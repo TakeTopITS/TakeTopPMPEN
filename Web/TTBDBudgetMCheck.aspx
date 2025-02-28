@@ -73,8 +73,8 @@
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList1" Width="110px" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                                                                 <asp:ListItem />
-                                                                <asp:ListItem Value="预算标准" Text="<%$ Resources:lang,YuSuanBiaoZhun%>" />
-                                                                <asp:ListItem Value="预算记录" Text="<%$ Resources:lang,YuSuanJiLu%>" />
+                                                                <asp:ListItem Value="BudgetStandard" Text="<%$ Resources:lang,YuSuanBiaoZhun%>" />
+                                                                <asp:ListItem Value="BudgetRecord" Text="<%$ Resources:lang,YuSuanJiLu%>" />
                                                             </asp:DropDownList>
                                                             <asp:Label ID="lbl_sql" runat="server" Visible="False"></asp:Label>
                                                             <asp:Label ID="lbl_sql1" runat="server" Visible="False"></asp:Label>
@@ -160,36 +160,36 @@
                                                     <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid1_ItemCommand"
                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" Width="100%" ShowHeader="false">
                                                         <Columns>
-                                                            <asp:TemplateColumn HeaderText="编号">
+                                                            <asp:TemplateColumn HeaderText="Number">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 <ItemTemplate>
                                                                     <asp:Button ID="BT_BudgetID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                 </ItemTemplate>
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="DepartName" HeaderText="部门名称">
+                                                            <asp:BoundColumn DataField="DepartName" HeaderText="DepartmentName">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
-                                                            <%--<asp:BoundColumn DataField="AccountName" HeaderText="会计科目">
+                                                            <%--<asp:BoundColumn DataField="AccountName" HeaderText="AccountingSubjects">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>--%>
-                                                            <asp:TemplateColumn HeaderText="会计科目">
+                                                            <asp:TemplateColumn HeaderText="AccountingSubjects">
                                                                 <ItemTemplate>
                                                                     <%# ShareClass.GetAccountName(Eval("AccountCode").ToString()) %>
                                                                 </ItemTemplate>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="YearNum" HeaderText="年份">
+                                                            <asp:BoundColumn DataField="YearNum" HeaderText="Year">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="MonthNum" HeaderText="月份">
+                                                            <asp:BoundColumn DataField="MonthNum" HeaderText="Month">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="MoneyNum" HeaderText="金额">
+                                                            <asp:BoundColumn DataField="MoneyNum" HeaderText="Amount">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
@@ -238,31 +238,31 @@
                                                                 </table>
                                                                 <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="False" Width="100%">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="DepartName" HeaderText="部门名称">
+                                                                        <asp:BoundColumn DataField="DepartName" HeaderText="DepartmentName">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                         </asp:BoundColumn>
-                                                                        <%--   <asp:BoundColumn DataField="AccountName" HeaderText="会计科目">
+                                                                        <%--   <asp:BoundColumn DataField="AccountName" HeaderText="AccountingSubjects">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                     </asp:BoundColumn>--%>
-                                                                        <asp:TemplateColumn HeaderText="会计科目">
+                                                                        <asp:TemplateColumn HeaderText="AccountingSubjects">
                                                                             <ItemTemplate>
                                                                                 <%# ShareClass.GetAccountName(Eval("AccountCode").ToString()) %>
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="YearNum" HeaderText="年份">
+                                                                        <asp:BoundColumn DataField="YearNum" HeaderText="Year">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="MonthNum" HeaderText="月份">
+                                                                        <asp:BoundColumn DataField="MonthNum" HeaderText="Month">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="MoneyNum" HeaderText="金额">
+                                                                        <asp:BoundColumn DataField="MoneyNum" HeaderText="Amount">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="UserName" HeaderText="申请人">
+                                                                        <asp:BoundColumn DataField="UserName" HeaderText="Applicant">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

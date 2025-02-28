@@ -429,7 +429,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
                 else
                 {
                     string strNewProgress = HF_NewProcess.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击减值计划！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击减值计划！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
             }
@@ -449,19 +449,19 @@ public partial class TTWZReduceList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strStoreRoom))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (!ShareClass.CheckIsNumber(strPlanMoney))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('计划减值只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('计划减值只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strMainLeader))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
 
@@ -483,7 +483,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
                     if (wZReduce.Process == LanguageHandle.GetWord("BianZhi").ToString().Trim())
                     {
                         string strNewProgress = HF_NewProcess.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是编制，不能修改！');ControlStatusChange('" + strNewProgress + "');", true); 
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是编制，不能修改！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                         return;
                     }
 
@@ -516,7 +516,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
             //重新加载列表
             DataReduceBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -535,19 +535,19 @@ public partial class TTWZReduceList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strStoreRoom))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (!ShareClass.CheckIsNumber(strPlanMoney))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('计划减值只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('计划减值只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strMainLeader))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
 
@@ -573,7 +573,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
             //重新加载列表
             DataReduceBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -593,19 +593,19 @@ public partial class TTWZReduceList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strStoreRoom))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (!ShareClass.CheckIsNumber(strPlanMoney))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('计划减值只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('计划减值只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strMainLeader))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
 
@@ -627,7 +627,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
                     if (wZReduce.Process != LanguageHandle.GetWord("BianZhi").ToString().Trim())
                     {
                         string strNewProgress = HF_NewProcess.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是编制，不能修改！');ControlStatusChange('" + strNewProgress + "');", true); 
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是编制，不能修改！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                         return;
                     }
 
@@ -644,14 +644,14 @@ public partial class TTWZReduceList : System.Web.UI.Page
             {
                 //增加
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的减值列表！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的减值列表！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
 
             //重新加载列表
             DataReduceBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -690,7 +690,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
             if (!ShareClass.CheckIsNumber(strYear))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计年份必须为整数！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计年份必须为整数！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
 
@@ -749,13 +749,13 @@ public partial class TTWZReduceList : System.Web.UI.Page
                 //加载库存
                 DataStoreBinder(wZReduce.ReduceCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计完成！');ControlStatusCloseChange();", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计完成！');ControlStatusCloseChange();", true);   //ChineseWord
             }
         }
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择减值单！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择减值单！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -781,7 +781,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
                     if (!ShareClass.CheckIsNumber(strDownRatio))
                     {
                         string strNewProgress = HF_NewProcess.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('减值比例只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true); 
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('减值比例只能为小数，或者整数！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                         return;
                     }
                     decimal decimalNewDownRatio = 0;
@@ -838,13 +838,13 @@ public partial class TTWZReduceList : System.Web.UI.Page
                         DataStoreBinder(wZReduce.ReduceCode);
                         DataReduceBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');ControlStatusCloseChange();", true); 
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');ControlStatusCloseChange();", true);   //ChineseWord
                     }
                 }
                 else
                 {
                     string strNewProgress = HF_NewProcess.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择库存！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择库存！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
             }
@@ -852,7 +852,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择减值单！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择减值单！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -878,11 +878,11 @@ public partial class TTWZReduceList : System.Web.UI.Page
 
             //查询减值计划
             string strSelectReduceHQL = string.Format(@"select * from T_WZReduce where ReduceCode in ({0})
-                        and Process = '生效'", strWhereReduceCode); 
+                        and Process = '生效'", strWhereReduceCode);   //ChineseWord
             DataTable dtSelectReduce = ShareClass.GetDataSetFromSql(strSelectReduceHQL, "SelectReduce").Tables[0];
 
             //文件名：《〈减值编号〉＋号减值计划》
-            Export3Excel(dtSelectReduce, "进度为生效的减值计划"); 
+            Export3Excel(dtSelectReduce, "Status Is Effective Impairment Plan");   //ChineseWord
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -890,7 +890,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的减值列表！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的减值列表！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -914,18 +914,18 @@ public partial class TTWZReduceList : System.Web.UI.Page
 
             //查询减值计划
             //            string strSelectReduceHQL = string.Format(@"select * from T_WZReduce where ReduceCode in ({0})
-            //                        and Process = '生效'", strWhereReduceCode); 
+            //                        and Process = '生效'", strWhereReduceCode);   //ChineseWord
             //            DataTable dtSelectReduce = ShareClass.GetDataSetFromSql(strSelectReduceHQL, "SelectReduce").Tables[0];
 
             //查询减值计划明细（库存)
             string strSelectReduceDetailHQL = string.Format(@"select s.* from T_WZReduce r
                         left join T_WZStore s on r.ReduceCode = s.DownCode
                         where r.ReduceCode in ({0})
-                        and r.Process = '生效'", strWhereReduceCode); 
+                        and r.Process = '生效'", strWhereReduceCode);   //ChineseWord
             DataTable dtSelectReduceDetail = ShareClass.GetDataSetFromSql(strSelectReduceDetailHQL, "SelectReduceDetail").Tables[0];
 
             //文件名：《〈减值编号〉＋号减值计划》、《〈减值编号〉＋号减值计划明细》
-            Export3Excel(dtSelectReduceDetail, "减值计划明细"); 
+            Export3Excel(dtSelectReduceDetail, "Impairment Plan Details");   //ChineseWord
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -933,7 +933,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的减值列表！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的减值列表！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -963,7 +963,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
             DataTable dtSelectReduce = ShareClass.GetDataSetFromSql(strSelectReduceHQL, "SelectReduce").Tables[0];
 
             //文件名：《〈减值编号〉＋号减值计划》、《〈减值编号〉＋号减值计划发料单》
-            Export3Excel(dtSelectReduce, "进度为完成的减值计划"); 
+            Export3Excel(dtSelectReduce, "Status Is Completed Impairment Plan");   //ChineseWord
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -971,7 +971,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -1006,7 +1006,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
             DataTable dtSelectSend = ShareClass.GetDataSetFromSql(strSelectSendHQL, "SelectSend").Tables[0];
 
             //文件名：《〈减值编号〉＋号减值计划》、《〈减值编号〉＋号减值计划发料单》
-            Export3Excel(dtSelectSend, "减值计划发料单"); 
+            Export3Excel(dtSelectSend, "Impairment Plan Material Order");   //ChineseWord
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -1014,7 +1014,7 @@ public partial class TTWZReduceList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }

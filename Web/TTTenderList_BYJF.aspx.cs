@@ -744,7 +744,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and actorGroup.GroupName Like " + "'" + strGroupName + "'";
         strHQL += " and actorGroup.LangCode = '" + strLangCode + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
@@ -1101,7 +1101,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
 
             }
 
-            if (strWarningType == "退保证金") 
+            if (strWarningType == "RefundDeposit")   //ChineseWord
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsReceiveMargin <> 0 and to_char(cast( ReceiveMarginTime as date),'yyyymmdd') <= to_char(now()+ReceiveMarginDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";

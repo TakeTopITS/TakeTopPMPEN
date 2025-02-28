@@ -503,18 +503,18 @@ public partial class TTWLRelatedDoc : System.Web.UI.Page
         strHQL = "from Document as document where document.Status <> 'Deleted' ";
         strHQL += " and (document.RelatedType = 'Workflow' and document.RelatedID = " + strWLID;
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
-        strHQL += " or ( document.Visible = '全体'))) "; 
-        strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strWLID + "))"; 
+        strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
+        strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strWLID + "))";  
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '全体')))"; 
+        strHQL += " or ( document.Visible = 'Entire')))";   //ChineseWord
 
-        strHQL += "or ((document.RelatedType = '合同' and document.RelatedID in (select workFlow.RelatedID from WorkFlow as workFlow where workFlow.RelatedType = '合同' and workFlow.WLID =" + strWLID + "))"; 
-        //strHQL += "or ((document.RelatedType = '合同' and document.RelatedID in (select workFlowBackup.RelatedID from WorkFlowBackup as workFlowBackup where workFlowBackup.RelatedType = '合同' and workFlowBackup.WLID =" + strWLID + "))";
+        strHQL += "or ((document.RelatedType = 'Contract' and document.RelatedID in (select workFlow.RelatedID from WorkFlow as workFlow where workFlow.RelatedType = 'Contract' and workFlow.WLID =" + strWLID + "))";   //ChineseWord
+        //strHQL += "or ((document.RelatedType = 'Contract' and document.RelatedID in (select workFlowBackup.RelatedID from WorkFlowBackup as workFlowBackup where workFlowBackup.RelatedType = 'Contract' and workFlowBackup.WLID =" + strWLID + "))";
 
 
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '全体')))"; 
+        strHQL += " or ( document.Visible = 'Entire')))";   //ChineseWord
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

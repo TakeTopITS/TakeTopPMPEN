@@ -218,8 +218,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
 
         if (strOperatorCode == "")//所有请假信息
         {
-            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," + 
-                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm  Where Creator In (Select UnderCode From T_MemberLevel Where UserCode = '" + strUserCode + "')"; 
+            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +   //ChineseWord
+                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm  Where Creator In (Select UnderCode From T_MemberLevel Where UserCode = '" + strUserCode + "')";   //ChineseWord
 
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
@@ -250,8 +250,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," + 
-                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm Where Creator = '" + strOperatorCode + "' Order by ID DESC "; 
+            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +   //ChineseWord
+                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm Where Creator = '" + strOperatorCode + "' Order by ID DESC ";   //ChineseWord
 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LeaveApplyForm");

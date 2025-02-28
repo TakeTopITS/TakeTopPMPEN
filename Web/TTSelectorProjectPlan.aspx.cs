@@ -29,13 +29,13 @@ public partial class TTSelectorProjectPlan : System.Web.UI.Page
         #region 正式使用
         //        string strProjectPlanHQL = @"select p.*,COALESCE(r.PlanID,'0') as IsExist from T_Project p
 //                    left join T_ProjectPlanRelated_YYUP r on p.ProjectID = r.ProjectID
-        //                    where p.ProjectClass = '模板项目'";
+        //                    where p.ProjectClass = 'TemplateProject'";
         #endregion
 
         string strProjectPlanHQL = string.Format(@"select p.*,COALESCE(r.PlanID,'0') as IsExist from T_Project p
                     left join T_ProjectPlanRelated_YYUP r on p.ProjectID = r.ProjectID
                     and r.PlanID = {0}
-                    where p.ProjectClass = '模板项目'", strPlanID); 
+                    where p.ProjectClass = 'TemplateProject'", strPlanID);   //ChineseWord
         DataTable dtProjectPlan = ShareClass.GetDataSetFromSql(strProjectPlanHQL, "ProjectPlan").Tables[0];
 
         DG_List.DataSource = dtProjectPlan;

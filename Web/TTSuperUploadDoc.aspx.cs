@@ -306,7 +306,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
                             Document document = new Document();
 
-                            document.RelatedType = "知识管理"; 
+                            document.RelatedType = "KnowledgeManagement";   //ChineseWord
                             document.DocTypeID = int.Parse(strDocTypeID);
                             document.DocType = strDocType;
                             document.Author = strAuthor;
@@ -332,7 +332,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
                             string strResult = FileUpLoad(file, strDocSavePath + strFileName3);
 
                             LoadDocument(LB_Sql.Text.Trim());
-                            //ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "知识管理", "0", "0");
+                            //ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "KnowledgeManagement", "0", "0");
                             ShareClass.InitialUserDocTypeTree(TreeView1, strUserCode);
 
                             if (strVisible == LanguageHandle.GetWord("GongSi").ToString().Trim())

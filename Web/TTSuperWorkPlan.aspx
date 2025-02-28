@@ -498,7 +498,7 @@
                                                                                  0 0.00
                                                         </NickLee:NumberBox>
 
-                                                        <%--  <asp:Label ID="Label12" runat="server" Text="µ¥Î»" />£º--%>
+                                                        <%--  <asp:Label ID="Label12" runat="server" Text="Unit" />£º--%>
                                                         <asp:DropDownList ID="DL_UnitName" runat="server" DataTextField="UnitName" DataValueField="UnitName" CssClass="DDList">
                                                         </asp:DropDownList>
 

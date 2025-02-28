@@ -31,7 +31,7 @@ public partial class TTUserAttendanceReportSAAS : System.Web.UI.Page
         string strUserName;
         strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "员工考勤报表";
+        //this.Title = "EmployeeAttendanceReport";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);

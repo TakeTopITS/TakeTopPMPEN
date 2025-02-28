@@ -135,7 +135,7 @@ public partial class TTRCJProjectTargetCostFee : System.Web.UI.Page
             }
             else
             {
-                sql.Append(" 0 as costfeesubid, '大类合计' as subtitle, "); 
+                sql.Append(" 0 as costfeesubid, 'TotalOfMajorCategories' as subtitle, ");   //ChineseWord
             }
             sql.Append(" sum(originalcost) as originalcost,sum(actualcost) as actualcost,sum(targetcost) as targetcost from V_RCJProjectTargetCostFee");
             sql.Append(" where ProjectID=");

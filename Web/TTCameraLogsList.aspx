@@ -46,7 +46,7 @@
                                             <asp:BoundColumn DataField="Area" HeaderText="区域">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ProjectDepartment" HeaderText="项目部">
+                                            <asp:BoundColumn DataField="ProjectDepartment" HeaderText="ProjectDepartment">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="ServerIP" HeaderText="摄像头IP">

@@ -176,7 +176,7 @@
                                                 Width="100%" AllowPaging="True" PageSize="35" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -206,14 +206,14 @@
                                                     <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同号">
+                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="ContractNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TenderContent" HeaderText="项目所属专业">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="26%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="Progress" HeaderText="状态">
+                                                    <asp:BoundColumn DataField="Progress" HeaderText="Status">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -304,7 +304,7 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label9" runat="server" Text="项目经理"></asp:Label>：</td>
+                                                <asp:Label ID="Label9" runat="server" Text="ProjectManager"></asp:Label>：</td>
                                             <td align="right" colspan="2">
                                                 <table width="100%">
                                                     <tr>
@@ -1049,7 +1049,7 @@
 
                                         <Columns>
 
-                                            <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
 
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
@@ -1065,7 +1065,7 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
 
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

@@ -280,7 +280,7 @@
                                                             <asp:BoundColumn DataField="Size" HeaderText="³ß´ç">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Mold" HeaderText="ÀàÐÍ">
+                                                            <asp:BoundColumn DataField="Mold" HeaderText="Type">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="SF" HeaderText="S/F">

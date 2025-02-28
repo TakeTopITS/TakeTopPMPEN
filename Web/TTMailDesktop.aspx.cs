@@ -77,7 +77,7 @@ public partial class MailDesktop : System.Web.UI.Page
         ImageButton deleteBtn = (ImageButton)e.Row.FindControl("DeleteBtn");
         if (deleteBtn != null)
         {
-            deleteBtn.Attributes.Add("onclick", "return confirm('你确定要删除所选择的数据项吗？');"); 
+            deleteBtn.Attributes.Add("onclick", "return confirm('你确定要删除所选择的数据项吗？');");   //ChineseWord
         }
     }
 }

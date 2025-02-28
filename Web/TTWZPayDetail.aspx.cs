@@ -68,9 +68,9 @@ public partial class TTWZPayDetail : System.Web.UI.Page
                         left join T_ProjectMember m on r.Borrower = m.UserCode
                         left join T_ProjectMember a on r.Approver = a.UserCode
                         left join T_WZSupplier s on r.SupplierCode = s.SupplierCode
-                        where r.Progress in ('±¨Ïú')
+                        where r.Progress in ('Reimbursement')
                         and r.IsFinisth = 0
-                        and r.ProjectCode in (select ProjectCode from T_WZPay where PayID = '{0}')", strPayID); 
+                        and r.ProjectCode in (select ProjectCode from T_WZPay where PayID = '{0}')", strPayID);   //ChineseWord
             DataTable dtRequest = ShareClass.GetDataSetFromSql(strWZRequestHQL, "Request").Tables[0];
 
             DG_Request.DataSource = dtRequest;

@@ -35,7 +35,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
     {
 
 
-        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, 'ц╩сп') as IsSelect,c.Suggest,sl.SupplierName,ps.DocumentName as SupplierDocumentName,ps.DocumentURL as SupplierDocumentURL from
+        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, 'None') as IsSelect,c.Suggest,sl.SupplierName,ps.DocumentName as SupplierDocumentName,ps.DocumentURL as SupplierDocumentURL from
                                                 (
                                                 select t.SupplierCode,t.PurchaseCode,Sum(t.ApplyMoney) as SumApplyMoney from
                                                 (
@@ -52,7 +52,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
                                                 left join T_WZSupplier sl on a.SupplierCode = sl.SupplierCode
                                                 left join T_WZPurchaseSupplier ps on a.SupplierCode = ps.SupplierCode
                                                 and a.PurchaseCode = ps.PurchaseCode
-                                                where p.PurchaseCode = '{0}'", strPurchaseCode, strUserCode); 
+                                                where p.PurchaseCode = '{0}'", strPurchaseCode, strUserCode);   //ChineseWord
         DataTable dtPurchase = ShareClass.GetDataSetFromSql(strPurchaseHQL, "Purchase").Tables[0];
 
         DG_List.DataSource = dtPurchase;

@@ -369,14 +369,14 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
             string strHQL;
             //采购文件
-            strHQL = "Update T_WZPurchase Set Progress = '决策' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
+            strHQL = "Update T_WZPurchase Set Progress = 'Decision' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";   //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
 
             //报价单
-            strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '决策'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
+            strHQL = "Update T_WZPurchaseOfferRecord Set Progress = 'Decision'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";   //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
         }
         catch (Exception ex)
         {
@@ -413,15 +413,15 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
                 string strHQL;
                 //采购文件
-                strHQL = "Update T_WZPurchase Set Progress = '报批' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
+                strHQL = "Update T_WZPurchase Set Progress = 'Approval' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";   //ChineseWord
                 ShareClass.RunSqlCommand(strHQL);
 
                 //报价单
-                strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '报批'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
+                strHQL = "Update T_WZPurchaseOfferRecord Set Progress = 'Approval'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";   //ChineseWord
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消成功！');", true);   //ChineseWord
         }
         catch (Exception ex)
         {

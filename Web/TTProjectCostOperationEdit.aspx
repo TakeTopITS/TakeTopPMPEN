@@ -153,7 +153,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -180,12 +180,12 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                                    <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Price" HeaderText="单价">
+                                                    <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

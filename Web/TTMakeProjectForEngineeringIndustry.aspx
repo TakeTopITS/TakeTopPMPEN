@@ -209,7 +209,7 @@
                                                     <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -221,17 +221,17 @@
                                                         <asp:BoundColumn DataField="ProjectID" HeaderText="项目ID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="项目代码">
+                                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="ProjectCode">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
                                                             DataTextField="ProjectName" HeaderText="项目名称" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="PMName" HeaderText="项目经理">
+                                                        <asp:BoundColumn DataField="PMName" HeaderText="ProjectManager">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                             </ItemTemplate>
@@ -254,11 +254,11 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTMakeConstractFromOther.aspx?RelatedType=PROJECT&RelatedID={0}"
-                                                            Text="<%$ Resources:lang,ZhuanHeTong%>" HeaderText="合同" Target="_blank">
+                                                            Text="<%$ Resources:lang,ZhuanHeTong%>" HeaderText="Contract" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
                                                         <%--  <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTMakeCollaboration.aspx?RelatedType=PROJECT&RelatedID={0}"
-                                                            Text="<%$ Resources:lang,XieZuo%>" HeaderText="协作" Target="_blank">
+                                                            Text="<%$ Resources:lang,XieZuo%>" HeaderText="Collaboration" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>--%>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectRelatedDoc.aspx?ProjectID={0}"
@@ -415,7 +415,7 @@
                                                                             <asp:DropDownList ID="DDL_UnitType" runat="server">
                                                                                 <asp:ListItem Text="" Value="" />
                                                                                 <asp:ListItem Text="<%$ Resources:lang,XingZhengDanWei%>" Value="行政单位" />
-                                                                                <asp:ListItem Text="<%$ Resources:lang,XiangMuBu%>" Value="项目部" />
+                                                                                <asp:ListItem Text="<%$ Resources:lang,XiangMuBu%>" Value="ProjectDepartment" />
                                                                             </asp:DropDownList>(<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,WuZiXiangMuCaiXuanZe%>"></asp:Label>)
                                                                                 
 
@@ -527,8 +527,8 @@
                                                                         <td class="formItemBgStyle" align="left">
                                                                             <asp:DropDownList ID="DL_AuthorizedProcurement" runat="server">
                                                                                 <asp:ListItem />
-                                                                                <asp:ListItem Value="有" Text="<%$ Resources:lang,You%>" />
-                                                                                <asp:ListItem Value="无" Text="<%$ Resources:lang,Wu%>" />
+                                                                                <asp:ListItem Value="Yes" Text="<%$ Resources:lang,You%>" />
+                                                                                <asp:ListItem Value="No" Text="<%$ Resources:lang,Wu%>" />
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td class="formItemBgStyle" align="right">

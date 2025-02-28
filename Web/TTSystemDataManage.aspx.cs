@@ -113,7 +113,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         string strHQL;
 
         strHQL = string.Format(@"Select ID 编号, UserCode 代码,UserName 姓名,UserIP IP,UserHostName 电脑名称,LoginTime 登录时间,LastestTime 最后操作时间,
-           Position 位置 From T_LogonLog "); 
+           Position 位置 From T_LogonLog ");   //ChineseWord
         strHQL += " Order by ID DESC";
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);

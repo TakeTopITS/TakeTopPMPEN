@@ -444,7 +444,7 @@
                                                                         GridLines="None" Width="100%">
                                                                         <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始日期">
@@ -453,10 +453,10 @@
                                                                             <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束日期">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                                            <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="17%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="Duty" HeaderText="职位">
+                                                                            <asp:BoundColumn DataField="Duty" HeaderText="Position">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="Salary" HeaderText="工资">
@@ -525,7 +525,7 @@
                                                                         GridLines="None" Width="100%">
                                                                         <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="School" HeaderText="学校名称">
@@ -602,28 +602,28 @@
                                                                         GridLines="None" Width="100%">
                                                                         <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="MemberName" HeaderText="姓名">
+                                                                            <asp:BoundColumn DataField="MemberName" HeaderText="Name">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="Relation" HeaderText="称谓">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="Duty" HeaderText="职位">
+                                                                            <asp:BoundColumn DataField="Duty" HeaderText="Position">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="WorkAddress" HeaderText="地址">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="Duty" HeaderText="职位">
+                                                                            <asp:BoundColumn DataField="Duty" HeaderText="Position">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="PostCode" HeaderText="邮编">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="Comment" HeaderText="备注">
+                                                                            <asp:BoundColumn DataField="Comment" HeaderText="Remark">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                         </Columns>
@@ -682,10 +682,10 @@
 
                                                                         <ItemStyle CssClass="itemStyle" />
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="TransType" HeaderText="类型">
+                                                                            <asp:BoundColumn DataField="TransType" HeaderText="Type">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%"></ItemStyle>
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="Description" HeaderText="描述">
@@ -746,7 +746,7 @@
 
                                                                         <ItemStyle CssClass="itemStyle" />
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="DepartName" HeaderText="兼职部门">

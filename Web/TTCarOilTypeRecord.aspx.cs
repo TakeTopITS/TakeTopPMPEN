@@ -329,7 +329,7 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
                     carOilTypeRecord.CarNo = dr[i][LanguageHandle.GetWord("ChePaiHao").ToString().Trim()].ToString();
                     carOilTypeRecord.OilTypeId = int.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("YouLiaoBianHao").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("YouLiaoBianHao").ToString().Trim()].ToString());
                     carOilTypeRecord.OilName = dr[i][LanguageHandle.GetWord("YouLiaoMingChen").ToString().Trim()].ToString();
-                    carOilTypeRecord.Type = dr[i]["”Õ¡œ–Õ∫≈"].ToString(); 
+                    carOilTypeRecord.Type = dr[i]["FuelModel"].ToString();   //ChineseWord
                     carOilTypeRecord.DepartCode = dr[i][LanguageHandle.GetWord("GuiShuBuMenBianMa").ToString().Trim()].ToString();
                     carOilTypeRecord.OilNum = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("JiaYouShuLiang").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("JiaYouShuLiang").ToString().Trim()].ToString());
                     carOilTypeRecord.OilPrice = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString());

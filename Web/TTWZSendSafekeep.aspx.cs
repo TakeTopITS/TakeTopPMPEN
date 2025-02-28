@@ -53,8 +53,8 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                     left join T_ProjectMember f on s.Safekeeper = f.UserCode
                     left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                     where s.Safekeeper ='{0}' 
-                    and s.Progress in ('开票','发料') 
-                    order by s.TicketTime desc", strUserCode); 
+                    and s.Progress in ('开票','Material Issuance') 
+                    order by s.TicketTime desc", strUserCode);   //ChineseWord
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;
@@ -253,7 +253,7 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                     }
 
                     //计划明细<进度> = LanguageHandle.GetWord("FaLiao").ToString().Trim()
-                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '发料' where ID = " + wZSend.PlanDetaiID; 
+                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'Material Issuance' where ID = " + wZSend.PlanDetaiID;   //ChineseWord
                     ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
 
                     strResult = "Success";
@@ -373,7 +373,7 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                     }
 
                     //计划明细<进度> = LanguageHandle.GetWord("FaLiao").ToString().Trim()
-                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '开票' where ID = " + wZSend.PlanDetaiID; 
+                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '开票' where ID = " + wZSend.PlanDetaiID;   //ChineseWord
                     ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
 
                     strResult = "Success";

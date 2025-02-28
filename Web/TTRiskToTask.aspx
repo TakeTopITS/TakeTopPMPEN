@@ -187,7 +187,7 @@
                                                                             ShowHeader="False" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                                             Width="100%" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="5%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
@@ -202,7 +202,7 @@
                                                                                 <asp:BoundColumn DataField="TaskID" HeaderText="ID">
                                                                                     <itemstyle cssclass="itemBorder" width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                                     <itemstyle cssclass="itemBorder" width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataTextField="Task" DataNavigateUrlFormatString="TTTaskAssignRecord.aspx?TaskID={0}"
@@ -212,10 +212,10 @@
                                                                                 <asp:BoundColumn DataField="Priority" HeaderText="优先级">
                                                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="Budget" HeaderText="Budget">
@@ -233,7 +233,7 @@
 
                                                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="7%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <itemtemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </itemtemplate>
@@ -678,14 +678,14 @@
                                             OnItemCommand="DataGrid2_ItemCommand" Width="100%" Height="1px" CellPadding="4"
                                             ShowHeader="False" ForeColor="#333333" GridLines="None">
                                             <columns>
-                                                <asp:TemplateColumn HeaderText="编号">
+                                                <asp:TemplateColumn HeaderText="Number">
                                                     <itemtemplate>
                                                         <asp:Button ID="BT_ID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                             CssClass="inpu" />
                                                     </itemtemplate>
                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="9%" />
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="8%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="TaskID" HeaderText="Task">
@@ -700,19 +700,19 @@
                                                 <asp:BoundColumn DataField="Operation" HeaderText="受理人的工作">
                                                     <itemstyle cssclass="itemBorder" horizontalalign="Left" width="14%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="15%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="15%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="Expense" HeaderText="费用">
+                                                <asp:BoundColumn DataField="Expense" HeaderText="Expense">
                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="5%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="RouteNumber" HeaderText="路线">
                                                     <itemstyle cssclass="itemBorder" horizontalalign="Center" width="5%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="状态">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <itemtemplate>
                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                     </itemtemplate>

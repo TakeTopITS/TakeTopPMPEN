@@ -420,7 +420,7 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
         }
         else
         {
-            return "Î´¿ª±ê"; 
+            return "Unopened Bid";   //ChineseWord
         }
     }
 }

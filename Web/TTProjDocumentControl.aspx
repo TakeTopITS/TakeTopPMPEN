@@ -198,7 +198,7 @@
                                                                             GridLines="None" Height="1px" OnItemCommand="DataGrid3_ItemCommand" ShowHeader="False"
                                                                             OnPageIndexChanged="DataGrid3_PageIndexChanged" Width="100%" OnItemDataBound="DataGrid3_ItemDataBound">
                                                                             <Columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
@@ -217,7 +217,7 @@
                                                                                 <asp:BoundColumn DataField="FileNo" HeaderText="档案号">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="FileName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="FileName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="FigureDate" HeaderText="收图日期" DataFormatString="{0:yyyy-MM-dd}">
@@ -241,7 +241,7 @@
                                                                                     Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                                                <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="11%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn>
@@ -333,7 +333,7 @@
                                                                             OnPageIndexChanged="DataGrid5_PageIndexChanged" Width="100%" OnItemDataBound="DataGrid5_ItemDataBound">
 
                                                                             <Columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
@@ -349,7 +349,7 @@
                                                                                 <asp:BoundColumn DataField="FileNo" HeaderText="档案号">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="FileName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="FileName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="IssueDate" HeaderText="发图日期" DataFormatString="{0:yyyy-MM-dd}">
@@ -454,7 +454,7 @@
                                                                             GridLines="None" Height="1px" OnItemCommand="DataGrid1_ItemCommand" ShowHeader="False"
                                                                             OnPageIndexChanged="DataGrid1_PageIndexChanged" Width="100%" OnItemDataBound="DataGrid1_ItemDataBound">
                                                                             <Columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
@@ -579,7 +579,7 @@
                                                                             GridLines="None" Height="1px" OnItemCommand="DataGrid2_ItemCommand" ShowHeader="False"
                                                                             OnPageIndexChanged="DataGrid2_PageIndexChanged" Width="100%" OnItemDataBound="DataGrid2_ItemDataBound">
                                                                             <Columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">

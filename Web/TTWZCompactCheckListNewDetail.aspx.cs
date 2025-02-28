@@ -106,7 +106,7 @@ public partial class TTWZCompactCheckListNewDetail : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strCheckCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('检号不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('检号不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
 
@@ -169,7 +169,7 @@ public partial class TTWZCompactCheckListNewDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('检号不存在，请点击编辑进来！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('检号不存在，请点击编辑进来！');", true);   //ChineseWord
             return;
         }
     }
@@ -232,11 +232,11 @@ public partial class TTWZCompactCheckListNewDetail : System.Web.UI.Page
                     }
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传材检资料成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传材检资料成功！');", true);   //ChineseWord
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -281,11 +281,11 @@ public partial class TTWZCompactCheckListNewDetail : System.Web.UI.Page
                     HF_CheckDocumentURL.Value = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\Doc\\" + strFileName3;
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传材检资料成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传材检资料成功！');", true);   //ChineseWord
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -357,11 +357,11 @@ public partial class TTWZCompactCheckListNewDetail : System.Web.UI.Page
                     }
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传报价文件成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传报价文件成功！');", true);   //ChineseWord
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -406,11 +406,11 @@ public partial class TTWZCompactCheckListNewDetail : System.Web.UI.Page
                     HF_ReinspectionRecordURL.Value = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\Doc\\" + strFileName3;
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传采购文件成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传采购文件成功！');", true);   //ChineseWord
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }

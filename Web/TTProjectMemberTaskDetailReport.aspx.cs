@@ -152,19 +152,19 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as '组别', 
-                   UserName as '姓名', 
+        strHQL = @"Select DepartCode as 'Group',   //ChineseWord
+                   UserName as 'Name',   //ChineseWord
                    ProjectName as 'Project',
                    PlanName as 'Plan',
                    TaskName as 'Task',
-                   PlanBeginTime as '计划预计开始时间', 
-                   PlanEndTime as '计划预计结束时间', 
-                   TaskBeginDate as '任务预计开始时间', 
-                   TaskFirstOperateTime as '任务受理时间', 
-                   TaskEndDate as '任务预计结束时间', 
-                   TaskLastestOperateTime as '任务最新操作时间', 
-                   Status as '任务状态', 
-                   TaskLog as '任务日志' 
+                   PlanBeginTime as 'PlannedStartTime',   //ChineseWord
+                   PlanEndTime as 'PlannedEndTime',   //ChineseWord
+                   TaskBeginDate as 'TaskEstimatedStartTime',   //ChineseWord
+                   TaskFirstOperateTime as 'TaskAcceptanceTime',   //ChineseWord
+                   TaskEndDate as 'TaskEstimatedEndTime',   //ChineseWord
+                   TaskLastestOperateTime as 'TaskLatestOperationTime',   //ChineseWord
+                   Status as 'TaskStatus',   //ChineseWord
+                   TaskLog as 'TaskLog'   //ChineseWord
                    From V_ProjectMemberTaskDetailReport";
 
 
@@ -191,7 +191,7 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanRenWuxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

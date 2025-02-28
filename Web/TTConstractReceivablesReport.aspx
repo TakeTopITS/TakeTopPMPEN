@@ -257,37 +257,37 @@
                                     Height="1px" Width="100%"
                                     CellPadding="4" ForeColor="#333333" GridLines="None">
                                     <Columns>
-                                        <asp:BoundColumn DataField="BillCode" HeaderText="原始单号">
+                                        <asp:BoundColumn DataField="BillCode" HeaderText="OriginalDocumentNumber">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ConstractCode" HeaderText="合同代码">
+                                        <asp:BoundColumn DataField="ConstractCode" HeaderText="ContractCode">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ConstractName" HeaderText="合同名称">
+                                        <asp:BoundColumn DataField="ConstractName" HeaderText="ContractName">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="17%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ReceivablesAccount" HeaderText="应收金额">
+                                        <asp:BoundColumn DataField="ReceivablesAccount" HeaderText="AmountReceivable">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="8%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ReceivablesTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="应收时间">
+                                        <asp:BoundColumn DataField="ReceivablesTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="TimeReceivable">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ReceiverAccount" HeaderText="实收金额">
+                                        <asp:BoundColumn DataField="ReceiverAccount" HeaderText="ActualAmountReceived">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="UNReceiveAmount" HeaderText="未收金额">
+                                        <asp:BoundColumn DataField="UNReceiveAmount" HeaderText="UnreceivedAmount">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="Payer" HeaderText="付款方">
+                                        <asp:BoundColumn DataField="Payer" HeaderText="Payer">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="PartA" HeaderText="甲方单位">
+                                        <asp:BoundColumn DataField="PartA" HeaderText="PartyAUnit">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="PartAOperator" HeaderText="负责人">
+                                        <asp:BoundColumn DataField="PartAOperator" HeaderText="ResponsiblePerson">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="CurrencyType" HeaderText="币别">
+                                        <asp:BoundColumn DataField="CurrencyType" HeaderText="Currency">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                         </asp:BoundColumn>
                                     </Columns>

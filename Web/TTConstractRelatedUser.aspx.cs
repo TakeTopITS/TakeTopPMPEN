@@ -74,7 +74,7 @@ public partial class TTConstractRelatedUser : System.Web.UI.Page
 
             ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
 
-            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司')"; 
+            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company')";  
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
 
             Repeater1.DataSource = lst;

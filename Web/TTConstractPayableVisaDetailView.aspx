@@ -53,19 +53,19 @@
                                 <asp:BoundColumn DataField="ID" HeaderText="ID">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaDetailName" HeaderText="名称">
+                                <asp:BoundColumn DataField="VisaDetailName" HeaderText="Name">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaNumber" HeaderText="数量">
+                                <asp:BoundColumn DataField="VisaNumber" HeaderText="Quantity">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaPrice" HeaderText="单价">
+                                <asp:BoundColumn DataField="VisaPrice" HeaderText="UnitPrice">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaAmount" HeaderText="金额">
+                                <asp:BoundColumn DataField="VisaAmount" HeaderText="Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
                             </Columns>

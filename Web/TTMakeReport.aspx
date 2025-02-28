@@ -250,12 +250,12 @@
                                                         DataTextField="CreatorName" HeaderText="上传者" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间">
+                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="可视人员">
+                                                    <asp:TemplateColumn HeaderText="VisiblePersonnel">
                                                         <ItemTemplate>
-                                                            <asp:Button ID="BT_VisualMember" CommandName="Select" runat="server" Text='可视人员'
+                                                            <asp:Button ID="BT_VisualMember" CommandName="Select" runat="server" Text='VisiblePersonnel'
                                                                 CssClass="inpuLong" />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />

@@ -46,7 +46,7 @@ public partial class TTDocumentTypeSet : System.Web.UI.Page
             DL_Authority.DataSource = lst;
             DL_Authority.DataBind();
 
-            DL_Authority.Items.Insert(0, new ListItem("集团", "集团")); 
+            DL_Authority.Items.Insert(0, new ListItem("Group", "Group"));  
 
             ShareClass.InitialAllDocTypeTree(TreeView1);
         }

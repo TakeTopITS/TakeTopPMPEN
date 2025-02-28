@@ -192,7 +192,7 @@
                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="步序">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="StepName" HeaderText="名称">
+                                                                <asp:BoundColumn DataField="StepName" HeaderText="Name">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="limitedOperator" HeaderText="最少人数">

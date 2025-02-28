@@ -213,7 +213,7 @@
                                                                 <asp:Button ID="BT_POID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"POID").ToString().Trim() %>' />
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="POName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="POName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="Amount" HeaderText="总金额">
@@ -222,7 +222,7 @@
                                                         <asp:BoundColumn DataField="PurTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="采购时间">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>
@@ -300,31 +300,31 @@
                                                                             OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" ShowHeader="False"
                                                                             Width="100%">
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="编号">
+                                                                                <asp:TemplateColumn HeaderText="Number">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID").ToString().Trim() %>' />
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="AssetCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="AssetCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="AssetName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="AssetName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                                                                <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                                                                <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Price" HeaderText="价格">
+                                                                                <asp:BoundColumn DataField="Price" HeaderText="Price">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

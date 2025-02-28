@@ -115,7 +115,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
                                                     </Columns>

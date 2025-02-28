@@ -179,11 +179,11 @@ public partial class TTAlluserPosition : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "已开通"; 
+            return "Enabled";  //ChineseWord //ChineseWord
         }
         else
         {
-            return "未开通"; 
+            return "NotEnabled";  //ChineseWord //ChineseWord
         }
     }
 }

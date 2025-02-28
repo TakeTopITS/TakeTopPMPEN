@@ -117,7 +117,7 @@
                                                         GridLines="None" Height="1px"  ShowHeader="False" OnPageIndexChanged="DataGrid1_PageIndexChanged" Width="98%">
                                                     
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="FileName" HeaderText="题名">
@@ -129,7 +129,7 @@
                                                         <asp:BoundColumn DataField="FileWay" HeaderText="归档单位">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="项目编号">
+                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="ProjectID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="DocumentNo" HeaderText="文件编号">
@@ -201,7 +201,7 @@
                                                         GridLines="None" Height="1px"  ShowHeader="False" OnPageIndexChanged="DataGrid3_PageIndexChanged" Width="98%">
                                                     
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="FileName" HeaderText="题名">
@@ -222,7 +222,7 @@
                                                         <asp:BoundColumn DataField="FigureNum" HeaderText="图/份">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="项目编号">
+                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="ProjectID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="FileNo" HeaderText="档案号">
@@ -299,7 +299,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="顺序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="FileName" HeaderText="文件名称">
@@ -382,10 +382,10 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="顺序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="FileName" HeaderText="Name">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="IssueDate" HeaderText="发图日期" DataFormatString="{0:yyyy-MM-dd}">

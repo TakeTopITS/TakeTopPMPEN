@@ -167,17 +167,17 @@
                                                         <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4"
                                                             ForeColor="#333333" GridLines="None" Height="1px" Width="98%" ShowHeader="False">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                                     DataTextField="DocName" HeaderText="文件名" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="29%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                                                <asp:BoundColumn DataField="Author" HeaderText="Author">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">
@@ -206,8 +206,8 @@
                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：<asp:DropDownList ID="DL_DocType" runat="server" DataTextField="Type" DataValueField="ID"
                                                                     Width="166px">
                                                                 </asp:DropDownList>&#160; <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,QuanXian%>"></asp:Label>：<asp:DropDownList ID="DL_Visible" runat="server" CssClass="DDList" Width="64px">
-                                                                    <asp:ListItem Value="全体" Text="<%$ Resources:lang,QuanTi%>"/>
-                                                                    <asp:ListItem Value="个人" Text="<%$ Resources:lang,GeRen%>"/>
+                                                                    <asp:ListItem Value="Entire" Text="<%$ Resources:lang,QuanTi%>"/>
+                                                                    <asp:ListItem Value="Individual" Text="<%$ Resources:lang,GeRen%>"/>
                                                                 </asp:DropDownList>&#160; <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ZuoZhe%>"></asp:Label>：<asp:TextBox ID="TB_Author" runat="server" Width="74px"></asp:TextBox></td>
                                                             </tr>
                                                             <tr>

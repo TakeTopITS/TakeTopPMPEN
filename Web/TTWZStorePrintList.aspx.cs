@@ -185,7 +185,7 @@ public partial class TTWZStorePrintList : System.Web.UI.Page
                         ) t 
                         ) x
                         ) y
-                        left join T_WZMaterialDL l on y.DLCode = l.DLCode", strStockCode, strYear, strPreviousMonth, strMonth, strNextMonth, strPreviousYear, strNextYear); 
+                        left join T_WZMaterialDL l on y.DLCode = l.DLCode", strStockCode, strYear, strPreviousMonth, strMonth, strNextMonth, strPreviousYear, strNextYear);   //ChineseWord
 
         DataTable dtStore = ShareClass.GetDataSetFromSql(strHQL, "Store").Tables[0];
 
@@ -255,7 +255,7 @@ public partial class TTWZStorePrintList : System.Web.UI.Page
         DDL_StockCode.DataSource = lstStock;
         DDL_StockCode.DataBind();
 
-        DDL_StockCode.Items.Insert(0, new ListItem("È«²¿", "")); 
+        DDL_StockCode.Items.Insert(0, new ListItem("All", ""));   //ChineseWord
     }
 
     private void DataYearMonthBinder()

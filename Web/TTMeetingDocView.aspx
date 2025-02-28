@@ -106,20 +106,20 @@
                                         Height="1px" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                         PageSize="8" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="false">
                                         <Columns>
-                                            <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                            <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="RelatedType" HeaderText="大类">
+                                            <asp:BoundColumn DataField="RelatedType" HeaderText="MajorCategory">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                            <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                 DataTextField="DocName" HeaderText="文件名" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                            <asp:BoundColumn DataField="Author" HeaderText="Author">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">

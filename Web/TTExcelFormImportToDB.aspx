@@ -211,7 +211,7 @@
                                                     ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                     PageSize="200" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="FormType" HeaderText="表单类型">

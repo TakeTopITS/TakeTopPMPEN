@@ -240,7 +240,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
 
         DataSet ds;
 
-        if(strRelateType == "合同") 
+        if(strRelateType == "Contract")   //ChineseWord
         {
             strHQL = "select * from T_Constract where ConstractID = " + strRelatedID;
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_Constract");
@@ -268,7 +268,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
             DataList3.DataBind();
         }
 
-        if (strRelateType == "投标") 
+        if (strRelateType == "Bid")   //ChineseWord
         {
             strHQL = "select * from T_Tender_HYYQ where ID = " + strRelatedID;
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_Tender_HYYQ");
@@ -817,11 +817,11 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
         strHQL = "from Document as document where document.Status <> 'Deleted' ";
         strHQL += " and (document.RelatedType = 'Workflow' and (document.RelatedID = " + strWLID + " Or document.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + ")";
         strHQL += " Or document.RelatedID in (Select wfStepRelatedWF.WFID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFChildID = " + strWLID + "))";
-        strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and (meeting.RelatedID =" + strWLID + " or meeting.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + "))))"; 
+        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and (meeting.RelatedID =" + strWLID + " or meeting.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + "))))";  
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '会议')))"; 
+        strHQL += " or ( document.Visible = 'Meeting')))";  
         strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( '部门','全体')))"; 
+        strHQL += " or (document.Visible in ( 'Department','Entire')))";   //ChineseWord
         strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
@@ -850,20 +850,20 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
 
             strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体')))"; 
+            strHQL += " or (document.Visible in ( 'Department','Entire')))";   //ChineseWord
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
             strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
             //strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
 
-            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
+            strHQL += "or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
             //strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
 
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))"; 
-            strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) "; 
-            strHQL += " or (document.Visible = '全体' )))))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))";  
+            strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  
+            strHQL += " or (document.Visible = 'Entire' )))))";   //ChineseWord
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
             DocumentBLL documentBLL = new DocumentBLL();

@@ -188,44 +188,44 @@
                                                     ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                     PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                            DataTextField="UserName" HeaderText="姓名" Target="_blank">
+                                                            DataTextField="UserName" HeaderText="Name" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DepartCode" HeaderText="部门代码">
+                                                        <asp:BoundColumn DataField="DepartCode" HeaderText="DepartmentCode">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DepartName" HeaderText="部门名称">
+                                                        <asp:BoundColumn DataField="DepartName" HeaderText="DepartmentName">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Duty" HeaderText="职责">
+                                                        <asp:BoundColumn DataField="Duty" HeaderText="Responsibility">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="KPICheckID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="KPICheckID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="KPICheckName" HeaderText="KPI考核名称">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="自评分">
+                                                        <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="SelfAssessmentScore">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TotalLeaderPoint" HeaderText="领导评分">
+                                                        <asp:BoundColumn DataField="TotalLeaderPoint" HeaderText="LeaderAssessmentScore">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="第三方评分">
+                                                        <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="ThirdPartyAssessmentScore">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TotalSqlPoint" HeaderText="系统评分">
+                                                        <asp:BoundColumn DataField="TotalSqlPoint" HeaderText="SystemAssessmentScore">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TotalHRPoint" HeaderText="人事评分">
+                                                        <asp:BoundColumn DataField="TotalHRPoint" HeaderText="HumanResourcesScore">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="TotalPoint" HeaderText="总评分">

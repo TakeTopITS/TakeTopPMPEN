@@ -150,7 +150,7 @@ lk<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMemberGradeLi
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="ĞòºÅ">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="GradeName" HeaderText="Äê¼¶">

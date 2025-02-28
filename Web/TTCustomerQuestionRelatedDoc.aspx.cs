@@ -85,7 +85,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
             DocType docType = (DocType)lst1[0];
             strDocType = docType.Type.Trim();
 
-            strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID =" + strQuestionID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'CustomerQuestion' and document.RelatedID =" + strQuestionID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + ": " + strDocType;
 
             //设置缺省的文件类型
@@ -96,7 +96,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
         }
         else
         {
-            strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID =" + strQuestionID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'CustomerQuestion' and document.RelatedID =" + strQuestionID + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
@@ -470,7 +470,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strDepartCode = GetDepartCode(strUserCode);
 
-        strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID; 
+        strHQL = " from Document as document where document.RelatedType = 'CustomerQuestion' and document.RelatedID = " + strQuestionID;  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

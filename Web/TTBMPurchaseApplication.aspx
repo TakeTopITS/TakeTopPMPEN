@@ -159,7 +159,7 @@
                                                     OnItemCommand="DataGrid2_ItemCommand" Width="100%" CellPadding="4" ForeColor="#333333"
                                                     GridLines="None" ShowHeader="False" AllowPaging="True" OnPageIndexChanged="DataGrid2_PageIndexChanged">
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -174,16 +174,16 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
+                                                        <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
+                                                        <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
 
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Application" HeaderText="ÉêÇëÈË">
+                                                        <asp:BoundColumn DataField="Application" HeaderText="Applicant">
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
 
@@ -524,7 +524,7 @@
 
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
+                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
@@ -534,7 +534,7 @@
                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <ItemTemplate>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />

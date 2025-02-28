@@ -311,7 +311,7 @@
                                                                                                         <asp:BoundColumn DataField="IsForbidLogin">
                                                                                                             <ItemStyle HorizontalAlign="Center" Width="10%" CssClass="itemBorder" />
                                                                                                         </asp:BoundColumn>
-                                                                                                        <asp:TemplateColumn HeaderText="״̬">
+                                                                                                        <asp:TemplateColumn HeaderText="Status">
                                                                                                             <ItemTemplate>
                                                                                                                 <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                                             </ItemTemplate>

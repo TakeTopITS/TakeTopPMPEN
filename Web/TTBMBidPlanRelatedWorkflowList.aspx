@@ -152,7 +152,7 @@
                                                                                         OnPageIndexChanged="DataGrid4_PageIndexChanged" PageSize="5" Width="100%">
 
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTWorkFlowDetailMain.aspx?ID={0}"
@@ -169,10 +169,10 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="26%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                                DataTextField="CreatorName" HeaderText="ÉêÇëÈË" Target="_blank">
+                                                                                                DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -245,7 +245,7 @@
                                                                                         ShowHeader="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                                                         OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="5" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTWorkFlowDetailMain.aspx?ID={0}"
@@ -262,10 +262,10 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="26%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                                DataTextField="CreatorName" HeaderText="ÉêÇëÈË" Target="_blank">
+                                                                                                DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -339,7 +339,7 @@
                                                                                         PageSize="5" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
 
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTWorkFlowDetailMain.aspx?ID={0}"
@@ -359,10 +359,10 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                                DataTextField="CreatorName" HeaderText="ÉêÇëÈË" Target="_blank">
+                                                                                                DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -424,7 +424,7 @@
                                                                                         Height="1px" OnPageIndexChanged="DataGrid6_PageIndexChanged" PageSize="5" Width="100%"
                                                                                         ShowHeader="False" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTWorkFlowDetailMain.aspx?ID={0}"
@@ -444,10 +444,10 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                                DataTextField="CreatorName" HeaderText="ÉêÇëÈË" Target="_blank">
+                                                                                                DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -581,7 +581,7 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
+                                                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
@@ -592,7 +592,7 @@
                                                                                     HeaderText="Workflow" Target="_blank" Text="<%$ Resources:lang,JinDu%>">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="ÀàÐÍ">
+                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
@@ -601,13 +601,13 @@
                                                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <%-- <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                <%-- <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
 </asp:TemplateColumn>--%>
-                                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

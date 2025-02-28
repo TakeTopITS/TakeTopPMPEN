@@ -98,13 +98,13 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="±ÒÖÖ">
+                                                        <asp:TemplateColumn HeaderText="Currency">
                                                             <ItemTemplate>
                                                                 <asp:Button CssClass="inpu" ID="BT_Type" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Type").ToString().Trim() %>' />
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ExchangeRate" HeaderText="»ãÂÊ">
+                                                        <asp:BoundColumn DataField="ExchangeRate" HeaderText="ExchangeRate">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="SortNo" HeaderText="ÅÅÐò">

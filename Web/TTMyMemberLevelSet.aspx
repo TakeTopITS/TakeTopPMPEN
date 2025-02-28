@@ -93,11 +93,11 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="UserName" HeaderText="姓名" Target="_blank">
+                                                            DataTextField="UserName" HeaderText="Name" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:BoundColumn DataField="ProjectVisible" HeaderText="项目可视">

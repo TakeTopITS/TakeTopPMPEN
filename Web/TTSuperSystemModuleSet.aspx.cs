@@ -36,7 +36,7 @@ public partial class TTSuperSystemModuleSet : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet.aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet", "系统模组设定", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet.aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet", "SystemModuleSettings", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");

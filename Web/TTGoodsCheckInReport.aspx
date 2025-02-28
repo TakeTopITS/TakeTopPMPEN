@@ -241,35 +241,35 @@
                                         ShowHeader="false" Height="1px"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="CheckInID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="CheckInID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="代码">
+                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="GoodsCode" DataNavigateUrlFormatString="TTGoodsInforView.aspx?GoodsCode={0}"
-                                                DataTextField="GoodsName" HeaderText="名称" Target="_blank">
+                                                DataTextField="GoodsName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                             </asp:HyperLinkColumn>
                                             <asp:BoundColumn DataField="Manufacturer" HeaderText="PinPai">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                            <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                            <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Price" HeaderText="单价">
+                                            <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="IsTaxPrice" HeaderText="<%$ Resources:lang,HanShui%>">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                            <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="Position" HeaderText="地址">

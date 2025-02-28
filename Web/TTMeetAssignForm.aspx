@@ -425,7 +425,7 @@
                                                                                             <asp:BoundColumn DataField="Address">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -488,7 +488,7 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}" DataTextField="WLName" HeaderText="Workflow" Target="_blank">
@@ -497,7 +497,7 @@
                                                                                             <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -586,7 +586,7 @@
                                             CellPadding="4" ForeColor="#333333" GridLines="None">
 
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="编号">
+                                                <asp:TemplateColumn HeaderText="Number">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                     </ItemTemplate>
@@ -598,10 +598,10 @@
                                                 <asp:BoundColumn DataField="Host" HeaderText="主持人">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="BeginTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="开始时间">
+                                                <asp:BoundColumn DataField="BeginTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="StartTime">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="14%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="结束时间">
+                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="EndTime">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="14%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="Organizer" HeaderText="召集人">
@@ -610,7 +610,7 @@
                                                 <asp:BoundColumn DataField="Address" HeaderText="会议室">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="17%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="状态">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <ItemTemplate>
                                                         <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                     </ItemTemplate>

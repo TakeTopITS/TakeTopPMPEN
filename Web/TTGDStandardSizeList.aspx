@@ -128,7 +128,7 @@
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ID" HeaderText="Ë³ÐòºÅ">
+                                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Size" HeaderText="³ß´ç">
@@ -149,7 +149,7 @@
                                                             <asp:BoundColumn DataField="BQMainCode" HeaderText="Ö÷Òª±àºÅ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="BQSubCode" HeaderText="±àºÅ">
+                                                            <asp:BoundColumn DataField="BQSubCode" HeaderText="Number">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

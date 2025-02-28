@@ -100,7 +100,7 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
             bMSupplierBidRecord.AnnInvitationID = int.Parse(LB_ID.Text.Trim());
             bMSupplierBidRecord.SupplierCode = bMSupplierBid.SupplierCode;
             bMSupplierBidRecord.BiddingContent = bMSupplierBid.BiddingContent;
-            bMSupplierBidRecord.OperationType = "ÐÂÔö"; 
+            bMSupplierBidRecord.OperationType = "Add";   //ChineseWord
             bMSupplierBidRecord.OperationDate = DateTime.Parse(DateTime.Now.ToString());
             bMSupplierBidRecordBLL.AddBMSupplierBidRecord(bMSupplierBidRecord);
 
@@ -171,7 +171,7 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
             bMSupplierBidRecord.AnnInvitationID = int.Parse(LB_ID.Text.Trim());
             bMSupplierBidRecord.SupplierCode = bMSupplierBid.SupplierCode;
             bMSupplierBidRecord.BiddingContent = bMSupplierBid.BiddingContent;
-            bMSupplierBidRecord.OperationType = "ÐÞ¸Ä"; 
+            bMSupplierBidRecord.OperationType = "Modify";   //ChineseWord
             bMSupplierBidRecord.OperationDate = DateTime.Parse(DateTime.Now.ToString());
             bMSupplierBidRecordBLL.AddBMSupplierBidRecord(bMSupplierBidRecord);
 

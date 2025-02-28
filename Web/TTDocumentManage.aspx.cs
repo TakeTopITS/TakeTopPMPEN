@@ -24,7 +24,7 @@ public partial class TTDocumentManage : System.Web.UI.Page
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
 
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "知识管理", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "KnowledgeManagement", strUserCode);
 
 
         if (blVisible == false)
@@ -51,23 +51,23 @@ public partial class TTDocumentManage : System.Web.UI.Page
             ShareClass.InitialPrjectTreeByAuthority(TreeView2, strUserCode);
 
             strHQL = "from Document as document where (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + ")"; 
-            strHQL += " or document.Visible = '集团'  or document.Visible = 'All')"; 
+            strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";  
+            strHQL += " or document.Visible = 'Group'  or document.Visible = 'All')";  
             strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += "or (document.Visible = '公司' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))"; 
+            strHQL += "or (document.Visible = 'Company' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))";  
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Defect' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))"; 
-            strHQL += " or (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))"; 
-            strHQL += "or (document.Visible = '公司' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))"; 
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Defect' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+            strHQL += " or (document.RelatedType = 'Contract' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";   //ChineseWord
+            strHQL += "or (document.Visible = 'Company' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";  
 
 
             strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
@@ -161,23 +161,23 @@ public partial class TTDocumentManage : System.Web.UI.Page
                 strHQL = "from Document as document where  document.DocTypeID = " + "'" + strDocTypeID + "'";
 
                 strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + ")"; 
-                strHQL += " or document.Visible = '集团'  or document.Visible = 'All')"; 
+                strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";  
+                strHQL += " or document.Visible = 'Group'  or document.Visible = 'All')";  
 
                 strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-                strHQL += "or (document.Visible = '公司' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))"; 
+                strHQL += "or (document.Visible = 'Company' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))";  
                 strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))"; 
-                strHQL += " or (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))"; 
-                strHQL += "or (document.Visible = '公司' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))"; 
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+                strHQL += " or (document.RelatedType = 'Contract' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";   //ChineseWord
+                strHQL += "or (document.Visible = 'Company' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";  
                 strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
                 lst = documentBLL.GetAllDocuments(strHQL);
                 DataGrid1.DataSource = lst;
@@ -205,24 +205,24 @@ public partial class TTDocumentManage : System.Web.UI.Page
             {
                 strHQL = "from Document as document where ";
                 strHQL += " (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + ")"; 
-                strHQL += " or (document.Visible = '集团')  or (document.Visible = 'All'))"; 
+                strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";  
+                strHQL += " or (document.Visible = 'Group')  or (document.Visible = 'All'))";  
 
                 strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-                strHQL += "or (document.Visible = '公司' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))"; 
+                strHQL += "or (document.Visible = 'Company' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))";  
 
                 strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))"; 
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))"; 
-                strHQL += " or (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))"; 
-                strHQL += "or (document.Visible = '公司' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))"; 
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+                strHQL += " or (document.RelatedType = 'Contract' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";   //ChineseWord
+                strHQL += "or (document.Visible = 'Company' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";  
                 strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
                 lst = documentBLL.GetAllDocuments(strHQL);
                 DataGrid1.DataSource = lst;
@@ -409,25 +409,25 @@ public partial class TTDocumentManage : System.Web.UI.Page
 
 
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + ")"; 
-            strHQL += " or (document.Visible = '集团')  or (document.Visible = 'All'))"; 
+            strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";  
+            strHQL += " or (document.Visible = 'Group')  or (document.Visible = 'All'))";  
 
 
             strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += "or (document.Visible = '公司' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))"; 
+            strHQL += "or (document.Visible = 'Company' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in" + strParentDepartString + "))";  
 
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))"; 
-            strHQL += " or (document.Visible = '全体' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))"; 
-            strHQL += " or (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))"; 
-            strHQL += "or (document.Visible = '公司' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))"; 
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";   //ChineseWord
+            strHQL += " or (document.RelatedType = 'Contract' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";   //ChineseWord
+            strHQL += "or (document.Visible = 'Company' and (document.DepartCode in" + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";  
 
             strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
 
@@ -480,15 +480,15 @@ public partial class TTDocumentManage : System.Web.UI.Page
 
 
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体')))"; 
+            strHQL += " or (document.Visible in ( 'Department','Entire')))";   //ChineseWord
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
             strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strRelatedID + "))";
-            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))"; 
+            strHQL += "or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))";  
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + "))"; 
-            strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) "; 
-            strHQL += " or (document.Visible = '全体' )))))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + "))";  
+            strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  
+            strHQL += " or (document.Visible = 'Entire' )))))";   //ChineseWord
         }
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 

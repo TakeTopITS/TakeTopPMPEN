@@ -160,7 +160,7 @@
                                         </asp:TemplateColumn>
 
 
-                                        <%--                                            <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                        <%--                                            <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:TemplateColumn HeaderText="位置：">
@@ -189,7 +189,7 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="60%" />
                                             </asp:TemplateColumn>
 
-                                            <asp:BoundColumn DataField="CreateTime" HeaderText="时间">
+                                            <asp:BoundColumn DataField="CreateTime" HeaderText="Time">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>--%>
                                     </Columns>

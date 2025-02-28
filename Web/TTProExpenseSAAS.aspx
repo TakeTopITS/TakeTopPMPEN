@@ -177,7 +177,7 @@
                                             OnItemCommand="DataGrid1_ItemCommand"
                                             ShowHeader="false" CellPadding="4" GridLines="None">
                                             <Columns>
-                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
@@ -189,7 +189,7 @@
                                                 <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="Account" HeaderText="科目">
+                                                <asp:BoundColumn DataField="Account" HeaderText="Subject">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="Description" HeaderText="描述">
@@ -198,7 +198,7 @@
                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="发生时间">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="Amount" HeaderText="金额">
+                                                <asp:BoundColumn DataField="Amount" HeaderText="Amount">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="ConfirmAmount" HeaderText="确认金额">

@@ -137,7 +137,7 @@
                                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="20" ShowHeader="false"
                                                                                 Width="100%" OnPageIndexChanged="DG_PickPlanDetailList_PageIndexChanged">
                                                                                 <Columns>
-                                                                                    <%--   <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                                                                    <%--   <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                     </asp:BoundColumn>--%>
                                                                                     <asp:TemplateColumn>

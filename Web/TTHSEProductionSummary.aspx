@@ -113,7 +113,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -122,12 +122,12 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
+                                                        <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
+                                                        <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />

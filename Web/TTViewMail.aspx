@@ -111,7 +111,7 @@
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                         </asp:TemplateField>
-                                        <asp:TemplateField HeaderText="创建时间">
+                                        <asp:TemplateField HeaderText="CreationTime">
                                             <ItemTemplate>
                                                 <%# DataBinder.Eval(Container.DataItem,"SenderDate")%>
                                             </ItemTemplate>

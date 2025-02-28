@@ -142,7 +142,7 @@ public partial class TTUploadFileWithDialog : System.Web.UI.Page
         strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "Select GroupName,HomeName from T_ActorGroup where GroupName <> 'Θ«Με' and  Type = 'All' "; 
+        strHQL = "Select GroupName,HomeName from T_ActorGroup where GroupName <> 'Entire' and  Type = 'All' ";   //ChineseWord
         strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
         strHQL += " Or BelongDepartCode in " + strDepartString + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";

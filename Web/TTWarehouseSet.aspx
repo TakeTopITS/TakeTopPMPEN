@@ -123,10 +123,10 @@
                                                         <asp:BoundColumn DataField="ParentWH" HeaderText="父仓库">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BelongDepartCode" HeaderText="部门代码">
+                                                        <asp:BoundColumn DataField="BelongDepartCode" HeaderText="DepartmentCode">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BelongDepartName" HeaderText="部门名称">
+                                                        <asp:BoundColumn DataField="BelongDepartName" HeaderText="DepartmentName">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
@@ -220,7 +220,7 @@
                                                                                 </strong></td>
 
                                                                                 <td align="center"><strong>
-                                                                                    <asp:Label ID="Label234237" runat="server" Text="备注"></asp:Label>
+                                                                                    <asp:Label ID="Label234237" runat="server" Text="Remark"></asp:Label>
                                                                                 </strong></td>
                                                                             </tr>
                                                                         </table>
@@ -250,7 +250,7 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="Comment" HeaderText="部门名称">
+                                                                    <asp:BoundColumn DataField="Comment" HeaderText="DepartmentName">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                     </asp:BoundColumn>
 

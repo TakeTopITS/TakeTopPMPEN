@@ -181,7 +181,7 @@
                                                             <asp:BoundColumn DataField="Description" HeaderText="ËµÃ÷">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Remarks" HeaderText="±¸×¢">
+                                                            <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

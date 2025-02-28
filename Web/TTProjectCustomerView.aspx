@@ -100,13 +100,13 @@
                                                         </table>
                                                         <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid2_ItemCommand" ShowHeader="False" Width="100%">
                                                             <Columns>
-                                                                <asp:TemplateColumn HeaderText="代码">
+                                                                <asp:TemplateColumn HeaderText="Code">
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_CustomerCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"CustomerCode") %>' />
                                                                     </ItemTemplate>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="CustomerName" HeaderText="名称">
+                                                                <asp:BoundColumn DataField="CustomerName" HeaderText="Name">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -314,10 +314,10 @@
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTCustomerQuestionHandleRecordList.aspx?ID={0}"
@@ -325,7 +325,7 @@
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                 </asp:HyperLinkColumn>
 
-                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                <asp:TemplateColumn HeaderText="Status">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>
@@ -335,7 +335,7 @@
                                                                     DataTextField="OperatorName" HeaderText="受理人" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OperatorStatus").ToString()) %>
     </ItemTemplate>

@@ -163,7 +163,7 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         string strYearMonth = DLC_YearMonth.Text.Trim() == "" ? DateTime.Now.ToString("yyyy-MM") : DLC_YearMonth.Text.Trim();
         if (ddl_ProjectID.SelectedValue.Trim() == "0")
         {
-            strHQL = "select A.WorkType '工种',A.WeekTotal1 '第一周',A.WeekTotal2 '第二周',A.WeekTotal3 '第三周',A.WeekTotal4 '第四周',COALESCE(B.WeekTotal,0) '储备量' from (select WorkType," + 
+            strHQL = "select A.WorkType 'Occupation',A.WeekTotal1 'FirstWeek',A.WeekTotal2 'SecondWeek',A.WeekTotal3 'ThirdWeek',A.WeekTotal4 'FourthWeek',COALESCE(B.WeekTotal,0) 'ReserveQuantity' from (select WorkType," +   //ChineseWord
                 " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=1 then NumberUsed else 0 end) WeekTotal1 ," +
                 " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=2 then NumberUsed else 0 end) WeekTotal2 ," +
                 " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=3 then NumberUsed else 0 end) WeekTotal3 ," +
@@ -175,10 +175,10 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         }
         else
         {
-            strHQL = "select WorkType '工种', sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=1 then NumberUsed else 0 end) '第一周' ," + 
+            strHQL = "select WorkType 'Occupation', sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=1 then NumberUsed else 0 end) 'FirstWeek' ," +   //ChineseWord
                 " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm").ToString().Trim() +
                 " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm").ToString().Trim() +
-                " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=4 then NumberUsed else 0 end) '第四周' from " + 
+                " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=4 then NumberUsed else 0 end) 'FourthWeek' from " +   //ChineseWord
                 "T_ProjectMemberSchedule where ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by WorkType";
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMemberSchedule");

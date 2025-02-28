@@ -216,7 +216,7 @@
                                                                         <asp:BoundColumn DataField="SignTime" HeaderText="评标日期">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

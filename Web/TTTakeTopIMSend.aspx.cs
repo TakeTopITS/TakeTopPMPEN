@@ -290,7 +290,7 @@ public partial class TTTakeTopIMSend : System.Web.UI.Page
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "Ð­×÷"; 
+                document.RelatedType = "Collaboration";  
                 document.DocType = strDocType;
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.RelatedID = int.Parse(strCoID);

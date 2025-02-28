@@ -105,21 +105,21 @@
                                                     <asp:BoundColumn DataField="ID" HeaderText="">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Account" HeaderText="科目">
+                                                    <asp:BoundColumn DataField="Account" HeaderText="Subject">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Amount" HeaderText="金额">
+                                                    <asp:BoundColumn DataField="Amount" HeaderText="Amount">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Description" HeaderText="描述">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                        DataTextField="CreatorName" HeaderText="姓名" Target="_blank">
+                                                        DataTextField="CreatorName" HeaderText="Name" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="UpdaterCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                        DataTextField="UpdaterName" HeaderText="姓名" Target="_blank">
+                                                        DataTextField="UpdaterName" HeaderText="Name" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:BoundColumn DataField="UpdateTime" HeaderText="变更时间">

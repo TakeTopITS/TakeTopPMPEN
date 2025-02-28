@@ -52,7 +52,7 @@ public partial class TTCompanyNotice : System.Web.UI.Page
 
         strHQL = "Select DocID,DocType,DocName,Address,RelatedDepartName,UploadManCode,UploadManName,UploadTime From T_PublicNotice ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-        strHQL += " And Status = '·¢²¼' Order By DocID DESC"; 
+        strHQL += " And Status = 'Publish' Order By DocID DESC";   //ChineseWord
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_PublicNotice");
 
         DataGrid1.DataSource = ds;

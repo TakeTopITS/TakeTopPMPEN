@@ -146,10 +146,10 @@
                                                                 OnPageIndexChanged="DataGrid1_PageIndexChanged" Width="100%" AllowPaging="True"
                                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None" ItemDataBound="DataGrid1_ItemDataBound">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="代码">
+                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="Code">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="11%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
@@ -260,7 +260,7 @@
                                                                     <asp:BoundColumn DataField="Priority" HeaderText="优先级" Visible="false">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                         </ItemTemplate>

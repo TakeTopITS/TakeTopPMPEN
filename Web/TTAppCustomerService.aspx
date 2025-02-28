@@ -167,7 +167,7 @@
                                                 </asp:TemplateColumn>
 
 
-                                                <%--    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                <%--    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:BoundColumn>
 
@@ -176,7 +176,7 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                 </asp:HyperLinkColumn>
 
-                                                <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>
@@ -256,7 +256,7 @@
 
 
 
-                                                <%--                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                <%--                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:BoundColumn>
 
@@ -265,7 +265,7 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                 </asp:HyperLinkColumn>
 
-                                                <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>
@@ -344,7 +344,7 @@
                                                 </asp:TemplateColumn>
 
 
-                                                <%--     <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                <%--     <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:BoundColumn>
 
@@ -353,7 +353,7 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                 </asp:HyperLinkColumn>
 
-                                                <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>
@@ -433,7 +433,7 @@
 
 
 
-                                                <%--         <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                <%--         <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:BoundColumn>
 
@@ -442,7 +442,7 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                 </asp:HyperLinkColumn>
 
-                                                <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>
@@ -523,7 +523,7 @@
 
 
 
-                                                <%--                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                <%--                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:BoundColumn>
 
@@ -532,7 +532,7 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                 </asp:HyperLinkColumn>
 
-                                                <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>

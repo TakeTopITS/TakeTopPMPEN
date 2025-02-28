@@ -149,7 +149,7 @@
                                                     ShowHeader="False" AllowPaging="True" PageSize="25" CellPadding="4" ForeColor="#333333"
                                                     GridLines="None">
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -164,7 +164,7 @@
                                                         <asp:BoundColumn DataField="DefectID" HeaderText="ID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DefectType" HeaderText="类型">
+                                                        <asp:BoundColumn DataField="DefectType" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="DefectName" HeaderText="需求名称">
@@ -176,7 +176,7 @@
                                                         <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="建立日期">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass.GetStatusHomeNameByDefectmentStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

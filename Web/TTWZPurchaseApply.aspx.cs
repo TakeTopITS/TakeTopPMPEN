@@ -38,8 +38,8 @@ public partial class TTWZPurchaseApply : System.Web.UI.Page
                         left join T_ProjectMember pe on p.PurchaseEngineer = pe.UserCode
                         left join T_ProjectMember pm on p.TenderCompetent = pm.UserCode
                         where s.SupplierCode = '{0}'
-                        and p.Progress in('询价','报价')
-                        order by p.MarkTime desc", strUserCode); 
+                        and p.Progress in('询价','Quotation')
+                        order by p.MarkTime desc", strUserCode);   //ChineseWord
 
 
         DataTable dtPurchase = ShareClass.GetDataSetFromSql(strPurchaseHQL, "Purchase").Tables[0];
@@ -86,7 +86,7 @@ public partial class TTWZPurchaseApply : System.Web.UI.Page
 
                     string strPurchaseCode = ShareClass.ObjectToString(drPurchase["PurchaseCode"]);
                     string strSupplierCode = strUserCode;// ShareClass.ObjectToString(drPurchase["SupplierCode"]);
-                    string strUpdatePurchaseSupplierSQL = string.Format("Select * From T_WZPurchaseOfferRecord Where Progress = '报价' and PurchaseCode = '{0}' and SupplierCode = '{1}'", strPurchaseCode, strSupplierCode); 
+                    string strUpdatePurchaseSupplierSQL = string.Format("Select * From T_WZPurchaseOfferRecord Where Progress = 'Quotation' and PurchaseCode = '{0}' and SupplierCode = '{1}'", strPurchaseCode, strSupplierCode);   //ChineseWord
                     DataSet ds = ShareClass.GetDataSetFromSql(strUpdatePurchaseSupplierSQL, "T_WZPurchaseOfferRecord");
 
                     if (ds.Tables[0].Rows.Count > 0)
@@ -630,7 +630,7 @@ public partial class TTWZPurchaseApply : System.Web.UI.Page
 
             string strPurchaseCode = ShareClass.ObjectToString(drPurchase["PurchaseCode"]);
             string strSupplierCode = strUserCode;//ShareClass.ObjectToString(drPurchase["SupplierCode"]);
-            string strUpdatePurchaseSupplierSQL = string.Format("update T_WZPurchaseOfferRecord set Progress = '报价' where PurchaseCode = '{0}' and SupplierCode = '{1}'", strPurchaseCode, strSupplierCode); 
+            string strUpdatePurchaseSupplierSQL = string.Format("update T_WZPurchaseOfferRecord set Progress = 'Quotation' where PurchaseCode = '{0}' and SupplierCode = '{1}'", strPurchaseCode, strSupplierCode);   //ChineseWord
 
             ShareClass.RunSqlCommand(strUpdatePurchaseSupplierSQL);
 
@@ -687,7 +687,7 @@ public partial class TTWZPurchaseApply : System.Web.UI.Page
 
             string strPurchaseCode = ShareClass.ObjectToString(drPurchase["PurchaseCode"]);
             string strSupplierCode = strUserCode;// ShareClass.ObjectToString(drPurchase["SupplierCode"]);
-            string strUpdatePurchaseSupplierSQL = string.Format("update T_WZPurchaseOfferRecord set Progress = '询价' where PurchaseCode = '{0}' and SupplierCode = '{1}'", strPurchaseCode, strSupplierCode); 
+            string strUpdatePurchaseSupplierSQL = string.Format("update T_WZPurchaseOfferRecord set Progress = '询价' where PurchaseCode = '{0}' and SupplierCode = '{1}'", strPurchaseCode, strSupplierCode);   //ChineseWord
 
             ShareClass.RunSqlCommand(strUpdatePurchaseSupplierSQL);
 

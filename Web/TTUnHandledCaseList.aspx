@@ -24,7 +24,7 @@
                                     <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="False" AutoGenerateColumns="False" PageSize="18" Width="100%"
                                         CellPadding="0" ForeColor="#333333" GridLines="None" ShowHeader="False" Height="1px">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ" Visible="false">
+                                            <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                 <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="1%" />
                                             </asp:BoundColumn>
                                             <asp:TemplateColumn>

@@ -188,7 +188,7 @@
 
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="AttachmentID" HeaderText="±àºÅ">
+                                                    <asp:BoundColumn DataField="AttachmentID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>

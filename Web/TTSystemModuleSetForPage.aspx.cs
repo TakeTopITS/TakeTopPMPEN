@@ -34,7 +34,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         strForbitModule = Session["ForbitModule"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet", "系统模组设定", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet", "SystemModuleSettings", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");

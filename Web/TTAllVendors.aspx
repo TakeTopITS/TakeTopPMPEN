@@ -145,7 +145,7 @@
                                                     ShowHeader="false" Width="100%" PageSize="5" GridLines="None" CellPadding="4"
                                                     ForeColor="#333333">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="VendorCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="VendorCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="VendorCode" DataNavigateUrlFormatString="TTVendorInfoView.aspx?VendorCode={0}"
@@ -155,7 +155,7 @@
                                                         <asp:BoundColumn DataField="ContactName" HeaderText="联系人">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Tel1" HeaderText="电话">
+                                                        <asp:BoundColumn DataField="Tel1" HeaderText="Telephone">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">

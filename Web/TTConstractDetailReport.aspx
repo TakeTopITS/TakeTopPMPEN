@@ -209,7 +209,7 @@
                                         Height="1px" Width="1400px" ShowHeader="false"
                                         CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:TemplateColumn HeaderText="序号">
+                                            <asp:TemplateColumn HeaderText="SerialNumber">
                                                 <ItemTemplate>
                                                    <%# Container.ItemIndex %>
                                                 </ItemTemplate>
@@ -218,11 +218,11 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:TemplateColumn>
 
-                                            <asp:BoundColumn DataField="单位" HeaderText="单位">
+                                            <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="合同号" HeaderText="合同号">
+                                            <asp:BoundColumn DataField="ContractNumber" HeaderText="ContractNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
@@ -230,50 +230,50 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="订货金额" HeaderText="订货金额(外币)">
+                                            <asp:BoundColumn DataField="OrderAmount" HeaderText="订货金额(外币)">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
 
 
-                                            <asp:BoundColumn DataField="国外进货成本" HeaderText="国外进货成本">
+                                            <asp:BoundColumn DataField="ForeignImportCost" HeaderText="ForeignImportCost">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="国内进货成本" HeaderText="国内进货成本">
+                                            <asp:BoundColumn DataField="DomesticImportCost" HeaderText="DomesticImportCost">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="进口关税" HeaderText="进口关税">
+                                            <asp:BoundColumn DataField="ImportDuty" HeaderText="ImportDuty">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="进口增值税" HeaderText="进口增值税">
+                                            <asp:BoundColumn DataField="ImportVAT" HeaderText="ImportVAT">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="其他费用总额" HeaderText="其他费用总额">
+                                            <asp:BoundColumn DataField="TotalOtherCharges" HeaderText="TotalOtherCharges">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="银行手续费" HeaderText="银行手续费">
+                                            <asp:BoundColumn DataField="BankHandlingFee" HeaderText="BankHandlingFee">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="其他付费" HeaderText="其他付费">
+                                            <asp:BoundColumn DataField="OtherPayments" HeaderText="OtherPayments">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="应交增值税" HeaderText="应交增值税">
+                                            <asp:BoundColumn DataField="VATPayable" HeaderText="VATPayable">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
-                                             <asp:BoundColumn DataField="应交地税" HeaderText="应交地税">
+                                             <asp:BoundColumn DataField="LocalTaxPayable" HeaderText="LocalTaxPayable">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                             <asp:BoundColumn DataField="印花税" HeaderText="印花税">
+                                             <asp:BoundColumn DataField="StampDuty" HeaderText="StampDuty">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                             <asp:BoundColumn DataField="防洪费" HeaderText="防洪费">
+                                             <asp:BoundColumn DataField="FloodControlFee" HeaderText="FloodControlFee">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="合同利润" HeaderText="合同利润">
+                                            <asp:BoundColumn DataField="ContractProfit" HeaderText="ContractProfit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 

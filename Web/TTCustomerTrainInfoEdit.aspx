@@ -289,13 +289,13 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="编号">
+                                                                                <asp:TemplateColumn HeaderText="Number">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%"></ItemStyle>
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="TrainingProject" HeaderText="培训项目">
+                                                                                <asp:BoundColumn DataField="TrainingProject" HeaderText="TrainingProgram">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%"></ItemStyle>
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TrainingAccord" HeaderText="培训依据">
@@ -310,7 +310,7 @@
                                                                                 <asp:BoundColumn DataField="TrainingContent" HeaderText="培训内容">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%"></ItemStyle>
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TrainingTime" HeaderText="培训日期" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                <asp:BoundColumn DataField="TrainingTime" HeaderText="TrainingDate" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%"></ItemStyle>
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
@@ -790,13 +790,13 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="编号">
+                                                                                            <asp:TemplateColumn HeaderText="Number">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%"></ItemStyle>
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="HolderProject" HeaderText="持证项目">
+                                                                                            <asp:BoundColumn DataField="HolderProject" HeaderText="CertifiedProjects">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%"></ItemStyle>
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="ValidTime" HeaderText="有效期">

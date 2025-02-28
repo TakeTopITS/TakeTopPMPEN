@@ -70,11 +70,11 @@
                                                                 <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"  Width="100%">
                                                                     
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="FormCode" HeaderText="´úÂë">
+                                                                        <asp:BoundColumn DataField="FormCode" HeaderText="Code">
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="40%" />
                                                                             <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="FormName" HeaderText="Ãû³Æ">
+                                                                        <asp:BoundColumn DataField="FormName" HeaderText="Name">
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="40%" />
                                                                             <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                         </asp:BoundColumn>

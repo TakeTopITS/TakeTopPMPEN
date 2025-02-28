@@ -297,22 +297,22 @@ public partial class TTWZCompactList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strProjectCode))
             {
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strSupplierCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strCompactName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strControlMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
 
@@ -417,7 +417,7 @@ public partial class TTWZCompactList : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到采购工程师对应的需方记录！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到采购工程师对应的需方记录！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -427,7 +427,7 @@ public partial class TTWZCompactList : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus();ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus();ControlStatusCloseChange();", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -450,22 +450,22 @@ public partial class TTWZCompactList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strProjectCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strSupplierCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strCompactName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strControlMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
 
@@ -530,7 +530,7 @@ public partial class TTWZCompactList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到采购工程师对应的需方记录！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到采购工程师对应的需方记录！');", true);   //ChineseWord
                 return;
             }
 
@@ -540,7 +540,7 @@ public partial class TTWZCompactList : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -564,22 +564,22 @@ public partial class TTWZCompactList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strProjectCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strSupplierCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strCompactName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strControlMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
 
@@ -617,7 +617,7 @@ public partial class TTWZCompactList : System.Web.UI.Page
             else
             {
                 //增加 提示先选择合同列表
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择合同列表！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择合同列表！');", true);   //ChineseWord
                 return;
             }
 
@@ -626,7 +626,7 @@ public partial class TTWZCompactList : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -765,11 +765,11 @@ public partial class TTWZCompactList : System.Web.UI.Page
                     }
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传报价文件成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传报价文件成功！');", true);   //ChineseWord
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -814,11 +814,11 @@ public partial class TTWZCompactList : System.Web.UI.Page
                     HF_CompactTextURL.Value = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\Doc\\" + strFileName3;
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传采购文件成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传采购文件成功！');", true);   //ChineseWord
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }

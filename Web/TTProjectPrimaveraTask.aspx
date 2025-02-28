@@ -101,7 +101,7 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="100%" PageSize="20"
                                                 OnItemCommand="DataGrid1_ItemCommand" ShowHeader="false" CellPadding="4" GridLines="None">
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -113,10 +113,10 @@
                                                     <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TaskCode" HeaderText="作业编码">
+                                                    <asp:BoundColumn DataField="TaskCode" HeaderText="JobCode">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TaskName" HeaderText="作业名称">
+                                                    <asp:BoundColumn DataField="TaskName" HeaderText="JobName">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="BeginDate" HeaderText="开始日期" DataFormatString="{0:yyyy-MM-dd}">

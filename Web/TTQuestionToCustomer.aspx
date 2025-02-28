@@ -161,13 +161,13 @@
                                                     Width="250px" CellPadding="4"
                                                     ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="代码">
+                                                        <asp:TemplateColumn HeaderText="Code">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_CustomerCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"CustomerCode") %>' />
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="CustomerName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="CustomerName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -212,13 +212,13 @@
                                                     OnPageIndexChanged="DataGrid2_PageIndexChanged" Width="250px" CellPadding="4"
                                                     ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="代码">
+                                                        <asp:TemplateColumn HeaderText="Code">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_CustomerCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"CustomerCode") %>' />
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="CustomerName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="CustomerName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -398,11 +398,11 @@
                                                         </td>
                                                         <td style="text-align: left;" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_Currency" runat="server">
-                                                                <asp:ListItem Value="人民币" Text="<%$ Resources:lang,RenMinBi%>" />
-                                                                <asp:ListItem Value="美元" Text="<%$ Resources:lang,MeiYuan%>" />
-                                                                <asp:ListItem Value="欧元" Text="<%$ Resources:lang,OuYuan%>" />
-                                                                <asp:ListItem Value="港币" Text="<%$ Resources:lang,GangBi%>" />
-                                                                <asp:ListItem Value="台币" Text="<%$ Resources:lang,TaiBi%>" />
+                                                                <asp:ListItem Value="Renminbi" Text="<%$ Resources:lang,RenMinBi%>" />
+                                                                <asp:ListItem Value="UsDollar" Text="<%$ Resources:lang,MeiYuan%>" />
+                                                                <asp:ListItem Value="Euro" Text="<%$ Resources:lang,OuYuan%>" />
+                                                                <asp:ListItem Value="HongKongDollar" Text="<%$ Resources:lang,GangBi%>" />
+                                                                <asp:ListItem Value="NewTaiwanDollar" Text="<%$ Resources:lang,TaiBi%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
@@ -615,7 +615,7 @@
                                                                             ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand"
                                                                             ShowHeader="False" Width="100%">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
@@ -630,7 +630,7 @@
                                                                                 <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="立项日期">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
@@ -656,7 +656,7 @@
                                                                         </asp:DataGrid>
                                                                     </ContentTemplate>
                                                                 </cc1:TabPanel>
-                                                                <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="可视人员" TabIndex="0">
+                                                                <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="VisiblePersonnel" TabIndex="0">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,KeShiRenYuan%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -842,11 +842,11 @@
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" Width="8%" />
                                         </asp:TemplateColumn>
-                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="代码">
+                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="Code">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                         </asp:BoundColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
-                                            DataTextField="CustomerName" HeaderText="客户名称" Target="_blank">
+                                            DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                         </asp:HyperLinkColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
@@ -856,7 +856,7 @@
                                         <asp:BoundColumn DataField="ContactName" HeaderText="联系人">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="Tel1" HeaderText="电话">
+                                        <asp:BoundColumn DataField="Tel1" HeaderText="Telephone">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                         </asp:BoundColumn>
                                         <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">

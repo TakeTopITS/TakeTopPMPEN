@@ -168,10 +168,10 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="RiskLevel" HeaderText="级别">
+                                                        <asp:BoundColumn DataField="RiskLevel" HeaderText="Level">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectRiskView.aspx?RiskID={0}"
@@ -181,7 +181,7 @@
                                                         <asp:BoundColumn DataField="EffectDate" HeaderText="预计发生时间">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

@@ -40,8 +40,8 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                     left join T_ProjectMember a on r.Approver = a.UserCode 
                     left join T_WZSupplier s on r.SupplierCode = s.SupplierCode
                     where r.Approver ='{0}' 
-                    and r.Progress in ('Çë¿î','ÉóºË','±¨Ïú') 
-                    order by r.RequestTime desc", strUserCode); 
+                    and r.Progress in ('Claim for Payment','Review','Reimbursement') 
+                    order by r.RequestTime desc", strUserCode);   //ChineseWord
         DataTable dtRequest = ShareClass.GetDataSetFromSql(strRequestHQL, "Request").Tables[0];
 
         DG_Request.DataSource = dtRequest;

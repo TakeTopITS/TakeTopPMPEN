@@ -109,11 +109,11 @@
                                                 ShowHeader="false" Height="1px" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
 
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TaskID" HeaderText="任务号">
@@ -128,7 +128,7 @@
                                                     <asp:BoundColumn DataField="Requisite" HeaderText="通过条件">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="状态">
+                                                    <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>
@@ -292,7 +292,7 @@
 
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="TestCaseID" HeaderText="用例号">
@@ -301,7 +301,7 @@
                                                 <asp:BoundColumn DataField="Command" HeaderText="详细说明">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="状态">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <ItemTemplate>
                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                     </ItemTemplate>

@@ -98,14 +98,14 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
-        strHQL = @"Select UserCode as '代码', 
-                   UserName as '姓名', 
-                   DepartCode as '部门代码', 
-                   DepartName as '部门名称', 
-                   ProjectID as '项目ID', 
+        strHQL = @"Select UserCode as 'Code',   //ChineseWord
+                   UserName as 'Name',   //ChineseWord
+                   DepartCode as 'DepartmentCode',   //ChineseWord
+                   DepartName as 'DepartmentName',   //ChineseWord
+                   ProjectID as '项目ID',   //ChineseWord
                    ProjectName as 'Project',
-                   sum(ManHour) as '申报工时', 
-                   sum(ConfirmManHour) as '确认工时' 
+                   sum(ManHour) as 'DeclaredLaborHours',   //ChineseWord
+                   sum(ConfirmManHour) as 'ConfirmedLaborHours'   //ChineseWord
                    From V_ProjectMemberManHourSummary";
 
         strHQL += " Where DepartName Like " + "'" + strDepartName + "'";
@@ -127,7 +127,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
 
         Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanGongShiHuiZong").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     protected void SumManHour(DataSet ds)

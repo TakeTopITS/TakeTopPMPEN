@@ -68,7 +68,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
     public void DataCompactBinder()
     {
         WZCompactBLL wZCompactBLL = new WZCompactBLL();
-        string strWZCompactHQL = "from WZCompact as wZCompact where Progress in ('生效','材检') and Checker = '" + strUserCode + "' order by CompactCode desc"; 
+        string strWZCompactHQL = "from WZCompact as wZCompact where Progress in ('生效','材检') and Checker = '" + strUserCode + "' order by CompactCode desc";   //ChineseWord
         IList listCompact = wZCompactBLL.GetAllWZCompacts(strWZCompactHQL);
 
         LB_Compact.DataSource = listCompact;
@@ -481,7 +481,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
             //合同明细〈检号〉＝“正在材检” 												
             //合同明细〈材检标志〉＝“0”												
 
-            string strCompactDetailSQL = "update T_WZCompactDetail set CheckCode ='正在材检',IsCheck=0 where id = " + wZCompactCheck.CompactDetailID; 
+            string strCompactDetailSQL = "update T_WZCompactDetail set CheckCode ='正在材检',IsCheck=0 where id = " + wZCompactCheck.CompactDetailID;   //ChineseWord
             ShareClass.RunSqlCommand(strCompactDetailSQL);
 
             //检号退回成功
@@ -597,7 +597,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
             string strWZCompactDetailHQL = string.Format(@"from WZCompactDetail as wZCompactDetail
                             where CompactCode = '{0}'
                             and (CheckCode = '' or CheckCode = '正在材检')
-                            and IsMark = 0", strCompactCode); 
+                            and IsMark = 0", strCompactCode);   //ChineseWord
             IList lstCompactDetail = wZCompactDetailBLL.GetAllWZCompactDetails(strWZCompactDetailHQL);
 
             if (lstCompactDetail != null && lstCompactDetail.Count > 0)

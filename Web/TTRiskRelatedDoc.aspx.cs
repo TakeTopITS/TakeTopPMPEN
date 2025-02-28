@@ -95,7 +95,7 @@ public partial class TTRiskRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = "from Document as document where document.RelatedType = '风险' and document.RelatedID =" + strRiskID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Risk' and document.RelatedID =" + strRiskID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
             //设置缺省的文件类型
@@ -108,7 +108,7 @@ public partial class TTRiskRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = "from Document as document where document.RelatedType = '风险' and document.RelatedID =" + strRiskID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Risk' and document.RelatedID =" + strRiskID + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
@@ -496,13 +496,13 @@ public partial class TTRiskRelatedDoc : System.Web.UI.Page
         strDepartCode = GetDepartCode(strUserCode);
 
         strHQL = "from Document as document where ";
-        strHQL += " ((document.RelatedType = '风险' and document.RelatedID = " + strRiskID; 
+        strHQL += " ((document.RelatedType = 'Risk' and document.RelatedID = " + strRiskID;  
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
-        strHQL += " or ( document.Visible = '全体'))) "; 
-        strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID =" + strRiskID + "))"; 
+        strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
+        strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Risk' and meeting.RelatedID =" + strRiskID + "))";  
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '会议'))))"; 
+        strHQL += " or ( document.Visible = 'Meeting'))))";  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

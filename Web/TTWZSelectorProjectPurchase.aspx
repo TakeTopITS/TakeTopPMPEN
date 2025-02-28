@@ -138,7 +138,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("ProjectName").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="项目经理">
+                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="ProjectManager">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

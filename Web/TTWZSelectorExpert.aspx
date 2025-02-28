@@ -162,7 +162,7 @@
                                                                 <asp:BoundColumn DataField="ExpertCode" HeaderText="专家编号">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <%--<asp:BoundColumn DataField="Name" HeaderText="姓名">
+                                                                <%--<asp:BoundColumn DataField="Name" HeaderText="Name">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -186,7 +186,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("Job").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="JobTitle" HeaderText="职称">
+                                                                <%--<asp:BoundColumn DataField="JobTitle" HeaderText="ProfessionalTitle">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>

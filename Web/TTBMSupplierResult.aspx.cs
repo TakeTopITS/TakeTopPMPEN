@@ -131,7 +131,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标"; 
+            return "BidWin";   //ChineseWord
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -139,7 +139,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
         }
         else
         {
-            return "未开标"; 
+            return "Unopened Bid";   //ChineseWord
         }
     }
 
@@ -164,20 +164,20 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
         IList lst = bMContractPreparationBLL.GetAllBMContractPreparations(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "合同已签订"; 
+            return "ContractSigned";   //ChineseWord
         }
         else
         {
             if (strStatus.Trim().Equals("New"))
             {
-                return "合同洽谈新建"; 
+                return "NewContractNegotiation";   //ChineseWord
             }
             else if (strStatus.Trim().Equals("Unqualified"))
             {
-                return "合同洽谈审核不合格"; 
+                return "ContractNegotiationReviewFailed";   //ChineseWord
             }
             else
-                return "合同洽谈中"; 
+                return "ContractNegotiationInProgress";   //ChineseWord
         }
     }
 

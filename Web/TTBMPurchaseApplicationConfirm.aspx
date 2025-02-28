@@ -122,7 +122,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="±àºÅ">
+                                                        <asp:TemplateColumn HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_ID" runat="server" CommandName="Update" CssClass="inpu" Width="150px" Text='<%# DataBinder.Eval(Container.DataItem,"Code").ToString().Trim() %>' />
@@ -136,12 +136,12 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
+                                                        <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Application" HeaderText="ÉêÇëÈË">
+                                                        <asp:BoundColumn DataField="Application" HeaderText="Applicant">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
@@ -565,7 +565,7 @@
 
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
+                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
@@ -575,7 +575,7 @@
                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <ItemTemplate>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />

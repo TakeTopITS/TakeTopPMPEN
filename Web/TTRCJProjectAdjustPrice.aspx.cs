@@ -340,7 +340,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         {
             int selectId = Convert.ToInt32(GridView1.Rows[GridView1.SelectedIndex].Cells[2].Text);
 
-            if (false == SaveDataList(1, selectId, "修改调整价")) 
+            if (false == SaveDataList(1, selectId, "ModifyAdjustedPrice"))   //ChineseWord
                 return;
 
             InitDataLog();
@@ -379,7 +379,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         try
         {
             int selectId = Convert.ToInt32(GridView1.Rows[GridView1.SelectedIndex].Cells[2].Text);
-            if (false == SaveDataList(2, selectId, "删除调整价")) 
+            if (false == SaveDataList(2, selectId, "DeleteAdjustedPrice"))   //ChineseWord
                 return; 
             
             InitDataLog();

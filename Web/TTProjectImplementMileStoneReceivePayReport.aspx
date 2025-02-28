@@ -60,7 +60,7 @@
                                                         </td>
 
                                                         <td>
-                                                            <asp:Label ID="Label37" runat="server" Text="项目经理"></asp:Label>：
+                                                            <asp:Label ID="Label37" runat="server" Text="ProjectManager"></asp:Label>：
                                                         </td>
                                                         <td align="left">
                                                             <asp:TextBox ID="TB_PMName" runat="server"></asp:TextBox>
@@ -69,7 +69,7 @@
 
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="Label5" runat="server" Text="开始时间"></asp:Label>：
+                                                            <asp:Label ID="Label5" runat="server" Text="StartTime"></asp:Label>：
                                                         </td>
                                                         <td align="left">
                                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -145,11 +145,11 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: right; padding-right: 20px;">
-                                                <asp:Label ID="Labe7" runat="server" Text="实收总额"></asp:Label>
+                                                <asp:Label ID="Labe7" runat="server" Text="TotalAmountReceived"></asp:Label>
                                                 ：<asp:Label ID="LB_ReceivableAmount" runat="server"></asp:Label>&nbsp; 
                                 <asp:Label ID="Label9" runat="server" Text="元"></asp:Label>
                                                 &nbsp;&nbsp;
-                                <asp:Label ID="Label10" runat="server" Text="应收总额"></asp:Label>
+                                <asp:Label ID="Label10" runat="server" Text="TotalAmountReceivable"></asp:Label>
                                                 ：<asp:Label ID="LB_ReceiverAmount" runat="server"></asp:Label>&nbsp; 
                                 <asp:Label ID="Label12" runat="server" Text="元"></asp:Label>
                                                 &nbsp;&nbsp;

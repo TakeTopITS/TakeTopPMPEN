@@ -135,9 +135,9 @@
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:DropDownList ID="DDL_PurchaseMethod" runat="server">
-                                                                <asp:ListItem Text="<%$ Resources:lang,XunBiJia%>" Value="询比价" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,ZhaoBiao%>" Value="招标" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,KuangJia%>" Value="框架" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,XunBiJia%>" Value="Inquiry and Comparison" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,ZhaoBiao%>" Value="Tendering" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,KuangJia%>" Value="Framework" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,DuJia%>" Value="独家" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,YiJia%>" Value="议价" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,JinJi%>" Value="Emergency" />

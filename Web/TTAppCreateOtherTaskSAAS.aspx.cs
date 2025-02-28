@@ -1012,7 +1012,7 @@ public partial class TTAppCreateOtherTaskSAAS : System.Web.UI.Page
         //    dtNowDate = DateTime.Now;
         //    strStatus = DataGrid2.Items[i].Cells[10].Text.Trim();
 
-        //    if (strStatus != "Completed" & strStatus != "ÒÑÍê³É")
+        //    if (strStatus != "Completed" & strStatus != "Completed")
         //    {
         //        if (dtFinishedDate < dtNowDate)
         //        {

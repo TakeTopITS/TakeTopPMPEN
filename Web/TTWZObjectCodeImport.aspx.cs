@@ -95,7 +95,7 @@ public partial class TTWZObjectCodeImport : System.Web.UI.Page
             lineNumber++;
             try
             {
-                //string strDLCode = ShareClass.ObjectToString(row["大类代码"]);
+                //string strDLCode = ShareClass.ObjectToString(row["Major Category Code"]);
                 //string strZLCode = ShareClass.ObjectToString(row["中类代码"]);
                 //string strXLCode = ShareClass.ObjectToString(row["小类代码"]);
                 string strObjectCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("WuZiDaiMa").ToString().Trim()]);
@@ -273,7 +273,7 @@ public partial class TTWZObjectCodeImport : System.Web.UI.Page
 
             try
             {
-                //strDLCode = ShareClass.ObjectToString(row["大类代码"]);
+                //strDLCode = ShareClass.ObjectToString(row["Major Category Code"]);
                 //strZLCode = ShareClass.ObjectToString(row["中类代码"]);
                 //strXLCode = ShareClass.ObjectToString(row["小类代码"]);
                 strObjectCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("WuZiDaiMa").ToString().Trim()]);

@@ -137,7 +137,7 @@ public partial class TTProPlanRelatedDocView : System.Web.UI.Page
         strHQL = "from Document as document where ";
         strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( '部门','全体'))))"; 
+        strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         documentBLL = new DocumentBLL();

@@ -234,8 +234,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
            
             if (strPlanOperator == "<")
             {
-                strHQL = "Select UserCode '代码',UserName '姓名',Gender '性别',Age '年龄',DepartCode '部门代码',DepartName '部门名称'," + 
-               "Duty '职责',OfficePhone '办公电话',MobilePhone '移动电话',EMail 'EMail',WorkScope '工作范围',JoinDate '加入日期',Status '状态'," + 
+                strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   //ChineseWord
+               "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   //ChineseWord
                LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
                "From T_ProjectMember Where DepartCode in " + strDepartString + " ";
 
@@ -255,8 +255,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             }
             else
             {
-                strHQL = "Select B.UserCode '代码',B.UserName '姓名',B.Gender '性别',B.Age '年龄',B.DepartCode '部门代码',B.DepartName '部门名称'," + 
-               "B.Duty '职责',B.OfficePhone '办公电话',B.MobilePhone '移动电话',B.EMail 'EMail',B.WorkScope '工作范围',B.JoinDate '加入日期',B.Status '状态'," + 
+                strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   //ChineseWord
+               "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   //ChineseWord
                LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode in " + strDepartString + " ";
 
@@ -281,8 +281,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         {
             if (strPlanOperator == "<")
             {
-                strHQL = "Select UserCode '代码',UserName '姓名',Gender '性别',Age '年龄',DepartCode '部门代码',DepartName '部门名称'," + 
-                "Duty '职责',OfficePhone '办公电话',MobilePhone '移动电话',EMail 'EMail',WorkScope '工作范围',JoinDate '加入日期',Status '状态'," + 
+                strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   //ChineseWord
+                "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   //ChineseWord
                 LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
                 "From T_ProjectMember Where DepartCode = '" + strDepartCode + "'";
                 strHQL += " and UserCode in (Select UserCode From T_SystemActiveUser )";
@@ -293,8 +293,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             }
             else
             {
-                strHQL = "Select B.UserCode '代码',B.UserName '姓名',B.Gender '性别',B.Age '年龄',B.DepartCode '部门代码',B.DepartName '部门名称'," + 
-               "B.Duty '职责',B.OfficePhone '办公电话',B.MobilePhone '移动电话',B.EMail 'EMail',B.WorkScope '工作范围',B.JoinDate '加入日期',B.Status '状态'," + 
+                strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   //ChineseWord
+               "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   //ChineseWord
                LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode  = '" + strDepartCode + "'";
 
@@ -326,11 +326,11 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "已开通"; 
+            return "Enabled";   //ChineseWord
         }
         else
         {
-            return "未开通"; 
+            return "NotEnabled";   //ChineseWord
         }
     }
 }

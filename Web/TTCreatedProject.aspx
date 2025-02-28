@@ -144,10 +144,10 @@
                                                                 ShowHeader="false" OnPageIndexChanged="DataGrid1_PageIndexChanged" Width="100%"
                                                                 AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="±àºÅ">
+                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="´úÂë">
+                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="Code">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTCreatedProjectDetail.aspx?ProjectID={0}"
@@ -255,7 +255,7 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" VerticalAlign="Middle" Width="50px" />
                                                                     </asp:TemplateColumn>
 
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                         </ItemTemplate>

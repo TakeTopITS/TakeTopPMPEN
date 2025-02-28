@@ -110,10 +110,10 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号" Visible="false">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="类型">
+                                                        <asp:TemplateColumn HeaderText="Type">
                                                             <ItemTemplate>
                                                                 <asp:Button CssClass="inpu" ID="BT_TypeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"TypeName").ToString().Trim() %>' />
                                                             </ItemTemplate>
@@ -161,7 +161,7 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号" Visible="false">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn HeaderText="ISBN编码">
@@ -211,7 +211,7 @@
                                                         <asp:BoundColumn DataField="ID" HeaderText="顺序" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" Width="1%" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="图书分类">
+                                                        <asp:TemplateColumn HeaderText="BookClassification">
                                                             <ItemTemplate>
                                                                 <asp:Button CssClass="inpu" ID="BT_ClassificationName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ClassificationType").ToString().Trim() %>' />
                                                             </ItemTemplate>
@@ -320,7 +320,7 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号" Visible="false">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn HeaderText="证件名称">
@@ -372,7 +372,7 @@
                                                         <asp:BoundColumn DataField="ID" HeaderText="顺序" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" Width="1%" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="标准分类">
+                                                        <asp:TemplateColumn HeaderText="StandardClassification">
                                                             <ItemTemplate>
                                                                 <asp:Button CssClass="inpu" ID="BT_ClassificationName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ClassificationType").ToString().Trim() %>' />
                                                             </ItemTemplate>

@@ -337,7 +337,7 @@
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
 
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
@@ -410,7 +410,7 @@
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                             </asp:BoundColumn>
 
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
@@ -540,7 +540,7 @@
                                                                         GridLines="None" OnItemCommand="DataGrid1_ItemCommand" Width="99%">
 
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ProjectID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
@@ -555,7 +555,7 @@
                                                                             <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="立项日期">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />

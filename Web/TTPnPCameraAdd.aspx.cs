@@ -37,7 +37,7 @@ public partial class TTPnPCameraAdd : System.Web.UI.Page
         //{
         //    TV_Department.Nodes.Clear();
         //    TreeNode Node = new TreeNode();
-        //    Node.Text = "È«²¿";
+        //    Node.Text = "All";
         //    Node.Value = "0";
         //    for (int i = 0; i < listDepartment.Count; i++)
         //    {

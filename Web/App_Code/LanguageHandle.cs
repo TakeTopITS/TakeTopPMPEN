@@ -18,7 +18,7 @@ public static class LanguageHandle
 
         // 从数据库获取所有语言代码
         var supportedLanguages = GetSupportedLanguagesFromDatabase();
-
+        
         foreach (var langCode in supportedLanguages)
         {
             string langFile = HttpContext.Current.Server.MapPath($"Language/lang.{langCode}.resx");

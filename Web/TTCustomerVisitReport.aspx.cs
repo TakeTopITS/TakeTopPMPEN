@@ -129,7 +129,7 @@ public partial class TTCustomerVisitReport : System.Web.UI.Page
 
         Export3Excel(dtSaleOrder, LanguageHandle.GetWord("KeHuBaiFangTongJiBiao").ToString().Trim() + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     protected void LoadIndustryType(DropDownList DL_Type)

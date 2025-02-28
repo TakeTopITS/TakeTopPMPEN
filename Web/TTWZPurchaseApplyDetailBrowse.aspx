@@ -168,7 +168,7 @@
                                                                                     <asp:BoundColumn DataField="Tenders" HeaderText="标段">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="序号">
+                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="SerialNumber">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -213,7 +213,7 @@
                                                                                     <asp:BoundColumn DataField="PurchaseNumber" HeaderText="采购数量">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ApplyMoney" HeaderText="报价">
+                                                                                    <asp:BoundColumn DataField="ApplyMoney" HeaderText="Quotation">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="TotalMoney" HeaderText="报价合计">

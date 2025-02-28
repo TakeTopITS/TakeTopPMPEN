@@ -121,7 +121,7 @@
                                         CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand"
                                         OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="false" Width="100%">
                                         <Columns>
-                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:ButtonColumn>
                                             <asp:TemplateColumn HeaderText="Delete">
@@ -139,7 +139,7 @@
                                             <asp:BoundColumn DataField="SendTime" HeaderText="发送时间">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

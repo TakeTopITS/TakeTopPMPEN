@@ -196,13 +196,13 @@
                                                             OnItemCommand="DataGrid2_ItemCommand" Width="98%" OnPageIndexChanged="DataGrid2_PageIndexChanged"
                                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="22%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DepartName" HeaderText="部门">
+                                                                <asp:BoundColumn DataField="DepartName" HeaderText="Department">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="Actor" HeaderText="角色">

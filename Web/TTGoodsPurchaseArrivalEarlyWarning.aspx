@@ -213,7 +213,7 @@
                                                 </table>
                                                 <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="false" Width="100%">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn HeaderText="打印">
@@ -230,28 +230,28 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:BoundColumn DataField="GoodsCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="GoodsName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="GoodsName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                                        <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                                        <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                                        <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="CheckInNumber" HeaderText="入库">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                                        <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="ApplicantName" HeaderText="申请人" Target="_blank">
+                                                        <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="ApplicantName" HeaderText="Applicant" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
 

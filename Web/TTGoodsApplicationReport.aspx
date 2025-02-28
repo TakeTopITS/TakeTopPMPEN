@@ -194,25 +194,25 @@
                                             <asp:BoundColumn DataField="GoodsCode" HeaderText="物料代码">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="GoodsName" HeaderText="物料名称">
+                                            <asp:BoundColumn DataField="GoodsName" HeaderText="MaterialName">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                            <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                            <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                            <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="ApplicantName" HeaderText="申请人" Target="_blank">
+                                                DataTextField="ApplicantName" HeaderText="Applicant" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:HyperLinkColumn>
                                             <asp:BoundColumn DataField="ApplyReason" HeaderText="申请原因">
@@ -224,7 +224,7 @@
                                             <asp:BoundColumn DataField="FinishTime" HeaderText="完成时间" DataFormatString="{0:yyyy/MM/dd}">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CheckOutNumber" HeaderText="状态">
+                                            <asp:BoundColumn DataField="CheckOutNumber" HeaderText="Status">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 

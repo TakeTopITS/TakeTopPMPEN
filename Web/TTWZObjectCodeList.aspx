@@ -398,7 +398,7 @@
                                                                                 <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ObjectCode") %>' CommandName="del" CssClass="notTab">删除</asp:LinkButton>--%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
+                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -437,7 +437,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("Grade").ToString(), 5) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="Grade" HeaderText="级别">
+                                                                        <%--<asp:BoundColumn DataField="Grade" HeaderText="Level">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:BoundColumn DataField="UnitName" HeaderText="计量单位">

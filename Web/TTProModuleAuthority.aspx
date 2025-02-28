@@ -239,7 +239,7 @@
                                                                                     <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" OnItemCommand="DataGrid3_ItemCommand" ShowHeader="False"
                                                                                         Height="1px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                                            <asp:TemplateColumn HeaderText="Number">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ParentID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                                                                         CssClass="inpu" />
@@ -415,7 +415,7 @@
                                                                                         ShowHeader="False" Height="1px" Width="100%" CellPadding="4" ForeColor="#333333"
                                                                                         GridLines="None">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                                            <asp:TemplateColumn HeaderText="Number">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ParentID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                                                                         CssClass="inpu" />
@@ -425,7 +425,7 @@
                                                                                             <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="30%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="²¿ÃÅ">
+                                                                                            <asp:TemplateColumn HeaderText="Department">
                                                                                                 <ItemTemplate>
                                                                                                     <%# Eval("DepartCode").ToString()%>    <%# ShareClass.GetDepartName(Eval("DepartCode").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -528,13 +528,13 @@
                                                                                     <asp:DataGrid ID="DataGrid6" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                                                                                         OnItemCommand="DataGrid6_ItemCommand" GridLines="None" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="20%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
+                                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="35%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="UserName" HeaderText="Ãû³Æ">
+                                                                                            <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="35%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="<%$ Resources:lang,ShanChu %>">
@@ -625,7 +625,7 @@
                                         <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" OnItemCommand="DataGrid4_ItemCommand" ShowHeader="False"
                                             Height="1px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="±àºÅ">
+                                                <asp:TemplateColumn HeaderText="Number">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ChildID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                             CssClass="inpu" />
@@ -734,7 +734,7 @@
                                         <asp:DataGrid ID="DataGrid7" runat="server" AutoGenerateColumns="False" ShowHeader="False" OnItemCommand="DataGrid7_ItemCommand"
                                             Height="1px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
@@ -838,7 +838,7 @@
                                             ShowHeader="False" Height="1px" Width="100%" CellPadding="4" ForeColor="#333333"
                                             GridLines="None">
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="±àºÅ">
+                                                <asp:TemplateColumn HeaderText="Number">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ChildID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                             CssClass="inpu" />
@@ -848,7 +848,7 @@
                                                 <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                     <ItemStyle CssClass="itemBorder" Width="30%" HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="²¿ÃÅ">
+                                                <asp:TemplateColumn HeaderText="Department">
                                                     <ItemTemplate>
                                                         <%# Eval("DepartCode").ToString()%>    <%# ShareClass.GetDepartName(Eval("DepartCode").ToString()) %>
                                                     </ItemTemplate>
@@ -944,13 +944,13 @@
                                             ShowHeader="False" Height="1px" Width="100%" CellPadding="4" ForeColor="#333333"
                                             GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" Width="10%" HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                     <ItemStyle CssClass="itemBorder" Width="30%" HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="²¿ÃÅ">
+                                                <asp:TemplateColumn HeaderText="Department">
                                                     <ItemTemplate>
                                                         <%# Eval("DepartCode").ToString()%>    <%# ShareClass.GetDepartName(Eval("DepartCode").ToString()) %>
                                                     </ItemTemplate>

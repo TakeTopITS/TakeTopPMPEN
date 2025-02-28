@@ -122,7 +122,7 @@
                                                         CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="20" ShowHeader="false"
                                                         Width="100%" OnItemCommand="DG_List_ItemCommand" OnPageIndexChanged="DG_List_PageIndexChanged">
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="项目号">
+                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="ProjectNumber">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">

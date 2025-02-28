@@ -54,7 +54,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
             string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            strHQL = "Select GroupName From T_ActorGroup Where Type <>'Part' and GroupName not in ('个人','部门','公司','集团','All')"; 
+            strHQL = "Select GroupName From T_ActorGroup Where Type <>'Part' and GroupName not in ('Individual','Department','Company','Group','All')";  
             strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'Super'";
             strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
@@ -960,7 +960,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);

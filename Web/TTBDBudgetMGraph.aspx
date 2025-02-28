@@ -94,9 +94,9 @@
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FenXiLeiXing%>"></asp:Label>：</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
-                                                                <asp:ListItem Value="部门" Text="<%$ Resources:lang,BuMen%>" />
-                                                                <asp:ListItem Value="科目" Text="<%$ Resources:lang,KeMu%>" />
-                                                                <asp:ListItem Value="部门+科目" Text="<%$ Resources:lang,BuMenKeMu%>" />
+                                                                <asp:ListItem Value="Department" Text="<%$ Resources:lang,BuMen%>" />
+                                                                <asp:ListItem Value="Subject" Text="<%$ Resources:lang,KeMu%>" />
+                                                                <asp:ListItem Value="DepartmentSubject" Text="<%$ Resources:lang,BuMenKeMu%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle" style="text-align: right">

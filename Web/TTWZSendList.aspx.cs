@@ -66,7 +66,7 @@ public partial class TTWZSendList : System.Web.UI.Page
                         left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                         where s.PurchaseEngineer ='{0}' 
                         and s.Progress in ('录入','材检','开票') 
-                        order by s.TicketTime desc", strUserCode); 
+                        order by s.TicketTime desc", strUserCode);   //ChineseWord
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;
@@ -92,9 +92,9 @@ public partial class TTWZSendList : System.Web.UI.Page
         WZPickingPlanBLL wZPickingPlanBLL = new WZPickingPlanBLL();
         string strWZPickingPlanHQL = string.Format(@"from WZPickingPlan as wZPickingPlan 
                                                     where PurchaseEngineer = '{0}' 
-                                                    and Progress = '签收' 
-                                                    and SupplyMethod='自购' 
-                                                    order by MarkerTime desc", strUserCode); 
+                                                    and Progress = 'Sign for Receipt' 
+                                                    and SupplyMethod='Self-purchase' 
+                                                    order by MarkerTime desc", strUserCode);   //ChineseWord
         IList listWZPickingPlan = wZPickingPlanBLL.GetAllWZPickingPlans(strWZPickingPlanHQL);
 
         LB_Plan.DataSource = listWZPickingPlan;

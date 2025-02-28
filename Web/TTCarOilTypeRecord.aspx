@@ -120,7 +120,7 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="CarName" HeaderText="名称">
+                                                                    <asp:BoundColumn DataField="CarName" HeaderText="Name">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="BelongDepartCode" HeaderText="部门编码" Visible="false">
@@ -129,7 +129,7 @@
                                                                     <asp:BoundColumn DataField="BelongDepartName" HeaderText="所属部门">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -255,7 +255,7 @@
                                                         </table>
                                                         <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid2_ItemCommand" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="12" ShowHeader="False" Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="序号" Visible="false">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="OilName" HeaderText="石油名称">

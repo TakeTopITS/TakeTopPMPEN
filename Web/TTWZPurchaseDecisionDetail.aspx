@@ -140,13 +140,13 @@
                                                                                     <%--<asp:BoundColumn DataField="PlanDetailID" HeaderText="计划明细编号" Visible="false">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="序号" Visible="false">
+                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="SerialNumber" Visible="false">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="Tenders" HeaderText="标段" Visible="false">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>--%>
-                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
+                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                     </asp:BoundColumn>
                                                                                     <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -161,7 +161,7 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("ObjectName").ToString(), 20) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="SupplierApplyMoney" HeaderText="报价">
+                                                                                    <asp:BoundColumn DataField="SupplierApplyMoney" HeaderText="Quotation">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="CurrrentSupplierCode" HeaderText="Supplier">
@@ -224,7 +224,7 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("StandardCode").ToString(), 190) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <%--<asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                                                    <%--<asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                     </asp:BoundColumn>--%>
                                                                                     <asp:TemplateColumn>

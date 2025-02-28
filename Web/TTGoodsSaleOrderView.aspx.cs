@@ -31,7 +31,7 @@ public partial class TTGoodsSaleOrderView : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
 
-        //this.Title = "物料销售单";
+        //this.Title = "MaterialSalesOrder";
 
         strSOID = Request.QueryString["SOID"];
 

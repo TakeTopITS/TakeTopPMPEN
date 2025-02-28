@@ -41,7 +41,7 @@ public partial class TTHSEHealthCheck : System.Web.UI.Page
     {
         string strHQL;
         IList lst;
-        //绑定项目名称Where project.ProjectType='Primavera项目' and project.Status<>'CaseClosed' and project.Status<>'Cancel' and project.Status<>'拒绝' and " +
+        //绑定项目名称Where project.ProjectType='Primavera项目' and project.Status<>'CaseClosed' and project.Status<>'Cancel' and project.Status<>'Rejected' and " +
         // "project.Status<>'Deleted' and project.Status<>'Archived' 
         strHQL = "From Project as project Order By project.ProjectID Desc";
         ProjectBLL projectBLL = new ProjectBLL();

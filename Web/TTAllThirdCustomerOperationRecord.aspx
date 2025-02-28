@@ -135,23 +135,23 @@
                                                                             ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                                             PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="用户代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="UserCode">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                                                    DataTextField="UserName" HeaderText="用户姓名" Target="_blank">
+                                                                                    DataTextField="UserName" HeaderText="UserName" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="CreaterName" HeaderText="操作人">
+                                                                                <asp:BoundColumn DataField="CreaterName" HeaderText="Operator">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="操作时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="OperationTime" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Remark" HeaderText="操作备注">
+                                                                                <asp:BoundColumn DataField="Remark" HeaderText="OperationRemark">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>

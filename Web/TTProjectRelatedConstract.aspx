@@ -111,33 +111,33 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" ShowHeader="false"
                                                 Height="1px" PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ConstractCode" HeaderText="合同代码">
+                                                    <asp:BoundColumn DataField="ConstractCode" HeaderText="ContractCode">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ConstractCode" DataNavigateUrlFormatString="TTConstractView.aspx?ConstractCode={0}"
-                                                        DataTextField="ConstractName" HeaderText="合同名称" Target="_blank">
+                                                        DataTextField="ConstractName" HeaderText="ContractName" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="17%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:TemplateColumn HeaderText="状态">
+                                                    <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SignDate" HeaderText="签订日期" DataFormatString="{0:yyyy/MM/dd}">
+                                                    <asp:BoundColumn DataField="SignDate" HeaderText="SigningDate" DataFormatString="{0:yyyy/MM/dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Amount" HeaderText="金额">
+                                                    <asp:BoundColumn DataField="Amount" HeaderText="Amount">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Currency" HeaderText="币种">
+                                                    <asp:BoundColumn DataField="Currency" HeaderText="Currency">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PartA" HeaderText="甲方单位">
+                                                    <asp:BoundColumn DataField="PartA" HeaderText="PartyAUnit">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="PartB" HeaderText="乙方单位">

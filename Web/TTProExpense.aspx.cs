@@ -1178,7 +1178,7 @@ public partial class TTProExpense : System.Web.UI.Page
                                 proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu").ToString().Trim()].ToString().Trim();
                                 proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
                                 proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
-                                proExpense.CurrencyType = dr[i]["币别"].ToString().Trim(); 
+                                proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   //ChineseWord
                                 proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi").ToString().Trim()].ToString().Trim());
                                 proExpense.RegisterDate = DateTime.Now;
 
@@ -1294,7 +1294,7 @@ public partial class TTProExpense : System.Web.UI.Page
                                 proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu").ToString().Trim()].ToString().Trim();
                                 proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
                                 proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
-                                proExpense.CurrencyType = dr[i]["币别"].ToString().Trim(); 
+                                proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   //ChineseWord
                                 proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi").ToString().Trim()].ToString().Trim());
                                 proExpense.RegisterDate = DateTime.Now;
 
@@ -1481,11 +1481,11 @@ public partial class TTProExpense : System.Web.UI.Page
         {
             //if (strUserCode == ShareClass.GetProjectPMCode(strProjectID))
             //{
-            //    dailyWork.Type = "主导";
+            //    dailyWork.Type = "Lead";
             //}
             //else
             //{
-            //    dailyWork.Type = "参与";
+            //    dailyWork.Type = "Participate";
             //}
             //dailyWork.UserCode = strUserCode;
             //dailyWork.UserName = LB_UserName.Text.Trim();
@@ -1501,11 +1501,11 @@ public partial class TTProExpense : System.Web.UI.Page
 
             if (strUserCode == ShareClass.GetProjectPMCode(strProjectID))
             {
-                dailyWork.Type = "主导"; 
+                dailyWork.Type = "Lead";   //ChineseWord
             }
             else
             {
-                dailyWork.Type = "参与"; 
+                dailyWork.Type = "Participate";  
             }
             dailyWork.UserCode = strUserCode;
             dailyWork.UserName = ShareClass.GetUserName(strUserCode);

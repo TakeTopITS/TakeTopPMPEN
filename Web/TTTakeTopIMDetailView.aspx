@@ -107,7 +107,7 @@
                                                                     DataTextField="DocName" HeaderText="文件名" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">

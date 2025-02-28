@@ -459,7 +459,7 @@
                                                                                 <asp:ButtonField CommandName="AdjustPrice" Text="价格调整">
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:ButtonField>
-                                                                                <asp:BoundField DataField="ItemNo" HeaderText="序号" />
+                                                                                <asp:BoundField DataField="ItemNo" HeaderText="SerialNumber" />
                                                                                 <asp:BoundField DataField="ItemName" HeaderText="定额号" HtmlEncode="False">
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:BoundField>
@@ -470,8 +470,8 @@
                                                                                     <HeaderStyle Wrap="False" />
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:BoundField>
-                                                                                <asp:BoundField DataField="ItemUnit" HeaderText="单位" />
-                                                                                <asp:BoundField DataField="ItemNum" HeaderText="数量" DataFormatString="{0:N3}" HtmlEncode="False" />
+                                                                                <asp:BoundField DataField="ItemUnit" HeaderText="Unit" />
+                                                                                <asp:BoundField DataField="ItemNum" HeaderText="Quantity" DataFormatString="{0:N3}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemPriceDeviceBudget" HeaderText="预算设备合价" DataFormatString="{0:N2}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemPriceMainMaterialBudget" HeaderText="预算主材合价" DataFormatString="{0:N2}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemPriceWageBudget" HeaderText="预算人工合价" DataFormatString="{0:N2}" HtmlEncode="False" />
@@ -508,8 +508,8 @@
                                                                                 <asp:BoundField DataField="Name" HeaderText="承包商">
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:BoundField>
-                                                                                <asp:BoundField DataField="BeginTime" HeaderText="开始时间" DataFormatString="{0:yyyy/MM/dd}" />
-                                                                                <asp:BoundField DataField="EndTime" HeaderText="结束时间" DataFormatString="{0:yyyy/MM/dd}" />
+                                                                                <asp:BoundField DataField="BeginTime" HeaderText="StartTime" DataFormatString="{0:yyyy/MM/dd}" />
+                                                                                <asp:BoundField DataField="EndTime" HeaderText="EndTime" DataFormatString="{0:yyyy/MM/dd}" />
                                                                                 <asp:TemplateField HeaderText="价格已调整">
                                                                                     <%--<EditItemTemplate>
                                                                                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("ItemPriceChanged") %>'></asp:TextBox>
@@ -585,7 +585,7 @@
                                                                                 </asp:ButtonField>
                                                                                 <asp:BoundField DataField="AdjustID" HeaderText="调整编号" />
                                                                                 <asp:BoundField DataField="ItemNo" HeaderText="绩效记录序号" />
-                                                                                <asp:BoundField DataField="ItemNum" HeaderText="数量" DataFormatString="{0:N3}" HtmlEncode="False" />
+                                                                                <asp:BoundField DataField="ItemNum" HeaderText="Quantity" DataFormatString="{0:N3}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemPriceDeviceAdjust" HeaderText="设备调整单价" DataFormatString="{0:N2}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemPriceMainMaterialAdjust" HeaderText="主材调整单价" DataFormatString="{0:N2}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemPriceWageAdjust" HeaderText="人工调整单价" DataFormatString="{0:N2}" HtmlEncode="False" />
@@ -604,7 +604,7 @@
                                                                                 <asp:BoundField DataField="ItemPricePurchaseFeeBudget" HeaderText="费率措施费" DataFormatString="{0:N2}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemComprehensiveFeeBudget" HeaderText="规费" DataFormatString="{0:N2}" HtmlEncode="False" />
                                                                                 <asp:BoundField DataField="ItemTaxesBudget" HeaderText="预算税金合价" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                                                <asp:BoundField DataField="Memo" HeaderText="备注">
+                                                                                <asp:BoundField DataField="Memo" HeaderText="Remark">
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:BoundField>
                                                                             </Columns>

@@ -354,7 +354,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Process" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Process" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="MainLeaderName" HeaderText="主管领导">

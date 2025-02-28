@@ -115,10 +115,10 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="100%"
                                                 OnItemCommand="DataGrid1_ItemCommand" ShowHeader="false" CellPadding="4" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="Account" HeaderText="科目">
+                                                    <asp:BoundColumn DataField="Account" HeaderText="Subject">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Amount" HeaderText="金额">
+                                                    <asp:BoundColumn DataField="Amount" HeaderText="Amount">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
@@ -139,7 +139,7 @@
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
                                                         <ItemTemplate>
-                                                            <asp:LinkButton ID="LBT_Select" CommandName="Select" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" ></asp:LinkButton>
+                                                            <asp:LinkButton ID="LBT_Select" CommandName="Select" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" ></asp:LinkButton>
 
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />

@@ -113,7 +113,7 @@ public partial class TTPlanCopyToOtherMembers : System.Web.UI.Page
 
             LoadActorGroup(strUserCode, LB_DepartString.Text, strLangCode);
 
-            BT_DeletePlanToAllSystemUser.Attributes.Add("onclick", "return confirm('你确定要删除从此计划复制的其它成员的计划吗？');"); 
+            BT_DeletePlanToAllSystemUser.Attributes.Add("onclick", "return confirm('你确定要删除从此计划复制的其它成员的计划吗？');");   //ChineseWord
         }
     }
     
@@ -1406,7 +1406,7 @@ public partial class TTPlanCopyToOtherMembers : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and (actorGroup.BelongDepartCode in " + strDepartString;
         strHQL += " Or actorGroup.MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and actorGroup.LangCode = '" + strLangCode + "'";

@@ -120,7 +120,7 @@
                                                             <td align="left" class="formItemBgStyle" style="padding-top: 0px;">
                                                                 <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand" Width="90%">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                             <ItemStyle Width="15%" BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="5%" />
                                                                         </asp:BoundColumn>

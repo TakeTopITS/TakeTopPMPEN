@@ -41,7 +41,7 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
     {
         string strServerType = DL_ServerType.SelectedValue.Trim();
 
-        if (strServerType == "×âÓÃ") 
+        if (strServerType == "Rent")  //ChineseWord //ChineseWord
         {
             TB_StorageCapacity.Enabled = true;
         }

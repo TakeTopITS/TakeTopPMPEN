@@ -169,7 +169,7 @@
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
 
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
 
@@ -185,13 +185,13 @@
                                                         </asp:BoundColumn>
 
 
-                                                        <asp:BoundColumn DataField="DepartName" HeaderText="部门名称">
+                                                        <asp:BoundColumn DataField="DepartName" HeaderText="DepartmentName">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:TemplateColumn HeaderText="会计科目">
+                                                        <asp:TemplateColumn HeaderText="AccountingSubjects">
                                                             <ItemTemplate>
                                                                 <%# ShareClass.GetAccountName(Eval("AccountCode").ToString()) %>
                                                             </ItemTemplate>

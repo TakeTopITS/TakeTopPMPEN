@@ -174,7 +174,7 @@
                                                                         <asp:BoundColumn DataField="CancelTime" HeaderText="报销日期">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
+                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="SupplierCode" HeaderText="供方编号">
@@ -349,7 +349,7 @@
                                                                         <asp:BoundColumn DataField="RequestCode" HeaderText="请款单号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
+                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
@@ -400,7 +400,7 @@
                                                                         <asp:BoundColumn DataField="Arrearage" HeaderText="欠款">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsPay" HeaderText="付款标志">

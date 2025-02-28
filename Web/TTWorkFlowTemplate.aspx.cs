@@ -141,7 +141,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             workFlowTemplate.CreateTime = DateTime.Now;
             workFlowTemplate.CreatorCode = strUserCode;
             workFlowTemplate.CreatorName = ShareClass.GetUserName(strUserCode);
-            workFlowTemplate.Status = "在用"; 
+            workFlowTemplate.Status = "InUse";  
             workFlowTemplate.Authority = LanguageHandle.GetWord("SuoYou").ToString().Trim();
             workFlowTemplate.IdentifyString = DateTime.Now.ToString("yyyyMMddHHMMssff");
             workFlowTemplate.WFDefinition = "";
@@ -274,8 +274,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strHQL = "from Department as department ";
         strHQL += " where department.DepartCode = " + "'" + strParentDepartCode + "'";
-        //strHQL += " and ((department.Authority = '所有')";
-        //strHQL += " or ((department.Authority = '部分') ";
+        //strHQL += " and ((department.Authority = 'All')";
+        //strHQL += " or ((department.Authority = 'Part') ";
         //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By department.DepartCode ASC";
         lst2 = departmentBLL.GetAllDepartments(strHQL);
@@ -308,8 +308,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         string strDepartCode, strDepartName;
 
         strHQL = "from Department as department where department.ParentCode = " + "'" + strParentCode + "'";
-        //strHQL += " and ((department.Authority = '所有')";
-        //strHQL += " or ((department.Authority = '部分') ";
+        //strHQL += " and ((department.Authority = 'All')";
+        //strHQL += " or ((department.Authority = 'Part') ";
         //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By department.DepartCode ASC";
         DepartmentBLL departmentBLL = new DepartmentBLL();

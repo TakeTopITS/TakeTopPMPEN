@@ -143,7 +143,7 @@
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="GradeName" HeaderText="Äê¼¶">

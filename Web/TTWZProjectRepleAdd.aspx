@@ -100,8 +100,8 @@
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShouQuanCaiGou%>"></asp:Label>£º</td>
                                                         <td style="text-align: left; width:20%;" class="formItemBgStyle">
                                                             <asp:DropDownList ID="TXT_PowerPurchase" runat="server" Enabled="false">
-                                                                <asp:ListItem Text="<%$ Resources:lang,You%>" Value="ÓÐ"/>
-                                                                <asp:ListItem Text="<%$ Resources:lang,Wu%>" Value="ÎÞ"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,You%>" Value="Yes"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,Wu%>" Value="No"/>
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>

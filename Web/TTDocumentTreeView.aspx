@@ -139,10 +139,10 @@
                                                                         Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" GridLines="None"
                                                                         ShowHeader="False" PageSize="32" Width="100%" CellPadding="4" ForeColor="#333333">
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                            <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="RelatedType" HeaderText="大类">
+                                                                            <asp:BoundColumn DataField="RelatedType" HeaderText="MajorCategory">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:TemplateColumn HeaderText="父类">
@@ -151,7 +151,7 @@
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                             </asp:TemplateColumn>
-                                                                            <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                            <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
@@ -245,10 +245,10 @@
                                                                                     ID="DataGrid3">
                                                                                     <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                                                                     <Columns>
-                                                                                        <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                                        <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="RelatedType" HeaderText="大类">
+                                                                                        <asp:BoundColumn DataField="RelatedType" HeaderText="MajorCategory">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:TemplateColumn HeaderText="父类">
@@ -257,14 +257,14 @@
                                                                                             </ItemTemplate>
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                         </asp:TemplateColumn>
-                                                                                        <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                                        <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                                                             DataTextField="DocName" Target="_blank" HeaderText="文件名">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                         </asp:HyperLinkColumn>
-                                                                                        <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                                                                        <asp:BoundColumn DataField="Author" HeaderText="Author">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">

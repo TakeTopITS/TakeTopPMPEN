@@ -127,11 +127,11 @@ public partial class TTWZGetUnitEdit : System.Web.UI.Page
             TXT_UnitCode.Text = strNewUnitCode;
             if (strNewUnitCode.Contains("01"))
             {
-                DDL_UnitType.SelectedValue = "行政单位"; 
+                DDL_UnitType.SelectedValue = "行政单位";   //ChineseWord
             }
             else
             {
-                DDL_UnitType.SelectedValue = "项目部"; 
+                DDL_UnitType.SelectedValue = "ProjectDepartment";   //ChineseWord
             }
             TXT_UnitName.Text = ShareClass.ObjectToString(drGetUnit["UnitName"]);// wZGetUnit.UnitName;
             TXT_Leader.Text = ShareClass.ObjectToString(drGetUnit["LeaderName"]);//wZGetUnit.Leader;
@@ -159,7 +159,7 @@ public partial class TTWZGetUnitEdit : System.Web.UI.Page
         //        DDL_UnitType.SelectedValue = "行政单位";
         //    }
         //    else {
-        //        DDL_UnitType.SelectedValue = "项目部";
+        //        DDL_UnitType.SelectedValue = "ProjectDepartment";
         //    }
         //    TXT_UnitName.Text = wZGetUnit.UnitName;
         //    TXT_Leader.Text = wZGetUnit.Leader;
@@ -183,7 +183,7 @@ public partial class TTWZGetUnitEdit : System.Web.UI.Page
                 int intGetUnitCodeNumber = 0;
                 do
                 {
-                    if (strUnitType == "行政单位") 
+                    if (strUnitType == "行政单位")   //ChineseWord
                     {
                         //以行政单位作为领料单位的部分，在创建本表单时直接导入，后期变更由物资管理员负责编辑，编号范围控制在0101-0199之间
                         int intRowNumber = 0;
@@ -197,7 +197,7 @@ public partial class TTWZGetUnitEdit : System.Web.UI.Page
                             strNewUnitCode = "01" + intRowNumber.ToString();
                         }
                     }
-                    else if (strUnitType == "项目部") 
+                    else if (strUnitType == "ProjectDepartment")   //ChineseWord
                     {
                         //以项目部作为领料单位的部分，由经营管理部负责编辑，编号范围控制在0201-9999之间
                         int intRowNumber = 0;

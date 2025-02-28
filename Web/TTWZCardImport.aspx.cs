@@ -205,7 +205,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 {
                     //当〈No编号〉相等，其余 2 项条件相等但不唯一时
 
-                    wZCardImport.ImportStatus = "记录重复"; 
+                    wZCardImport.ImportStatus = "记录重复";   //ChineseWord
 
                     wZCardImportBLL.UpdateWZCardImport(wZCardImport, wZCardImport.ID);
 
@@ -221,7 +221,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 IList listWZTurnDetail2 = wZTurnDetailBLL.GetAllWZTurnDetails(strWZTurnDetailHQL2);
                 if (listWZTurnDetail2 != null && listWZTurnDetail2.Count > 0)
                 {
-                    wZCardImport.ImportStatus = "数据错误"; 
+                    wZCardImport.ImportStatus = "数据错误";   //ChineseWord
 
                     wZCardImportBLL.UpdateWZCardImport(wZCardImport, wZCardImport.ID);
 
@@ -235,7 +235,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 IList listWZTurnDetail3 = wZTurnDetailBLL.GetAllWZTurnDetails(strWZTurnDetailHQL3);
                 if (listWZTurnDetail3 == null || listWZTurnDetail3.Count == 0)
                 {
-                    wZCardImport.ImportStatus = "无记录"; 
+                    wZCardImport.ImportStatus = "无记录";   //ChineseWord
 
                     wZCardImportBLL.UpdateWZCardImport(wZCardImport, wZCardImport.ID);
 

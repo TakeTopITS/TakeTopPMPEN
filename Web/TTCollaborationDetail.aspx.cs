@@ -242,7 +242,7 @@ public partial class TTCollaborationDetail : System.Web.UI.Page
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "协作"; 
+                document.RelatedType = "Collaboration";  
                 document.DocType = strDocType;
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.RelatedID = int.Parse(strCoID);
@@ -309,7 +309,7 @@ public partial class TTCollaborationDetail : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strCoID; 
+        strHQL = "from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID = " + strCoID;  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

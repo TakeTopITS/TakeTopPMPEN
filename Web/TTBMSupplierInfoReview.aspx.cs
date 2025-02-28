@@ -1237,7 +1237,7 @@ public partial class TTBMSupplierInfoReview : System.Web.UI.Page
     protected void LoadBMSupplierInfo()
     {
         string strHQL;
-        strHQL = "Select *,(case when Point>=90 then 'ÓÅĞã' when Point>=80 and Point<90 then 'Á¼ºÃ' when Point>=60 and Point<80 then 'Qualified' else 'Unqualified' end) EvalueDegree From T_BMSupplierInfo Where 1=1 "; 
+        strHQL = "Select *,(case when Point>=90 then 'Excellent' when Point>=80 and Point<90 then 'Good' when Point>=60 and Point<80 then 'Qualified' else 'Unqualified' end) EvalueDegree From T_BMSupplierInfo Where 1=1 ";   //ChineseWord
         if (!string.IsNullOrEmpty(txt_SupplierInfo.Text.Trim()))
         {
             strHQL += " and (Code like '%" + txt_SupplierInfo.Text.Trim() + "%' or Name like '%" + txt_SupplierInfo.Text.Trim() + "%' or CompanyFor like '%" + txt_SupplierInfo.Text.Trim() + "%' or Status like '%" + txt_SupplierInfo.Text.Trim() + "%' " +

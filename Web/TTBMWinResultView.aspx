@@ -73,7 +73,7 @@
                                         <ItemStyle CssClass="itemStyle" />
                                         <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ" Visible="false">
+                                            <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="1%" />
                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                     HorizontalAlign="Center" />

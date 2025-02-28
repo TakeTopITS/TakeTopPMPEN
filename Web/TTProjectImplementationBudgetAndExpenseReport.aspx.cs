@@ -84,7 +84,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName,strBeginTime,strEndTime); 
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName,strBeginTime,strEndTime);   //ChineseWord
 
         }
         else
@@ -92,7 +92,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime); 
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);   //ChineseWord
 
         }
 
@@ -129,7 +129,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime); 
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime);   //ChineseWord
 
         }
         else
@@ -137,7 +137,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime); 
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);   //ChineseWord
 
         }
 
@@ -151,7 +151,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -202,7 +202,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目 as XName, sum(COALESCE(预算,0)) as YNumber, sum(COALESCE(费用,0)) as ZNumber From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime); 
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime);   //ChineseWord
 
         }
         else
@@ -210,7 +210,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目 as XName, sum(COALESCE(预算,0)) as YNumber, sum(COALESCE(费用,0)) as ZNumber From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime); 
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);   //ChineseWord
 
         }
 

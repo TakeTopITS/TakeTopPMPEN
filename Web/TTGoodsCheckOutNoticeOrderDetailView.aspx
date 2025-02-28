@@ -96,13 +96,13 @@
                                     <asp:BoundColumn DataField="BarCode" HeaderText="条码">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                    <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="BoxNumber" HeaderText="装箱数">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                     </asp:BoundColumn>
-                                    <asp:TemplateColumn HeaderText="状态">
+                                    <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("FinishStatus").ToString()) %>
     </ItemTemplate>
@@ -114,7 +114,7 @@
                                     <asp:BoundColumn DataField="CheckOutTime" HeaderText="出货时间" DataFormatString="{0:yyyy/MM/dd}">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Comment" HeaderText="备注">
+                                    <asp:BoundColumn DataField="Comment" HeaderText="Remark">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>
 

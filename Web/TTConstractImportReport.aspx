@@ -53,7 +53,7 @@
                                 <td class="formItemBgStyle" align="left">
                                     <asp:DropDownList ID="DDL_ConstractClass" runat="server">
                                         <asp:ListItem Text="" Value="" />
-                                        <asp:ListItem Text="<%$ Resources:lang,CaiGouLei%>" Value="采购类" />
+                                        <asp:ListItem Text="<%$ Resources:lang,CaiGouLei%>" Value="PurchaseCategory" />
                                         <asp:ListItem Text="<%$ Resources:lang,XiaoShouLei%>" Value="销售类" />
                                     </asp:DropDownList>
 
@@ -249,46 +249,46 @@
                                         Height="1px" Width="1200px" ShowHeader="false"
                                         CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ConstractCode" HeaderText="合同代码">
+                                            <asp:BoundColumn DataField="ConstractCode" HeaderText="ContractCode">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="TotalAmount" HeaderText="申报金额">
+                                            <asp:BoundColumn DataField="TotalAmount" HeaderText="DeclaredAmount">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="ImportDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="进口日期">
+                                            <asp:BoundColumn DataField="ImportDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ImportDate">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="Customs" HeaderText="进口口岸">
+                                            <asp:BoundColumn DataField="Customs" HeaderText="PortOfEntry">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="ReportDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="申报日期">
+                                            <asp:BoundColumn DataField="ReportDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="DeclarationDate">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="EntryCode" HeaderText="报关单号">
+                                            <asp:BoundColumn DataField="EntryCode" HeaderText="CustomsDeclarationNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="PreEntryCode" HeaderText="预录单号">
+                                            <asp:BoundColumn DataField="PreEntryCode" HeaderText="PreRecordNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="Currency" HeaderText="币别">
+                                            <asp:BoundColumn DataField="Currency" HeaderText="Currency">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="ExchangeRate" HeaderText="汇率">
+                                            <asp:BoundColumn DataField="ExchangeRate" HeaderText="ExchangeRate">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="TotalEntryTax" HeaderText="关税">
+                                            <asp:BoundColumn DataField="TotalEntryTax" HeaderText="Tariff">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="TotalAddedValueTax" HeaderText="增值税">
+                                            <asp:BoundColumn DataField="TotalAddedValueTax" HeaderText="ValueAddedTax">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                         </Columns>

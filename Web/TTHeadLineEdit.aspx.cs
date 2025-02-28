@@ -469,14 +469,14 @@ public partial class TTHeadLineEdit : System.Web.UI.Page
             headLine.IsHead = DL_IsHead.SelectedValue.Trim();
             headLine.LangCode = ddlLangSwitcher.SelectedValue.Trim();
             headLine.NewsType = DL_NewsType.SelectedValue.Trim();
-            headLine.Status = "发布"; 
+            headLine.Status = "Publish";   //ChineseWord
 
             headLineBLL.UpdateHeadLine(headLine, int.Parse(strID));
 
             ////保存内容文件URL
             SaveHeadlineDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
 
-            DL_Statu.SelectedValue = "发布"; 
+            DL_Statu.SelectedValue = "Publish";   //ChineseWord
         
             LoadHeadLine();
 

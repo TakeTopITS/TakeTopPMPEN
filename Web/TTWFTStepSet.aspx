@@ -205,7 +205,7 @@
                                                         <asp:BoundColumn DataField="SortNumber" HeaderText="步序">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="StepName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="StepName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="limitedOperator" HeaderText="最少人数">
@@ -661,9 +661,9 @@
                                                                                     <asp:Label ID="Label67" runat="server" Text="<%$ Resources:lang,JueSe %>"></asp:Label>： </td>
                                                                                 <td style="width: 200px; text-align: left;" class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DL_Actor" runat="server">
-                                                                                        <asp:ListItem Value="主办者" />
-                                                                                        <asp:ListItem Value="协办者" />
-                                                                                        <asp:ListItem Value="阅知者" />
+                                                                                        <asp:ListItem Value="Organizer" />
+                                                                                        <asp:ListItem Value="Coorganizer" />
+                                                                                        <asp:ListItem Value="Reader" />
                                                                                     </asp:DropDownList></td>
                                                                             </tr>
 

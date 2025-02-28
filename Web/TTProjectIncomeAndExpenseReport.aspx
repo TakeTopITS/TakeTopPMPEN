@@ -161,16 +161,16 @@
 
                                                                                     <ItemStyle CssClass="itemStyle" />
                                                                                     <Columns>
-                                                                                        <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                        <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="50%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="TotalSalary" HeaderText="收入">
+                                                                                        <asp:BoundColumn DataField="TotalSalary" HeaderText="Income">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="TotalExpense" HeaderText="支出">
+                                                                                        <asp:BoundColumn DataField="TotalExpense" HeaderText="Expenditure">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="TotalIncome" HeaderText="收入支出差额">

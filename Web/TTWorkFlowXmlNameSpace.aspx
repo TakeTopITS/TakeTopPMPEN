@@ -47,7 +47,7 @@
                     OnItemCommand="DataGrid1_ItemCommand" Width="789px" >
                     <ItemStyle CssClass="itemStyle" />
                     <Columns>
-                        <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                            <ItemStyle  CssClass="itemBorder"  HorizontalAlign="Center"  Width="10%" />
                         </asp:BoundColumn>
                         <asp:BoundColumn DataField="XmlNameSpaceName" HeaderText="ÃüÃû¿Õ¼ä">

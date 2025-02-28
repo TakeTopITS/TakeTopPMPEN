@@ -102,7 +102,7 @@
                                                                     <asp:BoundColumn DataField="Title" HeaderText="主题">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="SummaryNumber" HeaderText="应收金额">
+                                                                    <asp:BoundColumn DataField="SummaryNumber" HeaderText="AmountReceivable">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                                     </asp:BoundColumn>
 
@@ -256,10 +256,10 @@
                                                                     <asp:BoundColumn DataField="UserName" HeaderText="人员">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Actor" HeaderText="职位">
+                                                                    <asp:BoundColumn DataField="Actor" HeaderText="Position">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="UnitHourSalary" HeaderText="单价">
+                                                                    <asp:BoundColumn DataField="UnitHourSalary" HeaderText="UnitPrice">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
 

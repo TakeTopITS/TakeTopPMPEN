@@ -53,16 +53,16 @@
         <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="99%"
             ShowHeader="false">
             <Columns>
-                <asp:BoundColumn DataField="WorkID" HeaderText="序号">
+                <asp:BoundColumn DataField="WorkID" HeaderText="SerialNumber">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="PlanDetail" HeaderText="计划内容">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="BeginTime" HeaderText="开始时间">
+                <asp:BoundColumn DataField="BeginTime" HeaderText="StartTime">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="EndTime" HeaderText="结束时间">
+                <asp:BoundColumn DataField="EndTime" HeaderText="EndTime">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="Resource" HeaderText="资源">

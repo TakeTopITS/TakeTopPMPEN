@@ -175,7 +175,7 @@ public partial class TTPublishNotice : System.Web.UI.Page
                 publicNotice.RelatedDepartCode = strDepartCode;
                 publicNotice.RelatedDepartName = strDepratName;
                 publicNotice.Scope = DL_Scope.SelectedValue.Trim();
-                publicNotice.Status = "·¢²¼"; 
+                publicNotice.Status = "Publish";   //ChineseWord
 
 
                 try

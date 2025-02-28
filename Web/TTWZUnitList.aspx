@@ -133,7 +133,7 @@
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="UnitName" HeaderText="计量单位">

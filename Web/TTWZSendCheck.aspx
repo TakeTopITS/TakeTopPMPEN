@@ -250,7 +250,7 @@
                                                             <asp:BoundColumn DataField="StoreRoom" HeaderText="库别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -361,7 +361,7 @@
                                                             <asp:BoundColumn DataField="UpLeaderName" HeaderText="主管领导">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

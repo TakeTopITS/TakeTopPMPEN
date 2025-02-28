@@ -77,7 +77,7 @@ public partial class TTWZSelectorSupplier : System.Web.UI.Page
                         left join T_ProjectMember l on s.CompetentLeadership = l.UserCode
                         where 
                         s.Grade <> 'Disabled'
-                        and s.Progress in ('µÇ¼Ç','Approved', '¸´Éó') 
+                        and s.Progress in ('Registration','Approved', 'Review')   //ChineseWord
                         and s.ReviewDate::timestamp  > now()";
 
         //if (strSupplierCode != null & strSupplierCode != "")

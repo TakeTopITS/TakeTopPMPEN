@@ -121,19 +121,19 @@
                                                 <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="身份证号">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="IDNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -149,11 +149,11 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ReleaseTime" HeaderText="发证日期" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="ReleaseTime" HeaderText="CertificateIssuanceDate" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="AnnValidTime" HeaderText="安恐有效期">
+                                                        <asp:BoundColumn DataField="AnnValidTime" HeaderText="AntiTerrorismValidityPeriod">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -169,7 +169,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -234,23 +234,23 @@
                                                 <asp:DataGrid ID="DataGrid6" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid6_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="身份证号">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="IDNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingProject" HeaderText="培训项目">
+                                                        <asp:BoundColumn DataField="TrainingProject" HeaderText="TrainingProgram">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -270,7 +270,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingTime" HeaderText="培训日期" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="TrainingTime" HeaderText="TrainingDate" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -337,23 +337,23 @@
                                                 <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="身份证号">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="IDNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WorkType" HeaderText="用工类别">
+                                                        <asp:BoundColumn DataField="WorkType" HeaderText="LaborCategory">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -377,7 +377,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -444,23 +444,23 @@
                                                 <asp:DataGrid ID="DataGrid3" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid3_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="身份证号">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="IDNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WorkType" HeaderText="用工类别">
+                                                        <asp:BoundColumn DataField="WorkType" HeaderText="LaborCategory">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -484,7 +484,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -548,19 +548,19 @@
                                                 <asp:DataGrid ID="DataGrid4" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid4_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="身份证号">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="IDNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -568,11 +568,11 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WelderSeal" HeaderText="焊工钢印">
+                                                        <asp:BoundColumn DataField="WelderSeal" HeaderText="WelderStamp">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="HolderProject" HeaderText="持证项目">
+                                                        <asp:BoundColumn DataField="HolderProject" HeaderText="CertifiedProjects">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -580,11 +580,11 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                                        <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -657,35 +657,35 @@
                                                 <asp:DataGrid ID="DataGrid5" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="身份证号">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="IDNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BirthDay" HeaderText="出生日期" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="BirthDay" HeaderText="DateOfBirth" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                                        <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WorkType" HeaderText="用工类别">
+                                                        <asp:BoundColumn DataField="WorkType" HeaderText="LaborCategory">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Job" HeaderText="岗位职务">
+                                                        <asp:BoundColumn DataField="Job" HeaderText="Position">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -705,7 +705,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>

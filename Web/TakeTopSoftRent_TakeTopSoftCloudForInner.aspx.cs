@@ -41,7 +41,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloudForInner : System.Web.UI.Pa
     {
         string strServerType = DL_ServerType.SelectedValue.Trim();
 
-        if (strServerType == "租用") 
+        if (strServerType == "Rent")  //ChineseWord //ChineseWord
         {
             TB_StorageCapacity.Enabled = true;
         }
@@ -206,7 +206,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloudForInner : System.Web.UI.Pa
                                ,'{25}'
                                 )", strRentUserPhoneNumber, strRentUserEMail, strRentUserName, strRentUserCompanyName, strRentProductName, strRentProductVersion, strRentUserNumber, "", "", "",
                            "", "", "", "", "", "", "", "",
-                          "", "", "", "", "", "", strQuestionID, "自建"); 
+                          "", "", "", "", "", "", strQuestionID, "SelfBuild");  //ChineseWord //ChineseWord
                 try
                 {
                     ShareClass.RunSqlCommand(strHQL);
@@ -219,7 +219,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloudForInner : System.Web.UI.Pa
 
                 if (strTargetHomeSiteURL != "")
                 {
-                    Response.Redirect("TakeTopSoftRent_BuildSite.aspx?RentUserCompanyName=" + strRentUserCompanyName + "&RentUserName=" + strRentUserName + "&RentUserPhoneNumber=" + strRentUserPhoneNumber + "&RentUserEMail=" + strRentUserEMail + "&RentProductName=" + strRentProductName + "&RentProductVersion=" + strRentProductVersion + "&RentUserNumber=" + strRentUserNumber + "&SiteID=" + strSiteID + "&ServerType=自建"); 
+                    Response.Redirect("TakeTopSoftRent_BuildSite.aspx?RentUserCompanyName=" + strRentUserCompanyName + "&RentUserName=" + strRentUserName + "&RentUserPhoneNumber=" + strRentUserPhoneNumber + "&RentUserEMail=" + strRentUserEMail + "&RentProductName=" + strRentProductName + "&RentProductVersion=" + strRentProductVersion + "&RentUserNumber=" + strRentUserNumber + "&SiteID=" + strSiteID + "&ServerType=自建");  //ChineseWord //ChineseWord
                 }
                 else
                 {

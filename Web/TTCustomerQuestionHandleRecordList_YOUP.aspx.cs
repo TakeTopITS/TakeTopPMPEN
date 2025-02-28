@@ -168,7 +168,7 @@ public partial class TTCustomerQuestionHandleRecordList_YOUP : System.Web.UI.Pag
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '¿Í·þ' and document.RelatedID = " + strQuestionID; 
+        strHQL = "from Document as document where document.RelatedType = 'CustomerQuestion' and document.RelatedID = " + strQuestionID;  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

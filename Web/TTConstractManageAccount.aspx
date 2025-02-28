@@ -115,15 +115,15 @@
                 <div>
                     <asp:GridView ID="gvContractData" runat="server" AutoGenerateColumns="False" EmptyDataText="暂时没有查询到相关信息" AllowPaging="True" PageSize="15" CellPadding="2">
                         <Columns>
-                            <asp:BoundField DataField="constractid" HeaderText="序号" />
+                            <asp:BoundField DataField="constractid" HeaderText="SerialNumber" />
                             <asp:BoundField DataField="status" HeaderText="合同状态" />
                             <asp:BoundField DataField="constractclass" HeaderText="合同大类" />
-                            <asp:BoundField DataField="type" HeaderText="合同类型" />
+                            <asp:BoundField DataField="type" HeaderText="ContractType" />
                             <asp:BoundField DataField="constractcode" HeaderText="公司合同编号" />
                             <asp:BoundField DataField="partyconstractcode" HeaderText="缔约方合同编号" />
-                            <asp:BoundField DataField="constractname" HeaderText="合同名称" />
+                            <asp:BoundField DataField="constractname" HeaderText="ContractName" />
                             <asp:BoundField DataField="ProjectBasis" HeaderText="合同立项依据" />
-                            <asp:BoundField DataField="Amount" HeaderText="合同金额" />
+                            <asp:BoundField DataField="Amount" HeaderText="ContractAmount" />
                             <asp:BoundField DataField="taxrate" HeaderText="税率" />
                             <asp:BoundField DataField="aftertaxtotalamount" HeaderText="合同不含税金额" />
                             <asp:BoundField DataField="provisionalamount" HeaderText="暂列金" />
@@ -136,10 +136,10 @@
                             <asp:BoundField DataField="aenddate" HeaderText="实际竣工时间" />
                             <asp:BoundField DataField="duration" HeaderText="约定工期" />
                             <asp:BoundField DataField="warranty" HeaderText="合同质保期" />
-                            <asp:BoundField DataField="prepaypercent" HeaderText="合同约定预付款比例" />
-                            <asp:BoundField DataField="monthpaypercent" HeaderText="合同约定月进度支付比例" />
-                            <asp:BoundField DataField="finishpaypercent" HeaderText="合同约定竣工支付比例" />
-                            <asp:BoundField DataField="settlepaypercent" HeaderText="合同约定结算支付比例" />
+                            <asp:BoundField DataField="prepaypercent" HeaderText="ContractAgreedAdvancePaymentRatio" />
+                            <asp:BoundField DataField="monthpaypercent" HeaderText="ContractAgreedMonthlyProgressPaymentRatio" />
+                            <asp:BoundField DataField="finishpaypercent" HeaderText="ContractAgreedCompletionPaymentRatio" />
+                            <asp:BoundField DataField="settlepaypercent" HeaderText="ContractAgreedSettlementPaymentRatio" />
                             <asp:BoundField DataField="realprogress" HeaderText="实时形象进度（%）" />
                             <asp:BoundField DataField="realpvalue" HeaderText="实时产值（元）" />
                             <asp:BoundField DataField="sumrecieve" HeaderText="累计收款（元）" />
@@ -147,8 +147,8 @@
                             <asp:BoundField DataField="settleaccount" HeaderText="结算金额（元）" />
                             <asp:BoundField DataField="departname" HeaderText="主管部门" />
                             <asp:BoundField DataField="operator" HeaderText="经办人" />
-                            <asp:BoundField DataField="pmname" HeaderText="项目经理" />
-                            <asp:BoundField DataField="memo" HeaderText="备注" />
+                            <asp:BoundField DataField="pmname" HeaderText="ProjectManager" />
+                            <asp:BoundField DataField="memo" HeaderText="Remark" />
                         </Columns>
                     </asp:GridView>
                 </div>

@@ -183,7 +183,7 @@
                                                     Height="1px" ShowHeader="False" OnItemCommand="DataGrid1_ItemCommand" Width="100%"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -193,29 +193,29 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                        <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FirstName" HeaderText="姓名">
+                                                        <asp:BoundColumn DataField="FirstName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="MobilePhone" HeaderText="手机">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Age" HeaderText="年龄">
+                                                        <asp:BoundColumn DataField="Age" HeaderText="Age">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                        <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:BoundColumn DataField="OfficePhone" HeaderText="办公电话">
+                                                        <asp:BoundColumn DataField="OfficePhone" HeaderText="OfficePhone">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
 

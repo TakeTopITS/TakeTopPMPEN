@@ -122,19 +122,19 @@
                                                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" ShowHeader="False"
                                                                                         Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="AccountType" HeaderText="科目类型">
+                                                                                            <asp:BoundColumn DataField="AccountType" HeaderText="SubjectType">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="会计科目">
+                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="AccountingSubjects">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="BeforeMoney" HeaderText="期初金额">
+                                                                                            <asp:BoundColumn DataField="BeforeMoney" HeaderText="BeginningBalance">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="HappenMoney" HeaderText="发生金额">
+                                                                                            <asp:BoundColumn DataField="HappenMoney" HeaderText="AmountOccurred">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
@@ -142,7 +142,7 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="CurrencyType" HeaderText="币种">
+                                                                                            <asp:BoundColumn DataField="CurrencyType" HeaderText="Currency">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>

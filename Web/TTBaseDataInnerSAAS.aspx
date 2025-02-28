@@ -139,7 +139,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ÀàÐÍ">
+                                                                    <asp:TemplateColumn HeaderText="Type">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_ProjectType" runat="server" CssClass="inpu" Width="150px" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' ToolTip='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                                         </ItemTemplate>
@@ -148,7 +148,7 @@
                                                                     <asp:BoundColumn DataField="KeyWord" HeaderText="¹Ø¼ü´Ê">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <%-- <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <%-- <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("AllowPMChangeStatus").ToString()) %>
     </ItemTemplate>
@@ -240,13 +240,13 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                    <asp:TemplateColumn HeaderText="Number">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_StatusID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
     </ItemTemplate>
@@ -271,7 +271,7 @@
                                                                     <asp:BoundColumn DataField="ReviewControl" HeaderText="¿ØÖÆµã">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="ÀàÐÍ">
+                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
@@ -514,7 +514,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_GroupName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"GroupName") %>' />
                                                                         </ItemTemplate>
@@ -533,7 +533,7 @@
                                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="ÀàÐÍ">
+                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -620,7 +620,7 @@
                                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                         </ItemTemplate>
@@ -639,7 +639,7 @@
                                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="ÀàÐÍ">
+                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -670,7 +670,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                         </ItemTemplate>
@@ -690,7 +690,7 @@
                                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="ÀàÐÍ">
+                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -722,7 +722,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                         </ItemTemplate>
@@ -741,7 +741,7 @@
                                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="ÀàÐÍ">
+                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">

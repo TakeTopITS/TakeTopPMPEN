@@ -328,13 +328,13 @@
                                                                                 <asp:BoundColumn DataField="SelfPoint" HeaderText="自评">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="LeaderPoint" HeaderText="领导评分">
+                                                                                <asp:BoundColumn DataField="LeaderPoint" HeaderText="LeaderAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ThirdPartPoint" HeaderText="第三方评分">
+                                                                                <asp:BoundColumn DataField="ThirdPartPoint" HeaderText="ThirdPartyAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SqlPoint" HeaderText="系统评分">
+                                                                                <asp:BoundColumn DataField="SqlPoint" HeaderText="SystemAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="Point" HeaderText="评分">

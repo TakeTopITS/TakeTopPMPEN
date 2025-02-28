@@ -139,7 +139,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select Account as '科目',SUM(Amount) as '金额' From V_ProjectProfitAndCostChart  
+        strHQL = @"Select Account as 'Subject',SUM(Amount) as 'Amount' From V_ProjectProfitAndCostChart    //ChineseWord
                       Where ";
 
         if (strProjectID != "")
@@ -204,7 +204,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

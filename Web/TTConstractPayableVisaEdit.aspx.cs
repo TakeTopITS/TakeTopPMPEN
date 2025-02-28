@@ -198,7 +198,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
                     //Workflow,删除流程模组关联记录
-                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "资产采购单", strVisaID); 
+                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "AssetPurchaseOrder", strVisaID);   //ChineseWord
 
                     BT_SubmitApply.Enabled = false;
 

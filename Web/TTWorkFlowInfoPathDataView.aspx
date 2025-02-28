@@ -757,7 +757,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label9" runat="server" Text="项目经理"></asp:Label>：</td>
+                                            <asp:Label ID="Label9" runat="server" Text="ProjectManager"></asp:Label>：</td>
                                         <td align="right" colspan="2">
                                             <table width="100%">
                                                 <tr>
@@ -1034,7 +1034,7 @@
                         GridLines="None" ForeColor="#333333" Height="1px" ShowHeader="False">
                         <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                         <Columns>
-                            <%--   <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                            <%--   <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                             </asp:BoundColumn>--%>
 
@@ -1049,7 +1049,7 @@
                                 DataTextField="DocName" Target="downFrame" HeaderText="文件名">
                                 <ItemStyle HorizontalAlign="Left" CssClass="itemBorder"></ItemStyle>
                             </asp:HyperLinkColumn>
-                            <asp:BoundColumn DataField="Visible" HeaderText="权限">
+                            <asp:BoundColumn DataField="Visible" HeaderText="Permission">
                                 <ItemStyle HorizontalAlign="center" CssClass="itemBorder"></ItemStyle>
                             </asp:BoundColumn>
                             <%--   <asp:TemplateColumn>
@@ -1081,7 +1081,7 @@
                                     GridLines="None" ForeColor="#333333" Height="1px" Width="700px" ShowHeader="False">
                                     <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                     <Columns>
-                                        <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                        <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                         </asp:BoundColumn>
 

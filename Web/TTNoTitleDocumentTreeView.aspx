@@ -128,13 +128,13 @@
                                                                 ShowHeader="False" GridLines="None" ForeColor="#333333" Height="1px" Width="100%"
                                                                 ID="DataGrid1">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                    <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <%--   <asp:BoundColumn DataField="RelatedType" HeaderText="大类">
+                                                                    <%--   <asp:BoundColumn DataField="RelatedType" HeaderText="MajorCategory">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>--%>
-                                                                    <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                    <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
@@ -235,13 +235,13 @@
                                                                 ShowHeader="False" GridLines="None" ForeColor="#333333" Height="1px" Width="100%"
                                                                 ID="DataGrid2">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                    <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <%--   <asp:BoundColumn DataField="RelatedType" HeaderText="大类">
+                                                                    <%--   <asp:BoundColumn DataField="RelatedType" HeaderText="MajorCategory">
                                                                           <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                       </asp:BoundColumn>--%>
-                                                                    <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                    <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"

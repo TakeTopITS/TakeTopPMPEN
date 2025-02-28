@@ -25,7 +25,7 @@
             $("#BT_NewBrowse").attr("class", "inpu");
             $("#BT_NewBrowse").removeAttr("disabled");
 
-            if (objProgress == "提交") {
+            if (objProgress == "Submit") {
                 $("#BT_NewEdit").attr("class", "inpu");
                 $("#BT_NewEdit").removeAttr("disabled");                            //编辑
                 $("#BT_NewPush").attr("class", "inpu");
@@ -33,7 +33,7 @@
                 $("#BT_NewPushReturn").attr("disabled", "disabled");
                 $("#BT_NewPushReturn").removeClass("inpu");                         //推荐退回
             }
-            else if (objProgress == "提交1") {
+            else if (objProgress == "Submission1") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //编辑
                 $("#BT_NewPush").attr("disabled", "disabled");
@@ -161,8 +161,8 @@
                                                                                 <td class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
 
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiao%>" Value="提交" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiaoYi%>" Value="提交1" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiao%>" Value="Submit" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiaoYi%>" Value="Submission1" />
                                                                                         <asp:ListItem Text="<%$ Resources:lang,PiZhun%>" Value="Approved" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
@@ -236,7 +236,7 @@
 
                                                                                             <ItemStyle CssClass="itemStyle" />
                                                                                             <Columns>
-                                                                                                <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                 </asp:BoundColumn>
                                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
@@ -246,7 +246,7 @@
                                                                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                                                 </asp:BoundColumn>
-                                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                                     <ItemTemplate>
                                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                     </ItemTemplate>
@@ -556,7 +556,7 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

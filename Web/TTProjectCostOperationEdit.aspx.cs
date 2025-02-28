@@ -225,7 +225,7 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
         bMBaseData.MonthNum = 0;
         bMBaseData.YearNum = DateTime.Now.Year;
         bMBaseData.EnterCode = strUserCode.Trim();
-        bMBaseData.Type = "实际"; 
+        bMBaseData.Type = "Actual";   //ChineseWord
         bMBaseData.ProjectCostID = int.Parse(strprocostID);
 
         bMBaseDataBLL.AddBDBaseData(bMBaseData);
@@ -241,7 +241,7 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
     /// <returns></returns>
     protected int GetMaxBMBaseDataID(BDBaseData bmbp)
     {
-        string strHQL = "Select ID From T_BDBaseData where EnterCode='" + bmbp.EnterCode.Trim() + "' and DepartCode='" + bmbp.DepartCode.Trim() + "' and Type='实际' Order by ID Desc"; 
+        string strHQL = "Select ID From T_BDBaseData where EnterCode='" + bmbp.EnterCode.Trim() + "' and DepartCode='" + bmbp.DepartCode.Trim() + "' and Type='Actual' Order by ID Desc";   //ChineseWord
         DataTable dt = ShareClass.GetDataSetFromSql(strHQL, "T_BDBaseData").Tables[0];
         if (dt.Rows.Count > 0 && dt != null)
         {
@@ -274,9 +274,9 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
         bMBaseDataRecord.YearNum = bmp.YearNum;
 
         if (strParaValue == "1")
-            bMBaseDataRecord.OperationType = "增加"; 
+            bMBaseDataRecord.OperationType = "Increase";   //ChineseWord
         else if (strParaValue == "2")
-            bMBaseDataRecord.OperationType = "更新"; 
+            bMBaseDataRecord.OperationType = "Update";   //ChineseWord
         else if (strParaValue == "3")
             bMBaseDataRecord.OperationType = "Deleted";
 

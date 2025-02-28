@@ -406,7 +406,7 @@
                                                                                     </table>
                                                                                     <asp:DataGrid ID="DataGrid7" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="Point" HeaderText="评分">
@@ -465,22 +465,22 @@
                                                                                     </table>
                                                                                     <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="false">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="Name" HeaderText="姓名">
+                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                                                            <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="Position" HeaderText="职务">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="MobileNum" HeaderText="手机号码">
+                                                                                            <asp:BoundColumn DataField="MobileNum" HeaderText="MobileNumber">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="OfficePhone" HeaderText="办公电话">
+                                                                                            <asp:BoundColumn DataField="OfficePhone" HeaderText="OfficePhone">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="Email" HeaderText="电子邮箱">
@@ -528,7 +528,7 @@
                                                                                     </table>
                                                                                     <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="false">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="CertificateNum" HeaderText="证书编号">
@@ -540,7 +540,7 @@
                                                                                             <asp:BoundColumn DataField="LicenseAgency" HeaderText="发证机关">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="ReleaseTime" HeaderText="发证日期" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                            <asp:BoundColumn DataField="ReleaseTime" HeaderText="CertificateIssuanceDate" DataFormatString="{0:yyyy-MM-dd}">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="Attach" DataNavigateUrlFormatString="{0}" DataTextField="CertificateName" HeaderText="附件下载" Target="_blank">
@@ -804,7 +804,7 @@
                                                                                             <asp:BoundColumn DataField="OperationType" HeaderText="操作性质">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="OperationDate" HeaderText="操作时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                                                                            <asp:BoundColumn DataField="OperationDate" HeaderText="OperationTime" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                             </asp:BoundColumn>
                                                                                         </Columns>

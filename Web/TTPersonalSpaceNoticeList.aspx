@@ -59,7 +59,7 @@
                                                             OnItemCommand="DataGrid7_ItemCommand" OnPageIndexChanged="DataGrid7_PageIndexChanged"
                                                             PageSize="8" Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}" DataTextField="DocName" HeaderText="公告文件名" Target="_blank">

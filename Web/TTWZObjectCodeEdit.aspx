@@ -206,7 +206,7 @@
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="false"
                                                                 Width="100%" OnPageIndexChanged="DG_List_PageIndexChanged">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
+                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="XLCode" HeaderText="小类代码">
@@ -224,7 +224,7 @@
                                                                             <%# ShareClass.StringCutByRequire(Eval("ObjectName").ToString(), 20) %>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <%--<asp:BoundColumn DataField="Criterion" HeaderText="标准">
+                                                                    <%--<asp:BoundColumn DataField="Criterion" HeaderText="Standard">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>
@@ -236,10 +236,10 @@
                                                                             <%# ShareClass.StringCutByRequire(Eval("Criterion").ToString(), 20) %>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="Grade" HeaderText="级别">
+                                                                    <asp:BoundColumn DataField="Grade" HeaderText="Level">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <%--<asp:BoundColumn DataField="Model" HeaderText="规格型号">
+                                                                    <%--<asp:BoundColumn DataField="Model" HeaderText="Specification">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>

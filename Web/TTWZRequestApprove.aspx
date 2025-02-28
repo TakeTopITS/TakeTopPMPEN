@@ -175,17 +175,17 @@
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="approve" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="请款" ? true : false %>'>审核</asp:LinkButton>
-                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="notApprove" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="审核" ? true : false %>'>退回审核</asp:LinkButton>
-                                                                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="account" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="审核" ? true : false %>'>报销</asp:LinkButton>
-                                                                    <asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="notAccount" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="报销" ? true : false %>'>取消报销</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="approve" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Claim for Payment" ? true : false %>'>审核</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="notApprove" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Review" ? true : false %>'>退回审核</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="account" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Review" ? true : false %>'>报销</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="notAccount" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Reimbursement" ? true : false %>'>取消报销</asp:LinkButton>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="RequestCode" HeaderText="请款单号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
+                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
@@ -263,7 +263,7 @@
                                                             <asp:BoundColumn DataField="Arrearage" HeaderText="欠款">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsPay" HeaderText="付款标志">

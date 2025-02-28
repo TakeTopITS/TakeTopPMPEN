@@ -98,7 +98,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="±àºÅ">
+                                                        <asp:TemplateColumn HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -111,13 +111,13 @@
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ChartType" HeaderText="ÀàÐÍ">
+                                                        <asp:BoundColumn DataField="ChartType" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

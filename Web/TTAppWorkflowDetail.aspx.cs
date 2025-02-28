@@ -630,7 +630,7 @@ public partial class TTAppWorkflowDetail : System.Web.UI.Page
 
             if (intResult == 2)
             {
-                TB_Message.Text = ShareClass.GetUserName(strUserCode).Trim() + LanguageHandle.GetWord("ZZZBNDGZLSQ").ToString().Trim() + " ：" + strWLID + " " + strWFName + " 返回到第" + DL_NextStep.SelectedValue.Trim() + " 步了！"; 
+                TB_Message.Text = ShareClass.GetUserName(strUserCode).Trim() + LanguageHandle.GetWord("ZZZBNDGZLSQ").ToString().Trim() + " ：" + strWLID + " " + strWFName + " 返回到第" + DL_NextStep.SelectedValue.Trim() + " 步了！";   //ChineseWord
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSYFHMBZZDSPZ").ToString().Trim() + "')", true);
             }
@@ -1291,7 +1291,7 @@ public partial class TTAppWorkflowDetail : System.Web.UI.Page
 
     protected void RB_WorkflowOperation_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (RB_WorkflowOperation.SelectedValue == "同意") 
+        if (RB_WorkflowOperation.SelectedValue == "Agree")   //ChineseWord
         {
             TB_Content.Text = TB_Content.Text.Replace(LanguageHandle.GetWord("BuTongYi").ToString().Trim(), "");
         }

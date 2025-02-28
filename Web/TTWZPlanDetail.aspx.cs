@@ -384,7 +384,7 @@ public partial class TTWZPlanDetail : System.Web.UI.Page
                     //重新加载领料计划明细
                     DataPickingPlanDetailBinder(wZPickingPlan.PlanCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('添加成功！');ControlStatusCloseChange();", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('添加成功！');ControlStatusCloseChange();", true);   //ChineseWord
                 }
             }
         }

@@ -143,7 +143,7 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="编号">
+                                                                    <asp:TemplateColumn HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -162,13 +162,13 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="币种">
+                                                                    <asp:TemplateColumn HeaderText="Currency">
                                                                         <ItemTemplate>
                                                                             <%# GetPaymentCurrency(Eval("ID").ToString()) %>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="汇率">
+                                                                    <asp:TemplateColumn HeaderText="ExchangeRate">
                                                                         <ItemTemplate>
                                                                             <%# GetPaymentCurrencyExchangeRate(Eval("ID").ToString()) %>
                                                                         </ItemTemplate>
@@ -178,17 +178,17 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Receiver" HeaderText="收款方">
+                                                                    <asp:BoundColumn DataField="Receiver" HeaderText="Payee">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# GetAccountGeneralLedgerStatus(Eval("ID").ToString()) %>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="Comment" HeaderText="备注">
+                                                                    <asp:BoundColumn DataField="Comment" HeaderText="Remark">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>

@@ -251,17 +251,17 @@
                                                                                 <asp:BoundColumn DataField="WLName" HeaderText="工作流名称">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="TemName" DataNavigateUrlFormatString="TTWLTemplate.aspx?TemName={0}"
                                                                                     DataTextField="TemName" HeaderText="模板" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间">
+                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

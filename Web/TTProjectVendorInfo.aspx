@@ -116,7 +116,7 @@
                                     OnPageIndexChanged="DataGrid2_PageIndexChanged" Width="100%" CellPadding="4"
                                     ForeColor="#333333" GridLines="None">
                                     <Columns>
-                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:ButtonColumn>
                                         <asp:TemplateColumn HeaderText="Delete">
@@ -125,7 +125,7 @@
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:TemplateColumn>
-                                        <asp:BoundColumn DataField="VendorCode" HeaderText="代码">
+                                        <asp:BoundColumn DataField="VendorCode" HeaderText="Code">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                         </asp:BoundColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="VendorCode" DataNavigateUrlFormatString="TTVendorInfoView.aspx?VendorCode={0}"
@@ -135,7 +135,7 @@
                                         <asp:BoundColumn DataField="ContactName" HeaderText="联系人">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="Tel1" HeaderText="电话">
+                                        <asp:BoundColumn DataField="Tel1" HeaderText="Telephone">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                         </asp:BoundColumn>
                                         <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">
@@ -227,11 +227,11 @@
                                     </td>
                                     <td style="text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_Currency" runat="server">
-                                            <asp:ListItem Value="人民币" Text="<%$ Resources:lang,RenMinBi%>" />
-                                            <asp:ListItem Value="美元" Text="<%$ Resources:lang,MeiYuan%>" />
-                                            <asp:ListItem Value="欧元" Text="<%$ Resources:lang,OuYuan%>" />
-                                            <asp:ListItem Value="港币" Text="<%$ Resources:lang,GangBi%>" />
-                                            <asp:ListItem Value="台币" Text="<%$ Resources:lang,TaiBi%>" />
+                                            <asp:ListItem Value="Renminbi" Text="<%$ Resources:lang,RenMinBi%>" />
+                                            <asp:ListItem Value="UsDollar" Text="<%$ Resources:lang,MeiYuan%>" />
+                                            <asp:ListItem Value="Euro" Text="<%$ Resources:lang,OuYuan%>" />
+                                            <asp:ListItem Value="HongKongDollar" Text="<%$ Resources:lang,GangBi%>" />
+                                            <asp:ListItem Value="NewTaiwanDollar" Text="<%$ Resources:lang,TaiBi%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

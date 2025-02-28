@@ -40,8 +40,8 @@ public partial class TTWZAdvanceApprove : System.Web.UI.Page
     {
         string strWZAdvanceHQL = string.Format(@"select a.*,m.UserName as MarkerName from T_WZAdvance a
                     left join T_ProjectMember m on a.Marker = m.UserCode 
-                    where a.Progress ='±¨Åú' 
-                    order by a.AdvanceTime desc", strUserCode); 
+                    where a.Progress ='Approval' 
+                    order by a.AdvanceTime desc", strUserCode);   //ChineseWord
         DataTable dtWZAdvance = ShareClass.GetDataSetFromSql(strWZAdvanceHQL, "Advance").Tables[0];
 
         DG_Advance.DataSource = dtWZAdvance;

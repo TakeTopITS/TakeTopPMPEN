@@ -144,13 +144,13 @@
                                                             <asp:BoundColumn DataField="PublicTime" HeaderText="发布日期">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                             </asp:BoundColumn>
-                                                            <asp:TemplateColumn HeaderText="状态">
+                                                            <asp:TemplateColumn HeaderText="Status">
                                                                 <ItemTemplate>
                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                 </ItemTemplate>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="WelderName" HeaderText="名称">
+                                                            <asp:BoundColumn DataField="WelderName" HeaderText="Name">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="RequestCode" HeaderText="申请号">
@@ -168,7 +168,7 @@
                                                             <asp:BoundColumn DataField="WeldPosition2" HeaderText="焊接位置2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Remarks" HeaderText="备注">
+                                                            <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

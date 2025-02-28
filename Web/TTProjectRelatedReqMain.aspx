@@ -153,11 +153,11 @@
                                                     ShowHeader="False" OnItemCommand="DataGrid2_ItemCommand" Width="100%" CellPadding="4"
                                                     ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ReqID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ReqID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ReqID" DataNavigateUrlFormatString="TTProRelatedReqView.aspx?ReqID={0}"
-                                                            DataTextField="ReqName" HeaderText="名称" Target="_blank">
+                                                            DataTextField="ReqName" HeaderText="Name" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:BoundColumn DataField="ReqFinishedDate" HeaderText="需求日期" DataFormatString="{0:yyyy/MM/dd}">
@@ -167,10 +167,10 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="ApplicantName" HeaderText="申请人" Target="_blank">
+                                                            DataTextField="ApplicantName" HeaderText="Applicant" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

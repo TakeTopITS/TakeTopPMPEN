@@ -169,10 +169,10 @@
                                                     AutoGenerateColumns="False" Height="1px" PageSize="30" Width="980px" CellPadding="4"
                                                     ShowHeader="false" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="DefectID" HeaderText="±àºÅ">
+                                                        <asp:BoundColumn DataField="DefectID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DefectType" HeaderText="ÀàÐÍ">
+                                                        <asp:BoundColumn DataField="DefectType" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTProRelatedDefectView.aspx?DefectID={0}"
@@ -186,10 +186,10 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="ApplicantName" HeaderText="ÉêÇëÈË" Target="_blank" Text="<%$ Resources:lang,ShenQingRen%>">
+                                                            DataTextField="ApplicantName" HeaderText="Applicant" Target="_blank" Text="<%$ Resources:lang,ShenQingRen%>">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

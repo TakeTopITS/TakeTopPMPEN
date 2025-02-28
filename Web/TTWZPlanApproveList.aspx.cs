@@ -48,7 +48,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode); 
+                        and pp.Progress != '录入'", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -200,7 +200,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);   //ChineseWord
             return;
         }
 
@@ -244,7 +244,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);   //ChineseWord
             return;
         }
 
@@ -258,7 +258,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);   //ChineseWord
             return;
         }
 
@@ -274,7 +274,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);   //ChineseWord
             return;
         }
 
@@ -291,7 +291,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);   //ChineseWord
             return;
         }
 
@@ -423,7 +423,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode); 
+                        and pp.Progress != '录入'", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -486,7 +486,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode); 
+                        and pp.Progress != '录入'", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -548,7 +548,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode); 
+                        and pp.Progress != '录入'", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))

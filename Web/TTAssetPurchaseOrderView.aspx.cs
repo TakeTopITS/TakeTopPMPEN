@@ -29,7 +29,7 @@ public partial class TTAssetPurchaseOrderView : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
         string strPOID = Request.QueryString["POID"].Trim();
 
-        //this.Title = "资产采购单";
+        //this.Title = "AssetPurchaseOrder";
 
 
         if (Page.IsPostBack != true)

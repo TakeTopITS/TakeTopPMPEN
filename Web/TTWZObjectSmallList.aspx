@@ -34,7 +34,7 @@
             }
 
 
-            if (objProgress == "申请") {
+            if (objProgress == "Application") {
                 $("#BT_NewApprove").attr("class", "inpu");
                 $("#BT_NewApprove").removeAttr("disabled");                            //批准
             }
@@ -262,11 +262,11 @@
 
                                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("XLCode")+"|"+Eval("CreateProgress")+"|"+Eval("IsMark") %>' CommandName="click" CssClass="notTab">操作</asp:LinkButton>
                                                                                 <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName="edit" CssClass="notTab">编辑</asp:LinkButton>--%>
-                                                                                <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName='<%# Eval("CreateProgress").ToString()=="申请" ? "approve" : "notApprove" %>' CssClass="notTab" Text='<%# Eval("CreateProgress").ToString()=="申请" ? "Approved" : "撤销" %>'></asp:LinkButton>--%>
+                                                                                <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName='<%# Eval("CreateProgress").ToString()=="Application" ? "approve" : "notApprove" %>' CssClass="notTab" Text='<%# Eval("CreateProgress").ToString()=="Application" ? "Approved" : "撤销" %>'></asp:LinkButton>--%>
 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="DLCode" HeaderText="大类代码">
+                                                                        <asp:BoundColumn DataField="DLCode" HeaderText="Major Category Code">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="ZLCode" HeaderText="中类代码">

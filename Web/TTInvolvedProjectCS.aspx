@@ -127,7 +127,7 @@
                                                                         Width="100%" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False"
                                                                         Font-Underline="False" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ProjectID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTInvolvedProDetailSAAS.aspx?ProjectID={0}"
@@ -141,7 +141,7 @@
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="PMCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                DataTextField="PMName" HeaderText="项目经理" Target="_blank">
+                                                                                DataTextField="PMName" HeaderText="ProjectManager" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:HyperLinkColumn>
                                                                             <asp:TemplateColumn>
@@ -173,13 +173,13 @@
                                                                             <asp:BoundColumn DataField="Priority" HeaderText="优先级">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                             </asp:BoundColumn>
-                                                                            <%-- <asp:TemplateColumn HeaderText="状态">
+                                                                            <%-- <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("ProStatus").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
 </asp:TemplateColumn>--%>
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                     <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                                 </ItemTemplate>

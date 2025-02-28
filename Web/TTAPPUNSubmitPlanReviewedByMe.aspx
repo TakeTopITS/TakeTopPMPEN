@@ -132,11 +132,11 @@
                                                                 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="PlanID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="PlanID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                  
-                                                                    <asp:BoundColumn DataField="PlanName" HeaderText="计划名">
+                                                                    <asp:BoundColumn DataField="PlanName" HeaderText="PlanName">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                                     </asp:BoundColumn>
                                                                 
@@ -144,17 +144,17 @@
                                                                         DataTextField="CreatorName" HeaderText="制定者" >
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:HyperLinkColumn>
-                                                                       <asp:BoundColumn DataField="PlanType" HeaderText="类型">
+                                                                       <asp:BoundColumn DataField="PlanType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                   <%-- <asp:BoundColumn DataField="StartTime" HeaderText="开始时间" DataFormatString="{0:yyyy/MM/dd}">
+                                                                   <%-- <asp:BoundColumn DataField="StartTime" HeaderText="StartTime" DataFormatString="{0:yyyy/MM/dd}">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="EndTime" HeaderText="结束时间" DataFormatString="{0:yyyy/MM/dd}">
+                                                                    <asp:BoundColumn DataField="EndTime" HeaderText="EndTime" DataFormatString="{0:yyyy/MM/dd}">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:BoundColumn>--%>
 
-                                                                     <asp:TemplateColumn HeaderText="状态">
+                                                                     <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>

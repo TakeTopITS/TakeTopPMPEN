@@ -2307,7 +2307,7 @@ public partial class TTGoodsSaleOrderWF : System.Web.UI.Page
         else
         {
             strHQL = "Select * from T_GoodsSaleOrder where ";
-            strHQL += "SOID in (Select RelatedID  From T_WorkFlowRelatedModule Where RelatedModuleName = '物料销售单' and WorkflowID =" + strRelatedWorkflowID + ")"; 
+            strHQL += "SOID in (Select RelatedID  From T_WorkFlowRelatedModule Where RelatedModuleName = 'MaterialSalesOrder' and WorkflowID =" + strRelatedWorkflowID + ")";   //ChineseWord
         }
         strHQL += " Order by SOID DESC";
 

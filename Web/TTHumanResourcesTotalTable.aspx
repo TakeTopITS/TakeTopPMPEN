@@ -71,8 +71,8 @@
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList1" runat="server">
-                                                                <asp:ListItem Value="按工种" Text="<%$ Resources:lang,AnGongZhong%>" />
-                                                                <asp:ListItem Value="按子组" Text="<%$ Resources:lang,AnZiZu%>" />
+                                                                <asp:ListItem Value="ByTrade" Text="<%$ Resources:lang,AnGongZhong%>" />
+                                                                <asp:ListItem Value="BySubgroup" Text="<%$ Resources:lang,AnZiZu%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle" style="text-align: center">
@@ -115,11 +115,11 @@
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="计划工时">
+                                                            <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="PlannedLaborHours">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="NumberAllTotal" HeaderText="储备工时">
+                                                            <asp:BoundColumn DataField="NumberAllTotal" HeaderText="ReservedLaborHours">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
@@ -154,13 +154,13 @@
                                                                 </table>
                                                                 <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="5" ShowHeader="False" Width="100%">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="HumanSubgroups" HeaderText="人力子组">
+                                                                        <asp:BoundColumn DataField="HumanSubgroups" HeaderText="HumanResourceSubgroup">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="计划工时">
+                                                                        <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="PlannedLaborHours">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="NumberAllTotal" HeaderText="储备工时">
+                                                                        <asp:BoundColumn DataField="NumberAllTotal" HeaderText="ReservedLaborHours">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

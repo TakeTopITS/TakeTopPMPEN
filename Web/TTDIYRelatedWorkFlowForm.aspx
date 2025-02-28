@@ -930,7 +930,7 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td style="text-align: left;">
-                                                                                    <asp:Label ID="Label9" runat="server" Text="项目经理"></asp:Label>：</td>
+                                                                                    <asp:Label ID="Label9" runat="server" Text="ProjectManager"></asp:Label>：</td>
                                                                                 <td align="right" colspan="2">
                                                                                     <table width="100%">
                                                                                         <tr>

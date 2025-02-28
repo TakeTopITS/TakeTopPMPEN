@@ -163,7 +163,7 @@
                                         CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid1_ItemCommand"
                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" ShowHeader="False" Width="100%">
                                         <Columns>
-                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:ButtonColumn>
                                             <asp:TemplateColumn HeaderText="Delete">
@@ -173,29 +173,29 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:TemplateColumn>
 
-                                            <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                            <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="FirstName" HeaderText="姓名">
+                                            <asp:BoundColumn DataField="FirstName" HeaderText="Name">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="MobilePhone" HeaderText="手机">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                            <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Age" HeaderText="年龄">
+                                            <asp:BoundColumn DataField="Age" HeaderText="Age">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                            <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="16%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="OfficePhone" HeaderText="办公电话">
+                                            <asp:BoundColumn DataField="OfficePhone" HeaderText="OfficePhone">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
@@ -283,7 +283,7 @@
                                                     </table>
                                                     <asp:DataGrid ID="DataGrid4" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand" OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="False" Width="100%">
                                                         <Columns>
-                                                            <asp:TemplateColumn HeaderText="编号">
+                                                            <asp:TemplateColumn HeaderText="Number">
                                                                 <ItemTemplate>
                                                                     <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                 </ItemTemplate>
@@ -295,7 +295,7 @@
                                                             <asp:BoundColumn DataField="SendTime" HeaderText="发送时间">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             </asp:BoundColumn>
-                                                            <asp:TemplateColumn HeaderText="状态">
+                                                            <asp:TemplateColumn HeaderText="Status">
                                                                 <ItemTemplate>
                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                 </ItemTemplate>

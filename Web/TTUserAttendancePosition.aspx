@@ -129,10 +129,10 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100px" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="UserName" HeaderText="姓名" Target="_blank">
+                                                            DataTextField="UserName" HeaderText="Name" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="时间">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="Time">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="150px" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn HeaderText="位置：">

@@ -41,7 +41,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
     {
         string strServerType = DL_ServerType.SelectedValue.Trim();
 
-        if (strServerType == "租用") 
+        if (strServerType == "Rent")  //ChineseWord //ChineseWord
         {
             TB_StorageCapacity.Enabled = true;
         }
@@ -203,7 +203,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
                                ,'{25}'
                                 )", strRentUserPhoneNumber, strRentUserEMail, strRentUserName, strRentUserCompanyName, strRentProductName, strRentProductVersion, strRentUserNumber, "", "", "",
                        "", "", "", "", "", "", "", "",
-                      "", "", "", "", "", "", strQuestionID, "租用"); 
+                      "", "", "", "", "", "", strQuestionID, "Rent");  //ChineseWord //ChineseWord
 
                 try
                 {
@@ -218,7 +218,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
 
                 if (strIsAutoBuildSite == "YES" & strTargetHomeSiteURL != "")
                 {
-                    IFrame_BuildSite.Src = "TakeTopSoftRent_BuildSite.aspx?RentUserCompanyName=" + strRentUserCompanyName + "&RentUserName=" + strRentUserName + "&RentUserPhoneNumber=" + strRentUserPhoneNumber + "&RentUserEMail=" + strRentUserEMail + "&RentProductName=" + strRentProductName + "&RentProductVersion=" + strRentProductVersion + "&RentUserNumber=" + strRentUserNumber + "&SiteID=" + strSiteID + "&ServerType=租用"; 
+                    IFrame_BuildSite.Src = "TakeTopSoftRent_BuildSite.aspx?RentUserCompanyName=" + strRentUserCompanyName + "&RentUserName=" + strRentUserName + "&RentUserPhoneNumber=" + strRentUserPhoneNumber + "&RentUserEMail=" + strRentUserEMail + "&RentProductName=" + strRentProductName + "&RentProductVersion=" + strRentProductVersion + "&RentUserNumber=" + strRentUserNumber + "&SiteID=" + strSiteID + "&ServerType=租用";  //ChineseWord //ChineseWord
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 }
                 else

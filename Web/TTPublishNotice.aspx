@@ -117,10 +117,10 @@
                                                     PageSize="8" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None"
                                                     ShowHeader="False">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
@@ -133,7 +133,7 @@
                                                         <asp:BoundColumn DataField="Scope" HeaderText="范围">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                                        <asp:BoundColumn DataField="Author" HeaderText="Author">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">

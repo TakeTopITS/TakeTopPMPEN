@@ -69,7 +69,7 @@ public partial class TTProjectRequirementManage : System.Web.UI.Page
             SetReqRecordColor(DataGrid4);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
+            strHQL += " and (reqAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";   //ChineseWord
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in ( select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + ")";
             strHQL += " Order by reqAssignRecord.ID DESC";
@@ -129,7 +129,7 @@ public partial class TTProjectRequirementManage : System.Web.UI.Page
             SetReqRecordColor(DataGrid4);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
+            strHQL += " and (reqAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";   //ChineseWord
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in ( select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('New','Review','Hided','Deleted','Archived')))";
             strHQL += " Order by reqAssignRecord.ID DESC";

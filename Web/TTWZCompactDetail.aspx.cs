@@ -83,8 +83,8 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                 WZPurchaseBLL wZPurchaseBLL = new WZPurchaseBLL();
                 string strWZPurchaseHQL = string.Format(@"from WZPurchase as wZPurchase 
                         where PurchaseEngineer = '{0}'
-                        and Progress in ('询价','评标','上报','决策')
-                        and ProjectCode = '{1}' order by MarkTime desc ", wZCompact.PurchaseEngineer, wZCompact.ProjectCode); 
+                        and Progress in ('询价','评标','上报','Decision')
+                        and ProjectCode = '{1}' order by MarkTime desc ", wZCompact.PurchaseEngineer, wZCompact.ProjectCode);   //ChineseWord
                 IList listWZPurchase = wZPurchaseBLL.GetAllWZPurchases(strWZPurchaseHQL);
 
                 HF_SupplierCode.Value = wZCompact.SupplierCode;
@@ -227,11 +227,11 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                     string strUpdateCompactHQL = "update T_WZCompact set CompactMoney = " + decimalCompactMoney + ",RowNumber=" + intRowNumber + ",IsMark=-1 where CompactCode = '" + strCompactCode + "'";
                     ShareClass.RunSqlCommand(strUpdateCompactHQL);
                     //修改采购清单的进度，使用标记
-                    string strUpdatePurchaseDetailHQL = "update T_WZPurchaseDetail set IsMark = -1,Progress='合同' where ID = " + intPurchaseDetailID; 
+                    string strUpdatePurchaseDetailHQL = "update T_WZPurchaseDetail set IsMark = -1,Progress='Contract' where ID = " + intPurchaseDetailID;   //ChineseWord
                     ShareClass.RunSqlCommand(strUpdatePurchaseDetailHQL);
 
                     //修改领料计划明细进度
-                    string strUpdatePickingDetailHQL = "update T_WZPickingPlanDetail set Progress = '合同' where ID = " + intPlanDetailID; 
+                    string strUpdatePickingDetailHQL = "update T_WZPickingPlanDetail set Progress = 'Contract' where ID = " + intPlanDetailID;   //ChineseWord
                     ShareClass.RunSqlCommand(strUpdatePickingDetailHQL);
 
                     //重新加载合同明细列表

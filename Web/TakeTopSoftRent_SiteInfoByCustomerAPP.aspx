@@ -158,7 +158,7 @@
                                                                                             </td>
                                                                                             <td align="center" width="2%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label2" runat="server" Text="序号"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label2" runat="server" Text="SerialNumber"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="2%">
                                                                                                 <strong>
@@ -171,7 +171,7 @@
 
                                                                                             <td align="center" class="auto-style1">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label7" runat="server" Text="公司"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label7" runat="server" Text="Company"></asp:Label></strong>
                                                                                             </td>
                                                                                            
                                                                                             <td align="center" width="4%">
@@ -193,7 +193,7 @@
                                                                                             </td>
                                                                                             <td align="center" width="3%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label12" runat="server" Text="版本"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label12" runat="server" Text="Version"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="3%">
                                                                                                 <strong>
@@ -201,7 +201,7 @@
                                                                                             </td>
                                                                                             <td align="center" width="2%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label6" runat="server" Text="用户数"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label6" runat="server" Text="UserCount"></asp:Label></strong>
                                                                                             </td>
                                                                                           
                                                                                               <td align="center" width="5%">
@@ -214,7 +214,7 @@
                                                                                             </td>
                                                                                             <td align="center" width="2%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label22" runat="server" Text="状态"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label22" runat="server" Text="Status"></asp:Label></strong>
                                                                                             </td>
                                                                                                <td align="center" width="3%">
                                                                                                 <strong>
@@ -261,7 +261,7 @@
                                                                                             </td>--%>
                                                                                             <td align="center">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label10" runat="server" Text="创建时间"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label10" runat="server" Text="CreationTime"></asp:Label></strong>
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>
@@ -341,10 +341,10 @@
                                                                                 <asp:BoundColumn DataField="RentUserName" HeaderText="用户名">
                                                                                     <ItemStyle CssClass="itemBorder" Width="2%" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="RentUserPhoneNumber" HeaderText="电话">
+                                                                                <asp:BoundColumn DataField="RentUserPhoneNumber" HeaderText="Telephone">
                                                                                     <ItemStyle CssClass="itemBorder" Width="3%" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="RentUserCompanyName" HeaderText="公司">
+                                                                                <asp:BoundColumn DataField="RentUserCompanyName" HeaderText="Company">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SiteAppSystemName" HeaderText="应用名">
@@ -357,7 +357,7 @@
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:TemplateColumn>
                                                                              
-                                                                              <%-- <asp:BoundColumn DataField="SiteAppName" HeaderText="站点名">
+                                                                              <%-- <asp:BoundColumn DataField="SiteAppName" HeaderText="SiteName">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                 </asp:BoundColumn>--%>
                                                                                  <asp:TemplateColumn>
@@ -366,13 +366,13 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                 </asp:TemplateColumn>
-                                                                                  <asp:BoundColumn DataField="RentProductVersion" HeaderText="版本">
+                                                                                  <asp:BoundColumn DataField="RentProductVersion" HeaderText="Version">
                                                                                     <ItemStyle CssClass="itemBorder" Width="3%" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="IsOEM" HeaderText="IsOEM">
                                                                                     <ItemStyle CssClass="itemBorder" Width="3%" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="RentUserNumber" HeaderText="用户数">
+                                                                                <asp:BoundColumn DataField="RentUserNumber" HeaderText="UserCount">
                                                                                     <ItemStyle CssClass="itemBorder" Width="2%" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                <asp:BoundColumn DataField="SiteDirectory" HeaderText="站点目录">
@@ -395,7 +395,7 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("SiteStatus").ToString()) %>
     </ItemTemplate>
@@ -437,7 +437,7 @@
                                                                                <%-- <asp:BoundColumn DataField="SiteCreatorName" HeaderText="创建人">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                                 </asp:BoundColumn>--%>
-                                                                                <asp:BoundColumn DataField="SiteCreateTime" HeaderText="创建时间">
+                                                                                <asp:BoundColumn DataField="SiteCreateTime" HeaderText="CreationTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>

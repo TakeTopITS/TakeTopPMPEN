@@ -126,7 +126,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -136,7 +136,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn HeaderText="专家名称">
@@ -155,12 +155,12 @@
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
@@ -204,9 +204,9 @@
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GeRenBiaoXian%>"></asp:Label>：</td>
                                     <td align="left" class="auto-style1">
                                         <asp:DropDownList ID="DL_CooperateDegree" runat="server">
-                                            <asp:ListItem Value="配合" Text="<%$ Resources:lang,PeiHe%>" />
-                                            <asp:ListItem Value="优秀" Text="<%$ Resources:lang,YouXiu%>" />
-                                            <asp:ListItem Value="不良" Text="<%$ Resources:lang,BuLiang%>" />
+                                            <asp:ListItem Value="Coordination" Text="<%$ Resources:lang,PeiHe%>" />
+                                            <asp:ListItem Value="Excellent" Text="<%$ Resources:lang,YouXiu%>" />
+                                            <asp:ListItem Value="Adverse" Text="<%$ Resources:lang,BuLiang%>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td align="right" class="auto-style2">&nbsp;</td>

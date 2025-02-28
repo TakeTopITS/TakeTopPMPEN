@@ -300,13 +300,13 @@
 
                                                                                     <ItemStyle CssClass="itemStyle" />
                                                                                     <Columns>
-                                                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                        <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="DepartCode" HeaderText="关联部门代码">
@@ -374,13 +374,13 @@
 
                                                                                     <ItemStyle CssClass="itemStyle" />
                                                                                     <Columns>
-                                                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                        <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -535,7 +535,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyle" style="width: 30%; height: 26px; text-align: right">
-                                        <asp:Label ID="Label87" runat="server" Text="办公地址"></asp:Label>：
+                                        <asp:Label ID="Label87" runat="server" Text="OfficeAddress"></asp:Label>：
                                     </td>
                                     <td class="formItemBgStyle" style="width: 70%; height: 26px; text-align: left">
                                         <asp:TextBox ID="TB_WorkAddressNew" runat="server" Width="400px"></asp:TextBox>

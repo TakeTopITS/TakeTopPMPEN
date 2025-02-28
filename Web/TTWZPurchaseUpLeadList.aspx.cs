@@ -101,7 +101,7 @@ public partial class TTWZPurchaseUpLeadList : System.Web.UI.Page
                         where (p.UpLeader = '{0}' or p.PurchaseManager = '{0}' or p.TenderCompetent = '{0}')
 
 
-                        and p.Progress in ('提交','上报','Approved')", strUserCode); 
+                        and p.Progress in ('Submit','上报','Approved')", strUserCode);   //ChineseWord
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {
@@ -304,7 +304,7 @@ public partial class TTWZPurchaseUpLeadList : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('批准" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('批准" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "');", true);   //ChineseWord
         }
     }
 
@@ -333,7 +333,7 @@ public partial class TTWZPurchaseUpLeadList : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重报成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重报成功！');", true);   //ChineseWord
         }
     }
 
@@ -415,7 +415,7 @@ public partial class TTWZPurchaseUpLeadList : System.Web.UI.Page
                         where (p.UpLeader = '{0}' or p.PurchaseManager = '{0}' or p.TenderCompetent = '{0}')
 
 
-                        and p.Progress in ('提交','上报','Approved')", strUserCode); 
+                        and p.Progress in ('Submit','上报','Approved')", strUserCode);   //ChineseWord
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {
@@ -508,7 +508,7 @@ public partial class TTWZPurchaseUpLeadList : System.Web.UI.Page
                         where (p.UpLeader = '{0}' or p.PurchaseManager = '{0}' or p.TenderCompetent = '{0}')
 
 
-                        and p.Progress in ('提交','上报','Approved')", strUserCode); 
+                        and p.Progress in ('Submit','上报','Approved')", strUserCode);   //ChineseWord
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {
@@ -601,7 +601,7 @@ public partial class TTWZPurchaseUpLeadList : System.Web.UI.Page
                         where (p.UpLeader = '{0}' or p.PurchaseManager = '{0}' or p.TenderCompetent = '{0}')
 
 
-                        and p.Progress in ('提交','上报','Approved')", strUserCode); 
+                        and p.Progress in ('Submit','上报','Approved')", strUserCode);   //ChineseWord
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {

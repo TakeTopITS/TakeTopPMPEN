@@ -146,7 +146,7 @@
                                                                     <asp:BoundColumn DataField="Address">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="״̬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -243,7 +243,7 @@
                                                                     <asp:BoundColumn DataField="Address">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="״̬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>

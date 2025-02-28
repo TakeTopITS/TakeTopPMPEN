@@ -203,7 +203,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="编号">
+                                                    <asp:TemplateColumn HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_Code" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Code").ToString().Trim() %>' />
@@ -211,18 +211,18 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="PurchasingContractName" HeaderText="合同名称">
+                                                    <asp:BoundColumn DataField="PurchasingContractName" HeaderText="ContractName">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="状态">
+                                                    <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="创建日期" DataFormatString="{0:yyyy-MM-dd}">
+                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="CreationDate" DataFormatString="{0:yyyy-MM-dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

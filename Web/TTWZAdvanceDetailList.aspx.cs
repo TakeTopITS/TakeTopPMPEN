@@ -66,7 +66,7 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
             string strWZCompactHQL = string.Format(@"select * from T_WZCompact as wZCompact
                         where Progress in ('ÉúÐ§','²Ä¼ì')
                         and ProjectCode = (select ProjectCode from T_WZAdvance where AdvanceCode = '{0}')
-                        and CompactCode not in (select CompactCode from T_WZRequest)", strAdvanceCode); 
+                        and CompactCode not in (select CompactCode from T_WZRequest)", strAdvanceCode);   //ChineseWord
             DataTable dtCompact = ShareClass.GetDataSetFromSql(strWZCompactHQL, "Compact").Tables[0];
 
             DG_Compact.DataSource = dtCompact;

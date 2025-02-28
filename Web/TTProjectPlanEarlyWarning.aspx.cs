@@ -126,23 +126,23 @@ public partial class TTProjectPlanEarlyWarning : System.Web.UI.Page
                 string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
                 decimal deRelaydays = NB_RelayDays.Amount;
 
-                strHQL = " select distinct ProjectID 项目号,ProjectName 项目名,PMCode 项目经理代码,PMName 项目经理名称, PlanID 计划号 ,PlanDetail 计划名,LeaderCode 负责人代码,Leader 负责人,BeginTime 开始时间,EndTime 结束时间,cast(ExpireDay as int) 拖期天数,"; 
-                strHQL += " Percent_Done 进度,DefaultSchedule 标准进度,Expense 费用,DefaultCost 标准成本,Budget 预算 "; 
+                strHQL = " select distinct ProjectID 项目号,ProjectName 项目名,PMCode 项目经理代码,PMName 项目经理名称, PlanID 计划号 ,PlanDetail 计划名,LeaderCode 负责人代码,Leader 负责人,BeginTime 开始时间,EndTime 结束时间,cast(ExpireDay as int) 拖期天数,";   //ChineseWord
+                strHQL += " Percent_Done 进度,DefaultSchedule 标准进度,Expense 费用,DefaultCost 标准成本,Budget 预算 ";   //ChineseWord
                 strHQL += " from V_ProjectPlanList";
                 strHQL += " where PMCode = " + "'" + strUserCode + "'";
 
                 if (strActorType == "LEADER")
                 {
-                    strHQL = " select distinct ProjectID 项目号,ProjectName 项目名,PMCode 项目经理代码,PMName 项目经理名称, PlanID 计划号 ,PlanDetail 计划名,LeaderCode 负责人代码,Leader 负责人,BeginTime 开始时间,EndTime 结束时间,cast(ExpireDay as int) 拖期天数,"; 
-                    strHQL += " Percent_Done,DefaultSchedule 标准进度,Expense,DefaultCost 标准成本 ,Budget 预算"; 
+                    strHQL = " select distinct ProjectID 项目号,ProjectName 项目名,PMCode 项目经理代码,PMName 项目经理名称, PlanID 计划号 ,PlanDetail 计划名,LeaderCode 负责人代码,Leader 负责人,BeginTime 开始时间,EndTime 结束时间,cast(ExpireDay as int) 拖期天数,";   //ChineseWord
+                    strHQL += " Percent_Done,DefaultSchedule 标准进度,Expense,DefaultCost 标准成本 ,Budget 预算";   //ChineseWord
                     strHQL += " from V_ProjectPlanList";
                     strHQL += " where PMCode in (Select UserCode From T_MemberLevel Where UserCode = " + "'" + strUserCode + "'" + " and ProjectVisible = 'YES' " + ")";            
                 }
 
                 if (strActorType == "SUPER")
                 {
-                    strHQL = " select distinct ProjectID 项目号,ProjectName 项目名,PMCode 项目经理代码,PMName 项目经理名称, PlanID 计划号 ,PlanDetail 计划名,LeaderCode 负责人代码,Leader 负责人,BeginTime 开始时间,EndTime 结束时间,cast(ExpireDay as int) 拖期天数,"; 
-                    strHQL += " Percent_Done,DefaultSchedule 标准进度,Expense,DefaultCost 标准成本,Budget 预算"; 
+                    strHQL = " select distinct ProjectID 项目号,ProjectName 项目名,PMCode 项目经理代码,PMName 项目经理名称, PlanID 计划号 ,PlanDetail 计划名,LeaderCode 负责人代码,Leader 负责人,BeginTime 开始时间,EndTime 结束时间,cast(ExpireDay as int) 拖期天数,";   //ChineseWord
+                    strHQL += " Percent_Done,DefaultSchedule 标准进度,Expense,DefaultCost 标准成本,Budget 预算";   //ChineseWord
                     strHQL += " from V_ProjectPlanList";
                     strHQL += " where PMCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
                 }

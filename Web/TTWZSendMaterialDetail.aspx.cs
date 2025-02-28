@@ -64,7 +64,7 @@ public partial class TTWZSendMaterialDetail : System.Web.UI.Page
                         left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                         where s.PurchaseEngineer ='{0}' 
                         and s.Progress = 'Â¼Èë' 
-                        order by s.TicketTime desc", strUserCode); 
+                        order by s.TicketTime desc", strUserCode);   //ChineseWord
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;

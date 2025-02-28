@@ -261,7 +261,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="已完成"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="Completed"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -303,7 +303,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="已分派"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="Assigned"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -392,14 +392,14 @@
                                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                                 OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="25" Width="95%">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTCreateDefectDetail.aspx?DefectID={0}"
                                                                         DataTextField="DefectName" HeaderText="缺陷名称" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="38%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="DefectType" HeaderText="类型">
+                                                                    <asp:BoundColumn DataField="DefectType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="DefectFinishedDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="缺陷日期">
@@ -409,7 +409,7 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByDefectmentStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>

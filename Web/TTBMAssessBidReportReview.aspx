@@ -190,7 +190,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="编号">
+                                                        <asp:TemplateColumn HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -275,14 +275,14 @@
                                                         <asp:TemplateColumn HeaderText="Operation">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             <ItemTemplate>
-                                                                <asp:Button ID="BT_Bidding" CommandName="中标" runat="server" CssClass="inpu" Text='中标' />
+                                                                <asp:Button ID="BT_Bidding" CommandName="BidWin" runat="server" CssClass="inpu" Text='BidWin' />
                                                                 <asp:Button ID="BT_NoBidding" CommandName="Unsuccessful Bid" runat="server" CssClass="inpu" Text='UnsuccessfulBid' />
                                                                 <asp:HiddenField runat="server" ID="hfStatus" Value='<%#Eval("BidStatus")%>' />
                                                             </ItemTemplate>
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="false">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="1%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />

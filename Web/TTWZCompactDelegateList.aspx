@@ -65,9 +65,9 @@
                                                                             <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,LieBiaoChaXun%>"></asp:Label>：&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>：
                                                             <asp:DropDownList ID="DDL_WhereProgress" runat="server" OnSelectedIndexChanged="DDL_WhereProgress_SelectedIndexChanged" AutoPostBack="true">
-                                                                <asp:ListItem Text="<%$ Resources:lang,ShenHe%>" Value="审核" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,ShenHe%>" Value="Review" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,ShengXiao%>" Value="生效" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value="全部" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value="All" />
                                                             </asp:DropDownList>
                                                                             <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>：<asp:TextBox ID="TXT_WhereProjectCode" runat="server" Width="70px"></asp:TextBox>
                                                                             <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,HeTongMingCheng%>"></asp:Label>：<asp:TextBox ID="TXT_WhereCompactName" runat="server"></asp:TextBox>&nbsp;
@@ -265,7 +265,7 @@
                                                                                                 <asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CompactCode") %>' CommandName="click" CssClass="notTab">
                                                                                                     <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label>
                                                                                                 </asp:LinkButton>
-                                                                                                <%--   <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CompactCode") %>' CommandName="audit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="审核" ? true : false %>'>
+                                                                                                <%--   <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CompactCode") %>' CommandName="audit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Review" ? true : false %>'>
                                                                                                     <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>
                                                                                                 </asp:LinkButton>
                                                                                                 <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CompactCode") %>' CommandName="approve" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Approved" ? true : false %>'>
@@ -276,7 +276,7 @@
                                                                                                 </asp:LinkButton>--%>
                                                                                             </ItemTemplate>
                                                                                         </asp:TemplateColumn>
-                                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
+                                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
@@ -288,7 +288,7 @@
                                                                                         <asp:BoundColumn DataField="SupplierCode" HeaderText="供方编号">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <%--<asp:BoundColumn DataField="CompactName" HeaderText="合同名称">
+                                                                                        <%--<asp:BoundColumn DataField="CompactName" HeaderText="ContractName">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                         </asp:BoundColumn>--%>
                                                                                         <asp:TemplateColumn>
@@ -315,7 +315,7 @@
                                                                                         <asp:BoundColumn DataField="RowNumber" HeaderText="明细条数">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="CompactMoney" HeaderText="合同金额">
+                                                                                        <asp:BoundColumn DataField="CompactMoney" HeaderText="ContractAmount">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="CollectMoney" HeaderText="收料金额">
@@ -345,7 +345,7 @@
                                                                                         <asp:BoundColumn DataField="PurchaseEngineerName" HeaderText="采购工程师">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="ControlMoneyName" HeaderText="价格监审">
+                                                                                        <asp:BoundColumn DataField="ControlMoneyName" HeaderText="Price Audit">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="VerifyTime" HeaderText="审核日期">
@@ -393,7 +393,7 @@
                                                                                       <%--  <asp:BoundColumn DataField="PayIsMark" HeaderText="预付标志">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                         </asp:BoundColumn>--%>
-                                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

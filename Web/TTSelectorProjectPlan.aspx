@@ -83,7 +83,7 @@
                                                             Width="100%" OnItemCommand="DG_List_ItemCommand">
                                                             <Columns>
                                                                
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="ÏîÄ¿ºÅ">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="ProjectNumber">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>

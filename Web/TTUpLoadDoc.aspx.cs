@@ -92,7 +92,7 @@ public partial class TTUpLoadDoc : System.Web.UI.Page
                 TB_DocType.Text = docType.Type.Trim();
 
                 strHQL = " from Document as document where document.DocTypeID = " + strDocTypeID;
-                strHQL += " and document.RelatedType = '知识管理'"; 
+                strHQL += " and document.RelatedType = 'KnowledgeManagement'";   //ChineseWord
                 strHQL += " and document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'";
                 strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
                 LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
@@ -110,7 +110,7 @@ public partial class TTUpLoadDoc : System.Web.UI.Page
 
             strHQL = " from Document as document where ";
             strHQL += " document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'";
-            strHQL += " and document.RelatedType = '知识管理'"; 
+            strHQL += " and document.RelatedType = 'KnowledgeManagement'";   //ChineseWord
             strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
@@ -699,7 +699,7 @@ public partial class TTUpLoadDoc : System.Web.UI.Page
         if (strHQL == "")
         {
             strHQL = "from Document as document where document.UploadManCode = " + "'" + strUserCode + "'";
-            //strHQL += " and document.RelatedType = '知识管理'";
+            //strHQL += " and document.RelatedType = 'KnowledgeManagement'";
             strHQL += " and document.DepartCode = " + "'" + strDepartCode + "'" + " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
         }

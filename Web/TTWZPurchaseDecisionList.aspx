@@ -307,10 +307,10 @@
                                                             <asp:BoundColumn DataField="TenderCompetentName" HeaderText="招标主管">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="价格监审">
+                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="Price Audit">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="纪检监督">
+                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="Disciplinary Supervision">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ExpertCode1Name" HeaderText="专家1">
@@ -331,7 +331,7 @@
                                                             <asp:BoundColumn DataField="UpLeaderName" HeaderText="上级领导">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
@@ -516,7 +516,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("DecisionTime").ToString(),10) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

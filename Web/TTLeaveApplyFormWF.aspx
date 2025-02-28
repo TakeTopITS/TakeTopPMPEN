@@ -125,7 +125,7 @@
                                                 </table>
                                                 <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid2_ItemCommand" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="15" ShowHeader="False" Width="100%">
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -143,22 +143,22 @@
                                                         <asp:BoundColumn DataField="DepartName" HeaderText="所属部门">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="申请人">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Applicant">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="开始时间">
+                                                        <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="StartTime">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="结束时间">
+                                                        <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="EndTime">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="LeaveType" HeaderText="请假类型">
+                                                        <asp:BoundColumn DataField="LeaveType" HeaderText="LeaveType">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ApplyBecause" HeaderText="请假事由">
+                                                        <asp:BoundColumn DataField="ApplyBecause" HeaderText="ReasonForLeave">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>
@@ -403,7 +403,7 @@
                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
@@ -413,7 +413,7 @@
                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="状态">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <ItemTemplate>
                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                     </ItemTemplate>

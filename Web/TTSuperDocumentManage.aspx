@@ -216,10 +216,10 @@
                                                                 Width="100%" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False"
                                                                 Font-Underline="False" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                    <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="RelatedType" HeaderText="大类">
+                                                                    <asp:BoundColumn DataField="RelatedType" HeaderText="MajorCategory">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="父类">
@@ -228,7 +228,7 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                    <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"

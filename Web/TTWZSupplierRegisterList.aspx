@@ -160,7 +160,7 @@
 
                                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Â¼Èë" ? true : false %>'>
                                                                                         <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,TiJiao%>"></asp:Label></asp:LinkButton>
-                                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submitReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Ìá½»" ? true : false %>'>
+                                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submitReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Submit" ? true : false %>'>
                                                                                         <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,TiJiaoTuiHui%>"></asp:Label></asp:LinkButton>
 
                                                                                 </ItemTemplate>

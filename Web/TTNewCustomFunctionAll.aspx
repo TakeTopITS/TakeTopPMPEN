@@ -133,10 +133,10 @@
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                                     </asp:BoundColumn>
                                                                                                     <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTNewCustomFunctionDetail.aspx?strCustomCode={0}"
-                                                                                                        DataTextField="CustomerName" HeaderText="客户名称" Target="_blank">
+                                                                                                        DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                                     </asp:HyperLinkColumn>
-                                                                                                    <asp:BoundColumn DataField="CreateDate" HeaderText="创建时间">
+                                                                                                    <asp:BoundColumn DataField="CreateDate" HeaderText="CreationTime">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                                     </asp:BoundColumn>
                                                                                                     <asp:BoundColumn DataField="CreatorCode" HeaderText="销售员">

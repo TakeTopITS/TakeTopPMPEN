@@ -497,7 +497,7 @@ public partial class TTWZCompactDelegateList : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('批准成功！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('批准成功！');ControlStatusCloseChange();", true);   //ChineseWord
         }
     }
 
@@ -528,7 +528,7 @@ public partial class TTWZCompactDelegateList : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('删除成功！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('删除成功！');ControlStatusCloseChange();", true);   //ChineseWord
         }
     }
 

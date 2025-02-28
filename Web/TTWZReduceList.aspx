@@ -416,7 +416,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 8) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Process" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Process" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="MainLeaderName" HeaderText="主管领导">
@@ -604,7 +604,7 @@
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <%--<asp:Button runat="server" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" Text="修改" />--%>
+                                                                    <%--<asp:Button runat="server" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" Text="Modify" />--%>
                                                                     <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab">修改</asp:LinkButton>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
@@ -614,7 +614,7 @@
                                                             <asp:BoundColumn DataField="StockCode" HeaderText="库别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">

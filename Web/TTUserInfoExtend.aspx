@@ -80,7 +80,7 @@
                                             </cc1:ModalPopupExtender>
                                         </td>
                                         <td style="width: 15%; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label5" runat="server" Text="司龄"></asp:Label></td>
+                                            <asp:Label ID="Label5" runat="server" Text="CompanySeniority"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="TB_EntryTotalYearMonth" Width="100" runat="server" ReadOnly></asp:TextBox>
                                         </td>
@@ -90,14 +90,14 @@
                                             <asp:Label ID="Label10" runat="server" Text="办公地点"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_OfficeAddress" runat="server">
-                                                <asp:ListItem Value="集团" Text="集团" />
-                                                <asp:ListItem Value="龙港" Text="龙港" />
-                                                <asp:ListItem Value="空港" Text="空港" />
-                                                <asp:ListItem Value="外勤" Text="外勤" />
+                                                <asp:ListItem Value="Group" Text="Group" />
+                                                <asp:ListItem Value="Longgang" Text="Longgang" />
+                                                <asp:ListItem Value="AirportArea" Text="AirportArea" />
+                                                <asp:ListItem Value="FieldWork" Text="FieldWork" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="height: 28px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label16" runat="server" Text="员工类型"></asp:Label></td>
+                                            <asp:Label ID="Label16" runat="server" Text="EmployeeType"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_UserTypeExtend" runat="server">
                                                 <asp:ListItem Value="NoType" Text="NoType" />
@@ -112,37 +112,37 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label1" runat="server" Text="员工状态"></asp:Label></td>
+                                            <asp:Label ID="Label1" runat="server" Text="EmployeeStatus"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_UserState" runat="server">
-                                                <asp:ListItem Value="试用" Text="试用" />
-                                                <asp:ListItem Value="正式" Text="正式" />
+                                                <asp:ListItem Value="Probation" Text="Probation" />
+                                                <asp:ListItem Value="Formal" Text="Formal" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="height: 28px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label2" runat="server" Text="试用期"></asp:Label></td>
+                                            <asp:Label ID="Label2" runat="server" Text="ProbationPeriod"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ProbationPeriod" runat="server">
-                                                <asp:ListItem Value="无试用期" Text="无试用期" />
-                                                <asp:ListItem Value="1个月" Text="1个月" />
-                                                <asp:ListItem Value="2个月" Text="2个月" />
-                                                <asp:ListItem Value="3个月" Text="3个月" />
-                                                <asp:ListItem Value="4个月" Text="4个月" />
-                                                <asp:ListItem Value="5个月" Text="5个月" />
-                                                <asp:ListItem Value="6个月" Text="6个月" />
+                                                <asp:ListItem Value="NoProbationPeriod" Text="NoProbationPeriod" />
+                                                <asp:ListItem Value="OneMonth" Text="OneMonth" />
+                                                <asp:ListItem Value="TwoMonths" Text="TwoMonths" />
+                                                <asp:ListItem Value="ThreeMonths" Text="ThreeMonths" />
+                                                <asp:ListItem Value="FourMonths" Text="FourMonths" />
+                                                <asp:ListItem Value="FiveMonths" Text="FiveMonths" />
+                                                <asp:ListItem Value="SixMonths" Text="SixMonths" />
                                                 <asp:ListItem Value="Other" Text="Other" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label3" runat="server" Text="实际转正日期"></asp:Label></td>
+                                            <asp:Label ID="Label3" runat="server" Text="ActualRegularizationDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_TurnOfficialDate" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_TurnOfficialDate" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="height: 28px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label6" runat="server" Text="户籍类型"></asp:Label></td>
+                                            <asp:Label ID="Label6" runat="server" Text="HouseholdType"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_HouseRegisterType" runat="server">
                                                 <asp:ListItem Value="LocalUrban" Text="LocalUrban" />
@@ -154,29 +154,29 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label7" runat="server" Text="政治面貌"></asp:Label></td>
+                                            <asp:Label ID="Label7" runat="server" Text="PoliticalAffiliation"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_PoliticalOutlook" runat="server">
-                                                <asp:ListItem Value="团员" Text="团员" />
-                                                <asp:ListItem Value="党员" Text="党员" />
-                                                <asp:ListItem Value="群众" Text="群众" />
+                                                <asp:ListItem Value="LeagueMember" Text="LeagueMember" />
+                                                <asp:ListItem Value="PartyMember" Text="PartyMember" />
+                                                <asp:ListItem Value="Public" Text="Public" />
                                                 <asp:ListItem Value="Other" Text="Other" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label20" runat="server" Text="联系人关系"></asp:Label></td>
+                                            <asp:Label ID="Label20" runat="server" Text="ContactRelationship"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_UrgencyRelation" runat="server">
-                                                <asp:ListItem Value="父母" Text="父母" />
-                                                <asp:ListItem Value="配偶" Text="配偶" />
-                                                <asp:ListItem Value="子女" Text="子女" />
+                                                <asp:ListItem Value="Parents" Text="Parents" />
+                                                <asp:ListItem Value="Spouse" Text="Spouse" />
+                                                <asp:ListItem Value="Children" Text="Children" />
                                                 <asp:ListItem Value="Other" Text="Other" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label9" runat="server" Text="合同类型"></asp:Label></td>
+                                            <asp:Label ID="Label9" runat="server" Text="ContractType"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ContractType" runat="server">
                                                 <asp:ListItem Value="LaborContract" Text="LaborContract" />
@@ -186,20 +186,20 @@
                                             </asp:DropDownList>
                                         </td>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label8" runat="server" Text="合同公司"></asp:Label></td>
+                                            <asp:Label ID="Label8" runat="server" Text="ContractCompany"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="TB_ContractCompany" Width="90%" runat="server"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label11" runat="server" Text="首次合同起始日"></asp:Label></td>
+                                            <asp:Label ID="Label11" runat="server" Text="FirstContractStartDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_FirstContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_FirstContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label12" runat="server" Text="首次合同到期日"></asp:Label></td>
+                                            <asp:Label ID="Label12" runat="server" Text="FirstContractEndDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_FirstContractEndTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_FirstContractEndTime" Enabled="True"></ajaxToolkit:CalendarExtender>
@@ -208,17 +208,17 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label26" runat="server" Text="首次合同期限"></asp:Label></td>
+                                            <asp:Label ID="Label26" runat="server" Text="FirstContractDuration"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_FirstContractYears" runat="server">
-                                                <asp:ListItem Value="1年" Text="1年" />
-                                                <asp:ListItem Value="2年" Text="2年" />
-                                                <asp:ListItem Value="3年" Text="3年" />
-                                                <asp:ListItem Value="无固定期" Text="无固定期" />
+                                                <asp:ListItem Value="OneYear" Text="OneYear" />
+                                                <asp:ListItem Value="TwoYears" Text="TwoYears" />
+                                                <asp:ListItem Value="ThreeYears" Text="ThreeYears" />
+                                                <asp:ListItem Value="NoFixedTerm" Text="NoFixedTerm" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label13" runat="server" Text="第二次合同起始日"></asp:Label></td>
+                                            <asp:Label ID="Label13" runat="server" Text="SecondContractStartDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_SecondContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_SecondContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
@@ -227,32 +227,32 @@
                                     <tr>
 
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label14" runat="server" Text="第二次合同到期日"></asp:Label></td>
+                                            <asp:Label ID="Label14" runat="server" Text="SecondContractEndDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_SecondContractEndTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender5" runat="server" TargetControlID="DLC_SecondContractEndTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label27" runat="server" Text="第二次合同期限"></asp:Label></td>
+                                            <asp:Label ID="Label27" runat="server" Text="SecondContractDuration"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_SecondContractYears" runat="server">
-                                                <asp:ListItem Value="1年" Text="1年" />
-                                                <asp:ListItem Value="2年" Text="2年" />
-                                                <asp:ListItem Value="3年" Text="3年" />
-                                                <asp:ListItem Value="无固定期" Text="无固定期" />
+                                                <asp:ListItem Value="OneYear" Text="OneYear" />
+                                                <asp:ListItem Value="TwoYears" Text="TwoYears" />
+                                                <asp:ListItem Value="ThreeYears" Text="ThreeYears" />
+                                                <asp:ListItem Value="NoFixedTerm" Text="NoFixedTerm" />
                                             </asp:DropDownList>
                                         </td>
 
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label15" runat="server" Text="第三次合同起始日"></asp:Label></td>
+                                            <asp:Label ID="Label15" runat="server" Text="ThirdContractStartDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_ThirdContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender6" runat="server" TargetControlID="DLC_ThirdContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label17" runat="server" Text="第三次合同到期日"></asp:Label></td>
+                                            <asp:Label ID="Label17" runat="server" Text="ThirdContractEndDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_ThirdContractEndTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender7" runat="server" TargetControlID="DLC_ThirdContractEndTime" Enabled="True"></ajaxToolkit:CalendarExtender>
@@ -261,36 +261,36 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label28" runat="server" Text="第三次合同期限"></asp:Label></td>
+                                            <asp:Label ID="Label28" runat="server" Text="ThirdContractDuration"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ThirdContractYears" runat="server">
-                                                <asp:ListItem Value="1年" Text="1年" />
-                                                <asp:ListItem Value="2年" Text="2年" />
-                                                <asp:ListItem Value="3年" Text="3年" />
-                                                <asp:ListItem Value="无固定期" Text="无固定期" />
+                                                <asp:ListItem Value="OneYear" Text="OneYear" />
+                                                <asp:ListItem Value="TwoYears" Text="TwoYears" />
+                                                <asp:ListItem Value="ThreeYears" Text="ThreeYears" />
+                                                <asp:ListItem Value="NoFixedTerm" Text="NoFixedTerm" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label18" runat="server" Text="已签次数"></asp:Label></td>
+                                            <asp:Label ID="Label18" runat="server" Text="SignedTimes"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="TB_SignContractCount" Width="90%" runat="server"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label19" runat="server" Text="现合同起始日"></asp:Label></td>
+                                            <asp:Label ID="Label19" runat="server" Text="CurrentContractStartDate"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_ContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender8" runat="server" TargetControlID="DLC_ContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label29" runat="server" Text="现合同期限"></asp:Label></td>
+                                            <asp:Label ID="Label29" runat="server" Text="CurrentContractDuration"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ContractYears" runat="server">
-                                                <asp:ListItem Value="1年" Text="1年" />
-                                                <asp:ListItem Value="2年" Text="2年" />
-                                                <asp:ListItem Value="3年" Text="3年" />
-                                                <asp:ListItem Value="无固定期" Text="无固定期" />
+                                                <asp:ListItem Value="OneYear" Text="OneYear" />
+                                                <asp:ListItem Value="TwoYears" Text="TwoYears" />
+                                                <asp:ListItem Value="ThreeYears" Text="ThreeYears" />
+                                                <asp:ListItem Value="NoFixedTerm" Text="NoFixedTerm" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>

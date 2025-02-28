@@ -321,8 +321,8 @@
                                                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>：</td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">
                                                                         <asp:DropDownList ID="DL_SystemMDIStyle" runat="server" Enabled="false">
-                                                                            <asp:ListItem Value="左右下展" Text="<%$ Resources:lang,ZuoYouXiaZhan%>" />
-                                                                            <asp:ListItem Value="上下联动" Text="<%$ Resources:lang,ShangXiaLianDong%>" />
+                                                                            <asp:ListItem Value="LeftRightDownExhibition" Text="<%$ Resources:lang,ZuoYouXiaZhan%>" />
+                                                                            <asp:ListItem Value="UpAndDownLinkage" Text="<%$ Resources:lang,ShangXiaLianDong%>" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;"></td>

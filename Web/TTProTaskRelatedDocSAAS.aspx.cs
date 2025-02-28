@@ -409,7 +409,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         strHQL += " (((document.RelatedType = 'Task' and document.RelatedID = " + strTaskID + " )";
         strHQL += " or ( document.RelatedType = 'Plan' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strTaskID + ")))";
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( '部门','全体'))))"; 
+        strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         documentBLL = new DocumentBLL();
@@ -447,7 +447,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
         strUserCode = HttpContext.Current.Session["UserCode"].ToString().Trim();
 
-        strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = '个人' or GroupName = '全体') "; 
+        strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = 'Individual' or GroupName = 'Entire') ";   //ChineseWord
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ActorGroup");

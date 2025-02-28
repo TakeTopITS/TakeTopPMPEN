@@ -108,10 +108,10 @@
                                                                 ShowHeader="False" OnItemCommand="DataGrid1_ItemCommand" Width="99%"
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ" Visible="False">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="False">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="ÐÕÃû">
+                                                                    <asp:TemplateColumn HeaderText="Name">
                                                                         <ItemTemplate>
                                                                             <asp:Button CssClass="inpuLongest" ID="BT_FirstName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"FirstName") %>' />
                                                                         </ItemTemplate>

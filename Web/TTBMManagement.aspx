@@ -54,10 +54,10 @@
                                     <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="18" Width="100%"
                                         CellPadding="0" ForeColor="#333333" GridLines="None" ShowHeader="False" Height="1px">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="false">
+                                            <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                 <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="1%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Name" HeaderText="名称">
+                                            <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                 <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="BidWay" HeaderText="招标方式">

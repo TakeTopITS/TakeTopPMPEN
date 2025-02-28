@@ -92,17 +92,17 @@
                                             Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="32" Width="100%"
                                             CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="false">
                                             <Columns>
-                                                <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                     DataTextField="DocName" HeaderText="文件名" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                 </asp:HyperLinkColumn>
-                                                <asp:BoundColumn DataField="RelatedDepartName" HeaderText="类型">
+                                                <asp:BoundColumn DataField="RelatedDepartName" HeaderText="Type">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="UploadManCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"

@@ -91,8 +91,8 @@
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShouQuanCaiGou%>"></asp:Label>：</td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <%--<asp:DropDownList ID="TXT_PowerPurchase" runat="server">
-                                                        <asp:ListItem Text="有" Value="有"/>
-                                                        <asp:ListItem Text="无" Value="无"/>
+                                                        <asp:ListItem Text="Yes" Value="Yes"/>
+                                                        <asp:ListItem Text="No" Value="No"/>
                                                     </asp:DropDownList>--%>
                                                     <asp:TextBox ID="TXT_PowerPurchase" runat="server"></asp:TextBox>
                                                 </td>

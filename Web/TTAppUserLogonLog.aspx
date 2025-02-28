@@ -149,16 +149,16 @@
                                         </asp:TemplateColumn>
 
 
-                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
                                         <asp:BoundColumn DataField="UserName" HeaderText="用户">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="Position" HeaderText="位置">
+                                        <asp:BoundColumn DataField="Position" HeaderText="Location">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="28%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="LoginTime" HeaderText="登录时间">
+                                        <asp:BoundColumn DataField="LoginTime" HeaderText="LoginTime">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                         </asp:BoundColumn>--%>
                                     </Columns>

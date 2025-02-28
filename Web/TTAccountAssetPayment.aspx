@@ -147,49 +147,49 @@
                                                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" ShowHeader="False"
                                                                                         Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="AccountType" HeaderText="科目类型">
+                                                                                            <asp:BoundColumn DataField="AccountType" HeaderText="SubjectType">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="会计科目">
+                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="AccountingSubjects">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="性质">
+                                                                                            <asp:TemplateColumn HeaderText="Nature">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetAccountType(Eval("ReceivablesRecordID").ToString(),Eval("PayableRecordID").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="财务帐套">
+                                                                                            <asp:TemplateColumn HeaderText="FinancialAccountingSet">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetFinancialName(Eval("FinancialCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="财务区间">
+                                                                                            <asp:TemplateColumn HeaderText="FinancialPeriod">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetIntervalName(Eval("IntervalCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="TotalMoney" HeaderText="发生金额">
+                                                                                            <asp:BoundColumn DataField="TotalMoney" HeaderText="AmountOccurred">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="币种">
+                                                                                            <asp:TemplateColumn HeaderText="Currency">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetFinancialCurrency(Eval("FinancialCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="操作人">
+                                                                                            <asp:TemplateColumn HeaderText="Operator">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetUserName(Eval("Creater").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="操作时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="OperationTime" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>

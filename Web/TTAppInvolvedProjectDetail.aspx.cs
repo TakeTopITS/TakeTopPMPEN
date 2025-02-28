@@ -86,7 +86,7 @@ public partial class TTAppInvolvedProjectDetail : System.Web.UI.Page
                 NB_ManHour.Enabled = false;
             }
 
-            strHQL = "from DailyWork as dailyWork where dailyWork.Type = '参与' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'"; 
+            strHQL = "from DailyWork as dailyWork where dailyWork.Type = 'Participate' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";  
             DailyWorkBLL dailyWorkBLL = new DailyWorkBLL();
             lst = dailyWorkBLL.GetAllDailyWorks(strHQL);
 
@@ -309,7 +309,7 @@ public partial class TTAppInvolvedProjectDetail : System.Web.UI.Page
                     strProject = project.ProjectName.Trim(); ;
                     deFinishPercent = NB_FinishPercent.Amount;
 
-                    dailyWork.Type = "参与"; 
+                    dailyWork.Type = "Participate";  
                     dailyWork.UserCode = strUserCode;
                     dailyWork.UserName = ShareClass.GetUserName(strUserCode);
                     dailyWork.WorkDate = DateTime.Now;
@@ -336,8 +336,8 @@ public partial class TTAppInvolvedProjectDetail : System.Web.UI.Page
                     //strHQL = string.Format(@"Insert Into T_DailyWork(Type,UserCode,UserName,WorkDate,ProjectID,ProjectName,
                     //   DailySummary,Charge,FinishPercent,ManHour,ConfirmManHour,Salary,Bonus,ConfirmBonus,Autority,Address,Achievement,RecordTime)
                     //  values('{0}','{1}','{2}',now(),{4},'{5}','{6}',{7},{8},{9},{10},{11},{12},{13},'{14}','{15}','{16}',now())"
-                    //  , "参与", strUserCode, ShareClass.GetUserName(strUserCode), int.Parse(strProjectID), strProject, strTodaySummary, 0, deFinishPercent,
-                    //  deManHour, deManHour, deManHour * deUnitHourSalary, deBonus, deBonus, DL_Authority.SelectedValue.Trim(), TB_WorkAddress.Text.Trim(), TB_Achievement.Text.Trim()); 
+                    //  , "Participate", strUserCode, ShareClass.GetUserName(strUserCode), int.Parse(strProjectID), strProject, strTodaySummary, 0, deFinishPercent,
+                    //  deManHour, deManHour, deManHour * deUnitHourSalary, deBonus, deBonus, DL_Authority.SelectedValue.Trim(), TB_WorkAddress.Text.Trim(), TB_Achievement.Text.Trim());  
 
                     //LogClass.WriteLogFile(strHQL);
 

@@ -114,7 +114,7 @@
                                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="false"
                                                                     Width="100%" OnItemCommand="DG_List_ItemCommand">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>

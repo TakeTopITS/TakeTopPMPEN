@@ -198,7 +198,7 @@
                                                             <asp:BoundColumn DataField="WeldingMaterial" HeaderText="º¸½Ó²ÄÁÏ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Remark" HeaderText="±¸×¢">
+                                                            <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

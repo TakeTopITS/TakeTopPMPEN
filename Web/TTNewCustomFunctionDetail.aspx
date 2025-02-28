@@ -239,11 +239,11 @@
                                                                             </td>
                                                                             <td style="text-align: left;" class="formItemBgStyle">
                                                                                 <asp:DropDownList ID="DL_Currency" runat="server">
-                                                                                    <asp:ListItem Value="人民币" Text="<%$ Resources:lang,RenMinBi%>"/>
-                                                                                    <asp:ListItem Value="美元" Text="<%$ Resources:lang,MeiYuan%>"/>
-                                                                                    <asp:ListItem Value="欧元" Text="<%$ Resources:lang,OuYuan%>"/>
-                                                                                    <asp:ListItem Value="港币" Text="<%$ Resources:lang,GangBi%>"/>
-                                                                                    <asp:ListItem Value="台币" Text="<%$ Resources:lang,TaiBi%>"/>
+                                                                                    <asp:ListItem Value="Renminbi" Text="<%$ Resources:lang,RenMinBi%>"/>
+                                                                                    <asp:ListItem Value="UsDollar" Text="<%$ Resources:lang,MeiYuan%>"/>
+                                                                                    <asp:ListItem Value="Euro" Text="<%$ Resources:lang,OuYuan%>"/>
+                                                                                    <asp:ListItem Value="HongKongDollar" Text="<%$ Resources:lang,GangBi%>"/>
+                                                                                    <asp:ListItem Value="NewTaiwanDollar" Text="<%$ Resources:lang,TaiBi%>"/>
                                                                                 </asp:DropDownList>
                                                                             </td>
                                                                         </tr>

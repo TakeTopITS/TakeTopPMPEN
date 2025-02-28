@@ -573,14 +573,14 @@
                                                 </tr>
                                                   <tr>
                                                       <td class="formItemBgStyle" style="width: 100px; text-align: right">
-                                                        <asp:Label ID="Label76" runat="server" Text="注册证号"></asp:Label>：
+                                                        <asp:Label ID="Label76" runat="server" Text="RegistrationCertificateNumber"></asp:Label>：
                                                     </td>
                                                     <td class="formItemBgStyle"  style="text-align: left">
                                                         <asp:TextBox ID="TB_RegistrationNumber" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
 
                                                     <td class="formItemBgStyle" style="width: 100px; text-align: right;">
-                                                        <asp:Label ID="Label75" runat="server" Text="包装方式"></asp:Label>：
+                                                        <asp:Label ID="Label75" runat="server" Text="PackagingMethod"></asp:Label>：
                                                     </td>
                                                     <td class="formItemBgStyle"  style="text-align: left;">
                                                         <asp:TextBox ID="TB_PackingType" runat="server" Width="99%"></asp:TextBox>

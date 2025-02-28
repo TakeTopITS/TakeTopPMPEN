@@ -49,8 +49,8 @@ public partial class TTWZRequestList : System.Web.UI.Page
                             left join T_ProjectMember a on r.Approver = a.UserCode
                             left join T_WZSupplier s on r.SupplierCode = s.SupplierCode 
                             where r.Borrower ='{0}' 
-                            and r.Progress in ('录入','请款','审核','报销') 
-                            order by r.RequestTime desc", strUserCode); 
+                            and r.Progress in ('录入','Claim for Payment','Review','Reimbursement') 
+                            order by r.RequestTime desc", strUserCode);   //ChineseWord
         DataTable dtRequest = ShareClass.GetDataSetFromSql(strRequestHQL, "Request").Tables[0];
 
         DG_Request.DataSource = dtRequest;
@@ -325,19 +325,19 @@ public partial class TTWZRequestList : System.Web.UI.Page
                 if (string.IsNullOrEmpty(strCompactCode))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
                 if (string.IsNullOrEmpty(strUseWay))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
                 if (string.IsNullOrEmpty(strApprover))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
 
@@ -351,7 +351,7 @@ public partial class TTWZRequestList : System.Web.UI.Page
                     if (wZRequest.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim())
                     {
                         string strNewProgress = HF_NewProgress.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是录入状态，不能修改！');ControlStatusChange('" + strNewProgress + "');", true); 
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是录入状态，不能修改！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                         return;
                     }
 
@@ -379,19 +379,19 @@ public partial class TTWZRequestList : System.Web.UI.Page
                 if (string.IsNullOrEmpty(strCompactCode))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
                 if (string.IsNullOrEmpty(strUseWay))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
                 if (string.IsNullOrEmpty(strApprover))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
 
@@ -436,19 +436,19 @@ public partial class TTWZRequestList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strCompactCode))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strUseWay))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
             if (string.IsNullOrEmpty(strApprover))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
             }
 
@@ -471,7 +471,7 @@ public partial class TTWZRequestList : System.Web.UI.Page
             //重新加载
             DataRequestBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');ControlStatusCloseChange();", true);   //ChineseWord
         }
         catch (Exception ex) { }
     }
@@ -494,19 +494,19 @@ public partial class TTWZRequestList : System.Web.UI.Page
                 if (string.IsNullOrEmpty(strCompactCode))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
                 if (string.IsNullOrEmpty(strUseWay))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('用途不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
                 if (string.IsNullOrEmpty(strApprover))
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('财务审核不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                     return;
                 }
 
@@ -520,7 +520,7 @@ public partial class TTWZRequestList : System.Web.UI.Page
                     if (wZRequest.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim())
                     {
                         string strNewProgress = HF_NewProgress.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是录入状态，不能修改！');ControlStatusChange('" + strNewProgress + "');", true); 
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不是录入状态，不能修改！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                         return;
                     }
 
@@ -535,14 +535,14 @@ public partial class TTWZRequestList : System.Web.UI.Page
                     //重新加载
                     DataRequestBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');ControlStatusCloseChange();", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');ControlStatusCloseChange();", true);   //ChineseWord
                 }
             }
             else
             {
                 //增加
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的请款单列表！');ControlStatusChange('" + strNewProgress + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的请款单列表！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
                 return;
 
             }
@@ -648,7 +648,7 @@ public partial class TTWZRequestList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProgress.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择请款单！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择请款单！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -736,7 +736,7 @@ public partial class TTWZRequestList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProgress.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择请款单中的收料按钮！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择请款单中的收料按钮！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -760,7 +760,7 @@ public partial class TTWZRequestList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProgress.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择请款单！');ControlStatusChange('" + strNewProgress + "');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择请款单！');ControlStatusChange('" + strNewProgress + "');", true);   //ChineseWord
             return;
         }
     }
@@ -804,7 +804,7 @@ public partial class TTWZRequestList : System.Web.UI.Page
     private void DataCompactBander()
     {
         WZCompactBLL wZCompactBLL = new WZCompactBLL();
-        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '材检' and CollectMoney > 0 order by MarkTime desc", strUserCode); 
+        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '材检' and CollectMoney > 0 order by MarkTime desc", strUserCode);   //ChineseWord
         IList listCompact = wZCompactBLL.GetAllWZCompacts(strWZCompactHQL);
 
         DDL_Compact.DataSource = listCompact;

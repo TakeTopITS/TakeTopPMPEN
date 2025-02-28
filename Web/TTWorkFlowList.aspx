@@ -223,7 +223,7 @@
                                                     <asp:BoundColumn DataField="ActiveTime" HeaderText="激活时间">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="状态">
+                                                    <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>
@@ -359,7 +359,7 @@
                                             <asp:BoundColumn DataField="CheckingTime" HeaderText="最后审核时间">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>
@@ -522,31 +522,31 @@
                                         ShowHeader="false" Height="1px"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
                                                 DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="WLType" HeaderText="类型">
+                                            <asp:BoundColumn DataField="WLType" HeaderText="Type">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="CreatorName" HeaderText="申请人" Target="_blank">
+                                                DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:HyperLinkColumn>
                                             <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <%--  <asp:TemplateColumn HeaderText="状态">
+                                            <%--  <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
 </asp:TemplateColumn>--%>
 
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

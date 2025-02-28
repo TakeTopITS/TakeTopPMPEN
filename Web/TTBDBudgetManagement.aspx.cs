@@ -150,7 +150,7 @@ public partial class TTBDBudgetManagement : System.Web.UI.Page
             LB_DepartCode.Text = "";
         }
 
-        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='Operation' or A.Type='Êµ¼Ê')"; 
+        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='Operation' or A.Type='Actual')";   //ChineseWord
         strHQL += " and B.DepartCode In " + strDepartString;
 
        

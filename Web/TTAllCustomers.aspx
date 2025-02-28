@@ -200,11 +200,11 @@
                                                     OnPageIndexChanged="DataGrid2_PageIndexChanged" Width="100%" CellPadding="4"
                                                     ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
-                                                            DataTextField="CustomerName" HeaderText="客户名称" Target="_blank">
+                                                            DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:TemplateColumn HeaderText="补充信息">
@@ -238,7 +238,7 @@
                                                         <asp:BoundColumn DataField="City" HeaderText="城市">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Tel1" HeaderText="电话">
+                                                        <asp:BoundColumn DataField="Tel1" HeaderText="Telephone">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">

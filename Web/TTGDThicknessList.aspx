@@ -124,7 +124,7 @@
                                                             <asp:BoundColumn DataField="Size" HeaderText="넹당">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Rules" HeaderText="방목">
+                                                            <asp:BoundColumn DataField="Rules" HeaderText="Specification">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Thickness" HeaderText="비똑">

@@ -260,7 +260,7 @@
                                                                                                     ShowHeader="false" OnPageIndexChanged="DataGrid3_PageIndexChanged" Width="100%"
                                                                                                     PageSize="25" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                                                     <Columns>
-                                                                                                        <asp:BoundColumn DataField="DefectID" HeaderText="±àºÅ">
+                                                                                                        <asp:BoundColumn DataField="DefectID" HeaderText="Number">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                         </asp:BoundColumn>
                                                                                                         <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTDefectView.aspx?DefectID={0}"
@@ -271,19 +271,19 @@
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                                         </asp:BoundColumn>
                                                                                                         <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                                            DataTextField="ApplicantName" HeaderText="ÉêÇëÈË" Target="_blank">
+                                                                                                            DataTextField="ApplicantName" HeaderText="Applicant" Target="_blank">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                                                                         </asp:HyperLinkColumn>
                                                                                                         <asp:BoundColumn DataField="MakeDate" HeaderText="ÉêÇëÊ±¼ä">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="17%" />
                                                                                                         </asp:BoundColumn>
-                                                                                                        <%-- <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                                        <%-- <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
 </asp:TemplateColumn>--%>
-                                                                                                        <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                                        <asp:TemplateColumn HeaderText="Status">
                                                                                                             <ItemTemplate>
                                                                                                                 <%# ShareClass.GetStatusHomeNameByDefectmentStatus(Eval("Status").ToString()) %>
                                                                                                             </ItemTemplate>

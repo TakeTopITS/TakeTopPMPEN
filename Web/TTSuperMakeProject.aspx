@@ -676,7 +676,7 @@
                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="编号">
+                                                <asp:TemplateColumn HeaderText="Number">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ProjectID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ProjectID") %>'
                                                             CssClass="inpu" />
@@ -695,7 +695,7 @@
                                                 <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="立项日期">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="状态">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <ItemTemplate>
                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                     </ItemTemplate>

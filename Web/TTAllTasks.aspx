@@ -321,7 +321,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="已完成"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="Completed"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -362,7 +362,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="已分派"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="Assigned"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

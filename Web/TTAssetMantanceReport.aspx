@@ -198,7 +198,7 @@
                                                         DataTextField="MTManName" HeaderText="用户" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="description" HeaderText="维护内容">
@@ -207,7 +207,7 @@
                                                     <asp:BoundColumn DataField="MTTime" HeaderText="维修时间" DataFormatString="{0:yyyy/MM/dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Cost" HeaderText="费用">
+                                                    <asp:BoundColumn DataField="Cost" HeaderText="Expense">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
                                                 </Columns>

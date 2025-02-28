@@ -72,7 +72,7 @@ public partial class TTMakeCustomer : System.Web.UI.Page
 
             LoadCustomerList(strRelatedType, strRelatedID);
 
-            strHQL = "Select GroupName From T_ActorGroup Where Type <>'Part' and GroupName not in ('个人','部门','公司','集团','All')"; 
+            strHQL = "Select GroupName From T_ActorGroup Where Type <>'Part' and GroupName not in ('Individual','Department','Company','Group','All')";  
             strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'Super'";
             strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
@@ -229,7 +229,7 @@ public partial class TTMakeCustomer : System.Web.UI.Page
         strAreaAddress = "%" + TB_FindArea.Text.Trim() + "%";
         strAgencyName = "%" + TB_AgencyName.Text.Trim() + "%";
 
-        strHQL = "Select distinct A.CustomerCode '客户代码',B.CustomerName '客户名称',F_GetCustomerRelatedUserString(A.CustomerCode) '可视人员' from T_CustomerRelatedUser A, T_Customer B where A.CustomerCode = B.CustomerCode "; 
+        strHQL = "Select distinct A.CustomerCode 'CustomerCode',B.CustomerName 'CustomerName',F_GetCustomerRelatedUserString(A.CustomerCode) 'VisiblePersonnel' from T_CustomerRelatedUser A, T_Customer B where A.CustomerCode = B.CustomerCode ";   //ChineseWord
         strHQL += " and B.Type like  " + "'" + strIndustryType + "'";
         strHQL += " and B.CustomerCode like " + "'" + strCustomerCode + "'";
         strHQL += " and B.CustomerName like  " + "'" + strCustomerName + "'";
@@ -1052,7 +1052,7 @@ public partial class TTMakeCustomer : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);

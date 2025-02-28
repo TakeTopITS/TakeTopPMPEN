@@ -70,7 +70,7 @@
                                                         <asp:BoundColumn DataField="CreatorName" HeaderText="创建人">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>

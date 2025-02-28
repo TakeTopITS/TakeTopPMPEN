@@ -119,7 +119,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ProjectClass = '模板项目' "; 
+        strHQL = "from Project as project where project.ProjectClass = 'TemplateProject' ";   //ChineseWord
         strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -143,7 +143,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
             TemplateProjectTreeView.DataBind();
         }
 
-        strHQL = "from Project as project where project.ProjectClass = '常规项目' and  project.PMCode = " + "'" + strUserCode + "'"; 
+        strHQL = "from Project as project where project.ProjectClass = 'RegularProject' and  project.PMCode = " + "'" + strUserCode + "'";   //ChineseWord
         strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
 
         lst = projectBLL.GetAllProjects(strHQL);

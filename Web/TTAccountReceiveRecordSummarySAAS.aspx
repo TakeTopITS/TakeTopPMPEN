@@ -92,7 +92,7 @@
                                                             </ajaxToolkit:CalendarExtender>
                                                         </td>
                                                         <td class="formItemBgStyle">
-                                                            <asp:Label ID="Label19" runat="server" Text="付款方"></asp:Label>：
+                                                            <asp:Label ID="Label19" runat="server" Text="Payer"></asp:Label>：
                                                         </td>
                                                         <td class="formItemBgStyle" style="width: 150px;" align="left">
                                                             <asp:TextBox ID="TB_Payer" runat="server" Width="99%"></asp:TextBox>
@@ -169,7 +169,7 @@
 
                                                                                 <td align="center" width="8%">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label15" runat="server" Text="付款方"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label15" runat="server" Text="Payer"></asp:Label></strong>
                                                                                 </td>
 
                                                                                 <td align="center" width="8%">
@@ -193,11 +193,11 @@
                                                                 ShowHeader="False" Width="100%">
 
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="ReceiverAccount" HeaderText="实收金额">
+                                                                    <asp:BoundColumn DataField="ReceiverAccount" HeaderText="ActualAmountReceived">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ReceiverTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="实收日期">
@@ -208,10 +208,10 @@
                                                                     <asp:BoundColumn DataField="ReAndPayType" HeaderText="收款方式">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Currency" HeaderText="币别">
+                                                                    <asp:BoundColumn DataField="Currency" HeaderText="Currency">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Bank" HeaderText="银行">
+                                                                    <asp:BoundColumn DataField="Bank" HeaderText="Bank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
 
@@ -222,15 +222,15 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="7%" />
                                                                     </asp:TemplateColumn>
 
-                                                                    <asp:BoundColumn DataField="Payer" HeaderText="付款方">
+                                                                    <asp:BoundColumn DataField="Payer" HeaderText="Payer">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="OperatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                        DataTextField="OperatorName" HeaderText="登记" Target="_blank">
+                                                                        DataTextField="OperatorName" HeaderText="Registration" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="RelatedProjectID" DataNavigateUrlFormatString="TTProjectDetailView.aspx?ProjectID={0}"
-                                                                        DataTextField="RelatedProjectID" HeaderText="登记" Target="_blank">
+                                                                        DataTextField="RelatedProjectID" HeaderText="Registration" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:HyperLinkColumn>
                                                                 </Columns>

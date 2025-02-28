@@ -577,7 +577,7 @@
                                                                                 <asp:BoundColumn DataField="OperationType" HeaderText="操作性质">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="OperationDate" HeaderText="操作时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                                                                <asp:BoundColumn DataField="OperationDate" HeaderText="OperationTime" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>

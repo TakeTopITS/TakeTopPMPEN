@@ -148,7 +148,7 @@
                                                                             PageSize="6" ShowHeader="False" Width="100%">
 
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="KPICheckID" DataNavigateUrlFormatString="TTKPILeaderReview.aspx?KPICheckID={0}"
@@ -159,25 +159,25 @@
                                                                                     DataTextField="UserName" HeaderText="受考人" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="自评分">
+                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="SelfAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalLeaderPoint" HeaderText="上级评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="第三方评分">
+                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="ThirdPartyAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalPoint" HeaderText="总评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
@@ -261,7 +261,7 @@
                                                                             PageSize="6" ShowHeader="False" Width="100%">
 
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="KPICheckID" DataNavigateUrlFormatString="TTKPILeaderReview.aspx?KPICheckID={0}"
@@ -272,25 +272,25 @@
                                                                                     DataTextField="UserName" HeaderText="受考人" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="自评分">
+                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="SelfAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalLeaderPoint" HeaderText="上级评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="第三方评分">
+                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="ThirdPartyAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalPoint" HeaderText="总评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
@@ -384,7 +384,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="KPICheckID" DataNavigateUrlFormatString="TTKPIThirdPartReview.aspx?KPICheckID={0}"
@@ -395,25 +395,25 @@
                                                                                     DataTextField="UserName" HeaderText="受考人" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="自评分">
+                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="SelfAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalLeaderPoint" HeaderText="上级评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="第三方评分">
+                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="ThirdPartyAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalPoint" HeaderText="总评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
@@ -497,7 +497,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="KPICheckID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="KPICheckID" DataNavigateUrlFormatString="TTKPIThirdPartReview.aspx?KPICheckID={0}"
@@ -508,25 +508,25 @@
                                                                                     DataTextField="UserName" HeaderText="受考人" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="自评分">
+                                                                                <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="SelfAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalLeaderPoint" HeaderText="上级评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="第三方评分">
+                                                                                <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="ThirdPartyAssessmentScore">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TotalPoint" HeaderText="总评分">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
@@ -619,32 +619,32 @@
                                                     PageSize="6" ShowHeader="False" Width="96%">
 
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="KPICheckID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="KPICheckID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="KPICheckID" DataNavigateUrlFormatString="TTMyKPICheckSet.aspx?KPICheckID={0}"
                                                             DataTextField="KPICheckName" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                        <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                        <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="自评分">
+                                                        <asp:BoundColumn DataField="TotalSelfPoint" HeaderText="SelfAssessmentScore">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="TotalLeaderPoint" HeaderText="上级评分">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="第三方评分">
+                                                        <asp:BoundColumn DataField="TotalThirdPartPoint" HeaderText="ThirdPartyAssessmentScore">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="TotalPoint" HeaderText="总评分">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

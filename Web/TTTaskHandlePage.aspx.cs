@@ -128,25 +128,25 @@ public partial class TTTaskHandlePage : System.Web.UI.Page
         SetTaskRecordColorForDataList(ds, DataList_Handling, "InProgress");
 
         strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')";   
+        strHQL += " and taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed')";     //ChineseWord
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
         DataList_FinishedUnAssigned.DataSource = ds;
         DataList_FinishedUnAssigned.DataBind();
-        SetTaskRecordColorForDataList(ds, DataList_FinishedUnAssigned, "已完成"); 
+        SetTaskRecordColorForDataList(ds, DataList_FinishedUnAssigned, "Completed");   //ChineseWord
 
         strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        //strHQL += " and (taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) and  taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Plan','Accepted','ToHandle','InProgress','InProgress','Completed','已完成','已分派'))";
-        strHQL += " and taskAssignRecord.Status = '已分派'"; 
+        //strHQL += " and (taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) and  taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Plan','Accepted','ToHandle','InProgress','InProgress','Completed','Completed','Assigned'))";
+        strHQL += " and taskAssignRecord.Status = 'Assigned'";   //ChineseWord
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
         DataList_Assigned.DataSource = ds;
         DataList_Assigned.DataBind();
-        SetTaskRecordColorForDataList(ds, DataList_Assigned, "已分派"); 
+        SetTaskRecordColorForDataList(ds, DataList_Assigned, "Assigned");   //ChineseWord
     }
 
     protected void RP_ToBeHandled_ItemCommand(object source, RepeaterCommandEventArgs e)
@@ -310,7 +310,7 @@ public partial class TTTaskHandlePage : System.Web.UI.Page
 
         //    strStatus = ds.Tables[0].Rows[i]["Status"].ToString().Trim();
 
-        //    if (strStatus != "Completed" & strStatus != "已完成")
+        //    if (strStatus != "Completed" & strStatus != "Completed")
         //    {
         //        if (strTaskStatus == "ToHandle")
         //        {
@@ -332,7 +332,7 @@ public partial class TTTaskHandlePage : System.Web.UI.Page
         //    }
         //    else
         //    {
-        //        if (strTaskStatus == "已分派")
+        //        if (strTaskStatus == "Assigned")
         //        {
         //            ((Label)(dataList.Items[i].FindControl("LB_ID"))).ForeColor = Color.Green;
         //            ((Label)(dataList.Items[i].FindControl("LB_Status"))).ForeColor = Color.Green;

@@ -105,14 +105,14 @@
                                                         <td align="left">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,LeiXingQuYu%>"></asp:Label>：<asp:TextBox ID="TB_TypeArea" runat="server" CssClass="shuru" Width="140px">中国大陆</asp:TextBox>
                                                             &nbsp;<asp:DropDownList ID="DL_Area" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_Area_SelectedIndexChanged">
-                                                                <asp:ListItem Value="中国大陆" Text="<%$ Resources:lang,ZhongGuoDaLu%>" />
-                                                                <asp:ListItem Value="中国香港" Text="<%$ Resources:lang,ZhongGuoXiangGang%>" />
-                                                                <asp:ListItem Value="中国澳门" Text="<%$ Resources:lang,ZhongGuoAoMen%>" />
-                                                                <asp:ListItem Value="美国" Text="<%$ Resources:lang,MeiGuo%>" />
-                                                                <asp:ListItem Value="日本" Text="<%$ Resources:lang,RiBen%>" />
-                                                                <asp:ListItem Value="英国" Text="<%$ Resources:lang,YingGuo%>" />
-                                                                <asp:ListItem Value="韩国" Text="<%$ Resources:lang,HanGuo%>" />
-                                                                <asp:ListItem Value="朝鲜" Text="<%$ Resources:lang,ChaoXian%>" />
+                                                                <asp:ListItem Value="MainlandChina" Text="<%$ Resources:lang,ZhongGuoDaLu%>" />
+                                                                <asp:ListItem Value="HongKongChina" Text="<%$ Resources:lang,ZhongGuoXiangGang%>" />
+                                                                <asp:ListItem Value="MacauChina" Text="<%$ Resources:lang,ZhongGuoAoMen%>" />
+                                                                <asp:ListItem Value="UnitedStates" Text="<%$ Resources:lang,MeiGuo%>" />
+                                                                <asp:ListItem Value="Japan" Text="<%$ Resources:lang,RiBen%>" />
+                                                                <asp:ListItem Value="UnitedKingdom" Text="<%$ Resources:lang,YingGuo%>" />
+                                                                <asp:ListItem Value="SouthKorea" Text="<%$ Resources:lang,HanGuo%>" />
+                                                                <asp:ListItem Value="NorthKorea" Text="<%$ Resources:lang,ChaoXian%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>

@@ -87,7 +87,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标"; 
+            return "BidWin";   //ChineseWord
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -95,7 +95,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
         }
         else
         {
-            return "未开标"; 
+            return "Unopened Bid";   //ChineseWord
         }
     }
 

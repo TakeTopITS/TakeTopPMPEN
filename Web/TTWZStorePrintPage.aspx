@@ -79,13 +79,13 @@
 
                                     <td class="formItemBgStyle"><%# Eval("DLCode") %></td>
                                     <td class="formItemBgStyle"><%# Eval("DLName") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("上期结额") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("本期收额") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("累计收额") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("本期发额") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("累计发额") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("本期结额") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("平均占用") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Previous Period Balance") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Current Period Receipt Amount") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Cumulative Receipt Amount") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Current Period Issuance Amount") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Cumulative Issuance Amount") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Current Period Balance") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Average Occupation") %></td>
 
                                 </tr>
 
@@ -130,31 +130,31 @@
                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                             Width="100%">
                             <Columns>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="大类">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="MajorCategory">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLName" HeaderText="大类名称">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="上期结额">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Previous Period Balance">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="本期收额">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Current Period Receipt Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="累计收额">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Cumulative Receipt Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="本期发额">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Current Period Issuance Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="累计发额">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Cumulative Issuance Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="本期结额">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Current Period Balance">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="平均占用">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Average Occupation">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
                             </Columns>

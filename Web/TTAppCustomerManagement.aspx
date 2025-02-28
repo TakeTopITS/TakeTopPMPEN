@@ -150,11 +150,11 @@
                                                     </asp:TemplateColumn>
 
 
-                                                    <%--                                                    <asp:BoundColumn DataField="CustomerCode" HeaderText="代码">
+                                                    <%--                                                    <asp:BoundColumn DataField="CustomerCode" HeaderText="Code">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
-                                                        DataTextField="CustomerName" HeaderText="客户名称" Target="_blank">
+                                                        DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                     </asp:HyperLinkColumn>
 

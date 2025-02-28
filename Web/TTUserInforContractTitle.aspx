@@ -158,19 +158,19 @@
                                                         <asp:BoundColumn DataField="UserCode" HeaderText="代号">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="11%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="11%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Age" HeaderText="年龄">
+                                                        <asp:BoundColumn DataField="Age" HeaderText="Age">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="EMail" HeaderText="邮件">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="加入日期">
+                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="JoinDate">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
 

@@ -219,7 +219,7 @@
                                                             <asp:BoundColumn DataField="WeldCode" HeaderText="º¸¿ÚºÅ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                            <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("WeldStatus").ToString()) %>
     </ItemTemplate>
@@ -228,7 +228,7 @@
                                                             <asp:BoundColumn DataField="Size" HeaderText="³ß´ç">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Mold" HeaderText="ÀàÐÍ">
+                                                            <asp:BoundColumn DataField="Mold" HeaderText="Type">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="SF" HeaderText="S/F">

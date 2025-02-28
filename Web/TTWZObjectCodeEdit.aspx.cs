@@ -365,7 +365,7 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
                             and Model = '{2}'
                             and Criterion = '{3}'
                             and Grade = '{4}'
-                            and Unit = {5}", strXLCode, strObjectName, strModel, strCriterion, strGrade, intUnit); 
+                            and Unit = {5}", strXLCode, strObjectName, strModel, strCriterion, strGrade, intUnit);   //ChineseWord
                         ShareClass.RunSqlCommand(strUpdateObjectReferHQL);
                     }
                     else

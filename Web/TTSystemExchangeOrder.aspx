@@ -197,7 +197,7 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                                            <asp:TemplateColumn HeaderText="Number">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                                                                         CssClass="inpu" />
@@ -210,7 +210,7 @@
                                                                                             <asp:BoundColumn DataField="SqlOrderString" HeaderText="Ö´ÐÐÓï¾ä">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="75%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>

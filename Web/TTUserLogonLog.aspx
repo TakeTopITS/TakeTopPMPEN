@@ -248,10 +248,10 @@
                                                                             Height="25px" Width="100%"
                                                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="用户代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="UserCode">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="UserName" HeaderText="用户名称">
@@ -263,10 +263,10 @@
                                                                                 <asp:BoundColumn DataField="UserIP" HeaderText="用户IP">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Position" HeaderText="位置">
+                                                                                <asp:BoundColumn DataField="Position" HeaderText="Location">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="17%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="LoginTime" HeaderText="登录时间">
+                                                                                <asp:BoundColumn DataField="LoginTime" HeaderText="LoginTime">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="LastestTime" HeaderText="最新使用时间">

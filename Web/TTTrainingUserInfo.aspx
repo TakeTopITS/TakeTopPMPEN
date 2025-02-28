@@ -344,7 +344,7 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
@@ -353,12 +353,12 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                     <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                                         HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TrainingProject" HeaderText="培训项目">
+                                                                                <asp:BoundColumn DataField="TrainingProject" HeaderText="TrainingProgram">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%"></ItemStyle>
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="TrainingAccord" HeaderText="培训依据">
@@ -373,7 +373,7 @@
                                                                                 <asp:BoundColumn DataField="TrainingContent" HeaderText="培训内容">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%"></ItemStyle>
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="TrainingTime" HeaderText="培训日期" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                <asp:BoundColumn DataField="TrainingTime" HeaderText="TrainingDate" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%"></ItemStyle>
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
@@ -826,7 +826,7 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                             </asp:ButtonColumn>
                                                                                             <asp:TemplateColumn HeaderText="Delete">
@@ -835,18 +835,18 @@
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                                                     HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="HolderProject" HeaderText="持证项目">
+                                                                                            <asp:BoundColumn DataField="HolderProject" HeaderText="CertifiedProjects">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%"></ItemStyle>
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="ValidTime" HeaderText="有效期">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%"></ItemStyle>
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:HyperLinkColumn DataNavigateUrlField="AttachPath" DataNavigateUrlFormatString="{0}"  Text ="附件" HeaderText="扫描件" Target="_blank">
+                                                                                            <asp:HyperLinkColumn DataNavigateUrlField="AttachPath" DataNavigateUrlFormatString="{0}"  Text ="Attachment" HeaderText="扫描件" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" Font-Size="XX-Small" Font-Underline="False" />
                                                                                             </asp:HyperLinkColumn>
                                                                                         </Columns>

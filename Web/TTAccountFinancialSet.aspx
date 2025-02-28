@@ -217,7 +217,7 @@
                                                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" ShowHeader="False"
                                                                                         Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                                            <asp:TemplateColumn HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_Financial" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -236,7 +236,7 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="11%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="DepartName" HeaderText="²¿ÃÅ">
+                                                                                            <asp:BoundColumn DataField="DepartName" HeaderText="Department">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
@@ -244,13 +244,13 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                      <%--      <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                      <%--      <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
 </asp:TemplateColumn>--%>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# Eval("Status").ToString()=="OPEN"?"Enabled":"Closed" %>
                                                                                                 </ItemTemplate>

@@ -193,10 +193,10 @@
                                                     ID="DataGrid1" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged">
                                                     <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                        <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <%-- <asp:BoundColumn DataField="RelatedType" HeaderText="类型">
+                                                        <%-- <asp:BoundColumn DataField="RelatedType" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>--%>
                                                         <asp:TemplateColumn>
@@ -205,7 +205,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="DocName" HeaderText="文件名" Visible="false">
@@ -219,7 +219,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                                        <asp:BoundColumn DataField="Author" HeaderText="Author">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">
@@ -228,7 +228,7 @@
                                                         <asp:BoundColumn DataField="UploadTime" HeaderText="上传时间">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Visible" HeaderText="权限">
+                                                        <asp:BoundColumn DataField="Visible" HeaderText="Permission">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>
@@ -447,7 +447,7 @@
 
                                                                         <ItemStyle CssClass="itemStyle" />
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
@@ -457,7 +457,7 @@
                                                                             <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                 </ItemTemplate>

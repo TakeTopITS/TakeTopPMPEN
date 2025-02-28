@@ -87,10 +87,10 @@ public partial class TTProjectSummaryAnalystChart : System.Web.UI.Page
         strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'Requirement' and RelatedID in (select ReqID from T_RelatedReq where ProjectID = " + strProjectID + "))";
-        strHQL += "or (RelatedType = '∑Áœ’' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))"; 
+        strHQL += "or (RelatedType = 'Risk' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))";  
         strHQL += " or (RelatedType = 'Task' and RelatedID in (select TaskID from T_ProjectTask where ProjectID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'Plan' and RelatedID in (select ID From T_ImplePlan where ProjectID = " + strProjectID + "))";
-        strHQL += "or (RelatedType = 'ª·“È' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))"; 
+        strHQL += "or (RelatedType = 'Meeting' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))";  
         strHQL += " Group By Status ";
         IFrame_Chart_WorkFlowStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 

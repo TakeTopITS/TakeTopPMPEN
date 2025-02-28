@@ -71,7 +71,7 @@ public partial class TTCollaborationDetailViewBackup : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = 'Ð­×÷' and document.RelatedID = " + strCoID; 
+        strHQL = "from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID = " + strCoID;  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

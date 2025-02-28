@@ -502,7 +502,7 @@
                                                             <asp:BoundColumn DataField="ClassName" HeaderText="°à¼¶">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Gender" HeaderText="ÐÔ±ð">
+                                                            <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

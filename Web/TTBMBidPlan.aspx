@@ -165,7 +165,7 @@
                                                     OnItemCommand="DataGrid2_ItemCommand" Width="100%" CellPadding="4" ForeColor="#333333"
                                                     GridLines="None" ShowHeader="False" AllowPaging="True" OnPageIndexChanged="DataGrid2_PageIndexChanged">
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -181,10 +181,10 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Name" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
@@ -334,9 +334,9 @@
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangShi%>"></asp:Label>：</td>
                                                 <td align="left" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_BidWay" runat="server">
-                                                        <asp:ListItem Value="邀请招标" Text="<%$ Resources:lang,YaoQingZhaoBiao%>" />
-                                                        <asp:ListItem Value="公开招标" Text="<%$ Resources:lang,GongKaiZhaoBiao%>" />
-                                                        <asp:ListItem Value="议标" Text="<%$ Resources:lang,YiBiao%>" />
+                                                        <asp:ListItem Value="InvitationToBid" Text="<%$ Resources:lang,YaoQingZhaoBiao%>" />
+                                                        <asp:ListItem Value="PublicTender" Text="<%$ Resources:lang,GongKaiZhaoBiao%>" />
+                                                        <asp:ListItem Value="NegotiatedBidding" Text="<%$ Resources:lang,YiBiao%>" />
                                                         <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
                                                     </asp:DropDownList>
                                                 </td>
@@ -492,17 +492,17 @@
                                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                                 HorizontalAlign="Center" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Name" HeaderText="专家">
+                                                                        <asp:BoundColumn DataField="Name" HeaderText="Expert">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                                 HorizontalAlign="Center" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                        <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                                 HorizontalAlign="Center" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTBMExpertInfoView.aspx?ExpertID={0}" DataTextField="Name" HeaderText="专家" Target="_blank">
+                                                                        <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTBMExpertInfoView.aspx?ExpertID={0}" DataTextField="Name" HeaderText="Expert" Target="_blank">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                         </asp:HyperLinkColumn>
@@ -597,7 +597,7 @@
                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
@@ -607,7 +607,7 @@
                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="状态">
+                                                <asp:TemplateColumn HeaderText="Status">
                                                     <ItemTemplate></ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                 </asp:TemplateColumn>

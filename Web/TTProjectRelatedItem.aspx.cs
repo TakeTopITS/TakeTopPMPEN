@@ -434,7 +434,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                     projectRelatedItem.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
                                     projectRelatedItem.ReservedNumber = decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang").ToString().Trim()].ToString().Trim());
                                     projectRelatedItem.DefaultProcess = dr[i][LanguageHandle.GetWord("QueShengGongYi").ToString().Trim()].ToString().Trim();
-                                    projectRelatedItem.Status = dr[i]["状态"].ToString().Trim(); 
+                                    projectRelatedItem.Status = dr[i]["Status"].ToString().Trim();  //ChineseWord //ChineseWord
 
                                     projectRelatedItem.AleadyPurchased = decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang").ToString().Trim()].ToString().Trim());
 
@@ -646,8 +646,8 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                ,A.Number * A.PurchasePrice 金额
 
-               , '注册证号' 注册证号
-               ,'注册证号' 包装方式
+               , 'RegistrationCertificateNumber' 注册证号
+               ,'RegistrationCertificateNumber' 包装方式
 
               ,A.Comment 备注
               ,A.BomVersionID BOM版本
@@ -663,7 +663,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
               ,A.AleadyProduction 已生产量
               ,A.AleadySale 已销售量
 							
-			  FROM T_ProjectRelatedItem A,T_Item B  Where A.ItemCode = B.ItemCode AND  A.ProjectID = {0} Order By A.ID DESC", strProjectID); 
+			  FROM T_ProjectRelatedItem A,T_Item B  Where A.ItemCode = B.ItemCode AND  A.ProjectID = {0} Order By A.ID DESC", strProjectID);  //ChineseWord //ChineseWord
 
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);
@@ -691,7 +691,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             dePurchasePrice = NB_PurchasePrice.Amount;
             deSalePrice = NB_SalePrice.Amount;
             deSafetyStock = NB_SalePrice.Amount;
-            strCurrencyType = "人民币"; 
+            strCurrencyType = "Renminbi";  //ChineseWord //ChineseWord
             dePULeadTime = NB_PULeadTime.Amount;
             deMFLeadTime = NB_MFLeadTime.Amount;
             deHRCost = NB_HRCost.Amount;
@@ -762,8 +762,8 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                                 item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
                                 item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
-                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim(); ; 
-                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
+                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim(); ;  //ChineseWord //ChineseWord
+                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();  //ChineseWord //ChineseWord
 
                                 item.BigType = "";
                                 if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -775,14 +775,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                     item.BigType = "Asset";
                                 }
 
-                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
+                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();  //ChineseWord //ChineseWord
                                 item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
                                 item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
                                 item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
                                 item.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
 
                                 item.RegistrationNumber = dr[i][LanguageHandle.GetWord("ZhuCeZhengHao").ToString().Trim()].ToString().Trim();
-                                item.PackingType = dr[i]["包装方式"].ToString().Trim(); 
+                                item.PackingType = dr[i]["PackagingMethod"].ToString().Trim();  //ChineseWord //ChineseWord
 
                                 item.PULeadTime = dePULeadTime;
                                 item.MFLeadTime = deMFCost;
@@ -892,14 +892,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                     {
                         CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
-                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
+                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();  //ChineseWord //ChineseWord
                         if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
                         {
                             LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW").ToString().Trim() + strBigType + LanguageHandle.GetWord("QingJianCha").ToString().Trim();
                             j = -1;
                         }
 
-                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
+                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();  //ChineseWord //ChineseWord
                         if (CheckSmallType(strSmallType, strBigType) == 0)
                         {
                             if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -1213,7 +1213,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + err.Message.ToString() + "')", true);
             }
 
-            strHQL = "Update T_ProjectRelatedItem Set Status = '固化' Where ProjectID = " + strProjectID; 
+            strHQL = "Update T_ProjectRelatedItem Set Status = 'Solidification' Where ProjectID = " + strProjectID;  //ChineseWord //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
 
             LoadProjectRelatedItem(strProjectID);
@@ -1263,7 +1263,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         projectRelatedItemBom.Unit = LanguageHandle.GetWord("Ge").ToString().Trim();
         projectRelatedItemBom.VerID = int.Parse(strVerID);
 
-        projectRelatedItemBom.ItemType = "成品"; 
+        projectRelatedItemBom.ItemType = "FinishedProduct";  //ChineseWord //ChineseWord
         projectRelatedItemBom.Specification = GetProjectSpecification(strProjectID);
         projectRelatedItem.Brand = "";
         projectRelatedItem.ModelNumber = "";

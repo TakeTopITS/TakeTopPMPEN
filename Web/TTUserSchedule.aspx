@@ -108,7 +108,7 @@
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="ÔÊÐí×î´ó¾àÀë">
+                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="MaximumAllowedDistance">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
 

@@ -102,7 +102,7 @@ public partial class TTWZPurchasePlanListDecisionRecord : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购编号不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购编号不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
             //if (string.IsNullOrEmpty(strSuggest))
@@ -157,7 +157,7 @@ public partial class TTWZPurchasePlanListDecisionRecord : System.Web.UI.Page
             ////重新加载
             //DataPurchaseBinder(HF_PurchaseCode.Value);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
         }
         catch (Exception ex)
         {

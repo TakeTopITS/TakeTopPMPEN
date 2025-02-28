@@ -198,7 +198,7 @@
                                                                     <%--<asp:Button ID="Button3" runat="server" CssClass="inpu" Text="评标" CommandName="assess" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="询价" ? true : false %>' />--%>
                                                                     <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="apply" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="评标" ? true : false %>'>
                                                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,BaoJia%>"></asp:Label></asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="报价" CommandName="apply" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="评标" ? true : false %>' />--%>
+                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="Quotation" CommandName="apply" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="评标" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编码">
@@ -219,7 +219,7 @@
                                                             <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="MarkTime" HeaderText="编制日期">

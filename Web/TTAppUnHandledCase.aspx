@@ -108,7 +108,7 @@
                                         </asp:TemplateColumn>
 
 
-                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="±àºÅ" Visible="false">
+                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                         </asp:BoundColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="MobileLinkAddress"

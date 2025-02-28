@@ -146,7 +146,7 @@
 
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="项目号">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="ProjectNumber">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -158,7 +158,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("ProjectName").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="BeginDate" HeaderText="开始时间">
+                                                                <%--<asp:BoundColumn DataField="BeginDate" HeaderText="StartTime">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -170,7 +170,7 @@
                                                                         <%#DataBinder.Eval(Container.DataItem, "BeginDate", "{0:yyyy/MM/dd}")%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="EndDate" HeaderText="结束时间">
+                                                                <%--<asp:BoundColumn DataField="EndDate" HeaderText="EndTime">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -182,7 +182,7 @@
                                                                         <%#DataBinder.Eval(Container.DataItem, "EndDate", "{0:yyyy/MM/dd}")%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("StatusValue").ToString()) %>
     </ItemTemplate>
@@ -194,7 +194,7 @@
                                                                 <asp:BoundColumn DataField="ProjectAmount" HeaderText="项目金额">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                <asp:TemplateColumn HeaderText="Status">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>

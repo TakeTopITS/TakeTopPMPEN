@@ -489,7 +489,7 @@ public partial class TTWZSupplierMember : System.Web.UI.Page
                 projectMember.CreatorCode = strCreatorCode;
                 projectMember.Status = DL_Status.SelectedValue.Trim();
 
-                projectMember.WorkType = "合同工"; 
+                projectMember.WorkType = "Contract Worker";   //ChineseWord
                 projectMember.IDCard = TB_IDCard.Text.Trim();
 
                 projectMember.EnglishName = "";
@@ -907,9 +907,9 @@ public partial class TTWZSupplierMember : System.Web.UI.Page
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
         lst = projectMemberBLL.GetAllProjectMembers(strHQL);
         if (lst != null && lst.Count > 0)
-            return "已开通"; 
+            return "Enabled";   //ChineseWord
         else
-            return "未开通"; 
+            return "NotEnabled";   //ChineseWord
     }
 
     protected string GetSystemActionUser(string strusercode)
@@ -921,9 +921,9 @@ public partial class TTWZSupplierMember : System.Web.UI.Page
         SystemActiveUserBLL systemActiveUserBLL = new SystemActiveUserBLL();
         lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst != null && lst.Count > 0)
-            return "已激活"; 
+            return "Activated";   //ChineseWord
         else
-            return "未激活"; 
+            return "NotActivated";   //ChineseWord
     }
 
     protected string GetUserPhotoURL(string strUserCode)

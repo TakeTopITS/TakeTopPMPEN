@@ -126,7 +126,7 @@ public partial class TTPersonalSpaceNoticeList : System.Web.UI.Page
         {
             strHQL += " And Scope = 'External'";
         }
-        strHQL += " And Status = '·¢²¼' Order By DocID DESC"; 
+        strHQL += " And Status = 'Publish' Order By DocID DESC";   //ChineseWord
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_PublicNotice");
         DataGrid7.DataSource = ds;
         DataGrid7.DataBind();

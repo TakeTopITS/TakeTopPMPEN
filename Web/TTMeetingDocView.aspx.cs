@@ -139,10 +139,10 @@ public partial class TTMeetingDocView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '会议' "; 
+        strHQL = "from Document as document where document.RelatedType = 'Meeting' ";  
         strHQL += " and document.RelatedID = " + strMeetingID;
-        strHQL += " and ((document.Visible = '全体' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))"; 
-        strHQL += " or  (document.Visible = '个人' and document.UploadManCode = " + "'" + strUserCode + "'" + "))"; 
+        strHQL += " and ((document.Visible = 'Entire' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";   //ChineseWord
+        strHQL += " or  (document.Visible = 'Individual' and document.UploadManCode = " + "'" + strUserCode + "'" + "))";  
         strHQL += " Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

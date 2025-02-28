@@ -126,13 +126,13 @@
                                     
                                     <ItemStyle CssClass="itemStyle" />
                                     <Columns>
-                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                        <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
                                         <asp:BoundColumn DataField="DepartCode" HeaderText="关联部门代码">

@@ -87,7 +87,7 @@
 
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label1" runat="server" Text="ºÏÍ¬±àºÅ"></asp:Label>£º
+                                                <asp:Label ID="Label1" runat="server" Text="Contract Number"></asp:Label>£º
                                                 <%#DataBinder.Eval(Container.DataItem, "ConstractCode")%>
                                             </td>
 

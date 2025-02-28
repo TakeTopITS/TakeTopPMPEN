@@ -108,7 +108,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
             DL_GoodsType.DataBind();
             DL_GoodsType.Items.Insert(0, new ListItem("--Select--", ""));
 
-            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
             ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
             Repeater1.DataSource = lst;
@@ -186,7 +186,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_ConstractClass.SelectedValue = "采购类"; 
+                        DL_ConstractClass.SelectedValue = "PurchaseCategory";   //ChineseWord
                     }
                     catch
                     {
@@ -196,7 +196,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                     try
                     {
 
-                        DL_Type.SelectedValue = "物资采购"; 
+                        DL_Type.SelectedValue = "MaterialPurchase";   //ChineseWord
                     }
                     catch
                     {
@@ -224,7 +224,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_Currency.SelectedValue = "人民币"; 
+                        DL_Currency.SelectedValue = "Renminbi";   //ChineseWord
                     }
                     catch
                     {
@@ -233,7 +233,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_ReAndPayType.SelectedValue = "转账"; 
+                        DL_ReAndPayType.SelectedValue = "Transfer";   //ChineseWord
                     }
                     catch
                     {
@@ -1419,7 +1419,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                             DocumentBLL documentBLL = new DocumentBLL();
                             Document document = new Document();
 
-                            document.RelatedType = "合同"; 
+                            document.RelatedType = "Contract";   //ChineseWord
 
                             document.DocTypeID = int.Parse("1");
                             strDocType = GetDocTypeName("1");
@@ -2485,7 +2485,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);
@@ -3438,7 +3438,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         DL_CustomerList.DataSource = lst;
         DL_CustomerList.DataBind();
 
-        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", "")); 
+        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", ""));   //ChineseWord
     }
 
     public string GetConstractName(string strConstractCode)

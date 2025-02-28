@@ -100,8 +100,8 @@
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_SupplyMethod" runat="server">
                                                                             <asp:ListItem Text="-" Value="" />
-                                                                            <asp:ListItem Text="<%$ Resources:lang,ZiGou%>" Value="×Ô¹º" />
-                                                                            <asp:ListItem Text="<%$ Resources:lang,JiaGong%>" Value="¼×¹©" />
+                                                                            <asp:ListItem Text="<%$ Resources:lang,ZiGou%>" Value="Self-purchase" />
+                                                                            <asp:ListItem Text="<%$ Resources:lang,JiaGong%>" Value="Party A Supply" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>

@@ -250,7 +250,7 @@
                                                                             OnPageIndexChanged="DataGrid4_PageIndexChanged" PageSize="5" Width="100%">
 
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="False">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="False">
                                                                                     <ItemStyle CssClass="" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn HeaderText="要审核的工作">
@@ -304,7 +304,7 @@
                                                                             PageSize="5" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
 
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="False">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="False">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn HeaderText="要审核的工作">
@@ -347,7 +347,7 @@
                                                                             <HeaderStyle HorizontalAlign="Center" />
                                                                             <Columns>
                                                                                 <asp:TemplateColumn></asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="WLID" HeaderText="编号" Visible="false"></asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="WLID" HeaderText="Number" Visible="false"></asp:BoundColumn>
 
                                                                                 <asp:TemplateColumn HeaderText="要审核的工作">
                                                                                     <ItemTemplate>
@@ -371,7 +371,7 @@
                                                                                 DataTextField="WLName" HeaderText="Workflow" Target="rightFrame">
                                                                                 
                                                                             </asp:HyperLinkColumn>--%>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                     </ItemTemplate>
 

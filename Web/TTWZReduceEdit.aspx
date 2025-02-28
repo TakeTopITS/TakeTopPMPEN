@@ -158,8 +158,8 @@
                                                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label>
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="报批" ? true : false %>'>批准</asp:LinkButton>
-                                                                    <%--<asp:Button runat="server" CssClass="inpu" Text="Approved" CommandName="submit" CommandArgument='<%# Eval("ReduceCode") %>' Visible='<%# Eval("Process").ToString()=="报批" ? true : false %>' />--%>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="Approval" ? true : false %>'>批准</asp:LinkButton>
+                                                                    <%--<asp:Button runat="server" CssClass="inpu" Text="Approved" CommandName="submit" CommandArgument='<%# Eval("ReduceCode") %>' Visible='<%# Eval("Process").ToString()=="Approval" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="ReduceCode" HeaderText="减值编号">
@@ -225,7 +225,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 8) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Process" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Process" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="MainLeaderName" HeaderText="主管领导">

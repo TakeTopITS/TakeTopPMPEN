@@ -92,8 +92,8 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         ///创建链接
         SqlConnection con = new SqlConnection(GetDataBaseLinkAddress(ddl_Code.SelectedValue.Trim()));
         ///定义SQL语句
-        string cmdText = "SELECT proj_id '项目编号',proj_short_name '项目代码',guid '项目标识码',plan_start_date '项目开始日期'," + 
-            "COALESCE(plan_end_date,plan_start_date) '项目结束日期',create_date '项目创建时间' FROM PROJECT Order by proj_id ASC "; 
+        string cmdText = "SELECT proj_id 'ProjectID',proj_short_name 'ProjectCode',guid 'ProjectIdentificationCode',plan_start_date 'ProjectStartDate'," +   //ChineseWord
+            "COALESCE(plan_end_date,plan_start_date) 'ProjectEndDate',create_date 'ProjectCreationTime' FROM PROJECT Order by proj_id ASC ";   //ChineseWord
         ///打开链接
         con.Open();
         ///创建Command
@@ -139,7 +139,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
                 project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
                 project.ProjectDetail = "";
                 project.ProjectName = getPrimProjName(dr[i][LanguageHandle.GetWord("XiangMuBianHao").ToString().Trim()].ToString(), dr[i][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString()).Trim();
-                project.ProjectType = "Primavera项目"; 
+                project.ProjectType = "Primavera项目";   //ChineseWord
                 project.Status = "New";
                 project.StatusValue = "InProgress";
                 project.UserCode = strUserCode.Trim();
@@ -247,8 +247,8 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         ///创建链接
         SqlConnection con = new SqlConnection(GetDataBaseLinkAddress(ddl_Code.SelectedValue.Trim()));
         ///定义SQL语句
-        string cmdText = "SELECT cost_item_id '序号',A.proj_id '项目编号',A.task_id '作业编号',target_cost '完成时预算费用',act_cost '完成时实际费用'," + 
-            "act_cost+remain_cost '完成时总费用',A.create_date '创建时间',B.guid '项目标识码',C.guid '作业标识码' FROM PROJCOST as A,PROJECT as B,TASK as C " + 
+        string cmdText = "SELECT cost_item_id 'SerialNumber',A.proj_id 'ProjectID',A.task_id 'JobNumber',target_cost 'BudgetedCostAtCompletion',act_cost 'ActualCostAtCompletion'," +   //ChineseWord
+            "act_cost+remain_cost 'TotalCostAtCompletion',A.create_date 'CreationTime',B.guid 'ProjectIdentificationCode',C.guid 'JobIdentificationCode' FROM PROJCOST as A,PROJECT as B,TASK as C " +   //ChineseWord
             "Where A.proj_id=B.proj_id and A.task_id=C.task_id ";
         ///打开链接
         con.Open();
@@ -330,8 +330,8 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         ///创建链接
         SqlConnection con = new SqlConnection(GetDataBaseLinkAddress(ddl_Code.SelectedValue.Trim()));
         ///定义SQL语句
-        string cmdText = "SELECT task_id '作业编号',A.proj_id '项目编号',wbs_id 'WBS编号',task_code '作业编码',task_name '作业名称',A.guid '作业标识码',A.create_date '创建时间',"+ 
-            "COALESCE(target_start_date,restart_date) '作业开始日期',COALESCE(target_end_date,reend_date) '作业结束日期',B.guid '项目标识码' FROM TASK as A,PROJECT as B where A.proj_id=B.proj_id "; 
+        string cmdText = "SELECT task_id 'JobNumber',A.proj_id 'ProjectID',wbs_id 'WBS编号',task_code 'JobCode',task_name 'JobName',A.guid 'JobIdentificationCode',A.create_date 'CreationTime',"+   //ChineseWord
+            "COALESCE(target_start_date,restart_date) 'JobStartDate',COALESCE(target_end_date,reend_date) 'JobEndDate',B.guid 'ProjectIdentificationCode' FROM TASK as A,PROJECT as B where A.proj_id=B.proj_id ";   //ChineseWord
         ///打开链接
         con.Open();
         ///创建Command
@@ -558,7 +558,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Project as project where project.ProjectName='" + pj.ProjectName.Trim() + "' and project.ProjectType = 'Primavera项目' and project.PMCode = '" + pj.PMCode.Trim() + "' and project.UserCode = '" + pj.UserCode.Trim() + "' Order by project.ProjectID DESC"; 
+        strHQL = "from Project as project where project.ProjectName='" + pj.ProjectName.Trim() + "' and project.ProjectType = 'Primavera项目' and project.PMCode = '" + pj.PMCode.Trim() + "' and project.UserCode = '" + pj.UserCode.Trim() + "' Order by project.ProjectID DESC";   //ChineseWord
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];

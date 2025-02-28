@@ -51,7 +51,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
 
             try
             {
-                SetAnalystModuleVisible(strUserCode, "分析图", strLangCode, strUserType); 
+                SetAnalystModuleVisible(strUserCode, "AnalysisChart", strLangCode, strUserType);  //ChineseWord //ChineseWord
             }
             catch
             {
@@ -87,10 +87,10 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
         strHQL = string.Format(@"Select Distinct A.ID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,
                 A.UserType,A.IconURL,A.SortNumber From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
                 ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' and A.ModuleName <> '分析图'
+                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' and A.ModuleName <> 'AnalysisChart'
                 and A.ModuleType In ('APP','DIYAPP') and A.UserType = 'INNER' and B.UserType = '{3}' 
                 and B.UserCode = '{0}' and B.Visible = 'YES' and B.ModuleType in('APP','DIYAPP') and position(rtrim(A.ModuleName)||',' in '{1}') = 0
-                and A.LangCode = '{2}' Order By A.SortNumber ASC", strUserCode, strForbitModule, strLangCode, strUserType); 
+                and A.LangCode = '{2}' Order By A.SortNumber ASC", strUserCode, strForbitModule, strLangCode, strUserType);  //ChineseWord //ChineseWord
 
         DataTable dtModule = ShareClass.GetDataSetFromSql(strHQL, "Module").Tables[0];
         DataView dvModule = new DataView(dtModule);
@@ -261,7 +261,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
         strHQL = "Select * From T_HeadLine ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
         strHQL += " and LangCode = '" + strLangCode + "' and ID Not in (Select NewsID From T_NewsRelatedUser Where UserCode  = '" + strUserCode + "')";
-        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = '发布' Order By ID DESC"; 
+        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = 'Publish' Order By ID DESC";  //ChineseWord //ChineseWord
 
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 

@@ -83,22 +83,22 @@
                                 Height="30px" Width="100%" ID="DataGrid2">
 
                                 <Columns>
-                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="AssetName" HeaderText="资产名">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                    <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                    <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                    <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="IP" HeaderText="IP">

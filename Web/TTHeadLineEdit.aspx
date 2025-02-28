@@ -262,7 +262,7 @@
                                                 <td style="display: none;">
                                                     <asp:DropDownList ID="DL_Statu" runat="server" Enabled="false">
                                                         <asp:ListItem Value="New" Text="<%$ Resources:lang,XinJian%>" />
-                                                        <asp:ListItem Value="·¢²¼" Text="<%$ Resources:lang,FaBu%>" />
+                                                        <asp:ListItem Value="Publish" Text="<%$ Resources:lang,FaBu%>" />
                                                         <asp:ListItem Value="Archived" Text="<%$ Resources:lang,GuiDang%>" />
                                                     </asp:DropDownList>
                                                 </td>

@@ -277,7 +277,7 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
     private void DataProjectBinder()
     {
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where Progress = '¿ª¹¤' and IsStatus != 'Closed' order by MarkTime desc"; 
+        string strProjectHQL = "from WZProject as wZProject where Progress = 'Start Work' and IsStatus != 'Closed' order by MarkTime desc";   //ChineseWord
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
 
         DDL_Project.DataSource = listProject;

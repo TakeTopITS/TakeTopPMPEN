@@ -133,10 +133,10 @@
 
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
+                                                                <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>

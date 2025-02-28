@@ -391,10 +391,10 @@
                                                                                                                         ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid1_ItemCommand"
                                                                                                                         ShowHeader="False" Width="100%">
                                                                                                                         <Columns>
-                                                                                                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                                             </asp:BoundColumn>
-                                                                                                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                                                                            <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                                             </asp:BoundColumn>
                                                                                                                             <asp:BoundColumn DataField="OperatorName" HeaderText="受理人">
@@ -403,16 +403,16 @@
                                                                                                                             <asp:BoundColumn DataField="Operation" HeaderText="受理人的工作">
                                                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                                                                             </asp:BoundColumn>
-                                                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                                             </asp:BoundColumn>
-                                                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                                             </asp:BoundColumn>
                                                                                                                             <asp:BoundColumn DataField="RouteNumber" HeaderText="路线">
                                                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                                             </asp:BoundColumn>
-                                                                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                                                 <ItemTemplate></ItemTemplate>
                                                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                                                                             </asp:TemplateColumn>

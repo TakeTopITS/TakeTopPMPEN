@@ -90,7 +90,7 @@
                     },
                     error: function () {
 
-                        alert("±£¥Ê ß∞‹");
+                        alert("Save Failed");
                     }
 
                 });

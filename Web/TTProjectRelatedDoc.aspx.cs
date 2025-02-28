@@ -149,20 +149,20 @@ public partial class TTProjectRelatedDoc : System.Web.UI.Page
 
                 strHQL += "  and (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
                 strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible in ( '部门','全体')))"; 
+                strHQL += " or (document.Visible in ( 'Department','Entire')))";  //ChineseWord //ChineseWord
                 strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
                 strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
                 strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
 
-                strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
+                strHQL += "or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
                 strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
                 strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
                 strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
 
-                strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))"; 
-                strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) "; 
-                strHQL += " or (document.Visible = '全体' )))))"; 
+                strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))";  //ChineseWord
+                strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' )))))";  //ChineseWord //ChineseWord
                 strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
                 LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
@@ -181,20 +181,20 @@ public partial class TTProjectRelatedDoc : System.Web.UI.Page
 
             strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体')))"; 
+            strHQL += " or (document.Visible in ( 'Department','Entire')))";  //ChineseWord //ChineseWord
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
             strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
             strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
 
-            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
+            strHQL += "or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
             strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
 
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))"; 
-            strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) "; 
-            strHQL += " or (document.Visible = '全体' )))))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))";  //ChineseWord
+            strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' )))))";  //ChineseWord //ChineseWord
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
@@ -689,38 +689,38 @@ public partial class TTProjectRelatedDoc : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strDepartCode = GetDepartCode(strUserCode);
 
-        strProjectType = "工程项目"; 
+        strProjectType = "EngineeringProject";  //ChineseWord //ChineseWord
         strHQL = string.Format(@"Select * From (Select * from T_Document as document where (((document.RelatedType = 'Project' and document.RelatedID = {0})
                    and (((document.UploadManCode = '{1}' and document.DepartCode = '{2}')
-                   or (document.Visible in ( '部门','全体')))
+                   or (document.Visible in ( 'Department','Entire')))
                    or (document.Visible in (select actorGroupDetail.GroupName from T_ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = '{1}'))))
                    or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
                    or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = {0}))
-                   or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from T_ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
+                   or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from T_ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
                    or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID = {0}))
                    or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0}))
                    or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0})))
-                   or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from T_Meeting as meeting where meeting.RelatedID = {0}))
-                   and ((document.Visible in ('会议','部门') and document.DepartCode = '{2}' ) 
-                   or (document.Visible = '全体' )))))
-                   and rtrim(ltrim(document.Status)) <> 'Deleted') A, (Select * From T_Document Where RelatedType = 'ProjectType' and RelatedName = '{3}' ) B  Where  position(B.DocName in A.DocName) > 0.", strProjectID, strUserCode, strDepartCode, strProjectType); 
+                   or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from T_Meeting as meeting where meeting.RelatedID = {0}))
+                   and ((document.Visible in ('Meeting','Department') and document.DepartCode = '{2}' ) 
+                   or (document.Visible = 'Entire' )))))
+                   and rtrim(ltrim(document.Status)) <> 'Deleted') A, (Select * From T_Document Where RelatedType = 'ProjectType' and RelatedName = '{3}' ) B  Where  position(B.DocName in A.DocName) > 0.", strProjectID, strUserCode, strDepartCode, strProjectType);  //ChineseWord //ChineseWord
 
         strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
         strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( '部门','全体')))"; 
+        strHQL += " or (document.Visible in ( 'Department','Entire')))";  //ChineseWord //ChineseWord
         strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
         strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
         strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
 
-        strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
+        strHQL += "or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
         strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
         strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
         strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
 
-        strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))"; 
-        strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) "; 
-        strHQL += " or (document.Visible = '全体' )))))"; 
+        strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))";  //ChineseWord
+        strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  //ChineseWord
+        strHQL += " or (document.Visible = 'Entire' )))))";  //ChineseWord //ChineseWord
 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 

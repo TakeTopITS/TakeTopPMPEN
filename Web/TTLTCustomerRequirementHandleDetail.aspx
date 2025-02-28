@@ -276,12 +276,12 @@
                                                                                             <td style="text-align: left;" class="formItemBgStyle">
                                                                                                 <asp:TextBox ID="TB_HandleWay" runat="server" Width="200px"></asp:TextBox><asp:DropDownList ID="DL_HandleWay" runat="server" Height="19px" Width="117px" AutoPostBack="True" OnSelectedIndexChanged="DL_ContactWay_SelectedIndexChanged">
                                                                                                     <asp:ListItem Text="<%$ Resources:lang,QingXuanZe %>" />
-                                                                                                    <asp:ListItem Value="电话" />
+                                                                                                    <asp:ListItem Value="Telephone" />
                                                                                                     <asp:ListItem Value="IM" />
-                                                                                                    <asp:ListItem Value="远程控制" />
+                                                                                                    <asp:ListItem Value="RemoteControl" />
                                                                                                     <asp:ListItem Value="EMail" />
-                                                                                                    <asp:ListItem Value="上门拜访" />
-                                                                                                    <asp:ListItem Value="其它方式" />
+                                                                                                    <asp:ListItem Value="DoorToDoorVisit" />
+                                                                                                    <asp:ListItem Value="OtherMethods" />
                                                                                                 </asp:DropDownList></td>
                                                                                             <td style="text-align: right;" class="formItemBgStyle">
                                                                                                 <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ChuLiZhuangTai %>"></asp:Label>： </td>
@@ -297,9 +297,9 @@
                                                                                                 <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YongShi %>"></asp:Label>： </td>
                                                                                             <td style="text-align: left;" class="formItemBgStyle">
                                                                                                 <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_UsedTime" runat="server" Width="53px" Amount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">1.00</NickLee:NumberBox><asp:DropDownList ID="DL_TimeUnit" runat="server" Height="19px">
-                                                                                                    <asp:ListItem Value="分钟" />
-                                                                                                    <asp:ListItem Value="小时" />
-                                                                                                    <asp:ListItem Value="天" />
+                                                                                                    <asp:ListItem Value="Minutes" />
+                                                                                                    <asp:ListItem Value="Hours" />
+                                                                                                    <asp:ListItem Value="Days" />
                                                                                                 </asp:DropDownList></td>
                                                                                         </tr>
                                                                                         <tr>
@@ -482,17 +482,17 @@
                                                                                                     Height="1px" Width="100%" CellPadding="4" ForeColor="#333333"
                                                                                                     GridLines="None">
                                                                                                     <Columns>
-                                                                                                        <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                                                        <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                         </asp:BoundColumn>
-                                                                                                        <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                                                        <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                                         </asp:BoundColumn>
                                                                                                         <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                                                                             DataTextField="DocName" HeaderText="文件名" Target="_blank">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                                                                         </asp:HyperLinkColumn>
-                                                                                                        <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                                                                                        <asp:BoundColumn DataField="Author" HeaderText="Author">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                                         </asp:BoundColumn>
                                                                                                         <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">

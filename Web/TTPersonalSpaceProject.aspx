@@ -68,14 +68,14 @@
                                                             Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="8" Width="100%"
                                                             CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="False">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="±àºÅ" visible="false">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" visible="false">
                                                                     <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
                                                                     DataTextField="ProjectName" HeaderText="ÏîÄ¿Ãû³Æ" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="75%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                <asp:TemplateColumn HeaderText="Status">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                     </ItemTemplate>
@@ -102,7 +102,7 @@
                                                             Font-Strikeout="False" Font-Underline="False" ForeColor="#333333" GridLines="None"
                                                             PageSize="8" Height="1px" OnPageIndexChanged="DataGrid4_PageIndexChanged" Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="±àºÅ" visible="false">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" visible="false">
                                                                     <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTInvolvedProDetail.aspx?ProjectID={0}"
@@ -134,7 +134,7 @@
                                                             Font-Strikeout="False" Font-Underline="False" ForeColor="#333333" GridLines="None"
                                                             PageSize="8" Height="1px" OnPageIndexChanged="DataGrid8_PageIndexChanged" Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="±àºÅ" visible="false">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" visible="false">
                                                                     <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTCreatedProjectDetail.aspx?ProjectID={0}"

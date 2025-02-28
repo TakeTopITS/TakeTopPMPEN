@@ -118,9 +118,9 @@
                                                                                 </td>
                                                                                 <td style="font-size: 12pt; width: 20%; text-align: left;" class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DL_RiskLevel" runat="server">
-                                                                                        <asp:ListItem Value="ÖÐ" Text="<%$ Resources:lang,Zhong%>" />
-                                                                                        <asp:ListItem Value="¸ß" Text="<%$ Resources:lang,Gao%>" />
-                                                                                        <asp:ListItem Value="µÍ" Text="<%$ Resources:lang,Di2%>" />
+                                                                                        <asp:ListItem Value="Medium" Text="<%$ Resources:lang,Zhong%>" />
+                                                                                        <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao%>" />
+                                                                                        <asp:ListItem Value="Low" Text="<%$ Resources:lang,Di2%>" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                             </tr>

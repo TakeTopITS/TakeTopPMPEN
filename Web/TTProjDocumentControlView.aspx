@@ -147,7 +147,7 @@
                                                                                 <asp:BoundColumn DataField="FileName" HeaderText="文件名称">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="顺序号">
+                                                                                <asp:TemplateColumn HeaderText="SerialNumber">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" CommandName="View" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                     </ItemTemplate>
@@ -227,7 +227,7 @@
                                                                                 <asp:BoundColumn DataField="FileName" HeaderText="文件名称">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="顺序号">
+                                                                                <asp:TemplateColumn HeaderText="SerialNumber">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" CommandName="View" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                     </ItemTemplate>
@@ -312,13 +312,13 @@
                                                                                 <asp:BoundColumn DataField="FileNo" HeaderText="档案号">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="FileName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="FileName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="FigureDate" HeaderText="收图日期" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="顺序号">
+                                                                                <asp:TemplateColumn HeaderText="SerialNumber">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" CommandName="View" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                     </ItemTemplate>
@@ -342,7 +342,7 @@
                                                                                     Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                                                <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
@@ -399,13 +399,13 @@
                                                                                 <asp:BoundColumn DataField="FileNo" HeaderText="档案号">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="FileName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="FileName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="IssueDate" HeaderText="发图日期" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="顺序号">
+                                                                                <asp:TemplateColumn HeaderText="SerialNumber">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" CommandName="View" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                     </ItemTemplate>

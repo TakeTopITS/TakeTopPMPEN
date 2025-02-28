@@ -209,27 +209,27 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
         //,A.DeliveryNumber '送化量'
         //,A.RealReceiveNumber '收货量'
 
-        strHQL = @"Select  B.SOName '名称'  
-            ,B.SalesName '业务员' 
+        strHQL = @"Select  B.SOName 'Name'    //ChineseWord
+            ,B.SalesName 'Salesperson'   //ChineseWord
             ,B.CustomerName 'Customer'
-            ,B.SaleTime '时间' 
-            ,A.ID '编号' 
-            ,A.GoodsCode '代码' 
-            ,A.GoodsName '商品名称' 
-            ,A.Number '数量' 
-            ,(Select COALESCE(Sum(RealReceiveNumber),0) From T_GoodsDeliveryOrderDetail Where SourceType = 'GoodsSORecord' and SourceID = A.ID) 实收量 
-            ,A.ModelNumber '型号' 
-            ,A.Spec '规格' 
-            ,A.Unit '单位' 
-            ,A.PackNumber '件数' 
-            ,A.Price '单价' 
-            ,A.Amount '金额' 
-            ,B.CurrencyType '币别' 
-            ,B.CarCode '车号' 
-            ,B.Driver '司机' 
-            ,B.OpenInvoiceTime '开票时间' 
-            ,B.InvoiceCode '票号' 
-            ,A.SaleReason '备注' 
+            ,B.SaleTime 'Time'   //ChineseWord
+            ,A.ID 'Number'   //ChineseWord
+            ,A.GoodsCode 'Code'   //ChineseWord
+            ,A.GoodsName 'ProductName'   //ChineseWord
+            ,A.Number 'Quantity'   //ChineseWord
+            ,(Select COALESCE(Sum(RealReceiveNumber),0) From T_GoodsDeliveryOrderDetail Where SourceType = 'GoodsSORecord' and SourceID = A.ID) 实收量   //ChineseWord
+            ,A.ModelNumber 'Model'   //ChineseWord
+            ,A.Spec 'Specification'   //ChineseWord
+            ,A.Unit 'Unit'   //ChineseWord
+            ,A.PackNumber 'NumberOfPieces'   //ChineseWord
+            ,A.Price 'UnitPrice'   //ChineseWord
+            ,A.Amount 'Amount'   //ChineseWord
+            ,B.CurrencyType 'Currency'   //ChineseWord
+            ,B.CarCode 'VehicleNumber'   //ChineseWord
+            ,B.Driver 'Driver'   //ChineseWord
+            ,B.OpenInvoiceTime 'InvoiceTime'   //ChineseWord
+            ,B.InvoiceCode 'InvoiceNumber'   //ChineseWord
+            ,A.SaleReason 'Remark'   //ChineseWord
             from T_GoodsSaleRecord A,T_GoodsSaleOrder B where A.SOID = B.SOID";
 
         strHQL += " and to_char(B.SaleTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(B.SaleTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -247,7 +247,7 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
 
         Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoXiaoShouBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

@@ -69,7 +69,7 @@
                                                             ShowHeader="False" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="8"
                                                             Width="100%" CssClass="auto-style1">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="编号" visible="false">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" visible="false">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                             
@@ -83,10 +83,10 @@
                                                                     DataTextField="Operation" HeaderText="受理人的工作" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="55%" />
                                                                 </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -110,7 +110,7 @@
                                                             ShowHeader="False" OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="8"
                                                             Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="编号" visible="false">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" visible="false">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                            
@@ -124,10 +124,10 @@
                                                                     DataTextField="Operation" HeaderText="受理人的工作" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="55%" />
                                                                 </asp:HyperLinkColumn>
-                                                                     <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                     <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>

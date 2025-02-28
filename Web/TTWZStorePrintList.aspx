@@ -110,7 +110,7 @@
                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="false"
                             Width="100%">
                             <Columns>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="大类">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="MajorCategory">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                 </asp:BoundColumn>
                                 <%--<asp:BoundColumn DataField="DLName" HeaderText="大类名称">
@@ -125,25 +125,25 @@
                                         <%# ShareClass.StringCutByRequire(Eval("DLName").ToString(), 190) %>
                                     </ItemTemplate>
                                 </asp:TemplateColumn>
-                                <asp:BoundColumn DataField="上期结额" HeaderText="上期结额">
+                                <asp:BoundColumn DataField="Previous Period Balance" HeaderText="Previous Period Balance">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="本期收额" HeaderText="本期收额">
+                                <asp:BoundColumn DataField="Current Period Receipt Amount" HeaderText="Current Period Receipt Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="累计收额" HeaderText="累计收额">
+                                <asp:BoundColumn DataField="Cumulative Receipt Amount" HeaderText="Cumulative Receipt Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="本期发额" HeaderText="本期发额">
+                                <asp:BoundColumn DataField="Current Period Issuance Amount" HeaderText="Current Period Issuance Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="累计发额" HeaderText="累计发额">
+                                <asp:BoundColumn DataField="Cumulative Issuance Amount" HeaderText="Cumulative Issuance Amount">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="本期结额" HeaderText="本期结额">
+                                <asp:BoundColumn DataField="Current Period Balance" HeaderText="Current Period Balance">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="平均占用" HeaderText="平均占用">
+                                <asp:BoundColumn DataField="Average Occupation" HeaderText="Average Occupation">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                 </asp:BoundColumn>
                             </Columns>

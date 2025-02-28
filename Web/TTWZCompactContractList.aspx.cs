@@ -440,7 +440,7 @@ public partial class TTWZCompactContractList : System.Web.UI.Page
             string strPayProgressSQL = string.Format(@"select c.* from T_WZCollect c
                         left join T_WZCompactDetail d on c.CompactDetailID = d.ID
                         where c.PayProcess != 'ºËÏú'
-                        and d.CompactCode = '{0}'", strEditCompactCode); 
+                        and d.CompactCode = '{0}'", strEditCompactCode);   //ChineseWord
             DataTable dtPayProgress = ShareClass.GetDataSetFromSql(strPayProgressSQL, "PayProgress").Tables[0];
             if (dtPayProgress != null && dtPayProgress.Rows.Count > 0)
             {

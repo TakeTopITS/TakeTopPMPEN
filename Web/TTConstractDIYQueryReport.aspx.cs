@@ -30,28 +30,28 @@ public partial class TTConstractDIYQueryReport : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            strHQL = @"SELECT     ConstractCode  合同代码 
-		  ,ConstractName  合同名称 
-		  ,Type   总类 
-		  ,ConstractClass  小类 
-		  ,Amount  金额 
-		  ,Currency  币别 
-		  ,ReAndPayType  收付款方式 
-		  ,StartDate  开始时间 
-		  ,EndDate  结束时间 
-		  ,MainContent  主要内容 
-		  ,Exception  异常情况 
-		  ,PartA  甲方 
-		  ,PartAOperator  甲方负责人 
-		  ,PartB  乙方 
-		  ,PartBOperator  乙方负责人 
-		  ,SignDate  签订日期 
-		  ,Status  状态 
-		  ,RecordTime  记录时间 
-		  ,RecorderCode  记录人代码 
-		  ,RecorderName  记录人名称 
-          ,F_GetConstractRelatedProjectName(ConstractCode)  关联项目 
-          ,F_GetConstractRelatedSales(ConstractCode)  业务员		   
+            strHQL = @"SELECT     ConstractCode  合同代码   //ChineseWord
+		  ,ConstractName  合同名称   //ChineseWord
+		  ,Type   总类   //ChineseWord
+		  ,ConstractClass  小类   //ChineseWord
+		  ,Amount  金额   //ChineseWord
+		  ,Currency  币别   //ChineseWord
+		  ,ReAndPayType  收付款方式   //ChineseWord
+		  ,StartDate  开始时间   //ChineseWord
+		  ,EndDate  结束时间   //ChineseWord
+		  ,MainContent  主要内容   //ChineseWord
+		  ,Exception  异常情况   //ChineseWord
+		  ,PartA  甲方   //ChineseWord
+		  ,PartAOperator  甲方负责人   //ChineseWord
+		  ,PartB  乙方   //ChineseWord
+		  ,PartBOperator  乙方负责人   //ChineseWord
+		  ,SignDate  签订日期   //ChineseWord
+		  ,Status  状态   //ChineseWord
+		  ,RecordTime  记录时间   //ChineseWord
+		  ,RecorderCode  记录人代码   //ChineseWord
+		  ,RecorderName  记录人名称   //ChineseWord
+          ,F_GetConstractRelatedProjectName(ConstractCode)  关联项目   //ChineseWord
+          ,F_GetConstractRelatedSales(ConstractCode)  业务员		     //ChineseWord
 		FROM T_Constract
 		Where    
           to_char(SignDate,'yyyymmdd') > '20150191'            

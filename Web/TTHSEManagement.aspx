@@ -115,10 +115,10 @@
                                                                                     </table>
                                                                                     <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="Name" HeaderText="ÐÕÃû">
+                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="ProjectName" HeaderText="Project">
@@ -130,7 +130,7 @@
                                                                                             <asp:BoundColumn DataField="TrainingContent" HeaderText="¼Æ»®ÅàÑµÄÚÈÝ">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="TrainingDate" HeaderText="ÅàÑµÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                            <asp:BoundColumn DataField="TrainingDate" HeaderText="TrainingDate" DataFormatString="{0:yyyy-MM-dd}">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                             </asp:BoundColumn>
                                                                                         </Columns>
@@ -179,10 +179,10 @@
                                                                                     </table>
                                                                                     <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
+                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="ProjectName" HeaderText="Project">
@@ -240,10 +240,10 @@
                                                                                     </table>
                                                                                     <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
+                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="ProjectName" HeaderText="Project">
@@ -298,10 +298,10 @@
                                                                                     </table>
                                                                                     <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
+                                                                                            <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
+                                                                                            <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:BoundColumn DataField="ProjectName" HeaderText="Project">

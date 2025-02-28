@@ -42,7 +42,7 @@ public partial class TTMakeProjectAssetPO : System.Web.UI.Page
         if (strRelatedType == "Project")
         {
             //strRelatedType = "Project";
-            //this.Title = strRelatedType + ":" + strRelatedID + "×Ê²ú²É¹º";
+            //this.Title = strRelatedType + ":" + strRelatedID + "AssetProcurement";
         }
 
         if (strRelatedType == "Other")

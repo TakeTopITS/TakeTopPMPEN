@@ -53,7 +53,7 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                             left join T_ProjectMember n on c.Contacter = n.UserCode 
                             left join T_ProjectMember f on c.FinanceApprove = f.UserCode
                             where c.Safekeeper ='{0}' 
-                            and c.Progress in('开票','收料')  ", strUserCode); 
+                            and c.Progress in('开票','MaterialReceipt')  ", strUserCode);   //ChineseWord
 
 
         string strProgress = DDL_Progress.SelectedValue;
@@ -290,7 +290,7 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                     }
 
                     //计划明细<进度> = LanguageHandle.GetWord("ShouLiao").ToString().Trim()
-                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '收料' where ID = " + wZCollect.PlanDetailID; 
+                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'MaterialReceipt' where ID = " + wZCollect.PlanDetailID;   //ChineseWord
                     ShareClass.RunSqlCommand(strPlanDetailHQL);
 
                     strResult = "Success";
@@ -393,7 +393,7 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                     }
 
                     //计划明细<进度> = LanguageHandle.GetWord("ShouLiao").ToString().Trim()
-                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '收料' where ID = " + wZCollect.PlanDetailID; 
+                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'MaterialReceipt' where ID = " + wZCollect.PlanDetailID;   //ChineseWord
                     ShareClass.RunSqlCommand(strPlanDetailHQL);
 
                     strResult = "Success";
@@ -545,8 +545,8 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                         wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
                     }
 
-                    //计划明细<进度> = "合同"
-                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '合同' where ID = " + wZCollect.PlanDetailID; 
+                    //计划明细<进度> = "Contract"
+                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'Contract' where ID = " + wZCollect.PlanDetailID;   //ChineseWord
                     ShareClass.RunSqlCommand(strPlanDetailHQL);
 
                     strResult = "Success";

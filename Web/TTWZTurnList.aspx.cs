@@ -86,7 +86,7 @@ public partial class TTWZTurnList : System.Web.UI.Page
     private void DataProjectBinder()
     {
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where Progress='开工' and PurchaseEngineer = '" + strUserCode + "' order by MarkTime desc"; 
+        string strProjectHQL = "from WZProject as wZProject where Progress='Start Work' and PurchaseEngineer = '" + strUserCode + "' order by MarkTime desc";   //ChineseWord
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
 
         DDL_Project.DataSource = listProject;
@@ -345,7 +345,7 @@ public partial class TTWZTurnList : System.Web.UI.Page
             //DDL_PickingUnit.BackColor = Color.White;
             TXT_PickingUnit.BackColor = Color.White;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -446,7 +446,7 @@ public partial class TTWZTurnList : System.Web.UI.Page
 
             //重新加载列表
             DataBinder();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true);   //ChineseWord
         }
         catch (Exception ex)
         { }
@@ -541,7 +541,7 @@ public partial class TTWZTurnList : System.Web.UI.Page
 
                     wZTurnBLL.UpdateWZTurn(wZTurn, int.Parse(HF_ID.Value));
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移交成功！');ControlStatus()", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移交成功！');ControlStatus()", true);   //ChineseWord
 
                     //string strHQL;
                     //strHQL = "Update T_WZPickingPlan Set Progress = '移交' " + " Where PlanCode in (Select PlanCode From T_WZPickingPlanDetail Where TurnCode = " + "'" + wZTurn.TurnCode + "')";
@@ -625,7 +625,7 @@ public partial class TTWZTurnList : System.Web.UI.Page
 
                     wZTurnBLL.UpdateWZTurn(wZTurn, int.Parse(HF_ID.Value));
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消移交成功！');ControlStatus()", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消移交成功！');ControlStatus()", true);   //ChineseWord
 
                     //重新加载列表
                     DataBinder();

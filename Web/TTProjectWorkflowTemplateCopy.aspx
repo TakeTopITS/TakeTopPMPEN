@@ -156,7 +156,7 @@
                                             ForeColor="#333333" ShowHeader="False"
                                             GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                                <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="IdentifyString" DataNavigateUrlFormatString="TTWorkFlowTemplateView.aspx?IdentifyString={0}"

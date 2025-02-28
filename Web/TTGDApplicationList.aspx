@@ -123,7 +123,7 @@
                                                             <asp:BoundColumn DataField="TheSystem" HeaderText="ÏµÍ³">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Remark" HeaderText="±¸×¢">
+                                                            <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

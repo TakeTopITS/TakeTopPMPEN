@@ -390,13 +390,13 @@
                                             <asp:BoundColumn DataField="UserName" HeaderText="成员姓名">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CreaterName" HeaderText="操作人">
+                                            <asp:BoundColumn DataField="CreaterName" HeaderText="Operator">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="CreateTime" HeaderText="更新时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                         </Columns>

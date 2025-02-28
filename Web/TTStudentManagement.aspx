@@ -212,25 +212,25 @@
                                                         Width="100%" OnPageIndexChanged="DG_List_PageIndexChanged">
                                                         <Columns>
 
-                                                            <asp:BoundColumn DataField="UserCode" HeaderText="编号">
+                                                            <asp:BoundColumn DataField="UserCode" HeaderText="Number">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                            <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ClassName" HeaderText="班级">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                            <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Age" HeaderText="年龄">
+                                                            <asp:BoundColumn DataField="Age" HeaderText="Age">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="JoinDate" HeaderText="加入日期" DataFormatString="{0:yyyy/MM/dd}">
+                                                            <asp:BoundColumn DataField="JoinDate" HeaderText="JoinDate" DataFormatString="{0:yyyy/MM/dd}">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="IDCard" HeaderText="身份证号">
+                                                            <asp:BoundColumn DataField="IDCard" HeaderText="IDNumber">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
 

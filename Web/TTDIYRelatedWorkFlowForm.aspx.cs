@@ -154,10 +154,10 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "Constract")
         {
-            strCNRelatedType = "合同"; 
+            strCNRelatedType = "Contract";   //ChineseWord
             strRelatedName = GetConstractName(strRelatedID);
 
-            strOriginRelatedType = "合同"; 
+            strOriginRelatedType = "Contract";   //ChineseWord
             strOriginRelateID = strRelatedID;
 
             //装载相应的业务数据
@@ -172,10 +172,10 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "Tender")
         {
-            strCNRelatedType = "投标"; 
+            strCNRelatedType = "Bid";   //ChineseWord
             strRelatedName = GetTenderName(strRelatedID);
 
-            strOriginRelatedType = "投标"; 
+            strOriginRelatedType = "Bid";   //ChineseWord
             strOriginRelateID = strRelatedID;
 
             //装载相应的业务数据
@@ -362,7 +362,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
             if (strRelatedType == "Constract")
             {
-                strCNRelatedType = "合同"; 
+                strCNRelatedType = "Contract";   //ChineseWord
                 TB_WorkFlowName.Text = strCNRelatedType + GetConstractCode(strRelatedID) + strRelatedName + strTemName;
             }
 

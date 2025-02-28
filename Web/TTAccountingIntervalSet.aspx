@@ -186,7 +186,7 @@
                                                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" ShowHeader="False"
                                                                                         Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                                            <asp:TemplateColumn HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_Interval" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -207,7 +207,7 @@
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# Eval("Status").ToString()=="OPEN"?"Enabled":"Closed" %>
                                                                                                 </ItemTemplate>

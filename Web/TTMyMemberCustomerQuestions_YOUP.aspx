@@ -178,13 +178,13 @@
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="OperatorName" HeaderText="客户等级">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Company" HeaderText="姓名">
+                                                                    <asp:BoundColumn DataField="Company" HeaderText="Name">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTCustomerQuestionHandleRecordList_YOUP.aspx?ID={0}"
@@ -200,7 +200,7 @@
                                                                     <asp:BoundColumn DataField="UserPosition" HeaderText="行业类型">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -212,7 +212,7 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OperatorStatus").ToString()) %>
     </ItemTemplate>

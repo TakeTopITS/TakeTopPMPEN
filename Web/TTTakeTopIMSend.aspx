@@ -91,8 +91,8 @@
                                                     </asp:DropDownList>
                                                     &#160;
                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QuanXian%>"></asp:Label>：<asp:DropDownList ID="DL_Visible" runat="server" CssClass="DDList" Width="64px">
-                                                        <asp:ListItem Value="全体" Text="<%$ Resources:lang,QuanTi%>" />
-                                                        <asp:ListItem Value="个人" Text="<%$ Resources:lang,GeRen%>" />
+                                                        <asp:ListItem Value="Entire" Text="<%$ Resources:lang,QuanTi%>" />
+                                                        <asp:ListItem Value="Individual" Text="<%$ Resources:lang,GeRen%>" />
                                                     </asp:DropDownList>
                                                     &#160;
                                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZuoZhe%>"></asp:Label>：<asp:TextBox ID="TB_Author" runat="server" Width="74px"></asp:TextBox>

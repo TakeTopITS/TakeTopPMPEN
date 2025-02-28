@@ -173,8 +173,8 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         DataSet ds = new DataSet();
         if (ddl_TrainingType.SelectedValue.Trim() == "EmployeeTraining")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.ProfessionalSkillLevel '职业技能等级'," + 
-                "A.ProfessionSkillNumber '职业技能鉴定证书编号',A.ValidityType '鉴定工种',A.ReleaseTime '发证日期',A.AnnValidTime '安恐有效期',"+ 
+            string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',A.ProfessionalSkillLevel 'ProfessionalSkillLevel'," +   //ChineseWord
+                "A.ProfessionSkillNumber 'ProfessionalSkillAppraisalCertificateNumber',A.ValidityType 'AppraisedOccupation',A.ReleaseTime 'CertificateIssuanceDate',A.AnnValidTime 'AntiTerrorismValidityPeriod',"+   //ChineseWord
                 LanguageHandle.GetWord("AAnnCertificateNoAnKongZhengSh").ToString().Trim() +
                 "from T_TREmployeeTraining A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
@@ -217,9 +217,9 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "TrainingRecord")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.TrainingProject '培训项目'," + 
+            string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',A.TrainingProject 'TrainingProgram'," +   //ChineseWord
                 LanguageHandle.GetWord("ATrainingAccordPeiXunYiJuATrai").ToString().Trim() +
-                "A.TrainingTime '培训日期' from T_TRTrainingRecordEmp A,T_ProjectMember B Where A.UserCode=B.UserCode "; 
+                "A.TrainingTime 'TrainingDate' from T_TRTrainingRecordEmp A,T_ProjectMember B Where A.UserCode=B.UserCode ";   //ChineseWord
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
                 strHQL += " and B.IDCard like '%" + txt_NumberNo.Text.Trim() + "%' ";
@@ -259,7 +259,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialOperations")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.WorkType '用工类别',A.SpeOpeType '特种作业类别'," + 
+            string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',B.WorkType 'LaborCategory',A.SpeOpeType 'SpecialOperationsCategory'," +   //ChineseWord
                 LanguageHandle.GetWord("ASpeOpeProjectTeChongZuoYeZhun").ToString().Trim() +
                 "from T_TRSpecialOperations A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
@@ -301,7 +301,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialEquipment")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.WorkType '用工类别',A.SpeEquType '特种设备类别'," + 
+            string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',B.WorkType 'LaborCategory',A.SpeEquType 'SpecialEquipmentCategory'," +   //ChineseWord
                 LanguageHandle.GetWord("ASpeEquProjectTeChongSheBeiZhu").ToString().Trim() +
                 "from T_TRSpecialEquipment A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
@@ -343,8 +343,8 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "WeldingCertification")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.CertificateNo '特种设备焊接操作人员证件编码'," + 
-                "A.WelderSeal '焊工钢印',A.HolderProject '持证项目',A.ValidTime '持证项目有效期',A.Unit '单位',A.Remark '备注' from T_TRHolderWelder A," + 
+            string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',A.CertificateNo 'SpecialEquipmentWeldingOperatorCertificateCode'," +   //ChineseWord
+                "A.WelderSeal 'WelderStamp',A.HolderProject 'CertifiedProjects',A.ValidTime 'ValidityPeriodOfCertifiedProjects',A.Unit 'Unit',A.Remark 'Remark' from T_TRHolderWelder A," +   //ChineseWord
                 "T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -386,7 +386,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "ConstructionManagerCertificate")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.BirthDay '出生日期',A.Unit '单位',B.WorkType '用工类别',A.Job '岗位职务'," + 
+            string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',B.BirthDay 'DateOfBirth',A.Unit 'Unit',B.WorkType 'LaborCategory',A.Job 'Position'," +   //ChineseWord
                 LanguageHandle.GetWord("ACertificateNoGangWeiZhengShuB").ToString().Trim() +
                 "from T_TRPostCertificate A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))

@@ -49,9 +49,9 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                     left join T_ProjectMember a on s.CompetentMaterials = a.UserCode
                     left join T_ProjectMember c on s.ContractWhose = c.UserCode
                     left join T_ProjectMember l on s.CompetentLeadership = l.UserCode
-                    where s.Progress in('Approved','登记','复审')
+                    where s.Progress in('Approved','Registration','Review')
                     and s.Auditor = '{0}'
-                    and now()::date- s.ReviewDate::timestamp::date <= {1}", strUserCode, 0); 
+                    and now()::date- s.ReviewDate::timestamp::date <= {1}", strUserCode, 0);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -165,13 +165,13 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
             if (string.IsNullOrEmpty(strReviewDocument) || string.IsNullOrEmpty(strReviewDocumentURL))
             {
                 //string strProgress = HF_Progress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审资料不能为空！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审资料不能为空！');", true);   //ChineseWord
                 return;
             }
 
             if (string.IsNullOrEmpty(strReviewResult))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择复审结论！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择复审结论！');", true);   //ChineseWord
                 return;
             }
 
@@ -186,7 +186,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                 string strGrade = wZSupplier.Grade;
                 if (strGrade == LanguageHandle.GetWord("LinShi").ToString().Trim() && strReviewResult == LanguageHandle.GetWord("BaoChi").ToString().Trim())
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('临时供应商资格复审，不允许保持！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('临时供应商资格复审，不允许保持！');", true);   //ChineseWord
                     return;
                 }
 
@@ -214,7 +214,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
                 //DDL_ReviewResult.BackColor = Color.White;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
             }
             else
             {
@@ -226,7 +226,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         {
             //string strNewProgress = HF_NewProgress.Value;
             //string strNewAuditor = HF_NewAuditor.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要复审的供应商！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要复审的供应商！');", true);   //ChineseWord
             return;
         }
     }
@@ -291,13 +291,13 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                     }
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true);   //ChineseWord
                 }
                 else
                 {
                     //string strNewProgress = HF_NewProgress.Value;
                     //string strNewAuditor = HF_NewAuditor.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -346,13 +346,13 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
                     //重新加载报价文件列表
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true);   //ChineseWord
                 }
                 else
                 {
                     //string strNewProgress = HF_NewProgress.Value;
                     //string strNewAuditor = HF_NewAuditor.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -469,7 +469,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审成功！');", true);   //ChineseWord
         }
         else
         {
@@ -505,7 +505,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审退回成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审退回成功！');", true);   //ChineseWord
         }
         else
         {

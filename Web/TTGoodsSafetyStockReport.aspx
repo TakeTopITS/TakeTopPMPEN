@@ -149,18 +149,18 @@
                                         ShowHeader="false" Height="1px"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="代码">
+                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="GoodsCode" DataNavigateUrlFormatString="TTGoodsInforView.aspx?GoodsCode={0}"
-                                                DataTextField="GoodsName" HeaderText="名称" Target="_blank">
+                                                DataTextField="GoodsName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Specification" HeaderText="规格">
+                                            <asp:BoundColumn DataField="Specification" HeaderText="Specification">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="SafetyStock" HeaderText="安全库存">
@@ -172,7 +172,7 @@
                                             <asp:BoundColumn DataField="Banlance" HeaderText="差额">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                            <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
                                         </Columns>

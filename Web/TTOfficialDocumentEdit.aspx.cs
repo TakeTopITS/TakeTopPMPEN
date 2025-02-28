@@ -591,7 +591,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = '¹«ÎÄÆÀÉó'"; 
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'OfficialDocumentReview'";   //ChineseWord
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);

@@ -287,7 +287,7 @@ public partial class TTWZSupplierRegister : System.Web.UI.Page
 
             wZSupplierRegisterBLL.AddWZSupplierRegister(wZSupplierRegister);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('注册成功，等候后台审核！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('注册成功，等候后台审核！');", true);   //ChineseWord
         }
         catch (Exception ex)
         { }

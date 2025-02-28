@@ -108,11 +108,11 @@ public partial class TTMakeBookManage : System.Web.UI.Page
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("1"))//图书
         {
-            strHQL += " and BookType='图书' Order By ReferenceNo ASC "; 
+            strHQL += " and BookType='Book' Order By ReferenceNo ASC ";   //ChineseWord
         }
         else//标准
         {
-            strHQL += " and BookType='标准' Order By BarCode ASC "; 
+            strHQL += " and BookType='Standard' Order By BarCode ASC ";   //ChineseWord
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
 
@@ -267,8 +267,8 @@ public partial class TTMakeBookManage : System.Web.UI.Page
 
     protected DataTable getExportBookList()
     {
-        string strHQL = "Select BookType '类型',BookClassificationName '标准或图书分类',ClassificationCode '分类码',ReferenceNo '登记号',BarCode '标准号',BookName '标准或图书名称'," + 
-            "BookPublishersName '出版社',Author '作者',Translator '译者',BookNum '可借数量',BookUseNum '已借数量',Price '价格',Introduction '备注',PublicationDate '出版/实施日期' From T_BookInformation Where 1=1 "; 
+        string strHQL = "Select BookType 'Type',BookClassificationName 'StandardOrBookClassification',ClassificationCode 'ClassificationCode',ReferenceNo 'RegistrationNumber',BarCode 'StandardNumber',BookName 'StandardOrBookName'," +   //ChineseWord
+            "BookPublishersName 'Publisher',Author 'Author',Translator 'Translator',BookNum 'AvailableForLoan',BookUseNum 'BorrowedQuantity',Price 'Price',Introduction 'Remark',PublicationDate '出版/实施日期' From T_BookInformation Where 1=1 ";   //ChineseWord
         if (!string.IsNullOrEmpty(txt_BarCode.Text.Trim()))
         {
             strHQL += " and BarCode like '%" + txt_BarCode.Text.Trim() + "%' ";
@@ -299,11 +299,11 @@ public partial class TTMakeBookManage : System.Web.UI.Page
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("1"))//图书
         {
-            strHQL += " and BookType='图书' Order By ReferenceNo ASC "; 
+            strHQL += " and BookType='Book' Order By ReferenceNo ASC ";   //ChineseWord
         }
         else//标准
         {
-            strHQL += " and BookType='标准' Order By BarCode ASC "; 
+            strHQL += " and BookType='Standard' Order By BarCode ASC ";   //ChineseWord
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
         return ds.Tables[0];
@@ -351,10 +351,10 @@ public partial class TTMakeBookManage : System.Web.UI.Page
 
     protected DataTable getExportBookBorrowList()
     {
-        string strHQL = " Select bookBorrowRecord.BookClassificationName '标准或图书分类',bookBorrowRecord.ReferenceNo '登记号',bookBorrowRecord.BarCode '标准号'," + 
+        string strHQL = " Select bookBorrowRecord.BookClassificationName 'StandardOrBookClassification',bookBorrowRecord.ReferenceNo 'RegistrationNumber',bookBorrowRecord.BarCode 'StandardNumber'," +   //ChineseWord
             LanguageHandle.GetWord("bookBorrowRecordBookNameBiaoZh").ToString().Trim() +
             LanguageHandle.GetWord("bookBorrowRecordBorrowCodeJieY").ToString().Trim() +
-            "projectMember.MobilePhone as '手机号码',bookBorrowRecord.ReaderTypeName as '借阅者类型' From T_BookBorrowRecord as bookBorrowRecord,T_ProjectMember as projectMember Where bookBorrowRecord.BorrowCode=projectMember.UserCode " + 
+            "projectMember.MobilePhone as 'MobileNumber',bookBorrowRecord.ReaderTypeName as 'BorrowerType' From T_BookBorrowRecord as bookBorrowRecord,T_ProjectMember as projectMember Where bookBorrowRecord.BorrowCode=projectMember.UserCode " +   //ChineseWord
             "and bookBorrowRecord.BookInfoId in (Select ID From T_BookInformation Where 1=1 ";
 
         if (!string.IsNullOrEmpty(txt_BarCode.Text.Trim()))

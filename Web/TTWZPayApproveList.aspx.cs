@@ -208,7 +208,7 @@ public partial class TTWZPayApproveList : System.Web.UI.Page
 
 
             //查询当月的预付款计划
-            string strAdvanceHQL = "select * from T_WZAdvance a where Progress = '报批' and SUBSTRING(to_char( AdvanceTime, 'yyyy-mm-dd'), 0, 8) = SUBSTRING(to_char( now(), 'yyyy-mm-dd'), 0, 8)"; 
+            string strAdvanceHQL = "select * from T_WZAdvance a where Progress = 'Approval' and SUBSTRING(to_char( AdvanceTime, 'yyyy-mm-dd'), 0, 8) = SUBSTRING(to_char( now(), 'yyyy-mm-dd'), 0, 8)";   //ChineseWord
             DataTable dtAdvance = ShareClass.GetDataSetFromSql(strAdvanceHQL, "Advance").Tables[0];
             if (dtAdvance != null && dtAdvance.Rows.Count > 0)
             {
@@ -235,7 +235,7 @@ public partial class TTWZPayApproveList : System.Web.UI.Page
             }
 
             //查询当月的付款计划
-            string strPayHQL = "select * from T_WZPay a where Progress = '报批' and SUBSTRING(to_char( PayTime, 'yyyy-mm-dd'), 0, 8) = SUBSTRING(to_char( now(), 'yyyy-mm-dd'), 0, 8)"; 
+            string strPayHQL = "select * from T_WZPay a where Progress = 'Approval' and SUBSTRING(to_char( PayTime, 'yyyy-mm-dd'), 0, 8) = SUBSTRING(to_char( now(), 'yyyy-mm-dd'), 0, 8)";   //ChineseWord
             DataTable dtPay = ShareClass.GetDataSetFromSql(strPayHQL, "Pay").Tables[0];
             if (dtPay != null && dtPay.Rows.Count > 0)
             {

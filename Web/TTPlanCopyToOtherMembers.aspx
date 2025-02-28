@@ -209,7 +209,7 @@
                                                                             OnItemCommand="DataGrid1_ItemCommand" ShowHeader="False" Width="100%">
 
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="编号">
+                                                                                <asp:TemplateColumn HeaderText="Number">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_TargetID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                     </ItemTemplate>
@@ -218,7 +218,7 @@
                                                                                 <asp:BoundColumn DataField="Target" HeaderText="目标">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%"></ItemStyle>
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="进度">
+                                                                                <asp:TemplateColumn HeaderText="Progress">
                                                                                     <ItemTemplate>
                                                                                         <asp:Label ID="LB_TargetProgress" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Progress")%> '></asp:Label>%
                                                                                     </ItemTemplate>
@@ -304,7 +304,7 @@
                                                                             OnItemCommand="DataGrid2_ItemCommand" ShowHeader="False" Width="100%">
 
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="编号">
+                                                                                <asp:TemplateColumn HeaderText="Number">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_LeaderID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                                     </ItemTemplate>
@@ -319,10 +319,10 @@
                                                                                 <asp:BoundColumn DataField="Actor" HeaderText="角色">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%"></ItemStyle>
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="JoinTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="加入日期">
+                                                                                <asp:BoundColumn DataField="JoinTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="JoinDate">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%"></ItemStyle>
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

@@ -84,7 +84,7 @@
                                                                 Width="100%">
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                     </asp:ButtonColumn>
                                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -93,10 +93,10 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTCustomerQuestionHandleDetail.aspx?ID={0}" DataTextField="Question" HeaderText="服务需求" Target="_blank">
@@ -105,7 +105,7 @@
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="OperatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="OperatorName" HeaderText="受理人" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OperatorStatus").ToString()) %>
     </ItemTemplate>
@@ -318,7 +318,7 @@
 
                                                                                         <td class="tdLeft" style="width: 5%; text-align: center;">
 
-                                                                                            <asp:LinkButton ID="LinkButton1" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" CssClass="inpu" CommandName="Update" />
+                                                                                            <asp:LinkButton ID="LinkButton1" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" CssClass="inpu" CommandName="Update" />
                                                                                         </td>
 
                                                                                         <%-- <td class="tdLeft" style="width: 5%; text-align: center;">
@@ -490,12 +490,12 @@
 
                                                                             <Columns>
 
-                                                                                <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                                <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
 
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
 
-                                                                                <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="DocType" HeaderText="Type">
 
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
@@ -506,7 +506,7 @@
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                                                 </asp:HyperLinkColumn>
 
-                                                                                <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                                                                <asp:BoundColumn DataField="Author" HeaderText="Author">
 
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
@@ -817,12 +817,12 @@
                                         <asp:TextBox ID="TB_HandleWay" runat="server" Width="200"></asp:TextBox>
                                         <asp:DropDownList ID="DL_HandleWay" runat="server"   AutoPostBack="true" OnSelectedIndexChanged="DL_ContactWay_SelectedIndexChanged">
                                             <asp:ListItem Value="" Text="<%$ Resources:lang,QingXuanZe%>" />
-                                            <asp:ListItem Value="电话" Text="<%$ Resources:lang,DianHua%>" />
+                                            <asp:ListItem Value="Telephone" Text="<%$ Resources:lang,DianHua%>" />
                                             <asp:ListItem Value="IM" Text="<%$ Resources:lang,IM%>" />
-                                            <asp:ListItem Value="远程控制" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
+                                            <asp:ListItem Value="RemoteControl" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
                                             <asp:ListItem Value="EMail" Text="<%$ Resources:lang,EMail%>" />
-                                            <asp:ListItem Value="上门拜访" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
-                                            <asp:ListItem Value="其它方式" Text="<%$ Resources:lang,QiTaFangShi%>" />
+                                            <asp:ListItem Value="DoorToDoorVisit" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
+                                            <asp:ListItem Value="OtherMethods" Text="<%$ Resources:lang,QiTaFangShi%>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td style="text-align: right;" class="formItemBgStyle">
@@ -843,9 +843,9 @@
                                     <td style="text-align: left;" class="formItemBgStyle">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_UsedTime" runat="server" Width="53px" Amount="1">1.00</NickLee:NumberBox>
                                         <asp:DropDownList ID="DL_TimeUnit" runat="server"  >
-                                            <asp:ListItem Value="分钟" Text="<%$ Resources:lang,FenZhong%>" />
-                                            <asp:ListItem Value="小时" Text="<%$ Resources:lang,XiaoShi%>" />
-                                            <asp:ListItem Value="天" Text="<%$ Resources:lang,Tian%>" />
+                                            <asp:ListItem Value="Minutes" Text="<%$ Resources:lang,FenZhong%>" />
+                                            <asp:ListItem Value="Hours" Text="<%$ Resources:lang,XiaoShi%>" />
+                                            <asp:ListItem Value="Days" Text="<%$ Resources:lang,Tian%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

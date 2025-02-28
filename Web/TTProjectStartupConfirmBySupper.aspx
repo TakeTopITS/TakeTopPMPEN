@@ -292,7 +292,7 @@
                                                                                         ShowHeader="false" AllowPaging="True" OnPageIndexChanged="DataGrid3_PageIndexChanged"
                                                                                         OnItemCommand="DataGrid3_ItemCommand" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ProjectID" HeaderText="编号">
+                                                                                            <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectReportMain.aspx?ProjectID={0}"
@@ -305,10 +305,10 @@
                                                                                             <asp:BoundColumn DataField="ProjectAmount" HeaderText="项目额">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy-MM-dd}" HeaderText="开始时间">
+                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy-MM-dd}" HeaderText="StartTime">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy-MM-dd}" HeaderText="结束时间">
+                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy-MM-dd}" HeaderText="EndTime">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:TemplateColumn>
@@ -328,16 +328,16 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="100px" />
                                                                                             </asp:TemplateColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="PMCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                                DataTextField="PMName" HeaderText="项目经理" Target="_blank">
+                                                                                                DataTextField="PMName" HeaderText="ProjectManager" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <%--  <asp:TemplateColumn HeaderText="状态">
+                                                                                            <%--  <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
 </asp:TemplateColumn>--%>
-                                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                                                 </ItemTemplate>

@@ -219,48 +219,48 @@
                                                                             ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                                             PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                                                    DataTextField="UserName" HeaderText="姓名" Target="_blank">
+                                                                                    DataTextField="UserName" HeaderText="Name" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Gender" HeaderText="性别">
+                                                                                <asp:BoundColumn DataField="Gender" HeaderText="Gender">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserPlanList.aspx?UserCode={0}"
                                                                                     Text="Plan" HeaderText="Plan" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Age" HeaderText="年龄">
+                                                                                <asp:BoundColumn DataField="Age" HeaderText="Age">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="DepartCode" HeaderText="部门代码">
+                                                                                <asp:BoundColumn DataField="DepartCode" HeaderText="DepartmentCode">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="DepartName" HeaderText="部门名称">
+                                                                                <asp:BoundColumn DataField="DepartName" HeaderText="DepartmentName">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Duty" HeaderText="职责">
+                                                                                <asp:BoundColumn DataField="Duty" HeaderText="Responsibility">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="OfficePhone" HeaderText="办公电话">
+                                                                                <asp:BoundColumn DataField="OfficePhone" HeaderText="OfficePhone">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MobilePhone" HeaderText="移动电话">
+                                                                                <asp:BoundColumn DataField="MobilePhone" HeaderText="MobilePhone">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EMail" HeaderText="EMail">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="12%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="WorkScope" HeaderText="工作范围">
+                                                                                <asp:BoundColumn DataField="WorkScope" HeaderText="ScopeOfWork">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="JoinDate" HeaderText="加入日期" DataFormatString="{0:yyyy/MM/dd}">
+                                                                                <asp:BoundColumn DataField="JoinDate" HeaderText="JoinDate" DataFormatString="{0:yyyy/MM/dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

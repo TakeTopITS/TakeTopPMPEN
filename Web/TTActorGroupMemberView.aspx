@@ -84,13 +84,13 @@
                         <asp:DataGrid ID="DataGrid2" runat="server" Width="90%" AutoGenerateColumns="False"
                             ShowHeader="false" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                             <Columns>
-                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DepartName" HeaderText="部门">
+                                <asp:BoundColumn DataField="DepartName" HeaderText="Department">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="Actor" HeaderText="角色">

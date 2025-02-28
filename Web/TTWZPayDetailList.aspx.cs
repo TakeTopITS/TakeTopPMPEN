@@ -64,9 +64,9 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
         if (!string.IsNullOrEmpty(strPayID))
         {
             string strWZRequestHQL = string.Format(@"select * from T_WZRequest r
-                        where Progress in ('±¨Ïú')
+                        where Progress in ('Reimbursement')
                         and IsFinisth = 0
-                        and ProjectCode in (select ProjectCode from T_WZPay where PayID = '{0}')", strPayID); 
+                        and ProjectCode in (select ProjectCode from T_WZPay where PayID = '{0}')", strPayID);   //ChineseWord
             DataTable dtRequest = ShareClass.GetDataSetFromSql(strWZRequestHQL, "Request").Tables[0];
 
             DG_Request.DataSource = dtRequest;

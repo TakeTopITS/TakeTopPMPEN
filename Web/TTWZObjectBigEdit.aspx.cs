@@ -246,7 +246,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
                 string strName = Path.GetFileNameWithoutExtension(strFileName2);
                 LT_Template.Text = "<a href=\"" + strUrl + "\" class=\"notTab\" target=\"_blank\">" + strName + "</a>";
 
-                string strCheckTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = '大类'"); 
+                string strCheckTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = 'MajorCategory'");   //ChineseWord
                 DataTable dtCheckTemplateFile = ShareClass.GetDataSetFromSql(strCheckTemplateFileHQL, "TemplateFile").Tables[0];
                 if (dtCheckTemplateFile != null && dtCheckTemplateFile.Rows.Count > 0)
                 {
@@ -262,7 +262,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
                 else {
                     //不存在，添加
                     string strInsertTemplateFileSQL = string.Format(@"insert into T_WZTemplateFile(TemplateType,TemplateName,TemplateUrl)
-                                    values('{0}', '{1}','{2}')", "大类", strName, strUrl); 
+                                    values('{0}', '{1}','{2}')", "MajorCategory", strName, strUrl);   //ChineseWord
                     ShareClass.RunSqlCommand(strInsertTemplateFileSQL);
                 }
 
@@ -283,7 +283,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
 
     private void DataTemplateFileBinder()
     {
-        string strTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = '大类'"); 
+        string strTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = 'MajorCategory'");   //ChineseWord
         DataTable dtTemplateFile = ShareClass.GetDataSetFromSql(strTemplateFileHQL, "TemplateFile").Tables[0];
 
         if (dtTemplateFile != null && dtTemplateFile.Rows.Count > 0)

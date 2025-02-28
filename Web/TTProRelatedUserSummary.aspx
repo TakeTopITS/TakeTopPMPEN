@@ -143,13 +143,13 @@
                                                     ForeColor="#333333" GridLines="None">
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DepartName" HeaderText="部门">
+                                                        <asp:BoundColumn DataField="DepartName" HeaderText="Department">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="Actor" HeaderText="角色">

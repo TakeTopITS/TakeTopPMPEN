@@ -199,7 +199,7 @@
                                         ShowHeader="false" Height="1px"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanged="DataGrid1_PageIndexChanged" AllowPaging="True" PageSize="25">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="AssetCode" HeaderText="资产代码">
@@ -208,23 +208,23 @@
                                             <asp:BoundColumn DataField="AssetName" HeaderText="资产名称">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                            <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                            <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                            <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                            <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="AAID" HeaderText="申请单号">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="ApplicantName" HeaderText="申请人" Target="_blank">
+                                                DataTextField="ApplicantName" HeaderText="Applicant" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:HyperLinkColumn>
                                             <asp:BoundColumn DataField="ApplyReason" HeaderText="申请原因">
@@ -236,7 +236,7 @@
                                             <asp:BoundColumn DataField="FinishTime" HeaderText="完成时间" DataFormatString="{0:yyyy/MM/dd}">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                             </asp:BoundColumn>
-                                              <asp:TemplateColumn HeaderText="状态">
+                                              <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

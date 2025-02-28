@@ -133,12 +133,12 @@ public partial class TTWZSupplierList : System.Web.UI.Page
             if (!string.IsNullOrEmpty(HF_NewID.Value))
             {
                 //string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('已有记录，不能新增！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('已有记录，不能新增！');", true);   //ChineseWord
                 return;
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('已有记录，不能新增！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('已有记录，不能新增！');", true);   //ChineseWord
                 return;
             }
         }
@@ -263,7 +263,7 @@ public partial class TTWZSupplierList : System.Web.UI.Page
             WZNeedObject wZNeedObject = (WZNeedObject)needObjectList[0];
             if (wZNeedObject.IsMark != 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('使用标记不为0，不允许删除！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('使用标记不为0，不允许删除！');", true);   //ChineseWord
                 return;
             }
 
@@ -274,7 +274,7 @@ public partial class TTWZSupplierList : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('删除成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('删除成功！');", true);   //ChineseWord
         }
         else
         {

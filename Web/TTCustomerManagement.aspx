@@ -201,11 +201,11 @@
                                                                 OnPageIndexChanged="DataGrid2_PageIndexChanged" Width="100%" CellPadding="4"
                                                                 ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="CustomerCode" HeaderText="代码">
+                                                                    <asp:BoundColumn DataField="CustomerCode" HeaderText="Code">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
-                                                                        DataTextField="CustomerName" HeaderText="客户名称" Target="_blank">
+                                                                        DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:TemplateColumn HeaderText="补充信息">
@@ -239,7 +239,7 @@
                                                                     <asp:BoundColumn DataField="City" HeaderText="城市">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Tel1" HeaderText="电话">
+                                                                    <asp:BoundColumn DataField="Tel1" HeaderText="Telephone">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">
@@ -308,11 +308,11 @@
                                                 <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" Height="1px" AllowPaging="True" PageSize="30" OnPageIndexChanged="DataGrid3_PageIndexChanged"
                                                     ShowHeader="False" Width="100%" GridLines="None" CellPadding="4" ForeColor="#333333">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoViewForReview.aspx?CustomerCode={0}"
-                                                            DataTextField="CustomerName" HeaderText="客户名称" Target="_blank">
+                                                            DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         </asp:HyperLinkColumn>
 
@@ -327,13 +327,13 @@
                                                         <asp:BoundColumn DataField="ContactName" HeaderText="联系人">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Tel1" HeaderText="电话">
+                                                        <asp:BoundColumn DataField="Tel1" HeaderText="Telephone">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("ReviewStatus").ToString()) %>
     </ItemTemplate>
@@ -345,7 +345,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="CreateDate" HeaderText="时间">
+                                                        <asp:BoundColumn DataField="CreateDate" HeaderText="Time">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                     </Columns>

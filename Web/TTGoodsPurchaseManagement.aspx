@@ -139,12 +139,12 @@
                                         ShowHeader="false"
                                         Width="100%">
                                         <Columns>
-                                            <asp:BoundColumn DataField="POID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="POID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="POID" DataNavigateUrlFormatString="TTGoodsPurchaseOrderView.aspx?POID={0}"
-                                                DataTextField="GPOName" HeaderText="名称" Target="_blank">
+                                                DataTextField="GPOName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="31%" />
                                             </asp:HyperLinkColumn>
 
@@ -157,15 +157,15 @@
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="PurManCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="PurManName" HeaderText="业务员" Target="_blank">
+                                                DataTextField="PurManName" HeaderText="Salesperson" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:HyperLinkColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="POID" DataNavigateUrlFormatString="TTMakeCollaboration.aspx?RelatedType=GoodsPO&RelatedID={0}"
-                                                HeaderText="协作" Text="<%$ Resources:lang,XieZuo%>" Target="_blank">
+                                                HeaderText="Collaboration" Text="<%$ Resources:lang,XieZuo%>" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:HyperLinkColumn>
 
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

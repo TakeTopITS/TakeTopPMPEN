@@ -120,7 +120,7 @@
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_UnitType" runat="server">
                                                                             <asp:ListItem Text="<%$ Resources:lang,XingZhengDanWei%>" Value="行政单位"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,XiangMuBu%>" Value="项目部"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,XiangMuBu%>" Value="ProjectDepartment"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle">&nbsp;</td>

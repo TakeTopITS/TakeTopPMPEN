@@ -196,10 +196,10 @@
                                         Height="1px" Width="1200px" ShowHeader="false"
                                         CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ConstractCode" HeaderText="合同代码">
+                                            <asp:BoundColumn DataField="ConstractCode" HeaderText="ContractCode">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="ConstractName" HeaderText="委托代理方">
@@ -209,23 +209,23 @@
                                             <asp:BoundColumn DataField="PayableAccount" HeaderText="代理合同金额">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <%--<asp:BoundColumn DataField="PayableTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="应付时间">
+                                            <%--<asp:BoundColumn DataField="PayableTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="PaymentDueDate">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>--%>
                                              <asp:BoundColumn DataField="OperateTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="收款日期">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="OutOfPocketAccount" HeaderText="金额">
+                                            <asp:BoundColumn DataField="OutOfPocketAccount" HeaderText="Amount">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="InvoiceAccount" HeaderText="关税">
+                                            <asp:BoundColumn DataField="InvoiceAccount" HeaderText="Tariff">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UNPayAmount" HeaderText="增值税" >
+                                            <asp:BoundColumn DataField="UNPayAmount" HeaderText="ValueAddedTax" >
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Receiver" HeaderText="备注">
+                                            <asp:BoundColumn DataField="Receiver" HeaderText="Remark">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
                                         </Columns>

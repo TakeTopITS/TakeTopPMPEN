@@ -14,7 +14,7 @@
                 //alert("组织构架表");
                 window.location.href = "TTPnPCameraAdd.aspx";
             } else {
-                //alert("项目部");
+                //alert("ProjectDepartment");
                 window.location.href = "TTPnPCameraProjectAdd.aspx";
             }
         }
@@ -68,7 +68,7 @@
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                     Width="100%">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="TypeName" HeaderText="类型">
+                                                        <asp:BoundColumn DataField="TypeName" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="DPName" HeaderText="组织架构或项目部">
@@ -89,7 +89,7 @@
                                                         <asp:BoundColumn DataField="CreatorName" HeaderText="创建人">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>

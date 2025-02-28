@@ -181,13 +181,13 @@
                                                                                             <%--<asp:Button ID="BT_Edit" runat="server" CssClass="inpu" Text="编辑" CommandArgument='<%# Eval("ID")+"|"+ Eval("CheckCode")+"|"+Eval("ObjectCode") %>' CommandName="edit" />--%>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
+                                                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
+                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -226,7 +226,7 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("Factory").ToString(), 192) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <%--<asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                                                    <%--<asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                                                     </asp:BoundColumn>--%>
                                                                                     <asp:TemplateColumn>
@@ -244,7 +244,7 @@
                                                                                     <asp:BoundColumn DataField="CompactPrice" HeaderText="合同单价">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="CompactMoney" HeaderText="合同金额">
+                                                                                    <asp:BoundColumn DataField="CompactMoney" HeaderText="ContractAmount">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <%--<asp:BoundColumn DataField="CheckCode" HeaderText="检号">

@@ -197,11 +197,11 @@
                                                     </td>
                                                     <td width="10%" align="center">
                                                         <strong>
-                                                            <asp:Label ID="Label19" runat="server" Text="合同金额"></asp:Label></strong>
+                                                            <asp:Label ID="Label19" runat="server" Text="ContractAmount"></asp:Label></strong>
                                                     </td>
                                                     <td width="8%" align="center">
                                                         <strong>
-                                                            <asp:Label ID="Label20" runat="server" Text="甲方单位"></asp:Label></strong>
+                                                            <asp:Label ID="Label20" runat="server" Text="PartyAUnit"></asp:Label></strong>
                                                     </td>
                                                     <td width="8%" align="center">
                                                         <strong>

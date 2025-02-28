@@ -167,7 +167,7 @@
                                                     ShowHeader="False" OnItemCommand="DataGrid2_ItemCommand" Width="100%"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -179,13 +179,13 @@
                                                         <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DepartName" HeaderText="部门">
+                                                        <asp:BoundColumn DataField="DepartName" HeaderText="Department">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="Actor" HeaderText="角色">
@@ -461,9 +461,9 @@
 
                                                                 <asp:DropDownList ID="DL_SalaryMethod" runat="server">
 
-                                                                    <asp:ListItem Value="提成" />
+                                                                    <asp:ListItem Value="Commission" />
 
-                                                                    <asp:ListItem Value="工时" />
+                                                                    <asp:ListItem Value="LaborHours" />
                                                                 </asp:DropDownList>
                                                             </td>
 

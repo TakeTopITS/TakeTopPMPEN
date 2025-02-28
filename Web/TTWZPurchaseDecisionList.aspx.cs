@@ -85,7 +85,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    order by p.MarkTime desc", strUserCode); 
+                    order by p.MarkTime desc", strUserCode);   //ChineseWord
         DataTable dtPurchase = ShareClass.GetDataSetFromSql(strPurchaseHQL, "Purchase").Tables[0];
 
         DG_List.DataSource = dtPurchase;
@@ -188,7 +188,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    ", strUserCode); 
+                    ", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(HF_SortPurchaseCode.Value))
         {
@@ -283,7 +283,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    ", strUserCode); 
+                    ", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(HF_SortProjectCode.Value))
         {
@@ -379,7 +379,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    ", strUserCode); 
+                    ", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(HF_SortPurchaseStartTime.Value))
         {

@@ -117,7 +117,7 @@
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                            <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="19%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Description" HeaderText="说明">

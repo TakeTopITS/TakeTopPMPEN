@@ -210,25 +210,25 @@
                                             </table>
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="false" Width="100%">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="GoodsCode" HeaderText="物料代码">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="GoodsName" HeaderText="物料名称">
+                                                    <asp:BoundColumn DataField="GoodsName" HeaderText="MaterialName">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                                    <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                                    <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                                    <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Manufacturer" HeaderText="厂家">

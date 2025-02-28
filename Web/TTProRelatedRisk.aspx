@@ -146,7 +146,7 @@
 
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -155,10 +155,10 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="级别">
+                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="Level">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Risk" HeaderText="Risk">
@@ -178,7 +178,7 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:TemplateColumn HeaderText="状态">
+                                                    <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>
@@ -228,9 +228,9 @@
                                         :</td>
                                     <td style="width: 20%; text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_RiskLevel" runat="server">
-                                            <asp:ListItem Value="中" Text="<%$ Resources:lang,Zhong%>" />
-                                            <asp:ListItem Value="高" Text="<%$ Resources:lang,Gao%>" />
-                                            <asp:ListItem Value="低" Text="<%$ Resources:lang,Di2%>" />
+                                            <asp:ListItem Value="Medium" Text="<%$ Resources:lang,Zhong%>" />
+                                            <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao%>" />
+                                            <asp:ListItem Value="Low" Text="<%$ Resources:lang,Di2%>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td style="text-align: right; width: 10%;" class="formItemBgStyle">

@@ -88,7 +88,7 @@
                                             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="序号" Visible="false">
+                                                <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                 </asp:BoundColumn>
                                                 <asp:TemplateColumn HeaderText="报表文件">
@@ -109,7 +109,7 @@
                                                     DataTextField="CreatorName" HeaderText="上传者" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:HyperLinkColumn>
-                                                <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间">
+                                                <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>
@@ -137,7 +137,7 @@
                                             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="序号" Visible="false">
+                                                <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                 </asp:BoundColumn>
                                                 <asp:TemplateColumn HeaderText="报表文件">
@@ -158,7 +158,7 @@
                               DataTextField="CreatorName" HeaderText="上传者" Target="_blank">
                               <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                           </asp:HyperLinkColumn>
-                          <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间">
+                          <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
                               <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                           </asp:BoundColumn>--%>
                                             </Columns>

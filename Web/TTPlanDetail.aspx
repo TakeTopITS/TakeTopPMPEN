@@ -348,13 +348,13 @@
                                                                                 <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" GridLines="None"
                                                                                     OnItemCommand="DataGrid1_ItemCommand" ShowHeader="False" Width="100%">
                                                                                     <Columns>
-                                                                                         <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                         <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:BoundColumn DataField="Target" HeaderText="目标">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:TemplateColumn HeaderText="进度">
+                                                                                        <asp:TemplateColumn HeaderText="Progress">
                                                                                             <ItemTemplate>
                                                                                                 <asp:TextBox ID="NB_TargetProgress" Text='<%# DataBinder.Eval(Container.DataItem,"Progress")%>' Width="50px" runat="server"></asp:TextBox>%
                                                                                                 

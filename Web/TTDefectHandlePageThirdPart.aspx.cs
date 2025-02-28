@@ -96,23 +96,23 @@ public partial class TTDefectHandlePageThirdPart : System.Web.UI.Page
         SetReqRecordColor(ds, DataList_Handling, "InProgress");
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')"; 
+        strHQL += " and defectAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed')";   //ChineseWord
         strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_FinishedUnAssigned.DataSource = ds;
         DataList_FinishedUnAssigned.DataBind();
-        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "已完成"); 
+        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "Completed");   //ChineseWord
 
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status = '已分派'"; 
+        strHQL += " and defectAssignRecord.Status = 'Assigned'";   //ChineseWord
         strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_Assigned.DataSource = ds;
         DataList_Assigned.DataBind();
-        SetReqRecordColor(ds, DataList_Assigned, "已分派"); 
+        SetReqRecordColor(ds, DataList_Assigned, "Assigned");   //ChineseWord
     }
 
     protected void LoadDefectment(string strUserCode)
@@ -157,9 +157,9 @@ public partial class TTDefectHandlePageThirdPart : System.Web.UI.Page
 
         //    strStatus = ds.Tables[0].Rows[i]["Status"].ToString().Trim();
 
-        //    if (strStatus != "Completed" & strStatus != "已完成")
+        //    if (strStatus != "Completed" & strStatus != "Completed")
         //    {
-        //        if (strTaskStatus != "已分派")
+        //        if (strTaskStatus != "Assigned")
         //        {
         //            if (dtFinishedDate < dtNowDate)
         //            {
@@ -173,7 +173,7 @@ public partial class TTDefectHandlePageThirdPart : System.Web.UI.Page
         //    }
         //    else
         //    {
-        //        if (strTaskStatus == "已分派")
+        //        if (strTaskStatus == "Assigned")
         //        {
         //            dataList.Items[i].BackColor = Color.Green;
         //        }

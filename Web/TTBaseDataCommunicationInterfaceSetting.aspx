@@ -175,7 +175,7 @@
                                                         <asp:BoundColumn DataField="SPInterface" HeaderText="接口">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="60%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
     </ItemTemplate>
@@ -312,7 +312,7 @@
                                                             <asp:BoundColumn DataField="ServerIP" HeaderText="接口">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ServerPort" HeaderText="状态">
+                                                            <asp:BoundColumn DataField="ServerPort" HeaderText="Status">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="WebSite" HeaderText="网址">

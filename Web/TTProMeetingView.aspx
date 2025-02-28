@@ -132,10 +132,10 @@
 
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                            <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTMeetingView.aspx?ID={0}"
@@ -145,10 +145,10 @@
                                             <asp:BoundColumn DataField="Host" HeaderText="主持人">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="BeginTime" DataFormatString="{0:yyyy/MM/dd hh:mm}" HeaderText="开始时间">
+                                            <asp:BoundColumn DataField="BeginTime" DataFormatString="{0:yyyy/MM/dd hh:mm}" HeaderText="StartTime">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd hh:mm}" HeaderText="结束时间">
+                                            <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd hh:mm}" HeaderText="EndTime">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="Organizer" HeaderText="召集人">

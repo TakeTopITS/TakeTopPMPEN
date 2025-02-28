@@ -237,7 +237,7 @@ public partial class TTWZStockList : System.Web.UI.Page
         TXT_Checker.BackColor = Color.White;
         TXT_StockDesc.BackColor = Color.White;
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true);   //ChineseWord
     }
 
     protected void BT_Create_Click(object sender, EventArgs e)
@@ -370,7 +370,7 @@ public partial class TTWZStockList : System.Web.UI.Page
             DataBinder();
         }
         catch (Exception ex) { }
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true);   //ChineseWord
     }
 
 
@@ -446,13 +446,13 @@ public partial class TTWZStockList : System.Web.UI.Page
     protected void BT_Start_Click(object sender, EventArgs e)
     {
         string strResult = string.Empty;
-        string strTotalHQL = "select * from T_WZStock where StockCode = '直属总库'"; 
+        string strTotalHQL = "select * from T_WZStock where StockCode = 'Direct General Warehouse'";   //ChineseWord
         DataTable dtTotal = ShareClass.GetDataSetFromSql(strTotalHQL, "strTotalHQL").Tables[0];
         if (dtTotal == null || dtTotal.Rows.Count == 0)
         {
             //创建 直属总库
             string strInsertTotalHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("ZhiShuZongKu").ToString().Trim(), "用于各行政单位自营项目（包括消耗、劳保、维修及自用料等）"); 
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("ZhiShuZongKu").ToString().Trim(), "用于各行政单位自营项目（包括消耗、劳保、维修及自用料等）");   //ChineseWord
             ShareClass.RunSqlCommand(strInsertTotalHQL);
             strResult += LanguageHandle.GetWord("ZhiShuZongKuChuangJianChengGon").ToString().Trim();
         }
@@ -461,13 +461,13 @@ public partial class TTWZStockList : System.Web.UI.Page
         }
 
 
-        string strContainerOneHQL = "select * from T_WZStock where StockCode = '容器一库'"; 
+        string strContainerOneHQL = "select * from T_WZStock where StockCode = 'Container Warehouse One'";   //ChineseWord
         DataTable dtContainerOne = ShareClass.GetDataSetFromSql(strContainerOneHQL, "ContainerOne").Tables[0];
         if (dtContainerOne == null || dtContainerOne.Rows.Count == 0)
         {
             //创建 容器一库
             string strInsertContainerOneHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("RongQiYiKu").ToString().Trim(), "用于容器制造厂压力容器制造项目"); 
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("RongQiYiKu").ToString().Trim(), "Used for Pressure Vessel Manufacturing Projects of Container Manufacturing Plant");   //ChineseWord
             ShareClass.RunSqlCommand(strInsertContainerOneHQL);
             strResult += LanguageHandle.GetWord("RongQiYiKuChuangJianChengGong").ToString().Trim();
         }
@@ -476,13 +476,13 @@ public partial class TTWZStockList : System.Web.UI.Page
             strResult += LanguageHandle.GetWord("RongQiYiKuYiJingCunZai").ToString().Trim();
         }
 
-        string strContainerTwoHQL = "select * from T_WZStock where StockCode = '容器二库'"; 
+        string strContainerTwoHQL = "select * from T_WZStock where StockCode = 'Container Warehouse Two'";   //ChineseWord
         DataTable dtContainerTwo = ShareClass.GetDataSetFromSql(strContainerTwoHQL, "ContainerTwo").Tables[0];
         if (dtContainerTwo == null || dtContainerTwo.Rows.Count == 0)
         {
             //创建 容器二库
             string strInsertContainerTwoHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("RongQiErKu").ToString().Trim(), "用于兰江公司压力容器制造项目"); 
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("RongQiErKu").ToString().Trim(), "Used for Pressure Vessel Manufacturing Projects of Lanjiang Company");   //ChineseWord
             ShareClass.RunSqlCommand(strInsertContainerTwoHQL);
             strResult += LanguageHandle.GetWord("RongQiErKuChuangJianChengGong").ToString().Trim();
         }
@@ -491,13 +491,13 @@ public partial class TTWZStockList : System.Web.UI.Page
             strResult += LanguageHandle.GetWord("RongQiErKuYiJingCunZai").ToString().Trim();
         }
 
-        string strAmountHQL = "select * from T_WZStock where StockCode = '计量库'"; 
+        string strAmountHQL = "select * from T_WZStock where StockCode = 'Measurement Warehouse'";   //ChineseWord
         DataTable dtAmount = ShareClass.GetDataSetFromSql(strAmountHQL, "Amount").Tables[0];
         if (dtAmount == null || dtAmount.Rows.Count == 0)
         {
             //创建 计量库
             string strInsertContainerTwoHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("JiLiangKu").ToString().Trim(), "用于兰江公司压力容器制造项目"); 
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("JiLiangKu").ToString().Trim(), "Used for Pressure Vessel Manufacturing Projects of Lanjiang Company");   //ChineseWord
             ShareClass.RunSqlCommand(strInsertContainerTwoHQL);
             strResult += LanguageHandle.GetWord("JiLiangKuChuangJianChengGong").ToString().Trim();
         }
@@ -506,13 +506,13 @@ public partial class TTWZStockList : System.Web.UI.Page
             strResult += LanguageHandle.GetWord("JiLiangKuYiJingCunZai").ToString().Trim();
         }
 
-        string strSecondLevelHQL = "select * from T_WZStock where StockCode = '二级库'"; 
+        string strSecondLevelHQL = "select * from T_WZStock where StockCode = 'Secondary Warehouse'";   //ChineseWord
         DataTable dtSecondLevel = ShareClass.GetDataSetFromSql(strSecondLevelHQL, "SecondLevel").Tables[0];
         if (dtSecondLevel == null || dtSecondLevel.Rows.Count == 0)
         {
             //创建 二级库
             string strInsertContainerTwoHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("ErJiKu").ToString().Trim(), "特定用于兰州石化公司集中采购的劳保用品核算"); 
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("ErJiKu").ToString().Trim(), "Specifically for the Calculation of Labor Protection Supplies Purchased by Lanzhou Petrochemical Company");   //ChineseWord
             ShareClass.RunSqlCommand(strInsertContainerTwoHQL);
             strResult += LanguageHandle.GetWord("ErJiKuChuangJianChengGong").ToString().Trim();
         }
@@ -521,7 +521,7 @@ public partial class TTWZStockList : System.Web.UI.Page
             strResult += LanguageHandle.GetWord("ErJiKuYiJingCunZai").ToString().Trim();
         }
 
-        string strUpdateSQL = "update T_WZStock set IsMark = -1 where StockCode in ('直属总库','容器一库','容器二库','计量库','二级库')"; 
+        string strUpdateSQL = "update T_WZStock set IsMark = -1 where StockCode in ('Direct General Warehouse','Container Warehouse One','Container Warehouse Two','Measurement Warehouse','Secondary Warehouse')";   //ChineseWord
         ShareClass.RunSqlCommand(strUpdateSQL);
 
         DataBinder();
@@ -599,7 +599,7 @@ public partial class TTWZStockList : System.Web.UI.Page
             lock (this)
             {
                 bool isExist = true;
-                string strStockCodeHQL = "select COUNT(1) as RowNumber from T_WZStock where StockCode like '自营%'"; 
+                string strStockCodeHQL = "select COUNT(1) as RowNumber from T_WZStock where StockCode like '自营%'";   //ChineseWord
                 DataTable dtStock = ShareClass.GetDataSetFromSql(strStockCodeHQL, "Stock").Tables[0];
                 int intStockCodeNumber = 0;
                 int.TryParse(dtStock.Rows[0]["RowNumber"].ToString(), out intStockCodeNumber);

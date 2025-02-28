@@ -475,9 +475,9 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
         bdBaseDataRecordRecord.YearNum = bmp.YearNum;
 
         if (strParaValue == "1")
-            bdBaseDataRecordRecord.OperationType = "增加"; 
+            bdBaseDataRecordRecord.OperationType = "Increase";   //ChineseWord
         else if (strParaValue == "2")
-            bdBaseDataRecordRecord.OperationType = "更新"; 
+            bdBaseDataRecordRecord.OperationType = "Update";   //ChineseWord
         else if (strParaValue == "3")
             bdBaseDataRecordRecord.OperationType = "Deleted";
 
@@ -562,7 +562,7 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
             LB_DepartCode.Text = "";
         }
 
-        strHQL = "Select * From T_BDBaseDataRecord Where (Type='Operation' or Type='实际')"; 
+        strHQL = "Select * From T_BDBaseDataRecord Where (Type='Operation' or Type='Actual')";   //ChineseWord
         strHQL += " and DepartCode In " + strDepartString;
 
         if (!string.IsNullOrEmpty(TB_DepartName.Text.Trim()))

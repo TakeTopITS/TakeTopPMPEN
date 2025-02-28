@@ -159,7 +159,7 @@
                                                                 <%--<asp:TemplateColumn>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     <ItemTemplate>
-                                                                        <input id='<%# Eval("SupplierCode") %>' type="radio" checked='<%# Eval("IsSelect") == "没有" ? "false" : "true" %>' name="dlCode" />
+                                                                        <input id='<%# Eval("SupplierCode") %>' type="radio" checked='<%# Eval("IsSelect") == "None" ? "false" : "true" %>' name="dlCode" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
                                                                 <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编码">
@@ -177,7 +177,7 @@
                                                                 <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
+                                                                <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="MarkTime" HeaderText="编制日期">

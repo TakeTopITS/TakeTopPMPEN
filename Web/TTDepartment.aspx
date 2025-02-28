@@ -323,13 +323,13 @@
                                                                         <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" ShowHeader="False"
                                                                             OnItemCommand="DataGrid2_ItemCommand" Width="100%" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="DepartCode" HeaderText="关联部门代码">
@@ -395,13 +395,13 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -454,13 +454,13 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -513,13 +513,13 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -572,13 +572,13 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -631,15 +631,15 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="序号">
+                                                                                <asp:TemplateColumn HeaderText="SerialNumber">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_SuperUserID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' /></ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ProductLineRelated" HeaderText="产品线相关">
@@ -676,7 +676,7 @@
                                                                                         <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="序号">
+                                                                                            <asp:TemplateColumn HeaderText="SerialNumber">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ProductLineName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Name") %>' /></ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100%" />
@@ -755,13 +755,13 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -814,13 +814,13 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -873,13 +873,13 @@
                                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EffectDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生效时间">
@@ -923,7 +923,7 @@
                                                                                         <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="序号">
+                                                                                            <asp:TemplateColumn HeaderText="SerialNumber">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ProductLineName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Name") %>' /></ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100%" />
@@ -1093,7 +1093,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyle" style="width: 30%; height: 26px; text-align: right">
-                                        <asp:Label ID="Label87" runat="server" Text="办公地址"></asp:Label>：
+                                        <asp:Label ID="Label87" runat="server" Text="OfficeAddress"></asp:Label>：
                                     </td>
                                     <td class="formItemBgStyle" style="width: 70%; height: 26px; text-align: left">
                                         <asp:TextBox ID="TB_WorkAddressNew" runat="server" Width="400px"></asp:TextBox>

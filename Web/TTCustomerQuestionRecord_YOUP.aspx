@@ -266,17 +266,17 @@
                                                                                 Width="450px" AllowPaging="True" OnPageIndexChanged="DataGrid3_PageIndexChanged"
                                                                                 ShowHeader="False" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                                 <Columns>
-                                                                                    <asp:TemplateColumn HeaderText="用户代码">
+                                                                                    <asp:TemplateColumn HeaderText="UserCode">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                                                         <ItemTemplate>
                                                                                             <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Style="text-align: center"
                                                                                                 Text='<%# DataBinder.Eval(Container.DataItem,"UserCode").ToString().Trim() %>' />
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="UserName" HeaderText="用户姓名">
+                                                                                    <asp:BoundColumn DataField="UserName" HeaderText="UserName">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                                         <ItemTemplate>
                                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                         </ItemTemplate>
@@ -460,17 +460,17 @@
                                                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                             Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                                                <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="类型">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                                     DataTextField="DocName" HeaderText="文件名" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="Author" HeaderText="作者">
+                                                                <asp:BoundColumn DataField="Author" HeaderText="Author">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">

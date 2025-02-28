@@ -208,20 +208,20 @@
                                                 <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="false">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="1%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BookType" HeaderText="类型">
+                                                        <asp:BoundColumn DataField="BookType" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BarCode" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="BarCode" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTMakeBookInfoDetail.aspx?Para=2&ID={0}"
-                                                            DataTextField="BookName" HeaderText="名称" Target="_blank">
+                                                            DataTextField="BookName" HeaderText="Name" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:HyperLinkColumn>
@@ -241,11 +241,11 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ClassificationCode" HeaderText="分类码">
+                                                        <asp:BoundColumn DataField="ClassificationCode" HeaderText="ClassificationCode">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BookPublishersName" HeaderText="出版社">
+                                                        <asp:BoundColumn DataField="BookPublishersName" HeaderText="Publisher">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -261,11 +261,11 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Price" HeaderText="价格">
+                                                        <asp:BoundColumn DataField="Price" HeaderText="Price">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>
@@ -386,7 +386,7 @@
                                                             </table>
                                                             <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="False" Width="100%" PageSize="5" OnPageIndexChanged="DataGrid2_PageIndexChanged">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="编号" Visible="false">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="BarCode" HeaderText="书籍条码">
@@ -419,13 +419,13 @@
                                                                     <asp:BoundColumn DataField="ReferenceNo" HeaderText="检索号">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Version" HeaderText="版本" Visible="false">
+                                                                    <asp:BoundColumn DataField="Version" HeaderText="Version" Visible="false">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="1%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="BookClassificationName" HeaderText="所属归类">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="BookPublishersName" HeaderText="出版社">
+                                                                    <asp:BoundColumn DataField="BookPublishersName" HeaderText="Publisher">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="BorrowDate" HeaderText="借阅日期" DataFormatString="{0:yyyy-MM-dd}">
@@ -443,13 +443,13 @@
                                                                     <asp:BoundColumn DataField="CertificateName" HeaderText="借阅证件">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                                    <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>

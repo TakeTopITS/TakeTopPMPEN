@@ -223,32 +223,32 @@
                                         ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="25">
                                         <Columns>
-                                            <asp:BoundColumn DataField="CheckInID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="CheckInID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="AssetCode" HeaderText="编号">
+                                            <asp:BoundColumn DataField="AssetCode" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="AssetCode" DataNavigateUrlFormatString="TTAssetInforView.aspx?AssetCode={0}"
-                                                DataTextField="AssetName" HeaderText="名称" Target="_blank">
+                                                DataTextField="AssetName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                            <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                            <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                            <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Price" HeaderText="单价">
+                                            <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                            <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="Manufacturer" HeaderText="厂家">

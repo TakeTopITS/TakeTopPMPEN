@@ -47,7 +47,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
 
             LoadWorkFlow(strUserCode);
 
-            HL_WLRelatedDoc.NavigateUrl = "TTWLRelatedDoc.aspx?DocType=…Û∫À&WLID=" + strWLID; 
+            HL_WLRelatedDoc.NavigateUrl = "TTWLRelatedDoc.aspx?DocType=…Û∫À&WLID=" + strWLID;   //ChineseWord
         }
     }
 
@@ -127,7 +127,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         strXMLFile = FUP_File.PostedFile.FileName;
 
-        strHQL = "from Approve as approve where approve.Type = '…Û∫À' and approve.RelatedID = " + strWLID; 
+        strHQL = "from Approve as approve where approve.Type = 'Review' and approve.RelatedID = " + strWLID;   //ChineseWord
         ApproveBLL approveBLL = new ApproveBLL();
         lst = approveBLL.GetAllApproves(strHQL);
 
@@ -183,7 +183,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
 
         strWLID = LB_WLID.Text.Trim();
 
-        strHQL = "from Approve as approve where approve.Type = '…Û∫À' and approve.RelatedID = " + strWLID; 
+        strHQL = "from Approve as approve where approve.Type = 'Review' and approve.RelatedID = " + strWLID;   //ChineseWord
         ApproveBLL approveBLL = new ApproveBLL();
         lst = approveBLL.GetAllApproves(strHQL);
 

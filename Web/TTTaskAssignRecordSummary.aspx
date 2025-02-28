@@ -123,7 +123,7 @@
 
                                                         <ItemStyle CssClass="itemStyle" />
                                                         <Columns>
-                                                            <asp:TemplateColumn HeaderText="状态">
+                                                            <asp:TemplateColumn HeaderText="Status">
                                                                 <ItemTemplate>
                                                                     <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' /><br />
                                                                 </ItemTemplate>
@@ -315,10 +315,10 @@
                                                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                                                 Width="100%">
                                                                                 <Columns>
-                                                                                    <asp:BoundColumn DataField="TaskID" HeaderText="编号">
+                                                                                    <asp:BoundColumn DataField="TaskID" HeaderText="Number">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataNavigateUrlFormatString="TTTaskAssignRecord.aspx?TaskID={0}"
@@ -328,10 +328,10 @@
                                                                                     <asp:BoundColumn DataField="Priority" HeaderText="优先级">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="Budget" HeaderText="费用预算">
@@ -346,13 +346,13 @@
                                                                                         </ItemTemplate>
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="100px" />
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="Expense" HeaderText="费用">
+                                                                                    <asp:BoundColumn DataField="Expense" HeaderText="Expense">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="RealManHour" HeaderText="工时">
+                                                                                    <asp:BoundColumn DataField="RealManHour" HeaderText="LaborHours">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:TemplateColumn HeaderText="状态">
+                                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                                         <ItemTemplate>
                                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                         </ItemTemplate>

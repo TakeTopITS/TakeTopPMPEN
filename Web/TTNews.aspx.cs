@@ -35,7 +35,7 @@ public partial class TTNews : System.Web.UI.Page
         {
             strHQL = "Select ID,Title,Content From T_HeadLine ";
             strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-            strHQL += " And Type = 'Internal' and Status = '·¢²¼'  Order By ID DESC limit 1"; 
+            strHQL += " And Type = 'Internal' and Status = 'Publish'  Order By ID DESC limit 1";   //ChineseWord
             DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
             if (ds.Tables[0].Rows.Count > 0)

@@ -166,13 +166,13 @@
                                                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand"
                                                             OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="false" Width="100%">
                                                             <Columns>
-                                                                <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                <asp:TemplateColumn HeaderText="Number">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="SiteName" HeaderText="Ãû³Æ">
+                                                                <asp:BoundColumn DataField="SiteName" HeaderText="Name">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="25%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="SiteAddress" DataNavigateUrlFormatString="{0}"

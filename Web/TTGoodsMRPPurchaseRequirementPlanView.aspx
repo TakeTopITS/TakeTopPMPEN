@@ -196,19 +196,19 @@
                                                                 Height="1px" Width="100%" CellPadding="4"
                                                                 ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ItemCode" HeaderText="代码">
+                                                                    <asp:BoundColumn DataField="ItemCode" HeaderText="Code">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ItemName" HeaderText="名称">
+                                                                    <asp:BoundColumn DataField="ItemName" HeaderText="Name">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Specification" HeaderText="规格">
+                                                                    <asp:BoundColumn DataField="Specification" HeaderText="Specification">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="BomVerID" HeaderText="BomVerID">
@@ -232,7 +232,7 @@
                                                                     </asp:BoundColumn>
 
 
-                                                                    <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                                                    <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
@@ -348,19 +348,19 @@
                                                                 Height="1px" Width="100%" CellPadding="4"
                                                                 ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ItemCode" HeaderText="代码">
+                                                                    <asp:BoundColumn DataField="ItemCode" HeaderText="Code">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ItemName" HeaderText="名称">
+                                                                    <asp:BoundColumn DataField="ItemName" HeaderText="Name">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Specification" HeaderText="规格">
+                                                                    <asp:BoundColumn DataField="Specification" HeaderText="Specification">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                     </asp:BoundColumn>
 
@@ -388,7 +388,7 @@
                                                                     </asp:BoundColumn>
 
 
-                                                                    <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                                                    <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <%--   <asp:BoundColumn DataField="DefaultProcess" HeaderText="工艺">

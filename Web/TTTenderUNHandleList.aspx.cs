@@ -79,7 +79,7 @@ public partial class TTTenderUNHandleList : System.Web.UI.Page
         LB_Sql2.Text = strHQL;
 
 
-        //if (strWarningType == "ÍË±£Ö¤½ð")
+        //if (strWarningType == "RefundDeposit")
         strHQL = "Select *  From T_Tender_HYYQ Where  IsReceiveMargin <> 0 and rtrim(ReceiveMarginTime) <= to_char(now()+ReceiveMarginDay*'1 day'::interval,'yyyymmdd') "; 
         strHQL += " and (CreatorCode = " + "'" + strUserCode + "'";
         strHQL += " or ID in (Select TenderID from T_TenderRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";

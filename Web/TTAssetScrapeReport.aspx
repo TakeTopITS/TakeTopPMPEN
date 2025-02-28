@@ -199,14 +199,14 @@
                                                 ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="25">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="AssetCode" HeaderText="代码">
+                                                    <asp:BoundColumn DataField="AssetCode" HeaderText="Code">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="AssetCode" DataNavigateUrlFormatString="TTAssetInforView.aspx?AssetCode={0}"
-                                                        DataTextField="AssetName" HeaderText="名称" Target="_blank">
+                                                        DataTextField="AssetName" HeaderText="Name" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="OldUserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"

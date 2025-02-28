@@ -317,7 +317,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
                 for (int i = 0; i < res.Tables[0].Rows.Count; i++)
                 {
-                    StringBuilder sbcom = new StringBuilder("insert into [实际工作列表$] values('"); 
+                    StringBuilder sbcom = new StringBuilder("insert into [实际工作列表$] values('");   //ChineseWord
 
                     sbcom.Append(res.Tables[0].Rows[i]["TypeName"].ToString());
                     sbcom.Append("',");

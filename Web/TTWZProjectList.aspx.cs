@@ -323,7 +323,7 @@ public partial class TTWZProjectList : System.Web.UI.Page
                         {
                             //TODO
                             //先查询领料计划，《进度》为核销，如果领料计划还有其它状态，给出提示
-                            string strPlanHQL = "select * from T_WZPickingPlan where ProjectCode = '" + wZProject.ProjectCode + "' and Progress != '核销'"; 
+                            string strPlanHQL = "select * from T_WZPickingPlan where ProjectCode = '" + wZProject.ProjectCode + "' and Progress != '核销'";   //ChineseWord
                             DataTable dtPlan = ShareClass.GetDataSetFromSql(strPlanHQL, "Plan").Tables[0];
                             if (dtPlan != null && dtPlan.Rows.Count > 0)
                             {
@@ -542,7 +542,7 @@ public partial class TTWZProjectList : System.Web.UI.Page
         //无，则写记录：工程项目〈使用标记〉＝“0”，然后继续做下一条												
         //循环检查，直到工程项目表单最后一条记录后结束												
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where Progress = '开工'"; 
+        string strProjectHQL = "from WZProject as wZProject where Progress = 'Start Work'";   //ChineseWord
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
         if (listProject != null && listProject.Count > 0)
         {
@@ -629,7 +629,7 @@ public partial class TTWZProjectList : System.Web.UI.Page
                             COALESCE(SUM(CompactMoney),0) as TotalCompactMoney 
                             from T_WZCompact
                             where Progress = '生效'
-                            and ProjectCode = '{0}'", strProjectCode); 
+                            and ProjectCode = '{0}'", strProjectCode);   //ChineseWord
                 DataTable dtCompact = ShareClass.GetDataSetFromSql(strCompactHQL, "Compact").Tables[0];
                 decimal decimalContractMoney = 0;
                 decimal.TryParse(ShareClass.ObjectToString(dtCompact.Rows[0]["TotalCompactMoney"]), out decimalContractMoney);
@@ -686,11 +686,11 @@ public partial class TTWZProjectList : System.Web.UI.Page
 
             DataBinder(strControlProjectCode, strProjectName, strProgress);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');ControlStatusCloseChange();", true);   //ChineseWord
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有项目，请稍后有项目时再做项目统计！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有项目，请稍后有项目时再做项目统计！');ControlStatusCloseChange();", true);   //ChineseWord
             return;
         }
     }
@@ -712,7 +712,7 @@ public partial class TTWZProjectList : System.Web.UI.Page
             WZStock wZStock = (WZStock)lstWZStock[0];
             if (!wZStock.StockCode.Contains(LanguageHandle.GetWord("ZiYing").ToString().Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('库别不是自营N库，不允许核销！');ControlStatusCloseChange();", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('库别不是自营N库，不允许核销！');ControlStatusCloseChange();", true);   //ChineseWord
                 return;
             }
             else
@@ -721,7 +721,7 @@ public partial class TTWZProjectList : System.Web.UI.Page
 
                 wZStockBLL.UpdateWZStock(wZStock, wZStock.ID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销库别成功！');ControlStatusCloseChange();", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销库别成功！');ControlStatusCloseChange();", true);   //ChineseWord
             }
         }
     }

@@ -198,7 +198,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
             LB_ReceivablesCurrency.Text = strCurrencyType;
 
             DataSet ds;
-            strHQL = "Select HomeModuleName, PageName || " + "'" + strConstractCode + "&RelatedID=" + constract.ConstractID.ToString() + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = '合同执行' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC"; 
+            strHQL = "Select HomeModuleName, PageName || " + "'" + strConstractCode + "&RelatedID=" + constract.ConstractID.ToString() + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'ContractExecution' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   //ChineseWord
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
             Repeater1.DataSource = ds;
             Repeater1.DataBind();
@@ -4362,7 +4362,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         string strUserName = Session["UserName"].ToString();
 
         strDefaultProcess = "";
-        strCurrencyType = "人民币"; 
+        strCurrencyType = "Renminbi";   //ChineseWord
 
         int intWarrantyPeriod;
 
@@ -4438,8 +4438,8 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                                 item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
                                 item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
-                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim(); 
-                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
+                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim();   //ChineseWord
+                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   //ChineseWord
 
                                 item.BigType = "";
                                 if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -4451,14 +4451,14 @@ public partial class TTConstractDetail : System.Web.UI.Page
                                     item.BigType = "Asset";
                                 }
 
-                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
+                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   //ChineseWord
                                 item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
                                 item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
                                 item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
                                 item.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
 
                                 item.RegistrationNumber = dr[i][LanguageHandle.GetWord("ZhuCeZhengHao").ToString().Trim()].ToString().Trim();
-                                item.PackingType = dr[i]["包装方式"].ToString().Trim(); 
+                                item.PackingType = dr[i]["PackagingMethod"].ToString().Trim();   //ChineseWord
 
                                 item.PULeadTime = 0;
                                 item.MFLeadTime = 0;
@@ -4486,7 +4486,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                                 itemBLL.AddItem(item);
 
-                                strHQL = "Insert Into T_ItemBomVersion(ItemCode,VerID,Type,RelatedType,RelatedID) Values(" + "'" + strItemCode + "'" + ",1,'标准','SYSTEM',0)"; 
+                                strHQL = "Insert Into T_ItemBomVersion(ItemCode,VerID,Type,RelatedType,RelatedID) Values(" + "'" + strItemCode + "'" + ",1,'Standard','SYSTEM',0)";   //ChineseWord
                                 ShareClass.RunSqlCommand(strHQL);
 
                                 //strHQL = "Insert Into T_ItemBom(ItemCode,ParentItemCode,ChildItemCode,Number,Unit,DefaultProcess,ChildItemVerID,VerID)";
@@ -4568,14 +4568,14 @@ public partial class TTConstractDetail : System.Web.UI.Page
                     {
                         CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
-                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
+                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   //ChineseWord
                         if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
                         {
                             LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW").ToString().Trim();
                             j = -1;
                         }
 
-                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
+                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   //ChineseWord
                         if (CheckSmallType(strSmallType, strBigType) == 0)
                         {
                             if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -4672,9 +4672,9 @@ public partial class TTConstractDetail : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from Document as document where ";
-        strHQL += " (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")"; 
-        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = '合同' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))"; 
-        strHQL += " or document.RelatedType = '协作' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))"; 
+        strHQL += " (document.RelatedType = 'Contract' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";   //ChineseWord
+        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Contract' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";   //ChineseWord
+        strHQL += " or document.RelatedType = 'Collaboration' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";  
         strHQL += " and document.DocType = '" + strDocType + "'";
 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";

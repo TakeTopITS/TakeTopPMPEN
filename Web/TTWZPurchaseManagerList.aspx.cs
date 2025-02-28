@@ -33,8 +33,8 @@ public partial class TTWZPurchaseManagerList : System.Web.UI.Page
                         left join T_ProjectMember u on p.UpLeader = u.UserCode
                         left join T_ProjectMember m on p.PurchaseManager = m.UserCode 
                         where p.PurchaseManager = '{0}' 
-                        and p.Progress in ('提交','报批','Approved','询价') 
-                        order by p.MarkTime desc", strUserCode); 
+                        and p.Progress in ('Submit','Approval','Approved','询价') 
+                        order by p.MarkTime desc", strUserCode);   //ChineseWord
         DataTable dtPurchase = ShareClass.GetDataSetFromSql(strPurchaseHQL, "Purchase").Tables[0];
 
         DG_List.DataSource = dtPurchase;

@@ -149,7 +149,7 @@
                                                                 ShowHeader="False" Width="100%">
 
                                                                 <Columns>
-                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:ButtonColumn>
                                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -161,7 +161,7 @@
                                                                     <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ReceiverAccount" HeaderText="实收金额">
+                                                                    <asp:BoundColumn DataField="ReceiverAccount" HeaderText="ActualAmountReceived">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ReceiverTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="实收日期">
@@ -171,24 +171,24 @@
                                                                     <asp:BoundColumn DataField="ReAndPayType" HeaderText="收款方式">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Currency" HeaderText="币别">
+                                                                    <asp:BoundColumn DataField="Currency" HeaderText="Currency">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Bank" HeaderText="银行">
+                                                                    <asp:BoundColumn DataField="Bank" HeaderText="Bank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="InvoiceAccount" HeaderText="开票金额">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Payer" HeaderText="付款方">
+                                                                    <asp:BoundColumn DataField="Payer" HeaderText="Payer">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="OperatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                        DataTextField="OperatorName" HeaderText="登记" Target="_blank">
+                                                                        DataTextField="OperatorName" HeaderText="Registration" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="Comment" HeaderText="备注">
+                                                                    <asp:BoundColumn DataField="Comment" HeaderText="Remark">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                     </asp:BoundColumn>
 

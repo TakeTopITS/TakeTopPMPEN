@@ -311,25 +311,25 @@
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
                                                                         <asp:HyperLinkColumn DataNavigateUrlField="AssetCode" DataNavigateUrlFormatString="TTAssetInforView.aspx?AssetCode={0}"
-                                                                            DataTextField="AssetName" HeaderText="名称" Target="_blank">
+                                                                            DataTextField="AssetName" HeaderText="Name" Target="_blank">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                         </asp:HyperLinkColumn>
-                                                                        <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                        <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                                                        <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                                                        <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                                                        <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                                                        <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Price" HeaderText="单价">
+                                                                        <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="Manufacturer" HeaderText="厂家">

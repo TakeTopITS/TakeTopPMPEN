@@ -140,7 +140,7 @@
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
 
-                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:ButtonColumn>
                                             <asp:TemplateColumn HeaderText="Delete">
@@ -161,7 +161,7 @@
                                             <asp:BoundColumn DataField="GongZuoLiang" HeaderText="工作量">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="DanJia" HeaderText="单价">
+                                            <asp:BoundColumn DataField="DanJia" HeaderText="UnitPrice">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                             </asp:BoundColumn>
 

@@ -186,10 +186,10 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="240px" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="Ê±¼ä">
+                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="Time">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="150px" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
+                                                                    <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100px" />
                                                                     </asp:BoundColumn>
                                                                      <asp:BoundColumn DataField="MacAddress" HeaderText="MacAddress">

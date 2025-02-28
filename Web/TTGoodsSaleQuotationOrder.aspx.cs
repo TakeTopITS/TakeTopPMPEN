@@ -1300,7 +1300,7 @@ public partial class TTGoodsSaleQuotationOrder : System.Web.UI.Page
         else
         {
             strHQL = "from GoodsSaleQuotationOrder as goodsSaleQuotationOrder where ";
-            strHQL += "goodsSaleQuotationOrder.QOID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = '物料报价单' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")"; 
+            strHQL += "goodsSaleQuotationOrder.QOID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = 'MaterialQuotation' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")";   //ChineseWord
         }
         strHQL += " Order by goodsSaleQuotationOrder.QOID DESC";
 

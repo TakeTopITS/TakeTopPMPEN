@@ -484,12 +484,12 @@
                                         <asp:TextBox ID="TB_HandleWay" runat="server" Width="60%"></asp:TextBox>
                                         <asp:DropDownList ID="DL_HandleWay" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="DL_ContactWay_SelectedIndexChanged">
                                             <asp:ListItem Value="" Text="<%$ Resources:lang,QingXuanZe%>" />
-                                            <asp:ListItem Value="电话" Text="<%$ Resources:lang,DianHua%>" />
-                                            <asp:ListItem Value="即时通讯" Text="<%$ Resources:lang,IM%>" />
-                                            <asp:ListItem Value="远程控制" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
+                                            <asp:ListItem Value="Telephone" Text="<%$ Resources:lang,DianHua%>" />
+                                            <asp:ListItem Value="InstantMessaging" Text="<%$ Resources:lang,IM%>" />
+                                            <asp:ListItem Value="RemoteControl" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
                                             <asp:ListItem Value="EMail" Text="<%$ Resources:lang,EMail%>" />
-                                            <asp:ListItem Value="上门拜访" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
-                                            <asp:ListItem Value="其它方式" Text="<%$ Resources:lang,QiTaFangShi%>" />
+                                            <asp:ListItem Value="DoorToDoorVisit" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
+                                            <asp:ListItem Value="OtherMethods" Text="<%$ Resources:lang,QiTaFangShi%>" />
                                         </asp:DropDownList>
                                             <asp:Label ID="LB_ID" runat="server" Visible ="false" ></asp:Label>
                                     </td>
@@ -517,9 +517,9 @@
                                     <td class="formItemBgStyle" style="text-align: left;">
                                         <NickLee:NumberBox ID="NB_UsedTime" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="60%" Amount="1">1.00</NickLee:NumberBox>
                                         <asp:DropDownList ID="DL_TimeUnit" runat="server"  >
-                                            <asp:ListItem Value="分钟" Text="<%$ Resources:lang,FenZhong%>" />
-                                            <asp:ListItem Value="小时" Text="<%$ Resources:lang,XiaoShi%>" />
-                                            <asp:ListItem Value="天" Text="<%$ Resources:lang,Tian%>" />
+                                            <asp:ListItem Value="Minutes" Text="<%$ Resources:lang,FenZhong%>" />
+                                            <asp:ListItem Value="Hours" Text="<%$ Resources:lang,XiaoShi%>" />
+                                            <asp:ListItem Value="Days" Text="<%$ Resources:lang,Tian%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

@@ -54,7 +54,7 @@ public partial class TTWZCompactCheckList : System.Web.UI.Page
                         left join T_ProjectMember h on c.Checker = h.UserCode 
                         where c.Checker = '{0}' 
                         and c.Progress in ('ÉúÐ§','²Ä¼ì') 
-                        order by c.MarkTime desc", strUserCode); 
+                        order by c.MarkTime desc", strUserCode);   //ChineseWord
         DataTable dtCompact = ShareClass.GetDataSetFromSql(strCompactHQL, "Compact").Tables[0];
 
         DG_List.DataSource = dtCompact;

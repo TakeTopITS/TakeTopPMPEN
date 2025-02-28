@@ -83,7 +83,7 @@ public partial class TTWZObjectCodeBrowse : System.Web.UI.Page
         DDL_ConvertUnit.DataSource = lstWZSpan;
         DDL_ConvertUnit.DataBind();
 
-        DDL_ConvertUnit.Items.Insert(0, new ListItem("Ñ¡Ôñ", "0")); 
+        DDL_ConvertUnit.Items.Insert(0, new ListItem("Ñ¡Ôñ", "0"));   //ChineseWord
     }
 
 

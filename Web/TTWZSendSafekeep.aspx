@@ -220,7 +220,7 @@
                                                                 <ItemTemplate>
                                                                     <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"SendCode") %>' CommandName="account" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="开票" ? true : false %>'>
                                                                         <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,ShangZhang%>"></asp:Label></asp:LinkButton>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="inpu"  CommandName="cancelAccount" CommandArgument='<%# Eval("SendCode") %>' Visible='<%# Eval("Progress").ToString()=="发料" ? true : false %>' >
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="inpu"  CommandName="cancelAccount" CommandArgument='<%# Eval("SendCode") %>' Visible='<%# Eval("Progress").ToString()=="Material Issuance" ? true : false %>' >
                                                                         <asp:Label ID="Label44" runat="server" Text="取消上帐"></asp:Label></asp:LinkButton>
 
                                                                     <a href='TTWZSendPrintPage.aspx?sendCode=<%# DataBinder.Eval(Container.DataItem,"SendCode") %>'>
@@ -254,7 +254,7 @@
                                                             <asp:BoundColumn DataField="StoreRoom" HeaderText="库别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -365,7 +365,7 @@
                                                             <asp:BoundColumn DataField="UpLeaderName" HeaderText="主管领导">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="结算标记">

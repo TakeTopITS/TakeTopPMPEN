@@ -185,19 +185,19 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
 
         if (strRelatedType == "Collaboration")
         {
-            strRelatedType = "协作"; 
+            strRelatedType = "Collaboration";  
             strRelatedName = GetCollaborationName(strRelatedID);
         }
 
         if (strRelatedType == "Meeting")
         {
-            strRelatedType = "会议"; 
+            strRelatedType = "Meeting";  
             strRelatedName = GetMeetingName(strRelatedID);
         }
 
         if (strRelatedType == "CustomerQuestion")
         {
-            strRelatedType = "客服"; 
+            strRelatedType = "CustomerQuestion";  
             strRelatedName = GetCustomerQuestionName(strRelatedID);
         }
 
@@ -205,10 +205,10 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         {
             strHQL = "from Document as document where ((document.RelatedType = 'Project' and document.RelatedID = " + strRelatedID + ")";
             strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strRelatedID + "))";
-            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))"; 
+            strHQL += "or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))";  
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + ")))";  
         }
 
         if (strRelatedType == "Plan")
@@ -227,37 +227,37 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         if (strRelatedType == "Risk")
         {
             strHQL = "from Document as document where ";
-            strHQL += "((document.RelatedType = '风险' and document.RelatedID =" + strRelatedID + ")"; 
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "((document.RelatedType = 'Risk' and document.RelatedID =" + strRelatedID + ")";  
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Risk' and meeting.RelatedID =" + strRelatedID + ")))";  
         }
 
         if (strRelatedType == "Requirement")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID = " + strRelatedID + ")";
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + ")))";  
         }
 
         if (strRelatedType == "Workflow")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Workflow' and document.RelatedID = " + strRelatedID + ")"; ;
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + ")))";  
         }
 
-        if (strRelatedType == "协作") 
+        if (strRelatedType == "Collaboration")  
         {
-            strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID; 
+            strHQL = " from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID = " + strRelatedID;  
         }
 
-        if (strRelatedType == "会议") 
+        if (strRelatedType == "Meeting")  
         {
-            strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strRelatedID; 
+            strHQL = " from Document as document where document.RelatedType = 'Meeting' and document.RelatedID = " + strRelatedID;  
         }
 
-        if (strRelatedType == "客服") 
+        if (strRelatedType == "CustomerQuestion")  
         {
-            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID; 
+            strHQL = " from Document as document where document.RelatedType = 'CustomerQuestion' and document.RelatedID = " + strRelatedID;  
         }
 
         strHQL += " and document.DepartCode in " + strDepartString;
@@ -321,27 +321,27 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
 
         if (strRelatedType == "Collaboration")
         {
-            strRelatedType = "协作"; 
+            strRelatedType = "Collaboration";  
         }
 
         if (strRelatedType == "Meeting")
         {
-            strRelatedType = "会议"; 
+            strRelatedType = "Meeting";  
         }
 
         if (strRelatedType == "CustomerQuestion")
         {
-            strRelatedType = "客服"; 
+            strRelatedType = "CustomerQuestion";  
         }
 
         if (strRelatedType == "Project")
         {
             strHQL = "from Document as document where ((document.RelatedType = 'Project' and document.RelatedID = " + strRelatedID + ")";
             strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strRelatedID + "))";
-            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))"; 
+            strHQL += "or (document.RelatedType = 'Risk' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))";  
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + ")))";  
 
         }
 
@@ -361,37 +361,37 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         if (strRelatedType == "Risk")
         {
             strHQL = "from Document as document where ";
-            strHQL += "((document.RelatedType = '风险' and document.RelatedID  in (Select projectRisk.ID From ProjectRisk as projectRisk Where projectRisk.ProjectID =" + strProjectID + "))"; 
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "((document.RelatedType = 'Risk' and document.RelatedID  in (Select projectRisk.ID From ProjectRisk as projectRisk Where projectRisk.ProjectID =" + strProjectID + "))";  
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Risk' and meeting.RelatedID =" + strRelatedID + ")))";  
         }
 
         if (strRelatedType == "Requirement")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID  in (Select relatedReq.ReqID From RelatedReq as relatedReq Where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + ")))";  
         }
 
         if (strRelatedType == "Workflow")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID from WorkFlow as workFlow where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
-            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + ")))"; 
+            strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + ")))";  
         }
 
-        if (strRelatedType == "会议") 
+        if (strRelatedType == "Meeting")  
         {
-            strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID  in (Select meeting.ID from Meeting as meeting where meeting.RelatedType = 'Project' and meeting.RelatedID =" + strProjectID + ")"; 
+            strHQL = "from Document as document where document.RelatedType = 'Meeting' and document.RelatedID  in (Select meeting.ID from Meeting as meeting where meeting.RelatedType = 'Project' and meeting.RelatedID =" + strProjectID + ")";  
         }
 
-        if (strRelatedType == "协作") 
+        if (strRelatedType == "Collaboration")  
         {
-            strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID; 
+            strHQL = " from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID = " + strRelatedID;  
         }
 
-        if (strRelatedType == "客服") 
+        if (strRelatedType == "CustomerQuestion")  
         {
-            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID; 
+            strHQL = " from Document as document where document.RelatedType = 'CustomerQuestion' and document.RelatedID = " + strRelatedID;  
         }
 
         strHQL += " and document.DepartCode in " + strDepartString;

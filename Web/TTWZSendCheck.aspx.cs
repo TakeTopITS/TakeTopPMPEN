@@ -53,7 +53,7 @@ public partial class TTWZSendCheck : System.Web.UI.Page
                     left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                     where s.Checker ='{0}' 
                     and s.Progress in ('²Ä¼ì','¿ªÆ±') 
-                    order by s.TicketTime desc", strUserCode); 
+                    order by s.TicketTime desc", strUserCode);   //ChineseWord
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;

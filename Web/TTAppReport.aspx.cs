@@ -77,7 +77,7 @@ public partial class TTAppReport : System.Web.UI.Page
                     }
 
 
-                    strHQL = "Update T_ReportRelatedUser Set Status = 'рятд' Where ReportID =" + strReportID + " and UserCode = " + "'" + strUserCode + "'"; 
+                    strHQL = "Update T_ReportRelatedUser Set Status = 'Read' Where ReportID =" + strReportID + " and UserCode = " + "'" + strUserCode + "'";   //ChineseWord
                     ShareClass.RunSqlCommand(strHQL);
                 }
             }
@@ -112,7 +112,7 @@ public partial class TTAppReport : System.Web.UI.Page
                     }
 
 
-                    //strHQL = "Update T_ReportRelatedUser Set Status = 'рятд' Where ReportID =" + strReportID + " and UserCode = " + "'" + strUserCode + "'";
+                    //strHQL = "Update T_ReportRelatedUser Set Status = 'Read' Where ReportID =" + strReportID + " and UserCode = " + "'" + strUserCode + "'";
                     //ShareClass.RunSqlCommand(strHQL);
                 }
             }
@@ -173,7 +173,7 @@ public partial class TTAppReport : System.Web.UI.Page
         IList lst;
 
         strHQL = "From Report as report  where ";
-        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = 'рятд' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")"; 
+        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = 'Read' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";   //ChineseWord
         strHQL += " Order By report.ID DESC";
         ReportBLL reportBLL = new ReportBLL();
         lst = reportBLL.GetAllReports(strHQL);

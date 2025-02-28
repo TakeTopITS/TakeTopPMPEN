@@ -227,30 +227,30 @@
                                                                             PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
 
-                                                                                <asp:TemplateColumn HeaderText="编号">
+                                                                                <asp:TemplateColumn HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                     <ItemTemplate>
                                                                                         <input value='<%#Eval("ID") %>' id='<%#Eval("ID") %>' type="checkbox" name="dlCode" />
                                                                                         <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'></asp:Label>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="AssetCode" HeaderText="代码">
+                                                                                <asp:BoundColumn DataField="AssetCode" HeaderText="Code">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTAssetInforView.aspx?AssetID={0}"
-                                                                                    DataTextField="AssetName" HeaderText="名称" Target="_blank">
+                                                                                    DataTextField="AssetName" HeaderText="Name" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                                                                <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Price" HeaderText="单价">
+                                                                                <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                                                                <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="OwnerCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"

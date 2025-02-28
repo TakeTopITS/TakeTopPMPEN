@@ -257,7 +257,7 @@
                                                                                 <asp:BoundColumn DataField="StudentCode" HeaderText="用户编号">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="姓名">
+                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="CheckTime" HeaderText="检查日期">

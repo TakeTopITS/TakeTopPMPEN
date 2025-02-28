@@ -425,10 +425,10 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MainWork" HeaderText="主要工作">

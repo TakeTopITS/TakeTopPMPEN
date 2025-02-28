@@ -552,12 +552,12 @@
                                                                                                     Width="100%">
                                                                                                     <Columns>
 
-                                                                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
 
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                         </asp:BoundColumn>
 
-                                                                                                        <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                                                        <asp:BoundColumn DataField="Type" HeaderText="Type">
 
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                         </asp:BoundColumn>
@@ -572,17 +572,17 @@
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="24%" />
                                                                                                         </asp:BoundColumn>
 
-                                                                                                        <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                                                                                        <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="StartTime">
 
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                                                         </asp:BoundColumn>
 
-                                                                                                        <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                                                                                        <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
 
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                                                         </asp:BoundColumn>
 
-                                                                                                        <asp:BoundColumn DataField="Expense" HeaderText="费用">
+                                                                                                        <asp:BoundColumn DataField="Expense" HeaderText="Expense">
 
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                                         </asp:BoundColumn>
@@ -592,7 +592,7 @@
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                         </asp:BoundColumn>
 
-                                                                                                        <asp:TemplateColumn HeaderText="状态">
+                                                                                                        <asp:TemplateColumn HeaderText="Status">
                                                                                                             <ItemTemplate>
                                                                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                             </ItemTemplate>

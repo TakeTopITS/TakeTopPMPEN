@@ -197,22 +197,22 @@ public partial class TTGoodsReturnReportForPurchase : System.Web.UI.Page
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        strHQL = @"Select  B.ReturnName '名称'  
-            ,B.OperatorName '业务员' 
+        strHQL = @"Select  B.ReturnName 'Name'    //ChineseWord
+            ,B.OperatorName 'Salesperson'   //ChineseWord
             ,B.CustomerName 'Supplier'
-            ,B.ReturnTime '时间' 
-            ,A.ID '编号' 
-            ,A.GoodsCode '代码' 
-            ,A.GoodsName '商品名称' 
-            ,A.Number '数量' 
-            ,A.ModelNumber '型号' 
-            ,A.Spec '规格' 
-            ,A.UnitName '单位' 
-            ,A.Price '单价' 
-            ,A.Amount '金额' 
-            ,B.CurrencyType '币别' 
+            ,B.ReturnTime 'Time'   //ChineseWord
+            ,A.ID 'Number'   //ChineseWord
+            ,A.GoodsCode 'Code'   //ChineseWord
+            ,A.GoodsName 'ProductName'   //ChineseWord
+            ,A.Number 'Quantity'   //ChineseWord
+            ,A.ModelNumber 'Model'   //ChineseWord
+            ,A.Spec 'Specification'   //ChineseWord
+            ,A.UnitName 'Unit'   //ChineseWord
+            ,A.Price 'UnitPrice'   //ChineseWord
+            ,A.Amount 'Amount'   //ChineseWord
+            ,B.CurrencyType 'Currency'   //ChineseWord
           
-            ,A.ReturnReason '备注' 
+            ,A.ReturnReason 'Remark'   //ChineseWord
             from T_GoodsReturnDetail A,T_GoodsReturnOrder B where A.ROID = B.ROID And B.Type = 'PURCHASE'";
 
         strHQL += " and to_char(B.ReturnTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(B.ReturnTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -232,7 +232,7 @@ public partial class TTGoodsReturnReportForPurchase : System.Web.UI.Page
 
         Export3Excel(dtSaleOrder, LanguageHandle.GetWord("CaiGouTuiHuoBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

@@ -161,7 +161,7 @@ public partial class TTConstractReceivablesReport : System.Web.UI.Page
         strReceivablesStartTime = DateTime.Parse(DLC_ReceivablesStartTime.Text).ToString("yyyyMMdd");
         strReceivablesEndTime = DateTime.Parse(DLC_ReceivablesEndTime.Text).ToString("yyyyMMdd");
 
-        strHQL = "Select BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,ReceivablesAccount 应收金额,to_char(ReceivablesTime,'yyyy/mm/dd') 应收时间,ReceiverAccount 实收金额,UNReceiveAmount 未收金额,Payer 付款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from  V_ConstractReceivablesReportSummary where 1=1 "; 
+        strHQL = "Select BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,ReceivablesAccount 应收金额,to_char(ReceivablesTime,'yyyy/mm/dd') 应收时间,ReceiverAccount 实收金额,UNReceiveAmount 未收金额,Payer 付款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from  V_ConstractReceivablesReportSummary where 1=1 ";   //ChineseWord
         strHQL += " and PartA like  " + "'" + strPartA + "'";
         if (strOperatorName != "%%")
         {

@@ -59,7 +59,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode); 
+                           ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
@@ -97,7 +97,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
     private void DataCompactBander()
     {
         WZCompactBLL wZCompactBLL = new WZCompactBLL();
-        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '生效' order by MarkTime desc", strUserCode); 
+        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '生效' order by MarkTime desc", strUserCode);   //ChineseWord
         IList listCompact = wZCompactBLL.GetAllWZCompacts(strWZCompactHQL);
 
         LB_Compact.DataSource = listCompact;
@@ -954,7 +954,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode); 
+                           ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
@@ -1009,7 +1009,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode); 
+                           ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
@@ -1064,7 +1064,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode); 
+                           ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())

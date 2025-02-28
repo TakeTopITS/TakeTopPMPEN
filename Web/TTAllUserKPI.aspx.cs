@@ -198,14 +198,14 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthorityAndDepartCode(strDepartCode, strUserCode); 
+            strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthorityAndDepartCode(strDepartCode, strUserCode);  //ChineseWord //ChineseWord
 
             strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,DepartCode 部门代码,DepartName 部门名称,
                 Duty 职责,KPICheckID 编号,KPICheckName KPI考核名称,TotalSelfPoint 自评分,TotalLeaderPoint 领导评分,TotalThirdPartPoint 第三方评分,TotalSqlPoint 系统评分,TotalHRPoint 人事评分,TotalPoint 总分
                 From V_UserKPIList Where DepartCode in ") + strDepartString   + " Order By StartTime DESC";
         }
 
-        MSExcelHandler.DataTableToExcel(strHQL, fileName); 
+        MSExcelHandler.DataTableToExcel(strHQL, fileName);  //ChineseWord //ChineseWord
     }
 
     protected string GetUserStatus(string strUserCode)
@@ -215,11 +215,11 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "已开通"; 
+            return "Enabled";  //ChineseWord //ChineseWord
         }
         else
         {
-            return "未开通"; 
+            return "NotEnabled";  //ChineseWord //ChineseWord
         }
     }
 }

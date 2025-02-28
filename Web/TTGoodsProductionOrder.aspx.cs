@@ -2339,7 +2339,7 @@ public partial class TTGoodsProductionOrder : System.Web.UI.Page
         else
         {
             strHQL = "from GoodsProductionOrder as goodsProductionOrder where ";
-            strHQL += "goodsProductionOrder.PDID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = '物料生产单' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")"; 
+            strHQL += "goodsProductionOrder.PDID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = 'MaterialProductionOrder' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")";   //ChineseWord
         }
 
         //从流程中打开的业务单

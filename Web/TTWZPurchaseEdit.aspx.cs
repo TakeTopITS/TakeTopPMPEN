@@ -220,14 +220,14 @@ public partial class TTWZPurchaseEdit : System.Web.UI.Page
                     left join T_ProjectMember ps on p.Safekeep = ps.UserCode
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
-                    where p.Progress = '开工'                                     
+                    where p.Progress = 'Start Work'                                     
                 
                     and (p.PurchaseEngineer = '{0}' or p.PurchaseEngineer = '-')
                     and ProjectCode not in 
                     (
                     select ProjectCode from T_Project
                     where Status in ('Deleted')
-                    )", strUserCode); 
+                    )", strUserCode);   //ChineseWord
 
 
         strProjectHQL += " order by p.MarkTime desc";
@@ -569,8 +569,8 @@ public partial class TTWZPurchaseEdit : System.Web.UI.Page
 
 
                     string strSupplierHQL = string.Format(@"select *  from T_WZSupplier 
-                                where Grade in ('Qualified','临时')
-                                and ReviewDate::timestamp  > now()  {0} order by random() limit 6", strPurchaseDetails); 
+                                where Grade in ('Qualified','Temporary')
+                                and ReviewDate::timestamp  > now()  {0} order by random() limit 6", strPurchaseDetails);   //ChineseWord
                     DataTable dtSupplier = ShareClass.GetDataSetFromSql(strSupplierHQL, "Supplier").Tables[0];
                     if (dtSupplier != null && dtSupplier.Rows.Count > 0)
                     {
@@ -639,7 +639,7 @@ public partial class TTWZPurchaseEdit : System.Web.UI.Page
                     {
                         string strTotalHQL = string.Empty;
                         //价格监审
-                        string strMoneyLookHQL = "select * from T_WZExpertDatabase where ExpertType = '价格监审' order by random() limit 1"; 
+                        string strMoneyLookHQL = "select * from T_WZExpertDatabase where ExpertType = 'Price Audit' order by random() limit 1";   //ChineseWord
                         //判断是否需要纪检监督
                         string strInspectHQL = string.Empty;
                         //技术类专家
@@ -662,7 +662,7 @@ public partial class TTWZPurchaseEdit : System.Web.UI.Page
 
                         if (wZPurchase.PlanMoney >= 300000)
                         {
-                            strInspectHQL = "select * from T_WZExpertDatabase where ExpertType = '纪检监督' order by random() limit 1"; 
+                            strInspectHQL = "select * from T_WZExpertDatabase where ExpertType = 'Disciplinary Supervision' order by random() limit 1";   //ChineseWord
                             if (wZPurchase.PurchaseMethod == LanguageHandle.GetWord("QiaoBiao").ToString().Trim() || wZPurchase.PurchaseMethod == LanguageHandle.GetWord("KuangJia").ToString().Trim())
                             {
                                 //最多抽取4个

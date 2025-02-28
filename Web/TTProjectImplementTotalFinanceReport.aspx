@@ -57,7 +57,7 @@
                                                 </cc1:ModalPopupExtender>
                                             </td>
                                             <td>
-                                                <asp:Label ID="Label37" runat="server" Text="项目经理"></asp:Label>：
+                                                <asp:Label ID="Label37" runat="server" Text="ProjectManager"></asp:Label>：
                                             </td>
                                             <td align="left">
                                                 <asp:TextBox ID="TB_PMName" runat="server"></asp:TextBox>
@@ -65,7 +65,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <asp:Label ID="Label5" runat="server" Text="开始时间"></asp:Label>：
+                                                <asp:Label ID="Label5" runat="server" Text="StartTime"></asp:Label>：
                                             </td>
                                             <td align="left">
                                                 <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>

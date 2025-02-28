@@ -128,21 +128,21 @@
                                         ShowHeader="false"
                                         Width="100%">
                                         <Columns>
-                                            <asp:BoundColumn DataField="PDID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="PDID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="PDID" DataNavigateUrlFormatString="TTGoodsProductionOrderView.aspx?PDID={0}"
-                                                DataTextField="PDName" HeaderText="名称" Target="_blank">
+                                                DataTextField="PDName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="31%" />
                                             </asp:HyperLinkColumn>
                                             <asp:BoundColumn DataField="ProductionDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="销售时间">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="CreatorName" HeaderText="业务员" Target="_blank">
+                                                DataTextField="CreatorName" HeaderText="Salesperson" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

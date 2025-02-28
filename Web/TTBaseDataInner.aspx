@@ -174,7 +174,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="类型">
+                                                                    <asp:TemplateColumn HeaderText="Type">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_ProjectType" runat="server" CssClass="inpu" Width="150px" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' ToolTip='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                                         </ItemTemplate>
@@ -183,7 +183,7 @@
                                                                     <asp:BoundColumn DataField="KeyWord" HeaderText="关键词">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <%-- <asp:TemplateColumn HeaderText="状态">
+                                                                    <%-- <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("AllowPMChangeStatus").ToString()) %>
     </ItemTemplate>
@@ -275,13 +275,13 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="编号">
+                                                                    <asp:TemplateColumn HeaderText="Number">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_StatusID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:TemplateColumn>
-                                                                     <asp:BoundColumn DataField="Status" HeaderText="状态">
+                                                                     <asp:BoundColumn DataField="Status" HeaderText="Status">
                                                                           <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="模块名称（本语）">
@@ -303,7 +303,7 @@
                                                                     <asp:BoundColumn DataField="ReviewControl" HeaderText="控制点">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                    <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
@@ -640,7 +640,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
@@ -661,7 +661,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -692,7 +692,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
@@ -712,7 +712,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -743,7 +743,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
@@ -763,7 +763,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -794,7 +794,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
@@ -814,7 +814,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -844,7 +844,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
@@ -863,7 +863,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -947,7 +947,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_GroupName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"GroupName") %>' />
                                                                                     </ItemTemplate>
@@ -966,7 +966,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -1017,7 +1017,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="类型">
+                                                                                <asp:TemplateColumn HeaderText="Type">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Type" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                                                     </ItemTemplate>
@@ -1036,7 +1036,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
@@ -1096,7 +1096,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="类型">
+                                                                                <asp:TemplateColumn HeaderText="Type">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
@@ -1115,7 +1115,7 @@
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="类型">
+                                                                                <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">

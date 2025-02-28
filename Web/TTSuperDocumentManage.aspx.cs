@@ -47,7 +47,7 @@ public partial class TTSuperDocumentManage : System.Web.UI.Page
             DL_Authority.DataSource = lst;
             DL_Authority.DataBind();
 
-            //DL_Authority.Items.Insert(0, new ListItem("集团", "集团"));
+            //DL_Authority.Items.Insert(0, new ListItem("Group", "Group"));
 
             strHQL = "from Document as document where ";
             strHQL += " document.Status <> 'Deleted' Order by document.DocID DESC";

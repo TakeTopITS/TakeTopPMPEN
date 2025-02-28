@@ -133,10 +133,10 @@
 
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ProjectID" HeaderText="ÏîÄ¿ºÅ">
+                                            <asp:BoundColumn DataField="ProjectID" HeaderText="ProjectNumber">
                                                 <ItemStyle CssClass="itemBorder" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="Actor" HeaderText="½ÇÉ«">

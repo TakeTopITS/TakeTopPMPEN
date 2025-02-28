@@ -358,9 +358,9 @@ public partial class TTBDBaseData : System.Web.UI.Page
         bMBaseDataRecord.YearNum = bmp.YearNum;
 
         if (strParaValue == "1")
-            bMBaseDataRecord.OperationType = "增加"; 
+            bMBaseDataRecord.OperationType = "Increase";   //ChineseWord
         else if (strParaValue == "2")
-            bMBaseDataRecord.OperationType = "更新"; 
+            bMBaseDataRecord.OperationType = "Update";   //ChineseWord
         else if (strParaValue == "3")
             bMBaseDataRecord.OperationType = "Deleted";
 

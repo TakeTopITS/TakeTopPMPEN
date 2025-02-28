@@ -323,7 +323,7 @@
                                                                             
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%"></ItemStyle>
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始日期">
@@ -332,10 +332,10 @@
                                                                                 <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束日期">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%"></ItemStyle>
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Company" HeaderText="公司">
+                                                                                <asp:BoundColumn DataField="Company" HeaderText="Company">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%"></ItemStyle>
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Duty" HeaderText="职位">
+                                                                                <asp:BoundColumn DataField="Duty" HeaderText="Position">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%"></ItemStyle>
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="Salary" HeaderText="工资">
@@ -398,7 +398,7 @@
                                                                             
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%"></ItemStyle>
                                                                                 </asp:BoundColumn>
                                                     <asp:TemplateColumn HeaderText="专家名称">
@@ -417,12 +417,12 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Remark" HeaderText="备注">
+                                                    <asp:BoundColumn DataField="Remark" HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="创建时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

@@ -254,7 +254,7 @@
                                                                             ShowHeader="false" Height="1px" OnItemCommand="DataGrid4_ItemCommand"
                                                                             Width="95%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
 

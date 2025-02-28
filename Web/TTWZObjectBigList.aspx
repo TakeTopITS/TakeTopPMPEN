@@ -113,7 +113,7 @@
 
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="DLCode" HeaderText="大类代码">
+                                                        <asp:BoundColumn DataField="DLCode" HeaderText="Major Category Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
                                                         <%--<asp:BoundColumn DataField="DLName" HeaderText="大类名称">

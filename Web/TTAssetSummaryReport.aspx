@@ -156,26 +156,26 @@
                                         ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="25">
                                         <Columns>
-                                            <asp:BoundColumn DataField="AssetCode" HeaderText="代码">
+                                            <asp:BoundColumn DataField="AssetCode" HeaderText="Code">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                            <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="AssetCode" DataNavigateUrlFormatString="TTAssetInforView.aspx?AssetCode={0}"
-                                                DataTextField="AssetName" HeaderText="名称" Target="_blank">
+                                                DataTextField="AssetName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                            <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="22%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="TotalNumber" HeaderText="数量">
+                                            <asp:BoundColumn DataField="TotalNumber" HeaderText="Quantity">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="TotalAmount" HeaderText="金额">
+                                            <asp:BoundColumn DataField="TotalAmount" HeaderText="Amount">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                            <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>
                                         </Columns>

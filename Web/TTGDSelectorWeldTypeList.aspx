@@ -124,7 +124,7 @@
                                                                         <input id='<%#Eval("Type") %>' type="radio" name="name1" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="Description" HeaderText="说明">

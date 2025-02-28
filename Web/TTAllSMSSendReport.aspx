@@ -161,7 +161,7 @@
                                         ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="25">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
 
@@ -171,7 +171,7 @@
                                             <asp:BoundColumn DataField="Msg" HeaderText="ÄÚÈÝ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="33%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="State" HeaderText="×´Ì¬">
+                                            <asp:BoundColumn DataField="State" HeaderText="Status">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="SendYorn" HeaderText="Success">
@@ -183,7 +183,7 @@
                                             <asp:BoundColumn DataField="UserRTXCode" HeaderText="RTXCode">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="RTXState" HeaderText="×´Ì¬">
+                                            <asp:BoundColumn DataField="RTXState" HeaderText="Status">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 

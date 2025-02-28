@@ -127,7 +127,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -136,12 +136,12 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Code" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="PurchasingContractName" HeaderText="合同名称">
+                                                        <asp:BoundColumn DataField="PurchasingContractName" HeaderText="ContractName">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
@@ -212,10 +212,10 @@
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ManYiChengDu%>"></asp:Label>：</td>
                                     <td align="left" class="formItemBgStyle" style="height: 30px">
                                         <asp:DropDownList ID="DL_SatisfactionDegree" runat="server" CssClass="shuru">
-                                            <asp:ListItem Value="非常满意" Text="<%$ Resources:lang,FeiChangManYi%>" />
-                                            <asp:ListItem Value="满意" Text="<%$ Resources:lang,ManYi%>" />
-                                            <asp:ListItem Value="一般" Text="<%$ Resources:lang,YiBan%>" />
-                                            <asp:ListItem Value="不满意" Text="<%$ Resources:lang,BuManYi%>" />
+                                            <asp:ListItem Value="VerySatisfied" Text="<%$ Resources:lang,FeiChangManYi%>" />
+                                            <asp:ListItem Value="Satisfied" Text="<%$ Resources:lang,ManYi%>" />
+                                            <asp:ListItem Value="General" Text="<%$ Resources:lang,YiBan%>" />
+                                            <asp:ListItem Value="Dissatisfied" Text="<%$ Resources:lang,BuManYi%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

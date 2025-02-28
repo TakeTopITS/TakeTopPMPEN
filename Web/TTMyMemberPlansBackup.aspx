@@ -391,13 +391,13 @@
                                                                                                                 ShowHeader="False" Width="100%">
 
                                                                                                                 <Columns>
-                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                                                                                     </asp:BoundColumn>
                                                                                                                     <asp:BoundColumn DataField="Target" HeaderText="目标">
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                                                                                                     </asp:BoundColumn>
-                                                                                                                    <asp:TemplateColumn HeaderText="进度">
+                                                                                                                    <asp:TemplateColumn HeaderText="Progress">
                                                                                                                         <ItemTemplate>
                                                                                                                             <asp:Label ID="LB_TargetProgress" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Progress")%> '></asp:Label>
                                                                                                                             %

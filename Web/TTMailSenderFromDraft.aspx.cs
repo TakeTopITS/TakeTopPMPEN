@@ -406,7 +406,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>"; 
+                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   //ChineseWord
                     }
 
                     nContain += int.Parse(f.Length.ToString());
@@ -615,7 +615,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>"; 
+                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   //ChineseWord
                     }
 
                     nContain += int.Parse(f.Length.ToString());

@@ -193,7 +193,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
             return result;
         }
         else
-            return "未开标！"; 
+            return "未开标！";   //ChineseWord
     }
 
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)

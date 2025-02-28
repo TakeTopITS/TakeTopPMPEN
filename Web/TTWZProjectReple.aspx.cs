@@ -69,7 +69,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     (
                     select ProjectCode from T_Project
                     where Status in ('Deleted')
-                    )", strUserCode); 
+                    )", strUserCode);   //ChineseWord
        
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -277,7 +277,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
                     where p.Progress != '录入' 
-                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode); 
+                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -352,7 +352,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
                     where p.Progress != '录入' 
-                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode); 
+                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -426,7 +426,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
                     where p.Progress != '录入' 
-                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode); 
+                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -490,7 +490,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         //无，则写记录：工程项目〈使用标记〉＝“0”，然后继续做下一条												
         //循环检查，直到工程项目表单最后一条记录后结束												
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where Progress = '开工'"; 
+        string strProjectHQL = "from WZProject as wZProject where Progress = 'Start Work'";   //ChineseWord
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
         if (listProject != null && listProject.Count > 0)
         {
@@ -522,13 +522,13 @@ public partial class TTWZProjectReple : System.Web.UI.Page
             //把按钮状态禁用
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重做使用标记完成！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重做使用标记完成！');", true);   //ChineseWord
         }
         else
         {
             //把按钮状态禁用
             //ControlStatusCloseChange();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有进度在开工的项目，请稍后有开工项目时再重做使用标记！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有进度在开工的项目，请稍后有开工项目时再重做使用标记！');", true);   //ChineseWord
             return;
         }
     }
@@ -570,7 +570,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                             COALESCE(SUM(CompactMoney),0) as TotalCompactMoney 
                             from T_WZCompact
                             where Progress = '生效'
-                            and ProjectCode = '{0}'", strProjectCode); 
+                            and ProjectCode = '{0}'", strProjectCode);   //ChineseWord
                 DataTable dtCompact = ShareClass.GetDataSetFromSql(strCompactHQL, "Compact").Tables[0];
                 decimal decimalContractMoney = 0;
                 decimal.TryParse(ShareClass.ObjectToString(dtCompact.Rows[0]["TotalCompactMoney"]), out decimalContractMoney);
@@ -630,14 +630,14 @@ public partial class TTWZProjectReple : System.Web.UI.Page
             //把按钮状态禁用
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');", true);   //ChineseWord
         }
         else
         {
             //把按钮状态禁用
             //ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有项目，请稍后有项目时再做项目统计！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有项目，请稍后有项目时再做项目统计！');", true);   //ChineseWord
             return;
         }
     }

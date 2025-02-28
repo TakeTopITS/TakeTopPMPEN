@@ -68,13 +68,13 @@
                                                         <td class="formItemBgStyle" colspan="6">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>：<asp:DropDownList ID="DDL_SearchProgress" runat="server"  OnSelectedIndexChanged="DDL_SearchProgress_SelectedIndexChanged" AutoPostBack="true">
                                                                 <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value=""/>
-                                                            <%--    <asp:ListItem Text="<%$ Resources:lang,TiJiao%>" Value="提交"/>--%>
+                                                            <%--    <asp:ListItem Text="<%$ Resources:lang,TiJiao%>" Value="Submit"/>--%>
                                                                 <asp:ListItem Text="<%$ Resources:lang,ShangBao%>" Value="上报"/>
                                                                 <asp:ListItem Text="<%$ Resources:lang,PiZhun%>" Value="Approved"/>
                                                              <%--   <asp:ListItem Text="<%$ Resources:lang,XunJia%>" Value="询价"/>
                                                                 <asp:ListItem Text="<%$ Resources:lang,PingBiao%>" Value="评标"/>
-                                                                <asp:ListItem Text="<%$ Resources:lang,BaoPi%>" Value="报批"/>
-                                                                <asp:ListItem Text="<%$ Resources:lang,JueCe%>" Value="决策"/>--%>
+                                                                <asp:ListItem Text="<%$ Resources:lang,BaoPi%>" Value="Approval"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,JueCe%>" Value="Decision"/>--%>
                                                                </asp:DropDownList>&nbsp;
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>：<asp:TextBox ID="TXT_SearchProjectCode" runat="server"></asp:TextBox>&nbsp;
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,WenJianMingCheng%>"></asp:Label>：<asp:TextBox ID="TXT_SearchPurchaseName" runat="server"></asp:TextBox>&nbsp;
@@ -298,8 +298,8 @@
                                                                     <%--<asp:LinkButton ID="LinkButton7" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="detail" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="录入" ? true : false %>'>明细</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="录入" ? true : false %>'>删除</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="approval" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="录入" ? true : false %>'>报批</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="notApproval" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>'>取消报批</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="cancel" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="决策" ? true : false %>'>核销</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="notApproval" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>'>取消报批</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="cancel" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Decision" ? true : false %>'>核销</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton6" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="notCancel" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="核销" ? true : false %>'>取消核销</asp:LinkButton>--%>
 
                                                                 </ItemTemplate>
@@ -343,7 +343,7 @@
                                                             <asp:BoundColumn DataField="UpLeaderName" HeaderText="上级领导">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
@@ -444,10 +444,10 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("SupplierCode6Name").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="纪检监督">
+                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="Disciplinary Supervision">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="价格监审">
+                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="Price Audit">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                              <asp:BoundColumn DataField="ExpertCode1Name" HeaderText="专家1">
@@ -541,7 +541,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("DecisionTime").ToString(),10) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

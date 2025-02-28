@@ -170,7 +170,7 @@
 
                                                         <td width="3%" align="center">
                                                             <strong>
-                                                                <asp:Label ID="Label2" runat="server" Text="±àºÅ"></asp:Label></strong>
+                                                                <asp:Label ID="Label2" runat="server" Text="Number"></asp:Label></strong>
                                                         </td>
                                                         <td width="13%" align="center">
                                                             <strong>

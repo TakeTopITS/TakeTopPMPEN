@@ -121,7 +121,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
@@ -146,7 +146,7 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Unit" HeaderText="µ¥Î»">
+                                                    <asp:BoundColumn DataField="Unit" HeaderText="Unit">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

@@ -44,7 +44,7 @@ public partial class TTBMSupplierInfo : System.Web.UI.Page
 
             TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
 
-            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
             ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
             Repeater1.DataSource = lst;
@@ -1242,7 +1242,7 @@ public partial class TTBMSupplierInfo : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);

@@ -140,7 +140,7 @@
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                                            <asp:TemplateColumn HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -159,13 +159,13 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="±ÒÖÖ">
+                                                                                            <asp:TemplateColumn HeaderText="Currency">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetReceiverCurrency(Eval("ID").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="»ãÂÊ">
+                                                                                            <asp:TemplateColumn HeaderText="ExchangeRate">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetReceiverCurrencyExchangeRate(Eval("ID").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -175,17 +175,17 @@
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="Payer" HeaderText="¸¶¿î·½">
+                                                                                            <asp:BoundColumn DataField="Payer" HeaderText="Payer">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetAccountGeneralLedgerStatus(Eval("ID").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="Comment" HeaderText="±¸×¢">
+                                                                                            <asp:BoundColumn DataField="Comment" HeaderText="Remark">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>

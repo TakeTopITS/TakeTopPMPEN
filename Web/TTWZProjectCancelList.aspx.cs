@@ -53,8 +53,8 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                     left join T_ProjectMember ps on p.Safekeep = ps.UserCode
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
-                    where (p.Progress in ('开工' ,'核销') or p.IsStatus = 'Closed')
-                    and p.PurchaseEngineer = '{0}'", strUserCode); 
+                    where (p.Progress in ('Start Work' ,'核销') or p.IsStatus = 'Closed')
+                    and p.PurchaseEngineer = '{0}'", strUserCode);   //ChineseWord
         //        string strWZProjectHQL = string.Format(@"select p.*,
         //                    pp.UserName as ProjectManagerName,
         //                    pd.UserName as DelegateAgentName,
@@ -74,7 +74,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
         //                    left join T_ProjectMember pk on p.Checker = pk.UserCode
         //                    left join T_ProjectMember ps on p.Safekeep = ps.UserCode
         //                    where p.Progress = '立项'
-        //                    and (COALESCE(SupplementEditor, '') = '' or SupplementEditor = '{0}')", strUserCode); 
+        //                    and (COALESCE(SupplementEditor, '') = '' or SupplementEditor = '{0}')", strUserCode);   //ChineseWord
         if (!string.IsNullOrEmpty(strProjectCode))
         {
             strWZProjectHQL += " and p.ProjectCode = '" + strProjectCode + "'";
@@ -132,10 +132,10 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                     left join T_WZPickingPlan pp on pd.PlanCode = pp.PlanCode
                     left join T_WZProject pj on pp.ProjectCode = pj.ProjectCode
                     where pj.ProjectCode = '{0}'
-                    and pj.Progress = '开工'
+                    and pj.Progress = 'Start Work'
                     and pj.PurchaseEngineer = '{1}'
-                    and pp.Progress = '签收'
-                    and pd.ShortNumber > 0", strEditProjectCode, strUserCode); 
+                    and pp.Progress = 'Sign for Receipt'
+                    and pd.ShortNumber > 0", strEditProjectCode, strUserCode);   //ChineseWord
                 DataTable dtImport = ShareClass.GetDataSetFromSql(strImportSQL, "Import").Tables[0];
 
                 string strGapValue = string.Empty;
@@ -283,8 +283,8 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                     left join T_ProjectMember ps on p.Safekeep = ps.UserCode
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
-                    where (p.Progress in ('开工' ,'核销') or p.IsStatus = 'Closed')
-                    and p.PurchaseEngineer = '{0}'", strUserCode); 
+                    where (p.Progress in ('Start Work' ,'核销') or p.IsStatus = 'Closed')
+                    and p.PurchaseEngineer = '{0}'", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -356,8 +356,8 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                     left join T_ProjectMember ps on p.Safekeep = ps.UserCode
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
-                    where (p.Progress in ('开工' ,'核销') or p.IsStatus = 'Closed')
-                    and p.PurchaseEngineer = '{0}'", strUserCode); 
+                    where (p.Progress in ('Start Work' ,'核销') or p.IsStatus = 'Closed')
+                    and p.PurchaseEngineer = '{0}'", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -428,8 +428,8 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                     left join T_ProjectMember ps on p.Safekeep = ps.UserCode
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
-                    where (p.Progress in ('开工' ,'核销') or p.IsStatus = 'Closed')
-                    and p.PurchaseEngineer = '{0}'", strUserCode); 
+                    where (p.Progress in ('Start Work' ,'核销') or p.IsStatus = 'Closed')
+                    and p.PurchaseEngineer = '{0}'", strUserCode);   //ChineseWord
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -489,7 +489,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
         //无，则写记录：工程项目〈使用标记〉＝“0”，然后继续做下一条												
         //循环检查，直到工程项目表单最后一条记录后结束												
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where Progress = '开工'"; 
+        string strProjectHQL = "from WZProject as wZProject where Progress = 'Start Work'";   //ChineseWord
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
         if (listProject != null && listProject.Count > 0)
         {
@@ -517,7 +517,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
 
             DataBinder(strProjectCode, strProjectName, strProgress);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重做使用标记完成！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重做使用标记完成！');ControlStatusCloseChange();", true);   //ChineseWord
         }
         else
         {
@@ -563,7 +563,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                             COALESCE(SUM(CompactMoney),0) as TotalCompactMoney 
                             from T_WZCompact
                             where Progress = '生效'
-                            and ProjectCode = '{0}'", strProjectCode); 
+                            and ProjectCode = '{0}'", strProjectCode);   //ChineseWord
                 DataTable dtCompact = ShareClass.GetDataSetFromSql(strCompactHQL, "Compact").Tables[0];
                 decimal decimalContractMoney = 0;
                 decimal.TryParse(ShareClass.ObjectToString(dtCompact.Rows[0]["TotalCompactMoney"]), out decimalContractMoney);
@@ -613,7 +613,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                 wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');ControlStatusCloseChange();", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');ControlStatusCloseChange();", true);   //ChineseWord
         }
         else
         {
@@ -656,7 +656,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
             WZStock wZStock = (WZStock)lstWZStock[0];
             if (!wZStock.StockCode.Contains(LanguageHandle.GetWord("ZiYing").ToString().Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('库别不是自营N库，不允许核销！');ControlStatusCloseChange();", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('库别不是自营N库，不允许核销！');ControlStatusCloseChange();", true);   //ChineseWord
                 return;
             }
             else
@@ -665,7 +665,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
 
                 wZStockBLL.UpdateWZStock(wZStock, wZStock.ID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销库别成功！');ControlStatusCloseChange();", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销库别成功！');ControlStatusCloseChange();", true);   //ChineseWord
             }
         }
     }
@@ -694,7 +694,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                 {
                     //TODO
                     //先查询领料计划，《进度》为核销，如果领料计划还有其它状态，给出提示
-                    string strPlanHQL = "select * from T_WZPickingPlan where ProjectCode = '" + wZProject.ProjectCode + "' and Progress != '核销'"; 
+                    string strPlanHQL = "select * from T_WZPickingPlan where ProjectCode = '" + wZProject.ProjectCode + "' and Progress != '核销'";   //ChineseWord
                     DataTable dtPlan = ShareClass.GetDataSetFromSql(strPlanHQL, "Plan").Tables[0];
                     if (dtPlan != null && dtPlan.Rows.Count > 0)
                     {
@@ -752,7 +752,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                     // 库别核销，《库别》为自营N库，是否一并核销
                     if (!wZProject.StoreRoom.Contains(LanguageHandle.GetWord("ZiYing").ToString().Trim()))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销成功！');ControlStatusCloseChange();", true); 
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销成功！');ControlStatusCloseChange();", true);   //ChineseWord
                     }
                     else
                     {
@@ -809,7 +809,7 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
 
                     DataBinder(strProjectCode, strProjectName, strProgress);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销退回成功！');ControlStatusCloseChange();", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销退回成功！');ControlStatusCloseChange();", true);   //ChineseWord
                 }
             }
             else
@@ -863,10 +863,10 @@ public partial class TTWZProjectCancelList : System.Web.UI.Page
                     left join T_WZPickingPlan pp on pd.PlanCode = pp.PlanCode
                     left join T_WZProject pj on pp.ProjectCode = pj.ProjectCode
                     where pj.ProjectCode = '{0}'
-                    and pj.Progress = '开工'
+                    and pj.Progress = 'Start Work'
                     and pj.PurchaseEngineer = '{1}'
-                    and pp.Progress = '签收'
-                    and pd.ShortNumber > 0", strEditProjectCode, strUserCode); 
+                    and pp.Progress = 'Sign for Receipt'
+                    and pd.ShortNumber > 0", strEditProjectCode, strUserCode);   //ChineseWord
         DataTable dtImport = ShareClass.GetDataSetFromSql(strImportSQL, "Import").Tables[0];
 
 

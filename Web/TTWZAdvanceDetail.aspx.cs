@@ -84,7 +84,7 @@ public partial class TTWZAdvanceDetail : System.Web.UI.Page
                         left join T_ProjectMember h on c.Checker = h.UserCode
                         where c.Progress in ('ÉúÐ§','²Ä¼ì')
                         and c.ProjectCode = (select ProjectCode from T_WZAdvance where AdvanceCode = '{0}')
-                        and c.CompactCode not in (select CompactCode from T_WZRequest)", strAdvanceCode); 
+                        and c.CompactCode not in (select CompactCode from T_WZRequest)", strAdvanceCode);   //ChineseWord
             DataTable dtCompact = ShareClass.GetDataSetFromSql(strWZCompactHQL, "Compact").Tables[0];
 
             DG_Compact.DataSource = dtCompact;

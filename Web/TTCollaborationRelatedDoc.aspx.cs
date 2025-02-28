@@ -90,7 +90,7 @@ public partial class TTCollaborationRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = "from Document as document where document.RelatedType = '协作' and document.RelatedID =" + strCoID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID =" + strCoID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
             //设置缺省的文件类型
@@ -103,7 +103,7 @@ public partial class TTCollaborationRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = "from Document as document where document.RelatedType = '协作' and document.RelatedID =" + strCoID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID =" + strCoID + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
@@ -500,7 +500,7 @@ public partial class TTCollaborationRelatedDoc : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strDepartCode = GetDepartCode(strUserCode);
 
-        strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strCoID; 
+        strHQL = " from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID = " + strCoID;  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

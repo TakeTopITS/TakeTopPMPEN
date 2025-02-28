@@ -187,10 +187,10 @@
                                                                 ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged"
                                                                 PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="UserName" HeaderText="姓名">
+                                                                    <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="时间">
+                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="Time">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="150px" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="位置：">

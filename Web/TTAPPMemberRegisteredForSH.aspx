@@ -104,7 +104,7 @@
                             </tr>
                             <tr>
                                 <td class="formItemBgStyle" align="left" style="vertical-align: bottom;">
-                                    <asp:Label ID="Label4" runat="server" Text="ÐÕÃû"></asp:Label>
+                                    <asp:Label ID="Label4" runat="server" Text="Name"></asp:Label>
 
                                 </td>
                             </tr>
@@ -129,7 +129,7 @@
                             </tr>
                             <tr>
                                 <td class="formItemBgStyle" align="left" style="vertical-align: bottom;">
-                                    <asp:Label ID="Label7" runat="server" Text="¹«Ë¾"></asp:Label>
+                                    <asp:Label ID="Label7" runat="server" Text="Company"></asp:Label>
                                 </td>
                             </tr>
                             <tr>

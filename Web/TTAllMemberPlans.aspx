@@ -480,7 +480,7 @@
 
                                                                                                                 <Columns>
 
-                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
 
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                                                                                     </asp:BoundColumn>
@@ -490,7 +490,7 @@
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                                                                                                     </asp:BoundColumn>
 
-                                                                                                                    <asp:TemplateColumn HeaderText="½ø¶È">
+                                                                                                                    <asp:TemplateColumn HeaderText="Progress">
 
                                                                                                                         <ItemTemplate>
 

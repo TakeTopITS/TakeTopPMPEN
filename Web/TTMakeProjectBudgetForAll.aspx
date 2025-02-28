@@ -164,7 +164,7 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="100%" OnItemCommand="DataGrid1_ItemCommand"
                                                 ShowHeader="false" CellPadding="4" GridLines="None">
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -176,7 +176,7 @@
                                                     <asp:BoundColumn DataField="ID" HeaderText="">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="XuHao" HeaderText="序号">
+                                                    <asp:BoundColumn DataField="XuHao" HeaderText="SerialNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="XiangMuFenBu" HeaderText="项目分部">
@@ -191,10 +191,10 @@
                                                     <asp:BoundColumn DataField="XiangMuMingChengHuoGuiGe" HeaderText="名称规格">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Account" HeaderText="会计科目">
+                                                    <asp:BoundColumn DataField="Account" HeaderText="AccountingSubjects">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="DanWei" HeaderText="单位">
+                                                    <asp:BoundColumn DataField="DanWei" HeaderText="Unit">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="YuSuanZongLiang" HeaderText="预算总量">
@@ -288,7 +288,7 @@
                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
                                     <td class="formItemBgStyle" style="width: 10%; text-align: right; height: 19px;">
-                                        <asp:Label ID="Label26" runat="server" Text="序号"></asp:Label>
+                                        <asp:Label ID="Label26" runat="server" Text="SerialNumber"></asp:Label>
                                     </td>
                                     <td class="formItemBgStyle" style="width: 15%; text-align: left; height: 19px;">
                                         <asp:TextBox ID="TB_XuHao" runat="server" Width="99%"></asp:TextBox>

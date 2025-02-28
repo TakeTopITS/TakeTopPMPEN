@@ -152,7 +152,7 @@
                                                 Width="100%" AllowPaging="True" PageSize="10" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TenderCode" HeaderText="招标编号">
@@ -166,14 +166,14 @@
                                                     <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同号">
+                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="ContractNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="Remarks" HeaderText="备注">
+                                                    <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Progress" HeaderText="状态">
+                                                    <asp:BoundColumn DataField="Progress" HeaderText="Status">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -239,7 +239,7 @@
                                                 Width="100%" AllowPaging="True" PageSize="10" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TenderCode" HeaderText="招标编号">
@@ -253,14 +253,14 @@
                                                     <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同号">
+                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="ContractNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="Remarks" HeaderText="备注">
+                                                    <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Progress" HeaderText="状态">
+                                                    <asp:BoundColumn DataField="Progress" HeaderText="Status">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -327,7 +327,7 @@
                                                 Width="100%" AllowPaging="True" PageSize="10" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TenderCode" HeaderText="招标编号">
@@ -341,14 +341,14 @@
                                                     <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同号">
+                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="ContractNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="Remarks" HeaderText="备注">
+                                                    <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Progress" HeaderText="状态">
+                                                    <asp:BoundColumn DataField="Progress" HeaderText="Status">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -416,7 +416,7 @@
                                                 Width="100%" AllowPaging="True" PageSize="10" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TenderCode" HeaderText="招标编号">
@@ -430,14 +430,14 @@
                                                     <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同号">
+                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="ContractNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="Remarks" HeaderText="备注">
+                                                    <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Progress" HeaderText="状态">
+                                                    <asp:BoundColumn DataField="Progress" HeaderText="Status">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -505,7 +505,7 @@
                                                 Width="100%" AllowPaging="True" PageSize="10" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TenderCode" HeaderText="招标编号">
@@ -519,14 +519,14 @@
                                                     <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同号">
+                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="ContractNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="Remarks" HeaderText="备注">
+                                                    <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Progress" HeaderText="状态">
+                                                    <asp:BoundColumn DataField="Progress" HeaderText="Status">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                 </Columns>

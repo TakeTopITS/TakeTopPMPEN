@@ -265,7 +265,7 @@
                                                         <asp:BoundColumn DataField="MarkerName" HeaderText="编制人">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

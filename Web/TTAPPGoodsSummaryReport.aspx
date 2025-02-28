@@ -302,20 +302,20 @@
 
 
 
-                                                    <%--                                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="代码">
+                                                    <%--                                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
 
                                                     <asp:HyperLinkColumn DataNavigateUrlField="GoodsCode" DataNavigateUrlFormatString="TTAPPGoodsInforView.aspx?GoodsCode={0}"
-                                                        DataTextField="GoodsName" HeaderText="名称">
+                                                        DataTextField="GoodsName" HeaderText="Name">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="17%" />
                                                     </asp:HyperLinkColumn>
 
-                                                    <asp:BoundColumn DataField="TotalNumber" HeaderText="数量">
+                                                    <asp:BoundColumn DataField="TotalNumber" HeaderText="Quantity">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                                    <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>--%>
                                                 </Columns>

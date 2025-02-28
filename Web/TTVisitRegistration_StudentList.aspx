@@ -157,7 +157,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("VisitName").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="VisitSex" HeaderText="ÐÔ±ð">
+                                                                        <asp:BoundColumn DataField="VisitSex" HeaderText="Gender">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>

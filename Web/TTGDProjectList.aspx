@@ -111,7 +111,7 @@
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="项目号">
+                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="ProjectNumber">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ProjectName" HeaderText="项目名称">

@@ -281,7 +281,7 @@
 
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
+                                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
@@ -291,7 +291,7 @@
                                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                <asp:TemplateColumn HeaderText="Status">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>

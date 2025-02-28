@@ -17,7 +17,7 @@ public partial class TTGoodsProductionOrderView : System.Web.UI.Page
 
         strPDID = Request.QueryString["PDID"];
 
-        //this.Title = "物料生产单";
+        //this.Title = "MaterialProductionOrder";
 
 
         if (Page.IsPostBack != true)

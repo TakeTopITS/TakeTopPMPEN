@@ -120,7 +120,7 @@ public partial class TTInvolvedProDetail : System.Web.UI.Page
                 HL_BusinessForm.Visible = false;
             }
 
-            strHQL = "from DailyWork as dailyWork where dailyWork.Type = '参与' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'"; 
+            strHQL = "from DailyWork as dailyWork where dailyWork.Type = 'Participate' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";  
             DailyWorkBLL dailyWorkBLL = new DailyWorkBLL();
             lst = dailyWorkBLL.GetAllDailyWorks(strHQL);
 
@@ -196,7 +196,7 @@ public partial class TTInvolvedProDetail : System.Web.UI.Page
                 Repeater1.DataSource = ds;
                 Repeater1.DataBind();
 
-                strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = '参与项目第二行'  and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC"; 
+                strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'ParticipateProjectSecondLine'  and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   //ChineseWord
                 ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
                 Repeater2.DataSource = ds;
                 Repeater2.DataBind();
@@ -289,7 +289,7 @@ public partial class TTInvolvedProDetail : System.Web.UI.Page
 
                     strProject = project.ProjectName.Trim();
 
-                    dailyWork.Type = "参与"; 
+                    dailyWork.Type = "Participate";  
                     dailyWork.UserCode = strUserCode;
                     dailyWork.UserName = ShareClass.GetUserName(strUserCode);
                     dailyWork.WorkDate = DateTime.Now;

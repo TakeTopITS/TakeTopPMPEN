@@ -88,7 +88,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID =" + strMeetingID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Meeting' and document.RelatedID =" + strMeetingID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
             //设置缺省的文件类型
@@ -101,7 +101,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID =" + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Meeting' and document.RelatedID =" + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
@@ -519,7 +519,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID =" + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+        strHQL = "from Document as document where document.RelatedType = 'Meeting' and document.RelatedID =" + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC";  
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;

@@ -58,7 +58,7 @@
                                         </td>
 
                                         <td>
-                                            <asp:Label ID="Label37" runat="server" Text="项目经理"></asp:Label>：
+                                            <asp:Label ID="Label37" runat="server" Text="ProjectManager"></asp:Label>：
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="TB_PMName" runat="server"></asp:TextBox>
@@ -67,7 +67,7 @@
 
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="开始时间"></asp:Label>：
+                                            <asp:Label ID="Label5" runat="server" Text="StartTime"></asp:Label>：
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -185,17 +185,17 @@
                                     Width="100%"
                                     ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                     <Columns>
-                                        <asp:BoundColumn DataField="ProjectID" HeaderText="编号">
+                                        <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="代码">
+                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="Code">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                         </asp:BoundColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
                                             DataTextField="ProjectName" HeaderText="项目名称" Target="_blank">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="22%" />
                                         </asp:HyperLinkColumn>
-                                        <asp:TemplateColumn HeaderText="状态">
+                                        <asp:TemplateColumn HeaderText="Status">
                                             <ItemTemplate>
                                                 <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                             </ItemTemplate>

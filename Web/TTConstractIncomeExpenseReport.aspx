@@ -255,33 +255,33 @@
                                     Height="1px" Width="1200px" ShowHeader="false"
                                     CellPadding="4" ForeColor="#333333" GridLines="None">
                                     <Columns>
-                                        <asp:BoundColumn DataField="SignDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="签订日期" >
+                                        <asp:BoundColumn DataField="SignDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="SigningDate" >
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="PartA" HeaderText="甲方">
+                                        <asp:BoundColumn DataField="PartA" HeaderText="PartyA">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ConstractCode" HeaderText="合同代码">
+                                        <asp:BoundColumn DataField="ConstractCode" HeaderText="ContractCode">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="ReceivablesAmount" HeaderText="应收总额">
+                                        <asp:BoundColumn DataField="ReceivablesAmount" HeaderText="TotalAmountReceivable">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="TotalReceiverAmount" HeaderText="实收总额">
+                                        <asp:BoundColumn DataField="TotalReceiverAmount" HeaderText="TotalAmountReceived">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="TotalRecInvoiceAmount" HeaderText="开发票总额">
+                                        <asp:BoundColumn DataField="TotalRecInvoiceAmount" HeaderText="TotalAmountInvoiced">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="PayableAmount" HeaderText="应付总额">
+                                        <asp:BoundColumn DataField="PayableAmount" HeaderText="TotalAmountPayable">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="TotalOutOfPocketAmount" HeaderText="实付总额">
+                                        <asp:BoundColumn DataField="TotalOutOfPocketAmount" HeaderText="TotalAmountPaid">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
@@ -289,23 +289,23 @@
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="TotalPayInvoiceAmount" HeaderText="收发票总额">
+                                        <asp:BoundColumn DataField="TotalPayInvoiceAmount" HeaderText="TotalAmountOfInvoicesReceived">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="TotalEntryTax" HeaderText="关税">
+                                        <asp:BoundColumn DataField="TotalEntryTax" HeaderText="Tariff">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="TotalAddedValueTax" HeaderText="增值税">
+                                        <asp:BoundColumn DataField="TotalAddedValueTax" HeaderText="ValueAddedTax">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="Profits" HeaderText="参考净利润">
+                                        <asp:BoundColumn DataField="Profits" HeaderText="EstimatedNetProfit">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="Currency" HeaderText="合同币别">
+                                        <asp:BoundColumn DataField="Currency" HeaderText="ContractCurrency">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                         </asp:BoundColumn>
 

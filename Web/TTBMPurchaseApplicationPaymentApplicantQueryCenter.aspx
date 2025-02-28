@@ -155,7 +155,7 @@
                                                                                 </td>
                                                                                 <td width="10%" align="center">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label4" runat="server" Text="Ó¦¸¶×Ü¶î"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label4" runat="server" Text="TotalAmountPayable"></asp:Label></strong>
                                                                                 </td>
 
                                                                                 <td width="10%" align="center">
@@ -172,22 +172,22 @@
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                             HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Code" HeaderText="´úÂë">
+                                                                    <asp:BoundColumn DataField="Code" HeaderText="Code">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                             HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
+                                                                    <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                             HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Application" HeaderText="ÉêÇëÈË">
+                                                                    <asp:BoundColumn DataField="Application" HeaderText="Applicant">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                             HorizontalAlign="Center" />
@@ -212,12 +212,12 @@
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                             HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="TotalPayAmount" HeaderText="Ó¦¸¶×Ü¶î">
+                                                                    <asp:BoundColumn DataField="TotalPayAmount" HeaderText="TotalAmountPayable">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                             HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/chengyuanricheng.png border=0 width=24 height=24 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
+                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/chengyuanricheng.png border=0 width=24 height=24 alt='Modify' /&gt;&lt;/div&gt;">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:ButtonColumn>
                                                                 </Columns>
@@ -281,7 +281,7 @@
 
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
+                                    <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
@@ -291,7 +291,7 @@
                                     <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                    <asp:TemplateColumn HeaderText="Status">
                                         <ItemTemplate>
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />

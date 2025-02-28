@@ -788,7 +788,7 @@ public partial class TTTenderFinanceList : System.Web.UI.Page
 
             }
 
-            if (strWarningType == "ÍË±£Ö¤½ð") 
+            if (strWarningType == "RefundDeposit")   //ChineseWord
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsReceiveMargin <> 0 and to_char(cast( ReceiveMarginTime as date),'yyyymmdd') <= to_char(now()+ReceiveMarginDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";

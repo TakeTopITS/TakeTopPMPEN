@@ -248,19 +248,19 @@ public partial class TTAllMemberWorkLoad : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as 组别, 
-                   UserName as 姓名, 
-                   ProjectName as 项目, 
-                   PlanName as 计划, 
-                   TaskName as 任务, 
-                   PlanBeginTime as 计划预计开始时间, 
-                   PlanEndTime as 计划预计结束时间, 
-                   TaskBeginDate as 任务预计开始时间, 
-                   TaskFirstOperateTime as 任务受理时间, 
-                   TaskEndDate as 任务预计结束时间, 
-                   TaskLastestOperateTime as 任务最新操作时间, 
-                   Status as 任务状态, 
-                   TaskLog as 任务日志 
+        strHQL = @"Select DepartCode as 组别,  //ChineseWord //ChineseWord
+                   UserName as 姓名,  //ChineseWord //ChineseWord
+                   ProjectName as 项目,  //ChineseWord //ChineseWord
+                   PlanName as 计划,  //ChineseWord //ChineseWord
+                   TaskName as 任务,  //ChineseWord //ChineseWord
+                   PlanBeginTime as 计划预计开始时间,  //ChineseWord //ChineseWord
+                   PlanEndTime as 计划预计结束时间,  //ChineseWord //ChineseWord
+                   TaskBeginDate as 任务预计开始时间,  //ChineseWord //ChineseWord
+                   TaskFirstOperateTime as 任务受理时间,  //ChineseWord //ChineseWord
+                   TaskEndDate as 任务预计结束时间,  //ChineseWord //ChineseWord
+                   TaskLastestOperateTime as 任务最新操作时间,  //ChineseWord //ChineseWord
+                   Status as 任务状态,  //ChineseWord //ChineseWord
+                   TaskLog as 任务日志  //ChineseWord //ChineseWord
                    From V_ProjectMemberTaskDetailReport";
 
         strHQL += " Where DepartCode Like " + "'" + strDepartCode + "'";

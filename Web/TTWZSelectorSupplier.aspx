@@ -276,7 +276,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("MainSupplier").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="Grade" HeaderText="级别">
+                                                                <asp:BoundColumn DataField="Grade" HeaderText="Level">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
                                                                 <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="登记日期">
@@ -327,7 +327,7 @@
                                                                 <asp:BoundColumn DataField="AuditorName" HeaderText="责任工程师">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                                <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>

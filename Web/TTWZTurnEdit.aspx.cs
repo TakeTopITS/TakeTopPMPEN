@@ -258,8 +258,8 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
     private void DataPickingPlanBander()
     {
         WZPickingPlanBLL wZPickingPlanBLL = new WZPickingPlanBLL();
-        //string strWZPickingPlanHQL = "from WZPickingPlan as wZPickingPlan where SupplyMethod = '¼×¹©' and Progress = 'Ç©ÊÕ' order by MarkerTime desc";
-        string strWZPickingPlanHQL = "from WZPickingPlan as wZPickingPlan where SupplyMethod = '¼×¹©'  order by MarkerTime desc"; 
+        //string strWZPickingPlanHQL = "from WZPickingPlan as wZPickingPlan where SupplyMethod = 'Party A Supply' and Progress = 'Sign for Receipt' order by MarkerTime desc";
+        string strWZPickingPlanHQL = "from WZPickingPlan as wZPickingPlan where SupplyMethod = 'Party A Supply'  order by MarkerTime desc";   //ChineseWord
         IList listWZPickingPlan = wZPickingPlanBLL.GetAllWZPickingPlans(strWZPickingPlanHQL);
 
         LB_PickingPlan.DataSource = listWZPickingPlan;

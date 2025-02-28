@@ -240,7 +240,7 @@
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="click" CssClass="notTab">操作</asp:LinkButton>
                                                                     <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="询价" ? true : false %>'>编辑</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="detail" CssClass="notTab">明细</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="kanFile" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="报价" ? true : false %>'>查看中标文件</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="kanFile" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Quotation" ? true : false %>'>查看中标文件</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# (Eval("IsConfirm").ToString()=="0" && Eval("Progress").ToString()=="询价") ? true : false %>'>提交</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="cancel" CssClass="notTab" Visible='<%# (Eval("IsConfirm").ToString()=="1" && Eval("Progress").ToString()=="询价") ? true : false %>'>退回报价</asp:LinkButton>--%>
                                                                 </ItemTemplate>
@@ -275,7 +275,7 @@
                                                             <asp:BoundColumn DataField="TenderCompetent" HeaderText="招标主管">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
@@ -365,7 +365,7 @@
                                                                     <a href='<%# DataBinder.Eval(Container.DataItem,"TenderDocumentURL6") %>' class="notTab" target="_blank"><%# ShareClass.StringCutByRequire(Eval("TenderDocument6").ToString(), 190) %></a>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>--%>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

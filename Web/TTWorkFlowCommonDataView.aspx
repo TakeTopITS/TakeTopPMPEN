@@ -326,7 +326,7 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,CaiGouMingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTMakeAssetPurchase.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "POID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;"></asp:HyperLink>
+                                                            <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTMakeAssetPurchase.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "POID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;"></asp:HyperLink>
 
                                                     </td>
                                                 </tr>
@@ -400,7 +400,7 @@
                                                 <tr>
                                                     <td style="text-align: right"></td>
                                                     <td align="left">
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTExpenseApplyWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTExpenseApplyWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -849,7 +849,7 @@
                                                             <asp:Label ID="Label78" runat="server" Text="<%$ Resources:lang,ZhiChanLingYongMingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTAssetApplicationWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1357,7 +1357,7 @@
                                                 <tr>
                                                     <td style="text-align: right"></td>
                                                     <td align="left">
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTLeaveApplyFormWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTLeaveApplyFormWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -1425,7 +1425,7 @@
                                                 <tr>
                                                     <td style="text-align: right"></td>
                                                     <td align="left">
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTOvertimeApplyFormWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTOvertimeApplyFormWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -1954,7 +1954,7 @@
                                                             <asp:Label ID="Label191" runat="server" Text="<%$ Resources:lang,CaiGouMingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTMakeGoodsPurchase.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "POID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2037,7 +2037,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationOrderForFilling.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "FillingAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2120,7 +2120,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationOrderForProduction.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ProductionAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2202,7 +2202,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationOrderForSale.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SaleAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2284,7 +2284,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationWFForOther.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "OtherAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2367,7 +2367,7 @@
                                                             <asp:Label ID="Label208" runat="server" Text="<%$ Resources:lang,ShangPingXiaoShouMingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsSaleOrderWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2445,7 +2445,7 @@
                                                             <asp:Label ID="Label217" runat="server" Text="<%$ Resources:lang,ShangPingBaoJiaMingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsSaleQuotationOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "QOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -2494,7 +2494,7 @@
                                                             <asp:Label ID="Label222" runat="server" Text="<%$ Resources:lang,GongHuoMingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsSupplyOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SUID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -2550,7 +2550,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsProductionOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "PDID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -2671,7 +2671,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForBorrow.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "BorrowROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -2739,7 +2739,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForProduction.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ProductionROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2805,7 +2805,7 @@
                                                             <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForPurchase.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "PurchaseROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -2872,7 +2872,7 @@
                                                             <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForSale.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SaleROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -2964,7 +2964,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsBorrowOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "BorrowNO") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -3071,7 +3071,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTExpenseClaimWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ECID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
 
@@ -3247,7 +3247,7 @@
 
                                                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTProjectMaterialPaymentApplicant.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                                 </td>
 
@@ -3780,7 +3780,7 @@
 
                                                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTSupplierMaterialPaymentApplicant.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
 
                                                                 </td>
@@ -3944,7 +3944,7 @@
 
                                                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                                                     <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTSupplierAssetPaymentApplicant.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
 
                                                                 </td>
@@ -3990,12 +3990,12 @@
 
                                                             <tr>
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label45" runat="server" Text="金额"></asp:Label>： </td>
+                                                                    <asp:Label ID="Label45" runat="server" Text="Amount"></asp:Label>： </td>
                                                                 <td class="formItemBgStyle" align="left">
                                                                     <%#DataBinder.Eval(Container.DataItem, "VisaAmount")%>
                                                                 </td>
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label23" runat="server" Text="币别"></asp:Label>： </td>
+                                                                    <asp:Label ID="Label23" runat="server" Text="Currency"></asp:Label>： </td>
                                                                 <td class="formItemBgStyle" colspan="3" align="left">
                                                                     <%#DataBinder.Eval(Container.DataItem, "CurrencyType")%>
                                                                 </td>
@@ -4003,7 +4003,7 @@
 
                                                             <tr>
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label1112212" runat="server" Text="备注"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label1112212" runat="server" Text="Remark"></asp:Label>：</td>
                                                                 <td colspan="3" class="formItemBgStyle" style="text-align: left">
 
                                                                     <%#DataBinder.Eval(Container.DataItem, "Comment")%></td>
@@ -4019,7 +4019,7 @@
 
                                                             <tr style="font-weight: 600;">
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label11" runat="server" Text="关联项目"></asp:Label>：
+                                                                    <asp:Label ID="Label11" runat="server" Text="RelatedProject"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="2" class="formItemBgStyle" style="text-align: left;">
                                                                     <%#DataBinder.Eval(Container.DataItem, "ProjectID")%>
@@ -4075,7 +4075,7 @@
 
                                                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                                                     <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTConstractPayableVisaEdit.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                                 </td>
                                                             </tr>
@@ -4167,7 +4167,7 @@
 
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsCheckOutNoticeOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "COOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -4247,7 +4247,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label9" runat="server" Text="项目经理"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label9" runat="server" Text="ProjectManager"></asp:Label>：</td>
                                                                 <td align="right" colspan="2">
                                                                     <table width="100%">
                                                                         <tr>
@@ -4447,7 +4447,7 @@
                                                                 <td colspan="3" class="formItemBgStyle" align="left">
 
                                                                     <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTTenderList.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;" />
+                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                                 </td>
                                                             </tr>
@@ -4529,7 +4529,7 @@
                             GridLines="None" ForeColor="#333333" Height="1px" ShowHeader="False">
                             <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                             <Columns>
-                              <%--  <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                              <%--  <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                 </asp:BoundColumn>--%>
 
@@ -4546,7 +4546,7 @@
                                 </asp:HyperLinkColumn>
 
 
-                                <asp:BoundColumn DataField="Visible" HeaderText="权限">
+                                <asp:BoundColumn DataField="Visible" HeaderText="Permission">
                                     <ItemStyle HorizontalAlign="center" CssClass="itemBorder"></ItemStyle>
                                 </asp:BoundColumn>
 
@@ -4580,7 +4580,7 @@
                                         <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                         <Columns>
 
-                                            <asp:BoundColumn DataField="DocID" HeaderText="序号">
+                                            <asp:BoundColumn DataField="DocID" HeaderText="SerialNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                             </asp:BoundColumn>
 
@@ -4589,7 +4589,7 @@
                                                 <ItemStyle HorizontalAlign="Left" Width="25%" CssClass="itemBorder"></ItemStyle>
                                             </asp:HyperLinkColumn>
 
-                                            <asp:BoundColumn DataField="Visible" HeaderText="权限">
+                                            <asp:BoundColumn DataField="Visible" HeaderText="Permission">
                                                 <ItemStyle HorizontalAlign="center" Width="15%" CssClass="itemBorder"></ItemStyle>
                                             </asp:BoundColumn>
 

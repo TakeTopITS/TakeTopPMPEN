@@ -20,7 +20,7 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
         strForbitModule = Session["ForbitModule"].ToString();
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "系统模组设定", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "SystemModuleSettings", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");

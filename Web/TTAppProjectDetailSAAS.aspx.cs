@@ -296,7 +296,7 @@ public partial class TTAppProjectDetailSAAS : System.Web.UI.Page
 
                 if (strLBWorkID == "-1")
                 {
-                    dailyWork.Type = "主导"; 
+                    dailyWork.Type = "Lead";   //ChineseWord
                     dailyWork.UserCode = strUserCode;
                     dailyWork.UserName = ShareClass.GetUserName(strUserCode);
                     dailyWork.WorkDate = DateTime.Now;
@@ -324,7 +324,7 @@ public partial class TTAppProjectDetailSAAS : System.Web.UI.Page
 
                         ShareClass.UpdateProjectCompleteDegree(strProjectID, deFinishPercent);
 
-                        strHQL = "from DailyWork as dailyWork where dailyWork.Type = '主导' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'"; 
+                        strHQL = "from DailyWork as dailyWork where dailyWork.Type = 'Lead' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";   //ChineseWord
                         lst = dailyWorkBLL.GetAllDailyWorks(strHQL);
                         dailyWork = (DailyWork)lst[0];
                         LB_WorkID.Text = dailyWork.WorkID.ToString();

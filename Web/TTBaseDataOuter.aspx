@@ -566,7 +566,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="名称">
+                                    <asp:TemplateColumn HeaderText="Name">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_KPIType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
@@ -683,13 +683,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="序号">
+                                    <asp:TemplateColumn HeaderText="SerialNumber">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_PositionID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="Position" HeaderText="职称">
+                                    <asp:BoundColumn DataField="Position" HeaderText="ProfessionalTitle">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
@@ -850,7 +850,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="名称">
+                                    <asp:TemplateColumn HeaderText="Name">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_LeaveType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
@@ -934,7 +934,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="名称">
+                                    <asp:TemplateColumn HeaderText="Name">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_OvertimeType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
@@ -987,7 +987,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="名称">
+                                    <asp:TemplateColumn HeaderText="Name">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_FestivalsType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
@@ -1218,7 +1218,7 @@
                                     <asp:BoundColumn DataField="OCheckOutIsMust" HeaderText="加班下班必须">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="允许最大距离">
+                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="MaximumAllowedDistance">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1415,7 +1415,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="单位">
+                                    <asp:TemplateColumn HeaderText="Unit">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_UnitName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UnitName") %>' />
                                         </ItemTemplate>
@@ -1481,7 +1481,7 @@
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="ExchangeRate" HeaderText="汇率">
+                                    <asp:BoundColumn DataField="ExchangeRate" HeaderText="ExchangeRate">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="SortNo" HeaderText="顺充号">
@@ -1541,7 +1541,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="类型">
+                                    <asp:TemplateColumn HeaderText="Type">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_ActorGroupType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
@@ -1593,7 +1593,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="类型">
+                                    <asp:TemplateColumn HeaderText="Type">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_IndustryType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
@@ -1698,7 +1698,7 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="类型">
+                                    <asp:TemplateColumn HeaderText="Type">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_DefectType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
@@ -1780,7 +1780,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="名称">
+                                                    <asp:TemplateColumn HeaderText="Name">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ReportType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -1835,7 +1835,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="名称">
+                                                    <asp:TemplateColumn HeaderText="Name">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_CarType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -1889,7 +1889,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="序号">
+                                                    <asp:TemplateColumn HeaderText="SerialNumber">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                         </ItemTemplate>
@@ -1943,7 +1943,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="名称">
+                                                    <asp:TemplateColumn HeaderText="Name">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_CustomerQuestionType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -1996,7 +1996,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_MeetingType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -2103,7 +2103,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="名称">
+                                                    <asp:TemplateColumn HeaderText="Name">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_Stage" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Stage") %>' />
                                                         </ItemTemplate>
@@ -2238,7 +2238,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ConstractType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -2303,7 +2303,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="名称">
+                                                    <asp:TemplateColumn HeaderText="Name">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_BankName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"BankName") %>' />
                                                         </ItemTemplate>
@@ -2355,7 +2355,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="名称">
+                                                    <asp:TemplateColumn HeaderText="Name">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ReceivePayType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -2391,10 +2391,10 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="UserCode" HeaderText="代码">
+                                                    <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UserName" HeaderText="名称">
+                                                    <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
@@ -2587,7 +2587,7 @@
                                             <asp:Label ID="Label59" runat="server" Text="<%$ Resources:lang,ZiChanDiaoHuanLeiXing%>"></asp:Label>
                                         </strong></td>
                                         <td><strong>
-                                            <asp:Label ID="Label6" runat="server" Text="包装方式"></asp:Label>
+                                            <asp:Label ID="Label6" runat="server" Text="PackagingMethod"></asp:Label>
                                         </strong></td>
                                         <td><strong>
                                             <asp:Label ID="Label374" runat="server" Text="<%$ Resources:lang,ChuKuLeiXing%>"></asp:Label>
@@ -2627,7 +2627,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_AssetType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -2678,7 +2678,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_MTType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -2730,7 +2730,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ChangeType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -2791,7 +2791,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_PackingType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -2973,7 +2973,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_TaskType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -3025,7 +3025,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ReqType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -3128,7 +3128,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_TaskRecordType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -3180,7 +3180,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="名称">
+                                                    <asp:TemplateColumn HeaderText="Name">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_PlanType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -3342,7 +3342,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="序号">
+                                                    <asp:TemplateColumn HeaderText="SerialNumber">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_CodeRuleID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                         </ItemTemplate>
@@ -3439,7 +3439,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_SupplierBigType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -3494,13 +3494,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_SupplierSmallType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="BigType" HeaderText="大类">
+                                                    <asp:BoundColumn DataField="BigType" HeaderText="MajorCategory">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="顺序">
@@ -3557,7 +3557,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="类型">
+                                                    <asp:TemplateColumn HeaderText="Type">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_BMBidType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
@@ -3629,7 +3629,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="序号">
+                                                    <asp:TemplateColumn HeaderText="SerialNumber">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_TenderContent" runat="server" CssClass="inpuLongest" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"TenderContent") %>' />
                                                         </ItemTemplate>
@@ -3676,7 +3676,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="序号">
+                                                    <asp:TemplateColumn HeaderText="SerialNumber">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_FundingSource" runat="server" CssClass="inpu" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"FundingSource") %>' />
                                                         </ItemTemplate>

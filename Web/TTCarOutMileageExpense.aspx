@@ -128,7 +128,7 @@
                                                                     ForeColor="#333333" GridLines="None">
 
                                                                     <Columns>
-                                                                        <asp:TemplateColumn HeaderText="±àºÅ">
+                                                                        <asp:TemplateColumn HeaderText="Number">
                                                                             <ItemTemplate>
                                                                                 <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                             </ItemTemplate>
@@ -138,10 +138,10 @@
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:HyperLinkColumn DataNavigateUrlField="DriverCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                            DataTextField="DriverName" HeaderText="ÐÕÃû" Target="_blank">
+                                                                            DataTextField="DriverName" HeaderText="Name" Target="_blank">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:HyperLinkColumn>
-                                                                        <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                        <asp:TemplateColumn HeaderText="Status">
                                                                             <ItemTemplate>
                                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                             </ItemTemplate>

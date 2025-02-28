@@ -165,7 +165,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
 
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -265,22 +265,22 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
 
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MemberCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="MemberCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="MemberName" HeaderText="成员">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="工时">
+                                                        <asp:TemplateColumn HeaderText="LaborHours">
                                                             <ItemTemplate>
                                                                 <asp:TextBox ID="TB_WorkHour" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Workhour") %>'></asp:TextBox>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:TemplateColumn HeaderText="收入">
+                                                        <asp:TemplateColumn HeaderText="Income">
                                                             <ItemTemplate>
                                                                 <asp:TextBox ID="TB_Income" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"MemberIncome") %>'></asp:TextBox>
                                                             </ItemTemplate>

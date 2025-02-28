@@ -34,7 +34,7 @@
             $("#BT_NewProjectChange").attr("class", "inpu");
             $("#BT_NewProjectChange").removeAttr("disabled");
 
-            if (objProgress == "审核" && objPurchaseEngineer == objUserCode) {
+            if (objProgress == "Review" && objPurchaseEngineer == objUserCode) {
                 $("#BT_NewSign").attr("class", "inpu");
                 $("#BT_NewSign").removeAttr("disabled");                            //签收
                 $("#BT_NewSignReturn").attr("disabled", "disabled");
@@ -48,7 +48,7 @@
                 $("#BT_NewCancelReturn").attr("disabled", "disabled");
                 $("#BT_NewCancelReturn").removeClass("inpu");                           //核销退回
             }
-            else if (objProgress == "签收" && objPurchaseEngineer == objUserCode) {
+            else if (objProgress == "Sign for Receipt" && objPurchaseEngineer == objUserCode) {
                 $("#BT_NewSign").attr("disabled", "disabled");
                 $("#BT_NewSign").removeClass("inpu");                            //签收
                 $("#BT_NewSignReturn").attr("class", "inpu");
@@ -218,9 +218,9 @@
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JingDu%>"></asp:Label> <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                 <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value=""/>
                                                              <%--   <asp:ListItem Text="<%$ Resources:lang,LuRu%>" Value="录入"/>
-                                                                <asp:ListItem Text="<%$ Resources:lang,TiBao%>" Value="提报"/>--%>
-                                                                <asp:ListItem Text="<%$ Resources:lang,ShenHe%>" Value="审核"/>
-                                                                <asp:ListItem Text="<%$ Resources:lang,QianShou%>" Value="签收"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,TiBao%>" Value="Submit for Approval"/>--%>
+                                                                <asp:ListItem Text="<%$ Resources:lang,ShenHe%>" Value="Review"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,QianShou%>" Value="Sign for Receipt"/>
                                                                 <asp:ListItem Text="<%$ Resources:lang,HeXiao%>" Value="核销"/>
                                                             </asp:DropDownList>&nbsp;
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label> <asp:TextBox ID="TXT_ProjectCode" runat="server"></asp:TextBox>&nbsp;
@@ -389,10 +389,10 @@
                                                                             <ItemTemplate>
 
                                                                                 <asp:LinkButton ID="LinkButton0" runat="server" CommandArgument='<%# Eval("PlanCode") %>' CommandName="click" CssClass="notTab"> <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label> </asp:LinkButton>
-                                                                               <%-- <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="sign" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="审核" ? true : false %>'>签收</asp:LinkButton>
-                                                                                <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="signReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="签收" ? true : false %>'>退回签收</asp:LinkButton>
-                                                                                <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="returnPlan" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="审核" ? true : false %>'>退回</asp:LinkButton>
-                                                                                <asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="cancel" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="签收" ? true : false %>'>核销</asp:LinkButton>
+                                                                               <%-- <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="sign" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Review" ? true : false %>'>签收</asp:LinkButton>
+                                                                                <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="signReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Sign for Receipt" ? true : false %>'>退回签收</asp:LinkButton>
+                                                                                <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="returnPlan" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Review" ? true : false %>'>退回</asp:LinkButton>
+                                                                                <asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="cancel" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Sign for Receipt" ? true : false %>'>核销</asp:LinkButton>
                                                                                 <asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="cancelReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="核销" ? true : false %>'>退回核销</asp:LinkButton>
                                                                                 <asp:LinkButton ID="LinkButton6" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="balance" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="核销" ? true : false %>'>平库</asp:LinkButton>
                                                                                 --%>
@@ -509,7 +509,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("CancelTime").ToString(),10) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

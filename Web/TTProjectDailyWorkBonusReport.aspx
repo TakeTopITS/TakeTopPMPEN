@@ -99,10 +99,10 @@
                                 Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="25" Width="100%"
                                 CellPadding="4" ForeColor="#333333" GridLines="None">
                                 <Columns>
-                                    <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
+                                    <asp:BoundColumn DataField="UserCode" HeaderText="Code">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
+                                    <asp:BoundColumn DataField="UserName" HeaderText="Name">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Bonus" HeaderText="½±½ð">

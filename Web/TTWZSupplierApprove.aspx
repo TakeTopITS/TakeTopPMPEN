@@ -33,7 +33,7 @@
                 $("#BT_NewRegisterReturn").attr("disabled", "disabled");
                 $("#BT_NewRegisterReturn").removeClass("inpu");                         //登记退回
             }
-            else if (objProgress == "登记") {
+            else if (objProgress == "Registration") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //编辑
                 $("#BT_NewRegister").attr("disabled", "disabled");
@@ -52,7 +52,7 @@
                 $("#BT_NewBrowse").removeClass("inpu");
             }
 
-            if (objProgress == "登记" && objQualityEngineer == ObjUserCode) {
+            if (objProgress == "Registration" && objQualityEngineer == ObjUserCode) {
                 $("#BT_NewChange").attr("class", "inpu");
                 $("#BT_NewChange").removeAttr("disabled");
             } else {
@@ -155,7 +155,7 @@
                                                                                         <asp:ListItem Text="<%$ Resources:lang,YiJi%>" Value="一级" />
                                                                                         <asp:ListItem Text="<%$ Resources:lang,ErJi%>" Value="二级" />
                                                                                         <asp:ListItem Text="<%$ Resources:lang,HeGe%>" Value="Qualified" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,LinShi%>" Value="临时" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,LinShi%>" Value="Temporary" />
                                                                                         <%--<asp:ListItem Text="Disabled" Value="Disabled"/>--%>
                                                                                     </asp:DropDownList>
                                                                                 </td>
@@ -193,7 +193,7 @@
                                                                                     <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
 
                                                                                         <asp:ListItem Text="<%$ Resources:lang,PiZhun%>" Value="Approved" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,DengJi%>" Value="登记" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,DengJi%>" Value="Registration" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td class="formItemBgStyle" colspan="4">
@@ -271,7 +271,7 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
@@ -281,7 +281,7 @@
                                                                                             <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -495,7 +495,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("MainSupplier").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Grade" HeaderText="级别">
+                                                                        <asp:BoundColumn DataField="Grade" HeaderText="Level">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -540,7 +540,7 @@
                                                                         <asp:BoundColumn DataField="AuditorName" HeaderText="责任工程师">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>

@@ -185,7 +185,7 @@
 
                                                              <%--   <td align="center" width="4%">
                                                                     <strong>
-                                                                        <asp:Label ID="Label22" runat="server" Text="车号"></asp:Label></strong>
+                                                                        <asp:Label ID="Label22" runat="server" Text="VehicleNumber"></asp:Label></strong>
                                                                 </td>
                                                                 <td align="center" width="4%">
                                                                     <strong>
@@ -266,7 +266,7 @@
                                                 ShowHeader="false" Height="1px"
                                                 Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ReturnName" HeaderText="名称">
+                                                    <asp:BoundColumn DataField="ReturnName" HeaderText="Name">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="CustomerName" HeaderText="Customer">
@@ -278,43 +278,43 @@
                                                     <asp:BoundColumn DataField="ReturnTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="退货时间">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>
-                                              <%--      <asp:BoundColumn DataField="CarCode" HeaderText="车号">
+                                              <%--      <asp:BoundColumn DataField="CarCode" HeaderText="VehicleNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Driver" HeaderText="司机">
+                                                    <asp:BoundColumn DataField="Driver" HeaderText="Driver">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="WareHouse" HeaderText="仓库">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>--%>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="代码">
+                                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="GoodsName" HeaderText="名称">
+                                                    <asp:BoundColumn DataField="GoodsName" HeaderText="Name">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                                    <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                                    <asp:BoundColumn DataField="Number" HeaderText="Quantity">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                                    <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Price" HeaderText="单价">
+                                                    <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Amount" HeaderText="金额">
+                                                    <asp:BoundColumn DataField="Amount" HeaderText="Amount">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
                                                
@@ -324,7 +324,7 @@
                                                       <asp:BoundColumn DataField="SourceID" HeaderText="来源ID">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ReturnReason" HeaderText="备注">
+                                                    <asp:BoundColumn DataField="ReturnReason" HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                     </asp:BoundColumn>
                                                 </Columns>

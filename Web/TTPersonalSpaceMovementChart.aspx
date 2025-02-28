@@ -40,7 +40,7 @@
                 }
             },
             legend: {
-                data: ['合同', 'Project', '物资','人员', '收入']
+                data: ['Contract', 'Project', '物资','人员', 'Income']
             },
             toolbox: {
                 feature: {
@@ -67,7 +67,7 @@
             ],
             series: [
                 {
-                    name: '合同',
+                    name: 'Contract',
                     type: 'line',
                     stack: 'Total',
                     areaStyle: {},
@@ -107,7 +107,7 @@
                     data: [320, 332, 301, 334, 390, 330, 320]
                 },
                 {
-                    name: '收入',
+                    name: 'Income',
                     type: 'line',
                     stack: 'Total',
                     label: {

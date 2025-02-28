@@ -49,7 +49,7 @@ public partial class TTReqManageThirdPart : System.Web.UI.Page
             SetReqRecordColor(DataGrid4);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
+            strHQL += " and (reqAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";   //ChineseWord
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by reqAssignRecord.ID DESC";
             reqAssignRecordBLL = new ReqAssignRecordBLL();
@@ -130,7 +130,7 @@ public partial class TTReqManageThirdPart : System.Web.UI.Page
         SetReqRecordColor(DataGrid4);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
+        strHQL += " and (reqAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";   //ChineseWord
         strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
@@ -195,7 +195,7 @@ public partial class TTReqManageThirdPart : System.Web.UI.Page
         SetReqRecordColor(DataGrid4);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
+        strHQL += " and (reqAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";   //ChineseWord
         strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and reqAssignRecord.Status = " + "'" + strStatus + "'" + " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();

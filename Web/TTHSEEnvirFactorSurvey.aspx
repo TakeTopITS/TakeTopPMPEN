@@ -116,7 +116,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -125,23 +125,23 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Code" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="Code" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Name" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:HyperLinkColumn DataNavigateUrlField="AttachPath" DataNavigateUrlFormatString="{0}" DataTextField="AttachName" HeaderText="附件" Target="_blank">
+                                                        <asp:HyperLinkColumn DataNavigateUrlField="AttachPath" DataNavigateUrlFormatString="{0}" DataTextField="AttachName" HeaderText="Attachment" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:BoundColumn DataField="Remark" HeaderText="备注内容">
@@ -332,7 +332,7 @@
                                 <ItemStyle CssClass="itemStyle" />
                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                 <Columns>
-                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                     </asp:ButtonColumn>
                                     <asp:TemplateColumn HeaderText="Delete">
@@ -341,7 +341,7 @@
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                    <asp:BoundColumn DataField="ID" HeaderText="Number">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                             HorizontalAlign="Center" />
@@ -415,10 +415,10 @@
                                         <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ZhongDaChengDu%>"></asp:Label>：</td>
                                     <td align="left" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_SignificantDegree" runat="server" Enabled="False" CssClass="shuru">
-                                            <asp:ListItem Value="待评" Text="<%$ Resources:lang,DaiPing%>" />
-                                            <asp:ListItem Value="非常重大" Text="<%$ Resources:lang,FeiChangZhongDa%>" />
-                                            <asp:ListItem Value="重大" Text="<%$ Resources:lang,ZhongDa%>" />
-                                            <asp:ListItem Value="一般" Text="<%$ Resources:lang,YiBan%>" />
+                                            <asp:ListItem Value="PendingEvaluation" Text="<%$ Resources:lang,DaiPing%>" />
+                                            <asp:ListItem Value="VerySignificant" Text="<%$ Resources:lang,FeiChangZhongDa%>" />
+                                            <asp:ListItem Value="Significant" Text="<%$ Resources:lang,ZhongDa%>" />
+                                            <asp:ListItem Value="General" Text="<%$ Resources:lang,YiBan%>" />
                                         </asp:DropDownList>
                                         <asp:Label ID="lbl_ID" runat="server" Visible="False"></asp:Label>
                                     </td>

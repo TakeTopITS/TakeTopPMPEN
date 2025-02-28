@@ -166,7 +166,7 @@
 
 
 
-                                                                <%--                                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                <%--                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                                 </asp:BoundColumn>
 
@@ -255,7 +255,7 @@
 
 
 
-                                                                <%--  <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                <%--  <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                                 </asp:BoundColumn>
 

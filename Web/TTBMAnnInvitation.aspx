@@ -174,7 +174,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -184,10 +184,10 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Name" HeaderText="名称">
+                                                        <asp:BoundColumn DataField="Name" HeaderText="Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
@@ -264,9 +264,9 @@
                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangShi%>"></asp:Label>：</td>
                                                 <td align="left" class="formItemBgStyle" style="height: 30px">
                                                     <asp:DropDownList ID="DL_BidWay" runat="server">
-                                                        <asp:ListItem Value="邀请招标" Text="<%$ Resources:lang,YaoQingZhaoBiao%>" />
-                                                        <asp:ListItem Value="公开招标" Text="<%$ Resources:lang,GongKaiZhaoBiao%>" />
-                                                        <asp:ListItem Value="议标" Text="<%$ Resources:lang,YiBiao%>" />
+                                                        <asp:ListItem Value="InvitationToBid" Text="<%$ Resources:lang,YaoQingZhaoBiao%>" />
+                                                        <asp:ListItem Value="PublicTender" Text="<%$ Resources:lang,GongKaiZhaoBiao%>" />
+                                                        <asp:ListItem Value="NegotiatedBidding" Text="<%$ Resources:lang,YiBiao%>" />
                                                         <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
                                                     </asp:DropDownList>
                                                 </td>

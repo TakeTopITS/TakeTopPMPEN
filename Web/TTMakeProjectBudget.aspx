@@ -139,7 +139,7 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="100%" OnItemCommand="DataGrid1_ItemCommand"
                                                 ShowHeader="false" CellPadding="4" GridLines="None">
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
@@ -151,10 +151,10 @@
                                                     <asp:BoundColumn DataField="ID" HeaderText="">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Account" HeaderText="科目">
+                                                    <asp:BoundColumn DataField="Account" HeaderText="Subject">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Amount" HeaderText="金额">
+                                                    <asp:BoundColumn DataField="Amount" HeaderText="Amount">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
@@ -459,10 +459,10 @@
                                     <asp:BoundColumn DataField="ID" HeaderText="">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Account" HeaderText="科目">
+                                    <asp:BoundColumn DataField="Account" HeaderText="Subject">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                     </asp:BoundColumn>
-                                    <asp:TemplateColumn HeaderText="金额">
+                                    <asp:TemplateColumn HeaderText="Amount">
                                         <ItemTemplate>
                                             <asp:TextBox ID="TB_Amount" runat="server" Width="95%" Text='<%# Eval("Amount").ToString() %>'></asp:TextBox>
                                         </ItemTemplate>

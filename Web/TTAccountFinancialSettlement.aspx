@@ -117,27 +117,27 @@
                                                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" ShowHeader="False"
                                                                                         Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="财务帐套">
+                                                                                            <asp:TemplateColumn HeaderText="FinancialAccountingSet">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetFinancialName(Eval("FinancialCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="财务区间">
+                                                                                            <asp:TemplateColumn HeaderText="FinancialPeriod">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetIntervalName(Eval("IntervalCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="会计科目">
+                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="AccountingSubjects">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="TotalAllMoney" HeaderText="金额">
+                                                                                            <asp:BoundColumn DataField="TotalAllMoney" HeaderText="Amount">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="币种">
+                                                                                            <asp:TemplateColumn HeaderText="Currency">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetFinancialCurrency(Eval("FinancialCode").ToString()) %>
                                                                                                 </ItemTemplate>

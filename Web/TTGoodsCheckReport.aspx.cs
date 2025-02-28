@@ -175,7 +175,7 @@ public partial class TTGoodsCheckReport : System.Web.UI.Page
 
         Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoPanDianBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

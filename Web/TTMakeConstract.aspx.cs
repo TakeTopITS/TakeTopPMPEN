@@ -107,7 +107,7 @@ public partial class TTMakeConstract : System.Web.UI.Page
             DL_GoodsType.DataBind();
             DL_GoodsType.Items.Insert(0, new ListItem("--Select--", ""));
 
-            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
             strHQL += " and actorGroup.LangCode = '" + strLangCode + "'";
             ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
@@ -2867,7 +2867,7 @@ public partial class TTMakeConstract : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         strHQL += " and actorGroup.LangCode = '" + strLangCode + "'";
 
@@ -3401,7 +3401,7 @@ public partial class TTMakeConstract : System.Web.UI.Page
         DL_CustomerList.DataSource = lst;
         DL_CustomerList.DataBind();
 
-        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", "")); 
+        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", ""));   //ChineseWord
     }
 
     //保存新闻内容的文档链接

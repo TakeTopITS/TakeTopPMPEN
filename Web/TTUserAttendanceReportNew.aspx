@@ -209,7 +209,7 @@
 
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label9" runat="server" Text="部门"></asp:Label></strong>
+                                                            <asp:Label ID="Label9" runat="server" Text="Department"></asp:Label></strong>
                                                     </td>
 
                                                     <td align="center" rowspan="2">
@@ -218,7 +218,7 @@
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label11" runat="server" Text="职位"></asp:Label></strong>
+                                                            <asp:Label ID="Label11" runat="server" Text="Position"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" runat="server" id="leaveTd">
                                                         <strong>
@@ -266,7 +266,7 @@
                                                     </td>
                                                     <td align="center" runat="server" id="kqjgTd">
                                                         <strong>
-                                                            <asp:Label ID="Label34" runat="server" Text="考勤结果"></asp:Label></strong>
+                                                            <asp:Label ID="Label34" runat="server" Text="AttendanceResult"></asp:Label></strong>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -299,11 +299,11 @@
                                                 <asp:Repeater runat="server" ID="rpReport" OnItemDataBound="rpReport_ItemDataBound">
                                                     <ItemTemplate>
                                                         <tr class="reportTr">
-                                                            <td align="center"><%#Eval("姓名") %></td>
+                                                            <td align="center"><%#Eval("Name") %></td>
 
-                                                            <td align="center"><%#Eval("部门") %></td>
+                                                            <td align="center"><%#Eval("Department") %></td>
                                                             <td align="center"><%#Eval("工号") %></td>
-                                                            <td align="center"><%#Eval("职位") %></td>
+                                                            <td align="center"><%#Eval("Position") %></td>
                                                             <asp:Repeater runat="server" ID="rpReportLeave">
                                                                 <ItemTemplate>
                                                                     <td align="center"><%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,(GetDataItem() as DataRowView).Row["Type"].ToString()) %></td>

@@ -48,10 +48,10 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
 
                 WZPickingPlanBLL wZPickingPlanBLL = new WZPickingPlanBLL();
                 string strWZPickingPlanHQL = string.Format(@"from WZPickingPlan as wZPickingPlan
-                            where Progress = '签收'
+                            where Progress = 'Sign for Receipt'
                             and PurchaseEngineer = '{0}'
                             and ProjectCode = '{1}'
-                            and SupplyMethod = '自购'", wZPurchase.PurchaseEngineer, wZPurchase.ProjectCode); 
+                            and SupplyMethod = 'Self-purchase'", wZPurchase.PurchaseEngineer, wZPurchase.ProjectCode);   //ChineseWord
                 IList listWZPickingPlan = wZPickingPlanBLL.GetAllWZPickingPlans(strWZPickingPlanHQL);
 
                 LB_PickingPlan.DataSource = listWZPickingPlan;
@@ -146,7 +146,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                             ShareClass.RunSqlCommand(strUpdatePurchaseHQL);
                         }
                         //修改计划明细的使用标记
-                        string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '询价',PurchaseCode='{0}',IsMark = -1 where ID = {1}", wZPurchase.PurchaseCode, intPlanDetailID); 
+                        string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '询价',PurchaseCode='{0}',IsMark = -1 where ID = {1}", wZPurchase.PurchaseCode, intPlanDetailID);   //ChineseWord
                         ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
                         //重新加载采购清单
                         DataPurchaseDetailBinder(strPurchaseCode);
@@ -230,7 +230,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                         ShareClass.RunSqlCommand(strUpdatePurchaseHQL);
                     }
                     //修改计划明细的使用标记
-                    string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '录入',PurchaseCode='-',IsMark = 0 where ID = {0}", wZPurchaseDetail.ID); 
+                    string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '录入',PurchaseCode='-',IsMark = 0 where ID = {0}", wZPurchaseDetail.ID);   //ChineseWord
                     ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
 
                     //重新加载采购清单

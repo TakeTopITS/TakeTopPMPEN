@@ -96,7 +96,7 @@
                                             Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="32" Width="100%"
                                             ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="±àºÅ">
+                                                <asp:TemplateColumn HeaderText="Number">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_DocID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"DocID") %>'
                                                             CssClass="inpu" />
@@ -104,7 +104,7 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>
 
-                                                <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
+                                                <asp:BoundColumn DataField="DocType" HeaderText="Type">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"

@@ -669,60 +669,60 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxRate.Text)).ToString();
 
             //当月实际发生成本（税前）人工费表-“rengongfeiheji”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:rengongfeiheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:rengongfeiheji");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:rengongfeiheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:rengongfeiheji");
             LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:rengongfeiheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:rengongfeiheji");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:rengongfeiheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:rengongfeiheji");
             LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiTaxRate.Text = "0";
 
             //当月实际发生成本（税前）人工费表-“gongzibaoxian”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:gongzibaoxian", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:gongzibaoxian");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:gongzibaoxian", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:gongzibaoxian");
             LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:gongzibaoxian", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:gongzibaoxian");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:gongzibaoxian", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:gongzibaoxian");
             LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiTaxRate.Text = "0";
 
             //当月实际发生成本（税前）人工费表-“gexiangjiangli ”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:gexiangjiangli", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:gexiangjiangli");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:gexiangjiangli", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:gexiangjiangli");
             LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:gexiangjiangli", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:gexiangjiangli");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:gexiangjiangli", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:gexiangjiangli");
             LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiTaxRate.Text = "0";
 
             //当月实际发生成本（税前）人工费表-“qitabuzhu ”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:qitabuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:qitabuzhu");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:qitabuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:qitabuzhu");
             LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:qitabuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:qitabuzhu");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:qitabuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:qitabuzhu");
             LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiTaxRate.Text = "0";
 
 
             //当月实际发生成本（税前）人工费表-“waichubuzhu ”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:waichubuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:waichubuzhu");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:waichubuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:waichubuzhu");
             LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:waichubuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:waichubuzhu");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:waichubuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:waichubuzhu");
             LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiTaxRate.Text = "0";
 
 
             //当月实际发生成本（税前）分包用费表-laowufenbao1-sq+laowufenbao2-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sq", "my:riqi", strYearMonth))).ToString();
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sq"))).ToString();
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sj", "my:riqi", strYearMonth))).ToString("f6");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sj"))).ToString("f6");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sq", "my:riqi", strYearMonth))).ToString();
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sq"))).ToString();
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sj", "my:riqi", strYearMonth))).ToString("f6");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sj"))).ToString("f6");
 
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sh", "my:riqi", strYearMonth))).ToString("f6");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sh"))).ToString("f6");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sh", "my:riqi", strYearMonth))).ToString("f6");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sh"))).ToString("f6");
             try
             {
                 LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxRate.Text = (decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxAmount.Text) / decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumAfterTaxAmount.Text)).ToString("f6");
@@ -733,369 +733,369 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             }
 
             //当月实际发生成本（税前）分包用费表-fenbaofeiheji”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fenbaofeiheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fenbaofeiheji");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fenbaoshuihouheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fenbaoshuihouheji");
-            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fenbaofei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fenbaofeiheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fenbaofeiheji");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fenbaoshuihouheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fenbaoshuihouheji");
+            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fenbaofei-slv", "my:riqi", strYearMonth);
 
-            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:diaozhuang-sj", "my:riqi", strYearMonth));
+            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:diaozhuang-sj", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount.Text = deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount.ToString("f6");
 
-            decimal deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sj"))  + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sj"));
-            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fengongsiziwan-sj"));
-            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:diaozhuang-sj")) ;
+            decimal deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sj"))  + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sj"));
+            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fengongsiziwan-sj"));
+            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:diaozhuang-sj")) ;
             LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount.Text = deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount.ToString("f6");
   
 
             //当月实际发生成本（税前）分包用费表-laowufenbao1-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）分包用费表-laowufenbao2-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）分包用费表-zhuanyefenbao-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:zhuanyefenbao-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:zhuanyefenbao-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:zhuanyefenbao-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:zhuanyefenbao-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:zhaunyefenbao-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:zhaunyefenbao-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:zhuanyefenbao-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:zhuanyefenbao-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:zhuanyefenbao-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:zhuanyefenbao-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:zhuanyefenbao-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:zhaunyefenbao-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:zhaunyefenbao-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:zhuanyefenbao-slv", "my:riqi", strYearMonth);
 
 
             //当月实际发生成本（税前）分包用费表-fbfengongsiziwan-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fbfengongsiziwan-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fbfengongsiziwan-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fengongsiziwan-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fengongsiziwan-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fengongsiziwan-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fengongsiziwan-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fbfengongsiziwan-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fbfengongsiziwan-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fengongsiziwan-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fengongsiziwan-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fengongsiziwan-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fengongsiziwan-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）分包用费表-dianyi-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:dianyi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:dianyi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:dianyi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:dianyi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:dianyi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:dianyi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:dianyi-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:dianyi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:dianyi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:dianyi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:dianyi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:dianyi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:dianyi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:dianyi-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）分包用费表-diaozhuang-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:diaozhuang-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:diaozhuang-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:diaozhuang-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:diaozhuang-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:diaozhuang-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:diaozhuang-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:diaozhuang-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:diaozhuang-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:diaozhuang-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:diaozhuang-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:diaozhuang-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:diaozhuang-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:diaozhuang-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:diaozhuang-slv", "my:riqi", strYearMonth);
 
 
             //当月实际发生成本（税前）材料费表-cailiaofei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:cailiaofei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:cailiaofei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:cailiaofei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:cailiaofei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:cailiaofei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:cailiaofei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:cailiaofei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:cailiaofei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:cailiaofei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:cailiaofei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:cailiaofei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:cailiaofei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:cailiaofei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:cailiaofei-slv", "my:riqi", strYearMonth);
 
 
             //当月实际发生成本（税前）材料费表-zhucai-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:zhucai-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:zhucai-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:zhucai-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:zhucai-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:zhucai-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:zhucai-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:zhucai-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:zhucai-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:zhucai-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:zhucai-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:zhucai-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:zhucai-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:zhucai-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:zhucai-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）材料费表-fucai-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:fucai-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:fucai-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:fucai-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:fucai-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:fucai-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:fucai-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:fucai-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:fucai-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:fucai-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:fucai-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:fucai-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:fucai-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:fucai-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:fucai-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）材料费表-pingku-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:pingku-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:pingku-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:pingku-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:pingku-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:pingku-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:pingku-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:pingku-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:pingku-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:pingku-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:pingku-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:pingku-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:pingku-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:pingku-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:pingku-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）材料费表-diqi-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:diqi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:diqi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:diqi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:diqi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:diqi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:diqi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:diqi-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:diqi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:diqi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:diqi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:diqi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:diqi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:diqi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:diqi-slv", "my:riqi", strYearMonth);
 
 
             //当月实际发生成本（税前）机械设备租赁费表-jixieshiyongfei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixieshiyongfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jixieshiyongfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jixieshiyongfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixieshiyongfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jixieshiyongfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixieshiyongfei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）机械设备租赁费表-jx-fengongsiziwan-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-fengongsiziwan-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jx-fengongsiziwan-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jx-fengongsiziwan-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-fengongsiziwan-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jx-fengongsiziwan-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）机械设备租赁费表-jx-qita-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-qita-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jx-qita-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-qita-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jx-qita-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-qita-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jx-qita-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-qita-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-qita-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jx-qita-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-qita-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jx-qita-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-qita-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jx-qita-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-qita-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）机械设备租赁费表-jixiezulinshuiqianheji”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jixiezulinshuiqianheji");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString();
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jixiezulinshuiqianheji");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumTaxAmount.Text = (decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumTaxAmount.Text) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumTaxAmount.Text) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumTaxAmount.Text)).ToString();
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jixiezulinshuihouheji");
-            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixiezulin-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jixiezulinshuihouheji");
+            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixiezulin-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）临时设施费表-linshisheshi-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "临时设施费", "my:linshisheshi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "临时设施费", "my:linshisheshi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "临时设施费", "my:linshisheshi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "临时设施费", "my:linshisheshi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "临时设施费", "my:linshisheshi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "临时设施费", "my:linshisheshi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "临时设施费", "my:linshisheshi-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "TemporaryFacilitiesFee", "my:linshisheshi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "TemporaryFacilitiesFee", "my:linshisheshi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "TemporaryFacilitiesFee", "my:linshisheshi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "TemporaryFacilitiesFee", "my:linshisheshi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "TemporaryFacilitiesFee", "my:linshisheshi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "TemporaryFacilitiesFee", "my:linshisheshi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "TemporaryFacilitiesFee", "my:linshisheshi-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）安全措施费表-anquancuoshi-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "安全措施费", "my:anquancuoshi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "安全措施费", "my:anquancuoshi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "安全措施费", "my:anquancuoshi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "安全措施费", "my:anquancuoshi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "安全措施费", "my:anquancuoshi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "安全措施费", "my:anquancuoshi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "安全措施费", "my:anquancuoshi-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SafetyMeasuresFee", "my:anquancuoshi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SafetyMeasuresFee", "my:anquancuoshi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SafetyMeasuresFee", "my:anquancuoshi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SafetyMeasuresFee", "my:anquancuoshi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SafetyMeasuresFee", "my:anquancuoshi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SafetyMeasuresFee", "my:anquancuoshi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "SafetyMeasuresFee", "my:anquancuoshi-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）水电费表-shuidianfei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "水电费", "my:shuidianfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "水电费", "my:shuidianfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "水电费", "my:shuidianfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "水电费", "my:shuidianfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "水电费", "my:shuidianfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "水电费", "my:shuidianfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "水电费", "my:shuidianfei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "UtilitiesFee", "my:shuidianfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "UtilitiesFee", "my:shuidianfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "UtilitiesFee", "my:shuidianfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "UtilitiesFee", "my:shuidianfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "UtilitiesFee", "my:shuidianfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "UtilitiesFee", "my:shuidianfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "UtilitiesFee", "my:shuidianfei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他工程费用表-qitagongchengfei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagongchengfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他工程费", "my:qitagongchengfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagongchengfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他工程费", "my:qitagongchengfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagognchengfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他工程费", "my:qitagognchengfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagongchengfei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagongchengfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherEngineeringCosts", "my:qitagongchengfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagongchengfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherEngineeringCosts", "my:qitagongchengfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagognchengfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherEngineeringCosts", "my:qitagognchengfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagongchengfei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-qitafeiheji-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitafeiheji-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitafeiheji-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitaqita-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitaqita-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitafeiheji-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitafeiheji-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitafei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitafeiheji-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitafeiheji-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitaqita-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitaqita-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitafeiheji-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitafeiheji-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitafei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-jiancefei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:jiancefei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:jiancefei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:jiancefei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:jiancefei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:jiancefei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:jiancefei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:jiancefei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:jiancefei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:jiancefei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:jiancefei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:jiancefei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:jiancefei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:jiancefei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:jiancefei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-waixiejiagongfei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:waixiejiagongfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:waixiejiagongfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:waixiejiagongfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:waixiejiagongfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:waixiejiagongfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:waixiejiagongfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:waixiejiagongfei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:waixiejiagongfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:waixiejiagongfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:waixiejiagongfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:waixiejiagongfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:waixiejiagongfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:waixiejiagongfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:waixiejiagongfei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-zulinfei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:zulinfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:zulinfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:zulinfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:zulinfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:zulinfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:zulinfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:zulinfei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:zulinfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:zulinfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:zulinfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:zulinfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:zulinfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:zulinfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:zulinfei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-laodongbaohufei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:laodongbaohufei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:laodongbaohufei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:laodongbaohufei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:laodongbaohufei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:laodongbaohufei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:laodongbaohufei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:laodongbaohufei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:laodongbaohufei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:laodongbaohufei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:laodongbaohufei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:laodongbaohufei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:laodongbaohufei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:laodongbaohufei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:laodongbaohufei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-xiulifei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:xiulifei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:xiulifei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:xiulifei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:xiulifei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:xiulifei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:xiulifei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:xiulifei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:xiulifei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:xiulifei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:xiulifei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:xiulifei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:xiulifei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:xiulifei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:xiulifei-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-bukeyujian-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bukeyujian-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:bukeyujian-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bukeyujian-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:bukeyujian-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bukeyujian-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:bukeyujian-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bukeyujian-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bukeyujian-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:bukeyujian-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bukeyujian-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:bukeyujian-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bukeyujian-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:bukeyujian-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bukeyujian-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-fakuan-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:fakuan-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:fakuan-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:fakuan-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:fakuan-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:fakuan-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:fakuan-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:fakuan-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:fakuan-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:fakuan-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:fakuan-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:fakuan-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:fakuan-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:fakuan-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:fakuan-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-bangongyongping-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bangongyongping-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:bangongyongping-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bangongyongping-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:bangongyongping-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bangongyongping-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:bangongyongping-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:bangongyongping-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bangongyongping-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:bangongyongping-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bangongyongping-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:bangongyongping-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bangongyongping-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:bangongyongping-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:bangongyongping-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）其他费表-qitaqita-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitaqita-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitaqita-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitaqita-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitaqita-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitaqita-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitaqita-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitaqita-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitaqita-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitaqita-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitaqita-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitaqita-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitaqita-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitaqita-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitaqita-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前） 动迁费表-dongqianfei-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "动迁费", "my:dongqianfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "动迁费", "my:dongqianfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "动迁费", "my:dongqianfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "动迁费", "my:dongqianfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "动迁费", "my:dongqianfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "动迁费", "my:dongqianfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "动迁费", "my:dongqianfei-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "RelocationFee", "my:dongqianfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "RelocationFee", "my:dongqianfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "RelocationFee", "my:dongqianfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "RelocationFee", "my:dongqianfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "RelocationFee", "my:dongqianfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "RelocationFee", "my:dongqianfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "RelocationFee", "my:dongqianfei-slv", "my:riqi", strYearMonth);
 
 
             //当月实际发生成本（税前） 让利成本项表-ranglichengben-sq”
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他让利项", "my:ranglichengben-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他让利项", "my:ranglichengben-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他让利项", "my:ranglichengben-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他让利项", "my:ranglichengben-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他让利项", "my:ranglichengben-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他让利项", "my:ranglichengben-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "其他让利项", "my:ranglichengben-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherConcessions", "my:ranglichengben-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherConcessions", "my:ranglichengben-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherConcessions", "my:ranglichengben-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherConcessions", "my:ranglichengben-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherConcessions", "my:ranglichengben-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherConcessions", "my:ranglichengben-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "OtherConcessions", "my:ranglichengben-slv", "my:riqi", strYearMonth);
 
             //当月实际发生成本（税前）M15+M16+M17+M18+M21+M22+M23+M24+M25+M26+M28+M29+M30+M31+M33+M34+M35+M36+M37+M38+M39+M41+M42+M43+M44+M45+M46+M47+M48+M49+M50+M51   或者  M14+M19+M27+M32+M36+M37+M38+M39+M40+M50+M51
-            decimal deSQSJCB = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fenbaofeiheji", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:cailiaofei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "临时设施费", "my:linshisheshi-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "安全措施费", "my:anquancuoshi-sq", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "水电费", "my:shuidianfei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagongchengfei-sq", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitafeiheji-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "动迁费", "my:dongqianfei-sq", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse( GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他让利项", "my:ranglichengben-sq", "my:riqi", strYearMonth));
+            decimal deSQSJCB = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fenbaofeiheji", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:cailiaofei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "TemporaryFacilitiesFee", "my:linshisheshi-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SafetyMeasuresFee", "my:anquancuoshi-sq", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "UtilitiesFee", "my:shuidianfei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagongchengfei-sq", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitafeiheji-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "RelocationFee", "my:dongqianfei-sq", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse( GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherConcessions", "my:ranglichengben-sq", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenAmount.Text = deSQSJCB.ToString();
 
           
             //“当月实际发生成本（税前）”即： M52 的每月累加
-            decimal deSQSJCBHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fenbaofeiheji"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:cailiaofei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jixiezulinshuiqianheji"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "临时设施费", "my:linshisheshi-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "安全措施费", "my:anquancuoshi-sq"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "水电费", "my:shuidianfei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他工程费", "my:qitagongchengfei-sq"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitafeiheji-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "动迁费", "my:dongqianfei-sq"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他让利项", "my:ranglichengben-sq"));
+            decimal deSQSJCBHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fenbaofeiheji"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:cailiaofei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jixiezulinshuiqianheji"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "TemporaryFacilitiesFee", "my:linshisheshi-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SafetyMeasuresFee", "my:anquancuoshi-sq"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "UtilitiesFee", "my:shuidianfei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherEngineeringCosts", "my:qitagongchengfei-sq"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitafeiheji-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "RelocationFee", "my:dongqianfei-sq"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherConcessions", "my:ranglichengben-sq"));
             LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text = deSQSJCBHJ.ToString();
 
             //“当月实际发生成本（税金）”O21+O22+O23+O24+O25+O26+O28+O29+O30+O31+O33+O34+O35+O36+O37+O38+O39+O41+O42+O43+O44+O45+O46+O47+O48+O49+O50+O51   或者  O14+O19+O27+O32+O36+O37+O38+O39+O40+O50+O51
-            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:diaozhuang-sj", "my:riqi", strYearMonth));
+            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:diaozhuang-sj", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount.Text = deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2.ToString("f2");
 
             decimal deSQSJSJ = decimal.Parse("0") + deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2;
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:cailiaofei-sj", "my:riqi", strYearMonth)) + decimal.Parse((decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString());
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "临时设施费", "my:linshisheshi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "安全措施费", "my:anquancuoshi-sj", "my:riqi", strYearMonth));
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "水电费", "my:shuidianfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagongchengfei-sj", "my:riqi", strYearMonth));
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitaqita-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "动迁费", "my:dongqianfei-sj", "my:riqi", strYearMonth));
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他让利项", "my:ranglichengben-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:cailiaofei-sj", "my:riqi", strYearMonth)) + decimal.Parse((decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString());
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "TemporaryFacilitiesFee", "my:linshisheshi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SafetyMeasuresFee", "my:anquancuoshi-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "UtilitiesFee", "my:shuidianfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagongchengfei-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitaqita-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "RelocationFee", "my:dongqianfei-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherConcessions", "my:ranglichengben-sj", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenTaxAmount.Text = deSQSJSJ.ToString();
 
             //“实际税金（当月）”即： O52 的每月累加
-            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:laowufenbao2-sj"));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fengongsiziwan-sj"));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:diaohzuang-sj"));
+            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:laowufenbao2-sj"));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fengongsiziwan-sj"));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:diaohzuang-sj"));
 
             decimal deSQSJSJHJ = decimal.Parse("0") + deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3;
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:cailiaofei-sj")) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumTaxAmount.Text);
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "临时设施费", "my:linshisheshi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "安全措施费", "my:anquancuoshi-sj"));
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "水电费", "my:shuidianfei-sj")) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他工程费", "my:qitagongchengfei-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "动迁费", "my:dongqianfei-sj"));
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他让利项", "my:ranglichengben-sj"));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:cailiaofei-sj")) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumTaxAmount.Text);
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "TemporaryFacilitiesFee", "my:linshisheshi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SafetyMeasuresFee", "my:anquancuoshi-sj"));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "UtilitiesFee", "my:shuidianfei-sj")) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherEngineeringCosts", "my:qitagongchengfei-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "RelocationFee", "my:dongqianfei-sj"));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherConcessions", "my:ranglichengben-sj"));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenSumTaxAmount.Text = deSQSJSJHJ.ToString();
 
             //“当月实际发生成本（税后）”Q15+Q16+Q17+Q18+Q21+Q22+Q23+Q24+Q25+Q26+Q28+Q29+Q30+Q31+Q33+Q34+Q35+Q36+Q37+Q38+Q39+Q41+Q42+Q43+Q44+Q45+Q46+Q47+Q48+Q49+Q50+Q51   或者  Q14+Q19+Q27+Q32+Q36+Q37+Q38+Q39+Q40+Q50+Q51
-            decimal deSQSJSH = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "项目人工费表", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "分包费", "my:fenbaoshuihouheji", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "材料费", "my:cailiaofei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "机械设备租赁费", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "临时设施费", "my:linshisheshi-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "安全措施费", "my:anquancuoshi-sh", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "水电费", "my:shuidianfei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他工程费", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他费", "my:qitafeiheji-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "动迁费", "my:dongqianfei-sh", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "其他让利项", "my:ranglichengben-sh", "my:riqi", strYearMonth));
+            decimal deSQSJSH = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProjectLaborCostSheet", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SubcontractingFee", "my:fenbaoshuihouheji", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MaterialCost", "my:cailiaofei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "MechanicalEquipmentLeaseFee", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "TemporaryFacilitiesFee", "my:linshisheshi-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SafetyMeasuresFee", "my:anquancuoshi-sh", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "UtilitiesFee", "my:shuidianfei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherEngineeringCosts", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherCosts", "my:qitafeiheji-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "RelocationFee", "my:dongqianfei-sh", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "OtherConcessions", "my:ranglichengben-sh", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenAfterTaxAmount.Text = deSQSJSH.ToString();
 
             //当月实际发生成本（税后）即： Q52 的每月累加
-            decimal deSQCBSJHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "项目人工费表", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "分包费", "my:fenbaoshuihouheji"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "材料费", "my:cailiaofei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "机械设备租赁费", "my:jixiezulinshuihouheji"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "临时设施费", "my:linshisheshi-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "安全措施费", "my:anquancuoshi-sh"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "水电费", "my:shuidianfei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他工程费", "my:qitagognchengfei-sh"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他费", "my:qitafeiheji-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "动迁费", "my:dongqianfei-sh"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "其他让利项", "my:ranglichengben-sh"));
+            decimal deSQCBSJHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProjectLaborCostSheet", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SubcontractingFee", "my:fenbaoshuihouheji"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MaterialCost", "my:cailiaofei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "MechanicalEquipmentLeaseFee", "my:jixiezulinshuihouheji"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "TemporaryFacilitiesFee", "my:linshisheshi-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "SafetyMeasuresFee", "my:anquancuoshi-sh"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "UtilitiesFee", "my:shuidianfei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherEngineeringCosts", "my:qitagognchengfei-sh"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherCosts", "my:qitafeiheji-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "RelocationFee", "my:dongqianfei-sh"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "OtherConcessions", "my:ranglichengben-sh"));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenSumAfterTaxAmount.Text = deSQCBSJHJ.ToString();
 
             //税金/税前金额 即：O52/M52
@@ -1112,7 +1112,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_XiangMuCurrentMonthShiJiFaShengProfitAmount.Text = (decimal.Parse(LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJi.Text) - decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text)).ToString();
 
             //销项税额=∑实际结算额*税率,即：来自表单“   进度款情况表”“税金”“合计”的实际总税额,即表单: 控件“xiaoxiangshuijinheji”        
-            LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "进度收款结算情况表", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProgressPaymentSettlementReport", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
 
             //进项税额：来自所有成本项表单填写的实际总税额,即:P52
             LB_XiangMuCurrentMonthShiJiFaShengProfitJingXiangTaxAmount.Text = LB_XiangMuCurrentMonthShiJiFaShengChengBenSumTaxAmount.Text;
@@ -1150,12 +1150,12 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_XiangMuTotalAfterTaxAmount.Text = (decimal.Parse(LB_XiangMuTotalBudget.Text) - decimal.Parse(LB_XiangMuTotalTaxAmount.Text)).ToString();
 
             //销项税额=∑实际结算额*税率,即：来自表单“ 进度款情况表”“税金”“合计”的实际总税额,即表单: 控件“xiaoxiangshuijinheji”
-            LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "进度收款结算情况表", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProgressPaymentSettlementReport", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
 
             try
             {
                 //综合税负=(收入类销项税总额?支出类进项税总额)/（不含税实际收入）  即：(M54-M55)/（“进度款情况表”“开票金额”“合计”即：控件“kpjeheji”的数据）
-                LB_XiangMuTotalSummaryTaxAmount.Text = ((decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text) - decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text)) / decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "进度收款结算情况表", "my:kpjeheji", "my:riqi", strYearMonth))).ToString();
+                LB_XiangMuTotalSummaryTaxAmount.Text = ((decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text) - decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text)) / decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProgressPaymentSettlementReport", "my:kpjeheji", "my:riqi", strYearMonth))).ToString();
             }
             catch
             {
@@ -1249,7 +1249,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         string strProfit = LB_XiangMuYiJiFaShengLiRenMaoLiAmount.Text;
 
         string strClearing;
-        string strdinganbiaoshangchuan = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "结算回款情况认定表", "my:dinganbiaoshangchuan", "my:riqi", strYearMonth);
+        string strdinganbiaoshangchuan = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "SettlementRecoveryReport", "my:dinganbiaoshangchuan", "my:riqi", strYearMonth);
         if (strdinganbiaoshangchuan.Trim() == "0")
         {
             strClearing = "10%";
@@ -1259,8 +1259,8 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             strClearing = "0%";
         }
 
-        string strReturnMoney = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "进度收款结算情况表", "my:shoukuanleijidefenzhi", "my:riqi", strYearMonth);
-        string strQHSE = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "专业管理考核审批表", "my:jiajianfenzhi", "my:riqi", strYearMonth);
+        string strReturnMoney = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProgressPaymentSettlementReport", "my:shoukuanleijidefenzhi", "my:riqi", strYearMonth);
+        string strQHSE = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ProfessionalManagementAssessmentApprovalForm", "my:jiajianfenzhi", "my:riqi", strYearMonth);
         string strProgress = (decimal.Parse(LB_XiangMuYiJiFaShengJingDuAmount.Text) * 80 / 100).ToString();
 
         strHQL = "Insert Into T_ProjectDetailedListOfMonthlyBonusAmount(ProjectID,YearNumber,MonthNumber,Profit,Clearing,ReturnMoney,QHSE,Progress)";
@@ -1299,7 +1299,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         string strCurrentMonthTotalCost = LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAfterTaxAmount.Text;
         string strCumulativeActualTaxCost = LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text;
         string strCumulativeActualAfterTaxCost = LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenSumAfterTaxAmount.Text;
-        string strKPJEHeJi = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "进度收款结算情况表", "my:kpjeheji");
+        string strKPJEHeJi = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ProgressPaymentSettlementReport", "my:kpjeheji");
 
         strHQL = "Insert Into T_ProjectCostIncomeAnalysisGeneralChart(ProjectID,YearNumber,MonthNumber,CurrentMonthTotalCost,CumulativeActualTaxCost,CumulativeActualAfterTaxCost,AccumulationSettlement)";
         strHQL += " values(" + strProjectID + "," + strYearNumber + "," + strMonthNumber + "," + strCurrentMonthTotalCost + ",'" + strCumulativeActualTaxCost + "'," + strCumulativeActualAfterTaxCost + "," + strKPJEHeJi + ")";

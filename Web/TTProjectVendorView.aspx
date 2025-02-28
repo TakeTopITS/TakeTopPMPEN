@@ -82,13 +82,13 @@
                                                 OnItemCommand="DataGrid2_ItemCommand" Width="100%" PageSize="5" GridLines="None"
                                                 CellPadding="4" ForeColor="#333333">
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="´úÂë">
+                                                    <asp:TemplateColumn HeaderText="Code">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_VendorCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"VendorCode") %>' CssClass="inpu" />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="VendorName" HeaderText="Ãû³Æ">
+                                                    <asp:BoundColumn DataField="VendorName" HeaderText="Name">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                     </asp:BoundColumn>
 

@@ -159,20 +159,20 @@
                                                         <asp:BoundColumn DataField="CreateLogTime" HeaderText="更新时间" DataFormatString="{0:yyyy/MM/dd HH:mm:ss}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="Name" HeaderText="计划内容">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="LeaderCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                            DataTextField="Leader" HeaderText="姓名" Target="_blank">
+                                                            DataTextField="Leader" HeaderText="Name" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="Start_Date" HeaderText="开始时间" DataFormatString="{0:yyyy/MM/dd}">
+                                                        <asp:BoundColumn DataField="Start_Date" HeaderText="StartTime" DataFormatString="{0:yyyy/MM/dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="End_Date" HeaderText="结束时间" DataFormatString="{0:yyyy/MM/dd}">
+                                                        <asp:BoundColumn DataField="End_Date" HeaderText="EndTime" DataFormatString="{0:yyyy/MM/dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="MakeDate" HeaderText="制定时间" DataFormatString="{0:yyyy/MM/dd}">
@@ -184,10 +184,10 @@
                                                         <asp:BoundColumn DataField="Budget" HeaderText="Budget">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DefaultCost" HeaderText="标准成本">
+                                                        <asp:BoundColumn DataField="DefaultCost" HeaderText="StandardCost">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DefaultSchedule" HeaderText="标准进度">
+                                                        <asp:BoundColumn DataField="DefaultSchedule" HeaderText="StandardProgress">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn HeaderText="实际进度">
@@ -196,7 +196,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:TemplateColumn HeaderText="状态">
+                                                        <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

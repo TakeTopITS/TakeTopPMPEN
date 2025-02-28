@@ -193,7 +193,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         {
             string strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = "Select ID '编号',UserCode '用户代码',UserName '用户姓名',CreaterName '操作人',CreateTime '操作时间',Remark '操作备注' from T_CustomerOperationRecord where " + 
+            strHQL = "Select ID 'Number',UserCode 'UserCode',UserName 'UserName',CreaterName 'Operator',CreateTime 'OperationTime',Remark 'OperationRemark' from T_CustomerOperationRecord where " +  //ChineseWord //ChineseWord
                 "UserCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         
             if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -216,7 +216,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = "Select ID '编号',UserCode '用户代码',UserName '用户姓名',CreaterName '操作人',CreateTime '操作时间',Remark '操作备注' from T_CustomerOperationRecord where " + 
+            strHQL = "Select ID 'Number',UserCode 'UserCode',UserName 'UserName',CreaterName 'Operator',CreateTime 'OperationTime',Remark 'OperationRemark' from T_CustomerOperationRecord where " +  //ChineseWord //ChineseWord
                 "UserCode in (Select UserCode From T_ProjectMember Where DepartCode = '" + strDepartCode + "') Order by ID ASC ";
 
         }

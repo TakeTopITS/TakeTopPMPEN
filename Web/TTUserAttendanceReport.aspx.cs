@@ -228,7 +228,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
                        
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                       员工考勤报表 
+                       员工考勤报表   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
                       
@@ -249,36 +249,36 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
                 </tr>
                 <tr class='itemStyle'>
                     <td class='itemBorder' align='center' style='width:4%;'> ID</td>
-                    <td class='itemBorder' align='center' style='width:8%;'>姓名</td> 
-                    <td class='itemBorder' align='center' style='width:6%;'>出勤日期</td> 
+                    <td class='itemBorder' align='center' style='width:8%;'>姓名</td>   //ChineseWord
+                    <td class='itemBorder' align='center' style='width:6%;'>出勤日期</td>   //ChineseWord
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        上午上班时间 
+                        上午上班时间   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        上午下班时间 
+                        上午下班时间   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        下午上班时间 
+                        下午上班时间   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        下午下班时间 
+                        下午下班时间   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        晚班上班时间 
+                        晚班上班时间   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        晚班下班时间 
+                        晚班下班时间   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        午夜上班时间 
+                        午夜上班时间   //ChineseWord
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        午夜下班时间 
+                        午夜下班时间   //ChineseWord
                     </td>
-                    <td class='itemBorder' align='center' style='width:6%;'>允许最大距离 (米)</td> 
-                    <td class='itemBorder' align='center' style='width:4%;'>迟到 (分)</td> 
-                    <td class='itemBorder' align='center' style='width:4%;'>早退 (分)</td> 
-                    <td class='itemBorder' align='center'>位置</td> 
+                    <td class='itemBorder' align='center' style='width:6%;'>允许最大距离 (米)</td>   //ChineseWord
+                    <td class='itemBorder' align='center' style='width:4%;'>迟到 (分)</td>   //ChineseWord
+                    <td class='itemBorder' align='center' style='width:4%;'>早退 (分)</td>   //ChineseWord
+                    <td class='itemBorder' align='center'>位置</td>   //ChineseWord
                 </tr>
             </table>";
         try

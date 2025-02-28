@@ -159,7 +159,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应方式不能为空，请补充！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应方式不能为空，请补充！');", true);   //ChineseWord
                 return;
             }
 
@@ -173,7 +173,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
                 }
                 if (IsDaiYu)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
                     return;
                 }
             }
@@ -413,7 +413,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true);   //ChineseWord
                 return;
             }
 
@@ -522,7 +522,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
 
                 HF_Supplier1.Value = strSupplier11;
                 TXT_Supplier1.Text = strSupplierName11;
@@ -573,7 +573,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
 
                 HF_Supplier2.Value = strSupplier22;
                 TXT_Supplier2.Text = strSupplierName22;
@@ -625,7 +625,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
 
                 HF_Supplier3.Value = strSupplier33;
                 TXT_Supplier3.Text = strSupplierName33;

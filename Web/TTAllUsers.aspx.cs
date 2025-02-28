@@ -275,9 +275,9 @@ public partial class TTAllUsers : System.Web.UI.Page
 
             strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,Age 年龄,DepartCode 部门代码,DepartName 部门,ChildDepartment 子部门,
                 Duty 职责,OfficePhone 办公电话,MobilePhone 移动电话,EMail EMail,WorkScope 工作范围,JoinDate 加入日期,Status 状态,
-                RefUserCode 参考工号,IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then '已开通'
-								 else '未开通' end) 权限 
-                From T_ProjectMember Where DepartCode in {0}", strDepartString);  
+                RefUserCode 参考工号,IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
+								 else 'NotEnabled' end) 权限 
+                From T_ProjectMember Where DepartCode in {0}", strDepartString);   //ChineseWord //ChineseWord
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -297,9 +297,9 @@ public partial class TTAllUsers : System.Web.UI.Page
         {
             strHQL = string.Format(@"Select UserCode 代码,UserName 姓名, Gender 性别,Age 年龄, DepartCode 部门代码,DepartName 部门,ChildDepartment 子部门,
                   Duty 职责,OfficePhone 办公电话, MobilePhone 移动电话,EMail EMail, WorkScope 工作范围,JoinDate 加入日期, Status 状态,
-                RefUserCode 参考工号, IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then '已开通'
-                                 else '未开通' end) 权限
-                From T_ProjectMember Where DepartCode = '{0}') Order by SortNumber ASC ", strDepartCode);  
+                RefUserCode 参考工号, IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
+                                 else 'NotEnabled' end) 权限
+                From T_ProjectMember Where DepartCode = '{0}') Order by SortNumber ASC ", strDepartCode);   //ChineseWord //ChineseWord
         }
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);
@@ -313,11 +313,11 @@ public partial class TTAllUsers : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "已开通"; 
+            return "Enabled";  //ChineseWord //ChineseWord
         }
         else
         {
-            return "未开通"; 
+            return "NotEnabled";  //ChineseWord //ChineseWord
         }
     }
 }

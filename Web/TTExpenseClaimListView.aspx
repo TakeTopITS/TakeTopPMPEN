@@ -54,19 +54,19 @@
             ShowHeader="false" Height="30px" Width="850">
             
             <Columns>
-                <asp:BoundColumn DataField="ID" HeaderText="序号">
+                <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="RelatedExpenseID" HeaderText="费用ID">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="Account" HeaderText="科目">
+                <asp:BoundColumn DataField="Account" HeaderText="Subject">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="Description" HeaderText="描述">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="Amount" HeaderText="金额">
+                <asp:BoundColumn DataField="Amount" HeaderText="Amount">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="RegisterDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="登记时间">

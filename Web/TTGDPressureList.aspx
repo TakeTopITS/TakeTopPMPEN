@@ -213,7 +213,7 @@
                                                             <asp:BoundColumn DataField="PressureTime" HeaderText="ÊÔÑ¹ÈÕÆÚ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Remarks" HeaderText="±¸×¢">
+                                                            <asp:BoundColumn DataField="Remarks" HeaderText="Remark">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

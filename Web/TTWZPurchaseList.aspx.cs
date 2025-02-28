@@ -582,12 +582,12 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提交成功！');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提交成功！');", true);   //ChineseWord
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不为录入，或者使用不为-1，不能提交！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不为录入，或者使用不为-1，不能提交！');", true);   //ChineseWord
                 return;
             }
         }
@@ -622,11 +622,11 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
                 //重新加载列表
                 DataBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提交退回成功！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提交退回成功！');", true);   //ChineseWord
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不为提交，不能取消提交退回！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不为提交，不能取消提交退回！');", true);   //ChineseWord
                 return;
             }
         }
@@ -678,7 +678,7 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
                             left join T_WZPurchaseDetail p on c.PurchaseDetailID = p.ID
                             where p.PurchaseCode = '{0}'
                             )
-                            and Progress = '核销'", wZPurchase.PurchaseCode); 
+                            and Progress = '核销'", wZPurchase.PurchaseCode);   //ChineseWord
                 DataTable dtCompact = ShareClass.GetDataSetFromSql(strCompactSQL, "Compact").Tables[0];
                 string strCompactResult = string.Empty;
                 if (dtCompact != null && dtCompact.Rows.Count > 0)
@@ -692,7 +692,7 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
                 if (!string.IsNullOrEmpty(strCompactResult))
                 {
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "AlertCompact('本采购文件下有尚未核销的合同，不能核销<br />合同编号：<br />" + strCompactResult + "');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "AlertCompact('本采购文件下有尚未核销的合同，不能核销<br />合同编号：<br />" + strCompactResult + "');", true);   //ChineseWord
                     return;
                 }
 
@@ -742,11 +742,11 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
                             left join T_WZPurchaseDetail p on c.ID = p.PlanDetailID
                             where p.PurchaseCode = '{0}'
                             )
-                            and Progress = '核销'", wZPurchase.PurchaseCode); 
+                            and Progress = '核销'", wZPurchase.PurchaseCode);   //ChineseWord
                 DataTable dtPlan = ShareClass.GetDataSetFromSql(strPlanSQL, "Plan").Tables[0];
                 if (dtPlan != null && dtPlan.Rows.Count > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "AlertCompact('该采购文件涉及的领料计划已核销，不能退回');", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "AlertCompact('该采购文件涉及的领料计划已核销，不能退回');", true);   //ChineseWord
                     return;
                 }
 
@@ -826,7 +826,7 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提交成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提交成功！');", true);   //ChineseWord
         }
 
 
@@ -857,7 +857,7 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
                             left join T_WZPurchaseDetail p on c.PurchaseDetailID = p.ID
                             where p.PurchaseCode = '{0}'
                             )
-                            and Progress = '核销'", wZPurchase.PurchaseCode); 
+                            and Progress = '核销'", wZPurchase.PurchaseCode);   //ChineseWord
             DataTable dtCompact = ShareClass.GetDataSetFromSql(strCompactSQL, "Compact").Tables[0];
             string strCompactResult = string.Empty;
             if (dtCompact != null && dtCompact.Rows.Count > 0)
@@ -871,7 +871,7 @@ public partial class TTWZPurchaseList : System.Web.UI.Page
             if (!string.IsNullOrEmpty(strCompactResult))
             {
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "AlertCompact('本采购文件下有尚未核销的合同，不能核销<br />合同编号：<br />" + strCompactResult + "');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "AlertCompact('本采购文件下有尚未核销的合同，不能核销<br />合同编号：<br />" + strCompactResult + "');", true);   //ChineseWord
                 return;
             }
 

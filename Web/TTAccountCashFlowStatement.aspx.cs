@@ -172,7 +172,7 @@ public partial class TTAccountCashFlowStatement : System.Web.UI.Page
     {
         if (strFinancialID.Trim() != "" && strIntervalID.Trim() != "")
         {
-            string strHQL = "select F.AccountType '科目类型',D.AccountName '会计科目',D.BeforeMoney '期初金额',D.HappenMoney '发生金额',D.BeforeMoney+D.HappenMoney '期末余额',E.CurrencyType '币种' from " + 
+            string strHQL = "select F.AccountType 'SubjectType',D.AccountName 'AccountingSubjects',D.BeforeMoney 'BeginningBalance',D.HappenMoney 'AmountOccurred',D.BeforeMoney+D.HappenMoney 'EndingBalance',E.CurrencyType 'Currency' from " +  //ChineseWord //ChineseWord
                 "(select A.*,COALESCE(B.BeforeMoney,0) BeforeMoney,COALESCE(C.HappenMoney,0) HappenMoney from (select distinct AccountCode,AccountName,FinancialCode from " +
                 "T_AccountGeneralLedger where FinancialCode='" + strFinancialID + "' and IntervalCode='" + strIntervalID + "') A left join (select AccountCode,AccountName," +
                 "SUM(TotalMoney) BeforeMoney from T_AccountGeneralLedger where FinancialCode='" + strFinancialID + "' and IntervalCode='" + strIntervalID + "' and " +

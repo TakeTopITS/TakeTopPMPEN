@@ -230,13 +230,13 @@
                                                                                             <asp:BoundColumn DataField="LoginString" HeaderText="µÇÂ¼´®">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="23%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³ÐòºÅ">
+                                                                                            <asp:BoundColumn DataField="SortNumber" HeaderText="SerialNumber">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                             </asp:BoundColumn>
                                                                                         </Columns>

@@ -96,29 +96,29 @@ public partial class TakeTopLRExLeft : System.Web.UI.Page
         {
             if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("GuanKongZhongXin").ToString().Trim(), "SYSTEM", strUserType) == false)
             {
-                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('管控中心','ADMIN','YES','SYSTEM','" + strUserType + "')"; 
+                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('ControlCenter','ADMIN','YES','SYSTEM','" + strUserType + "')";  //ChineseWord //ChineseWord
                 ShareClass.RunSqlCommand(strHQL);
             }
             else
             {
-                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = '管控中心' and UserCode = 'ADMIN'"; 
+                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = 'ControlCenter' and UserCode = 'ADMIN'";  //ChineseWord //ChineseWord
                 ShareClass.RunSqlCommand(strHQL);
             }
 
             if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("JiTongMoZuSheDing").ToString().Trim(), "SYSTEM", strUserType) == false)
             {
-                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('系统模组设定','ADMIN','YES','SYSTEM','" + strUserType + "')"; 
+                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('SystemModuleSettings','ADMIN','YES','SYSTEM','" + strUserType + "')";  //ChineseWord //ChineseWord
                 ShareClass.RunSqlCommand(strHQL);
             }
             else
             {
-                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = '系统模组设定' and UserCode = 'ADMIN'"; 
+                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = 'SystemModuleSettings' and UserCode = 'ADMIN'";  //ChineseWord //ChineseWord
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = '管控中心'"; 
+            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = 'ControlCenter'";  //ChineseWord //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
-            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = '系统模组设定'"; 
+            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = 'SystemModuleSettings'";  //ChineseWord //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
         }
 

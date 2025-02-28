@@ -154,7 +154,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <asp:Label ID="Label53" runat="server" Text="项目经理"></asp:Label>：</td>
+                                                        <asp:Label ID="Label53" runat="server" Text="ProjectManager"></asp:Label>：</td>
                                                     <td align="left" colspan="2">
                                                         <table>
                                                             <tr>
@@ -316,7 +316,7 @@
                                                         <asp:TextBox ID="TB_AgencyCost" runat="server" CssClass="shuru"></asp:TextBox>
                                                     </td>
                                                     <td align="left" colspan="2">
-                                                        <asp:Label ID="Label52" runat="server" Text="状态"></asp:Label>：
+                                                        <asp:Label ID="Label52" runat="server" Text="Status"></asp:Label>：
                                                             <asp:DropDownList ID="DL_TenderStatus" runat="server" Style="z-index: 1">
                                                                 <asp:ListItem Value="New"></asp:ListItem>
                                                                 <asp:ListItem Value="Bidding"></asp:ListItem>
@@ -362,7 +362,7 @@
                                     <tr>
                                         <td style="border-right: solid 1px #D8D8D8;" valign="top">
                                             <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                                <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="费用" TabIndex="0">
+                                                <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="Expense" TabIndex="0">
                                                     <HeaderTemplate>
                                                         <asp:Label ID="Label45" runat="server" Text="投标费用明细"></asp:Label>
                                                     </HeaderTemplate>
@@ -413,7 +413,7 @@
                                                                                 <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" OnItemCommand="DataGrid3_ItemCommand" ShowHeader="False" Width="100%">
                                                                                     <Columns>
 
-                                                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                         </asp:ButtonColumn>
                                                                                         <asp:TemplateColumn HeaderText="Delete">
@@ -430,7 +430,7 @@
                                                                                         <asp:BoundColumn DataField="ExpenseName" HeaderText="ExpenseName">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="50%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="expenseamount" HeaderText="金额">
+                                                                                        <asp:BoundColumn DataField="expenseamount" HeaderText="Amount">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                         </asp:BoundColumn>
                                                                                         <%--   <asp:BoundColumn DataField="Remarks" HeaderText="说明">
@@ -513,7 +513,7 @@
                                                                                 <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" OnItemCommand="DataGrid2_ItemCommand" ShowHeader="False" Width="100%">
                                                                                     <Columns>
 
-                                                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
+                                                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                         </asp:ButtonColumn>
 

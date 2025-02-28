@@ -352,7 +352,7 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:TemplateColumn>
 
-                                                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="允许最大距离">
+                                                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="MaximumAllowedDistance">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="LateMinute" HeaderText="迟到分钟">

@@ -294,7 +294,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                         //计划明细<已供数量>=移交明细<实领数量>
                         //计划明细<缺口数量>=计划明细<计划数量>-计划明细<已供数量>
                         //计划明细<缺口换算>=计划明细<缺口数量>/物资代码<换算系数>
-                        //计划明细<进度> = '发料'
+                        //计划明细<进度> = 'Material Issuance'
                         WZPickingPlanDetailBLL wZPickingPlanDetailBLL = new WZPickingPlanDetailBLL();
                         string strWZPickingPlanDetailHQL = string.Format(@"from WZPickingPlanDetail as wZPickingPlanDetail where wZPickingPlanDetail.ID = {0}", wZTurnDetail.PlanCode);
                         IList listWZPickingPlanDetail = wZPickingPlanDetailBLL.GetAllWZPickingPlanDetails(strWZPickingPlanDetailHQL);
@@ -323,7 +323,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                             wZPickingPlanDetailBLL.UpdateWZPickingPlanDetail(wZPickingPlanDetail, int.Parse(wZTurnDetail.PlanCode));
 
                             //string strHQL;
-                            //strHQL = "Update T_WZPickingPlan Set Progress = '发料' Where PlanCode = " + "'" + wZPickingPlanDetail.PlanCode + "'";
+                            //strHQL = "Update T_WZPickingPlan Set Progress = 'Material Issuance' Where PlanCode = " + "'" + wZPickingPlanDetail.PlanCode + "'";
                             //ShareClass.RunSqlCommand(strHQL);
 
                             //重新加载移交单明细列表
@@ -705,14 +705,14 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             strID = HF_ID.Value;
 
 
-            //strHQL = "Update T_WZTurnDetail Set Progress = '签收' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
+            //strHQL = "Update T_WZTurnDetail Set Progress = 'Sign for Receipt' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
             //ShareClass.RunSqlCommand(strHQL);
 
-            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> '签收'";
+            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> 'Sign for Receipt'";
             //DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             //if (ds.Tables[0].Rows.Count == 0)
             //{
-            strHQL = "Update T_WZTurn Set Progress = '签收' Where TurnCode = " + "'" + strTurnCode + "'"; 
+            strHQL = "Update T_WZTurn Set Progress = 'Sign for Receipt' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
 
             strHQL = "Update T_WZTurn Set SingTime = " + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "'" + " Where TurnCode = " + "'" + strTurnCode + "'";
@@ -728,7 +728,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('签收失败，请检查！')" + ex.Message.ToString(), true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('签收失败，请检查！')" + ex.Message.ToString(), true);   //ChineseWord
         }
     }
 
@@ -845,10 +845,10 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             //DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             //if (ds.Tables[0].Rows.Count == 0)
             //{
-            strHQL = "Update T_WZTurn Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'"; 
+            strHQL = "Update T_WZTurn Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WZTurnDetail Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'"; 
+            strHQL = "Update T_WZTurnDetail Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
 
             //}
@@ -892,7 +892,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             strHQL = "Update T_WZTurn Set Progress = 'Completed' Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WZTurnDetail Set Progress = '领料' Where TurnCode = " + "'" + strTurnCode + "'"; 
+            strHQL = "Update T_WZTurnDetail Set Progress = 'Material Requisition' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
             ShareClass.RunSqlCommand(strHQL);
 
             //}

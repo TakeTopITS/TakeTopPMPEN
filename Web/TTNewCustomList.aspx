@@ -53,7 +53,7 @@
                                                     <asp:BoundColumn DataField="CustomModuleName" HeaderText="客户模组">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TemName" HeaderText="流程名称">

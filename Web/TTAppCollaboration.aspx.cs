@@ -33,7 +33,7 @@ public partial class TTAppCollaboration : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Ð­×÷", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Collaboration", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");

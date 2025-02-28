@@ -292,7 +292,7 @@
                                                                             ShowHeader="false" Height="1px"
                                                                             Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">

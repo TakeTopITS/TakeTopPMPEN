@@ -434,7 +434,7 @@
                                                                                 <asp:BoundColumn DataField="ParentModule" HeaderText="¸¸Ä£¿é">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ModuleType" HeaderText="ÀàÐÍ">
+                                                                                <asp:BoundColumn DataField="ModuleType" HeaderText="Type">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn HeaderText="Ë³Ðò">

@@ -2450,7 +2450,7 @@
                                                         <ItemStyle CssClass="itemStyle" HorizontalAlign="Center" />
                                                         <Columns>
 
-                                                            <asp:BoundColumn DataField="MonthNumber" HeaderText="月份">
+                                                            <asp:BoundColumn DataField="MonthNumber" HeaderText="Month">
                                                                 <ItemStyle CssClass="itemBorder" BorderWidth="1" HorizontalAlign="center" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Profit" HeaderText="利润">
@@ -2465,7 +2465,7 @@
                                                             <asp:BoundColumn DataField="QHSE" HeaderText="QHSE 打分">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
 
@@ -2549,7 +2549,7 @@
                                                         <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                         <ItemStyle CssClass="itemStyle" HorizontalAlign="Center" />
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="MonthNumber" HeaderText="月份">
+                                                            <asp:BoundColumn DataField="MonthNumber" HeaderText="Month">
                                                                 <ItemStyle CssClass="itemBorder" BorderWidth="1" HorizontalAlign="center" Width="20%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="CurrentMonthTotalCost" HeaderText="目标成本（二次）">

@@ -150,11 +150,11 @@
                                                                 ShowHeader="False" OnItemCommand="DataGrid2_ItemCommand" Width="100%" CellPadding="4"
                                                                 ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="±àºÅ">
+                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="Number">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTProRelatedDefectView.aspx?DefectID={0}"
-                                                                        DataTextField="DefectName" HeaderText="Ãû³Æ" Target="_blank">
+                                                                        DataTextField="DefectName" HeaderText="Name" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:BoundColumn DataField="DefectFinishedDate" HeaderText="È±ÏÝÈÕÆÚ" DataFormatString="{0:yyyy/MM/dd}">
@@ -164,10 +164,10 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                        DataTextField="ApplicantName" HeaderText="ÉêÇëÈË" Target="_blank">
+                                                                        DataTextField="ApplicantName" HeaderText="Applicant" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+                                                                    <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>

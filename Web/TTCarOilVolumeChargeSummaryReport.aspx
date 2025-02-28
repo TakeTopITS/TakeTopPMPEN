@@ -148,7 +148,7 @@
                                                 ShowHeader="false" Height="1px" 
                                                 Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="CarCode" HeaderText="车号">
+                                                    <asp:BoundColumn DataField="CarCode" HeaderText="VehicleNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="DepartDay" HeaderText="出车日期">
@@ -172,7 +172,7 @@
                                                     <asp:BoundColumn DataField="AverageEconomy" HeaderText="平均油耗">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="备注">
+                                                    <asp:TemplateColumn HeaderText="Remark">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         <ItemTemplate>
                                                         </ItemTemplate>

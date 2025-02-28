@@ -536,11 +536,11 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
         strHQL = "from Document as document where ";
         strHQL += " ((document.RelatedType = 'Defect' and document.RelatedID = " + strDefectID;
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
-        strHQL += " or ( document.Visible = '全体'))) "; 
-        strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Defect' and meeting.RelatedID =" + strDefectID + "))"; 
+        strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
+        strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Defect' and meeting.RelatedID =" + strDefectID + "))";  
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '会议'))))"; 
+        strHQL += " or ( document.Visible = 'Meeting'))))";  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

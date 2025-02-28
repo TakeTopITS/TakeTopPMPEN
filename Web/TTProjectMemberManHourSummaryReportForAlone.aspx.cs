@@ -73,13 +73,13 @@ public partial class TTProjectMemberManHourSummaryReportForAlone : System.Web.UI
 
         strOpretorName = "%" + TB_MemberName.Text.Trim() + "%";
 
-        strHQL = @"Select DepartCode as '部门', 
-                   UserName as '姓名', 
-                   DepartCode as '部门代码', 
-                   DepartName as '部门名称', 
-                   ProjectID as '项目ID', 
-                   Sum(ManHour) as '工时', 
-                   sum(ConfirmManHour) as '确认工时' 
+        strHQL = @"Select DepartCode as 'Department',  
+                   UserName as 'Name',   //ChineseWord
+                   DepartCode as 'DepartmentCode',   //ChineseWord
+                   DepartName as 'DepartmentName',   //ChineseWord
+                   ProjectID as '项目ID',   //ChineseWord
+                   Sum(ManHour) as 'LaborHours',   //ChineseWord
+                   sum(ConfirmManHour) as 'ConfirmedLaborHours'   //ChineseWord
                    From V_ProjectMemberManHourSummary";
 
         strHQL += " Where ProjectID = " + strProjectID + " and UserName Like " + "'" + strOpretorName + "'"; ;
@@ -89,7 +89,7 @@ public partial class TTProjectMemberManHourSummaryReportForAlone : System.Web.UI
 
         Export3Excel(dtProject, LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + strProjectName + LanguageHandle.GetWord("ChengYuanGongShiHuiZongBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

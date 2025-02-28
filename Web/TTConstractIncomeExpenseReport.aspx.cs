@@ -135,7 +135,7 @@ public partial class TTConstractIncomeExpenseReport : System.Web.UI.Page
         strConstractCode = "%" + TB_ConstractCode.Text.Trim() + "%";
         strPartA = "%" + TB_PartA.Text.Trim() + "%";
 
-        strHQL = "Select to_char(SignDate,'yyyy/mm/dd') 签订日期,PartA 甲方,ConstractCode 合同代码,ReceivablesAmount 应收总额,TotalReceiverAmount 实收总额,TotalRecInvoiceAmount 开发票总额,PayableAmount 应付总额,TotalOutOfPocketAmount 实付总额,TotalOutOfPocketAmountHOme 实付总额本币,TotalPayInvoiceAmount 收发票总额,TotalEntryTax 关税,TotalAddedValueTax 增值税,Profits 参考净利润,Currency 合同币别 from   V_ConstractIncomeExpenseReport Where"; 
+        strHQL = "Select to_char(SignDate,'yyyy/mm/dd') 签订日期,PartA 甲方,ConstractCode 合同代码,ReceivablesAmount 应收总额,TotalReceiverAmount 实收总额,TotalRecInvoiceAmount 开发票总额,PayableAmount 应付总额,TotalOutOfPocketAmount 实付总额,TotalOutOfPocketAmountHOme 实付总额本币,TotalPayInvoiceAmount 收发票总额,TotalEntryTax 关税,TotalAddedValueTax 增值税,Profits 参考净利润,Currency 合同币别 from   V_ConstractIncomeExpenseReport Where";   //ChineseWord
         strHQL += " (ConstractCode in (Select ConstractCode From T_Constract Where DepartCode in " + strDepartString + ")";
         strHQL += " Or ConstractCode in (Select ConstractCode From T_ConstractRelatedUser Where UserCode like  " + "'" + strLikeUserCode + "'" + "))";
         strHQL += " and PartA Like " + "'" + strPartA + "'";

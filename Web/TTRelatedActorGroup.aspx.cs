@@ -87,7 +87,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
                 TB_ActorGroup.Text = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
             }
 
-            if (strRelatedType == "会议") 
+            if (strRelatedType == "Meeting")  
             {
                 TB_ActorGroup.Text = LanguageHandle.GetWord("HuiYi").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
             }
@@ -644,7 +644,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
         IList lst;
 
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and (actorGroup.BelongDepartCode in " + strDepartString;
         strHQL += " Or actorGroup.MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and actorGroup.LangCode = " + "'" + strLangCode + "'";

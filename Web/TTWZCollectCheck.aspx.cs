@@ -49,7 +49,7 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('²Ä¼ì','¿ªÆ±') 
-                            ", strUserCode); 
+                            ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
@@ -248,7 +248,7 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('²Ä¼ì','¿ªÆ±') 
-                            ", strUserCode); 
+                            ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
@@ -293,7 +293,7 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('²Ä¼ì','¿ªÆ±') 
-                            ", strUserCode); 
+                            ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
@@ -338,7 +338,7 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('²Ä¼ì','¿ªÆ±') 
-                            ", strUserCode); 
+                            ", strUserCode);   //ChineseWord
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())

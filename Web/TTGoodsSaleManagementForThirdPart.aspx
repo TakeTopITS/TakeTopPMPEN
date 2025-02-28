@@ -148,12 +148,12 @@
                                         ShowHeader="false"
                                         Width="100%">
                                         <Columns>
-                                            <asp:BoundColumn DataField="SOID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="SOID" HeaderText="Number">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="SOID" DataNavigateUrlFormatString="TTGoodsSaleOrderView.aspx?SOID={0}"
-                                                DataTextField="SOName" HeaderText="名称" Target="_blank">
+                                                DataTextField="SOName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="31%" />
                                             </asp:HyperLinkColumn>
 
@@ -161,7 +161,7 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
-                                                DataTextField="CustomerName" HeaderText="名称" Target="_blank">
+                                                DataTextField="CustomerName" HeaderText="Name" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:HyperLinkColumn>
                                             <asp:BoundColumn DataField="SaleTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="销售时间">
@@ -169,15 +169,15 @@
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="SalesCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="SalesName" HeaderText="业务员" Target="_blank">
+                                                DataTextField="SalesName" HeaderText="Salesperson" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:HyperLinkColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="SOID" DataNavigateUrlFormatString="TTMakeCollaboration.aspx?RelatedType=GoodsSO&RelatedID={0}"
-                                                HeaderText="协作" Text="<%$ Resources:lang,XieZuo%>" Target="_blank">
+                                                HeaderText="Collaboration" Text="<%$ Resources:lang,XieZuo%>" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

@@ -63,7 +63,7 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
             }
 
             LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
-            //lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + "小时；合计：" + strDayNum + "天";
+            //lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + "小时；合计：" + strDayNum + "Days";
             lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
 
             LB_Sql.Text = strHQL;
@@ -235,8 +235,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         {
             string strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," + 
-                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm Where DepartCode in" + strDepartString + " "; 
+            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +  //ChineseWord //ChineseWord
+                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm Where DepartCode in" + strDepartString + " ";  //ChineseWord //ChineseWord
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -266,8 +266,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," + 
-                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm Where DepartCode = '" + strDepartCode + "' Order by ID DESC "; 
+            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +  //ChineseWord //ChineseWord
+                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm Where DepartCode = '" + strDepartCode + "' Order by ID DESC ";  //ChineseWord //ChineseWord
 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LeaveApplyForm");

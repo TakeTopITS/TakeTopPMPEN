@@ -133,7 +133,7 @@
                                             <asp:BoundColumn DataField="PDID" HeaderText="PDID">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="PDName" HeaderText="名称">
+                                            <asp:BoundColumn DataField="PDName" HeaderText="Name">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="RouteName" HeaderText="工艺">
@@ -142,10 +142,10 @@
                                             <asp:BoundColumn DataField="ProductionDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="生产时间">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="BelongDepartName" HeaderText="部门">
+                                            <asp:BoundColumn DataField="BelongDepartName" HeaderText="Department">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>
@@ -191,8 +191,8 @@
                                         <asp:TextBox ID="TB_PaymentMethod" runat="server" Width="100px"></asp:TextBox>
                                         <asp:DropDownList ID="DL_PaymentMethod" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_PaymentMethod_SelectedIndexChanged">
                                             <asp:ListItem Value="">---Select=-- </asp:ListItem>
-                                            <asp:ListItem Value="支票" Text="<%$ Resources:lang,ZhiPiao%>" />
-                                            <asp:ListItem Value="转账" Text="<%$ Resources:lang,ZhuanZhang%>" />
+                                            <asp:ListItem Value="Check" Text="<%$ Resources:lang,ZhiPiao%>" />
+                                            <asp:ListItem Value="Transfer" Text="<%$ Resources:lang,ZhuanZhang%>" />
                                         </asp:DropDownList>
                                     </td>
 

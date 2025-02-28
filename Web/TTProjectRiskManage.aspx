@@ -105,14 +105,14 @@
                                                 GridLines="None" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="8"
                                                 Width="100%" ShowHeader="false">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetailView.aspx?ProjectID={0}"
-                                                        DataTextField="ProjectID" HeaderText="项目号" Target="_blank">
+                                                        DataTextField="ProjectID" HeaderText="ProjectNumber" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="级别">
+                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="Level">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectRiskDetail.aspx?ID={0}"
@@ -122,7 +122,7 @@
                                                     <asp:BoundColumn DataField="EffectDate" HeaderText="预计发生时间" DataFormatString="{0:yyyy/MM/dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="状态">
+                                                    <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>

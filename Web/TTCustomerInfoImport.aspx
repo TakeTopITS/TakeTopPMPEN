@@ -191,17 +191,17 @@
                                                 <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" Height="1px"
                                                     ShowHeader="false" Width="100%" GridLines="None" CellPadding="4" ForeColor="#333333">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="代码">
+                                                        <asp:BoundColumn DataField="CustomerCode" HeaderText="Code">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
-                                                            DataTextField="CustomerName" HeaderText="客户名称" Target="_blank">
+                                                            DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:BoundColumn DataField="ContactName" HeaderText="联系人">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Tel1" HeaderText="电话">
+                                                        <asp:BoundColumn DataField="Tel1" HeaderText="Telephone">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">

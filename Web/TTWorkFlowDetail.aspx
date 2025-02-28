@@ -407,16 +407,16 @@
                                                     </table>
                                                     <asp:DataGrid ID="DataGrid6" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="False" Width="100%">
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>
                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}" DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                             </asp:HyperLinkColumn>
-                                                            <asp:BoundColumn DataField="WLType" HeaderText="类型">
+                                                            <asp:BoundColumn DataField="WLType" HeaderText="Type">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="CreatorName" HeaderText="申请人" Target="_blank">
+                                                            <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:HyperLinkColumn>
                                                             <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="启动步序">
@@ -425,7 +425,7 @@
                                                             <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="必须">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                             </asp:BoundColumn>
-                                                            <asp:TemplateColumn HeaderText="状态">
+                                                            <asp:TemplateColumn HeaderText="Status">
                                                                 <ItemTemplate>
                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                 </ItemTemplate>
@@ -588,7 +588,7 @@
                                                                         <asp:BoundColumn DataField="CheckingTime" HeaderText="最后审核时间">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:TemplateColumn HeaderText="状态">
+                                                                        <asp:TemplateColumn HeaderText="Status">
                                                                             <ItemTemplate>
                                                                                 <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                             </ItemTemplate>
@@ -695,7 +695,7 @@
                                                                     <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" Height="1px"
                                                                         ShowHeader="False" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:BoundColumn DataField="WorkDetail" HeaderText="要审核的工作">
@@ -716,7 +716,7 @@
                                                                             <asp:BoundColumn DataField="CheckingTime" HeaderText="最后审核时间">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
@@ -856,24 +856,24 @@
                                                                         ShowHeader="False" Height="1px"
                                                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="WLID" HeaderText="编号">
+                                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
                                                                                 DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                                             </asp:HyperLinkColumn>
-                                                                            <asp:BoundColumn DataField="WLType" HeaderText="类型">
+                                                                            <asp:BoundColumn DataField="WLType" HeaderText="Type">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                DataTextField="CreatorName" HeaderText="申请人" Target="_blank">
+                                                                                DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:HyperLinkColumn>
                                                                             <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
@@ -992,7 +992,7 @@
                                                                             <asp:BoundColumn DataField="ActiveTime" HeaderText="激活时间">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="状态">
+                                                                            <asp:TemplateColumn HeaderText="Status">
                                                                                 <ItemTemplate>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
@@ -1079,7 +1079,7 @@
                                                                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="步序">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                                     </asp:BoundColumn>
-                                                                                                    <asp:BoundColumn DataField="StepName" HeaderText="名称">
+                                                                                                    <asp:BoundColumn DataField="StepName" HeaderText="Name">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="32%" />
                                                                                                     </asp:BoundColumn>
                                                                                                     <asp:BoundColumn DataField="limitedOperator" HeaderText="最少人数">

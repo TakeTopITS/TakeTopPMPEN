@@ -134,32 +134,32 @@
 
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                 DataTextField="UserName" HeaderText="±ä¸üÈË" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                            <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OldStatus").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
 </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                            <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OldStatusValue").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
 </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                            <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("NewStatus").ToString()) %>
     </ItemTemplate>
     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
 </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="×´Ì¬">
+                                            <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
         <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("NewStatusValue").ToString()) %>
     </ItemTemplate>

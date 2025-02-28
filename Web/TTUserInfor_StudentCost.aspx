@@ -143,7 +143,7 @@
                                                             Width="100%" AllowPaging="false" PageSize="10"
                                                             ShowHeader="false" CellPadding="1" ForeColor="#333333" GridLines="None">
                                                             <Columns>
-                                                                <%--<asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
+                                                                <%--<asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -154,7 +154,7 @@
                                                                         <%# Container.ItemIndex + 1%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:TemplateColumn HeaderText="ÐÕÃû">
+                                                                <asp:TemplateColumn HeaderText="Name">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_SupplierID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />

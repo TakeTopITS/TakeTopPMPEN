@@ -122,7 +122,7 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTProjectRiskView.aspx?RiskID=" + strRelatedID);
         }
 
-        if (strRelatedType == "会议") 
+        if (strRelatedType == "Meeting")  
         {
             Response.Redirect("TTMeetingView.aspx?ID=" + strRelatedID);
         }
@@ -137,12 +137,12 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTExpenseClaimListView.aspx?ECID=" + strRelatedID);
         }
 
-        if (strRelatedType == "协作") 
+        if (strRelatedType == "Collaboration")  
         {
             Response.Redirect("TTCollaborationView.aspx?CoID=" + strRelatedID);
         }
 
-        if (strRelatedType == "合同") 
+        if (strRelatedType == "Contract")   //ChineseWord
         {
             Response.Redirect("TTConstractView.aspx?ID=" + strRelatedID);
         }
@@ -152,12 +152,12 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTProjectPlanView.aspx?PlanID=" + strRelatedID);
         }
 
-        if (strRelatedType == "客服") 
+        if (strRelatedType == "CustomerQuestion")  
         {
             Response.Redirect("TTCustomerQuestionView.aspx?ID=" + strRelatedID);
         }
 
-        if (strRelatedType == "大计划") 
+        if (strRelatedType == "MasterPlan")   //ChineseWord
         {
             Response.Redirect("TTPlanView.aspx?PlanID=" + strRelatedID);
         }

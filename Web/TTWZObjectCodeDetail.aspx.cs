@@ -229,7 +229,7 @@ public partial class TTWZObjectCodeDetail : System.Web.UI.Page
 
                 wZObjectBLL.UpdateWZObject(wZObject, strObjectCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
            }
         }
         else
@@ -274,7 +274,7 @@ public partial class TTWZObjectCodeDetail : System.Web.UI.Page
             //修改小类代码的使用标记
             ShareClass.UpdateXLCodeStatus(strXLCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
         }
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "LoadParentLit();", true);
@@ -327,7 +327,7 @@ public partial class TTWZObjectCodeDetail : System.Web.UI.Page
         DDL_ConvertUnit.DataSource = lstWZSpan;
         DDL_ConvertUnit.DataBind();
 
-        DDL_ConvertUnit.Items.Insert(0, new ListItem("选择", "0")); 
+        DDL_ConvertUnit.Items.Insert(0, new ListItem("选择", "0"));   //ChineseWord
     }
 
 

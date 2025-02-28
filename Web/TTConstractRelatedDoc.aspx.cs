@@ -94,7 +94,7 @@ public partial class TTConstractRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = "from Document as document where document.RelatedType = '合同' and document.RelatedID =" + strConstractID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Contract' and document.RelatedID =" + strConstractID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";   //ChineseWord
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
             //设置缺省的文件类型
@@ -107,7 +107,7 @@ public partial class TTConstractRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = "from Document as document where document.RelatedType = '合同' and document.RelatedID =" + strConstractID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            strHQL = "from Document as document where document.RelatedType = 'Contract' and document.RelatedID =" + strConstractID + " and document.Status <> 'Deleted' Order by document.DocID DESC";   //ChineseWord
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
@@ -500,9 +500,9 @@ public partial class TTConstractRelatedDoc : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from Document as document where ";
-        strHQL += " (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")"; 
-        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = '合同' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))"; 
-        strHQL += " or document.RelatedType = '协作' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))"; 
+        strHQL += " (document.RelatedType = 'Contract' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";   //ChineseWord
+        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Contract' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";   //ChineseWord
+        strHQL += " or document.RelatedType = 'Collaboration' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

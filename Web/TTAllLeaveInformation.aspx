@@ -191,38 +191,38 @@
                                                                             ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                                             PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="Creator" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                                                    DataTextField="UserName" HeaderText="请假人" Target="_blank">
+                                                                                    DataTextField="UserName" HeaderText="LeaveApplicant" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="DepartCode" HeaderText="部门代码">
+                                                                                <asp:BoundColumn DataField="DepartCode" HeaderText="DepartmentCode">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="DepartName" HeaderText="部门名称">
+                                                                                <asp:BoundColumn DataField="DepartName" HeaderText="DepartmentName">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Duty" HeaderText="职位">
+                                                                                <asp:BoundColumn DataField="Duty" HeaderText="Position">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="LeaveType" HeaderText="请假类型">
+                                                                                <asp:BoundColumn DataField="LeaveType" HeaderText="LeaveType">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="StartTime" HeaderText="开始时间" DataFormatString="{0:yyyy-MM-dd HH:mm}">
+                                                                                <asp:BoundColumn DataField="StartTime" HeaderText="StartTime" DataFormatString="{0:yyyy-MM-dd HH:mm}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EndTime" HeaderText="结束时间" DataFormatString="{0:yyyy-MM-dd HH:mm}">
+                                                                                <asp:BoundColumn DataField="EndTime" HeaderText="EndTime" DataFormatString="{0:yyyy-MM-dd HH:mm}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ApplyBecause" HeaderText="请假事由">
+                                                                                <asp:BoundColumn DataField="ApplyBecause" HeaderText="ReasonForLeave">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="16%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="请假日期" DataFormatString="{0:yyyy/MM/dd}">
+                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="LeaveDate" DataFormatString="{0:yyyy/MM/dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="状态">
+                                                                                <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

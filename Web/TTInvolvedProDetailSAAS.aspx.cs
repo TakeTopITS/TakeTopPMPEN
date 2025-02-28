@@ -99,7 +99,7 @@ public partial class TTInvolvedProDetailSAAS : System.Web.UI.Page
 
             HL_ProjectDetailView.NavigateUrl = "TTProjectDetailView.aspx?ProjectID=" + strProjectID;
 
-            strHQL = "from DailyWork as dailyWork where dailyWork.Type = '参与' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'"; 
+            strHQL = "from DailyWork as dailyWork where dailyWork.Type = 'Participate' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";  
             DailyWorkBLL dailyWorkBLL = new DailyWorkBLL();
             lst = dailyWorkBLL.GetAllDailyWorks(strHQL);
 
@@ -533,7 +533,7 @@ public partial class TTInvolvedProDetailSAAS : System.Web.UI.Page
                     strProject = project.ProjectName.Trim(); ;
                     deFinishPercent = NB_FinishPercent.Amount;
 
-                    dailyWork.Type = "参与"; 
+                    dailyWork.Type = "Participate";  
                     dailyWork.UserCode = strUserCode;
                     dailyWork.UserName = ShareClass.GetUserName(strUserCode);
                     dailyWork.WorkDate = DateTime.Now;
