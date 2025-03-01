@@ -8336,4 +8336,372 @@ END $$;</SQLText>
     <ID>3655</ID>
     <SQLText>Delete from  t_funinfordialbox Where inforname = '待处理的缺陷'</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3656</ID>
+    <SQLText>-- FUNCTION: public.Func_TG_InsertWLStepDetail()
+
+-- DROP FUNCTION IF EXISTS public."Func_TG_InsertWLStepDetail"();
+
+CREATE OR REPLACE FUNCTION public."Func_TG_InsertWLStepDetail"()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+
+declare intStepID bigint;
+      declare intSortNumber bigint;
+      declare intWLID bigint;
+      declare chrTemName varchar(50);
+      declare chrCreatorCode varchar(20);
+      declare chrCreatorName varchar(20);
+      declare chrCreatorDepartCode varchar(20);
+      declare chrDepartRelated char(10);
+	  declare intDepartRelatedLevelNumber bigint;
+      declare chrPartTimeReview char(10);
+      declare chrSMSSend varchar(1000);
+      declare chrMailSend varchar(1000);
+      declare chrOperatorSelect char(10);
+      declare chrPriorOperatorSelect char(10);
+      declare chrIsSelect char(10);
+      declare chrProjectRelated char(10);
+      declare intProjectID bigint;
+
+      declare chrRelatedType char(20);
+      declare intRelatedID bigint;
+
+      declare chrSelfReview char(10);
+
+      declare chrAdminEMail varchar(200);
+      declare intFolderID bigint;
+
+	  Begin
+
+	  select  EMail into chrAdminEMail From T_ProjectMember Where UserCode = 'ADMIN';
+      select FolderID into intFolderID From T_MailFolder Where OwnerCode = 'ADMIN' and KeyWord = 'Waiting';
+
+      select StepID,SortNumber,WLID,rtrim(DepartRelated) into intStepID,intSortNumber,intWLID,chrDepartRelated  from T_WorkFlowStep Where StepID = new.StepID;
+
+	  select CreatorCode,CreatorName,RelatedType,RelatedID into chrCreatorCode,chrCreatorName,chrRelatedType,intRelatedID from T_WorkFlow where WLID = new.WLID;
+
+      select rtrim(DepartCode) into chrCreatorDepartCode  from T_ProjectMember where UserCode = chrCreatorCode;
+
+      select TemName into chrTemName from T_WorkFlow where WLID = intWLID;
+
+      --select @chrSMSSend = rtrim(ltrim(ReceiveSMS)) from T_WorkFlow where WLID = @intWLID
+
+      select rtrim(SelfReview) into chrSelfReview from T_WorkFlowTStep where SortNumber = intSortNumber and TemName = chrTemName;
+      select rtrim(OperatorSelect) into chrOperatorSelect  from T_WorkFlowTStep where SortNumber = @intSortNumber and TemName = chrTemName;
+      select rtrim(IsPriorStepSelect) into chrPriorOperatorSelect from T_WorkFlowTStep where SortNumber = intSortNumber and TemName = chrTemName;
+
+      select rtrim(PartTimeReview) into chrPartTimeReview  from T_WorkFlowTStep where SortNumber = intSortNumber and TemName = chrTemName;
+      select rtrim(ProjectRelated) into chrProjectRelated from T_WorkFlowTStep where SortNumber = intSortNumber and TemName = chrTemName;
+      select DepartRelatedLevelNumber into intDepartRelatedLevelNumber  from T_WorkFlowTStep where SortNumber = intSortNumber and TemName = chrTemName;
+
+      select rtrim(SendSMS) into chrSMSSend  from T_WorkFlowTStep where SortNumber = intSortNumber and TemName = chrTemName;
+      select rtrim(SendEMail) into chrMailSend  from T_WorkFlowTStep where SortNumber = intSortNumber and TemName = chrTemName;
+      select '"ADMIN"' || '&amp;amp;amp;lt;' || chrMailSend || '&amp;amp;amp;gt;' into chrMailSend;
+
+----------以下中文短语和语句都不能改，信息发送时要进行其它语言的替换，以实现多语言功能，改了就可能替换不了---------
+
+      --如果此步骤项目相关，则取得相关的项目号-------------------------------------------
+      if(chrProjectRelated = 'YES')  Then
+
+		  if(chrRelatedType = 'Project')   Then
+
+		  select   intRelatedID into intProjectID ;
+
+		  End If;
+
+		  if(chrRelatedType = 'Requirement')   Then
+
+		  Select ProjectID into intProjectID  From T_RelatedReq Where ReqID = intRelatedID;
+
+		  End If;
+
+		  if(chrRelatedType = 'Defect')   Then
+
+		  Select ProjectID into intProjectID  From T_RelatedDefect Where DefectID = intRelatedID;
+
+		  End If;
+
+		  if(chrRelatedType = 'Plan')  Then
+
+		  Select iProjectID into intProjectID From T_ImplePlan Where ID = intRelatedID;
+
+		  End If;
+
+		  if(chrRelatedType = 'Task')   Then
+
+		  Select ProjectID into intProjectID From T_ProjectTask Where TaskID = intRelatedID;
+
+		  End If;
+
+		  if(chrRelatedType = 'Risk')  Then
+
+		    Select ProjectID into intProjectID From T_ProjectRisk Where ID = intRelatedID;
+
+		  End If;
+
+      End If;
+
+         --如果申请者或前步审批者自选下一步审批者
+      If(chrOperatorSelect = 'YES' or chrPriorOperatorSelect = 'YES')
+      Then
+      select  'NO' into chrIsSelect ;
+
+      Else
+
+      select  'YES' into chrIsSelect ;
+
+      End If;
+
+      if(chrSelfReview = 'YES')
+      Then
+
+      insert into T_WorkFlowStepDetail(StepID,WLID,OperatorCode,OperatorName,Actor,WorkDetail,FinishedTime,Requisite,FieldList,AllowFullEdit,EditFieldList,CanNotNullFieldList,SignPictureField,IsOperator,ManHour,Expense,Status)
+      select intStepID,intWLID,chrCreatorCode,chrCreatorName,'Organizer','Self-Review by Initiator',1,'YES',A.FieldList,A.AllowFullEdit,A.EditFieldList,A.CanNotNullFieldList,A.SignPictureField, chrIsSelect,0,0,'InProgress'
+      from T_WorkFlowTStepOperator A,T_WorkFlowTStep B
+      where A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber;
+
+       raise notice '1';
+
+      If(chrSMSSend = 'YES' )
+      Then
+
+      insert into Sms_Send(UserCode,Mobile,Msg,UserRTXCode)
+      SELECT chrCreatorCode,MobilePhone,'Notice:Hello, you have a new task assigned to you. The task content is: Self-Review.',coalesce(UserRTXCode,'')
+      from T_ProjectMember
+      where UserCode = chrCreatorCode;
+      End If;
+
+      If(chrMailSend = 'YES' )
+      Then
+      insert into T_Mail(Title,Body,FromAddress,ToAddress,CCAddress,HTMLFormat,SenderDate,contain,AttachmentFlag,ReaderFlag,FolderID,UserCode)
+      select 'Review Notice','Notice:Hello, you have a new task assigned to you. The task content is: Self-Review.',
+      chrAdminEMail,EMail,'',1,getdate(),100,0,0,intFolderID,'ADMIN'
+      from T_ProjectMember
+      where UserCode = chrCreatorCode;
+      End If;
+
+      Else
+
+      If(chrDepartRelated = 'NO' )
+      Then
+
+      if(chrProjectRelated = 'NO')
+      Then
+      insert into T_WorkFlowStepDetail(StepID,WLID,OperatorCode,OperatorName,Actor,WorkDetail,FinishedTime,Requisite,FieldList,AllowFullEdit,EditFieldList,CanNotNullFieldList,SignPictureField, IsOperator,ManHour,Expense,Status)
+      select intStepID,intWLID,C.UserCode,C.UserName,A.Actor,A.WorkDetail,A.LimitedTime,A.Requisite,A.FieldList,A.AllowFullEdit,A.EditFieldList,A.CanNotNullFieldList,A.SignPictureField,chrIsSelect,0,0,'InProgress'
+      from T_ActorGroupDetail C,T_WorkFlowTStepOperator A,T_WorkFlowTStep B
+      where C.GroupName = A.ActorGroup and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber;
+
+	 raise notice '2';
+
+      If(chrSMSSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into Sms_Send(UserCode,Mobile,Msg,UserRTXCode)
+      SELECT D.UserCode, D.MobilePhone,'Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',coalesce(D.UserRTXCode,'')
+      from T_ActorGroupDetail C,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember D
+      where C.GroupName = A.ActorGroup and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and C.UserCode = D.UserCode;
+      End If;
+
+      If(chrMailSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into T_Mail(Title,Body,FromAddress,ToAddress,CCAddress,HTMLFormat,SenderDate,contain,AttachmentFlag,ReaderFlag,FolderID,UserCode)
+      select 'Review Notice','Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',
+      chrAdminEMail,D.EMail,'',1,getdate(),100,0,0,intFolderID,'ADMIN'
+      from T_ActorGroupDetail C,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember D
+      where C.GroupName = A.ActorGroup and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and C.UserCode = D.UserCode;
+      End If;
+
+      Else
+
+      insert into T_WorkFlowStepDetail(StepID,WLID,OperatorCode,OperatorName,Actor,WorkDetail,FinishedTime,Requisite,FieldList,AllowFullEdit,EditFieldList,CanNotNullFieldList,SignPictureField,IsOperator,ManHour,Expense,Status)
+      select intStepID,intWLID,C.UserCode,C.UserName,A.Actor,A.WorkDetail,A.LimitedTime,A.Requisite,A.FieldList,A.AllowFullEdit,A.EditFieldList,A.CanNotNullFieldList,A.SignPictureField, chrIsSelect,0,0,'InProgress'
+      from T_ActorGroupDetail C,T_RelatedUser D, T_WorkFlowTStepOperator A,T_WorkFlowTStep B
+      where C.GroupName = A.ActorGroup and C.UserCode = D.UserCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber  and D.ProjectID = intProjectID;
+
+raise notice '3';
+
+      If(chrSMSSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into Sms_Send(UserCode,Mobile,Msg,UserRTXCode)
+      SELECT D.UserCode, D.MobilePhone,'Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',coalesce(D.UserRTXCode,'')
+      from T_ActorGroupDetail C,T_RelatedUser E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember D
+      where C.GroupName = A.ActorGroup and C.UserCode = E.UserCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and C.UserCode = D.UserCode and E.ProjectID = intRelatedID;
+      End If;
+
+      If(chrMailSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into T_Mail(Title,Body,FromAddress,ToAddress,CCAddress,HTMLFormat,SenderDate,contain,AttachmentFlag,ReaderFlag,FolderID,UserCode)
+      select 'Review Notice','Notice: Hello, you have a task, content:： ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',
+      chrAdminEMail,D.EMail,'',1,getdate(),100,0,0,intFolderID,'ADMIN'
+      from T_ActorGroupDetail C,T_RelatedUser E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember D
+      where C.GroupName = A.ActorGroup and C.UserCode = E.UserCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and C.UserCode = D.UserCode and E.ProjectID = intRelatedID;
+      End If;
+
+      End If;
+
+      Else
+
+      if(chrPartTimeReview = 'YES')
+      Then
+
+      if(chrProjectRelated = 'NO')
+      Then
+
+      insert into T_WorkFlowStepDetail(StepID,WLID,OperatorCode,OperatorName,WorkDetail,Actor,FinishedTime,Requisite,FieldList,AllowFullEdit,EditFieldList,CanNotNullFieldList,SignPictureField, IsOperator,ManHour,Expense,Status)
+      select intStepID,intWLID,C.UserCode,C.UserName,A.WorkDetail,A.Actor,A.LimitedTime,A.Requisite,A.FieldList,A.AllowFullEdit,A.EditFieldList,A.CanNotNullFieldList,A.SignPictureField, chrIsSelect,0,0,'InProgress'
+      from T_ActorGroupDetail C,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B
+      where C.GroupName = A.ActorGroup and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))
+      or ( C.UserCode in ( Select UserCode From T_PartTimeJob Where DepartCode in ( select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))));
+
+raise notice '4';
+
+      If(chrSMSSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into Sms_Send(UserCode,Mobile,Msg,UserRTXCode)
+      SELECT F.UserCode, F.MobilePhone,'Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',coalesce(F.UserRTXCode,'')
+      from T_ActorGroupDetail C,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))
+      or ( C.UserCode in ( Select UserCode From T_PartTimeJob Where DepartCode in ( select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))))
+      and C.UserCode = F.UserCode;
+
+      End If;
+
+      If(chrMailSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into T_Mail(Title,Body,FromAddress,ToAddress,CCAddress,HTMLFormat,SenderDate,contain,AttachmentFlag,ReaderFlag,FolderID,UserCode)
+      select 'Review Notice','Notice: Hello, you have a task, content: ' || A.WorkDetail || 'Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',
+      chrAdminEMail,D.EMail,'',1,getdate(),100,0,0,intFolderID,'ADMIN'
+      from T_ActorGroupDetail C,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))
+      or ( C.UserCode in ( Select UserCode From T_PartTimeJob Where DepartCode in ( select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))))
+      and C.UserCode = F.UserCode;
+      End If;
+
+      Else
+
+      insert into T_WorkFlowStepDetail(StepID,WLID,OperatorCode,OperatorName,WorkDetail,Actor,FinishedTime,Requisite,FieldList,AllowFullEdit,EditFieldList,CanNotNullFieldList,SignPictureField, IsOperator,ManHour,Expense,Status)
+      select intStepID,intWLID,C.UserCode,C.UserName,A.WorkDetail,A.Actor,A.LimitedTime,A.Requisite,A.FieldList,A.AllowFullEdit,A.EditFieldList,A.CanNotNullFieldList,A.SignPictureField, chrIsSelect,0,0,'InProgress'
+      from T_ActorGroupDetail C,T_RelatedUser F,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B
+      where C.GroupName = A.ActorGroup and C.UserCode = F.UserCode and  C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and F.ProjectID = intProjectID and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))
+      or ( C.UserCode in ( Select UserCode From T_PartTimeJob Where DepartCode in ( select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))));
+
+raise notice '5';
+
+      If(chrSMSSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into Sms_Send(UserCode,Mobile,Msg,UserRTXCode)
+      SELECT F.UserCode, F.MobilePhone,'Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',coalesce(F.UserRTXCode,'')
+      from T_ActorGroupDetail C,T_RelatedUser G,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = G.UserCode and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and G.ProjectID = intRelatedID and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))
+      or ( C.UserCode in ( Select UserCode From T_PartTimeJob Where DepartCode in ( select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))))
+      and C.UserCode = F.UserCode;
+      End If;
+
+      If(chrMailSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into T_Mail(Title,Body,FromAddress,ToAddress,CCAddress,HTMLFormat,SenderDate,contain,AttachmentFlag,ReaderFlag,FolderID,UserCode)
+      select 'Review Notice','Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',
+      chrAdminEMail,D.EMail,'',1,getdate(),100,0,0,intFolderID,'ADMIN'
+      from T_ActorGroupDetail C,T_RelatedUser G,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = G.UserCode and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and G.ProjectID = intRelatedID and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))
+      or ( C.UserCode in ( Select UserCode From T_PartTimeJob Where DepartCode in ( select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber))))
+      and C.UserCode = F.UserCode;
+      End If;
+
+      End If;
+
+      Else
+
+      if(chrProjectRelated = 'NO')
+      Then
+
+      insert into T_WorkFlowStepDetail(StepID,WLID,OperatorCode,OperatorName,WorkDetail,Actor,FinishedTime,Requisite,FieldList,AllowFullEdit,EditFieldList,CanNotNullFieldList,SignPictureField,IsOperator,ManHour,Expense,Status)
+      select intStepID,intWLID,C.UserCode,C.UserName,A.WorkDetail,A.Actor,A.LimitedTime,A.Requisite,A.FieldList,A.AllowFullEdit,A.EditFieldList,A.CanNotNullFieldList,A.SignPictureField,chrIsSelect,0,0,'InProgress'
+      from T_ActorGroupDetail C,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B
+      where C.GroupName = A.ActorGroup and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber)));
+
+	raise notice '6';
+
+	 If(chrSMSSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into Sms_Send(UserCode,Mobile,Msg,UserRTXCode)
+      SELECT F.UserCode, F.MobilePhone,'Notice: Hello, you have a task, content: ' || A.WorkDetail ||  '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',coalesce(F.UserRTXCode,'')
+      from T_ActorGroupDetail C,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber)))
+      and C.UserCode = F.UserCode;
+      End If;
+
+      If(chrMailSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into T_Mail(Title,Body,FromAddress,ToAddress,CCAddress,HTMLFormat,SenderDate,contain,AttachmentFlag,ReaderFlag,FolderID,UserCode)
+      select 'Review Notice','Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',
+      chrAdminEMail,D.EMail,'',1,getdate(),100,0,0,intFolderID,'ADMIN'
+      from T_ActorGroupDetail C,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber)))
+      and C.UserCode = F.UserCode;
+      End If;
+
+      Else
+
+      insert into T_WorkFlowStepDetail(StepID,WLID,OperatorCode,OperatorName,WorkDetail,Actor,FinishedTime,Requisite,FieldList,AllowFullEdit,EditFieldList,CanNotNullFieldList,SignPictureField,IsOperator,ManHour,Expense,Status)
+      select intStepID,intWLID,C.UserCode,C.UserName,A.WorkDetail,A.Actor,A.LimitedTime,A.Requisite,A.FieldList,A.AllowFullEdit,A.EditFieldList,A.CanNotNullFieldList,A.SignPictureField,chrIsSelect,0,0,'处理中'
+      from T_ActorGroupDetail C,T_RelatedUser F,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B
+      where C.GroupName = A.ActorGroup and C.UserCode = F.UserCode and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and F.ProjectID = intProjectID and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber)));
+
+raise notice 'intStepID: %,intWLID: %,chrTemName: %, intSortNumber: %,chrCreatorDepartCode:%,intDepartRelatedLevelNumber:%',cast(intStepID as char(8)),intWLID,chrTemName,intSortNumber,chrCreatorDepartCode,intDepartRelatedLevelNumber;
+
+      If(chrSMSSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into Sms_Send(UserCode,Mobile,Msg,UserRTXCode)
+      SELECT F.UserCode, F.MobilePhone,'Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',coalesce(F.UserRTXCode,'')
+      from T_ActorGroupDetail C,T_RelatedUser G,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = G.UserCode and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber)))
+      and C.UserCode = F.UserCode and G.ProjectID = intRelatedID;
+      End If;
+
+      If(chrMailSend = 'YES' and chrOperatorSelect = 'NO')
+      Then
+      insert into T_Mail(Title,Body,FromAddress,ToAddress,CCAddress,HTMLFormat,SenderDate,contain,AttachmentFlag,ReaderFlag,FolderID,UserCode)
+      select 'Review Notice','Notice: Hello, you have a task, content: ' || A.WorkDetail || '，Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!',
+      chrAdminEMail,D.EMail,'',1,getdate(),100,0,0,intFolderID,'ADMIN'
+      from T_ActorGroupDetail C,T_RelatedUser G,T_ProjectMember D,T_Department E,T_WorkFlowTStepOperator A,T_WorkFlowTStep B,T_ProjectMember F
+      where C.GroupName = A.ActorGroup and C.UserCode = G.UserCode and C.UserCode = D.UserCode and D.DepartCode = E.DepartCode and A.StepID = B.StepID and A.TemName = chrTemName
+      and B.SortNumber = intSortNumber and (( D.DepartCode = chrCreatorDepartCode ) or (D.DepartCode in (select ParentDepartCode from F_GetParentDepartCode(chrCreatorDepartCode) Where Level &lt;= intDepartRelatedLevelNumber)))
+      and C.UserCode = F.UserCode and G.ProjectID = intRelatedID;
+      End If;
+      End If;
+
+      End If;
+      End If;
+
+      End If;
+	return new;
+end
+$BODY$;
+
+ALTER FUNCTION public."Func_TG_InsertWLStepDetail"()
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
