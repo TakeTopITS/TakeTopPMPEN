@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>HSE生產總結</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生產總結</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>紅色:拖期，加粗:參與，黑色:正常</value>
   </data>
@@ -27579,6 +27576,27 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>项目年度回款</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>启动后，计划内容不能更改，确定要启动吗？</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>当天有效</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>资产采购单</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>物料采购单</value>
+  </data>
+  <data name="XiaoShouGenZong" xml:space="preserve">
+    <value>销售跟踪</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE生產總結</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>域規則：員工代碼：[TAKETOPUSERCODE]，部門串：[TAKETOPDEPARTMENT] ,出於安全考慮，不能使用含Delete,Update,Drop,Insert,Alter語句）</value>
   </data>
@@ -27590,9 +27608,6 @@
   </data>
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>關聯合同</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>启动后，计划内容不能更改，确定要启动吗？</value>
   </data>
   <data name="HSE生產總結" xml:space="preserve">
     <value>HSE生產總結</value>
@@ -27902,11 +27917,5 @@
   </data>
   <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value>保存失敗，原密碼錯誤或為空，請檢查！</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>当天有效</value>
   </data>
 </root>

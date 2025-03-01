@@ -159,7 +159,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
 
     /// <summary>
-    /// 获取请假时间数(小时）
+    /// 获取请假时间数("+LanguageHandle.GetWord("XiaoShi")+"）
     /// </summary>
     /// <param name="starttime"></param>
     /// <param name="endtime"></param>

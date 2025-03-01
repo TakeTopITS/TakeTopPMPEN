@@ -294,9 +294,9 @@
                                                 </td>
                                                 <td style="width: 20%; text-align: left;" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_Priority" runat="server" DataTextField="Priority" DataValueField="Priority">
-                                                        <asp:ListItem>Normal</asp:ListItem>
-                                                        <asp:ListItem>High</asp:ListItem>
-                                                        <asp:ListItem>Low</asp:ListItem>
+                                                        <asp:ListItem Value="Normal" Text="<%$ Resources:lang,PuTong %>" ></asp:ListItem>
+                                                          <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao %>" ></asp:ListItem>
+                                                         <asp:ListItem Value="Low" Text="<%$ Resources:lang,Di2 %>" ></asp:ListItem>
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td style="width: 15%; text-align: right" class="formItemBgStyle">

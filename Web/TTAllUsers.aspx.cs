@@ -272,12 +272,30 @@ public partial class TTAllUsers : System.Web.UI.Page
         if (strDepartCode == "")//所有成员的情况
         {
             string strDepartString = LB_DepartString.Text.Trim();
-
-            strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,Age 年龄,DepartCode 部门代码,DepartName 部门,ChildDepartment 子部门,
-                Duty 职责,OfficePhone 办公电话,MobilePhone 移动电话,EMail EMail,WorkScope 工作范围,JoinDate 加入日期,Status 状态,
-                RefUserCode 参考工号,IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
-								 else 'NotEnabled' end) 权限 
-                From T_ProjectMember Where DepartCode in {0}", strDepartString);    
+            strHQL = string.Format(@"Select UserCode {0},UserName {1},Gender {2},Age {3},DepartCode {4},DepartName {5},ChildDepartment {6},
+                Duty {7},OfficePhone {8},MobilePhone {9},EMail {10},WorkScope {11},JoinDate {12},Status {13},
+                RefUserCode {14},IDCard {15},SortNumber {16},(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
+								 else 'NotEnabled' end) {17} 
+                From T_ProjectMember Where DepartCode in {18}",
+                            LanguageHandle.GetWord("DaiMa"),
+                            LanguageHandle.GetWord("XingMing"),
+                            LanguageHandle.GetWord("XingBie"),
+                            LanguageHandle.GetWord("NianLing"),
+                            LanguageHandle.GetWord("BuMenDaiMa"),
+                            LanguageHandle.GetWord("BuMen"),
+                            LanguageHandle.GetWord("ZiBuMen"),
+                            LanguageHandle.GetWord("ZhiZe"),
+                            LanguageHandle.GetWord("BanGongDianHua"),
+                            LanguageHandle.GetWord("YiDongDianHua"),
+                            LanguageHandle.GetWord("EMail"),
+                            LanguageHandle.GetWord("GongZuoFanWei"),
+                            LanguageHandle.GetWord("JiaRuRiQi"),
+                            LanguageHandle.GetWord("ZhuangTai"),
+                            LanguageHandle.GetWord("CanKaoGongHao"),
+                            LanguageHandle.GetWord("ShenFenZhengHao"),
+                            LanguageHandle.GetWord("ShunXuHao"),
+                            LanguageHandle.GetWord("QuanXian"),
+                            strDepartString);
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -295,11 +313,30 @@ public partial class TTAllUsers : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = string.Format(@"Select UserCode 代码,UserName 姓名, Gender 性别,Age 年龄, DepartCode 部门代码,DepartName 部门,ChildDepartment 子部门,
-                  Duty 职责,OfficePhone 办公电话, MobilePhone 移动电话,EMail EMail, WorkScope 工作范围,JoinDate 加入日期, Status 状态,
-                RefUserCode 参考工号, IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
-                                 else 'NotEnabled' end) 权限
-                From T_ProjectMember Where DepartCode = '{0}') Order by SortNumber ASC ", strDepartCode);    
+            strHQL = string.Format(@"Select UserCode {0},UserName {1}, Gender {2},Age {3}, DepartCode {4},DepartName {5},ChildDepartment {6},
+          Duty {7},OfficePhone {8}, MobilePhone {9},EMail {10}, WorkScope {11},JoinDate {12}, Status {13},
+        RefUserCode {14}, IDCard {15},SortNumber {16},(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
+                         else 'NotEnabled' end) {17}
+        From T_ProjectMember Where DepartCode = '{18}') Order by SortNumber ASC ",
+            LanguageHandle.GetWord("DaiMa"),
+            LanguageHandle.GetWord("XingMing"),
+            LanguageHandle.GetWord("XingBie"),
+            LanguageHandle.GetWord("NianLing"),
+            LanguageHandle.GetWord("BuMenDaiMa"),
+            LanguageHandle.GetWord("BuMen"),
+            LanguageHandle.GetWord("ZiBuMen"),
+            LanguageHandle.GetWord("ZhiZe"),
+            LanguageHandle.GetWord("BanGongDianHua"),
+            LanguageHandle.GetWord("YiDongDianHua"),
+            LanguageHandle.GetWord("EMail"),
+            LanguageHandle.GetWord("GongZuoFanWei"),
+            LanguageHandle.GetWord("JiaRuRiQi"),
+            LanguageHandle.GetWord("ZhuangTai"),
+            LanguageHandle.GetWord("CanKaoGongHao"),
+            LanguageHandle.GetWord("ShenFenZhengHao"),
+            LanguageHandle.GetWord("ShunXuHao"),
+            LanguageHandle.GetWord("QuanXian"),
+            strDepartCode);
         }
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);

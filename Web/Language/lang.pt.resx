@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>Resumo do HSE Produção</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Resumo do HSE Produção</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Vermelho: atrasos, negrito: Participação, Preto: Normal</value>
   </data>
@@ -27579,6 +27576,24 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Após o lançamento, o conteúdo do plano não pode ser alterado, você tem certeza de que deseja começar?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Asset purchase orders</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Item purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Resumo do HSE Produção</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Regras de Domínio: código empregado: [TAKETOPUSERCODE], corda departamento: [TAKETOPDEPARTMENT], por razões de segurança, não podem ser utilizados, incluindo exclusão, atualização, Gota, Inserir, Alter declaração)</value>
   </data>
@@ -27596,9 +27611,6 @@
   </data>
   <data name="String" xml:space="preserve">
     <value>Os custos de distribuição por departamento de estatísticas</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>Após o lançamento, o conteúdo do plano não pode ser alterado, você tem certeza de que deseja começar?</value>
   </data>
   <data name="String13" xml:space="preserve">
     <value>Os custos de distribuição por conta Estatísticas</value>
@@ -27638,11 +27650,5 @@
   </data>
   <data name="String25" xml:space="preserve">
     <value>Zhou</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
   </data>
 </root>

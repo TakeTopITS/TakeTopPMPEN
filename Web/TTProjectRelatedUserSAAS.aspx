@@ -374,17 +374,17 @@
                                                 </td>
                                                 <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_Status" runat="server">
-                                                        <asp:ListItem Value="Plan" />
+                                                         <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
 
-                                                        <asp:ListItem Value="Accepted" />
+                                                           <asp:ListItem Value="Accepted" Text="<%$ Resources:lang,ProjectAgree %>" />
 
-                                                        <asp:ListItem Value="Rejected" />
+                                                        <asp:ListItem Value="Rejected" Text="<%$ Resources:lang,JuJue %>"/>
 
-                                                        <asp:ListItem Value="InProgress" />
+                                                         <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong %>"/>
 
-                                                        <asp:ListItem Value="Pause" />
+                                                        <asp:ListItem Value="Pause" Text="<%$ Resources:lang,ZanTing %>"/>
 
-                                                        <asp:ListItem Value="Stop" />
+                                                        <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi %>"/>
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>

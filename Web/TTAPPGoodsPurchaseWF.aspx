@@ -805,9 +805,9 @@
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_BusinessType" runat="server" AutoPostBack="True">
 
-                                                                        <asp:ListItem Value="SaleOrder" />
-                                                                        <asp:ListItem Value="Project" />
-                                                                        <asp:ListItem Value="Other" />
+                                                                        <asp:ListItem Value="SaleOrder" Text="<%$ Resources:Lang,SaleOrder %>"/>
+                                                                        <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu %>"/>
+                                                                          <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa %>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>

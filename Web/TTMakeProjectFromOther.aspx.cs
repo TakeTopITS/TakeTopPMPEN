@@ -193,7 +193,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
             return result;
         }
         else
-            return "未开标！";   
+            return ""+LanguageHandle.GetWord("WeiKaiBiao")+"！";   
     }
 
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)
@@ -1015,7 +1015,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                     HL_ProjectTask.NavigateUrl = "TTProjectPrimaveraTask.aspx?ProjectID=" + strProjectID;//end
 
 
-                    //项目成本控制-预算，仅仅创建人可以对预算进行管理
+                    //项目成本控制-"+LanguageHandle.GetWord("YuSuan")+"，仅仅创建人可以对预算进行管理
                     if (project.UserCode.Trim() == strProjectUserCode.Trim())
                     {
                         HL_ProjectCostManageEdit.Enabled = true;

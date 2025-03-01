@@ -1040,8 +1040,8 @@
                                                                     <asp:ListItem Value="New" />
                                                                     <asp:ListItem Value="Reviewing" />
                                                                     <asp:ListItem Value="Executing" />
-                                                                    <asp:ListItem Value="Completed" />
-                                                                    <asp:ListItem Value="Cancel" />
+                                                                    <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
+                                                                    <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                                                     <asp:ListItem Value="Deleted" />
                                                                 </asp:DropDownList>
                                                             </td>
@@ -2615,8 +2615,8 @@
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_CommissionStatus" runat="server">
-                                            <asp:ListItem Value="Unsent" />
-                                            <asp:ListItem Value="Sent" />
+                                             <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
+                                           <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
                                         </asp:DropDownList></td>
                                     <td style="text-align: Right;" class="formItemBgStyle"></td>
                                     <td style="text-align: left;" class="formItemBgStyle"></td>

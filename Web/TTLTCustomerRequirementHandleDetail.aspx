@@ -287,11 +287,11 @@
                                                                                                 <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ChuLiZhuangTai %>"></asp:Label>£º </td>
                                                                                             <td style="text-align: left;" class="formItemBgStyle">
                                                                                                 <asp:DropDownList ID="DL_HandleStatus" runat="server" Height="19px">
-                                                                                                    <asp:ListItem Value="InProgress" />
+                                                                                                     <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong %>"/>
                                                                                                     <asp:ListItem Value="Reviewing" />
                                                                                                     <asp:ListItem Value="Suspended" />
-                                                                                                    <asp:ListItem Value="Completed" />
-                                                                                                    <asp:ListItem Value="Cancel" />
+                                                                                                    <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
+                                                                                                    <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                                                                                 </asp:DropDownList></td>
                                                                                             <td style="text-align: right;" class="formItemBgStyle">
                                                                                                 <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YongShi %>"></asp:Label>£º </td>

@@ -160,7 +160,7 @@ public partial class TTConstractBankReport : System.Web.UI.Page
         strBank = "%" + strBank + "%";
 
         strUnitName = TXT_UnitName.Text.Trim();
-        strHQL = "Select to_char(OperateTime, 'yyyy/mm/dd') 时间,Bank 银行,BillCode 原始单号,ConstractCode 合同代码,Currency 币别, sum(ReciverAmount) 收入 ,sum(PayableAmount) 支出,UnitName 单位,sum(HandlingCharge) 手续费,sum(Balance) 每日现金余额  from V_ConstractBankReport Where";   
+        strHQL = "Select to_char(OperateTime, 'yyyy/mm/dd') "+LanguageHandle.GetWord("ShiJian")+",Bank "+LanguageHandle.GetWord("YinHang")+",BillCode "+LanguageHandle.GetWord("YuanShiDanHao")+",ConstractCode "+LanguageHandle.GetWord("HeTongDaiMa")+",Currency "+LanguageHandle.GetWord("BiBie")+", sum(ReciverAmount) "+LanguageHandle.GetWord("ShouRu")+" ,sum(PayableAmount) "+LanguageHandle.GetWord("ZhiChu")+",UnitName "+LanguageHandle.GetWord("DanWei")+",sum(HandlingCharge) "+LanguageHandle.GetWord("ShouXuFei")+",sum(Balance) "+LanguageHandle.GetWord("MeiRiXianJinYuE")+"  from V_ConstractBankReport Where";   
         strHQL += " ((ConstractCode in (Select ConstractCode From T_Constract Where DepartCode in " + strDepartString + "))";
         strHQL += " Or (ConstractCode in (Select ConstractCode From T_ConstractRelatedUser Where UserCode like  " + "'" + strLikeUserCode + "'" + ")))";
         strHQL += " and ConstractCode Like " + "'" + strConstractCode + "'";

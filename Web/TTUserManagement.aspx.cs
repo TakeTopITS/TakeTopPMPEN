@@ -289,17 +289,56 @@ public partial class TTUserManagement : System.Web.UI.Page
         if (strDepartCode == "")//所有成员的情况
         {
             strDepartString = LB_DepartString.Text.Trim();
+            strHQL = string.Format(@"Select A.UserCode {0},A.UserName {1},A.Gender {2},A.Age {3},A.DepartCode {4},A.DepartName {5},   
+                A.Duty {6},A.OfficePhone {7},A.MobilePhone {8},A.EMail {9},A.WorkScope {10},A.JoinDate {11},A.Status {12},   
+                A.RefUserCode {13},A.IDCard {14},B.TopDepartName {15},B.EntryTotalYearMonth {16},B.OfficeAddress {17},   
+                B.UserTypeExtend {18},B.UserState {19},B.ProbationPeriod {20},B.TurnOfficialDate {21},B.HouseRegisterType {22},   
+                B.PoliticalOutlook {23},B.UrgencyRelation {24},B.ContractType {25},B.ContractCompany {26},B.FirstContractStartTime {27},   
+                B.FirstContractEndTime {28},B.FirstContractYears {29},B.SecondContractStartTime {30},B.SecondContractEndTime {31},   
+                B.SecondContractYears {32},B.ThirdContractStartTime {33},B.ThirdContractEndTime {34},B.ThirdContractYears {35},   
+                B.SignContractCount {36},B.ContractStartTime {37},B.ContractYears {38},A.SortNumber {39}    
+                From T_ProjectMember A Left Join T_ProjectMemberExtend B On A.UserCode = B.UserCode  Where 1=1", 
+                LanguageHandle.GetWord("DaiMa"), 
+                LanguageHandle.GetWord("XingMing"), 
+                LanguageHandle.GetWord("XingBie"), 
+                LanguageHandle.GetWord("NianLing"), 
+                LanguageHandle.GetWord("BuMenDaiMa"), 
+                LanguageHandle.GetWord("BuMenMingCheng"), 
+                LanguageHandle.GetWord("ZhiZe"), 
+                LanguageHandle.GetWord("BanGongDianHua"), 
+                LanguageHandle.GetWord("YiDongDianHua"), 
+                LanguageHandle.GetWord("EMail"), 
+                LanguageHandle.GetWord("GongZuoFanWei"), 
+                LanguageHandle.GetWord("JiaRuRiQi"), 
+                LanguageHandle.GetWord("ZhuangTai"), 
+                LanguageHandle.GetWord("CanKaoGongHao"), 
+                LanguageHandle.GetWord("ShenFenZhengHao"), 
+                LanguageHandle.GetWord("YiJiBuMen"), 
+                LanguageHandle.GetWord("SiLing"), 
+                LanguageHandle.GetWord("BanGongDiZhi"), 
+                LanguageHandle.GetWord("YuanGongLeiXing"), 
+                LanguageHandle.GetWord("YuanGongZhuangTai"), 
+                LanguageHandle.GetWord("ShiYongQi"), 
+                LanguageHandle.GetWord("ShiJiZhuanZhengRiQi"), 
+                LanguageHandle.GetWord("HuJiLeiXing"), 
+                LanguageHandle.GetWord("ZhengZhiMianMao"), 
+                LanguageHandle.GetWord("LianXiRenGuanXi"), 
+                LanguageHandle.GetWord("HeTongLeiXing"), 
+                LanguageHandle.GetWord("HeTongGongSi"), 
+                LanguageHandle.GetWord("ShouCiHeTongQiShiRi"), 
+                LanguageHandle.GetWord("ShouCiHeTongDaoQiRi"), 
+                LanguageHandle.GetWord("ShouCiHeTongQiXian"), 
+                LanguageHandle.GetWord("DiErCiHeTongQiShiRi"), 
+                LanguageHandle.GetWord("DiErCiHeTongDaoQiRi"), 
+                LanguageHandle.GetWord("DiErCiHeTongQiXian"), 
+                LanguageHandle.GetWord("DiSanCiHeTongQiShiRi"), 
+                LanguageHandle.GetWord("DiSanCiHeTongDaoQiRi"), 
+                LanguageHandle.GetWord("DiSanCiHeTongQiXian"), 
+                LanguageHandle.GetWord("YiQianCiShu"), 
+                LanguageHandle.GetWord("XianHeTongQiShiRi"), 
+                LanguageHandle.GetWord("XianHeTongQiXian"), 
+                LanguageHandle.GetWord("ShunXuHao"));
 
-            strHQL = @"Select A.UserCode 代码,A.UserName 姓名,A.Gender 性别,A.Age 年龄,A.DepartCode 部门代码,A.DepartName 部门名称,   
-                A.Duty 职责,A.OfficePhone 办公电话,A.MobilePhone 移动电话,A.EMail EMail,A.WorkScope 工作范围,A.JoinDate 加入日期,A.Status 状态,   
-                A.RefUserCode 参考工号,A.IDCard 身份证号,B.TopDepartName 一级部门,B.EntryTotalYearMonth 司龄,B.OfficeAddress 办公地址,   
-                B.UserTypeExtend 员工类型,B.UserState 员工状态,B.ProbationPeriod 试用期,B.TurnOfficialDate 实际转正日期,B.HouseRegisterType 户籍类型,   
-                B.PoliticalOutlook 政治面貌,B.UrgencyRelation 联系人关系,B.ContractType 合同类型,B.ContractCompany 合同公司,B.FirstContractStartTime 首次合同起始日,   
-                B.FirstContractEndTime 首次合同到期日,B.FirstContractYears 首次合同期限,B.SecondContractStartTime 第二次合同起始日,B.SecondContractEndTime 第二次合同到期日,   
-                B.SecondContractYears 	第二次合同期限,B.ThirdContractStartTime 第三次合同起始日,B.ThirdContractEndTime 第三次合同到期日,B.ThirdContractYears 第三次合同期限,   
-                B.SignContractCount 已签次数,B.ContractStartTime 现合同起始日,B.ContractYears 现合同期限,A.SortNumber 顺序号    
-                From T_ProjectMember A Left Join T_ProjectMemberExtend B On A.UserCode = B.UserCode  Where 1=1";
-          
             if (!string.IsNullOrEmpty(strDepartString))
             {
                 strHQL += " and A.DepartCode in " + strDepartString + " ";
@@ -320,16 +359,56 @@ public partial class TTUserManagement : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = @"Select A.UserCode 代码,A.UserName 姓名,A.Gender 性别,A.Age 年龄,A.DepartCode 部门代码,A.DepartName 部门名称,   
-                A.Duty 职责,A.OfficePhone 办公电话,A.MobilePhone 移动电话,A.EMail EMail,A.WorkScope 工作范围,A.JoinDate 加入日期,A.Status 状态,   
-                A.RefUserCode 参考工号,A.IDCard 身份证号,B.TopDepartName 一级部门,B.EntryTotalYearMonth 司龄,B.OfficeAddress 办公地址,   
-                B.UserTypeExtend 员工类型,B.UserState 员工状态,B.ProbationPeriod 试用期,B.TurnOfficialDate 实际转正日期,B.HouseRegisterType 户籍类型,   
-                B.PoliticalOutlook 政治面貌,B.UrgencyRelation 联系人关系,B.ContractType 合同类型,B.ContractCompany 合同公司,B.FirstContractStartTime 首次合同起始日,   
-                B.FirstContractEndTime 首次合同到期日,B.FirstContractYears 首次合同期限,B.SecondContractStartTime 第二次合同起始日,B.SecondContractEndTime 第二次合同到期日,   
-                B.SecondContractYears 	第二次合同期限,B.ThirdContractStartTime 第三次合同起始日,B.ThirdContractEndTime 第三次合同到期日,B.ThirdContractYears 第三次合同期限,   
-                B.SignContractCount 已签次数,B.ContractStartTime 现合同起始日,B.ContractYears 现合同期限,A.SortNumber 顺序号    
-                From T_ProjectMember A Left Join T_ProjectMemberExtend B On A.UserCode = B.UserCode Where 1=1";
-         
+            strHQL = string.Format(@"Select A.UserCode {0},A.UserName {1},A.Gender {2},A.Age {3},A.DepartCode {4},A.DepartName {5},   
+        A.Duty {6},A.OfficePhone {7},A.MobilePhone {8},A.EMail {9},A.WorkScope {10},A.JoinDate {11},A.Status {12},   
+        A.RefUserCode {13},A.IDCard {14},B.TopDepartName {15},B.EntryTotalYearMonth {16},B.OfficeAddress {17},   
+        B.UserTypeExtend {18},B.UserState {19},B.ProbationPeriod {20},B.TurnOfficialDate {21},B.HouseRegisterType {22},   
+        B.PoliticalOutlook {23},B.UrgencyRelation {24},B.ContractType {25},B.ContractCompany {26},B.FirstContractStartTime {27},   
+        B.FirstContractEndTime {28},B.FirstContractYears {29},B.SecondContractStartTime {30},B.SecondContractEndTime {31},   
+        B.SecondContractYears {32},B.ThirdContractStartTime {33},B.ThirdContractEndTime {34},B.ThirdContractYears {35},   
+        B.SignContractCount {36},B.ContractStartTime {37},B.ContractYears {38},A.SortNumber {39}    
+        From T_ProjectMember A Left Join T_ProjectMemberExtend B On A.UserCode = B.UserCode Where 1=1",
+        LanguageHandle.GetWord("DaiMa"), 
+        LanguageHandle.GetWord("XingMing"), 
+        LanguageHandle.GetWord("XingBie"), 
+        LanguageHandle.GetWord("NianLing"), 
+        LanguageHandle.GetWord("BuMenDaiMa"), 
+        LanguageHandle.GetWord("BuMenMingCheng"), 
+        LanguageHandle.GetWord("ZhiZe"), 
+        LanguageHandle.GetWord("BanGongDianHua"), 
+        LanguageHandle.GetWord("YiDongDianHua"), 
+        LanguageHandle.GetWord("EMail"), 
+        LanguageHandle.GetWord("GongZuoFanWei"), 
+        LanguageHandle.GetWord("JiaRuRiQi"), 
+        LanguageHandle.GetWord("ZhuangTai"), 
+        LanguageHandle.GetWord("CanKaoGongHao"), 
+        LanguageHandle.GetWord("ShenFenZhengHao"), 
+        LanguageHandle.GetWord("YiJiBuMen"), 
+        LanguageHandle.GetWord("SiLing"), 
+        LanguageHandle.GetWord("BanGongDiZhi"), 
+        LanguageHandle.GetWord("YuanGongLeiXing"), 
+        LanguageHandle.GetWord("YuanGongZhuangTai"), 
+        LanguageHandle.GetWord("ShiYongQi"), 
+        LanguageHandle.GetWord("ShiJiZhuanZhengRiQi"), 
+        LanguageHandle.GetWord("HuJiLeiXing"), 
+        LanguageHandle.GetWord("ZhengZhiMianMao"), 
+        LanguageHandle.GetWord("LianXiRenGuanXi"), 
+        LanguageHandle.GetWord("HeTongLeiXing"), 
+        LanguageHandle.GetWord("HeTongGongSi"), 
+        LanguageHandle.GetWord("ShouCiHeTongQiShiRi"), 
+        LanguageHandle.GetWord("ShouCiHeTongDaoQiRi"), 
+        LanguageHandle.GetWord("ShouCiHeTongQiXian"), 
+        LanguageHandle.GetWord("DiErCiHeTongQiShiRi"), 
+        LanguageHandle.GetWord("DiErCiHeTongDaoQiRi"), 
+        LanguageHandle.GetWord("DiErCiHeTongQiXian"), 
+        LanguageHandle.GetWord("DiSanCiHeTongQiShiRi"), 
+        LanguageHandle.GetWord("DiSanCiHeTongDaoQiRi"), 
+        LanguageHandle.GetWord("DiSanCiHeTongQiXian"), 
+        LanguageHandle.GetWord("YiQianCiShu"), 
+        LanguageHandle.GetWord("XianHeTongQiShiRi"), 
+        LanguageHandle.GetWord("XianHeTongQiXian"), 
+        LanguageHandle.GetWord("ShunXuHao"));
+
             if (!string.IsNullOrEmpty(strDepartCode))
             {
                 strHQL += " and A.DepartCode = " + "'" + strDepartCode + "'";

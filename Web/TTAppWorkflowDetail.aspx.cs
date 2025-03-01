@@ -630,7 +630,7 @@ public partial class TTAppWorkflowDetail : System.Web.UI.Page
 
             if (intResult == 2)
             {
-                TB_Message.Text = ShareClass.GetUserName(strUserCode).Trim() + LanguageHandle.GetWord("ZZZBNDGZLSQ").ToString().Trim() + " ：" + strWLID + " " + strWFName + " 返回到第" + DL_NextStep.SelectedValue.Trim() + " 步了！";   
+                TB_Message.Text = ShareClass.GetUserName(strUserCode).Trim() + LanguageHandle.GetWord("ZZZBNDGZLSQ").ToString().Trim() + " ：" + strWLID + " " + strWFName + " "+LanguageHandle.GetWord("FanHuiDaoDi")+"" + DL_NextStep.SelectedValue.Trim() + " "+LanguageHandle.GetWord("BuLe")+"！";   
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSYFHMBZZDSPZ").ToString().Trim() + "')", true);
             }

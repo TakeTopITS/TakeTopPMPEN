@@ -57,7 +57,7 @@ public partial class TTNewCustomAdd : System.Web.UI.Page
 
 
     /// <summary>
-    ///  ¿‡–Õ
+    ///  "+LanguageHandle.GetWord("LeiXing")+"
     /// </summary>
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {

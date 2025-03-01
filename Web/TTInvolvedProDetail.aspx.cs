@@ -72,7 +72,7 @@ public partial class TTInvolvedProDetail : System.Web.UI.Page
         DataList1.DataBind();
 
         Project project = (Project)lst[0];
-        //2013-10-14 By LiuJianping 项目经理
+        //2013-10-14 By LiuJianping "+LanguageHandle.GetWord("XiangMuJingLi")+"
         strProjectType = project.ProjectType.Trim();
         string strPMUserCode = project.PMCode.Trim();//end
         LB_PMCode.Text = strPMUserCode;

@@ -145,7 +145,7 @@
                                                                                 <asp:ListItem Value="New" />
                                                                                 <asp:ListItem Value="Pending Review" />
                                                                                 <asp:ListItem Value="Approved" />
-                                                                                <asp:ListItem Value="Completed" />
+                                                                                <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
                                                                             </asp:DropDownList>
 
                                                                             <asp:HyperLink ID="HL_RelatedDoc" runat="server" Enabled="False" NavigateUrl="~/TTPlanRelatedDoc.aspx"

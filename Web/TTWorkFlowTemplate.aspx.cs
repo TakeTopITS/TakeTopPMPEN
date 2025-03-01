@@ -141,7 +141,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             workFlowTemplate.CreateTime = DateTime.Now;
             workFlowTemplate.CreatorCode = strUserCode;
             workFlowTemplate.CreatorName = ShareClass.GetUserName(strUserCode);
-            workFlowTemplate.Status = "在用";
+            workFlowTemplate.Status = ""+LanguageHandle.GetWord("ZaiYong")+"";
             workFlowTemplate.Authority = "所有";
             workFlowTemplate.IdentifyString = DateTime.Now.ToString("yyyyMMddHHMMssff");
             workFlowTemplate.WFDefinition = "";
@@ -160,7 +160,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             workFlowTemplate.XSNFile = @"Template\CommonBusinessForm.xsn";
             workFlowTemplate.PageFile = "";
 
-            workFlowTemplate.WFDefinition = "{states:{rect2:{type:'start',text:{text:'开始'}, attr:{ x:209, y:72, width:50, height:50}, props:{guid:{value:'4af6bc4b-7ed9-0b0b-e3a0-91c9d8fd92d1'},text:{value:'开始'}}}},paths:{},props:{props:{name:{value:'新建流程'},key:{value:''},desc:{value:''}}}}";
+            workFlowTemplate.WFDefinition = "{states:{rect2:{type:'start',text:{text:'"+LanguageHandle.GetWord("KaiShi")+"'}, attr:{ x:209, y:72, width:50, height:50}, props:{guid:{value:'4af6bc4b-7ed9-0b0b-e3a0-91c9d8fd92d1'},text:{value:'"+LanguageHandle.GetWord("KaiShi")+"'}}}},paths:{},props:{props:{name:{value:'"+LanguageHandle.GetWord("XinJianLiuCheng")+"'},key:{value:''},desc:{value:''}}}}";
 
 
             try
@@ -275,7 +275,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         strHQL = "from Department as department ";
         strHQL += " where department.DepartCode = " + "'" + strParentDepartCode + "'";
         //strHQL += " and ((department.Authority = '所有')";
-        //strHQL += " or ((department.Authority = '部分') ";
+        //strHQL += " or ((department.Authority = '"+LanguageHandle.GetWord("BuFen")+"') ";
         //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By department.DepartCode ASC";
         lst2 = departmentBLL.GetAllDepartments(strHQL);
@@ -309,7 +309,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strHQL = "from Department as department where department.ParentCode = " + "'" + strParentCode + "'";
         //strHQL += " and ((department.Authority = '所有')";
-        //strHQL += " or ((department.Authority = '部分') ";
+        //strHQL += " or ((department.Authority = '"+LanguageHandle.GetWord("BuFen")+"') ";
         //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By department.DepartCode ASC";
         DepartmentBLL departmentBLL = new DepartmentBLL();
@@ -355,7 +355,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node0.Text = "<B>角色组</B>";
+        node0.Text = "<B>"+LanguageHandle.GetWord("JiaoSeZu")+"</B>";
         node0.Target = "0";
         node0.Expanded = true;
         TreeView.Nodes.Add(node0);
@@ -383,7 +383,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
 
         node2 = new TreeNode();
-        node2.Text = "<B>部分</B>";
+        node2.Text = "<B>"+LanguageHandle.GetWord("BuFen")+"</B>";
         node2.Target = "1";
         node2.Expanded = false;
         node0.ChildNodes.Add(node2);

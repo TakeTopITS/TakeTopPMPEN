@@ -17,6 +17,9 @@ using System.Data.SqlClient;
 using ProjectMgt.Model;
 using ProjectMgt.DAL;
 using ProjectMgt.BLL;
+using jdk.nashorn.@internal.objects.annotations;
+using System.Xml.Linq;
+using Stimulsoft.Base.Gauge.GaugeGeoms;
 
 public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI.Page
 {
@@ -78,20 +81,24 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) +   
-                   科目) as 'Subject',SUM(应收金额) as 'AmountReceivable',SUM(实收金额) as 'ActualAmountReceived' From V_ProjectImplementMileStoneReceivePayReport Where ";   
+        strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) +   
+                   {1}) as 'Subject',SUM({2}) as 'AmountReceivable',SUM({3}) as 'ActualAmountReceived' From V_ProjectImplementMileStoneReceivePayReport Where ",
+                       LanguageHandle.GetWord("YingShouShiJian"),
+                       LanguageHandle.GetWord("KeMu"),
+                       LanguageHandle.GetWord("YingShouJinE"),
+                       LanguageHandle.GetWord("ShiShouJinE"));
         if (strProjectID != "")
         {
-            strHQL += " 项目号 = " + strProjectID;   
+            strHQL += " " + LanguageHandle.GetWord("XiangMuHao") + " = " + strProjectID;
         }
         else
         {
-            strHQL += "项目名 Like '%" + strProjectName + "%'";   
+            strHQL += "" + LanguageHandle.GetWord("XiangMuMing") + " Like '%" + strProjectName + "%'";
         }
-        strHQL += "And 项目经理 Like '%" + strPMName + "%'";   
-        strHQL += "And 应收时间 >= '" + strBeginTime + "' And 应收时间 <= '" + strEndTime + "'";   
-        strHQL += " Group By (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) + 科目) ";   
-        strHQL += " Order By (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) +  科目) ASC";   
+        strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
+        strHQL += "And " + LanguageHandle.GetWord("YingShouShiJian") + " >= '" + strBeginTime + "' And " + LanguageHandle.GetWord("YingShouShiJian") + " <= '" + strEndTime + "'";
+        strHQL += " Group By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) + " + LanguageHandle.GetWord("KeMu") + ") ";
+        strHQL += " Order By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) +  " + LanguageHandle.GetWord("KeMu") + ") ASC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -118,22 +125,24 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        strStatus = "%" + DL_Status.SelectedValue + "%";
-
-        strHQL = @"Select (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) +   
-                   科目) as 'Subject',SUM(应收金额) as 'AmountReceivable',SUM(实收金额) as 'ActualAmountReceived' From V_ProjectImplementMileStoneReceivePayReport Where ";   
+        strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) +   
+                   {1}) as XName,SUM({2}) as YNumber,SUM({3}) as ZNumber From V_ProjectImplementMileStoneReceivePayReport Where ",
+                   LanguageHandle.GetWord("YingShouShiJian"),
+                   LanguageHandle.GetWord("KeMu"),
+                   LanguageHandle.GetWord("YingShouJinE"),
+                   LanguageHandle.GetWord("ShiShouJinE"));
         if (strProjectID != "")
         {
-            strHQL += " 项目号 = " + strProjectID;   
+            strHQL += " " + LanguageHandle.GetWord("XiangMuHao") + " = " + strProjectID;
         }
         else
         {
-            strHQL += "项目名 Like '%" + strProjectName + "%'";   
+            strHQL += "" + LanguageHandle.GetWord("XiangMuMing") + " Like '%" + strProjectName + "%'";
         }
-        strHQL += "And 项目经理 Like '%" + strPMName + "%'";   
-        strHQL += "And 应收时间 >= '" + strBeginTime + "' And 应收时间 <= '" + strEndTime + "'";   
-        strHQL += " Group By (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) + 科目) ";   
-        strHQL += " Order By (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) +  科目) ASC";   
+        strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
+        strHQL += "And " + LanguageHandle.GetWord("YingShouShiJian") + " >= '" + strBeginTime + "' And " + LanguageHandle.GetWord("YingShouShiJian") + " <= '" + strEndTime + "'";
+        strHQL += " Group By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) + " + LanguageHandle.GetWord("KeMu") + ") ";
+        strHQL += " Order By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) +  " + LanguageHandle.GetWord("KeMu") + ") ASC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -146,7 +155,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("DaoChuChengGong") + "！');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -192,24 +201,27 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
         strChartTitle = LanguageHandle.GetWord("YingShouShiShouTongJiTu").ToString().Trim();
-
-        strHQL = @"Select (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) +   
-                   科目) as XName,SUM(应收金额) as YNumber,SUM(实收金额) as ZNumber From V_ProjectImplementMileStoneReceivePayReport Where ";   
+        strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) +   
+                   {1}) as XName,SUM({2}) as YNumber,SUM({3}) as ZNumber From V_ProjectImplementMileStoneReceivePayReport Where ",
+                   LanguageHandle.GetWord("YingShouShiJian"),
+                   LanguageHandle.GetWord("KeMu"),
+                   LanguageHandle.GetWord("YingShouJinE"),
+                   LanguageHandle.GetWord("ShiShouJinE"));
         if (strProjectID != "")
         {
-            strHQL += " 项目号 = " + strProjectID;   
+            strHQL += " " + LanguageHandle.GetWord("XiangMuHao") + " = " + strProjectID;
         }
         else
         {
-            strHQL += "项目名 Like '%" + strProjectName + "%'";   
+            strHQL += "" + LanguageHandle.GetWord("XiangMuMing") + " Like '%" + strProjectName + "%'";
         }
-        strHQL += "And 项目经理 Like '%" + strPMName + "%'";   
-        strHQL += "And 应收时间 >= '" + strBeginTime + "' And 应收时间 <= '" + strEndTime + "'";   
-        strHQL += " Group By (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) + 科目) ";   
-        strHQL += " Order By (SUBSTRING (to_char(应收时间,'yyyymmdd'),0,7) +  科目) ASC";   
+        strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
+        strHQL += "And " + LanguageHandle.GetWord("YingShouShiJian") + " >= '" + strBeginTime + "' And " + LanguageHandle.GetWord("YingShouShiJian") + " <= '" + strEndTime + "'";
+        strHQL += " Group By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) + " + LanguageHandle.GetWord("KeMu") + ") ";
+        strHQL += " Order By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) +  " + LanguageHandle.GetWord("KeMu") + ") ASC";
 
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Column2&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
-        
+
         LB_ReceivableAmount.Text = SumReceivableAmount();
         LB_ReceiverAmount.Text = SumReceiverAmount();
         LB_UnReceiverAmount.Text = SumUnReceiverAmount();
@@ -231,17 +243,17 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select COALESCE(SUM(应收金额),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";   
+        strHQL = @"Select COALESCE(SUM(" + LanguageHandle.GetWord("YingShouJinE") + "),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " 项目号 = " + strProjectID;   
+            strHQL += " " + LanguageHandle.GetWord("XiangMuHao") + " = " + strProjectID;
         }
         else
         {
-            strHQL += "项目名 Like '%" + strProjectName + "%'";   
+            strHQL += "" + LanguageHandle.GetWord("XiangMuMing") + " Like '%" + strProjectName + "%'";
         }
-        strHQL += "And 项目经理 Like '%" + strPMName + "%'";   
-        strHQL += "And 应收时间 >= '" + strBeginTime + "' And 应收时间 <= '" + strEndTime + "'";   
+        strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
+        strHQL += "And " + LanguageHandle.GetWord("YingShouShiJian") + " >= '" + strBeginTime + "' And " + LanguageHandle.GetWord("YingShouShiJian") + " <= '" + strEndTime + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -264,17 +276,17 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select COALESCE(SUM(实收金额),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";   
+        strHQL = @"Select COALESCE(SUM(" + LanguageHandle.GetWord("ShiShouJinE") + "),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " 项目号 = " + strProjectID;   
+            strHQL += " " + LanguageHandle.GetWord("XiangMuHao") + " = " + strProjectID;
         }
         else
         {
-            strHQL += "项目名 Like '%" + strProjectName + "%'";   
+            strHQL += "" + LanguageHandle.GetWord("XiangMuMing") + " Like '%" + strProjectName + "%'";
         }
-        strHQL += "And 项目经理 Like '%" + strPMName + "%'";   
-        strHQL += "And 实收时间 >= '" + strBeginTime + "' And 实收时间 <= '" + strEndTime + "'";   
+        strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
+        strHQL += "And 实收时间 >= '" + strBeginTime + "' And 实收时间 <= '" + strEndTime + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -297,17 +309,17 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select COALESCE(SUM(未收金额),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";   
+        strHQL = @"Select COALESCE(SUM(未收金额),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " 项目号 = " + strProjectID;   
+            strHQL += " " + LanguageHandle.GetWord("XiangMuHao") + " = " + strProjectID;
         }
         else
         {
-            strHQL += "项目名 Like '%" + strProjectName + "%'";   
+            strHQL += "" + LanguageHandle.GetWord("XiangMuMing") + " Like '%" + strProjectName + "%'";
         }
-        strHQL += "And 项目经理 Like '%" + strPMName + "%'";   
-        strHQL += "And 应收时间 >= '" + strBeginTime + "' And 应收时间 <= '" + strEndTime + "'";   
+        strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
+        strHQL += "And " + LanguageHandle.GetWord("YingShouShiJian") + " >= '" + strBeginTime + "' And " + LanguageHandle.GetWord("YingShouShiJian") + " <= '" + strEndTime + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 

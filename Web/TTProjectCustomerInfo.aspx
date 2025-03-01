@@ -239,11 +239,11 @@
                                     </td>
                                     <td style="width: 15%; text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_Currency" runat="server">
-                                            <asp:ListItem Value="Renminbi" />
-                                            <asp:ListItem Value="UsDollar" />
-                                            <asp:ListItem Value="Euro" />
-                                            <asp:ListItem Value="HongKongDollar" />
-                                            <asp:ListItem Value="NewTaiwanDollar" />
+                                            <asp:ListItem Value="Renminbi" Text="<%$ Resources:lang,RenMinBi %>"/>
+                                            <asp:ListItem Value="UsDollar" Text="<%$ Resources:lang,MeiYuan %>"/>
+                                            <asp:ListItem Value="Euro" Text="<%$ Resources:lang,OuYuan %>"/>
+                                            <asp:ListItem Value="HongKongDollar" Text="<%$ Resources:lang,GangBi %>"/>
+                                            <asp:ListItem Value="NewTaiwanDollar" Text="<%$ Resources:lang,TaiBi %>"/>
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

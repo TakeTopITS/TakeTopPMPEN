@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>HSE生産概要</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>赤：遅刻、太字：参加、ブラック：ノーマル</value>
   </data>
@@ -27579,6 +27576,24 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>起動後、プランの内容は変更できませんが、開始してもよろしいですか?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Asset purchase orders</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Item purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE生産概要</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>ドメインルール：社員コード：[TAKETOPUSERCODE]、部門列：[TAKETOPDEPARTMENT]、セキュリティ上の理由から、削除など、使用することはできません、更新、ドロップ、挿入、ALTER文）</value>
   </data>
@@ -27596,9 +27611,6 @@
   </data>
   <data name="String" xml:space="preserve">
     <value>部門の統計による物流コスト</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>起動後、プランの内容は変更できませんが、開始してもよろしいですか?</value>
   </data>
   <data name="String13" xml:space="preserve">
     <value>アカウントの統計情報により流通コスト</value>
@@ -27638,11 +27650,5 @@
   </data>
   <data name="String25" xml:space="preserve">
     <value>周</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
   </data>
 </root>

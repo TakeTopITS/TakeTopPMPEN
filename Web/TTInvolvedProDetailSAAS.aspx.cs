@@ -62,7 +62,7 @@ public partial class TTInvolvedProDetailSAAS : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
-        //2013-10-14 By LiuJianping 项目经理
+        //2013-10-14 By LiuJianping "+LanguageHandle.GetWord("XiangMuJingLi")+"
         string strPMUserCode = project.PMCode.Trim();//end
         string strProjectType = project.ProjectType.Trim();
 

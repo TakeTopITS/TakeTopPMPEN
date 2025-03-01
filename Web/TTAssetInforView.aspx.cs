@@ -50,7 +50,7 @@ public partial class TTAssetInforView : System.Web.UI.Page
 
             Asset asset = (Asset)lst[0];
 
-            //this.Title = "资产：" + asset.AssetCode + " " + asset.AssetName + " 资料！";
+            //this.Title = ""+LanguageHandle.GetWord("ZiChan")+"：" + asset.AssetCode + " " + asset.AssetName + " 资料！";
 
             DataList1.DataSource = lst;
             DataList1.DataBind();

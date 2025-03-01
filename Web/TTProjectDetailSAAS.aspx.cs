@@ -107,7 +107,7 @@ public partial class TTProjectDetailSAAS : System.Web.UI.Page
             //当天任务分派记录汇总
             HL_CurrentDailyWorkTask.NavigateUrl = "TTDailyWorkTaskView.aspx?ProjectID=" + strProjectID + "&UserCode=" + strUserCode + "&WorkDate=" + DateTime.Now;
 
-            //2013-09-13 By LiuJianping 项目经理
+            //2013-09-13 By LiuJianping "+LanguageHandle.GetWord("XiangMuJingLi")+"
             string strPMUserCode = project.PMCode.Trim();//
 
             strHQL = "from DailyWork as dailyWork where dailyWork.ProjectID = " + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";

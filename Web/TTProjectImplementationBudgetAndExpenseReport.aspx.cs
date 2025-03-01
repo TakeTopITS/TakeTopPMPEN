@@ -81,19 +81,33 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
-   Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName,strBeginTime,strEndTime);   
-
+            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
+Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where A.ProjectID = {3}  Group By A.Account, A.ProjectID) as AA
+LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where A.ProjectID = {3} And A.EffectDate >= '{5}' And A.EffectDate <= '{6}'  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
+LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {3} AND CC.PMName LIKE '{7}') AS KK Group By {0}",
+       LanguageHandle.GetWord("KeMu"),
+       LanguageHandle.GetWord("YuSuan"),
+       LanguageHandle.GetWord("FeiYong"),
+       strProjectID,
+       LanguageHandle.GetWord("KeMuA"),
+       strBeginTime,
+       strEndTime,
+       strPMName);
         }
         else
         {
-            strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
-   Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);   
-
+            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
+Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as AA
+LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where  A.EffectDate >= '{5}' And A.EffectDate <= '{6}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
+LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}') AND CC.PMName LIKE '{7}') AS KK Group By {0}",
+      LanguageHandle.GetWord("KeMu"),
+      LanguageHandle.GetWord("YuSuan"),
+      LanguageHandle.GetWord("FeiYong"),
+      strProjectName,
+      LanguageHandle.GetWord("KeMuA"),
+      strBeginTime,
+      strEndTime,
+      strPMName);
         }
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
@@ -126,19 +140,33 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
-   Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime);   
-
+            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
+Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where A.ProjectID = {3}  Group By A.Account, A.ProjectID) as AA
+LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where A.ProjectID = {3} And A.EffectDate >= '{5}' And A.EffectDate <= '{6}'  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
+LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {3} AND CC.PMName LIKE '{7}') AS KK Group By {0}",
+     LanguageHandle.GetWord("KeMu"),
+     LanguageHandle.GetWord("YuSuan"),
+     LanguageHandle.GetWord("FeiYong"),
+     strProjectID,
+     LanguageHandle.GetWord("KeMuA"),
+     strBeginTime,
+     strEndTime,
+     strPMName);
         }
         else
         {
-            strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
-   Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);   
-
+            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
+Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as AA
+LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where  A.EffectDate >= '{5}' And A.EffectDate <= '{6}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
+LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}') AND CC.PMName LIKE '{7}') AS KK Group By {0}",
+     LanguageHandle.GetWord("KeMu"),
+     LanguageHandle.GetWord("YuSuan"),
+     LanguageHandle.GetWord("FeiYong"),
+     strProjectName,
+     LanguageHandle.GetWord("KeMuA"),
+     strBeginTime,
+     strEndTime,
+     strPMName);
         }
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
@@ -151,7 +179,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"！');", true);   
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -199,19 +227,33 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select 科目 as XName, sum(COALESCE(预算,0)) as YNumber, sum(COALESCE(费用,0)) as ZNumber From(
-   Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime);   
-
+            strHQL = string.Format(@"Select {0} as XName, sum(COALESCE({1},0)) as YNumber, sum(COALESCE({2},0)) as ZNumber From(
+   Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where A.ProjectID = {3}  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where A.ProjectID = {3} And A.EffectDate >= '{5}' And A.EffectDate <= '{6}'  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {3} AND CC.PMName LIKE '{7}') AS KK Group By {0}",
+   LanguageHandle.GetWord("KeMu"),
+   LanguageHandle.GetWord("YuSuan"),
+   LanguageHandle.GetWord("FeiYong"),
+   strProjectID,
+   LanguageHandle.GetWord("KeMuA"),
+   strBeginTime,
+   strEndTime,
+   strPMName);
         }
         else
         {
-            strHQL = string.Format(@"Select 科目 as XName, sum(COALESCE(预算,0)) as YNumber, sum(COALESCE(费用,0)) as ZNumber From(
-   Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);   
-
+            strHQL = string.Format(@"Select {0} as XName, sum(COALESCE({1},0)) as YNumber, sum(COALESCE({2},0)) as ZNumber From(
+   Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where  A.EffectDate >= '{5}' And A.EffectDate <= '{6}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}') AND CC.PMName LIKE '{7}') AS KK Group By {0}",
+   LanguageHandle.GetWord("KeMu"),
+   LanguageHandle.GetWord("YuSuan"),
+   LanguageHandle.GetWord("FeiYong"),
+   strProjectName,
+   LanguageHandle.GetWord("KeMuA"),
+   strBeginTime,
+   strEndTime,
+   strPMName);
         }
 
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Column2&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);

@@ -112,8 +112,15 @@ public partial class TTSystemDataManage : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = string.Format(@"Select ID 编号, UserCode 代码,UserName 姓名,UserIP IP,UserHostName 电脑名称,LoginTime 登录时间,LastestTime 最后操作时间,
-           Position 位置 From T_LogonLog ");   
+        strHQL = string.Format(@"Select ID {0}, UserCode {1},UserName {2},UserIP IP,UserHostName {3},LoginTime {4},LastestTime {5}, Position {6} From T_LogonLog ",
+        LanguageHandle.GetWord("BianHao"),
+        LanguageHandle.GetWord("DaiMa"),
+        LanguageHandle.GetWord("XingMing"),
+        LanguageHandle.GetWord("DianNaoMingCheng"),
+        LanguageHandle.GetWord("DengLuShiJian"),
+        LanguageHandle.GetWord("ZuiHouCaoZuoShiJian"),
+        LanguageHandle.GetWord("WeiZhi"));
+
         strHQL += " Order by ID DESC";
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);

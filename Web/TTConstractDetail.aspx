@@ -1919,9 +1919,9 @@
                                         <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyle" align="left">
                                         <asp:DropDownList ID="DL_ReceivablesStatus" runat="server">
-                                            <asp:ListItem Value="Plan" />
-                                            <asp:ListItem Value="Completed" />
-                                            <asp:ListItem Value="Cancel" />
+                                            <asp:ListItem Value="Plan"  Text="<%$ Resources:lang,JiHua %>"/>
+                                            <asp:ListItem Value="Completed"  Text="<%$ Resources:lang,WanCheng %>"/>
+                                            <asp:ListItem Value="Cancel"  Text="<%$ Resources:lang,QuXiao %>"/>
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
@@ -1929,9 +1929,9 @@
                                         <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,GuanLian %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyle" align="left" colspan="3">
                                         <asp:DropDownList ID="DL_ReceivablesRelatedType" runat="server" OnSelectedIndexChanged="DL_RelatedType_SelectedIndexChanged" AutoPostBack="True">
-                                            <asp:ListItem Value="Other" />
-                                            <asp:ListItem Value="Project" />
-                                            <asp:ListItem Value="GoodsSO" />
+                                            <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa %>"/>
+                                            <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu %>"/>
+                                            <asp:ListItem Value="GoodsSO" Text="<%$ Resources:lang,XiaoShouDingDan %>"/>
                                         </asp:DropDownList>&#160;ID:<NickLee:NumberBox ID="NB_ReceivablesRelatedID" runat="server" MaxAmount="1000000000000" MinAmount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="50px">0</NickLee:NumberBox>&#160;<asp:DropDownList ID="DL_ReceiveRelatedProjectID" runat="server" DataTextField="ProjectID" Visible="False"
                                             DataValueField="ProjectID" OnSelectedIndexChanged="DL_ReceiveRelatedProjectID_SelectedIndexChanged" AutoPostBack="True" Width="80px">
                                         </asp:DropDownList><asp:DropDownList ID="DL_ReceiveRelatedGoodsSOID" runat="server" DataTextField="SOID" DataValueField="SOID" Visible="False"
@@ -2062,9 +2062,9 @@
                                         <asp:Label ID="Label59" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyle" align="left">
                                         <asp:DropDownList ID="DL_PayableStatus" runat="server">
-                                            <asp:ListItem Value="Plan" />
-                                            <asp:ListItem Value="Completed" />
-                                            <asp:ListItem Value="Cancel" />
+                                            <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
@@ -2083,10 +2083,10 @@
                                             <tr>
                                                 <td>
                                                     <asp:DropDownList ID="DL_PayablesRelatedType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_PayablesRelatedType_SelectedIndexChanged">
-                                                        <asp:ListItem Value="Other" />
-                                                        <asp:ListItem Value="Project" />
-                                                        <asp:ListItem Value="GoodsPO" />
-                                                        <asp:ListItem Value="AssetPO" />
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
+                                                        <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu%>"/>
+                                                        <asp:ListItem Value="GoodsPO" Text="<%$ Resources:lang,GoodsPO%>"/>
+                                                        <asp:ListItem Value="AssetPO" Text="<%$ Resources:lang,AssetPO%>"/>
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>ID:
@@ -2429,8 +2429,8 @@
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_CommissionStatus" runat="server">
-                                            <asp:ListItem Value="Unsent" />
-                                            <asp:ListItem Value="Sent" />
+                                            <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,WeiFa %>"/>
+                                           <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
                                         </asp:DropDownList></td>
                                     <td style="text-align: Right;" class="formItemBgStyle"></td>
                                     <td style="text-align: left;" class="formItemBgStyle"></td>
@@ -2832,9 +2832,9 @@
                                                     <asp:Label ID="Label118" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>£º</td>
                                                 <td colspan="5" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_DeliveryStatus" runat="server">
-                                                        <asp:ListItem Value="Plan" />
-                                                        <asp:ListItem Value="Completed" />
-                                                        <asp:ListItem Value="Cancel" />
+                                                         <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
+                                                        <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
+                                                        <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>
@@ -3197,9 +3197,9 @@
                                         <asp:Label ID="Label174" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>£º</td>
                                     <td colspan="5" class="formItemBgStyle" style="text-align: left;">
                                         <asp:DropDownList ID="DL_ReceiptStatus" runat="server">
-                                            <asp:ListItem Value="Plan" />
-                                            <asp:ListItem Value="Completed" />
-                                            <asp:ListItem Value="Cancel" />
+                                             <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

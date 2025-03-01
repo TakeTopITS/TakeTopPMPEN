@@ -268,7 +268,7 @@ public partial class TTMakeBookManage : System.Web.UI.Page
     protected DataTable getExportBookList()
     {
         string strHQL = "Select BookType 'Type',BookClassificationName 'StandardOrBookClassification',ClassificationCode 'ClassificationCode',ReferenceNo 'RegistrationNumber',BarCode 'StandardNumber',BookName 'StandardOrBookName'," +   
-            "BookPublishersName 'Publisher',Author 'Author',Translator 'Translator',BookNum 'AvailableForLoan',BookUseNum 'BorrowedQuantity',Price 'Price',Introduction 'Remark',PublicationDate '出版/实施日期' From T_BookInformation Where 1=1 ";   
+            "BookPublishersName 'Publisher',Author 'Author',Translator 'Translator',BookNum 'AvailableForLoan',BookUseNum 'BorrowedQuantity',Price 'Price',Introduction 'Remark',PublicationDate '"+LanguageHandle.GetWord("ChuBan")+"/"+LanguageHandle.GetWord("ShiShiRiQi")+"' From T_BookInformation Where 1=1 ";   
         if (!string.IsNullOrEmpty(txt_BarCode.Text.Trim()))
         {
             strHQL += " and BarCode like '%" + txt_BarCode.Text.Trim() + "%' ";

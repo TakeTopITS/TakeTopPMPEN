@@ -151,14 +151,14 @@
                                                                 <asp:ListItem Value="Doughnut" Text="<%$ Resources:lang,QuanTu%>" />
                                                                 <asp:ListItem Value="Bar" Text="<%$ Resources:lang,HengXiangZhuZhuangTu%>"  />
                                                                 <asp:ListItem Value="Column" Text="<%$ Resources:lang,ZongXiangZhuZhuangTu%>" />
-                                                                <asp:ListItem Value="Line" Text="线图" />
+                                                                <asp:ListItem Value="Line" TText="<%$ Resources:lang,XianTu%>" />
                                                                 <asp:ListItem Value="Funnel" Text="<%$ Resources:lang,LouDouTu%>" />
-                                                                <asp:ListItem Value="Gauge" Text="仪表盘" />
-                                                                <asp:ListItem Value="HRuningProjectStatus" Text="在执行项目状态" />
-                                                                <asp:ListItem Value="HDelayProjectStatus" Text="延误项目状态" />
-                                                                <asp:ListItem Value="HAnnualPaymentStatus" Text="年度回款状态" />
-                                                                <asp:ListItem Value="HAnnualWorkHourStatus" Text="年度工时状态" />
-                                                                <asp:ListItem Value="HRuningTaskStatus" Text="年度任务状态" />
+                                                                <asp:ListItem Value="Gauge" Text="<%$ Resources:lang,YiBiaoPan%>" />
+                                                                <asp:ListItem Value="HRuningProjectStatus" Text="<%$ Resources:lang,ZaiZiXunZhangTai%>" />
+                                                                <asp:ListItem Value="HDelayProjectStatus" Text="<%$ Resources:lang,YanWuXiangMuZhangTai%>" />
+                                                                <asp:ListItem Value="HAnnualPaymentStatus" Text="<%$ Resources:lang,NianDuHuiKanZhangTai%>" />
+                                                                <asp:ListItem Value="HAnnualWorkHourStatus" Text="<%$ Resources:lang,NianDuGongShiZhangTai%>" />
+                                                                <asp:ListItem Value="HRuningTaskStatus" Text="<%$ Resources:lang,NianDuRenWuZhangTai%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td align="right" style="width: 150px;" class="formItemBgStyle">

@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>Riassunto HSE Produzione</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Riassunto HSE Produzione</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Rosso: ritardo, audace: Partecipazione, Nero: Normale</value>
   </data>
@@ -27579,6 +27576,24 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Dopo il lancio, il contenuto del piano non può essere modificato, sei sicuro di voler iniziare?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Asset purchase orders</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Item purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Riassunto HSE Produzione</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Regole di dominio: codice dipendente: [TAKETOPUSERCODE], stringa dipartimento: [TAKETOPDEPARTMENT], per ragioni di sicurezza, non può essere utilizzato compresi Delete, Update, Goccia, Insert, dichiarazione Alter)</value>
   </data>
@@ -27593,9 +27608,6 @@
   </data>
   <data name="String" xml:space="preserve">
     <value>Alimentazione</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>Dopo il lancio, il contenuto del piano non può essere modificato, sei sicuro di voler iniziare?</value>
   </data>
   <data name="String13" xml:space="preserve">
     <value>Candidato</value>
@@ -27830,11 +27842,5 @@
   </data>
   <data name="String121" xml:space="preserve">
     <value>Prezzo (yuan / mesi-persona)</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
   </data>
 </root>

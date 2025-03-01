@@ -30,34 +30,56 @@ public partial class TTConstractDIYQueryReport : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            strHQL = @"SELECT     ConstractCode  合同代码   
-		  ,ConstractName  合同名称   
-		  ,Type   总类   
-		  ,ConstractClass  小类   
-		  ,Amount  金额   
-		  ,Currency  币别   
-		  ,ReAndPayType  收付款方式   
-		  ,StartDate  开始时间   
-		  ,EndDate  结束时间   
-		  ,MainContent  主要内容   
-		  ,Exception  异常情况   
-		  ,PartA  甲方   
-		  ,PartAOperator  甲方负责人   
-		  ,PartB  乙方   
-		  ,PartBOperator  乙方负责人   
-		  ,SignDate  签订日期   
-		  ,Status  状态   
-		  ,RecordTime  记录时间   
-		  ,RecorderCode  记录人代码   
-		  ,RecorderName  记录人名称   
-          ,F_GetConstractRelatedProjectName(ConstractCode)  关联项目   
-          ,F_GetConstractRelatedSales(ConstractCode)  业务员		     
-		FROM T_Constract
-		Where    
-          to_char(SignDate,'yyyymmdd') > '20150191'            
-		  AND  Amount > 1000
-          AND  ConstractName Like '%%'
-		  Order By SignDate DESC ,Amount ASC";
+            strHQL = string.Format(@"SELECT     ConstractCode  {0}   
+  ,ConstractName  {1}   
+  ,Type   {2}   
+  ,ConstractClass  {3}   
+  ,Amount  {4}   
+  ,Currency  {5}   
+  ,ReAndPayType  {6}   
+  ,StartDate  {7}   
+  ,EndDate  {8}   
+  ,MainContent  {9}   
+  ,Exception  {10}   
+  ,PartA  {11}   
+  ,PartAOperator  {12}   
+  ,PartB  {13}   
+  ,PartBOperator  {14}   
+  ,SignDate  {15}   
+  ,Status  {16}   
+  ,RecordTime  {17}   
+  ,RecorderCode  {18}   
+  ,RecorderName  {19}   
+  ,F_GetConstractRelatedProjectName(ConstractCode)  {20}   
+  ,F_GetConstractRelatedSales(ConstractCode)  {21}		     
+FROM T_Constract
+Where    
+  to_char(SignDate,'yyyymmdd') > '20150191'            
+  AND  Amount > 1000
+  AND  ConstractName Like '%%'
+  Order By SignDate DESC ,Amount ASC", 
+  LanguageHandle.GetWord("HeTongDaiMa"), 
+  LanguageHandle.GetWord("HeTongMingCheng"), 
+  LanguageHandle.GetWord("ZongLei"), 
+  LanguageHandle.GetWord("XiaoLei"), 
+  LanguageHandle.GetWord("JinE"), 
+  LanguageHandle.GetWord("BiBie"), 
+  LanguageHandle.GetWord("ShouFuKuanFangShi"), 
+  LanguageHandle.GetWord("KaiShiShiJian"), 
+  LanguageHandle.GetWord("JieShuShiJian"), 
+  LanguageHandle.GetWord("ZhuYaoNeiRong"), 
+  LanguageHandle.GetWord("YiChangQingKuang"), 
+  LanguageHandle.GetWord("JiaFang"), 
+  LanguageHandle.GetWord("JiaFangFuZeRen"), 
+  LanguageHandle.GetWord("YiFang"), 
+  LanguageHandle.GetWord("YiFangFuZeRen"), 
+  LanguageHandle.GetWord("QianDingRiQi"), 
+  LanguageHandle.GetWord("ZhuangTai"), 
+  LanguageHandle.GetWord("JiLuShiJian"), 
+  LanguageHandle.GetWord("JiLuRenDaiMa"), 
+  LanguageHandle.GetWord("JiLuRenMingCheng"), 
+  LanguageHandle.GetWord("GuanLianXiangMu"), 
+  LanguageHandle.GetWord("YeWuYuan"));
 
             TB_SQLCode.Text = strHQL;
 

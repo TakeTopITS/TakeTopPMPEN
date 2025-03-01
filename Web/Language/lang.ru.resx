@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>Резюме HSE Производство</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Резюме HSE Производство</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Красный: опоздания, смелый: участие, Черный: Нормальный</value>
   </data>
@@ -27576,6 +27573,24 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>После запуска содержимое плана изменить нельзя, вы уверены, что хотите начать?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Asset purchase orders</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Item purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Резюме HSE Производство</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Правила домена: Код сотрудника: [TAKETOPUSERCODE], строка отдел: [TAKETOPDEPARTMENT], по соображениям безопасности, не могут быть использованы в том числе удаление, обновление, падения, Вставить, Альтер заявление)</value>
   </data>
@@ -27593,9 +27608,6 @@
   </data>
   <data name="String" xml:space="preserve">
     <value>Расходы на реализацию по статистике отдела</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>После запуска содержимое плана изменить нельзя, вы уверены, что хотите начать?</value>
   </data>
   <data name="String13" xml:space="preserve">
     <value>Расходы на реализацию по статистике счета</value>
@@ -27635,11 +27647,5 @@
   </data>
   <data name="String25" xml:space="preserve">
     <value>Чжоу</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
   </data>
 </root>

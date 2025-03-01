@@ -845,9 +845,9 @@
 
                                                         <asp:ListItem Value="Procuring" />
 
-                                                        <asp:ListItem Value="Completed" />
+                                                        <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
 
-                                                        <asp:ListItem Value="Cancel" />
+                                                        <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>

@@ -41,7 +41,7 @@ public partial class TTProjectTaskView : System.Web.UI.Page
             {
                 ProjectTask projectTask = (ProjectTask)lst[0];
               
-                //this.Title = "任务:" + strTaskID + " " + projectTask.Task.Trim() + " 详细信息";
+                //this.Title = ""+LanguageHandle.GetWord("RenWu")+":" + strTaskID + " " + projectTask.Task.Trim() + " 详细信息";
             }
             else
             {

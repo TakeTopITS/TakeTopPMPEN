@@ -214,7 +214,7 @@ public partial class TTCarInOut : System.Web.UI.Page
     {
         DataGrid1.CurrentPageIndex = e.NewPageIndex;
 
-        string strHQL = "From CarAssignForm as carAssignForm Where carAssignForm.GuardCode = " + "'" + strUserCode + "'" + " And carAssignForm.Status<>'Cancel' And carAssignForm.Status<>'Closed' Order By carAssignForm.DepartTime DESC";//过滤掉 取消或关闭 状态 Liujp 2013-07-16
+        string strHQL = "From CarAssignForm as carAssignForm Where carAssignForm.GuardCode = " + "'" + strUserCode + "'" + " And carAssignForm.Status<>'Cancel' And carAssignForm.Status<>'Closed' Order By carAssignForm.DepartTime DESC";//过滤掉 取消或关闭 "+LanguageHandle.GetWord("ZhuangTai")+" Liujp 2013-07-16
 
         CarAssignFormBLL carAssignFormBLL = new CarAssignFormBLL();
         IList lst = carAssignFormBLL.GetAllCarAssignForms(strHQL);
@@ -241,7 +241,7 @@ public partial class TTCarInOut : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "From CarAssignForm as carAssignForm Where carAssignForm.GuardCode = " + "'" + strUserCode + "'" + " And carAssignForm.Status<>'Cancel' And carAssignForm.Status<>'Closed' Order By carAssignForm.DepartTime DESC";//过滤掉 取消或关闭 状态 Liujp 2013-07-16
+        strHQL = "From CarAssignForm as carAssignForm Where carAssignForm.GuardCode = " + "'" + strUserCode + "'" + " And carAssignForm.Status<>'Cancel' And carAssignForm.Status<>'Closed' Order By carAssignForm.DepartTime DESC";//过滤掉 取消或关闭 "+LanguageHandle.GetWord("ZhuangTai")+" Liujp 2013-07-16
         CarAssignFormBLL carAssignFormBLL = new CarAssignFormBLL();
         lst = carAssignFormBLL.GetAllCarAssignForms(strHQL);
 

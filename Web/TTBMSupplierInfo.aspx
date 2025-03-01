@@ -289,7 +289,7 @@
                                                         <asp:ListItem Value="PrivateEnterprise" />
                                                         <asp:ListItem Value="Foreign(JointVenture)" />
                                                         <asp:ListItem Value="ShareholdingSystem" />
-                                                        <asp:ListItem Value="Other" />
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>

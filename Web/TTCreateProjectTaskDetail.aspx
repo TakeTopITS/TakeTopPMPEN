@@ -95,9 +95,9 @@
                                                                                 <td style="text-align: right; height: 28px;" class="formItemBgStyle">
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YouXianJi%>"></asp:Label>£º<asp:DropDownList ID="DL_Priority" runat="server" DataTextField="Priority" DataValueField="Priority">
 
-                                                                                        <asp:ListItem>Normal</asp:ListItem>
-                                                                                        <asp:ListItem>High</asp:ListItem>
-                                                                                        <asp:ListItem>Low</asp:ListItem>
+                                                                                        <asp:ListItem Value="Normal" Text="<%$ Resources:lang,PuTong %>" ></asp:ListItem>
+                                                                                          <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao %>" ></asp:ListItem>
+                                                                                         <asp:ListItem Value="Low" Text="<%$ Resources:lang,Di2 %>" ></asp:ListItem>
 
                                                                                     </asp:DropDownList>
                                                                                 </td>

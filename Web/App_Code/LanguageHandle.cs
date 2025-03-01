@@ -67,7 +67,7 @@ public static class LanguageHandle
             if (resourceCache.TryGetValue(key, out  value))
             {
                 //LogClass.WriteLogFile(value + ":" + value);
-                return value;
+                return value.Trim();
             }
         }
 

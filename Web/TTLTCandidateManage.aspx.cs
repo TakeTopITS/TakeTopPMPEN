@@ -173,9 +173,21 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             string strBriefKeyWord = "%" + TB_BriefKeyWord.Text.Trim() + "%";
 
 
-            strHQL = string.Format(@"Select UserName 姓名,Gender 性别,Age 年龄,Company 公司,Department 部门,
-                CurrentDuty 职责, MobilePhone 移动电话,CreateTime 创建日期, Status 状态,BelongDepartCode 归属部门代码, BelongDepartName 归属部门名称
-                    From T_LTCandidateInformation Where BelongDepartCode in ") + strDepartString + " ";
+            strHQL = string.Format(@"Select UserName {0},Gender {1},Age {2},Company {3},Department {4},
+       CurrentDuty {5}, MobilePhone {6},CreateTime {7}, Status {8},BelongDepartCode {9}, BelongDepartName {10}
+           From T_LTCandidateInformation Where BelongDepartCode in '{11}",
+              LanguageHandle.GetWord("XingMing"),
+              LanguageHandle.GetWord("XingBie"),
+              LanguageHandle.GetWord("NianLing"),
+              LanguageHandle.GetWord("GongSi"),
+              LanguageHandle.GetWord("BuMen"),
+              LanguageHandle.GetWord("ZhiZe"),
+              LanguageHandle.GetWord("YiDongDianHua"),
+              LanguageHandle.GetWord("ChuangJianRiQi"),
+              LanguageHandle.GetWord("ZhuangTai"),
+              LanguageHandle.GetWord("GuiShuBuMenDaiMa"),
+              LanguageHandle.GetWord("GuiShuBuMenMingCheng"),
+              strDepartString);
             strHQL += " and UserName Like " + "'" + strUserName + "'";
             strHQL += " and Status Like " + "'" + strStatus + "'";
             strHQL += " and Company Like " + "'" + strCompany + "'";
@@ -185,9 +197,21 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = string.Format(@"Select UserName 姓名,Gender 性别,Age 年龄,Company 公司,Department 部门,
-                CurrentDuty 职责, MobilePhone 移动电话,CreateTime 创建日期, Status 状态,BelongDepartCode 归属部门代码, BelongDepartName 归属部门名称
-                    From T_LTCandidateInformation Where DepartCode = ") + "'" + strDepartCode + "'";
+            strHQL = string.Format(@"Select UserName {0},Gender {1},Age {2},Company {3},Department {4},
+    CurrentDuty {5}, MobilePhone {6},CreateTime {7}, Status {8},BelongDepartCode {9}, BelongDepartName {10}
+        From T_LTCandidateInformation Where DepartCode = ‘{11}'",
+            LanguageHandle.GetWord("XingMing"),
+            LanguageHandle.GetWord("XingBie"),
+            LanguageHandle.GetWord("NianLing"),
+            LanguageHandle.GetWord("GongSi"),
+            LanguageHandle.GetWord("BuMen"),
+            LanguageHandle.GetWord("ZhiZe"),
+            LanguageHandle.GetWord("YiDongDianHua"),
+            LanguageHandle.GetWord("ChuangJianRiQi"),
+            LanguageHandle.GetWord("ZhuangTai"),
+            LanguageHandle.GetWord("GuiShuBuMenDaiMa"),
+            LanguageHandle.GetWord("GuiShuBuMenMingCheng"),
+            strDepartCode);
             strHQL += " Order by CreateTime ASC";
         }
 

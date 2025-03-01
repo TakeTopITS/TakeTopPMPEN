@@ -248,20 +248,33 @@ public partial class TTAllMemberWorkLoad : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as 组别,   
-                   UserName as 姓名,   
-                   ProjectName as 项目,   
-                   PlanName as 计划,   
-                   TaskName as 任务,   
-                   PlanBeginTime as 计划预计开始时间,   
-                   PlanEndTime as 计划预计结束时间,   
-                   TaskBeginDate as 任务预计开始时间,   
-                   TaskFirstOperateTime as 任务受理时间,   
-                   TaskEndDate as 任务预计结束时间,   
-                   TaskLastestOperateTime as 任务最新操作时间,   
-                   Status as 任务状态,   
-                   TaskLog as 任务日志   
-                   From V_ProjectMemberTaskDetailReport";
+        strHQL = string.Format(@"Select DepartCode as {0},   
+              UserName as {1},   
+              ProjectName as {2},   
+              PlanName as {3},   
+              TaskName as {4},   
+              PlanBeginTime as {5},   
+              PlanEndTime as {6},   
+              TaskBeginDate as {7},   
+              TaskFirstOperateTime as {8},   
+              TaskEndDate as {9},   
+              TaskLastestOperateTime as {10},   
+              Status as {11},   
+              TaskLog as {12}   
+              From V_ProjectMemberTaskDetailReport",
+              LanguageHandle.GetWord("ZuBie"),
+              LanguageHandle.GetWord("XingMing"),
+              LanguageHandle.GetWord("XiangMu"),
+              LanguageHandle.GetWord("JiHua"),
+              LanguageHandle.GetWord("RenWu"),
+              LanguageHandle.GetWord("JiHuaYuJiKaiShiShiJian"),
+              LanguageHandle.GetWord("JiHuaYuJiJieShuShiJian"),
+              LanguageHandle.GetWord("RenWuYuJiKaiShiShiJian"),
+              LanguageHandle.GetWord("RenWuShouLiShiJian"),
+              LanguageHandle.GetWord("RenWuYuJiJieShuShiJian"),
+              LanguageHandle.GetWord("RenWuZuiXinCaoZuoShiJian"),
+              LanguageHandle.GetWord("RenWuZhuangTai"),
+              LanguageHandle.GetWord("RenWuRiZhi"));
 
         strHQL += " Where DepartCode Like " + "'" + strDepartCode + "'";
         strHQL += " and UserName Like " + "'" + strOpretorName + "'";
@@ -286,7 +299,7 @@ public partial class TTAllMemberWorkLoad : System.Web.UI.Page
 
         Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanRenWuxls").ToString().Trim());
 
-        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"！');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

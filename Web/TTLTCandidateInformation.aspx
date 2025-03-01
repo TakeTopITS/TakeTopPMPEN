@@ -376,7 +376,7 @@
                                                     <asp:DropDownList ID="DL_Status" runat="server">
                                                         <asp:ListItem Value="Employed" />
                                                         <asp:ListItem Value="Resign" />
-                                                        <asp:ListItem Value="Stop" />
+                                                        <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi %>"/>
                                                         <asp:ListItem Value="Deleted" />
                                                         <asp:ListItem />
                                                     </asp:DropDownList></td>

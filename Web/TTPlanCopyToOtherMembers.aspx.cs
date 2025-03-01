@@ -113,7 +113,7 @@ public partial class TTPlanCopyToOtherMembers : System.Web.UI.Page
 
             LoadActorGroup(strUserCode, LB_DepartString.Text, strLangCode);
 
-            BT_DeletePlanToAllSystemUser.Attributes.Add("onclick", "return confirm('你确定要删除从此计划复制的其它成员的计划吗？');");   
+            BT_DeletePlanToAllSystemUser.Attributes.Add("onclick", "return confirm('"+LanguageHandle.GetWord("NiQueDingYaoShanChuCongCiJiHuaFuZhiDeQiTaChengYuanDeJiHuaMa")+"？');");   
         }
     }
     

@@ -156,11 +156,28 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         {
             string strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,Age 年龄,DepartCode 部门代码,DepartName 部门名称,
-                Duty 职责,OfficePhone 办公电话,MobilePhone 移动电话,EMail EMail,WorkScope 工作范围,JoinDate 加入日期,Status 状态,
-                RefUserCode 参考工号,IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
-								 else 'NotEnabled' end) 权限 
-                From T_ProjectMember Where DepartCode in ") + strDepartString + " ";
+            strHQL = string.Format(@"Select UserCode {0},UserName {1},Gender {2},Age {3},DepartCode {4},DepartName {5},
+      Duty {6},OfficePhone {7},MobilePhone {8},EMail {9},WorkScope {10},JoinDate {11},Status {12},
+      RefUserCode {13},IDCard {14},SortNumber {15},(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
+							 else 'NotEnabled' end) {16} 
+      From T_ProjectMember Where DepartCode in ",
+        LanguageHandle.GetWord("DaiMa"),
+        LanguageHandle.GetWord("XingMing"),
+        LanguageHandle.GetWord("XingBie"),
+        LanguageHandle.GetWord("NianLing"),
+        LanguageHandle.GetWord("BuMenDaiMa"),
+        LanguageHandle.GetWord("BuMenMingCheng"),
+        LanguageHandle.GetWord("ZhiZe"),
+        LanguageHandle.GetWord("BanGongDianHua"),
+        LanguageHandle.GetWord("YiDongDianHua"),
+        LanguageHandle.GetWord("EMail"),
+        LanguageHandle.GetWord("GongZuoFanWei"),
+        LanguageHandle.GetWord("JiaRuRiQi"),
+        LanguageHandle.GetWord("ZhuangTai"),
+        LanguageHandle.GetWord("CanKaoGongHao"),
+        LanguageHandle.GetWord("ShenFenZhengHao"),
+        LanguageHandle.GetWord("ShunXuHao"),
+        LanguageHandle.GetWord("QuanXian")) + strDepartString + " ";
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -180,13 +197,30 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,Age 年龄,DepartCode 部门代码,DepartName 部门名称,
-                Duty 职责,OfficePhone 办公电话,MobilePhone 移动电话,EMail EMail,WorkScope 工作范围,JoinDate 加入日期,Status 状态,
-                RefUserCode 参考工号,IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
-								 else 'NotEnabled' end) 权限 
-                From T_ProjectMember Where DepartCode = '") + strDepartCode + "' and  Password = '25D55AD283AA400AF464C76D713C07AD'" +
-                 " and UserCode in (Select UserCode From T_SystemActiveUser)" +
-                " Order by SortNumber ASC ";
+            strHQL = string.Format(@"Select UserCode {0},UserName {1},Gender {2},Age {3},DepartCode {4},DepartName {5},
+      Duty {6},OfficePhone {7},MobilePhone {8},EMail {9},WorkScope {10},JoinDate {11},Status {12},
+      RefUserCode {13},IDCard {14},SortNumber {15},(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
+							 else 'NotEnabled' end) {16} 
+      From T_ProjectMember Where DepartCode = '",
+        LanguageHandle.GetWord("DaiMa"),
+        LanguageHandle.GetWord("XingMing"),
+        LanguageHandle.GetWord("XingBie"),
+        LanguageHandle.GetWord("NianLing"),
+        LanguageHandle.GetWord("BuMenDaiMa"),
+        LanguageHandle.GetWord("BuMenMingCheng"),
+        LanguageHandle.GetWord("ZhiZe"),
+        LanguageHandle.GetWord("BanGongDianHua"),
+        LanguageHandle.GetWord("YiDongDianHua"),
+        LanguageHandle.GetWord("EMail"),
+        LanguageHandle.GetWord("GongZuoFanWei"),
+        LanguageHandle.GetWord("JiaRuRiQi"),
+        LanguageHandle.GetWord("ZhuangTai"),
+        LanguageHandle.GetWord("CanKaoGongHao"),
+        LanguageHandle.GetWord("ShenFenZhengHao"),
+        LanguageHandle.GetWord("ShunXuHao"),
+        LanguageHandle.GetWord("QuanXian")) + strDepartCode + "' and  Password = '25D55AD283AA400AF464C76D713C07AD'" +
+         " and UserCode in (Select UserCode From T_SystemActiveUser)" +
+        " Order by SortNumber ASC ";
 
         }
 

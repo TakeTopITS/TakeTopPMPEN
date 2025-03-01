@@ -213,74 +213,89 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
         Random a = new Random();
         string fileName = LanguageHandle.GetWord("YuanGongKaoQinBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
-        string strTableTitle = @"<table cellspacing='0' cellpadding='4' id='DataGrid3' style='color:#333333;width:100%;border-collapse:collapse;'>
-                <tr class='itemStyle'>
-                    <td class='itemBorder' align='center' style='width:4%;'> </td>
-                    <td class='itemBorder' align='center' style='width:8%;'></td>
-                    <td class='itemBorder' align='center' style='width:6%;'></td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                      
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                       
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                       员工考勤报表   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                      
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                       
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                       
-                    </td>
-                    <td class='itemBorder' align='center' style='width:6%;'></td>
-                    <td class='itemBorder' align='center' style='width:4%;'></td>
-                    <td class='itemBorder' align='center' style='width:4%;'></td>
-                    <td class='itemBorder' align='center'></td>
-                </tr>
-                <tr class='itemStyle'>
-                    <td class='itemBorder' align='center' style='width:4%;'> ID</td>
-                    <td class='itemBorder' align='center' style='width:8%;'>姓名</td>   
-                    <td class='itemBorder' align='center' style='width:6%;'>出勤日期</td>   
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        上午上班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        上午下班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        下午上班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        下午下班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        晚班上班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        晚班下班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        午夜上班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:8%;'>
-                        午夜下班时间   
-                    </td>
-                    <td class='itemBorder' align='center' style='width:6%;'>允许最大距离 (米)</td>   
-                    <td class='itemBorder' align='center' style='width:4%;'>迟到 (分)</td>   
-                    <td class='itemBorder' align='center' style='width:4%;'>早退 (分)</td>   
-                    <td class='itemBorder' align='center'>位置</td>   
-                </tr>
-            </table>";
+        string strTableTitle = string.Format(@"<table cellspacing='0' cellpadding='4' id='DataGrid3' style='color:#333333;width:100%;border-collapse:collapse;'>
+         <tr class='itemStyle'>
+             <td class='itemBorder' align='center' style='width:4%;'> </td>
+             <td class='itemBorder' align='center' style='width:8%;'></td>
+             <td class='itemBorder' align='center' style='width:6%;'></td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+               
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                {0}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+               
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                
+             </td>
+             <td class='itemBorder' align='center' style='width:6%;'></td>
+             <td class='itemBorder' align='center' style='width:4%;'></td>
+             <td class='itemBorder' align='center' style='width:4%;'></td>
+             <td class='itemBorder' align='center'></td>
+         </tr>
+         <tr class='itemStyle'>
+             <td class='itemBorder' align='center' style='width:4%;'> ID</td>
+             <td class='itemBorder' align='center' style='width:8%;'>{1}</td>   
+             <td class='itemBorder' align='center' style='width:6%;'>{2}</td>   
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {3}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {4}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {5}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {6}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {7}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {8}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {9}   
+             </td>
+             <td class='itemBorder' align='center' style='width:8%;'>
+                 {10}   
+             </td>
+             <td class='itemBorder' align='center' style='width:6%;'>{11} (米)</td>   
+             <td class='itemBorder' align='center' style='width:4%;'>{12} (分)</td>   
+             <td class='itemBorder' align='center' style='width:4%;'>{13} (分)</td>   
+             <td class='itemBorder' align='center'>{14}</td>   
+         </tr>
+     </table>",
+      LanguageHandle.GetWord("YuanGongKaoQinBaoBiao"),
+      LanguageHandle.GetWord("XingMing"),
+      LanguageHandle.GetWord("ChuQinRiQi"),
+      LanguageHandle.GetWord("ShangWuShangBanShiJian"),
+      LanguageHandle.GetWord("ShangWuXiaBanShiJian"),
+      LanguageHandle.GetWord("XiaWuShangBanShiJian"),
+      LanguageHandle.GetWord("XiaWuXiaBanShiJian"),
+      LanguageHandle.GetWord("WanBanShangBanShiJian"),
+      LanguageHandle.GetWord("WanBanXiaBanShiJian"),
+      LanguageHandle.GetWord("WuYeShangBanShiJian"),
+      LanguageHandle.GetWord("WuYeXiaBanShiJian"),
+      LanguageHandle.GetWord("YunXuZuiDaJuLi"),
+      LanguageHandle.GetWord("ChiDao"),
+      LanguageHandle.GetWord("ZaoTui"),
+      LanguageHandle.GetWord("WeiZhi"));
         try
         {
             ShareClass.DataGridExportToExecl(DataGrid3, strTableTitle, fileName, ds);

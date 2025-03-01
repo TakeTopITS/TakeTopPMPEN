@@ -76,7 +76,7 @@
                                                         <asp:ListItem Value="Customer" />
                                                         <asp:ListItem Value="Supplier" />
                                                         <asp:ListItem Value="Relative" />
-                                                        <asp:ListItem Value="Other" />
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
 
                                                     </asp:DropDownList>
                                                 <span style="font-size: 10pt">
@@ -368,7 +368,7 @@
                                             <asp:ListItem Value="Customer" />
                                             <asp:ListItem Value="Supplier" />
                                             <asp:ListItem Value="Relative" />
-                                            <asp:ListItem Value="Other" />
+                                            <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                         </asp:DropDownList>
                                     </td>
 

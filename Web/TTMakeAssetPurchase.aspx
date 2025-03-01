@@ -687,8 +687,8 @@
                                                     <asp:DropDownList ID="DL_Status" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_Status_SelectedIndexChanged">
                                                         <asp:ListItem Value="New" />
                                                         <asp:ListItem Value="Procuring" />
-                                                        <asp:ListItem Value="Completed" />
-                                                        <asp:ListItem Value="Cancel" />
+                                                        <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
+                                                        <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                                     </asp:DropDownList></td>
                                             </tr>
 

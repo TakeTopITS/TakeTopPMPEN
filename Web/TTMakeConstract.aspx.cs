@@ -3401,7 +3401,7 @@ public partial class TTMakeConstract : System.Web.UI.Page
         DL_CustomerList.DataSource = lst;
         DL_CustomerList.DataBind();
 
-        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", ""));   
+        DL_CustomerList.Items.Insert(0, new ListItem("--"+LanguageHandle.GetWord("QingXuanZeKeHu")+"--", ""));   
     }
 
     //保存新闻内容的文档链接

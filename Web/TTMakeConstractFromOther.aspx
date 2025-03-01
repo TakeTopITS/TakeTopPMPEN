@@ -1810,8 +1810,8 @@
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_CommissionStatus" runat="server">
-                                            <asp:ListItem Value="Unsent" />
-                                            <asp:ListItem Value="Sent" />
+                                             <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
+                                           <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
                                         </asp:DropDownList></td>
                                     <td style="text-align: Right;" class="formItemBgStyle"></td>
                                     <td style="text-align: left;" class="formItemBgStyle"></td>

@@ -34,7 +34,7 @@ public partial class TTItemInforView : System.Web.UI.Page
 
             Item item = (Item)lst[0];
 
-            //this.Title = "物料：" + item.ItemCode + " " + item.ItemName + " 资料！";
+            //this.Title = ""+LanguageHandle.GetWord("WuLiao")+"：" + item.ItemCode + " " + item.ItemName + " 资料！";
 
             DataList1.DataSource = lst;
             DataList1.DataBind();

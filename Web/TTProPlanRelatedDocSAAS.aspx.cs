@@ -46,7 +46,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
 
         //if (ShareClass.CheckUserCanControlProjectPlan(strPlanID, strUserCode) == false)
         //{
-        //    Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC").ToString().Trim() + "'");
+        //    Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + Resources.lang.ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC + "'");
         //}
 
         strHQL = "from WorkPlan as workPlan where workPlan.ID = " + strPlanID;
@@ -77,7 +77,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Plan", strPlanID, strPlanName);
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
 
             LoadRelatedDoc(strPlanID, strProjectID);
 
@@ -139,7 +139,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strDocType = docType.Type.Trim();
 
             strHQL = " Select * from T_Document as document where document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+            LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
 
             //设置缺省的文件类型
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -149,7 +149,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
         else
         {
             strHQL = " Select * from T_Document as document where document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
 
             strDocType = "";
         }
@@ -158,7 +158,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
         DataGrid1.DataSource = ds;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + ds.Tables[0].Rows.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
@@ -197,7 +197,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = " Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
+            strHQL += " or (document.Visible in ( '部门','全体'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted'";
         }
         else
@@ -205,7 +205,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = " Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID in (Select workPlan.ID from T_ImplePlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
+            strHQL += " or (document.Visible in ( '部门','全体'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted'";
         }
 
@@ -218,7 +218,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + ds.Tables[0].Rows.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
@@ -292,7 +292,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFFCZNBNSCBRSCDWJ + "')", true);
                 }
             }
 
@@ -309,7 +309,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID + strDocName + LanguageHandle.GetWord("PingShen").ToString().Trim();
+                TB_WLName.Text = Resources.lang.WenJian + strDocID + strDocName + Resources.lang.PingShen;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -352,19 +352,19 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strDocType = docType.Type.Trim();
 
             strHQL = "Select * from T_Document as document where document.RelatedType = 'ProjectType' and document.RelatedName = " + "'" + strProjectType + "'" + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+            LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
         }
         else
         {
             strHQL = "Select * from T_Document as document where document.RelatedType =  'ProjectType' and document.RelatedName = " + "'" + strProjectType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
         }
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Doc");
         DataGrid3.DataSource = ds;
         DataGrid3.DataBind();
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + ds.Tables[0].Rows.Count.ToString();
     }
 
     protected void BtnUP_Click(object sender, EventArgs e)
@@ -377,7 +377,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGWDLXBNWKJC + "')", true);
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -408,14 +408,14 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             {
                 //    if (this.AttachFile.ContentLength > 1024)
                 //    {
-                //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBNSCDYSZDWJ").ToString().Trim() + "')", true);
+                //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBNSCDYSZDWJ + "')", true);
                 //        return;
                 //    }
             }
 
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
             }
             else
             {
@@ -454,13 +454,13 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
         }
     }
 
@@ -573,23 +573,23 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             //工作流模板是否是自动激活状态
             if (ShareClass.GetWorkflowTemplateIsAutoActiveStatus(strTemName) == "NO")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLFQCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGZLFQCG + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWJPSSSB + "')", true);
         }
     }
 
     protected void BT_Refrash_Click(object sender, EventArgs e)
     {
         string strHQL;
-        string strTopTreeDocTypeName = "Plan" + "：" + strPlanID + " " + strPlanName + " " + LanguageHandle.GetWord("WenDangLieBiao").ToString().Trim();
+        string strTopTreeDocTypeName = "Plan" + "：" + strPlanID + " " + strPlanName + " " + Resources.lang.WenDangLieBiao;
         strHQL = "Select TemName From T_WorkFlowTemplate Where TemName In ((Select TemName from T_WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'DocumentReview'";
         strHQL += " and ((workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from T_RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'Project' and relatedWorkFlowTemplate.RelatedID = " + strProjectID + "))";
         strHQL += " or ( workFlowTemplate.Authority = 'All' ))";
@@ -683,7 +683,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = "Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
+            strHQL += " or (document.Visible in ( '部门','全体'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         }
         else
@@ -691,7 +691,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = "Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID in (Select workPlan.ID from T_ImplePlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
+            strHQL += " or (document.Visible in ( '部门','全体'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         }
 
@@ -701,7 +701,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + ds.Tables[0].Rows.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
@@ -745,7 +745,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
         DataGrid5.DataSource = ds;
         DataGrid5.DataBind();
 
-        LB_UnUploadMustDocCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+        LB_UnUploadMustDocCount.Text = Resources.lang.CXDDWJS + ": " + ds.Tables[0].Rows.Count.ToString();
 
         TR_UnUploadForMustDocList.Visible = true;
     }

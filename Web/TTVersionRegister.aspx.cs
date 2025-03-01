@@ -100,7 +100,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
                     strSiteName = license.GetSiteName(strServerName);
                     strForbitModule = license.GetForbitModuleString(strServerName).TrimEnd(',');
 
-                    LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + "，授权用户数：WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline + "，禁用模块：" + strForbitModule;   
+                    LB_LicenseNumber.Text = ""+LanguageHandle.GetWord("ShouQuanLeiXing")+"：" + strLicenseType + "，"+LanguageHandle.GetWord("BanBen")+"：" + strVerType + "，"+LanguageHandle.GetWord("ZhanDianMing")+"：" + strSiteName + "，"+LanguageHandle.GetWord("ShouQuanYongHuShu")+"：WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，"+LanguageHandle.GetWord("YouXiaoQiZhi")+"：" + strDeadline + "，"+LanguageHandle.GetWord("JinYongMoKuai")+"：" + strForbitModule;   
                     LB_LicenseNumber.Text += LanguageHandle.GetWord("XianYouYongHuShu").ToString().Trim() + "WEB：" + GetCurrentWebUserNumber() + ", APP：" + GetCurrentAppUserNumber();
                 }
                 else
@@ -192,7 +192,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
                             strSiteName = license.GetSiteName(strServerName);
                             strForbitModule = license.GetForbitModuleString(strServerName);
 
-                            LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + "，用户数 WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline + "，禁用模块：" + strForbitModule;   
+                            LB_LicenseNumber.Text = ""+LanguageHandle.GetWord("ShouQuanLeiXing")+"：" + strLicenseType + "，"+LanguageHandle.GetWord("BanBen")+"：" + strVerType + "，"+LanguageHandle.GetWord("ZhanDianMing")+"：" + strSiteName + "，用户数 WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，"+LanguageHandle.GetWord("YouXiaoQiZhi")+"：" + strDeadline + "，"+LanguageHandle.GetWord("JinYongMoKuai")+"：" + strForbitModule;   
                             BT_Register.ToolTip = strRegisterCodeNew;
 
                             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCG").ToString().Trim() + "')", true);
@@ -223,7 +223,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
                             //设置缓存更改标志
                             ChangePageCache();
 
-                            LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + "，用户数 WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline;   
+                            LB_LicenseNumber.Text = ""+LanguageHandle.GetWord("ShouQuanLeiXing")+"：" + strLicenseType + "，"+LanguageHandle.GetWord("BanBen")+"：" + strVerType + "，"+LanguageHandle.GetWord("ZhanDianMing")+"：" + strSiteName + "，用户数 WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，"+LanguageHandle.GetWord("YouXiaoQiZhi")+"：" + strDeadline;   
                             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCG").ToString().Trim() + "')", true);
                         }
                         catch

@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>HSE Produktion Zusammenfassung</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE Produktion Zusammenfassung</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Rot: Unpünktlichkeit, fett: Teilnahme, Schwarz: Normal</value>
   </data>
@@ -27579,6 +27576,24 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Nach dem Start kann der Inhalt des Plans nicht mehr geändert werden, sind Sie sicher, dass Sie beginnen möchten?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Asset purchase orders</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Item purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE Produktion Zusammenfassung</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Domain-Regeln: Mitarbeiter Code: [TAKETOPUSERCODE], Abteilung string: [TAKETOPDEPARTMENT], aus Sicherheitsgründen nicht verwendet werden können, einschließlich löschen, aktualisieren, Tropfen, Einfügen, ALTER-Anweisung)</value>
   </data>
@@ -27773,14 +27788,5 @@
   </data>
   <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
     <value>Antragsformular für Arbeitsanträge</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>Nach dem Start kann der Inhalt des Plans nicht mehr geändert werden, sind Sie sicher, dass Sie beginnen möchten?</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
   </data>
 </root>

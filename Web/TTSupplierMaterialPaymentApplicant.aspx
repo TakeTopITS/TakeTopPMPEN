@@ -307,11 +307,11 @@
                                                                 <asp:TextBox ID="TB_Attachment" runat="server" Width="80%"></asp:TextBox>
                                                                 <asp:DropDownList ID="DL_Attachment" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_Attachment_SelectedIndexChanged">
                                                                     <asp:ListItem Value="">---Select--- </asp:ListItem>
-                                                                    <asp:ListItem Value="项目请购单" Text="<%$ Resources:lang,XiangMuQingGouDan%>" />
-                                                                    <asp:ListItem Value="比价表" Text="<%$ Resources:lang,BiJiaBiao%>" />
-                                                                    <asp:ListItem Value="采购合同" Text="<%$ Resources:lang,CaiGouHeTong%>" />
-                                                                    <asp:ListItem Value="供应商送货单" Text="<%$ Resources:lang,GongYingShangShongHuoDan%>" />
-                                                                    <asp:ListItem Value="收款收据" Text="<%$ Resources:lang,ShouKuanShouJu%>" />
+                                                                    <asp:ListItem Value="ProjectRequisition" Text="<%$ Resources:lang,XiangMuQingGouDan%>" />
+                                                                    <asp:ListItem Value="PriceComparisonTable" Text="<%$ Resources:lang,BiJiaBiao%>" />
+                                                                    <asp:ListItem Value="PurchaseContracts" Text="<%$ Resources:lang,CaiGouHeTong%>" />
+                                                                    <asp:ListItem Value="SupplierDeliveryNote" Text="<%$ Resources:lang,GongYingShangShongHuoDan%>" />
+                                                                    <asp:ListItem Value="ReceiptOfPayment" Text="<%$ Resources:lang,ShouKuanShouJu%>" />
                                                                 </asp:DropDownList>
                                                             </td>
                                                         </tr>

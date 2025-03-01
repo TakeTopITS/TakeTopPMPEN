@@ -422,7 +422,7 @@
                                                                 <asp:DropDownList ID="DL_StatusValue" OnSelectedIndexChanged="DL_StatusValue_SelectedIndexChanged" Visible="false"
                                                                     AutoPostBack="True" runat="server">
                                                                     <asp:ListItem Value="Passed" />
-                                                                    <asp:ListItem Value="InProgress" />
+                                                                     <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong %>"/>
                                                                 </asp:DropDownList>
                                                             </td>
                                                         </tr>

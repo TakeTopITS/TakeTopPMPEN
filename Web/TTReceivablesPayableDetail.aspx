@@ -469,9 +469,9 @@
                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>£º </td>
                                     <td colspan="3" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_ReceivablesStatus" runat="server">
-                                            <asp:ListItem Value="Plan" />
-                                            <asp:ListItem Value="Completed" />
-                                            <asp:ListItem Value="Cancel" />
+                                             <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
                                         </asp:DropDownList>
                                     </td>
 

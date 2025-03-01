@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>Resumen HSE Producción</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Resumen HSE Producción</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Rojo: la tardanza, negrita: Participación, Negro: Largo</value>
   </data>
@@ -27579,6 +27576,24 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Después del lanzamiento, el contenido del plan no se puede cambiar, ¿estás seguro de que quieres comenzar?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Asset purchase orders</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Item purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Resumen HSE Producción</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Reglas de Dominio: Código del empleado: [TAKETOPUSERCODE], cadena de departamento: [TAKETOPDEPARTMENT], por razones de seguridad, no puede ser utilizado incluyendo eliminar, actualizar, Gota, Insertar, declaración Alter)</value>
   </data>
@@ -27593,14 +27608,5 @@
   </data>
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>contrato de Asociación</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>Después del lanzamiento, el contenido del plan no se puede cambiar, ¿estás seguro de que quieres comenzar?</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
   </data>
 </root>

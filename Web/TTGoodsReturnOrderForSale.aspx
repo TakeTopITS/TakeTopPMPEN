@@ -482,7 +482,7 @@
                                                 </td>
                                                 <td align="left" width="25%" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_RecordSourceType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_RecordSourceType_SelectedIndexChanged">
-                                                        <asp:ListItem Value="Other" />
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                                         <asp:ListItem Value="GoodsSORecord" />
                                                         <asp:ListItem Value="GoodsAORecord" />
                                                     </asp:DropDownList>

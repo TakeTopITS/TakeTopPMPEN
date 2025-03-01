@@ -181,7 +181,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"！');", true);   
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

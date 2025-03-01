@@ -375,7 +375,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
     }
 
     /// <summary>
-    /// 更改UseNum(借阅数次)、BookUseNum(借出数量)、BookNum(数量)
+    /// 更改UseNum(借阅数次)、BookUseNum(借出数量)、BookNum("+LanguageHandle.GetWord("ShuLiang")+")
     /// </summary>
     /// <param name="strBookUseNum"></param>
     /// <param name="strUseNum"></param>

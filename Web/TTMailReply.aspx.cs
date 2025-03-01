@@ -268,7 +268,7 @@ public partial class TTMailReply : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>¸½¼þ£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   
+                        strAttachmentUrlList += "</br>"+LanguageHandle.GetWord("FuJian")+"£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   
                     }
 
                     nContain += int.Parse(f.Length.ToString());
@@ -473,7 +473,7 @@ public partial class TTMailReply : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>¸½¼þ£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   
+                        strAttachmentUrlList += "</br>"+LanguageHandle.GetWord("FuJian")+"£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   
                     }
 
                     nContain += int.Parse(f.Length.ToString());

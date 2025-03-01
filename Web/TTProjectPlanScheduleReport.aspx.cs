@@ -330,10 +330,10 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
 
     protected void getBeginEndTime(string strProjectID, string strVerID, ref DateTime dtBegin, ref DateTime dtEnd)
     {
-        //开始时间
+        //"+LanguageHandle.GetWord("KaiShiShiJian")+"
         dtBegin = GetProjectPlanMinBeginTime(strProjectID, strVerID);
         dtBegin = new DateTime(dtBegin.Year, dtBegin.Month, 1);
-        //结束时间，若MakeDate在项目计划的结束时间以后，则取最大的MakeDate
+        //"+LanguageHandle.GetWord("JieShuShiJian")+"，若MakeDate在项目计划的结束时间以后，则取最大的MakeDate
         dtEnd = GetProjectPlanMaxEndTime(strProjectID, strVerID);
         DateTime dtTaskEnd = GetProjectTaskMaxEndTime(strProjectID, strVerID);
         if (dtEnd < dtTaskEnd)
@@ -484,11 +484,11 @@ class Report_Frame_Header
 
 class Report_Frame_Row
 {
-    public int id { get; set; } //序号
+    public int id { get; set; } //"+LanguageHandle.GetWord("XuHao")+"
     public string Type { get; set; }  //施工类型
     public decimal reqiredNumer { get; set; } //合同数
     public decimal FinishedNumber { get; set; }
-    public string UnitName { get; set; }//单位
+    public string UnitName { get; set; }//"+LanguageHandle.GetWord("DanWei")+"
 
     public List<decimal> CountPerWeek { get; set; }
 

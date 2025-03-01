@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>참가자</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>테스트 기록</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>기술</value>
   </data>
@@ -27576,6 +27573,24 @@
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>시작 후 계획의 내용을 변경할 수 없습니다.</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Asset purchase orders</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Item purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>테스트 기록</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>도메인 규칙 : 직​​원 코드 : [TAKETOPUSERCODE, 부서 문자열 : [TAKETOPDEPARTMENT, 보안상의 이유로 포함하여 사용할 수 없습니다 삭제, 업데이트, 드롭, 삽입, ALTER 문)</value>
   </data>
@@ -27590,14 +27605,5 @@
   </data>
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>협회 계약</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>시작 후 계획의 내용을 변경할 수 없습니다.</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
   </data>
 </root>

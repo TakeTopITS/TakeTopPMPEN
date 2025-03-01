@@ -146,7 +146,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
 
                 bool blIsProjectPlanOperator;
                 blIsProjectPlanOperator = ShareClass.CheckMemberIsProjectPlanOperator(strProjectID, strUserCode);
-                //当前用户是项目计划员，项目经理，立项者
+                //当前用户是项目计划员，"+LanguageHandle.GetWord("XiangMuJingLi")+"，立项者
                 if (blIsProjectPlanOperator == true || strUserCode == strPMCode || strUserCode == strProjectCreatorCode)
                 {
                     BtnUP.Visible = true;
@@ -964,7 +964,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             Repeater1.DataSource = ds;
             Repeater1.DataBind();
 
-            //当前用户是项目计划员，项目经理，立项者
+            //当前用户是项目计划员，"+LanguageHandle.GetWord("XiangMuJingLi")+"，立项者
             if (blIsProjectPlanOperator == true || strUserCode == strPMCode || strUserCode == strProjectCreatorCode)
             {
                 BT_New.Enabled = true;
@@ -1004,7 +1004,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 BT_Delete.Visible = true;
             }
 
-            //当前用户是计划创建者，但不项目计划员，项目经理，立项者
+            //当前用户是计划创建者，但不项目计划员，"+LanguageHandle.GetWord("XiangMuJingLi")+"，立项者
             if (strUserCode == strPlanCreatorCode & blIsProjectPlanOperator == false & strUserCode != strPMCode & strUserCode != strProjectCreatorCode)
             {
                 if (blParentPlanHaveLockStatus == true)
@@ -1029,7 +1029,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 }
             }
 
-            //当前用户是计划负责人，但不是计划创建人，项目计划员，项目经理，立项者
+            //当前用户是计划负责人，但不是计划创建人，项目计划员，"+LanguageHandle.GetWord("XiangMuJingLi")+"，立项者
             if (strUserCode == strPlanLeaderCode.Trim() & strUserCode != strPlanCreatorCode & blIsProjectPlanOperator == false & strUserCode != strPMCode & strUserCode != strProjectCreatorCode)
             {
                 if (strLockStatus == "YES")

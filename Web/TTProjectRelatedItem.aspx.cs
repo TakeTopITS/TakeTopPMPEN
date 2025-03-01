@@ -628,42 +628,72 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = string.Format(@" SELECT  A.ID 序号,A.FirstDirectory 一级目录
-              ,A.SecondDirectory 二级目录
-              ,A.ThirdDirectory 三级目录
-              ,A.FourthDirectory 四级目录
-              ,A.ItemCode 代码
-              ,A.ItemName 名称
-			  ,B.Type 属性（采购件、自制件、外协件、交付件）
-			  ,B.BigType 大类（物料、资产）
-              ,A.ModelNumber 型号
-              ,A.Specification 规格
-              ,A.Brand 品牌
+        strHQL = string.Format(@" SELECT  A.ID {0},A.FirstDirectory {1}
+        ,A.SecondDirectory {2}
+        ,A.ThirdDirectory {3}
+        ,A.FourthDirectory {4}
+        ,A.ItemCode {5}
+        ,A.ItemName {6}
+  ,B.Type {7}
+  ,B.BigType {8}
+        ,A.ModelNumber {9}
+        ,A.Specification {10}
+        ,A.Brand {11}
 
-              ,A.Number 数量
-              ,A.Unit 单位
-              ,A.PurchasePrice 单价
+        ,A.Number {12}
+        ,A.Unit {13}
+        ,A.PurchasePrice {14}
 
-               ,A.Number * A.PurchasePrice 金额
+         ,A.Number * A.PurchasePrice {15}
 
-               , 'RegistrationCertificateNumber' 注册证号
-               ,'RegistrationCertificateNumber' 包装方式
+         , 'RegistrationCertificateNumber' {16}
+         ,'RegistrationCertificateNumber' {17}
 
-              ,A.Comment 备注
-              ,A.BomVersionID BOM版本
+        ,A.Comment {18}
+        ,A.BomVersionID {19}
 
-              ,A.Status 状态
-              ,A.ReservedNumber 保留数量
-              ,A.DefaultProcess 缺省工艺
-              ,A.AleadyPurchased 已采购量
-              ,A.AleadyCheckIn 已入库量
-              ,A.AleadyPick 已领料量
-              ,A.AleadyCheckOut 已出库量
-            
-              ,A.AleadyProduction 已生产量
-              ,A.AleadySale 已销售量
-							
-			  FROM T_ProjectRelatedItem A,T_Item B  Where A.ItemCode = B.ItemCode AND  A.ProjectID = {0} Order By A.ID DESC", strProjectID);   
+        ,A.Status {20}
+        ,A.ReservedNumber {21}
+        ,A.DefaultProcess {22}
+        ,A.AleadyPurchased {23}
+        ,A.AleadyCheckIn {24}
+        ,A.AleadyPick {25}
+        ,A.AleadyCheckOut {26}
+      
+        ,A.AleadyProduction {27}
+        ,A.AleadySale {28}
+				
+  FROM T_ProjectRelatedItem A,T_Item B  Where A.ItemCode = B.ItemCode AND  A.ProjectID = {29} Order By A.ID DESC",
+    LanguageHandle.GetWord("XuHao"),
+    LanguageHandle.GetWord("YiJiMuLu"),
+    LanguageHandle.GetWord("ErJiMuLu"),
+    LanguageHandle.GetWord("SanJiMuLu"),
+    LanguageHandle.GetWord("SiJiMuLu"),
+    LanguageHandle.GetWord("DaiMa"),
+    LanguageHandle.GetWord("MingCheng"),
+    LanguageHandle.GetWord("ShuXing"),
+    LanguageHandle.GetWord("DaiLei"),
+    LanguageHandle.GetWord("XingHao"),
+    LanguageHandle.GetWord("GuiGe"),
+    LanguageHandle.GetWord("PinPai"),
+    LanguageHandle.GetWord("ShuLiang"),
+    LanguageHandle.GetWord("DanWei"),
+    LanguageHandle.GetWord("DanJia"),
+    LanguageHandle.GetWord("JinE"),
+    LanguageHandle.GetWord("ZhuCeZhengHao"),
+    LanguageHandle.GetWord("BaoZhuangFangShi"),
+    LanguageHandle.GetWord("BeiZhu"),
+    LanguageHandle.GetWord("BOMBanBen"),
+    LanguageHandle.GetWord("ZhuangTai"),
+    LanguageHandle.GetWord("BaoLiuShuLiang"),
+    LanguageHandle.GetWord("QueShengGongYi"),
+    LanguageHandle.GetWord("YiCaiGouLiang"),
+    LanguageHandle.GetWord("YiRuKuLiang"),
+    LanguageHandle.GetWord("YiLingLiaoLiang"),
+    LanguageHandle.GetWord("YiChuKuLiang"),
+    LanguageHandle.GetWord("YiShengChanLiang"),
+    LanguageHandle.GetWord("YiXiaoShouLiang"),
+    strProjectID);
 
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);
@@ -762,8 +792,8 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                                 item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
                                 item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
-                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim(); ;   
-                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   
+                                item.Type = dr[i][""+LanguageHandle.GetWord("ShuXing")+"（"+LanguageHandle.GetWord("CaiGouJian")+"、"+LanguageHandle.GetWord("ZiZhiJian")+"、"+LanguageHandle.GetWord("WaiXieJian")+"、"+LanguageHandle.GetWord("JiaoFuJian")+"）"].ToString().Trim(); ;   
+                                strBigType = dr[i][""+LanguageHandle.GetWord("DaLei")+"（"+LanguageHandle.GetWord("WuLiao")+"、"+LanguageHandle.GetWord("ZiChan")+"）"].ToString().Trim();   
 
                                 item.BigType = "";
                                 if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -775,7 +805,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                     item.BigType = "Asset";
                                 }
 
-                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   
+                                item.SmallType = dr[i][""+LanguageHandle.GetWord("XiaoLei")+"（"+LanguageHandle.GetWord("WuLiaoHuoZiChanLeiXing")+"）"].ToString().Trim();   
                                 item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
                                 item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
                                 item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
@@ -892,14 +922,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                     {
                         CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
-                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   
+                        string strBigType = dr[i][""+LanguageHandle.GetWord("DaLei")+"（"+LanguageHandle.GetWord("WuLiao")+"、"+LanguageHandle.GetWord("ZiChan")+"）"].ToString().Trim();   
                         if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
                         {
                             LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW").ToString().Trim() + strBigType + LanguageHandle.GetWord("QingJianCha").ToString().Trim();
                             j = -1;
                         }
 
-                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   
+                        string strSmallType = dr[i][""+LanguageHandle.GetWord("XiaoLei")+"（"+LanguageHandle.GetWord("WuLiaoHuoZiChanLeiXing")+"）"].ToString().Trim();   
                         if (CheckSmallType(strSmallType, strBigType) == 0)
                         {
                             if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())

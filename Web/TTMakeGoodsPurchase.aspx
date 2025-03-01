@@ -1194,8 +1194,8 @@
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_BusinessType" runat="server" AutoPostBack="True">
                                                                         <asp:ListItem Value="SaleOrder" />
-                                                                        <asp:ListItem Value="Project" />
-                                                                        <asp:ListItem Value="Other" />
+                                                                        <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu%>"/>
+                                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                                                     </asp:DropDownList></td>
                                                                 <td>
                                                                     <NickLee:NumberBox ID="NB_BusinessID" runat="server" MaxAmount="1000000000000" MinAmount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="60px">0</NickLee:NumberBox></td>

@@ -181,9 +181,24 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         {
             strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,DepartCode 部门代码,DepartName 部门名称,
-                Duty 职责,KPICheckID 编号,KPICheckName KPI考核名称,TotalSelfPoint 自评分,TotalLeaderPoint 领导评分,TotalThirdPartPoint 第三方评分,TotalSqlPoint 系统评分,TotalHRPoint 人事评分,TotalPoint 总分
-                From V_UserKPIList Where DepartCode in ") + strDepartString;
+            strHQL = string.Format(@"Select UserCode {0},UserName {1},Gender {2},DepartCode {3},DepartName {4},
+                  Duty {5},KPICheckID {6},KPICheckName {7},TotalSelfPoint {8},TotalLeaderPoint {9},TotalThirdPartPoint {10},TotalSqlPoint {11},TotalHRPoint {12},TotalPoint {13}
+                  From V_UserKPIList Where DepartCode in {14}",
+                     LanguageHandle.GetWord("DaiMa"),
+                     LanguageHandle.GetWord("XingMing"),
+                     LanguageHandle.GetWord("XingBie"),
+                     LanguageHandle.GetWord("BuMenDaiMa"),
+                     LanguageHandle.GetWord("BuMenMingCheng"),
+                     LanguageHandle.GetWord("ZhiZe"),
+                     LanguageHandle.GetWord("BianHao"),
+                     LanguageHandle.GetWord("KPIKaoHeMingCheng"),
+                     LanguageHandle.GetWord("ZiPingFen"),
+                     LanguageHandle.GetWord("LingDaoPingFen"),
+                     LanguageHandle.GetWord("DiSanFangPingFen"),
+                     LanguageHandle.GetWord("XiTongPingFen"),
+                     LanguageHandle.GetWord("RenShiPingFen"),
+                     LanguageHandle.GetWord("ZongFen"),
+                     strDepartString);
 
 
             if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -198,11 +213,26 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthorityAndDepartCode(strDepartCode, strUserCode);   
+            strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthorityAndDepartCode(strDepartCode, strUserCode);
 
-            strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,DepartCode 部门代码,DepartName 部门名称,
-                Duty 职责,KPICheckID 编号,KPICheckName KPI考核名称,TotalSelfPoint 自评分,TotalLeaderPoint 领导评分,TotalThirdPartPoint 第三方评分,TotalSqlPoint 系统评分,TotalHRPoint 人事评分,TotalPoint 总分
-                From V_UserKPIList Where DepartCode in ") + strDepartString   + " Order By StartTime DESC";
+            strHQL = string.Format(@"Select UserCode {0},UserName {1},Gender {2},DepartCode {3},DepartName {4},
+                 Duty {5},KPICheckID {6},KPICheckName {7},TotalSelfPoint {8},TotalLeaderPoint {9},TotalThirdPartPoint {10},TotalSqlPoint {11},TotalHRPoint {12},TotalPoint {13}
+                 From V_UserKPIList Where DepartCode in {14} Order By StartTime DESC",
+                  LanguageHandle.GetWord("DaiMa"),
+                  LanguageHandle.GetWord("XingMing"),
+                  LanguageHandle.GetWord("XingBie"),
+                  LanguageHandle.GetWord("BuMenDaiMa"),
+                  LanguageHandle.GetWord("BuMenMingCheng"),
+                  LanguageHandle.GetWord("ZhiZe"),
+                  LanguageHandle.GetWord("BianHao"),
+                  LanguageHandle.GetWord("KPIKaoHeMingCheng"),
+                  LanguageHandle.GetWord("ZiPingFen"),
+                  LanguageHandle.GetWord("LingDaoPingFen"),
+                  LanguageHandle.GetWord("DiSanFangPingFen"),
+                  LanguageHandle.GetWord("XiTongPingFen"),
+                  LanguageHandle.GetWord("RenShiPingFen"),
+                  LanguageHandle.GetWord("ZongFen"),
+                  strDepartString);
         }
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);   

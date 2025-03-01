@@ -139,7 +139,7 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
 
         Export3Excel(dtProject, LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + strProjectName + LanguageHandle.GetWord("ChengYuanGongShiHuiZongBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"！');", true);   
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

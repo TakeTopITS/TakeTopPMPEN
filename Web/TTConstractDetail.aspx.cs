@@ -4438,8 +4438,8 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                                 item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
                                 item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
-                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim();   
-                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   
+                                item.Type = dr[i][""+LanguageHandle.GetWord("ShuXing")+"（"+LanguageHandle.GetWord("CaiGouJian")+"、"+LanguageHandle.GetWord("ZiZhiJian")+"、"+LanguageHandle.GetWord("WaiXieJian")+"、"+LanguageHandle.GetWord("JiaoFuJian")+"）"].ToString().Trim();   
+                                strBigType = dr[i][""+LanguageHandle.GetWord("DaLei")+"（"+LanguageHandle.GetWord("WuLiao")+"、"+LanguageHandle.GetWord("ZiChan")+"）"].ToString().Trim();   
 
                                 item.BigType = "";
                                 if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -4451,7 +4451,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                                     item.BigType = "Asset";
                                 }
 
-                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   
+                                item.SmallType = dr[i][""+LanguageHandle.GetWord("XiaoLei")+"（"+LanguageHandle.GetWord("WuLiaoHuoZiChanLeiXing")+"）"].ToString().Trim();   
                                 item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
                                 item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
                                 item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
@@ -4568,14 +4568,14 @@ public partial class TTConstractDetail : System.Web.UI.Page
                     {
                         CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
-                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   
+                        string strBigType = dr[i][""+LanguageHandle.GetWord("DaLei")+"（"+LanguageHandle.GetWord("WuLiao")+"、"+LanguageHandle.GetWord("ZiChan")+"）"].ToString().Trim();   
                         if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
                         {
                             LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW").ToString().Trim();
                             j = -1;
                         }
 
-                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   
+                        string strSmallType = dr[i][""+LanguageHandle.GetWord("XiaoLei")+"（"+LanguageHandle.GetWord("WuLiaoHuoZiChanLeiXing")+"）"].ToString().Trim();   
                         if (CheckSmallType(strSmallType, strBigType) == 0)
                         {
                             if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())

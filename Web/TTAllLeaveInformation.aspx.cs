@@ -63,7 +63,7 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
             }
 
             LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
-            //lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + "小时；合计：" + strDayNum + "Days";
+            //lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + ""+LanguageHandle.GetWord("XiaoShi")+"；合计：" + strDayNum + "Days";
             lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
 
             LB_Sql.Text = strHQL;

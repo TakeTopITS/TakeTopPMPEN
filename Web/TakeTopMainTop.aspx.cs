@@ -318,7 +318,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         if (lbl_FunInfoDialBoxNum.Text.Trim() != LanguageHandle.GetWord("MoZhuiJiaDeXinXiDiShiKuang").ToString().Trim())
         {
             string[] tempOldNumList = lbl_FunInfoDialBoxNum.Text.Trim().Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-            StringBuilder NewNumList = new StringBuilder();//数量
+            StringBuilder NewNumList = new StringBuilder();//"+LanguageHandle.GetWord("ShuLiang")+"
             StringBuilder NewInforNameList = new StringBuilder();//提示预警名称
             StringBuilder NewIsSendMsgList = new StringBuilder();//是否短信通知
             StringBuilder NewIsSendEmailList = new StringBuilder();//是否邮件通知

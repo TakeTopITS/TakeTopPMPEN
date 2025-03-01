@@ -3438,7 +3438,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         DL_CustomerList.DataSource = lst;
         DL_CustomerList.DataBind();
 
-        DL_CustomerList.Items.Insert(0, new ListItem("--ÇëÑ¡Ôñ¿Í»§--", ""));   
+        DL_CustomerList.Items.Insert(0, new ListItem("--"+LanguageHandle.GetWord("QingXuanZeKeHu")+"--", ""));   
     }
 
     public string GetConstractName(string strConstractCode)

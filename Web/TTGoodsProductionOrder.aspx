@@ -565,7 +565,7 @@
                                                 </td>
                                                 <td style="text-align: left; width: 25%;" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_RecordSourceType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_RecordSourceType_SelectedIndexChanged">
-                                                        <asp:ListItem Value="OTHER" />
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                                         <asp:ListItem Value="GoodsPJRecord" Text="<%$ Resources:lang,XiangMuGuanLianLiaoPing%>" />
                                                         <asp:ListItem Value="ProjectBOMRecord" Text="ProjectBOMRecord" />
                                                         <asp:ListItem Value="ProductionPlan" />
@@ -1315,13 +1315,13 @@
 
                                                                     <asp:DropDownList ID="DL_BusinessType" runat="server">
 
-                                                                        <asp:ListItem Value="Other" />
+                                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
 
-                                                                        <asp:ListItem Value="Project" />
+                                                                        <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu%>"/>
 
                                                                         <asp:ListItem Value="SaleOrder" />
 
-                                                                        <asp:ListItem Value="Project" />
+                                                                        <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu%>"/>
                                                                     </asp:DropDownList>
                                                                 </td>
 

@@ -41,7 +41,7 @@ public partial class TTPlanLeaderReviewDetail : System.Web.UI.Page
         strCreatorCode = plan.UserCode.Trim();
         strPlanStatus = plan.Status.Trim();
 
-        //this.Title = "下属计划：" + strPlanID + " " + strPlanName + " 审核";
+        //this.Title = "下属计划：" + strPlanID + " " + strPlanName + " "+LanguageHandle.GetWord("ShenHe")+"";
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)

@@ -27161,7 +27161,7 @@
     <value>任务详细信息</value>
   </data>
   <data name="BaNiJiaRuLeXiangMU" xml:space="preserve">
-    <value>把你加入了项目</value>
+    <value>把你加入了项目：</value>
   </data>
   <data name="JiaRuXiangMuTongZi" xml:space="preserve">
     <value>加入项目通知</value>
@@ -28361,9 +28361,6 @@
   <data name="GeTongQianZheng" xml:space="preserve">
     <value>合同签证</value>
   </data>
-  <data name="BaNiJiaRuLeXiangMu" xml:space="preserve">
-    <value>把你加入了项目：</value>
-  </data>
   <data name="QingJiShiShouLi" xml:space="preserve">
     <value>,请及时受理！</value>
   </data>
@@ -28831,9 +28828,6 @@
   </data>
   <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
     <value>物料维护报表.xls</value>
-  </data>
-  <data name="XiaoShouChan" xml:space="preserve">
-    <value>销售单：</value>
   </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
     <value>警告，此物料数量为0，不用维护！</value>

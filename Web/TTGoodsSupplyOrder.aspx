@@ -475,7 +475,7 @@
                                                 </td>
                                                 <td class="formItemBgStyle" style="text-align: left; width: 25%;">
                                                     <asp:DropDownList ID="DL_RecordSourceType" runat="server">
-                                                        <asp:ListItem Value="Other" />
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                                         <asp:ListItem Value="GoodsPORecord" />
                                                     </asp:DropDownList></td>
                                                 <td align="right" style="text-align: right; width: 15%" class="formItemBgStyle">ID:</td>

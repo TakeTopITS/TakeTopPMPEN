@@ -97,7 +97,7 @@
                                                                     <asp:ListItem Value="Friend" />
                                                                     <asp:ListItem Value="Classmate" />
                                                                     <asp:ListItem Value="Relative" />
-                                                                    <asp:ListItem Value="Other" />
+                                                                    <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
 
                                                                 </asp:DropDownList>
                                                             <span style="font-size: 10pt">
@@ -282,7 +282,7 @@
                                             <asp:ListItem Value="Friend" />
                                             <asp:ListItem Value="Classmate" />
                                             <asp:ListItem Value="Relative" />
-                                            <asp:ListItem Value="Other" />
+                                            <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                         </asp:DropDownList>
                                     </td>
                                     <td style="text-align: right; height: 3px;" class="formItemBgStyle">
