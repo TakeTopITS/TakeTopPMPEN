@@ -1051,7 +1051,7 @@
 
             if (chartType == 'HRuningProjectStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>" + "<%=LanguageHandle.GetWord("ZaiZiXingXiangMuZhongShu").ToString() %>" + ":<span id='spanXNumber'></span></h3> <p> " + "<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("NianDuWanCheng").ToString() %>" + ":<span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>" + "<%=LanguageHandle.GetWord("ZaiZiXingXiangMuZhongShu").ToString() %>" + ":<span id='spanXNumber'></span></h3> <p> " + "<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>" + "£º <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("NianDuWanCheng").ToString() %>" + ":<span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({

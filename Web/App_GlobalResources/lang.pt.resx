@@ -27537,6 +27537,9 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Progresso da entrega</value>
   </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>TotalNumberOf ProjectsExecuted</value>
+  </data>
   <data name="JiaoFu" xml:space="preserve">
     <value>Delivery</value>
   </data>

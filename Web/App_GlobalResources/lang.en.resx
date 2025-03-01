@@ -27562,6 +27562,9 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="SheJi" xml:space="preserve">
     <value>Design</value>
   </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>TotalNumberOf ProjectsExecuted</value>
+  </data>
   <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
     <value>After launching, the content of the plan cannot be changed, are you sure you want to start?</value>
   </data>

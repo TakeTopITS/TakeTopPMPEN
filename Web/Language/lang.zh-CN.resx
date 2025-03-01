@@ -31503,4 +31503,24 @@
     <value>你确定要删除所选择的数据项吗?</value>
     <comment>你确定要删除所选择的数据项吗?</comment>
   </data>
+  <data name="ChaKuan" xml:space="preserve">
+    <value>查看</value>
+    <comment>查看</comment>
+  </data>
+  <data name="XiangMuHaoWeiKongQingJianCha" xml:space="preserve">
+    <value>项目号为空，请检查！</value>
+    <comment>项目号为空，请检查！</comment>
+  </data>
+  <data name="MoYouQuanXianGengGeiJiHaQingJianCha" xml:space="preserve">
+    <value>你没有权限更改计划，请检查！</value>
+    <comment>你没有权限更改计划，请检查！</comment>
+  </data>
+  <data name="ChengCaiXiangTongTuPianWenJian" xml:space="preserve">
+    <value>存在相同图片文件！</value>
+    <comment>存在相同图片文件！</comment>
+  </data>
+  <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
+    <value>图片数据为空，请检查！</value>
+    <comment>图片数据为空，请检查！</comment>
+  </data>
 </root>

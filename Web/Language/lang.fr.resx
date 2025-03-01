@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>Résumé HSE production</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Résumé HSE production</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Rouge: retard, audacieuse: Participation, Noir: Normale</value>
   </data>
@@ -23421,9 +23418,6 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Indique succès!</value>
   </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Les frais de représentation, frais de déplacement, le remboursement du personnel TODO déterminée, l'erreur: "+ ex.Message +"!</value>
-  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Indique échoue, vérifiez!</value>
   </data>
@@ -27543,20 +27537,8 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Progression de la livraison</value>
   </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Avoir</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Résumé HSE production</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Formulaire de demande de contrat de sous-traitance</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>contrat de l'Association</value>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>TotalNumberOf ProjectsExecuted</value>
   </data>
   <data name="JiaoFu" xml:space="preserve">
     <value>Delivery</value>
@@ -27596,5 +27578,30 @@
   </data>
   <data name="AssetPO" xml:space="preserve">
     <value>Assset purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Résumé HSE production</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Les frais de représentation, frais de déplacement, le remboursement du personnel TODO déterminée, l'erreur: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Avoir</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Résumé HSE production</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Formulaire de demande de contrat de sous-traitance</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>contrat de l'Association</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
 </root>

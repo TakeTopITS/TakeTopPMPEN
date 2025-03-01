@@ -168,8 +168,15 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
             IDictionaryEnumerator ideOther = rrOther.GetEnumerator();
             while (ideOther.MoveNext())
             {
-                strHQL = "Insert Into T_LanguageResourceOther(KeyName,KeyValue) Values('" + ideOther.Key + "','" + ideOther.Value.ToString().Replace("'", "") + "')";
-                ShareClass.RunSqlCommand(strHQL);
+                try
+                {
+                    strHQL = "Insert Into T_LanguageResourceOther(KeyName,KeyValue) Values('" + ideOther.Key + "','" + ideOther.Value.ToString().Replace("'", "") + "')";
+                    ShareClass.RunSqlCommand(strHQL);
+                }
+                catch(Exception err)
+                {
+                    LogClass.WriteLogFile("Error page: Key:" + ideOther.Key + " ,"+ err.Message.ToString() + "\n" + err.StackTrace);
+                }
             }
             rrOther.Close();
 

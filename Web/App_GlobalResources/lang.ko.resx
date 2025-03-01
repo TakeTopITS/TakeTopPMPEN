@@ -27534,6 +27534,9 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>배달 진행 상황</value>
   </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>TotalNumberOf ProjectsExecuted</value>
+  </data>
   <data name="JiaoFu" xml:space="preserve">
     <value>Delivery</value>
   </data>

@@ -27918,6 +27918,9 @@
   <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value>保存失敗，原密碼錯誤或為空，請檢查！</value>
   </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" xml:space="preserve">
+    <value>警告，请选择文件类型</value>
+  </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>请假(小时)</value>
   </data>

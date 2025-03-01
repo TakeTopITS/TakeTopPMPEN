@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>Summarizing HSE</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Summarizing HSE</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Red: tardiness, bold: Participation, Black: Normal</value>
   </data>
@@ -23421,9 +23418,6 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Specifies success!</value>
   </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Entertainment expenses, travel expenses, personnel TODO pending claims, the error: "+ ex.Message +"!</value>
-  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Specifies fails, check!</value>
   </data>
@@ -27565,6 +27559,60 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="DianJiDaKaiTaoHuangYeMian" xml:space="preserve">
     <value>Click to open the navigation page</value>
   </data>
+  <data name="SheJi" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>TotalNumberOf ProjectsExecuted</value>
+  </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>After launching, the content of the plan cannot be changed, are you sure you want to start?</value>
+  </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Summarizing HSE</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Entertainment expenses, travel expenses, personnel TODO pending claims, the error: "+ ex.Message +"!</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Domain Rules: employee code: [TAKETOPUSERCODE], department string: [TAKETOPDEPARTMENT], the language code [TAKETOPLANGCODE], for security reasons, can not be used including Delete, Update, Drop, Insert, Alter statement)</value>
   </data>
@@ -27610,49 +27658,8 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="TaoHuangYeMian" xml:space="preserve">
     <value>navigation page</value>
   </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>After launching, the content of the plan cannot be changed, are you sure you want to start?</value>
-  </data>
-  <data name="SheJi" xml:space="preserve">
-    <value>Design</value>
-  </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material purchase order</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
 </root>
