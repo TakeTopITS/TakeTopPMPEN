@@ -5952,6 +5952,9 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>HSE Produktion Zusammenfassung</value>
   </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE Produktion Zusammenfassung</value>
+  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>Rot: Unpünktlichkeit, fett: Teilnahme, Schwarz: Normal</value>
   </data>
@@ -23418,7 +23421,7 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Gibt Erfolg!</value>
   </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
     <value>Bewirtungskosten, Reisekosten, Erstattung der Mitarbeiter TODO bestimmt, die Fehlermeldung: "+ ex.Message +"!</value>
   </data>
   <data name="ZZZDSBJC" xml:space="preserve">
@@ -27540,60 +27543,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Lieferfortschritt</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>Total number of projects executed</value>
-  </data>
-  <data name="NianDuXingZeng" xml:space="preserve">
-    <value>New additions for the year</value>
-  </data>
-  <data name="NianDuWanCheng" xml:space="preserve">
-    <value>Annual completion</value>
-  </data>
-  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
-    <value>Number of severely delayed projects</value>
-  </data>
-  <data name="JingDuZhengChang" xml:space="preserve">
-    <value>On schedule</value>
-  </data>
-  <data name="QingDuYanWu" xml:space="preserve">
-    <value>Slight delay</value>
-  </data>
-  <data name="NianDuChengBenHeShuan" xml:space="preserve">
-    <value>Annual costing</value>
-  </data>
-  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
-    <value>Number of projects over budget</value>
-  </data>
-  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
-    <value>Annual project man-hour investment</value>
-  </data>
-  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
-    <value>Annual number of registrants</value>
-  </data>
-  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
-    <value>Total number of tasks in execution</value>
-  </data>
-  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
-    <value>Annual payment of the project</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>Nach dem Start kann der Inhalt des Plans nicht mehr geändert werden, sind Sie sicher, dass Sie beginnen möchten?</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
-  </data>
-  <data name="ZiChanCaiGouChan" xml:space="preserve">
-    <value>Asset purchase orders</value>
-  </data>
-  <data name="WuLiaoCaiGouChan" xml:space="preserve">
-    <value>Item purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE Produktion Zusammenfassung</value>
-  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Domain-Regeln: Mitarbeiter Code: [TAKETOPUSERCODE], Abteilung string: [TAKETOPDEPARTMENT], aus Sicherheitsgründen nicht verwendet werden können, einschließlich löschen, aktualisieren, Tropfen, Einfügen, ALTER-Anweisung)</value>
   </data>
@@ -27635,6 +27584,12 @@
   </data>
   <data name="CaiWuZhangWuLei1" xml:space="preserve">
     <value>Classe di contabilità finanziaria</value>
+  </data>
+  <data name="DaiChuLiYeWu1" xml:space="preserve">
+    <value>In attesa di business</value>
+  </data>
+  <data name="DaJiaGou1" xml:space="preserve">
+    <value>prendere l'architettura</value>
   </data>
   <data name="GSCSNDDASWXH1" xml:space="preserve">
     <value>Formato: numero di serie CS + + quattro cifre del codice (0001-9999)</value>
@@ -27788,5 +27743,44 @@
   </data>
   <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
     <value>Antragsformular für Arbeitsanträge</value>
+  </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
   </data>
 </root>

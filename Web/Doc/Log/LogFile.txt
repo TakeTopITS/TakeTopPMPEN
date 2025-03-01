@@ -702,4 +702,425 @@ POSITION: 338
    在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
 
 ------------------------------------
+
+Log Entry : 11:54:15 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 11:54:48 AM Saturday, March 1, 2025 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenen
+Message Object reference not set to an instance of an object.
+   at TakeTopLRTop.AsyncWork() in E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:line 83
+   at TakeTopLRTop.Page_Load(Object sender, EventArgs e) in E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:line 38
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.<LoadRecursiveAsync>d__246.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   at System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:00:03 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 12:06:05 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 12:06:28 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 12:12:06 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 12:18:07 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 12:24:08 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 14:15:11 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 14:16:15 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 14:19:54 2025年3月1日 
+URL: http://10.211.55.22:5000/ENSource/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 14:19:54 2025年3月1日 
+URL: http://10.211.55.22:5000/ENSource/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 14:24:41 2025年3月1日 
+URL: http://10.211.55.22:5000/ENSource/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 14:29:16 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 14:30:18 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 14:45:32 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
 

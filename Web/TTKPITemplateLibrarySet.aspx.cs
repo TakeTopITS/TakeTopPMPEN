@@ -318,11 +318,11 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                         {
                             try
                             {
-                                kpiLibrary.KPIType = dr[i]["KPI类型"].ToString().Trim();   
+                                kpiLibrary.KPIType = dr[i]["KPItype"].ToString().Trim();   
                                 kpiLibrary.KPI = dr[i]["KPI"].ToString().Trim();
                                 kpiLibrary.Definition = dr[i][LanguageHandle.GetWord("DingYi").ToString().Trim()].ToString().Trim();
                                 kpiLibrary.Formula = dr[i][LanguageHandle.GetWord("GongShi").ToString().Trim()].ToString().Trim();
-                                kpiLibrary.SqlCode = dr[i]["SQL代码"].ToString().Trim();   
+                                kpiLibrary.SqlCode = dr[i]["SQLCode"].ToString().Trim();   
                                 kpiLibrary.UnitSqlPoint = decimal.Parse(dr[i]["UnitScore"].ToString().Trim());   
                                 kpiLibrary.Source = dr[i][LanguageHandle.GetWord("LaiYuan").ToString().Trim()].ToString().Trim();
                                 kpiLibrary.KPIFunction = dr[i][LanguageHandle.GetWord("GongNengHuoBeiZhu").ToString().Trim()].ToString().Trim();
@@ -402,7 +402,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strKPIType = dr[i]["KPI类型"].ToString().Trim();   
+                        strKPIType = dr[i]["KPIType"].ToString().Trim();   
                         strKPI = dr[i]["KPI"].ToString().Trim();
                         strDefinition = dr[i][LanguageHandle.GetWord("DingYi").ToString().Trim()].ToString().Trim();
 

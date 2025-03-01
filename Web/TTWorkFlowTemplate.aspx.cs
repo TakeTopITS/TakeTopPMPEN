@@ -142,7 +142,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             workFlowTemplate.CreatorCode = strUserCode;
             workFlowTemplate.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlowTemplate.Status = ""+LanguageHandle.GetWord("ZaiYong")+"";
-            workFlowTemplate.Authority = "所有";
+            workFlowTemplate.Authority = ""+LanguageHandle.GetWord("SuoYou")+"";
             workFlowTemplate.IdentifyString = DateTime.Now.ToString("yyyyMMddHHMMssff");
             workFlowTemplate.WFDefinition = "";
 
@@ -274,7 +274,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strHQL = "from Department as department ";
         strHQL += " where department.DepartCode = " + "'" + strParentDepartCode + "'";
-        //strHQL += " and ((department.Authority = '所有')";
+        //strHQL += " and ((department.Authority = '"+LanguageHandle.GetWord("SuoYou")+"')";
         //strHQL += " or ((department.Authority = '"+LanguageHandle.GetWord("BuFen")+"') ";
         //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By department.DepartCode ASC";
@@ -308,7 +308,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         string strDepartCode, strDepartName;
 
         strHQL = "from Department as department where department.ParentCode = " + "'" + strParentCode + "'";
-        //strHQL += " and ((department.Authority = '所有')";
+        //strHQL += " and ((department.Authority = '"+LanguageHandle.GetWord("SuoYou")+"')";
         //strHQL += " or ((department.Authority = '"+LanguageHandle.GetWord("BuFen")+"') ";
         //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By department.DepartCode ASC";

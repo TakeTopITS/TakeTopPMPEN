@@ -52,7 +52,7 @@
 
                 //判断文档类型是否为空
                 if (document.getElementById("TabContainer1_TabPanel1_TB_DocType").value == "") {
-                    alert("警告，请选择文件类型（Warning,Doc type can not be null）！")
+                     alert("<%=LanguageHandle.GetWord("JingGaoQingXuanZeWenJianLeiXing").ToString() %>");
                     return;
                 }
 

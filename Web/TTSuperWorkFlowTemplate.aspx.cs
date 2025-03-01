@@ -150,7 +150,7 @@ public partial class TTSuperWorkFlowTemplate : System.Web.UI.Page
             workFlowTemplate.CreatorCode = strUserCode;
             workFlowTemplate.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlowTemplate.Status = ""+LanguageHandle.GetWord("ZaiYong")+"";
-            workFlowTemplate.Authority = "所有";
+            workFlowTemplate.Authority = ""+LanguageHandle.GetWord("SuoYou")+"";
             workFlowTemplate.IdentifyString = DateTime.Now.ToString("yyyyMMddHHMMssff");
             workFlowTemplate.WFDefinition = "";
             workFlowTemplate.EnableEdit = "NO";
@@ -931,7 +931,7 @@ public partial class TTSuperWorkFlowTemplate : System.Web.UI.Page
         node0.Expanded = true;
         TreeView.Nodes.Add(node0);
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.Type = '所有' ";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.Type = '"+LanguageHandle.GetWord("SuoYou")+"' ";
         strHQL += " Order by actorGroup.IdentifyString DESC";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);

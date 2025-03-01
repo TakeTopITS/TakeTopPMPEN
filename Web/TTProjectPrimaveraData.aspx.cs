@@ -139,7 +139,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
                 project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
                 project.ProjectDetail = "";
                 project.ProjectName = getPrimProjName(dr[i][LanguageHandle.GetWord("XiangMuBianHao").ToString().Trim()].ToString(), dr[i][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString()).Trim();
-                project.ProjectType = "Primavera项目";   
+                project.ProjectType = "PrimaveraProject";   
                 project.Status = "New";
                 project.StatusValue = "InProgress";
                 project.UserCode = strUserCode.Trim();
@@ -330,7 +330,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         ///创建链接
         SqlConnection con = new SqlConnection(GetDataBaseLinkAddress(ddl_Code.SelectedValue.Trim()));
         ///定义SQL语句
-        string cmdText = "SELECT task_id 'JobNumber',A.proj_id 'ProjectID',wbs_id 'WBS编号',task_code 'JobCode',task_name 'JobName',A.guid 'JobIdentificationCode',A.create_date 'CreationTime',"+   
+        string cmdText = "SELECT task_id 'JobNumber',A.proj_id 'ProjectID',wbs_id 'WBSCode',task_code 'JobCode',task_name 'JobName',A.guid 'JobIdentificationCode',A.create_date 'CreationTime',"+   
             "COALESCE(target_start_date,restart_date) 'JobStartDate',COALESCE(target_end_date,reend_date) 'JobEndDate',B.guid 'ProjectIdentificationCode' FROM TASK as A,PROJECT as B where A.proj_id=B.proj_id ";   
         ///打开链接
         con.Open();
@@ -558,7 +558,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Project as project where project.ProjectName='" + pj.ProjectName.Trim() + "' and project.ProjectType = 'Primavera项目' and project.PMCode = '" + pj.PMCode.Trim() + "' and project.UserCode = '" + pj.UserCode.Trim() + "' Order by project.ProjectID DESC";   
+        strHQL = "from Project as project where project.ProjectName='" + pj.ProjectName.Trim() + "' and project.ProjectType = 'PrimaveraProject' and project.PMCode = '" + pj.PMCode.Trim() + "' and project.UserCode = '" + pj.UserCode.Trim() + "' Order by project.ProjectID DESC";   
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];

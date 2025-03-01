@@ -30513,7 +30513,7 @@
     <value>允许最大距离</value>
   </data>
   <data name="JiaBanShiChang" xml:space="preserve">
-    <value>加班时长</value>
+    <value>加班时长（小时）</value>
   </data>
   <data name="YueDuHuiZong" xml:space="preserve">
     <value>月度汇总</value>
@@ -30614,7 +30614,78 @@
   <data name="YanShou" xml:space="preserve">
     <value>验收</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>交付</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>在执行项目状态</value>
+    <comment>在执行项目状态</comment>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>延误项目状态</value>
+    <comment>延误项目状态</comment>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>年度回款状态</value>
+    <comment>年度回款状态</comment>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>年度工时状态</value>
+    <comment>年度工时状态</comment>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>年度任务状态</value>
+    <comment>年度任务状态</comment>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>线图</value>
+    <comment>线图</comment>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>仪表盘</value>
+    <comment>Dashboard</comment>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>销售订单</value>
+    <comment>销售订单</comment>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>销售订单</value>
+    <comment>销售订单</comment>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>物料采购单</value>
+    <comment>物料采购单</comment>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>资产采购单</value>
+    <comment>资产采购单</comment>
+  </data>
+  <data name="WeiShouJieE" xml:space="preserve">
+    <value>未收金额</value>
+  </data>
+  <data name="KaoHeMingCheng" xml:space="preserve">
+    <value>考核名称</value>
+  </data>
+  <data name="MeiYouZhaoDaoXiangYingDeBaiFangJiLu" xml:space="preserve">
+    <value>没有找到相应的拜访记录</value>
+  </data>
+  <data name="FuZeRenMingCheng" xml:space="preserve">
+    <value>负责人名称</value>
+  </data>
+  <data name="NiQuedYaoShanChuSuoXuanZeDeShuJuXiangMa" xml:space="preserve">
+    <value>您确定要删除所选择的数据项吗</value>
+  </data>
+  <data name="TuoQiXiangMuJiHua" xml:space="preserve">
+    <value>拖期项目计划</value>
+  </data>
   <data name="HSE生产总结" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
     <value />
   </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
@@ -30657,6 +30728,12 @@
     <value />
   </data>
   <data name="CaiWuZhangWuLei1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DaiChuLiYeWu1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DaJiaGou1" xml:space="preserve">
     <value />
   </data>
   <data name="GSCSNDDASWXH1" xml:space="preserve">
@@ -31136,6 +31213,12 @@
   <data name="ChuLiRen2" xml:space="preserve">
     <value />
   </data>
+  <data name="CuoWu1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CuoWu2" xml:space="preserve">
+    <value />
+  </data>
   <data name="FaQiRen1" xml:space="preserve">
     <value />
   </data>
@@ -31334,6 +31417,12 @@
   <data name="YuLieYuShuanZongE2" xml:space="preserve">
     <value />
   </data>
+  <data name="ZDYBZGDWZBGDYYKQDYG1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZDYBZGDWZBGDYYKQDYG2" xml:space="preserve">
+    <value />
+  </data>
   <data name="ZiDong1" xml:space="preserve">
     <value />
   </data>
@@ -31393,5 +31482,25 @@
   </data>
   <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value />
+  </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" xml:space="preserve">
+    <value>警告，请选择文件类型</value>
+    <comment>警告，请选择文件类型</comment>
+  </data>
+  <data name="QingJiaXiaoShi" xml:space="preserve">
+    <value>请假(小时)</value>
+    <comment>请假(小时)</comment>
+  </data>
+  <data name="QingXuanZheLiuChengMoBan" xml:space="preserve">
+    <value>请选择流程模板!</value>
+    <comment>请选择流程模板!</comment>
+  </data>
+  <data name="DaiMaBuNengWeiKong" xml:space="preserve">
+    <value>代码不能为空！</value>
+    <comment>代码不能为空！</comment>
+  </data>
+  <data name="QueDingYaoShanChuSuoYouDeShuJiXiang" xml:space="preserve">
+    <value>你确定要删除所选择的数据项吗?</value>
+    <comment>你确定要删除所选择的数据项吗?</comment>
   </data>
 </root>

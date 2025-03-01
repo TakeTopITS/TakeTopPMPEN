@@ -256,9 +256,9 @@ public class Msg
             }
             strMsg = ds.Tables[0].Rows[i][2].ToString().Trim();
 
-            strMsg = strMsg.Replace("通知：你好，你有审批工作，内容：自审 ，请及时登录管理平台进行处理，此信息来自：系统管理员！", LanguageHandle.GetWord("ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
-            strMsg = strMsg.Replace("通知：你好，你有审批工作，内容：", LanguageHandle.GetWord("ZZTZNHNYSPGZNR").ToString().Trim());  
-            strMsg = strMsg.Replace("请及时登录管理平台进行处理，此信息来自：系统管理员！", LanguageHandle.GetWord("ZZQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
+            strMsg = strMsg.Replace("Notice:Hello, you have a new task assigned to you. The task content is: Self-Review.", LanguageHandle.GetWord("ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
+            strMsg = strMsg.Replace("Notice: Hello, you have a task, content:", LanguageHandle.GetWord("ZZTZNHNYSPGZNR").ToString().Trim());  
+            strMsg = strMsg.Replace("Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!", LanguageHandle.GetWord("ZZQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
 
             strMobilePhone = ds.Tables[0].Rows[i][3].ToString().Trim();
             strUserRTXCode = ds.Tables[0].Rows[i][4].ToString().Trim();
@@ -1428,11 +1428,12 @@ public class Msg
 
         nContain += strSubject.Length;
 
+    
         ///添加邮件内容
         mailMsg.Body = strBody;
-        mailMsg.Body = mailMsg.Body.Replace("通知：你好，你有审批工作，内容：自审 ，请及时登录管理平台进行处理，此信息来自：系统管理员！", LanguageHandle.GetWord("ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
-        mailMsg.Body = mailMsg.Body.Replace("通知：你好，你有审批工作，内容：", LanguageHandle.GetWord("ZZTZNHNYSPGZNR").ToString().Trim());  
-        mailMsg.Body = mailMsg.Body.Replace("请及时登录管理平台进行处理，此信息来自：系统管理员！", LanguageHandle.GetWord("ZZQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
+        mailMsg.Body = mailMsg.Body.Replace("Notice:Hello, you have a new task assigned to you. The task content is: Self-Review.", LanguageHandle.GetWord("ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
+        mailMsg.Body = mailMsg.Body.Replace("Notice: Hello, you have a task, content:", LanguageHandle.GetWord("ZZTZNHNYSPGZNR").ToString().Trim());  
+        mailMsg.Body = mailMsg.Body.Replace("Please log in to the management platform and open the Workflow Module to process it as soon as possible. This message is from the System Administrator!", LanguageHandle.GetWord("ZZQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());  
 
         mailMsg.BodyEncoding = Encoding.UTF8;
         mailMsg.IsBodyHtml = true;

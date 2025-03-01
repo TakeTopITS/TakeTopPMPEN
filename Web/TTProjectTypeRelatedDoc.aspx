@@ -375,7 +375,7 @@
                                                                                                 </asp:TemplateColumn>
                                                                                                 <asp:TemplateColumn>
                                                                                                     <ItemTemplate>
-                                                                                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=ÉóºË&WLID={0}") %>'
+                                                                                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=Review&WLID={0}") %>'
                                                                                                             Target="_blank"><img src="ImagesSkin/Doc.gif" style="border-width:0px;"/></asp:HyperLink>
                                                                                                     </ItemTemplate>
                                                                                                     <ItemStyle CssClass="itemBorder" Width="10%" HorizontalAlign="Center" />

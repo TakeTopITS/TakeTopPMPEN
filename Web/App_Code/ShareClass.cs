@@ -17085,7 +17085,6 @@ public static class ShareClass
         intResult = ShareClass.CreateDirectory(strBackupDBSavePath);
         if (intResult == 2)
         {
-            LogClass.WriteLogFile("警告，备份目录创建" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim());  
             return;
         }
 

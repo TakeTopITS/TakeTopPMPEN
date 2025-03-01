@@ -170,7 +170,7 @@ public class MSProjectHandler
 
                 try
                 {
-                    ShareClass.AddProjectMember(strProjectID, strLeaderCode, "项目成员", task.getName(), "InProgress"); 
+                    ShareClass.AddProjectMember(strProjectID, strLeaderCode, LanguageHandle.GetWord("XiangMuChengYuan"), task.getName(), "InProgress"); 
                 }
                 catch (System.Exception err)
                 {

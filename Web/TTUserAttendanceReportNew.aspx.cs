@@ -332,7 +332,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             CellRangeAddress region = new CellRangeAddress(rowIndex, rowIndex, 0, colNum - 1);
             sheet.AddMergedRegion(region);
             var cell = sheet.CreateRow(rowIndex).CreateCell(0);
-            cell.SetCellValue("月度汇总    统计日期：" + strStartTime + "To" + strEndTime);   
+            cell.SetCellValue( LanguageHandle.GetWord("YueDuHuiZong") + LanguageHandle.GetWord("TongJiRiQi") + " "+ strStartTime + "To" + strEndTime);   
 
             var style = workbook.CreateCellStyle() as HSSFCellStyle;
             var font = workbook.CreateFont() as HSSFFont;
@@ -350,7 +350,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             sheet.AddMergedRegion(region);
             cell = sheet.CreateRow(rowIndex).CreateCell(0);
             //            cell.SetCellValue("月度汇总    统计日期：" + strStartTime + "To" + strEndTime);
-            cell.SetCellValue("报表生成时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm"));   
+            cell.SetCellValue( LanguageHandle.GetWord("BaoBiaoShengChengShiJian") +": " + DateTime.Now.ToString("yyyy-MM-dd HH:mm"));   
             style = workbook.CreateCellStyle() as HSSFCellStyle;
             font = workbook.CreateFont() as HSSFFont;
             font.FontName = LanguageHandle.GetWord("SongTi").ToString().Trim();
@@ -395,7 +395,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             }
 
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("请假(小时)");   
+            cell.SetCellValue(LanguageHandle.GetWord("QingJiaXiaoShi"));   
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 
@@ -432,7 +432,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             }
 
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("加班时长(小时)");   
+            cell.SetCellValue(LanguageHandle.GetWord("JiaBanShiChang"));   
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 

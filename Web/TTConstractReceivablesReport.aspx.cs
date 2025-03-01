@@ -161,7 +161,7 @@ public partial class TTConstractReceivablesReport : System.Web.UI.Page
         strReceivablesStartTime = DateTime.Parse(DLC_ReceivablesStartTime.Text).ToString("yyyyMMdd");
         strReceivablesEndTime = DateTime.Parse(DLC_ReceivablesEndTime.Text).ToString("yyyyMMdd");
 
-        strHQL = "Select BillCode "+LanguageHandle.GetWord("YuanShiDanHao")+",ConstractCode "+LanguageHandle.GetWord("HeTongDaiMa")+",ConstractName "+LanguageHandle.GetWord("HeTongMingCheng")+",ReceivablesAccount "+LanguageHandle.GetWord("YingShouJinE")+",to_char(ReceivablesTime,'yyyy/mm/dd') "+LanguageHandle.GetWord("YingShouShiJian")+",ReceiverAccount "+LanguageHandle.GetWord("ShiShouJinE")+",UNReceiveAmount 未收金额,Payer "+LanguageHandle.GetWord("FuKuanFang")+",PartA 甲方单位,PartAOperator "+LanguageHandle.GetWord("FuZeRen")+",CurrencyType "+LanguageHandle.GetWord("BiBie")+" from  V_ConstractReceivablesReportSummary where 1=1 ";   
+        strHQL = "Select BillCode "+LanguageHandle.GetWord("YuanShiDanHao")+",ConstractCode "+LanguageHandle.GetWord("HeTongDaiMa")+",ConstractName "+LanguageHandle.GetWord("HeTongMingCheng")+",ReceivablesAccount "+LanguageHandle.GetWord("YingShouJinE")+",to_char(ReceivablesTime,'yyyy/mm/dd') "+LanguageHandle.GetWord("YingShouShiJian")+",ReceiverAccount "+LanguageHandle.GetWord("ShiShouJinE")+",UNReceiveAmount "+LanguageHandle.GetWord("WeiShouJieE")+",Payer "+LanguageHandle.GetWord("FuKuanFang")+",PartA "+LanguageHandle.GetWord("JiaFangDanWei")+",PartAOperator "+LanguageHandle.GetWord("FuZeRen")+",CurrencyType "+LanguageHandle.GetWord("BiBie")+" from  V_ConstractReceivablesReportSummary where 1=1 ";   
         strHQL += " and PartA like  " + "'" + strPartA + "'";
         if (strOperatorName != "%%")
         {

@@ -5952,6 +5952,9 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>참가자</value>
   </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>테스트 기록</value>
+  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>기술</value>
   </data>
@@ -23415,7 +23418,7 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>성공을 지정합니다!</value>
   </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
     <value>엔터테인먼트 비용, 여행 경비, 직원 TODO의 상환이 결정 오류 : "+ ex.Message +"!</value>
   </data>
   <data name="ZZZDSBJC" xml:space="preserve">
@@ -27537,60 +27540,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>배달 진행 상황</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>Total number of projects executed</value>
-  </data>
-  <data name="NianDuXingZeng" xml:space="preserve">
-    <value>New additions for the year</value>
-  </data>
-  <data name="NianDuWanCheng" xml:space="preserve">
-    <value>Annual completion</value>
-  </data>
-  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
-    <value>Number of severely delayed projects</value>
-  </data>
-  <data name="JingDuZhengChang" xml:space="preserve">
-    <value>On schedule</value>
-  </data>
-  <data name="QingDuYanWu" xml:space="preserve">
-    <value>Slight delay</value>
-  </data>
-  <data name="NianDuChengBenHeShuan" xml:space="preserve">
-    <value>Annual costing</value>
-  </data>
-  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
-    <value>Number of projects over budget</value>
-  </data>
-  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
-    <value>Annual project man-hour investment</value>
-  </data>
-  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
-    <value>Annual number of registrants</value>
-  </data>
-  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
-    <value>Total number of tasks in execution</value>
-  </data>
-  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
-    <value>Annual payment of the project</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>시작 후 계획의 내용을 변경할 수 없습니다.</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>Valid for the day</value>
-  </data>
-  <data name="ZiChanCaiGouChan" xml:space="preserve">
-    <value>Asset purchase orders</value>
-  </data>
-  <data name="WuLiaoCaiGouChan" xml:space="preserve">
-    <value>Item purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>테스트 기록</value>
-  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>도메인 규칙 : 직​​원 코드 : [TAKETOPUSERCODE, 부서 문자열 : [TAKETOPDEPARTMENT, 보안상의 이유로 포함하여 사용할 수 없습니다 삭제, 업데이트, 드롭, 삽입, ALTER 문)</value>
   </data>
@@ -27605,5 +27554,44 @@
   </data>
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>협회 계약</value>
+  </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
   </data>
 </root>

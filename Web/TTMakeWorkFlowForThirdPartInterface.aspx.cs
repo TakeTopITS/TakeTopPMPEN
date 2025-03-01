@@ -47,7 +47,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
 
             LoadWorkFlow(strUserCode);
 
-            HL_WLRelatedDoc.NavigateUrl = "TTWLRelatedDoc.aspx?DocType=…Û∫À&WLID=" + strWLID;   
+            HL_WLRelatedDoc.NavigateUrl = "TTWLRelatedDoc.aspx?DocType=Review&WLID=" + strWLID;   
         }
     }
 

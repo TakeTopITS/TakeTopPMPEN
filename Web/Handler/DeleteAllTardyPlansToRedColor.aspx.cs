@@ -28,13 +28,13 @@ public partial class Handler_DeleteAllTardyPlansToRedColor : System.Web.UI.Page
         }
         else
         {
-            HttpContext.Current.Response.Write("项目号为空，请检查！"); 
+            HttpContext.Current.Response.Write(LanguageHandle.GetWord("XiangMuHaoWeiKongQingJianCha")); 
             return;
         }
 
         if (GanttShareClass.CheckUserCanUpdatePlan(strPID) == false || GanttShareClass.CheckIsCanUpdatePlanByProjectStatus(strPID) == false)
         {
-            HttpContext.Current.Response.Write("没有权限更改计划，请检查！"); 
+            HttpContext.Current.Response.Write(LanguageHandle.GetWord("MoYouQuanXianGengGeiJiHaQingJianCha")); 
             return;
         }
 

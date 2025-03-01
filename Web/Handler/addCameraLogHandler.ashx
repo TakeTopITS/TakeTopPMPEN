@@ -9,8 +9,8 @@ using ProjectMgt.BLL;
 
 public class addCameraLogHandler : IHttpHandler, IReadOnlySessionState
 {
-    
-    public void ProcessRequest (HttpContext context) 
+
+    public void ProcessRequest (HttpContext context)
     {
         string result = string.Empty;
         try
@@ -30,7 +30,7 @@ public class addCameraLogHandler : IHttpHandler, IReadOnlySessionState
             cameraLog.CreatorCode = strCreatorCode;
             cameraLog.CreatorName = strCreatorName;
             cameraLog.CreateTime = DateTime.Now;
-            cameraLog.Description = "查看";
+            cameraLog.Description = LanguageHandle.GetWord("ChaKuan"); 
             CameraLogBLL cameraLogBLL = new CameraLogBLL();
             cameraLogBLL.AddCameraLog(cameraLog);
 
@@ -45,7 +45,7 @@ public class addCameraLogHandler : IHttpHandler, IReadOnlySessionState
     }
 
 
- 
+
     public bool IsReusable {
         get {
             return false;

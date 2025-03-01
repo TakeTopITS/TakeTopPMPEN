@@ -58,7 +58,7 @@
                 var strTemName = $("#DL_WFTemplate").val();
 
                 if (strTemName == "" || strTemName == null) {
-                    alert("请选择流程模板！");
+                    alert("<%=LanguageHandle.GetWord("QingXuanZheLiuChengMoBan").ToString() %>");
                     return;
                 }
 
@@ -67,7 +67,7 @@
                 var strSql = editor.getValue();
 
                 if (strSql == "" || strSql == null) {
-                    alert("代码不能为空！");
+                    alert("<%=LanguageHandle.GetWord("DaiMaBuNengWeiKong").ToString() %>");
                     return;
                 }
                 var strComment = $("#TXT_Comment").val();
@@ -86,11 +86,10 @@
 
                         $("#HF_ID").val = json;
 
-                        alert("保存成功!");
-                    },
+                        alert("<%=LanguageHandle.GetWord("ZZBaoCunChengGong").ToString() %>");                 },
                     error: function () {
 
-                        alert("Save Failed");
+                        alert("<%=LanguageHandle.GetWord("ZZBCSB").ToString() %>"); 
                     }
 
                 });

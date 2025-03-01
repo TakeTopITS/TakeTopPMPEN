@@ -103,7 +103,7 @@ public partial class TTProjectPlanEarlyWarning : System.Web.UI.Page
             DataGrid2.DataBind();
 
             LB_Plan.Visible = true;
-            LB_Plan.Text = Resources.lang.JiHua + ": " + strPlanID + " " + strPlanName + " 成员：";
+            LB_Plan.Text = Resources.lang.JiHua + ": " + strPlanID + " " + strPlanName + " "+LanguageHandle.GetWord("ChengYuan")+"：";
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -116,7 +116,7 @@ public partial class TTProjectPlanEarlyWarning : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "拖期项目计划_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
+                string fileName =  LanguageHandle.GetWord("TuoJiXiangMuJiHua") + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
 
                 string strHQL;
                 string strActorType = DL_ActorType.SelectedValue.Trim();

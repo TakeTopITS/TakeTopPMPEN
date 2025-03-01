@@ -52,7 +52,7 @@
 
                 //判断文档类型是否为空
                 if (document.getElementById("TabContainer1_TabPanel1_TB_DocType").value == "") {
-                    alert("警告，请选择文件类型（Warning,Doc type can not be null）！")
+                     alert("<%=LanguageHandle.GetWord("JingGaoQingXuanZeWenJianLeiXing").ToString() %>");
                     return;
                 }
 
@@ -722,7 +722,7 @@
 
                                                                                                                 <ItemTemplate>
 
-                                                                                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=审核&WLID={0}") %>'
+                                                                                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=Review&WLID={0}") %>'
                                                                                                                         Target="_blank"><img src="ImagesSkin/Doc.gif" class="noBorder" /></asp:HyperLink>
                                                                                                                 </ItemTemplate>
 

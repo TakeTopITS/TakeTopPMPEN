@@ -41,7 +41,7 @@ public class UploadPhotoToServerSite : IHttpHandler
 
             if (fi.Exists)
             {
-                json = "存在相同的图片文件";
+                json = LanguageHandle.GetWord("ChengCaiXiangTongTuPianWenJian");
                 //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
             }
             else
@@ -54,7 +54,7 @@ public class UploadPhotoToServerSite : IHttpHandler
         }
         else
         {
-            json = "图片数据为空,请检查！";
+            json = LanguageHandle.GetWord("TuPianShuJiWeiKongQingJianCha");
             //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZZYSCDWJ + "');</script>");
         }
 

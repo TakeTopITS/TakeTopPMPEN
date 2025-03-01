@@ -209,28 +209,48 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
         //,A.DeliveryNumber '送化量'
         //,A.RealReceiveNumber '收货量'
 
-        strHQL = @"Select  B.SOName 'Name'    
-            ,B.SalesName 'Salesperson'   
-            ,B.CustomerName 'Customer'
-            ,B.SaleTime 'Time'   
-            ,A.ID 'Number'   
-            ,A.GoodsCode 'Code'   
-            ,A.GoodsName 'ProductName'   
-            ,A.Number 'Quantity'   
-            ,(Select COALESCE(Sum(RealReceiveNumber),0) From T_GoodsDeliveryOrderDetail Where SourceType = 'GoodsSORecord' and SourceID = A.ID) 实收量   
-            ,A.ModelNumber 'Model'   
-            ,A.Spec 'Specification'   
-            ,A.Unit 'Unit'   
-            ,A.PackNumber 'NumberOfPieces'   
-            ,A.Price 'UnitPrice'   
-            ,A.Amount 'Amount'   
-            ,B.CurrencyType 'Currency'   
-            ,B.CarCode 'VehicleNumber'   
-            ,B.Driver 'Driver'   
-            ,B.OpenInvoiceTime 'InvoiceTime'   
-            ,B.InvoiceCode 'InvoiceNumber'   
-            ,A.SaleReason 'Remark'   
-            from T_GoodsSaleRecord A,T_GoodsSaleOrder B where A.SOID = B.SOID";
+        strHQL = string.Format(@"Select  B.SOName '{0}' 
+        ,B.SalesName '{1}'
+        ,B.CustomerName 'Customer'
+        ,B.SaleTime '{2}'
+        ,A.ID '{3}'
+        ,A.GoodsCode '{4}'
+        ,A.GoodsName '{5}'
+        ,A.Number '{6}'
+        ,(Select COALESCE(Sum(RealReceiveNumber),0) From T_GoodsDeliveryOrderDetail Where SourceType = 'GoodsSORecord' and SourceID = A.ID) {7}
+        ,A.ModelNumber '{8}'
+        ,A.Spec '{9}'
+        ,A.Unit '{10}'
+        ,A.PackNumber '{11}'
+        ,A.Price '{12}'
+        ,A.Amount '{13}'
+        ,B.CurrencyType '{14}'
+        ,B.CarCode '{15}'
+        ,B.Driver '{16}'
+        ,B.OpenInvoiceTime '{17}'
+        ,B.InvoiceCode '{18}'
+        ,A.SaleReason '{19}'
+        from T_GoodsSaleRecord A,T_GoodsSaleOrder B where A.SOID = B.SOID",
+            LanguageHandle.GetWord("MingCheng"),
+            LanguageHandle.GetWord("YeWuYuan"),
+            LanguageHandle.GetWord("ShiJian"),
+            LanguageHandle.GetWord("BianHao"),
+            LanguageHandle.GetWord("DaiMa"),
+            LanguageHandle.GetWord("ShangPinMingCheng"),
+            LanguageHandle.GetWord("ShuLiang"),
+            LanguageHandle.GetWord("ShiShouLiang"),
+            LanguageHandle.GetWord("XingHao"),
+            LanguageHandle.GetWord("GuiGe"),
+            LanguageHandle.GetWord("DanWei"),
+            LanguageHandle.GetWord("JianShu"),
+            LanguageHandle.GetWord("DanJia"),
+            LanguageHandle.GetWord("JinE"),
+            LanguageHandle.GetWord("BiBie"),
+            LanguageHandle.GetWord("CheHao"),
+            LanguageHandle.GetWord("SiJi"),
+            LanguageHandle.GetWord("KaiPiaoShiJian"),
+            LanguageHandle.GetWord("PiaoHao"),
+            LanguageHandle.GetWord("BeiZhu"));
 
         strHQL += " and to_char(B.SaleTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(B.SaleTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " and B.SalesName like " + "'" + strSalesName + "'";
@@ -245,9 +265,9 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_GoodsSaleRecord");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoXiaoShouBaoBiaoxls").ToString().Trim());
+        Export3Excel(dtSaleOrder, "物料销售报表.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"！');", true);   
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

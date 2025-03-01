@@ -77,7 +77,7 @@ public partial class TTProjectMemberManHourSummaryReportForAlone : System.Web.UI
                    UserName as 'Name',   
                    DepartCode as 'DepartmentCode',   
                    DepartName as 'DepartmentName',   
-                   ProjectID as 'ÏîÄ¿ID',   
+                   ProjectID as 'ProjectID',   
                    Sum(ManHour) as 'LaborHours',   
                    sum(ConfirmManHour) as 'ConfirmedLaborHours'   
                    From V_ProjectMemberManHourSummary";

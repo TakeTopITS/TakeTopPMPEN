@@ -286,7 +286,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
             strHQL += "" + LanguageHandle.GetWord("XiangMuMing") + " Like '%" + strProjectName + "%'";
         }
         strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
-        strHQL += "And 实收时间 >= '" + strBeginTime + "' And 实收时间 <= '" + strEndTime + "'";
+        strHQL += "And "+LanguageHandle.GetWord("ShiShouShiJian")+" >= '" + strBeginTime + "' And "+LanguageHandle.GetWord("ShiShouShiJian")+" <= '" + strEndTime + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -309,7 +309,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select COALESCE(SUM(未收金额),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
+        strHQL = @"Select COALESCE(SUM("+LanguageHandle.GetWord("WeiShouJieE")+"),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
             strHQL += " " + LanguageHandle.GetWord("XiangMuHao") + " = " + strProjectID;

@@ -5952,6 +5952,9 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>HSE生產總結</value>
   </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE生產總結</value>
+  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>紅色:拖期，加粗:參與，黑色:正常</value>
   </data>
@@ -23418,7 +23421,7 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>指定成功！</value>
   </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
     <value>招待費用，差旅費，報銷人員 TODO待定 ，錯誤：" + ex.Message + "！</value>
   </data>
   <data name="ZZZDSBJC" xml:space="preserve">
@@ -27540,63 +27543,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>交付進度</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>在执行项目总数</value>
-  </data>
-  <data name="NianDuXingZeng" xml:space="preserve">
-    <value>年度新增</value>
-  </data>
-  <data name="NianDuWanCheng" xml:space="preserve">
-    <value>年度完成</value>
-  </data>
-  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
-    <value>严重延误项目数 </value>
-  </data>
-  <data name="JingDuZhengChang" xml:space="preserve">
-    <value>进度正常</value>
-  </data>
-  <data name="QingDuYanWu" xml:space="preserve">
-    <value>轻度延误</value>
-  </data>
-  <data name="NianDuChengBenHeShuan" xml:space="preserve">
-    <value>年度成本核算</value>
-  </data>
-  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
-    <value>成本超支项目数</value>
-  </data>
-  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
-    <value>年度项目工时投入</value>
-  </data>
-  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
-    <value>年度填报人数</value>
-  </data>
-  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
-    <value>在执行任务总数</value>
-  </data>
-  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
-    <value>项目年度回款</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>启动后，计划内容不能更改，确定要启动吗？</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </value>
-  </data>
-  <data name="DangTianYouXiao" xml:space="preserve">
-    <value>当天有效</value>
-  </data>
-  <data name="ZiChanCaiGouChan" xml:space="preserve">
-    <value>资产采购单</value>
-  </data>
-  <data name="WuLiaoCaiGouChan" xml:space="preserve">
-    <value>物料采购单</value>
-  </data>
-  <data name="XiaoShouGenZong" xml:space="preserve">
-    <value>销售跟踪</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生產總結</value>
-  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>域規則：員工代碼：[TAKETOPUSERCODE]，部門串：[TAKETOPDEPARTMENT] ,出於安全考慮，不能使用含Delete,Update,Drop,Insert,Alter語句）</value>
   </data>
@@ -27659,6 +27605,12 @@
   </data>
   <data name="ChuLiRen2" xml:space="preserve">
     <value>處理人</value>
+  </data>
+  <data name="CuoWu1" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="CuoWu2" xml:space="preserve">
+    <value>錯誤</value>
   </data>
   <data name="FaQiRen1" xml:space="preserve">
     <value>发起人</value>
@@ -27858,6 +27810,12 @@
   <data name="YuLieYuShuanZongE2" xml:space="preserve">
     <value>已列預算總額</value>
   </data>
+  <data name="ZDYBZGDWZBGDYYKQDYG1" xml:space="preserve">
+    <value>注：对于不在固定位置办公但也要考勤的员工，要把经纬度设为！</value>
+  </data>
+  <data name="ZDYBZGDWZBGDYYKQDYG2" xml:space="preserve">
+    <value>注：對於不在固定位置辦公但也要考勤的員工，要把經緯度設為！</value>
+  </data>
   <data name="ZiDong1" xml:space="preserve">
     <value>自动</value>
   </data>
@@ -27917,5 +27875,44 @@
   </data>
   <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value>保存失敗，原密碼錯誤或為空，請檢查！</value>
+  </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>交付</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>没有找到相应的拜访记录!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>在执行项目状态</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>延误项目状态</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>年度回款状态</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>年度工时状态</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>年度任务状态</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>线图</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>仪表盘</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>销售订单</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>销售订单</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>物料采购单</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>资产采购单</value>
   </data>
 </root>

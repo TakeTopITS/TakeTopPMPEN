@@ -185,7 +185,7 @@ public partial class TTConstractPayableReport : System.Web.UI.Page
         strCurrencyType = "%" + DL_CurrencyType.SelectedValue.Trim() + "%";
 
 
-        strHQL = "select  BillCode "+LanguageHandle.GetWord("YuanShiDanHao")+",ConstractCode "+LanguageHandle.GetWord("HeTongDaiMa")+",ConstractName "+LanguageHandle.GetWord("HeTongMingCheng")+",PayableAccount "+LanguageHandle.GetWord("YingFuJinE")+",to_char(PayableTime,'yyyy/mm/dd') "+LanguageHandle.GetWord("YingFuShiJian")+",OutOfPocketAccount "+LanguageHandle.GetWord("ShiFuJinE")+",HandlingCharge "+LanguageHandle.GetWord("ShouXuFei")+",UNPayAmount "+LanguageHandle.GetWord("WeiFuJinE")+",Receiver "+LanguageHandle.GetWord("ShouKuanFang")+",PartA ¼×·½µ¥Î»,PartAOperator "+LanguageHandle.GetWord("FuZeRen")+",CurrencyType "+LanguageHandle.GetWord("BiBie")+" from V_ConstractPayableReportSummary where 1=1 ";   
+        strHQL = "select  BillCode "+LanguageHandle.GetWord("YuanShiDanHao")+",ConstractCode "+LanguageHandle.GetWord("HeTongDaiMa")+",ConstractName "+LanguageHandle.GetWord("HeTongMingCheng")+",PayableAccount "+LanguageHandle.GetWord("YingFuJinE")+",to_char(PayableTime,'yyyy/mm/dd') "+LanguageHandle.GetWord("YingFuShiJian")+",OutOfPocketAccount "+LanguageHandle.GetWord("ShiFuJinE")+",HandlingCharge "+LanguageHandle.GetWord("ShouXuFei")+",UNPayAmount "+LanguageHandle.GetWord("WeiFuJinE")+",Receiver "+LanguageHandle.GetWord("ShouKuanFang")+",PartA "+LanguageHandle.GetWord("JiaFangDanWei")+",PartAOperator "+LanguageHandle.GetWord("FuZeRen")+",CurrencyType "+LanguageHandle.GetWord("BiBie")+" from V_ConstractPayableReportSummary where 1=1 ";   
 
         if (!string.IsNullOrEmpty(strPartA))
         {

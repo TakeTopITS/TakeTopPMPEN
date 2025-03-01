@@ -5952,9 +5952,6 @@
   <data name="HSEShengChanZongJie" xml:space="preserve">
     <value>HSE生産概要</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
   <data name="HSTQJCCYHSZC" xml:space="preserve">
     <value>赤：遅刻、太字：参加、ブラック：ノーマル</value>
   </data>
@@ -23421,9 +23418,6 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>成功を指定します！</value>
   </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
-    <value>交際費、旅費、スタッフのTODOの償還を求め、エラー： "+ ex.Message +"！</value>
-  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>指定が失敗し、チェック！</value>
   </data>
@@ -27543,6 +27537,51 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>配信の進行状況</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE生産概要</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>交際費、旅費、スタッフのTODOの償還を求め、エラー： "+ ex.Message +"！</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>ドメインルール：社員コード：[TAKETOPUSERCODE]、部門列：[TAKETOPDEPARTMENT]、セキュリティ上の理由から、削除など、使用することはできません、更新、ドロップ、挿入、ALTER文）</value>
   </data>
@@ -27600,43 +27639,8 @@
   <data name="String25" xml:space="preserve">
     <value>周</value>
   </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material purchase order</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
 </root>

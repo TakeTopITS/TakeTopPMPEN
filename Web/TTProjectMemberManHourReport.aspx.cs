@@ -102,7 +102,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
                    UserName as 'Name',   
                    DepartCode as 'DepartmentCode',   
                    DepartName as 'DepartmentName',   
-                   ProjectID as 'ÏîÄ¿ID',   
+                   ProjectID as 'ProjectID',   
                    ProjectName as 'Project',
                    sum(ManHour) as 'DeclaredLaborHours',   
                    sum(ConfirmManHour) as 'ConfirmedLaborHours'   

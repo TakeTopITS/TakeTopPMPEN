@@ -197,7 +197,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = " Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体'))))";
+            strHQL += " or (document.Visible in ( '"+LanguageHandle.GetWord("BuMen")+"','"+LanguageHandle.GetWord("QuanTi")+"'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted'";
         }
         else
@@ -205,7 +205,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = " Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID in (Select workPlan.ID from T_ImplePlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体'))))";
+            strHQL += " or (document.Visible in ( '"+LanguageHandle.GetWord("BuMen")+"','"+LanguageHandle.GetWord("QuanTi")+"'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted'";
         }
 
@@ -683,7 +683,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = "Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体'))))";
+            strHQL += " or (document.Visible in ( '"+LanguageHandle.GetWord("BuMen")+"','"+LanguageHandle.GetWord("QuanTi")+"'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         }
         else
@@ -691,7 +691,7 @@ public partial class TTProPlanRelatedDocSAAS : System.Web.UI.Page
             strHQL = "Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID in (Select workPlan.ID from T_ImplePlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体'))))";
+            strHQL += " or (document.Visible in ( '"+LanguageHandle.GetWord("BuMen")+"','"+LanguageHandle.GetWord("QuanTi")+"'))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         }
 

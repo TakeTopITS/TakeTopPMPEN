@@ -80,7 +80,7 @@ public partial class TakeTopLRTop : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         string licenseKey = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
-        if (licenseKey != LanguageHandle.GetWord("TaiDingTaDingZhongLiYue").ToString().Trim())
+        if (licenseKey != "Ã©∂•-Õÿ∂¶-÷”¿Ò‘¬")
         {
             Response.Write("<script>top.window.location.href = 'TTDisplayErrors.aspx';</script>");
             return;
