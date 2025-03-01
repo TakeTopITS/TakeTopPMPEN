@@ -1275,4 +1275,180 @@ POSITION: 338
    在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
 
 ------------------------------------
+
+Log Entry : 18:57:47 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 19:01:27 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:01:34 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:01:46 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:01:52 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:01:54 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TTWorkFlowDetail.aspx?ID=6427
+长度不能小于 0。
+参数名: length
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 TakeTopWF.WFDetailHandle.GetWLStepConditionLogicalOperator(String strWLID, String strConID, UpdatePanel UpdatePanel1)
+   在 TakeTopWF.WFDetailHandle.GetNextSortNumber(String strWLID, Int32 intStepID, UpdatePanel UpdatePanel1)
+   在 TTWorkFlowDetail.LoadNextIsPriorSelectWorkFlowStep(String strTemName, String strWLID, String strStepID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTWorkFlowDetail.aspx.cs:行号 2394
+
+------------------------------------
+
+Log Entry : 19:01:54 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TTWorkFlowDetail.aspx?ID=6427
+正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 TTWorkFlowDetail.LoadNextIsPriorSelectWorkFlowStep(String strTemName, String strWLID, String strStepID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTWorkFlowDetail.aspx.cs:行号 2442
+   在 TTWorkFlowDetail.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTWorkFlowDetail.aspx.cs:行号 176
+
+------------------------------------
+
+Log Entry : 19:01:57 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:02:24 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:02:41 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:03:01 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:03:10 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:03:20 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:03:23 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TTWorkFlowDetail.aspx?ID=6434
+长度不能小于 0。
+参数名: length
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 TakeTopWF.WFDetailHandle.GetWLStepConditionLogicalOperator(String strWLID, String strConID, UpdatePanel UpdatePanel1)
+   在 TakeTopWF.WFDetailHandle.GetNextSortNumber(String strWLID, Int32 intStepID, UpdatePanel UpdatePanel1)
+   在 TTWorkFlowDetail.LoadNextIsPriorSelectWorkFlowStep(String strTemName, String strWLID, String strStepID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTWorkFlowDetail.aspx.cs:行号 2394
+
+------------------------------------
+
+Log Entry : 19:03:23 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TTWorkFlowDetail.aspx?ID=6434
+正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 TTWorkFlowDetail.LoadNextIsPriorSelectWorkFlowStep(String strTemName, String strWLID, String strStepID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTWorkFlowDetail.aspx.cs:行号 2442
+   在 TTWorkFlowDetail.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TTWorkFlowDetail.aspx.cs:行号 176
+
+------------------------------------
+
+Log Entry : 19:03:46 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 19:03:47 2025年3月1日 
+Error page: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+42P01: 关系 "v_projectplanlist" 不存在
+
+POSITION: 338
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\App_Code\ShareClass.cs:行号 16599
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 19:03:53 2025年3月1日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
 

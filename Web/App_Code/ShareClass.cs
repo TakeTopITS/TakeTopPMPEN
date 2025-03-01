@@ -136,18 +136,18 @@ public static class ShareClass
 
             try
             {
-                //System.Threading.Thread.Sleep(5000);
-                //string strUrl = System.Configuration.ConfigurationManager.AppSettings["CurrentSite"] + "/TakeTopTimer.aspx";
+                System.Threading.Thread.Sleep(5000);
 
-                //string strUrl = ShareClass.GetCurrentSiteRootPath() + "TakeTopTimer.aspx";
+                string strUrl = ShareClass.GetCurrentSiteRootPath() + "TakeTopTimer.aspx";
 
-                //System.Net.HttpWebRequest _HttpWebRequest = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(strUrl);
-                //System.Net.HttpWebResponse _HttpWebResponse = (System.Net.HttpWebResponse)_HttpWebRequest.GetResponse();
-                //System.IO.Stream _Stream = _HttpWebResponse.GetResponseStream();//得到回写的字节流 
+                System.Net.HttpWebRequest _HttpWebRequest = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(strUrl);
+                System.Net.HttpWebResponse _HttpWebResponse = (System.Net.HttpWebResponse)_HttpWebRequest.GetResponse();
+                System.IO.Stream _Stream = _HttpWebResponse.GetResponseStream();//得到回写的字节流 
 
-                // 执行 AnotherPage.aspx，并将其输出包含在当前页面中
-                string strUrl = "TakeTopTimer.aspx";
-                //HttpContext.Current.Server.Execute(strUrl);
+                //执行 AnotherPage.aspx，并将其输出包含在当前页面中
+
+
+                HttpContext.Current.Server.Execute(strUrl);
             }
             catch (Exception err)
             {
