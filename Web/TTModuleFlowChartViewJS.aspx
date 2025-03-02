@@ -90,6 +90,9 @@
                 padding: 3px;
             }
 
+
+
+
        
         #nav1 {
             width: 98%;
@@ -186,6 +189,7 @@
             else {
                 CloseWebPage();
             }
+
 
         });
 
@@ -319,5 +323,3 @@
 </body>
 <script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>
-
-

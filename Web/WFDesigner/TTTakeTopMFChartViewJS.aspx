@@ -101,8 +101,15 @@
                 }
     </style>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <%-- <script type="text/javascript" src="lib/jquery-ui-1.8.4.custom/js/jquery-1.4.2.min.js"></script>--%>
+
+    <link type="text/css"
+        href="lib/jquery-ui-1.8.4.custom/css/smoothness/jquery-ui-1.8.4.custom.css"
+        rel="stylesheet" />
+    <script type="text/javascript"
+        src="lib/jquery-ui-1.8.4.custom/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript"
+        src="lib/jquery-ui-1.8.4.custom/js/jquery-ui-1.8.4.custom.min.js"></script>
+
     <script type="text/javascript" src="lib/jquery-ui-1.8.4.custom/js/jquery-ui-1.8.4.custom.min.js"></script>
     <script type="text/javascript" src="lib/TakeTopFlowBase.js"></script>
     <script type="text/javascript" src="TakeTopModuleFlowView.js"></script>
@@ -113,6 +120,7 @@
         $(function () {
 
             if (top.location != self.location) { } else { CloseWebPage(); }
+
 
             LoadWFChart();
 
@@ -268,55 +276,4 @@
     </form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

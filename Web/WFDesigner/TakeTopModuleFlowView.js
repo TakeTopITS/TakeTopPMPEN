@@ -1480,6 +1480,7 @@ function LoadWFChart() {
 
     var varPageName = getPageName();
 
+
     if (varPageName.indexOf("TTTakeTopMFChartViewJS.aspx") >= 0) {
 
         $('#TakeTopFlow').TakeTopFlow(

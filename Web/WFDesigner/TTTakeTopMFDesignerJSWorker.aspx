@@ -149,8 +149,6 @@
         function displayWaitingImg(img) {
 
             this.document.getElementById(img).style.display = 'block';
-
-            parent.document.getElementById("img_processing").style.display = 'block';
         }
 
         function autoHeight() {

@@ -11,10 +11,11 @@ public partial class WFDesigner_TTTakeTopMFChartViewJS : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+
         licenseKey = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
         if (licenseKey != "泰顶-拓鼎-钟礼月")
         {
-            HttpContext.Current.Response.Redirect("TTDisplayErrors.aspx");
+            HttpContext.Current.Response.Redirect("../TTDisplayErrors.aspx");
         }
     }
 }
