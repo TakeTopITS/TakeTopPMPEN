@@ -121,7 +121,6 @@
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 
-
             LoadWFChart();
 
         });
@@ -276,5 +275,9 @@
     </form>
 </body>
 </html>
+
+
+
+
 
 
