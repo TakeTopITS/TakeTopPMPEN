@@ -166,8 +166,8 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         try
         {
             //给相关页面文件添加空行以刷新页面缓存
-            ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "<%--***--%>");
-            ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "<%--***--%>");
+            ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "");
+            ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "");
 
             ////完成更新之后，此存储过程将报告已为所有的表更新了统计信息
             //ShareClass.RunSqlCommand("exec sp_updatestats");

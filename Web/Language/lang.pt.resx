@@ -23418,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Especifica sucesso!</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>Custos de hospedagem, despesas de viagem, reembolso para pessoa TODO pendente, erro: " + ex.Message + "!</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Especifica falhar, confira!</value>
   </data>
@@ -27537,121 +27540,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Progresso da entrega</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
-  </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material purchase order</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Resumo do HSE Produção</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Despesas de representação, despesas de viagem, o reembolso do pessoal TODO determinado, o erro: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Regras de Domínio: código empregado: [TAKETOPUSERCODE], corda departamento: [TAKETOPDEPARTMENT], por razões de segurança, não podem ser utilizados, incluindo exclusão, atualização, Gota, Inserir, Alter declaração)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Ter</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Resumo do HSE Produção</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Formulário de Candidatura ao Subcontrato Trabalhista</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>contrato de associação</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>Os custos de distribuição por departamento de estatísticas</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>Os custos de distribuição por conta Estatísticas</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>Pagamento - renda total</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>Ocultar Estado</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>Amarelo: rendimento Azul: pagar</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>responder</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>Plano de distribuição de Estado</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>O montante pago perfil de conta</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>Renda - pagamento total de</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>Conta de distribuição Valor pago</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>Pagamentos efectivos recebidos através da carta de comparação mesmo período</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>Distribuição do orçamento</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>definição de elemento</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>Zhou</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
-    <value>Custos de hospedagem, despesas de viagem, reembolso para pessoa TODO pendente, erro: " + ex.Message + "!</value>
-  </data>
-  <data name="GouHuoChanWei" xml:space="preserve">
-    <value>Unidade de compra</value>
-  </data>
   <data name="MustBeUploadDoc" xml:space="preserve">
     <value>Documentos obrigatórios</value>
   </data>
@@ -27678,6 +27566,9 @@
   </data>
   <data name="SheJi" xml:space="preserve">
     <value>Design</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>Número total de projetos em execução</value>
   </data>
   <data name="NianDuXingZeng" xml:space="preserve">
     <value>Novos no ano</value>
@@ -27898,6 +27789,7 @@
   <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
     <value>&lt;/a&gt;</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ZhanDianShanChuChengGong" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -28722,6 +28614,9 @@
   </data>
   <data name="RiJi" xml:space="preserve">
     <value>Este defeito não existe, pode ter sido excluído, por favor, verifique!</value>
+  </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>Unidade de compra</value>
   </data>
   <data name="ChanPinChangDaiMa" xml:space="preserve">
     <value>Enviou o arquivo:</value>
@@ -29608,9 +29503,6 @@
   <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
     <value>Mensagem: Modificação do modo [Plano Mensal] bem-sucedida!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
-    <value>Erro: A entrada de quantidade está incorreta, deve ser um número maior ou igual a zero, por favor, insira corretamente antes de prosseguir!</value>
-  </data>
   <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
     <value>Erro: A entrada do preço ajustado do equipamento está incorreta, deve ser um número maior ou igual a zero, por favor, insira corretamente antes de prosseguir!</value>
   </data>
@@ -29980,8 +29872,8 @@
   <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
     <value>Conteúdo ou status de, esta é uma notificação!</value>
   </data>
-  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
-    <value>Erro: Falha ao importar os dados de referência de desempenho para o arquivo Excel!</value>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>Erro: A entrada de quantidade está incorreta, deve ser um número maior ou igual a zero, por favor, insira corretamente antes de prosseguir!</value>
   </data>
   <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
     <value>Mensagem: Falha ao consultar as informações consolidadas do valor solicitado e do padrão!</value>
@@ -30222,6 +30114,9 @@
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>Ocorreu um erro!</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>Erro: Falha ao importar os dados de referência de desempenho para o arquivo Excel!</value>
   </data>
   <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
     <value>&lt;B&gt;Parcial&lt;/B&gt;</value>
@@ -30706,6 +30601,45 @@
   <data name="YanShou" xml:space="preserve">
     <value>Nome da avaliação</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
   <data name="WeiShouJieE" xml:space="preserve">
     <value />
   </data>
@@ -30723,6 +30657,9 @@
   </data>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>Plano de projeto atrasado</value>
+  </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>Aviso: Por favor, selecione o tipo de arquivo</value>
@@ -30750,5 +30687,68 @@
   </data>
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Você não tem permissão para alterar o plano. Por favor, verifique!</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Resumo do HSE Produção</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Despesas de representação, despesas de viagem, o reembolso do pessoal TODO determinado, o erro: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Regras de Domínio: código empregado: [TAKETOPUSERCODE], corda departamento: [TAKETOPDEPARTMENT], por razões de segurança, não podem ser utilizados, incluindo exclusão, atualização, Gota, Inserir, Alter declaração)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Ter</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Resumo do HSE Produção</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Formulário de Candidatura ao Subcontrato Trabalhista</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>contrato de associação</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Os custos de distribuição por departamento de estatísticas</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Os custos de distribuição por conta Estatísticas</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Pagamento - renda total</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>Ocultar Estado</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Amarelo: rendimento Azul: pagar</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>responder</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>Plano de distribuição de Estado</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>O montante pago perfil de conta</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>Renda - pagamento total de</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>Conta de distribuição Valor pago</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>Pagamentos efectivos recebidos através da carta de comparação mesmo período</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Distribuição do orçamento</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>definição de elemento</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>Zhou</value>
   </data>
 </root>

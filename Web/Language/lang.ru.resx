@@ -15612,6 +15612,9 @@
   <data name="YiHun" xml:space="preserve">
     <value>Женат</value>
   </data>
+  <data name="YiJi" xml:space="preserve">
+    <value>Уровень 1</value>
+  </data>
   <data name="YiJia" xml:space="preserve">
     <value>Сделка</value>
   </data>
@@ -23415,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Указывает успех!</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>Расходы на прием, командировочные расходы, возмещение персонала TODO待定, ошибка: " + ex.Message + "!</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Указывает не удается, проверьте!</value>
   </data>
@@ -27534,124 +27540,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Ход доставки</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
-  </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material purchase order</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Резюме HSE Производство</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Представительские расходы, командировочные расходы, возмещение персонала TODO определяется, ошибка: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Правила домена: Код сотрудника: [TAKETOPUSERCODE], строка отдел: [TAKETOPDEPARTMENT], по соображениям безопасности, не могут быть использованы в том числе удаление, обновление, падения, Вставить, Альтер заявление)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Имеют</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Резюме HSE Производство</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Заявка на подачу заявки на субподряд</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>Ассоциация контракт</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>Расходы на реализацию по статистике отдела</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>Расходы на реализацию по статистике счета</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>Платное - общий доход</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>Скрыть Состояние</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>Желтый: Синий доход: платить</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>ответить</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>Государственный план распределения</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>Сумма фактически выплаченных профиль учетной записи</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>Доходы - всего платить</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>Распределение суммы, уплаченной аккаунт</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>Фактические платежи, полученные за тот же период сравнительную таблицу</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>Распределение бюджета</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>определение элемента</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>Чжоу</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="YiJi" xml:space="preserve">
-    <value>Уровень 1</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
-    <value>Расходы на прием, командировочные расходы, возмещение персонала TODO待定, ошибка: " + ex.Message + "!</value>
-  </data>
-  <data name="GouHuoChanWei" xml:space="preserve">
-    <value>Покупающая организация</value>
-  </data>
   <data name="MustBeUploadDoc" xml:space="preserve">
     <value>Обязательные документы</value>
   </data>
@@ -27678,6 +27566,9 @@
   </data>
   <data name="SheJi" xml:space="preserve">
     <value>Дизайн</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>Общее количество выполняемых проектов</value>
   </data>
   <data name="NianDuXingZeng" xml:space="preserve">
     <value>Годовое добавление</value>
@@ -27895,6 +27786,7 @@
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>&lt;/a&gt;</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ZhengZaiShanChuNiDeYingYongZha" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -28722,6 +28614,9 @@
   </data>
   <data name="RiJi" xml:space="preserve">
     <value>Этот дефект не существует, возможно, был удален, проверьте!</value>
+  </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>Покупающая организация</value>
   </data>
   <data name="ChanPinChangDaiMa" xml:space="preserve">
     <value>Загрузил файл:</value>
@@ -29608,9 +29503,6 @@
   <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
     <value>Сообщение: изменение режима [Помесячный план] успешно!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
-    <value>Ошибка: ввод количества ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
-  </data>
   <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
     <value>Ошибка: ввод цены корректировки оборудования ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
   </data>
@@ -29980,8 +29872,8 @@
   <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
     <value>Ошибка: импорт базовых данных о производительности в файл Excel не удался!</value>
   </data>
-  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
-    <value>Сообщение: запрос информации о сумме заявки и стандартах не удался!</value>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>Ошибка: ввод количества ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
   </data>
   <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
     <value>Сообщение: [Подкатегория затрат] не выбрана, сначала введите подпункт этой категории!</value>
@@ -30222,6 +30114,9 @@
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>Изменен проект:</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>Сообщение: запрос информации о сумме заявки и стандартах не удался!</value>
   </data>
   <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
     <value>Уведомление об изменении плана проекта</value>
@@ -30706,6 +30601,45 @@
   <data name="YanShou" xml:space="preserve">
     <value>Выдача материалов</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
   <data name="WeiShouJieE" xml:space="preserve">
     <value>Проверка</value>
   </data>
@@ -30723,6 +30657,9 @@
   </data>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>Вы уверены, что хотите удалить выбранные данные?</value>
+  </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>Предупреждение: Выберите тип файла</value>
@@ -30750,5 +30687,68 @@
   </data>
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Существует файл с таким же изображением!</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Резюме HSE Производство</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Представительские расходы, командировочные расходы, возмещение персонала TODO определяется, ошибка: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Правила домена: Код сотрудника: [TAKETOPUSERCODE], строка отдел: [TAKETOPDEPARTMENT], по соображениям безопасности, не могут быть использованы в том числе удаление, обновление, падения, Вставить, Альтер заявление)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Имеют</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Резюме HSE Производство</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Заявка на подачу заявки на субподряд</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>Ассоциация контракт</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Расходы на реализацию по статистике отдела</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Расходы на реализацию по статистике счета</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Платное - общий доход</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>Скрыть Состояние</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Желтый: Синий доход: платить</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>ответить</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>Государственный план распределения</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>Сумма фактически выплаченных профиль учетной записи</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>Доходы - всего платить</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>Распределение суммы, уплаченной аккаунт</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>Фактические платежи, полученные за тот же период сравнительную таблицу</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Распределение бюджета</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>определение элемента</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>Чжоу</value>
   </data>
 </root>

@@ -1428,9 +1428,9 @@ FROM (
     protected static void ChangePageCache()
     {
         //更新页面缓存，刷新页面
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceModuleFlowView.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTModuleFlowChartViewJS.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("WFDesigner/TTTakeTopMFChartViewJS.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceModuleFlowView.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTModuleFlowChartViewJS.aspx", "");
+        ShareClass.AddSpaceLineToFile("WFDesigner/TTTakeTopMFChartViewJS.aspx", "");
     }
 
 

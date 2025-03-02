@@ -254,53 +254,53 @@ public static class ShareClass
     public static void AddSpaceLineToFileForRefreshCache()
     {
         //在平台左边栏增加一行注释
-        ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TakeTopMainTab.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TakeTopMainTop.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "");
+        ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "");
+        ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "");
+        ShareClass.AddSpaceLineToFile("TakeTopMainTab.aspx", "");
+        ShareClass.AddSpaceLineToFile("TakeTopMainTop.aspx", "");
 
         ShareClass.AddSpaceLineToFile("TakeTopPersonalSpace.aspx", "");
-        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceForOuterUser.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceSAAS.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceForOuterUser.aspx", "");
+        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceSAAS.aspx", "");
 
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceAnalysisChart.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceMembersWebAddress.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceMembersWebAddressForOuter.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceAnalysisChart.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceMembersWebAddress.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceMembersWebAddressForOuter.aspx", "");
 
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceMyMonthSchedule.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNewsList.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceMyMonthSchedule.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNewsList.aspx", "");
 
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNewsNotice.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNewsNoticeForSAAS.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNoticeList.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNewsNotice.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNewsNoticeForSAAS.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceNoticeList.aspx", "");
 
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceProject.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceTask.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceProject.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceTask.aspx", "");
 
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceToDoNewsForOuter.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceToDoList.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceToDoNewsForOuter.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceToDoList.aspx", "");
 
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceWorkflow.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceWorkflowForOuter.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceWorkflow.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceWorkflowForOuter.aspx", "");
     }
 
     //给主界面左边栏相关页面文件添加空行以刷新页面缓存
     public static void AddSpaceLineToLeftColumnForRefreshCache()
     {
         ////在平台左边栏增加一行注释
-        //ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "<%--***--%>");
-        //ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "<%--***--%>");
-        //ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "<%--***--%>");
+        //ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "");
+        //ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "");
+        //ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "");
     }
 
     //给主界面个人空间相关页面文件添加空行以刷新页面缓存
     public static void AddSpaceLineToPersonalSpaceForRefreshCache()
     {
         //页面文件加注释字符，以刷新缓存
-        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpace.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceForOuterUser.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceSAAS.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpace.aspx", "");
+        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceForOuterUser.aspx", "");
+        ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceSAAS.aspx", "");
     }
 
     //初始化实体类，以加快后续的操作速度

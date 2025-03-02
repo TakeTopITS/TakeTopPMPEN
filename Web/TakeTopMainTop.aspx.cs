@@ -121,8 +121,8 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
             Session["LeftBarExtend"] = strLeftBarExtend;
 
-            ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "<%--***--%>");
-            ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "<%--***--%>");
+            ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "");
+            ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "");
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click55", "changeLeftBarExtend('" + strLeftBarExtend + "')", true);
         }

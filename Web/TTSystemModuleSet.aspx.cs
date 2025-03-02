@@ -933,7 +933,7 @@ public partial class TTSystemModuleSet : System.Web.UI.Page
                 ChangePageCache();
 
                 //更新页面缓存，刷新页面
-                ShareClass.AddSpaceLineToFile("TTModuleTreeSelectPage.aspx", "<%--***--%>");
+                ShareClass.AddSpaceLineToFile("TTModuleTreeSelectPage.aspx", "");
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSQCG").ToString().Trim() + "')", true);
             }
@@ -1324,9 +1324,9 @@ public partial class TTSystemModuleSet : System.Web.UI.Page
         //Session["CssDirectoryChangeNumber"] = "1";
 
         //更新页面缓存，刷新页面
-        ShareClass.AddSpaceLineToFile("TTPersonalSpaceModuleFlowView.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("TTModuleFlowChartViewJS.aspx", "<%--***--%>");
-        ShareClass.AddSpaceLineToFile("WFDesigner/TTTakeTopMFChartViewJS.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TTPersonalSpaceModuleFlowView.aspx", "");
+        ShareClass.AddSpaceLineToFile("TTModuleFlowChartViewJS.aspx", "");
+        ShareClass.AddSpaceLineToFile("WFDesigner/TTTakeTopMFChartViewJS.aspx", "");
     }
 
 

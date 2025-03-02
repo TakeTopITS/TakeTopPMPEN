@@ -23418,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Indique succès!</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>Frais de réception, frais de voyage, personnel à rembourser TODO à déterminer, erreur : " + ex.Message + " !</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Indique échoue, vérifiez!</value>
   </data>
@@ -27537,79 +27540,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Progression de la livraison</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
-  </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material purchase order</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Résumé HSE production</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Les frais de représentation, frais de déplacement, le remboursement du personnel TODO déterminée, l'erreur: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Avoir</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Résumé HSE production</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Formulaire de demande de contrat de sous-traitance</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>contrat de l'Association</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
-    <value>Frais de réception, frais de voyage, personnel à rembourser TODO à déterminer, erreur : " + ex.Message + " !</value>
-  </data>
-  <data name="GouHuoChanWei" xml:space="preserve">
-    <value>Unité d'achat</value>
-  </data>
   <data name="MustBeUploadDoc" xml:space="preserve">
     <value>Documents obligatoires</value>
   </data>
@@ -27636,6 +27566,9 @@
   </data>
   <data name="SheJi" xml:space="preserve">
     <value>Conception</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>Nombre total de projets en cours d'exécution</value>
   </data>
   <data name="NianDuXingZeng" xml:space="preserve">
     <value>Nouveaux ajouts annuels</value>
@@ -27847,6 +27780,7 @@
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>&lt;/a&gt;</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="abrbrDengLuZhangHaoADMINMiMa12" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -28680,6 +28614,9 @@
   </data>
   <data name="RiJi" xml:space="preserve">
     <value>Ce défaut n'existe pas, il a peut-être été supprimé, veuillez vérifier !</value>
+  </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>Unité d'achat</value>
   </data>
   <data name="ChanPinChangDaiMa" xml:space="preserve">
     <value>A téléchargé le fichier :</value>
@@ -29566,9 +29503,6 @@
   <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
     <value>Message : Modification du mode [Plan mensuel] réussie !</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
-    <value>Message d'erreur : L'entrée de quantité est incorrecte, doit être un nombre et supérieure ou égale à zéro, veuillez entrer correctement avant de procéder à l'opération !</value>
-  </data>
   <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
     <value>Message d'erreur : L'entrée du prix d'ajustement de l'équipement est incorrecte, doit être un nombre et supérieure ou égale à zéro, veuillez entrer correctement avant de procéder à l'opération !</value>
   </data>
@@ -29938,8 +29872,8 @@
   <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
     <value>] dans le fichier Excel !</value>
   </data>
-  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
-    <value>Contenu ou statut de , notification spéciale !</value>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>Message d'erreur : L'entrée de quantité est incorrecte, doit être un nombre et supérieure ou égale à zéro, veuillez entrer correctement avant de procéder à l'opération !</value>
   </data>
   <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
     <value>Message d'erreur : Échec de l'importation des données de référence de performance dans le fichier Excel !</value>
@@ -30180,6 +30114,9 @@
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>Modification du projet :</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>Contenu ou statut de , notification spéciale !</value>
   </data>
   <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
     <value>Notification de modification du plan de projet</value>
@@ -30664,6 +30601,45 @@
   <data name="YanShou" xml:space="preserve">
     <value>Acceptation</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
   <data name="WeiShouJieE" xml:space="preserve">
     <value>Montant non reçu</value>
   </data>
@@ -30681,6 +30657,9 @@
   </data>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>Plan de projet retardé</value>
+  </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>Congé (heures)</value>
@@ -30708,5 +30687,26 @@
   </data>
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Les données de l'image sont vides, veuillez vérifier !</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Résumé HSE production</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Les frais de représentation, frais de déplacement, le remboursement du personnel TODO déterminée, l'erreur: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Avoir</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Résumé HSE production</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Formulaire de demande de contrat de sous-traitance</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>contrat de l'Association</value>
   </data>
 </root>

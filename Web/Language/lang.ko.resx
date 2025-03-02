@@ -15612,6 +15612,9 @@
   <data name="YiHun" xml:space="preserve">
     <value>결혼 한</value>
   </data>
+  <data name="YiJi" xml:space="preserve">
+    <value>일차</value>
+  </data>
   <data name="YiJia" xml:space="preserve">
     <value>매매</value>
   </data>
@@ -23415,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>성공을 지정합니다!</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>접대비, 출장비, 보고 인원 TODO 결정 , 오류 :" + ex.Message + "！</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>지정이 실패 체크!</value>
   </data>
@@ -27534,82 +27540,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>배달 진행 상황</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
-  </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material purchase order</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>테스트 기록</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>엔터테인먼트 비용, 여행 경비, 직원 TODO의 상환이 결정 오류 : "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>도메인 규칙 : 직​​원 코드 : [TAKETOPUSERCODE, 부서 문자열 : [TAKETOPDEPARTMENT, 보안상의 이유로 포함하여 사용할 수 없습니다 삭제, 업데이트, 드롭, 삽입, ALTER 문)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>있다</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>HSE 생산 개요</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>노동 하도급 신청서</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>협회 계약</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="YiJi" xml:space="preserve">
-    <value>일차</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
-    <value>접대비, 출장비, 보고 인원 TODO 결정 , 오류 :" + ex.Message + "！</value>
-  </data>
-  <data name="GouHuoChanWei" xml:space="preserve">
-    <value>구매 단위</value>
-  </data>
   <data name="MustBeUploadDoc" xml:space="preserve">
     <value>필수 파일</value>
   </data>
@@ -27636,6 +27566,9 @@
   </data>
   <data name="SheJi" xml:space="preserve">
     <value>디자인</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>진행 중인 프로젝트 총수 </value>
   </data>
   <data name="NianDuXingZeng" xml:space="preserve">
     <value>연도별 추가</value>
@@ -28681,6 +28614,9 @@
   <data name="RiJi" xml:space="preserve">
     <value>날짜</value>
   </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>구매 단위</value>
+  </data>
   <data name="ChanPinChangDaiMa" xml:space="preserve">
     <value>제품 긴 코드</value>
   </data>
@@ -29566,9 +29502,6 @@
   <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
     <value>오류 메시지: 수량 입력 오류, 숫자여야 하며 0보다 크거나 같아야 합니다. 올바르게 입력한 후 다시 시도하세요!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
-    <value>오류 메시지: 장비 조정 단가 입력 오류, 숫자여야 하며 0보다 크거나 같아야 합니다. 올바르게 입력한 후 다시 시도하세요!</value>
-  </data>
   <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
     <value>오류 메시지: 주재료 조정 단가 입력 오류, 숫자여야 하며 0보다 크거나 같아야 합니다. 올바르게 입력한 후 다시 시도하세요!</value>
   </data>
@@ -29938,8 +29871,8 @@
   <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
     <value>]를 Excel 파일로 가져오기 실패!</value>
   </data>
-  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
-    <value>내용 또는 상태, 특별히 알립니다!</value>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>오류 메시지: 장비 조정 단가 입력 오류, 숫자여야 하며 0보다 크거나 같아야 합니다. 올바르게 입력한 후 다시 시도하세요!</value>
   </data>
   <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
     <value>오류 메시지: 성과 기준 데이터를 Excel 파일로 가져오기 실패!</value>
@@ -30180,6 +30113,9 @@
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>프로젝트 변경:</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>내용 또는 상태, 특별히 알립니다!</value>
   </data>
   <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
     <value>프로젝트 계획 변경 알림</value>
@@ -30664,6 +30600,45 @@
   <data name="YanShou" xml:space="preserve">
     <value>검수  </value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
   <data name="WeiShouJieE" xml:space="preserve">
     <value>미수금  </value>
   </data>
@@ -30681,6 +30656,10 @@
   </data>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>지연 프로젝트 계획  </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>휴가(시간)  </value>
@@ -30708,5 +30687,26 @@
   </data>
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>이미지 데이터가 비어 있습니다. 확인하세요!</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>테스트 기록</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>엔터테인먼트 비용, 여행 경비, 직원 TODO의 상환이 결정 오류 : "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>도메인 규칙 : 직​​원 코드 : [TAKETOPUSERCODE, 부서 문자열 : [TAKETOPDEPARTMENT, 보안상의 이유로 포함하여 사용할 수 없습니다 삭제, 업데이트, 드롭, 삽입, ALTER 문)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>있다</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>HSE 생산 개요</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>노동 하도급 신청서</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>협회 계약</value>
   </data>
 </root>

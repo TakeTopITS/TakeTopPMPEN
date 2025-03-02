@@ -23418,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Gibt Erfolg!</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>Spesen, Reisekosten, zu erstattende Personen TODO steht noch aus, Fehler: " + ex.Message + "!</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Gibt an, fehlschlägt, überprüfen!</value>
   </data>
@@ -27537,265 +27540,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Lieferfortschritt</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
-  </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE Produktion Zusammenfassung</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Bewirtungskosten, Reisekosten, Erstattung der Mitarbeiter TODO bestimmt, die Fehlermeldung: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Domain-Regeln: Mitarbeiter Code: [TAKETOPUSERCODE], Abteilung string: [TAKETOPDEPARTMENT], aus Sicherheitsgründen nicht verwendet werden können, einschließlich löschen, aktualisieren, Tropfen, Einfügen, ALTER-Anweisung)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Haben</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>HSE Produktion Zusammenfassung</value>
-  </data>
-  <data name="BaseEndTime1" xml:space="preserve">
-    <value>tempo finale di riferimento</value>
-  </data>
-  <data name="BaseStartTime1" xml:space="preserve">
-    <value>Inizio previsto</value>
-  </data>
-  <data name="BeiAnZhuangTai1" xml:space="preserve">
-    <value>status di deposito</value>
-  </data>
-  <data name="BianGengEDu1" xml:space="preserve">
-    <value>La quantità di variazione</value>
-  </data>
-  <data name="BianGengFang1" xml:space="preserve">
-    <value>Modifica del partito</value>
-  </data>
-  <data name="BianGengHaoJinE1" xml:space="preserve">
-    <value>importo cambiato</value>
-  </data>
-  <data name="BianGengHouJinE1" xml:space="preserve">
-    <value>importo cambiato</value>
-  </data>
-  <data name="BianGengLeiXing1" xml:space="preserve">
-    <value>Modifica tipo</value>
-  </data>
-  <data name="BianGengNeiRong1" xml:space="preserve">
-    <value>modifiche</value>
-  </data>
-  <data name="BianGengZongE1" xml:space="preserve">
-    <value>variazione totale</value>
-  </data>
-  <data name="CaiWuZhangWuLei1" xml:space="preserve">
-    <value>Classe di contabilità finanziaria</value>
-  </data>
-  <data name="DaiChuLiYeWu1" xml:space="preserve">
-    <value>In attesa di business</value>
-  </data>
-  <data name="DaJiaGou1" xml:space="preserve">
-    <value>prendere l'architettura</value>
-  </data>
-  <data name="GSCSNDDASWXH1" xml:space="preserve">
-    <value>Formato: numero di serie CS + + quattro cifre del codice (0001-9999)</value>
-  </data>
-  <data name="GuiDangRiQi1" xml:space="preserve">
-    <value>data di registrazione</value>
-  </data>
-  <data name="HeTongBianGengBaoBiao1" xml:space="preserve">
-    <value>Rapporto Contract Change</value>
-  </data>
-  <data name="HeTongChaXunBaobiao1" xml:space="preserve">
-    <value>Rapporto Query Contratto</value>
-  </data>
-  <data name="HeTongFengLiTaiZhuang1" xml:space="preserve">
-    <value>classificazione contabile Contratto</value>
-  </data>
-  <data name="HeTongTiQianZhiXingBaoBiao1" xml:space="preserve">
-    <value>Contratto esecuzione del report in anticipo</value>
-  </data>
-  <data name="HTLXBLT1" xml:space="preserve">
-    <value>Tipo di disegno in scala contratto</value>
-  </data>
-  <data name="HTZCQST1" xml:space="preserve">
-    <value>trend di crescita Contratto</value>
-  </data>
-  <data name="HTZTBLT1" xml:space="preserve">
-    <value>Percentuale di stato del contratto</value>
-  </data>
-  <data name="JianDangAn1" xml:space="preserve">
-    <value>build file</value>
-  </data>
-  <data name="JiBenLeiXingLei1" xml:space="preserve">
-    <value>classi di tipo Base</value>
-  </data>
-  <data name="KeHuBeiAn1" xml:space="preserve">
-    <value>record del cliente</value>
-  </data>
-  <data name="LiaoPinReiXing1" xml:space="preserve">
-    <value>Tipo di elemento</value>
-  </data>
-  <data name="LiuChenYeWuRenYuan1" xml:space="preserve">
-    <value>persone dei processi di business</value>
-  </data>
-  <data name="MoQingKuanE1" xml:space="preserve">
-    <value>Si prega di non ammonterà</value>
-  </data>
-  <data name="QianDingShiJianWanYuKaiShiShiJian1" xml:space="preserve">
-    <value>(Firma tempo dopo l'orario di inizio)</value>
-  </data>
-  <data name="RenShiXinZhunLei1" xml:space="preserve">
-    <value>categoria Amministrazione del Personale</value>
-  </data>
-  <data name="SBKNWJGSBDHLCDBGQJC1" xml:space="preserve">
-    <value>Fallimento, non può essere un formato di file \\ pool di applicazioni non viene avviato il supporto a 32 bit \\ tavolo T_ProModuleLevel lunghezza della colonna HomeModuleName non è al 100, controllare!</value>
-  </data>
-  <data name="SheYongHu1" xml:space="preserve">
-    <value>consentire agli utenti</value>
-  </data>
-  <data name="ShouQuanXian1" xml:space="preserve">
-    <value>limite di autorizzazione</value>
-  </data>
-  <data name="ShuJiJiaoHanFuWuQiDong1" xml:space="preserve">
-    <value>servizio di scambio di dati inizia</value>
-  </data>
-  <data name="SuoShuXiangMu1" xml:space="preserve">
-    <value>vista del progetto</value>
-  </data>
-  <data name="TianShu1" xml:space="preserve">
-    <value>giorni</value>
-  </data>
-  <data name="TongXunJieKouLei1" xml:space="preserve">
-    <value>Interfacce di comunicazione</value>
-  </data>
-  <data name="XiangMuRenWuLei1" xml:space="preserve">
-    <value>attività del progetto Class</value>
-  </data>
-  <data name="XiangMuShiTu1" xml:space="preserve">
-    <value>Progetto View</value>
-  </data>
-  <data name="XuanMoKuai1" xml:space="preserve">
-    <value>Modulo opzione</value>
-  </data>
-  <data name="YGXBBLT1" xml:space="preserve">
-    <value>Percentuale di lavoratori del sesso</value>
-  </data>
-  <data name="YGZCQST1" xml:space="preserve">
-    <value>trend di crescita personale</value>
-  </data>
-  <data name="YGZTBLT1" xml:space="preserve">
-    <value>Percentuale di dipendenti statali</value>
-  </data>
-  <data name="YiJiaoDanMingXiBianJi1" xml:space="preserve">
-    <value>Modifica di trasferimento dati dell'ordine</value>
-  </data>
-  <data name="YuJiao1" xml:space="preserve">
-    <value>trasferimento</value>
-  </data>
-  <data name="ZiChanLiaoPinLei1" xml:space="preserve">
-    <value>categoria beni materiali</value>
-  </data>
-  <data name="ZiDingYiBaoBiao1" xml:space="preserve">
-    <value>rapporto personalizzato</value>
-  </data>
-  <data name="ZiXingMingLing1" xml:space="preserve">
-    <value>corsa</value>
-  </data>
-  <data name="ZiXingShiJian1" xml:space="preserve">
-    <value>Tempo di esecuzione</value>
-  </data>
-  <data name="ZongFengShu1" xml:space="preserve">
-    <value>Il numero totale di copie</value>
-  </data>
-  <data name="ZuYong1" xml:space="preserve">
-    <value>assumere</value>
-  </data>
-  <data name="ZZCZXTDMQJC1" xml:space="preserve">
-    <value>La presenza dello stesso codice, controllare!</value>
-  </data>
-  <data name="ZZJGSJBHBXDYXZDBHDZSQJC1" xml:space="preserve">
-    <value>Attenzione, l'aggiornamento deve essere maggiore del numero attuale di numeri interi, controllare!</value>
-  </data>
-  <data name="ZZNDKHBAYBJQQGZ1" xml:space="preserve">
-    <value>Il tuo record di un cliente è stato respinto, si prega di prestare attenzione!</value>
-  </data>
-  <data name="ZZNDKHBAYBPZTGQGZ1" xml:space="preserve">
-    <value>Il tuo record è stato approvato da parte del cliente, si prega di prestare attenzione!</value>
-  </data>
-  <data name="ZZPZBACG1" xml:space="preserve">
-    <value>Approvazione del successo discografico</value>
-  </data>
-  <data name="ZZPZBASBQJC1" xml:space="preserve">
-    <value>Approvazione del disco non riesce, controllare!</value>
-  </data>
-  <data name="ZZQQBACG1" xml:space="preserve">
-    <value>Rifiutato di registrare il successo</value>
-  </data>
-  <data name="ZZQQBASBQJC1" xml:space="preserve">
-    <value>Rifiuta il record non riesce, controllare</value>
-  </data>
-  <data name="ZZSHOUCHECG1" xml:space="preserve">
-    <value>successo vettura chiusa!</value>
-  </data>
-  <data name="ZZTJBACG1" xml:space="preserve">
-    <value>Invia il successo record di</value>
-  </data>
-  <data name="ZZTJBASBQJC1" xml:space="preserve">
-    <value>Invia il record non riesce, controllare</value>
-  </data>
-  <data name="ZZYJBACGQBYCFTJ1" xml:space="preserve">
-    <value>Il successo è stata depositata, si prega di non inviare</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Antragsformular für Arbeitsanträge</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
-    <value>Spesen, Reisekosten, zu erstattende Personen TODO steht noch aus, Fehler: " + ex.Message + "!</value>
-  </data>
-  <data name="GouHuoChanWei" xml:space="preserve">
-    <value>Einkaufseinheit</value>
-  </data>
   <data name="MustBeUploadDoc" xml:space="preserve">
     <value>Erforderliche Dokumente</value>
   </data>
@@ -27822,6 +27566,9 @@
   </data>
   <data name="SheJi" xml:space="preserve">
     <value>Design</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>Gesamtzahl der laufenden Projekte</value>
   </data>
   <data name="NianDuXingZeng" xml:space="preserve">
     <value>Jährliche Neuzugänge</value>
@@ -28039,6 +27786,7 @@
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>&lt;/a&gt;</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ZhengZaiShanChuNiDeYingYongZha" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -28866,6 +28614,9 @@
   </data>
   <data name="RiJi" xml:space="preserve">
     <value>Dieser Fehler existiert nicht, möglicherweise wurde er bereits gelöscht, bitte überprüfen!</value>
+  </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>Einkaufseinheit</value>
   </data>
   <data name="ChanPinChangDaiMa" xml:space="preserve">
     <value>Datei hochgeladen:</value>
@@ -29752,9 +29503,6 @@
   <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
     <value>Hinweis: Änderung des [monatlichen Planungsmodus] erfolgreich!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
-    <value>Fehlermeldung: Mengeneingabe fehlerhaft, sollte eine Zahl und größer oder gleich null sein, bitte korrigieren Sie die Eingabe und führen Sie die Operation erneut durch!</value>
-  </data>
   <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
     <value>Fehlermeldung: Geräteanpassungspreis fehlerhaft, sollte eine Zahl und größer oder gleich null sein, bitte korrigieren Sie die Eingabe und führen Sie die Operation erneut durch!</value>
   </data>
@@ -30124,8 +29872,8 @@
   <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
     <value>] konnten nicht in eine Excel-Datei importiert werden!</value>
   </data>
-  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
-    <value>Inhalt oder Status, hiermit wird informiert!</value>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>Fehlermeldung: Mengeneingabe fehlerhaft, sollte eine Zahl und größer oder gleich null sein, bitte korrigieren Sie die Eingabe und führen Sie die Operation erneut durch!</value>
   </data>
   <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
     <value>Fehlermeldung: Leistungs-Benchmark-Daten konnten nicht in eine Excel-Datei importiert werden!</value>
@@ -30366,6 +30114,9 @@
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>Projekt geändert:</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>Inhalt oder Status, hiermit wird informiert!</value>
   </data>
   <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
     <value>Benachrichtigung über Projektplanänderung</value>
@@ -30850,6 +30601,45 @@
   <data name="YanShou" xml:space="preserve">
     <value>Materialausgabe</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
   <data name="WeiShouJieE" xml:space="preserve">
     <value>Abnahme</value>
   </data>
@@ -30867,6 +30657,9 @@
   </data>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>Sind Sie sicher, dass Sie die ausgewählten Datensätze löschen möchten?</value>
+  </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>Warnung, bitte wählen Sie einen Dateityp aus</value>
@@ -30894,5 +30687,212 @@
   </data>
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Es existieren identische Bilddateien!</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE Produktion Zusammenfassung</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Bewirtungskosten, Reisekosten, Erstattung der Mitarbeiter TODO bestimmt, die Fehlermeldung: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Domain-Regeln: Mitarbeiter Code: [TAKETOPUSERCODE], Abteilung string: [TAKETOPDEPARTMENT], aus Sicherheitsgründen nicht verwendet werden können, einschließlich löschen, aktualisieren, Tropfen, Einfügen, ALTER-Anweisung)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Haben</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>HSE Produktion Zusammenfassung</value>
+  </data>
+  <data name="BaseEndTime1" xml:space="preserve">
+    <value>tempo finale di riferimento</value>
+  </data>
+  <data name="BaseStartTime1" xml:space="preserve">
+    <value>Inizio previsto</value>
+  </data>
+  <data name="BeiAnZhuangTai1" xml:space="preserve">
+    <value>status di deposito</value>
+  </data>
+  <data name="BianGengEDu1" xml:space="preserve">
+    <value>La quantità di variazione</value>
+  </data>
+  <data name="BianGengFang1" xml:space="preserve">
+    <value>Modifica del partito</value>
+  </data>
+  <data name="BianGengHaoJinE1" xml:space="preserve">
+    <value>importo cambiato</value>
+  </data>
+  <data name="BianGengHouJinE1" xml:space="preserve">
+    <value>importo cambiato</value>
+  </data>
+  <data name="BianGengLeiXing1" xml:space="preserve">
+    <value>Modifica tipo</value>
+  </data>
+  <data name="BianGengNeiRong1" xml:space="preserve">
+    <value>modifiche</value>
+  </data>
+  <data name="BianGengZongE1" xml:space="preserve">
+    <value>variazione totale</value>
+  </data>
+  <data name="CaiWuZhangWuLei1" xml:space="preserve">
+    <value>Classe di contabilità finanziaria</value>
+  </data>
+  <data name="DaiChuLiYeWu1" xml:space="preserve">
+    <value>In attesa di business</value>
+  </data>
+  <data name="DaJiaGou1" xml:space="preserve">
+    <value>prendere l'architettura</value>
+  </data>
+  <data name="GSCSNDDASWXH1" xml:space="preserve">
+    <value>Formato: numero di serie CS + + quattro cifre del codice (0001-9999)</value>
+  </data>
+  <data name="GuiDangRiQi1" xml:space="preserve">
+    <value>data di registrazione</value>
+  </data>
+  <data name="HeTongBianGengBaoBiao1" xml:space="preserve">
+    <value>Rapporto Contract Change</value>
+  </data>
+  <data name="HeTongChaXunBaobiao1" xml:space="preserve">
+    <value>Rapporto Query Contratto</value>
+  </data>
+  <data name="HeTongFengLiTaiZhuang1" xml:space="preserve">
+    <value>classificazione contabile Contratto</value>
+  </data>
+  <data name="HeTongTiQianZhiXingBaoBiao1" xml:space="preserve">
+    <value>Contratto esecuzione del report in anticipo</value>
+  </data>
+  <data name="HTLXBLT1" xml:space="preserve">
+    <value>Tipo di disegno in scala contratto</value>
+  </data>
+  <data name="HTZCQST1" xml:space="preserve">
+    <value>trend di crescita Contratto</value>
+  </data>
+  <data name="HTZTBLT1" xml:space="preserve">
+    <value>Percentuale di stato del contratto</value>
+  </data>
+  <data name="JianDangAn1" xml:space="preserve">
+    <value>build file</value>
+  </data>
+  <data name="JiBenLeiXingLei1" xml:space="preserve">
+    <value>classi di tipo Base</value>
+  </data>
+  <data name="KeHuBeiAn1" xml:space="preserve">
+    <value>record del cliente</value>
+  </data>
+  <data name="LiaoPinReiXing1" xml:space="preserve">
+    <value>Tipo di elemento</value>
+  </data>
+  <data name="LiuChenYeWuRenYuan1" xml:space="preserve">
+    <value>persone dei processi di business</value>
+  </data>
+  <data name="MoQingKuanE1" xml:space="preserve">
+    <value>Si prega di non ammonterà</value>
+  </data>
+  <data name="QianDingShiJianWanYuKaiShiShiJian1" xml:space="preserve">
+    <value>(Firma tempo dopo l'orario di inizio)</value>
+  </data>
+  <data name="RenShiXinZhunLei1" xml:space="preserve">
+    <value>categoria Amministrazione del Personale</value>
+  </data>
+  <data name="SBKNWJGSBDHLCDBGQJC1" xml:space="preserve">
+    <value>Fallimento, non può essere un formato di file \\ pool di applicazioni non viene avviato il supporto a 32 bit \\ tavolo T_ProModuleLevel lunghezza della colonna HomeModuleName non è al 100, controllare!</value>
+  </data>
+  <data name="SheYongHu1" xml:space="preserve">
+    <value>consentire agli utenti</value>
+  </data>
+  <data name="ShouQuanXian1" xml:space="preserve">
+    <value>limite di autorizzazione</value>
+  </data>
+  <data name="ShuJiJiaoHanFuWuQiDong1" xml:space="preserve">
+    <value>servizio di scambio di dati inizia</value>
+  </data>
+  <data name="SuoShuXiangMu1" xml:space="preserve">
+    <value>vista del progetto</value>
+  </data>
+  <data name="TianShu1" xml:space="preserve">
+    <value>giorni</value>
+  </data>
+  <data name="TongXunJieKouLei1" xml:space="preserve">
+    <value>Interfacce di comunicazione</value>
+  </data>
+  <data name="XiangMuRenWuLei1" xml:space="preserve">
+    <value>attività del progetto Class</value>
+  </data>
+  <data name="XiangMuShiTu1" xml:space="preserve">
+    <value>Progetto View</value>
+  </data>
+  <data name="XuanMoKuai1" xml:space="preserve">
+    <value>Modulo opzione</value>
+  </data>
+  <data name="YGXBBLT1" xml:space="preserve">
+    <value>Percentuale di lavoratori del sesso</value>
+  </data>
+  <data name="YGZCQST1" xml:space="preserve">
+    <value>trend di crescita personale</value>
+  </data>
+  <data name="YGZTBLT1" xml:space="preserve">
+    <value>Percentuale di dipendenti statali</value>
+  </data>
+  <data name="YiJiaoDanMingXiBianJi1" xml:space="preserve">
+    <value>Modifica di trasferimento dati dell'ordine</value>
+  </data>
+  <data name="YuJiao1" xml:space="preserve">
+    <value>trasferimento</value>
+  </data>
+  <data name="ZiChanLiaoPinLei1" xml:space="preserve">
+    <value>categoria beni materiali</value>
+  </data>
+  <data name="ZiDingYiBaoBiao1" xml:space="preserve">
+    <value>rapporto personalizzato</value>
+  </data>
+  <data name="ZiXingMingLing1" xml:space="preserve">
+    <value>corsa</value>
+  </data>
+  <data name="ZiXingShiJian1" xml:space="preserve">
+    <value>Tempo di esecuzione</value>
+  </data>
+  <data name="ZongFengShu1" xml:space="preserve">
+    <value>Il numero totale di copie</value>
+  </data>
+  <data name="ZuYong1" xml:space="preserve">
+    <value>assumere</value>
+  </data>
+  <data name="ZZCZXTDMQJC1" xml:space="preserve">
+    <value>La presenza dello stesso codice, controllare!</value>
+  </data>
+  <data name="ZZJGSJBHBXDYXZDBHDZSQJC1" xml:space="preserve">
+    <value>Attenzione, l'aggiornamento deve essere maggiore del numero attuale di numeri interi, controllare!</value>
+  </data>
+  <data name="ZZNDKHBAYBJQQGZ1" xml:space="preserve">
+    <value>Il tuo record di un cliente è stato respinto, si prega di prestare attenzione!</value>
+  </data>
+  <data name="ZZNDKHBAYBPZTGQGZ1" xml:space="preserve">
+    <value>Il tuo record è stato approvato da parte del cliente, si prega di prestare attenzione!</value>
+  </data>
+  <data name="ZZPZBACG1" xml:space="preserve">
+    <value>Approvazione del successo discografico</value>
+  </data>
+  <data name="ZZPZBASBQJC1" xml:space="preserve">
+    <value>Approvazione del disco non riesce, controllare!</value>
+  </data>
+  <data name="ZZQQBACG1" xml:space="preserve">
+    <value>Rifiutato di registrare il successo</value>
+  </data>
+  <data name="ZZQQBASBQJC1" xml:space="preserve">
+    <value>Rifiuta il record non riesce, controllare</value>
+  </data>
+  <data name="ZZSHOUCHECG1" xml:space="preserve">
+    <value>successo vettura chiusa!</value>
+  </data>
+  <data name="ZZTJBACG1" xml:space="preserve">
+    <value>Invia il successo record di</value>
+  </data>
+  <data name="ZZTJBASBQJC1" xml:space="preserve">
+    <value>Invia il record non riesce, controllare</value>
+  </data>
+  <data name="ZZYJBACGQBYCFTJ1" xml:space="preserve">
+    <value>Il successo è stata depositata, si prega di non inviare</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Antragsformular für Arbeitsanträge</value>
   </data>
 </root>

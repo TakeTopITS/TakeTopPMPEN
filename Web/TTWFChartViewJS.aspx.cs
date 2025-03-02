@@ -21,6 +21,7 @@ using System.Data.SqlClient;
 using ProjectMgt.Model;
 using ProjectMgt.DAL;
 using ProjectMgt.BLL;
+using TakeTopWF;
 
 public partial class TTWFChartViewJS : System.Web.UI.Page
 {
@@ -52,11 +53,9 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
         strHQL = "Select TemName,WFDefinition From T_WorkFlowTemplate Where TemName = " + "'" + strTemName + "'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
-
         strWFDefinition = ds.Tables[0].Rows[0][1].ToString().Trim();
 
         this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + ": " + strTemName + LanguageHandle.GetWord("LiuChengTu").ToString().Trim();
-
 
         if (Page.IsPostBack == false)
         {
@@ -64,128 +63,10 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
             TB_WFIdentifyString.Text = strIdentifyString;
             TB_WFName.Text = strTemName;
 
-            try
-            {
-                strHQL = "from WorkFlowTStep as workFlowTStep where workFlowTStep.TemName = " + "'" + strTemName + "'";
-                strHQL += " Order by workFlowTStep.SortNumber ASC,workFlowTStep.StepName ASC";
-                WorkFlowTStepBLL workFlowTStepBLL = new WorkFlowTStepBLL();
-                IList lst = workFlowTStepBLL.GetAllWorkFlowTSteps(strHQL);
-                WorkFlowTStep workFlowTStep;
-
-                string strStepName, strNewStepName, strStatus, strSortNumber;
-                int intStartIndex;
-                for (int i = 0; i < lst.Count; i++)
-                {
-                    workFlowTStep = (WorkFlowTStep)lst[i];
-
-                    strGUID = workFlowTStep.GUID.Trim();
-                    strStepName = workFlowTStep.StepName.Trim();
-                    strSortNumber = workFlowTStep.SortNumber.ToString();
-                    strStatus = GetWorkFlowStepStatus(strWLID, strSortNumber);
-
-                    if (CheckStepNameIsBelongToGUID(strGUID, strStepName, strWFDefinition))
-                    {
-                        intStartIndex = strWFDefinition.IndexOf(strGUID, 0) - 250;
-
-                        if (intStartIndex < 0)
-                        {
-                            intStartIndex = 0;
-                        }
-
-                        strGUIDStep = strWFDefinition.Substring(intStartIndex, 250);
-
-                        if (strStatus == "InProgress")
-                        {
-                            //strNewStepName = strStepName + "【" + LanguageHandle.GetWord("JinXingZhong").ToString().Trim() + "】";
-
-                            strNewStepName = strStepName;
-                            strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
-                            strNewGUIDStep = strNewGUIDStep.Replace("attr:{", "attr:{fill:'yellow',");
-                            strNewGUIDStep = strNewGUIDStep.Replace("text:{", "text:{fill:'red',");
-
-                            strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
-                        }
-
-                        if (strStatus == "Passed")
-                        {
-                            //strNewStepName = strStepName + "【" + LanguageHandle.GetWord("TongGuo").ToString().Trim() + "】";
-
-                            strNewStepName = strStepName;
-                            strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
-                            strNewGUIDStep = strNewGUIDStep.Replace("attr:{", "attr:{fill:'green',");
-                            strNewGUIDStep = strNewGUIDStep.Replace("text:{", "text:{fill:'yellow',");
-
-                            strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
-                        }
-
-                        if (strStatus == "Rejected")
-                        {
-                            //strNewStepName = strStepName + "【" + LanguageHandle.GetWord("TongGuo").ToString().Trim() + "】";
-
-                            strNewStepName = strStepName;
-                            strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
-                            strNewGUIDStep = strNewGUIDStep.Replace("attr:{", "attr:{fill:'red',");
-
-                            strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
-                        }
-                    }
-                }
-            }
-            catch
-            {
-            }
-
-            TB_WFXML.Text = strWFDefinition;
+            //取得流程图定义
+            TB_WFXML.Text = WFMFFlowDefinitionHandle.GetWorkflowDefinition(strIdentifyString, strWLID, strTemName, strWFDefinition);
         }
     }
 
-    //检查步骤是不是属于此GUID，防止步骤重命出错
-    protected bool CheckStepNameIsBelongToGUID(string strGUID, string strStepName, string strWFDefinition)
-    {
-        string strGUIDStep;
-
-        if (strWFDefinition.IndexOf(strGUID, 0) >= 0)
-        {
-            strGUIDStep = strWFDefinition.Substring(strWFDefinition.IndexOf(strGUID, 0), 250);
-
-            if (strGUIDStep.IndexOf(strStepName, 0) >= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    public string GetWorkFlowStepStatus(string strWLID, string strSortNumber)
-    {
-        string strHQL;
-        string strStatus;
-        DataSet ds1;
-
-        strHQL = "Select Status From T_WorkFlowStep Where WLID = " + strWLID + " and SortNumber = " + strSortNumber;
-        ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowStep");
-        if (ds1.Tables[0].Rows.Count == 0)
-        {
-            strHQL = "Select Status From T_WorkFlowStepBackup Where WLID = " + strWLID + " and SortNumber = " + strSortNumber;
-            ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowStepBackup");
-        }
-
-        if (ds1.Tables[0].Rows.Count > 0)
-        {
-            strStatus = ds1.Tables[0].Rows[0][0].ToString().Trim();
-        }
-        else
-        {
-            strStatus = "";
-        }
-
-        return strStatus;
-    }
+  
 }

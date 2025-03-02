@@ -282,7 +282,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
         //Session["CssDirectoryChangeNumber"] = "1";
 
         //设置缓存更改标志
-        ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "<%--***--%>");
+        ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "");
     }
 
     protected string GetCurrentAppUserNumber()

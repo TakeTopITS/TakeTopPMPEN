@@ -23418,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>成功を指定します！</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>接待費用、旅費、経費精算者 TODO未定、エラー：「 + ex.Message + 」！</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>指定が失敗し、チェック！</value>
   </data>
@@ -27537,121 +27540,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>配信の進行状況</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
-  </data>
-  <data name="JiaoFu" xml:space="preserve">
-    <value>Delivery</value>
-  </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value>No corresponding visit record was found!</value>
-  </data>
-  <data name="ZaiZiXunZhangTai" xml:space="preserve">
-    <value>In the Execution Project status</value>
-  </data>
-  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
-    <value>Delayed project status</value>
-  </data>
-  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
-    <value>Annual payment status</value>
-  </data>
-  <data name="NianDuGongShiZhangTai" xml:space="preserve">
-    <value>Annual work status</value>
-  </data>
-  <data name="NianDuRenWuZhangTai" xml:space="preserve">
-    <value>Annual task status</value>
-  </data>
-  <data name="XianTu" xml:space="preserve">
-    <value>Line chart</value>
-  </data>
-  <data name="YiBiaoPan" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="XiaoShouDan22" xml:space="preserve">
-    <value>Sales Order</value>
-  </data>
-  <data name="SaleOrder" xml:space="preserve">
-    <value>Sale Order</value>
-  </data>
-  <data name="GoodsPO" xml:space="preserve">
-    <value>Material purchase order</value>
-  </data>
-  <data name="AssetPO" xml:space="preserve">
-    <value>Assset purchase order</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>交際費、旅費、スタッフのTODOの償還を求め、エラー： "+ ex.Message +"！</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>ドメインルール：社員コード：[TAKETOPUSERCODE]、部門列：[TAKETOPDEPARTMENT]、セキュリティ上の理由から、削除など、使用することはできません、更新、ドロップ、挿入、ALTER文）</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>持っています</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>労働委託申請書</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>協会契約</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>部門の統計による物流コスト</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>アカウントの統計情報により流通コスト</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>ペイ - 総所得</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>隠すステータス</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>イエロー：ブルー収入：有料</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>返事</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>状態分布プラン</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>量は、実際にアカウントプロファイルを支払っ</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>収入 - 総給与</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>分配金額有料アカウント</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>実際の支払いは、同期間の比較表を介して受信</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>予算配分</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>要素定義</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>周</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
-    <value>接待費用、旅費、経費精算者 TODO未定、エラー：「 + ex.Message + 」！</value>
-  </data>
-  <data name="GouHuoChanWei" xml:space="preserve">
-    <value>購入先</value>
-  </data>
   <data name="MustBeUploadDoc" xml:space="preserve">
     <value>必須ファイル</value>
   </data>
@@ -27673,11 +27561,15 @@
   <data name="ZZGSMCBCZQJC" xml:space="preserve">
     <value>警告：会社名が間違っているか存在しません。確認してください！</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DianJiDaKaiTaoHuangYeMian" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="SheJi" xml:space="preserve">
     <value>ナビゲーションページを開く</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>実行中のプロジェクト総数</value>
   </data>
   <data name="NianDuXingZeng" xml:space="preserve">
     <value>設計</value>
@@ -28723,6 +28615,9 @@
   <data name="RiJi" xml:space="preserve">
     <value>この不具合は存在しません。削除された可能性があります。確認してください！</value>
   </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>購入先</value>
+  </data>
   <data name="ChanPinChangDaiMa" xml:space="preserve">
     <value>ファイルをアップロードしました：</value>
   </data>
@@ -29608,9 +29503,6 @@
   <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
     <value>エラーメッセージ：検索操作に異常があります：</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
-    <value>メッセージ：【月次計画】モードの変更に成功しました！</value>
-  </data>
   <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
     <value>エラーメッセージ：数量入力が誤っています。数字で0以上を入力してください！</value>
   </data>
@@ -29980,8 +29872,8 @@
   <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
     <value>] のExcelファイルへのインポートに失敗しました！</value>
   </data>
-  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
-    <value>の内容または状態、特此通知！</value>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>メッセージ：【月次計画】モードの変更に成功しました！</value>
   </data>
   <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
     <value>エラーメッセージ：パフォーマンス基準データのExcelファイルへのインポートに失敗しました！</value>
@@ -30222,6 +30114,9 @@
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>パスワードが間違っています。非表示に失敗しました。確認してください！</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>の内容または状態、特此通知！</value>
   </data>
   <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
     <value>エラーが発生しました</value>
@@ -30706,6 +30601,45 @@
   <data name="YanShou" xml:space="preserve">
     <value>記録者名</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>No corresponding visit record was found!</value>
+  </data>
+  <data name="ZaiZiXunZhangTai" xml:space="preserve">
+    <value>In the Execution Project status</value>
+  </data>
+  <data name="YanWuXiangMuZhangTai" xml:space="preserve">
+    <value>Delayed project status</value>
+  </data>
+  <data name="NianDuHuiKanZhangTai" xml:space="preserve">
+    <value>Annual payment status</value>
+  </data>
+  <data name="NianDuGongShiZhangTai" xml:space="preserve">
+    <value>Annual work status</value>
+  </data>
+  <data name="NianDuRenWuZhangTai" xml:space="preserve">
+    <value>Annual task status</value>
+  </data>
+  <data name="XianTu" xml:space="preserve">
+    <value>Line chart</value>
+  </data>
+  <data name="YiBiaoPan" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="XiaoShouDan22" xml:space="preserve">
+    <value>Sales Order</value>
+  </data>
+  <data name="SaleOrder" xml:space="preserve">
+    <value>Sale Order</value>
+  </data>
+  <data name="GoodsPO" xml:space="preserve">
+    <value>Material purchase order</value>
+  </data>
+  <data name="AssetPO" xml:space="preserve">
+    <value>Assset purchase order</value>
+  </data>
   <data name="WeiShouJieE" xml:space="preserve">
     <value>為替レート</value>
   </data>
@@ -30723,6 +30657,9 @@
   </data>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>未収金額</value>
+  </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>対応する訪問記録が見つかりません</value>
@@ -30750,5 +30687,68 @@
   </data>
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>選択したデータ項目を削除しますか？</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE生産概要</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>交際費、旅費、スタッフのTODOの償還を求め、エラー： "+ ex.Message +"！</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>ドメインルール：社員コード：[TAKETOPUSERCODE]、部門列：[TAKETOPDEPARTMENT]、セキュリティ上の理由から、削除など、使用することはできません、更新、ドロップ、挿入、ALTER文）</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>持っています</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>HSE生産概要</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>労働委託申請書</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>協会契約</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>部門の統計による物流コスト</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>アカウントの統計情報により流通コスト</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>ペイ - 総所得</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>隠すステータス</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>イエロー：ブルー収入：有料</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>返事</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>状態分布プラン</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>量は、実際にアカウントプロファイルを支払っ</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>収入 - 総給与</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>分配金額有料アカウント</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>実際の支払いは、同期間の比較表を介して受信</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>予算配分</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>要素定義</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>周</value>
   </data>
 </root>
