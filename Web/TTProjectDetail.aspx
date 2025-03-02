@@ -100,12 +100,10 @@
                                                     <ul class="moduleGreen">
                                                         <asp:Repeater ID="Repeater1" runat="server">
                                                             <ItemTemplate>
-                                                                <li style="text-align:left;">
-                                                                    <div style="padding-top: 10px; padding-right:15px; text-align: center; overflow: hidden; width: 200px;">
-                                                                        <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" >
-                                                                            <b style="color: white; display: inline-block; text-align: left;">
-                                                                                <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %>
-                                                                            </b>
+                                                                <li>
+                                                                    <div style="padding-top: 10px; text-align: center; width: 100%;">
+                                                                        <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                            <b style="color: white;"><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %></b>
                                                                         </a>
                                                                     </div>
                                                                 </li>
@@ -118,12 +116,9 @@
                                                     <asp:Repeater ID="Repeater2" runat="server">
                                                         <ItemTemplate>
                                                             <li>
-
-                                                                <div style="padding-top: 10px; text-align: center; overflow: hidden; width: 200px;">
-                                                                    <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                                        <b style="color: white;">
-                                                                            <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %>
-                                                                        </b>
+                                                                <div style="padding-top: 10px; text-align: center; width: 100%;">
+                                                                    <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                        <b style="color: white;"><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %></b>
                                                                     </a>
                                                                 </div>
                                                             </li>
