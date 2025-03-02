@@ -23418,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Specifica successo!</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>Costi di intrattenimento, spese di viaggio, persona da rimborsare TODO da definire, errore: " + ex.Message + "!</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Specifica fallisce, controllare!</value>
   </data>
@@ -27537,8 +27540,3065 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Stato di avanzamento della consegna</value>
   </data>
+  <data name="MustBeUploadDoc" xml:space="preserve">
+    <value>Documenti obbligatori</value>
+  </data>
+  <data name="YCMCDWD" xml:space="preserve">
+    <value>Documenti da inviare non inviati</value>
+  </data>
+  <data name="XMJHTGGLGZLMB" xml:space="preserve">
+    <value>Modello di revisione del progetto</value>
+  </data>
+  <data name="BanGongWangZi" xml:space="preserve">
+    <value>Sito web dell'ufficio</value>
+  </data>
+  <data name="JianCheng" xml:space="preserve">
+    <value>Abbreviazione</value>
+  </data>
+  <data name="ZZJGCZXTMTDKHQJC" xml:space="preserve">
+    <value>Attenzione, esistono clienti con lo stesso nome o abbreviazione, si prega di verificare!</value>
+  </data>
+  <data name="ZZGSMCBCZQJC" xml:space="preserve">
+    <value>Attenzione, il nome dell'azienda è errato o non esiste, si prega di verificare!</value>
+  </data>
+  <data name="DianJiDaKaiTaoHuangYeMian" xml:space="preserve">
+    <value>Clicca per aprire la pagina di navigazione</value>
+  </data>
+  <data name="SheJi" xml:space="preserve">
+    <value>Progettazione</value>
+  </data>
   <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
+    <value>Numero totale di progetti in esecuzione</value>
+  </data>
+  <data name="NianDuXingZeng" xml:space="preserve">
+    <value>Nuovi aggiunti annualmente</value>
+  </data>
+  <data name="NianDuWanCheng" xml:space="preserve">
+    <value>Completati annualmente</value>
+  </data>
+  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
+    <value>Numero di progetti con grave ritardo</value>
+  </data>
+  <data name="JingDuZhengChang" xml:space="preserve">
+    <value>Progresso normale</value>
+  </data>
+  <data name="QingDuYanWu" xml:space="preserve">
+    <value>Leggero ritardo</value>
+  </data>
+  <data name="NianDuXiangMuHuiKan" xml:space="preserve">
+    <value>Pagamenti annuali del progetto</value>
+  </data>
+  <data name="NianDuChengBenHeShuan" xml:space="preserve">
+    <value>Costi annuali del progetto</value>
+  </data>
+  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
+    <value>Numero di progetti con costi superiori al budget</value>
+  </data>
+  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
+    <value>Ore di lavoro annuali dedicate al progetto</value>
+  </data>
+  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
+    <value>Numero di persone che hanno compilato il modulo annualmente</value>
+  </data>
+  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
+    <value>Numero totale di attività in esecuzione</value>
+  </data>
+  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
+    <value>Pagamenti annuali del progetto</value>
+  </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Dopo l'avvio, il contenuto del piano non può essere modificato, sei sicuro di voler avviare?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>A causa di aggiornamenti del database, il sistema è in fase di aggiornamento, ci vorranno alcuni minuti, non chiudere questa finestra, si prega di attendere pazientemente!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valido per il giorno</value>
+  </data>
+  <data name="YuanGongC7094" xml:space="preserve">
+    <value>Dipendente C7094</value>
+  </data>
+  <data name="XinWen" xml:space="preserve">
+    <value>Notizie</value>
+  </data>
+  <data name="DaiBanShiXiang" xml:space="preserve">
+    <value>Cose da fare</value>
+  </data>
+  <data name="GuanKongZhongXin" xml:space="preserve">
+    <value>Centro di controllo</value>
+  </data>
+  <data name="JiTongMoZuSheDing" xml:space="preserve">
+    <value>Impostazioni del modulo di sistema</value>
+  </data>
+  <data name="TaiDingTaDingZhongLiYue" xml:space="preserve">
+    <value>Taiding-Tuoding-Zhong Liyue</value>
+  </data>
+  <data name="QingZhuYiJiTongShouQuanJiangYu" xml:space="preserve">
+    <value>Attenzione, l'autorizzazione del sistema scadrà tra</value>
+  </data>
+  <data name="DaoJiQingJinKuaiXuFeiHeBeiFenS" xml:space="preserve">
+    <value>, si prega di rinnovare e fare il backup dei dati il prima possibile!</value>
+  </data>
+  <data name="QingZhuYiJiTongShouQuanYiYu" xml:space="preserve">
+    <value>Attenzione, l'autorizzazione del sistema è scaduta il</value>
+  </data>
+  <data name="GuoJiQingXuFeiZaiShiYong" xml:space="preserve">
+    <value>, si prega di rinnovare per continuare a utilizzare!</value>
+  </data>
+  <data name="MoZhuiJiaDeXinXiDiShiKuang" xml:space="preserve">
+    <value>Nessun messaggio aggiuntivo</value>
+  </data>
+  <data name="JiangZhiTongZhi" xml:space="preserve">
+    <value>Notifica obbligatoria:</value>
+  </data>
+  <data name="TiaoYaoChuLi" xml:space="preserve">
+    <value>da elaborare!</value>
+  </data>
+  <data name="MeiYouXinDeXinXi" xml:space="preserve">
+    <value>Nessun nuovo messaggio</value>
+  </data>
+  <data name="TiaoXiaoXi" xml:space="preserve">
+    <value>messaggi</value>
+  </data>
+  <data name="TiaoXieZuoYaoChuLi" xml:space="preserve">
+    <value>collaborazioni da elaborare!</value>
+  </data>
+  <data name="DiShiGongSi" xml:space="preserve">
+    <value>Notifica: Azienda:</value>
+  </data>
+  <data name="DeYuanGong" xml:space="preserve">
+    <value>dipendente:</value>
+  </data>
+  <data name="DiJiaoLe" xml:space="preserve">
+    <value>ha inviato:</value>
+  </data>
+  <data name="DeWenTiFanKuiQingGuanZhu" xml:space="preserve">
+    <value>feedback sul problema, si prega di prestare attenzione!!!</value>
+  </data>
+  <data name="ZZZhuCeChengGongHuanYingNiJiaR" xml:space="preserve">
+    <value>Registrazione riuscita, benvenuto nel consiglio di commercio, grazie!</value>
+  </data>
+  <data name="ZZZhuCeShiBaiQingLianJiShangHu" xml:space="preserve">
+    <value>Registrazione fallita, si prega di contattare l'amministratore del consiglio di commercio (WeChat: 623077337)!</value>
+  </data>
+  <data name="ZunJingDe" xml:space="preserve">
+    <value>Gentile</value>
+  </data>
+  <data name="TongXiangHuanYingNiJiaRuShangH" xml:space="preserve">
+    <value>connazionale, benvenuto nel consiglio di commercio, grazie!</value>
+  </data>
+  <data name="ShangHuiXinXi" xml:space="preserve">
+    <value>Informazioni sul consiglio di commercio</value>
+  </data>
+  <data name="ZZDiJiaoChengGongTaiDingTaDing" xml:space="preserve">
+    <value>-----Invio riuscito, il servizio clienti Taiding Tuoding ti contatterà entro 5 minuti, si prega di attendere, grazie!</value>
+  </data>
+  <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
+    <value>-----Invio fallito, si prega di contattare il servizio clienti Taiding Tuoding (021-51085119), grazie!</value>
+  </data>
+  <data name="GouMaiBanBen" xml:space="preserve">
+    <value>Acquista versione:</value>
+  </data>
+  <data name="YongHuShu" xml:space="preserve">
+    <value>, numero di utenti:</value>
+  </data>
+  <data name="DiJiaoShiBaiQingJianCha" xml:space="preserve">
+    <value>Invio fallito, si prega di verificare!</value>
+  </data>
+  <data name="YanZhengMaCuoWuQingJianCha" xml:space="preserve">
+    <value>Codice di verifica errato, si prega di verificare!</value>
+  </data>
+  <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
+    <value>richiesta di acquisto, si prega di elaborare tempestivamente!!!</value>
+  </data>
+  <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
+    <value>Notifica di richiesta di acquisto software</value>
+  </data>
+  <data name="DiJiaoChengGong" xml:space="preserve">
+    <value>Invio riuscito!</value>
+  </data>
+  <data name="ZZDiJiaoChengGong" xml:space="preserve">
+    <value>---Invio riuscito</value>
+  </data>
+  <data name="ZZDiJiaoShiBaiQingJianCha" xml:space="preserve">
+    <value>-----Invio fallito, si prega di verificare!</value>
+  </data>
+  <data name="YuanMaXiaZai" xml:space="preserve">
+    <value>Download del codice sorgente</value>
+  </data>
+  <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
+    <value>richiesta, si prega di elaborare tempestivamente!!!</value>
+  </data>
+  <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
+    <value>Invio riuscito, il link per il download è di seguito, clicca per scaricare!</value>
+  </data>
+  <data name="ChengWeiGeZuoHuoBan" xml:space="preserve">
+    <value>Diventa partner</value>
+  </data>
+  <data name="ZZShiBaiYaoFuZhiDeZhanDianBuNe" xml:space="preserve">
+    <value>Fallito, il sito da copiare non può essere vuoto, si prega di verificare!</value>
+  </data>
+  <data name="ZZDiShiCiZhanDianDeShuJuYiYing" xml:space="preserve">
+    <value>Attenzione, i dati di questo sito sono già stati applicati, non possono essere eliminati, si prega di verificare!</value>
+  </data>
+  <data name="ZZShiBaiYaoShanChuDeZhanDianBu" xml:space="preserve">
+    <value>Fallito, il sito da eliminare non può essere vuoto, si prega di verificare!</value>
+  </data>
+  <data name="ZZQuanBuGengXinChengGong" xml:space="preserve">
+    <value>Aggiornamento completato con successo!</value>
+  </data>
+  <data name="DiShiDaiHaoDeDouBuNengKongQing" xml:space="preserve">
+    <value>Attenzione, i campi con * non possono essere vuoti, si prega di verificare!</value>
+  </data>
+  <data name="JingGaoZhanDianMingChenZhiNeng" xml:space="preserve">
+    <value>Attenzione, il nome del sito può contenere solo lettere, non possono esserci caratteri cinesi, numeri, punteggiatura o spazi, si prega di verificare!</value>
+  </data>
+  <data name="ChuangJianShiBaiMeiYouNiShuaQu" xml:space="preserve">
+    <value>Creazione fallita, non ci sono parametri di base del sito disponibili per la versione del prodotto selezionata, si prega di verificare!</value>
+  </data>
+  <data name="ChuangJianShiBaiCunZaiXiangTon" xml:space="preserve">
+    <value>Creazione fallita, esiste già un sito con lo stesso nome, si prega di verificare!</value>
+  </data>
+  <data name="YiChuangJian" xml:space="preserve">
+    <value>) creato:</value>
+  </data>
+  <data name="ZuYongZhanDian" xml:space="preserve">
+    <value>) sito in affitto:</value>
+  </data>
+  <data name="NiHaoNi" xml:space="preserve">
+    <value>Ciao, il tuo</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="YiChuangJianZhanDianDeZhiShi" xml:space="preserve">
+    <value>sito creato, l'indirizzo è:</value>
+  </data>
+  <data name="DengLuZhangHaoADMINMiMa1234567" xml:space="preserve">
+    <value>, account di accesso: ADMIN password: 12345678, si prega di utilizzare con fiducia, per qualsiasi problema contattare il servizio clienti (021-51085119), grazie, questa email è inviata dal gruppo Taiding Tuoding!</value>
+  </data>
+  <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
+    <value>Notifica di creazione del sito</value>
+  </data>
+  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
+    <value>&lt;/a&gt;</value>
+  </data>
+  <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
+    <value>Account di accesso: ADMIN Password: 12345678</value>
+  </data>
+  <data name="ZhanDianShanChuChengGong" xml:space="preserve">
+    <value>Ripristino del database fallito!</value>
+  </data>
+  <data name="ShanChuShiBaiQingJianCha" xml:space="preserve">
+    <value>Sto eliminando il tuo sito applicativo, ci vorranno circa 5 minuti, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="DiShiCiZhanDianBuCunZaiQingJia" xml:space="preserve">
+    <value>Eliminazione del sito completata con successo!</value>
+  </data>
+  <data name="HuiFuShiBaiMeiYouNiShuaQuDeCha" xml:space="preserve">
+    <value>Eliminazione fallita, si prega di verificare!</value>
+  </data>
+  <data name="ShiBaiCunZaiXiangTongMingChenD" xml:space="preserve">
+    <value>Attenzione, questo sito non esiste, si prega di verificare!</value>
+  </data>
+  <data name="YiHuiFu" xml:space="preserve">
+    <value>Ripristino fallito, non ci sono parametri di base del sito disponibili per la versione del prodotto selezionata, si prega di verificare!</value>
+  </data>
+  <data name="DeTaiDingTaDing" xml:space="preserve">
+    <value>Fallito, esiste già un sito con lo stesso nome, si prega di verificare!</value>
+  </data>
+  <data name="YiHuiFuZhanDianDeZhiShi" xml:space="preserve">
+    <value>) ripristinato:</value>
+  </data>
+  <data name="ZhanDianHuiFuTongZhi" xml:space="preserve">
+    <value>di: Taiding Tuoding</value>
+  </data>
+  <data name="HuiFuShiBaiCunZaiXiangTongMing" xml:space="preserve">
+    <value>sito ripristinato, l'indirizzo è:</value>
+  </data>
+  <data name="ZhengZaiBeiFenNiDeZhanDianWenJ" xml:space="preserve">
+    <value>Notifica di ripristino del sito</value>
+  </data>
+  <data name="ZhanDianBeiFenWenJianFaSongChe" xml:space="preserve">
+    <value>Ripristino fallito, esiste già un sito con lo stesso nome, si prega di verificare!</value>
+  </data>
+  <data name="DiShiFaSongShiBaiQingJianCha" xml:space="preserve">
+    <value>Sto eseguendo il backup dei file del tuo sito, ci vorranno circa 5 minuti, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="ZZYiGengXinXianYouRongLiang" xml:space="preserve">
+    <value>Invio del file di backup del sito completato con successo!</value>
+  </data>
+  <data name="ZZZhanDianShengJiShiBaiQingJia" xml:space="preserve">
+    <value>Attenzione, invio fallito, si prega di verificare!</value>
+  </data>
+  <data name="ZZDiShiFaSongShiBaiQingJianCha" xml:space="preserve">
+    <value>Capacità esistente aggiornata!</value>
+  </data>
+  <data name="ZZDiShiCiZhanDianBuCunZaiQingJ" xml:space="preserve">
+    <value>Aggiornamento del sito fallito, si prega di verificare!</value>
+  </data>
+  <data name="ZZBaoCunChengGong" xml:space="preserve">
+    <value>Attenzione, invio fallito, si prega di verificare</value>
+  </data>
+  <data name="ZZDiShiCiZhanDianHaiCunZaiJiLu" xml:space="preserve">
+    <value>Attenzione, questo sito non esiste, si prega di verificare!</value>
+  </data>
+  <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
+    <value>Salvataggio completato con successo</value>
+  </data>
+  <data name="ZhanDian" xml:space="preserve">
+    <value>Attenzione, questo sito esiste ancora, il record non può essere eliminato, si prega di verificare!</value>
+  </data>
+  <data name="YiBeiShengJiDaoZuiXinBanShengJ" xml:space="preserve">
+    <value>Sto aggiornando questo sito, ci vorranno circa 5 minuti, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="ZhanDianShengJiTongZhi" xml:space="preserve">
+    <value>Sito:</value>
+  </data>
+  <data name="ZhengZaiFaSongZheGeZhanDianBei" xml:space="preserve">
+    <value>è stato aggiornato all'ultima versione, il primo avvio dopo l'aggiornamento sarà più lento, ci vorranno circa 5-10 minuti per visualizzare la pagina di accesso, per qualsiasi problema, contattare il servizio clienti Taiding Tuoding (021-51085119), grazie, questa email è inviata dal gruppo Taiding Tuoding!</value>
+  </data>
+  <data name="DeShuJuBeiFenWenJianXiaZaiDeZh" xml:space="preserve">
+    <value>Notifica di aggiornamento del sito</value>
+  </data>
+  <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
+    <value>Sto inviando il file di backup di questo sito, ci vorranno circa 5 minuti, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
+    <value>L'indirizzo di download del file di backup dei dati è:</value>
+  </data>
+  <data name="ZhengZaiShanChuZheGeZhanDianDa" xml:space="preserve">
+    <value>, si prega di scaricare tempestivamente, per qualsiasi problema contattare il servizio clienti (021-51085119), grazie, questa email è inviata dal gruppo Taiding Tuoding!</value>
+  </data>
+  <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
+    <value>Notifica di download del file di backup</value>
+  </data>
+  <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
+    <value>Sto eliminando questo sito, ci vorranno circa 5 minuti, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="ZhengZaiBaoCunZheGeZhanDianDeX" xml:space="preserve">
+    <value>è stato eliminato, per qualsiasi problema, contattare il servizio clienti (021-51085119), grazie, questa email è inviata dal gruppo Taiding Tuoding!</value>
+  </data>
+  <data name="ZuYongBanBen" xml:space="preserve">
+    <value>Notifica di eliminazione del sito</value>
+  </data>
+  <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
+    <value>Sto salvando il percorso assoluto della directory virtuale di questo sito, ci vorrà circa 1 minuto, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="RuanJianZuYongShenQingTongZhi" xml:space="preserve">
+    <value>Affitto versione:</value>
+  </data>
+  <data name="ZhengZaiShengJiNiDeYingYongZha" xml:space="preserve">
+    <value>richiesta di affitto, si prega di elaborare tempestivamente!!!</value>
+  </data>
+  <data name="ZhanDianShengJiChengGong" xml:space="preserve">
+    <value>Notifica di richiesta di affitto software</value>
+  </data>
+  <data name="ZhanDianShengJiShiBaiQingJianC" xml:space="preserve">
+    <value>Sto aggiornando il tuo sito applicativo, ci vorranno circa 5 minuti, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="ZhengZaiBaoCunYingYongZhanDian" xml:space="preserve">
+    <value>Aggiornamento del sito completato con successo!</value>
+  </data>
+  <data name="XuNiMuLuDeJueDuiLuJingBaoCunCh" xml:space="preserve">
+    <value>Aggiornamento del sito fallito, si prega di verificare!</value>
+  </data>
+  <data name="BaoCunShiBaiQingJianCha" xml:space="preserve">
+    <value>Sto salvando il percorso assoluto della directory virtuale del sito applicativo, ci vorrà circa 1 minuto, si prega di attendere pazientemente......</value>
+  </data>
+  <data name="GengXinShiBaiQingJianCha" xml:space="preserve">
+    <value>Salvataggio del percorso assoluto della directory virtuale completato con successo!</value>
+  </data>
+  <data name="TongYiWanChengTongGuo" xml:space="preserve">
+    <value>Salvataggio fallito, si prega di verificare!</value>
+  </data>
+  <data name="ZZJingGaoBuNengShuaZiShenZuoWe" xml:space="preserve">
+    <value>Aggiornamento fallito, si prega di verificare!</value>
+  </data>
+  <data name="HuiJiKeMuLieBiao" xml:space="preserve">
+    <value>Approvazione completata</value>
+  </data>
+  <data name="WeiShuaDing" xml:space="preserve">
+    <value>Attenzione, non è possibile selezionare se stessi come conto principale, si prega di verificare!</value>
+  </data>
+  <data name="ZiChanLiRunBiao" xml:space="preserve">
+    <value>Elenco dei conti contabili</value>
+  </data>
+  <data name="WeiChuZhang" xml:space="preserve">
+    <value>Non selezionato</value>
+  </data>
+  <data name="YiChuZhang" xml:space="preserve">
+    <value>Bilancio patrimoniale e dei redditi_</value>
+  </data>
+  <data name="WeiRuZhang" xml:space="preserve">
+    <value>Non contabilizzato</value>
+  </data>
+  <data name="YiRuZhang" xml:space="preserve">
+    <value>Contabilizzato</value>
+  </data>
+  <data name="ZZJingGaoJiaoSeBuNengWeiKongQi" xml:space="preserve">
+    <value>Non registrato</value>
+  </data>
+  <data name="ZZDiShiQingXianShuaZeYaoShanCh" xml:space="preserve">
+    <value>Registrato</value>
+  </data>
+  <data name="WoDeSuoYouGeTongLieBiao" xml:space="preserve">
+    <value>Attenzione, il ruolo non può essere vuoto, si prega di verificare!</value>
+  </data>
+  <data name="QianDingDeGeTongLieBiao" xml:space="preserve">
+    <value>Attenzione, seleziona prima l'ID del JSCode da eliminare!</value>
+  </data>
+  <data name="DeGeTong" xml:space="preserve">
+    <value>Elenco di tutti i miei contratti:</value>
+  </data>
+  <data name="SuoYouGeTongLieBiao" xml:space="preserve">
+    <value>Elenco dei contratti firmati:</value>
+  </data>
+  <data name="ShanChuTuPianXinXi" xml:space="preserve">
+    <value>contratto:</value>
+  </data>
+  <data name="GengXinTuPianXinXi" xml:space="preserve">
+    <value>Elenco di tutti i contratti:</value>
+  </data>
+  <data name="XinZengYongHuXinXi" xml:space="preserve">
+    <value>Elimina informazioni sull'immagine</value>
+  </data>
+  <data name="GengXinSuoYouXinXi" xml:space="preserve">
+    <value>Aggiorna informazioni sull'immagine</value>
+  </data>
+  <data name="nbspnbspXuQiuZhuangTai" xml:space="preserve">
+    <value>Aggiungi informazioni utente</value>
+  </data>
+  <data name="ZongWenJianShu" xml:space="preserve">
+    <value>Aggiorna tutte le informazioni</value>
+  </data>
+  <data name="SuoYouQingJiaXinXiLieBiao" xml:space="preserve">
+    <value>  Stato della richiesta:</value>
+  </data>
+  <data name="GongQingJia" xml:space="preserve">
+    <value>Numero totale di file:</value>
+  </data>
+  <data name="DeQingJiaXinXi" xml:space="preserve">
+    <value>Elenco di tutte le informazioni sulle ferie:</value>
+  </data>
+  <data name="QingJiaXinXi" xml:space="preserve">
+    <value>Totale ferie:</value>
+  </data>
+  <data name="XinShouYouJian" xml:space="preserve">
+    <value>informazioni sulle ferie:</value>
+  </data>
+  <data name="YiYueYouJian" xml:space="preserve">
+    <value>Informazioni sulle ferie_</value>
+  </data>
+  <data name="DaiFaYouJian" xml:space="preserve">
+    <value>Nuova email</value>
+  </data>
+  <data name="YiFaYouJian" xml:space="preserve">
+    <value>Email letta</value>
+  </data>
+  <data name="CaoGaoXiang" xml:space="preserve">
+    <value>Email da inviare</value>
+  </data>
+  <data name="LaJiXiang" xml:space="preserve">
+    <value>Email inviata</value>
+  </data>
+  <data name="BuMenChengYuanJiHuaPingFenDuiB" xml:space="preserve">
+    <value>Bozze</value>
+  </data>
+  <data name="ChengYuanJiXiaoZongPingFenDuiB" xml:space="preserve">
+    <value>Cestino</value>
+  </data>
+  <data name="XiangMuChengYuanRenWuxls" xml:space="preserve">
+    <value>Grafico di confronto dei punteggi dei piani dei membri del dipartimento</value>
+  </data>
+  <data name="YueJiHuaWanChengQingKuang" xml:space="preserve">
+    <value>Grafico di confronto dei punteggi totali delle prestazioni dei membri</value>
+  </data>
+  <data name="GeTongZongE" xml:space="preserve">
+    <value>Compiti dei membri del progetto.xls</value>
+  </data>
+  <data name="GeTongYingShouZongE" xml:space="preserve">
+    <value>Situazione di completamento del piano mensile</value>
+  </data>
+  <data name="GeTongShiShouZongE" xml:space="preserve">
+    <value>Totale contratto:</value>
+  </data>
+  <data name="YiFaShengFeiYong" xml:space="preserve">
+    <value>, Totale pagamenti contrattuali:</value>
+  </data>
+  <data name="ZongYuSuan" xml:space="preserve">
+    <value>, Totale pagamenti effettivi:</value>
+  </data>
+  <data name="DangQianRiJiYuSuan" xml:space="preserve">
+    <value>Costi sostenuti:</value>
+  </data>
+  <data name="WenJianShangChuanZheBaoHan" xml:space="preserve">
+    <value>, Budget totale:</value>
+  </data>
+  <data name="BAnLeiXingLiuLanSuoYouXiangMuB" xml:space="preserve">
+    <value>Budget della data corrente:</value>
+  </data>
+  <data name="DiSanFangCaoZuoJiLuLieBiao" xml:space="preserve">
+    <value>Caricatore di file include:</value>
+  </data>
+  <data name="TiaoJiLu" xml:space="preserve">
+    <value>&lt;B&gt;Esplora tutti i progetti per tipo&lt;/B&gt;</value>
+  </data>
+  <data name="DeDiSanFangCaoZuoJiLu" xml:space="preserve">
+    <value>Elenco dei record delle operazioni di terze parti:</value>
+  </data>
+  <data name="DeChengYuan" xml:space="preserve">
+    <value>record</value>
+  </data>
+  <data name="YuanGongKPIKaoHeBiao" xml:space="preserve">
+    <value>record delle operazioni di terze parti di:</value>
+  </data>
+  <data name="YongHuChengYuanXinXi" xml:space="preserve">
+    <value>membri di:</value>
+  </data>
+  <data name="ShouLiLeNiDeRenWu" xml:space="preserve">
+    <value>Tabella delle prestazioni dei dipendenti KPI_</value>
+  </data>
+  <data name="JuJueLeNiDeRenWu" xml:space="preserve">
+    <value>Informazioni sui membri utente</value>
+  </data>
+  <data name="ZhengZaiChuLiNiDeRenWu" xml:space="preserve">
+    <value>Ha accettato il tuo compito:</value>
+  </data>
+  <data name="WanChengLeNiDeRenWu" xml:space="preserve">
+    <value>Ha rifiutato il tuo compito:</value>
+  </data>
+  <data name="GuaQiLeNiDeRenWu" xml:space="preserve">
+    <value>Sta elaborando il tuo compito:</value>
+  </data>
+  <data name="DeFenPaJiLu" xml:space="preserve">
+    <value>Ha completato il tuo compito:</value>
+  </data>
+  <data name="KeHuFuWuXuQiuLieBiao" xml:space="preserve">
+    <value>Ha sospeso il tuo compito:</value>
+  </data>
+  <data name="BKeHuFuWuXuQiuLieBiaoB" xml:space="preserve">
+    <value>record di assegnazione di:</value>
+  </data>
+  <data name="CuoWuXiangYingMoBanHuoMoBanWen" xml:space="preserve">
+    <value>Elenco delle richieste di servizio clienti</value>
+  </data>
+  <data name="QingXianZhuCeBiaoChanMoBan" xml:space="preserve">
+    <value>&lt;B&gt;Elenco delle richieste di servizio clienti&lt;/B&gt;</value>
+  </data>
+  <data name="WenKongZhuanYuan" xml:space="preserve">
+    <value>Errore, il modello o il file modello corrispondente non esiste, si prega di verificare!</value>
+  </data>
+  <data name="ShouLiNiDeXiangMu" xml:space="preserve">
+    <value>Si prega di registrare prima il modello del modulo.</value>
+  </data>
+  <data name="JuJueNiDeXiangMu" xml:space="preserve">
+    <value>Responsabile del controllo documenti</value>
+  </data>
+  <data name="KaiShiChuLiNiDeXiangMu" xml:space="preserve">
+    <value>Ha accettato il tuo progetto:</value>
+  </data>
+  <data name="XiangMuChuLiQingKuangFanKui" xml:space="preserve">
+    <value>Ha rifiutato il tuo progetto:</value>
+  </data>
+  <data name="1MoKaoQinLiuCheng" xml:space="preserve">
+    <value>Ha iniziato a elaborare il tuo progetto:</value>
+  </data>
+  <data name="HuiYi" xml:space="preserve">
+    <value>Feedback sullo stato di elaborazione del progetto</value>
+  </data>
+  <data name="GeTong" xml:space="preserve">
+    <value>-1 Nessun processo di presenza</value>
+  </data>
+  <data name="HouShuaRen" xml:space="preserve">
+    <value>Riunione</value>
+  </data>
+  <data name="NiYiBeiYaoQingCanJiaXieZuo" xml:space="preserve">
+    <value>Contratto</value>
+  </data>
+  <data name="YaoQingZhe" xml:space="preserve">
+    <value>Candidato</value>
+  </data>
+  <data name="QingZhunShiCanJia" xml:space="preserve">
+    <value>Sei stato invitato a partecipare alla collaborazione:</value>
+  </data>
+  <data name="XieZuoTongZhi" xml:space="preserve">
+    <value>, invitato da:</value>
+  </data>
+  <data name="ZZDengJiChengGongHuanYingNiChe" xml:space="preserve">
+    <value>, si prega di partecipare puntualmente!</value>
+  </data>
+  <data name="ZZDengJiShiBaiQingLianJiShangH" xml:space="preserve">
+    <value>Notifica di collaborazione</value>
+  </data>
+  <data name="DengJiChengGongHuanYingNiCheng" xml:space="preserve">
+    <value>Registrazione completata, benvenuto come membro provvisorio del consiglio di commercio!</value>
+  </data>
+  <data name="ShangHuiGuanLiYuan" xml:space="preserve">
+    <value>Registrazione fallita, si prega di contattare l'amministratore del consiglio di commercio</value>
+  </data>
+  <data name="ZhiJieChengYuanJiHuaPingFenDui" xml:space="preserve">
+    <value>Registrazione completata, benvenuto come membro provvisorio del consiglio di commercio, il tuo</value>
+  </data>
+  <data name="YinQuXiangMuZhuangTai" xml:space="preserve">
+    <value>Amministratore del consiglio di commercio</value>
+  </data>
+  <data name="GongZuoLiuShenPiTongZhi" xml:space="preserve">
+    <value>Grafico di confronto dei punteggi dei piani dei membri diretti</value>
+  </data>
+  <data name="ZZJingGaoKaiShiShiJianHeJieShu" xml:space="preserve">
+    <value>Nascondi lo stato del progetto</value>
+  </data>
+  <data name="ZZJingGaoBuNengShenQingKuaNian" xml:space="preserve">
+    <value>Notifica di approvazione del flusso di lavoro</value>
+  </data>
+  <data name="1MoJiaBanLeiXing" xml:space="preserve">
+    <value>Attenzione, l'ora di inizio e di fine devono essere lo stesso giorno, si prega di verificare!</value>
+  </data>
+  <data name="JiaBan" xml:space="preserve">
+    <value>Attenzione, non è possibile richiedere straordinari che coprano anni o mesi diversi, si prega di verificare!</value>
+  </data>
+  <data name="JiaBanShenQing" xml:space="preserve">
+    <value>-1 Nessun tipo di straordinario</value>
+  </data>
+  <data name="DeJiaBanShenQing" xml:space="preserve">
+    <value>Straordinario</value>
+  </data>
+  <data name="ShouLiLeNiJianLiDeXiangMu" xml:space="preserve">
+    <value>Richiesta di straordinario</value>
+  </data>
+  <data name="JuJueLeNiJianLiDeXiangMu" xml:space="preserve">
+    <value>richiesta di straordinario di:</value>
+  </data>
+  <data name="KaiShiChuLiNiJianLiDeXiangMu" xml:space="preserve">
+    <value>Ha accettato il progetto che hai creato:</value>
+  </data>
+  <data name="GongZuoLiuChuLiTongZhi" xml:space="preserve">
+    <value>Ha rifiutato il progetto che hai creato:</value>
+  </data>
+  <data name="YiWanCheng" xml:space="preserve">
+    <value>Ha iniziato a elaborare il progetto che hai creato:</value>
+  </data>
+  <data name="ChanWei" xml:space="preserve">
+    <value>Notifica di elaborazione del flusso di lavoro</value>
+  </data>
+  <data name="CunFangCangKu" xml:space="preserve">
+    <value>Completato</value>
+  </data>
+  <data name="ZZJingGaoCiZiChanShuLiangWei0B" xml:space="preserve">
+    <value>Unità</value>
+  </data>
+  <data name="ZZGongZhongHaoAppIDBuNengWeiKo" xml:space="preserve">
+    <value>Magazzino di stoccaggio</value>
+  </data>
+  <data name="ZZQiYeHaoCordIDHeYingYongIDBuN" xml:space="preserve">
+    <value>Attenzione, la quantità di questo asset è 0, non è necessario mantenerlo!</value>
+  </data>
+  <data name="XinJianPingShenShouLiHuoDongJu" xml:space="preserve">
+    <value>L'AppID del pubblico account non può essere vuoto!</value>
+  </data>
+  <data name="ZZBaoCunShiBaiZhouMoKaiShiRiJi" xml:space="preserve">
+    <value>Il CordID dell'account aziendale e l'ID dell'applicazione non possono essere vuoti!</value>
+  </data>
+  <data name="DeFeiYongFenBu" xml:space="preserve">
+    <value>Nuovo, Revisione, Accettazione, Attività, Rifiuto, Chiusura, Annullamento, Sospensione, Archiviazione, Nascondi, Elimina</value>
+  </data>
+  <data name="QiaoBiaoYaoQingHanTongZhi" xml:space="preserve">
+    <value>Salvataggio fallito, la data di inizio o fine settimana non può essere maggiore di 6 o minore di 0, si prega di verificare!</value>
+  </data>
+  <data name="ZhongBiao" xml:space="preserve">
+    <value>distribuzione dei costi di:</value>
+  </data>
+  <data name="ZhongBiaoYuFouQingKuangTongZhi" xml:space="preserve">
+    <value>Notifica della lettera di invito alla gara</value>
+  </data>
+  <data name="ZZJingGaoGongChengChanWeiHeShe" xml:space="preserve">
+    <value>Vincitore</value>
+  </data>
+  <data name="BSuoYouXiangMuB" xml:space="preserve">
+    <value>Notifica dello stato di vincita</value>
+  </data>
+  <data name="FenBaoFuKuanShenQing" xml:space="preserve">
+    <value>Attenzione, l'unità di lavoro e l'unità di apparecchiatura non possono essere vuote, si prega di verificare!</value>
+  </data>
+  <data name="WeiKaiBiao" xml:space="preserve">
+    <value>&lt;B&gt;Tutti i progetti&lt;/B&gt;</value>
+  </data>
+  <data name="XinJianChengGongQingJiShiZaiQi" xml:space="preserve">
+    <value>Richiesta di pagamento del subappaltatore</value>
+  </data>
+  <data name="ZZJingGaoDaiHaoDeBuNengWeiKong" xml:space="preserve">
+    <value>Non aperto</value>
+  </data>
+  <data name="GeRenZhangHao" xml:space="preserve">
+    <value>Creazione completata. Si prega di verificare tempestivamente le informazioni del contraente nella gestione delle gare - revisione del contraente!</value>
+  </data>
+  <data name="ZhuanGu" xml:space="preserve">
+    <value>Attenzione, i campi con * non possono essere vuoti, si prega di verificare!</value>
+  </data>
+  <data name="ChuCheTongZhi" xml:space="preserve">
+    <value>Account personale:</value>
+  </data>
+  <data name="MuDeDe" xml:space="preserve">
+    <value>Esperto</value>
+  </data>
+  <data name="FanHuiShiJian" xml:space="preserve">
+    <value>Notifica di uscita del veicolo:</value>
+  </data>
+  <data name="QingZhunShiChuFa1" xml:space="preserve">
+    <value>Destinazione:</value>
+  </data>
+  <data name="QingZhunShiChuFa" xml:space="preserve">
+    <value>, Ora di ritorno:</value>
+  </data>
+  <data name="YouLiaoBianHao" xml:space="preserve">
+    <value>, Si prega di partire puntualmente1</value>
+  </data>
+  <data name="YouLiaoMingChen" xml:space="preserve">
+    <value>, Si prega di partire puntualmente!</value>
+  </data>
+  <data name="GuiShuBuMenBianMa" xml:space="preserve">
+    <value>Codice del carburante</value>
+  </data>
+  <data name="JiaYouShuLiang" xml:space="preserve">
+    <value>Nome del carburante</value>
+  </data>
+  <data name="ChanJia" xml:space="preserve">
+    <value>Codice del dipartimento di appartenenza</value>
+  </data>
+  <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
+    <value>Quantità di rifornimento</value>
+  </data>
+  <data name="brbrNeiRong" xml:space="preserve">
+    <value>Prezzo unitario</value>
+  </data>
+  <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
+    <value>Notifica di correzione del problema</value>
+  </data>
+  <data name="Juan" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JuanNeiJian" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShuRuXiangMuXiangGuanFeiYong" xml:space="preserve">
+    <value>Contenuto:</value>
+  </data>
+  <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
+    <value>Questa collaborazione non esiste, potrebbe essere stata eliminata, si prega di verificare!</value>
+  </data>
+  <data name="BuChongXieYi" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="XiangMuJiTaXinXi" xml:space="preserve">
+    <value>Volume interno</value>
+  </data>
+  <data name="DaoRuShiBaiShuJuYouWuQingJianC" xml:space="preserve">
+    <value>Inserisci i costi relativi al progetto</value>
+  </data>
+  <data name="CuoWuDaiMa" xml:space="preserve">
+    <value>Attenzione, il tipo di documento non può essere vuoto, si prega di verificare!</value>
+  </data>
+  <data name="YiCunZaiBuNengChongFuTianJiaQi" xml:space="preserve">
+    <value>Accordo supplementare</value>
+  </data>
+  <data name="SiJiMuLu" xml:space="preserve">
+    <value>Altre informazioni sul progetto</value>
+  </data>
+  <data name="BaoLiuShuLiang" xml:space="preserve">
+    <value>Importazione fallita, i dati sono errati, si prega di verificare!</value>
+  </data>
+  <data name="YiChuKuLiang" xml:space="preserve">
+    <value>Errore, codice:</value>
+  </data>
+  <data name="ZhuCeZhengHao" xml:space="preserve">
+    <value>esiste già, non può essere aggiunto di nuovo, si prega di verificare!</value>
+  </data>
+  <data name="DaoRuShiBaiDaLeiZhiNengSheWeiW" xml:space="preserve">
+    <value>Quarto livello di directory</value>
+  </data>
+  <data name="DaoRuShiBaiXiaoLei" xml:space="preserve">
+    <value>Quantità conservata</value>
+  </data>
+  <data name="BuCunZaiQingXianZaiJiChuShuJuW" xml:space="preserve">
+    <value>Quantità uscita</value>
+  </data>
+  <data name="BuCunZaiQingXianZaiWuLiaoLeiXi" xml:space="preserve">
+    <value>Numero di registrazione</value>
+  </data>
+  <data name="GeTongChaXunBaoBiao" xml:space="preserve">
+    <value>Importazione fallita, la categoria principale può essere solo "Materiale" o "Asset", si prega di verificare!</value>
+  </data>
+  <data name="MeiYouChaXunDaoXiangYingXinXi" xml:space="preserve">
+    <value>Importazione fallita, la sottocategoria:</value>
+  </data>
+  <data name="GeTongFuKuan" xml:space="preserve">
+    <value>non esiste, si prega di impostarla prima nel modulo [Dati di base (esterni)]!</value>
+  </data>
+  <data name="WuLiaoCaiGouFuKuan" xml:space="preserve">
+    <value>non esiste, si prega di impostarla prima nel modulo [Tipo di materiale]!</value>
+  </data>
+  <data name="ZiChanCaiGouFuKuan" xml:space="preserve">
+    <value>Report di query del contratto</value>
+  </data>
+  <data name="GeTongQianZheng" xml:space="preserve">
+    <value>Nessuna informazione trovata</value>
+  </data>
+  <data name="QingJiShiShouLi" xml:space="preserve">
+    <value>Pagamento del contratto</value>
+  </data>
+  <data name="JiaRuXiangMuTongZhi" xml:space="preserve">
+    <value>Pagamento dell'acquisto di materiali</value>
+  </data>
+  <data name="XiangMuChengYuanJiaRuTongZhi" xml:space="preserve">
+    <value>Pagamento dell'acquisto di asset</value>
+  </data>
+  <data name="ZZShiBaiZhiNengShangChuanwordW" xml:space="preserve">
+    <value>Visto del contratto</value>
+  </data>
+  <data name="GeTongYiJu" xml:space="preserve">
+    <value>, si prega di accettare tempestivamente!</value>
+  </data>
+  <data name="TaDingXiangMuBao" xml:space="preserve">
+    <value>Notifica di aggiunta al progetto</value>
+  </data>
+  <data name="GeiNiFenPaLeXuQiu" xml:space="preserve">
+    <value>Notifica di aggiunta dei membri del progetto</value>
+  </data>
+  <data name="FenPaLeXuQiu" xml:space="preserve">
+    <value>Fallito, è possibile caricare solo documenti Word, si prega di verificare!</value>
+  </data>
+  <data name="GeiNiQingJiShiShouLi" xml:space="preserve">
+    <value>Base contrattuale</value>
+  </data>
+  <data name="XuQiuFenPaTongZhi" xml:space="preserve">
+    <value>Progetto Tuoding Bao</value>
+  </data>
+  <data name="nbspnbspZhuangTai" xml:space="preserve">
+    <value>Ti ha assegnato la richiesta:</value>
+  </data>
+  <data name="GengXinLeXiangMu" xml:space="preserve">
+    <value>Ha assegnato la richiesta:</value>
+  </data>
+  <data name="DeNeiRongQingGuanZhuTeCiTongZh" xml:space="preserve">
+    <value>a te, si prega di accettare tempestivamente!</value>
+  </data>
+  <data name="ShanChuLeXiangMu" xml:space="preserve">
+    <value>Notifica di assegnazione della richiesta</value>
+  </data>
+  <data name="XiangMuTongZhi" xml:space="preserve">
+    <value>  Stato:</value>
+  </data>
+  <data name="GeiNiJianLiLeXiangMu" xml:space="preserve">
+    <value>Ha aggiornato il progetto:</value>
+  </data>
+  <data name="DiSanFangSheBei" xml:space="preserve">
+    <value>contenuto, si prega di prestare attenzione, questa è una notifica!</value>
+  </data>
+  <data name="DiSanFangSheBeiDaoRuShuJu" xml:space="preserve">
+    <value>Ha eliminato il progetto:</value>
+  </data>
+  <data name="LianJiRen" xml:space="preserve">
+    <value>Notifica del progetto</value>
+  </data>
+  <data name="ZhongWenDeZhi" xml:space="preserve">
+    <value>Ti ha creato il progetto:</value>
+  </data>
+  <data name="YingWenDeZhi" xml:space="preserve">
+    <value>Apparecchiatura di terze parti:</value>
+  </data>
+  <data name="JieSuanYinHang" xml:space="preserve">
+    <value>Apparecchiatura di terze parti: Importazione dati</value>
+  </data>
+  <data name="OuYu" xml:space="preserve">
+    <value>Contatto</value>
+  </data>
+  <data name="FenGuanJingXiaoShangDaiMa" xml:space="preserve">
+    <value>Indirizzo in cinese</value>
+  </data>
+  <data name="FenGuanJingXiaoShangMingChen" xml:space="preserve">
+    <value>Indirizzo in inglese</value>
+  </data>
+  <data name="GuiShuBuMenMingChen" xml:space="preserve">
+    <value>Banca di regolamento</value>
+  </data>
+  <data name="HangYeLeiXingBuCunZaiQingJianC" xml:space="preserve">
+    <value>Regione</value>
+  </data>
+  <data name="DeZhi" xml:space="preserve">
+    <value>Codice del distributore responsabile</value>
+  </data>
+  <data name="ZhuCeLe" xml:space="preserve">
+    <value>Nome del distributore responsabile</value>
+  </data>
+  <data name="DeXinXiQingGuanZhu" xml:space="preserve">
+    <value>Nome del dipartimento di appartenenza</value>
+  </data>
+  <data name="DianXiaoYuan" xml:space="preserve">
+    <value>Il tipo di settore non esiste, si prega di verificare!</value>
+  </data>
+  <data name="KeFu" xml:space="preserve">
+    <value>, Indirizzo:</value>
+  </data>
+  <data name="TaiDingXiangMuBao" xml:space="preserve">
+    <value>registrato:</value>
+  </data>
+  <data name="XiangMuZengGeGuanLiPingTai" xml:space="preserve">
+    <value>informazioni, si prega di prestare attenzione!!!</value>
+  </data>
+  <data name="XiangMuGuanLiPingTai" xml:space="preserve">
+    <value>Addetto alle vendite telefoniche</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai" xml:space="preserve">
+    <value>Servizio clienti</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai" xml:space="preserve">
+    <value>Progetto Taiding Bao</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
+    <value>Piattaforma di gestione integrata dei progetti</value>
+  </data>
+  <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
+    <value>Piattaforma di gestione dei progetti</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLiPin" xml:space="preserve">
+    <value>Piattaforma di gestione dei progetti di ricerca e sviluppo</value>
+  </data>
+  <data name="XiangMuXingERPPingTai" xml:space="preserve">
+    <value>Piattaforma di gestione dei progetti governativi</value>
+  </data>
+  <data name="CRMPingTai" xml:space="preserve">
+    <value>Piattaforma di gestione dei progetti di ingegneria</value>
+  </data>
+  <data name="XieTongOAPingTai" xml:space="preserve">
+    <value>Piattaforma di gestione dei progetti di integrazione di sistemi</value>
+  </data>
+  <data name="DiJiaoShiBaiDaiHaoXiangBuNengW" xml:space="preserve">
+    <value>Piattaforma di gestione dei progetti di implementazione software</value>
+  </data>
+  <data name="DiJiaoShiBaiYanZhengMaCuoWuQin" xml:space="preserve">
+    <value>Piattaforma ERP per progetti</value>
+  </data>
+  <data name="DeShiYongXinXiQingGuanZhu" xml:space="preserve">
+    <value>Piattaforma CRM</value>
+  </data>
+  <data name="AnKongYouXiaoJi" xml:space="preserve">
+    <value>Piattaforma OA collaborativa</value>
+  </data>
+  <data name="ZhiYeJiNengJianDingZhengShuBia" xml:space="preserve">
+    <value>Invio fallito, i campi con * non possono essere vuoti, si prega di verificare!</value>
+  </data>
+  <data name="YuanGongXingMing" xml:space="preserve">
+    <value>Invio fallito, codice di verifica errato, si prega di verificare!</value>
+  </data>
+  <data name="JingGaoExcelBiaoShuJuDaoRuShiB" xml:space="preserve">
+    <value>informazioni di prova, si prega di prestare attenzione!!!</value>
+  </data>
+  <data name="TeChongZuoYeZhengShuBianHao" xml:space="preserve">
+    <value>Validità della paura della sicurezza</value>
+  </data>
+  <data name="TeChongZuoYeZhunCaoXiangMu" xml:space="preserve">
+    <value>Numero del certificato di valutazione delle competenze professionali</value>
+  </data>
+  <data name="TeChongZuoYeFuShenShiJian" xml:space="preserve">
+    <value>Nome del dipendente</value>
+  </data>
+  <data name="TeChongZuoYeQuZhengShiJian" xml:space="preserve">
+    <value>Attenzione, l'importazione dei dati dal foglio Excel è fallita, si prega di verificare i dati! Il codice del dipendente è un dato obbligatorio!</value>
+  </data>
+  <data name="TeChongSheBeiZhengShuBianHao" xml:space="preserve">
+    <value>Numero del certificato di operazioni speciali</value>
+  </data>
+  <data name="TeChongSheBeiZhunCaoXiangMu" xml:space="preserve">
+    <value>Progetto di operazioni speciali approvato</value>
+  </data>
+  <data name="TeChongSheBeiFuShenShiJian" xml:space="preserve">
+    <value>Tempo di revisione delle operazioni speciali</value>
+  </data>
+  <data name="TeChongSheBeiQuZhengShiJian" xml:space="preserve">
+    <value>Tempo di ottenimento delle operazioni speciali</value>
+  </data>
+  <data name="TeChongSheBeiHanJieCaoZuoRenYu" xml:space="preserve">
+    <value>Numero del certificato delle apparecchiature speciali</value>
+  </data>
+  <data name="ChiZhengXiangMuYouXiaoJi" xml:space="preserve">
+    <value>Progetto delle apparecchiature speciali approvato</value>
+  </data>
+  <data name="SaoMiaoJianLuJing" xml:space="preserve">
+    <value>Tempo di revisione delle apparecchiature speciali</value>
+  </data>
+  <data name="GangWeiZhengShuFuShenShiJian" xml:space="preserve">
+    <value>Tempo di ottenimento delle apparecchiature speciali</value>
+  </data>
+  <data name="GangWeiZhengShuQuZhengShiJian" xml:space="preserve">
+    <value>Codice del certificato dell'operatore di saldatura delle apparecchiature speciali</value>
+  </data>
+  <data name="PeiXunDeDian" xml:space="preserve">
+    <value>Validità del progetto certificato</value>
+  </data>
+  <data name="JuBanChanWei" xml:space="preserve">
+    <value>Percorso della scansione</value>
+  </data>
+  <data name="PeiXunRiJi" xml:space="preserve">
+    <value>Tempo di revisione del certificato di posizione</value>
+  </data>
+  <data name="KeHuBaiFangTongJiBiao" xml:space="preserve">
+    <value>Tempo di ottenimento del certificato di posizione</value>
+  </data>
+  <data name="DeSuoYouFenPaJiLu" xml:space="preserve">
+    <value>Luogo di formazione</value>
+  </data>
+  <data name="ShouLiLeNiDeQueXian" xml:space="preserve">
+    <value>Unità organizzativa</value>
+  </data>
+  <data name="JuJueLeNiDeQueXian" xml:space="preserve">
+    <value>Data di formazione</value>
+  </data>
+  <data name="ChangGuiXiangMu" xml:space="preserve">
+    <value>Tabella statistica delle visite ai clienti</value>
+  </data>
+  <data name="brbrbWoDeYiJianbbr" xml:space="preserve">
+    <value>tutti i record di assegnazione di!</value>
+  </data>
+  <data name="BaQueXian" xml:space="preserve">
+    <value>Ha accettato il tuo difetto:</value>
+  </data>
+  <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
+    <value>Ha rifiutato il tuo difetto:</value>
+  </data>
+  <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
+    <value>Progetto regolare</value>
+  </data>
+  <data name="WanChengLeNiDeQueXian" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GuaQiLeNiDeQueXian" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QueXianChuLiQingKuangFanKui" xml:space="preserve">
+    <value>&lt;b&gt;La mia opinione:&lt;/b&gt;</value>
+  </data>
+  <data name="QueXianFenPaTongZhi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BZongXiangMuB" xml:space="preserve">
+    <value>Ha trasformato il difetto:</value>
+  </data>
+  <data name="QueXianZhuaiXiangTongZhi" xml:space="preserve">
+    <value>in un progetto per te, si prega di accettare tempestivamente!</value>
+  </data>
+  <data name="ZhuaiChengXiangMuGeiNiQingJiSh" xml:space="preserve">
+    <value>Sta elaborando il tuo difetto:</value>
+  </data>
+  <data name="brbrYanShouBiaoZhun" xml:space="preserve">
+    <value>Ha completato il tuo difetto:</value>
+  </data>
+  <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
+    <value>Ha sospeso il tuo difetto:</value>
+  </data>
+  <data name="ShangChuanLeWenJian" xml:space="preserve">
+    <value>Feedback sullo stato di elaborazione del difetto</value>
+  </data>
+  <data name="QingJiShiChaKan" xml:space="preserve">
+    <value>Notifica di assegnazione del difetto</value>
+  </data>
+  <data name="WenJianChaYueTongZhi" xml:space="preserve">
+    <value>&lt;B&gt;Progetto totale&lt;/B&gt;</value>
+  </data>
+  <data name="WenDangLieBiaoB" xml:space="preserve">
+    <value>Notifica di trasformazione del difetto in progetto</value>
+  </data>
+  <data name="RiJi" xml:space="preserve">
+    <value>Trasformato in progetto per te, si prega di accettare tempestivamente!</value>
+  </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>Unità di acquisto</value>
+  </data>
+  <data name="ChanPinChangDaiMa" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GongYiKaBianHao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HanShuiChanJia" xml:space="preserve">
+    <value>Standard di accettazione:</value>
+  </data>
+  <data name="CaiWuFeiYong" xml:space="preserve">
+    <value>Questo difetto non esiste, potrebbe essere stato eliminato, si prega di verificare!</value>
+  </data>
+  <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
+    <value>Ha caricato il file:</value>
+  </data>
+  <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
+    <value>, si prega di visualizzare tempestivamente!</value>
+  </data>
+  <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
+    <value>Notifica di consultazione del file</value>
+  </data>
+  <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
+    <value>Elenco dei documenti&lt;/B&gt;</value>
+  </data>
+  <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
+    <value>Codice lungo del prodotto</value>
+  </data>
+  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
+    <value>Numero della scheda di processo</value>
+  </data>
+  <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
+    <value>Prezzo unitario IVA inclusa</value>
+  </data>
+  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
+    <value>Costi finanziari</value>
+  </data>
+  <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
+    <value>Riga {0}, la data non può essere vuota</value>
+  </data>
+  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
+    <value>Riga {0}, il formato della data non è corretto</value>
+  </data>
+  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
+    <value>Riga {0}, l'unità di acquisto non può essere vuota</value>
+  </data>
+  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
+    <value />
+  </data>
+  <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
+    <value>Riga {0}, il tipo di prodotto non può essere vuoto</value>
+  </data>
+  <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
+    <value>Riga {0}, il tipo di prodotto non esiste nella tabella di base dei tipi</value>
+  </data>
+  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
+    <value>Riga {0}, il codice lungo del prodotto non può essere vuoto</value>
+  </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
+    <value>Riga {0}, il numero della scheda di processo non può essere vuoto</value>
+  </data>
+  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
+    <value>Riga {0}, la quantità non può essere vuota</value>
+  </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
+    <value>Riga {0}, la quantità può essere solo un numero decimale</value>
+  </data>
+  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChanPinMingChen" xml:space="preserve">
+    <value>Riga {0}, il prezzo unitario IVA inclusa non può essere vuoto</value>
+  </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
+    <value>Riga {0}, il prezzo unitario IVA inclusa può essere solo un numero decimale</value>
+  </data>
+  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MoChanPinJiLutd" xml:space="preserve">
+    <value>Riga {0}, l'importo non può essere vuoto</value>
+  </data>
+  <data name="BianJia" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BaoCuna" xml:space="preserve">
+    <value>Riga {0}, l'importo può essere solo un numero decimale</value>
+  </data>
+  <data name="ZongShuLiangtdtr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
+    <value>Riga {0}, i costi finanziari non possono essere vuoti</value>
+  </data>
+  <data name="ZongShuLiangtdtdclass" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BenSeChengBentdtdclass" xml:space="preserve">
+    <value>Riga {0}, i costi finanziari possono essere solo un numero decimale</value>
+  </data>
+  <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
+    <value>Importazione completata con successo di {0} dati</value>
+  </data>
+  <data name="PeiLiao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Importazione completata con successo di {0} dati, {1} dati non superano la verifica</value>
+  </data>
+  <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
+    <value>Nessun dato importato, {0} dati non superano la verifica</value>
+  </data>
+  <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
+    <value>Riga {0}, il nome del cliente non può essere vuoto</value>
+  </data>
+  <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
+    <value>Riga {0}, il costo non può essere vuoto</value>
+  </data>
+  <data name="ShouHouFuWu" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
+    <value>Riga {0}, il costo può essere solo un numero decimale</value>
+  </data>
+  <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
+    <value>Riga {0}, il tipo non può essere vuoto</value>
+  </data>
+  <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
+    <value>Riga {0}, il costo di produzione non può essere vuoto</value>
+  </data>
+  <data name="PiHao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanRiJi" xml:space="preserve">
+    <value>Riga {0}, il costo di produzione può essere solo un numero decimale</value>
+  </data>
+  <data name="ShiXiaoRiJi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanSheBeiHao" xml:space="preserve">
+    <value>Riga {0}, il consumo per tonnellata non può essere vuoto</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
+    <value>Riga {0}, il consumo per tonnellata può essere solo un numero decimale</value>
+  </data>
+  <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
+    <value>Riga {0}, il numero del prodotto non può essere vuoto</value>
+  </data>
+  <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
+    <value>Nome del prodotto</value>
+  </data>
+  <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
+    <value>Riga {0}, il nome del prodotto non può essere vuoto</value>
+  </data>
+  <data name="WuLiaoShengChanChan" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
+    <value>Riga {0}, il tipo di prodotto non può essere vuoto</value>
+  </data>
+  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
+    <value>Riga {0}, il tipo di prodotto:{1} non esiste nella tabella dei tipi di prodotto</value>
+  </data>
+  <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
+    <value>Nessun record del prodotto&lt;/td&gt;</value>
+  </data>
+  <data name="WuLiaoXiaoShouChan" xml:space="preserve">
+    <value>Modifica&lt;/a&gt;</value>
+  </data>
+  <data name="WuLiaoBaoJiaChan" xml:space="preserve">
+    <value>Salva&lt;/a&gt;</value>
+  </data>
+  <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
+    <value>Quantità totale&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="DeWuLiaoLieBiao" xml:space="preserve">
+    <value>Elenco dei materiali:</value>
+  </data>
+  <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
+    <value>Rapporto di scarto dei materiali.xls</value>
+  </data>
+  <data name="ZZShanChuShiBaiZhiNengShanChuD" xml:space="preserve">
+    <value>Eliminazione fallita, è possibile eliminare solo i record del giorno corrente, si prega di verificare!</value>
+  </data>
+  <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
+    <value>Attenzione, la quantità di uscita supera la quantità richiesta, si prega di verificare!</value>
+  </data>
+  <data name="WuLiaoChuHuo" xml:space="preserve">
+    <value>Uscita dei materiali</value>
+  </data>
+  <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
+    <value>Rapporto di uscita dei materiali.xls</value>
+  </data>
+  <data name="WuLiaoHuiZongBaoBiaoxls" xml:space="preserve">
+    <value>Rapporto di riepilogo dei materiali.xls</value>
+  </data>
+  <data name="WuLiaoDiaoBoBaoBiaoxls" xml:space="preserve">
+    <value>Rapporto di trasferimento dei materiali.xls</value>
+  </data>
+  <data name="GuoJi" xml:space="preserve">
+    <value>Scaduto</value>
+  </data>
+  <data name="ZuChang" xml:space="preserve">
+    <value>(Capo gruppo)</value>
+  </data>
+  <data name="brJianChaNeiRongJiJiFaXian" xml:space="preserve">
+    <value>.&lt;/br&gt;Contenuto del controllo e risultati:</value>
+  </data>
+  <data name="JianChaNeiRongJiJiFaXian" xml:space="preserve">
+    <value>Contenuto del controllo e risultati:</value>
+  </data>
+  <data name="AnGongChong" xml:space="preserve">
+    <value>Per tipo di lavoro</value>
+  </data>
+  <data name="XiangMuRenLiZiYuanBiaoAnGongCh" xml:space="preserve">
+    <value>Tabella delle risorse umane del progetto per tipo di lavoro_</value>
+  </data>
+  <data name="XiangMuRenLiZiYuanBiaoAnZiZu" xml:space="preserve">
+    <value>Tabella delle risorse umane del progetto per sottogruppo_</value>
+  </data>
+  <data name="GongZuoRiZhiBaoBiao" xml:space="preserve">
+    <value>Rapporto del registro di lavoro</value>
+  </data>
+  <data name="ZZDaoRuShiBaiDaLeiZhiNengSheWe" xml:space="preserve">
+    <value>Importazione fallita, la categoria principale può essere solo "Materiale" o "Asset", si prega di verificare!</value>
+  </data>
+  <data name="ZZDaoRuShiBaiXiaoLeistrSmallTy" xml:space="preserve">
+    <value>Importazione fallita, la sottocategoria:" + strSmallType + " non esiste, si prega di impostarla prima nel modulo [Dati di base (esterni)]!</value>
+  </data>
+  <data name="WuLiaoDaiMa" xml:space="preserve">
+    <value>Codice del materiale</value>
+  </data>
+  <data name="BOMBanBenHao" xml:space="preserve">
+    <value>Numero di versione BOM</value>
+  </data>
+  <data name="FuWuLiaoDaiMa" xml:space="preserve">
+    <value>Codice del materiale padre</value>
+  </data>
+  <data name="ZiWuLiaoDaiMa" xml:space="preserve">
+    <value>Codice del materiale figlio</value>
+  </data>
+  <data name="ZiWuLiaoBOMBanBenHao" xml:space="preserve">
+    <value>Numero di versione BOM del materiale figlio</value>
+  </data>
+  <data name="ZiWuLiaoShuLiang" xml:space="preserve">
+    <value>Quantità del materiale figlio</value>
+  </data>
+  <data name="GuiShuWuLiaoDaiMa" xml:space="preserve">
+    <value>Codice del materiale di appartenenza</value>
+  </data>
+  <data name="GuiShuWuLiaoBOMBanBen" xml:space="preserve">
+    <value>Versione BOM del materiale di appartenenza</value>
+  </data>
+  <data name="GongNengHuoBeiZhu" xml:space="preserve">
+    <value>Funzione o nota</value>
+  </data>
+  <data name="HuoKPILeiXing" xml:space="preserve">
+    <value>o tipo KPI:</value>
+  </data>
+  <data name="HuoDingYi" xml:space="preserve">
+    <value>o definizione:</value>
+  </data>
+  <data name="WeiKong" xml:space="preserve">
+    <value>vuoto,</value>
+  </data>
+  <data name="BuCunZai" xml:space="preserve">
+    <value>non esiste,</value>
+  </data>
+  <data name="QingJia" xml:space="preserve">
+    <value>Permesso</value>
+  </data>
+  <data name="DangQianZhiWu" xml:space="preserve">
+    <value>Posizione attuale</value>
+  </data>
+  <data name="HouShuaRenXinXi" xml:space="preserve">
+    <value>Informazioni sul candidato_</value>
+  </data>
+  <data name="ShanChuShuJuChengGongQingTuoSh" xml:space="preserve">
+    <value>Eliminazione dei dati completata con successo, si prega di conservare i propri dati con cura!</value>
+  </data>
+  <data name="ShenPiTongZhi" xml:space="preserve">
+    <value>Notifica di approvazione</value>
+  </data>
+  <data name="TongZhiNiHaoNiYouShenPiGongZuo" xml:space="preserve">
+    <value>Notifica: Ciao, hai un lavoro di approvazione, contenuto: autocontrollo, si prega di accedere tempestivamente alla piattaforma di gestione per elaborarlo, questa informazione proviene da: amministratore di sistema!</value>
+  </data>
+  <data name="QingJiShiDengLuGuanLiPingTaiJi" xml:space="preserve">
+    <value>Si prega di accedere tempestivamente alla piattaforma di gestione per elaborarlo, questa informazione proviene da: amministratore di sistema!</value>
+  </data>
+  <data name="TianJiaShuJuChengGongQingTuoSh" xml:space="preserve">
+    <value>Aggiunta dei dati completata con successo, si prega di conservare i propri dati con cura!</value>
+  </data>
+  <data name="XiuGaiShuJuChengGongQingTuoSha" xml:space="preserve">
+    <value>Modifica dei dati completata con successo, si prega di conservare i propri dati con cura!</value>
+  </data>
+  <data name="ZhuaiFa" xml:space="preserve">
+    <value>Inoltra:</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Ordine di acquisto di asset</value>
+  </data>
+  <data name="KeJieYueTianShu" xml:space="preserve">
+    <value>Giorni di prestito:</value>
+  </data>
+  <data name="BenFen" xml:space="preserve">
+    <value>copie!</value>
+  </data>
+  <data name="GuiHai" xml:space="preserve">
+    <value>Restituzione</value>
+  </data>
+  <data name="BiaoZhunYuTuShuXinXi" xml:space="preserve">
+    <value>Informazioni sugli standard e sui libri_</value>
+  </data>
+  <data name="ShuJiJieYueQingKuang" xml:space="preserve">
+    <value>Situazione del prestito dei libri_</value>
+  </data>
+  <data name="CaiGouDingChan" xml:space="preserve">
+    <value>Ordine di acquisto</value>
+  </data>
+  <data name="ZhongDanYouDiErJianSheGongSi" xml:space="preserve">
+    <value>Seconda società di costruzione di PetroChina</value>
+  </data>
+  <data name="GeTongYuan" xml:space="preserve">
+    <value>Addetto ai contratti</value>
+  </data>
+  <data name="KeHuKeShiRenYuanBiao" xml:space="preserve">
+    <value>Tabella del personale visibile al cliente_</value>
+  </data>
+  <data name="NiYouYiGeDaiLiShangDiJiaoDeKeH" xml:space="preserve">
+    <value>Hai una registrazione di cliente inviata da un agente da approvare, si prega di prestare attenzione!</value>
+  </data>
+  <data name="ZZDiShiRuKuLiangChaoChuXuQiuLi" xml:space="preserve">
+    <value>Attenzione, la quantità di entrata supera la quantità richiesta, si prega di verificare!</value>
+  </data>
+  <data name="ZZShanChuShiBaiZhiNengShanChuS" xml:space="preserve">
+    <value>Eliminazione fallita, è possibile eliminare solo i record entro tre giorni, si prega di verificare!</value>
+  </data>
+  <data name="ZZDiShiCaiGouLiangChaoChuXuQiu" xml:space="preserve">
+    <value>Attenzione, la quantità di acquisto supera la quantità richiesta, si prega di verificare!</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Ordine di acquisto dei materiali</value>
+  </data>
+  <data name="HuiYiTongZhi" xml:space="preserve">
+    <value>Notifica della riunione:</value>
+  </data>
+  <data name="ShaoJiRen" xml:space="preserve">
+    <value>, convocatore:</value>
+  </data>
+  <data name="DeJiHua" xml:space="preserve">
+    <value>piano</value>
+  </data>
+  <data name="ZZBaoCunShiBaiYuSuanZongLiangB" xml:space="preserve">
+    <value>Salvataggio fallito, il budget totale non può essere 0, si prega di verificare!</value>
+  </data>
+  <data name="XiangMuMingChenHuoGuiGe" xml:space="preserve">
+    <value>Nome o specifiche del progetto</value>
+  </data>
+  <data name="HuiJiKeMu" xml:space="preserve">
+    <value>Conto contabile</value>
+  </data>
+  <data name="JiLiangChanWei" xml:space="preserve">
+    <value>Unità di misura</value>
+  </data>
+  <data name="YuSuanChanJia" xml:space="preserve">
+    <value>Prezzo unitario del budget</value>
+  </data>
+  <data name="ZhongBiaoXinXi" xml:space="preserve">
+    <value>. Informazioni sull'aggiudicazione:</value>
+  </data>
+  <data name="QiaoBiao" xml:space="preserve">
+    <value>Gara</value>
+  </data>
+  <data name="TouBiaoZhe" xml:space="preserve">
+    <value>Offerente</value>
+  </data>
+  <data name="PingBiaoZhe" xml:space="preserve">
+    <value>Valutatore</value>
+  </data>
+  <data name="DiCheng" xml:space="preserve">
+    <value>Provvigione</value>
+  </data>
+  <data name="NiYiBeiYaoQingCanJiaHuiYi" xml:space="preserve">
+    <value>Sei stato invitato a partecipare alla riunione:</value>
+  </data>
+  <data name="XiangMuHuiYiTongZhi" xml:space="preserve">
+    <value>Notifica della riunione del progetto</value>
+  </data>
+  <data name="JiTongTongZhiYouXinBaoBiao" xml:space="preserve">
+    <value>Notifica del sistema, c'è un nuovo rapporto:</value>
+  </data>
+  <data name="QingJiShiYueDou" xml:space="preserve">
+    <value>, si prega di leggerlo tempestivamente!</value>
+  </data>
+  <data name="BaoBiaoYueDouTongZhi" xml:space="preserve">
+    <value>Notifica di lettura del rapporto</value>
+  </data>
+  <data name="ChuangJianYongHuDeYongHuMingHu" xml:space="preserve">
+    <value>Nome utente o password per la creazione dell'utente non corretti!</value>
+  </data>
+  <data name="HuiYiMingChenBuYunHuWeiKong" xml:space="preserve">
+    <value>Il nome della riunione non può essere vuoto!</value>
+  </data>
+  <data name="ShiJianGeShiCuoWu" xml:space="preserve">
+    <value>Formato dell'ora errato!</value>
+  </data>
+  <data name="ShiJianSheZhiYouWu" xml:space="preserve">
+    <value>Impostazione dell'ora errata!</value>
+  </data>
+  <data name="ZhuXiMiMaGeShiCuoWu" xml:space="preserve">
+    <value>Formato della password del presidente errato!</value>
+  </data>
+  <data name="HuiYiBuCunZai" xml:space="preserve">
+    <value>La riunione non esiste!</value>
+  </data>
+  <data name="HuiYiMiMaCuoWu" xml:space="preserve">
+    <value>Password della riunione errata!</value>
+  </data>
+  <data name="PuTongYongHuMiMaGeShiCuoWu" xml:space="preserve">
+    <value>Formato della password dell'utente normale errato!</value>
+  </data>
+  <data name="DiaoYongChuCuoQingJianCha" xml:space="preserve">
+    <value>Errore di chiamata, si prega di verificare!</value>
+  </data>
+  <data name="ShangChuanLeHuiYi" xml:space="preserve">
+    <value>Caricato il documento della riunione:</value>
+  </data>
+  <data name="DeWenDang" xml:space="preserve">
+    <value>Notifica di caricamento del documento della riunione</value>
+  </data>
+  <data name="HuiYiWenDangShangChuanTongZhi" xml:space="preserve">
+    <value>Questo materiale della riunione non esiste, potrebbe essere stato eliminato, si prega di verificare!</value>
+  </data>
+  <data name="CiHuiYiZiLiaoBuCunZaiKeNengYiB" xml:space="preserve">
+    <value>Elenco delle informazioni sui permessi dei membri diretti:</value>
+  </data>
+  <data name="ZhiJieChengYuanQingJiaXinXiLie" xml:space="preserve">
+    <value>&lt;B&gt;Diagramma gerarchico organizzativo di tutti i membri diretti del dipartimento&lt;/B&gt;</value>
+  </data>
+  <data name="BSuoYouBuMenZhiJieChengYuanZuZ" xml:space="preserve">
+    <value>Diagramma gerarchico organizzativo dei membri diretti&lt;/B&gt;</value>
+  </data>
+  <data name="ZhiJieChengYuanZuZhiCengCiTuB" xml:space="preserve">
+    <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(Salvataggio fallito, non sei il creatore di questo modello di processo, non puoi salvare queste immagini di processo!</value>
+  </data>
+  <data name="ZZScriptManagerRegisterStartup" xml:space="preserve">
+    <value>&lt;B&gt;Esplora i progetti che ho creato per tipo&lt;/B&gt;</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoJianLiDeXian" xml:space="preserve">
+    <value>&lt;B&gt;Esplora i progetti a cui ho partecipato per tipo&lt;/B&gt;</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoCanYuDeXiang" xml:space="preserve">
+    <value>&lt;B&gt;Esplora i progetti dei miei membri per tipo&lt;/B&gt;</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoChengYuanDeX" xml:space="preserve">
+    <value>Grafico di confronto dei punteggi totali delle prestazioni dei miei membri diretti</value>
+  </data>
+  <data name="WoDeZhiJieChengYuanJiXiaoZongP" xml:space="preserve">
+    <value>Attenzione, seleziona prima un progetto!</value>
+  </data>
+  <data name="ZZDiShiQingXianShuaZeXiangMu" xml:space="preserve">
+    <value>&lt;B&gt;Esplora i miei progetti per tipo&lt;/B&gt;</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoDeXiangMuB" xml:space="preserve">
+    <value>Attenzione, questo membro esiste già, non può essere aggiunto di nuovo, si prega di verificare!</value>
+  </data>
+  <data name="ZZJingGaoCiChengYuanYiCunZaiBu" xml:space="preserve">
+    <value>Attenzione, il contenuto del lavoro non può essere vuoto, si prega di verificare!</value>
+  </data>
+  <data name="ZZJingGaoGongZuoNeiRongBuNengK" xml:space="preserve">
+    <value>cliente di</value>
+  </data>
+  <data name="DeKeHu" xml:space="preserve">
+    <value>Sviluppo del cliente</value>
+  </data>
+  <data name="KeHuKaiFa" xml:space="preserve">
+    <value>Piano di sviluppo</value>
+  </data>
+  <data name="KaiFaJiHua" xml:space="preserve">
+    <value>Preventivo del prodotto</value>
+  </data>
+  <data name="ChanPinBaoJia" xml:space="preserve">
+    <value>Discussione tematica</value>
+  </data>
+  <data name="ZhuanTiTaoLun" xml:space="preserve">
+    <value>Monitoraggio delle vendite</value>
+  </data>
+  <data name="XiaoShouGenZong" xml:space="preserve">
+    <value>Elenco dei file degli annunci aziendali:</value>
+  </data>
+  <data name="GongSiGongGaoWenJianLieBiao" xml:space="preserve">
+    <value>Il nome del file contiene:</value>
+  </data>
+  <data name="WenJianMingBaoHan" xml:space="preserve">
+    <value>Elenco dei documenti della stringa:</value>
+  </data>
+  <data name="ZiFuChuanDeWenDangLieBiao" xml:space="preserve">
+    <value>Documento ufficiale</value>
+  </data>
+  <data name="GongWen" xml:space="preserve">
+    <value>Piano generale</value>
+  </data>
+  <data name="DaJiHua" xml:space="preserve">
+    <value>Record di assegnazione:</value>
+  </data>
+  <data name="FenPaJiLu" xml:space="preserve">
+    <value>Errore, non puoi importare le spese di altri, si prega di verificare!</value>
+  </data>
+  <data name="ZZCuoWuNiBuNengDaoRuBieRenDeFe" xml:space="preserve">
+    <value>Richiesta di rimborso spese</value>
+  </data>
+  <data name="FeiYongBaoXiaoShenQing" xml:space="preserve">
+    <value>Nome del conto</value>
+  </data>
+  <data name="KeMuMingChen" xml:space="preserve">
+    <value>Data dell'evento</value>
+  </data>
+  <data name="FaShengRiJi" xml:space="preserve">
+    <value>Codice della persona coinvolta</value>
+  </data>
+  <data name="DangShiRenDaiMa" xml:space="preserve">
+    <value>Nome della persona coinvolta</value>
+  </data>
+  <data name="DangShiRenXingMing" xml:space="preserve">
+    <value>Elenco del controllo documenti</value>
+  </data>
+  <data name="WenKongLieBiao" xml:space="preserve">
+    <value>Allegato del disegno ricevuto</value>
+  </data>
+  <data name="ShouTuFuJian" xml:space="preserve">
+    <value>Allegato del file</value>
+  </data>
+  <data name="WenJianFuJian" xml:space="preserve">
+    <value>Elenco della registrazione dei disegni ricevuti</value>
+  </data>
+  <data name="ShouTuDengJiLieBiao" xml:space="preserve">
+    <value>Registrazione dei disegni ricevuti, registrazione dei disegni inviati, registrazione dei documenti ricevuti, registrazione dei documenti inviati</value>
+  </data>
+  <data name="ShouTuDengJiFaTuDengJiShouWenD" xml:space="preserve">
+    <value>Elenco della registrazione dei disegni inviati</value>
+  </data>
+  <data name="FaTuDengJiLieBiao" xml:space="preserve">
+    <value>Elenco della registrazione dei documenti ricevuti</value>
+  </data>
+  <data name="ShouWenDengJiLieBiao" xml:space="preserve">
+    <value>Elenco della registrazione dei documenti inviati</value>
+  </data>
+  <data name="FaWenDengJiLieBiao" xml:space="preserve">
+    <value>Spese impreviste e vari premi</value>
+  </data>
+  <data name="BuKeYuJianFeiJiGeXiangJiangLi" xml:space="preserve">
+    <value>Tabella di separazione dei prezzi della prima offerta</value>
+  </data>
+  <data name="YiCiBiaoJiaFenLiBiao" xml:space="preserve">
+    <value>Processo di approvazione del costo obiettivo della separazione dei prezzi della seconda offerta</value>
+  </data>
+  <data name="ErCiBiaoJiaFenLiMuBiaoChengBen" xml:space="preserve">
+    <value>Attenzione, il tipo di costo non può essere vuoto, si prega di verificare!</value>
+  </data>
+  <data name="ZZJingGaoChengBenLeiXingBuNeng" xml:space="preserve">
+    <value>Registro di lavoro del progetto</value>
+  </data>
+  <data name="XiangMuGongZuoRiZhi" xml:space="preserve">
+    <value>Ha accettato la tua richiesta:</value>
+  </data>
+  <data name="ShouLiLeNiDeXuQiu" xml:space="preserve">
+    <value>Ha rifiutato la tua richiesta:</value>
+  </data>
+  <data name="JuJueLeNiDeXuQiu" xml:space="preserve">
+    <value>Sta elaborando la tua richiesta:</value>
+  </data>
+  <data name="ZhengZaiChuLiNiDeXuQiu" xml:space="preserve">
+    <value>Ha completato la tua richiesta:</value>
+  </data>
+  <data name="WanChengLeNiDeXuQiu" xml:space="preserve">
+    <value>Ha sospeso la tua richiesta:</value>
+  </data>
+  <data name="GuaQiLeNiDeXuQiu" xml:space="preserve">
+    <value>Feedback sullo stato di elaborazione della richiesta</value>
+  </data>
+  <data name="XuQiuChuLiQingKuangFanKui" xml:space="preserve">
+    <value>Notifica di trasformazione della richiesta in progetto</value>
+  </data>
+  <data name="XuQiuZhuaiXiangTongZhi" xml:space="preserve">
+    <value>Trasforma la richiesta in:</value>
+  </data>
+  <data name="BaXuQiu" xml:space="preserve">
+    <value>aaaa-MM</value>
+  </data>
+  <data name="yyyyNianMMYue" xml:space="preserve">
+    <value>Confronto del piano di riepilogo di tutti i progetti_</value>
+  </data>
+  <data name="QuanTiXiangMuHuiZongJiHuaDuiZh" xml:space="preserve">
+    <value>Piano generale delle risorse umane del progetto_</value>
+  </data>
+  <data name="XiangMuRenLiZiYuanZongJiHua" xml:space="preserve">
+    <value>Confronto mensile del riepilogo di tutti i progetti_</value>
+  </data>
+  <data name="QuanTiXiangMuHuiZongYueDuiZhao" xml:space="preserve">
+    <value>Rapporto del budget e delle spese del progetto</value>
+  </data>
+  <data name="XiangMuYuSuanYuFeiYongBaoBiao" xml:space="preserve">
+    <value>Rapporto statistico del budget e delle spese del progetto.xls</value>
+  </data>
+  <data name="XiangMuYuSuanYuFeiYongTongJiBa" xml:space="preserve">
+    <value>Grafico della distribuzione delle spese del budget</value>
+  </data>
+  <data name="YuSuanFeiYongFenBuTu" xml:space="preserve">
+    <value>Rapporto statistico dei pagamenti ricevuti e dovuti del progetto</value>
+  </data>
+  <data name="XiangMuYingShouShiShouTongJiBa" xml:space="preserve">
+    <value>Rapporto statistico dei pagamenti ricevuti e dovuti del progetto.xls</value>
+  </data>
+  <data name="XiangMuYingShouYingFuTongJiBao" xml:space="preserve">
+    <value>Grafico statistico dei pagamenti ricevuti e dovuti</value>
+  </data>
+  <data name="YingShouShiShouTongJiTu" xml:space="preserve">
+    <value>Rapporto dello stato delle milestone del progetto</value>
+  </data>
+  <data name="XiangMuLiChengBeiZhuangTaiBaoB" xml:space="preserve">
+    <value>Rapporto statistico del budget mensile del progetto</value>
+  </data>
+  <data name="XiangMuMeiYueYuSuanTongJiBaoBi" xml:space="preserve">
+    <value>Budget mensile</value>
+  </data>
+  <data name="YueDuYuSuan" xml:space="preserve">
+    <value>Rapporto dello stato dei costi e dei profitti del progetto</value>
+  </data>
+  <data name="XiangMuLiRunChengBenZhuangTaiB" xml:space="preserve">
+    <value>Grafico della distribuzione dei costi e dei profitti</value>
+  </data>
+  <data name="LiRunChengBenFenBuTu" xml:space="preserve">
+    <value>Grafico della distribuzione dello stato del progetto</value>
+  </data>
+  <data name="XiangMuZhuangTaiFenBuTu" xml:space="preserve">
+    <value>Tabella statistica dei costi e dei profitti del progetto.xls</value>
+  </data>
+  <data name="XiangMuLiRunChengBenTongJiBiao" xml:space="preserve">
+    <value>Rapporto dei dati delle milestone del progetto</value>
+  </data>
+  <data name="XiangMuLiChengBeiShuJuBaoBiao" xml:space="preserve">
+    <value>Valore di produzione annuale dei progetti implementati</value>
+  </data>
+  <data name="NianDuShiShiXiangMuChanZhi" xml:space="preserve">
+    <value>Statistica annuale dello stato finanziario dei progetti implementati</value>
+  </data>
+  <data name="NianDuShiShiXiangMuCaiWuZhuang" xml:space="preserve">
+    <value>Tabella annuale dello stato dei progetti implementati</value>
+  </data>
+  <data name="NianDuShiShiXiangMuZhuangTaiYi" xml:space="preserve">
+    <value>Rapporto dei dati delle milestone del progetto.xls</value>
+  </data>
+  <data name="XiangMuLiChengBeiShuJuBaoBiaox" xml:space="preserve">
+    <value>Dati dei materiali</value>
+  </data>
+  <data name="WuLiaoZiLiao" xml:space="preserve">
+    <value>&lt;/Strong&gt; (Quantità:</value>
+  </data>
+  <data name="StrongShuLiang" xml:space="preserve">
+    <value>Tabella di riepilogo delle ore e delle spese del progetto</value>
+  </data>
+  <data name="XiangMuGongShiHeFeiYongHuiZong" xml:space="preserve">
+    <value>Costi di acquisto dei materiali</value>
+  </data>
+  <data name="WuZiCaiGouFeiYong" xml:space="preserve">
+    <value>Tabella di riepilogo delle ore dei membri del progetto</value>
+  </data>
+  <data name="XiangMuChengYuanGongShiHuiZong" xml:space="preserve">
+    <value>Tabella delle ore dei membri</value>
+  </data>
+  <data name="ChengYuanGongShiBiao" xml:space="preserve">
+    <value>Tabella di riepilogo delle ore dei membri.xls</value>
+  </data>
+  <data name="ChengYuanGongShiHuiZongBiaoxls" xml:space="preserve">
+    <value>Tabella di riepilogo delle ore dei membri</value>
+  </data>
+  <data name="ChengYuanGongShiHuiZongBiao" xml:space="preserve">
+    <value>Tabella delle attività dei membri del progetto</value>
+  </data>
+  <data name="XiangMuChengYuanRenWuBiao" xml:space="preserve">
+    <value>Fallito, seleziona prima il progetto e la versione del piano!</value>
+  </data>
+  <data name="ZZShiBaiQingXianShuaZeXiangMuH" xml:space="preserve">
+    <value>Inizializzazione dei dati del modulo fallita!</value>
+  </data>
+  <data name="ZZChuShiHuaMoZuShuJuShiBai" xml:space="preserve">
+    <value>Piano del progetto in ritardo_</value>
+  </data>
+  <data name="TuoJiXiangMuJiHua" xml:space="preserve">
+    <value>Errore, questo progetto non ha una versione del piano [in uso], si prega di verificare!</value>
+  </data>
+  <data name="CuoWuCiXiangMuMeiYouZaiYongDeJ" xml:space="preserve">
+    <value>Tabella di avanzamento della costruzione del progetto</value>
+  </data>
+  <data name="XiangMuJianSheJinDuBiao" xml:space="preserve">
+    <value>Tipo di costruzione</value>
+  </data>
+  <data name="ShiGongLeiXing" xml:space="preserve">
+    <value>Numero di contratti</value>
+  </data>
+  <data name="GeTongShu" xml:space="preserve">
+    <value>Numero di completamenti</value>
+  </data>
+  <data name="WanChengShu" xml:space="preserve">
+    <value>{0} anno {1} mese</value>
+  </data>
+  <data name="0Nian1Yue" xml:space="preserve">
+    <value>Settimana {0}</value>
+  </data>
+  <data name="Di0Zhou" xml:space="preserve">
+    <value>Tutti i record di assegnazione del compito!</value>
+  </data>
+  <data name="RenWuDeSuoYouFenPaJiLu" xml:space="preserve">
+    <value>Questo piano non esiste, potrebbe essere stato eliminato, si prega di verificare!</value>
+  </data>
+  <data name="CiJiHuaBuCunZaiKeNengYiBeiShan" xml:space="preserve">
+    <value>Data di inizio del progetto</value>
+  </data>
+  <data name="XiangMuKaiShiRiJi" xml:space="preserve">
+    <value>Data di fine del progetto</value>
+  </data>
+  <data name="XiangMuJieShuRiJi" xml:space="preserve">
+    <value>Data di creazione del progetto</value>
+  </data>
+  <data name="XiangMuChuangJianShiJian" xml:space="preserve">
+    <value>Codice identificativo del progetto</value>
+  </data>
+  <data name="XiangMuBiaoShiMa" xml:space="preserve">
+    <value>Codice identificativo del compito</value>
+  </data>
+  <data name="ZuoYeBiaoShiMa" xml:space="preserve">
+    <value>Costo del budget al completamento</value>
+  </data>
+  <data name="WanChengShiYuSuanFeiYong" xml:space="preserve">
+    <value>Importazione dei costi del progetto da primavera 6</value>
+  </data>
+  <data name="primavera6DaoRuXiangMuFeiYong" xml:space="preserve">
+    <value>Costo effettivo al completamento</value>
+  </data>
+  <data name="WanChengShiShiJiFeiYong" xml:space="preserve">
+    <value>Costo totale al completamento</value>
+  </data>
+  <data name="WanChengShiZongFeiYong" xml:space="preserve">
+    <value>Data di inizio del compito</value>
+  </data>
+  <data name="ZuoYeKaiShiRiJi" xml:space="preserve">
+    <value>Data di fine del compito</value>
+  </data>
+  <data name="ZuoYeJieShuRiJi" xml:space="preserve">
+    <value>Nome del compito</value>
+  </data>
+  <data name="ZuoYeMingChen" xml:space="preserve">
+    <value>Dati del progetto Prim_</value>
+  </data>
+  <data name="PrimXiangMuShuJu" xml:space="preserve">
+    <value>Dati dei costi del progetto Prim_</value>
+  </data>
+  <data name="PrimXiangMuFeiYongShuJu" xml:space="preserve">
+    <value>Dati delle attività del progetto Prim_</value>
+  </data>
+  <data name="PrimXiangMuZuoYeShuJu" xml:space="preserve">
+    <value>Caricato il file del progetto:</value>
+  </data>
+  <data name="ShangChuanLeXiangMu" xml:space="preserve">
+    <value>, si prega di consultare tempestivamente!</value>
+  </data>
+  <data name="DeWenJian" xml:space="preserve">
+    <value>Importazione fallita, i dati sono errati, si prega di verificare!</value>
+  </data>
+  <data name="QingJiShiChaYue" xml:space="preserve">
+    <value>Attenzione, questo materiale esiste già, non può essere aggiunto di nuovo, si prega di verificare!</value>
+  </data>
+  <data name="ZZDaoRuShiBaiShuJuYouWuQingJia" xml:space="preserve">
+    <value>Fallito, questo budget dei materiali è già stato utilizzato, non può essere eliminato, si prega di verificare!</value>
+  </data>
+  <data name="ZZDiShiCiWuLiaoYiCunZaiBuNengC" xml:space="preserve">
+    <value>Versione BOM</value>
+  </data>
+  <data name="ZZShiBaiCiWuZiYuSuanYiBeiCaiYo" xml:space="preserve">
+    <value>Quantità prelevata</value>
+  </data>
+  <data name="BOMBanBen" xml:space="preserve">
+    <value>Quantità entrata</value>
+  </data>
+  <data name="YiLingLiaoLiang" xml:space="preserve">
+    <value>Quantità prodotta</value>
+  </data>
+  <data name="YiRuKuLiang" xml:space="preserve">
+    <value>Quantità venduta</value>
+  </data>
+  <data name="YiShengChanLiang" xml:space="preserve">
+    <value>Modello di tabella obsoleto, si prega di scaricare l'ultimo modello di importazione!</value>
+  </data>
+  <data name="YiXiaoShouLiang" xml:space="preserve">
+    <value>Materiale correlato_</value>
+  </data>
+  <data name="MoBanBiaoGeGuoShiQingXiaZaiZui" xml:space="preserve">
+    <value>Si prega di verificare!</value>
+  </data>
+  <data name="GuanLianWuLiao" xml:space="preserve">
+    <value>pezzi</value>
+  </data>
+  <data name="QingJianCha" xml:space="preserve">
+    <value>Grafico della distribuzione delle spese del progetto</value>
+  </data>
+  <data name="Ge" xml:space="preserve">
+    <value>Numero di record:</value>
+  </data>
+  <data name="XiangMuFeiYongFenBuTu" xml:space="preserve">
+    <value>Questo compito del progetto non esiste, potrebbe essere stato eliminato, si prega di verificare!</value>
+  </data>
+  <data name="JiLuShu" xml:space="preserve">
+    <value>Errore, il tipo non può essere vuoto!</value>
+  </data>
+  <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
+    <value>Fallito, il codice del distributore responsabile è vuoto, si prega di fare clic sul pulsante [Seleziona] per eseguire una ricerca e una selezione!</value>
+  </data>
+  <data name="ZZCuoWuLeiXingBuNengWeiKong" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante l'operazione di query:</value>
+  </data>
+  <data name="ZZShiBaiFenGuanJingXiaoShangDa" xml:space="preserve">
+    <value>Messaggio: modifica del modello [Piano mensile] completata con successo!</value>
+  </data>
+  <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
+    <value>Errore: input della quantità errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
+    <value>Errore: input del prezzo di aggiustamento del materiale principale errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiSheBeiDiaoZhengChanJ" xml:space="preserve">
+    <value>Errore: input del prezzo di aggiustamento del lavoro errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiZhuCaiDiaoZhengChanJ" xml:space="preserve">
+    <value>Errore: input del prezzo di aggiustamento del materiale errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiRenGongDiaoZhengChan" xml:space="preserve">
+    <value>Errore: input del prezzo di aggiustamento della macchina errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiCaiLiaoDiaoZhengChan" xml:space="preserve">
+    <value>Errore: input del prezzo totale di aggiustamento delle tasse errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiJiXieDiaoZhengChanJi" xml:space="preserve">
+    <value>Errore: input del prezzo totale del budget (BCWS) errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiDiaoZhengShuiJinGeJi" xml:space="preserve">
+    <value>Errore: input del prezzo totale del budget dell'apparecchiatura errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiYuSuanGeJiGeJiaBCWSS" xml:space="preserve">
+    <value>Errore: input del prezzo totale del budget del materiale principale errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiYuSuanSheBeiGeJiaShu" xml:space="preserve">
+    <value>Errore: input del prezzo totale del budget del lavoro errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiZhuCaiYuSuanGeJiaShu" xml:space="preserve">
+    <value>Errore: input del prezzo totale del budget del materiale errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiRenGongYuSuanGeJiaSh" xml:space="preserve">
+    <value>Errore: input del prezzo totale del budget della macchina errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiCaiLiaoYuSuanGeJiaSh" xml:space="preserve">
+    <value>Errore: input delle spese di gestione e di profitto errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiJiXieYuSuanGeJiaShuR" xml:space="preserve">
+    <value>Errore: input delle spese delle misure di tariffa errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiGuanLiFeiJiLiRunFeiS" xml:space="preserve">
+    <value>Errore: input delle spese regolamentari errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiFeiLvCuoShiFeiShuRuY" xml:space="preserve">
+    <value>Errore: il prezzo di aggiustamento non può essere vuoto, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiGuiFeiShuRuYouWuYing" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante la query delle informazioni di aggiustamento del prezzo:</value>
+  </data>
+  <data name="CuoWuDiShiDiaoZhengJiaGeBuNeng" xml:space="preserve">
+    <value>Aggiungi prezzo di aggiustamento</value>
+  </data>
+  <data name="CuoWuDiShiChaXunJiaGeDiaoZheng" xml:space="preserve">
+    <value>Messaggio: aggiunta del prezzo di aggiustamento completata con successo!</value>
+  </data>
+  <data name="ZengJiaDiaoZhengJia" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante l'aggiunta del prezzo di aggiustamento:</value>
+  </data>
+  <data name="XiaoXiDiShiJiaGeDiaoZhengXinZe" xml:space="preserve">
+    <value>Messaggio: nessuno</value>
+  </data>
+  <data name="CuoWuDiShiJiaGeDiaoZhengXinZen" xml:space="preserve">
+    <value>Messaggio: seleziona una riga di dati di aggiustamento del prezzo da modificare prima di procedere con l'operazione di eliminazione!</value>
+  </data>
+  <data name="XiaoXiDiShiMo" xml:space="preserve">
+    <value>Messaggio: non è possibile modificare il prezzo originale.</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangYao" xml:space="preserve">
+    <value>Messaggio: il BCWP di questo elemento non è zero, durante l'operazione di modifica non può essere inferiore al totale del lavoro già inserito, si prega di compilare correttamente prima di procedere!</value>
+  </data>
+  <data name="XiaoXiDiShiBuNengXiuGaiYuanDin" xml:space="preserve">
+    <value>Messaggio: modifica del prezzo di aggiustamento completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiGaiXiangBCWPBuWeiLi" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante la modifica del prezzo di aggiustamento:</value>
+  </data>
+  <data name="XiaoXiDiShiJiaGeDiaoZhengXiuGa" xml:space="preserve">
+    <value>Messaggio: non è possibile eliminare il prezzo originale.</value>
+  </data>
+  <data name="CuoWuDiShiJiaGeDiaoZhengXiuGai" xml:space="preserve">
+    <value>Messaggio: eliminazione del record specificato completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiBuNengShanChuYuanDi" xml:space="preserve">
+    <value>Messaggio: si è verificata un'eccezione durante l'operazione di eliminazione:</value>
+  </data>
+  <data name="XiaoXiDiShiZhiDingJiLuShanChuC" xml:space="preserve">
+    <value>Messaggio:</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuCaoZuoChuXia" xml:space="preserve">
+    <value>Messaggio: si è verificata un'eccezione durante l'operazione di query dei dati del registro:</value>
+  </data>
+  <data name="XiaoXiDiShi" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante l'operazione:</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunRiZhiShuJuCao" xml:space="preserve">
+    <value>Risultato: non ci sono ancora informazioni di riepilogo delle prestazioni di entrate e spese del progetto!</value>
+  </data>
+  <data name="CuoWuDiShiCaoZuoChuXianYiChang" xml:space="preserve">
+    <value>Errore: si è verificato un errore durante la query dell'elenco delle informazioni di aggiustamento del prezzo di questo sottoggetto:</value>
+  </data>
+  <data name="JieGuoDiShiHaiMeiYouXiangMuSho" xml:space="preserve">
+    <value>~/Template/Modello di esportazione dei dati di riepilogo delle prestazioni.xls</value>
+  </data>
+  <data name="CuoWuDiShiChaXunGaiZiXiangDeJi" xml:space="preserve">
+    <value>Dati di riepilogo delle prestazioni.xls</value>
+  </data>
+  <data name="TemplateJiXiaoHuiZongShuJuDaoC" xml:space="preserve">
+    <value>attachment;filename=Dati di riepilogo delle prestazioni.xls</value>
+  </data>
+  <data name="JiXiaoHuiZongShuJuxls" xml:space="preserve">
+    <value>Messaggio: importazione dei dati di riepilogo delle prestazioni nel file Excel completata con successo!</value>
+  </data>
+  <data name="attachmentfilenameJiXiaoHuiZon" xml:space="preserve">
+    <value>Errore: si è verificato un errore durante l'importazione dei dati di riepilogo delle prestazioni nel file Excel:</value>
+  </data>
+  <data name="CaoZuoDiShiJiXiaoHuiZongShuJuD" xml:space="preserve">
+    <value>Errore: importazione dei dati di lavoro effettivi delle prestazioni nel file Excel fallita!</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoHuiZongShuJuDa" xml:space="preserve">
+    <value>Cancellazione di tutti i dati di test completata con successo, si prega di aggiornare e riprovare.</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoShiJiGongZuoSh" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante l'operazione di cancellazione di tutti i dati di test:</value>
+  </data>
+  <data name="ChengGongQingChuSuoYouCeShiShu" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante l'operazione di ottenimento dell'elenco degli anni:</value>
+  </data>
+  <data name="CuoWuDiShiQingChuSuoYouCeShiSh" xml:space="preserve">
+    <value>Messaggio: lettura dell'elenco delle informazioni delle categorie principali delle voci di costo fallita!</value>
+  </data>
+  <data name="CuoWuDiShiHuoQuNianLieBiaoCaoZ" xml:space="preserve">
+    <value>Voce di costo diretta</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuChengBenFeiXia" xml:space="preserve">
+    <value>Messaggio: [Titolo cinese] non può essere vuoto, deve essere di 50 caratteri (25 caratteri cinesi), si prega di reinserire e riprovare!</value>
+  </data>
+  <data name="ZhiJieFeiXiangXiangMu" xml:space="preserve">
+    <value>Messaggio: operazione di aggiunta fallita, il nome della voce di costo [</value>
+  </data>
+  <data name="XiaoXiDiShiZhongWenBiaoTiBuNen" xml:space="preserve">
+    <value>] esiste già, non può essere aggiunto di nuovo!</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengCaoZuoShiBai" xml:space="preserve">
+    <value>Messaggio: operazione di aggiunta completata con successo!</value>
+  </data>
+  <data name="YiJingCunZaiBuNengChongFuTianJ" xml:space="preserve">
+    <value>Messaggio: seleziona una riga per procedere con l'operazione di modifica!</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengCaoZuoChengG" xml:space="preserve">
+    <value>Messaggio: operazione di modifica fallita, il nome della voce di costo da modificare [</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangJin" xml:space="preserve">
+    <value>Messaggio: operazione di modifica completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoShiBaiY" xml:space="preserve">
+    <value>Messaggio: operazione di modifica fallita, si prega di verificare se il numero della categoria principale della voce di costo è duplicato:</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoChengGo" xml:space="preserve">
+    <value>Messaggio: elimina prima le voci di sottocategoria di questa voce di costo prima di procedere con l'operazione di eliminazione!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoShiBaiQ" xml:space="preserve">
+    <value>Messaggio: operazione di eliminazione completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiQingXianShanChuGaiC" xml:space="preserve">
+    <value>Messaggio: operazione di eliminazione fallita:</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuCaoZuoChengG" xml:space="preserve">
+    <value>Messaggio: seleziona una riga della categoria principale prima di procedere con l'operazione di modifica!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuCaoZuoShiBai" xml:space="preserve">
+    <value>Messaggio: le voci di sottocategoria fisse non possono essere eliminate!</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangDaL" xml:space="preserve">
+    <value>Messaggio: operazione di query fallita:</value>
+  </data>
+  <data name="XiaoXiDiShiGuDingZiLeiFeiXiang" xml:space="preserve">
+    <value>Messaggio: si è verificata un'eccezione durante l'operazione di query:</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunCaoZuoShiBai" xml:space="preserve">
+    <value>Errore: si è verificato un errore durante il caricamento dell'elenco delle informazioni degli appaltatori:</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunCaoZuoChuXian" xml:space="preserve">
+    <value>Messaggio: input del [Numero del sottoggetto] errato, deve essere un numero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="CuoWuDiShiJiaZaiChengBaoShangL" xml:space="preserve">
+    <value>Messaggio: input del [Numero della quota] errato, non può superare 256 caratteri cinesi, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiZiXiangXuHaoShuRuYo" xml:space="preserve">
+    <value>Messaggio: input della [Partizione] errato, non può superare 20 caratteri cinesi, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiDingEHaoShuRuYouWuB" xml:space="preserve">
+    <value>Messaggio: input dell'[Unità] errato, non può superare 5 caratteri cinesi, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiFenBuFenXiangShuRuY" xml:space="preserve">
+    <value>Messaggio: input della [Quantità] errato, deve essere un numero maggiore di zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiChanWeiShuRuYouWuBu" xml:space="preserve">
+    <value>Messaggio: input del [Nome della quota] errato, non può superare 256 caratteri cinesi, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiShuLiangShuRuYouWuY" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo originale dell'apparecchiatura] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiDingEMingChenShuRuY" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo originale del materiale principale] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiSheBeiYuanDingChanJ" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo originale del lavoro] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiZhuCaiYuanDingChanJ" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo originale del materiale] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiRenGongYuanDingChan" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo originale della macchina] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiCaiLiaoYuanDingChan" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo totale del budget dell'apparecchiatura] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiJiXieYuanDingChanJi" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo totale del budget del materiale principale] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiYuSuanSheBeiGeJiaSh" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo totale del budget del materiale] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiZhuCaiYuSuanGeJiaSh" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo totale del budget della macchina] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiCaiLiaoYuSuanGeJiaS" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo totale del budget del lavoro] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiJiXieYuSuanGeJiaShu" xml:space="preserve">
+    <value>Messaggio: input delle [Spese di gestione e di profitto] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiRenGongYuSuanGeJiaS" xml:space="preserve">
+    <value>Messaggio: input delle [Spese delle misure di tariffa] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiGuanLiFeiJiLiRunFei" xml:space="preserve">
+    <value>Messaggio: input delle [Spese regolamentari] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiFeiLvCuoShiFeiShuRu" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo totale delle tasse del budget] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiGuiFeiShuRuYouWuYin" xml:space="preserve">
+    <value>Messaggio: input del [Prezzo totale del budget] errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiYuSuanShuiJinGeJiaS" xml:space="preserve">
+    <value>Messaggio: input della [Data di inizio] errato, si prega di selezionare correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiGeJiYuSuanGeJiaShuR" xml:space="preserve">
+    <value>Messaggio: input della [Data di fine] errato, si prega di selezionare correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiKaiShiShiJianShuRuY" xml:space="preserve">
+    <value>Messaggio: questo numero del sottoggetto esiste già, si prega di inserire correttamente e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiJieShuShiJianShuRuY" xml:space="preserve">
+    <value>Messaggio: aggiunta dei dati completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
+    <value>Messaggio: si è verificata un'eccezione durante l'operazione di aggiunta:</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
+    <value>Prezzo originale</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
+    <value>Errore: si prega di selezionare un file Excel!</value>
+  </data>
+  <data name="YuanDingJiaGe" xml:space="preserve">
+    <value>Errore: si può selezionare solo un file Excel!</value>
+  </data>
+  <data name="CuoWuDiShiQingNinShuaZeExcelWe" xml:space="preserve">
+    <value>Errore: [</value>
+  </data>
+  <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
+    <value>] nessun dato, importazione del tipo successivo.\n</value>
+  </data>
+  <data name="CuoWuDiShi" xml:space="preserve">
+    <value>Importazione dei dati di riferimento delle prestazioni dei costi dal file Excel, totale {0:D } righe, successo {1:D } righe, classificazione professionale: {2:s }\n</value>
+  </data>
+  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
+    <value>Input del [Numero del sottoggetto] errato, deve essere un numero, si prega di inserire correttamente e riprovare!\n</value>
+  </data>
+  <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
+    <value>Inizio importazione dei dati di riferimento delle prestazioni con [Numero del sottoggetto]:</value>
+  </data>
+  <data name="ZiXiangXuHaoShuRuYouWuYingQuan" xml:space="preserve">
+    <value>-----------------\n</value>
+  </data>
+  <data name="KaiShiDaoRuZiXiangXuHaoWei" xml:space="preserve">
+    <value>Messaggio: input dell'[Appaltatore] errato, se non vuoto deve essere di 50 caratteri, 25 caratteri cinesi, si prega di inserire correttamente e riprovare!\n</value>
+  </data>
+  <data name="DeJiXiaoJiZhunShuJun" xml:space="preserve">
+    <value>Messaggio: [Appaltatore] non esiste, si prega di inserire correttamente e riprovare!\n</value>
+  </data>
+  <data name="XiaoXiDiShiChengBaoShangShuRuY" xml:space="preserve">
+    <value>Messaggio: input del [Calcolo automatico del piano mensile] errato, può essere solo 0 o 1, si prega di inserire correttamente e riprovare!\n</value>
+  </data>
+  <data name="XiaoXiDiShiChengBaoShangBuCunZ" xml:space="preserve">
+    <value>Importazione di un record fallita!!!\n</value>
+  </data>
+  <data name="XiaoXiDiShiZiDongJiSuanYueJiHu" xml:space="preserve">
+    <value>[Numero del sottoggetto]:</value>
+  </data>
+  <data name="DaoRuYiTiaoJiLuShiBain" xml:space="preserve">
+    <value>si è verificata un'eccezione durante l'operazione dei dati di riferimento delle prestazioni:</value>
+  </data>
+  <data name="ZiXiangXuHaoWei" xml:space="preserve">
+    <value>importazione dei dati di riferimento delle prestazioni completata con successo!\n</value>
+  </data>
+  <data name="DeJiXiaoJiZhunShuJuCaoZuoChuXi" xml:space="preserve">
+    <value>Messaggio: query del record specificato completata con successo!</value>
+  </data>
+  <data name="DeJiXiaoJiZhunShuJuDaoRuChengG" xml:space="preserve">
+    <value>Messaggio: operazione fallita!</value>
+  </data>
+  <data name="XiaoXiDiShiZhiDingJiLuChaXunCh" xml:space="preserve">
+    <value>Messaggio: durante l'operazione di modifica non è possibile modificare il [Calcolo automatico del piano mensile]!</value>
+  </data>
+  <data name="XiaoXiDiShiCaoZuoShiBai" xml:space="preserve">
+    <value>Messaggio: durante l'operazione di modifica non è possibile modificare il numero del sottoggetto, si prega di compilare correttamente prima di procedere!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoShiBuNe" xml:space="preserve">
+    <value>Messaggio: modifica del record specificato completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiJinHangXiuGaiCaoZuo" xml:space="preserve">
+    <value>Messaggio: si è verificata un'eccezione durante l'operazione di modifica:</value>
+  </data>
+  <data name="XiaoXiDiShiZhiDingJiLuXiuGaiCh" xml:space="preserve">
+    <value>Messaggio: nessun record corrispondente trovato durante l'operazione di query dell'elenco delle prestazioni originali.</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoChuXian" xml:space="preserve">
+    <value>Messaggio: nessun record corrispondente trovato durante l'operazione di query dei dati di aggiustamento del prezzo originali.</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunYuanYouJiXiao" xml:space="preserve">
+    <value>Esportazione delle informazioni dell'elenco dei dati di riferimento delle prestazioni in corso...\n</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunYuanYouJiaGeD" xml:space="preserve">
+    <value>~/Template/Modello di esportazione dei dati di riferimento delle prestazioni.xls</value>
+  </data>
+  <data name="ZhengZaiDaoChuJiXiaoJiZhunLieB" xml:space="preserve">
+    <value>Eccezione durante l'operazione del modello:</value>
+  </data>
+  <data name="TemplateJiXiaoJiZhunShuJuDaoCh" xml:space="preserve">
+    <value>Messaggio: importazione dei dati di riferimento delle prestazioni nel file Excel completata con successo!</value>
+  </data>
+  <data name="MoBanCaoZuoYiChang" xml:space="preserve">
+    <value>Esportazione del file completata con successo\n</value>
+  </data>
+  <data name="CaoZuoDiShiJiXiaoJiZhunShuJuDa" xml:space="preserve">
+    <value>attachment;filename=Dati di riferimento delle prestazioni.xls</value>
+  </data>
+  <data name="DaoChuWenJianChengGongn" xml:space="preserve">
+    <value>Eccezione durante l'operazione: si prega di confermare se il file modello 'Modello di esportazione dei dati di riferimento delle prestazioni.xls' è in uso, si prega di chiuderlo e riprovare!</value>
+  </data>
+  <data name="attachmentfilenameJiXiaoJiZhun" xml:space="preserve">
+    <value>] completata con successo, totale</value>
+  </data>
+  <data name="CaoZuoYiChangQingQueRenMoBanWe" xml:space="preserve">
+    <value>righe.\n</value>
+  </data>
+  <data name="ChengGongGong" xml:space="preserve">
+    <value>Errore: importazione dei dati di riferimento delle prestazioni [</value>
+  </data>
+  <data name="Tiaon" xml:space="preserve">
+    <value>] nel file Excel fallita!</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>contenuto o stato, questa è una notifica!</value>
+  </data>
+  <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
+    <value>Errore: importazione dei dati di riferimento delle prestazioni nel file Excel fallita!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>Errore: input del prezzo di aggiustamento dell'apparecchiatura errato, deve essere un numero e maggiore o uguale a zero, si prega di inserire correttamente prima di procedere!</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
+    <value>Messaggio: [Sottocategoria della voce di costo] non ha elementi selezionati, si prega di inserire prima le voci di sottocategoria di questa categoria principale e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunShenQingJinEH" xml:space="preserve">
+    <value>Messaggio: input dell'[Importo richiesto] errato, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiChengBenFeiXiangZiL" xml:space="preserve">
+    <value>Messaggio: input dello [Standard dell'importo] errato, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiShenQingJinEShuRuYo" xml:space="preserve">
+    <value>Messaggio: input della [Descrizione dell'uso] errato, la lunghezza del contenuto è limitata a 250 caratteri cinesi o 500 caratteri inglesi, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiJinEBiaoZhunShuRuYo" xml:space="preserve">
+    <value>Messaggio: aggiunta del record di implementazione dei fondi del progetto completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiYongTuShuiMingShuRu" xml:space="preserve">
+    <value>Messaggio: lettura dell'elenco delle informazioni delle voci di sottocategoria dei costi fallita!</value>
+  </data>
+  <data name="XiaoXiDiShiZengJiaXiangMuZiJin" xml:space="preserve">
+    <value>Messaggio: trovato il record corrispondente!</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuChengBenZiXian" xml:space="preserve">
+    <value>Messaggio: nessun record corrispondente trovato!</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunDaoDuiYingDeJ" xml:space="preserve">
+    <value>Messaggio: seleziona una riga prima di procedere con l'operazione di modifica!</value>
+  </data>
+  <data name="XiaoXiDiShiMeiYouChaXunDaoDuiY" xml:space="preserve">
+    <value>Messaggio: modifica del record di implementazione dei fondi del progetto completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangHou" xml:space="preserve">
+    <value>Messaggio: eliminazione del record di implementazione dei fondi del progetto completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiXiangMuZiJinS" xml:space="preserve">
+    <value>Messaggio: input dell'[Importo eseguito] errato, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuXiangMuZiJin" xml:space="preserve">
+    <value>Messaggio: input della [Nota] errato, la lunghezza del contenuto è limitata a 512 caratteri cinesi o 1024 caratteri inglesi, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiZhiHangJinEShuRuYou" xml:space="preserve">
+    <value>Messaggio: operazione di approvazione completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiBeiZhuShuRuYouWuShu" xml:space="preserve">
+    <value>Messaggio: operazione di approvazione fallita!</value>
+  </data>
+  <data name="XiaoXiDiShiShenHeCaoZuoChengGo" xml:space="preserve">
+    <value>Messaggio: operazione di ottenimento dell'elenco di approvazione fallita!</value>
+  </data>
+  <data name="XiaoXiDiShiShenHeCaoZuoShiBai" xml:space="preserve">
+    <value>Messaggio: lettura dell'elenco delle informazioni delle spese effettive dei costi fallita!</value>
+  </data>
+  <data name="XiaoXiDiShiHuoQuShenHeLieBiaoC" xml:space="preserve">
+    <value>Messaggio: eliminazione delle spese effettive dei costi completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuChengBenFeiShi" xml:space="preserve">
+    <value>Messaggio: input delle [Spese dei costi] errato, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuShiJiFaSheng" xml:space="preserve">
+    <value>Messaggio: aggiunta delle spese effettive dei costi completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiChengBenFeiYongShuR" xml:space="preserve">
+    <value>Messaggio: modifica delle spese effettive dei costi completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiZengJiaShiJiFaSheng" xml:space="preserve">
+    <value>Messaggio: lettura dell'elenco delle informazioni del costo obiettivo fallita!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiShiJiFaShengC" xml:space="preserve">
+    <value>Messaggio: elenco delle spese cumulative mensili dei costi fallito!</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuMuBiaoChengBen" xml:space="preserve">
+    <value>Totale della categoria principale</value>
+  </data>
+  <data name="XiaoXiDiShiAnYueLeiJiChengBenF" xml:space="preserve">
+    <value>Messaggio: eliminazione del costo obiettivo completata con successo!</value>
+  </data>
+  <data name="DaLeiGeJi" xml:space="preserve">
+    <value>Messaggio: input del [Costo originale] errato, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuMuBiaoChengB" xml:space="preserve">
+    <value>Messaggio: input del [Costo obiettivo] errato, si prega di inserire un numero e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiYuanDingChengBenShu" xml:space="preserve">
+    <value>Messaggio: questa voce di costo ha già un costo obiettivo inserito, si prega di modificare direttamente!</value>
+  </data>
+  <data name="XiaoXiDiShiMuBiaoChengBenShuRu" xml:space="preserve">
+    <value>Messaggio: aggiunta del costo obiettivo completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiGaiChengBenFeiXiang" xml:space="preserve">
+    <value>Messaggio: modifica del costo obiettivo completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiZengJiaMuBiaoChengB" xml:space="preserve">
+    <value>Errore: si è verificata un'eccezione durante l'operazione di ottenimento dell'elenco dei mesi:</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
+    <value>Messaggio: si prega di inserire correttamente la quantità di lavoro effettiva e riprovare!</value>
+  </data>
+  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
+    <value>Messaggio: si prega di inserire correttamente la quantità di lavoro e riprovare! Attualmente la quantità massima di lavoro che può essere confermata è: {0:f4 }</value>
+  </data>
+  <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
+    <value>Aggiungi record di lavoro effettivo</value>
+  </data>
+  <data name="XiaoXiDiShiQingZhengQueShuRuGo" xml:space="preserve">
+    <value>Messaggio: aggiunta della quantità di lavoro effettivo completata con successo!</value>
+  </data>
+  <data name="ZengJiaShiJiGongZuoJiLu" xml:space="preserve">
+    <value>Messaggio: seleziona la quantità di lavoro effettivo da modificare e riprovare!</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengShiJiGongZuo" xml:space="preserve">
+    <value>Modifica record di lavoro effettivo</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeXuYaoXiuG" xml:space="preserve">
+    <value>Messaggio: modifica della quantità di lavoro effettivo completata con successo!</value>
+  </data>
+  <data name="XiuGaiShiJiGongZuoJiLu" xml:space="preserve">
+    <value>Elimina record di lavoro effettivo</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiShiJiGongZuoL" xml:space="preserve">
+    <value>Messaggio: eliminazione della quantità di lavoro effettivo completata con successo!</value>
+  </data>
+  <data name="ShanChuShiJiGongZuoJiLu" xml:space="preserve">
+    <value>Messaggio: aggiunta del record di conferma del lavoro completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuShiJiGongZuo" xml:space="preserve">
+    <value>Messaggio: modifica del record di conferma del lavoro completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengGongZuoQueRe" xml:space="preserve">
+    <value>Messaggio: eliminazione del record di conferma del lavoro completata con successo!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiGongZuoQueRen" xml:space="preserve">
+    <value>Aggiungi record di conferma del pagamento</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuGongZuoQueRe" xml:space="preserve">
+    <value>Messaggio: aggiunta del record di conferma del pagamento completata con successo!</value>
+  </data>
+  <data name="ZengJiaShouKuanQueRenJiLu" xml:space="preserve">
+    <value>Modifica record di conferma del pagamento</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengShouKuanQueR" xml:space="preserve">
+    <value>Messaggio: modifica del record di conferma del pagamento completata con successo!</value>
+  </data>
+  <data name="XiuGaiShouKuanQueRenJiLu" xml:space="preserve">
+    <value>Elimina record di conferma del pagamento</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiShouKuanQueRe" xml:space="preserve">
+    <value>Messaggio: eliminazione del record di conferma del pagamento completata con successo!</value>
+  </data>
+  <data name="ShanChuShouKuanQueRenJiLu" xml:space="preserve">
+    <value>Seleziona la quantità di lavoro corrispondente da confermare e riprovare.</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuShouKuanQueR" xml:space="preserve">
+    <value>Gruppo</value>
+  </data>
+  <data name="WeiShuaZeDuiYingDeQueRenGongZu" xml:space="preserve">
+    <value>Gruppo</value>
+  </data>
+  <data name="Zu" xml:space="preserve">
+    <value>--Questa operazione non ha moduli associati!</value>
+  </data>
+  <data name="JiTuan" xml:space="preserve">
+    <value>Processo di revisione</value>
+  </data>
+  <data name="CiYeWuMoGuanLianBiaoChan" xml:space="preserve">
+    <value>&lt;B&gt;Gruppo di ruoli&lt;/B&gt;</value>
+  </data>
+  <data name="PingShenLiuCheng" xml:space="preserve">
+    <value>&lt;B&gt;Tutti&lt;/B&gt;</value>
+  </data>
+  <data name="BJiaoSeZuB" xml:space="preserve">
+    <value>Questa richiesta non esiste, potrebbe essere stata eliminata, si prega di verificare!</value>
+  </data>
+  <data name="BSuoYouB" xml:space="preserve">
+    <value>Contenuto del rischio:</value>
+  </data>
+  <data name="CiXuQiuBuCunZaiKeNengYiBeiShan" xml:space="preserve">
+    <value>Creazione del servizio RTX fallita, si prega di verificare!</value>
+  </data>
+  <data name="FengXianNeiRong" xml:space="preserve">
+    <value>Invio completato con successo!</value>
+  </data>
+  <data name="ChuangJianRTXFuWuShiBaiQingJia" xml:space="preserve">
+    <value>Invio fallito!</value>
+  </data>
+  <data name="FaSongChengGong" xml:space="preserve">
+    <value>Ottenimento dello stato dell'utente fallito!</value>
+  </data>
+  <data name="FaSongShiBai" xml:space="preserve">
+    <value>Ottenimento delle informazioni sulla versione fallito!</value>
+  </data>
+  <data name="HuoQuYongHuZhuangTaiShiBai" xml:space="preserve">
+    <value>Ottenimento delle informazioni sulle autorizzazioni dell'utente fallito!</value>
+  </data>
+  <data name="HuoQuBanBenXinXiShiBai" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td&gt;Nessun dato del nome del modulo&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Nessun dato del tipo&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Nessun dato&lt;/td&gt;&lt;/tr&gt; Numero di studenti: Elenco di tutti i progetti Progetto modello contenuto, questa è un'eliminazione definitiva, si prega di prestare attenzione, questa è una notifica! elenco dei progetti di: Elenco di tutti i progetti dei miei membri: Nascondi completato con successo! Password errata, nascondi fallito, si prega di verificare! Errore &lt;B&gt;Parte&lt;/B&gt; Cambiato il progetto: Notifica di modifica del piano del progetto Costi di acquisto degli asset Assegnazione completata con successo! Registro di accesso dell'utente_ Numero di estensione RTX &lt;b&gt;Modulo della pagina&lt;b&gt; Attenzione, i costi di produzione e le commissioni devono essere di tipo numerico, si prega di verificare! Offerta Errore, l'offerta e il prezzo di controllo devono essere numerici, si prega di verificare! Fallito, questa offerta è già stata completata, non può essere eliminata, si prega di verificare Generazione della richiesta di offerta completata con successo Attenzione, generazione della richiesta di offerta fallita, si prega di verificare! Operazioni speciali_ Apparecchiature speciali_ Certificato di saldatura_ Attenzione, seleziona prima il dipartimento prima di eseguire la query! Errore, il numero di dipendenti del dipartimento e del sottodipartimento è troppo elevato, memoria insufficiente, si prega di verificare! Attenzione, le date di inizio e fine possono essere selezionate solo nello stesso mese! Tempo di statistica: {0} a {1} Codice dipendente 1 Codice dipendente 2 Song Ti Codice dipendente Giorni di presenza Giorni di presenza previsti Numero di ritardi Durata del ritardo (minuti) Numero di ritardi e assenze ingiustificate Numero di uscite anticipate Durata delle uscite anticipate (minuti) Giorni di assenza ingiustificata Giorni di turno notturno Codice studente Riga {0}, il codice studente non può essere vuoto&lt;br/&gt; Nome studente Riga {0}, il nome studente non può essere vuoto&lt;br/&gt; Frequenta la scuola Elenco dei membri: Attenzione, questo" + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + " Batch"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+" Elimina" + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + " Modifica" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + " Esci" + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + " Riprova" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Annulla" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + " Generazione del piano di gara" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Account" + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + " Generazione del piano di richiesta" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Generazione della richiesta" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Allegato" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + " Progetto certificato"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+" Progetto di formazione"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+" Azienda"+LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim()+" Attenzione, i fattori ambientali sono obbligatori, operazione" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Attenzione, i fattori ambientali esistono già, operazione" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Attenzione, questo fattore ambientale è scaduto o anomalo, operazione" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Carica"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+" Salvataggio fallito, non sei il creatore di questo modello di processo, non puoi salvare queste immagini di processo! Annulla" + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + " Archivia" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Nodo" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + " Invio informazioni" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Trasforma in progetto" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Salva" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " Attenzione, creazione della directory di backup"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+" Attenzione, c'è questo nodo di passaggio nel diagramma di flusso, non può essere eliminato, si prega di verificare! Eliminazione completata con successo! Eliminazione fallita, si prega di verificare! Attenzione, questo processo non è stato creato da te, non sei nemmeno un super amministratore, non hai i permessi per eliminare, si prega di verificare! Batch di annotazioni" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + " Numero di controllo" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + " Contratto" + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + " Controllo materiali del contratto" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + " Confronto"+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+"</value>
+  </data>
+  <data name="trtdMoMoKuaiMingChenShuJutdtr" xml:space="preserve">
+    <value>Dati senza nome del modulo</value>
+  </data>
+  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
+    <value>Dati senza tipo</value>
+  </data>
+  <data name="trtdMoShuJutdtr" xml:space="preserve">
+    <value>Nessun dato</value>
+  </data>
+  <data name="XueShengShu" xml:space="preserve">
+    <value>Numero di studenti:</value>
+  </data>
+  <data name="SuoYouXiangMuLieBiao" xml:space="preserve">
+    <value>Elenco di tutti i progetti</value>
+  </data>
+  <data name="MoBanXiangMu" xml:space="preserve">
+    <value>Progetto modello</value>
+  </data>
+  <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
+    <value>Contenuto, questa è un'eliminazione definitiva, si prega di prestare attenzione, notifica!</value>
+  </data>
+  <data name="DeXiangMuLieBiao" xml:space="preserve">
+    <value>Elenco dei progetti:</value>
+  </data>
+  <data name="WoChengYuanDeSuoYouXiangMuLieB" xml:space="preserve">
+    <value>Elenco di tutti i progetti dei miei membri:</value>
+  </data>
+  <data name="ZZYinCangChengGong" xml:space="preserve">
+    <value>Nascosto con successo!</value>
+  </data>
+  <data name="ZZMiMaBuDuiYinCangShiBaiQingJi" xml:space="preserve">
+    <value>Password errata, nascondimento fallito, si prega di verificare!</value>
+  </data>
+  <data name="ChuCuoLe" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="BBuFenB" xml:space="preserve">
+    <value>&lt;B&gt;Parte&lt;/B&gt;</value>
+  </data>
+  <data name="GaiBianLeXiangMu" xml:space="preserve">
+    <value>Progetto modificato:</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>Messaggio: operazione di query delle informazioni di riepilogo dell'importo richiesto e degli standard fallita!</value>
+  </data>
+  <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
+    <value>Notifica di modifica del progetto</value>
+  </data>
+  <data name="ZiChanCaiGouFeiYong" xml:space="preserve">
+    <value>Costi di acquisto delle attività</value>
+  </data>
+  <data name="ZZFenPaChengGong" xml:space="preserve">
+    <value>Assegnazione riuscita!</value>
+  </data>
+  <data name="YongHuDengLuRiZhi" xml:space="preserve">
+    <value>Log di accesso dell'utente_</value>
+  </data>
+  <data name="RTXFenJiHao" xml:space="preserve">
+    <value>Numero interno RTX</value>
+  </data>
+  <data name="bXieMianMoZub" xml:space="preserve">
+    <value>&lt;b&gt;Modulo di pagina&lt;b&gt;</value>
+  </data>
+  <data name="ZZJingGaoGongBenFeiHeDaiLiFeiB" xml:space="preserve">
+    <value>Avviso, i costi di produzione e le commissioni devono essere di tipo numerico, si prega di verificare!</value>
+  </data>
+  <data name="TouBiao" xml:space="preserve">
+    <value>Offerta</value>
+  </data>
+  <data name="ZZCuoWuTouBiaoBaoJiaHeKongZhiJ" xml:space="preserve">
+    <value>Errore, l'offerta e il prezzo di controllo devono essere numerici, si prega di verificare!</value>
+  </data>
+  <data name="ZZShiBaiCiTouBiaoYiWanChengBuN" xml:space="preserve">
+    <value>Fallito, questa offerta è già stata completata, non può essere eliminata, si prega di verificare!</value>
+  </data>
+  <data name="ZZTouBiaoShenQingShengChengChe" xml:space="preserve">
+    <value>Generazione della richiesta di offerta riuscita</value>
+  </data>
+  <data name="ZZJingGaoTouBiaoShenQingShengC" xml:space="preserve">
+    <value>Avviso, generazione della richiesta di offerta fallita, si prega di verificare!</value>
+  </data>
+  <data name="TeChongZuoYe" xml:space="preserve">
+    <value>Operazioni speciali_</value>
+  </data>
+  <data name="TeChongSheBei" xml:space="preserve">
+    <value>Attrezzature speciali_</value>
+  </data>
+  <data name="HanJieChiZheng" xml:space="preserve">
+    <value>Certificazioni di saldatura_</value>
+  </data>
+  <data name="ZZJingGaoQingXianShuaZeBuMenZa" xml:space="preserve">
+    <value>Avviso, si prega di selezionare prima il dipartimento prima di effettuare la ricerca!</value>
+  </data>
+  <data name="ZZCuoWuBuMenHeZiBuMenYuanGongR" xml:space="preserve">
+    <value>Errore, il numero di dipendenti del dipartimento e dei sottodipartimenti è troppo elevato, memoria insufficiente, si prega di verificare!</value>
+  </data>
+  <data name="ZZJingGaoKaiShiJieShuRiJiZhiNe" xml:space="preserve">
+    <value>Avviso, le date di inizio e fine devono essere dello stesso mese!</value>
+  </data>
+  <data name="TongJiShiJian0Zhi1" xml:space="preserve">
+    <value>Periodo di statistica: {0} a {1}</value>
+  </data>
+  <data name="GongHao1" xml:space="preserve">
+    <value>Codice dipendente 1</value>
+  </data>
+  <data name="GongHao2" xml:space="preserve">
+    <value>Codice dipendente 2</value>
+  </data>
+  <data name="SongTi" xml:space="preserve">
+    <value>Carattere Song</value>
+  </data>
+  <data name="GongHao" xml:space="preserve">
+    <value>Codice dipendente</value>
+  </data>
+  <data name="ChuQinTianShu" xml:space="preserve">
+    <value>Giorni di presenza</value>
+  </data>
+  <data name="YingChuQinTianShu" xml:space="preserve">
+    <value>Giorni di presenza previsti</value>
+  </data>
+  <data name="ChiDaoCiShu" xml:space="preserve">
+    <value>Numero di ritardi</value>
+  </data>
+  <data name="ChiDaoShiChangFenZhong" xml:space="preserve">
+    <value>Durata dei ritardi (minuti)</value>
+  </data>
+  <data name="KuangGongChiDaoCiShu" xml:space="preserve">
+    <value>Numero di assenze per ritardi</value>
+  </data>
+  <data name="ZaoTuiCiShu" xml:space="preserve">
+    <value>Numero di uscite anticipate</value>
+  </data>
+  <data name="ZaoTuiShiChangFenZhong" xml:space="preserve">
+    <value>Durata delle uscite anticipate (minuti)</value>
+  </data>
+  <data name="KuangGongTianShu" xml:space="preserve">
+    <value>Giorni di assenza</value>
+  </data>
+  <data name="YeBanTianShu" xml:space="preserve">
+    <value>Giorni di turno di notte</value>
+  </data>
+  <data name="XueShengBianMa" xml:space="preserve">
+    <value>Codice studente</value>
+  </data>
+  <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
+    <value>Riga {0}, il codice studente non può essere vuoto</value>
+  </data>
+  <data name="XueShengXingMing" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
+    <value>Nome studente</value>
+  </data>
+  <data name="ShiFouShangXue" xml:space="preserve">
+    <value>Riga {0}, il nome dello studente non può essere vuoto</value>
+  </data>
+  <data name="ChengYuanLieBiao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
+    <value>Frequenta la scuola?</value>
+  </data>
+  <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
+    <value>Elenco dei membri:</value>
+  </data>
+  <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
+    <value>Avviso, questo " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Operazione batch "+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+""</value>
+  </data>
+  <data name="ZZTuiChuLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Elimina " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZChongXinLanguageHandleGetWor" xml:space="preserve">
+    <value>Modifica " + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZCheXiaoLanguageHandleGetWord" xml:space="preserve">
+    <value>Esci " + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZQiaoBiaoFangAnShengChengLang" xml:space="preserve">
+    <value>Riprova " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZZhangHaoLanguageHandleGetWor" xml:space="preserve">
+    <value>Annulla " + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZShenQingJiHuaShengChengLangu" xml:space="preserve">
+    <value>Generazione del piano di gara " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZShenQingShengChengLanguageHa" xml:space="preserve">
+    <value>Account " + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZFuJianLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Generazione del piano di richiesta " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZChiZhengXiangMuLanguageHandl" xml:space="preserve">
+    <value>Generazione della richiesta " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZPeiXunXiangMuLanguageHandleG" xml:space="preserve">
+    <value>Allegato " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZGongSiLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Progetto certificato "+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+""</value>
+  </data>
+  <data name="ZZJingGaoHuanJingYinSuWeiBiShu" xml:space="preserve">
+    <value>Progetto di formazione "+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+""</value>
+  </data>
+  <data name="ZZJingGaoHuanJingYinSuYiCunZai" xml:space="preserve">
+    <value>Azienda "+LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim()+""</value>
+  </data>
+  <data name="ZZJingGaoCiHuanJingYinSuGuoJiH" xml:space="preserve">
+    <value>Avviso, il fattore ambientale è obbligatorio, operazione " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZShangChuanLanguageHandleGetW" xml:space="preserve">
+    <value>Avviso, il fattore ambientale esiste già, operazione " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZBaoCunShiBaiNiBuShiCiLiuChen" xml:space="preserve">
+    <value>Avviso, questo fattore ambientale è scaduto o anomalo, operazione " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZQuXiaoLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Carica "+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+""</value>
+  </data>
+  <data name="ZZGuiDangLanguageHandleGetWord" xml:space="preserve">
+    <value>Salvataggio fallito, non sei il creatore di questo modello di processo, non puoi salvare questa immagine del processo!</value>
+  </data>
+  <data name="ZZJieDianLanguageHandleGetWord" xml:space="preserve">
+    <value>Annulla " + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZXinXiFaSongLanguageHandleGet" xml:space="preserve">
+    <value>Archivia " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZZhuaiXiangLanguageHandleGetW" xml:space="preserve">
+    <value>Nodo " + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZBaoCunLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Invio informazioni " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZJingGaoBeiFenMuLuChuangJianL" xml:space="preserve">
+    <value>Trasferisci " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZJingGaoLiuChengTuZhongYouCiB" xml:space="preserve">
+    <value>Salva " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZShanChuChengGong" xml:space="preserve">
+    <value>Avviso, creazione della directory di backup "+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+""</value>
+  </data>
+  <data name="ZZShanChuShiBaiQingJianCha" xml:space="preserve">
+    <value>Avviso, c'è un nodo di passaggio nel diagramma di flusso, non può essere eliminato, si prega di verificare!</value>
+  </data>
+  <data name="ZZJingGaoCiLiuChengBuShiNiChua" xml:space="preserve">
+    <value>Eliminazione riuscita!</value>
+  </data>
+  <data name="ZZBiaoZhuPiLiangLanguageHandle" xml:space="preserve">
+    <value>Eliminazione fallita, si prega di verificare!</value>
+  </data>
+  <data name="ZZJianHaoLanguageHandleGetWord" xml:space="preserve">
+    <value>Avviso, questo processo non è stato creato da te e non sei un super amministratore, non hai i permessi per eliminarlo, si prega di verificare!</value>
+  </data>
+  <data name="ZZGeTongLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Etichettatura batch " + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZGeTongCaiJianLanguageHandleG" xml:space="preserve">
+    <value>Numero di controllo " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="ZZDuiZhaoLanguageHandleGetWord" xml:space="preserve">
+    <value>Contratto " + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="QiaoBiaoWenJianMuLutd" xml:space="preserve">
+    <value>Controllo materiali del contratto " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + ""</value>
+  </data>
+  <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
+    <value>Confronto "+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+""</value>
+  </data>
+  <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
+    <value>Elenco dei documenti di gara&lt;/td&gt;</value>
+  </data>
+  <data name="GongFang" xml:space="preserve">
+    <value>&lt;td&gt;Documento di gara&lt;/td&gt; &gt;Elenco dei documenti di valutazione&lt;/td&gt; &lt;td &gt;Metodo e standard di valutazione&lt;/td&gt; &gt;Fornitore&lt; &gt;Documento di gara&lt;/td&gt; &gt;Metodo e standard di valutazione&lt;/td&gt; Generazione del fornitore " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "" Saldo giornaliero di cassa Situazione anomala Numero di pre-registrazione Totale pagato in valuta locale Codice materiale speciale Nome del materiale Quantità utilizzata Pubblicazione Giorni di ritardo Codice del responsabile Codice del project manager Nome del project manager Crea nuovo processo Nome del computer Ultima operazione Relazione del contatto Azienda del contratto Data di inizio del primo contratto Tempo previsto di inizio del piano Tempo previsto di fine del piano Tempo previsto di inizio del compito Tempo di accettazione del compito Tempo previsto di fine del compito Ultima operazione sul compito Esportazione riuscita Torna al passo Materiale o tipo di asset Categoria generale Codice del registratore Nome del registratore Gruppo di ruoli L'espansione sovrascriverà i dati dell'operazione precedente Sei sicuro di voler procedere? Seleziona un cliente Sei sicuro di voler eliminare questo record? Sei sicuro di voler eliminare i piani di altri membri copiati da questo piano? Data di presenza Orario di inizio mattutino Orario di fine mattutino Orario di inizio pomeridiano Orario di fine pomeridiano Orario di inizio notturno Orario di fine notturno Distanza massima consentita Durata degli straordinari (ore) Riepilogo mensile Data di statistica Ora di generazione del report Dipartimento di primo livello Anni di servizio Tipo di dipendente Stato del dipendente Periodo di prova Data effettiva di conferma Tipo di residenza Affiliazione politica Data di scadenza del primo contratto Durata del primo contratto Data di inizio del secondo contratto Data di scadenza del secondo contratto Durata del secondo contratto Data di inizio del terzo contratto Data di scadenza del terzo contratto Durata del terzo contratto Numero di volte firmato Data di inizio del contratto attuale Durata del contratto attuale Tipo di autorizzazione Nome del sito Numero di utenti autorizzati Modulo disabilitato Banca Nome del registratore Tasso di cambio Quantità ricevuta Tempo di ricezione Emissione materiali Ispezione Importo non ricevuto Nome della valutazione Nessun record di visita trovato Nome del responsabile Sei sicuro di voler eliminare i dati selezionati? Piano del progetto in ritardo Avviso, si prega di selezionare il tipo di file Permesso (ore) Seleziona un modello di processo! Il codice non può essere vuoto! Sei sicuro di voler eliminare i dati selezionati? Visualizza Il numero del progetto è vuoto, si prega di verificare! Non hai i permessi per modificare il piano, si prega di verificare! Esiste un file immagine identico! I dati dell'immagine sono vuoti, si prega di verificare!</value>
+  </data>
+  <data name="QiaoBiaoWenJiantd" xml:space="preserve">
+    <value>Documento di gara&lt;/td&gt;</value>
+  </data>
+  <data name="PingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
+    <value>Metodo e standard di valutazione&lt;/td&gt;</value>
+  </data>
+  <data name="ZZGongYingShangShengChengLangu" xml:space="preserve">
+    <value>Generazione del fornitore " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + ""</value>
+  </data>
+  <data name="MeiRiXianJinYuE" xml:space="preserve">
+    <value>Saldo giornaliero di cassa</value>
+  </data>
+  <data name="YiChangQingKuang" xml:space="preserve">
+    <value>Situazione anomala</value>
+  </data>
+  <data name="YuLuDanHao" xml:space="preserve">
+    <value>Numero di pre-registrazione</value>
+  </data>
+  <data name="ShiFuZongEBenBi" xml:space="preserve">
+    <value>Totale pagato in valuta locale</value>
+  </data>
+  <data name="TeLiaoDaiMa" xml:space="preserve">
+    <value>Codice materiale speciale</value>
+  </data>
+  <data name="WuLiaoMingCheng" xml:space="preserve">
+    <value>Nome del materiale</value>
+  </data>
+  <data name="YongLiang" xml:space="preserve">
+    <value>Quantità utilizzata</value>
+  </data>
+  <data name="ChuBan" xml:space="preserve">
+    <value>Pubblicazione</value>
+  </data>
+  <data name="TuoQiTianShu" xml:space="preserve">
+    <value>Giorni di ritardo</value>
+  </data>
+  <data name="FuZeRenDaiMa" xml:space="preserve">
+    <value>Codice del responsabile</value>
+  </data>
+  <data name="XiangMuJingLiDaiMa" xml:space="preserve">
+    <value>Codice del project manager</value>
+  </data>
+  <data name="XiangMuJingLiMingCheng" xml:space="preserve">
+    <value>Nome del project manager</value>
+  </data>
+  <data name="XinJianLiuCheng" xml:space="preserve">
+    <value>Crea nuovo processo</value>
+  </data>
+  <data name="DianNaoMingCheng" xml:space="preserve">
+    <value>Nome del computer</value>
+  </data>
+  <data name="ZuiHouCaoZuoShiJian" xml:space="preserve">
+    <value>Ultima operazione</value>
+  </data>
+  <data name="LianXiRenGuanXi" xml:space="preserve">
+    <value>Relazione del contatto</value>
+  </data>
+  <data name="HeTongGongSi" xml:space="preserve">
+    <value>Azienda del contratto</value>
+  </data>
+  <data name="ShouCiHeTongQiShiRi" xml:space="preserve">
+    <value>Data di inizio del primo contratto</value>
+  </data>
+  <data name="JiHuaYuJiKaiShiShiJian" xml:space="preserve">
+    <value>Tempo previsto di inizio del piano</value>
+  </data>
+  <data name="JiHuaYuJiJieShuShiJian" xml:space="preserve">
+    <value>Tempo previsto di fine del piano</value>
+  </data>
+  <data name="RenWuYuJiKaiShiShiJian" xml:space="preserve">
+    <value>Tempo previsto di inizio del compito</value>
+  </data>
+  <data name="RenWuShouLiShiJian" xml:space="preserve">
+    <value>Tempo di accettazione del compito</value>
+  </data>
+  <data name="RenWuYuJiJieShuShiJian" xml:space="preserve">
+    <value>Tempo previsto di fine del compito</value>
+  </data>
+  <data name="RenWuZuiXinCaoZuoShiJian" xml:space="preserve">
+    <value>Ultima operazione sul compito</value>
+  </data>
+  <data name="DaoChuChengGong" xml:space="preserve">
+    <value>Esportazione riuscita</value>
+  </data>
+  <data name="FanHuiDaoDi" xml:space="preserve">
+    <value>Torna al passo</value>
+  </data>
+  <data name="BuLe" xml:space="preserve">
+    <value>Materiale o tipo di asset</value>
+  </data>
+  <data name="WuLiaoHuoZiChanLeiXing" xml:space="preserve">
+    <value>Categoria generale</value>
+  </data>
+  <data name="ZongLei" xml:space="preserve">
+    <value>Codice del registratore</value>
+  </data>
+  <data name="JiLuRenDaiMa" xml:space="preserve">
+    <value>Nome del registratore</value>
+  </data>
+  <data name="JiLuRenMingCheng" xml:space="preserve">
+    <value>Gruppo di ruoli</value>
+  </data>
+  <data name="JiaoSeZu" xml:space="preserve">
+    <value>L'espansione sovrascriverà i dati dell'operazione precedente</value>
+  </data>
+  <data name="ZhanKaiYunSuanHuiFuGaiQianCiYunSuanDeShuJu" xml:space="preserve">
+    <value>L'espansione sovrascriverà i dati dell'operazione precedente</value>
+  </data>
+  <data name="NinQueDingYaoJinXingMa" xml:space="preserve">
+    <value>Sei sicuro di voler procedere?</value>
+  </data>
+  <data name="QingXuanZeKeHu" xml:space="preserve">
+    <value>Seleziona un cliente</value>
+  </data>
+  <data name="QueDingYaoShanChuCiXiangJiLuMa" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare questo record?</value>
+  </data>
+  <data name="NiQueDingYaoShanChuCongCiJiHuaFuZhiDeQiTaChengYuanDeJiHuaMa" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare i piani di altri membri copiati da questo piano?</value>
+  </data>
+  <data name="ChuQinRiQi" xml:space="preserve">
+    <value>Data di presenza</value>
+  </data>
+  <data name="ShangWuShangBanShiJian" xml:space="preserve">
+    <value>Orario di inizio mattutino</value>
+  </data>
+  <data name="ShangWuXiaBanShiJian" xml:space="preserve">
+    <value>Orario di fine mattutino</value>
+  </data>
+  <data name="XiaWuShangBanShiJian" xml:space="preserve">
+    <value>Orario di inizio pomeridiano</value>
+  </data>
+  <data name="XiaWuXiaBanShiJian" xml:space="preserve">
+    <value>Orario di fine pomeridiano</value>
+  </data>
+  <data name="WuYeShangBanShiJian" xml:space="preserve">
+    <value>Orario di inizio notturno</value>
+  </data>
+  <data name="WuYeXiaBanShiJian" xml:space="preserve">
+    <value>Orario di fine notturno</value>
+  </data>
+  <data name="YunXuZuiDaLiJu" xml:space="preserve">
+    <value>Distanza massima consentita</value>
+  </data>
+  <data name="JiaBanShiChang" xml:space="preserve">
+    <value>Durata degli straordinari (ore)</value>
+  </data>
+  <data name="YueDuHuiZong" xml:space="preserve">
+    <value>Riepilogo mensile</value>
+  </data>
+  <data name="TongJiRiQi" xml:space="preserve">
+    <value>Data di statistica</value>
+  </data>
+  <data name="BaoBiaoShengChengShiJian" xml:space="preserve">
+    <value>Ora di generazione del report</value>
+  </data>
+  <data name="YiJiBuMen" xml:space="preserve">
+    <value>Dipartimento di primo livello</value>
+  </data>
+  <data name="SiLing" xml:space="preserve">
+    <value>Anni di servizio</value>
+  </data>
+  <data name="YuanGongLeiXing" xml:space="preserve">
+    <value>Tipo di dipendente</value>
+  </data>
+  <data name="YuanGongZhuangTai" xml:space="preserve">
+    <value>Stato del dipendente</value>
+  </data>
+  <data name="ShiYongQi" xml:space="preserve">
+    <value>Periodo di prova</value>
+  </data>
+  <data name="ShiJiZhuanZhengRiQi" xml:space="preserve">
+    <value>Data effettiva di conferma</value>
+  </data>
+  <data name="HuJiLeiXing" xml:space="preserve">
+    <value>Tipo di residenza</value>
+  </data>
+  <data name="ZhengZhiMianMao" xml:space="preserve">
+    <value>Affiliazione politica</value>
+  </data>
+  <data name="ShouCiHeTongDaoQiRi" xml:space="preserve">
+    <value>Data di scadenza del primo contratto</value>
+  </data>
+  <data name="ShouCiHeTongQiXian" xml:space="preserve">
+    <value>Durata del primo contratto</value>
+  </data>
+  <data name="DiErCiHeTongQiShiRi" xml:space="preserve">
+    <value>Data di inizio del secondo contratto</value>
+  </data>
+  <data name="DiErCiHeTongDaoQiRi" xml:space="preserve">
+    <value>Data di scadenza del secondo contratto</value>
+  </data>
+  <data name="DiErCiHeTongQiXian" xml:space="preserve">
+    <value>Durata del secondo contratto</value>
+  </data>
+  <data name="DiSanCiHeTongQiShiRi" xml:space="preserve">
+    <value>Data di inizio del terzo contratto</value>
+  </data>
+  <data name="DiSanCiHeTongDaoQiRi" xml:space="preserve">
+    <value>Data di scadenza del terzo contratto</value>
+  </data>
+  <data name="DiSanCiHeTongQiXian" xml:space="preserve">
+    <value>Durata del terzo contratto</value>
+  </data>
+  <data name="YiQianCiShu" xml:space="preserve">
+    <value>Numero di volte firmato</value>
+  </data>
+  <data name="XianHeTongQiShiRi" xml:space="preserve">
+    <value>Data di inizio del contratto attuale</value>
+  </data>
+  <data name="XianHeTongQiXian" xml:space="preserve">
+    <value>Durata del contratto attuale</value>
+  </data>
+  <data name="ShouQuanLeiXing" xml:space="preserve">
+    <value>Tipo di autorizzazione</value>
+  </data>
+  <data name="ZhanDianMing" xml:space="preserve">
+    <value>Nome del sito</value>
+  </data>
+  <data name="ShouQuanYongHuShu" xml:space="preserve">
+    <value>Numero di utenti autorizzati</value>
+  </data>
+  <data name="JinYongMoKuai" xml:space="preserve">
+    <value>Modulo disabilitato</value>
+  </data>
+  <data name="YinXing" xml:space="preserve">
+    <value>Banca</value>
+  </data>
+  <data name="JiLuRenMingChen" xml:space="preserve">
+    <value>Nome del registratore</value>
+  </data>
+  <data name="HuiLu" xml:space="preserve">
+    <value>Tasso di cambio</value>
+  </data>
+  <data name="ShiShouLiang" xml:space="preserve">
+    <value>Quantità ricevuta</value>
+  </data>
+  <data name="ShiShouShiJian" xml:space="preserve">
+    <value>Tempo di ricezione</value>
+  </data>
+  <data name="FaLiao" xml:space="preserve">
+    <value>Emissione materiali</value>
+  </data>
+  <data name="YanShou" xml:space="preserve">
+    <value>Ispezione</value>
   </data>
   <data name="JiaoFu" xml:space="preserve">
     <value>Delivery</value>
@@ -27578,6 +30638,55 @@
   </data>
   <data name="AssetPO" xml:space="preserve">
     <value>Assset purchase order</value>
+  </data>
+  <data name="WeiShouJieE" xml:space="preserve">
+    <value>Importo non ricevuto</value>
+  </data>
+  <data name="KaoHeMingCheng" xml:space="preserve">
+    <value>Nome della valutazione</value>
+  </data>
+  <data name="MeiYouZhaoDaoXiangYingDeBaiFangJiLu" xml:space="preserve">
+    <value>Nessun record di visita trovato</value>
+  </data>
+  <data name="FuZeRenMingCheng" xml:space="preserve">
+    <value>Nome del responsabile</value>
+  </data>
+  <data name="NiQuedYaoShanChuSuoXuanZeDeShuJuXiangMa" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare i dati selezionati?</value>
+  </data>
+  <data name="TuoQiXiangMuJiHua" xml:space="preserve">
+    <value>Piano del progetto in ritardo</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="QingJiaXiaoShi" xml:space="preserve">
+    <value>Permesso (ore)</value>
+  </data>
+  <data name="QingXuanZheLiuChengMoBan" xml:space="preserve">
+    <value>Seleziona un modello di processo!</value>
+  </data>
+  <data name="DaiMaBuNengWeiKong" xml:space="preserve">
+    <value>Il codice non può essere vuoto!</value>
+  </data>
+  <data name="QueDingYaoShanChuSuoYouDeShuJiXiang" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare i dati selezionati?</value>
+  </data>
+  <data name="ChaKuan" xml:space="preserve">
+    <value>Visualizza</value>
+  </data>
+  <data name="XiangMuHaoWeiKongQingJianCha" xml:space="preserve">
+    <value>Il numero del progetto è vuoto, si prega di verificare!</value>
+  </data>
+  <data name="MoYouQuanXianGengGeiJiHaQingJianCha" xml:space="preserve">
+    <value>Non hai i permessi per modificare il piano, si prega di verificare!</value>
+  </data>
+  <data name="ChengCaiXiangTongTuPianWenJian" xml:space="preserve">
+    <value>Esiste un file immagine identico!</value>
+  </data>
+  <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
+    <value>I dati dell'immagine sono vuoti, si prega di verificare!</value>
   </data>
   <data name="HSE生产总结" xml:space="preserve">
     <value>Riassunto HSE Produzione</value>
@@ -27833,9 +30942,5 @@
   </data>
   <data name="String121" xml:space="preserve">
     <value>Prezzo (yuan / mesi-persona)</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
 </root>

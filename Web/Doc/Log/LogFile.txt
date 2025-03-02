@@ -3,4 +3,1198 @@
 所有文件复制完成！
 
 ------------------------------------
+
+Log Entry : 1:04:17 2025年3月2日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 1:04:22 2025年3月2日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 9:10:04 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 9:15:38 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:09:37 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:18:31 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 12:03:01 2025年3月2日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 12:03:02 2025年3月2日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 17:43:36 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopPersonalSpace.aspx
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopPersonalSpace.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopPersonalSpace.aspx.cs:行号 28
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.<LoadRecursiveAsync>d__246.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:36 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:36 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:36 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:36 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:38 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:38 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:39 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:39 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:41 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:41 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:42 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:42 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:43 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:44 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:45 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:45 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:46 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:46 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:47 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:47 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:49 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:49 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:50 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:50 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:52 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:52 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:54 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:54 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:56 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:56 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:57 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:57 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:43:58 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:43:58 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:00 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:00 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:01 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:02 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:03 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:03 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:04 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:04 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:05 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:05 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:07 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:07 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:08 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:09 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:09 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:11 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:11 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:12 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:12 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:13 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:14 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:14 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:15 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:16 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:17 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:17 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:18 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:18 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:19 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:19 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:21 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:21 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:22 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:22 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:23 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:23 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:24 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:24 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:44:25 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRTop.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 80
+   在 TakeTopLRTop.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRTop.aspx.cs:行号 69
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 17:44:26 2025年3月2日 
+URL: http://10.211.55.22:5000/ENSource/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 70
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\ENSource\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
 

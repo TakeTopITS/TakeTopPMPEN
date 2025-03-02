@@ -15612,6 +15612,9 @@
   <data name="YiHun" xml:space="preserve">
     <value>Женат</value>
   </data>
+  <data name="YiJi" xml:space="preserve">
+    <value>Уровень 1</value>
+  </data>
   <data name="YiJia" xml:space="preserve">
     <value>Сделка</value>
   </data>
@@ -23415,6 +23418,9 @@
   <data name="ZZZDCG" xml:space="preserve">
     <value>Указывает успех!</value>
   </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE" xml:space="preserve">
+    <value>Расходы на прием, командировочные расходы, возмещение персонала TODO待定, ошибка: " + ex.Message + "!</value>
+  </data>
   <data name="ZZZDSBJC" xml:space="preserve">
     <value>Указывает не удается, проверьте!</value>
   </data>
@@ -27534,8 +27540,3066 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Ход доставки</value>
   </data>
+  <data name="MustBeUploadDoc" xml:space="preserve">
+    <value>Обязательные документы</value>
+  </data>
+  <data name="YCMCDWD" xml:space="preserve">
+    <value>Документы, которые нужно передать, но не переданы</value>
+  </data>
+  <data name="XMJHTGGLGZLMB" xml:space="preserve">
+    <value>Шаблон оценки плана проекта</value>
+  </data>
+  <data name="BanGongWangZi" xml:space="preserve">
+    <value>Офисный сайт</value>
+  </data>
+  <data name="JianCheng" xml:space="preserve">
+    <value>Сокращенное название</value>
+  </data>
+  <data name="ZZJGCZXTMTDKHQJC" xml:space="preserve">
+    <value>Предупреждение: обнаружены клиенты с одинаковыми именами или сокращениями, проверьте!</value>
+  </data>
+  <data name="ZZGSMCBCZQJC" xml:space="preserve">
+    <value>Предупреждение: название компании ошибочно или не существует, проверьте!</value>
+  </data>
+  <data name="DianJiDaKaiTaoHuangYeMian" xml:space="preserve">
+    <value>Нажмите, чтобы открыть страницу навигации</value>
+  </data>
+  <data name="SheJi" xml:space="preserve">
+    <value>Дизайн</value>
+  </data>
   <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>TotalNumberOf ProjectsExecuted</value>
+    <value>Общее количество выполняемых проектов</value>
+  </data>
+  <data name="NianDuXingZeng" xml:space="preserve">
+    <value>Годовое добавление</value>
+  </data>
+  <data name="NianDuWanCheng" xml:space="preserve">
+    <value>Годовое завершение</value>
+  </data>
+  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
+    <value>Количество проектов с серьезными задержками</value>
+  </data>
+  <data name="JingDuZhengChang" xml:space="preserve">
+    <value>Ход выполнения в норме</value>
+  </data>
+  <data name="QingDuYanWu" xml:space="preserve">
+    <value>Незначительные задержки</value>
+  </data>
+  <data name="NianDuXiangMuHuiKan" xml:space="preserve">
+    <value>Годовые поступления по проектам</value>
+  </data>
+  <data name="NianDuChengBenHeShuan" xml:space="preserve">
+    <value>Годовой расчет затрат</value>
+  </data>
+  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
+    <value>Количество проектов с превышением затрат</value>
+  </data>
+  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
+    <value>Годовые трудозатраты по проектам</value>
+  </data>
+  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
+    <value>Количество заполнивших за год</value>
+  </data>
+  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
+    <value>Общее количество выполняемых задач</value>
+  </data>
+  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
+    <value>Годовые поступления по проектам</value>
+  </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>После запуска содержание плана нельзя изменить, вы уверены, что хотите запустить?</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>Из-за обновления базы данных система обновляется, это займет несколько минут, не закрывайте это окно, пожалуйста, подождите!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Действительно в течение дня</value>
+  </data>
+  <data name="YuanGongC7094" xml:space="preserve">
+    <value>Сотрудник C7094</value>
+  </data>
+  <data name="XinWen" xml:space="preserve">
+    <value>Новости</value>
+  </data>
+  <data name="DaiBanShiXiang" xml:space="preserve">
+    <value>Задачи</value>
+  </data>
+  <data name="GuanKongZhongXin" xml:space="preserve">
+    <value>Центр управления</value>
+  </data>
+  <data name="JiTongMoZuSheDing" xml:space="preserve">
+    <value>Настройка модулей системы</value>
+  </data>
+  <data name="TaiDingTaDingZhongLiYue" xml:space="preserve">
+    <value>Тайдинг-Тодинг-Чжун Лиюэ</value>
+  </data>
+  <data name="QingZhuYiJiTongShouQuanJiangYu" xml:space="preserve">
+    <value>Обратите внимание, авторизация системы истекает через</value>
+  </data>
+  <data name="DaoJiQingJinKuaiXuFeiHeBeiFenS" xml:space="preserve">
+    <value>, пожалуйста, продлите и сделайте резервную копию данных!</value>
+  </data>
+  <data name="QingZhuYiJiTongShouQuanYiYu" xml:space="preserve">
+    <value>Обратите внимание, авторизация системы уже истекла</value>
+  </data>
+  <data name="GuoJiQingXuFeiZaiShiYong" xml:space="preserve">
+    <value>, пожалуйста, продлите и используйте снова!</value>
+  </data>
+  <data name="MoZhuiJiaDeXinXiDiShiKuang" xml:space="preserve">
+    <value>Нет дополнительных информационных сообщений</value>
+  </data>
+  <data name="JiangZhiTongZhi" xml:space="preserve">
+    <value>Обязательное уведомление:</value>
+  </data>
+  <data name="TiaoYaoChuLi" xml:space="preserve">
+    <value>сообщений для обработки!</value>
+  </data>
+  <data name="MeiYouXinDeXinXi" xml:space="preserve">
+    <value>Нет новых сообщений</value>
+  </data>
+  <data name="TiaoXiaoXi" xml:space="preserve">
+    <value>сообщений</value>
+  </data>
+  <data name="TiaoXieZuoYaoChuLi" xml:space="preserve">
+    <value>сообщений о сотрудничестве для обработки!</value>
+  </data>
+  <data name="DiShiGongSi" xml:space="preserve">
+    <value>Подсказка: компания:</value>
+  </data>
+  <data name="DeYuanGong" xml:space="preserve">
+    <value>сотрудник:</value>
+  </data>
+  <data name="DiJiaoLe" xml:space="preserve">
+    <value>отправил:</value>
+  </data>
+  <data name="DeWenTiFanKuiQingGuanZhu" xml:space="preserve">
+    <value>обратную связь, обратите внимание!!!</value>
+  </data>
+  <data name="ZZZhuCeChengGongHuanYingNiJiaR" xml:space="preserve">
+    <value>Регистрация успешна, добро пожаловать в ассоциацию, спасибо!</value>
+  </data>
+  <data name="ZZZhuCeShiBaiQingLianJiShangHu" xml:space="preserve">
+    <value>Регистрация не удалась, свяжитесь с администратором ассоциации (WeChat: 623077337)!</value>
+  </data>
+  <data name="ZunJingDe" xml:space="preserve">
+    <value>Уважаемый</value>
+  </data>
+  <data name="TongXiangHuanYingNiJiaRuShangH" xml:space="preserve">
+    <value>земляк, добро пожаловать в ассоциацию, спасибо!</value>
+  </data>
+  <data name="ShangHuiXinXi" xml:space="preserve">
+    <value>Информация об ассоциации</value>
+  </data>
+  <data name="ZZDiJiaoChengGongTaiDingTaDing" xml:space="preserve">
+    <value>-----Отправка успешна, служба поддержки Тайдинг Тодинг свяжется с вами в течение 5 минут, подождите, спасибо!</value>
+  </data>
+  <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
+    <value>-----Отправка не удалась, свяжитесь с службой поддержки Тайдинг Тодинг по телефону (021-51085119), спасибо!</value>
+  </data>
+  <data name="GouMaiBanBen" xml:space="preserve">
+    <value>Покупка версии:</value>
+  </data>
+  <data name="YongHuShu" xml:space="preserve">
+    <value>, количество пользователей:</value>
+  </data>
+  <data name="DiJiaoShiBaiQingJianCha" xml:space="preserve">
+    <value>Отправка не удалась, проверьте!</value>
+  </data>
+  <data name="YanZhengMaCuoWuQingJianCha" xml:space="preserve">
+    <value>Ошибка проверочного кода, проверьте!</value>
+  </data>
+  <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
+    <value>Заявка на покупку</value>
+  </data>
+  <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
+    <value>, пожалуйста, обработайте вовремя!!!</value>
+  </data>
+  <data name="DiJiaoChengGong" xml:space="preserve">
+    <value>Уведомление о заявке на покупку ПО</value>
+  </data>
+  <data name="ZZDiJiaoChengGong" xml:space="preserve">
+    <value>Отправка успешна!</value>
+  </data>
+  <data name="ZZDiJiaoShiBaiQingJianCha" xml:space="preserve">
+    <value>---Отправка успешна</value>
+  </data>
+  <data name="YuanMaXiaZai" xml:space="preserve">
+    <value>-----Отправка не удалась, проверьте!</value>
+  </data>
+  <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
+    <value>Скачивание исходного кода</value>
+  </data>
+  <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
+    <value>Заявка, пожалуйста, обработайте вовремя!!!</value>
+  </data>
+  <data name="ChengWeiGeZuoHuoBan" xml:space="preserve">
+    <value>Отправка успешна, ссылка для скачивания ниже, нажмите, чтобы скачать!</value>
+  </data>
+  <data name="ZZShiBaiYaoFuZhiDeZhanDianBuNe" xml:space="preserve">
+    <value>Стать партнером</value>
+  </data>
+  <data name="ZZDiShiCiZhanDianDeShuJuYiYing" xml:space="preserve">
+    <value>Не удалось, сайт для копирования не может быть пустым, проверьте!</value>
+  </data>
+  <data name="ZZShiBaiYaoShanChuDeZhanDianBu" xml:space="preserve">
+    <value>Подсказка: данные этого сайта уже применены, удаление невозможно, проверьте!</value>
+  </data>
+  <data name="ZZQuanBuGengXinChengGong" xml:space="preserve">
+    <value>Не удалось, сайт для удаления не может быть пустым, проверьте!</value>
+  </data>
+  <data name="DiShiDaiHaoDeDouBuNengKongQing" xml:space="preserve">
+    <value>Все обновления успешны!</value>
+  </data>
+  <data name="JingGaoZhanDianMingChenZhiNeng" xml:space="preserve">
+    <value>Подсказка: поля со * не могут быть пустыми, проверьте!</value>
+  </data>
+  <data name="ChuangJianShiBaiMeiYouNiShuaQu" xml:space="preserve">
+    <value>Предупреждение: название сайта может состоять только из букв, не может содержать китайские иероглифы, цифры, знаки препинания или пробелы, проверьте!</value>
+  </data>
+  <data name="ChuangJianShiBaiCunZaiXiangTon" xml:space="preserve">
+    <value>Создание не удалось, нет доступных базовых параметров сайта для выбранной версии продукта, проверьте!</value>
+  </data>
+  <data name="YiChuangJian" xml:space="preserve">
+    <value>Создание не удалось, существует сайт с таким же именем, проверьте!</value>
+  </data>
+  <data name="ZuYongZhanDian" xml:space="preserve">
+    <value>) создан:</value>
+  </data>
+  <data name="NiHaoNi" xml:space="preserve">
+    <value>) арендованный сайт:</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>Здравствуйте, ваш</value>
+  </data>
+  <data name="YiChuangJianZhanDianDeZhiShi" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="DengLuZhangHaoADMINMiMa1234567" xml:space="preserve">
+    <value>Сайт создан, адрес:</value>
+  </data>
+  <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
+    <value>, логин: ADMIN, пароль: 12345678, пожалуйста, используйте с уверенностью, при возникновении вопросов свяжитесь с службой поддержки (021-51085119), спасибо, это письмо отправлено от группы Тайдинг Тодинг!</value>
+  </data>
+  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
+    <value>Уведомление о создании сайта</value>
+  </data>
+  <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
+    <value>&lt;/a&gt;</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ZhengZaiShanChuNiDeYingYongZha" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ZhanDianShanChuChengGong" xml:space="preserve">
+    <value>Логин: ADMIN, пароль: 12345678</value>
+  </data>
+  <data name="ShanChuShiBaiQingJianCha" xml:space="preserve">
+    <value>Восстановление базы данных не удалось!</value>
+  </data>
+  <data name="DiShiCiZhanDianBuCunZaiQingJia" xml:space="preserve">
+    <value>Удаление вашего приложения займет около 5 минут, подождите...</value>
+  </data>
+  <data name="HuiFuShiBaiMeiYouNiShuaQuDeCha" xml:space="preserve">
+    <value>Удаление сайта успешно!</value>
+  </data>
+  <data name="ShiBaiCunZaiXiangTongMingChenD" xml:space="preserve">
+    <value>Удаление не удалось, проверьте!</value>
+  </data>
+  <data name="YiHuiFu" xml:space="preserve">
+    <value>Подсказка: этот сайт не существует, проверьте!</value>
+  </data>
+  <data name="DeTaiDingTaDing" xml:space="preserve">
+    <value>Восстановление не удалось, нет доступных базовых параметров сайта для выбранной версии продукта, проверьте!</value>
+  </data>
+  <data name="YiHuiFuZhanDianDeZhiShi" xml:space="preserve">
+    <value>Не удалось, существует сайт с таким же именем, проверьте!</value>
+  </data>
+  <data name="ZhanDianHuiFuTongZhi" xml:space="preserve">
+    <value>) восстановлен:</value>
+  </data>
+  <data name="HuiFuShiBaiCunZaiXiangTongMing" xml:space="preserve">
+    <value>: Тайдинг Тодинг</value>
+  </data>
+  <data name="ZhengZaiBeiFenNiDeZhanDianWenJ" xml:space="preserve">
+    <value>Сайт восстановлен, адрес:</value>
+  </data>
+  <data name="ZhanDianBeiFenWenJianFaSongChe" xml:space="preserve">
+    <value>Уведомление о восстановлении сайта</value>
+  </data>
+  <data name="DiShiFaSongShiBaiQingJianCha" xml:space="preserve">
+    <value>Восстановление не удалось, существует сайт с таким же именем, проверьте!</value>
+  </data>
+  <data name="ZZYiGengXinXianYouRongLiang" xml:space="preserve">
+    <value>Резервное копирование файлов сайта займет около 5 минут, подождите...</value>
+  </data>
+  <data name="ZZZhanDianShengJiShiBaiQingJia" xml:space="preserve">
+    <value>Резервная копия сайта успешно отправлена!</value>
+  </data>
+  <data name="ZZDiShiFaSongShiBaiQingJianCha" xml:space="preserve">
+    <value>Подсказка: отправка не удалась, проверьте!</value>
+  </data>
+  <data name="ZZDiShiCiZhanDianBuCunZaiQingJ" xml:space="preserve">
+    <value>Текущая емкость обновлена!</value>
+  </data>
+  <data name="ZZBaoCunChengGong" xml:space="preserve">
+    <value>Обновление сайта не удалось, проверьте!</value>
+  </data>
+  <data name="ZZDiShiCiZhanDianHaiCunZaiJiLu" xml:space="preserve">
+    <value>Подсказка: отправка не удалась, проверьте</value>
+  </data>
+  <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
+    <value>Подсказка: этот сайт не существует, проверьте!</value>
+  </data>
+  <data name="ZhanDian" xml:space="preserve">
+    <value>Сохранение успешно</value>
+  </data>
+  <data name="YiBeiShengJiDaoZuiXinBanShengJ" xml:space="preserve">
+    <value>Подсказка: этот сайт все еще существует, запись нельзя удалить, проверьте!</value>
+  </data>
+  <data name="ZhanDianShengJiTongZhi" xml:space="preserve">
+    <value>Обновление сайта займет около 5 минут, подождите...</value>
+  </data>
+  <data name="ZhengZaiFaSongZheGeZhanDianBei" xml:space="preserve">
+    <value>Сайт:</value>
+  </data>
+  <data name="DeShuJuBeiFenWenJianXiaZaiDeZh" xml:space="preserve">
+    <value>был обновлен до последней версии, первое открытие после обновления может занять больше времени, около 5-10 минут, чтобы появилась страница входа, при возникновении вопросов свяжитесь с службой поддержки Тайдинг Тодинг (021-51085119), спасибо, это письмо отправлено от группы Тайдинг Тодинг!</value>
+  </data>
+  <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
+    <value>Уведомление об обновлении сайта</value>
+  </data>
+  <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
+    <value>Отправка резервной копии сайта займет около 5 минут, подождите...</value>
+  </data>
+  <data name="ZhengZaiShanChuZheGeZhanDianDa" xml:space="preserve">
+    <value>Ссылка для скачивания резервной копии данных:</value>
+  </data>
+  <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
+    <value>, скачайте вовремя, при возникновении вопросов свяжитесь с службой поддержки (021-51085119), спасибо, это письмо отправлено от группы Тайдинг Тодинг!</value>
+  </data>
+  <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
+    <value>Уведомление о скачивании резервной копии</value>
+  </data>
+  <data name="ZhengZaiBaoCunZheGeZhanDianDeX" xml:space="preserve">
+    <value>Удаление сайта займет около 5 минут, подождите...</value>
+  </data>
+  <data name="ZuYongBanBen" xml:space="preserve">
+    <value>был удален, при возникновении вопросов свяжитесь с службой поддержки (021-51085119), спасибо, это письмо отправлено от группы Тайдинг Тодинг!</value>
+  </data>
+  <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
+    <value>Уведомление об удалении сайта</value>
+  </data>
+  <data name="RuanJianZuYongShenQingTongZhi" xml:space="preserve">
+    <value>Сохранение абсолютного пути виртуального каталога сайта займет около 1 минуты, подождите...</value>
+  </data>
+  <data name="ZhengZaiShengJiNiDeYingYongZha" xml:space="preserve">
+    <value>Аренда версии:</value>
+  </data>
+  <data name="ZhanDianShengJiChengGong" xml:space="preserve">
+    <value>Заявка на аренду, пожалуйста, обработайте вовремя!!!</value>
+  </data>
+  <data name="ZhanDianShengJiShiBaiQingJianC" xml:space="preserve">
+    <value>Уведомление о заявке на аренду ПО</value>
+  </data>
+  <data name="ZhengZaiBaoCunYingYongZhanDian" xml:space="preserve">
+    <value>Обновление вашего приложения займет около 5 минут, подождите...</value>
+  </data>
+  <data name="XuNiMuLuDeJueDuiLuJingBaoCunCh" xml:space="preserve">
+    <value>Обновление сайта успешно!</value>
+  </data>
+  <data name="BaoCunShiBaiQingJianCha" xml:space="preserve">
+    <value>Обновление сайта не удалось, проверьте!</value>
+  </data>
+  <data name="GengXinShiBaiQingJianCha" xml:space="preserve">
+    <value>Сохранение абсолютного пути виртуального каталога приложения займет около 1 минуты, подождите...</value>
+  </data>
+  <data name="TongYiWanChengTongGuo" xml:space="preserve">
+    <value>Абсолютный путь виртуального каталога успешно сохранен!</value>
+  </data>
+  <data name="ZZJingGaoBuNengShuaZiShenZuoWe" xml:space="preserve">
+    <value>Сохранение не удалось, проверьте!</value>
+  </data>
+  <data name="HuiJiKeMuLieBiao" xml:space="preserve">
+    <value>Обновление не удалось, проверьте!</value>
+  </data>
+  <data name="WeiShuaDing" xml:space="preserve">
+    <value>Согласование завершено</value>
+  </data>
+  <data name="ZiChanLiRunBiao" xml:space="preserve">
+    <value>Предупреждение: нельзя выбрать себя в качестве родительской категории, проверьте!</value>
+  </data>
+  <data name="WeiChuZhang" xml:space="preserve">
+    <value>Список бухгалтерских счетов</value>
+  </data>
+  <data name="YiChuZhang" xml:space="preserve">
+    <value>Не выбрано</value>
+  </data>
+  <data name="WeiRuZhang" xml:space="preserve">
+    <value>Баланс активов и прибыли</value>
+  </data>
+  <data name="YiRuZhang" xml:space="preserve">
+    <value>Не выставлен</value>
+  </data>
+  <data name="ZZJingGaoJiaoSeBuNengWeiKongQi" xml:space="preserve">
+    <value>Выставлен</value>
+  </data>
+  <data name="ZZDiShiQingXianShuaZeYaoShanCh" xml:space="preserve">
+    <value>Не внесен</value>
+  </data>
+  <data name="WoDeSuoYouGeTongLieBiao" xml:space="preserve">
+    <value>Внесен</value>
+  </data>
+  <data name="QianDingDeGeTongLieBiao" xml:space="preserve">
+    <value>Предупреждение: роль не может быть пустой, проверьте!</value>
+  </data>
+  <data name="DeGeTong" xml:space="preserve">
+    <value>Подсказка: сначала выберите ID JSCode для удаления!</value>
+  </data>
+  <data name="SuoYouGeTongLieBiao" xml:space="preserve">
+    <value>Список всех моих контрактов:</value>
+  </data>
+  <data name="ShanChuTuPianXinXi" xml:space="preserve">
+    <value>Список заключенных контрактов:</value>
+  </data>
+  <data name="GengXinTuPianXinXi" xml:space="preserve">
+    <value>Контракт:</value>
+  </data>
+  <data name="XinZengYongHuXinXi" xml:space="preserve">
+    <value>Список всех контрактов:</value>
+  </data>
+  <data name="GengXinSuoYouXinXi" xml:space="preserve">
+    <value>Удаление информации об изображении</value>
+  </data>
+  <data name="nbspnbspXuQiuZhuangTai" xml:space="preserve">
+    <value>Обновление информации об изображении</value>
+  </data>
+  <data name="ZongWenJianShu" xml:space="preserve">
+    <value>Добавление информации о пользователе</value>
+  </data>
+  <data name="SuoYouQingJiaXinXiLieBiao" xml:space="preserve">
+    <value>Обновление всей информации</value>
+  </data>
+  <data name="GongQingJia" xml:space="preserve">
+    <value>  Статус запроса:</value>
+  </data>
+  <data name="DeQingJiaXinXi" xml:space="preserve">
+    <value>Общее количество файлов:</value>
+  </data>
+  <data name="QingJiaXinXi" xml:space="preserve">
+    <value>Список всей информации об отпусках:</value>
+  </data>
+  <data name="XinShouYouJian" xml:space="preserve">
+    <value>Всего отпусков:</value>
+  </data>
+  <data name="YiYueYouJian" xml:space="preserve">
+    <value>Информация об отпуске:</value>
+  </data>
+  <data name="DaiFaYouJian" xml:space="preserve">
+    <value>Информация об отпуске_</value>
+  </data>
+  <data name="YiFaYouJian" xml:space="preserve">
+    <value>Новые письма</value>
+  </data>
+  <data name="CaoGaoXiang" xml:space="preserve">
+    <value>Прочитанные письма</value>
+  </data>
+  <data name="LaJiXiang" xml:space="preserve">
+    <value>Письма к отправке</value>
+  </data>
+  <data name="BuMenChengYuanJiHuaPingFenDuiB" xml:space="preserve">
+    <value>Отправленные письма</value>
+  </data>
+  <data name="ChengYuanJiXiaoZongPingFenDuiB" xml:space="preserve">
+    <value>Черновики</value>
+  </data>
+  <data name="XiangMuChengYuanRenWuxls" xml:space="preserve">
+    <value>Корзина</value>
+  </data>
+  <data name="YueJiHuaWanChengQingKuang" xml:space="preserve">
+    <value>Сравнение оценок планов членов отдела</value>
+  </data>
+  <data name="GeTongZongE" xml:space="preserve">
+    <value>Сравнение общих оценок эффективности членов</value>
+  </data>
+  <data name="GeTongYingShouZongE" xml:space="preserve">
+    <value>Задачи участников проекта.xls</value>
+  </data>
+  <data name="GeTongShiShouZongE" xml:space="preserve">
+    <value>Выполнение месячного плана</value>
+  </data>
+  <data name="YiFaShengFeiYong" xml:space="preserve">
+    <value>Общая сумма контракта:</value>
+  </data>
+  <data name="ZongYuSuan" xml:space="preserve">
+    <value>, Общая сумма к получению по контракту:</value>
+  </data>
+  <data name="DangQianRiJiYuSuan" xml:space="preserve">
+    <value>, Фактически полученная сумма по контракту:</value>
+  </data>
+  <data name="WenJianShangChuanZheBaoHan" xml:space="preserve">
+    <value>Понесенные расходы:</value>
+  </data>
+  <data name="BAnLeiXingLiuLanSuoYouXiangMuB" xml:space="preserve">
+    <value>, Общий бюджет:</value>
+  </data>
+  <data name="DiSanFangCaoZuoJiLuLieBiao" xml:space="preserve">
+    <value>Бюджет на текущую дату:</value>
+  </data>
+  <data name="TiaoJiLu" xml:space="preserve">
+    <value>Загрузивший файл:</value>
+  </data>
+  <data name="DeDiSanFangCaoZuoJiLu" xml:space="preserve">
+    <value>&lt;B&gt;Просмотр всех проектов по типу&lt;/B&gt;</value>
+  </data>
+  <data name="DeChengYuan" xml:space="preserve">
+    <value>Список записей сторонних операций:</value>
+  </data>
+  <data name="YuanGongKPIKaoHeBiao" xml:space="preserve">
+    <value>записей</value>
+  </data>
+  <data name="YongHuChengYuanXinXi" xml:space="preserve">
+    <value>Записи сторонних операций:</value>
+  </data>
+  <data name="ShouLiLeNiDeRenWu" xml:space="preserve">
+    <value>Участник:</value>
+  </data>
+  <data name="JuJueLeNiDeRenWu" xml:space="preserve">
+    <value>Таблица KPI сотрудников_</value>
+  </data>
+  <data name="ZhengZaiChuLiNiDeRenWu" xml:space="preserve">
+    <value>Информация о пользователях</value>
+  </data>
+  <data name="WanChengLeNiDeRenWu" xml:space="preserve">
+    <value>Принял вашу задачу:</value>
+  </data>
+  <data name="GuaQiLeNiDeRenWu" xml:space="preserve">
+    <value>Отклонил вашу задачу:</value>
+  </data>
+  <data name="DeFenPaJiLu" xml:space="preserve">
+    <value>Обрабатывает вашу задачу:</value>
+  </data>
+  <data name="KeHuFuWuXuQiuLieBiao" xml:space="preserve">
+    <value>Завершил вашу задачу:</value>
+  </data>
+  <data name="BKeHuFuWuXuQiuLieBiaoB" xml:space="preserve">
+    <value>Приостановил вашу задачу:</value>
+  </data>
+  <data name="CuoWuXiangYingMoBanHuoMoBanWen" xml:space="preserve">
+    <value>Записи распределения:</value>
+  </data>
+  <data name="QingXianZhuCeBiaoChanMoBan" xml:space="preserve">
+    <value>Список запросов клиентов</value>
+  </data>
+  <data name="WenKongZhuanYuan" xml:space="preserve">
+    <value>&lt;B&gt;Список запросов клиентов&lt;/B&gt;</value>
+  </data>
+  <data name="ShouLiNiDeXiangMu" xml:space="preserve">
+    <value>Ошибка: соответствующий шаблон или файл шаблона не существует, проверьте!</value>
+  </data>
+  <data name="JuJueNiDeXiangMu" xml:space="preserve">
+    <value>Сначала зарегистрируйте шаблон формы.</value>
+  </data>
+  <data name="KaiShiChuLiNiDeXiangMu" xml:space="preserve">
+    <value>Специалист по документации</value>
+  </data>
+  <data name="XiangMuChuLiQingKuangFanKui" xml:space="preserve">
+    <value>Принял ваш проект:</value>
+  </data>
+  <data name="1MoKaoQinLiuCheng" xml:space="preserve">
+    <value>Отклонил ваш проект:</value>
+  </data>
+  <data name="HuiYi" xml:space="preserve">
+    <value>Начал обработку вашего проекта:</value>
+  </data>
+  <data name="GeTong" xml:space="preserve">
+    <value>Обратная связь по обработке проекта</value>
+  </data>
+  <data name="HouShuaRen" xml:space="preserve">
+    <value>-1 Нет процесса учета рабочего времени</value>
+  </data>
+  <data name="NiYiBeiYaoQingCanJiaXieZuo" xml:space="preserve">
+    <value>Собрание</value>
+  </data>
+  <data name="YaoQingZhe" xml:space="preserve">
+    <value>Контракт</value>
+  </data>
+  <data name="QingZhunShiCanJia" xml:space="preserve">
+    <value>Кандидат</value>
+  </data>
+  <data name="XieZuoTongZhi" xml:space="preserve">
+    <value>Вы приглашены к сотрудничеству:</value>
+  </data>
+  <data name="ZZDengJiChengGongHuanYingNiChe" xml:space="preserve">
+    <value>, приглашающий:</value>
+  </data>
+  <data name="ZZDengJiShiBaiQingLianJiShangH" xml:space="preserve">
+    <value>, пожалуйста, приходите вовремя!</value>
+  </data>
+  <data name="DengJiChengGongHuanYingNiCheng" xml:space="preserve">
+    <value>Уведомление о сотрудничестве</value>
+  </data>
+  <data name="ShangHuiGuanLiYuan" xml:space="preserve">
+    <value>Регистрация успешна, добро пожаловать в ассоциацию!</value>
+  </data>
+  <data name="ZhiJieChengYuanJiHuaPingFenDui" xml:space="preserve">
+    <value>Регистрация не удалась, свяжитесь с администратором ассоциации</value>
+  </data>
+  <data name="YinQuXiangMuZhuangTai" xml:space="preserve">
+    <value>Регистрация успешна, добро пожаловать в ассоциацию, ваш</value>
+  </data>
+  <data name="GongZuoLiuShenPiTongZhi" xml:space="preserve">
+    <value>Администратор ассоциации</value>
+  </data>
+  <data name="ZZJingGaoKaiShiShiJianHeJieShu" xml:space="preserve">
+    <value>Сравнение оценок планов прямых членов</value>
+  </data>
+  <data name="ZZJingGaoBuNengShenQingKuaNian" xml:space="preserve">
+    <value>Скрыть статус проекта</value>
+  </data>
+  <data name="1MoJiaBanLeiXing" xml:space="preserve">
+    <value>Уведомление о согласовании рабочего процесса</value>
+  </data>
+  <data name="JiaBan" xml:space="preserve">
+    <value>Предупреждение: время начала и окончания должно быть в один и тот же день, проверьте!</value>
+  </data>
+  <data name="JiaBanShenQing" xml:space="preserve">
+    <value>Предупреждение: нельзя подавать заявку на сверхурочную работу, пересекающую год или месяц, проверьте!</value>
+  </data>
+  <data name="DeJiaBanShenQing" xml:space="preserve">
+    <value>-1 Нет типа сверхурочной работы</value>
+  </data>
+  <data name="ShouLiLeNiJianLiDeXiangMu" xml:space="preserve">
+    <value>Сверхурочная работа</value>
+  </data>
+  <data name="JuJueLeNiJianLiDeXiangMu" xml:space="preserve">
+    <value>Заявка на сверхурочную работу</value>
+  </data>
+  <data name="KaiShiChuLiNiJianLiDeXiangMu" xml:space="preserve">
+    <value>Заявка на сверхурочную работу</value>
+  </data>
+  <data name="GongZuoLiuChuLiTongZhi" xml:space="preserve">
+    <value>Принял ваш проект:</value>
+  </data>
+  <data name="YiWanCheng" xml:space="preserve">
+    <value>Отклонил ваш проект:</value>
+  </data>
+  <data name="ChanWei" xml:space="preserve">
+    <value>Начал обработку вашего проекта:</value>
+  </data>
+  <data name="CunFangCangKu" xml:space="preserve">
+    <value>Уведомление о обработке рабочего процесса</value>
+  </data>
+  <data name="ZZJingGaoCiZiChanShuLiangWei0B" xml:space="preserve">
+    <value>Завершено</value>
+  </data>
+  <data name="ZZGongZhongHaoAppIDBuNengWeiKo" xml:space="preserve">
+    <value>Единица</value>
+  </data>
+  <data name="ZZQiYeHaoCordIDHeYingYongIDBuN" xml:space="preserve">
+    <value>Склад хранения</value>
+  </data>
+  <data name="XinJianPingShenShouLiHuoDongJu" xml:space="preserve">
+    <value>Предупреждение: количество этого актива равно 0, не требует обслуживания!</value>
+  </data>
+  <data name="ZZBaoCunShiBaiZhouMoKaiShiRiJi" xml:space="preserve">
+    <value>AppID официального аккаунта не может быть пустым!</value>
+  </data>
+  <data name="DeFeiYongFenBu" xml:space="preserve">
+    <value>CordID корпоративного аккаунта и ID приложения не могут быть пустыми!</value>
+  </data>
+  <data name="QiaoBiaoYaoQingHanTongZhi" xml:space="preserve">
+    <value>Создать, Оценить, Принять, Активность, Отклонить, Закрыть, Отменить, Приостановить, Архивировать, Скрыть, Удалить</value>
+  </data>
+  <data name="ZhongBiao" xml:space="preserve">
+    <value>Сохранение не удалось, дата начала или окончания выходных не может быть больше 6 или меньше 0, проверьте!</value>
+  </data>
+  <data name="ZhongBiaoYuFouQingKuangTongZhi" xml:space="preserve">
+    <value>Распределение расходов:</value>
+  </data>
+  <data name="ZZJingGaoGongChengChanWeiHeShe" xml:space="preserve">
+    <value>Уведомление о приглашении на тендер</value>
+  </data>
+  <data name="BSuoYouXiangMuB" xml:space="preserve">
+    <value>Победа в тендере</value>
+  </data>
+  <data name="FenBaoFuKuanShenQing" xml:space="preserve">
+    <value>Уведомление о результатах тендера</value>
+  </data>
+  <data name="WeiKaiBiao" xml:space="preserve">
+    <value>Предупреждение: единицы измерения работ и оборудования не могут быть пустыми, проверьте!</value>
+  </data>
+  <data name="XinJianChengGongQingJiShiZaiQi" xml:space="preserve">
+    <value>&lt;B&gt;Все проекты&lt;/B&gt;</value>
+  </data>
+  <data name="ZZJingGaoDaiHaoDeBuNengWeiKong" xml:space="preserve">
+    <value>Заявка на оплату субподряда</value>
+  </data>
+  <data name="GeRenZhangHao" xml:space="preserve">
+    <value>Тендер не открыт</value>
+  </data>
+  <data name="ZhuanGu" xml:space="preserve">
+    <value>Создание успешно. Пожалуйста, своевременно проверьте информацию о подрядчике в разделе Управление тендерами - Проверка подрядчиков!</value>
+  </data>
+  <data name="ChuCheTongZhi" xml:space="preserve">
+    <value>Предупреждение: поля со * не могут быть пустыми, проверьте!</value>
+  </data>
+  <data name="MuDeDe" xml:space="preserve">
+    <value>Личный аккаунт:</value>
+  </data>
+  <data name="FanHuiShiJian" xml:space="preserve">
+    <value>Эксперт</value>
+  </data>
+  <data name="QingZhunShiChuFa1" xml:space="preserve">
+    <value>Уведомление о выезде:</value>
+  </data>
+  <data name="QingZhunShiChuFa" xml:space="preserve">
+    <value>Место назначения:</value>
+  </data>
+  <data name="YouLiaoBianHao" xml:space="preserve">
+    <value>, Время возвращения:</value>
+  </data>
+  <data name="YouLiaoMingChen" xml:space="preserve">
+    <value>, Пожалуйста, отправляйтесь вовремя!</value>
+  </data>
+  <data name="GuiShuBuMenBianMa" xml:space="preserve">
+    <value>, Пожалуйста, отправляйтесь вовремя!</value>
+  </data>
+  <data name="JiaYouShuLiang" xml:space="preserve">
+    <value>Номер топлива</value>
+  </data>
+  <data name="ChanJia" xml:space="preserve">
+    <value>Название топлива</value>
+  </data>
+  <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
+    <value>Код отдела</value>
+  </data>
+  <data name="brbrNeiRong" xml:space="preserve">
+    <value>Количество заправки</value>
+  </data>
+  <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
+    <value>Цена за единицу</value>
+  </data>
+  <data name="Juan" xml:space="preserve">
+    <value>Уведомление о исправлении проблем</value>
+  </data>
+  <data name="JuanNeiJian" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ShuRuXiangMuXiangGuanFeiYong" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
+    <value>Содержание:</value>
+  </data>
+  <data name="BuChongXieYi" xml:space="preserve">
+    <value>Это сотрудничество не существует, возможно, было удалено, проверьте!</value>
+  </data>
+  <data name="XiangMuJiTaXinXi" xml:space="preserve">
+    <value>Том</value>
+  </data>
+  <data name="DaoRuShiBaiShuJuYouWuQingJianC" xml:space="preserve">
+    <value>Документ в томе</value>
+  </data>
+  <data name="CuoWuDaiMa" xml:space="preserve">
+    <value>Введите расходы, связанные с проектом</value>
+  </data>
+  <data name="YiCunZaiBuNengChongFuTianJiaQi" xml:space="preserve">
+    <value>Подсказка: тип документа не может быть пустым, проверьте!</value>
+  </data>
+  <data name="SiJiMuLu" xml:space="preserve">
+    <value>Дополнительное соглашение</value>
+  </data>
+  <data name="BaoLiuShuLiang" xml:space="preserve">
+    <value>Другая информация о проекте</value>
+  </data>
+  <data name="YiChuKuLiang" xml:space="preserve">
+    <value>Импорт не удался, данные ошибочны, проверьте!</value>
+  </data>
+  <data name="ZhuCeZhengHao" xml:space="preserve">
+    <value>Ошибка: код:</value>
+  </data>
+  <data name="DaoRuShiBaiDaLeiZhiNengSheWeiW" xml:space="preserve">
+    <value>уже существует, нельзя добавить повторно, проверьте!</value>
+  </data>
+  <data name="DaoRuShiBaiXiaoLei" xml:space="preserve">
+    <value>Четвертый уровень каталога</value>
+  </data>
+  <data name="BuCunZaiQingXianZaiJiChuShuJuW" xml:space="preserve">
+    <value>Количество в наличии</value>
+  </data>
+  <data name="BuCunZaiQingXianZaiWuLiaoLeiXi" xml:space="preserve">
+    <value>Количество выданного</value>
+  </data>
+  <data name="GeTongChaXunBaoBiao" xml:space="preserve">
+    <value>Номер регистрационного удостоверения</value>
+  </data>
+  <data name="MeiYouChaXunDaoXiangYingXinXi" xml:space="preserve">
+    <value>Импорт не удался, основная категория может быть только "Материалы" или "Активы", проверьте!</value>
+  </data>
+  <data name="GeTongFuKuan" xml:space="preserve">
+    <value>Импорт не удался, подкатегория:</value>
+  </data>
+  <data name="WuLiaoCaiGouFuKuan" xml:space="preserve">
+    <value>не существует, сначала установите в модуле [Базовые данные (внешние)]!</value>
+  </data>
+  <data name="ZiChanCaiGouFuKuan" xml:space="preserve">
+    <value>не существует, сначала установите в модуле [Типы материалов]!</value>
+  </data>
+  <data name="GeTongQianZheng" xml:space="preserve">
+    <value>Отчет по запросу контрактов</value>
+  </data>
+  <data name="QingJiShiShouLi" xml:space="preserve">
+    <value>Не найдено соответствующей информации</value>
+  </data>
+  <data name="JiaRuXiangMuTongZhi" xml:space="preserve">
+    <value>Оплата по контракту</value>
+  </data>
+  <data name="XiangMuChengYuanJiaRuTongZhi" xml:space="preserve">
+    <value>Оплата за закупку материалов</value>
+  </data>
+  <data name="ZZShiBaiZhiNengShangChuanwordW" xml:space="preserve">
+    <value>Оплата за закупку активов</value>
+  </data>
+  <data name="GeTongYiJu" xml:space="preserve">
+    <value>Виза контракта</value>
+  </data>
+  <data name="TaDingXiangMuBao" xml:space="preserve">
+    <value>, Пожалуйста, обработайте вовремя!</value>
+  </data>
+  <data name="GeiNiFenPaLeXuQiu" xml:space="preserve">
+    <value>Уведомление о присоединении к проекту</value>
+  </data>
+  <data name="FenPaLeXuQiu" xml:space="preserve">
+    <value>Уведомление о присоединении участника проекта</value>
+  </data>
+  <data name="GeiNiQingJiShiShouLi" xml:space="preserve">
+    <value>Не удалось, можно загружать только документы Word, проверьте!</value>
+  </data>
+  <data name="XuQiuFenPaTongZhi" xml:space="preserve">
+    <value>Основание контракта</value>
+  </data>
+  <data name="nbspnbspZhuangTai" xml:space="preserve">
+    <value>Тодинг Проект Бокс</value>
+  </data>
+  <data name="GengXinLeXiangMu" xml:space="preserve">
+    <value>Назначил вам запрос:</value>
+  </data>
+  <data name="DeNeiRongQingGuanZhuTeCiTongZh" xml:space="preserve">
+    <value>Назначил запрос:</value>
+  </data>
+  <data name="ShanChuLeXiangMu" xml:space="preserve">
+    <value>вам, пожалуйста, обработайте вовремя!</value>
+  </data>
+  <data name="XiangMuTongZhi" xml:space="preserve">
+    <value>Уведомление о назначении запроса</value>
+  </data>
+  <data name="GeiNiJianLiLeXiangMu" xml:space="preserve">
+    <value>  Статус:</value>
+  </data>
+  <data name="DiSanFangSheBei" xml:space="preserve">
+    <value>Обновил проект:</value>
+  </data>
+  <data name="DiSanFangSheBeiDaoRuShuJu" xml:space="preserve">
+    <value>содержание, обратите внимание, уведомление!</value>
+  </data>
+  <data name="LianJiRen" xml:space="preserve">
+    <value>Удалил проект:</value>
+  </data>
+  <data name="ZhongWenDeZhi" xml:space="preserve">
+    <value>Уведомление о проекте</value>
+  </data>
+  <data name="YingWenDeZhi" xml:space="preserve">
+    <value>Создал для вас проект:</value>
+  </data>
+  <data name="JieSuanYinHang" xml:space="preserve">
+    <value>Стороннее оборудование:</value>
+  </data>
+  <data name="OuYu" xml:space="preserve">
+    <value>Стороннее оборудование: Импорт данных</value>
+  </data>
+  <data name="FenGuanJingXiaoShangDaiMa" xml:space="preserve">
+    <value>Контактное лицо</value>
+  </data>
+  <data name="FenGuanJingXiaoShangMingChen" xml:space="preserve">
+    <value>Адрес на китайском</value>
+  </data>
+  <data name="GuiShuBuMenMingChen" xml:space="preserve">
+    <value>Адрес на английском</value>
+  </data>
+  <data name="HangYeLeiXingBuCunZaiQingJianC" xml:space="preserve">
+    <value>Банк для расчетов</value>
+  </data>
+  <data name="DeZhi" xml:space="preserve">
+    <value>Регион</value>
+  </data>
+  <data name="ZhuCeLe" xml:space="preserve">
+    <value>Код управляющего дистрибьютора</value>
+  </data>
+  <data name="DeXinXiQingGuanZhu" xml:space="preserve">
+    <value>Название управляющего дистрибьютора</value>
+  </data>
+  <data name="DianXiaoYuan" xml:space="preserve">
+    <value>Название отдела</value>
+  </data>
+  <data name="KeFu" xml:space="preserve">
+    <value>Тип отрасли не существует, проверьте!</value>
+  </data>
+  <data name="TaiDingXiangMuBao" xml:space="preserve">
+    <value>, Адрес:</value>
+  </data>
+  <data name="XiangMuZengGeGuanLiPingTai" xml:space="preserve">
+    <value>Зарегистрировал:</value>
+  </data>
+  <data name="XiangMuGuanLiPingTai" xml:space="preserve">
+    <value>информацию, обратите внимание!!!</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai" xml:space="preserve">
+    <value>Платформа управления проектами НИОКР</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai" xml:space="preserve">
+    <value>Платформа управления государственными проектами</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
+    <value>Платформа управления строительными проектами</value>
+  </data>
+  <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
+    <value>Платформа управления проектами системной интеграции</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLiPin" xml:space="preserve">
+    <value>Платформа управления проектами внедрения ПО</value>
+  </data>
+  <data name="XiangMuXingERPPingTai" xml:space="preserve">
+    <value>Платформа ERP для проектов</value>
+  </data>
+  <data name="CRMPingTai" xml:space="preserve">
+    <value>Платформа CRM</value>
+  </data>
+  <data name="XieTongOAPingTai" xml:space="preserve">
+    <value>Платформа совместной работы OA</value>
+  </data>
+  <data name="DiJiaoShiBaiDaiHaoXiangBuNengW" xml:space="preserve">
+    <value>Отправка не удалась, поля со * не могут быть пустыми, проверьте!</value>
+  </data>
+  <data name="DiJiaoShiBaiYanZhengMaCuoWuQin" xml:space="preserve">
+    <value>Отправка не удалась, ошибка проверочного кода, проверьте!</value>
+  </data>
+  <data name="DeShiYongXinXiQingGuanZhu" xml:space="preserve">
+    <value>Информация о пробном использовании, обратите внимание!!!</value>
+  </data>
+  <data name="AnKongYouXiaoJi" xml:space="preserve">
+    <value>Срок действия сертификата безопасности</value>
+  </data>
+  <data name="ZhiYeJiNengJianDingZhengShuBia" xml:space="preserve">
+    <value>Номер сертификата профессиональной квалификации</value>
+  </data>
+  <data name="YuanGongXingMing" xml:space="preserve">
+    <value>Имя сотрудника</value>
+  </data>
+  <data name="JingGaoExcelBiaoShuJuDaoRuShiB" xml:space="preserve">
+    <value>Предупреждение: импорт данных из Excel не удался, проверьте данные! Код сотрудника является обязательным полем!</value>
+  </data>
+  <data name="TeChongZuoYeZhengShuBianHao" xml:space="preserve">
+    <value>Номер сертификата специальных работ</value>
+  </data>
+  <data name="TeChongZuoYeZhunCaoXiangMu" xml:space="preserve">
+    <value>Разрешенные виды специальных работ</value>
+  </data>
+  <data name="TeChongZuoYeFuShenShiJian" xml:space="preserve">
+    <value>Срок пересмотра специальных работ</value>
+  </data>
+  <data name="TeChongZuoYeQuZhengShiJian" xml:space="preserve">
+    <value>Дата получения сертификата специальных работ</value>
+  </data>
+  <data name="TeChongSheBeiZhengShuBianHao" xml:space="preserve">
+    <value>Номер сертификата специального оборудования</value>
+  </data>
+  <data name="TeChongSheBeiZhunCaoXiangMu" xml:space="preserve">
+    <value>Разрешенные виды специального оборудования</value>
+  </data>
+  <data name="TeChongSheBeiFuShenShiJian" xml:space="preserve">
+    <value>Срок пересмотра специального оборудования</value>
+  </data>
+  <data name="TeChongSheBeiQuZhengShiJian" xml:space="preserve">
+    <value>Дата получения сертификата специального оборудования</value>
+  </data>
+  <data name="TeChongSheBeiHanJieCaoZuoRenYu" xml:space="preserve">
+    <value>Код сварщика специального оборудования</value>
+  </data>
+  <data name="ChiZhengXiangMuYouXiaoJi" xml:space="preserve">
+    <value>Срок действия сертификата</value>
+  </data>
+  <data name="SaoMiaoJianLuJing" xml:space="preserve">
+    <value>Путь к скану</value>
+  </data>
+  <data name="GangWeiZhengShuFuShenShiJian" xml:space="preserve">
+    <value>Срок пересмотра сертификата должности</value>
+  </data>
+  <data name="GangWeiZhengShuQuZhengShiJian" xml:space="preserve">
+    <value>Дата получения сертификата должности</value>
+  </data>
+  <data name="PeiXunDeDian" xml:space="preserve">
+    <value>Место проведения обучения</value>
+  </data>
+  <data name="JuBanChanWei" xml:space="preserve">
+    <value>Организатор</value>
+  </data>
+  <data name="PeiXunRiJi" xml:space="preserve">
+    <value>Дата обучения</value>
+  </data>
+  <data name="KeHuBaiFangTongJiBiao" xml:space="preserve">
+    <value>Таблица статистики посещений клиентов</value>
+  </data>
+  <data name="DeSuoYouFenPaJiLu" xml:space="preserve">
+    <value>Все записи распределения!</value>
+  </data>
+  <data name="ShouLiLeNiDeQueXian" xml:space="preserve">
+    <value>Принял ваш дефект:</value>
+  </data>
+  <data name="JuJueLeNiDeQueXian" xml:space="preserve">
+    <value>Отклонил ваш дефект:</value>
+  </data>
+  <data name="ChangGuiXiangMu" xml:space="preserve">
+    <value>Обычный проект</value>
+  </data>
+  <data name="brbrbWoDeYiJianbbr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BaQueXian" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
+    <value>&lt;b&gt;Мое мнение:&lt;/b&gt;</value>
+  </data>
+  <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WanChengLeNiDeQueXian" xml:space="preserve">
+    <value>Преобразовал дефект:</value>
+  </data>
+  <data name="GuaQiLeNiDeQueXian" xml:space="preserve">
+    <value>в проект для вас, пожалуйста, обработайте вовремя!</value>
+  </data>
+  <data name="QueXianChuLiQingKuangFanKui" xml:space="preserve">
+    <value>Обрабатывает ваш дефект:</value>
+  </data>
+  <data name="QueXianFenPaTongZhi" xml:space="preserve">
+    <value>Завершил ваш дефект:</value>
+  </data>
+  <data name="BZongXiangMuB" xml:space="preserve">
+    <value>Приостановил ваш дефект:</value>
+  </data>
+  <data name="QueXianZhuaiXiangTongZhi" xml:space="preserve">
+    <value>Обратная связь по обработке дефекта</value>
+  </data>
+  <data name="ZhuaiChengXiangMuGeiNiQingJiSh" xml:space="preserve">
+    <value>Уведомление о распределении дефекта</value>
+  </data>
+  <data name="brbrYanShouBiaoZhun" xml:space="preserve">
+    <value>&lt;B&gt;Общий проект&lt;/B&gt;</value>
+  </data>
+  <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
+    <value>Уведомление о преобразовании дефекта в проект</value>
+  </data>
+  <data name="ShangChuanLeWenJian" xml:space="preserve">
+    <value>Преобразовал в проект для вас, пожалуйста, обработайте вовремя!</value>
+  </data>
+  <data name="QingJiShiChaKan" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WenJianChaYueTongZhi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WenDangLieBiaoB" xml:space="preserve">
+    <value>Критерии приемки:</value>
+  </data>
+  <data name="RiJi" xml:space="preserve">
+    <value>Этот дефект не существует, возможно, был удален, проверьте!</value>
+  </data>
+  <data name="GouHuoChanWei" xml:space="preserve">
+    <value>Покупающая организация</value>
+  </data>
+  <data name="ChanPinChangDaiMa" xml:space="preserve">
+    <value>Загрузил файл:</value>
+  </data>
+  <data name="GongYiKaBianHao" xml:space="preserve">
+    <value>, пожалуйста, просмотрите вовремя!</value>
+  </data>
+  <data name="HanShuiChanJia" xml:space="preserve">
+    <value>Уведомление о просмотре файла</value>
+  </data>
+  <data name="CaiWuFeiYong" xml:space="preserve">
+    <value>Список документов&lt;/B&gt;</value>
+  </data>
+  <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
+    <value>Длинный код продукта</value>
+  </data>
+  <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
+    <value>Номер технологической карты</value>
+  </data>
+  <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
+    <value>Цена с НДС</value>
+  </data>
+  <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
+    <value>Финансовые расходы</value>
+  </data>
+  <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
+    <value>Строка {0}, дата не может быть пустой</value>
+  </data>
+  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
+    <value>Строка {0}, неверный формат даты</value>
+  </data>
+  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
+    <value>Строка {0}, покупающая организация не может быть пустой</value>
+  </data>
+  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
+    <value>Строка {0}, тип продукта не может быть пустой</value>
+  </data>
+  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
+    <value>Строка {0}, тип продукта отсутствует в базовой таблице типов</value>
+  </data>
+  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
+    <value />
+  </data>
+  <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
+    <value>Строка {0}, длинный код продукта не может быть пустым</value>
+  </data>
+  <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
+    <value>Строка {0}, номер технологической карты не может быть пустым</value>
+  </data>
+  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
+    <value>Строка {0}, количество не может быть пустым</value>
+  </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
+    <value>Строка {0}, количество может быть только десятичным числом</value>
+  </data>
+  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
+    <value>Строка {0}, цена с НДС не может быть пустой</value>
+  </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
+    <value>Строка {0}, цена с НДС может быть только десятичным числом</value>
+  </data>
+  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChanPinMingChen" xml:space="preserve">
+    <value>Строка {0}, сумма не может быть пустой</value>
+  </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
+    <value>Строка {0}, сумма может быть только десятичным числом</value>
+  </data>
+  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MoChanPinJiLutd" xml:space="preserve">
+    <value>Строка {0}, финансовые расходы не могут быть пустыми</value>
+  </data>
+  <data name="BianJia" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BaoCuna" xml:space="preserve">
+    <value>Строка {0}, финансовые расходы могут быть только десятичным числом</value>
+  </data>
+  <data name="ZongShuLiangtdtr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZongShuLiangtdtdclass" xml:space="preserve">
+    <value>Успешно импортировано {0} записей</value>
+  </data>
+  <data name="BenSeChengBentdtdclass" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
+    <value>Успешно импортировано {0} записей, всего {1} записей не прошли проверку</value>
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
+    <value>Данные не импортированы, всего {0} записей не прошли проверку</value>
+  </data>
+  <data name="PeiLiao" xml:space="preserve">
+    <value>Строка {0}, название клиента не может быть пустым</value>
+  </data>
+  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
+    <value>Строка {0}, расходы не могут быть пустыми</value>
+  </data>
+  <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
+    <value>Строка {0}, расходы могут быть только десятичным числом</value>
+  </data>
+  <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
+    <value>Строка {0}, тип не может быть пустым</value>
+  </data>
+  <data name="ShouHouFuWu" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
+    <value>Строка {0}, производственные затраты не могут быть пустыми</value>
+  </data>
+  <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
+    <value>Строка {0}, производственные затраты могут быть только десятичным числом</value>
+  </data>
+  <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
+    <value>Строка {0}, расход на тонну не может быть пустым</value>
+  </data>
+  <data name="PiHao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanRiJi" xml:space="preserve">
+    <value>Строка {0}, расход на тонну может быть только десятичным числом</value>
+  </data>
+  <data name="ShiXiaoRiJi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanSheBeiHao" xml:space="preserve">
+    <value>Строка {0}, номер продукта не может быть пустым</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
+    <value>Название продукта</value>
+  </data>
+  <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
+    <value>Строка {0}, название продукта не может быть пустым</value>
+  </data>
+  <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
+    <value>Строка {0}, тип продукта не может быть пустым</value>
+  </data>
+  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
+    <value>Строка {0}, тип продукта: {1} отсутствует в таблице типов продуктов</value>
+  </data>
+  <data name="WuLiaoShengChanChan" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
+    <value>Нет записей о продукте&lt;/td&gt;</value>
+  </data>
+  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
+    <value>Редактировать&lt;/a&gt;</value>
+  </data>
+  <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
+    <value>Сохранить&lt;/a&gt;</value>
+  </data>
+  <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
+    <value>Общее количество&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoXiaoShouChan" xml:space="preserve">
+    <value>&lt;p&gt;Нет записей о сырье&lt;/p&gt;&amp;nbsp;&lt;/td&gt; Общее количество&lt;/td&gt;&lt;td class=\ Себестоимость&lt;/td&gt;&lt;td class=\ Себестоимость цветного материала&lt;/td&gt;&lt;td class=\ Цена рецептуры&lt;/td&gt;&lt;td class=\</value>
+  </data>
+  <data name="WuLiaoBaoJiaChan" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
+    <value>Архив продуктов сырья</value>
+  </data>
+  <data name="DeWuLiaoLieBiao" xml:space="preserve">
+    <value>Компенсация материала</value>
+  </data>
+  <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
+    <value>Строка {0}, компенсация материала не может быть пустой</value>
+  </data>
+  <data name="ZZShanChuShiBaiZhiNengShanChuD" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
+    <value>Строка {0}, компенсация материала может быть только десятичным числом</value>
+  </data>
+  <data name="WuLiaoChuHuo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
+    <value>Пожалуйста, введите тип формы!</value>
+  </data>
+  <data name="WuLiaoHuiZongBaoBiaoxls" xml:space="preserve">
+    <value>Ошибка формата Excel или Excel занят другим процессом</value>
+  </data>
+  <data name="WuLiaoDiaoBoBaoBiaoxls" xml:space="preserve">
+    <value>Подсказка: копирование успешно!</value>
+  </data>
+  <data name="GuoJi" xml:space="preserve">
+    <value>Предупреждение: год копирования не может быть равен или меньше года, из которого копируют, проверьте!</value>
+  </data>
+  <data name="ZuChang" xml:space="preserve">
+    <value>Послепродажное обслуживание</value>
+  </data>
+  <data name="brJianChaNeiRongJiJiFaXian" xml:space="preserve">
+    <value>Подсказка: количество запрошенного материала превышает потребность, проверьте!</value>
+  </data>
+  <data name="JianChaNeiRongJiJiFaXian" xml:space="preserve">
+    <value>Отчет о выдаче материалов.xls</value>
+  </data>
+  <data name="AnGongChong" xml:space="preserve">
+    <value>Отчет о движении материалов.xls</value>
+  </data>
+  <data name="XiangMuRenLiZiYuanBiaoAnGongCh" xml:space="preserve">
+    <value>Отчет о поступлении материалов.xls</value>
+  </data>
+  <data name="XiangMuRenLiZiYuanBiaoAnZiZu" xml:space="preserve">
+    <value>Отчет о инвентаризации материалов.xls</value>
+  </data>
+  <data name="GongZuoRiZhiBaoBiao" xml:space="preserve">
+    <value>Номер партии</value>
+  </data>
+  <data name="ZZDaoRuShiBaiDaLeiZhiNengSheWe" xml:space="preserve">
+    <value>Дата производства</value>
+  </data>
+  <data name="ZZDaoRuShiBaiXiaoLeistrSmallTy" xml:space="preserve">
+    <value>Срок годности</value>
+  </data>
+  <data name="WuLiaoDaiMa" xml:space="preserve">
+    <value>Номер производственного оборудования</value>
+  </data>
+  <data name="BOMBanBenHao" xml:space="preserve">
+    <value>Номер сертификата материала</value>
+  </data>
+  <data name="FuWuLiaoDaiMa" xml:space="preserve">
+    <value>Дата производства: неверный формат или пусто, формат должен быть: 2021-04-01)</value>
+  </data>
+  <data name="ZiWuLiaoDaiMa" xml:space="preserve">
+    <value>Срок годности: неверный формат или пусто, формат должен быть: 2021-04-01)</value>
+  </data>
+  <data name="ZiWuLiaoBOMBanBenHao" xml:space="preserve">
+    <value>Отчет о обслуживании материалов.xls</value>
+  </data>
+  <data name="ZiWuLiaoShuLiang" xml:space="preserve">
+    <value>Предупреждение: количество этого материала равно 0, не требует обслуживания!</value>
+  </data>
+  <data name="GuiShuWuLiaoDaiMa" xml:space="preserve">
+    <value>Предупреждение: количество материала равно 0, не требует обслуживания!</value>
+  </data>
+  <data name="GuiShuWuLiaoBOMBanBen" xml:space="preserve">
+    <value>Подсказка: объем производства превышает потребность, проверьте!</value>
+  </data>
+  <data name="GongNengHuoBeiZhu" xml:space="preserve">
+    <value>Заказ на производство материалов</value>
+  </data>
+  <data name="HuoKPILeiXing" xml:space="preserve">
+    <value>Затраты на производство и обработку</value>
+  </data>
+  <data name="HuoDingYi" xml:space="preserve">
+    <value>Отчет о заказах на закупку.xls</value>
+  </data>
+  <data name="WeiKong" xml:space="preserve">
+    <value>Отчет о возврате закупок.xls</value>
+  </data>
+  <data name="BuCunZai" xml:space="preserve">
+    <value>Отчет о возврате продаж.xls</value>
+  </data>
+  <data name="QingJia" xml:space="preserve">
+    <value>Отчет о безопасном запасе материалов.xls</value>
+  </data>
+  <data name="DangQianZhiWu" xml:space="preserve">
+    <value>Заказ на продажу материалов</value>
+  </data>
+  <data name="HouShuaRenXinXi" xml:space="preserve">
+    <value>Счет-фактура на материалы</value>
+  </data>
+  <data name="ShanChuShuJuChengGongQingTuoSh" xml:space="preserve">
+    <value>Отчет о продаже материалов.xls</value>
+  </data>
+  <data name="ShenPiTongZhi" xml:space="preserve">
+    <value>Список материалов:</value>
+  </data>
+  <data name="TongZhiNiHaoNiYouShenPiGongZuo" xml:space="preserve">
+    <value>Отчет о списании материалов.xls</value>
+  </data>
+  <data name="QingJiShiDengLuGuanLiPingTaiJi" xml:space="preserve">
+    <value>Удаление не удалось, можно удалять только записи за текущий день, проверьте!</value>
+  </data>
+  <data name="TianJiaShuJuChengGongQingTuoSh" xml:space="preserve">
+    <value>Подсказка: количество выдачи превышает потребность, проверьте!</value>
+  </data>
+  <data name="XiuGaiShuJuChengGongQingTuoSha" xml:space="preserve">
+    <value>Отгрузка материалов</value>
+  </data>
+  <data name="ZhuaiFa" xml:space="preserve">
+    <value>Отчет о выдаче материалов.xls</value>
+  </data>
+  <data name="ZiChanCaiGouChan" xml:space="preserve">
+    <value>Сводный отчет о материалах.xls</value>
+  </data>
+  <data name="KeJieYueTianShu" xml:space="preserve">
+    <value>Отчет о перемещении материалов.xls</value>
+  </data>
+  <data name="BenFen" xml:space="preserve">
+    <value>Просрочено</value>
+  </data>
+  <data name="GuiHai" xml:space="preserve">
+    <value>(Руководитель группы)</value>
+  </data>
+  <data name="BiaoZhunYuTuShuXinXi" xml:space="preserve">
+    <value>.&lt;/br&gt;Содержание проверки и обнаруженное:</value>
+  </data>
+  <data name="ShuJiJieYueQingKuang" xml:space="preserve">
+    <value>Содержание проверки и обнаруженное:</value>
+  </data>
+  <data name="CaiGouDingChan" xml:space="preserve">
+    <value>По профессии</value>
+  </data>
+  <data name="ZhongDanYouDiErJianSheGongSi" xml:space="preserve">
+    <value>Таблица человеческих ресурсов проекта по профессиям_</value>
+  </data>
+  <data name="GeTongYuan" xml:space="preserve">
+    <value>Таблица человеческих ресурсов проекта по подгруппам_</value>
+  </data>
+  <data name="KeHuKeShiRenYuanBiao" xml:space="preserve">
+    <value>Отчет о рабочем журнале</value>
+  </data>
+  <data name="NiYouYiGeDaiLiShangDiJiaoDeKeH" xml:space="preserve">
+    <value>Импорт не удался, основная категория может быть только "Материалы" или "Активы", проверьте!</value>
+  </data>
+  <data name="ZZDiShiRuKuLiangChaoChuXuQiuLi" xml:space="preserve">
+    <value>Импорт не удался, подкатегория: " + strSmallType + " отсутствует, сначала установите в модуле [Базовые данные (внешние)]!</value>
+  </data>
+  <data name="ZZShanChuShiBaiZhiNengShanChuS" xml:space="preserve">
+    <value>Код материала</value>
+  </data>
+  <data name="ZZDiShiCaiGouLiangChaoChuXuQiu" xml:space="preserve">
+    <value>Номер версии BOM</value>
+  </data>
+  <data name="WuLiaoCaiGouChan" xml:space="preserve">
+    <value>Код родительского материала</value>
+  </data>
+  <data name="HuiYiTongZhi" xml:space="preserve">
+    <value>Код дочернего материала</value>
+  </data>
+  <data name="ShaoJiRen" xml:space="preserve">
+    <value>Номер версии BOM дочернего материала</value>
+  </data>
+  <data name="DeJiHua" xml:space="preserve">
+    <value>Количество дочернего материала</value>
+  </data>
+  <data name="ZZBaoCunShiBaiYuSuanZongLiangB" xml:space="preserve">
+    <value>Код принадлежащего материала</value>
+  </data>
+  <data name="XiangMuMingChenHuoGuiGe" xml:space="preserve">
+    <value>Версия BOM принадлежащего материала</value>
+  </data>
+  <data name="HuiJiKeMu" xml:space="preserve">
+    <value>Функция или примечание</value>
+  </data>
+  <data name="JiLiangChanWei" xml:space="preserve">
+    <value>или тип KPI:</value>
+  </data>
+  <data name="YuSuanChanJia" xml:space="preserve">
+    <value>или определение:</value>
+  </data>
+  <data name="ZhongBiaoXinXi" xml:space="preserve">
+    <value>пусто,</value>
+  </data>
+  <data name="QiaoBiao" xml:space="preserve">
+    <value>не существует,</value>
+  </data>
+  <data name="TouBiaoZhe" xml:space="preserve">
+    <value>Отпуск</value>
+  </data>
+  <data name="PingBiaoZhe" xml:space="preserve">
+    <value>Текущая должность</value>
+  </data>
+  <data name="DiCheng" xml:space="preserve">
+    <value>Информация о кандидате_</value>
+  </data>
+  <data name="NiYiBeiYaoQingCanJiaHuiYi" xml:space="preserve">
+    <value>Удаление данных успешно, пожалуйста, сохраните свои данные!</value>
+  </data>
+  <data name="XiangMuHuiYiTongZhi" xml:space="preserve">
+    <value>Уведомление о согласовании</value>
+  </data>
+  <data name="JiTongTongZhiYouXinBaoBiao" xml:space="preserve">
+    <value>Уведомление: у вас есть работа на согласование, содержание: самопроверка, пожалуйста, войдите в платформу управления для обработки, это сообщение от: системный администратор!</value>
+  </data>
+  <data name="QingJiShiYueDou" xml:space="preserve">
+    <value>Пожалуйста, войдите в платформу управления для обработки, это сообщение от: системный администратор!</value>
+  </data>
+  <data name="BaoBiaoYueDouTongZhi" xml:space="preserve">
+    <value>Добавление данных успешно, пожалуйста, сохраните свои данные!</value>
+  </data>
+  <data name="ChuangJianYongHuDeYongHuMingHu" xml:space="preserve">
+    <value>Изменение данных успешно, пожалуйста, сохраните свои данные!</value>
+  </data>
+  <data name="HuiYiMingChenBuYunHuWeiKong" xml:space="preserve">
+    <value>Переслать:</value>
+  </data>
+  <data name="ShiJianGeShiCuoWu" xml:space="preserve">
+    <value>Заказ на закупку активов</value>
+  </data>
+  <data name="ShiJianSheZhiYouWu" xml:space="preserve">
+    <value>Количество дней для выдачи:</value>
+  </data>
+  <data name="ZhuXiMiMaGeShiCuoWu" xml:space="preserve">
+    <value>экз./шт.!</value>
+  </data>
+  <data name="HuiYiBuCunZai" xml:space="preserve">
+    <value>Возврат</value>
+  </data>
+  <data name="HuiYiMiMaCuoWu" xml:space="preserve">
+    <value>Информация о стандартах и книгах_</value>
+  </data>
+  <data name="PuTongYongHuMiMaGeShiCuoWu" xml:space="preserve">
+    <value>Информация о выдаче книг_</value>
+  </data>
+  <data name="DiaoYongChuCuoQingJianCha" xml:space="preserve">
+    <value>Заказ на закупку</value>
+  </data>
+  <data name="ShangChuanLeHuiYi" xml:space="preserve">
+    <value>Вторая строительная компания CNPC</value>
+  </data>
+  <data name="DeWenDang" xml:space="preserve">
+    <value>Специалист по контрактам</value>
+  </data>
+  <data name="HuiYiWenDangShangChuanTongZhi" xml:space="preserve">
+    <value>Таблица видимости клиентов_</value>
+  </data>
+  <data name="CiHuiYiZiLiaoBuCunZaiKeNengYiB" xml:space="preserve">
+    <value>У вас есть заявка на регистрацию клиента от агента для согласования, обратите внимание!</value>
+  </data>
+  <data name="ZhiJieChengYuanQingJiaXinXiLie" xml:space="preserve">
+    <value>Подсказка: количество поступления превышает потребность, проверьте!</value>
+  </data>
+  <data name="BSuoYouBuMenZhiJieChengYuanZuZ" xml:space="preserve">
+    <value>Удаление не удалось, можно удалять только записи за последние три дня, проверьте!</value>
+  </data>
+  <data name="ZhiJieChengYuanZuZhiCengCiTuB" xml:space="preserve">
+    <value>Подсказка: количество закупки превышает потребность, проверьте!</value>
+  </data>
+  <data name="ZZScriptManagerRegisterStartup" xml:space="preserve">
+    <value>Заказ на закупку материалов</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoJianLiDeXian" xml:space="preserve">
+    <value>Уведомление о собрании:</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoCanYuDeXiang" xml:space="preserve">
+    <value>, Организатор:</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoChengYuanDeX" xml:space="preserve">
+    <value>План</value>
+  </data>
+  <data name="WoDeZhiJieChengYuanJiXiaoZongP" xml:space="preserve">
+    <value>Сохранение не удалось, общий бюджет не может быть 0, проверьте!</value>
+  </data>
+  <data name="ZZDiShiQingXianShuaZeXiangMu" xml:space="preserve">
+    <value>Название проекта или спецификация</value>
+  </data>
+  <data name="BAnLeiXingLiuLanWoDeXiangMuB" xml:space="preserve">
+    <value>Бухгалтерский счет</value>
+  </data>
+  <data name="ZZJingGaoCiChengYuanYiCunZaiBu" xml:space="preserve">
+    <value>Единица измерения</value>
+  </data>
+  <data name="ZZJingGaoGongZuoNeiRongBuNengK" xml:space="preserve">
+    <value>Бюджетная цена</value>
+  </data>
+  <data name="DeKeHu" xml:space="preserve">
+    <value>. Информация о победе в тендере:</value>
+  </data>
+  <data name="KeHuKaiFa" xml:space="preserve">
+    <value>Тендер</value>
+  </data>
+  <data name="KaiFaJiHua" xml:space="preserve">
+    <value>Участник тендера</value>
+  </data>
+  <data name="ChanPinBaoJia" xml:space="preserve">
+    <value>Оценщик</value>
+  </data>
+  <data name="ZhuanTiTaoLun" xml:space="preserve">
+    <value>Комиссия</value>
+  </data>
+  <data name="XiaoShouGenZong" xml:space="preserve">
+    <value>Вы приглашены на собрание:</value>
+  </data>
+  <data name="GongSiGongGaoWenJianLieBiao" xml:space="preserve">
+    <value>Уведомление о собрании проекта</value>
+  </data>
+  <data name="WenJianMingBaoHan" xml:space="preserve">
+    <value>Системное уведомление: новый отчет:</value>
+  </data>
+  <data name="ZiFuChuanDeWenDangLieBiao" xml:space="preserve">
+    <value>, пожалуйста, прочитайте вовремя!</value>
+  </data>
+  <data name="GongWen" xml:space="preserve">
+    <value>Уведомление о прочтении отчета</value>
+  </data>
+  <data name="DaJiHua" xml:space="preserve">
+    <value>Имя пользователя или пароль для создания пользователя неверны!</value>
+  </data>
+  <data name="FenPaJiLu" xml:space="preserve">
+    <value>Название собрания не может быть пустым!</value>
+  </data>
+  <data name="ZZCuoWuNiBuNengDaoRuBieRenDeFe" xml:space="preserve">
+    <value>Ошибка формата времени!</value>
+  </data>
+  <data name="FeiYongBaoXiaoShenQing" xml:space="preserve">
+    <value>Ошибка в настройках времени!</value>
+  </data>
+  <data name="KeMuMingChen" xml:space="preserve">
+    <value>Ошибка формата пароля председателя!</value>
+  </data>
+  <data name="FaShengRiJi" xml:space="preserve">
+    <value>Собрание не существует!</value>
+  </data>
+  <data name="DangShiRenDaiMa" xml:space="preserve">
+    <value>Ошибка пароля собрания!</value>
+  </data>
+  <data name="DangShiRenXingMing" xml:space="preserve">
+    <value>Ошибка формата пароля обычного пользователя!</value>
+  </data>
+  <data name="WenKongLieBiao" xml:space="preserve">
+    <value>Ошибка вызова, проверьте!</value>
+  </data>
+  <data name="ShouTuFuJian" xml:space="preserve">
+    <value>Загрузил документ для собрания:</value>
+  </data>
+  <data name="WenJianFuJian" xml:space="preserve">
+    <value>Уведомление о загрузке документа собрания</value>
+  </data>
+  <data name="ShouTuDengJiLieBiao" xml:space="preserve">
+    <value>Этот материал собрания не существует, возможно, был удален, проверьте!</value>
+  </data>
+  <data name="ShouTuDengJiFaTuDengJiShouWenD" xml:space="preserve">
+    <value>Список информации об отпусках прямых членов:</value>
+  </data>
+  <data name="FaTuDengJiLieBiao" xml:space="preserve">
+    <value>&lt;B&gt;Организационная диаграмма всех отделов прямых членов&lt;/B&gt;</value>
+  </data>
+  <data name="ShouWenDengJiLieBiao" xml:space="preserve">
+    <value>Организационная диаграмма прямых членов&lt;/B&gt;</value>
+  </data>
+  <data name="FaWenDengJiLieBiao" xml:space="preserve">
+    <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(Сохранение не удалось, вы не создатель этого шаблона процесса, нельзя сохранить изображение процесса!</value>
+  </data>
+  <data name="BuKeYuJianFeiJiGeXiangJiangLi" xml:space="preserve">
+    <value>&lt;B&gt;Просмотр моих проектов по типу&lt;/B&gt;</value>
+  </data>
+  <data name="YiCiBiaoJiaFenLiBiao" xml:space="preserve">
+    <value>&lt;B&gt;Просмотр проектов, в которых я участвую, по типу&lt;/B&gt;</value>
+  </data>
+  <data name="ErCiBiaoJiaFenLiMuBiaoChengBen" xml:space="preserve">
+    <value>&lt;B&gt;Просмотр проектов моих членов по типу&lt;/B&gt;</value>
+  </data>
+  <data name="ZZJingGaoChengBenLeiXingBuNeng" xml:space="preserve">
+    <value>Моя диаграмма общей оценки эффективности прямых членов</value>
+  </data>
+  <data name="XiangMuGongZuoRiZhi" xml:space="preserve">
+    <value>Подсказка: сначала выберите проект!</value>
+  </data>
+  <data name="ShouLiLeNiDeXuQiu" xml:space="preserve">
+    <value>&lt;B&gt;Просмотр моих проектов по типу&lt;/B&gt;</value>
+  </data>
+  <data name="JuJueLeNiDeXuQiu" xml:space="preserve">
+    <value>Предупреждение: этот член уже существует, нельзя добавить повторно, проверьте!</value>
+  </data>
+  <data name="ZhengZaiChuLiNiDeXuQiu" xml:space="preserve">
+    <value>Предупреждение: содержание работы не может быть пустым, проверьте!</value>
+  </data>
+  <data name="WanChengLeNiDeXuQiu" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="GuaQiLeNiDeXuQiu" xml:space="preserve">
+    <value>Разработка клиента</value>
+  </data>
+  <data name="XuQiuChuLiQingKuangFanKui" xml:space="preserve">
+    <value>План разработки</value>
+  </data>
+  <data name="XuQiuZhuaiXiangTongZhi" xml:space="preserve">
+    <value>Ценообразование продукта</value>
+  </data>
+  <data name="BaXuQiu" xml:space="preserve">
+    <value>Тематическое обсуждение</value>
+  </data>
+  <data name="yyyyNianMMYue" xml:space="preserve">
+    <value>Отслеживание продаж</value>
+  </data>
+  <data name="QuanTiXiangMuHuiZongJiHuaDuiZh" xml:space="preserve">
+    <value>Список файлов объявлений компании:</value>
+  </data>
+  <data name="XiangMuRenLiZiYuanZongJiHua" xml:space="preserve">
+    <value>Имя файла содержит:</value>
+  </data>
+  <data name="QuanTiXiangMuHuiZongYueDuiZhao" xml:space="preserve">
+    <value>Список документов строки:</value>
+  </data>
+  <data name="XiangMuYuSuanYuFeiYongBaoBiao" xml:space="preserve">
+    <value>Официальный документ</value>
+  </data>
+  <data name="XiangMuYuSuanYuFeiYongTongJiBa" xml:space="preserve">
+    <value>Большой план</value>
+  </data>
+  <data name="YuSuanFeiYongFenBuTu" xml:space="preserve">
+    <value>Записи распределения:</value>
+  </data>
+  <data name="XiangMuYingShouShiShouTongJiBa" xml:space="preserve">
+    <value>Ошибка: вы не можете импортировать чужие расходы, проверьте!</value>
+  </data>
+  <data name="XiangMuYingShouYingFuTongJiBao" xml:space="preserve">
+    <value>Заявка на возмещение расходов</value>
+  </data>
+  <data name="YingShouShiShouTongJiTu" xml:space="preserve">
+    <value>Название счета</value>
+  </data>
+  <data name="XiangMuLiChengBeiZhuangTaiBaoB" xml:space="preserve">
+    <value>Дата возникновения</value>
+  </data>
+  <data name="XiangMuMeiYueYuSuanTongJiBaoBi" xml:space="preserve">
+    <value>Код участника</value>
+  </data>
+  <data name="YueDuYuSuan" xml:space="preserve">
+    <value>Имя участника</value>
+  </data>
+  <data name="XiangMuLiRunChengBenZhuangTaiB" xml:space="preserve">
+    <value>Список документов</value>
+  </data>
+  <data name="LiRunChengBenFenBuTu" xml:space="preserve">
+    <value>Приложение к чертежу</value>
+  </data>
+  <data name="XiangMuZhuangTaiFenBuTu" xml:space="preserve">
+    <value>Приложение к файлу</value>
+  </data>
+  <data name="XiangMuLiRunChengBenTongJiBiao" xml:space="preserve">
+    <value>Список регистрации получения чертежей</value>
+  </data>
+  <data name="XiangMuLiChengBeiShuJuBaoBiao" xml:space="preserve">
+    <value>Регистрация получения чертежей, регистрация выдачи чертежей, регистрация получения документов, регистрация выдачи документов</value>
+  </data>
+  <data name="NianDuShiShiXiangMuChanZhi" xml:space="preserve">
+    <value>Список регистрации выдачи чертежей</value>
+  </data>
+  <data name="NianDuShiShiXiangMuCaiWuZhuang" xml:space="preserve">
+    <value>Список регистрации получения документов</value>
+  </data>
+  <data name="NianDuShiShiXiangMuZhuangTaiYi" xml:space="preserve">
+    <value>Список регистрации выдачи документов</value>
+  </data>
+  <data name="XiangMuLiChengBeiShuJuBaoBiaox" xml:space="preserve">
+    <value>Непредвиденные расходы и различные вознаграждения</value>
+  </data>
+  <data name="WuLiaoZiLiao" xml:space="preserve">
+    <value>Таблица разделения цен на первый этап</value>
+  </data>
+  <data name="StrongShuLiang" xml:space="preserve">
+    <value>&lt;/Strong&gt; (Количество:</value>
+  </data>
+  <data name="XiangMuGongShiHeFeiYongHuiZong" xml:space="preserve">
+    <value>Сводная таблица трудозатрат и расходов по проекту</value>
+  </data>
+  <data name="WuZiCaiGouFeiYong" xml:space="preserve">
+    <value>Расходы на закупку материалов</value>
+  </data>
+  <data name="XiangMuChengYuanGongShiHuiZong" xml:space="preserve">
+    <value>Сводная таблица трудозатрат участников проекта</value>
+  </data>
+  <data name="ChengYuanGongShiBiao" xml:space="preserve">
+    <value>Таблица трудозатрат участников</value>
+  </data>
+  <data name="ChengYuanGongShiHuiZongBiaoxls" xml:space="preserve">
+    <value>Сводная таблица трудозатрат участников.xls</value>
+  </data>
+  <data name="ChengYuanGongShiHuiZongBiao" xml:space="preserve">
+    <value>Сводная таблица трудозатрат участников</value>
+  </data>
+  <data name="XiangMuChengYuanRenWuBiao" xml:space="preserve">
+    <value>Таблица задач участников проекта</value>
+  </data>
+  <data name="ZZShiBaiQingXianShuaZeXiangMuH" xml:space="preserve">
+    <value>Не удалось, сначала выберите проект и версию плана!</value>
+  </data>
+  <data name="ZZChuShiHuaMoZuShuJuShiBai" xml:space="preserve">
+    <value>Не удалось инициализировать данные модуля!</value>
+  </data>
+  <data name="TuoJiXiangMuJiHua" xml:space="preserve">
+    <value>План задержанных проектов_</value>
+  </data>
+  <data name="CuoWuCiXiangMuMeiYouZaiYongDeJ" xml:space="preserve">
+    <value>Ошибка: у этого проекта нет версии плана [В использовании], проверьте!</value>
+  </data>
+  <data name="XiangMuJianSheJinDuBiao" xml:space="preserve">
+    <value>Таблица прогресса строительства проекта</value>
+  </data>
+  <data name="ShiGongLeiXing" xml:space="preserve">
+    <value>Тип строительства</value>
+  </data>
+  <data name="GeTongShu" xml:space="preserve">
+    <value>Количество контрактов</value>
+  </data>
+  <data name="WanChengShu" xml:space="preserve">
+    <value>Количество завершенных</value>
+  </data>
+  <data name="0Nian1Yue" xml:space="preserve">
+    <value>{0} год {1} месяц</value>
+  </data>
+  <data name="Di0Zhou" xml:space="preserve">
+    <value>Неделя {0}</value>
+  </data>
+  <data name="RenWuDeSuoYouFenPaJiLu" xml:space="preserve">
+    <value>Все записи распределения задач!</value>
+  </data>
+  <data name="CiJiHuaBuCunZaiKeNengYiBeiShan" xml:space="preserve">
+    <value>Этот план не существует, возможно, был удален, проверьте!</value>
+  </data>
+  <data name="XiangMuKaiShiRiJi" xml:space="preserve">
+    <value>Дата начала проекта</value>
+  </data>
+  <data name="XiangMuJieShuRiJi" xml:space="preserve">
+    <value>Дата окончания проекта</value>
+  </data>
+  <data name="XiangMuChuangJianShiJian" xml:space="preserve">
+    <value>Время создания проекта</value>
+  </data>
+  <data name="XiangMuBiaoShiMa" xml:space="preserve">
+    <value>Код идентификации проекта</value>
+  </data>
+  <data name="ZuoYeBiaoShiMa" xml:space="preserve">
+    <value>Код идентификации задачи</value>
+  </data>
+  <data name="WanChengShiYuSuanFeiYong" xml:space="preserve">
+    <value>Бюджетные расходы при завершении</value>
+  </data>
+  <data name="primavera6DaoRuXiangMuFeiYong" xml:space="preserve">
+    <value>Импорт расходов проекта из Primavera 6</value>
+  </data>
+  <data name="WanChengShiShiJiFeiYong" xml:space="preserve">
+    <value>Фактические расходы при завершении</value>
+  </data>
+  <data name="WanChengShiZongFeiYong" xml:space="preserve">
+    <value>Общие расходы при завершении</value>
+  </data>
+  <data name="ZuoYeKaiShiRiJi" xml:space="preserve">
+    <value>Дата начала задачи</value>
+  </data>
+  <data name="ZuoYeJieShuRiJi" xml:space="preserve">
+    <value>Дата окончания задачи</value>
+  </data>
+  <data name="ZuoYeMingChen" xml:space="preserve">
+    <value>Название задачи</value>
+  </data>
+  <data name="PrimXiangMuShuJu" xml:space="preserve">
+    <value>Данные проекта Prima_</value>
+  </data>
+  <data name="PrimXiangMuFeiYongShuJu" xml:space="preserve">
+    <value>Данные расходов проекта Prima_</value>
+  </data>
+  <data name="PrimXiangMuZuoYeShuJu" xml:space="preserve">
+    <value>Данные задач проекта Prima_</value>
+  </data>
+  <data name="ShangChuanLeXiangMu" xml:space="preserve">
+    <value>Загружен файл для проекта:</value>
+  </data>
+  <data name="DeWenJian" xml:space="preserve">
+    <value>, пожалуйста, просмотрите вовремя!</value>
+  </data>
+  <data name="QingJiShiChaYue" xml:space="preserve">
+    <value>Импорт не удался, данные ошибочны, проверьте!</value>
+  </data>
+  <data name="ZZDaoRuShiBaiShuJuYouWuQingJia" xml:space="preserve">
+    <value>Подсказка: этот материал уже существует, нельзя добавить повторно, проверьте!</value>
+  </data>
+  <data name="ZZDiShiCiWuLiaoYiCunZaiBuNengC" xml:space="preserve">
+    <value>Не удалось, этот бюджет материала уже используется, нельзя удалить, проверьте!</value>
+  </data>
+  <data name="ZZShiBaiCiWuZiYuSuanYiBeiCaiYo" xml:space="preserve">
+    <value>Версия BOM</value>
+  </data>
+  <data name="BOMBanBen" xml:space="preserve">
+    <value>Количество выданного материала</value>
+  </data>
+  <data name="YiLingLiaoLiang" xml:space="preserve">
+    <value>Количество поступившего материала</value>
+  </data>
+  <data name="YiRuKuLiang" xml:space="preserve">
+    <value>Количество произведенного материала</value>
+  </data>
+  <data name="YiShengChanLiang" xml:space="preserve">
+    <value>Количество проданного материала</value>
+  </data>
+  <data name="YiXiaoShouLiang" xml:space="preserve">
+    <value>Шаблон таблицы устарел, загрузите последнюю версию шаблона импорта!</value>
+  </data>
+  <data name="MoBanBiaoGeGuoShiQingXiaZaiZui" xml:space="preserve">
+    <value>Связанные материалы_</value>
+  </data>
+  <data name="GuanLianWuLiao" xml:space="preserve">
+    <value>Пожалуйста, проверьте!</value>
+  </data>
+  <data name="QingJianCha" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="Ge" xml:space="preserve">
+    <value>Диаграмма распределения расходов по проекту</value>
+  </data>
+  <data name="XiangMuFeiYongFenBuTu" xml:space="preserve">
+    <value>Количество записей:</value>
+  </data>
+  <data name="JiLuShu" xml:space="preserve">
+    <value>Эта задача проекта не существует, возможно, была удалена, проверьте!</value>
+  </data>
+  <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
+    <value>Ошибка: тип не может быть пустым!</value>
+  </data>
+  <data name="ZZCuoWuLeiXingBuNengWeiKong" xml:space="preserve">
+    <value>Не удалось, код управляющего дистрибьютора пуст, нажмите кнопку [Выбрать] для поиска и выбора!</value>
+  </data>
+  <data name="ZZShiBaiFenGuanJingXiaoShangDa" xml:space="preserve">
+    <value>Ошибка: при выполнении запроса произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiChaXunCaoZuoChuXianY" xml:space="preserve">
+    <value>Сообщение: изменение режима [Помесячный план] успешно!</value>
+  </data>
+  <data name="CuoWuDiShiShuLiangShuRuYouWuYi" xml:space="preserve">
+    <value>Ошибка: ввод цены корректировки оборудования ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiSheBeiDiaoZhengChanJ" xml:space="preserve">
+    <value>Ошибка: ввод цены корректировки основного материала ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiZhuCaiDiaoZhengChanJ" xml:space="preserve">
+    <value>Ошибка: ввод цены корректировки труда ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiRenGongDiaoZhengChan" xml:space="preserve">
+    <value>Ошибка: ввод цены корректировки материалов ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiCaiLiaoDiaoZhengChan" xml:space="preserve">
+    <value>Ошибка: ввод цены корректировки механизмов ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiJiXieDiaoZhengChanJi" xml:space="preserve">
+    <value>Ошибка: ввод суммы корректировки налогов ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiDiaoZhengShuiJinGeJi" xml:space="preserve">
+    <value>Ошибка: ввод суммы бюджета (BCWS) ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiYuSuanGeJiGeJiaBCWSS" xml:space="preserve">
+    <value>Ошибка: ввод суммы бюджета оборудования ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiYuSuanSheBeiGeJiaShu" xml:space="preserve">
+    <value>Ошибка: ввод суммы бюджета основного материала ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiZhuCaiYuSuanGeJiaShu" xml:space="preserve">
+    <value>Ошибка: ввод суммы бюджета труда ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiRenGongYuSuanGeJiaSh" xml:space="preserve">
+    <value>Ошибка: ввод суммы бюджета материалов ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiCaiLiaoYuSuanGeJiaSh" xml:space="preserve">
+    <value>Ошибка: ввод суммы бюджета механизмов ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiJiXieYuSuanGeJiaShuR" xml:space="preserve">
+    <value>Ошибка: ввод управленческих расходов и прибыли ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiGuanLiFeiJiLiRunFeiS" xml:space="preserve">
+    <value>Ошибка: ввод расходов на меры по ставке ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiFeiLvCuoShiFeiShuRuY" xml:space="preserve">
+    <value>Ошибка: ввод регулируемых расходов ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiGuiFeiShuRuYouWuYing" xml:space="preserve">
+    <value>Ошибка: цена корректировки не может быть пустой, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiDiaoZhengJiaGeBuNeng" xml:space="preserve">
+    <value>Ошибка: при запросе информации о корректировке цен произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiChaXunJiaGeDiaoZheng" xml:space="preserve">
+    <value>Добавление корректировки цены</value>
+  </data>
+  <data name="ZengJiaDiaoZhengJia" xml:space="preserve">
+    <value>Сообщение: добавление корректировки цены успешно!</value>
+  </data>
+  <data name="XiaoXiDiShiJiaGeDiaoZhengXinZe" xml:space="preserve">
+    <value>Ошибка: при добавлении корректировки цены произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiJiaGeDiaoZhengXinZen" xml:space="preserve">
+    <value>Сообщение: нет</value>
+  </data>
+  <data name="XiaoXiDiShiMo" xml:space="preserve">
+    <value>Сообщение: выберите строку с данными о корректировке цены для удаления!</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangYao" xml:space="preserve">
+    <value>Сообщение: нельзя изменить исходную цену.</value>
+  </data>
+  <data name="XiaoXiDiShiBuNengXiuGaiYuanDin" xml:space="preserve">
+    <value>Сообщение: BCWP не равен нулю, при изменении нельзя вводить меньше общего объема работ, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="XiaoXiDiShiGaiXiangBCWPBuWeiLi" xml:space="preserve">
+    <value>Сообщение: изменение корректировки цены успешно!</value>
+  </data>
+  <data name="XiaoXiDiShiJiaGeDiaoZhengXiuGa" xml:space="preserve">
+    <value>Ошибка: при изменении корректировки цены произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiJiaGeDiaoZhengXiuGai" xml:space="preserve">
+    <value>Сообщение: нельзя удалить исходную цену.</value>
+  </data>
+  <data name="XiaoXiDiShiBuNengShanChuYuanDi" xml:space="preserve">
+    <value>Сообщение: указанная запись успешно удалена!</value>
+  </data>
+  <data name="XiaoXiDiShiZhiDingJiLuShanChuC" xml:space="preserve">
+    <value>Сообщение: при удалении произошла ошибка:</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuCaoZuoChuXia" xml:space="preserve">
+    <value>Сообщение:</value>
+  </data>
+  <data name="XiaoXiDiShi" xml:space="preserve">
+    <value>Сообщение: при запросе данных журнала произошла ошибка:</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunRiZhiShuJuCao" xml:space="preserve">
+    <value>Ошибка: при выполнении операции произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiCaoZuoChuXianYiChang" xml:space="preserve">
+    <value>Результат: еще нет сводной информации о доходах и расходах по проекту!</value>
+  </data>
+  <data name="JieGuoDiShiHaiMeiYouXiangMuSho" xml:space="preserve">
+    <value>Ошибка: при запросе списка информации о корректировке цен для этого подпункта произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiChaXunGaiZiXiangDeJi" xml:space="preserve">
+    <value>~/Template/Шаблон экспорта сводных данных о производительности.xls</value>
+  </data>
+  <data name="TemplateJiXiaoHuiZongShuJuDaoC" xml:space="preserve">
+    <value>Сводные данные о производительности.xls</value>
+  </data>
+  <data name="JiXiaoHuiZongShuJuxls" xml:space="preserve">
+    <value>attachment;filename=Сводные данные о производительности.xls</value>
+  </data>
+  <data name="attachmentfilenameJiXiaoHuiZon" xml:space="preserve">
+    <value>Подсказка: импорт сводных данных о производительности в файл Excel успешен!</value>
+  </data>
+  <data name="CaoZuoDiShiJiXiaoHuiZongShuJuD" xml:space="preserve">
+    <value>Ошибка: при импорте сводных данных о производительности в файл Excel произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoHuiZongShuJuDa" xml:space="preserve">
+    <value>Ошибка: импорт фактических данных о производительности в файл Excel не удался!</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoShiJiGongZuoSh" xml:space="preserve">
+    <value>Все тестовые данные успешно очищены, обновите и попробуйте снова.</value>
+  </data>
+  <data name="ChengGongQingChuSuoYouCeShiShu" xml:space="preserve">
+    <value>Ошибка: при очистке всех тестовых данных произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiQingChuSuoYouCeShiSh" xml:space="preserve">
+    <value>Ошибка: при получении списка годов произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiHuoQuNianLieBiaoCaoZ" xml:space="preserve">
+    <value>Сообщение: не удалось загрузить список категорий затрат!</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuChengBenFeiXia" xml:space="preserve">
+    <value>Прямые затраты</value>
+  </data>
+  <data name="ZhiJieFeiXiangXiangMu" xml:space="preserve">
+    <value>Сообщение: [Заголовок на китайском] не может быть пустым, должен быть не более 50 символов (25 иероглифов), введите заново и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiZhongWenBiaoTiBuNen" xml:space="preserve">
+    <value>Сообщение: добавление не удалось, название категории затрат [</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengCaoZuoShiBai" xml:space="preserve">
+    <value>] уже существует, нельзя добавить повторно!</value>
+  </data>
+  <data name="YiJingCunZaiBuNengChongFuTianJ" xml:space="preserve">
+    <value>Сообщение: добавление успешно!</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengCaoZuoChengG" xml:space="preserve">
+    <value>Сообщение: выберите строку для изменения!</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangJin" xml:space="preserve">
+    <value>Сообщение: изменение не удалось, название категории затрат [</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoShiBaiY" xml:space="preserve">
+    <value>Сообщение: изменение успешно!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoChengGo" xml:space="preserve">
+    <value>Сообщение: изменение не удалось, проверьте, не повторяется ли номер категории затрат:</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoShiBaiQ" xml:space="preserve">
+    <value>Сообщение: сначала удалите подкатегории этой категории затрат, а затем выполните удаление!</value>
+  </data>
+  <data name="XiaoXiDiShiQingXianShanChuGaiC" xml:space="preserve">
+    <value>Сообщение: удаление успешно!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuCaoZuoChengG" xml:space="preserve">
+    <value>Сообщение: удаление не удалось:</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuCaoZuoShiBai" xml:space="preserve">
+    <value>Сообщение: выберите строку категории затрат для изменения!</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangDaL" xml:space="preserve">
+    <value>Сообщение: фиксированные подкатегории нельзя удалять!</value>
+  </data>
+  <data name="XiaoXiDiShiGuDingZiLeiFeiXiang" xml:space="preserve">
+    <value>Сообщение: запрос не удался:</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunCaoZuoShiBai" xml:space="preserve">
+    <value>Сообщение: при запросе произошла ошибка:</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunCaoZuoChuXian" xml:space="preserve">
+    <value>Ошибка: при загрузке списка подрядчиков произошла ошибка:</value>
+  </data>
+  <data name="CuoWuDiShiJiaZaiChengBaoShangL" xml:space="preserve">
+    <value>Сообщение: [Номер подпункта] введен неверно, должен быть числом, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiZiXiangXuHaoShuRuYo" xml:space="preserve">
+    <value>Сообщение: [Номер нормы] введен неверно, не более 256 иероглифов, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiDingEHaoShuRuYouWuB" xml:space="preserve">
+    <value>Сообщение: [Раздел] введен неверно, не более 20 иероглифов, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiFenBuFenXiangShuRuY" xml:space="preserve">
+    <value>Сообщение: [Единица] введен неверно, не более 5 иероглифов, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiChanWeiShuRuYouWuBu" xml:space="preserve">
+    <value>Сообщение: [Количество] введен неверно, должно быть числом больше нуля, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiShuLiangShuRuYouWuY" xml:space="preserve">
+    <value>Сообщение: [Название нормы] введен неверно, не более 256 иероглифов, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiDingEMingChenShuRuY" xml:space="preserve">
+    <value>Сообщение: [Исходная цена оборудования] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiSheBeiYuanDingChanJ" xml:space="preserve">
+    <value>Сообщение: [Исходная цена основного материала] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiZhuCaiYuanDingChanJ" xml:space="preserve">
+    <value>Сообщение: [Исходная цена труда] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiRenGongYuanDingChan" xml:space="preserve">
+    <value>Сообщение: [Исходная цена материалов] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiCaiLiaoYuanDingChan" xml:space="preserve">
+    <value>Сообщение: [Исходная цена механизмов] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiJiXieYuanDingChanJi" xml:space="preserve">
+    <value>Сообщение: [Сумма бюджета оборудования] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiYuSuanSheBeiGeJiaSh" xml:space="preserve">
+    <value>Сообщение: [Сумма бюджета основного материала] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiZhuCaiYuSuanGeJiaSh" xml:space="preserve">
+    <value>Сообщение: [Сумма бюджета материалов] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiCaiLiaoYuSuanGeJiaS" xml:space="preserve">
+    <value>Сообщение: [Сумма бюджета механизмов] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiJiXieYuSuanGeJiaShu" xml:space="preserve">
+    <value>Сообщение: [Сумма бюджета труда] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiRenGongYuSuanGeJiaS" xml:space="preserve">
+    <value>Сообщение: [Управленческие расходы и прибыль] введены неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiGuanLiFeiJiLiRunFei" xml:space="preserve">
+    <value>Сообщение: [Расходы на меры по ставке] введены неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiFeiLvCuoShiFeiShuRu" xml:space="preserve">
+    <value>Сообщение: [Регулируемые расходы] введены неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiGuiFeiShuRuYouWuYin" xml:space="preserve">
+    <value>Сообщение: [Сумма налогов бюджета] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiYuSuanShuiJinGeJiaS" xml:space="preserve">
+    <value>Сообщение: [Общая сумма бюджета] введена неверно, должно быть числом и больше или равно нулю, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiGeJiYuSuanGeJiaShuR" xml:space="preserve">
+    <value>Сообщение: [Время начала] введено неверно, выберите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiKaiShiShiJianShuRuY" xml:space="preserve">
+    <value>Сообщение: [Время окончания] введено неверно, выберите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiJieShuShiJianShuRuY" xml:space="preserve">
+    <value>Сообщение: этот номер подпункта уже существует, введите правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
+    <value>Сообщение: данные успешно добавлены!</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
+    <value>Сообщение: при добавлении произошла ошибка:</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
+    <value>Исходная цена</value>
+  </data>
+  <data name="YuanDingJiaGe" xml:space="preserve">
+    <value>Ошибка: выберите файл Excel!</value>
+  </data>
+  <data name="CuoWuDiShiQingNinShuaZeExcelWe" xml:space="preserve">
+    <value>Ошибка: можно выбрать только файл Excel!</value>
+  </data>
+  <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
+    <value>Ошибка: [</value>
+  </data>
+  <data name="CuoWuDiShi" xml:space="preserve">
+    <value>] нет данных, импортируйте следующий тип.\n</value>
+  </data>
+  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
+    <value>Импорт базовых данных о производительности из файла Excel, всего {0:D } записей, успешно {1:D }, категория: {2:s }\n</value>
+  </data>
+  <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
+    <value>[Номер подпункта] введен неверно, должен быть числом, введите правильно и попробуйте снова!\n</value>
+  </data>
+  <data name="ZiXiangXuHaoShuRuYouWuYingQuan" xml:space="preserve">
+    <value>Начало импорта базовых данных о производительности для [Номер подпункта]:</value>
+  </data>
+  <data name="KaiShiDaoRuZiXiangXuHaoWei" xml:space="preserve">
+    <value>Сообщение: [Подрядчик] введен неверно, если не пуст, то длина 50 символов, 25 иероглифов, введите правильно и попробуйте снова!\n</value>
+  </data>
+  <data name="DeJiXiaoJiZhunShuJun" xml:space="preserve">
+    <value>Сообщение: [Подрядчик] не существует, введите правильно и попробуйте снова!\n</value>
+  </data>
+  <data name="XiaoXiDiShiChengBaoShangShuRuY" xml:space="preserve">
+    <value>Сообщение: [Автоматический расчет месячного плана] введен неверно, может быть только 0 или 1, введите правильно и попробуйте снова!\n</value>
+  </data>
+  <data name="XiaoXiDiShiChengBaoShangBuCunZ" xml:space="preserve">
+    <value>Импорт одной записи не удался!!!\n</value>
+  </data>
+  <data name="XiaoXiDiShiZiDongJiSuanYueJiHu" xml:space="preserve">
+    <value>[Номер подпункта]:</value>
+  </data>
+  <data name="DaoRuYiTiaoJiLuShiBain" xml:space="preserve">
+    <value>Ошибка при обработке базовых данных о производительности:</value>
+  </data>
+  <data name="ZiXiangXuHaoWei" xml:space="preserve">
+    <value>Базовые данные о производительности успешно импортированы!\n</value>
+  </data>
+  <data name="DeJiXiaoJiZhunShuJuCaoZuoChuXi" xml:space="preserve">
+    <value>Сообщение: указанная запись успешно найдена!</value>
+  </data>
+  <data name="DeJiXiaoJiZhunShuJuDaoRuChengG" xml:space="preserve">
+    <value>Сообщение: операция не удалась!</value>
+  </data>
+  <data name="XiaoXiDiShiZhiDingJiLuChaXunCh" xml:space="preserve">
+    <value>Сообщение: при изменении нельзя изменить [Автоматический расчет месячного плана]!</value>
+  </data>
+  <data name="XiaoXiDiShiCaoZuoShiBai" xml:space="preserve">
+    <value>Сообщение: при изменении нельзя изменить номер подпункта, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoShiBuNe" xml:space="preserve">
+    <value>Сообщение: указанная запись успешно изменена!</value>
+  </data>
+  <data name="XiaoXiDiShiJinHangXiuGaiCaoZuo" xml:space="preserve">
+    <value>Сообщение: при изменении произошла ошибка:</value>
+  </data>
+  <data name="XiaoXiDiShiZhiDingJiLuXiuGaiCh" xml:space="preserve">
+    <value>Сообщение: при запросе списка существующих данных о производительности записей не найдено.</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiCaoZuoChuXian" xml:space="preserve">
+    <value>Сообщение: при запросе существующих данных о корректировке цен записей не найдено.</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunYuanYouJiXiao" xml:space="preserve">
+    <value>Экспорт списка базовых данных о производительности...\n</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunYuanYouJiaGeD" xml:space="preserve">
+    <value>~/Template/Шаблон экспорта базовых данных о производительности.xls</value>
+  </data>
+  <data name="ZhengZaiDaoChuJiXiaoJiZhunLieB" xml:space="preserve">
+    <value>Ошибка шаблона:</value>
+  </data>
+  <data name="TemplateJiXiaoJiZhunShuJuDaoCh" xml:space="preserve">
+    <value>Подсказка: импорт базовых данных о производительности в файл Excel успешен!</value>
+  </data>
+  <data name="MoBanCaoZuoYiChang" xml:space="preserve">
+    <value>Экспорт файла успешен\n</value>
+  </data>
+  <data name="CaoZuoDiShiJiXiaoJiZhunShuJuDa" xml:space="preserve">
+    <value>attachment;filename=Базовые данные о производительности.xls</value>
+  </data>
+  <data name="DaoChuWenJianChengGongn" xml:space="preserve">
+    <value>Ошибка: убедитесь, что файл шаблона 'Шаблон экспорта базовых данных о производительности.xls' не используется, закройте и попробуйте снова!</value>
+  </data>
+  <data name="attachmentfilenameJiXiaoJiZhun" xml:space="preserve">
+    <value>] успешно, всего</value>
+  </data>
+  <data name="CaoZuoYiChangQingQueRenMoBanWe" xml:space="preserve">
+    <value>записей.\n</value>
+  </data>
+  <data name="ChengGongGong" xml:space="preserve">
+    <value>Ошибка: импорт базовых данных о производительности [</value>
+  </data>
+  <data name="Tiaon" xml:space="preserve">
+    <value>] в файл Excel не удался!</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>содержание или статус, уведомление!</value>
+  </data>
+  <data name="DaoRuDaoExcelWenJianShiBai" xml:space="preserve">
+    <value>Ошибка: импорт базовых данных о производительности в файл Excel не удался!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiZhuYueJiHuaMo" xml:space="preserve">
+    <value>Ошибка: ввод количества ошибочен, должно быть числом и больше или равно нулю, введите правильно и повторите операцию!</value>
+  </data>
+  <data name="CuoWuDiShiJiXiaoJiZhunShuJuDao" xml:space="preserve">
+    <value>Сообщение: [Подкатегория затрат] не выбрана, сначала введите подпункт этой категории!</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunShenQingJinEH" xml:space="preserve">
+    <value>Сообщение: [Сумма заявки] введена неверно, введите число!</value>
+  </data>
+  <data name="XiaoXiDiShiChengBenFeiXiangZiL" xml:space="preserve">
+    <value>**Сообщение: [Стандарт суммы]</value>
+  </data>
+  <data name="XiaoXiDiShiShenQingJinEShuRuYo" xml:space="preserve">
+    <value>Сообщение: [Сумма заявки] введена неверно, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiJinEBiaoZhunShuRuYo" xml:space="preserve">
+    <value>Сообщение: [Стандарт суммы] введен неверно, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiYongTuShuiMingShuRu" xml:space="preserve">
+    <value>Сообщение: [Описание назначения] введено неверно, длина ограничена 250 символами на китайском или 500 символами на английском, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiZengJiaXiangMuZiJin" xml:space="preserve">
+    <value>Сообщение: Запись о реализации финансирования проекта успешно добавлена!</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuChengBenZiXian" xml:space="preserve">
+    <value>Сообщение: Не удалось загрузить список подкатегорий затрат!</value>
+  </data>
+  <data name="XiaoXiDiShiChaXunDaoDuiYingDeJ" xml:space="preserve">
+    <value>Сообщение: Соответствующая запись найдена!</value>
+  </data>
+  <data name="XiaoXiDiShiMeiYouChaXunDaoDuiY" xml:space="preserve">
+    <value>Сообщение: Соответствующая запись не найдена!</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeYiHangHou" xml:space="preserve">
+    <value>Сообщение: Выберите строку перед изменением!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiXiangMuZiJinS" xml:space="preserve">
+    <value>Сообщение: Запись о реализации финансирования проекта успешно изменена!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuXiangMuZiJin" xml:space="preserve">
+    <value>Сообщение: Запись о реализации финансирования проекта успешно удалена!</value>
+  </data>
+  <data name="XiaoXiDiShiZhiHangJinEShuRuYou" xml:space="preserve">
+    <value>Сообщение: [Сумма исполнения] введена неверно, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiBeiZhuShuRuYouWuShu" xml:space="preserve">
+    <value>Сообщение: [Примечание] введено неверно, длина ограничена 512 символами на китайском или 1024 символами на английском, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiShenHeCaoZuoChengGo" xml:space="preserve">
+    <value>Сообщение: Операция проверки успешна!</value>
+  </data>
+  <data name="XiaoXiDiShiShenHeCaoZuoShiBai" xml:space="preserve">
+    <value>Сообщение: Операция проверки не удалась!</value>
+  </data>
+  <data name="XiaoXiDiShiHuoQuShenHeLieBiaoC" xml:space="preserve">
+    <value>Сообщение: Не удалось получить список проверок!</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuChengBenFeiShi" xml:space="preserve">
+    <value>Сообщение: Не удалось загрузить список фактических затрат!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuShiJiFaSheng" xml:space="preserve">
+    <value>Сообщение: Фактические затраты успешно удалены!</value>
+  </data>
+  <data name="XiaoXiDiShiChengBenFeiYongShuR" xml:space="preserve">
+    <value>Сообщение: [Затраты] введены неверно, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiZengJiaShiJiFaSheng" xml:space="preserve">
+    <value>Сообщение: Фактические затраты успешно добавлены!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiShiJiFaShengC" xml:space="preserve">
+    <value>Сообщение: Фактические затраты успешно изменены!</value>
+  </data>
+  <data name="XiaoXiDiShiDouQuMuBiaoChengBen" xml:space="preserve">
+    <value>Сообщение: Не удалось загрузить список целевых затрат!</value>
+  </data>
+  <data name="XiaoXiDiShiAnYueLeiJiChengBenF" xml:space="preserve">
+    <value>Сообщение: Не удалось загрузить список ежемесячных накопленных затрат!</value>
+  </data>
+  <data name="DaLeiGeJi" xml:space="preserve">
+    <value>Итог по категориям</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuMuBiaoChengB" xml:space="preserve">
+    <value>Сообщение: Целевые затраты успешно удалены!</value>
+  </data>
+  <data name="XiaoXiDiShiYuanDingChengBenShu" xml:space="preserve">
+    <value>Сообщение: [Исходные затраты] введены неверно, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiMuBiaoChengBenShuRu" xml:space="preserve">
+    <value>Сообщение: [Целевые затраты] введены неверно, введите число и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiGaiChengBenFeiXiang" xml:space="preserve">
+    <value>Сообщение: Целевые затраты для этой категории уже введены, измените напрямую!</value>
+  </data>
+  <data name="XiaoXiDiShiZengJiaMuBiaoChengB" xml:space="preserve">
+    <value>Сообщение: Целевые затраты успешно добавлены!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
+    <value>Сообщение: Целевые затраты успешно изменены!</value>
+  </data>
+  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
+    <value>Ошибка: При получении списка месяцев произошла ошибка:</value>
+  </data>
+  <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
+    <value>Сообщение: Введите фактический объем работ правильно и попробуйте снова!</value>
+  </data>
+  <data name="XiaoXiDiShiQingZhengQueShuRuGo" xml:space="preserve">
+    <value>Сообщение: Введите объем работ правильно и попробуйте снова! Максимально подтвержденный объем работ: {0:f4 }</value>
+  </data>
+  <data name="ZengJiaShiJiGongZuoJiLu" xml:space="preserve">
+    <value>Добавление записи о фактической работе</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengShiJiGongZuo" xml:space="preserve">
+    <value>Сообщение: Фактический объем работ успешно добавлен!</value>
+  </data>
+  <data name="XiaoXiDiShiQingShuaZeXuYaoXiuG" xml:space="preserve">
+    <value>Сообщение: Выберите фактический объем работ для изменения!</value>
+  </data>
+  <data name="XiuGaiShiJiGongZuoJiLu" xml:space="preserve">
+    <value>Изменение записи о фактической работе</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiShiJiGongZuoL" xml:space="preserve">
+    <value>Сообщение: Фактический объем работ успешно изменен!</value>
+  </data>
+  <data name="ShanChuShiJiGongZuoJiLu" xml:space="preserve">
+    <value>Удаление записи о фактической работе</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuShiJiGongZuo" xml:space="preserve">
+    <value>Сообщение: Фактический объем работ успешно удален!</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengGongZuoQueRe" xml:space="preserve">
+    <value>Сообщение: Запись о подтверждении работы успешно добавлена!</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiGongZuoQueRen" xml:space="preserve">
+    <value>Сообщение: Запись о подтверждении работы успешно изменена!</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuGongZuoQueRe" xml:space="preserve">
+    <value>Сообщение: Запись о подтверждении работы успешно удалена!</value>
+  </data>
+  <data name="ZengJiaShouKuanQueRenJiLu" xml:space="preserve">
+    <value>Добавление записи о подтверждении оплаты</value>
+  </data>
+  <data name="XiaoXiDiShiXinZengShouKuanQueR" xml:space="preserve">
+    <value>Сообщение: Запись о подтверждении оплаты успешно добавлена!</value>
+  </data>
+  <data name="XiuGaiShouKuanQueRenJiLu" xml:space="preserve">
+    <value>Изменение записи о подтверждении оплаты</value>
+  </data>
+  <data name="XiaoXiDiShiXiuGaiShouKuanQueRe" xml:space="preserve">
+    <value>Сообщение: Запись о подтверждении оплаты успешно изменена!</value>
+  </data>
+  <data name="ShanChuShouKuanQueRenJiLu" xml:space="preserve">
+    <value>Удаление записи о подтверждении оплаты</value>
+  </data>
+  <data name="XiaoXiDiShiShanChuShouKuanQueR" xml:space="preserve">
+    <value>Сообщение: Запись о подтверждении оплаты успешно удалена!</value>
+  </data>
+  <data name="WeiShuaZeDuiYingDeQueRenGongZu" xml:space="preserve">
+    <value>Выберите соответствующий подтвержденный объем работ и попробуйте снова.</value>
+  </data>
+  <data name="Zu" xml:space="preserve">
+    <value>Группа</value>
+  </data>
+  <data name="JiTuan" xml:space="preserve">
+    <value>Холдинг</value>
+  </data>
+  <data name="CiYeWuMoGuanLianBiaoChan" xml:space="preserve">
+    <value>--Для этой операции нет связанной формы!</value>
+  </data>
+  <data name="PingShenLiuCheng" xml:space="preserve">
+    <value>Процесс проверки</value>
+  </data>
+  <data name="BJiaoSeZuB" xml:space="preserve">
+    <value>&lt;B&gt;Группа ролей&lt;/B&gt;</value>
+  </data>
+  <data name="BSuoYouB" xml:space="preserve">
+    <value>&lt;B&gt;Все&lt;/B&gt;</value>
+  </data>
+  <data name="CiXuQiuBuCunZaiKeNengYiBeiShan" xml:space="preserve">
+    <value>Этот запрос не существует, возможно, был удален, проверьте!</value>
+  </data>
+  <data name="FengXianNeiRong" xml:space="preserve">
+    <value>Содержание риска:</value>
+  </data>
+  <data name="ChuangJianRTXFuWuShiBaiQingJia" xml:space="preserve">
+    <value>Не удалось создать службу RTX, проверьте!</value>
+  </data>
+  <data name="FaSongChengGong" xml:space="preserve">
+    <value>Отправлено успешно!</value>
+  </data>
+  <data name="FaSongShiBai" xml:space="preserve">
+    <value>Отправка не удалась!</value>
+  </data>
+  <data name="HuoQuYongHuZhuangTaiShiBai" xml:space="preserve">
+    <value>Не удалось получить статус пользователя!</value>
+  </data>
+  <data name="HuoQuBanBenXinXiShiBai" xml:space="preserve">
+    <value>Не удалось получить информацию о версии!</value>
+  </data>
+  <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
+    <value>Не удалось получить информацию о правах пользователя!</value>
+  </data>
+  <data name="trtdMoMoKuaiMingChenShuJutdtr" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td&gt;Нет данных о названии модуля&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td&gt;Нет данных о типе&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="trtdMoShuJutdtr" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td&gt;Нет данных&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="XueShengShu" xml:space="preserve">
+    <value>Количество студентов:</value>
+  </data>
+  <data name="SuoYouXiangMuLieBiao" xml:space="preserve">
+    <value>Список всех проектов</value>
+  </data>
+  <data name="MoBanXiangMu" xml:space="preserve">
+    <value>Шаблонный проект</value>
+  </data>
+  <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
+    <value>Содержание, это настоящее удаление, обратите внимание, уведомление!</value>
+  </data>
+  <data name="DeXiangMuLieBiao" xml:space="preserve">
+    <value>Список проектов:</value>
+  </data>
+  <data name="WoChengYuanDeSuoYouXiangMuLieB" xml:space="preserve">
+    <value>Список всех проектов моих участников:</value>
+  </data>
+  <data name="ZZYinCangChengGong" xml:space="preserve">
+    <value>Скрытие успешно!</value>
+  </data>
+  <data name="ZZMiMaBuDuiYinCangShiBaiQingJi" xml:space="preserve">
+    <value>Пароль неверен, скрытие не удалось, проверьте!</value>
+  </data>
+  <data name="ChuCuoLe" xml:space="preserve">
+    <value>Произошла ошибка</value>
+  </data>
+  <data name="BBuFenB" xml:space="preserve">
+    <value>&lt;B&gt;Часть&lt;/B&gt;</value>
+  </data>
+  <data name="GaiBianLeXiangMu" xml:space="preserve">
+    <value>Изменен проект:</value>
+  </data>
+  <data name="DeNeiRongHuoZhuangTaiTeCiTongZ" xml:space="preserve">
+    <value>Сообщение: запрос информации о сумме заявки и стандартах не удался!</value>
+  </data>
+  <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
+    <value>Уведомление об изменении плана проекта</value>
+  </data>
+  <data name="ZiChanCaiGouFeiYong" xml:space="preserve">
+    <value>Затраты на закупку активов</value>
+  </data>
+  <data name="ZZFenPaChengGong" xml:space="preserve">
+    <value>Распределение успешно!</value>
+  </data>
+  <data name="YongHuDengLuRiZhi" xml:space="preserve">
+    <value>Журнал входа пользователей_</value>
+  </data>
+  <data name="RTXFenJiHao" xml:space="preserve">
+    <value>Номер внутреннего телефона RTX</value>
+  </data>
+  <data name="bXieMianMoZub" xml:space="preserve">
+    <value>&lt;b&gt;Модуль страницы&lt;b&gt;</value>
+  </data>
+  <data name="ZZJingGaoGongBenFeiHeDaiLiFeiB" xml:space="preserve">
+    <value>Предупреждение: Стоимость изготовления и комиссия должны быть числовыми, проверьте!</value>
+  </data>
+  <data name="TouBiao" xml:space="preserve">
+    <value>Тендер</value>
+  </data>
+  <data name="ZZCuoWuTouBiaoBaoJiaHeKongZhiJ" xml:space="preserve">
+    <value>Ошибка: Цена предложения и контрольная цена должны быть числовыми, проверьте!</value>
+  </data>
+  <data name="ZZShiBaiCiTouBiaoYiWanChengBuN" xml:space="preserve">
+    <value>Не удалось, этот тендер завершен, нельзя удалить, проверьте</value>
+  </data>
+  <data name="ZZTouBiaoShenQingShengChengChe" xml:space="preserve">
+    <value>Заявка на тендер успешно создана</value>
+  </data>
+  <data name="ZZJingGaoTouBiaoShenQingShengC" xml:space="preserve">
+    <value>Предупреждение: Создание заявки на тендер не удалось, проверьте!</value>
+  </data>
+  <data name="TeChongZuoYe" xml:space="preserve">
+    <value>Специальные работы_</value>
+  </data>
+  <data name="TeChongSheBei" xml:space="preserve">
+    <value>Специальное оборудование_</value>
+  </data>
+  <data name="HanJieChiZheng" xml:space="preserve">
+    <value>Сертификат сварщика_</value>
+  </data>
+  <data name="ZZJingGaoQingXianShuaZeBuMenZa" xml:space="preserve">
+    <value>Предупреждение: Сначала выберите отдел для запроса!</value>
+  </data>
+  <data name="ZZCuoWuBuMenHeZiBuMenYuanGongR" xml:space="preserve">
+    <value>Ошибка: Слишком много сотрудников в отделе и подотделах, недостаточно памяти, проверьте!</value>
+  </data>
+  <data name="ZZJingGaoKaiShiJieShuRiJiZhiNe" xml:space="preserve">
+    <value>Предупреждение: Дата начала и окончания должна быть в одном месяце!</value>
+  </data>
+  <data name="TongJiShiJian0Zhi1" xml:space="preserve">
+    <value>Время статистики: с {0} по {1}</value>
+  </data>
+  <data name="GongHao1" xml:space="preserve">
+    <value>Табельный номер 1</value>
+  </data>
+  <data name="GongHao2" xml:space="preserve">
+    <value>Табельный номер 2</value>
+  </data>
+  <data name="SongTi" xml:space="preserve">
+    <value>Шрифт Song</value>
+  </data>
+  <data name="GongHao" xml:space="preserve">
+    <value>Табельный номер</value>
+  </data>
+  <data name="ChuQinTianShu" xml:space="preserve">
+    <value>Количество рабочих дней</value>
+  </data>
+  <data name="YingChuQinTianShu" xml:space="preserve">
+    <value>Количество рабочих дней по графику</value>
+  </data>
+  <data name="ChiDaoCiShu" xml:space="preserve">
+    <value>Количество опозданий</value>
+  </data>
+  <data name="ChiDaoShiChangFenZhong" xml:space="preserve">
+    <value>Продолжительность опозданий (минуты)</value>
+  </data>
+  <data name="KuangGongChiDaoCiShu" xml:space="preserve">
+    <value>Количество опозданий и прогулов</value>
+  </data>
+  <data name="ZaoTuiCiShu" xml:space="preserve">
+    <value>Количество ранних уходов</value>
+  </data>
+  <data name="ZaoTuiShiChangFenZhong" xml:space="preserve">
+    <value>Продолжительность ранних уходов (минуты)</value>
+  </data>
+  <data name="KuangGongTianShu" xml:space="preserve">
+    <value>Количество прогулов</value>
+  </data>
+  <data name="YeBanTianShu" xml:space="preserve">
+    <value>Количество ночных смен</value>
+  </data>
+  <data name="XueShengBianMa" xml:space="preserve">
+    <value>Код студента</value>
+  </data>
+  <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
+    <value>Строка {0}, код студента не может быть пустым</value>
+  </data>
+  <data name="XueShengXingMing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
+    <value>Имя студента</value>
+  </data>
+  <data name="ShiFouShangXue" xml:space="preserve">
+    <value>Строка {0}, имя студента не может быть пустым</value>
+  </data>
+  <data name="ChengYuanLieBiao" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
+    <value>Учится ли</value>
+  </data>
+  <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
+    <value>Список участников:</value>
+  </data>
+  <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
+    <value>Подсказка: " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Пакетная " + LanguageHandle.GetWord("ZZCZCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZTuiChuLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Удалить " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZChongXinLanguageHandleGetWor" xml:space="preserve">
+    <value>Изменить " + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZCheXiaoLanguageHandleGetWord" xml:space="preserve">
+    <value>Выйти " + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZQiaoBiaoFangAnShengChengLang" xml:space="preserve">
+    <value>Повторно " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZZhangHaoLanguageHandleGetWor" xml:space="preserve">
+    <value>Отменить " + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZShenQingJiHuaShengChengLangu" xml:space="preserve">
+    <value>Создание тендерного плана " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZShenQingShengChengLanguageHa" xml:space="preserve">
+    <value>Аккаунт " + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZFuJianLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Создание плана заявки " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZChiZhengXiangMuLanguageHandl" xml:space="preserve">
+    <value>Создание заявки " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZPeiXunXiangMuLanguageHandleG" xml:space="preserve">
+    <value>Вложение " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZGongSiLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Сертифицированный проект " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZJingGaoHuanJingYinSuWeiBiShu" xml:space="preserve">
+    <value>Проект обучения " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZJingGaoHuanJingYinSuYiCunZai" xml:space="preserve">
+    <value>Компания " + LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZJingGaoCiHuanJingYinSuGuoJiH" xml:space="preserve">
+    <value>Предупреждение: Факторы окружающей среды обязательны, операция " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZShangChuanLanguageHandleGetW" xml:space="preserve">
+    <value>Предупреждение: Факторы окружающей среды уже существуют, операция " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZBaoCunShiBaiNiBuShiCiLiuChen" xml:space="preserve">
+    <value>Предупреждение: Этот фактор окружающей среды истек или недействителен, операция " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZQuXiaoLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Загрузить " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZGuiDangLanguageHandleGetWord" xml:space="preserve">
+    <value>Сохранение не удалось, вы не создатель этого шаблона процесса, нельзя сохранить изображения процесса!</value>
+  </data>
+  <data name="ZZJieDianLanguageHandleGetWord" xml:space="preserve">
+    <value>Отменить " + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZXinXiFaSongLanguageHandleGet" xml:space="preserve">
+    <value>Архивировать " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZZhuaiXiangLanguageHandleGetW" xml:space="preserve">
+    <value>Узел " + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZBaoCunLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Отправка информации " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZJingGaoBeiFenMuLuChuangJianL" xml:space="preserve">
+    <value>Преобразовать в проект " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZJingGaoLiuChengTuZhongYouCiB" xml:space="preserve">
+    <value>Сохранить " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZShanChuChengGong" xml:space="preserve">
+    <value>Предупреждение: Создание резервной директории " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZShanChuShiBaiQingJianCha" xml:space="preserve">
+    <value>Предупреждение: Этот шаг есть в диаграмме процесса, нельзя удалить, проверьте!</value>
+  </data>
+  <data name="ZZJingGaoCiLiuChengBuShiNiChua" xml:space="preserve">
+    <value>Удаление успешно!</value>
+  </data>
+  <data name="ZZBiaoZhuPiLiangLanguageHandle" xml:space="preserve">
+    <value>Удаление не удалось, проверьте!</value>
+  </data>
+  <data name="ZZJianHaoLanguageHandleGetWord" xml:space="preserve">
+    <value>Предупреждение: Этот процесс создан не вами, и вы не суперадминистратор, нет прав на удаление, проверьте!</value>
+  </data>
+  <data name="ZZGeTongLanguageHandleGetWordZ" xml:space="preserve">
+    <value>Пометка пакетной " + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZGeTongCaiJianLanguageHandleG" xml:space="preserve">
+    <value>Номер проверки " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
+  </data>
+  <data name="ZZDuiZhaoLanguageHandleGetWord" xml:space="preserve">
+    <value>Контракт " + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "</value>
+  </data>
+  <data name="QiaoBiaoWenJianMuLutd" xml:space="preserve">
+    <value>Проверка материалов контракта " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
+  </data>
+  <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
+    <value>Сравнение " + LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim() + "</value>
+  </data>
+  <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
+    <value>&gt;Каталог тендерных документов&lt;/td&gt;</value>
+  </data>
+  <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
+    <value>&lt;td&gt;Тендерные документы&lt;/td&gt;</value>
+  </data>
+  <data name="GongFang" xml:space="preserve">
+    <value>&gt;Каталог оценочных документов&lt;/td&gt;</value>
+  </data>
+  <data name="QiaoBiaoWenJiantd" xml:space="preserve">
+    <value>&lt;td &gt;Метод и стандарты оценки&lt;/td&gt;</value>
+  </data>
+  <data name="PingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
+    <value>&gt;Поставщик&lt;</value>
+  </data>
+  <data name="ZZGongYingShangShengChengLangu" xml:space="preserve">
+    <value>&gt;Тендерные документы&lt;/td&gt;</value>
+  </data>
+  <data name="MeiRiXianJinYuE" xml:space="preserve">
+    <value>&gt;Метод и стандарты оценки&lt;/td&gt;</value>
+  </data>
+  <data name="YiChangQingKuang" xml:space="preserve">
+    <value>Создание поставщика " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+  </data>
+  <data name="YuLuDanHao" xml:space="preserve">
+    <value>Ежедневный остаток наличных</value>
+  </data>
+  <data name="ShiFuZongEBenBi" xml:space="preserve">
+    <value>Исключительные ситуации</value>
+  </data>
+  <data name="TeLiaoDaiMa" xml:space="preserve">
+    <value>Номер предварительной записи</value>
+  </data>
+  <data name="WuLiaoMingCheng" xml:space="preserve">
+    <value>Фактическая общая сумма в местной валюте</value>
+  </data>
+  <data name="YongLiang" xml:space="preserve">
+    <value>Код специального материала</value>
+  </data>
+  <data name="ChuBan" xml:space="preserve">
+    <value>Название материала</value>
+  </data>
+  <data name="TuoQiTianShu" xml:space="preserve">
+    <value>Расход</value>
+  </data>
+  <data name="FuZeRenDaiMa" xml:space="preserve">
+    <value>Публикация</value>
+  </data>
+  <data name="XiangMuJingLiDaiMa" xml:space="preserve">
+    <value>Количество дней задержки</value>
+  </data>
+  <data name="XiangMuJingLiMingCheng" xml:space="preserve">
+    <value>Код ответственного</value>
+  </data>
+  <data name="XinJianLiuCheng" xml:space="preserve">
+    <value>Код менеджера проекта</value>
+  </data>
+  <data name="DianNaoMingCheng" xml:space="preserve">
+    <value>Имя менеджера проекта</value>
+  </data>
+  <data name="ZuiHouCaoZuoShiJian" xml:space="preserve">
+    <value>Создать процесс</value>
+  </data>
+  <data name="LianXiRenGuanXi" xml:space="preserve">
+    <value>Имя компьютера</value>
+  </data>
+  <data name="HeTongGongSi" xml:space="preserve">
+    <value>Время последней операции</value>
+  </data>
+  <data name="ShouCiHeTongQiShiRi" xml:space="preserve">
+    <value>Связь с контактным лицом</value>
+  </data>
+  <data name="JiHuaYuJiKaiShiShiJian" xml:space="preserve">
+    <value>Компания контракта</value>
+  </data>
+  <data name="JiHuaYuJiJieShuShiJian" xml:space="preserve">
+    <value>Дата начала первого контракта</value>
+  </data>
+  <data name="RenWuYuJiKaiShiShiJian" xml:space="preserve">
+    <value>Планируемое время начала</value>
+  </data>
+  <data name="RenWuShouLiShiJian" xml:space="preserve">
+    <value>Планируемое время окончания</value>
+  </data>
+  <data name="RenWuYuJiJieShuShiJian" xml:space="preserve">
+    <value>Планируемое время начала задачи</value>
+  </data>
+  <data name="RenWuZuiXinCaoZuoShiJian" xml:space="preserve">
+    <value>Время принятия задачи</value>
+  </data>
+  <data name="DaoChuChengGong" xml:space="preserve">
+    <value>Планируемое время окончания задачи</value>
+  </data>
+  <data name="FanHuiDaoDi" xml:space="preserve">
+    <value>Время последней операции с задачей</value>
+  </data>
+  <data name="BuLe" xml:space="preserve">
+    <value>Экспорт успешен</value>
+  </data>
+  <data name="WuLiaoHuoZiChanLeiXing" xml:space="preserve">
+    <value>Вернуться к шагу</value>
+  </data>
+  <data name="ZongLei" xml:space="preserve">
+    <value>Тип материала или актива</value>
+  </data>
+  <data name="JiLuRenDaiMa" xml:space="preserve">
+    <value>Общая категория</value>
+  </data>
+  <data name="JiLuRenMingCheng" xml:space="preserve">
+    <value>Код записывающего</value>
+  </data>
+  <data name="JiaoSeZu" xml:space="preserve">
+    <value>Имя записывающего</value>
+  </data>
+  <data name="ZhanKaiYunSuanHuiFuGaiQianCiYunSuanDeShuJu" xml:space="preserve">
+    <value>Группа ролей</value>
+  </data>
+  <data name="NinQueDingYaoJinXingMa" xml:space="preserve">
+    <value>Развертывание перезапишет данные предыдущего развертывания</value>
+  </data>
+  <data name="QingXuanZeKeHu" xml:space="preserve">
+    <value>Вы уверены, что хотите продолжить?</value>
+  </data>
+  <data name="QueDingYaoShanChuCiXiangJiLuMa" xml:space="preserve">
+    <value>Выберите клиента</value>
+  </data>
+  <data name="NiQueDingYaoShanChuCongCiJiHuaFuZhiDeQiTaChengYuanDeJiHuaMa" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить эту запись?</value>
+  </data>
+  <data name="ChuQinRiQi" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить планы других участников, скопированные с этого плана?</value>
+  </data>
+  <data name="ShangWuShangBanShiJian" xml:space="preserve">
+    <value>Дата посещения</value>
+  </data>
+  <data name="ShangWuXiaBanShiJian" xml:space="preserve">
+    <value>Время начала утренней смены</value>
+  </data>
+  <data name="XiaWuShangBanShiJian" xml:space="preserve">
+    <value>Время окончания утренней смены</value>
+  </data>
+  <data name="XiaWuXiaBanShiJian" xml:space="preserve">
+    <value>Время начала дневной смены</value>
+  </data>
+  <data name="WuYeShangBanShiJian" xml:space="preserve">
+    <value>Время окончания дневной смены</value>
+  </data>
+  <data name="WuYeXiaBanShiJian" xml:space="preserve">
+    <value>Время начала ночной смены</value>
+  </data>
+  <data name="YunXuZuiDaLiJu" xml:space="preserve">
+    <value>Время окончания ночной смены</value>
+  </data>
+  <data name="JiaBanShiChang" xml:space="preserve">
+    <value>Максимальное допустимое расстояние</value>
+  </data>
+  <data name="YueDuHuiZong" xml:space="preserve">
+    <value>Продолжительность сверхурочной работы (часы)</value>
+  </data>
+  <data name="TongJiRiQi" xml:space="preserve">
+    <value>Ежемесячный итог</value>
+  </data>
+  <data name="BaoBiaoShengChengShiJian" xml:space="preserve">
+    <value>Дата статистики</value>
+  </data>
+  <data name="YiJiBuMen" xml:space="preserve">
+    <value>Время создания отчета</value>
+  </data>
+  <data name="SiLing" xml:space="preserve">
+    <value>Отдел первого уровня</value>
+  </data>
+  <data name="YuanGongLeiXing" xml:space="preserve">
+    <value>Стаж работы в компании</value>
+  </data>
+  <data name="YuanGongZhuangTai" xml:space="preserve">
+    <value>Тип сотрудника</value>
+  </data>
+  <data name="ShiYongQi" xml:space="preserve">
+    <value>Статус сотрудника</value>
+  </data>
+  <data name="ShiJiZhuanZhengRiQi" xml:space="preserve">
+    <value>Испытательный срок</value>
+  </data>
+  <data name="HuJiLeiXing" xml:space="preserve">
+    <value>Фактическая дата перевода на постоянную работу</value>
+  </data>
+  <data name="ZhengZhiMianMao" xml:space="preserve">
+    <value>Тип регистрации</value>
+  </data>
+  <data name="ShouCiHeTongDaoQiRi" xml:space="preserve">
+    <value>Политический статус</value>
+  </data>
+  <data name="ShouCiHeTongQiXian" xml:space="preserve">
+    <value>Дата окончания первого контракта</value>
+  </data>
+  <data name="DiErCiHeTongQiShiRi" xml:space="preserve">
+    <value>Срок первого контракта</value>
+  </data>
+  <data name="DiErCiHeTongDaoQiRi" xml:space="preserve">
+    <value>Дата начала второго контракта</value>
+  </data>
+  <data name="DiErCiHeTongQiXian" xml:space="preserve">
+    <value>Дата окончания второго контракта</value>
+  </data>
+  <data name="DiSanCiHeTongQiShiRi" xml:space="preserve">
+    <value>Срок второго контракта</value>
+  </data>
+  <data name="DiSanCiHeTongDaoQiRi" xml:space="preserve">
+    <value>Дата начала третьего контракта</value>
+  </data>
+  <data name="DiSanCiHeTongQiXian" xml:space="preserve">
+    <value>Дата окончания третьего контракта</value>
+  </data>
+  <data name="YiQianCiShu" xml:space="preserve">
+    <value>Срок третьего контракта</value>
+  </data>
+  <data name="XianHeTongQiShiRi" xml:space="preserve">
+    <value>Количество подписанных раз</value>
+  </data>
+  <data name="XianHeTongQiXian" xml:space="preserve">
+    <value>Дата начала текущего контракта</value>
+  </data>
+  <data name="ShouQuanLeiXing" xml:space="preserve">
+    <value>Срок текущего контракта</value>
+  </data>
+  <data name="ZhanDianMing" xml:space="preserve">
+    <value>Тип авторизации</value>
+  </data>
+  <data name="ShouQuanYongHuShu" xml:space="preserve">
+    <value>Имя сайта</value>
+  </data>
+  <data name="JinYongMoKuai" xml:space="preserve">
+    <value>Количество авторизованных пользователей</value>
+  </data>
+  <data name="YinXing" xml:space="preserve">
+    <value>Отключенные модули</value>
+  </data>
+  <data name="JiLuRenMingChen" xml:space="preserve">
+    <value>Банк</value>
+  </data>
+  <data name="HuiLu" xml:space="preserve">
+    <value>Имя записывающего</value>
+  </data>
+  <data name="ShiShouLiang" xml:space="preserve">
+    <value>Курс обмена</value>
+  </data>
+  <data name="ShiShouShiJian" xml:space="preserve">
+    <value>Фактическое полученное количество</value>
+  </data>
+  <data name="FaLiao" xml:space="preserve">
+    <value>Время получения</value>
+  </data>
+  <data name="YanShou" xml:space="preserve">
+    <value>Выдача материалов</value>
   </data>
   <data name="JiaoFu" xml:space="preserve">
     <value>Delivery</value>
@@ -27575,6 +30639,54 @@
   </data>
   <data name="AssetPO" xml:space="preserve">
     <value>Assset purchase order</value>
+  </data>
+  <data name="WeiShouJieE" xml:space="preserve">
+    <value>Проверка</value>
+  </data>
+  <data name="KaoHeMingCheng" xml:space="preserve">
+    <value>Неполученная сумма</value>
+  </data>
+  <data name="MeiYouZhaoDaoXiangYingDeBaiFangJiLu" xml:space="preserve">
+    <value>Название проверки</value>
+  </data>
+  <data name="FuZeRenMingCheng" xml:space="preserve">
+    <value>Не найдено соответствующих записей о посещениях</value>
+  </data>
+  <data name="NiQuedYaoShanChuSuoXuanZeDeShuJuXiangMa" xml:space="preserve">
+    <value>Имя ответственного</value>
+  </data>
+  <data name="TuoQiXiangMuJiHua" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные данные?</value>
+  </data>
+  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="QingJiaXiaoShi" xml:space="preserve">
+    <value>Предупреждение: Выберите тип файла</value>
+  </data>
+  <data name="QingXuanZheLiuChengMoBan" xml:space="preserve">
+    <value>Отпуск (часы)</value>
+  </data>
+  <data name="DaiMaBuNengWeiKong" xml:space="preserve">
+    <value>Выберите шаблон процесса!</value>
+  </data>
+  <data name="QueDingYaoShanChuSuoYouDeShuJiXiang" xml:space="preserve">
+    <value>Код не может быть пустым!</value>
+  </data>
+  <data name="ChaKuan" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные данные?</value>
+  </data>
+  <data name="XiangMuHaoWeiKongQingJianCha" xml:space="preserve">
+    <value>Просмотр</value>
+  </data>
+  <data name="MoYouQuanXianGengGeiJiHaQingJianCha" xml:space="preserve">
+    <value>Номер проекта пуст, проверьте!</value>
+  </data>
+  <data name="ChengCaiXiangTongTuPianWenJian" xml:space="preserve">
+    <value>У вас нет прав на изменение плана, проверьте!</value>
+  </data>
+  <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
+    <value>Существует файл с таким же изображением!</value>
   </data>
   <data name="HSE生产总结" xml:space="preserve">
     <value>Резюме HSE Производство</value>
@@ -27638,9 +30750,5 @@
   </data>
   <data name="String25" xml:space="preserve">
     <value>Чжоу</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
 </root>

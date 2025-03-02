@@ -8744,4 +8744,16 @@ CREATE OR REPLACE VIEW public.v_projectplanlist
 ALTER TABLE public.v_projectplanlist
     OWNER TO postgres;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3658</ID>
+    <SQLText>Update T_ProModuleLevel Set HomeModuleName = '操作導航' Where ModuleName = 'OperateNavigation' and LangCode = 'zh-tw';
+Update T_ProModuleLevel Set HomeModuleName = 'Operación de Navegación' Where ModuleName = 'OperateNavigation' and LangCode = 'es';
+Update T_ProModuleLevel Set HomeModuleName = 'Opération de Navigation' Where ModuleName = 'OperateNavigation' and LangCode = 'fr';
+Update T_ProModuleLevel Set HomeModuleName = 'Betriebsnavigation' Where ModuleName = 'OperateNavigation' and LangCode = 'de';
+Update T_ProModuleLevel Set HomeModuleName = 'Operazione di Navigazione' Where ModuleName = 'OperateNavigation' and LangCode = 'it';
+Update T_ProModuleLevel Set HomeModuleName = '操作ナビゲーション' Where ModuleName = 'OperateNavigation' and LangCode = 'ja';
+Update T_ProModuleLevel Set HomeModuleName = '조작 내비게이션 ' Where ModuleName = 'OperateNavigation' and LangCode = 'ko';
+Update T_ProModuleLevel Set HomeModuleName = 'Operação de Navegação' Where ModuleName = 'OperateNavigation' and LangCode = 'pt';
+Update T_ProModuleLevel Set HomeModuleName = 'Операция навигации' Where ModuleName = 'OperateNavigation' and LangCode = 'ru';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

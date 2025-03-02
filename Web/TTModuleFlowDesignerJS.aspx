@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleFlowDesignerJS.aspx.cs" Inherits="TTModuleFlowDesignerJS" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleFlowDesignerJS.aspx.cs" Inherits="TTModuleFlowDesignerJS" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -66,11 +66,6 @@
             this.document.getElementById("BT_SaveWFDefinition").style.display = varStatus;
         }
 
-        function displayWaitingImg() {
-
-            this.document.getElementById("img_processing").style.display = 'block';
-        }
-
     </script>
 </head>
 <body onresize="autoHeight()">
@@ -81,7 +76,6 @@
                 <tr>
                     <td style="width: 100%; height: 100%; vertical-align: top;">
                         <iframe id="_WFDesignerFrame" src="WFDesigner/TTTakeTopMFDesignerJSWorker.aspx?IdentifyString=2020060217063966" style="width: 100%; height: 800px;"></iframe>
-                        <img id="img_processing" src="img/Processing.gif" alt="Loading,please wait..." style="display: none;" />
                     </td>
                 </tr>
 

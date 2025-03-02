@@ -80,6 +80,11 @@
                                                             <asp:Button ID="BT_CompareByHomeLanguage" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,YiBenYuDuiBi%>" OnClick="BT_CompareByHomeLanguage_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
                                                             <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                                         </td>
+
+                                                        <td>
+                                                            <asp:Button ID="BT_ImportLanguageData" runat="server" CssClass="inpuLong" Text="导入语言数据" OnClick="BT_ImportLanguageData_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
+                                                            <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
+                                                        </td>
                                                     </tr>
                                                 </table>
                                             </td>

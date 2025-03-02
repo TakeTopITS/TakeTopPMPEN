@@ -37,6 +37,10 @@ using Microsoft.International.Converters.PinYinConverter;
 using TakeTopGantt.models;
 using static sun.rmi.log.ReliableLog;
 using System.Xml.Linq;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
+
 
 
 public partial class TTDatabaseUpgrade : System.Web.UI.Page
@@ -173,9 +177,9 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
                     strHQL = "Insert Into T_LanguageResourceOther(KeyName,KeyValue) Values('" + ideOther.Key + "','" + ideOther.Value.ToString().Replace("'", "") + "')";
                     ShareClass.RunSqlCommand(strHQL);
                 }
-                catch(Exception err)
+                catch (Exception err)
                 {
-                    LogClass.WriteLogFile("Error page: Key:" + ideOther.Key + " ,"+ err.Message.ToString() + "\n" + err.StackTrace);
+                    LogClass.WriteLogFile("Error page: Key:" + ideOther.Key + " ," + err.Message.ToString() + "\n" + err.StackTrace);
                 }
             }
             rrOther.Close();
@@ -197,13 +201,121 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
 
             strHQL = "Select KeyName,KeyValue From T_LanguageResourceHome Where KeyName Not In (Select KeyName From T_LanguageResourceOther)";
 
-            MSExcelHandler.DataTableToExcel(strHQL, strOtherLangResxFile + ".xls");
+            MSExcelHandler.DataTableToExcel(strHQL, "lang."+ strLangCode + ".xls");
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('OK！')", true);
 
             return;
         }
     }
+
+    protected void BT_ImportLanguageData_Click(object sender, EventArgs e)
+    {
+        if (Page.IsValid)
+        {
+            string directoryPath = Server.MapPath("../App_GlobalResources");
+
+            // 调用方法遍历目录并导入Excel数据到对应的.resx文件
+            ImportExcelFilesInDirectory(directoryPath);
+
+            Console.WriteLine("所有文件导入完成！");
+        }
+    }
+
+    public static void ImportExcelFilesInDirectory(string directoryPath)
+    {
+        // 获取目录下所有的Excel文件（.xls 和 .xlsx）
+        var excelFiles = Directory.GetFiles(directoryPath, "*.xls*");
+
+        foreach (var excelFilePath in excelFiles)
+        {
+            // 获取Excel文件名（不带扩展名）
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(excelFilePath);
+
+            // 构建对应的.resx文件路径
+            string resxFilePath = Path.Combine(directoryPath, $"{fileNameWithoutExtension}.resx");
+
+            // 调用方法将Excel数据导入到.resx文件
+            ImportExcelToResx(excelFilePath, resxFilePath);
+
+            Console.WriteLine($"已处理文件: {excelFilePath} -> {resxFilePath}");
+        }
+    }
+
+    public static void ImportExcelToResx(string excelFilePath, string resxFilePath)
+    {
+        // 打开Excel文件
+        IWorkbook workbook;
+        using (var fileStream = new FileStream(excelFilePath, FileMode.Open, FileAccess.Read))
+        {
+            if (excelFilePath.EndsWith(".xlsx"))
+            {
+                workbook = new XSSFWorkbook(fileStream); // 读取 .xlsx 文件
+            }
+            else
+            {
+                workbook = new HSSFWorkbook(fileStream); // 读取 .xls 文件
+            }
+        }
+
+        // 获取第一个工作表
+        ISheet worksheet = workbook.GetSheetAt(0);
+
+        // 创建一个字典来存储Excel中的KeyName和KeyValue
+        var keyValuePairs = new Dictionary<string, string>();
+
+        // 遍历Excel表中的每一行（从第二行开始，假设第一行是标题）
+        for (int row = 1; row <= worksheet.LastRowNum; row++)
+        {
+            IRow currentRow = worksheet.GetRow(row);
+            if (currentRow == null) continue; // 跳过空行
+
+            string keyName = currentRow.GetCell(0)?.ToString(); // KeyName列（第一列）
+            string keyValue = currentRow.GetCell(1)?.ToString(); // KeyValue列（第二列）
+
+            if (!string.IsNullOrEmpty(keyName))
+            {
+                keyValuePairs[keyName] = keyValue;
+            }
+        }
+
+        // 如果.resx文件已存在，读取现有资源
+        var existingResources = new Dictionary<string, string>();
+        if (File.Exists(resxFilePath))
+        {
+            using (ResXResourceReader resxReader = new ResXResourceReader(resxFilePath))
+            {
+                foreach (System.Collections.DictionaryEntry entry in resxReader)
+                {
+                    existingResources[entry.Key.ToString()] = entry.Value?.ToString();
+                }
+            }
+        }
+
+        // 将数据写入.resx文件（新增时跳过已存在的KeyName）
+        using (ResXResourceWriter resxWriter = new ResXResourceWriter(resxFilePath))
+        {
+            // 先写入现有资源
+            foreach (var kvp in existingResources)
+            {
+                resxWriter.AddResource(kvp.Key, kvp.Value);
+            }
+
+            // 再写入Excel中的新资源（跳过已存在的KeyName）
+            foreach (var kvp in keyValuePairs)
+            {
+                if (!existingResources.ContainsKey(kvp.Key))
+                {
+                    resxWriter.AddResource(kvp.Key, kvp.Value);
+                }
+                else
+                {
+                    Console.WriteLine($"跳过已存在的KeyName: {kvp.Key}");
+                }
+            }
+        }
+    }
+
 
 
     //设置缓存更改标志，并刷新页面缓存
