@@ -138,8 +138,8 @@ public static class LanguageHandle
                 Directory.CreateDirectory(targetDirectory);
             }
 
-            // 获取源目录下的所有文件
-            string[] files = Directory.GetFiles(sourceDirectory);
+            // 获取源目录下的所有扩展名为 .resx 的文件
+            string[] files = Directory.GetFiles(sourceDirectory, "*.resx");
 
             foreach (string file in files)
             {
