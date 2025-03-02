@@ -1,4 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceToDoNewsForOuter.aspx.cs" Inherits="TTPersonalSpaceToDoNewsForOuter" %>
+
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
@@ -63,11 +64,16 @@
                                                                 <asp:Repeater ID="RP_ToDoList" runat="server">
                                                                     <ItemTemplate>
                                                                         <li style="color: #333;">
-
-
-                                                                            <a href='<%#DataBinder .Eval (Container .DataItem,"LinkAddress") %>' target="rightFrame"><%#DataBinder .Eval (Container .DataItem,"HomeName") %> :<%# GetNumberCount(Eval("SQLCode").ToString()) %></a></li>
+                                                                            <a href='<%# DataBinder.Eval(Container.DataItem, "LinkAddress") %>' target="rightFrame">
+                                                                                <span style="display: inline-block; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                                    <%# DataBinder.Eval(Container.DataItem, "HomeName") %>
+                                                                                </span>
+                                                                                : <%# GetNumberCount(Eval("SQLCode").ToString()) %>
+                                                                            </a>
+                                                                        </li>
                                                                     </ItemTemplate>
                                                                 </asp:Repeater>
+                                                            </ul>
                                                             </ul>
                                                         </div>
                                                     </td>

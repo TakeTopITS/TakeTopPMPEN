@@ -250,9 +250,13 @@
                                                                                     <asp:Repeater ID="Repeater1" runat="server">
                                                                                         <ItemTemplate>
 
-                                                                                            <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe">
-                                                                                                <b><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %> &nbsp; </b>
-                                                                                            </a>
+                                                                                            <div style="padding-top: 10px; text-align: center; overflow: hidden; width: 200px;">
+                                                                                                <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                                                                    <b style="color: white;">
+                                                                                                        <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %>
+                                                                                                    </b>
+                                                                                                </a>
+                                                                                            </div>
                                                                                         </ItemTemplate>
                                                                                     </asp:Repeater>
                                                                                     <br />
@@ -260,9 +264,13 @@
 
                                                                                       <asp:Repeater ID="Repeater2" runat="server">
                                                                                           <ItemTemplate>
-                                                                                              <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe">
-                                                                                                  <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %> &nbsp;
-                                                                                              </a>
+                                                                                              <div style="padding-top: 10px; text-align: center; overflow: hidden; width: 200px;">
+                                                                                                  <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                                                                      <b style="color: white;">
+                                                                                                          <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %>
+                                                                                                      </b>
+                                                                                                  </a>
+                                                                                              </div>
                                                                                           </ItemTemplate>
                                                                                       </asp:Repeater>
                                                                                 </td>
@@ -296,9 +304,13 @@
                                                                                             <td>
                                                                                                 <asp:Repeater ID="Repeater3" runat="server">
                                                                                                     <ItemTemplate>
-                                                                                                        <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe">
-                                                                                                            <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %> &nbsp;
-                                                                                                        </a>
+                                                                                                        <div style="padding-top: 10px; text-align: center; overflow: hidden; width: 200px;">
+                                                                                                            <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                                                                                <b style="color: white;">
+                                                                                                                    <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %>
+                                                                                                                </b>
+                                                                                                            </a>
+                                                                                                        </div>
                                                                                                     </ItemTemplate>
                                                                                                 </asp:Repeater>
                                                                                             </td>
@@ -368,7 +380,7 @@
                                                                     </a>
                                                                 </ItemTemplate>
                                                             </asp:Repeater>
-                                                         </td>
+                                                        </td>
                                                     </tr>
                                                 </table>
                                                 <br />
@@ -401,4 +413,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>
