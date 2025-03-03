@@ -8810,4 +8810,19 @@ Update T_Project Set ProjectClass = 'TemplateProject' Where ProjectClass = 'Temp
 ALTER TABLE public.v_projectplanlist
     OWNER TO postgres;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3664</ID>
+    <SQLText>Insert Into public.t_systemanalystchartrelateduser(UserCode,chartName,FormType,SortNumber)
+   Select B.UserCode,A.chartName,'PersonalSpacePage',0 From t_systemanalystchartmanagement A,public.t_systemactiveuser B
+     Where A.ChartName 
+	 Not In (Select ChartName From t_systemanalystchartrelateduser Where UserCode = B.UserCode and FormType = 'PersonalSpacePage' )
+	 and A.ChartName in ('在执行项目状态','延误项目状态','年度项目工时状态','在执行任务状态','项目年度回款状态');</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3665</ID>
+    <SQLText>Update t_systemanalystchartrelateduser Set SortNumber = 1 Where ChartName = '延误项目状态';
+Update t_systemanalystchartrelateduser Set SortNumber = 2 Where ChartName = '年度项目工时状态';
+Update t_systemanalystchartrelateduser Set SortNumber = 3 Where ChartName = '在执行任务状态';
+Update t_systemanalystchartrelateduser Set SortNumber = 4 Where ChartName = '项目年度回款状态';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
