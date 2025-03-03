@@ -92,8 +92,10 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
             //给用户增加系统分析图
             InitialSystemAnalystChart(strUserCode, "ADMIN");
             //增加分析图给用户
-            AddChartToUser(strUserCode);
+            AddChartToUserFromADMIN(strUserCode);
 
+            //给用户分配系统分析图
+            UpdateSystemAnalystChartForUser();
 
             //设置数据库只读用户的只读密码，一般于报表设计者
             SetDBUserIDPasswordForDBOnlyReadUser();
@@ -434,8 +436,8 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         }
     }
 
-    //增加分析图给用户
-    public static void AddChartToUser(string strUserCode)
+    //Copy 管理员ADMIN用户的分析图给其它用户
+    public static void AddChartToUserFromADMIN(string strUserCode)
     {
         string strHQL;
 
@@ -1422,6 +1424,27 @@ FROM (
         {
             LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
         }
+    }
+
+
+    //给用户分配分析图  
+    private static void UpdateSystemAnalystChartForUser()
+    {
+        string strHQL;
+
+        strHQL = @"Insert Into public.t_systemanalystchartrelateduser(UserCode,chartName,FormType,SortNumber)
+               Select B.UserCode,A.chartName,'PersonalSpacePage',0 From t_systemanalystchartmanagement A,public.t_systemactiveuser B
+                 Where A.ChartName 
+	             Not In (Select ChartName From t_systemanalystchartrelateduser Where UserCode = B.UserCode and FormType = 'PersonalSpacePage' )
+	             and A.ChartName in ('在执行项目状态','延误项目状态','年度项目工时状态','在执行任务状态','项目年度回款状态');";
+        ShareClass.RunSqlCommand(strHQL);
+
+        strHQL = @"Update t_systemanalystchartrelateduser Set SortNumber = 1 Where ChartName = '延误项目状态';
+                Update t_systemanalystchartrelateduser Set SortNumber = 2 Where ChartName = '年度项目工时状态';
+                Update t_systemanalystchartrelateduser Set SortNumber = 3 Where ChartName = '在执行任务状态';
+                Update t_systemanalystchartrelateduser Set SortNumber = 4 Where ChartName = '项目年度回款状态';";
+        ShareClass.RunSqlCommand(strHQL);
+
     }
 
     //设置缓存更改标志，并刷新页面缓存

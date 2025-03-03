@@ -97,6 +97,7 @@ public static class DatabaseUpdateHandle
                 LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
 
             }
+
         }
     }
 
@@ -120,7 +121,7 @@ public static class DatabaseUpdateHandle
             strHQL = @"Insert Into t_OtherCodeRunMark(normalcoderunmark,updatecolumnvaluecoderunmark,updatemodulenamecoderunmark) values(0,0,0);";
             ShareClass.RunSqlCommand(strHQL);
         }
-        catch(Exception err) 
+        catch (Exception err)
         {
             LogClass.WriteLogFile(err.Message.ToString());
         }
@@ -173,8 +174,6 @@ public static class DatabaseUpdateHandle
         strHQL = "Update T_OtherCodeRunMark Set UpdateModuleNameCodeRunMark = " + intMark;
         ShareClass.RunSqlCommand(strHQL);
     }
-
-
 
 
     //更新带有Status字段Table的Status的值到英文核心
@@ -956,4 +955,5 @@ AND c.table_name NOT Like '%rcj%' AND C.column_name not like '%id%' and C.column
             return original;
         return original.Substring(0, index) + newText + original.Substring(index + oldText.Length);
     }
+
 }
