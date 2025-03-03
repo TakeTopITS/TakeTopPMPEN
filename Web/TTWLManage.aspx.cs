@@ -84,7 +84,7 @@ public partial class TTWLManage : System.Web.UI.Page
             strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
             strHQL += " And A.IsOperator = 'YES'";
             strHQL += " Order By A.StepID DESC";
-            LogClass.WriteLogFile(strHQL);
+            
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
             DataGrid5.DataSource = ds;

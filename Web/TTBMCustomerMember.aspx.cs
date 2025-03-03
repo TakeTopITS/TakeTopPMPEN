@@ -1055,7 +1055,7 @@ public partial class TTBMCustomerMember : System.Web.UI.Page
 
         strHQL = "from ProjectMember as projectMember where projectMember.UserCode = " + "'" + strUserCode + "'" + " or projectMember.UserName = " + "'" + strUserName + "'";
 
-        LogClass.WriteLogFile(strHQL);
+        
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
         lst = projectMemberBLL.GetAllProjectMembers(strHQL);

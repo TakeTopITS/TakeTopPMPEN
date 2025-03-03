@@ -31026,4 +31026,184 @@
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>拖期專案計畫</value>
   </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>管理員</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>標準量</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>已經存在</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>鍵</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>人事行政</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>員工檔案設置</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>員工資料導入</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>參數設置</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>外置</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>內置</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>條件編號</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>運算式編號</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>審批條件運算式有錯誤</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>流程範本設置人員</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>請先選取表單範本才能下載</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>提交失敗</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>發生異常頁</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>異常資訊</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>需要</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>無法解密</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>請稍候</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>正在恢復資料庫</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>資料庫狀態正常</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>正在用</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>被佔用</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>請用整數型數位作為埠</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>流覽器不能自動打開</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>請把前面的地址</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>到流覽器位址欄以打開登錄頁面</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>登錄連結格式不對</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>正在備份資料</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>資料備份成功</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>備份檔案在安裝目錄的</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>資料夾下</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>請及時把此資料夾</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>到其它備份盤上</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>正在檢查資料庫狀態</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>創建資料庫恢復命令失敗</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>重新開機應該能解決問題</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>項目號為空</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>程式集</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>不能插入節或行</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>因為該片段沒有有效的插入點</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>所以試圖進行的片斷操作無法完成</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>未能載入</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>載入失敗</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>查詢失敗</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>刷新失敗</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>表單提交成功</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>回應狀態碼為</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>未設置</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>找不到郵件發送地址</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>郵寄地址</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>其中之一必須被設置</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>未能提交表單</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>可列印版本</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>請選擇一個文</value>
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>語言資源檔差異</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>導入語言資料</value>
+  </data>
 </root>

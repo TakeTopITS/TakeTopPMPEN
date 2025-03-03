@@ -109,7 +109,7 @@ public partial class TTAPPPersonalSpaceAnalysisChart : System.Web.UI.Page
             strHQL += " and chartName Not In (Select ChartName From T_SystemAnalystChartManagement where ChartType In  ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus'))";
             strHQL += " Order By A.SortNumber ASC";
 
-            LogClass.WriteLogFile(strHQL);
+            
         }
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_SystemAnalystChartManagement");
 

@@ -434,7 +434,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
             project.CustomerPMName = strCustomerPMName;
             project.ProjectName = strProject;
             project.ProjectType = strProjectType;
-            project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
+            project.ProjectClass = "NormalProject";
             project.ProjectAmount = NB_ProjectAmount.Amount;
             project.Budget = decimal.Parse(strBudget);
             project.CurrencyType = DL_CurrencyType.SelectedValue.Trim();
@@ -1611,7 +1611,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
         if (strRelatedType == "Constract")
         {
             strHQL = "Insert Into T_ConstractRelatedProject(ProjectID,ConstractCode) Values(" + strProjectID + "," + "'" + GetConstractCode(strRelatedID) + "'" + ")";
-            //LogClass.WriteLogFile(strHQL);
+            //
             ShareClass.RunSqlCommand(strHQL);
         }
         if (strRelatedType == "tender")

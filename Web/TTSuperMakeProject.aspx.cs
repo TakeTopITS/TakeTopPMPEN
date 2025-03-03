@@ -522,7 +522,7 @@ public partial class TTSuperMakeProject : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        project.ProjectClass = LanguageHandle.GetWord("MoBanXiangMu").ToString().Trim();
+        project.ProjectClass = "Template";
 
         try
         {
@@ -550,13 +550,13 @@ public partial class TTSuperMakeProject : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
+        project.ProjectClass = "NormalProject";
 
         try
         {
             projectBLL.UpdateProject(project, int.Parse(strProjectID));
 
-            LB_ProjectClass.Text = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
+            LB_ProjectClass.Text = "Normal";
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSWCGXM").ToString().Trim() + "')", true);
         }

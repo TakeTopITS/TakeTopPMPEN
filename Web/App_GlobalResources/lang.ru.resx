@@ -30751,4 +30751,184 @@
   <data name="String25" xml:space="preserve">
     <value>Чжоу</value>
   </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>Администратор</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>Стандартное количество</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>Уже существует</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>Ключ</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>Кадры и администрация</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>Настройка архива сотрудников</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>Импорт данных сотрудников</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>Настройка параметров</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>Внешний</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>Внутренний</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>Номер условия</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>Номер выражения</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>Ошибка в выражении условия утверждения</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>Настройка персонала шаблона процесса</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>Сначала выберите шаблон формы для загрузки</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>Подсказка</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>Ошибка отправки</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>Страница исключения</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>Информация об исключении</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>Требуется</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>Невозможно расшифровать</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>Пожалуйста, подождите</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>Восстановление базы данных</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>Состояние базы данных в норме</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>Используется</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>Занято</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>Используйте целое число в качестве порта</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>Браузер не может открыться автоматически</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>Скопируйте предыдущий адрес</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>В адресную строку браузера, чтобы открыть страницу входа</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>Неверный формат ссылки для входа</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>Резервное копирование данных</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>Резервное копирование данных успешно завершено</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>Резервные файлы находятся в каталоге установки</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>В папке</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>Пожалуйста, своевременно переместите эту папку</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>На другой резервный диск</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>Проверка состояния базы данных</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>Не удалось создать команду восстановления базы данных</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>Перезагрузка должна решить проблему</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>Номер проекта пуст</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>Сборка</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>Невозможно вставить раздел или строку</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>Поскольку фрагмент не имеет допустимой точки вставки</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>Попытка выполнить операцию с фрагментом не удалась</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>Не удалось загрузить</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>Ошибка загрузки</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>Ошибка запроса</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>Ошибка обновления</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>Форма успешно отправлена</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>Код состояния ответа:</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>Не установлено</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>Не найден адрес электронной почты для отправки</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>Один из них должен быть установлен</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>Не удалось отправить форму</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>Версия для печати</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>Пожалуйста, выберите документ</value>
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>Различия в файлах языковых ресурсов</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>Импорт языковых данных</value>
+  </data>
 </root>

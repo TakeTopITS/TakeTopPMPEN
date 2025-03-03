@@ -77,7 +77,7 @@ public partial class TTProjectReviewWL : System.Web.UI.Page
             strHQL += " and workFlowTemplate.Visible = 'YES'";
             strHQL += " order by workFlowTemplate.SortNumber ASC";
 
-            //LogClass.WriteLogFile(strHQL);
+            //
 
             lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
             DL_TemName.DataSource = lst;

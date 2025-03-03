@@ -3146,7 +3146,7 @@ public static class ShareClass
                    )))
                    and rtrim(ltrim(document.Status)) <> 'Deleted'", strProjectID, strUserCode, strDepartCode);  
 
-        //LogClass.WriteLogFile(strHQL);
+        //
 
         DataSet ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_Document");
 

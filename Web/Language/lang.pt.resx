@@ -30751,4 +30751,184 @@
   <data name="String25" xml:space="preserve">
     <value>Zhou</value>
   </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>Quantidade padrão</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>Já existe</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>Chave</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>Recursos humanos e administração</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>Configuração de arquivos de funcionários</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>Importação de dados de funcionários</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>Configuração de parâmetros</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>Externo</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>Interno</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>Número da condição</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>Número da expressão</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>Erro na expressão da condição de aprovação</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>Configuração de pessoal do modelo de fluxo</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>Por favor, selecione um modelo de formulário para baixar</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>Aviso</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>Falha no envio</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>Página de exceção ocorrida</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>Informações da exceção</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>Necessário</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>Não é possível descriptografar</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>Aguarde um momento</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>Restaurando o banco de dados</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>Estado do banco de dados normal</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>Em uso</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>Ocupado</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>Por favor, use um número inteiro como porta</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>O navegador não pode abrir automaticamente</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>Por favor, copie o endereço anterior</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>Para a barra de endereços do navegador para abrir a página de login</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>Formato do link de login incorreto</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>Fazendo backup dos dados</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>Backup dos dados concluído com sucesso</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>Os arquivos de backup estão no diretório de instalação</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>Na pasta</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>Por favor, mova esta pasta a tempo</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>Para outro disco de backup</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>Verificando o estado do banco de dados</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>Falha ao criar o comando de restauração do banco de dados</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>Reiniciar deve resolver o problema</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>Número do projeto está vazio</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>Assembly</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>Não é possível inserir seção ou linha</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>Porque o fragmento não tem um ponto de inserção válido</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>A operação de fragmento tentada não pode ser concluída</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>Falha ao carregar</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>Erro de carregamento</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>Falha na consulta</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>Falha na atualização</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>Envio do formulário bem-sucedido</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>Código de status da resposta é</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>Não definido</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>Endereço de e-mail de envio não encontrado</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>Endereço de e-mail</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>Um deles deve ser definido</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>Falha no envio do formulário</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>Versão imprimível</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>Por favor, selecione um documento</value>
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>Diferenças nos arquivos de recursos de idioma</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>Importar dados de idioma</value>
+  </data>
 </root>

@@ -351,7 +351,7 @@ public partial class TTMakeProject : System.Web.UI.Page
             project.CustomerPMName = strCustomerPMName;
             project.ProjectName = strProject;
             project.ProjectType = strProjectType;
-            project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
+            project.ProjectClass = "NormalProject";
             project.ProjectAmount = NB_ProjectAmount.Amount;
             project.Budget = decimal.Parse(strBudget);
             project.ManHour = deManHour;
@@ -422,12 +422,16 @@ public partial class TTMakeProject : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
             }
-            catch
+            catch(Exception err)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
+
+                LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
             }
+
+            
         }
     }
 

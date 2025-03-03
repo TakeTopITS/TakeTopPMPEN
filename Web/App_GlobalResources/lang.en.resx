@@ -30740,4 +30740,184 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="TaoHuangYeMian" xml:space="preserve">
     <value>navigation page</value>
   </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>Batch "+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>Warning, please select the file type</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>Standard quantity</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>Already exists</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>Human Resources and Administration</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>Employee file settings</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>Employee data import</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>Parameter settings</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>External</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>Internal</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>Condition number</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>Expression number</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>Approval condition expression has an error</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>Process template setting personnel</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>Please select a form template before downloading</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>Submission failed</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>Exception page</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>Exception information</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>Unable to decrypt</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>Please wait</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>Restoring database</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>Database status is normal</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>Using</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>Occupied</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>Please use an integer as the port</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>Browser cannot open automatically</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>Please copy the previous address</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>To the browser address bar to open the login page</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>Login link format is incorrect</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>Backing up data</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>Data backup successful</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>Backup files are in the installation directory</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>Under the folder</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>Please promptly move this folder</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>To another backup drive</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>Checking database status</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>Failed to create database recovery command</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>Restarting should solve the problem</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>Project number is empty</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>Assembly</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>Cannot insert section or row</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>Because the fragment does not have a valid insertion point</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>The fragment operation attempted cannot be completed</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>Failed to load</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>Load failed</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>Query failed</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>Refresh failed</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>Form submission successful</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>Response status code is</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>Not set</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>Cannot find email sending address</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>Email address</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>One of them must be set</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>Failed to submit form</value>
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>Language resource file differences</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>Import language data</value>
+  </data>
 </root>

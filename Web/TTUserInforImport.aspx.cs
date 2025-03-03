@@ -595,7 +595,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
                                     strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'InProgress',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','',OfficeLongitude,OfficeLatitude";
                                     strHQL += " From T_ProjectMember A, T_AttendanceRule B";
                                     strHQL += " Where A.UserCode = '" + strUserCode + "' and A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('Resign','Stop') ";
-                                    LogClass.WriteLogFile(strHQL);
+                                    
                                     
                                     ShareClass.RunSqlCommand(strHQL);
                                 }

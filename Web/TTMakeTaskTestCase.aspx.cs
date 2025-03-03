@@ -60,7 +60,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
                 HE_Description.Visible = true;
             }
 
-            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
 
             strHQL = "from TestStatus as testStatus";
             strHQL += " Where testStatus.LangCode =" + "'" + strLangCode + "'";
@@ -299,7 +299,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
                 LB_CaseID.Text = strCaseID;
 
                 LoadTaskTestCase(strTaskID);
-                InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
@@ -357,7 +357,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
             taskTestCaseBLL.UpdateTaskTestCase(taskTestCase, int.Parse(strID));
             LoadTaskTestCase(strTaskID);
 
-            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
@@ -425,7 +425,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
                     taskTestCaseBLL.DeleteTaskTestCase(taskTestCase);
                     LoadTaskTestCase(strTaskID);
 
-                    InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                    InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
 
                     LB_CaseID.Text = "";
                 }

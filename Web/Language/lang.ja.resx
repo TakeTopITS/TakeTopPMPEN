@@ -30751,4 +30751,184 @@
   <data name="String25" xml:space="preserve">
     <value>周</value>
   </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>管理者</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>標準量</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>既に存在します</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>キー</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>人事行政</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>従業員ファイル設定</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>従業員データインポート</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>パラメータ設定</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>外部</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>内部</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>条件番号</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>式番号</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>承認条件式にエラーがあります</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>プロセステンプレート設定担当者</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>ダウンロードするには、まずフォームテンプレートを選択してください</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>ヒント</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>送信失敗</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>例外ページが発生しました</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>例外情報</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>必要です</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>復号化できません</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>お待ちください</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>データベースを復元中です</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>データベースの状態は正常です</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>使用中です</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>占有されています</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>ポートとして整数を使用してください</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>ブラウザが自動的に開きません</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>前のアドレスをコピーしてください</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>ブラウザのアドレスバーに貼り付けて、ログインページを開いてください</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>ログインリンクの形式が正しくありません</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>データをバックアップ中です</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>データバックアップが成功しました</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>バックアップファイルはインストールディレクトリの</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>フォルダにあります</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>このフォルダを他のバックアップドライブに</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>早めに移動してください</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>データベースの状態を確認中です</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>データベース復旧コマンドの作成に失敗しました</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>再起動すれば問題が解決するはずです</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>プロジェクト番号が空です</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>アセンブリ</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>セクションまたは行を挿入できません</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>このフラグメントには有効な挿入ポイントがないため、</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>試みたフラグメント操作を完了できません</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>読み込みに失敗しました</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>読み込みエラー</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>クエリ失敗</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>更新失敗</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>フォーム送信成功</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>応答ステータスコード：</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>設定されていません</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>メール送信アドレスが見つかりません</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>メールアドレス</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>そのうちの1つを設定する必要があります</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>フォーム送信に失敗しました</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>印刷可能なバージョン</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>文書を選択してください</value>
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>言語リソースファイルの差異</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>言語データをインポート</value>
+  </data>
 </root>

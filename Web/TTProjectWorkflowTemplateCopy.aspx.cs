@@ -37,7 +37,7 @@ public partial class TTProjectWorkflowTemplateCopy : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            TakeTopPlan.InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strTemProjectID, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            TakeTopPlan.InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strTemProjectID, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
 
             LoadRelatedWorkFlowTemplate(strNewProjectID);
         }

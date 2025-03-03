@@ -42,7 +42,6 @@ using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 
 
-
 public partial class TTDatabaseUpgrade : System.Web.UI.Page
 {
     string strUserCode;
@@ -218,7 +217,7 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
             // 调用方法遍历目录并导入Excel数据到对应的.resx文件
             ImportExcelFilesInDirectory(directoryPath);
 
-            Console.WriteLine("所有文件导入完成！");
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('OK！')", true);
         }
     }
 
@@ -238,7 +237,7 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
             // 调用方法将Excel数据导入到.resx文件
             ImportExcelToResx(excelFilePath, resxFilePath);
 
-            Console.WriteLine($"已处理文件: {excelFilePath} -> {resxFilePath}");
+           LogClass.WriteLogFile($"Handle file: {excelFilePath} -> {resxFilePath}");
         }
     }
 
@@ -310,7 +309,7 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
                 }
                 else
                 {
-                    Console.WriteLine($"跳过已存在的KeyName: {kvp.Key}");
+                    Console.WriteLine($"Passed be existed KeyName: {kvp.Key}");
                 }
             }
         }

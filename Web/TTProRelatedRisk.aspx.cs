@@ -42,7 +42,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
             DLC_EffectDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_FindDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            InitialTemplatePrjectRiskTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            InitialTemplatePrjectRiskTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
 
             LoadProjectRiskList(strProjectID);
         }

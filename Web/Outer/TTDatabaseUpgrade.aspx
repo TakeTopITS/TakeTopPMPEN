@@ -68,10 +68,10 @@
                                             <td>
                                                 <table>
                                                     <tr>
-                                                        <td>语言资源文件差异：
+                                                        <td><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,YuYanZiYuanWenJianChaYi%>"></asp:Label>： 
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>： </td>
+                                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>： </td>
                                                         <td>
                                                             <asp:DropDownList ID="ddlLangSwitcher" runat="server" AutoPostBack="true" DataTextField="Language" DataValueField="LangCode">
                                                             </asp:DropDownList>
@@ -82,8 +82,8 @@
                                                         </td>
 
                                                         <td>
-                                                            <asp:Button ID="BT_ImportLanguageData" runat="server" CssClass="inpuLong" Text="导入语言数据" OnClick="BT_ImportLanguageData_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
-                                                            <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
+                                                            <asp:Button ID="BT_ImportLanguageData" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,DaoRuYiNianShuJi%>"  OnClick="BT_ImportLanguageData_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
+                                                          
                                                         </td>
                                                     </tr>
                                                 </table>

@@ -48,7 +48,7 @@ public partial class TakeTopWebServerNews : System.Web.UI.Page
                 {
                     strHQL = "Select * From T_LogonLog Where UserName = " + "'" + strSystemName + "'" + " and Position = " + "'" + strUserHostAddress + "'";
                     strHQL += " and to_char(LoginTime,'yyyymmdd') =" + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";
-                    //LogClass.WriteLogFile(strHQL);
+                    //
 
                     DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LogonLog");
                     if (ds.Tables[0].Rows.Count == 0)

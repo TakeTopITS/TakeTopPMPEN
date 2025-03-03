@@ -339,7 +339,7 @@ public partial class TTAppInvolvedProjectDetail : System.Web.UI.Page
                     //  , "Participate", strUserCode, ShareClass.GetUserName(strUserCode), int.Parse(strProjectID), strProject, strTodaySummary, 0, deFinishPercent,
                     //  deManHour, deManHour, deManHour * deUnitHourSalary, deBonus, deBonus, DL_Authority.SelectedValue.Trim(), TB_WorkAddress.Text.Trim(), TB_Achievement.Text.Trim());  
 
-                    //LogClass.WriteLogFile(strHQL);
+                    //
 
                     //ShareClass.RunSqlCommand(strHQL);
 

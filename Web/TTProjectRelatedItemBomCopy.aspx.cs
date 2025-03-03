@@ -38,7 +38,7 @@ public partial class TTProjectRelatedItemBomCopy : System.Web.UI.Page
         {
             try
             {
-                TakeTopBOM.InitialTemplatePrjectTreeForBOM(TreeView2, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                TakeTopBOM.InitialTemplatePrjectTreeForBOM(TreeView2, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
             }
             catch (Exception err)
             {

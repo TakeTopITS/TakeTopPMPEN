@@ -47,11 +47,11 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
                     TakeTopPlan.InitialProjectPlanTree(TreeView3, strRelatedProjectID, strRelatedProjectPlanVerID);
                 }
 
-                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strRelatedProjectID, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strRelatedProjectID, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
             }
             else
             {
-                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, null, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, null, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
 
             }
         }

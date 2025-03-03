@@ -410,7 +410,7 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
         DataGrid1.CurrentPageIndex = e.NewPageIndex;
 
         string strHQL = LB_Sql.Text;
-        LogClass.WriteLogFile(strHQL);
+        
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Document");
 
         DataGrid1.DataSource = ds;

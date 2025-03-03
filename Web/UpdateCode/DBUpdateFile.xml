@@ -8756,4 +8756,58 @@ Update T_ProModuleLevel Set HomeModuleName = '조작 내비게이션 ' Where Mod
 Update T_ProModuleLevel Set HomeModuleName = 'Operação de Navegação' Where ModuleName = 'OperateNavigation' and LangCode = 'pt';
 Update T_ProModuleLevel Set HomeModuleName = 'Операция навигации' Where ModuleName = 'OperateNavigation' and LangCode = 'ru';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3659</ID>
+    <SQLText>Update T_Project Set ProjectClass = 'Normal' Where ProjectClass = '常规项目 ';
+Update T_Project Set ProjectClass = 'Template' Where ProjectClass = '模板项目 '</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3660</ID>
+    <SQLText>DROP VIEW public.v_projectplanlist;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3661</ID>
+    <SQLText>alter table public.t_project alter column projectclass type char(100);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3662</ID>
+    <SQLText>Update T_Project Set ProjectClass = 'NormalProject' Where ProjectClass = 'Normal';
+Update T_Project Set ProjectClass = 'TemplateProject' Where ProjectClass = 'Template'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3663</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectplanlist
+ AS
+ SELECT a.verid,
+    a.planid,
+    a.parentidgantt,
+    a.workid,
+    a.plandetail,
+    a.type,
+    a.begintime,
+    a.endtime,
+    a.expireday,
+    a.leadercode,
+    a.leader,
+    a.resource,
+    a.budget,
+    a.makedate,
+    a.parentid,
+    a.priorid,
+    a.defaultschedule,
+    a.defaultcost,
+    a.percent_done,
+    a.expense,
+    a.status,
+    b.projectid,
+    b.projectname,
+    b.pmcode,
+    b.pmname
+   FROM v_projectplanforwanring a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.status::bpchar &lt;&gt; ALL (ARRAY['Completed'::bpchar, 'Cance'::bpchar])) AND b.projectid &gt; 1 AND b.projectclass &lt;&gt; 'TemplateProject'::bpchar AND (b.status::bpchar &lt;&gt; ALL (ARRAY['Acceptance'::bpchar, 'CaseClosed'::bpchar, 'Archived'::bpchar, 'Deleted'::bpchar, 'Suspended'::bpchar, 'Cance'::bpchar]));
+
+ALTER TABLE public.v_projectplanlist
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

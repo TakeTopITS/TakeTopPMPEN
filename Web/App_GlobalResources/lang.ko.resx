@@ -30709,4 +30709,184 @@
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>협회 계약</value>
   </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>관리자</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>표준 수량</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>이미 존재함</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>키</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>인사 행정</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>직원 기록 설정</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>직원 데이터 가져오기</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>매개변수 설정</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>외부</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>내부</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>조건 번호</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>표현식 번호</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>승인 조건 표현식에 오류가 있습니다</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>프로세스 템플릿 설정 담당자</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>다운로드를 위해 먼저 양식 템플릿을 선택하세요</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>알림</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>제출 실패</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>예외 페이지 발생</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>예외 정보</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>필요함</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>복호화할 수 없음</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>잠시만 기다려 주세요</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>데이터베이스 복원 중</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>데이터베이스 상태 정상</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>사용 중</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>점유됨</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>포트로 정수형 숫자를 사용하세요</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>브라우저가 자동으로 열리지 않습니다</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>앞의 주소를 복사하세요</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>브라우저 주소창에 붙여넣어 로그인 페이지를 열어주세요</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>로그인 링크 형식이 잘못되었습니다</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>데이터 백업 중</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>데이터 백업 성공</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>백업 파일은 설치 디렉토리의</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>폴더 아래에 있습니다</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>이 폴더를 다른 백업 드라이브로</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>제때 이동해 주세요</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>데이터베이스 상태 확인 중</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>데이터베이스 복원 명령 생성 실패</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>재부팅하면 문제가 해결될 것입니다</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>프로젝트 번호가 비어 있습니다</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>어셈블리</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>섹션이나 행을 삽입할 수 없습니다</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>해당 조각에 유효한 삽입 지점이 없기 때문에</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>시도한 조각 작업을 완료할 수 없습니다</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>로드하지 못함</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>로드 실패</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>쿼리 실패</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>새로 고침 실패</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>양식 제출 성공</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>응답 상태 코드:</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>설정되지 않음</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>이메일 발신 주소를 찾을 수 없습니다</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>이메일 주소</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>그 중 하나는 반드시 설정되어야 합니다</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>양식 제출 실패</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>인쇄 가능한 버전</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>문서를 선택하세요</value>
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>언어 리소스 파일 차이</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>언어 데이터 가져오기</value>
+  </data>
 </root>

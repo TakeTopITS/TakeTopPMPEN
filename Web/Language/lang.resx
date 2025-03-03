@@ -30682,7 +30682,7 @@
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>拖期项目计划</value>
   </data>
-   <data name="JingGaoQingXuanZeWenJianLeiXing" xml:space="preserve">
+  <data name="JingGaoQingXuanZeWenJianLeiXing" xml:space="preserve">
     <value>警告，请选择文件类型</value>
     <comment>警告，请选择文件类型</comment>
   </data>
@@ -30721,5 +30721,184 @@
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>图片数据为空，请检查！</value>
     <comment>图片数据为空，请检查！</comment>
+  </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>管理员</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>标准量</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>已经存在</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>键</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>人事行政</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>员工档案设置</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>员工资料导入</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>参数设置</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>外置</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>内置</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>条件编号</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>表达式编号</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>审批条件表达式有错误</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>流程模板设置人员</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>请先选取表单模板才能下载</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>提交失败</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>发生异常页</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>异常信息</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>需要</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>无法解密</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>请稍候</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>正在恢复数据库</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>数据库状态正常</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>正在用</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>被占用</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>请用整数型数字作为端口</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>浏览器不能自动打开</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>请把前面的地址</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>到浏览器地址栏以打开登录页面</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>登录链接格式不对</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>正在备份数据</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>数据备份成功</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>备份文件在安装目录的</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>文件夹下</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>请及时把此文件夹</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>到其它备份盘上</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>正在检查数据库状态</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>创建数据库恢复命令失败</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>重新开机应该能解决问题</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>项目号为空</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>程序集</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>不能插入节或行</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>因为该片段没有有效的插入点</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>所以试图进行的片断操作无法完成</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>未能加载</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>加载失败</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>查询失败</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>刷新失败</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>表单提交成功</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>响应状态代码为</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>未设置</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>找不到邮件发送地址</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>邮件地址</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>其中之一必须被设置</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>未能提交表单</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>可打印版本</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>请选择一个文</value>
+  </data>  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>语言资源文件差异</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>导入语言数据</value>
   </data>
 </root>

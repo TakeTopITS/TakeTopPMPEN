@@ -160,6 +160,7 @@ public partial class TTPersonalSpaceWorkflow : System.Web.UI.Page
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlow");
         DataGrid3.DataSource = ds;
         DataGrid3.DataBind();
+
     }
 
     protected void LoadWorkFlowList(string strUserCode)

@@ -295,7 +295,7 @@ public partial class TTProModuleAuthority : System.Web.UI.Page
         strHQL += " and B.LangCode = " + "'" + strLangCode + "'";
         strHQL += " Order By B.ModuleType DESC, B.UserType ASC, B.SortNumber ASC";
 
-        //LogClass.WriteLogFile(strHQL);
+        //
         DataSet ds = CoreShareClass.GetDataSetFromSql(strHQL, "T_ProModule");
         dataGrid.DataSource = ds;
         dataGrid.DataBind();
@@ -334,7 +334,7 @@ public partial class TTProModuleAuthority : System.Web.UI.Page
         strHQL += " and B.LangCode = " + "'" + strLangCode + "'";
         strHQL += " Order By B.ModuleType DESC, B.UserType ASC,B.SortNumber ASC";
 
-        //LogClass.WriteLogFile(strHQL);
+        //
         DataSet ds = CoreShareClass.GetDataSetFromSql(strHQL, "T_DepartRelateModule");
         dataGrid.DataSource = ds;
         dataGrid.DataBind();

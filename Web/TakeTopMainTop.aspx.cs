@@ -339,7 +339,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                         strHQL = strHQL.Replace("[TAKETOPUSERCODE]", strUserCode);
                         strHQL = strHQL.Replace("[TAKETOPSUPERDEPARTSTRING]", LB_SuperDepartString.Text.Trim());
 
-                        //LogClass.WriteLogFile(strHQL);
+                        //
 
                         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "FunInforDialBoxList");
 

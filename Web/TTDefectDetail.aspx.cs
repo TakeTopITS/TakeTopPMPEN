@@ -406,7 +406,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
                 project.PMName = ShareClass.GetUserName(strOperatorCode);
                 project.CustomerPMName = "";
                 project.ProjectType = "OtherProject";
-                project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
+                project.ProjectClass = "NormalProject";
                 project.ProjectName = strProjectName;
                 project.ProjectDetail = strProjectDetail;
                 project.AcceptStandard = strAcceptStandard + LanguageHandle.GetWord("brbrbWoDeYiJianbbr").ToString().Trim() + strContent;

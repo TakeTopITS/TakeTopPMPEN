@@ -349,7 +349,7 @@ public partial class TTMakeProject_GCP : System.Web.UI.Page
             project.CustomerPMName = strCustomerPMName;
             project.ProjectName = strProject;
             project.ProjectType = strProjectType;
-            project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
+            project.ProjectClass = "NormalProject";
             project.ProjectAmount = NB_ProjectAmount.Amount;
             project.Budget = decimal.Parse(strBudget);
             project.ManHour = deManHour;

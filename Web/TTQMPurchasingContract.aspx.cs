@@ -394,7 +394,7 @@ public partial class TTQMPurchasingContract : System.Web.UI.Page
         }
         strHQL = "Delete From T_QMPurchasingContract Where Code = '" + strCode + "' ";
 
-        LogClass.WriteLogFile(strHQL);
+        
 
         try
         {

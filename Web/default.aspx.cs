@@ -141,14 +141,11 @@ public partial class _default : System.Web.UI.Page
                     LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
                 }
 
-                ////运行更新字段值代码
-                //DatabaseUpdateHandle.RunUpdateColumnValueCode();
+                //运行更新字段值代码
+                DatabaseUpdateHandle.RunUpdateColumnValueCode();
             }
         }
     }
-
-
-
 
     protected void LB_Login_Click(object sender, EventArgs e)
     {

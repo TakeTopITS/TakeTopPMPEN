@@ -64,7 +64,7 @@ public partial class TTUserAttendanceRecord : System.Web.UI.Page
                 strHQL += " From T_ProjectMember A, T_AttendanceRule B";
                 strHQL += " Where A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('Resign','Stop') ";
 
-                //LogClass.WriteLogFile(strHQL);
+                //
                 ShareClass.RunSqlCommand(strHQL);
             }
             catch
@@ -112,7 +112,7 @@ public partial class TTUserAttendanceRecord : System.Web.UI.Page
         strHQL += " Where A.UserCode = B.UserCode and A.UserCode not in (Select UserCode From T_UserAttendanceRecord Where to_char(AttendanceDate,'yyyymmdd') = " + "'" + strAttendanceDate3 + "'" + ") and A.Status not in ('Resign','Stop') ";
         strHQL += " and B.Status = 'InUse' ";
 
-        //LogClass.WriteLogFile(strHQL);
+        //
 
         try
         {

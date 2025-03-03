@@ -41,7 +41,7 @@ public partial class TTPersonalSpaceModuleFlowView : System.Web.UI.Page
                 ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
                 ||rtrim(B.UserType) and B.ModuleName = '{0}' and B.UserCode ='{1}' and B.UserType = '{2}' and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) ", strModuleName, strUserCode, strUserType, strLangCode);
 
-        //LogClass.WriteLogFile(strHQL);
+        //
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevel");
 

@@ -136,7 +136,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
                 project.PMCode = strUserCode.Trim();
                 project.PMName = GetUserName(strUserCode).Trim();
                 project.ProjectAmount = 0;
-                project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
+                project.ProjectClass = "NormalProject";
                 project.ProjectDetail = "";
                 project.ProjectName = getPrimProjName(dr[i][LanguageHandle.GetWord("XiangMuBianHao").ToString().Trim()].ToString(), dr[i][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString()).Trim();
                 project.ProjectType = "PrimaveraProject";   

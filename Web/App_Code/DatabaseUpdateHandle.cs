@@ -20,6 +20,7 @@ using Npgsql;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.Web.Administration;
+using org.apache.commons.math3.random;
 
 
 /// <summary>
@@ -69,7 +70,7 @@ public static class DatabaseUpdateHandle
     }
 
     //运行模组名称英文化代码
-    public  static void RunUpdateModuleNameCode()
+    public static void RunUpdateModuleNameCode()
     {
         int intUpdateModuleRunMarkInDB = DatabaseUpdateHandle.GetUpdateModuleNameCodeRunMark();
 
@@ -104,6 +105,26 @@ public static class DatabaseUpdateHandle
     {
         string strHQL;
         int intMark = 0;
+
+        try
+        {
+            strHQL = @"CREATE TABLE IF NOT EXISTS public.t_othercoderunmark
+            (
+                normalcoderunmark bigint DEFAULT 0,
+                updatecolumnvaluecoderunmark integer DEFAULT 0,
+                updatemodulenamecoderunmark integer DEFAULT 0
+            );
+            ";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = @"Insert Into t_OtherCodeRunMark(normalcoderunmark,updatecolumnvaluecoderunmark,updatemodulenamecoderunmark) values(0,0,0);";
+            ShareClass.RunSqlCommand(strHQL);
+        }
+        catch(Exception err) 
+        {
+            LogClass.WriteLogFile(err.Message.ToString());
+        }
+
         strHQL = "Select UpdateColumnValueCodeRunmark From T_OtherCodeRunMark";
         DataSet dataSet = ShareClass.GetDataSetFromSql(strHQL, "T_OtherCodeRunMark");
         if (dataSet.Tables[0].Rows.Count > 0)
