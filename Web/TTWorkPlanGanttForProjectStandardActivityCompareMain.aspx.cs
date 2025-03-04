@@ -1,4 +1,4 @@
-using ProjectMgt.BLL;
+ï»¿using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -17,19 +17,19 @@ public partial class TTWorkPlanGanttForProjectStandardActivityCompareMain : Syst
         {
             if (Session["WeekendFirstDay"] == null)
             {
-                //È¡µÃÖÜÄ©¿ªÊ¼ÈÕ
+                //å–å¾—å‘¨æœ«å¼€å§‹æ—¥
                 Session["WeekendFirstDay"] = ShareClass.GetWeekendFirstDay();
             }
 
             if (Session["WeekendSecondDay"] == null)
             {
-                //È¡µÃÖÜÄ©½áÊøÈÕ
+                //å–å¾—å‘¨æœ«ç»“æŸæ—¥
                 Session["WeekendSecondDay"] = ShareClass.GetWeekendSecondDay();
             }
 
             if (Session["WeekendsAreWorkdays"] == null)
             {
-                //È¡µÃÖÜÄ©ÊÇ·ñ¹¤×÷ÈÕ
+                //å–å¾—å‘¨æœ«æ˜¯å¦å·¥ä½œæ—¥
                 Session["WeekendsAreWorkdays"] = ShareClass.GetWeekendsAreWorkdays();
             }
         }
@@ -38,7 +38,7 @@ public partial class TTWorkPlanGanttForProjectStandardActivityCompareMain : Syst
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
         }
 
-        //ÒÀÔÚÓÃ°æÏîÄ¿¼Æ»®½ø¶È¸ü¸Äµ±Ç°Ê±¼äÏîÄ¿Íê³É½ø¶È
+        //ä¾åœ¨ç”¨ç‰ˆé¡¹ç›®è®¡åˆ’è¿›åº¦æ›´æ”¹å½“å‰æ—¶é—´é¡¹ç›®å®Œæˆè¿›åº¦
         ShareClass.UpdateProjectScheduleByActivityPlanSchedule(strProjectID);
 
         strActivityPlanURL = "TTWorkPlanGanttForProject.aspx?pid=" + strProjectID + "&verID=" + ShareClass.GetProjectPlanVerID(strProjectID, "InUse") + "&BusinessType=COMPARE";

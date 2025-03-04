@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanGanttForProjectStandardActivityCompareMain.aspx.cs" Inherits="TTWorkPlanGanttForProjectStandardActivityCompareMain" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanGanttForProjectStandardActivityCompareMain.aspx.cs" Inherits="TTWorkPlanGanttForProjectStandardActivityCompareMain" %>
 
 <!DOCTYPE html>
 
@@ -56,8 +56,8 @@
 
         }
 
-        function autoheight() {?//º¯Êı£º»ñÈ¡³ß´ç
-            //»ñÈ¡ä¯ÀÀÆ÷´°¿Ú¸ß¶È
+        function autoheight() {Â //å‡½æ•°ï¼šè·å–å°ºå¯¸
+            //è·å–æµè§ˆå™¨çª—å£é«˜åº¦
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;
@@ -71,7 +71,7 @@
             document.getElementById("IFrame_ActivityGanttPlan").style.height = (winHeight - 30) + "px";
         }
 
-        window.onresize = autoheight;?//ä¯ÀÀÆ÷´°¿Ú·¢Éú±ä»¯Ê±Í¬Ê±±ä»¯DIV¸ß¶È
+        window.onresize = autoheight;Â //æµè§ˆå™¨çª—å£å‘ç”Ÿå˜åŒ–æ—¶åŒæ—¶å˜åŒ–DIVé«˜åº¦
     </script>
 
 </head>
