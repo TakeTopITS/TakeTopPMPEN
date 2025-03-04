@@ -18,7 +18,6 @@ public partial class _default : System.Web.UI.Page
         //泰顶拓鼎集团（TakeTop Software）2006－2026
 
         string strDevelopStatus = "NO";
-
         if (strDevelopStatus == "YES")
         {
             //应用会话对象，以保持在线连接
@@ -42,6 +41,8 @@ public partial class _default : System.Web.UI.Page
         }
         else
         {
+
+
             string strVerificationCode, strSMSVerification, strIsOEMVersion, strProductType;
             string strUserHostAddress = Request.UserHostAddress;
 

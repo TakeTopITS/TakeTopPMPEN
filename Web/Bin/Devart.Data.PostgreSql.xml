@@ -1390,8 +1390,9 @@
     <member name="P:Devart.Data.PostgreSql.PgSqlCommand.CommandText">
       <summary>Gets or sets the SQL statement to execute against PostgreSQL. </summary>
       <keywords>PgSqlCommand.CommandText property </keywords>
-      <value>The SQL statement or stored procedure to execute. The default value is an empty string ("").
-<para>When working with overloaded stored procedures, use following syntax for executing specific overloaded routine: "StoredProcName:1" or "StoredProcName:5". First example executes first overloaded stored procedure, while second example executes fifth overloaded procedure. This notation affects only describing procedures when <see cref="P:Devart.Data.DbCommandBase.ParameterCheck" /> is <see langword="true" />.</para> </value>
+      <value><para>The SQL statement or stored procedure to execute. The default value is an empty string ("").</para>
+<para>When working with overloaded stored procedures, use following syntax for executing specific overloaded routine: "StoredProcName:1" or "StoredProcName:5". First example executes first overloaded stored procedure, while second example executes fifth overloaded procedure. This notation affects only describing procedures when <see cref="P:Devart.Data.DbCommandBase.ParameterCheck" /> is <see langword="true" />.</para>
+<para>If <see cref="P:Devart.Data.DbCommandBase.ParameterCheck" /> is <see langword="false" />, for a stored procedure, you need to explicitly specify that you are calling a procedure, and not a function. This is done by adding the ':proc' suffix to theprocedure name. For example, "StoredProcName:proc". You don't need to add this suffix for a stored function.</para> </value>
     </member>
     <member name="P:Devart.Data.PostgreSql.PgSqlCommand.CommandTimeout">
       <summary>Gets or sets the wait time before terminating an attempt to execute a command and generating an error. Note that it is the time to wait for any server reply since the command was sent to a server, and it doesn't include the time necessary to fetch data if the command selects some data. </summary>
@@ -1465,6 +1466,11 @@
     <member name="M:Devart.Data.PostgreSql.PgSqlCommand.Prepare()">
       <summary>Creates a prepared (or compiled) version of the command on the server. </summary>
       <keywords>PgSqlCommand.Prepare method </keywords>
+    </member>
+    <member name="P:Devart.Data.PostgreSql.PgSqlCommand.TargetSession">
+      <summary>Determines  how the host to connect to is selected from the list when multiple hosts are specified in the  Host connection string parameter of the command connection. See <a href="LoadBalancing.html">Load Balancing and Failover</a> for more information. </summary>
+      <keywords>PgSqlCommand.TargetSession property </keywords>
+      <value>One of the <see cref="T:Devart.Data.PostgreSql.TargetSession" /> values. </value>
     </member>
     <member name="P:Devart.Data.PostgreSql.PgSqlCommand.UnpreparedExecute">
       <summary>Determines if 'simple query' sub-protocol is applied for executing SQL statements without preparing on server side. </summary>
@@ -1920,6 +1926,11 @@
       <keywords>PgSqlConnectionStringBuilder.KeepAlive property </keywords>
       <value>Interval in seconds between sending TCP keep-alive packets. </value>
     </member>
+    <member name="P:Devart.Data.PostgreSql.PgSqlConnectionStringBuilder.KeepConnected">
+      <summary>Specifies whether to perform periodic ping calls to PostgreSQL when a connection is inactive (in order to avoid PostgreSQL closing connection because of inactivity and to always know if the connection is still valid) and the interval at which the calls are made in seconds. Default value is 0, which means that the calls are not made. </summary>
+      <keywords>PgSqlConnectionStringBuilder.KeepConnected property </keywords>
+      <value>The interval at which ping reauests are sent in seconds. </value>
+    </member>
     <member name="P:Devart.Data.PostgreSql.PgSqlConnectionStringBuilder.Keys">
       <summary>Collection of keys in the <see cref="T:Devart.Data.PostgreSql.PgSqlConnectionStringBuilder" />. </summary>
       <keywords>PgSqlConnectionStringBuilder.Keys property </keywords>
@@ -2078,6 +2089,11 @@
       <summary>Determines the preferred TLS protocol version reported to a server when establishing a secure connection. </summary>
       <keywords>PgSqlConnectionStringBuilder.SslTlsProtocol property </keywords>
       <value>The preferred TLS protocol version reported to a server when establishing a secure connection. </value>
+    </member>
+    <member name="P:Devart.Data.PostgreSql.PgSqlConnectionStringBuilder.TargetSession">
+      <summary>Determines  how the host to connect to is selected from the list when multiple hosts are specified in the Host connection string parameter. See <a href="LoadBalancing.html">Load Balancing and Failover</a> for more information. </summary>
+      <keywords>PgSqlConnectionStringBuilder.TargetSession property </keywords>
+      <value>One of the <see cref="T:Devart.Data.PostgreSql.TargetSession" /> values. </value>
     </member>
     <member name="P:Devart.Data.PostgreSql.PgSqlConnectionStringBuilder.TransactionErrorBehavior">
       <summary>Determines whether to roll back a transaction automatically when an error occurs inside the transaction. </summary>
@@ -4025,8 +4041,8 @@
     </member>
     <member name="M:Devart.Data.PostgreSql.PgSqlLargeObject.Seek(System.Int64,System.IO.SeekOrigin)">
       <summary>Changes the current read or write location associated with the large object. </summary>
-      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Read(System.Byte[],System.Int32,System.Int32)                                                                                                                        </keywords>
-      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Write(System.Byte[],System.Int32,System.Int32)                                                                                                                        </keywords>
+      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Read(System.Byte[],System.Int32,System.Int32)                                                                                                                               </keywords>
+      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Write(System.Byte[],System.Int32,System.Int32)                                                                                                                               </keywords>
       <keywords>P:Devart.Data.PostgreSql.PgSqlLargeObject.CanSeek </keywords>
       <keywords>PgSqlLargeObject.Seek method </keywords>
       <param name="offset">A byte offset relative to the origin parameter. </param>
@@ -4040,8 +4056,8 @@
     </member>
     <member name="M:Devart.Data.PostgreSql.PgSqlLargeObject.Write(System.Byte[],System.Int32,System.Int32)">
       <summary>Writes an array of bytes to <see cref="T:Devart.Data.PostgreSql.PgSqlLargeObject" />. </summary>
-      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Read(System.Byte[],System.Int32,System.Int32)                                                                                                                        </keywords>
-      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Seek(System.Int64,System.IO.SeekOrigin)                                                                                                                        </keywords>
+      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Read(System.Byte[],System.Int32,System.Int32)                                                                                                                               </keywords>
+      <keywords>M:Devart.Data.PostgreSql.PgSqlLargeObject.Seek(System.Int64,System.IO.SeekOrigin)                                                                                                                               </keywords>
       <keywords>P:Devart.Data.PostgreSql.PgSqlLargeObject.CanWrite </keywords>
       <keywords>PgSqlLargeObject.Write method </keywords>
       <param name="buffer">The array of bytes to copy data from. </param>
@@ -6665,6 +6681,9 @@
     <member name="F:Devart.Data.PostgreSql.PgSqlType.BigInt">
       <summary>A PostgreSQL bigint data type that contains a 64-bit signed integer. Represented as the <see cref="T:System.Int64" />. </summary>
     </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.BigIntMultirange">
+      <summary>A PostgreSQL int8multirange type. Represented as an array of <see cref="T:Devart.Data.PostgreSql.PgSqlBigIntRange" />. </summary>
+    </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.BigIntRange">
       <summary>A PostgreSQL int8range type. Represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlBigIntRange" />. </summary>
     </member>
@@ -6692,6 +6711,9 @@
     <member name="F:Devart.Data.PostgreSql.PgSqlType.Date">
       <summary>A PostgreSQL date data type that contains a fixed-length representation of a date value. Represented as the <see cref="T:System.DateTime" />. </summary>
     </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.DateMultirange">
+      <summary>A PostgreSQL datemultirange type. Represented as an array of <see cref="T:Devart.Data.PostgreSql.PgSqlDateRange" />. </summary>
+    </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.DateRange">
       <summary>A PostgreSQL daterange type. Represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlDateRange" />. </summary>
     </member>
@@ -6704,6 +6726,9 @@
     <member name="F:Devart.Data.PostgreSql.PgSqlType.Int">
       <summary>A PostgreSQL integer data type that contains a 32-bit signed integer. Represented as the <see cref="T:System.Int32" />. </summary>
     </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.IntMultirange">
+      <summary>A PostgreSQL int4multirange type. Represented as an array of <see cref="T:Devart.Data.PostgreSql.PgSqlIntRange" />. </summary>
+    </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.IntRange">
       <summary>A PostgreSQL int4range type. Represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlIntRange" />. </summary>
     </member>
@@ -6712,6 +6737,9 @@
     </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.Json">
       <summary>A PostgreSQL json data type that contains a JSON object. Represented as the <see cref="T:System.String" />. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.JsonB">
+      <summary>A PostgreSQL jsonb data type that contains a JSON object in a decomposed binary format. Represented as the <see cref="T:System.String" />. </summary>
     </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.LSeg">
       <summary>A PostgreSQL lseg geometric data type that represents line segment in the plane. May be represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlLSeg" /> class or the <see cref="T:System.String" />. </summary>
@@ -6725,14 +6753,20 @@
     <member name="F:Devart.Data.PostgreSql.PgSqlType.MacAddr">
       <summary>A PostgreSQL macaddr data type that contains a MAC address. May be represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlMacAddr" /> class. </summary>
     </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.MacAddr8">
+      <summary>A PostgreSQL macaddr data type that contains a MAC address in 8 byte length EUI-64 format. May be represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlMacAddr" /> class. </summary>
+    </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.Money">
       <summary>A PostgreSQL money data type that contains a currency amount with a fixed fractional precision. </summary>
     </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.Numeric">
       <summary>A PostgreSQL numeric data type that contains exact numeric data with selectable precision. Represented as the <see cref="T:System.Decimal" />. </summary>
     </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.NumericMultirange">
+      <summary>A PostgreSQL nummultirange type. Represented as an array of <see cref="T:Devart.Data.PostgreSql.PgSqlNumericRange" />. </summary>
+    </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.NumericRange">
-      <summary>A PostgreSQL daterange type. Represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlDateRange" />. </summary>
+      <summary>A PostgreSQL numrange type. Represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlNumericRange" />. </summary>
     </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.Path">
       <summary>A PostgreSQL path geometric data type that represents open and closed geometric path in the plane. May be represented as the <see cref="T:Devart.Data.PostgreSql.PgSqlPath" /> class or the <see cref="T:System.String" />. </summary>
@@ -6761,11 +6795,17 @@
     <member name="F:Devart.Data.PostgreSql.PgSqlType.TimeStamp">
       <summary>A PostgreSQL timestamp data type that contains date and time, including seconds. Represented as the <see cref="T:System.DateTime" />. </summary>
     </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.TimeStampMultirange">
+      <summary>Represents the PostgreSQL tsmultirange type. Represented as an array of <see cref="T:Devart.Data.PostgreSql.PgSqlTimeStampRange" />. </summary>
+    </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.TimeStampRange">
       <summary>Represents the PostgreSQL tsrange type. Represented as <see cref="T:Devart.Data.PostgreSql.PgSqlTimeStampRange" />. </summary>
     </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.TimeStampTZ">
       <summary>A PostgreSQL timestamp with time zone data type that contains date and time, including seconds, with time zone. Represented as the <see cref="T:System.DateTime" />. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.PgSqlType.TimeStampTZMultirange">
+      <summary>Represents the PostgreSQL tstzmultirange type. Represented as an array of <see cref="T:Devart.Data.PostgreSql.PgSqlTimeStampTZRange" />. </summary>
     </member>
     <member name="F:Devart.Data.PostgreSql.PgSqlType.TimeStampTZRange">
       <summary>Represents the PostgreSQL tstzrange type. Represented as <see cref="T:Devart.Data.PostgreSql.PgSqlTimeStampTZRange" />. </summary>
@@ -7104,6 +7144,27 @@
     <member name="M:Devart.Data.PostgreSql.SslOptions.ToString()">
       <summary>Returns a string that represents the current object. </summary>
       <keywords>SslOptions.ToString method </keywords>
+    </member>
+    <member name="T:Devart.Data.PostgreSql.TargetSession">
+      <summary>Determines how the host to connect to is selected from the list when multiple hosts are specified in the Host connection string parameter. See <a href="LoadBalancing.html">Load Balancing and Failover</a> for more information. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.TargetSession.Any">
+      <summary>When opening a connection, dotConnect for PostgreSQL connects to any working host from the list and returns an error only if it could not connect to all of the hosts. After connecting, hosts are switched for read-only commands using round-robin load balancing. This option is the best for cases when load balancing is not configured on the server side, but there are several servers, running replicas of the same database and not divided into standby and primary, and the user wants their order to determine their function. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.TargetSession.PreferPrimary">
+      <summary>When opening a connection, dotConnect for PostgreSQL looks for a primary host in the list. If a connection fails when executing a command and no valid primary host is found when reexecuting it via failover, any valid host from the list is selected, and a standby host can be selected too. After a standby host is selected, standby hosts are switched for read-only commands using round-robin load balancing. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.TargetSession.PreferStandby">
+      <summary>When opening a connection, dotConnect for PostgreSQL connects to any working standby host from the list. If there are no valid standby hosts in the list, an error occurs. After connecting, standby hosts are switched for read-only commands using round-robin load balancing. If a connection fails when executing a command and no valid standby hosts are found when reexecuting it via failover, any valid host from the list is selected, and a primary host can be selected too. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.TargetSession.Primary">
+      <summary>When opening a connection, dotConnect for PostgreSQL looks for a primary host in the list. If there are no such host in the list, an error occurs. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.TargetSession.Standby">
+      <summary>When opening a connection, dotConnect for PostgreSQL connects to any working standby host from the list. If there are no valid standby hosts in the list, an error occurs. After connecting, standby hosts are switched for any commands using round-robin load balancing. </summary>
+    </member>
+    <member name="F:Devart.Data.PostgreSql.TargetSession.SuppressLoadBalancing">
+      <summary>Default behaviour. dotConnect for PostgreSQL connects only to the first host in the list. It throws an exception and does not attempt to connect to other hosts if the first host is unavailable. </summary>
     </member>
     <member name="T:Devart.Data.PostgreSql.TransactionErrorBehavior">
       <summary>Determines how dotConnect for PostgreSQL handles errors, which occur within a transaction. </summary>

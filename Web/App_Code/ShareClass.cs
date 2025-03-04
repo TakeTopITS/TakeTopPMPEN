@@ -59,7 +59,7 @@ public static class ShareClass
         //
     }
 
-    public static string SystemVersionID = "V2025.3.3";
+    public static string SystemVersionID = "V2025.3.4";
 
     public static string SystemLatestLoginUser = "";
     public static string SystemDBer = "";
@@ -17546,6 +17546,7 @@ public static class ShareClass
         {
             return httpProtocol + serverName + (port.Length > 0 ? ":" + port : string.Empty) + applicationName;
         }
+
     }
 
 //得到当前网站的根地址,不包含站点名,

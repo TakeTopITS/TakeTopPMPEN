@@ -8825,4 +8825,1196 @@ Update t_systemanalystchartrelateduser Set SortNumber = 2 Where ChartName = '年
 Update t_systemanalystchartrelateduser Set SortNumber = 3 Where ChartName = '在执行任务状态';
 Update t_systemanalystchartrelateduser Set SortNumber = 4 Where ChartName = '项目年度回款状态';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3666</ID>
+    <SQLText>-- View: public.v_projectmember_workload
+
+-- DROP VIEW public.v_projectmember_workload;
+
+CREATE OR REPLACE VIEW public.v_projectmember_workload
+ AS
+ SELECT 'Project'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])
+UNION
+ SELECT 'Project'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])))
+UNION
+ SELECT 'Plan'::text AS type,
+    a.usercode,
+    a.username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Plan:'::text) || b.id::character varying(30)::text AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type::bpchar = 'InUse'::bpchar
+UNION
+ SELECT 'Plan'::text AS type,
+    t_plan.usercode,
+    t_plan.username,
+    t_plan.planid::character varying(30) AS projectid,
+    t_plan.planname AS projectname,
+    t_plan.starttime AS begindate,
+    t_plan.endtime AS enddate,
+    t_plan.status
+   FROM t_plan
+UNION
+ SELECT 'Task'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Task:'::text) || a.taskid::character varying(30)::text AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT 'Requirement'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT 'Meeting'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;
+
+ALTER TABLE public.v_projectmember_workload
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectmember_workload TO postgres;
+GRANT SELECT ON TABLE public.v_projectmember_workload TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3667</ID>
+    <SQLText>-- View: public.v_projectmember_workloadbyprojecttask
+
+-- DROP VIEW public.v_projectmember_workloadbyprojecttask;
+
+CREATE OR REPLACE VIEW public.v_projectmember_workloadbyprojecttask
+ AS
+ SELECT 'Project'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.projectid AS pjid,
+    t_project.projectaddress AS taskid
+   FROM t_project
+  WHERE t_project.projectid = 0
+UNION
+ SELECT 'Task'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Task:'::text) || a.taskid::character varying(30)::text AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.projectid AS pjid,
+    b.taskid::character varying(30) AS taskid
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid AND (b.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar, 'ToProject'::bpchar, 'ToTask'::bpchar]));
+
+ALTER TABLE public.v_projectmember_workloadbyprojecttask
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectmember_workloadbyprojecttask TO postgres;
+GRANT SELECT ON TABLE public.v_projectmember_workloadbyprojecttask TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3668</ID>
+    <SQLText>-- View: public.v_projectmember_workloadschedule
+
+-- DROP VIEW public.v_projectmember_workloadschedule;
+
+CREATE OR REPLACE VIEW public.v_projectmember_workloadschedule
+ AS
+ SELECT '项目'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])
+UNION
+ SELECT '项目'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])))
+UNION
+ SELECT '计划'::text AS type,
+    a.usercode,
+    a.username,
+    b.id::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type::bpchar = '在用'::bpchar
+UNION
+ SELECT '计划'::text AS type,
+    t_plan.usercode,
+    t_plan.username,
+    t_plan.planid::character varying(30) AS projectid,
+    t_plan.planname AS projectname,
+    t_plan.starttime AS begindate,
+    t_plan.endtime AS enddate,
+    t_plan.status
+   FROM t_plan
+UNION
+ SELECT '任务'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    a.taskid::character varying(30) AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT '需求'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT '会议'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;
+
+ALTER TABLE public.v_projectmember_workloadschedule
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectmember_workloadschedule TO postgres;
+GRANT SELECT ON TABLE public.v_projectmember_workloadschedule TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3669</ID>
+    <SQLText>-- View: public.v_projectmembertaskdetailreport
+
+-- DROP VIEW public.v_projectmembertaskdetailreport;
+
+CREATE OR REPLACE VIEW public.v_projectmembertaskdetailreport
+ AS
+ SELECT COALESCE(f.departcode, ''::bpchar) AS departcode,
+    COALESCE(f.departname, ''::character varying) AS departname,
+    COALESCE(e.usercode, ''::bpchar) AS usercode,
+    COALESCE(e.username, ''::bpchar) AS username,
+        CASE b.projectid
+            WHEN 1 THEN NULL::bigint
+            ELSE b.projectid
+        END AS projectid,
+    COALESCE(b.projectcode, ''::character varying) AS projectcode,
+    COALESCE(b.projectname, ''::bpchar) AS projectname,
+    COALESCE(c.id::text, ''::text) AS planid,
+    COALESCE(c.name, ''::character varying) AS planname,
+    a.taskid,
+    a.task AS taskname,
+    c.start_date AS planbegintime,
+    c.end_date AS planendtime,
+    a.begindate AS taskbegindate,
+    d.operationtime AS taskfirstoperatetime,
+    a.enddate AS taskenddate,
+    d.operationtime AS tasklastestoperatetime,
+    a.status,
+    f_getsumtasklog(a.taskid) AS tasklog,
+    a.manhour,
+    a.type AS tasktype
+   FROM t_projecttask a
+     LEFT JOIN t_project b ON a.projectid = b.projectid
+     LEFT JOIN t_impleplan c ON a.planid = c.id AND (c.verid IN ( SELECT t_projectplanversion.verid
+           FROM t_projectplanversion
+          WHERE t_projectplanversion.type::bpchar = 'InUse'::bpchar))
+     LEFT JOIN t_taskassignrecord d ON a.taskid = d.taskid AND (d.id IN ( SELECT min(t_taskassignrecord.id) AS min
+           FROM t_taskassignrecord
+          GROUP BY t_taskassignrecord.taskid))
+     LEFT JOIN t_projectmember e ON d.operatorcode = e.usercode
+     LEFT JOIN t_department f ON e.departcode = f.departcode
+     LEFT JOIN t_taskassignrecord g ON a.taskid = g.taskid AND (g.id IN ( SELECT min(t_taskassignrecord.id) AS min
+           FROM t_taskassignrecord
+          GROUP BY t_taskassignrecord.taskid))
+  WHERE (a.planid IN ( SELECT t_impleplan.id AS planid
+           FROM t_impleplan)) AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project));
+
+ALTER TABLE public.v_projectmembertaskdetailreport
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectmembertaskdetailreport TO postgres;
+GRANT SELECT ON TABLE public.v_projectmembertaskdetailreport TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3670</ID>
+    <SQLText>-- View: public.v_prorelateduser
+
+-- DROP VIEW public.v_prorelateduser;
+
+CREATE OR REPLACE VIEW public.v_prorelateduser
+ AS
+ SELECT a.id,
+    a.projectid,
+    b.projectcode,
+    b.projectname,
+    b.projecttype,
+    b.status,
+    b.begindate,
+    b.enddate,
+    b.parentid,
+    b.customername,
+    b.pingpai,
+    b.productname,
+    a.unithoursalary,
+    a.actor,
+    a.joindate,
+    a.usercode,
+    a.username,
+    b.pmcode,
+    b.pmname,
+    b.priority,
+    b.usercode AS makemancode,
+    b.username AS makemanname,
+    b.budget,
+    b.manhour,
+    b.mannumber,
+    b.finishpercent,
+    a.status AS mystatus,
+    b.status AS prostatus,
+    b.customerprojectcode,
+    b.confirmedbysupper,
+    b.makedate,
+    b.projectstartupneedsupperconfirm
+   FROM t_relateduser a
+     JOIN t_project b ON a.projectid = b.projectid
+  WHERE b.status::bpchar &lt;&gt; ALL (ARRAY['New'::bpchar, 'Review'::bpchar, 'Hidden'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar]);
+
+ALTER TABLE public.v_prorelateduser
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_prorelateduser TO postgres;
+GRANT SELECT ON TABLE public.v_prorelateduser TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3671</ID>
+    <SQLText>-- View: public.v_projectstatusnumberchart
+
+-- DROP VIEW public.v_projectstatusnumberchart;
+
+CREATE OR REPLACE VIEW public.v_projectstatusnumberchart
+ AS
+ SELECT 'Normal'::text AS status,
+    t_project.projectid,
+    t_project.projectname,
+    t_project.pmcode,
+    t_project.pmname,
+    t_project.begindate,
+    t_project.enddate
+   FROM t_project
+  WHERE t_project.enddate &lt;= now() AND t_project.finishpercent = 100
+UNION
+ SELECT 'Abnormal'::text AS status,
+    t_project.projectid,
+    t_project.projectname,
+    t_project.pmcode,
+    t_project.pmname,
+    t_project.begindate,
+    t_project.enddate
+   FROM t_project
+  WHERE t_project.enddate &lt; now() AND t_project.finishpercent &lt; 100;
+
+ALTER TABLE public.v_projectstatusnumberchart
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectstatusnumberchart TO postgres;
+GRANT SELECT ON TABLE public.v_projectstatusnumberchart TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3672</ID>
+    <SQLText>-- View: public.v_projectprofitandcostchart
+
+-- DROP VIEW public.v_projectprofitandcostchart;
+
+CREATE OR REPLACE VIEW public.v_projectprofitandcostchart
+ AS
+ SELECT a.projectid,
+    b.projectname,
+    b.pmcode,
+    b.pmname,
+    b.begindate,
+    b.enddate,
+    a.account,
+    COALESCE(a.amount, 0::numeric) AS amount
+   FROM t_projectbudget a,
+    t_project b
+  WHERE a.projectid = b.projectid
+UNION
+ SELECT b.projectid,
+    b.projectname,
+    b.pmcode,
+    b.pmname,
+    b.begindate,
+    b.enddate,
+    'Profit'::character varying AS account,
+    COALESCE(b.projectamount, 0::numeric) - (( SELECT COALESCE(sum(a.amount), 0::numeric) AS "coalesce"
+           FROM t_projectbudget a
+          WHERE a.projectid = b.projectid)) AS amount
+   FROM t_project b;
+
+ALTER TABLE public.v_projectprofitandcostchart
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectprofitandcostchart TO postgres;
+GRANT SELECT ON TABLE public.v_projectprofitandcostchart TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3673</ID>
+    <SQLText>-- View: public.v_projectplanforwanring
+
+-- DROP VIEW public.v_projectplanforwanring;
+
+CREATE OR REPLACE VIEW public.v_projectplanforwanring
+ AS
+ SELECT DISTINCT a.verid,
+    a.id AS planid,
+    a.parent_id AS parentidgantt,
+    a.workid,
+    a.name AS plandetail,
+    a.type,
+    a.start_date AS begintime,
+    a.end_date AS endtime,
+    date_part('epoch'::text, age(now(), a.end_date::timestamp with time zone)) / 86400::double precision AS expireday,
+    a.leadercode,
+    a.leader,
+    a.resource,
+    a.budget,
+    a.makedate,
+    a.parentid,
+    a.priorid,
+    a.defaultschedule,
+    a.defaultcost,
+    a.expense,
+    a.percent_done,
+    a.status,
+    a.projectid
+   FROM t_impleplan a,
+    t_projectplanversion b
+  WHERE a.projectid = b.projectid AND a.verid = b.verid AND b.type::bpchar = 'InUse'::bpchar AND (a.status::bpchar &lt;&gt; ALL (ARRAY['Suspended'::bpchar, 'Cancel'::bpchar])) AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Acceptance'::bpchar, 'CaseClosed'::bpchar, 'Archived'::bpchar, 'Deleted'::bpchar, 'Suspended'::bpchar, 'Cancel'::bpchar])));
+
+ALTER TABLE public.v_projectplanforwanring
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectplanforwanring TO postgres;
+GRANT SELECT ON TABLE public.v_projectplanforwanring TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3674</ID>
+    <SQLText>-- View: public.v_projectbasedatasummaryreport
+
+-- DROP VIEW public.v_projectbasedatasummaryreport;
+
+CREATE OR REPLACE VIEW public.v_projectbasedatasummaryreport
+ AS
+ SELECT t_project.projectid,
+    'Workload Estimation'::text AS title,
+    t_project.mannumber AS summarynumber
+   FROM t_project
+UNION
+ SELECT t_relateduser.projectid,
+    'Actual Workload'::text AS title,
+    count(t_relateduser.usercode) AS summarynumber
+   FROM t_relateduser
+  GROUP BY t_relateduser.projectid
+UNION
+ SELECT t_project.projectid,
+    'Cost Estimation'::text AS title,
+    t_project.budget AS summarynumber
+   FROM t_project
+UNION
+ SELECT t_proexpense.projectid,
+    'Actual Cost'::text AS title,
+    sum(t_proexpense.amount) AS summarynumber
+   FROM t_proexpense
+  GROUP BY t_proexpense.projectid
+UNION
+ SELECT t_project.projectid,
+    'Cycle Estimation'::text AS title,
+    t_project.manhour AS summarynumber
+   FROM t_project
+UNION
+ SELECT t_dailywork.projectid,
+    'Actual Cycle'::text AS title,
+    sum(t_dailywork.confirmmanhour) AS summarynumber
+   FROM t_dailywork
+  GROUP BY t_dailywork.projectid;
+
+ALTER TABLE public.v_projectbasedatasummaryreport
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectbasedatasummaryreport TO postgres;
+GRANT SELECT ON TABLE public.v_projectbasedatasummaryreport TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3675</ID>
+    <SQLText>-- View: public.v_mymember_workload
+
+-- DROP VIEW public.v_mymember_workload;
+
+CREATE OR REPLACE VIEW public.v_mymember_workload
+ AS
+ SELECT DISTINCT a.type,
+    a.usercode,
+    a.username,
+    a.projectid,
+    a.projectname,
+    a.begindate,
+    a.enddate,
+    b.sortnumber,
+    a.status
+   FROM v_projectmember_workload a,
+    t_memberlevel b
+  WHERE a.usercode = b.usercode AND (a.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, '拒绝'::bpchar, 'Rejusted'::bpchar, 'ToProject'::bpchar, 'ToTask'::bpchar]));
+
+ALTER TABLE public.v_mymember_workload
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_mymember_workload TO postgres;
+GRANT SELECT ON TABLE public.v_mymember_workload TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3676</ID>
+    <SQLText>-- View: public.v_impleplanactive
+
+-- DROP VIEW public.v_impleplanactive;
+
+CREATE OR REPLACE VIEW public.v_impleplanactive
+ AS
+ SELECT a.id,
+    a.projectid,
+    a.workid,
+    a.name,
+    a.start_date,
+    a.end_date,
+    a.resource,
+    a.budget,
+    a.makedate,
+    a.status,
+    a.parentid,
+    a.priorid,
+    a.type,
+    a.verid,
+    a.defaultschedule,
+    a.defaultcost,
+    a.backupid,
+    a.lockstatus,
+    a.updatemancode,
+    a.updatetime,
+    a.fromprojectid,
+    a.fromprojectplanverid,
+    a.creatorcode,
+    a.percent_done,
+    a.priority,
+    a.baseline_start_date,
+    a.baseline_end_date,
+    a.duration,
+    a.duration_unit,
+    a.other_field,
+    a.index,
+    a.pid,
+    a.parent_id,
+    a.fromplanid,
+    a.operatorcode,
+    a.operatorname,
+    a.sortnumber,
+    a.leader,
+    a.remark,
+    a.baseline_percent_done,
+    a.taskcolor,
+    a.leadercode,
+    a.workhour,
+    a.actualhour,
+    a.expense,
+    a.requirenumber,
+    a.finishednumber,
+    a.unitname,
+    a.price,
+    a.belongdepartcode,
+    a.belongdepartname,
+    b.beforetime
+   FROM t_impleplan a
+     LEFT JOIN ( SELECT a_1.id,
+            max(b_1.start_date) AS beforetime
+           FROM ( SELECT t_impleplan.id,
+                    t_impleplan.projectid,
+                    t_impleplan.workid,
+                    t_impleplan.name,
+                    t_impleplan.start_date,
+                    t_impleplan.end_date,
+                    t_impleplan.resource,
+                    t_impleplan.budget,
+                    t_impleplan.makedate,
+                    t_impleplan.status,
+                    t_impleplan.parentid,
+                    t_impleplan.priorid,
+                    t_impleplan.type,
+                    t_impleplan.verid,
+                    t_impleplan.defaultschedule,
+                    t_impleplan.defaultcost,
+                    t_impleplan.backupid,
+                    t_impleplan.lockstatus,
+                    t_impleplan.updatemancode,
+                    t_impleplan.updatetime,
+                    t_impleplan.fromprojectid,
+                    t_impleplan.fromprojectplanverid,
+                    t_impleplan.creatorcode,
+                    t_impleplan.percent_done,
+                    t_impleplan.priority,
+                    t_impleplan.baseline_start_date,
+                    t_impleplan.baseline_end_date,
+                    t_impleplan.duration,
+                    t_impleplan.duration_unit,
+                    t_impleplan.other_field,
+                    t_impleplan.index,
+                    t_impleplan.pid,
+                    t_impleplan.parent_id,
+                    t_impleplan.fromplanid,
+                    t_impleplan.operatorcode,
+                    t_impleplan.operatorname,
+                    t_impleplan.sortnumber,
+                    t_impleplan.leader,
+                    t_impleplan.remark,
+                    t_impleplan.baseline_percent_done,
+                    t_impleplan.taskcolor,
+                    t_impleplan.leadercode,
+                    t_impleplan.workhour,
+                    t_impleplan.actualhour,
+                    t_impleplan.expense,
+                    t_impleplan.requirenumber,
+                    t_impleplan.finishednumber,
+                    t_impleplan.unitname,
+                    t_impleplan.price,
+                    t_impleplan.belongdepartcode,
+                    t_impleplan.belongdepartname
+                   FROM t_impleplan
+                  WHERE (t_impleplan.verid IN ( SELECT t_projectplanversion.verid
+                           FROM t_projectplanversion
+                          WHERE t_projectplanversion.type::bpchar = 'InUse'::bpchar)) AND t_impleplan.start_date = t_impleplan.end_date) a_1
+             LEFT JOIN ( SELECT t_impleplan.id,
+                    t_impleplan.projectid,
+                    t_impleplan.workid,
+                    t_impleplan.name,
+                    t_impleplan.start_date,
+                    t_impleplan.end_date,
+                    t_impleplan.resource,
+                    t_impleplan.budget,
+                    t_impleplan.makedate,
+                    t_impleplan.status,
+                    t_impleplan.parentid,
+                    t_impleplan.priorid,
+                    t_impleplan.type,
+                    t_impleplan.verid,
+                    t_impleplan.defaultschedule,
+                    t_impleplan.defaultcost,
+                    t_impleplan.backupid,
+                    t_impleplan.lockstatus,
+                    t_impleplan.updatemancode,
+                    t_impleplan.updatetime,
+                    t_impleplan.fromprojectid,
+                    t_impleplan.fromprojectplanverid,
+                    t_impleplan.creatorcode,
+                    t_impleplan.percent_done,
+                    t_impleplan.priority,
+                    t_impleplan.baseline_start_date,
+                    t_impleplan.baseline_end_date,
+                    t_impleplan.duration,
+                    t_impleplan.duration_unit,
+                    t_impleplan.other_field,
+                    t_impleplan.index,
+                    t_impleplan.pid,
+                    t_impleplan.parent_id,
+                    t_impleplan.fromplanid,
+                    t_impleplan.operatorcode,
+                    t_impleplan.operatorname,
+                    t_impleplan.sortnumber,
+                    t_impleplan.leader,
+                    t_impleplan.remark,
+                    t_impleplan.baseline_percent_done,
+                    t_impleplan.taskcolor,
+                    t_impleplan.leadercode,
+                    t_impleplan.workhour,
+                    t_impleplan.actualhour,
+                    t_impleplan.expense,
+                    t_impleplan.requirenumber,
+                    t_impleplan.finishednumber,
+                    t_impleplan.unitname,
+                    t_impleplan.price,
+                    t_impleplan.belongdepartcode,
+                    t_impleplan.belongdepartname
+                   FROM t_impleplan
+                  WHERE (t_impleplan.verid IN ( SELECT t_projectplanversion.verid
+                           FROM t_projectplanversion
+                          WHERE t_projectplanversion.type::bpchar = 'InUse'::bpchar)) AND t_impleplan.start_date = t_impleplan.end_date) b_1 ON a_1.projectid = b_1.projectid AND a_1.start_date &gt; b_1.start_date
+          GROUP BY a_1.id) b ON a.id = b.id
+  WHERE (a.verid IN ( SELECT t_projectplanversion.verid
+           FROM t_projectplanversion
+          WHERE t_projectplanversion.type::bpchar = 'InUse'::bpchar)) AND a.start_date = a.end_date;
+
+ALTER TABLE public.v_impleplanactive
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_impleplanactive TO postgres;
+GRANT SELECT ON TABLE public.v_impleplanactive TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3677</ID>
+    <SQLText>-- View: public.v_documenttypefilter
+
+-- DROP VIEW public.v_documenttypefilter;
+
+CREATE OR REPLACE VIEW public.v_documenttypefilter
+ AS
+ SELECT DISTINCT t_document.doctype,
+    t_document.doctypeid,
+    t_document.relatedtype,
+    t_document.relatedid
+   FROM t_document
+  WHERE t_document.status::bpchar &lt;&gt; 'Deleted'::bpchar;
+
+ALTER TABLE public.v_documenttypefilter
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_documenttypefilter TO postgres;
+GRANT SELECT ON TABLE public.v_documenttypefilter TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3678</ID>
+    <SQLText>-- View: public.v_constractincomeexpensereport
+
+-- DROP VIEW public.v_constractincomeexpensereport;
+
+CREATE OR REPLACE VIEW public.v_constractincomeexpensereport
+ AS
+ SELECT a.parta,
+    a.constractcode,
+    a.signdate,
+    to_char(a.signdate, 'yymmdd'::text) AS signdatestring,
+    COALESCE(g.receivablesamount, 0::numeric) AS receivablesamount,
+    COALESCE(h.payableamount, 0::numeric) AS payableamount,
+    a.currency,
+    a.status,
+    COALESCE(b.totalreceiveramount, 0::numeric) AS totalreceiveramount,
+    COALESCE(d.totalrecinvoiceamount, 0::numeric) AS totalrecinvoiceamount,
+    COALESCE(c.totaloutofpocketamount, 0::numeric) AS totaloutofpocketamount,
+    COALESCE(c.totaloutofpocketamounthome, 0::numeric) AS totaloutofpocketamounthome,
+    COALESCE(e.totalpayinvoiceamount, 0::numeric) AS totalpayinvoiceamount,
+    COALESCE(f.totaltax, 0::numeric) AS totaltax,
+    COALESCE(f.totaladdedvaluetax, 0::numeric) AS totaladdedvaluetax,
+    COALESCE(f.totalentrytax, 0::numeric) AS totalentrytax,
+    COALESCE(g.receivablesamount, 0::numeric) - COALESCE(h.payableamount, 0::numeric) - COALESCE(f.totaladdedvaluetax, 0::numeric) - COALESCE(f.totalentrytax, 0::numeric) AS profits
+   FROM t_constract a
+     FULL JOIN v_constractreceivablesaccountsummary g ON a.constractcode::text = g.constractcode::text AND a.status::bpchar &lt;&gt; 'Deleted'::bpchar
+     FULL JOIN v_constractpayableaccountsummary h ON a.constractcode::text = h.constractcode::text
+     FULL JOIN v_constractreceivablesrecord b ON a.constractcode::text = b.constractcode::text
+     FULL JOIN v_constractpayablerecord c ON a.constractcode::text = c.constractcode::text
+     FULL JOIN v_constractrelatedinvoice_open d ON a.constractcode::text = d.constractcode::text
+     FULL JOIN v_constractrelatedinvoice_receive e ON a.constractcode::text = e.constractcode::text
+     FULL JOIN v_constractrelatedentryorderforinner f ON a.constractcode::text = f.constractcode::text
+  WHERE char_length(rtrim(a.parta::text)) &gt; 0;
+
+ALTER TABLE public.v_constractincomeexpensereport
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_constractincomeexpensereport TO postgres;
+GRANT SELECT ON TABLE public.v_constractincomeexpensereport TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3679</ID>
+    <SQLText>-- FUNCTION: public.Func_tg_ImplePlan_Update()
+
+-- DROP FUNCTION IF EXISTS public."Func_tg_ImplePlan_Update"();
+
+CREATE OR REPLACE FUNCTION public."Func_tg_ImplePlan_Update"()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+declare chrPMCode varchar(20);
+declare chrPMName varchar(20);
+
+declare charBelongDepartCode char(20);
+declare charBelongDepartName varchar(40);
+
+declare charLeaderCode char(20);
+
+declare chrPlanVerType varchar(20);
+declare chrLeaderCode varchar(20);
+declare chrLeaderName varchar(20);
+declare chrProjectType char(20);
+declare chrImpactByDetail char(10);
+declare intWholePlanPercent_Done int;
+declare intParentIDGantt  int;
+
+begin
+
+  --插入原来的数据作为日志
+	Insert Into T_ImplePlan_UpdateLog(ID,ProjectID,WorkID,Name,Start_Date,End_Date,Resource
+      ,Budget
+      ,MakeDate
+      ,Status
+      ,ParentID
+      ,PriorID
+      ,Type
+      ,VerID
+      ,DefaultSchedule
+      ,DefaultCost
+      ,BackupID
+      ,LockStatus
+      ,UpdateManCode
+      ,UpdateTime
+      ,FromProjectID
+      ,FromProjectPlanVerID
+      ,CreatorCode
+      ,Percent_Done
+      ,priority
+      ,BaseLine_Start_Date
+      ,BaseLine_End_Date
+      ,Duration
+      ,Duration_Unit
+      ,Other_Field
+      ,Index
+      ,pid
+      ,Parent_ID
+      ,FromPlanID
+      ,OperatorCode
+      ,OperatorName
+      ,SortNumber
+      ,leader
+      ,remark
+      ,baseline_percent_done
+      ,taskcolor
+      ,LeaderCode
+      ,WorkHour
+      ,ActualHour
+      ,Expense
+      ,CreateLogTime
+	  ,RequireNumber
+	  ,FinishedNumber
+	  ,UnitName
+	  ,Price
+	  ,BelongDepartCode
+	  ,BelongDepartName) values(old.ID
+      ,old.ProjectID
+      ,old.WorkID
+      ,old.Name
+      ,old.Start_Date
+      ,old.End_Date
+      ,old.Resource
+      ,old.Budget
+      ,old.MakeDate
+      ,old.Status
+      ,old.ParentID
+      ,old.PriorID
+      ,old.Type
+      ,old.VerID
+      ,old.DefaultSchedule
+      ,old.DefaultCost
+      ,old.BackupID
+      ,old.LockStatus
+      ,old.UpdateManCode
+      ,old.UpdateTime
+      ,old.FromProjectID
+      ,old.FromProjectPlanVerID
+      ,old.CreatorCode
+      ,old.Percent_Done
+      ,old.priority
+      ,old.BaseLine_Start_Date
+      ,old.BaseLine_End_Date
+      ,old.Duration
+      ,old.Duration_Unit
+      ,old.Other_Field
+      ,old.Index
+      ,old.pid
+      ,old.Parent_ID
+      ,old.FromPlanID
+      ,old.OperatorCode
+      ,old.OperatorName
+      ,old.SortNumber
+      ,old.leader
+      ,old.remark
+      ,old.baseline_percent_done
+      ,old.taskcolor
+      ,old.LeaderCode
+      ,old.WorkHour
+      ,old.ActualHour
+      ,old.Expense
+      ,now()
+	  ,old.RequireNumber
+	  ,old.FinishedNumber
+	  ,old.UnitName
+	  ,old.Price
+	  ,old.BelongDepartCode
+	  ,old.BelongDepartName);
+
+		select rtrim(COALESCE(new.BelongDepartCode,'')),rtrim(COALESCE(new.BelongDepartName,'')) into charBelongDepartCode,charBelongDepartName;
+
+		Select Type into chrPlanVerType From T_ProjectPlanVersion Where ProjectID = new.ProjectID and VerID = new.VerID;
+
+		Select Percent_Done into intWholePlanPercent_Done From T_ImplePlan Where ProjectID = new.ProjectID and VerID = new.VerID and Parent_ID = 0;
+
+		select PMCode,PMName into chrPMCode,chrPMName From T_Project Where ProjectID = new.ProjectID;
+
+   	--更新归属部门代码和名称
+	if new.leadercode != old.leadercode then
+	
+-- 	    delete from t_sqlrunlog;
+--  	    insert into t_sqlrunlog(logcontent,createtime) values(new.leader|| '--' || old.leader,now());
+		
+ 		select new.leadercode into  charLeaderCode ;
+
+ 		select DepartCode,DepartName into charBelongDepartCode,charBelongDepartName From T_ProjectMember  Where UserCode = charLeaderCode;
+		Update T_ImplePlan Set BelongDepartCode = charBelongDepartCode,BelongDepartName = charBelongDepartName Where ID = new.ID ;
+
+ 	End if;
+
+  --依活动版计划进度更改项目总进度
+	if new.percent_done!=old.percent_done then
+		Select ProjectType into chrProjectType From T_Project Where ProjectID = new.ProjectID;
+		Select ProgressByDetailImpact into chrImpactByDetail From T_ProjectType Where Type = chrProjectType;
+
+		if chrImpactByDetail = 'YES' and new.parent_id = 0 and chrPlanVerType = 'InUse' then
+			Update T_Project Set FinishPercent = intWholePlanPercent_Done Where ProjectID = new.ProjectID;
+		End if;
+	End if;
+
+	--更改此计划转的任务的开始时间和结束时间
+	if new.Start_Date!=old.Start_Date or new.End_Date !=old.End_Date then
+
+	  Update T_ProjectTask Set BeginDate = new.Start_Date,EndDate = new.End_Date Where PlanID = new.ID ;
+
+	  Update T_TaskAssignRecord Set BeginDate = new.Start_Date,EndDate = new.End_Date
+	    Where TaskID In (Select TaskID From T_ProjectTask Where PlanID = new.ID  and PriorID = 0);
+
+	End if;
+
+	return new;
+end
+$BODY$;
+
+ALTER FUNCTION public."Func_tg_ImplePlan_Update"()
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3680</ID>
+    <SQLText>-- FUNCTION: public.f_userattendancereport(text, text, text, text)
+
+-- DROP FUNCTION IF EXISTS public.f_userattendancereport(text, text, text, text);
+
+CREATE OR REPLACE FUNCTION public.f_userattendancereport(
+	startdate text,
+	enddate text,
+	departcode text,
+	username text)
+    RETURNS text
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
+declare 
+	SqlCol text;
+	MonthdaysSql VARCHAR(2000);
+	UserAttendanceRecordSql VARCHAR(2000);
+	Sql1 text;
+	Sql2 text;
+	Sql3 text;
+	Sql4 text;
+	LeaveSql text; 
+	OvertimeSql text;
+	SqlDetail text;	
+	sqltotal text;
+	recreport record;
+	jsonreport text;
+BEGIN
+
+SELECT 'SELECT to_char(a.AttendanceDate, ''YYYY-MM-DD'') AttendanceDate,case WHEN c.Id is not null then 0 
+when DATE_PART(''dow'',a.AttendanceDate) = 0 OR DATE_PART(''dow'',a.AttendanceDate)=6 OR b.ID IS NOT NULL THEN 1 ELSE 0 END IsHoliday 
+FROM (SELECT generate_series(to_date('''||StartDate||''', ''YYYY-MM-DD''),to_date('''||EndDate||''', ''YYYY-MM-DD''),INTERVAL ''1 day'') as AttendanceDate) a 
+LEFT JOIN T_FestivalsDaySet b ON a.AttendanceDate=b.FestivalsDate 
+left join T_FestivalsExchangeDaySet c on a.AttendanceDate=c.ExchangeDate ' into MonthdaysSql;
+
+SELECT ' SELECT UserCode,to_char(AttendanceDate,''YYYY-MM-DD'') AttendanceDate,LateMinute,EarlyMinute,LargestDistance,
+CASE WHEN NCheckInIsMust=''YES'' THEN 1 ELSE 0 END NCheckInIsMust,CASE WHEN NCheckOutIsMust=''YES'' THEN 1 ELSE 0 END NCheckOutIsMust,
+CASE WHEN MCheckInIsMust=''YES'' THEN MCheckIn 
+WHEN NCheckInIsMust=''YES'' THEN NCheckIn
+ELSE NULL END CheckIn,
+CASE WHEN ACheckOutIsMust=''YES'' THEN ACheckOut 
+WHEN NCheckOutIsMust=''YES'' THEN NCheckOut
+ELSE NULL END CheckOut,
+CASE WHEN MCheckInIsMust=''YES'' THEN COALESCE(MCheckInAddress,'''')  
+WHEN NCheckInIsMust=''YES'' THEN COALESCE(NCheckInAddress,'''')
+ELSE NULL END CheckInAddress,
+CASE WHEN MCheckInIsMust=''YES'' THEN COALESCE(char_length(MCheckInAddress),0)  
+WHEN NCheckInIsMust=''YES'' THEN COALESCE(char_length(NCheckInAddress),0)
+ELSE 0 END CheckInAddressLen,
+CASE WHEN ACheckOutIsMust=''YES'' THEN COALESCE(ACheckOutAddress,'''')   
+WHEN NCheckOutIsMust=''YES'' THEN COALESCE(NCheckOutAddress,'''') 
+ELSE NULL END CheckOutAddress,
+CASE WHEN ACheckOutIsMust=''YES'' THEN COALESCE(char_length(ACheckOutAddress),0)   
+WHEN NCheckOutIsMust=''YES'' THEN COALESCE(char_length(NCheckOutAddress),0) 
+ELSE 0 END CheckOutAddressLen,
+CASE WHEN MCheckInIsMust=''YES'' THEN MCheckInDistance  
+WHEN NCheckInIsMust=''YES'' THEN NCheckInDistance
+ELSE NULL END CheckInDistance,
+CASE WHEN ACheckOutIsMust=''YES'' THEN ACheckOutDistance   
+WHEN NCheckOutIsMust=''YES'' THEN NCheckOutDistance
+ELSE NULL END CheckOutDistance
+FROM T_UserAttendanceRecord 
+where AttendanceDate &gt;= '''||StartDate||''' AND  AttendanceDate&lt; to_date('''||EndDate||''',''YYYY-MM-DD'')+INTERVAL ''1 day''  '
+into UserAttendanceRecordSql;
+
+SELECT ' SELECT a.UserName,a.Department,a.EmployeeID,a.Position,b.*,
+CAST(a.AttendanceDays-COALESCE(f.HourNum,0)/8 as decimal(5,3)) AttendanceDays,a.ScheduledAttendanceDays,a.NumberOfLateArrivals,a.DurationOfLateArrival,a.AbsenteeismNumberOfLateArrivals,a.NumberOfEarlyDepartures,a.DurationOfEarlyDeparture,a.DaysOfAbsenteeism,a.NumberOfNightShifts,
+d.*,c.*   
+FROM(SELECT MIN(a.UserName) UserName,MIN(a.DepartName)Department,MIN(a.UserCode)EmployeeID,MIN(a.Duty)Position,
+SUM(case when ((b.CheckInAddressLen&gt;0 AND (b.CheckInDistance&lt;=b.LargestDistance or b.CheckInDistance=0))
+and (b.CheckOutAddressLen&gt;0 AND (b.CheckOutDistance&lt;=b.LargestDistance or b.CheckOutDistance=0)) or l.HourNum&gt;=8) AND k.IsHoliday=0 then 1 else 0 end ) AttendanceDays,
+sum(case when k.IsHoliday=0 then 1 else 0 end) ScheduledAttendanceDays, SUM(CASE WHEN COALESCE(b.LateMinute,0)&gt;0 THEN 1 ELSE 0 end) NumberOfLateArrivals,
+SUM(COALESCE(b.LateMinute,0)) DurationOfLateArrival,SUM(case when (COALESCE(b.CheckInAddressLen,0)=0 OR  b.CheckInDistance&gt;b.LargestDistance) AND (COALESCE(b.CheckOutAddressLen,0)=0 or b.CheckOutDistance&gt;b.LargestDistance) AND k.IsHoliday=0 and l.Creator is null then 1 else 0 end )
++SUM(CASE WHEN COALESCE(b.LateMinute,0)&gt;0 THEN 1 ELSE 0 end) AbsenteeismNumberOfLateArrivals,
+SUM(CASE WHEN COALESCE(b.EarlyMinute,0)&gt;0 THEN 1 ELSE 0 end) NumberOfEarlyDepartures,SUM(COALESCE(b.EarlyMinute,0)) DurationOfEarlyDeparture,
+SUM(case when (COALESCE(b.CheckInAddressLen,0)=0 OR  b.CheckInDistance&gt;b.LargestDistance) AND (COALESCE(b.CheckOutAddressLen,0)=0 or b.CheckOutDistance&gt;b.LargestDistance) AND k.IsHoliday=0 and l.Creator is null then 1 else 0 end ) DaysOfAbsenteeism,
+SUM(CASE WHEN b.NCheckInIsMust=1 AND COALESCE(b.LateMinute,0)=0 AND (b.CheckInDistance&lt;=b.LargestDistance OR b.CheckInDistance=0) 
+AND b.NCheckOutIsMust=1 AND COALESCE(b.EarlyMinute,0)=0 AND (b.CheckOutDistance&lt;=b.LargestDistance OR b.CheckOutDistance=0) THEN 1 ELSE 0 END) NumberOfNightShifts 
+FROM T_ProjectMember a 
+cross join ('||MonthdaysSql||') k '
+into Sql1;
+
+SELECT  ' LEFT JOIN ( '||UserAttendanceRecordSql||' ) b ON a.UserCode=b.UserCode AND b.AttendanceDate=k.AttendanceDate 
+left join(select a.Creator,to_char(a.StartTime,''YYYY-MM-DD'') LeaveDate,sum(a.HourNum) HourNum from T_LeaveApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+where b.Status in (''Passed'',''CaseClosed'') and b.WLType = ''AttendanceManagement'' and  b.RelatedType = ''LeaveOfAbsence''
+group by a.Creator,to_char(a.StartTime,''YYYY-MM-DD'')) l on l.Creator=a.UserCode and k.AttendanceDate=l.LeaveDate 
+WHERE a.DepartCode = '''||DepartCode||''' AND a.UserName = '''||UserName||'''
+GROUP BY a.UserCode) a  ' into Sql2;
+
+SELECT array_to_string(ARRAY(SELECT Type || ' int' FROM T_LeaveType order by sortnumber),',') into LeaveSql;
+
+select ' LEFT JOIN (select * from crosstab(
+''SELECT a.UserCode EmployeeID1,c.Type LeaveType,COALESCE(b.HourNum,0) HourNum  
+FROM T_ProjectMember a CROSS JOIN T_LeaveType c 
+LEFT JOIN (select a.* from T_LeaveApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+where b.Status in (''''Passed'''',''''CaseClosed'''') and b.WLType = ''''AttendanceManagement'''' and  b.RelatedType = ''''LeaveOfAbsence'''') b ON a.UserCode=b.Creator AND c.Type=b.LeaveType AND to_date('''''||EndDate||''''',''''YYYY-MM-DD'''')&lt;b.EndTime AND to_date('''''||StartDate||''''',''''YYYY-MM-DD'''')&gt;=b.StartTime 
+WHERE a.DepartCode = '''''||DepartCode||''''' AND a.UserName = '''''||UserName||''''' '', ''SELECT Type FROM T_LeaveType order by sortnumber'') 
+as t(EmployeeID1 varchar(20),{0})
+) b ON a.EmployeeID=b.EmployeeID1 
+LEFT JOIN ( ' into sql3;
+
+SELECT REPLACE(Sql3,'{0}',LeaveSql) into Sql3;
+
+select string_agg('"'||ex || '" text',',') from( 
+	select * from (SELECT EXTRACT(DAY FROM(generate_series(StartDate::date, EndDate::date, '1 day'::interval)::date)) as ex) a order by a.ex
+) itable into SqlCol;
+
+select 'select * from crosstab(''SELECT a.UserCode,DATE_PART(''''day'''',a.AttendanceDate::date) AttendanceDay,
+	CASE WHEN a.IsHoliday=1 THEN CASE WHEN b.UserCode IS NOT NULL THEN ''''RestAndClockIn/Out'''' ELSE ''''Rest'''' END 
+	ELSE  
+	CASE WHEN a.LeaveDetail IS NOT NULL THEN a.LeaveDetail 
+		WHEN b.UserCode IS NULL THEN ''''Absenteeism'''' 
+		WHEN (b.CheckInAddressLen&gt;0 AND b.LateMinute=0 AND (b.CheckInDistance&lt;=b.LargestDistance or b.CheckInDistance=0)) 
+	THEN CASE WHEN (b.CheckOutAddressLen&gt;0 AND b.EarlyMinute=0 AND (b.CheckOutDistance&lt;=b.LargestDistance or b.CheckOutDistance=0))  THEN ''''Normal'''' 
+			WHEN b.CheckOutAddressLen=0 THEN ''''Missed Clock-Out'''' 
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''FieldWorkAfterHours，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 THEN ''''LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''FieldWorkAfterHours'''' END 
+		WHEN b.CheckInAddressLen=0 
+	THEN CASE WHEN (b.CheckOutAddressLen&gt;0 AND b.EarlyMinute=0 AND (b.CheckOutDistance&lt;=b.LargestDistance or b.CheckOutDistance=0))  THEN ''''MissedClock-In'''' 
+			WHEN b.CheckOutAddressLen=0 THEN ''''Absenteeism'''' 
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''MissedClock-In，FieldWorkAfterHours，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 THEN ''''MissedClock-In，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''MissedClock-In，FieldWorkAfterHours'''' END 
+		WHEN b.CheckInAddressLen&gt;0 AND b.LateMinute&gt;0 AND b.CheckInDistance&gt;b.LargestDistance 
+	THEN CASE WHEN (b.CheckOutAddressLen&gt;0 AND b.EarlyMinute=0 AND (b.CheckOutDistance&lt;=b.LargestDistance or b.CheckOutDistance=0))  THEN ''''FieldWorkDuringOfficeHours'''' 
+			WHEN b.CheckOutAddressLen=0 THEN ''''FieldWorkDuringOfficeHours，Missed Clock-Out''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''FieldWorkDuringOfficeHours，FieldWorkAfterHours，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 THEN ''''FieldWorkDuringOfficeHours，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''FieldWorkDuringOfficeHours，FieldWorkAfterHours'''' END 
+		WHEN b.CheckInAddressLen&gt;0 AND b.LateMinute&gt;0 AND (b.CheckInDistance&lt;=b.LargestDistance or b.CheckInDistance=0)   
+	THEN CASE WHEN (b.CheckOutAddressLen&gt;0 AND b.EarlyMinute=0 AND (b.CheckOutDistance&lt;=b.LargestDistance or b.CheckOutDistance=0))  THEN ''''LateArrivalToWork''''
+			WHEN b.CheckOutAddressLen=0 THEN ''''LateArrivalToWork，Missed Clock-Out'''' 
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''LateArrivalToWork，FieldWorkAfterHours，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 THEN ''''LateArrivalToWork，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''LateArrivalToWork，FieldWorkAfterHours'''' END 
+		WHEN b.CheckInAddressLen&gt;0 AND b.LateMinute=0 AND b.CheckInDistance&gt;b.LargestDistance    
+	THEN CASE WHEN (b.CheckOutAddressLen&gt;0 AND b.EarlyMinute=0 AND (b.CheckOutDistance&lt;=b.LargestDistance or b.CheckOutDistance=0))  THEN ''''FieldWorkDuringOfficeHours'''' 
+			WHEN b.CheckOutAddressLen=0 THEN ''''FieldWorkDuringOfficeHours，Missed Clock-Out'''' 
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''FieldWorkDuringOfficeHours，FieldWorkAfterHours，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.EarlyMinute&gt;0 THEN ''''FieldWorkDuringOfficeHours，LeaveEarlyFromWork''''
+			WHEN b.CheckOutAddressLen&gt;0 AND b.CheckOutDistance&gt;b.LargestDistance THEN ''''FieldWorkDuringOfficeHours，FieldWorkAfterHours'''' END 
+		END 
+	END|| case when a.OvertimeDetail is not null then '''' ''''||a.OvertimeDetail else '''''''' end Detail  FROM (
+	SELECT a.UserCode,k.AttendanceDate,MIN(k.IsHoliday)IsHoliday,
+		trim(leading '''','''' from (
+			select string_agg(qjia,'''''''') qjv from (
+				select DISTINCT '''',''''||LeaveType||'''' ''''||to_char(StartTime,''''YYYY-MM-DD'''')||''''到''''||to_char(EndTime,''''YYYY-MM-DD'''') as qjia 
+				FROM (
+					select a.* from T_LeaveApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+					where b.Status in (''''Passed'''',''''CaseClosed'''') and b.WLType = ''''AttendanceManagement'''' and  b.RelatedType = ''''LeaveOfAbsence'''') m WHERE m.Creator = a.UserCode AND to_date(k.AttendanceDate,''''YYYY-MM-DD'''') BETWEEN m.StartTime AND m.EndTime) lty))LeaveDetail,
+		trim(leading '''','''' from (
+			select DISTINCT '''',''''||OvertimeType||'''' ''''||SUBSTRING(COALESCE(OverTimeCheckInTime,''''''''),1,16)||''''到''''||SUBSTRING(COALESCE(OverTimeCheckOutTime,''''''''),1,16)
+			FROM (
+					select a.* from T_OvertimeApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+					where b.Status in (''''Passed'''',''''CaseClosed'''') and b.WLType = ''''AttendanceManagement'''' and  b.RelatedType = ''''Overtime'''') m WHERE m.Creator = a.UserCode AND to_date(k.AttendanceDate,''''YYYY-MM-DD'''') BETWEEN m.StartTime AND m.EndTime)) OvertimeDetail      
+	FROM T_ProjectMember a 
+	CROSS JOIN (
+		SELECT to_char(a.AttendanceDate, ''''YYYY-MM-DD'''') AttendanceDate,case WHEN c.Id is not null then 0 
+			when DATE_PART(''''dow'''',a.AttendanceDate) = 0 OR DATE_PART(''''dow'''',a.AttendanceDate)=6 OR b.ID IS NOT NULL THEN 1 ELSE 0 END IsHoliday 
+		FROM (SELECT generate_series(to_date('''''||StartDate||''''', ''''YYYY-MM-DD''''),to_date('''''||EndDate||''''', ''''YYYY-MM-DD''''),INTERVAL ''''1 day'''') as AttendanceDate) a 
+		LEFT JOIN T_FestivalsDaySet b ON a.AttendanceDate=b.FestivalsDate 
+		left join T_FestivalsExchangeDaySet c on a.AttendanceDate=c.ExchangeDate ) k 
+	LEFT JOIN (select a.* from T_LeaveApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+		where b.Status in (''''Passed'''',''''CaseClosed'''') and b.WLType = ''''AttendanceManagement'''' and  b.RelatedType = ''''LeaveOfAbsence'''') b 
+		ON a.UserCode=b.Creator AND to_date(k.AttendanceDate,''''YYYY-MM-DD'''') BETWEEN b.StartTime AND b.EndTime 
+	LEFT JOIN (select a.* from T_OvertimeApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+		where b.Status in (''''Passed'''',''''CaseClosed'''') and b.WLType = ''''AttendanceManagement'''' and  b.RelatedType = ''''Overtime'''') c  
+		ON a.UserCode=c.Creator AND to_date(k.AttendanceDate,''''YYYY-MM-DD'''') BETWEEN c.StartTime AND c.EndTime
+	WHERE a.DepartCode = '''''||DepartCode||''''' AND a.UserName = '''''||UserName||'''''
+	GROUP BY a.UserCode,k.AttendanceDate) a 
+	LEFT JOIN (  
+		SELECT UserCode,to_char(AttendanceDate,''''YYYY-MM-DD'''') AttendanceDate,LateMinute,EarlyMinute,LargestDistance,
+			CASE WHEN NCheckInIsMust=''''YES'''' THEN 1 ELSE 0 END NCheckInIsMust,CASE WHEN NCheckOutIsMust=''''YES'''' THEN 1 ELSE 0 END NCheckOutIsMust,
+			CASE WHEN MCheckInIsMust=''''YES'''' THEN MCheckIn 
+			WHEN NCheckInIsMust=''''YES'''' THEN NCheckIn
+			ELSE NULL END CheckIn,
+			CASE WHEN ACheckOutIsMust=''''YES'''' THEN ACheckOut 
+			WHEN NCheckOutIsMust=''''YES'''' THEN NCheckOut
+			ELSE NULL END CheckOut,
+			CASE WHEN MCheckInIsMust=''''YES'''' THEN COALESCE(MCheckInAddress,'''''''')  
+			WHEN NCheckInIsMust=''''YES'''' THEN COALESCE(NCheckInAddress,'''''''')
+			ELSE NULL END CheckInAddress,
+			CASE WHEN MCheckInIsMust=''''YES'''' THEN COALESCE(char_length(MCheckInAddress),0)  
+			WHEN NCheckInIsMust=''''YES'''' THEN COALESCE(char_length(NCheckInAddress),0)
+			ELSE 0 END CheckInAddressLen,
+			CASE WHEN ACheckOutIsMust=''''YES'''' THEN COALESCE(ACheckOutAddress,'''''''')   
+			WHEN NCheckOutIsMust=''''YES'''' THEN COALESCE(NCheckOutAddress,'''''''') 
+			ELSE NULL END CheckOutAddress,
+			CASE WHEN ACheckOutIsMust=''''YES'''' THEN COALESCE(char_length(ACheckOutAddress),0)   
+			WHEN NCheckOutIsMust=''''YES'''' THEN COALESCE(char_length(NCheckOutAddress),0) 
+			ELSE 0 END CheckOutAddressLen,
+			CASE WHEN MCheckInIsMust=''''YES'''' THEN MCheckInDistance  
+			WHEN NCheckInIsMust=''''YES'''' THEN NCheckInDistance
+			ELSE NULL END CheckInDistance,
+			CASE WHEN ACheckOutIsMust=''''YES'''' THEN ACheckOutDistance   
+			WHEN NCheckOutIsMust=''''YES'''' THEN NCheckOutDistance
+			ELSE NULL END CheckOutDistance
+		FROM T_UserAttendanceRecord 
+		where AttendanceDate &gt;= '''''||StartDate||''''' AND  AttendanceDate&lt; to_date('''''||EndDate||''''',''''YYYY-MM-DD'''')+INTERVAL ''''1 day''''  ) b
+		ON a.UserCode=b.UserCode AND b.AttendanceDate=a.AttendanceDate'',''select * from ( SELECT EXTRACT(DAY FROM(generate_series('''''||StartDate||'''''::date,'''''||EndDate||'''''::date, ''''1 day''''::interval)::date)) as ex) a order by a.ex''
+	) AS  t(usercode varchar(20),{0})' into SqlDetail;
+
+select replace( SqlDetail , '{0}' , SqlCol) into SqlDetail;
+
+SELECT array_to_string(ARRAY(SELECT Type || ' int' FROM T_OvertimeType),',') into OvertimeSql;
+
+--按分钟计算实际Overtime时间 误差多加1分钟  因为午夜打卡时间分别为23:59和00:01 
+SELECT ') c ON a.EmployeeID=c.UserCode 
+LEFT JOIN (select * from crosstab(
+			 ''SELECT a.UserCode EmployeeID2,c.Type OvertimeType,FLOOR(COALESCE(DATEDIFF(''''mi'''',
+				CASE WHEN b.OverTimeCheckInTime::timestamp without time zone&lt;b.StartTime THEN b.StartTime ELSE b.OverTimeCheckInTime::timestamp without time zone END,
+				CASE WHEN b.OverTimeCheckOutTime::timestamp without time zone&gt;b.EndTime THEN b.EndTime ELSE b.OverTimeCheckOutTime::timestamp without time zone END)+1,0)*1.0/60) HourNum   
+			FROM T_ProjectMember a 
+			CROSS JOIN T_OvertimeType c 
+			LEFT JOIN (select a.* from T_OvertimeApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+				where b.Status in (''''Passed'''',''''CaseClosed'''') and b.WLType = ''''AttendanceManagement'''' and  b.RelatedType = ''''Overtime'''') b ON a.UserCode=b.Creator AND '''''||StartDate||'''''&lt;b.EndTime AND '''''||EndDate||'''''&gt;=b.StartTime 
+			WHERE a.DepartCode = '''''||DepartCode||''''' AND a.UserName = '''''||UserName||''''' ''
+	,''SELECT distinct c.Type from T_OvertimeType c order by 1 '')
+			as t(EmployeeID2 varchar(20),WeekdayOvertime int,HolidayOvertime int,WeekendOvertime int)
+) d ON a.EmployeeID=d.EmployeeID2 
+LEFT JOIN (		select a.Creator,SUM(COALESCE(a.HourNum,0)) HourNum from T_LeaveApplyForm a inner join T_WorkFlow b on a.ID=b.RelatedID
+		where b.Status in (''Passed'',''CaseClosed'') and b.WLType = ''AttendanceManagement'' and  b.RelatedType = ''LeaveOfAbsence'' AND '''||StartDate||'''::timestamp without time zone&lt;a.EndTime AND '''||EndDate||'''::timestamp without time zone&gt;=a.StartTime 
+		GROUP BY a.Creator) f ON a.EmployeeID=f.Creator 
+order by a.Department,a.UserName' into Sql4;
+
+SELECT REPLACE(Sql4,'{0}',OvertimeSql) into Sql4;
+
+select Sql1||Sql2||Sql3||SqlDetail||Sql4 into sqltotal;
+execute sqltotal into recreport;
+SELECT json_agg(row_to_json(recreport)) into jsonreport;
+
+RETURN jsonreport;
+
+END;
+$BODY$;
+
+ALTER FUNCTION public.f_userattendancereport(text, text, text, text)
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
