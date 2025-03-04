@@ -10129,4 +10129,52 @@ Where PageName In ('TTProjectManHourAndExpenseReport.aspx','TTProjectManHourInco
     <SQLText>Update T_ProModuleLevel Set IsDeleted = 'YES'
 Where PageName In ('TTProjectManHourAndExpenseReport.aspx','TTProjectManHourIncomeAndExpenseReport.aspx','TTGoodsCheckInOutInventoryReport.aspx','TTProjectImplementTotalFinanceReport.aspx','TTProjectIncomeExpenseMain.aspx')</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3685</ID>
+    <SQLText>-- View: public.v_projectconstractamountincome
+
+-- DROP VIEW public.v_projectconstractamountincome;
+
+CREATE OR REPLACE VIEW public.v_projectconstractamountincome
+ AS
+ SELECT a.relatedid AS projectid,
+    COALESCE(a.constractcode, ''::character varying) AS constractcode,
+    COALESCE(a.totalreceivablesamount, 0::numeric) AS totalreceivablesamount,
+    COALESCE(a.totalincome, 0::numeric) AS totalincome,
+    COALESCE(b.amount * c.exchangerate, 0::numeric) AS constractamount
+   FROM v_projectincomesum a
+     FULL JOIN t_constract b ON a.constractcode::text = b.constractcode::text
+     FULL JOIN t_currencytype c ON b.currency::text = c.type::text
+  WHERE COALESCE(a.relatedid, 0::bigint) &lt;&gt; 0;
+
+ALTER TABLE public.v_projectconstractamountincome
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectconstractamountincome TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3686</ID>
+    <SQLText>-- View: public.v_projectincomeexpensesum
+
+-- DROP VIEW public.v_projectincomeexpensesum;
+
+CREATE OR REPLACE VIEW public.v_projectincomeexpensesum
+ AS
+ SELECT a.projectid,
+    COALESCE(a.constractamount, 0::numeric) AS constractamount,
+    COALESCE(a.totalreceivablesamount, 0::numeric) AS totalreceivablesamount,
+    COALESCE(a.totalincome, 0::numeric) AS totalincome,
+    COALESCE(b.totalexpense, 0::numeric) AS totalexpense,
+    COALESCE(a.totalincome, 0::numeric) - COALESCE(b.totalexpense, 0::numeric) AS incomeexpensebalance,
+    COALESCE(a.constractamount, 0::numeric) - COALESCE(a.totalincome, 0::numeric) AS contractreceiverbalance,
+    COALESCE(a.totalreceivablesamount, 0::numeric) - COALESCE(a.totalincome, 0::numeric) AS receivablereceiverbalance
+   FROM v_projectconstractamountincome a
+     FULL JOIN v_projectexpensesum b ON a.projectid = b.projectid
+  WHERE COALESCE(a.projectid, 0::bigint) &lt;&gt; 0;
+
+ALTER TABLE public.v_projectincomeexpensesum
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectincomeexpensesum TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
