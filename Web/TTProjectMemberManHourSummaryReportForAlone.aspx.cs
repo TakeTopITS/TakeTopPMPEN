@@ -73,13 +73,13 @@ public partial class TTProjectMemberManHourSummaryReportForAlone : System.Web.UI
 
         strOpretorName = "%" + TB_MemberName.Text.Trim() + "%";
 
-        strHQL = @"Select DepartCode as 'Department',  
-                   UserName as 'Name',   
-                   DepartCode as 'DepartmentCode',   
-                   DepartName as 'DepartmentName',   
-                   ProjectID as 'ProjectID',   
-                   Sum(ManHour) as 'LaborHours',   
-                   sum(ConfirmManHour) as 'ConfirmedLaborHours'   
+        strHQL = @"Select DepartCode as Department,  
+                   UserName as Name,   
+                   DepartCode as DepartmentCode,   
+                   DepartName as DepartmentName,   
+                   ProjectID as ProjectID,   
+                   Sum(ManHour) as LaborHours,   
+                   sum(ConfirmManHour) as ConfirmedLaborHours   
                    From V_ProjectMemberManHourSummary";
 
         strHQL += " Where ProjectID = " + strProjectID + " and UserName Like " + "'" + strOpretorName + "'"; ;

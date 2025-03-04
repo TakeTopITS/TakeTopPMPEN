@@ -139,7 +139,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select Account as 'Subject',SUM(Amount) as 'Amount' From V_ProjectProfitAndCostChart    
+        strHQL = @"Select Account as Subject,SUM(Amount) as Amount From V_ProjectProfitAndCostChart    
                       Where ";
 
         if (strProjectID != "")
@@ -153,6 +153,9 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strHQL += " And PMName Like '%" + strPMName + "%'";
         strHQL += " And BeginDate >= '" + strBeginTime + "' And BeginDate <= '" + strEndTime + "'";
         strHQL += " Group By Account";
+
+        LogClass.WriteLogFile(strHQL);
+
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectBudgetChartForEveryMonth");
 
         GridView1.DataSource = ds;

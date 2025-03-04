@@ -18,6 +18,7 @@ using ProjectMgt.Model;
 using ProjectMgt.DAL;
 using ProjectMgt.BLL;
 
+
 public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.UI.Page
 {
     string strLangCode, strUserCode;
@@ -81,30 +82,67 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
-Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where A.ProjectID = {3}  Group By A.Account, A.ProjectID) as AA
-LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where A.ProjectID = {3} And A.EffectDate >= '{5}' And A.EffectDate <= '{6}'  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
-LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {3} AND CC.PMName LIKE '{7}') AS KK Group By {0}",
-       LanguageHandle.GetWord("KeMu"),
-       LanguageHandle.GetWord("YuSuan"),
-       LanguageHandle.GetWord("FeiYong"),
-       strProjectID,
-       LanguageHandle.GetWord("KeMuA"),
-       strBeginTime,
-       strEndTime,
-       strPMName);
+            strHQL = string.Format(@"SELECT kk.A{0}, SUM(COALESCE({1}, 0)) AS {1}, SUM(COALESCE({2}, 0)) AS {2}
+FROM (
+    SELECT * FROM (
+        SELECT A.ProjectID, A.Account AS A{0}, COALESCE(SUM(A.Amount), 0) AS {1}
+        FROM T_ProjectBudget A
+        WHERE A.ProjectID = {3}
+        GROUP BY A.Account, A.ProjectID
+    ) AS AA
+    LEFT JOIN (
+        SELECT A.ProjectID AS BProjectID, A.Account AS B{4}, SUM(A.ConfirmAmount) AS {2}
+        FROM T_ProExpense A
+        WHERE A.ProjectID = {3}
+        AND A.EffectDate >= '{5}'
+        AND A.EffectDate <= '{6}'
+        GROUP BY A.Account, A.ProjectID
+    ) AS BB ON BB.B{4} = AA.A{0}
+    LEFT JOIN (
+        SELECT A.ProjectID AS CProjectID, A.PMName
+        FROM T_PROJECT A
+    ) AS CC ON CC.CProjectID = {3} AND CC.PMName LIKE '{7}'
+) AS KK
+GROUP BY KK.A{0}",
+    LanguageHandle.GetWord("KeMu"),
+    LanguageHandle.GetWord("YuSuan"),
+    LanguageHandle.GetWord("FeiYong"),
+    strProjectID,
+    LanguageHandle.GetWord("KeMu"),
+    strBeginTime,
+    strEndTime,
+    strPMName);
         }
         else
         {
-            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
-Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as AA
-LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where  A.EffectDate >= '{5}' And A.EffectDate <= '{6}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
-LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}') AND CC.PMName LIKE '{7}') AS KK Group By {0}",
+            strHQL = string.Format(@"SELECT KK.A{0}, SUM(COALESCE({1}, 0)) AS {1}, SUM(COALESCE({2}, 0)) AS {2}
+FROM (
+    SELECT * FROM (
+        SELECT A.ProjectID, A.Account AS A{0}, COALESCE(SUM(A.Amount), 0) AS {1}
+        FROM T_ProjectBudget A
+        WHERE A.ProjectID IN (SELECT ProjectID FROM T_Project WHERE ProjectName LIKE '{3}')
+        GROUP BY A.Account, A.ProjectID
+    ) AS AA
+    LEFT JOIN (
+        SELECT A.ProjectID AS BProjectID, A.Account AS B{4}, SUM(A.ConfirmAmount) AS {2}
+        FROM T_ProExpense A
+        WHERE A.EffectDate >= '{5}' AND A.EffectDate <= '{6}'
+        AND A.ProjectID IN (SELECT ProjectID FROM T_Project WHERE ProjectName LIKE '{3}')
+        GROUP BY A.Account, A.ProjectID
+    ) AS BB ON BB.B{4} = AA.A{0}
+    LEFT JOIN (
+        SELECT A.ProjectID AS CProjectID, A.PMName
+        FROM T_PROJECT A
+        WHERE A.ProjectID IN (SELECT ProjectID FROM T_Project WHERE ProjectName LIKE '{3}')
+        AND A.PMName LIKE '{7}'
+    ) AS CC ON CC.CProjectID = AA.ProjectID
+) AS KK
+GROUP BY KK.A{0}",
       LanguageHandle.GetWord("KeMu"),
       LanguageHandle.GetWord("YuSuan"),
       LanguageHandle.GetWord("FeiYong"),
       strProjectName,
-      LanguageHandle.GetWord("KeMuA"),
+      LanguageHandle.GetWord("KeMu"),
       strBeginTime,
       strEndTime,
       strPMName);
@@ -140,35 +178,71 @@ LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
-Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where A.ProjectID = {3}  Group By A.Account, A.ProjectID) as AA
-LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where A.ProjectID = {3} And A.EffectDate >= '{5}' And A.EffectDate <= '{6}'  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
-LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {3} AND CC.PMName LIKE '{7}') AS KK Group By {0}",
-     LanguageHandle.GetWord("KeMu"),
-     LanguageHandle.GetWord("YuSuan"),
-     LanguageHandle.GetWord("FeiYong"),
-     strProjectID,
-     LanguageHandle.GetWord("KeMuA"),
-     strBeginTime,
-     strEndTime,
-     strPMName);
+            strHQL = string.Format(@"SELECT kk.A{0}, SUM(COALESCE({1}, 0)) AS {1}, SUM(COALESCE({2}, 0)) AS {2}
+FROM (
+    SELECT * FROM (
+        SELECT A.ProjectID, A.Account AS A{0}, COALESCE(SUM(A.Amount), 0) AS {1}
+        FROM T_ProjectBudget A
+        WHERE A.ProjectID = {3}
+        GROUP BY A.Account, A.ProjectID
+    ) AS AA
+    LEFT JOIN (
+        SELECT A.ProjectID AS BProjectID, A.Account AS B{4}, SUM(A.ConfirmAmount) AS {2}
+        FROM T_ProExpense A
+        WHERE A.ProjectID = {3}
+        AND A.EffectDate >= '{5}'
+        AND A.EffectDate <= '{6}'
+        GROUP BY A.Account, A.ProjectID
+    ) AS BB ON BB.B{4} = AA.A{0}
+    LEFT JOIN (
+        SELECT A.ProjectID AS CProjectID, A.PMName
+        FROM T_PROJECT A
+    ) AS CC ON CC.CProjectID = {3} AND CC.PMName LIKE '{7}'
+) AS KK
+GROUP BY KK.A{0}",
+    LanguageHandle.GetWord("KeMu"),
+    LanguageHandle.GetWord("YuSuan"),
+    LanguageHandle.GetWord("FeiYong"),
+    strProjectID,
+    LanguageHandle.GetWord("KeMu"),
+    strBeginTime,
+    strEndTime,
+    strPMName);
         }
         else
         {
-            strHQL = string.Format(@"Select {0}, sum(COALESCE({1},0)) as {1}, sum(COALESCE({2},0)) as {2} From(
-Select * From(Select A.ProjectID, A.Account as {0}, COALESCE(sum(A.Amount), 0) as {1} From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as AA
-LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as {4}, SUM(A.ConfirmAmount) as {2} From T_ProExpense A Where  A.EffectDate >= '{5}' And A.EffectDate <= '{6}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}')  Group By A.Account, A.ProjectID) as BB ON BB.{4} = AA.{0}
-LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{3}') AND CC.PMName LIKE '{7}') AS KK Group By {0}",
-     LanguageHandle.GetWord("KeMu"),
-     LanguageHandle.GetWord("YuSuan"),
-     LanguageHandle.GetWord("FeiYong"),
-     strProjectName,
-     LanguageHandle.GetWord("KeMuA"),
-     strBeginTime,
-     strEndTime,
-     strPMName);
+            strHQL = string.Format(@"SELECT KK.A{0}, SUM(COALESCE({1}, 0)) AS {1}, SUM(COALESCE({2}, 0)) AS {2}
+FROM (
+    SELECT * FROM (
+        SELECT A.ProjectID, A.Account AS A{0}, COALESCE(SUM(A.Amount), 0) AS {1}
+        FROM T_ProjectBudget A
+        WHERE A.ProjectID IN (SELECT ProjectID FROM T_Project WHERE ProjectName LIKE '{3}')
+        GROUP BY A.Account, A.ProjectID
+    ) AS AA
+    LEFT JOIN (
+        SELECT A.ProjectID AS BProjectID, A.Account AS B{4}, SUM(A.ConfirmAmount) AS {2}
+        FROM T_ProExpense A
+        WHERE A.EffectDate >= '{5}' AND A.EffectDate <= '{6}'
+        AND A.ProjectID IN (SELECT ProjectID FROM T_Project WHERE ProjectName LIKE '{3}')
+        GROUP BY A.Account, A.ProjectID
+    ) AS BB ON BB.B{4} = AA.A{0}
+    LEFT JOIN (
+        SELECT A.ProjectID AS CProjectID, A.PMName
+        FROM T_PROJECT A
+        WHERE A.ProjectID IN (SELECT ProjectID FROM T_Project WHERE ProjectName LIKE '{3}')
+        AND A.PMName LIKE '{7}'
+    ) AS CC ON CC.CProjectID = AA.ProjectID
+) AS KK
+GROUP BY KK.A{0}",
+      LanguageHandle.GetWord("KeMu"),
+      LanguageHandle.GetWord("YuSuan"),
+      LanguageHandle.GetWord("FeiYong"),
+      strProjectName,
+      LanguageHandle.GetWord("KeMu"),
+      strBeginTime,
+      strEndTime,
+      strPMName);
         }
-
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
         GridView1.DataSource = ds;
         GridView1.DataBind();

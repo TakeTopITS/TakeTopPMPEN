@@ -78,7 +78,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'Budget') as 'Budget',SUM(COALESCE(Amount,0)) as 'Amount' From V_ProjectBudgetChartForEveryMonth   
+        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget') as Budget,SUM(COALESCE(Amount,0)) as Amount From V_ProjectBudgetChartForEveryMonth   
                  Where ";
         if (strProjectID != "")
         {
@@ -90,8 +90,9 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         }
         strHQL += " And PMName Like '%" + strPMName + "%'";
         strHQL += " And BeginDate >= '" + strBeginTime + "' And BeginDate <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget') ";
-        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget')  ASC";
+        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget') ";
+        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget')  ASC";
+
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectBudgetChartForEveryMonth");
 
         GridView1.DataSource = ds;
@@ -119,7 +120,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'Budget') as 'Budget',SUM(COALESCE(Amount,0)) as 'Amount' From V_ProjectBudgetChartForEveryMonth   
+        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget') as Budget,SUM(COALESCE(Amount,0)) as Amount From V_ProjectBudgetChartForEveryMonth   
                  Where ";
         if (strProjectID != "")
         {
@@ -131,8 +132,8 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         }
         strHQL += " And PMName Like '%" + strPMName + "%'";
         strHQL += " And BeginDate >= '" + strBeginTime + "' And BeginDate <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget') ";
-        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget')  ASC";
+        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget') ";
+        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget')  ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectBudgetChartForEveryMonth");
 
 
@@ -192,7 +193,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
         strChartTitle = LanguageHandle.GetWord("YueDuYuSuan").ToString().Trim();
 
-        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'Budget') as XName,SUM(COALESCE(Amount,0)) as YNumber From V_ProjectBudgetChartForEveryMonth
+        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget') as XName,SUM(COALESCE(Amount,0)) as YNumber From V_ProjectBudgetChartForEveryMonth
                  Where ";
         if (strProjectID != "")
         {
@@ -204,8 +205,8 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         }
         strHQL += " And PMName Like '%" + strPMName + "%'";
         strHQL += " And BeginDate >= '" + strBeginTime + "' And BeginDate <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget') ";
-        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget')  ASC";
+        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget') ";
+        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget')  ASC";
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
         LB_ReceivableAmount.Text = SumReceivableAmount();

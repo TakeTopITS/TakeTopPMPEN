@@ -10017,4 +10017,116 @@ $BODY$;
 ALTER FUNCTION public.f_userattendancereport(text, text, text, text)
     OWNER TO postgres;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3681</ID>
+    <SQLText>-- View: public.v_projectmember_workload
+
+-- DROP VIEW public.v_projectmember_workload;
+
+CREATE OR REPLACE VIEW public.v_projectmember_workload
+ AS
+ SELECT 'Project'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])
+UNION
+ SELECT 'Project'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])))
+UNION
+ SELECT 'Plan'::text AS type,
+    a.usercode,
+    a.username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Plan:'::text) || b.id::character varying(30)::text AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type::bpchar = 'InUse'::bpchar
+UNION
+ SELECT 'Plan'::text AS type,
+    t_plan.usercode,
+    t_plan.username,
+    t_plan.planid::character varying(30) AS projectid,
+    t_plan.planname AS projectname,
+    t_plan.starttime AS begindate,
+    t_plan.endtime AS enddate,
+    t_plan.status
+   FROM t_plan
+UNION
+ SELECT 'Task'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Task:'::text) || a.taskid::character varying(30)::text AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT 'Requirement'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT 'Meeting'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;
+
+ALTER TABLE public.v_projectmember_workload
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_projectmember_workload TO postgres;
+GRANT SELECT ON TABLE public.v_projectmember_workload TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3682</ID>
+    <SQLText>Update T_ProModuleLevel Set IsDeleted = 'YES'
+Where PageName In ('TTProjectManHourIncomeAndExpenseReport.aspx','TTProjectManHourAndExpenseReport','TTProjectImplementTotalFinanceReport.aspx','TTProjectIncomeExpenseMain.aspx')</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3683</ID>
+    <SQLText>Update T_ProModuleLevel Set IsDeleted = 'YES'
+Where PageName In ('TTProjectManHourAndExpenseReport.aspx','TTProjectManHourIncomeAndExpenseReport.aspx','TTProjectManHourAndExpenseReport','TTProjectImplementTotalFinanceReport.aspx','TTProjectIncomeExpenseMain.aspx')</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3684</ID>
+    <SQLText>Update T_ProModuleLevel Set IsDeleted = 'YES'
+Where PageName In ('TTProjectManHourAndExpenseReport.aspx','TTProjectManHourIncomeAndExpenseReport.aspx','TTGoodsCheckInOutInventoryReport.aspx','TTProjectImplementTotalFinanceReport.aspx','TTProjectIncomeExpenseMain.aspx')</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

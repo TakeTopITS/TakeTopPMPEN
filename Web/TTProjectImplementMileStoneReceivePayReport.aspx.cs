@@ -81,8 +81,8 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) +   
-                   {1}) as 'Subject',SUM({2}) as 'AmountReceivable',SUM({3}) as 'ActualAmountReceived' From V_ProjectImplementMileStoneReceivePayReport Where ",
+        strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) ||   
+                   {1}) as Subject,SUM({2}) as AmountReceivable,SUM({3}) as ActualAmountReceived From V_ProjectImplementMileStoneReceivePayReport Where ",
                        LanguageHandle.GetWord("YingShouShiJian"),
                        LanguageHandle.GetWord("KeMu"),
                        LanguageHandle.GetWord("YingShouJinE"),
@@ -97,8 +97,10 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         }
         strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
         strHQL += "And " + LanguageHandle.GetWord("YingShouShiJian") + " >= '" + strBeginTime + "' And " + LanguageHandle.GetWord("YingShouShiJian") + " <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) + " + LanguageHandle.GetWord("KeMu") + ") ";
-        strHQL += " Order By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) +  " + LanguageHandle.GetWord("KeMu") + ") ASC";
+        strHQL += " Group By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) || " + LanguageHandle.GetWord("KeMu") + ") ";
+        strHQL += " Order By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) || " + LanguageHandle.GetWord("KeMu") + ") ASC";
+
+        LogClass.WriteLogFile(strHQL);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -125,7 +127,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) +   
+        strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) ||  
                    {1}) as XName,SUM({2}) as YNumber,SUM({3}) as ZNumber From V_ProjectImplementMileStoneReceivePayReport Where ",
                    LanguageHandle.GetWord("YingShouShiJian"),
                    LanguageHandle.GetWord("KeMu"),
@@ -141,8 +143,8 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         }
         strHQL += "And " + LanguageHandle.GetWord("XiangMuJingLi") + " Like '%" + strPMName + "%'";
         strHQL += "And " + LanguageHandle.GetWord("YingShouShiJian") + " >= '" + strBeginTime + "' And " + LanguageHandle.GetWord("YingShouShiJian") + " <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) + " + LanguageHandle.GetWord("KeMu") + ") ";
-        strHQL += " Order By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) +  " + LanguageHandle.GetWord("KeMu") + ") ASC";
+        strHQL += " Group By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) || " + LanguageHandle.GetWord("KeMu") + ") ";
+        strHQL += " Order By (SUBSTRING (to_char(" + LanguageHandle.GetWord("YingShouShiJian") + ",'yyyymmdd'),0,7) ||  " + LanguageHandle.GetWord("KeMu") + ") ASC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 

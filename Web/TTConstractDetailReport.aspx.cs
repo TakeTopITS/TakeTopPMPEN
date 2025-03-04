@@ -46,69 +46,6 @@ public partial class TTConstractDetailReport : System.Web.UI.Page
 
             strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
             LB_DepartString.Text = strDepartString;
-
-
-            //strHQL = @"select c.PartA as 'Unit',
-            //    c.ConstractCode as 'ContractNumber',
-            //    COALESCE(i.InvoiceAmount,0) as '¿ªÆ±½ð¶î',
-            //    COALESCE(p.PayableAccount,0) as 'OrderAmount',
-            //    COALESCE(r.PayableRecordAmount,0) as 'ForeignImportCost',
-            //    COALESCE(p.PayableAccount,0) as 'DomesticImportCost',
-            //    COALESCE(f.InnerEntryTax,0) as 'ImportDuty',
-            //    COALESCE(f.InnerAddedValueTax,0) as 'ImportVAT',
-            //    COALESCE(p.PayOtherAccount,0) as 'TotalOtherCharges',
-            //    COALESCE(r.HandlingCharge,0) as 'BankHandlingFee',
-            //    COALESCE(p.OtherAccount,0) as 'OtherPayments',
-            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as 'VATPayable',
-            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as 'LocalTaxPayable',
-            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'StampDuty',
-            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'FloodControlFee',
-            //    (COALESCE(i.InvoiceAmount,0)-COALESCE(r.PayableRecordAmount,0)-COALESCE(p.PayableAccount,0)-COALESCE(f.InnerEntryTax,0)-
-            //    COALESCE(f.InnerAddedValueTax,0)-COALESCE(p.PayOtherAccount,0)-COALESCE(r.HandlingCharge,0)-COALESCE(p.OtherAccount,0)-0)-
-            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) -
-            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 -
-            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 - 
-            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000
-            //    as 'ContractProfit'
-            //    from dbo.T_Constract c
-            //    left join 
-            //    (
-            //    select ConstractCode,SUM(Amount) as InvoiceAmount from T_ConstractRelatedInvoice
-            //    where ReceiveOpen = 'OPEN'
-            //    group by ConstractCode
-            //    ) i on c.ConstractCode = i.ConstractCode
-            //    left join
-            //    (
-            //    select ConstractCode,SUM(PayableAccount) as PayableAccount,SUM(PayOtherAccount) as PayOtherAccount,
-            //    SUM(OtherAccount) as OtherAccount
-            //    from T_ConstractPayable
-            //    group by ConstractCode
-            //    ) p on c.ConstractCode = p.ConstractCode
-            //    left join
-            //    (
-            //    select ConstractCode,SUM(HomeCurrencyAmount*ExchangeRate) as PayableRecordAmount,SUM(HandlingCharge) as HandlingCharge 
-            //    from dbo.T_ConstractPayableRecord
-            //    group by ConstractCode
-            //    ) r on c.ConstractCode = r.ConstractCode
-            //    left join
-            //    (
-            //    select ConstractCode,SUM(EntryTax) as InnerEntryTax,SUM(AddedValueTax) as InnerAddedValueTax 
-            //    from T_ConstractRelatedEntryOrderForInner
-            //    group by ConstractCode
-            //    ) f on c.ConstractCode = f.ConstractCode
-            //                where 1=1 ";
-            //strHQL += " and (c.ConstractCode in (Select ConstractCode From T_Constract Where  DepartCode in " + strDepartString + ")";
-            //strHQL += " Or (c.ConstractCode in (Select ConstractCode From T_ConstractRelatedUser Where UserCode like  " + "'" + strLikeUserCode + "'" + ")))";
-            //strHQL += " Order by c.ConstractID DESC";
-
-            //DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ConstractImportReport");
-
-            //DataGrid1.DataSource = ds;
-            //DataGrid1.DataBind();
-
-            //CountAmount(ds);
-
-            //LB_Sql.Text = strHQL;
         }
     }
 
@@ -130,33 +67,33 @@ public partial class TTConstractDetailReport : System.Web.UI.Page
         strConstractName = "%" + TB_ConstractName.Text.Trim() + "%";
 
 
-        strHQL = @"select c.PartA as 'Unit',   
-                    c.ConstractCode as 'ContractNumber',   
-                    COALESCE(i.InvoiceAmount,0) as 'ContractAmount',   
-                    COALESCE(p.PayableAccount,0) as 'OrderAmount',   
-                    COALESCE(r.PayableRecordAmount,0) as 'ForeignImportCost',   
-                    COALESCE(p.PayableAccount,0) as 'DomesticImportCost',   
-                    COALESCE(f.InnerEntryTax,0) as 'ImportDuty',   
-                    COALESCE(f.InnerAddedValueTax,0) as 'ImportVAT',   
-                    COALESCE(p.PayOtherAccount,0) as 'TotalOtherCharges',   
-                    COALESCE(r.HandlingCharge,0) as 'BankHandlingFee',   
-                    COALESCE(p.OtherAccount,0) as 'OtherPayments',   
-                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as 'VATPayable',   
-                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as 'LocalTaxPayable',   
-                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'StampDuty',   
-                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'FloodControlFee',   
+        strHQL = @"select c.PartA as Unit,   
+                    c.ConstractCode as ContractNumber,   
+                    COALESCE(i.InvoiceAmount,0) as ContractAmount,   
+                    COALESCE(p.PayableAccount,0) as OrderAmount,   
+                    COALESCE(r.PayableRecordAmount,0) as ForeignImportCost,   
+                    COALESCE(p.PayableAccount,0) as DomesticImportCost,   
+                    COALESCE(f.InnerEntryTax,0) as ImportDuty,   
+                    COALESCE(f.InnerAddedValueTax,0) as ImportVAT,   
+                    COALESCE(p.PayOtherAccount,0) as TotalOtherCharges,   
+                    COALESCE(r.HandlingCharge,0) as BankHandlingFee,   
+                    COALESCE(p.OtherAccount,0) as OtherPayments,   
+                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as VATPayable,   
+                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as LocalTaxPayable,   
+                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as StampDuty,   
+                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as FloodControlFee,   
                     (COALESCE(i.InvoiceAmount,0)-COALESCE(r.PayableRecordAmount,0)-COALESCE(p.PayableAccount,0)-COALESCE(f.InnerEntryTax,0)-
                     COALESCE(f.InnerAddedValueTax,0)-COALESCE(p.PayOtherAccount,0)-COALESCE(r.HandlingCharge,0)-COALESCE(p.OtherAccount,0)-0)-
                     (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) -
                     (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 -
                     COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 - 
                     COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000
-                    as 'ContractProfit'   
+                    as ContractProfit   
                     from T_Constract c
                     left join 
                     (
                     select ConstractCode,SUM(Amount) as InvoiceAmount from T_ConstractRelatedInvoice
-                    where ReceiveOpen = 'OPEN'
+                    where ReceiveOpen = OPEN
                     group by ConstractCode
                     ) i on c.ConstractCode = i.ConstractCode
                     left join

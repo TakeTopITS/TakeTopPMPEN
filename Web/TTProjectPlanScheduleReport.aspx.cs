@@ -256,7 +256,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
             List<DateTime> mondays = getMondayList(tmp);
             for (int j = 0; j < mondays.Count - 1; j++)
             {
-                sub.Append(string.Format("(select COALESCE(sum(b.FinishedNumber), 0) from T_TaskAssignRecord b,T_ProjectTask c where b.TaskID = c.TaskID AND c.PlanID = a.ID and b.MakeDate >= '{0}' and b.MakeDate < '{1}') as mw{2},", mondays[j], mondays[j + 1], index++));
+                sub.Append(string.Format("(select COALESCE(sum(b.FinishedNumber), 0) from T_TaskAssignRecord b,T_ProjectTask c where b.TaskID = c.TaskID AND c.PlanID = a.ID and TO_CHAR(b.MakeDate,'yyyy/MM/dd HH:MM:ss')   >= '{0}' and TO_CHAR(b.MakeDate,'yyyy/MM/dd HH:MM:ss')  < '{1}') as mw{2},", mondays[j].ToString("yyyy/MM/dd HH:MM:ss"),  mondays[j + 1].ToString("yyyy/MM/dd HH:MM:ss"), index++));
             }
             tmp = tmp.AddMonths(1);
         }
@@ -295,6 +295,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
 
         int nMonth = (dtEnd.Year - dtBegin.Year) * 12 + (dtEnd.Month - dtBegin.Month);
         string sql = getQueryString(planId, dtBegin, dtEnd, nMonth);
+
         DataSet ds = ShareClass.GetDataSetFromSql(sql, "T_ImplePlan");
 
         if (ds == null || ds.Tables.Count <= 0)

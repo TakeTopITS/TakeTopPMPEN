@@ -210,7 +210,7 @@
                                                                 <td>
                                                                     <asp:ImageButton ID="IBT_MileStone" runat="server" />&nbsp;&nbsp;
                                                                         <br />
-                                                                    <%# DataBinder.Eval(Container.DataItem,"PlanDetail").ToString().Trim() %>
+                                                                    <%# DataBinder.Eval(Container.DataItem,"name").ToString().Trim() %>
                                                                 </td>
                                                             </ItemTemplate>
                                                         </asp:Repeater>

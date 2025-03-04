@@ -351,10 +351,10 @@ public partial class TTMakeBookManage : System.Web.UI.Page
 
     protected DataTable getExportBookBorrowList()
     {
-        string strHQL = " Select bookBorrowRecord.BookClassificationName 'StandardOrBookClassification',bookBorrowRecord.ReferenceNo 'RegistrationNumber',bookBorrowRecord.BarCode 'StandardNumber'," +   
+        string strHQL = " Select bookBorrowRecord.BookClassificationName StandardOrBookClassification,bookBorrowRecord.ReferenceNo RegistrationNumber,bookBorrowRecord.BarCode StandardNumber," +   
             LanguageHandle.GetWord("bookBorrowRecordBookNameBiaoZh").ToString().Trim() +
             LanguageHandle.GetWord("bookBorrowRecordBorrowCodeJieY").ToString().Trim() +
-            "projectMember.MobilePhone as 'MobileNumber',bookBorrowRecord.ReaderTypeName as 'BorrowerType' From T_BookBorrowRecord as bookBorrowRecord,T_ProjectMember as projectMember Where bookBorrowRecord.BorrowCode=projectMember.UserCode " +   
+            "projectMember.MobilePhone as MobileNumber,bookBorrowRecord.ReaderTypeName as BorrowerType From T_BookBorrowRecord as bookBorrowRecord,T_ProjectMember as projectMember Where bookBorrowRecord.BorrowCode=projectMember.UserCode " +   
             "and bookBorrowRecord.BookInfoId in (Select ID From T_BookInformation Where 1=1 ";
 
         if (!string.IsNullOrEmpty(txt_BarCode.Text.Trim()))

@@ -98,14 +98,14 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
-        strHQL = @"Select UserCode as 'Code',   
-                   UserName as 'Name',   
-                   DepartCode as 'DepartmentCode',   
-                   DepartName as 'DepartmentName',   
-                   ProjectID as 'ProjectID',   
-                   ProjectName as 'Project',
-                   sum(ManHour) as 'DeclaredLaborHours',   
-                   sum(ConfirmManHour) as 'ConfirmedLaborHours'   
+        strHQL = @"Select UserCode as Code,   
+                   UserName as Name,   
+                   DepartCode as DepartmentCode,   
+                   DepartName as DepartmentName,   
+                   ProjectID as ProjectID,   
+                   ProjectName as Project,
+                   sum(ManHour) as DeclaredLaborHours,   
+                   sum(ConfirmManHour) as ConfirmedLaborHours   
                    From V_ProjectMemberManHourSummary";
 
         strHQL += " Where DepartName Like " + "'" + strDepartName + "'";

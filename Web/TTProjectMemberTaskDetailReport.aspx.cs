@@ -152,19 +152,19 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as 'Group',   
-                   UserName as 'Name',   
-                   ProjectName as 'Project',
-                   PlanName as 'Plan',
-                   TaskName as 'Task',
-                   PlanBeginTime as 'PlannedStartTime',   
-                   PlanEndTime as 'PlannedEndTime',   
-                   TaskBeginDate as 'TaskEstimatedStartTime',   
-                   TaskFirstOperateTime as 'TaskAcceptanceTime',   
-                   TaskEndDate as 'TaskEstimatedEndTime',   
-                   TaskLastestOperateTime as 'TaskLatestOperationTime',   
-                   Status as 'TaskStatus',   
-                   TaskLog as 'TaskLog'   
+        strHQL = @"Select DepartCode as Group,   
+                   UserName as Name,   
+                   ProjectName as Project,
+                   PlanName as Plan,
+                   TaskName as Task,
+                   PlanBeginTime as PlannedStartTime,   
+                   PlanEndTime as PlannedEndTime,   
+                   TaskBeginDate as TaskEstimatedStartTime,   
+                   TaskFirstOperateTime as TaskAcceptanceTime,   
+                   TaskEndDate as TaskEstimatedEndTime,   
+                   TaskLastestOperateTime as TaskLatestOperationTime,   
+                   Status as TaskStatus,   
+                   TaskLog as TaskLog   
                    From V_ProjectMemberTaskDetailReport";
 
 

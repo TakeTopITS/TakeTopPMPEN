@@ -120,13 +120,13 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
-        strHQL = @"Select DepartCode as 'Department',  
-                   UserName as 'Name',   
-                   DepartCode as 'DepartmentCode',   
-                   DepartName as 'DepartmentName',   
-                   WorkDate as 'WorkingHours',   
-                   sum(ManHour) as 'DeclaredLaborHours',   
-                   sum(ConfirmManHour) as 'ConfirmedLaborHours'   
+        strHQL = @"Select DepartCode as Department,  
+                   UserName as Name,   
+                   DepartCode as DepartmentCode,   
+                   DepartName as DepartmentName,   
+                   WorkDate as WorkingHours,   
+                   sum(ManHour) as DeclaredLaborHours,   
+                   sum(ConfirmManHour) as ConfirmedLaborHours   
                    From V_ProjectMemberManHourSummary";
         strHQL += " Where ProjectID = " + strProjectID;
         strHQL += " and to_char(WorkDate,'yyyymmdd') >= " + "'" + strBeginTime + "'";

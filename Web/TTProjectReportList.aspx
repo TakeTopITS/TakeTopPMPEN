@@ -47,11 +47,11 @@
                     <Columns>
                         <asp:TemplateColumn HeaderText="报表列表">
                             <ItemTemplate>
-                                <table>
+                                <table style="width:100%;">
                                     <tr>
-                                        <td align="left" style="height: 25px;font-weight:800;">
-                                            <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe">
-                                                <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %>  
+                                        <td align="left" style="height: 25px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; ">
+                                            <a href='<%# DataBinder.Eval(Container.DataItem, "ModulePage") %>' target="iframe" style="display: block; overflow: hidden; text-overflow: ellipsis; ">
+                                                <%# DataBinder.Eval(Container.DataItem, "HomeModuleName") %>
                                             </a>
                                         </td>
                                     </tr>
@@ -406,4 +406,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>
