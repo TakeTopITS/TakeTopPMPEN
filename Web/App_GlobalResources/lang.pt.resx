@@ -30688,69 +30688,6 @@
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Você não tem permissão para alterar o plano. Por favor, verifique!</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Resumo do HSE Produção</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Despesas de representação, despesas de viagem, o reembolso do pessoal TODO determinado, o erro: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Regras de Domínio: código empregado: [TAKETOPUSERCODE], corda departamento: [TAKETOPDEPARTMENT], por razões de segurança, não podem ser utilizados, incluindo exclusão, atualização, Gota, Inserir, Alter declaração)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Ter</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Resumo do HSE Produção</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Formulário de Candidatura ao Subcontrato Trabalhista</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>contrato de associação</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>Os custos de distribuição por departamento de estatísticas</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>Os custos de distribuição por conta Estatísticas</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>Pagamento - renda total</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>Ocultar Estado</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>Amarelo: rendimento Azul: pagar</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>responder</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>Plano de distribuição de Estado</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>O montante pago perfil de conta</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>Renda - pagamento total de</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>Conta de distribuição Valor pago</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>Pagamentos efectivos recebidos através da carta de comparação mesmo período</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>Distribuição do orçamento</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>definição de elemento</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>Zhou</value>
-  </data>
   <data name="GuanLiYuan" xml:space="preserve">
     <value>Administrador</value>
   </data>
@@ -30930,5 +30867,68 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>Importar dados de idioma</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Resumo do HSE Produção</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Despesas de representação, despesas de viagem, o reembolso do pessoal TODO determinado, o erro: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Regras de Domínio: código empregado: [TAKETOPUSERCODE], corda departamento: [TAKETOPDEPARTMENT], por razões de segurança, não podem ser utilizados, incluindo exclusão, atualização, Gota, Inserir, Alter declaração)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Ter</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Resumo do HSE Produção</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Formulário de Candidatura ao Subcontrato Trabalhista</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>contrato de associação</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Os custos de distribuição por departamento de estatísticas</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Os custos de distribuição por conta Estatísticas</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Pagamento - renda total</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>Ocultar Estado</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Amarelo: rendimento Azul: pagar</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>responder</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>Plano de distribuição de Estado</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>O montante pago perfil de conta</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>Renda - pagamento total de</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>Conta de distribuição Valor pago</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>Pagamentos efectivos recebidos através da carta de comparação mesmo período</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Distribuição do orçamento</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>definição de elemento</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>Zhou</value>
   </data>
 </root>

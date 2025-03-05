@@ -7,7 +7,6 @@ using System.IO;
 using System.Resources;
 using System.Web;
 
-using TakeTopCore;
 
 public static class LanguageHandle
 {
@@ -50,21 +49,13 @@ public static class LanguageHandle
     {
         try
         {
-            HttpContext context = HttpContext.Current;
-            if (context == null)
-            {
-                throw new InvalidOperationException("HttpContext is not available.");
-            }
-
-
             // 获取当前语言代码
-            string langCode = context.Session["LangCode"] as string;
+            string langCode = HttpContext.Current.Session["LangCode"] as string;
             if (string.IsNullOrEmpty(langCode))
             {
                 langCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
-                context.Session["LangCode"] = langCode;
+                HttpContext.Current.Session["LangCode"] = langCode;
             }
-
 
             // 从全局资源字典中获取对应语言的资源
             var resourceCache = new Dictionary<string, string>();
@@ -73,7 +64,6 @@ public static class LanguageHandle
             {
                 if (resourceCache.TryGetValue(key, out value))
                 {
-                    //LogClass.WriteLogFile(value + ":" + value);
                     return value.Trim();
                 }
             }
@@ -87,7 +77,6 @@ public static class LanguageHandle
             {
                 if (resourceCacheDefault.TryGetValue(key, out valueDefault))
                 {
-                    //LogClass.WriteLogFile(value + ":" + value);
                     return valueDefault.Trim();
                 }
             }
@@ -99,7 +88,7 @@ public static class LanguageHandle
             return "";
         }
     }
-    
+
 
     // 从数据库获取支持的语言类型
     private static List<string> GetSupportedLanguagesFromDatabase()
@@ -107,7 +96,7 @@ public static class LanguageHandle
         var supportedLanguages = new List<string>();
 
         string query = "SELECT LangCode FROM t_systemlanguage";
-        DataSet ds = ShareClass. GetDataSetFromSql(query, "t_systemlanguage");
+        DataSet ds = ShareClass.GetDataSetFromSql(query, "t_systemlanguage");
 
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
 

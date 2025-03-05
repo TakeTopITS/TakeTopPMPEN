@@ -28834,7 +28834,7 @@
     <value />
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>Riga {0}, il tipo di prodotto:{1} non esiste nella tabella dei tipi di prodotto</value>
+    <value>Report resi di acquisto</value>
   </data>
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value />
@@ -30688,6 +30688,186 @@
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>I dati dell'immagine sono vuoti, si prega di verificare!</value>
   </data>
+  <data name="GuanLiYuan" xml:space="preserve">
+    <value>Amministratore</value>
+  </data>
+  <data name="BiaoZhunLiang" xml:space="preserve">
+    <value>Quantità standard</value>
+  </data>
+  <data name="YiJingCunZai" xml:space="preserve">
+    <value>Esiste già</value>
+  </data>
+  <data name="Jian" xml:space="preserve">
+    <value>Chiave</value>
+  </data>
+  <data name="RenShiXingZheng" xml:space="preserve">
+    <value>Risorse umane e amministrazione</value>
+  </data>
+  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
+    <value>Impostazioni archivio dipendenti</value>
+  </data>
+  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
+    <value>Importazione dati dipendenti</value>
+  </data>
+  <data name="CanShuSheZhi" xml:space="preserve">
+    <value>Impostazioni parametri</value>
+  </data>
+  <data name="WaiZhi" xml:space="preserve">
+    <value>Esterno</value>
+  </data>
+  <data name="NeiZhi" xml:space="preserve">
+    <value>Interno</value>
+  </data>
+  <data name="TiaoJianBianHao" xml:space="preserve">
+    <value>Numero condizione</value>
+  </data>
+  <data name="BiaoDaShiBianHao" xml:space="preserve">
+    <value>Numero espressione</value>
+  </data>
+  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
+    <value>Errore nell'espressione della condizione di approvazione</value>
+  </data>
+  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
+    <value>Impostazione personale modello di flusso</value>
+  </data>
+  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
+    <value>Seleziona prima un modello di modulo per scaricare</value>
+  </data>
+  <data name="TiShi" xml:space="preserve">
+    <value>Avviso</value>
+  </data>
+  <data name="TiJiaoShiBai" xml:space="preserve">
+    <value>Invio fallito</value>
+  </data>
+  <data name="FaShengYiChangYe" xml:space="preserve">
+    <value>Pagina eccezione verificatasi</value>
+  </data>
+  <data name="YiChangXinXi" xml:space="preserve">
+    <value>Informazioni eccezione</value>
+  </data>
+  <data name="XuYao" xml:space="preserve">
+    <value>Necessario</value>
+  </data>
+  <data name="WuFaJieMi" xml:space="preserve">
+    <value>Impossibile decifrare</value>
+  </data>
+  <data name="QingShaoHou" xml:space="preserve">
+    <value>Attendere prego</value>
+  </data>
+  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
+    <value>Ripristino database in corso</value>
+  </data>
+  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
+    <value>Stato database normale</value>
+  </data>
+  <data name="ZhengZaiYong" xml:space="preserve">
+    <value>In uso</value>
+  </data>
+  <data name="BeiZhanYong" xml:space="preserve">
+    <value>Occupato</value>
+  </data>
+  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
+    <value>Utilizza un numero intero come porta</value>
+  </data>
+  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
+    <value>Il browser non può aprirsi automaticamente</value>
+  </data>
+  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
+    <value>Copia l'indirizzo precedente</value>
+  </data>
+  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
+    <value>Nella barra degli indirizzi del browser per aprire la pagina di accesso</value>
+  </data>
+  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
+    <value>Formato link di accesso errato</value>
+  </data>
+  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
+    <value>Backup dati in corso</value>
+  </data>
+  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
+    <value>Backup dati completato</value>
+  </data>
+  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
+    <value>I file di backup si trovano nella directory di installazione</value>
+  </data>
+  <data name="WenJianJiaXia" xml:space="preserve">
+    <value>Nella cartella</value>
+  </data>
+  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
+    <value>Sposta questa cartella tempestivamente</value>
+  </data>
+  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
+    <value>Su un altro disco di backup</value>
+  </data>
+  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
+    <value>Verifica stato database in corso</value>
+  </data>
+  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
+    <value>Creazione comando ripristino database fallita</value>
+  </data>
+  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
+    <value>Un riavvio dovrebbe risolvere il problema</value>
+  </data>
+  <data name="XiangMuHaoWeiKong" xml:space="preserve">
+    <value>Numero progetto vuoto</value>
+  </data>
+  <data name="ChengXuJi" xml:space="preserve">
+    <value>Assembly</value>
+  </data>
+  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
+    <value>Impossibile inserire sezione o riga</value>
+  </data>
+  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
+    <value>Poiché il frammento non ha un punto di inserimento valido</value>
+  </data>
+  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
+    <value>L'operazione sul frammento tentata non può essere completata</value>
+  </data>
+  <data name="WeiNengJiaZai" xml:space="preserve">
+    <value>Caricamento fallito</value>
+  </data>
+  <data name="JiaZaiShiBai" xml:space="preserve">
+    <value>Errore di caricamento</value>
+  </data>
+  <data name="ChaXunShiBai" xml:space="preserve">
+    <value>Query fallita</value>
+  </data>
+  <data name="ShuaXinShiBai" xml:space="preserve">
+    <value>Aggiornamento fallito</value>
+  </data>
+  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
+    <value>Invio modulo completato</value>
+  </data>
+  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
+    <value>Codice stato risposta è</value>
+  </data>
+  <data name="WeiSheZhi" xml:space="preserve">
+    <value>Non impostato</value>
+  </data>
+  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
+    <value>Indirizzo email di invio non trovato</value>
+  </data>
+  <data name="YouJianDiZhi" xml:space="preserve">
+    <value>Indirizzo email</value>
+  </data>
+  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
+    <value>Uno di questi deve essere impostato</value>
+  </data>
+  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
+    <value>Invio modulo fallito</value>
+  </data>
+  <data name="KeDaYinBanBen" xml:space="preserve">
+    <value>Versione stampabile</value>
+  </data>
+  <data name="QingXuanZeYiGeWen" xml:space="preserve">
+    <value>Seleziona un documento</value>
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+    <value>Differenze file risorse linguistiche</value>
+  </data>
+  <data name="DaoRuYiNianShuJi" xml:space="preserve">
+    <value>Importa dati linguistici</value>
+  </data>
   <data name="HSE生产总结" xml:space="preserve">
     <value>Riassunto HSE Produzione</value>
   </data>
@@ -30942,185 +31122,5 @@
   </data>
   <data name="String121" xml:space="preserve">
     <value>Prezzo (yuan / mesi-persona)</value>
-  </data>
-  <data name="GuanLiYuan" xml:space="preserve">
-    <value>Amministratore</value>
-  </data>
-  <data name="BiaoZhunLiang" xml:space="preserve">
-    <value>Quantità standard</value>
-  </data>
-  <data name="YiJingCunZai" xml:space="preserve">
-    <value>Esiste già</value>
-  </data>
-  <data name="Jian" xml:space="preserve">
-    <value>Chiave</value>
-  </data>
-  <data name="RenShiXingZheng" xml:space="preserve">
-    <value>Risorse umane e amministrazione</value>
-  </data>
-  <data name="YuanGongDangAnSheZhi" xml:space="preserve">
-    <value>Impostazioni archivio dipendenti</value>
-  </data>
-  <data name="YuanGongZiLiaoDaoRu" xml:space="preserve">
-    <value>Importazione dati dipendenti</value>
-  </data>
-  <data name="CanShuSheZhi" xml:space="preserve">
-    <value>Impostazioni parametri</value>
-  </data>
-  <data name="WaiZhi" xml:space="preserve">
-    <value>Esterno</value>
-  </data>
-  <data name="NeiZhi" xml:space="preserve">
-    <value>Interno</value>
-  </data>
-  <data name="TiaoJianBianHao" xml:space="preserve">
-    <value>Numero condizione</value>
-  </data>
-  <data name="BiaoDaShiBianHao" xml:space="preserve">
-    <value>Numero espressione</value>
-  </data>
-  <data name="ShenPiTiaoJianBiaoDaShiYouCuoWu" xml:space="preserve">
-    <value>Errore nell'espressione della condizione di approvazione</value>
-  </data>
-  <data name="LiuChengMoBanSheZhiRenYuan" xml:space="preserve">
-    <value>Impostazione personale modello di flusso</value>
-  </data>
-  <data name="QingXianXuanQuBiaoDanMoBanCaiNengXiaZai" xml:space="preserve">
-    <value>Seleziona prima un modello di modulo per scaricare</value>
-  </data>
-  <data name="TiShi" xml:space="preserve">
-    <value>Avviso</value>
-  </data>
-  <data name="TiJiaoShiBai" xml:space="preserve">
-    <value>Invio fallito</value>
-  </data>
-  <data name="FaShengYiChangYe" xml:space="preserve">
-    <value>Pagina eccezione verificatasi</value>
-  </data>
-  <data name="YiChangXinXi" xml:space="preserve">
-    <value>Informazioni eccezione</value>
-  </data>
-  <data name="XuYao" xml:space="preserve">
-    <value>Necessario</value>
-  </data>
-  <data name="WuFaJieMi" xml:space="preserve">
-    <value>Impossibile decifrare</value>
-  </data>
-  <data name="QingShaoHou" xml:space="preserve">
-    <value>Attendere prego</value>
-  </data>
-  <data name="ZhengZaiHuiFuShuJuKu" xml:space="preserve">
-    <value>Ripristino database in corso</value>
-  </data>
-  <data name="ShuJuKuZhuangTaiZhengChang" xml:space="preserve">
-    <value>Stato database normale</value>
-  </data>
-  <data name="ZhengZaiYong" xml:space="preserve">
-    <value>In uso</value>
-  </data>
-  <data name="BeiZhanYong" xml:space="preserve">
-    <value>Occupato</value>
-  </data>
-  <data name="QingYongZhengShuXingShuZiZuoWeiDuanKou" xml:space="preserve">
-    <value>Utilizza un numero intero come porta</value>
-  </data>
-  <data name="LiuLanQiBuNengZiDongDaKai" xml:space="preserve">
-    <value>Il browser non può aprirsi automaticamente</value>
-  </data>
-  <data name="QingBaQianMianDeDiZhi" xml:space="preserve">
-    <value>Copia l'indirizzo precedente</value>
-  </data>
-  <data name="DaoLiuLanQiDiZhiLanYiDaKaiDengLuYeMian" xml:space="preserve">
-    <value>Nella barra degli indirizzi del browser per aprire la pagina di accesso</value>
-  </data>
-  <data name="DengLuLianJieGeShiBuDui" xml:space="preserve">
-    <value>Formato link di accesso errato</value>
-  </data>
-  <data name="ZhengZaiBeiFenShuJu" xml:space="preserve">
-    <value>Backup dati in corso</value>
-  </data>
-  <data name="ShuJuBeiFenChengGong" xml:space="preserve">
-    <value>Backup dati completato</value>
-  </data>
-  <data name="BeiFenWenJianZaiAnZhuangMuLuDe" xml:space="preserve">
-    <value>I file di backup si trovano nella directory di installazione</value>
-  </data>
-  <data name="WenJianJiaXia" xml:space="preserve">
-    <value>Nella cartella</value>
-  </data>
-  <data name="QingJiShiBaCiWenJianJia" xml:space="preserve">
-    <value>Sposta questa cartella tempestivamente</value>
-  </data>
-  <data name="DaoQiTaBeiFenPanShang" xml:space="preserve">
-    <value>Su un altro disco di backup</value>
-  </data>
-  <data name="ZhengZaiJianChaShuJuKuZhuangTai" xml:space="preserve">
-    <value>Verifica stato database in corso</value>
-  </data>
-  <data name="ChuangJianShuJuKuHuiFuMingLingShiBai" xml:space="preserve">
-    <value>Creazione comando ripristino database fallita</value>
-  </data>
-  <data name="ChongXinKaiJiYingGaiNengJieJueWenTi" xml:space="preserve">
-    <value>Un riavvio dovrebbe risolvere il problema</value>
-  </data>
-  <data name="XiangMuHaoWeiKong" xml:space="preserve">
-    <value>Numero progetto vuoto</value>
-  </data>
-  <data name="ChengXuJi" xml:space="preserve">
-    <value>Assembly</value>
-  </data>
-  <data name="BuNengChaRuJieHuoXing" xml:space="preserve">
-    <value>Impossibile inserire sezione o riga</value>
-  </data>
-  <data name="YinWeiGaiPianDuanMeiYouYouXiaoDeChaRuDian" xml:space="preserve">
-    <value>Poiché il frammento non ha un punto di inserimento valido</value>
-  </data>
-  <data name="SuoYiShiTuJinXingDePianDuanCaoZuoWuFaWanCheng" xml:space="preserve">
-    <value>L'operazione sul frammento tentata non può essere completata</value>
-  </data>
-  <data name="WeiNengJiaZai" xml:space="preserve">
-    <value>Caricamento fallito</value>
-  </data>
-  <data name="JiaZaiShiBai" xml:space="preserve">
-    <value>Errore di caricamento</value>
-  </data>
-  <data name="ChaXunShiBai" xml:space="preserve">
-    <value>Query fallita</value>
-  </data>
-  <data name="ShuaXinShiBai" xml:space="preserve">
-    <value>Aggiornamento fallito</value>
-  </data>
-  <data name="BiaoDanTiJiaoChengGong" xml:space="preserve">
-    <value>Invio modulo completato</value>
-  </data>
-  <data name="XiangYingZhuangTaiDaiMaWei" xml:space="preserve">
-    <value>Codice stato risposta è</value>
-  </data>
-  <data name="WeiSheZhi" xml:space="preserve">
-    <value>Non impostato</value>
-  </data>
-  <data name="ZhaoBuDaoYouJianFaSongDiZhi" xml:space="preserve">
-    <value>Indirizzo email di invio non trovato</value>
-  </data>
-  <data name="YouJianDiZhi" xml:space="preserve">
-    <value>Indirizzo email</value>
-  </data>
-  <data name="QiZhongZhiYiBiXuBeiSheZhi" xml:space="preserve">
-    <value>Uno di questi deve essere impostato</value>
-  </data>
-  <data name="WeiNengTiJiaoBiaoDan" xml:space="preserve">
-    <value>Invio modulo fallito</value>
-  </data>
-  <data name="KeDaYinBanBen" xml:space="preserve">
-    <value>Versione stampabile</value>
-  </data>
-  <data name="QingXuanZeYiGeWen" xml:space="preserve">
-    <value>Seleziona un documento</value>
-  </data>
-  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
-    <value>Differenze file risorse linguistiche</value>
-  </data>
-  <data name="DaoRuYiNianShuJi" xml:space="preserve">
-    <value>Importa dati linguistici</value>
   </data>
 </root>

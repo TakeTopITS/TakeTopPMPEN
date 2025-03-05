@@ -30688,69 +30688,6 @@
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Существует файл с таким же изображением!</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Резюме HSE Производство</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Представительские расходы, командировочные расходы, возмещение персонала TODO определяется, ошибка: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Правила домена: Код сотрудника: [TAKETOPUSERCODE], строка отдел: [TAKETOPDEPARTMENT], по соображениям безопасности, не могут быть использованы в том числе удаление, обновление, падения, Вставить, Альтер заявление)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Имеют</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Резюме HSE Производство</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Заявка на подачу заявки на субподряд</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>Ассоциация контракт</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>Расходы на реализацию по статистике отдела</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>Расходы на реализацию по статистике счета</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>Платное - общий доход</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>Скрыть Состояние</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>Желтый: Синий доход: платить</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>ответить</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>Государственный план распределения</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>Сумма фактически выплаченных профиль учетной записи</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>Доходы - всего платить</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>Распределение суммы, уплаченной аккаунт</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>Фактические платежи, полученные за тот же период сравнительную таблицу</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>Распределение бюджета</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>определение элемента</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>Чжоу</value>
-  </data>
   <data name="GuanLiYuan" xml:space="preserve">
     <value>Администратор</value>
   </data>
@@ -30930,5 +30867,68 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>Импорт языковых данных</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Резюме HSE Производство</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Представительские расходы, командировочные расходы, возмещение персонала TODO определяется, ошибка: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Правила домена: Код сотрудника: [TAKETOPUSERCODE], строка отдел: [TAKETOPDEPARTMENT], по соображениям безопасности, не могут быть использованы в том числе удаление, обновление, падения, Вставить, Альтер заявление)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Имеют</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Резюме HSE Производство</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Заявка на подачу заявки на субподряд</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>Ассоциация контракт</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Расходы на реализацию по статистике отдела</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Расходы на реализацию по статистике счета</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Платное - общий доход</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>Скрыть Состояние</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Желтый: Синий доход: платить</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>ответить</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>Государственный план распределения</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>Сумма фактически выплаченных профиль учетной записи</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>Доходы - всего платить</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>Распределение суммы, уплаченной аккаунт</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>Фактические платежи, полученные за тот же период сравнительную таблицу</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Распределение бюджета</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>определение элемента</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>Чжоу</value>
   </data>
 </root>

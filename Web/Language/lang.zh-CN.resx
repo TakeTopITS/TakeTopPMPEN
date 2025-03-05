@@ -30895,7 +30895,8 @@
   </data>
   <data name="QingXuanZeYiGeWen" xml:space="preserve">
     <value>请选择一个文</value>
-  </data>  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
+  </data>
+  <data name="YuYanZiYuanWenJianChaYi" xml:space="preserve">
     <value>语言资源文件差异</value>
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">

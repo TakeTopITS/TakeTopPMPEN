@@ -607,13 +607,13 @@
                                                                                                     <asp:Label ID="LB_dgChildItemID" runat="server" Text="<%$ Resources:lang,ID%>"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="4%"><strong>
-                                                                                                <asp:Label ID="Label323" runat="server" Text="FirstLevelDirectory"></asp:Label></strong></td>
+                                                                                                <asp:Label ID="Label323" runat="server" Text="<%$ Resources:lang,YiJiMuLu%>"></asp:Label></strong></td>
                                                                                             <td align="center" width="4%"><strong>
-                                                                                                <asp:Label ID="Label325" runat="server" Text="SecondLevelDirectory"></asp:Label></strong></td>
+                                                                                                <asp:Label ID="Label325" runat="server"  Text="<%$ Resources:lang,ErJiMuLu%>"></asp:Label></strong></td>
                                                                                             <td align="center" width="4%"><strong>
-                                                                                                <asp:Label ID="Label328" runat="server" Text="ThirdLevelDirectory"></asp:Label></strong></td>
+                                                                                                <asp:Label ID="Label328" runat="server"  Text="<%$ Resources:lang,SanJiMuLu%>"></asp:Label></strong></td>
                                                                                             <td align="center" width="4%"><strong>
-                                                                                                <asp:Label ID="Label329" runat="server" Text="FourthLevelDirectory"></asp:Label></strong></td>
+                                                                                                <asp:Label ID="Label329" runat="server"  Text="<%$ Resources:lang,SiJiMuLu%>"></asp:Label></strong></td>
 
 
                                                                                             <td width="10%" align="center">
@@ -645,7 +645,7 @@
                                                                                             </td>
                                                                                             <td width="4%" align="center">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label50" runat="server" Text="MaterialIssuedQuantity"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,YiFaHuo%>"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td width="4%" align="center">
                                                                                                 <strong>
@@ -657,7 +657,7 @@
                                                                                             </td>
                                                                                             <td width="4%" align="center">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label55" runat="server" Text="SoldQuantity"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,YiXiaoShouLiang%>"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td width="4%" align="center">
                                                                                                 <strong>

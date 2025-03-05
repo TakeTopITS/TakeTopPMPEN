@@ -30688,69 +30688,6 @@
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>選択したデータ項目を削除しますか？</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>交際費、旅費、スタッフのTODOの償還を求め、エラー： "+ ex.Message +"！</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>ドメインルール：社員コード：[TAKETOPUSERCODE]、部門列：[TAKETOPDEPARTMENT]、セキュリティ上の理由から、削除など、使用することはできません、更新、ドロップ、挿入、ALTER文）</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>持っています</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>労働委託申請書</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>協会契約</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>部門の統計による物流コスト</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>アカウントの統計情報により流通コスト</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>ペイ - 総所得</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>隠すステータス</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>イエロー：ブルー収入：有料</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>返事</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>状態分布プラン</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>量は、実際にアカウントプロファイルを支払っ</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>収入 - 総給与</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>分配金額有料アカウント</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>実際の支払いは、同期間の比較表を介して受信</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>予算配分</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>要素定義</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>周</value>
-  </data>
   <data name="GuanLiYuan" xml:space="preserve">
     <value>管理者</value>
   </data>
@@ -30930,5 +30867,68 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>言語データをインポート</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>HSE生産概要</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>交際費、旅費、スタッフのTODOの償還を求め、エラー： "+ ex.Message +"！</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>ドメインルール：社員コード：[TAKETOPUSERCODE]、部門列：[TAKETOPDEPARTMENT]、セキュリティ上の理由から、削除など、使用することはできません、更新、ドロップ、挿入、ALTER文）</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>持っています</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>HSE生産概要</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>労働委託申請書</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>協会契約</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>部門の統計による物流コスト</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>アカウントの統計情報により流通コスト</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>ペイ - 総所得</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>隠すステータス</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>イエロー：ブルー収入：有料</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>返事</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>状態分布プラン</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>量は、実際にアカウントプロファイルを支払っ</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>収入 - 総給与</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>分配金額有料アカウント</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>実際の支払いは、同期間の比較表を介して受信</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>予算配分</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>要素定義</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>周</value>
   </data>
 </root>

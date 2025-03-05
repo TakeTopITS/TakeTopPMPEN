@@ -30688,27 +30688,6 @@
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Les données de l'image sont vides, veuillez vérifier !</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Résumé HSE production</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Les frais de représentation, frais de déplacement, le remboursement du personnel TODO déterminée, l'erreur: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Avoir</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Résumé HSE production</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Formulaire de demande de contrat de sous-traitance</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>contrat de l'Association</value>
-  </data>
   <data name="GuanLiYuan" xml:space="preserve">
     <value>Administrateur</value>
   </data>
@@ -30888,5 +30867,26 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>Importer des données linguistiques</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Résumé HSE production</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Les frais de représentation, frais de déplacement, le remboursement du personnel TODO déterminée, l'erreur: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Avoir</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Résumé HSE production</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Formulaire de demande de contrat de sous-traitance</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>contrat de l'Association</value>
   </data>
 </root>

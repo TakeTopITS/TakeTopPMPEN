@@ -28836,7 +28836,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>*&gt;Formula price&lt;/td&gt;&lt;td class=*</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>Material入库 report.xls</value>
+    <value>Material In stock report.xls</value>
   </data>
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>Material loss</value>
@@ -30689,57 +30689,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="TuPianShuJiWeiKongQingJianCha" xml:space="preserve">
     <value>Image data is empty, please check!</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Summarizing HSE</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Entertainment expenses, travel expenses, personnel TODO pending claims, the error: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Domain Rules: employee code: [TAKETOPUSERCODE], department string: [TAKETOPDEPARTMENT], the language code [TAKETOPLANGCODE], for security reasons, can not be used including Delete, Update, Drop, Insert, Alter statement)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Have</value>
-  </data>
-  <data name="ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD" xml:space="preserve">
-    <value> + DtBeginTime + to "+ dtEndTime +" has been used "+ count +" point!</value>
-  </data>
-  <data name="ZZDTVERSIONROWSCOUNT|STRALERTTEXT" xml:space="preserve">
-    <value>  + DtVersion.Rows.Count + | "+ strAlertText +"</value>
-  </data>
-  <data name="ZZRESULTTOSTRING" xml:space="preserve">
-    <value> + Result.ToString () +!</value>
-  </data>
-  <data name="ZZSTRNEWUSERCODEYHDRSB" xml:space="preserve">
-    <value> + StrNewUserCode + User Import failed!</value>
-  </data>
-  <data name="BOMQuery" xml:space="preserve">
-    <value>BOM Item Query</value>
-  </data>
-  <data name="ChongDianFuWuXuQiuHuoShangJi1" xml:space="preserve">
-    <value>Important service requirement or business apportunity</value>
-  </data>
-  <data name="Membes1" xml:space="preserve">
-    <value>Members</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>Association contract</value>
-  </data>
-  <data name="YuanSuDingYi1" xml:space="preserve">
-    <value>Element definition</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>CHENGYUANSHOURUFENPEI</value>
-  </data>
-  <data name="GongYingShangZiChanCaiGouFuKuanShengQing1" xml:space="preserve">
-    <value>Supplier asset purchase payment application</value>
-  </data>
-  <data name="GongHuoZhiJianDan" xml:space="preserve">
-    <value>Quality Order For Supply</value>
-  </data>
-  <data name="TaoHuangYeMian" xml:space="preserve">
-    <value>navigation page</value>
-  </data>
   <data name="GuanLiYuan" xml:space="preserve">
     <value>Batch "+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
   </data>
@@ -30919,5 +30868,56 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>Import language data</value>
+  </data>
+  <data name="HSE生产总结" xml:space="preserve">
+    <value>Summarizing HSE</value>
+  </data>
+  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
+    <value>Entertainment expenses, travel expenses, personnel TODO pending claims, the error: "+ ex.Message +"!</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Domain Rules: employee code: [TAKETOPUSERCODE], department string: [TAKETOPDEPARTMENT], the language code [TAKETOPLANGCODE], for security reasons, can not be used including Delete, Update, Drop, Insert, Alter statement)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Have</value>
+  </data>
+  <data name="ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD" xml:space="preserve">
+    <value> + DtBeginTime + to "+ dtEndTime +" has been used "+ count +" point!</value>
+  </data>
+  <data name="ZZDTVERSIONROWSCOUNT|STRALERTTEXT" xml:space="preserve">
+    <value>  + DtVersion.Rows.Count + | "+ strAlertText +"</value>
+  </data>
+  <data name="ZZRESULTTOSTRING" xml:space="preserve">
+    <value> + Result.ToString () +!</value>
+  </data>
+  <data name="ZZSTRNEWUSERCODEYHDRSB" xml:space="preserve">
+    <value> + StrNewUserCode + User Import failed!</value>
+  </data>
+  <data name="BOMQuery" xml:space="preserve">
+    <value>BOM Item Query</value>
+  </data>
+  <data name="ChongDianFuWuXuQiuHuoShangJi1" xml:space="preserve">
+    <value>Important service requirement or business apportunity</value>
+  </data>
+  <data name="Membes1" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>Association contract</value>
+  </data>
+  <data name="YuanSuDingYi1" xml:space="preserve">
+    <value>Element definition</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>CHENGYUANSHOURUFENPEI</value>
+  </data>
+  <data name="GongYingShangZiChanCaiGouFuKuanShengQing1" xml:space="preserve">
+    <value>Supplier asset purchase payment application</value>
+  </data>
+  <data name="GongHuoZhiJianDan" xml:space="preserve">
+    <value>Quality Order For Supply</value>
+  </data>
+  <data name="TaoHuangYeMian" xml:space="preserve">
+    <value>navigation page</value>
   </data>
 </root>
