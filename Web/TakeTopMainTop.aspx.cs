@@ -48,10 +48,10 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             {
                 Response.Redirect("TakeTopMainTopSAAS.aspx");
             }
-        
+
             strUserName = ShareClass.GetUserName(strUserCode);
             LB_UserName.Text = strUserName;
-            LB_SystemMsg.Text = LanguageHandle.GetWord("NiHao").ToString().Trim() + "，" + LanguageHandle.GetWord("HuanYingNiShiYong").ToString().Trim() + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];       
+            LB_SystemMsg.Text = LanguageHandle.GetWord("NiHao").ToString().Trim() + "，" + LanguageHandle.GetWord("HuanYingNiShiYong").ToString().Trim() + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
             //清空页面缓存，用于改变皮肤
             SetPageNoCache();
@@ -363,7 +363,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                                 }
 
                                 strMessageType = random.Next(1, 100).ToString();
-                                strMessage = LanguageHandle.GetWord("JiangZhiTongZhi").ToString().Trim() + funInforDialBox.InforName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+                                strMessage = LanguageHandle.GetWord("JiangZhiTongZhi").ToString().Trim() + funInforDialBox.HomeName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
 
                                 strURL = funInforDialBox.LinkAddress.Trim() + "&URLType=POP";
                                 strJavaScriptFuntion = "opAdvert('" + strMessageType + "'," + "'TTDisplayPOPMessage.aspx?URL=" + strURL + "&Msg=" + strMessage + "');";

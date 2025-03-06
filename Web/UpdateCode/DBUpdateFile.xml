@@ -10661,4 +10661,8 @@ CREATE INDEX idx_workflowstepdetail_covering ON public.t_workflowstepdetail (ste
     <ID>3706</ID>
     <SQLText>Update T_ProjectMember Set Status = 'Resign' Where Status = 'Depart';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3707</ID>
+    <SQLText>Delete From  public.t_funinfordialbox Where InforName = '待处理的缺陷';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
