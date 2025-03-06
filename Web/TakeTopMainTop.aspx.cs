@@ -343,7 +343,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
                         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "FunInforDialBoxList");
 
-                        NewInforNameList.AppendFormat("{0}@", funInforDialBox.InforName.ToString());
+                        NewInforNameList.AppendFormat("{0}@", funInforDialBox.HomeName.ToString());
                         NewNumList.AppendFormat("{0},", ds.Tables[0].Rows.Count.ToString());
                         NewIsSendMsgList.AppendFormat("{0},", funInforDialBox.IsSendMsg.ToString().Trim());
                         NewIsSendEmailList.AppendFormat("{0},", funInforDialBox.IsSendEmail.ToString().Trim());
