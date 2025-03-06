@@ -142,7 +142,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* ??????? */
+            align-items: center; /* 垂直居中 */
             color: white;
             font-size: 12px;
         }
@@ -151,7 +151,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* ?????????????????????λ */
+            transform: translate(-50%, -50%); /* 让图标相对于其自身中心点定位 */
         }
 
         .TextColor {
@@ -215,21 +215,21 @@
 
         }
 
-        //??????????????
+        //设置左边栏元素的值
         function setExtendValue(isFalse) {
 
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
 
         }
 
-        //?????????
+        //弹出消息框
         function clickPopMsgWindow() {
 
             top.frames[0].frames[2].parent.frames["rightTopFrame"].clickPopMsgWindow();
         }
 
 
-        //?????????
+        //设置屏幕状态
         var varScreenFull = false;
         function setScreenStatus() {
 
@@ -245,7 +245,7 @@
             }
         }
 
-        //???
+        //全屏
         function fullScreen() {
 
             var el = top.document.documentElement;
@@ -267,7 +267,7 @@
 
         }
 
-        //??????
+        //退出全屏
         function exitScreen() {
 
             var el = document;
@@ -302,6 +302,7 @@
 <body>
     <center>
         <form id="form1" runat="server">
+
             <asp:ScriptManager ID="ScriptManager1" runat="server" />
             <div id="divGuide" class="nav">
                 <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="1000" />

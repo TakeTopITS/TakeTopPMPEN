@@ -55,7 +55,7 @@ public partial class TTPersonalSpaceAnalysisChart : System.Web.UI.Page
 
             intRunNumber = 1;
 
-            //Timer1.Interval = 3600000;
+            Timer1.Interval = 3600000;
         }
     }
 

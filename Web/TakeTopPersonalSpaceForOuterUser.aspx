@@ -1,6 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpaceForOuterUser.aspx.cs" Inherits="TakeTopPersonalSpaceForOuterUser" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
+
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
