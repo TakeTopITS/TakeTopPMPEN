@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopMFChartViewJS.aspx.cs" Inherits="WFDesigner_TTTakeTopMFChartViewJS" %>
 
-<%@ OutputCache Duration="2678400" VaryByParam="*" %>
+<%--<%@ OutputCache Duration="2678400" VaryByParam="*" %>--%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

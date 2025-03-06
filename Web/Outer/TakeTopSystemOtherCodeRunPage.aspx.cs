@@ -56,7 +56,7 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         intRunMarkInDB = GetNormalOtherCodeRunMark();
 
         //设置这个值，可以决定是否执行下面的代码
-        int intRunMark = 1;
+        int intRunMark = 3;
 
         if (intRunMarkInDB < intRunMark)
         {
@@ -72,7 +72,11 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
 
 
             //更新系统分析图SqlCode代码
-            UpdateSystemAnalystChart("延误项目状态"); 
+            UpdateSystemAnalystChart("在执行项目状态");
+            UpdateSystemAnalystChart("项目年度回款状态");
+            UpdateSystemAnalystChart("延误项目状态");
+            UpdateSystemAnalystChart("年度项目工时状态");
+            UpdateSystemAnalystChart("在执行任务状态");
 
 
             //更改预警命令
@@ -159,25 +163,20 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         {
             strChartType = "HRuningProjectStatus";
 
-            strSqlCode = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
-                    FROM (
-                        SELECT count(*) AS XName  
-                        FROM T_Project 
-                        WHERE PMCode = '[TAKETOPUSERCODE]'  
-                          AND Status IN ('InProgress')
-                    ) AS A,
-                    (
-                        SELECT count(*) AS YNumber  
-                        FROM T_Project 
-                        WHERE PMCode = '[TAKETOPUSERCODE]'  
-                          AND Status IN ('InProgress') and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
-                    ) AS B,
-                    (
-                        SELECT count(*) AS ZNumber  
-                        FROM T_Project 
-                        WHERE PMCode = '[TAKETOPUSERCODE]'  and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
-                          AND Status IN ('Acceptance','CaseClosed')
-                    ) AS C;";
+            strSqlCode = @"WITH ProjectData AS (
+    SELECT 
+        Status,
+        EXTRACT(YEAR FROM begindate) AS BeginYear
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+      AND Status IN ('InProgress', 'Acceptance', 'CaseClosed')
+)
+SELECT 
+    COUNT(*) AS XName,
+    (SUM(CASE WHEN Status = 'InProgress' AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE) THEN 1 ELSE 0 END) || ',' ||
+     SUM(CASE WHEN Status IN ('Acceptance', 'CaseClosed') AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE) THEN 1 ELSE 0 END)) AS YNumber
+FROM ProjectData
+WHERE Status = 'InProgress';";
 
             systemAnalystChartManagement.ChartType = strChartType;
             systemAnalystChartManagement.ChartName = strChartName;
@@ -200,20 +199,37 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         {
             strChartType = "HAnnualPaymentStatus";
 
-            strSqlCode = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
-                        FROM (
-                        SELECT CoalEsce(Sum(receiveraccount),0) as XName FROM public.t_constractreceivables  where RelatedType = 'Project' and RelatedID 
-                            In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM receivertime) = EXTRACT(YEAR FROM CURRENT_DATE)
-                        ) AS A,
-                        (
-                        Select CoalEsce(Sum(RealCharge),0) As YNumber from v_procurrentyearrealcharge  where ProjectID 
-                            In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]') 
-	                        and EXTRACT(YEAR FROM effectdate) = EXTRACT(YEAR FROM CURRENT_DATE)
-                        ) AS B,
-                        (
-                        Select count(*) as ZNumber from V_ProRealCharge A,T_Project B where A.ProjectID 
-                            In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]') and A.RealCharge > B.Budget
-                        ) AS C;";
+            strSqlCode = @"WITH ProjectIDs AS (
+    SELECT ProjectID
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+),
+CurrentYear AS (
+    SELECT EXTRACT(YEAR FROM CURRENT_DATE) AS CurrentYear
+)
+SELECT 
+    A.XName AS XName,
+    (B.YNumber || ',' || C.ZNumber) AS YNumber
+FROM (
+    SELECT COALESCE(SUM(receiveraccount), 0) AS XName
+    FROM public.t_constractreceivables
+    WHERE RelatedType = 'Project'
+      AND RelatedID IN (SELECT ProjectID FROM ProjectIDs)
+      AND EXTRACT(YEAR FROM receivertime) = (SELECT CurrentYear FROM CurrentYear)
+) AS A,
+(
+    SELECT COALESCE(SUM(RealCharge), 0) AS YNumber
+    FROM v_procurrentyearrealcharge
+    WHERE ProjectID IN (SELECT ProjectID FROM ProjectIDs)
+      AND EXTRACT(YEAR FROM effectdate) = (SELECT CurrentYear FROM CurrentYear)
+) AS B,
+(
+    SELECT COUNT(*) AS ZNumber
+    FROM V_ProRealCharge A
+    JOIN T_Project B ON A.ProjectID = B.ProjectID
+    WHERE A.ProjectID IN (SELECT ProjectID FROM ProjectIDs)
+      AND A.RealCharge > B.Budget
+) AS C;";
 
             systemAnalystChartManagement.ChartType = strChartType;
             systemAnalystChartManagement.ChartName = strChartName;
@@ -236,30 +252,19 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         {
             strChartType = "HDelayProjectStatus";
 
-            strSqlCode = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
-                        FROM (
-                           SELECT count(*) AS XName  
-                        FROM T_Project 
-                        WHERE PMCode = '[TAKETOPUSERCODE]'  
-                          AND FinishPercent <100
-                          AND now() > (EndDate + interval '30 days')
-                        ) AS A,
-                        (
-   
-                           SELECT count(*) AS YNumber
-                        FROM T_Project 
-                        WHERE PMCode = '[TAKETOPUSERCODE]'  
-                          AND FinishPercent = 100
-                          AND now() > EndDate
-                        ) AS B,
-                        (
-
-                           SELECT count(*) AS ZNumber
-                        FROM T_Project 
-                        WHERE PMCode = '[TAKETOPUSERCODE]'  
-                          AND FinishPercent <100
-                           AND now() < (EndDate + interval '10 days') and now() > EndDate
-                        ) AS C;";
+            strSqlCode = @"WITH ProjectData AS (
+    SELECT
+        FinishPercent,
+        EndDate
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+)
+SELECT
+    (SELECT COUNT(*) FROM ProjectData WHERE FinishPercent < 100 AND now() > (EndDate + interval '30 days')) AS XName,
+    (
+        (SELECT COUNT(*) FROM ProjectData WHERE FinishPercent = 100 AND now() > EndDate) || ',' ||
+        (SELECT COUNT(*) FROM ProjectData WHERE FinishPercent < 100 AND now() < (EndDate + interval '10 days') AND now() > EndDate)
+    ) AS YNumber;";
 
             systemAnalystChartManagement.ChartType = strChartType;
             systemAnalystChartManagement.ChartName = strChartName;
@@ -282,21 +287,24 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         {
             strChartType = "HAnnualWorkHourStatus";
 
-            strSqlCode = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
-                        FROM (
-                           SELECT CoalEsce(Sum(ManHour),0) as XName FROM public.T_DailyWork where ProjectID
-                             In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
-                        ) AS A,
-                        (
-                           SELECT Count(Distinct UserCode) as YNumber FROM public.T_DailyWork where ProjectID
-                             In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
-     
-                        ) AS B,
-                        (
-                          SELECT CoalEsce(Sum(Confirmbonus),0) as ZNumber FROM public.T_DailyWork where ProjectID
-                             In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
-
-                        ) AS C;";
+            strSqlCode = @"WITH ProjectIDs AS (
+    SELECT ProjectID
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+),
+FilteredDailyWork AS (
+    SELECT
+        ManHour,
+        UserCode,
+        Confirmbonus
+    FROM public.T_DailyWork
+    WHERE ProjectID IN (SELECT ProjectID FROM ProjectIDs)
+      AND EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+)
+SELECT
+    COALESCE(SUM(ManHour), 0) AS XName,
+    (COUNT(DISTINCT UserCode) || ',' || COALESCE(SUM(Confirmbonus), 0)) AS YNumber
+FROM FilteredDailyWork;";
 
             systemAnalystChartManagement.ChartType = strChartType;
             systemAnalystChartManagement.ChartName = strChartName;
@@ -319,26 +327,24 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         {
             strChartType = "HRuningTaskStatus";
 
-            strSqlCode = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
-                        FROM (
-                            SELECT count(*) AS XName  
-                            FROM T_ProjectTask 
-                            WHERE makemancode = '[TAKETOPUSERCODE]'  
-                              AND finishpercent <100 and Status IN ('InProgress')
-                        ) AS A,
-                        (
-                            SELECT count(*) AS YNumber  
-                            FROM T_ProjectTask 
-                            WHERE makemancode = '[TAKETOPUSERCODE]'  
-                              AND finishpercent <100 and Status IN ('InProgress') and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
-                        ) AS B,
-                        (
-                            SELECT count(*) AS ZNumber  
-                            FROM T_ProjectTask 
-                            WHERE makemancode = '[TAKETOPUSERCODE]'  
-	                        and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
-                              AND finishpercent = 100 AND Status IN ('Completed','Closed')
-                        ) AS C;";
+            strSqlCode = @"WITH TaskData AS (
+    SELECT
+        Status,
+        finishpercent,
+        EXTRACT(YEAR FROM begindate) AS BeginYear
+    FROM T_ProjectTask
+    WHERE makemancode = '[TAKETOPUSERCODE]'
+      AND (
+          (finishpercent < 100 AND Status = 'InProgress') OR
+          (finishpercent = 100 AND Status IN ('Completed', 'Closed'))
+      )
+)
+SELECT
+    (SELECT COUNT(*) FROM TaskData WHERE finishpercent < 100 AND Status = 'InProgress') AS XName,
+    (
+        (SELECT COUNT(*) FROM TaskData WHERE finishpercent < 100 AND Status = 'InProgress' AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE)) || ',' ||
+        (SELECT COUNT(*) FROM TaskData WHERE finishpercent = 100 AND Status IN ('Completed', 'Closed') AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE))
+    ) AS YNumber;";
 
             systemAnalystChartManagement.ChartType = strChartType;
             systemAnalystChartManagement.ChartName = strChartName;
@@ -373,32 +379,158 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
 
             intID = systemAnalystChartManagement.ID;
 
-            if (strChartName == "延误项目状态") 
+            if (strChartName == "在执行项目状态") 
             {
-                systemAnalystChartManagement.SqlCode = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
-                            FROM (
-                               SELECT count(*) AS XName  
-                            FROM T_Project 
-                            WHERE PMCode = '[TAKETOPUSERCODE]'  
-                              AND FinishPercent <100
-                              AND now() > (EndDate + interval '30 days')
-                            ) AS A,
-                            (
-   
-                               SELECT count(*) AS YNumber
-                            FROM T_Project 
-                            WHERE PMCode = '[TAKETOPUSERCODE]'  
-                              AND FinishPercent = 100
-                              AND now() > EndDate
-                            ) AS B,
-                            (
+                systemAnalystChartManagement.SqlCode = @"WITH ProjectData AS (
+    SELECT 
+        Status,
+        EXTRACT(YEAR FROM begindate) AS BeginYear
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+      AND Status IN ('InProgress', 'Acceptance', 'CaseClosed')
+)
+SELECT 
+    COUNT(*) AS XName,
+    (SUM(CASE WHEN Status = 'InProgress' AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE) THEN 1 ELSE 0 END) || ',' ||
+     SUM(CASE WHEN Status IN ('Acceptance', 'CaseClosed') AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE) THEN 1 ELSE 0 END)) AS YNumber
+FROM ProjectData
+WHERE Status = 'InProgress';";
 
-                               SELECT count(*) AS ZNumber
-                            FROM T_Project 
-                            WHERE PMCode = '[TAKETOPUSERCODE]'  
-                              AND FinishPercent <100
-                               AND now() < (EndDate + interval '10 days') and now() > EndDate
-                            ) AS C;";
+
+                try
+                {
+                    systemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(systemAnalystChartManagement, intID);
+                }
+                catch (Exception err)
+                {
+                    LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+                }
+            }
+
+            if (strChartName == "延误项目状态")
+            {
+                systemAnalystChartManagement.SqlCode = @"WITH ProjectData AS (
+    SELECT
+        FinishPercent,
+        EndDate
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+)
+SELECT
+    (SELECT COUNT(*) FROM ProjectData WHERE FinishPercent < 100 AND now() > (EndDate + interval '30 days')) AS XName,
+    (
+        (SELECT COUNT(*) FROM ProjectData WHERE FinishPercent = 100 AND now() > EndDate) || ',' ||
+        (SELECT COUNT(*) FROM ProjectData WHERE FinishPercent < 100 AND now() < (EndDate + interval '10 days') AND now() > EndDate)
+    ) AS YNumber;";
+
+
+                try
+                {
+                    systemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(systemAnalystChartManagement, intID);
+                }
+                catch (Exception err)
+                {
+                    LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+                }
+            }
+
+            if (strChartName == "年度项目工时状态")
+            {
+                systemAnalystChartManagement.SqlCode = @"WITH ProjectIDs AS (
+    SELECT ProjectID
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+),
+FilteredDailyWork AS (
+    SELECT
+        ManHour,
+        UserCode,
+        Confirmbonus
+    FROM public.T_DailyWork
+    WHERE ProjectID IN (SELECT ProjectID FROM ProjectIDs)
+      AND EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+)
+SELECT
+    COALESCE(SUM(ManHour), 0) AS XName,
+    (COUNT(DISTINCT UserCode) || ',' || COALESCE(SUM(Confirmbonus), 0)) AS YNumber
+FROM FilteredDailyWork;";
+
+
+                try
+                {
+                    systemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(systemAnalystChartManagement, intID);
+                }
+                catch (Exception err)
+                {
+                    LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+                }
+            }
+
+            if (strChartName == "项目年度回款状态")
+            {
+                systemAnalystChartManagement.SqlCode = @"WITH ProjectIDs AS (
+    SELECT ProjectID
+    FROM T_Project
+    WHERE PMCode = '[TAKETOPUSERCODE]'
+),
+CurrentYear AS (
+    SELECT EXTRACT(YEAR FROM CURRENT_DATE) AS CurrentYear
+)
+SELECT 
+    A.XName AS XName,
+    (B.YNumber || ',' || C.ZNumber) AS YNumber
+FROM (
+    SELECT COALESCE(SUM(receiveraccount), 0) AS XName
+    FROM public.t_constractreceivables
+    WHERE RelatedType = 'Project'
+      AND RelatedID IN (SELECT ProjectID FROM ProjectIDs)
+      AND EXTRACT(YEAR FROM receivertime) = (SELECT CurrentYear FROM CurrentYear)
+) AS A,
+(
+    SELECT COALESCE(SUM(RealCharge), 0) AS YNumber
+    FROM v_procurrentyearrealcharge
+    WHERE ProjectID IN (SELECT ProjectID FROM ProjectIDs)
+      AND EXTRACT(YEAR FROM effectdate) = (SELECT CurrentYear FROM CurrentYear)
+) AS B,
+(
+    SELECT COUNT(*) AS ZNumber
+    FROM V_ProRealCharge A
+    JOIN T_Project B ON A.ProjectID = B.ProjectID
+    WHERE A.ProjectID IN (SELECT ProjectID FROM ProjectIDs)
+      AND A.RealCharge > B.Budget
+) AS C;";
+
+
+                try
+                {
+                    systemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(systemAnalystChartManagement, intID);
+                }
+                catch (Exception err)
+                {
+                    LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+                }
+            }
+
+            if (strChartName == "在执行任务状态")
+            {
+                systemAnalystChartManagement.SqlCode = @"WITH TaskData AS (
+    SELECT
+        Status,
+        finishpercent,
+        EXTRACT(YEAR FROM begindate) AS BeginYear
+    FROM T_ProjectTask
+    WHERE makemancode = '[TAKETOPUSERCODE]'
+      AND (
+          (finishpercent < 100 AND Status = 'InProgress') OR
+          (finishpercent = 100 AND Status IN ('Completed', 'Closed'))
+      )
+)
+SELECT
+    (SELECT COUNT(*) FROM TaskData WHERE finishpercent < 100 AND Status = 'InProgress') AS XName,
+    (
+        (SELECT COUNT(*) FROM TaskData WHERE finishpercent < 100 AND Status = 'InProgress' AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE)) || ',' ||
+        (SELECT COUNT(*) FROM TaskData WHERE finishpercent = 100 AND Status IN ('Completed', 'Closed') AND BeginYear = EXTRACT(YEAR FROM CURRENT_DATE))
+    ) AS YNumber;";
 
 
                 try
