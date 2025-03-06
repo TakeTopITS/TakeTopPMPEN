@@ -1,31 +1,7 @@
 ﻿using System;
-using System.Resources;
-using System.Drawing;
 using System.Data;
-using System.Configuration;
-using System.Collections;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 
-
-using System.Text;
-using System.IO;
-using System.Web.Mail;
-
-using System.Data.SqlClient;
-using System.Runtime.Serialization.Json;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-
-using ProjectMgt.Model;
-using ProjectMgt.DAL;
-using ProjectMgt.BLL;
-using NHibernate.Util;
-using jdk.nashorn.@internal.ir;
 using TakeTopWF;
 
 public partial class TTModuleFlowChartViewJS : System.Web.UI.Page

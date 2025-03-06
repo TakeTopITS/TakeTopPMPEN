@@ -1,5 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopAnalystChartSet.aspx.cs" Inherits="TTTakeTopAnalystChartSet" %>
 
+<%--<%@ OutputCache Duration="2678400" VaryByParam="*" %>--%>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">

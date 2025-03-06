@@ -1,34 +1,17 @@
 using System;
-using System.Resources;
-using System.Drawing;
-using System.Data;
-using System.Configuration;
 using System.Collections;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
-using System.IO;
-using System.Text;
-
-using System.Security.Cryptography;
-using System.Security.Permissions;
-using Npgsql;//using System.Data.SqlClient;
-
-using ProjectMgt.Model;
-using ProjectMgt.DAL;
-using ProjectMgt.BLL;
 
 
 public partial class TTPersonalSpaceAnalysisChart : System.Web.UI.Page
 {
     int intRunNumber;
+    string strUserCode;
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        strUserCode = Session["UserCode"].ToString();
+
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
@@ -72,7 +55,7 @@ public partial class TTPersonalSpaceAnalysisChart : System.Web.UI.Page
 
             intRunNumber = 1;
 
-            Timer1.Interval = 3600000;
+            //Timer1.Interval = 3600000;
         }
     }
 
@@ -83,10 +66,8 @@ public partial class TTPersonalSpaceAnalysisChart : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
         strLangCode = Session["LangCode"].ToString();
-      
+
 
         ShareClass.LoadSytemChart(strUserCode, "PersonalSpacePage", RP_ChartList);
     }
-
-
 }
