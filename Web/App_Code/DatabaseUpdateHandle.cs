@@ -249,8 +249,8 @@ public static class DatabaseUpdateHandle
                     WHEN {columnName} = '暂停' THEN 'Pause'
                     WHEN {columnName} = '终止' THEN 'Stop'
 
-                    WHEN {columnName} = '在职' THEN 'InPosition'
-                    WHEN {columnName} = '离职' THEN 'Depart'
+                    WHEN {columnName} = '在职' THEN 'Employed'
+                    WHEN {columnName} = '离职' THEN 'Resign'
 
                     WHEN {columnName} = '未婚' THEN 'Stop'
                     WHEN {columnName} = '已婚' THEN 'Married'

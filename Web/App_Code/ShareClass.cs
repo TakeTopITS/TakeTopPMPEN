@@ -15616,6 +15616,7 @@ public static class ShareClass
             strHQL = "Select UserCode,UserName From T_ProjectMember ";
         }
         strHQL += " Order By SortNumber ASC";
+
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_MemberLevel");
 
         dropDownList.DataSource = ds;

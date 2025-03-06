@@ -401,7 +401,7 @@
                                                     <asp:Label ID="LB_tbStatus" runat="server" Text="<%$ Resources:lang,Status %>"></asp:Label>: </td>
                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_Status" runat="server" DataTextField="HomeName" DataValueField="Status" />
-                                                    </asp:DropDownList>
+                                                
                                                     <asp:Label ID="LB_Status" runat="server" Visible="False"></asp:Label>
                                                 </td>
                                                 <td style="text-align: right;" class="formItemBgStyle">

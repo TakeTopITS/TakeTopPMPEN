@@ -2587,7 +2587,7 @@
                                             <asp:Label ID="Label59" runat="server" Text="<%$ Resources:lang,ZiChanDiaoHuanLeiXing%>"></asp:Label>
                                         </strong></td>
                                         <td><strong>
-                                            <asp:Label ID="Label6" runat="server" Text="PackagingMethod"></asp:Label>
+                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BaoZhuangFangShi%>"></asp:Label>
                                         </strong></td>
                                         <td><strong>
                                             <asp:Label ID="Label374" runat="server" Text="<%$ Resources:lang,ChuKuLeiXing%>"></asp:Label>

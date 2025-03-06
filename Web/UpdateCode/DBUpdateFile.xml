@@ -10653,4 +10653,12 @@ CREATE INDEX idx_workflowstepdetail_checkingtime_range ON public.t_workflowstepd
 -- 5. 覆盖索引（针对只查询索引列的查询）
 CREATE INDEX idx_workflowstepdetail_covering ON public.t_workflowstepdetail (stepid, wlid) INCLUDE (operatorcode, status, checkingtime);</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3705</ID>
+    <SQLText>Update T_ProjectMember Set Status = 'Employed' Where Status = 'InPosition';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3706</ID>
+    <SQLText>Update T_ProjectMember Set Status = 'Resign' Where Status = 'Depart';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
