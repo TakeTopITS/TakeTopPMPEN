@@ -47,4 +47,9 @@ public class Task
         set { trackDays = value; }
         get { return trackDays; }
     }
+
+    internal static void Run(Action value)
+    {
+        throw new NotImplementedException();
+    }
 }

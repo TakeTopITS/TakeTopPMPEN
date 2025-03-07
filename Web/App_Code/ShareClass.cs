@@ -15833,8 +15833,6 @@ public static class ShareClass
     }
 
 
-
-
     //直接删除指定目录下的所有文件
     public static void DeleteFileUnderDirectory(string strDirectory)
     {
@@ -16495,214 +16493,421 @@ public static class ShareClass
     //SQL取得数据集
     public static DataSet GetDataSetFromSql(string strHQL, string strTableName)
     {
-        NpgsqlConnection myConnection = new NpgsqlConnection(
-          ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
-        NpgsqlCommand myCommand = new NpgsqlCommand(strHQL, myConnection);
-        myCommand.CommandTimeout = 1000;
+        DataSet dataSet = new DataSet();
+        NpgsqlConnection npgsqlConnection = null;
+        NpgsqlTransaction transaction = null;
 
-        DataSet ds = new DataSet();
-
-        NpgsqlDataAdapter sda = new NpgsqlDataAdapter(strHQL, myConnection);
-        sda.SelectCommand.CommandTimeout = 1000;
-        sda.Fill(ds, strTableName);
-        myConnection.Close();
-
-        //---保存用户操作日志到日志表-------
-        InsertUserOperateLog(strHQL);
-
-        if (myCommand != null)
+        try
         {
-            myCommand.Dispose();
+            // 创建连接
+            npgsqlConnection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
+            npgsqlConnection.Open();
+
+            // 开始事务并设置隔离级别为 Read Committed（默认）
+            transaction = npgsqlConnection.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
+
+            // 创建命令并设置事务
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand(strHQL, npgsqlConnection, transaction);
+            npgsqlCommand.CommandTimeout = 1000;
+
+            // 创建数据适配器并设置命令
+            NpgsqlDataAdapter npgsqlDataAdapter = new NpgsqlDataAdapter(npgsqlCommand);
+            npgsqlDataAdapter.SelectCommand.CommandTimeout = 1000;
+
+            // 填充数据集
+            npgsqlDataAdapter.Fill(dataSet, strTableName);
+
+            // 提交事务
+            transaction.Commit();
+
+            // 记录操作日志
+            InsertUserOperateLog(strHQL);
+        }
+        catch (Exception ex)
+        {
+            // 回滚事务
+            transaction?.Rollback();
+            // 记录错误日志或抛出异常
+            throw new Exception("An error occurred while executing the query.", ex);
+        }
+        finally
+        {
+            // 关闭连接
+            npgsqlConnection?.Close();
+            // 释放资源
+            transaction?.Dispose();
+            npgsqlConnection?.Dispose();
         }
 
-        return ds;
+        return dataSet;
     }
 
     //SQL取得数据集,执行操作日志不存入日志表
     public static DataSet GetDataSetFromSqlNOOperateLog(string strHQL, string strTableName)
     {
-        NpgsqlConnection myConnection = new NpgsqlConnection(
-          ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
-        NpgsqlCommand myCommand = new NpgsqlCommand(strHQL, myConnection);
-        myCommand.CommandTimeout = 600;
+        DataSet dataSet = new DataSet();
+        NpgsqlConnection npgsqlConnection = null;
+        NpgsqlTransaction transaction = null;
 
-        DataSet ds = new DataSet();
-        NpgsqlDataAdapter sda = new NpgsqlDataAdapter(strHQL, myConnection);
-        sda.SelectCommand.CommandTimeout = 600;
-
-        sda.Fill(ds, strTableName);
-
-        myConnection.Close();
-
-        if (myCommand != null)
+        try
         {
-            myCommand.Dispose();
+            // 创建连接
+            npgsqlConnection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
+            npgsqlConnection.Open();
+
+            // 开始事务并设置隔离级别为 Read Committed（默认）
+            transaction = npgsqlConnection.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
+
+            // 创建命令并设置事务
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand(strHQL, npgsqlConnection, transaction);
+            npgsqlCommand.CommandTimeout = 1000;
+
+            // 创建数据适配器并设置命令
+            NpgsqlDataAdapter npgsqlDataAdapter = new NpgsqlDataAdapter(npgsqlCommand);
+            npgsqlDataAdapter.SelectCommand.CommandTimeout = 1000;
+
+            // 填充数据集
+            npgsqlDataAdapter.Fill(dataSet, strTableName);
+
+            // 提交事务
+            transaction.Commit();
+        }
+        catch (Exception ex)
+        {
+            // 回滚事务
+            transaction?.Rollback();
+            // 记录错误日志或抛出异常
+            throw new Exception("An error occurred while executing the query.", ex);
+        }
+        finally
+        {
+            // 关闭连接
+            npgsqlConnection?.Close();
+            // 释放资源
+            transaction?.Dispose();
+            npgsqlConnection?.Dispose();
         }
 
-        return ds;
+        return dataSet;
     }
 
     //运行SQL语句
     public static void RunSqlCommand(string strCmdText)
     {
-        NpgsqlConnection myConnection = new NpgsqlConnection(
-               ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
-
-        ///创建Command
-        NpgsqlCommand myCommand = new NpgsqlCommand(strCmdText, myConnection);
-        myCommand.CommandTimeout = 600;
-
-        ///打开链接
-        myConnection.Open();
-
-        myCommand.ExecuteNonQuery();
-
-        myConnection.Close();
-
-        //---保存用户操作日志到日志表-------
-        InsertUserOperateLog(strCmdText);
-
-        if (myCommand != null)
-        {
-            myCommand.Dispose();
-        }
-    }
-
-    //运行带返回参数的存储过程
-    public static void RunSQLProcedure(string pro, List<NpgsqlParameter> values, ref Hashtable htReturn)
-    {
-        NpgsqlConnection myConnection = new NpgsqlConnection(
-                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
-
-        NpgsqlCommand myCommand = new NpgsqlCommand(pro, myConnection);
-        myCommand.CommandTimeout = 600;
-        myCommand.CommandType = CommandType.Text;
-
-        foreach (NpgsqlParameter sp in values)
-        {
-            myCommand.Parameters.Add(sp);
-        }
-
-        ///打开链接
-        myConnection.Open();
-        myCommand.ExecuteNonQuery();
-
-        List<String> keys = new List<String>();
-        foreach (String key in htReturn.Keys)
-        {
-            keys.Add(key);
-        }
-        foreach (string key in keys)
-        {
-            htReturn[key] = myCommand.Parameters[key].Value.ToString();
-        }
-
-        myConnection.Close();
-
-        if (myCommand != null)
-        {
-            myCommand.Dispose();
-        }
-    }
-
-    //保存用户操作日志到日志表
-    public static void InsertUserOperateLog(string strHQL)
-    {
-        string strSQL;
-        string strUserCode, strUserName, strUserIP;
-
+        NpgsqlConnection myConnection = null;
+        NpgsqlTransaction transaction = null;
 
         try
         {
-            if (System.Configuration.ConfigurationManager.AppSettings["SaveOperateLog"] == "YES")
+            // 创建连接
+            myConnection = new NpgsqlConnection(
+                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
+            myConnection.Open();
+
+            // 开始事务
+            transaction = myConnection.BeginTransaction();
+
+            // 创建命令并关联事务
+            using (NpgsqlCommand myCommand = new NpgsqlCommand(strCmdText, myConnection, transaction))
             {
-                if (strHQL.IndexOf("BySystem") == -1)
-                {
-                    if (HttpContext.Current.Session["UserCode"] != null & HttpContext.Current.Session["UserName"] != null)
-                    {
-                        strUserCode = HttpContext.Current.Session["UserCode"].ToString().Trim();
-                        strUserName = HttpContext.Current.Session["UserName"].ToString();
-                        strUserIP = HttpContext.Current.Request.UserHostAddress.Trim();
+                myCommand.CommandTimeout = 600;
 
-                        strHQL = strHQL.Replace("'", "''");
+                // 执行 SQL 命令
+                myCommand.ExecuteNonQuery();
 
-                        new System.Threading.Thread(delegate ()
-                        {
-                            try
-                            {
-                                strSQL = "Insert into T_UserOperateLog(UserCode,UserName,UserIP,OperateContent,OperateTime) ";
-                                strSQL += " Values(" + "'" + strUserCode + "'" + "," + "'" + strUserName + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strHQL + "'" + ",now())";
-
-                                RunSqlCommandForNOOperateLog(strSQL);
-                            }
-                            catch
-                            {
-                            }
-                        }).Start();
-                    }
-                }
+                // 提交事务
+                transaction.Commit();
             }
+
+            // 保存用户操作日志到日志表（在事务提交后执行）
+            InsertUserOperateLog(strCmdText);
         }
-        catch
+        catch (Exception ex)
         {
+            // 回滚事务
+            transaction?.Rollback();
+            // 记录错误日志或抛出异常
+            throw new Exception("An error occurred while executing the SQL command.", ex);
         }
-    }
-
-
-
-    //运行带返回参数的存储过程
-    public static DataSet RunSQLProcedure(string pro, List<SqlParameter> values)
-    {
-        NpgsqlConnection myConnection = new NpgsqlConnection(
-            ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
-
-        NpgsqlCommand myCommand = new NpgsqlCommand(pro, myConnection);
-        myCommand.CommandTimeout = 600;
-        myCommand.CommandType = CommandType.Text;
-
-        foreach (SqlParameter sp in values)
+        finally
         {
-            myCommand.Parameters.Add(sp);
+            // 关闭连接
+            myConnection?.Close();
+            // 释放事务资源
+            transaction?.Dispose();
+            myConnection?.Dispose();
         }
-
-        NpgsqlDataAdapter sda = new NpgsqlDataAdapter();
-        sda.SelectCommand = myCommand;
-        sda.SelectCommand.CommandTimeout = 600;  //取消超时默认设置  默认是30s   增加一条设置
-        DataSet ds = new DataSet();
-        sda.Fill(ds);
-
-        myConnection.Close();
-
-        if (myCommand != null)
-        {
-            myCommand.Dispose();
-        }
-
-        return ds;
     }
 
     //运行SQL语句,执行操作日志不存入日志表
     public static void RunSqlCommandForNOOperateLog(string strCmdText)
     {
-        NpgsqlConnection myConnection = new NpgsqlConnection(
-               ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
+        NpgsqlConnection myConnection = null;
+        NpgsqlTransaction transaction = null;
 
-        ///创建Command
-        NpgsqlCommand myCommand = new NpgsqlCommand(strCmdText, myConnection);
-        myCommand.CommandTimeout = 600;
-
-        ///打开链接
-        myConnection.Open();
-
-        myCommand.ExecuteNonQuery();
-
-        myConnection.Close();
-
-        if (myCommand != null)
+        try
         {
-            myCommand.Dispose();
+            // 创建连接
+            myConnection = new NpgsqlConnection(
+                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
+            myConnection.Open();
+
+            // 开始事务
+            transaction = myConnection.BeginTransaction();
+
+            // 创建命令并关联事务
+            using (NpgsqlCommand myCommand = new NpgsqlCommand(strCmdText, myConnection, transaction))
+            {
+                myCommand.CommandTimeout = 600;
+
+                // 执行 SQL 命令
+                myCommand.ExecuteNonQuery();
+
+                // 提交事务
+                transaction.Commit();
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // 回滚事务
+            transaction?.Rollback();
+            // 记录错误日志或抛出异常
+            throw new Exception("An error occurred while executing the SQL command.", ex);
+        }
+        finally
+        {
+            // 关闭连接
+            myConnection?.Close();
+            // 释放事务资源
+            transaction?.Dispose();
+            myConnection?.Dispose();
         }
     }
+
+
+
+    //运行带返回参数的存储过程
+    public static void RunSQLProcedure(string pro, List<NpgsqlParameter> values, ref Hashtable htReturn)
+    {
+        NpgsqlConnection myConnection = null;
+        NpgsqlTransaction transaction = null;
+
+        try
+        {
+            // 创建连接
+            myConnection = new NpgsqlConnection(
+                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
+            myConnection.Open();
+
+            // 开始事务
+            transaction = myConnection.BeginTransaction();
+
+            // 创建命令并关联事务
+            using (NpgsqlCommand myCommand = new NpgsqlCommand(pro, myConnection, transaction))
+            {
+                myCommand.CommandTimeout = 600;
+                myCommand.CommandType = CommandType.StoredProcedure; // 设置为存储过程
+
+                // 添加参数
+                foreach (NpgsqlParameter sp in values)
+                {
+                    myCommand.Parameters.Add(sp);
+                }
+
+                // 执行存储过程
+                myCommand.ExecuteNonQuery();
+
+                // 提交事务
+                transaction.Commit();
+
+                // 获取输出参数的值
+                List<string> keys = new List<string>();
+                foreach (string key in htReturn.Keys)
+                {
+                    keys.Add(key);
+                }
+                foreach (string key in keys)
+                {
+                    if (myCommand.Parameters.Contains(key))
+                    {
+                        htReturn[key] = myCommand.Parameters[key].Value?.ToString();
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // 回滚事务
+            transaction?.Rollback();
+            // 记录错误日志或抛出异常
+            throw new Exception("An error occurred while executing the stored procedure.", ex);
+        }
+        finally
+        {
+            // 关闭连接
+            myConnection?.Close();
+            // 释放事务资源
+            transaction?.Dispose();
+            myConnection?.Dispose();
+        }
+    }
+
+
+    //运行带返回参数的存储过程
+    public static DataSet RunSQLProcedure(string pro, List<NpgsqlParameter> values)
+    {
+        DataSet ds = new DataSet();
+        NpgsqlConnection myConnection = null;
+        NpgsqlTransaction transaction = null;
+
+        try
+        {
+            // 创建连接
+            myConnection = new NpgsqlConnection(
+                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
+            myConnection.Open();
+
+            // 开始事务
+            transaction = myConnection.BeginTransaction();
+
+            // 创建命令并关联事务
+            using (NpgsqlCommand myCommand = new NpgsqlCommand(pro, myConnection, transaction))
+            {
+                myCommand.CommandTimeout = 600;
+                myCommand.CommandType = CommandType.StoredProcedure; // 设置为存储过程
+
+                // 添加参数
+                foreach (NpgsqlParameter sp in values)
+                {
+                    myCommand.Parameters.Add(sp);
+                }
+
+                // 创建数据适配器
+                using (NpgsqlDataAdapter sda = new NpgsqlDataAdapter(myCommand))
+                {
+                    sda.SelectCommand.CommandTimeout = 600; // 设置超时时间
+                    sda.Fill(ds); // 填充数据集
+                }
+
+                // 提交事务
+                transaction.Commit();
+            }
+        }
+        catch (Exception ex)
+        {
+            // 回滚事务
+            transaction?.Rollback();
+            // 记录错误日志或抛出异常
+            throw new Exception("An error occurred while executing the stored procedure.", ex);
+        }
+        finally
+        {
+            // 关闭连接
+            myConnection?.Close();
+            // 释放事务资源
+            transaction?.Dispose();
+            myConnection?.Dispose();
+        }
+
+        return ds;
+    }
+
+
+
+    //保存用户操作日志到日志表
+    public static void InsertUserOperateLog(string strHQL)
+    {
+        try
+        {
+            // 检查是否启用日志记录
+            if (System.Configuration.ConfigurationManager.AppSettings["SaveOperateLog"] != "YES")
+            {
+                return;
+            }
+
+            // 检查是否为系统操作
+            if (strHQL.IndexOf("BySystem") != -1)
+            {
+                return;
+            }
+
+            // 获取用户信息
+            if (HttpContext.Current.Session["UserCode"] == null || HttpContext.Current.Session["UserName"] == null)
+            {
+                return;
+            }
+
+            string strUserCode = HttpContext.Current.Session["UserCode"].ToString().Trim();
+            string strUserName = HttpContext.Current.Session["UserName"].ToString();
+            string strUserIP = HttpContext.Current.Request.UserHostAddress.Trim();
+
+            // 转义 SQL 中的单引号
+            string escapedHQL = strHQL.Replace("'", "''");
+
+            // 使用 Task 异步执行日志插入操作
+            Task.Run(() => InsertLogAsync(strUserCode, strUserName, strUserIP, escapedHQL));
+        }
+        catch (Exception ex)
+        {
+            // 记录日志插入失败的错误
+            LogError("Failed to insert user operate log.", ex);
+        }
+    }
+
+    private static void InsertLogAsync(string userCode, string userName, string userIP, string operateContent)
+    {
+        try
+        {
+            // 使用参数化查询避免 SQL 注入
+            string strSQL = @"
+            INSERT INTO T_UserOperateLog (UserCode, UserName, UserIP, OperateContent, OperateTime)
+            VALUES (@UserCode, @UserName, @UserIP, @OperateContent, NOW())";
+
+            // 创建参数列表
+            var parameters = new List<NpgsqlParameter>
+        {
+            new NpgsqlParameter("@UserCode", userCode),
+            new NpgsqlParameter("@UserName", userName),
+            new NpgsqlParameter("@UserIP", userIP),
+            new NpgsqlParameter("@OperateContent", operateContent)
+        };
+
+            // 执行 SQL 命令
+            RunSqlCommandForNOOperateLog(strSQL, parameters);
+        }
+        catch (Exception ex)
+        {
+            // 记录日志插入失败的错误
+            LogError("Failed to insert user operate log asynchronously.", ex);
+        }
+    }
+
+    private static void RunSqlCommandForNOOperateLog(string sql, List<NpgsqlParameter> parameters = null)
+    {
+        using (var myConnection = new NpgsqlConnection(
+            ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString))
+        {
+            myConnection.Open();
+
+            using (var myCommand = new NpgsqlCommand(sql, myConnection))
+            {
+                if (parameters != null)
+                {
+                    myCommand.Parameters.AddRange(parameters.ToArray());
+                }
+
+                myCommand.ExecuteNonQuery();
+            }
+        }
+    }
+
+    private static void LogError(string message, Exception ex)
+    {
+        // 这里可以实现日志记录逻辑，例如写入文件、数据库或日志系统
+        Console.Error.WriteLine($"[ERROR] {DateTime.Now}: {message} - {ex.Message}");
+    }
+
 
     //过滤非法字符，防止注入式攻攻击
     public static bool SqlFilter(string InText)
