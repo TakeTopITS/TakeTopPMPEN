@@ -309,6 +309,30 @@ public partial class DefaultMobileDemo : System.Web.UI.Page
                     Session["SystemVersionType"] = "SAAS";
                 }
 
+                //初始化个人空间模块
+                new System.Threading.Thread(delegate ()
+                {
+                    String strLangCode;
+
+                    strUserCode = Session["UserCode"].ToString();
+                    strUserType = Session["UserType"].ToString();
+                    strLangCode = Session["LangCode"].ToString();
+
+                    try
+                    {
+                        strHQL = string.Format(@"Insert Into t_promodulelevelforpageuser(modulename,usercode,usertype,visible,sortnumber) 
+               select modulename,'{0}','{1}',visible,sortnumber from T_ProModuleLevelForPage  Where ParentModule = 'PersonalSpaceSaaS'
+               and PageName <> 'TTPersonalSpaceNews.aspx' and LangCode = '{2}' and Visible ='YES' and IsDeleted = 'NO'
+               and modulename not in (select modulename from t_promodulelevelforpageuser where usercode = '{0}' and UserType = '{1}') 
+               Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
+                        ShareClass.RunSqlCommand(strHQL);
+                    }
+                    catch
+                    {
+                    }
+
+                }).Start();
+
                 try
                 {
                     if (Session["CssDirectoryChangeNumber"].ToString() != "2" & Session["CssDirectoryChangeNumber"].ToString() != "0")

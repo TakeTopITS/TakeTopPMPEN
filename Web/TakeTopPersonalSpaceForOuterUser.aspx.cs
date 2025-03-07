@@ -125,7 +125,6 @@ public partial class TakeTopPersonalSpaceForOuterUser : System.Web.UI.Page
     {
         await System.Threading.Tasks.Task.Delay(8000);
 
-
         string strUserCode;
         string strUserType;
         String strLangCode;
@@ -138,13 +137,6 @@ public partial class TakeTopPersonalSpaceForOuterUser : System.Web.UI.Page
         DataSet ds;
 
         BindNewsAndNoticeTypeData();
-
-        strHQL = string.Format(@"Insert Into t_promodulelevelforpageuser(modulename,usercode,usertype,visible,sortnumber) 
-               select modulename,'{0}','{1}',visible,sortnumber from T_ProModuleLevelForPage  Where ParentModule = 'ExternalPersonalSpace'
-               and PageName <> 'TTPersonalSpaceNews.aspx' and LangCode = '{2}' and Visible ='YES' and IsDeleted = 'NO'
-               and modulename not in (select modulename from t_promodulelevelforpageuser where usercode = '{0}' and UserType = '{1}') 
-               Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
-        ShareClass.RunSqlCommand(strHQL);
 
 
         strHQL = String.Format(@"Select distinct B.HomeModuleName,(rtrim(B.PageName)||'?UserCode={0}') as ModulePage,A.SortNumber  From T_ProModuleLevelForPageUser A,T_ProModuleLevelForPage B 

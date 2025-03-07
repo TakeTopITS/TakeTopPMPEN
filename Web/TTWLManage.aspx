@@ -1,5 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWLManage.aspx.cs" Inherits="TTWLManage" %>
 
+<%--<%@ OutputCache Duration="60" VaryByParam="none" %>--%>
+
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
