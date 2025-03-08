@@ -34,22 +34,22 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table style="width:100%;">
+            <table style="width: 100%;">
                 <tr>
-                    <td style="width:40%; text-align:left;">
-                        <asp:LinkButton ID="LinkButton_Up" runat="server" OnClick="LinkButton2_Click"> <<< ��һҳ </asp:LinkButton>
+                    <td style="width: 40%; text-align: left;">
+                        <asp:LinkButton ID="LinkButton_Up" runat="server" OnClick="LinkButton2_Click"> <<< 上一页 </asp:LinkButton>
                         &nbsp;&nbsp;&nbsp;&nbsp;   
-                        <asp:LinkButton ID="LinkButton_Down" runat="server" OnClick="LinkButton1_Click"> >>> ��һҳ </asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton_Down" runat="server" OnClick="LinkButton1_Click"> >>> 下一页 </asp:LinkButton>
                         &nbsp;&nbsp;&nbsp;&nbsp;   
                     </td>
-                    <td style="text-align:right;">
+                    <td style="text-align: right;">
                         <a href="#" onclick="preview1()">
                             <img src="ImagesSkin/print.gif" alt="��ӡ" border="0" /></a>
                     </td>
                 </tr>
             </table>
         </div>
-       
+
         <div>
             <!--startprint1-->
             <asp:Label ID="LB_ReportTable" runat="server" Text="this is table string"></asp:Label>
@@ -57,4 +57,5 @@
         </div>
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

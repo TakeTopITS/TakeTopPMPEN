@@ -301,7 +301,7 @@
         <form id="form1" runat="server">
             <asp:ScriptManager ID="ScriptManager1" runat="server" />
             <div id="divGuide" class="nav">
-                <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="1000" />
+                <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="6000" />
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="Timer1" />

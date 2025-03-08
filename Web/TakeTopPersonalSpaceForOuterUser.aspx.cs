@@ -115,7 +115,7 @@ public partial class TakeTopPersonalSpaceForOuterUser : System.Web.UI.Page
         {
             BindNewsAndNoticeTypeData();
 
-            Timer1.Interval = 3600000;
+            Timer1.Interval = 36000000;
 
             intRunNumber = 1;
         }

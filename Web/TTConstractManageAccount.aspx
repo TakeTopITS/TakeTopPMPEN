@@ -34,7 +34,7 @@
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
                                                     <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                        <asp:Label ID="Label1" runat="server" Text="��̨ͬ��"></asp:Label>
+                                                        <asp:Label ID="Label1" runat="server" Text="合同台帐"></asp:Label>
                                                     </td>
                                                     <td width="5">
                                                         <%--<img src="ImagesSkin/main_top_r.jpg" width="5" height="31" alt="" />--%>
@@ -54,29 +54,29 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                        <asp:Label ID="LB_Contractid" runat="server" Text="��ͬ���:"> </asp:Label></td>
+                                                        <asp:Label ID="LB_Contractid" runat="server" Text="合同编号:"> </asp:Label></td>
                                                         <td>
                                                             <asp:TextBox ID="TB_ConstractID" runat="server"></asp:TextBox>
                                                         </td>
                                                     <td>
-                                                        <asp:Label ID="Label2" runat="server" Text="��ͬ����:"> </asp:Label>
+                                                        <asp:Label ID="Label2" runat="server" Text="合同名称:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                         <asp:TextBox ID="TB_ConstractName" runat="server"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:Label ID="Label3" runat="server" Text="��ͬ����:"> </asp:Label>
+                                                        <asp:Label ID="Label3" runat="server" Text="合同类型:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                           <asp:DropDownList ID="DDL_Constractype" runat="server" DataTextField="type" DataValueField="type" Width="175px" AutoPostBack="true"></asp:DropDownList>
                                                     </td>
                                                     <td>
-                                                         <asp:Button ID="BTN_Query" runat="server" Text="��ѯ" OnClick="BTN_Query_Click" />
+                                                         <asp:Button ID="BTN_Query" runat="server" Text="查询" OnClick="BTN_Query_Click" />
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:Label ID="Label4" runat="server" Text="ѡ���ͬ:"> </asp:Label></td>
+                                                        <asp:Label ID="Label4" runat="server" Text="选择合同:"> </asp:Label></td>
                                                         <td>
                                                             <asp:TextBox ID="TB_ConstractCode" runat="server"></asp:TextBox>
                                                             <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server"
@@ -85,13 +85,13 @@
                                                             </cc1:ModalPopupExtender>
                                                         </td>
                                                     <td>
-                                                        <asp:Label ID="Label6" runat="server" Text="��ͬ״̬:"> </asp:Label>
+                                                        <asp:Label ID="Label6" runat="server" Text="合同状态:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                           <asp:DropDownList ID="DDL_ConstractStatus" runat="server" DataTextField="status" DataValueField="status" Width="175px" AutoPostBack="true"></asp:DropDownList>
                                                     </td>
                                                     <td>
-                                                        <asp:Label ID="Label7" runat="server" Text="ǩ������:"> </asp:Label>
+                                                        <asp:Label ID="Label7" runat="server" Text="签署日期:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                          <%-- <asp:TextBox ID="TB_signdate" runat="server" TextMode="Date" ></asp:TextBox>--%>
@@ -113,42 +113,42 @@
                 </div>
 
                 <div>
-                    <asp:GridView ID="gvContractData" runat="server" AutoGenerateColumns="False" EmptyDataText="��ʱû�в�ѯ�������Ϣ" AllowPaging="True" PageSize="15" CellPadding="2">
+                    <asp:GridView ID="gvContractData" runat="server" AutoGenerateColumns="False" EmptyDataText="暂时没有查询到相关信息" AllowPaging="True" PageSize="15" CellPadding="2">
                         <Columns>
-                            <asp:BoundField DataField="constractid" HeaderText="SerialNumber" />
-                            <asp:BoundField DataField="status" HeaderText="��ͬ״̬" />
-                            <asp:BoundField DataField="constractclass" HeaderText="��ͬ����" />
-                            <asp:BoundField DataField="type" HeaderText="ContractType" />
-                            <asp:BoundField DataField="constractcode" HeaderText="��˾��ͬ���" />
-                            <asp:BoundField DataField="partyconstractcode" HeaderText="��Լ����ͬ���" />
-                            <asp:BoundField DataField="constractname" HeaderText="ContractName" />
-                            <asp:BoundField DataField="ProjectBasis" HeaderText="��ͬ��������" />
-                            <asp:BoundField DataField="Amount" HeaderText="ContractAmount" />
-                            <asp:BoundField DataField="taxrate" HeaderText="˰��" />
-                            <asp:BoundField DataField="aftertaxtotalamount" HeaderText="��ͬ����˰���" />
-                            <asp:BoundField DataField="provisionalamount" HeaderText="���н�" />
-                            <asp:BoundField DataField="part1" HeaderText="��Լ��" />
-                            <asp:BoundField DataField="signdate" HeaderText="ǩ������" />
-                            <asp:BoundField DataField="signname" HeaderText="ǩ����" />
-                            <asp:BoundField DataField="startdate" HeaderText="Լ������ʱ��" />
-                            <asp:BoundField DataField="enddate" HeaderText="Լ������ʱ��" />
-                            <asp:BoundField DataField="astartdate" HeaderText="ʵ�ʿ���ʱ��" />
-                            <asp:BoundField DataField="aenddate" HeaderText="ʵ�ʿ���ʱ��" />
-                            <asp:BoundField DataField="duration" HeaderText="Լ������" />
-                            <asp:BoundField DataField="warranty" HeaderText="��ͬ�ʱ���" />
-                            <asp:BoundField DataField="prepaypercent" HeaderText="ContractAgreedAdvancePaymentRatio" />
-                            <asp:BoundField DataField="monthpaypercent" HeaderText="ContractAgreedMonthlyProgressPaymentRatio" />
-                            <asp:BoundField DataField="finishpaypercent" HeaderText="ContractAgreedCompletionPaymentRatio" />
-                            <asp:BoundField DataField="settlepaypercent" HeaderText="ContractAgreedSettlementPaymentRatio" />
-                            <asp:BoundField DataField="realprogress" HeaderText="ʵʱ������ȣ�%��" />
-                            <asp:BoundField DataField="realpvalue" HeaderText="ʵʱ��ֵ��Ԫ��" />
-                            <asp:BoundField DataField="sumrecieve" HeaderText="�ۼ��տԪ��" />
-                            <asp:BoundField DataField="sumpayment" HeaderText="�ۼƸ��Ԫ��" />
-                            <asp:BoundField DataField="settleaccount" HeaderText="�����Ԫ��" />
-                            <asp:BoundField DataField="departname" HeaderText="���ܲ���" />
-                            <asp:BoundField DataField="operator" HeaderText="������" />
-                            <asp:BoundField DataField="pmname" HeaderText="ProjectManager" />
-                            <asp:BoundField DataField="memo" HeaderText="Remark" />
+                            <asp:BoundField DataField="constractid" HeaderText="序号" />
+                            <asp:BoundField DataField="status" HeaderText="合同状态" />
+                            <asp:BoundField DataField="constractclass" HeaderText="合同大类" />
+                            <asp:BoundField DataField="type" HeaderText="合同类型" />
+                            <asp:BoundField DataField="constractcode" HeaderText="公司合同编号" />
+                            <asp:BoundField DataField="partyconstractcode" HeaderText="缔约方合同编号" />
+                            <asp:BoundField DataField="constractname" HeaderText="合同名称" />
+                            <asp:BoundField DataField="ProjectBasis" HeaderText="合同立项依据" />
+                            <asp:BoundField DataField="Amount" HeaderText="合同金额" />
+                            <asp:BoundField DataField="taxrate" HeaderText="税率" />
+                            <asp:BoundField DataField="aftertaxtotalamount" HeaderText="合同不含税金额" />
+                            <asp:BoundField DataField="provisionalamount" HeaderText="暂列金" />
+                            <asp:BoundField DataField="part1" HeaderText="缔约方" />
+                            <asp:BoundField DataField="signdate" HeaderText="签署日期" />
+                            <asp:BoundField DataField="signname" HeaderText="签署人" />
+                            <asp:BoundField DataField="startdate" HeaderText="约定开工时间" />
+                            <asp:BoundField DataField="enddate" HeaderText="约定竣工时间" />
+                            <asp:BoundField DataField="astartdate" HeaderText="实际开工时间" />
+                            <asp:BoundField DataField="aenddate" HeaderText="实际竣工时间" />
+                            <asp:BoundField DataField="duration" HeaderText="约定工期" />
+                            <asp:BoundField DataField="warranty" HeaderText="合同质保期" />
+                            <asp:BoundField DataField="prepaypercent" HeaderText="合同约定预付款比例" />
+                            <asp:BoundField DataField="monthpaypercent" HeaderText="合同约定月进度支付比例" />
+                            <asp:BoundField DataField="finishpaypercent" HeaderText="合同约定竣工支付比例" />
+                            <asp:BoundField DataField="settlepaypercent" HeaderText="合同约定结算支付比例" />
+                            <asp:BoundField DataField="realprogress" HeaderText="实时形象进度（%）" />
+                            <asp:BoundField DataField="realpvalue" HeaderText="实时产值（元）" />
+                            <asp:BoundField DataField="sumrecieve" HeaderText="累计收款（元）" />
+                            <asp:BoundField DataField="sumpayment" HeaderText="累计付款（元）" />
+                            <asp:BoundField DataField="settleaccount" HeaderText="结算金额（元）" />
+                            <asp:BoundField DataField="departname" HeaderText="主管部门" />
+                            <asp:BoundField DataField="operator" HeaderText="经办人" />
+                            <asp:BoundField DataField="pmname" HeaderText="项目经理" />
+                            <asp:BoundField DataField="memo" HeaderText="备注" />
                         </Columns>
                     </asp:GridView>
                 </div>

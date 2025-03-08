@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <T_Project>
+    <projectid>153</projectid>
+    <usercode>C7094               </usercode>
+    <username>员工C7094             </username>
+    <projectname>晶盛工业控制自动化研发项目                                                                                                                                                                                           </projectname>
+    <projectdetail>计划制定</projectdetail>
+    <acceptstandard>&lt;p&gt;泰顶汽车营销战略咨询项目 ? ? ? ? ? ? ? ? ? ? ? ?&lt;/p&gt;</acceptstandard>
+    <begindate>2008-05-19T00:00:00+09:00</begindate>
+    <enddate>2018-08-31T00:00:00+08:00</enddate>
+    <pmcode>C7094               </pmcode>
+    <pmname>员工C7094             </pmname>
+    <makedate>2023-07-11T10:27:07.723284+08:00</makedate>
+    <status>InProgress</status>
+    <parentid>1</parentid>
+    <budget>1000000.00</budget>
+    <finishpercent>84</finishpercent>
+    <manhour>200.00</manhour>
+    <mannumber>20.00</mannumber>
+    <projecttype>工程项目</projecttype>
+    <projectamount>560000000.00</projectamount>
+    <customerpmcode xml:space="preserve">          </customerpmcode>
+    <customerpmname>JASON</customerpmname>
+    <statusvalue>Passed</statusvalue>
+    <projectclass>TemplateProject                                                                                     </projectclass>
+    <projectcode>G20190001</projectcode>
+    <currencytype>瑞士法郎</currencytype>
+    <priority>COMMON    </priority>
+    <dianyadengji>1200</dianyadengji>
+    <jiakong>5</jiakong>
+    <dianlan>6</dianlan>
+    <wutan>7</wutan>
+    <danjia1>10.00</danjia1>
+    <danjia2>10.00</danjia2>
+    <projectaddress>TEST</projectaddress>
+    <customername>TEST</customername>
+    <yewulaiyuan>TEST</yewulaiyuan>
+    <customerprojectcode>TEST</customerprojectcode>
+    <pingpai>卡姿兰</pingpai>
+    <jiantu />
+    <productname>眼影</productname>
+    <secondprojectname>TESTTESTTEST</secondprojectname>
+    <confirmedbysupper>YES</confirmedbysupper>
+    <belongdepartcode>10145               </belongdepartcode>
+    <belongdepartname>工程技术中心</belongdepartname>
+    <longitude>116.404                                                                                             </longitude>
+    <latitude>39.915                                                                                              </latitude>
+    <attachfile xml:space="preserve">                                                                                                                                                                                                        </attachfile>
+    <projectdirection xml:space="preserve">                                                                                                    </projectdirection>
+    <budgetaccount xml:space="preserve">                                                                                                    </budgetaccount>
+    <projectlocation xml:space="preserve">                                                                                                                                                                                                                                                                                                            </projectlocation>
+    <fundingsource xml:space="preserve">                                                                                                                                                                                                        </fundingsource>
+    <pmduty xml:space="preserve">                                                                                                    </pmduty>
+    <pmphonenumber xml:space="preserve">                                                                                                    </pmphonenumber>
+    <projectoperator xml:space="preserve">                    </projectoperator>
+    <projectoperatorphonenumber xml:space="preserve">                    </projectoperatorphonenumber>
+    <approvedamount>0.00</approvedamount>
+    <pmcanupdateplan>YES       </pmcanupdateplan>
+    <lockstartupedplan>NO        </lockstartupedplan>
+    <allowpmchangestatus>NO</allowpmchangestatus>
+    <autorunwfaftermakeproject>NO        </autorunwfaftermakeproject>
+    <progressbydetailimpact>YES       </progressbydetailimpact>
+    <planprogressneedplanerconfirm>NO        </planprogressneedplanerconfirm>
+    <projectstartupneedsupperconfirm>NO        </projectstartupneedsupperconfirm>
+    <projectplanstartupstatus>NO</projectplanstartupstatus>
+    <planstartuprelatedworkflowtemplate xml:space="preserve">                                                  </planstartuprelatedworkflowtemplate>
+  </T_Project>
+</NewDataSet>

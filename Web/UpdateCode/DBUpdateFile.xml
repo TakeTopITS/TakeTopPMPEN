@@ -10665,4 +10665,8 @@ CREATE INDEX idx_workflowstepdetail_covering ON public.t_workflowstepdetail (ste
     <ID>3707</ID>
     <SQLText>Delete From  public.t_funinfordialbox Where InforName = '待处理的缺陷';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3708</ID>
+    <SQLText>Update public.t_systemanalystchartrelateduser Set SortNumber = 0  Where ChartName = '在执行项目状态';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

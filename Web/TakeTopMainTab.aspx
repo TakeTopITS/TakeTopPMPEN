@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTab.aspx.cs" Inherits="TakeTopMainTab" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTab.aspx.cs" Inherits="TakeTopMainTab" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,7 +18,7 @@
             min-width: 100%;
             margin: 0;
             margin-left: 0px;
-          /*  background-image: url(ImagesSkin/Backgroud.jpg);
+            /*  background-image: url(ImagesSkin/Backgroud.jpg);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -53,7 +53,7 @@
             var tabs = $('#tt').tabs("tabs");
             if (tabs.length == 0) {
 
-                //ÒÀ°æ±¾ÀàĞÍºÍÓÃ»§ÀàĞÍ´ò¿ªÏàÓ¦µÄ¸öÈË¿Õ¼äÒ³Ãæ
+                //ä¾ç‰ˆæœ¬ç±»å‹å’Œç”¨æˆ·ç±»å‹æ‰“å¼€ç›¸åº”çš„ä¸ªäººç©ºé—´é¡µé¢
                 var varSystemVerType = '<%=Session["SystemVersionType"].ToString() %>'.trim();
                 if (varSystemVerType == "SAAS") {
 
@@ -79,7 +79,7 @@
 
                     intSelectTabIndex = currentTabIndex - 1;
 
-                    //µÃµ½½¹µãÊ±£¬Ë¢ĞÂ´ËÒ³Ãæ
+                    //å¾—åˆ°ç„¦ç‚¹æ—¶ï¼Œåˆ·æ–°æ­¤é¡µé¢
                     if (tabs.length > 0) {
                         var iframe = $(currentTab).find("iframe").get(0);
 
@@ -108,17 +108,17 @@
             changeIFrameDivWidth();
         });
 
-        //Ìí¼ÓTABÀ¸
+        //æ·»åŠ TABæ 
         function addTab(title, url, type) {
 
             if (type == "new") {
                 intTabIndex = 1;
             }
 
-            ////µ¯³öĞÂÒ³Ãæ
+            ////å¼¹å‡ºæ–°é¡µé¢
             //if (url.indexOf('TakeTopPersonalSpace') == -1) {
 
-            //    //¹Ø±ÕËùÓĞ×Ó²ã
+            //    //å…³é—­æ‰€æœ‰å­å±‚
             //    CloseChildLayer();
 
             //    popShowByURL(url, 800, 600,window.location);
@@ -139,10 +139,10 @@
 
             if (type == "new") {
 
-                //¹Ø±ÕËùÓĞ²ã
+                //å…³é—­æ‰€æœ‰å±‚
                 layer.closeAll();
 
-                //ÏÈÉ¾³ıÆäËütab
+                //å…ˆåˆ é™¤å…¶å®ƒtab
                 $('.tabs-inner span').each(function (i, n) {
                     var t = $(n).text();
                     if (t != 'Home') {
@@ -150,7 +150,7 @@
                     }
                 });
 
-                //ÔÙ´´½¨
+                //å†åˆ›å»º
                 if ($('#tt').tabs('exists', title)) {
                     $('#tt').tabs('select', title);
                 } else {
@@ -179,15 +179,15 @@
             changeIFrameDivWidth();
         }
 
-        //¹ØÁªËùÓĞ×Ó²ã
+        //å…³è”æ‰€æœ‰å­å±‚
         function CloseChildLayer() {
             layer.closeAll('iframe');
         }
 
-        //É¾³ıµ±Ç°TAB
+        //åˆ é™¤å½“å‰TAB
         function CloseCurrentTabPage() {
 
-            //É¾³ıÖ¸¶¨tab
+            //åˆ é™¤æŒ‡å®štab
             $('.tabs-inner span').each(function (i, n) {
 
                 var t = $(n).text();
@@ -200,10 +200,10 @@
             });
         }
 
-        //É¾³ıµ±Ç°TAB
+        //åˆ é™¤å½“å‰TAB
         function CloseCurrentTabPageAndOpenSpecialPage() {
 
-            //É¾³ıÖ¸¶¨tab
+            //åˆ é™¤æŒ‡å®štab
             $('.tabs-inner span').each(function (i, n) {
 
                 var t = $(n).text();
@@ -217,7 +217,7 @@
 
             $('.tabs-selected').remove();
 
-            //ÒÀ°æ±¾ÀàĞÍºÍÓÃ»§ÀàĞÍ´ò¿ªÏàÓ¦µÄ¸öÈË¿Õ¼äÒ³Ãæ
+            //ä¾ç‰ˆæœ¬ç±»å‹å’Œç”¨æˆ·ç±»å‹æ‰“å¼€ç›¸åº”çš„ä¸ªäººç©ºé—´é¡µé¢
             var varSystemVerType = '<%=Session["SystemVersionType"].ToString() %>'.trim();
             if (varSystemVerType == "SAAS") {
                 addTab('PersonalSpace', 'TakeTopPersonalSpaceSAAS.aspx', 'new');
@@ -237,24 +237,24 @@
 
         function test_confirm() {
             $.confirm({
-                title: 'ÌáÊ¾£¡',
-                content: '½«È·ÈÏºÍÈ¡Ïû°´Å¥ÉèÖÃÎªÖĞÎÄÏÔÊ¾£¡',
+                title: 'æç¤ºï¼',
+                content: 'å°†ç¡®è®¤å’Œå–æ¶ˆæŒ‰é’®è®¾ç½®ä¸ºä¸­æ–‡æ˜¾ç¤ºï¼',
                 buttons: {
                     ok: {
-                        text: "È·¶¨",
+                        text: "ç¡®å®š",
                         btnClass: 'btn-primary',
                         keys: ['enter'],
                         action: function () {
-                            alert("Äãµã»÷ÁËÈ·ÈÏ°´Å¥£¡")
+                            alert("ä½ ç‚¹å‡»äº†ç¡®è®¤æŒ‰é’®ï¼")
 
                         }
                     },
                     cancel: {
-                        text: "Cancel",
+                        text: "å–æ¶ˆ",
                         btnClass: 'btn-primary',
                         keys: ['esc'],
                         action: function () {
-                            alert("Äãµã»÷ÁËÈ¡Ïû°´Å¥£¡")
+                            alert("ä½ ç‚¹å‡»äº†å–æ¶ˆæŒ‰é’®ï¼")
                         }
 
                     }
@@ -263,7 +263,7 @@
         }
 
 
-        //Ë¢ĞÂÒ³Ãæ
+        //åˆ·æ–°é¡µé¢
         function reloadPage() {
 
             location.reload();
@@ -277,7 +277,7 @@
 
 
 
-        //ÉèÖÃTabÄÚÈİµÄ¿í¶È£¬Ê¹Ö®×ÔÊÊÓ¦¿ò¼ÜµÄ¿í¶È
+        //è®¾ç½®Tabå†…å®¹çš„å®½åº¦ï¼Œä½¿ä¹‹è‡ªé€‚åº”æ¡†æ¶çš„å®½åº¦
         function changeIFrameDivWidth() {
 
             var cNodes = document.getElementsByClassName("panel-body panel-body-noheader panel-body-noborder");
@@ -311,6 +311,9 @@
 
     <%-- <div id="tt" class="easyui-tabs" onmousemove="changeIFrameDivWidth();">--%>
     <div id="tt" class="easyui-tabs">
+
+      <%--  <img src="Images/Processing.gif" alt="Loading,please wait..." />--%>
+
     </div>
 
 </body>
