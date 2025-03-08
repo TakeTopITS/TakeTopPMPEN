@@ -179,9 +179,9 @@ function aHandlerForSpecialPopWindow() {
             if (click.toLowerCase().indexOf("treeview") == -1 && url.toLowerCase().indexOf("lbt_delete") == -1) {
                 $(this).click(function () {
 
-                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,*') {
+                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,0,*') {
 
-                        /*  top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,*';*/
+                        /*  top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,0,*';*/
 
                         if (url != "https://www.taketopits.com" & url != "TTTakeTopIM.aspx" & url != "TTUnHandledCaseMain.aspx") {
 
@@ -204,9 +204,9 @@ function aHandlerForSpecialPopWindow() {
             $(this).click(function () {
                 if (title.toLowerCase().indexOf("icon_del") == -1 && url.toLowerCase().indexOf("javascript") == -1) {
 
-                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,*') {
+                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,0,*') {
 
-                        /*   top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,*';*/
+                        /*   top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,0,*';*/
 
                         if (url != "https://www.taketopits.com" & url != "TTTakeTopIM.aspx" & url != "TTUnHandledCaseMain.aspx") {
 
@@ -244,7 +244,7 @@ function aHandlerForPersonalSpaceIOSAddTab() {
             if (click.toLowerCase().indexOf("treeview") == -1 && url.toLowerCase().indexOf("lbt_delete") == -1) {
                 $(this).click(function () {
 
-                    if (top.frames[2].parent.document.getElementById("rightFrame").rows != '40,*') {
+                    if (top.frames[2].parent.document.getElementById("rightFrame").rows != '40,0,*') {
 
                         /*   top.frames[2].parent.document.getElementById("rightFrame").rows = '40,*';*/
 
@@ -269,9 +269,9 @@ function aHandlerForPersonalSpaceIOSAddTab() {
 
                 if (title.toLowerCase().indexOf("icon_del") == -1 && url.toLowerCase().indexOf("javascript") == -1) {
 
-                    if (top.frames[2].parent.document.getElementById("rightFrame").rows != '40,*') {
+                    if (top.frames[2].parent.document.getElementById("rightFrame").rows != '40,0,*') {
 
-                        /*  top.frames[2].parent.document.getElementById("rightFrame").rows = '40,*';*/
+                        /*  top.frames[2].parent.document.getElementById("rightFrame").rows = '40,0,*';*/
 
                         if (url != "https://www.taketopits.com" & url != "TTTakeTopIM.aspx" & url != "TTUnHandledCaseMain.aspx") {
 
@@ -309,9 +309,9 @@ function aHandlerForTab() {
             if (click.toLowerCase().indexOf("treeview") == -1 && url.toLowerCase().indexOf("lbt_delete") == -1 && url.toLowerCase().indexOf("javascript") == -1) {
                 $(this).click(function () {
 
-                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,*') {
+                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,0,*') {
 
-                        top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,*';
+                        top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,0,*';
 
                         if (url != "http://www.taketopits.com" & url != "TTTakeTopIM.aspx" & url != "TTUnHandledCaseMain.aspx") {
 
@@ -331,9 +331,9 @@ function aHandlerForTab() {
             $(this).click(function () {
                 if (title.toLowerCase().indexOf("icon_del") == -1 && url.toLowerCase().indexOf("javascript") == -1) {
 
-                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,*') {
+                    if (top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows != '40,0,*') {
 
-                        top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,*';
+                        top.frames[0].frames[2].parent.document.getElementById("rightFrame").rows = '40,0,*';
 
                         if (url != "http://www.taketopits.com" & url != "TTTakeTopIM.aspx" & url != "TTUnHandledCaseMain.aspx") {
 

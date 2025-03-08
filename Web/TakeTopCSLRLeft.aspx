@@ -150,11 +150,11 @@
 
             if (url.indexOf('TakeTopPersonalSpace') == -1) {
 
-                window.parent.document.getElementById("rightFrame").rows = '40,*';
+                window.parent.document.getElementById("rightFrame").rows = '40,0,*';
             }
             else {
 
-                window.parent.document.getElementById("rightFrame").rows = '0,*';
+                window.parent.document.getElementById("rightFrame").rows = '0,0,*';
             }
 
             parent.frames["rightTabFrame"].addTab(title, url, "new");
@@ -180,11 +180,11 @@
 
             if (url.indexOf('TakeTopPersonalSpace') == -1) {
 
-                window.parent.document.getElementById("rightFrame").rows = '40,*';
+                window.parent.document.getElementById("rightFrame").rows = '40,0,*';
             }
             else {
 
-                window.parent.document.getElementById("rightFrame").rows = '0,*';
+                window.parent.document.getElementById("rightFrame").rows = '0,0,*';
             }
 
             parent.frames["rightTabFrame"].addTab(title, url, "new");

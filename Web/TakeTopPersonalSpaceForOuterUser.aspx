@@ -164,7 +164,7 @@
     <script type="text/javascript" language="javascript">
         $(function () {
 
-            window.parent.parent.document.getElementById("rightFrame").rows = '0,*';
+            window.parent.parent.document.getElementById("rightFrame").rows = '0,0,*';
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 

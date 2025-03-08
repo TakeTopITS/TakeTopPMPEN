@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style type="text/css">
+        .loading {
+            position: fixed; /* 固定定位，覆盖整个页面 */
+            top: 50%; /* 上边距 50% */
+            left: 50%; /* 左边距 50% */
+            transform: translate(-50%, -50%); /* 通过偏移实现居中 */
+            z-index: 9999; /* 确保在最顶层 */
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            padding: 20px; /* 内边距 */
+            border-radius: 10px; /* 圆角 */
+            text-align: center; /* 内容居中 */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="loading" class="loading">
+        <img src="Images/Processing.gif" alt="Loading,please wait..." />
+    </div>
+
+</body>
+</html>

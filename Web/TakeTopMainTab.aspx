@@ -24,6 +24,18 @@
             background-repeat: no-repeat;
             background-attachment: fixed;*/
         }
+
+        .loading {
+            position: fixed; /* 固定定位，覆盖整个页面 */
+            top: 50%; /* 上边距 50% */
+            left: 50%; /* 左边距 50% */
+            transform: translate(-50%, -50%); /* 通过偏移实现居中 */
+            z-index: 9999; /* 确保在最顶层 */
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            padding: 20px; /* 内边距 */
+            border-radius: 10px; /* 圆角 */
+            text-align: center; /* 内容居中 */
+        }
     </style>
 
     <link id="mainCss" href="css/bluelightleftEx.css" rel="stylesheet" type="text/css" />
@@ -47,6 +59,11 @@
             else {
                 CloseWebPage();
             }
+
+            window.parent.document.getElementById("rightFrame").rows = '0,0,*';
+
+            //设置加载动画
+            DisplayLoadingIcon();
 
             var intSelectTabIndex = 0;
 
@@ -86,12 +103,12 @@
                         if (iframe.src.indexOf("TakeTopPersonalSpace") > 0) {
 
                             //alert(window.parent.document.getElementById("rightFrame").rows);
-                            //window.parent.document.getElementById("rightFrame").rows = '0,*';
+                            //window.parent.document.getElementById("rightFrame").rows = '0,0,*';
                         }
 
                         //if (iframe.src.indexOf("TakeTopPersonalSpace") != -1) {
 
-                        //    window.parent.document.getElementById("rightFrame").rows = '0,*';  
+                        //    window.parent.document.getElementById("rightFrame").rows = '0,0,*';  
                         //}
 
                     }
@@ -108,12 +125,57 @@
             changeIFrameDivWidth();
         });
 
+        //设置加载动画
+        function DisplayLoadingIcon() {
+
+            // 获取加载动画元素和目标容器
+            const loadingDiv = document.getElementById('loading');
+            const ttDiv = document.getElementById('tt');
+
+            // 定时器检查内容
+            const checkContent = setInterval(function () {
+                // 获取 ttDiv 中的所有 iframe
+                const iframes = ttDiv.getElementsByTagName('iframe');
+
+                let hasEmptyIframeBody = false; // 标记是否有 iframe 的 body 为空
+
+                // 遍历所有 iframe
+                for (let iframe of iframes) {
+                    try {
+                        // 检查 iframe 的 body 内容
+                        const iframeBody = iframe.contentDocument.body;
+                        if (iframeBody.innerHTML.trim() === '') {
+                            hasEmptyIframeBody = true; // 如果 iframe 的 body 为空，标记为 true
+                            break; // 只要有一个 iframe 的 body 为空，就跳出循环
+                        }
+                    } catch (error) {
+                        console.error('无法访问 iframe 内容:', error);
+                        // 如果无法访问 iframe 的内容（例如跨域限制），假设其内容为空
+                        hasEmptyIframeBody = true;
+                        break;
+                    }
+                }
+
+                // 根据检查结果更新加载动画
+                if (hasEmptyIframeBody) {
+                    loadingDiv.style.display = "block"; // 如果有 iframe 的 body 为空，显示加载动画
+                } else {
+                    loadingDiv.style.display = "none"; // 如果所有 iframe 的 body 都有内容，隐藏加载动画
+                    clearInterval(checkContent); // 停止定时器
+                }
+            }, 500); // 每 500 毫秒检查一次
+        }
+
         //添加TAB栏
         function addTab(title, url, type) {
 
             if (type == "new") {
                 intTabIndex = 1;
             }
+
+            document.getElementById('loading').style.display = "block";
+
+       
 
             ////弹出新页面
             //if (url.indexOf('TakeTopPersonalSpace') == -1) {
@@ -177,6 +239,8 @@
             intTabIndex++;
 
             changeIFrameDivWidth();
+
+            DisplayLoadingIcon();
         }
 
         //关联所有子层
@@ -232,7 +296,7 @@
                 }
             }
 
-            window.parent.document.getElementById("rightFrame").rows = '0,*';
+            window.parent.document.getElementById("rightFrame").rows = '0,0,*';
         }
 
         function test_confirm() {
@@ -309,11 +373,12 @@
 </head>
 <body style="margin: 0 0 0 0;">
 
+    <div id="loading" class="loading">
+        <img src="Images/Processing.gif" alt="Loading,please wait..." />
+    </div>
+
     <%-- <div id="tt" class="easyui-tabs" onmousemove="changeIFrameDivWidth();">--%>
     <div id="tt" class="easyui-tabs">
-
-      <%--  <img src="Images/Processing.gif" alt="Loading,please wait..." />--%>
-
     </div>
 
 </body>
@@ -328,5 +393,8 @@
 
     var oIconLink = document.getElementById('iconCss');
     oIconLink.href = 'css/' + cssDirectory + '/' + 'icon.css';
+
+
+
 </script>
 </html>
