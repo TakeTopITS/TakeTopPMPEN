@@ -28,8 +28,10 @@
         <frame src='Outer/TakeTopSystemOtherCodeRunPage.aspx?UserCode=<%=strUserCode%>&Flag=<%=Session["SkinFlag"].ToString()%>' id="leftUpdateFrameID" name="leftUpdateFrame" scrolling="no" noresize />
     </frameset>
 
-    <frameset rows="0,*" name="rightFrame" id="rightFrame" frameborder="no" border="0" framespacing="0">
+    <frameset rows="0,*,0" name="rightFrame" id="rightFrame" frameborder="no" border="0" framespacing="0">
+
         <frame src='TakeTopCSMainTop.aspx?UserCode=<%=strUserCode%>&Flag=<%=Session["SkinFlag"].ToString()%>' id="rightTopFrameID" name="rightTopFrame" frameborder="no" scrolling="no" marginwidth="0" marginheight="0" marginbottom="0" />
+        <frame src='TakeTopMainProcessing.html' id="middleTopFrameID" name="middleTopFrame" frameborder="no" scrolling="no" marginwidth="0" marginheight="0" marginbottom="0" />
         <frame src='TakeTopMainTab.aspx?UserCode=<%=strUserCode%>&Flag=<%=Session["SkinFlag"].ToString()%>' id="rightTabFrameID" name="rightTabFrame" scrolling="no" />
 
     </frameset>
