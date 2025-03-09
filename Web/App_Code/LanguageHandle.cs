@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -10,86 +11,93 @@ using System.Xml;
 
 public static class LanguageHandle
 {
-    private static XmlDocument xmlLanguageDoc;
+    private static ConcurrentDictionary<string, XmlDocument> languageDocCache = new ConcurrentDictionary<string, XmlDocument>();
 
     static LanguageHandle()
     {
-        // 可以在这里调用 CopyLanguageFilesToLanguageDirctory() 如果需要
-        CopyLanguageFilesToLanguageDirctory();
+        // 复制语言文件（如果需要）
+        CopyLanguageFilesToLanguageDirectory();
     }
 
-    //取得语言文件的关键词的值
+    // 取得语言文件的关键词的值
     public static string GetWord(string strKeyword)
     {
-        // 创建一个XmlDocument对象并加载XML文件  
-        XmlDocument doc = GetLanguageDoc();
+        // 获取当前会话的语言代码
+        string systemLangCode = HttpContext.Current.Session["LangCode"]?.ToString();
+
+        if (string.IsNullOrEmpty(systemLangCode))
+        {
+            systemLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+        }
+
+        // 获取对应的语言资源文件
+        XmlDocument doc = GetLanguageDoc(systemLangCode);
 
         // 使用XPath选择器定位到指定节点  
         XmlNode dataNode = doc.SelectSingleNode("/root/data[@name='" + strKeyword + "']/value");
         if (dataNode != null)
         {
             // 获取节点的值并返回给客户端  
-            string value = dataNode.InnerText;
-            return value;
+            return dataNode.InnerText;
         }
         else
         {
             // 节点不存在，则取默认语言文件的节点值
-            string resxFile = HttpContext.Current.Server.MapPath($"Language/lang.resx");
-            doc = new XmlDocument();
-            doc.Load(resxFile);
+            string defaultLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+            doc = GetLanguageDoc(defaultLangCode);
 
             // 使用XPath选择器定位到指定节点  
             dataNode = doc.SelectSingleNode("/root/data[@name='" + strKeyword + "']/value");
             if (dataNode != null)
             {
                 // 获取节点的值并返回给客户端  
-                string value = dataNode.InnerText;
-                return value;
+                return dataNode.InnerText;
             }
             else
             {
-                return "";
+                return ""; // 如果默认语言文件也没有找到，返回空字符串
             }
         }
     }
 
-    //取得语言文件到缓存，不用每次重复读文档
-    public static XmlDocument GetLanguageDoc()
+    // 从缓存中获取语言文件，如果缓存中没有则加载
+    public static XmlDocument GetLanguageDoc(string langCode)
     {
-        string resxFile = "";
-
-        string SystemLangCode = HttpContext.Current.Session["LangCode"].ToString();
-
-        if (SystemLangCode == "" || string.IsNullOrEmpty(SystemLangCode))
+        // 检查缓存中是否已经存在该语言的资源文件
+        XmlDocument cachedDoc;
+        if (languageDocCache.TryGetValue(langCode, out cachedDoc))
         {
-            SystemLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+            return cachedDoc; // 如果缓存中存在，直接返回
         }
 
-        if (SystemLangCode != null && SystemLangCode != "")
+        // 如果缓存中不存在，加载对应的语言文件
+        string resxFile = HttpContext.Current.Server.MapPath($"Language/lang.{langCode}.resx");
+
+        // 如果指定的语言文件不存在，则使用默认语言文件
+        if (!File.Exists(resxFile))
         {
-            resxFile = HttpContext.Current.Server.MapPath($"Language/lang.{SystemLangCode}.resx"); 
+            string defaultLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+            resxFile = HttpContext.Current.Server.MapPath($"Language/lang.{defaultLangCode}.resx");
+
+            // 如果默认语言文件也不存在，返回空的 XmlDocument
             if (!File.Exists(resxFile))
             {
-                resxFile = "Language/lang.resx";
+                return new XmlDocument();
             }
         }
-        else
-        {
-            resxFile = "Language/lang.resx";
-        }
-
-        //LogClass.WriteLogFile(resxFile);
 
         // 创建一个XmlDocument对象并加载XML文件  
         XmlDocument doc = new XmlDocument();
         doc.Load(resxFile);
 
+        // 将加载的资源文件缓存起来
+        languageDocCache[langCode] = doc;
+
         return doc;
     }
 
     // 复制语言文件（如果需要）
-    public static void CopyLanguageFilesToLanguageDirctory()
+    public static void CopyLanguageFilesToLanguageDirectory()
     {
         try
         {
