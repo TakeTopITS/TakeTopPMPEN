@@ -6,7 +6,7 @@ using System.IO;
 using System.Resources;
 using System.Web;
 
-public static class LangHandle
+public static class LanguageHandleBackup
 {
     // 使用 Lazy<T> 延迟初始化只读字典
     private static readonly Lazy<Dictionary<string, Dictionary<string, string>>> AllLanguageResources =
@@ -16,7 +16,7 @@ public static class LangHandle
     private static readonly string DefaultLangCode = ConfigurationManager.AppSettings["DefaultLang"];
 
     // 静态构造器（可选，如果需要初始化其他资源）
-    static LangHandle()
+    static LanguageHandleBackup()
     {
         // 可以在这里调用 CopyLanguageFilesToLanguageDirctory() 如果需要
         CopyLanguageFilesToLanguageDirctory();
