@@ -59,7 +59,7 @@
                                         </td>
 
                                         <td>
-                                            <asp:Label ID="Label37" runat="server" Text="ProjectManager"></asp:Label>£º
+                                            <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,XiangMuJingLi%>"></asp:Label>£º
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="TB_PMName" runat="server"></asp:TextBox>
@@ -68,7 +68,7 @@
 
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="StartTime"></asp:Label>£º
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>£º
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -76,7 +76,7 @@
                                             </ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label2" runat="server" Text="½áÊøÈÕÆÚ"></asp:Label>£º
+                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieShuRiQi%>"></asp:Label>£º
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>

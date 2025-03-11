@@ -56,8 +56,8 @@
             if (document.documentElement && document.documentElement.clientHeight)
                 winHeight = document.documentElement.clientHeight;
 
-            document.getElementById("_WFDesignerFrame").style.height = (winHeight + 600) + "px";
-            document.getElementById("_WFSetAreaFrame").style.height = (winHeight + 600) + "px";
+            document.getElementById("_WFDesignerFrame").style.height = (winHeight + 200) + "px";
+            document.getElementById("_WFSetAreaFrame").style.height = (winHeight + 200) + "px";
         }
 
         window.onresize = autoheight; //浏览器窗口发生变化时同时变化DIV高度

@@ -14,6 +14,12 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
         }
         return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
     }
+    function remove_div_node_order() {
+        var div_node_order = document.getElementById('div_node_order');
+        if (div_node_order) {
+            div_node_order.remove();
+        }
+    }
     var a = {};
     a.config = {
         editable: true,
@@ -240,8 +246,9 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
         }
     };
     a.rect = function (p, m) {
+        var id = a.util.nextId()
         var u = this,
-            g = "rect" + a.util.nextId(),
+            g = "rect" + id,
             E = b.extend(true, {},
                 a.config.rect, p),
             C = m,
@@ -250,7 +257,7 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
             n,
             f,
             x,
-            v, sub_text;
+            v, sub_text, node_order;
         t = C.rect(E.attr.x, E.attr.y, E.attr.width, E.attr.height, E.attr.r).hide().attr(E.attr);
         e = C.image(a.config.basePath + E.img.src, E.attr.x + E.img.width / 2, E.attr.y + (E.attr.height - E.img.height) / 2, E.img.width, E.img.height).hide();
         n = C.text(E.attr.x + E.img.width + (E.attr.width - E.img.width) / 2, E.attr.y + a.config.lineHeight / 2, E.name.text).hide().attr(E.name);
@@ -280,6 +287,101 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
                 error: function () {
 
                     console.error('获取子流程数量失败');
+                }
+
+            });
+
+            //获取流程节点步序
+            $.ajax({
+                type: "POST",
+                url: "../Handler/getWorkflowTemplateStepSortNumber.ashx",
+                data: "GUID=" + E.props.guid.value,
+                success: function (data) {
+                    let data_arr = data.split('>');
+                    var old_order = data_arr[0];
+                    var old_next_order = data_arr[1];
+                    node_order = C.text(0, 0, data).hide().attr({ 'font-weight': 'bold', 'cursor': 'pointer', 'fill': 'red' });
+                    B();
+                    node_order.click(function (event) {
+                        event.stopPropagation();
+                        remove_div_node_order();
+                        //创建div
+                        var div = document.createElement('div');
+                        div.id = 'div_node_order';
+                        div.style.display = "flex";
+                        div.style.position = 'absolute';
+                        div.style.fontSize = '10px';
+                        div.style.left = node_order.attrs.x - 35 + 'px'; // 根据矩形位置调整
+                        div.style.top = node_order.attrs.y - 3 + 'px';  // 根据矩形位置调整
+                        div.style.width = '40px'; // 根据矩形大小调整
+                        div.style.height = '10px'; // 根据矩形大小调整
+                        $(div).click(function (event) {
+                            event.stopPropagation();
+                        });
+
+                        document.body.appendChild(div); // 将div添加到body中（或更合适的位置）
+                        // 创建一个文本输入框
+                        var input = document.createElement('input');
+                        input.type = 'text';
+                        input.style.fontSize = '10px';
+                        input.style.width = '18px'; // 根据矩形大小调整
+                        input.style.height = '10px'; // 根据矩形大小调整
+                        input.style.border.radius = '10px';
+                        input.focus();
+                        div.appendChild(input);
+                        var span = document.createElement('span');
+                        span.innerHTML = ">";
+                        div.appendChild(span);
+
+                        input.value = old_order;//原始步序值
+                        input.onblur = function () {
+                            let new_order = input.value;
+                            if (new_order != '' && old_order != new_order) {
+                                old_order = new_order;
+                                node_order.attr("text", old_order + ">" + old_next_order);
+                                $.ajax({
+                                    type: "POST",
+                                    url: "../Handler/UpdateWorkflowStepSortNumber.ashx",
+                                    data: "GUID=" + E.props.guid.value + "&SortNumber=" + new_order + "&StepName=" + (E.props.text.value == '' ? E.props.text.label : E.props.text.value),
+                                    success: function (data) {
+                                    },
+                                    error: function () {
+                                        console.error('更新流程节点步序失败');
+                                    }
+                                });
+                            }
+                        }
+                        // 创建一个文本输入框
+                        var input_next = document.createElement('input');
+                        input_next.type = 'text';
+                        input_next.style.fontSize = '10px';
+                        input_next.style.width = '18px'; // 根据矩形大小调整
+                        input_next.style.height = '10px'; // 根据矩形大小调整
+                        input_next.style.border.radius = '10px';
+                        div.appendChild(input_next);
+
+                        input_next.value = old_next_order;//原始下一步步序值
+                        input_next.onblur = function () {
+                            let new_next_order = input_next.value;
+                            if (new_next_order != '' && old_next_order != new_next_order) {
+                                old_next_order = new_next_order;
+                                node_order.attr("text", old_order + ">" + old_next_order);
+                                $.ajax({
+                                    type: "POST",
+                                    url: "../Handler/UpdateWorkflowStepNextSortNumber.ashx",
+                                    data: "GUID=" + E.props.guid.value + "&SortNumber=" + new_next_order + "&StepName=" + (E.props.text.value == '' ? E.props.text.label : E.props.text.value),
+                                    success: function (data) {
+                                    },
+                                    error: function () {
+                                        console.error('更新流程节点下一步步序失败');
+                                    }
+                                });
+                            }
+                        }
+                    });
+                },
+                error: function () {
+                    console.error('获取流程节点步序失败');
                 }
 
             });
@@ -584,7 +686,14 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
                     if (sub_text) {
                         sub_text.attr({
                             x:
-                                F + G - 10,
+                                F + G - 25,
+                            y: r + o - 10
+                        }).show();
+                    }
+                    if (node_order) {
+                        node_order.attr({
+                            x:
+                                F + G - 24,
                             y: r + 8
                         }).show();
                     }
@@ -674,6 +783,13 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
             n.remove();
             e.remove();
             s.remove();
+            if (sub_text) {
+                sub_text.remove();
+            }
+            if (node_order) {
+                node_order.remove();
+            }
+            remove_div_node_order();
             for (var o in i) {
                 i[o].remove()
             }
@@ -1158,13 +1274,14 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
                 handle: "#TakeTopFlow_props_handle"
             }).resizable().css(a.config.props.attr).bind("click",
                 function () {
+                    remove_div_node_order();
                     return false
                 }),
             e = c.find("table"),
             g = f,
             i;
         var d = function (n, m, o, rect) {
-
+            remove_div_node_order();
             var srcUrl = getUrlParam('IdentifyString');
             if (srcUrl == null | srcUrl.length != 16) {
                 return;
@@ -1218,7 +1335,7 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
                     parent.window.document.getElementById("divImgWaiting").style.display = "none";
                 }
 
-               
+
             }
             else {
                 var url = a.config.blankUrl.replace("@IdentifyString", a.config.identifyString);
@@ -1276,7 +1393,7 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
                 parent.window.document.getElementById("nodeDesign").style.width = "60%";
             }
 
-            
+
 
 
         };
@@ -1340,6 +1457,7 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
         });
 
         b(document).click(function () {
+            remove_div_node_order();
             b(y).data("currNode", null);
             b(y).trigger("click", {
                 getId: function () {

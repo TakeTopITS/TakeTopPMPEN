@@ -43,7 +43,7 @@
                                 <td height="31" class="page_topbj">
                                     <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" style="padding-top: 4px;">
+                                            <td align="center" style="padding-top: 4px;">
 
                                                 <table>
                                                     <tr>

@@ -814,7 +814,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         else
         {
             workFlowTStep.SortNumber = 1;
-            workFlowTStep.StepName = LanguageHandle.GetWord("BuZhouHuoDongMingChen").ToString().Trim();
+            workFlowTStep.StepName = LanguageHandle.GetWord("BuZhouMingChen").ToString().Trim();
             workFlowTStep.NextSortNumber = 0;
 
             workFlowTStep.NextStepMust = "NO";

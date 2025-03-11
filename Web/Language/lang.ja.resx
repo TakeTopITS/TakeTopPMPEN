@@ -27561,10 +27561,6 @@
   <data name="ZZGSMCBCZQJC" xml:space="preserve">
     <value>警告：会社名が間違っているか存在しません。確認してください！</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DianJiDaKaiTaoHuangYeMian" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="SheJi" xml:space="preserve">
     <value>ナビゲーションページを開く</value>
   </data>
@@ -27786,9 +27782,6 @@
   </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>&lt;/a&gt;</value>
-  </data>
-  <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
-    <value />
   </data>
   <data name="ZhanDianShanChuChengGong" xml:space="preserve">
     <value>ログインアカウント：ADMIN パスワード：12345678</value>
@@ -28561,17 +28554,8 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>通常プロジェクト</value>
   </data>
-  <data name="brbrbWoDeYiJianbbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="BaQueXian" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;私の意見：&lt;/b&gt;</value>
-  </data>
-  <data name="ZhengZaiChuLiNiDeQueXian" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WanChengLeNiDeQueXian" xml:space="preserve">
     <value>不具合：</value>
@@ -28602,12 +28586,6 @@
   </data>
   <data name="ShangChuanLeWenJian" xml:space="preserve">
     <value>プロジェクトに変換しました。早めに受領してください！</value>
-  </data>
-  <data name="QingJiShiChaKan" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="WenJianChaYueTongZhi" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>検収基準：</value>
@@ -28648,107 +28626,53 @@
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>第{0}行、日付が空です</value>
   </data>
-  <data name="Di0HangGongYiKaBianHaoBuNengWe" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行、日付形式が正しくありません</value>
-  </data>
-  <data name="Di0HangShuLiangZhiNengShiXiaoS" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>第{0}行、購入先が空です</value>
   </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行、製品種類が空です</value>
-  </data>
-  <data name="Di0HangJinEZhiNengShiXiaoShubr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>第{0}行、製品種類が基本テーブルに存在しません</value>
   </data>
-  <data name="Di0HangCaiWuFeiYongZhiNengShiX" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
     <value>第{0}行、製品長コードが空です</value>
-  </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJuGo" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>第{0}行、工芸カード番号が空です</value>
   </data>
-  <data name="Di0HangKeHuMingChenBuNengWeiKo" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行、数量が空です</value>
-  </data>
-  <data name="Di0HangFeiYongZhiNengShiXiaoSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行、数量は小数のみ可能です</value>
   </data>
-  <data name="Di0HangZhiZaoChengBenBuNengWei" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>第{0}行、税込単価が空です</value>
-  </data>
-  <data name="Di0HangDunHaoBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>第{0}行、税込単価は小数のみ可能です</value>
   </data>
-  <data name="Di0HangChanPinBianHaoBuNengWei" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>第{0}行、金額が空です</value>
-  </data>
-  <data name="Di0HangChanPinMingChenBuNengWe" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>第{0}行、金額は小数のみ可能です</value>
   </data>
-  <data name="Di0HangChanPinLeiXing1ZaiChanP" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>第{0}行、財務費用が空です</value>
-  </data>
-  <data name="BianJia" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="BaoCuna" xml:space="preserve">
     <value>第{0}行、財務費用は小数のみ可能です</value>
   </data>
-  <data name="ZongShuLiangtdtr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="pMoYuanLiaoJiLupnbsptd" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>{0} 件のデータを正常にインポートしました</value>
   </data>
-  <data name="BenSeChengBentdtdclass" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>{0} 件のデータを正常にインポートしましたが、 {1} 件のデータが検証に失敗しました</value>
-  </data>
-  <data name="PeiFangJiatdtdclass" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
     <value>データをインポートできませんでした。 {0} 件のデータが検証に失敗しました</value>
@@ -28756,56 +28680,29 @@
   <data name="PeiLiao" xml:space="preserve">
     <value>第{0}行、顧客名が空です</value>
   </data>
-  <data name="Di0HangPeiLiaoBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>第{0}行、費用が空です</value>
-  </data>
-  <data name="QingShuRuBiaoChanLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>第{0}行、費用は小数のみ可能です</value>
   </data>
-  <data name="ZZDiShiFuZhiChengGong" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
     <value>第{0}行、タイプが空です</value>
-  </data>
-  <data name="ShouHouFuWu" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>第{0}行、製造コストが空です</value>
   </data>
-  <data name="WuLiaoLingYongBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
     <value>第{0}行、製造コストは小数のみ可能です</value>
-  </data>
-  <data name="WuLiaoRuKuBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>第{0}行、トン当たり消費量が空です</value>
   </data>
-  <data name="PiHao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>第{0}行、トン当たり消費量は小数のみ可能です</value>
   </data>
-  <data name="ShiXiaoRiJi" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>第{0}行、製品番号が空です</value>
-  </data>
-  <data name="CaiZhiChanHao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>製品名</value>
@@ -28813,20 +28710,11 @@
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>第{0}行、製品名が空です</value>
   </data>
-  <data name="WuLiaoWeiHuBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
     <value>第{0}行、製品タイプが空です</value>
   </data>
-  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
     <value>第{0}行、製品タイプ:{1}が製品タイプテーブルに存在しません</value>
-  </data>
-  <data name="WuLiaoShengChanChan" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>&gt;製品記録なし&lt;/td&gt;</value>
@@ -28864,14 +28752,8 @@
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
     <value>第{0}行、賠償材料が空です</value>
   </data>
-  <data name="WuLiaoChuHuo" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
     <value>第{0}行、賠償材料は小数のみ可能です</value>
-  </data>
-  <data name="WuLiaoHuiZongBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WuLiaoDiaoBoBaoBiaoxls" xml:space="preserve">
     <value>フォームタイプを入力してください！</value>
@@ -29776,9 +29658,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>エラーメッセージ：Excelファイルのみ選択できます！</value>
   </data>
-  <data name="CuoWuDiShi" xml:space="preserve">
-    <value>エラーメッセージ: [</value>
-  </data>
   <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
     <value>] データなし、次のタイプをインポートします。\n</value>
   </data>
@@ -29970,9 +29849,6 @@
   </data>
   <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
     <value>メッセージ：目標コストの変更に成功しました！</value>
-  </data>
-  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
-    <value>エラーメッセージ：月リストの取得操作に異常があります：</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
     <value>メッセージ：実際作業量を正しく入力してください！</value>
@@ -30229,17 +30105,11 @@
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>第{0}行、学生コードは空にできません</value>
   </data>
-  <data name="ChengYuanLieBiao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>学生名</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
     <value>第{0}行、学生名は空にできません</value>
-  </data>
-  <data name="ZZShanChuLanguageHandleGetWord" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>就学中かどうか</value>
@@ -30658,9 +30528,6 @@
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>未収金額</value>
   </data>
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>対応する訪問記録が見つかりません</value>
   </data>
@@ -30930,5 +30797,8 @@
   </data>
   <data name="String25" xml:space="preserve">
     <value>周</value>
+  </data>
+  <data name="LianXian" xml:space="preserve">
+    <value>接続</value>
   </data>
 </root>

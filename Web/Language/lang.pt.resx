@@ -27789,10 +27789,6 @@
   <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
     <value>&lt;/a&gt;</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ZhanDianShanChuChengGong" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ShanChuShiBaiQingJianCha" xml:space="preserve">
     <value>Conta de login: ADMIN Senha: 12345678</value>
   </data>
@@ -28288,12 +28284,6 @@
   <data name="ShuRuXiangMuXiangGuanFeiYong" xml:space="preserve">
     <value>Notificação de ordem de correção de problemas</value>
   </data>
-  <data name="ZZDiShiWenDangLeiXingBuNengWei" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="BuChongXieYi" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>Conteúdo:</value>
   </data>
@@ -28561,17 +28551,8 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>Projeto regular</value>
   </data>
-  <data name="brbrbWoDeYiJianbbr" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BaQueXian" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;Minha opinião:&lt;/b&gt;</value>
-  </data>
-  <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
-    <value />
   </data>
   <data name="WanChengLeNiDeQueXian" xml:space="preserve">
     <value>Transformou o defeito:</value>
@@ -28602,12 +28583,6 @@
   </data>
   <data name="ShangChuanLeWenJian" xml:space="preserve">
     <value>Transformou em projeto para você, por favor, processe imediatamente!</value>
-  </data>
-  <data name="QingJiShiChaKan" xml:space="preserve">
-    <value />
-  </data>
-  <data name="WenJianChaYueTongZhi" xml:space="preserve">
-    <value />
   </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>Critérios de aceitação:</value>
@@ -28648,107 +28623,53 @@
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>Linha {0}, a data não pode estar vazia</value>
   </data>
-  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
-    <value />
-  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, o formato da data está incorreto</value>
-  </data>
-  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
-    <value />
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Linha {0}, a unidade de compra não pode estar vazia</value>
   </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
-    <value />
-  </data>
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, o tipo de produto não pode estar vazio</value>
-  </data>
-  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
-    <value />
   </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Linha {0}, o tipo de produto não existe na tabela de tipos básicos</value>
   </data>
-  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
-    <value />
-  </data>
   <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
     <value>Linha {0}, o código longo do produto não pode estar vazio</value>
-  </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
-    <value />
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Linha {0}, o número do cartão de processo não pode estar vazio</value>
   </data>
-  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
-    <value />
-  </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, a quantidade não pode estar vazia</value>
-  </data>
-  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
-    <value />
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, a quantidade só pode ser um número decimal</value>
   </data>
-  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
-    <value />
-  </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>Linha {0}, o preço unitário com impostos não pode estar vazio</value>
-  </data>
-  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
-    <value />
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Linha {0}, o preço unitário com impostos só pode ser um número decimal</value>
   </data>
-  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
-    <value />
-  </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Linha {0}, o valor não pode estar vazio</value>
-  </data>
-  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
-    <value />
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>Linha {0}, o valor só pode ser um número decimal</value>
   </data>
-  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
-    <value />
-  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>Linha {0}, os custos financeiros não podem estar vazios</value>
-  </data>
-  <data name="BianJia" xml:space="preserve">
-    <value />
   </data>
   <data name="BaoCuna" xml:space="preserve">
     <value>Linha {0}, os custos financeiros só podem ser um número decimal</value>
   </data>
-  <data name="ZongShuLiangtdtr" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>Importação bem-sucedida de {0} registros</value>
   </data>
-  <data name="BenSeChengBentdtdclass" xml:space="preserve">
-    <value />
-  </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>Importação bem-sucedida de {0} registros, total de {1} registros com falha na validação</value>
-  </data>
-  <data name="PeiFangJiatdtdclass" xml:space="preserve">
-    <value />
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
     <value>Nenhum dado importado, total de {0} registros com falha na validação</value>
@@ -28756,56 +28677,29 @@
   <data name="PeiLiao" xml:space="preserve">
     <value>Linha {0}, o nome do cliente não pode estar vazio</value>
   </data>
-  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
-    <value />
-  </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Linha {0}, o custo não pode estar vazio</value>
-  </data>
-  <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
-    <value />
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>Linha {0}, o custo só pode ser um número decimal</value>
   </data>
-  <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
     <value>Linha {0}, o tipo não pode estar vazio</value>
-  </data>
-  <data name="ShouHouFuWu" xml:space="preserve">
-    <value />
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>Linha {0}, o custo de fabricação não pode estar vazio</value>
   </data>
-  <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
-    <value />
-  </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
     <value>Linha {0}, o custo de fabricação só pode ser um número decimal</value>
-  </data>
-  <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
-    <value />
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Linha {0}, o consumo por tonelada não pode estar vazio</value>
   </data>
-  <data name="PiHao" xml:space="preserve">
-    <value />
-  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Linha {0}, o consumo por tonelada só pode ser um número decimal</value>
   </data>
-  <data name="ShiXiaoRiJi" xml:space="preserve">
-    <value />
-  </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Linha {0}, o número do produto não pode estar vazio</value>
-  </data>
-  <data name="CaiZhiChanHao" xml:space="preserve">
-    <value />
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>Nome do produto</value>
@@ -28813,20 +28707,11 @@
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Linha {0}, o nome do produto não pode estar vazio</value>
   </data>
-  <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
     <value>Linha {0}, o tipo de produto não pode estar vazio</value>
   </data>
-  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
     <value>Linha {0}, o tipo de produto:{1} não existe na tabela de tipos de produto</value>
-  </data>
-  <data name="WuLiaoShengChanChan" xml:space="preserve">
-    <value />
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>Nenhum registro de produto&lt;/td&gt;</value>
@@ -28840,14 +28725,8 @@
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>Quantidade total&lt;/td&gt;&lt;/tr&gt;</value>
   </data>
-  <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
-    <value />
-  </data>
   <data name="WuLiaoXiaoShouChan" xml:space="preserve">
     <value>&lt;p&gt;Nenhum registro de matéria-prima&lt;/p&gt;&amp;nbsp;&lt;/td&gt; Quantidade total&lt;/td&gt;&lt;td class=\ Custo natural&lt;/td&gt;&lt;td class=\ Custo de material colorido&lt;/td&gt;&lt;td class=\ Preço da fórmula&lt;/td&gt;&lt;td class=\</value>
-  </data>
-  <data name="WuLiaoBaoJiaChan" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
     <value>Arquivo de produtos de matéria-prima</value>
@@ -28858,14 +28737,8 @@
   <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
     <value>Linha {0}, o material de perda não pode estar vazio</value>
   </data>
-  <data name="ZZShanChuShiBaiZhiNengShanChuD" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
     <value>Linha {0}, o material de perda só pode ser um número decimal</value>
-  </data>
-  <data name="WuLiaoChuHuo" xml:space="preserve">
-    <value />
   </data>
   <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
     <value>Por favor, insira o tipo de formulário!</value>
@@ -29776,9 +29649,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>Erro: [</value>
   </data>
-  <data name="CuoWuDiShi" xml:space="preserve">
-    <value>] Sem dados, importando o próximo tipo.\n</value>
-  </data>
   <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
     <value>Importação de dados de referência de desempenho de custos do arquivo Excel, total de {0:D } registros, {1:D } bem-sucedidos, classificação profissional: {2:s }\n</value>
   </data>
@@ -29884,9 +29754,6 @@
   <data name="XiaoXiDiShiChengBenFeiXiangZiL" xml:space="preserve">
     <value>Mensagens de aviso:</value>
   </data>
-  <data name="XiaoXiDiShiShenQingJinEShuRuYo" xml:space="preserve">
-    <value />
-  </data>
   <data name="XiaoXiDiShiJinEBiaoZhunShuRuYo" xml:space="preserve">
     <value>[Subcategoria de custos] não possui itens selecionados. Por favor, insira os subitens desta categoria antes de tentar novamente!</value>
   </data>
@@ -29970,9 +29837,6 @@
   </data>
   <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
     <value>Este item de custo já possui um custo-alvo inserido. Por favor, modifique diretamente!</value>
-  </data>
-  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
-    <value>Custo-alvo adicionado com sucesso!</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
     <value>Custo-alvo modificado com sucesso!</value>
@@ -30079,9 +29943,6 @@
   <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
     <value>Falha ao obter informações de permissão do usuário!</value>
   </data>
-  <data name="trtdMoShuJutdtr" xml:space="preserve">
-    <value />
-  </data>
   <data name="XueShengShu" xml:space="preserve">
     <value>&lt;tr&gt;&lt;td&gt;Nenhum dado de nome do módulo&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Nenhum dado de tipo&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Nenhum dado&lt;/td&gt;&lt;/tr&gt; **Número de estudantes:** **Lista de todos os projetos** **Projeto modelo** - O conteúdo foi realmente excluído. Por favor, fique atento. Esta é uma notificação! **Lista de projetos de:** **Lista de todos os projetos dos meus membros:** - Ocultação bem-sucedida! - Senha incorreta, ocultação falhou. Por favor, verifique! - Ocorreu um erro! &lt;B&gt;Parcial&lt;/B&gt; - O projeto foi alterado: **Notificação de alteração do plano do projeto** **Custos de aquisição de ativos** - Atribuição bem-sucedida! **Log de login do usuário_** **Número de extensão RTX** &lt;b&gt;Módulo de página&lt;b&gt; - Aviso: Custos de produção e taxas de agência devem ser do tipo numérico. Por favor, verifique! **Licitação** - Erro: Oferta de licitação e preço de controle devem ser números. Por favor, verifique! - Falha: Esta licitação já foi concluída e não pode ser excluída. Por favor, verifique! - Solicitação de licitação gerada com sucesso! - Aviso: Falha ao gerar a solicitação de licitação. Por favor, verifique! **Operações especiais_** **Equipamentos especiais_** **Certificação de soldagem_** - Aviso: Por favor, selecione o departamento antes de consultar! - Erro: O número de funcionários do departamento e subdepartamentos é muito grande, memória insuficiente. Por favor, verifique! - Aviso: As datas de início e término devem ser do mesmo mês! **Período de estatística:** {0} a {1} **Número de funcionário 1** **Número de funcionário 2** **Fonte Song** **Número de funcionário** **Dias de presença** **Dias de presença esperados** **Número de atrasos** **Duração do atraso (minutos)** **Número de atrasos por ausência** **Número de saídas antecipadas** **Duração da saída antecipada (minutos)** **Dias de ausência** **Dias de turno noturno** **Código do estudante** - Linha {0}: O código do estudante não pode estar vazio.&lt;br/&gt; **Nome do estudante** - Linha {0}: O nome do estudante não pode estar vazio.&lt;br/&gt; **Frequenta a escola?** **Lista de membros:** - Aviso: O " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + " - Em lote "+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+" - Excluir " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + " - Modificar " + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + " - Sair " + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + " - Re " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Cancelar " + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + " - Geração de plano de licitação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Conta " + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + " - Geração de plano de solicitação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Geração de solicitação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Anexo " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + " - Projeto certificado "+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+" - Projeto de treinamento "+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+" - Empresa "+LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim()+" - Aviso: Fatores ambientais são obrigatórios, operação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Aviso: Fatores ambientais já existem, operação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Aviso: Este fator ambiental está expirado ou anormal, operação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Upload "+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+" - Falha ao salvar: Você não é o criador deste modelo de processo e não pode salvar estas imagens de processo! - Cancelar " + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + " - Arquivar " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Nó " + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + " - Envio de informações " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Conversão de item " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Salvar " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " - Aviso: Criação do diretório de backup "+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+" - Aviso: Este nó de etapa existe no fluxograma e não pode ser excluído. Por favor, verifique! - Exclusão bem-sucedida! - Falha na exclusão. Por favor, verifique! - Aviso: Este processo não foi criado por você, e você não é um superadministrador, portanto, não tem permissão para excluir. Por favor, verifique! - Marcação em lote " + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + " - Número de inspeção " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + " - Contrato " + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + " - Inspeção de materiais do contrato " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + " - Comparação "+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+" &gt;Diretório de documentos de licitação&lt;/td&gt; &lt;td&gt;Documentos de licitação&lt;/td&gt; &gt;Diretório de documentos de avaliação&lt;/td&gt; &lt;td &gt;Métodos e padrões de avaliação&lt;/td&gt; &gt;Fornecedor&lt; &gt;Documentos de licitação&lt;/td&gt; &gt;Métodos e padrões de avaliação&lt;/td&gt; - Geração de fornecedor " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " **Saldo diário de caixa** **Situação anormal** **Número de pré-registro** **Total pago em moeda local** **Código de material especial** **Nome do material** **Quantidade usada** **Publicação** **Dias de atraso** **Código do responsável** **Código do gerente de projeto** **Nome do gerente de projeto** **Novo processo** **Nome do computador** **Hora da última operação** **Relação de contato** **Empresa do contrato** **Data de início do primeiro contrato** **Tempo previsto de início do plano** **Tempo previsto de término do plano** **Tempo previsto de início da tarefa** **Hora de aceitação da tarefa** **Tempo previsto de término da tarefa** **Hora da última operação da tarefa** **Exportação bem-sucedida** **Retornar ao passo** **Tipo de material ou ativo** **Categoria geral** **Código do registrador** **Nome do registrador** **Grupo de funções** **A expansão da operação substituirá os dados da operação anterior. Você tem certeza que deseja continuar?** **Por favor, selecione o cliente** **Tem certeza que deseja excluir este registro?** **Tem certeza que deseja excluir os planos de outros membros copiados deste plano?** **Data de presença** **Hora de início da manhã** **Hora de término da manhã** **Hora de início da tarde** **Hora de término da tarde** **Hora de início da meia-noite** **Hora de término da meia-noite** **Distância máxima permitida** **Duração das horas extras (horas)** **Resumo mensal** **Data da estatística** **Hora de geração do relatório** **Departamento de nível 1** **Tempo de serviço na empresa** **Tipo de funcionário** **Status do funcionário** **Período de experiência** **Data real de efetivação** **Tipo de registro de residência** **Afiliação política**</value>
   </data>
@@ -30091,9 +29952,6 @@
   <data name="MoBanXiangMu" xml:space="preserve">
     <value>Projeto modelo</value>
   </data>
-  <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
-    <value />
-  </data>
   <data name="DeXiangMuLieBiao" xml:space="preserve">
     <value>O conteúdo foi realmente excluído. Por favor, fique atento. Esta é uma notificação!</value>
   </data>
@@ -30102,9 +29960,6 @@
   </data>
   <data name="ZZYinCangChengGong" xml:space="preserve">
     <value>Lista de todos os projetos dos meus membros:</value>
-  </data>
-  <data name="ZZMiMaBuDuiYinCangShiBaiQingJi" xml:space="preserve">
-    <value />
   </data>
   <data name="ChuCuoLe" xml:space="preserve">
     <value>Ocultação bem-sucedida!</value>
@@ -30226,17 +30081,11 @@
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
     <value>Linha {0}: O código do estudante não pode estar vazio.</value>
   </data>
-  <data name="ShiFouShangXue" xml:space="preserve">
-    <value />
-  </data>
   <data name="ChengYuanLieBiao" xml:space="preserve">
     <value>Nome do estudante</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>Linha {0}: O nome do estudante não pode estar vazio.</value>
-  </data>
-  <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
-    <value />
   </data>
   <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
     <value>Frequenta a escola?</value>
@@ -30351,9 +30200,6 @@
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>Comparação "+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+"</value>
-  </data>
-  <data name="GongFang" xml:space="preserve">
-    <value />
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
     <value>Diretório de documentos de licitação&lt;/td&gt;</value>
@@ -30640,17 +30486,11 @@
   <data name="AssetPO" xml:space="preserve">
     <value>Assset purchase order</value>
   </data>
-  <data name="WeiShouJieE" xml:space="preserve">
-    <value />
-  </data>
   <data name="KaoHeMingCheng" xml:space="preserve">
     <value>Nenhum registro de visita correspondente encontrado</value>
   </data>
   <data name="MeiYouZhaoDaoXiangYingDeBaiFangJiLu" xml:space="preserve">
     <value>Nome do responsável</value>
-  </data>
-  <data name="FuZeRenMingCheng" xml:space="preserve">
-    <value />
   </data>
   <data name="NiQuedYaoShanChuSuoXuanZeDeShuJuXiangMa" xml:space="preserve">
     <value>Tem certeza que deseja excluir os itens de dados selecionados?</value>
@@ -30658,17 +30498,11 @@
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>Plano de projeto atrasado</value>
   </data>
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>Aviso: Por favor, selecione o tipo de arquivo</value>
   </data>
   <data name="QingXuanZheLiuChengMoBan" xml:space="preserve">
     <value>Licença (horas)</value>
-  </data>
-  <data name="DaiMaBuNengWeiKong" xml:space="preserve">
-    <value />
   </data>
   <data name="QueDingYaoShanChuSuoYouDeShuJiXiang" xml:space="preserve">
     <value>Por favor, selecione um modelo de processo!</value>
@@ -30930,5 +30764,8 @@
   </data>
   <data name="String25" xml:space="preserve">
     <value>Zhou</value>
+  </data>
+  <data name="LianXian" xml:space="preserve">
+    <value>Conexão</value>
   </data>
 </root>

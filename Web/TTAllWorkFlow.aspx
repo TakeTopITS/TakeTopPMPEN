@@ -43,57 +43,58 @@
                                 <td height="31" class="page_topbj">
                                     <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" style="padding-top: 4px;">
+                                            <td align="center" style="width: 10%;" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                <asp:Label ID="Label1" runat="server"></asp:Label>
+                                            </td>
+                                            <td align="center" style="padding-top: 4px;">
 
                                                 <table>
                                                     <tr>
-                                                        <td align="center" style="width: 150px;" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server"></asp:Label>
-                                                        </td>
-                                                        <td>
+
+                                                          <td style="text-align: left;">
                                                             <asp:Label ID="Label122222" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></td>
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <NickLee:NumberBox ID="NB_WFID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="53px">0</NickLee:NumberBox>
 
                                                             <asp:Button ID="BT_FindWFID" runat="server" CssClass="inpu" OnClick="BT_FindWFID_Click" Text="<%$ Resources:lang,ChaXun%>" />
 
                                                         </td>
 
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></td>
-                                                        <td>
+                                                            <td style="text-align: left;">
                                                             <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="Type" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
 
 
-                                                        <td>&nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label>
+                                                            <td style="text-align: left;">&nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label>
                                                         </td>
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <asp:TextBox ID="TB_WFTemName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <asp:DropDownList ID="DL_WLTem" runat="server" AutoPostBack="True" DataTextField="TemName" DataValueField="TemName" OnSelectedIndexChanged="DL_WLTem_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingChen%>"></asp:Label>
                                                         </td>
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <asp:TextBox ID="TB_WFName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
 
                                                         <td></td>
                                                     </tr>
                                                     <tr>
-                                                        <td></td>
-                                                        <td>
+                                                       
+                                                         <td style="text-align: left;">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FaQiRen%>"></asp:Label>
                                                         </td>
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <asp:TextBox ID="TB_WFCreatorName" Width="100px" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td>
+                                                           <td style="text-align: left;">
                                                             <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>
                                                         </td>
                                                         <td style="width: 120px;" align="left">
@@ -101,7 +102,7 @@
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_StartTime">
                                                             </ajaxToolkit:CalendarExtender>
                                                         </td>
-                                                        <td align="center">
+                                                            <td style="text-align: left;">
                                                             <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>
                                                         </td>
                                                         <td style="width: 120px;" align="left">
@@ -109,16 +110,19 @@
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_EndTime">
                                                             </ajaxToolkit:CalendarExtender>
                                                         </td>
-                                                        <td>
+                                                            <td style="text-align: left;">
                                                             <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click"
                                                                 Text="<%$ Resources:lang,ChaXun%>" />
                                                         </td>
-                                                        <td align="right" style="padding-top: 3px;">
+                                                        <td align="left" style="padding-top: 3px;">
                                                             <asp:HyperLink ID="HL_AllWorkFlowBackup" runat="server" NavigateUrl="TTAllWorkFlowBackup.aspx" Text="<%$ Resources:lang,ChaKanYuBeiFengDeGongZuoLiu%>"></asp:HyperLink>
                                                         </td>
                                                     </tr>
                                                 </table>
 
+                                            </td>
+                                            <td align="center" style="width:10%;" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                
                                             </td>
                                         </tr>
                                     </table>
@@ -367,7 +371,7 @@
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
-                                                                                         <%# ShareClass. GetWorkflowStatusByAuto(Eval("WLID").ToString()) %><%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
+                                                                                        <%# ShareClass. GetWorkflowStatusByAuto(Eval("WLID").ToString()) %><%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                 </asp:TemplateColumn>

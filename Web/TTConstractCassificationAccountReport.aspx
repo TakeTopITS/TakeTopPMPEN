@@ -196,7 +196,7 @@
 
                                                     <td width="7%" align="center">
                                                         <strong>
-                                                            <asp:Label ID="Label20" runat="server" Text="StartTime"></asp:Label></strong>
+                                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label></strong>
                                                     </td>
                                                     <td width="7%" align="center">
                                                         <strong>

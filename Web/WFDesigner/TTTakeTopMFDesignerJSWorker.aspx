@@ -175,54 +175,54 @@
             class="ui-widget-content">
 
             <div id="TakeTopFlow_tools_handle" style="text-align: center;" class="ui-widget-header">
-                工具集(Tools)
+                <%=LanguageHandle.GetWord("Toolbar").ToString() %>
             </div>
             <div class="node" id="TakeTopFlow_save" onclick="javascript:displayWaitingImg('img_processing');">
-                <img src="img/save.gif" alt="saving..." />&nbsp;&nbsp;保存(Save)
-                 <img id="img_processing" src="img/Processing.gif" alt="Loading,please wait..." style="display: none;" />
+                <img src="img/save.gif" alt="saving..." />&nbsp;&nbsp;<%=LanguageHandle.GetWord("BaoCun").ToString() %>
+                <img id="img_processing" src="img/Processing.gif" alt="Loading,please wait..." style="display: none;" />
             </div>
             <div>
                 <hr />
             </div>
             <div class="node selectable" id="pointer">
-                <img src="img/select16.gif" />&nbsp;&nbsp;选择(Select)
+                <img src="img/select16.gif" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("Select").ToString() %>
             </div>
             <div class="node selectable" id="path" onclick="hideTakeTopProps()">
-                <img src="img/16/flow_sequence.png" />&nbsp;&nbsp;连线(Line)
+                <img src="img/16/flow_sequence.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("LianXian").ToString() %>
             </div>
             <div>
                 <hr />
             </div>
             <div class="node state" id="start" type="start">
-                <img src="img/16/start_event_empty.png" />&nbsp;&nbsp;开始(Start)
+                <img src="img/16/start_event_empty.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("KaiShi").ToString() %>
             </div>
 
             <div class="node state" id="task" type="task">
-                <img src="img/16/task_empty.png" />&nbsp;&nbsp;步骤(Step)
+                <img src="img/16/task_empty.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("BuZou").ToString() %>
             </div>
             <div class="node state" id="state" type="state">
-                <img src="img/16/task_empty.png" />&nbsp;&nbsp;状态(Status)
+                <img src="img/16/task_empty.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("Status").ToString() %>
             </div>
             <div class="node state" id="fork" type="fork">
-                <img src="img/16/gateway_parallel.png" />&nbsp;&nbsp;分支(Branch)
+                <img src="img/16/gateway_parallel.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("FenZhi").ToString() %>
             </div>
             <div class="node state" id="join" type="join">
-                <img src="img/16/gateway_parallel.png" />&nbsp;&nbsp;合并(Merge)
+                <img src="img/16/gateway_parallel.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("HeBing").ToString() %>
             </div>
             <div class="node state" id="end" type="end">
-                <img src="img/16/end_event_terminate.png" />&nbsp;&nbsp;结束(End)
+                <img src="img/16/end_event_terminate.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("JieShu").ToString() %>
             </div>
             <div class="node state" id="end-cancel" type="end-cancel">
-                <img src="img/16/end_event_cancel.png" />&nbsp;&nbsp;取消(Cancel)
+                <img src="img/16/end_event_cancel.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("QuXiao").ToString() %>
             </div>
             <div class="node state" id="end-error" type="end-error">
-                <img src="img/16/end_event_error.png" />&nbsp;&nbsp;错误(Error)
+                <img src="img/16/end_event_error.png" />&nbsp;&nbsp;<%=LanguageHandle.GetWord("CuoWu").ToString() %>
             </div>
             <div>
                 <hr />
             </div>
             <div class="node print" id="TakeTopFlow_print" onclick="printDiv(document.getElementById('TakeTopFlow'))">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打印(Print)
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=LanguageHandle.GetWord("DaYin").ToString() %>
             </div>
         </div>
         <div id="TakeTopFlow_props" style="position: absolute; top: 30; left: 30; background-color: #fff; width: 320px; padding: 3px;"

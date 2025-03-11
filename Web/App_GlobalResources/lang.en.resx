@@ -27787,10 +27787,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>Database restoration failed!</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ZhengZaiShanChuNiDeYingYongZha" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZhanDianShanChuChengGong" xml:space="preserve">
     <value>Site deletion successful!</value>
   </data>
@@ -28274,14 +28270,8 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
     <value>Issue rectification notice</value>
   </data>
-  <data name="brbrNeiRong" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
     <value>This collaboration does not exist, it may have been deleted, please check!</value>
-  </data>
-  <data name="Juan" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="JuanNeiJian" xml:space="preserve">
     <value>File within volume</value>
@@ -28574,14 +28564,8 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
     <value>Submission failed, verification code error, please check!</value>
   </data>
-  <data name="WanChengLeNiDeQueXian" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="GuaQiLeNiDeQueXian" xml:space="preserve">
     <value>Safety certificate validity period</value>
-  </data>
-  <data name="QueXianChuLiQingKuangFanKui" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="QueXianFenPaTongZhi" xml:space="preserve">
     <value>Employee name</value>
@@ -28591,9 +28575,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="QueXianZhuaiXiangTongZhi" xml:space="preserve">
     <value>Special operation certificate number</value>
-  </data>
-  <data name="ZhuaiChengXiangMuGeiNiQingJiSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
     <value>Special operation review time</value>
@@ -28640,9 +28621,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
     <value>Customer visit statistics table</value>
   </data>
-  <data name="Di0HangChanPinChongLeiBuNengWe" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
     <value>Accepted your defect:</value>
   </data>
@@ -28651,9 +28629,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
     <value>Regular project</value>
-  </data>
-  <data name="Di0HangShuLiangBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
     <value>Defect:</value>
@@ -28664,9 +28639,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
     <value>Processing your defect:</value>
   </data>
-  <data name="Di0HangJinEBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
     <value>Suspended your defect:</value>
   </data>
@@ -28675,9 +28647,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
     <value>Defect assignment notification</value>
-  </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJu" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
     <value>Successfully imported {0} records, a total of {1} records failed validation</value>
@@ -28688,23 +28657,11 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
     <value>Row {0}, customer name cannot be empty</value>
   </data>
-  <data name="Di0HangFeiYongBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Di0HangFeiYongZhiNengShiXiaoSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Row {0}, amount cannot be empty</value>
   </data>
   <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
     <value>Row {0}, cost must be a decimal</value>
-  </data>
-  <data name="Di0HangZhiZaoChengBenZhiNengSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Di0HangDunHaoBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Row {0}, financial expenses cannot be empty</value>
@@ -28712,26 +28669,11 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
     <value>Row {0}, manufacturing cost cannot be empty</value>
   </data>
-  <data name="ChanPinMingChen" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Di0HangChanPinMingChenBuNengWe" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Di0HangChanPinLeiXingBuNengWei" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
     <value>Row {0}, ton consumption cannot be empty</value>
   </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>Successfully imported {0} records</value>
-  </data>
-  <data name="BianJia" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="BaoCuna" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ZongShuLiangtdtr" xml:space="preserve">
     <value>Row {0}, product number cannot be empty</value>
@@ -28739,20 +28681,11 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
     <value>No data imported, a total of {0} records failed validation</value>
   </data>
-  <data name="ZongShuLiangtdtdclass" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="BenSeChengBentdtdclass" xml:space="preserve">
     <value>Row {0}, cost cannot be empty</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>Row {0}, product name cannot be empty</value>
-  </data>
-  <data name="PeiFangJiatdtdclass" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="YuanLiaoChanPinCunDang" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="PeiLiao" xml:space="preserve">
     <value>Row {0}, type cannot be empty</value>
@@ -28760,20 +28693,11 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
     <value>Row {0}, product type: {1} does not exist in the product type table</value>
   </data>
-  <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="QingShuRuBiaoChanLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>Row {0}, manufacturing cost must be a decimal</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>&gt;Edit&lt;/a&gt;</value>
-  </data>
-  <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ShouHouFuWu" xml:space="preserve">
     <value>&gt;Total quantity&lt;/td&gt;&lt;/tr&gt;</value>
@@ -28783,9 +28707,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
     <value>*&gt;Total quantity&lt;/td&gt;&lt;td class=*</value>
-  </data>
-  <data name="WuLiaoShouFaCunBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
     <value>*&gt;Color material cost&lt;/td&gt;&lt;td class=*</value>
@@ -28801,12 +28722,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>Row {0}, material loss cannot be empty</value>
-  </data>
-  <data name="ShengChanSheBeiHao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="CaiZhiChanHao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>&gt;No product records&lt;/td&gt;</value>
@@ -28849,9 +28764,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="WuLiaoBaoJiaChan" xml:space="preserve">
     <value>Expiration date</value>
-  </data>
-  <data name="WuLiaoXiaoShouBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="DeWuLiaoLieBiao" xml:space="preserve">
     <value>Material list number</value>
@@ -29777,9 +29689,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>Error: Only Excel files can be selected!</value>
   </data>
-  <data name="CuoWuDiShi" xml:space="preserve">
-    <value>Error: [</value>
-  </data>
   <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
     <value>] No data, importing the next type.\n</value>
   </data>
@@ -29971,9 +29880,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
     <value>Message: [Original cost] input is incorrect, please enter a number and try again!</value>
-  </data>
-  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
-    <value>Error: Fetching month list operation encountered an exception:</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
     <value>Message: Target cost has already been entered for this cost item, please modify directly!</value>
@@ -30224,9 +30130,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="XueShengXingMing" xml:space="preserve">
     <value>Student name</value>
   </data>
-  <data name="Di0HangXueShengXingMingBuNengW" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>Whether attending school</value>
   </data>
@@ -30235,9 +30138,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>Prompt, this " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZPiLiangLanguageHandleGetWord" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
     <value>Delete " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
@@ -30659,9 +30559,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>Delayed project plan</value>
   </data>
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>Leave (hours)</value>
   </data>
@@ -30919,5 +30816,8 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="TaoHuangYeMian" xml:space="preserve">
     <value>navigation page</value>
+  </data>
+  <data name="LianXian" xml:space="preserve">
+    <value>Connection</value>
   </data>
 </root>

@@ -304,7 +304,7 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label9" runat="server" Text="ProjectManager"></asp:Label>£º</td>
+                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XiangMuJingLi%>"></asp:Label>£º</td>
                                             <td align="right" colspan="2">
                                                 <table width="100%">
                                                     <tr>

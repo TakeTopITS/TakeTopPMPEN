@@ -1,4 +1,4 @@
-﻿<%@ WebHandler Language="C#" Class="getWorkflowTemplateStepChildNumber" %>
+﻿<%@ WebHandler Language="C#" Class="getWorkflowTemplateStepSortNumber" %>
 
 using System;
 using System.Resources;
@@ -8,7 +8,8 @@ using ProjectMgt.BLL;
 using Newtonsoft.Json;
 using System.Data;
 
-public class getWorkflowTemplateStepChildNumber : IHttpHandler
+
+public class getWorkflowTemplateStepSortNumber : IHttpHandler
 {
     string result = "";
 
@@ -28,7 +29,7 @@ public class getWorkflowTemplateStepChildNumber : IHttpHandler
     public void Get_Data01(HttpContext context)
     {
         string strHQL;
-        string strTStepID;
+        string strTSortNumber, strTNextSortNumber;
 
         string strGUID = context.Request["GUID"];
 
@@ -36,24 +37,23 @@ public class getWorkflowTemplateStepChildNumber : IHttpHandler
 
         try
         {
-            DataSet ds1, ds2;
-            strHQL = string.Format(@"Select StepID from T_WorkFlowTStep where GUID = '{0}'", strGUID);
+            DataSet ds1;
+            strHQL = string.Format(@"Select SortNumber,NextSortNumber from T_WorkFlowTStep where GUID = '{0}'", strGUID);
             ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTStep");
             if (ds1.Tables[0].Rows.Count > 0)
             {
-                strTStepID = ds1.Tables[0].Rows[0][0].ToString();
-
-                strHQL = "Select * From T_WFTStepRelatedTem Where RelatedStepID=" + strTStepID;
-                ds2 = ShareClass.GetDataSetFromSql(strHQL, "T_WFTStepRelatedTem ");
-                if (ds2.Tables[0].Rows.Count > 0)
-                {
-                    HttpContext.Current.Response.Write(ds2.Tables[0].Rows.Count.ToString());
-                }
+                strTSortNumber = ds1.Tables[0].Rows[0]["SortNumber"].ToString();
+                strTNextSortNumber = ds1.Tables[0].Rows[0]["NextSortNumber"].ToString();
+                HttpContext.Current.Response.Write(strTSortNumber + ">" + strTNextSortNumber);
+            }
+            else
+            {
+                HttpContext.Current.Response.Write("0>0");
             }
         }
         catch (Exception err)
         {
-            HttpContext.Current.Response.Write("0");
+            HttpContext.Current.Response.Write("0>0");
         }
 
     }

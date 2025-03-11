@@ -29789,9 +29789,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>错误提示： 只可以选择Excel文件!</value>
   </data>
-  <data name="CuoWuDiShi" xml:space="preserve">
-    <value>错误提示: [</value>
-  </data>
   <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
     <value>]无数据，导入下一个类型。\n</value>
   </data>
@@ -29983,9 +29980,6 @@
   </data>
   <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
     <value>消息提示：修改目标成本成功！</value>
-  </data>
-  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
-    <value>错误提示：获取月列表操作出现异常：</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
     <value>消息提示：请正确输入实际工作量再试！</value>
@@ -30617,9 +30611,6 @@
   <data name="JiaoFu" xml:space="preserve">
     <value>交付</value>
   </data>
-  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZaiZiXunZhangTai" xml:space="preserve">
     <value>在执行项目状态</value>
     <comment>在执行项目状态</comment>
@@ -30681,10 +30672,6 @@
   </data>
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>拖期项目计划</value>
-  </data>
-  <data name="JingGaoQingXuanZeWenJianLeiXing" xml:space="preserve">
-    <value>警告，请选择文件类型</value>
-    <comment>警告，请选择文件类型</comment>
   </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>请假(小时)</value>
@@ -30901,5 +30888,8 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>导入语言数据</value>
+  </data>
+  <data name="LianXian" xml:space="preserve">
+    <value>连线</value>
   </data>
 </root>

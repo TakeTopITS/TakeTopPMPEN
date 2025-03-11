@@ -29775,9 +29775,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>錯誤提示： 只可以選擇Excel檔!</value>
   </data>
-  <data name="CuoWuDiShi" xml:space="preserve">
-    <value>錯誤提示: [</value>
-  </data>
   <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
     <value>]無數據，導入下一個類型。\n</value>
   </data>
@@ -29969,9 +29966,6 @@
   </data>
   <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
     <value>消息提示：修改目標成本成功！</value>
-  </data>
-  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
-    <value>錯誤提示：獲取月列表操作出現異常：</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
     <value>消息提示：請正確輸入實際工作量再試！</value>
@@ -30657,9 +30651,6 @@
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>拖期專案計畫</value>
   </data>
-  <data name="JingGaoQingXuanZeWenJianLeiXing" xml:space="preserve">
-    <value>警告，请选择文件类型</value>
-  </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>请假(小时)</value>
   </data>
@@ -30888,12 +30879,6 @@
   <data name="HSE生產總結" xml:space="preserve">
     <value>HSE生產總結</value>
   </data>
-  <data name="APPURLMiaoShu1" xml:space="preserve">
-    <value>请用微信或其他工具扫描下面二维码，打开你的APP登录界面，并把此登录界面的地址收藏！</value>
-  </data>
-  <data name="APPURLMiaoShu2" xml:space="preserve">
-    <value>請用微信或其他工具掃描下面二維碼，打開你的APP登錄界面，並把此登錄界面的地址收藏！</value>
-  </data>
   <data name="APPURLShouChang1" xml:space="preserve">
     <value>收藏后，以后用此地址登录APP！</value>
   </data>
@@ -30936,9 +30921,6 @@
   <data name="ChuLiRen2" xml:space="preserve">
     <value>處理人</value>
   </data>
-  <data name="CuoWu1" xml:space="preserve">
-    <value>错误</value>
-  </data>
   <data name="CuoWu2" xml:space="preserve">
     <value>錯誤</value>
   </data>
@@ -30953,12 +30935,6 @@
   </data>
   <data name="FaQiShiJian2" xml:space="preserve">
     <value>發起時間</value>
-  </data>
-  <data name="FenZhi1" xml:space="preserve">
-    <value>分支</value>
-  </data>
-  <data name="FenZhi2" xml:space="preserve">
-    <value>分支</value>
   </data>
   <data name="FESTIVALSDAY1" xml:space="preserve">
     <value>节假日</value>
@@ -31013,9 +30989,6 @@
   </data>
   <data name="GuanLianTaoHuangYeMian2" xml:space="preserve">
     <value>關聯導航頁面</value>
-  </data>
-  <data name="HeBing1" xml:space="preserve">
-    <value>合并</value>
   </data>
   <data name="HeBing2" xml:space="preserve">
     <value>合併</value>
@@ -31205,5 +31178,8 @@
   </data>
   <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value>保存失敗，原密碼錯誤或為空，請檢查！</value>
+  </data>
+  <data name="LianXian" xml:space="preserve">
+    <value>連線</value>
   </data>
 </root>

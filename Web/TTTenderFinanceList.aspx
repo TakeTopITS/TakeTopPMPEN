@@ -286,7 +286,7 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label53" runat="server" Text="ProjectManager"></asp:Label>£º</td>
+                                                <asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,XiangMuJingLi%>"></asp:Label>£º</td>
                                             <td align="left" colspan="2">
                                                 <table>
                                                     <tr>

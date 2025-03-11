@@ -42,87 +42,95 @@
                                     <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" style="padding-bottom: 5px; padding-top: 10px;">
-                                                <table>
+                                                <table width="100%">
                                                     <tr>
-                                                        <td align="center" style="width: 100px;" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>"></asp:Label>
-                                                        </td>
-                                                        <td>
-                                                            <asp:Label ID="Label111" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></td>
-                                                        <td>
-                                                            <NickLee:NumberBox ID="NB_WFID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="53px">0</NickLee:NumberBox>
-
-                                                            <asp:Button ID="BT_FindWFID" runat="server" CssClass="inpu" OnClick="BT_FindWFID_Click" Text="<%$ Resources:lang,ChaXun%>" />
-                                                        </td>
-
-                                                        <td>
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></td>
-                                                        <td>
-                                                            <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="Type" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
-                                                            </asp:DropDownList>
-                                                        </td>
-
-                                                        <td>&nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label>
-                                                        </td>
-                                                        <td>
-                                                            <asp:TextBox ID="TB_WFTemName" runat="server" Width="120px"></asp:TextBox>
-                                                        </td>
-                                                        <td>
-                                                            <asp:DropDownList ID="DL_WLTem" runat="server" AutoPostBack="True" DataTextField="TemName" DataValueField="TemName" OnSelectedIndexChanged="DL_WLTem_SelectedIndexChanged">
-                                                            </asp:DropDownList>
-                                                        </td>
-                                                        <td>
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingChen%>"></asp:Label>
-                                                        </td>
-                                                        <td colspan="4">
-                                                            <asp:TextBox ID="TB_WFName" runat="server" Width="99%"></asp:TextBox>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td>
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FaQiRen%>"></asp:Label>
-                                                        </td>
-                                                        <td>
-                                                            <asp:TextBox ID="TB_WFCreatorName" Width="100px" runat="server"></asp:TextBox>
-                                                        </td>
-                                                        <td>
-                                                            <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>
-                                                        </td>
-                                                        <td style="width: 120px;" align="left">
-                                                            <asp:TextBox ID="DLC_StartTime" ReadOnly="false" runat="server" Width="99%"></asp:TextBox>
-                                                            <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_StartTime">
-                                                            </ajaxToolkit:CalendarExtender>
+                                                        <td align="center" width="10%" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                            <asp:Label ID="Label1" runat="server"></asp:Label>
                                                         </td>
                                                         <td align="center">
-                                                            <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>
-                                                        </td>
-                                                        <td style="width: 120px;" align="left">
-                                                            <asp:TextBox ID="DLC_EndTime" ReadOnly="false" runat="server" Width="99%"></asp:TextBox>
-                                                            <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_EndTime">
-                                                            </ajaxToolkit:CalendarExtender>
-                                                        </td>
-                                                        <td>
-                                                            <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click"
-                                                                Text="<%$ Resources:lang,ChaXun%>" />
+                                                            <table>
+                                                                <tr>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:Label ID="Label111" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></td>
+                                                                    <td style="text-align: left;">
+                                                                        <NickLee:NumberBox ID="NB_WFID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="53px">0</NickLee:NumberBox>
+
+                                                                        <asp:Button ID="BT_FindWFID" runat="server" CssClass="inpu" OnClick="BT_FindWFID_Click" Text="<%$ Resources:lang,ChaXun%>" />
+                                                                    </td>
+
+                                                                    <td style="text-align: left;">
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="Type" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
+                                                                        </asp:DropDownList>
+                                                                    </td>
+
+                                                                    <td style="text-align: left;">&nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label>
+                                                                    </td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:TextBox ID="TB_WFTemName" runat="server" Width="120px"></asp:TextBox>
+                                                                    </td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:DropDownList ID="DL_WLTem" runat="server" AutoPostBack="True" DataTextField="TemName" DataValueField="TemName" OnSelectedIndexChanged="DL_WLTem_SelectedIndexChanged">
+                                                                        </asp:DropDownList>
+                                                                    </td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingChen%>"></asp:Label>
+                                                                    </td>
+                                                                    <td style="text-align: left;" colspan="4">
+                                                                        <asp:TextBox ID="TB_WFName" runat="server" Width="99%"></asp:TextBox>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td style="text-align: left;">
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FaQiRen%>"></asp:Label>
+                                                                    </td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:TextBox ID="TB_WFCreatorName" Width="100px" runat="server"></asp:TextBox>
+                                                                    </td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>
+                                                                    </td>
+                                                                    <td style="width: 120px;" align="left">
+                                                                        <asp:TextBox ID="DLC_StartTime" ReadOnly="false" runat="server" Width="99%"></asp:TextBox>
+                                                                        <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_StartTime">
+                                                                        </ajaxToolkit:CalendarExtender>
+                                                                    </td>
+                                                                    <td align="left">
+                                                                        <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>
+                                                                    </td>
+                                                                    <td style="width: 120px;" align="left">
+                                                                        <asp:TextBox ID="DLC_EndTime" ReadOnly="false" runat="server" Width="99%"></asp:TextBox>
+                                                                        <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_EndTime">
+                                                                        </ajaxToolkit:CalendarExtender>
+                                                                    </td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click"
+                                                                            Text="<%$ Resources:lang,ChaXun%>" />
+                                                                    </td>
+
+                                                                    <td style="text-align: left;">
+                                                                        <asp:Label ID="LB_SetAgent" runat="server" Text="<%$ Resources:lang,DaiLiRen%>" />
+                                                                    </td>
+                                                                    <td style="text-align: left;">
+                                                                        <asp:DropDownList ID="DL_MemberAgency" runat="server" DataTextField="UserName"
+                                                                            DataValueField="UserCode" AutoPostBack="True" OnSelectedIndexChanged="DL_MemberAgency_SelectedIndexChanged">
+                                                                        </asp:DropDownList>
+
+                                                                    </td>
+                                                                    <td align="left">
+                                                                        <asp:Button ID="BT_Refresh" runat="server" CssClass="inpu" OnClick="BT_Refresh_Click"
+                                                                            Text="<%$ Resources:lang,Refresh%>" />
+                                                                    </td>
+                                                                    <td align="left">
+                                                                        <asp:HyperLink ID="HL_MyWorkFlowBackup" runat="server" NavigateUrl="TTMyWorkFlowBackup.aspx" Text="<%$ Resources:lang,ChaKanYuBeiFengDeGongZuoLiu%>"></asp:HyperLink>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
                                                         </td>
 
-                                                        <td style="text-align: right;">
-                                                            <asp:Label ID="LB_SetAgent" runat="server" Text="<%$ Resources:lang,DaiLiRen%>" />
-                                                        </td>
-                                                        <td style="text-align: left;">
-                                                            <asp:DropDownList ID="DL_MemberAgency" runat="server" DataTextField="UserName"
-                                                                DataValueField="UserCode" AutoPostBack="True" OnSelectedIndexChanged="DL_MemberAgency_SelectedIndexChanged">
-                                                            </asp:DropDownList>
-
-                                                        </td>
-                                                        <td align="right">
-                                                            <asp:Button ID="BT_Refresh" runat="server" CssClass="inpu" OnClick="BT_Refresh_Click"
-                                                                Text="<%$ Resources:lang,Refresh%>" />
-                                                        </td>
-                                                        <td align="right">
-                                                            <asp:HyperLink ID="HL_MyWorkFlowBackup" runat="server" NavigateUrl="TTMyWorkFlowBackup.aspx" Text="<%$ Resources:lang,ChaKanYuBeiFengDeGongZuoLiu%>"></asp:HyperLink>
-                                                        </td>
+                                                        <td align="center" width="10%" background="ImagesSkin/main_top_bj.jpg" class="titlezi"></td>
                                                     </tr>
                                                 </table>
                                             </td>
@@ -695,7 +703,7 @@
                                                                                                 </strong>
                                                                                             </td>
 
-                                                                                            <td  align="center">
+                                                                                            <td align="center">
                                                                                                 <strong></strong>
                                                                                             </td>
                                                                                         </tr>

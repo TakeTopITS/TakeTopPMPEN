@@ -27786,10 +27786,6 @@
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>&lt;/a&gt;</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ZhengZaiShanChuNiDeYingYongZha" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZhanDianShanChuChengGong" xml:space="preserve">
     <value>Login-Konto: ADMIN Passwort: 12345678</value>
   </data>
@@ -28282,12 +28278,6 @@
   <data name="Juan" xml:space="preserve">
     <value>Benachrichtigung über Problembehebung</value>
   </data>
-  <data name="JuanNeiJian" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ShuRuXiangMuXiangGuanFeiYong" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
     <value>Inhalt:</value>
   </data>
@@ -28561,17 +28551,8 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>Reguläres Projekt</value>
   </data>
-  <data name="brbrbWoDeYiJianbbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="BaQueXian" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;Meine Meinung:&lt;/b&gt;</value>
-  </data>
-  <data name="ZhengZaiChuLiNiDeQueXian" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WanChengLeNiDeQueXian" xml:space="preserve">
     <value>Fehler:</value>
@@ -28602,12 +28583,6 @@
   </data>
   <data name="ShangChuanLeWenJian" xml:space="preserve">
     <value>In ein Projekt für Sie umgewandelt, bitte zeitnah bearbeiten!</value>
-  </data>
-  <data name="QingJiShiChaKan" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="WenJianChaYueTongZhi" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>Abnahmekriterien:</value>
@@ -28648,107 +28623,53 @@
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>Zeile {0}, Datum darf nicht leer sein</value>
   </data>
-  <data name="Di0HangGongYiKaBianHaoBuNengWe" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>Zeile {0}, Datumsformat falsch</value>
-  </data>
-  <data name="Di0HangShuLiangZhiNengShiXiaoS" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Zeile {0}, Einkaufseinheit darf nicht leer sein</value>
   </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>Zeile {0}, Produktart darf nicht leer sein</value>
-  </data>
-  <data name="Di0HangJinEZhiNengShiXiaoShubr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Zeile {0}, Produktart existiert nicht in der Typengrundtabelle</value>
   </data>
-  <data name="Di0HangCaiWuFeiYongZhiNengShiX" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
     <value>Zeile {0}, Produktlanger Code darf nicht leer sein</value>
-  </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJuGo" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Zeile {0}, Prozesskartennummer darf nicht leer sein</value>
   </data>
-  <data name="Di0HangKeHuMingChenBuNengWeiKo" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>Zeile {0}, Menge darf nicht leer sein</value>
-  </data>
-  <data name="Di0HangFeiYongZhiNengShiXiaoSh" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Zeile {0}, Menge muss eine Dezimalzahl sein</value>
   </data>
-  <data name="Di0HangZhiZaoChengBenBuNengWei" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>Zeile {0}, Preis inkl. Steuern darf nicht leer sein</value>
-  </data>
-  <data name="Di0HangDunHaoBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Zeile {0}, Preis inkl. Steuern muss eine Dezimalzahl sein</value>
   </data>
-  <data name="Di0HangChanPinBianHaoBuNengWei" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Zeile {0}, Betrag darf nicht leer sein</value>
-  </data>
-  <data name="Di0HangChanPinMingChenBuNengWe" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>Zeile {0}, Betrag muss eine Dezimalzahl sein</value>
   </data>
-  <data name="Di0HangChanPinLeiXing1ZaiChanP" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>Zeile {0}, Finanzkosten darf nicht leer sein</value>
-  </data>
-  <data name="BianJia" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="BaoCuna" xml:space="preserve">
     <value>Zeile {0}, Finanzkosten muss eine Dezimalzahl sein</value>
   </data>
-  <data name="ZongShuLiangtdtr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="pMoYuanLiaoJiLupnbsptd" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>Erfolgreich {0} Datensätze importiert</value>
   </data>
-  <data name="BenSeChengBentdtdclass" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>Erfolgreich {0} Datensätze importiert, insgesamt {1} Datensätze fehlgeschlagen</value>
-  </data>
-  <data name="PeiFangJiatdtdclass" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
     <value>Keine Daten importiert, insgesamt {0} Datensätze fehlgeschlagen</value>
@@ -28756,56 +28677,29 @@
   <data name="PeiLiao" xml:space="preserve">
     <value>Zeile {0}, Kundenname darf nicht leer sein</value>
   </data>
-  <data name="Di0HangPeiLiaoBuNengWeiKongbr" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Zeile {0}, Kosten darf nicht leer sein</value>
-  </data>
-  <data name="QingShuRuBiaoChanLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>Zeile {0}, Kosten muss eine Dezimalzahl sein</value>
   </data>
-  <data name="ZZDiShiFuZhiChengGong" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
     <value>Zeile {0}, Typ darf nicht leer sein</value>
-  </data>
-  <data name="ShouHouFuWu" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>Zeile {0}, Herstellungskosten darf nicht leer sein</value>
   </data>
-  <data name="WuLiaoLingYongBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
     <value>Zeile {0}, Herstellungskosten muss eine Dezimalzahl sein</value>
-  </data>
-  <data name="WuLiaoRuKuBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Zeile {0}, Tonnenverbrauch darf nicht leer sein</value>
   </data>
-  <data name="PiHao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Zeile {0}, Tonnenverbrauch muss eine Dezimalzahl sein</value>
   </data>
-  <data name="ShiXiaoRiJi" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Zeile {0}, Produktnummer darf nicht leer sein</value>
-  </data>
-  <data name="CaiZhiChanHao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>Produktname</value>
@@ -28813,20 +28707,11 @@
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Zeile {0}, Produktname darf nicht leer sein</value>
   </data>
-  <data name="WuLiaoWeiHuBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
     <value>Zeile {0}, Produkttyp darf nicht leer sein</value>
   </data>
-  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
     <value>Zeile {0}, Produkttyp:{1} existiert nicht in der Produkttypentabelle</value>
-  </data>
-  <data name="WuLiaoShengChanChan" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>&gt;Keine Produktaufzeichnungen&lt;/td&gt;</value>
@@ -28864,14 +28749,8 @@
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
     <value>Zeile {0}, Verlustmaterial darf nicht leer sein</value>
   </data>
-  <data name="WuLiaoChuHuo" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
     <value>Zeile {0}, Verlustmaterial muss eine Dezimalzahl sein</value>
-  </data>
-  <data name="WuLiaoHuiZongBaoBiaoxls" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="WuLiaoDiaoBoBaoBiaoxls" xml:space="preserve">
     <value>Bitte geben Sie den Formulartyp ein!</value>
@@ -29776,9 +29655,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>Fehlermeldung: Es können nur Excel-Dateien ausgewählt werden!</value>
   </data>
-  <data name="CuoWuDiShi" xml:space="preserve">
-    <value>Fehlermeldung: [</value>
-  </data>
   <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
     <value>] Keine Daten, importiere den nächsten Typ.\n</value>
   </data>
@@ -29970,9 +29846,6 @@
   </data>
   <data name="XiaoXiDiShiXiuGaiMuBiaoChengBe" xml:space="preserve">
     <value>Hinweis: Die Änderung der Zielkosten war erfolgreich!</value>
-  </data>
-  <data name="CuoWuDiShiHuoQuYueLieBiaoCaoZu" xml:space="preserve">
-    <value>Fehlermeldung: Beim Abrufen der Monatsliste ist eine Ausnahme aufgetreten:</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
     <value>Hinweis: Bitte geben Sie die tatsächliche Arbeitsmenge korrekt ein und versuchen Sie es erneut!</value>
@@ -30220,17 +30093,11 @@
   <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
     <value>Zeile {0}, Schülercode darf nicht leer sein</value>
   </data>
-  <data name="XueShengXingMing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
     <value>Schülername</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>Zeile {0}, Schülername darf nicht leer sein</value>
-  </data>
-  <data name="ChengYuanLieBiao" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>Schulbesuch</value>
@@ -30658,9 +30525,6 @@
   <data name="TuoQiXiangMuJiHua" xml:space="preserve">
     <value>Sind Sie sicher, dass Sie die ausgewählten Datensätze löschen möchten?</value>
   </data>
-  <data name="JingGaoQingXuanZeWenJianLeiXing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="QingJiaXiaoShi" xml:space="preserve">
     <value>Warnung, bitte wählen Sie einen Dateityp aus</value>
   </data>
@@ -31074,5 +30938,8 @@
   </data>
   <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
     <value>Antragsformular für Arbeitsanträge</value>
+  </data>
+  <data name="LianXian" xml:space="preserve">
+    <value>Verbindung</value>
   </data>
 </root>
