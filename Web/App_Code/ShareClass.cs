@@ -6864,6 +6864,24 @@ public static class ShareClass
         }
     }
 
+    //取得工作流类型的本地化名称
+    public static string GetWorkflowTypeHomeName(string strWLType)
+    {
+        string strHQL;
+        IList lst;
+
+        strHQL = string.Format(@"Select HomeName From T_WLType Where Type = '{0}' and LangCode ='{1}'", strWLType, HttpContext.Current.Session["LangCode"].ToString());
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WLType");
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            return ds.Tables[0].Rows[0][0].ToString().Trim();
+        }
+        else
+        {
+            return strWLType;
+        }
+    }
+
     //BusinessForm,列出业务表单类型
     public static void LoadWorkflowType(DropDownList DL_WLType, string strLangCode)
     {

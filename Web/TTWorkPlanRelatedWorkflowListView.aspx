@@ -145,9 +145,12 @@
                                                                         <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWFChartViewJS.aspx?WLID={0}" HeaderText="Workflow" Target="_blank" Text="<%$ Resources:lang,JinDu%>">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:HyperLinkColumn>
-                                                                        <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                        </asp:BoundColumn>
+                                                                        <asp:TemplateColumn HeaderText="HomeName">
+                                                                            <ItemTemplate>
+                                                                                <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                            </ItemTemplate>
+                                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                        </asp:TemplateColumn>
                                                                         <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:HyperLinkColumn>
@@ -210,4 +213,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

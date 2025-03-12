@@ -61,7 +61,7 @@
                                                                     <td style="text-align: left;">
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></td>
                                                                     <td style="text-align: left;">
-                                                                        <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="Type" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
+                                                                        <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="HomeName" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                                         </asp:DropDownList>
                                                                     </td>
 
@@ -743,10 +743,12 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="15%" />
                                                                                 </asp:TemplateColumn>
-
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                                </asp:BoundColumn>
+                                                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                                                    <ItemTemplate>
+                                                                                        <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                                </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                                                 </asp:BoundColumn>

@@ -1,85 +1,3 @@
-TaskPriority = {
-    Low: 0,
-    Normal: 1,
-    High: 2
-};
-
-
-Ext.define('MSProjectImportPanel', {
-    //extend : 'Ext.form.Panel',
-    extend: 'Ext.window.Window',
-    width: 300,
-    frame: true,
-    title: '导入Project文件',
-    bodyPadding: '10 10 0',
-
-    defaults: {
-        anchor: '100%',
-        allowBlank: false,
-        msgTarget: 'side',
-        labelWidth: 50
-    },
-    initComponent: function () {
-        this.addEvents('dataavailable');
-        var w = this;
-        Ext.apply(this, {
-            items: [new Ext.form.Panel({
-                items: [{
-                    xtype: 'filefield',
-                    id: 'form-file',
-                    emptyText: '上传 .mpp 文件',
-                    fieldLabel: '选择文件',
-                    name: 'file',
-                    buttonText: '',
-                    buttonConfig: {
-                        iconCls: 'upload-icon'
-                    }
-                }],
-                buttons: [{
-                    text: '上传',
-                    handler: function () {
-                        var panel = this.up('form');
-                        var form = panel.getForm();
-                        if (form.isValid()) {
-                            form.submit({
-                                url: APIVAR.url.upload + '?pid=' + pid,
-                                waitMsg: '正在加载数据...',
-                                failure: function (form, action) {
-                                    msg('上传出错', '请确认上传文件格式是否正确. 错误位置: ' + action.result.msg);
-                                },
-                                success: function (form, action) {
-                                    //w.fireEvent('dataavailable', panel, action.result.data);
-                                    this.refreshViews();
-                                }
-                            });
-                        }
-                    }
-                },
-                {
-                    text: '重置',
-                    handler: function () {
-                        this.up('form').getForm().reset();
-                    }
-                }]
-            })]
-
-        });
-
-        this.callParent(arguments);
-    }
-});
-
-var msg = function (title, msg) {
-    Ext.Msg.show({
-        title: title,
-        msg: msg,
-        minWidth: 200,
-        modal: true,
-        icon: Ext.Msg.INFO,
-        buttons: Ext.Msg.OK
-    });
-};
-
 
 
 Ext.define("MyApp.DemoGanttPanel", {
@@ -104,6 +22,11 @@ Ext.define("MyApp.DemoGanttPanel", {
 
     initComponent: function () {
 
+        // 初始化撤销和重做栈
+        this.undoStack = [];  // 撤销栈
+        this.redoStack = [];  // 重做栈
+
+
         Ext.apply(this, {
             enableBaseline: true,
             baselineVisible: false,
@@ -119,7 +42,7 @@ Ext.define("MyApp.DemoGanttPanel", {
                 title: '<table><tr><td>甘特图</td><td><img src="Images/UpDnArrow.png" width="18" height="24" border="0" alt="排序" onclick="javascript:SortByDate();"></td></tr></table>'
             },
 
-          
+
 
             leftLabelField: {
                 dataIndex: 'Name',
@@ -434,7 +357,129 @@ Ext.define("MyApp.DemoGanttPanel", {
 
 
         this.callParent(arguments);
+
+        // 监听任务存储事件
+        this.initTaskStoreListeners();
     },
+
+    // 初始化任务存储事件监听
+    initTaskStoreListeners: function () {
+        var taskStore = this.getTaskStore();
+
+        // 监听任务添加事件
+        taskStore.on('add', this.onTaskAdd, this);
+
+        // 监听任务更新事件
+        taskStore.on('update', this.onTaskUpdate, this);
+
+        // 监听任务删除事件
+        taskStore.on('remove', this.onTaskRemove, this);
+    },
+
+    // 任务添加时记录操作
+    onTaskAdd: function (store, records) {
+        records.forEach(function (record) {
+            this.recordOperation({
+                type: 'add',       // 操作类型
+                taskId: record.getId(), // 任务ID
+                taskData: record.getData() // 任务数据
+            });
+        }, this);
+    },
+
+    // 任务更新时记录操作
+    onTaskUpdate: function (store, record, operation) {
+        var oldData = record.modified; // 获取修改前的数据
+        var newData = record.getData(); // 获取修改后的数据
+
+        this.recordOperation({
+            type: 'update',       // 操作类型
+            taskId: record.getId(), // 任务ID
+            oldValue: oldData,    // 修改前的值
+            newValue: newData     // 修改后的值
+        });
+    },
+
+    // 任务删除时记录操作
+    onTaskRemove: function (store, record) {
+        this.recordOperation({
+            type: 'delete',       // 操作类型
+            taskId: record.getId(), // 任务ID
+            taskData: record.getData() // 任务数据
+        });
+    },
+
+    // 记录操作到撤销栈
+    recordOperation: function (operation) {
+        console.log('Record Operation:', operation); // 调试日志
+        this.undoStack.push(operation);
+        this.redoStack = [];  // 清空重做栈
+    },
+
+    // 撤销操作
+    onUndo: function () {
+        if (this.undoStack.length > 0) {
+            var operation = this.undoStack.pop(); // 从撤销栈中弹出最后一个操作
+            this.redoStack.push(operation);       // 将操作推入重做栈
+            this.performUndo(operation);         // 执行撤销操作
+        } else {
+            Ext.Msg.alert('提示', '没有可撤销的操作');
+        }
+    },
+
+    // 重做操作
+    onRedo: function () {
+        if (this.redoStack.length > 0) {
+            var operation = this.redoStack.pop(); // 从重做栈中弹出最后一个操作
+            this.undoStack.push(operation);      // 将操作推入撤销栈
+            this.performRedo(operation);         // 执行重做操作
+        } else {
+            Ext.Msg.alert('提示', '没有可重做的操作');
+        }
+    },
+
+    // 执行撤销操作
+    performUndo: function (operation) {
+        console.log('Perform Undo:', operation); // 调试日志
+        var taskStore = this.getTaskStore();
+        var task = taskStore.getById(operation.taskId);
+
+        switch (operation.type) {
+            case 'add':
+                taskStore.remove(task);
+                break;
+            case 'update':
+                task.set(operation.oldValue);
+                break;
+            case 'delete':
+                taskStore.add(task);
+                break;
+        }
+
+        this.refreshViews(); // 刷新视图
+    },
+
+    // 执行重做操作
+    performRedo: function (operation) {
+        console.log('Perform Redo:', operation); // 调试日志
+        var taskStore = this.getTaskStore();
+        var task = taskStore.getById(operation.taskId);
+
+        switch (operation.type) {
+            case 'add':
+                taskStore.add(task);
+                break;
+            case 'update':
+                task.set(operation.newValue);
+                break;
+            case 'delete':
+                taskStore.remove(task);
+                break;
+        }
+
+        this.refreshViews(); // 刷新视图
+    },
+
 
 
     createToolbar: function () {
@@ -455,7 +500,7 @@ Ext.define("MyApp.DemoGanttPanel", {
                         }
                     }
 
-                   
+
 
                 ]
             },
@@ -510,7 +555,7 @@ Ext.define("MyApp.DemoGanttPanel", {
                     //    scope: this
                     //},
 
-                    
+
 
                     {
                         text: '折叠所有',
@@ -788,17 +833,7 @@ Ext.define("MyApp.DemoGanttPanel", {
                     },
 
 
-                    {
-                        //iconCls: 'action',
-                        text: '打印',
-                        enableToggle: true,
-                        pressed: false,
-                        scope: this,
-                        handler: function () {
-                            App.Gantt.gantt.print();
 
-                        }
-                    },
 
                     {
                         text: '保存',
@@ -820,6 +855,27 @@ Ext.define("MyApp.DemoGanttPanel", {
 
                             this.refreshViews();
 
+                        }
+                    },
+
+                    {
+                        text: '撤消',
+                        iconCls: 'icon-undo', // 修正图标类名
+                        scope: this,
+                        xtype: 'button',
+                        handler: function () {
+                            // 调用撤销逻辑
+                            this.onUndo();
+                        }
+                    },
+                    {
+                        text: '重做',
+                        iconCls: 'icon-redo',
+                        scope: this,
+                        xtype: 'button',
+                        handler: function () {
+                            // 调用重做逻辑
+                            this.onRedo();
                         }
                     }
                 ]
@@ -948,22 +1004,17 @@ Ext.define("MyApp.DemoGanttPanel", {
                         }
                     },
 
+                    {
+                        //iconCls: 'action',
+                        text: '打印',
+                        enableToggle: true,
+                        pressed: false,
+                        scope: this,
+                        handler: function () {
+                            App.Gantt.gantt.print();
 
-                    //{
-                    //    text: '撤消',
-                    //    iconCls: 'icon-redo',
-                    //    scope: this,
-                    //    xtype: 'button',
-
-                    //    handler: function () {
-
-                    //        alert("dk11111");
-                    //      /*  this.undo("10");*/
-                    //        this.refreshViews();
-
-                    //    }
-
-                    //},
+                        }
+                    }
 
                     //{
                     //    iconCls: 'togglebutton',
@@ -1121,3 +1172,87 @@ Ext.define("MyApp.DemoGanttPanel", {
         }
     })()
 });
+
+TaskPriority = {
+    Low: 0,
+    Normal: 1,
+    High: 2
+};
+
+
+Ext.define('MSProjectImportPanel', {
+    //extend : 'Ext.form.Panel',
+    extend: 'Ext.window.Window',
+    width: 300,
+    frame: true,
+    title: '导入Project文件',
+    bodyPadding: '10 10 0',
+
+    defaults: {
+        anchor: '100%',
+        allowBlank: false,
+        msgTarget: 'side',
+        labelWidth: 50
+    },
+    initComponent: function () {
+        this.addEvents('dataavailable');
+        var w = this;
+        Ext.apply(this, {
+            items: [new Ext.form.Panel({
+                items: [{
+                    xtype: 'filefield',
+                    id: 'form-file',
+                    emptyText: '上传 .mpp 文件',
+                    fieldLabel: '选择文件',
+                    name: 'file',
+                    buttonText: '',
+                    buttonConfig: {
+                        iconCls: 'upload-icon'
+                    }
+                }],
+                buttons: [{
+                    text: '上传',
+                    handler: function () {
+                        var panel = this.up('form');
+                        var form = panel.getForm();
+                        if (form.isValid()) {
+                            form.submit({
+                                url: APIVAR.url.upload + '?pid=' + pid,
+                                waitMsg: '正在加载数据...',
+                                failure: function (form, action) {
+                                    msg('上传出错', '请确认上传文件格式是否正确. 错误位置: ' + action.result.msg);
+                                },
+                                success: function (form, action) {
+                                    //w.fireEvent('dataavailable', panel, action.result.data);
+                                    this.refreshViews();
+                                }
+                            });
+                        }
+                    }
+                },
+                {
+                    text: '重置',
+                    handler: function () {
+                        this.up('form').getForm().reset();
+                    }
+                }]
+            })]
+
+        });
+
+        this.callParent(arguments);
+    }
+});
+
+
+var msg = function (title, msg) {
+    Ext.Msg.show({
+        title: title,
+        msg: msg,
+        minWidth: 200,
+        modal: true,
+        icon: Ext.Msg.INFO,
+        buttons: Ext.Msg.OK
+    });
+};
+

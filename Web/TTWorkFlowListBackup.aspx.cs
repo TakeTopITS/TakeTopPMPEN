@@ -79,7 +79,7 @@ public partial class TTWorkFlowListBackup : System.Web.UI.Page
             }
             catch(Exception err)
             {
-                Response.Write("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+                //Response.Write("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
                 LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
             }

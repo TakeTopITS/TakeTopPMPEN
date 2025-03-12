@@ -62,7 +62,7 @@
                                                                     </td>
 
 
-<%--                                                                    <td style="text-align: left;">&nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
+                                                                    <%--                                                                    <td style="text-align: left;">&nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                                     </td>--%>
                                                                     <%--<td>
                                                                         <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="Type" DataValueField="Type"
@@ -118,7 +118,7 @@
                                                                         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                                                                     </td>
                                                                     <td colspan="2" style="text-align: right; padding-right: 30px;">
-                                                                        <asp:Button ID="BT_CreateUserDIYModule" runat="server" CssClass="inpuYello" Text="<%$ Resources:lang,New%>"  />
+                                                                        <asp:Button ID="BT_CreateUserDIYModule" runat="server" CssClass="inpuYello" Text="<%$ Resources:lang,New%>" />
 
                                                                         <asp:Label ID="LB_UserCode" runat="server" Visible="false"></asp:Label>
                                                                         <asp:Label ID="LB_UserName" Visible="false" runat="server"></asp:Label>
@@ -142,7 +142,7 @@
                                                                                 </HeaderTemplate>
 
                                                                                 <ContentTemplate>
-                                                                                     <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
+                                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                         <tr>
                                                                                             <td width="7">
                                                                                                 <img height="26" src="ImagesSkin/main_n_l.jpg" width="7" /></td>
@@ -267,7 +267,7 @@
                                                                                     <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,YaoPiHeDeDaiLiGongZuoLiu%>"></asp:Label>
                                                                                 </HeaderTemplate>
                                                                                 <ContentTemplate>
-                                                                                   <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
+                                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                         <tr>
                                                                                             <td width="7">
                                                                                                 <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" /></td>
@@ -448,7 +448,7 @@
                                                                                             </asp:HyperLinkColumn>
                                                                                             <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
-                                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
+                                                                                                    <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                             </asp:TemplateColumn>
@@ -534,7 +534,7 @@
                                                                                             </asp:HyperLinkColumn>
                                                                                             <asp:TemplateColumn HeaderText="Status">
                                                                                                 <ItemTemplate>
-                                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
+                                                                                                    <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                             </asp:TemplateColumn>
@@ -668,9 +668,12 @@
                                                                                     HeaderText="Workflow" Target="_blank" Text="<%$ Resources:lang,JinDu%>">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                                </asp:BoundColumn>
+                                                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                                                    <ItemTemplate>
+                                                                                        <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                                </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                                                 </asp:BoundColumn>
@@ -679,7 +682,7 @@
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
-                                                                                         <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
+                                                                                        <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                 </asp:TemplateColumn>

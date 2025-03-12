@@ -265,7 +265,7 @@
                                         </td>
 
                                         <td style="text-align: left; padding-top: 1px; color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
-                                            <asp:ImageButton ID="BT_SaveWFRelatedData" ImageUrl="Images/Save.gif"  Width="24" Height="24" runat="server" OnClick="BT_SaveWFRelatedData_Click" />
+                                            <asp:ImageButton ID="BT_SaveWFRelatedData" ImageUrl="Images/Save.gif" Width="24" Height="24" runat="server" OnClick="BT_SaveWFRelatedData_Click" />
                                         </td>
                                         <td style="text-align: left; padding-left: 10px; color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
                                             <asp:HyperLink ID="HL_ApproveRecord" runat="server" NavigateUrl="TTWorkflowApproveRecord.aspx" Target="_blank" ToolTip="ÉóÅú¼ÇÂ¼">
@@ -413,9 +413,12 @@
                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}" DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                             </asp:HyperLinkColumn>
-                                                            <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                            </asp:BoundColumn>
+                                                            <asp:TemplateColumn HeaderText="HomeName">
+                                                                <ItemTemplate>
+                                                                    <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                </ItemTemplate>
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                            </asp:TemplateColumn>
                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:HyperLinkColumn>
@@ -863,9 +866,12 @@
                                                                                 DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                                             </asp:HyperLinkColumn>
-                                                                            <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                            </asp:BoundColumn>
+                                                                            <asp:TemplateColumn HeaderText="HomeName">
+                                                                                <ItemTemplate>
+                                                                                    <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                </ItemTemplate>
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                            </asp:TemplateColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                                                 DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />

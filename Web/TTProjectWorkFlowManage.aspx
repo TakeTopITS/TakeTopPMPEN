@@ -339,7 +339,7 @@
                                                                                             </td>
                                                                                             <td width="15%" align="center">
                                                                                                 <strong>
-                                                                                                      <asp:Label ID="Label65" runat="server" Text="<%$ Resources:lang,LastestReviewer%>"></asp:Label>
+                                                                                                    <asp:Label ID="Label65" runat="server" Text="<%$ Resources:lang,LastestReviewer%>"></asp:Label>
                                                                                                 </strong>
                                                                                             </td>
                                                                                             <td width="10%" align="center">
@@ -393,9 +393,12 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="15%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                                </asp:BoundColumn>
+                                                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                                                    <ItemTemplate>
+                                                                                        <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                                </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                                                 </asp:BoundColumn>
@@ -422,7 +425,7 @@
                                                                                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?RelatedType=WorkFlow&WLID={0}") %>'
                                                                                             Target="_blank"><img src="ImagesSkin/Doc.gif" alt ="Folder Icon"  class="noBorder"/></asp:HyperLink>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center"/>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:TemplateColumn>
                                                                             </Columns>
 

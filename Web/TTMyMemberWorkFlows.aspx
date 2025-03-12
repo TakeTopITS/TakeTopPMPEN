@@ -62,7 +62,7 @@
                                                         <td style="text-align: left;">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></td>
                                                         <td>
-                                                            <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="Type" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
+                                                            <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="HomeName" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
 
@@ -81,7 +81,7 @@
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingChen%>"></asp:Label>
                                                         </td>
                                                         <td style="text-align: left;">
-                                                            <asp:TextBox ID="TB_WFName" runat="server" Width="120px"></asp:TextBox>
+                                                            <asp:TextBox ID="TB_WFName" runat="server" Width="250px"></asp:TextBox>
                                                         </td>
                                                         <td></td>
                                                     </tr>
@@ -113,7 +113,7 @@
                                                             <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click"
                                                                 Text="<%$ Resources:lang,ChaXun%>" />
                                                         </td>
-                                                        <td align="left" style="padding-top: 3px;">
+                                                        <td colspan="2" align="left" style="padding-top: 3px;">
                                                             <asp:HyperLink ID="HL_MyMemberWorkFlowBackup" runat="server" NavigateUrl="TTMyMemberWorkFlowsBackup.aspx" Text="<%$ Resources:lang,ChaKanYuBeiFengDeGongZuoLiu%>"></asp:HyperLink>
                                                         </td>
                                                     </tr>
@@ -341,9 +341,12 @@
                                                                                     HeaderText="Workflow" Target="_blank" Text="<%$ Resources:lang,JinDu%>">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                                </asp:BoundColumn>
+                                                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                                                    <ItemTemplate>
+                                                                                        <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                                </asp:TemplateColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                                                     DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />

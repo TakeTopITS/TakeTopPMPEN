@@ -5,7 +5,10 @@
 <head id="Head1" runat="server">
     <title></title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script><script type="text/javascript" src="js/allAHandler.js"></script><script type="text/javascript" language="javascript">$(function () {if (top.location != self.location) { } else { CloseWebPage(); }});</script></head>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/allAHandler.js"></script>
+    <script type="text/javascript" language="javascript">$(function () { if (top.location != self.location) { } else { CloseWebPage(); } });</script>
+</head>
 <body>
     <center>
         <form id="form1" runat="server">
@@ -177,7 +180,7 @@
                                                                     <asp:HyperLink ID="HL_WLRelatedDoc" runat="server" NavigateUrl="TTReqRelatedDoc.aspx"
                                                                         Target="_blank" Enabled="False">
                                                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,XiangGuanWenDang%>"></asp:Label>
-                                                                        </asp:HyperLink>
+                                                                    </asp:HyperLink>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -251,9 +254,12 @@
                                                                                 <asp:BoundColumn DataField="WLName" HeaderText="工作流名称">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                                </asp:BoundColumn>
+                                                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                                                    <ItemTemplate>
+                                                                                        <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                                </asp:TemplateColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="TemName" DataNavigateUrlFormatString="TTWLTemplate.aspx?TemName={0}"
                                                                                     DataTextField="TemName" HeaderText="模板" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
@@ -314,4 +320,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

@@ -92,7 +92,7 @@
                 <div id="AboveDiv">
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
-                            <td height="31" style="background-color:ButtonFace;">
+                            <td height="31" style="background-color: ButtonFace;">
                                 <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td style="width: 50%;" align="left">
@@ -113,7 +113,7 @@
                                         <td align="center">
                                             <table>
                                                 <tr>
-                                                    <td style="width: 60px; text-align: center; color: #394f66; ">
+                                                    <td style="width: 60px; text-align: center; color: #394f66;">
                                                         <asp:HyperLink ID="HL_WLRelatedDoc" runat="server" Target="_blank"><img src="ImagesSkin/UploadDoc.png" width= "24" height ="24" class="noBorder" />
                                                         </asp:HyperLink>
                                                     </td>
@@ -529,9 +529,12 @@
                                                 DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                            </asp:BoundColumn>
+                                            <asp:TemplateColumn HeaderText="HomeName">
+                                                <ItemTemplate>
+                                                    <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                </ItemTemplate>
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                            </asp:TemplateColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                 DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
@@ -539,13 +542,7 @@
                                             <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <%--  <asp:TemplateColumn HeaderText="Status">
-    <ItemTemplate>
-        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
-    </ItemTemplate>
-    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-</asp:TemplateColumn>--%>
-
+                                      
                                             <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
@@ -572,7 +569,7 @@
                         </table>
                         <br />
 
-                        <div style="width: 98%; text-align: left; overflow-x: auto;display:none;">
+                        <div style="width: 98%; text-align: left; overflow-x: auto; display: none;">
                             <table>
                                 <tr>
                                     <asp:Repeater ID="Repeater1" runat="server">

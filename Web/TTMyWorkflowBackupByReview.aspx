@@ -43,7 +43,7 @@
                                 <td height="31" class="page_topbj">
                                     <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" style="padding-top: 4px;">
+                                            <td align="center" style="padding-top: 4px;">
 
                                                 <table>
                                                     <tr>
@@ -59,7 +59,7 @@
                                                         <td>
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></td>
                                                         <td>
-                                                            <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="Type" DataValueField="Type"  OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged" >
+                                                            <asp:DropDownList ID="DL_WLType" runat="server" AutoPostBack="True" DataTextField="HomeName" DataValueField="Type" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
 
@@ -70,14 +70,14 @@
                                                             <asp:TextBox ID="TB_WFTemName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:DropDownList ID="DL_WLTem" runat="server" AutoPostBack="True" DataTextField="TemName" DataValueField="TemName"  OnSelectedIndexChanged="DL_WLTem_SelectedIndexChanged" >
+                                                            <asp:DropDownList ID="DL_WLTem" runat="server" AutoPostBack="True" DataTextField="TemName" DataValueField="TemName" OnSelectedIndexChanged="DL_WLTem_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td>
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingChen%>"></asp:Label>
                                                         </td>
                                                         <td>
-                                                            <asp:TextBox ID="TB_WFName" runat="server" Width="120px"></asp:TextBox>
+                                                            <asp:TextBox ID="TB_WFName" runat="server" Width="250px"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -207,9 +207,12 @@
                                                                                     HeaderText="Workflow" Target="_blank" Text="<%$ Resources:lang,JinDu%>">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                                </asp:BoundColumn>
+                                                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                                                    <ItemTemplate>
+                                                                                        <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                                </asp:TemplateColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                                                     DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
@@ -217,12 +220,7 @@
                                                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <%--  <asp:TemplateColumn HeaderText="Status">
-    <ItemTemplate>
-        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
-    </ItemTemplate>
-    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-</asp:TemplateColumn>--%>
+                                                                           
 
                                                                                 <asp:TemplateColumn HeaderText="Status">
                                                                                     <ItemTemplate>
@@ -379,7 +377,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                         
+
                                         </tr>
                                     </table>
                                 </td>
@@ -398,4 +396,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

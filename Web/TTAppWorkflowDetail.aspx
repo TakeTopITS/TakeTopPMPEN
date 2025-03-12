@@ -126,7 +126,7 @@
     <script type="text/javascript" language="javascript">
         $(function () {
 
-             /*  if (top.location != self.location) { } else { CloseWebPage(); }*/
+            /*  if (top.location != self.location) { } else { CloseWebPage(); }*/
         });
 
         //显示意见栏
@@ -173,7 +173,7 @@
 
                                 <table width="100%">
                                     <tr>
-                                        <td >
+                                        <td>
                                             <a id="a_return" runat="server" href="TTAppWorkFlow.aspx" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" target="_top">
                                                 <table border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
@@ -420,9 +420,12 @@
                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}" DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                             </asp:HyperLinkColumn>
-                                                            <asp:BoundColumn DataField="WLType" HeaderText="Type">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                            </asp:BoundColumn>
+                                                            <asp:TemplateColumn HeaderText="HomeName">
+                                                                <ItemTemplate>
+                                                                    <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                </ItemTemplate>
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                            </asp:TemplateColumn>
                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:HyperLinkColumn>
@@ -678,11 +681,11 @@
                                                     <HeaderTemplate>
                                                         <asp:Label runat="server" Text="<%$ Resources:lang,GongZuoNeiRong%>"></asp:Label>
 
-                                                    
-</HeaderTemplate>
-                                                    
 
-<ContentTemplate>
+                                                    </HeaderTemplate>
+
+
+                                                    <ContentTemplate>
                                                         <table style="width: 100%; text-align: left;">
                                                             <tr>
                                                                 <td style="text-align: left; height: 1px;">
@@ -746,50 +749,51 @@
                                                                         </tr>
                                                                     </table>
                                                                     <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" Height="1px"
-                                                                        ShowHeader="False" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None"><Columns>
-<asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
-</asp:BoundColumn>
-<asp:BoundColumn DataField="WorkDetail" HeaderText="要审核的工作">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
-</asp:BoundColumn>
-<asp:BoundColumn DataField="Actor" HeaderText="承担角色">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-</asp:BoundColumn>
-<asp:BoundColumn DataField="FinishedTime" HeaderText="时间(小时)">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
-</asp:BoundColumn>
-<asp:BoundColumn DataField="Requisite" HeaderText="必需">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
-</asp:BoundColumn>
-<asp:BoundColumn DataField="Operation" HeaderText="动作">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-</asp:BoundColumn>
-<asp:BoundColumn DataField="CheckingTime" HeaderText="最后审核时间">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
-</asp:BoundColumn>
-<asp:TemplateColumn HeaderText="Status"><ItemTemplate>
+                                                                        ShowHeader="False" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                                                        <Columns>
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:BoundColumn DataField="WorkDetail" HeaderText="要审核的工作">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:BoundColumn DataField="Actor" HeaderText="承担角色">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:BoundColumn DataField="FinishedTime" HeaderText="时间(小时)">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:BoundColumn DataField="Requisite" HeaderText="必需">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:BoundColumn DataField="Operation" HeaderText="动作">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:BoundColumn DataField="CheckingTime" HeaderText="最后审核时间">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:TemplateColumn HeaderText="Status">
+                                                                                <ItemTemplate>
                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
-                                                                                
-</ItemTemplate>
+                                                                                </ItemTemplate>
 
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-</asp:TemplateColumn>
-<asp:BoundColumn DataField="StepId" HeaderText="步骤ID">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
-</asp:BoundColumn>
-</Columns>
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+                                                                            </asp:TemplateColumn>
+                                                                            <asp:BoundColumn DataField="StepId" HeaderText="步骤ID">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                            </asp:BoundColumn>
+                                                                        </Columns>
 
-<EditItemStyle BackColor="#2461BF" />
+                                                                        <EditItemStyle BackColor="#2461BF" />
 
-<FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
 
-<ItemStyle CssClass="itemStyle" />
+                                                                        <ItemStyle CssClass="itemStyle" />
 
-<PagerStyle HorizontalAlign="Center" />
+                                                                        <PagerStyle HorizontalAlign="Center" />
 
-<SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-</asp:DataGrid>
+                                                                        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                    </asp:DataGrid>
 
 
                                                                 </td>
@@ -964,71 +968,76 @@
                                                                     </table>
                                                                     <asp:DataGrid ID="DataGrid7" runat="server" AutoGenerateColumns="False"
                                                                         ShowHeader="False" Height="1px"
-                                                                        Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None"><Columns>
-<asp:BoundColumn DataField="WLID" HeaderText="Number">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-</asp:BoundColumn>
-<asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
+                                                                        Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                                                        <Columns>
+                                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
                                                                                 DataTextField="WLName" HeaderText="Workflow" Target="_blank">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
-</asp:HyperLinkColumn>
-<asp:BoundColumn DataField="WLType" HeaderText="Type">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-</asp:BoundColumn>
-<asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
+                                                                            </asp:HyperLinkColumn>
+                                                                            <asp:TemplateColumn HeaderText="HomeName">
+                                                                                <ItemTemplate>
+                                                                                    <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                </ItemTemplate>
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                            </asp:TemplateColumn>
+                                                                            <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                                                 DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-</asp:HyperLinkColumn>
-<asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
-</asp:BoundColumn>
-<asp:TemplateColumn HeaderText="Status"><ItemTemplate>
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                            </asp:HyperLinkColumn>
+                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                                            </asp:BoundColumn>
+                                                                            <asp:TemplateColumn HeaderText="Status">
+                                                                                <ItemTemplate>
                                                                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
-                                                                                
-</ItemTemplate>
+                                                                                </ItemTemplate>
 
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-</asp:TemplateColumn>
-<asp:TemplateColumn><ItemTemplate>
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+                                                                            </asp:TemplateColumn>
+                                                                            <asp:TemplateColumn>
+                                                                                <ItemTemplate>
                                                                                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?RelatedType=WorkFlow&WLID={0}") %>'
                                                                                         Target="_blank">
                                                                                         <img src="ImagesSkin/Doc.gif" class="noBorder" /></asp:HyperLink>
 
-                                                                                
-</ItemTemplate>
 
-<ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
-</asp:TemplateColumn>
-</Columns>
+                                                                                </ItemTemplate>
 
-<EditItemStyle BackColor="#2461BF" />
+                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                                            </asp:TemplateColumn>
+                                                                        </Columns>
 
-<FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                                        <EditItemStyle BackColor="#2461BF" />
 
-<ItemStyle CssClass="itemStyle" />
+                                                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
 
-<PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                        <ItemStyle CssClass="itemStyle" />
 
-<SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-</asp:DataGrid>
+                                                                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+
+                                                                        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                    </asp:DataGrid>
 
 
                                                                 </td>
                                                             </tr>
                                                         </table>
-                                                    
-</ContentTemplate>
-                                                
 
-</cc1:TabPanel>
+                                                    </ContentTemplate>
+
+
+                                                </cc1:TabPanel>
                                                 <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="审批记录">
                                                     <HeaderTemplate>
                                                         <asp:Label ID="Label54" runat="server" Text="<%$ Resources:lang,ShenPiJiLu%>"></asp:Label>
-                                                    
-</HeaderTemplate>
-                                                    
 
-<ContentTemplate>
+                                                    </HeaderTemplate>
+
+
+                                                    <ContentTemplate>
                                                         <div id="mess_box" style="width: 100%; height: 450px; overflow: auto;">
                                                             <table style="width: 98%; text-align: left;">
                                                                 <tr>
@@ -1058,19 +1067,19 @@
                                                                 </tr>
                                                             </table>
                                                         </div>
-                                                    
-</ContentTemplate>
-                                                
 
-</cc1:TabPanel>
+                                                    </ContentTemplate>
+
+
+                                                </cc1:TabPanel>
                                                 <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="关联步骤">
                                                     <HeaderTemplate>
                                                         <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,GuanLianBuZhou%>"></asp:Label>
-                                                    
-</HeaderTemplate>
-                                                    
 
-<ContentTemplate>
+                                                    </HeaderTemplate>
+
+
+                                                    <ContentTemplate>
                                                         <table style="width: 100%; text-align: left;">
                                                             <tr>
                                                                 <td style="text-align: left; height: 1px;">
@@ -1273,11 +1282,11 @@
                                                                 </td>
                                                             </tr>
                                                         </table>
-                                                    
-</ContentTemplate>
-                                                
 
-</cc1:TabPanel>
+                                                    </ContentTemplate>
+
+
+                                                </cc1:TabPanel>
                                             </cc1:TabContainer>
                                         </td>
                                     </tr>

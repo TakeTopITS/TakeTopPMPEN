@@ -105,6 +105,8 @@ public partial class TTWorkPlanGanttForProjectForEnglish : System.Web.UI.Page
 
         //获取整个项目的时间范围
         TakeTopGantt.models.extganttDataContext db = new extganttDataContext();
+
+    
         var allTasks = db.task.Where(b => b.pid == pid);
         try
         {
