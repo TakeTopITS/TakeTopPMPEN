@@ -415,7 +415,7 @@
                                                             </asp:HyperLinkColumn>
                                                             <asp:TemplateColumn HeaderText="HomeName">
                                                                 <ItemTemplate>
-                                                                    <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                    <%# ShareClass.GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
                                                                 </ItemTemplate>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                             </asp:TemplateColumn>
@@ -868,7 +868,7 @@
                                                                             </asp:HyperLinkColumn>
                                                                             <asp:TemplateColumn HeaderText="HomeName">
                                                                                 <ItemTemplate>
-                                                                                    <%# ShareClass.  GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                                                    <%# ShareClass.GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                                             </asp:TemplateColumn>

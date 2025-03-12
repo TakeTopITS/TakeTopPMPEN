@@ -17431,7 +17431,7 @@
     <value>エキスパート1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>専門家が構築することを提案します</value>
+    <value>専門家の意見</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>エキスパートタイトル</value>
@@ -30800,5 +30800,32 @@
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>接続</value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>入札者</value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>プロジェクト担当者</value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>内外属性 </value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>入札価格</value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>コントロール価格</value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>プロジェクト所属専門</value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>今年のこのタイプの総残業日数</value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>残業の理由</value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>残業時間</value>
   </data>
 </root>

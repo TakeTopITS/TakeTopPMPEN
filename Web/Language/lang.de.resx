@@ -17431,7 +17431,7 @@
     <value>Expert 1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>Experten schlagen vor, zu bauen</value>
+    <value>Expertenmeinung</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>Expertentitel</value>
@@ -30941,5 +30941,32 @@
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Verbindung</value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>Ausschreibender</value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>Projektbearbeiter</value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>Interne und externe Attribute</value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>Angebotsabgabe</value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>Kontrollpreis </value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>Projektfachgebiet </value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>Gesamtzahl der Überstundentage dieser Art in diesem Jahr</value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>Grund für Überstunden</value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>Überstunden</value>
   </data>
 </root>

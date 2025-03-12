@@ -17431,7 +17431,7 @@
     <value>전문가 1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>전문가들은 건설 제안</value>
+    <value>전문가 의견</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>전문가 제목</value>
@@ -30878,5 +30878,32 @@
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>연결</value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>입찰자</value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>프로젝트 담당자</value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>내외 속성 </value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>입찰 가격 </value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>통제 가격 </value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>프로젝트 소속 전공</value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>올해 이 유형의 총 초과 근무 일수</value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>초과 근무 사유 </value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>초과 근무 시간</value>
   </data>
 </root>

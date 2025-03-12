@@ -17431,7 +17431,7 @@
     <value>Expert 1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>Gli esperti propongono di costruire</value>
+    <value>Parere esperto</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>Titolo Expert</value>
@@ -28677,6 +28677,10 @@
   <data name="BenSeChengBentdtdclass" xml:space="preserve">
     <value>Riga {0}, i costi finanziari possono essere solo un numero decimale</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PeiFangJiatdtdclass" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
     <value>Importazione completata con successo di {0} dati</value>
   </data>
@@ -30989,5 +30993,34 @@
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Connessione</value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>Appaltatore</value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>Responsabile del progetto</value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>Attributi interni ed esterni</value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>Offerta di gara</value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>Prezzo di controllo </value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>Specialità del progetto</value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>Numero totale di giorni di straordinario di questo tipo quest'anno
+
+</value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>Motivo degli straordinari</value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>Ore straordinarie</value>
   </data>
 </root>

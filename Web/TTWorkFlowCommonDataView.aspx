@@ -1390,12 +1390,12 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right">
-                                                        <asp:Label ID="Label23" runat="server" Text="加班类型"></asp:Label>
+                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,TianXieRiQi%>"></asp:Label>
                                                         ：</td>
                                                     <td style="text-align: left" colspan="7">
                                                         <asp:Label ID="LB_OvertimeType" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "OvertimeType")%>'></asp:Label>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:Label ID="Label10" runat="server" Text="本年度此类型已加班总天数"></asp:Label>：
+                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BenNianDuZiLeiXingJiaBanZongTianShu%>"></asp:Label>：
 
                                                         当月：<asp:Label ID="LB_TotalOvertimeDaysForCurrrentMonth" runat="server"></asp:Label>
                                                         当年：<asp:Label ID="LB_TotalOvertimeDaysForCurrrentYear" runat="server"></asp:Label>
@@ -1403,12 +1403,12 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right">
-                                                        <asp:Label ID="Label121" runat="server" Text="加班事由"></asp:Label>：</td>
+                                                        <asp:Label ID="Label121" runat="server" Text="<%$ Resources:lang,JiaBanShiYou%>"></asp:Label>：</td>
                                                     <td style="text-align: left" colspan="7"><%#DataBinder.Eval(Container.DataItem, "ApplyBecause")%></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right">
-                                                        <asp:Label ID="Label122" runat="server" Text="加班时间"></asp:Label>：</td>
+                                                        <asp:Label ID="Label122" runat="server" Text="<%$ Resources:lang,JiaBanShiJian%>"></asp:Label>：</td>
                                                     <td style="text-align: left" colspan="7">
                                                         <asp:Label ID="Label123" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>
 
@@ -1775,7 +1775,7 @@
                                                     <td style="text-align: right"></td>
                                                     <td style="text-align: left;" colspan="5">
                                                         <a id="aDetailView" href='TTBMWinResultView.aspx?AnnID=<%#DataBinder.Eval(Container.DataItem, "ID")%>&NoPop=YES' target="DetailArea">
-                                                            <asp:Label ID="Label167" runat="server" Text="专家意见"></asp:Label>
+                                                            <asp:Label ID="Label167" runat="server" Text="<%$ Resources:lang,ZhuanJiaYiJian%>"></asp:Label>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -3972,7 +3972,7 @@
                                                                     <%#DataBinder.Eval(Container.DataItem, "ID")%>&nbsp;&nbsp; <%#DataBinder.Eval(Container.DataItem, "VisaName")%>
                                                                 </td>
                                                                 <td class="formItemBgStyle" style="width: 15%; text-align: left">
-                                                                    <asp:Label ID="Label8" runat="server" Text="签证人"></asp:Label>：
+                                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,QianZengRen%>"></asp:Label>：
                                                                 </td>
                                                                 <td class="formItemBgStyle" style="text-align: left">
                                                                     <%#DataBinder.Eval(Container.DataItem, "VisaSignMan")%>
@@ -4019,13 +4019,13 @@
 
                                                             <tr style="font-weight: 600;">
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label11" runat="server" Text="RelatedProject"></asp:Label>：
+                                                                    <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GuanLianXiangMu%>"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="2" class="formItemBgStyle" style="text-align: left;">
                                                                     <%#DataBinder.Eval(Container.DataItem, "ProjectID")%>
                                                                     <asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                                                     &nbsp;&nbsp;
-                                                                    <asp:Label ID="Label2" runat="server" Text="关联合同应付计划"></asp:Label>：
+                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GuanLianHeTongYingFuJiHua%>"></asp:Label>：
                                                                     <%#DataBinder.Eval(Container.DataItem, "ConstractPayableID")%>
                                                                     <asp:Label ID="LB_ConstractPayablePlanName" runat="server"></asp:Label>
                                                                 </td>
@@ -4037,7 +4037,7 @@
                                                             </tr>
                                                             <tr style="font-weight: 600;">
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label56" runat="server" Text="相关影响"></asp:Label>：
+                                                                    <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,XiangGuanYingXiang%>"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="3" class="formItemBgStyle" style="text-align: left;">
                                                                     <asp:TextBox ID="TB_RelatedImpact" TextMode="MultiLine" Style="width: 99%; height: 80px;" runat="server"> </asp:TextBox>
@@ -4048,7 +4048,7 @@
                                                             </tr>
                                                             <tr style="font-weight: 600;">
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label245" runat="server" Text="处理结论"></asp:Label>：
+                                                                    <asp:Label ID="Label245" runat="server" Text="<%$ Resources:lang,ChuLiJieRen%>"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="3" class="formItemBgStyle" style="text-align: left;">
                                                                     <asp:TextBox ID="TB_RelatedResult" TextMode="MultiLine" Style="width: 99%; height: 80px;" runat="server"> </asp:TextBox>
@@ -4219,7 +4219,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label7" runat="server" Text="招标人"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhaoBiaoRen%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="3">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"UserCode") %>
@@ -4262,7 +4262,7 @@
                                                                     </table>
                                                                 </td>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label10" runat="server" Text="技术负责人"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JiShuFuZeRen%>"></asp:Label>：</td>
                                                                 <td colspan="2" style="text-align: left;">
                                                                     <table>
                                                                         <tr>
@@ -4279,7 +4279,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label46" runat="server" Text="项目经办人"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,XiangMuJinBanRen%>"></asp:Label>：</td>
                                                                 <td align="right" colspan="2">
                                                                     <table width="100%">
                                                                         <tr>
@@ -4294,7 +4294,7 @@
                                                                     </table>
                                                                 </td>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label49" runat="server" Text="内外属性"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,NiWaiSuoXing%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="2">
 
 
@@ -4322,13 +4322,13 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label47" runat="server" Text="投标报价"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,TouBiaoBaoJia%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="3">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"BiddingPrice") %>
                                                                 </td>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label48" runat="server" Text="控制价"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,KongZhiJia%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="3">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"ControlPrice") %>
@@ -4426,7 +4426,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label28" runat="server" Text="项目所属专业"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,XiangMuSuoSuoZhuanYe%>"></asp:Label>：</td>
                                                                 <td colspan="6" align="left" class="formItemBgStyle">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"TenderContent") %>
@@ -4541,7 +4541,7 @@
                                 </asp:TemplateColumn>
 
                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                    DataTextField="DocName" Target="downFrame" HeaderText="文件名">
+                                    DataTextField="DocName" Target="downFrame" HeaderText="FileName">
                                     <ItemStyle HorizontalAlign="Left" CssClass="itemBorder"></ItemStyle>
                                 </asp:HyperLinkColumn>
 
@@ -4560,7 +4560,7 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" VerticalAlign="Middle" Width="5%" />
                                             </asp:TemplateColumn>--%>
 
-                                <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">
+                                <asp:BoundColumn DataField="UploadManName" HeaderText="UploadMan">
                                     <ItemStyle HorizontalAlign="center" CssClass="itemBorder"></ItemStyle>
                                 </asp:BoundColumn>
                             </Columns>
@@ -4585,7 +4585,7 @@
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                DataTextField="DocName" Target="downFrame" HeaderText="文件名">
+                                                DataTextField="DocName" Target="downFrame" HeaderText="FileName">
                                                 <ItemStyle HorizontalAlign="Left" Width="25%" CssClass="itemBorder"></ItemStyle>
                                             </asp:HyperLinkColumn>
 
@@ -4593,7 +4593,7 @@
                                                 <ItemStyle HorizontalAlign="center" Width="15%" CssClass="itemBorder"></ItemStyle>
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="UploadManName" HeaderText="上传者">
+                                            <asp:BoundColumn DataField="UploadManName" HeaderText="UploadMan">
                                                 <ItemStyle HorizontalAlign="Left" Width="10%" CssClass="itemBorder"></ItemStyle>
                                             </asp:BoundColumn>
                                         </Columns>

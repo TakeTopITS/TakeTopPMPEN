@@ -17431,7 +17431,7 @@
     <value>Expert 1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>Experts propose to build</value>
+    <value>Expert Opinion</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>Expert title</value>
@@ -30819,5 +30819,32 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Connection</value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>Tenderer</value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>Project Handler </value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>nternal and External Attributes</value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>Bid Quotation</value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>Control Price </value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>Project Discipline</value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>Total Overtime Days of This Type This Year</value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>Reason for Overtime</value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>Overtime Hours</value>
   </data>
 </root>

@@ -59,7 +59,7 @@ public static class ShareClass
         //
     }
 
-    public static string SystemVersionID = "V2025.3.11";
+    public static string SystemVersionID = "V2025.3.12";
 
     public static string SystemLatestLoginUser = "";
     public static string SystemDBer = "";
@@ -6870,7 +6870,7 @@ public static class ShareClass
         string strHQL;
         IList lst;
 
-        strHQL = string.Format(@"Select HomeName From T_WLType Where Type = '{0}' and LangCode ='{1}'", strWLType, HttpContext.Current.Session["LangCode"].ToString());
+        strHQL = string.Format(@"Select HomeName From T_WLType Where Type = '{0}' and LangCode ='{1}'", strWLType, HttpContext.Current.Session["LangCode"].ToString().Trim());
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WLType");
         if (ds.Tables[0].Rows.Count > 0)
         {

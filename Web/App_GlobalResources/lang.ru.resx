@@ -17431,7 +17431,7 @@
     <value>Эксперт 1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>Эксперты предлагают построить</value>
+    <value>Мнение эксперта </value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>Эксперт название</value>
@@ -30791,5 +30791,32 @@
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Соединение </value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>Заказчик </value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>Исполнитель проекта</value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>Внутренние и внешние атрибуты</value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>Предложение на торгах </value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>Контрольная цена</value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>Специализация проекта</value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>Общее количество сверхурочных дней данного типа в этом году </value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>Причина сверхурочной работы</value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>Сверхурочные часы</value>
   </data>
 </root>

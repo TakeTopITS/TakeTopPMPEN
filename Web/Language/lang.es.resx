@@ -17431,7 +17431,7 @@
     <value>Experto 1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>Los expertos proponen construir</value>
+    <value>Opinión de experto</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>Título de Experto</value>
@@ -30741,7 +30741,38 @@
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>contrato de Asociación</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NianTie2" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="LianXian" xml:space="preserve">
     <value>Conexión</value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>Licitador</value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>Responsable del proyecto</value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>Atributos internos y externos</value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>Cotización de licitación</value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>Precio de control</value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>Especialidad del proyecto</value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>Total de días de horas extras de este tipo este año</value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>Motivo de las horas extras</value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>Horas extras</value>
   </data>
 </root>

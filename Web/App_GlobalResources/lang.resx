@@ -17432,7 +17432,7 @@
     <value>专家1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>专家议建</value>
+    <value>专家意见</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>专家职称</value>
@@ -31393,27 +31393,6 @@
   <data name="BuTongYi2" xml:space="preserve">
     <value />
   </data>
-  <data name="CaoShi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CaoShi2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CaoZuoDaoHang1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CaoZuoDaoHang2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CaoZuoRiZhiBaoBiao1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CaoZuoRiZhiBaoBiao2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ChuLiJieRen1" xml:space="preserve">
-    <value />
-  </data>
   <data name="ChuLiJieRen2" xml:space="preserve">
     <value />
   </data>
@@ -31537,9 +31516,6 @@
   <data name="QianZengMIngXi2" xml:space="preserve">
     <value />
   </data>
-  <data name="QianZengRen1" xml:space="preserve">
-    <value />
-  </data>
   <data name="QianZengRen2" xml:space="preserve">
     <value />
   </data>
@@ -31583,9 +31559,6 @@
     <value />
   </data>
   <data name="WanChengTongGuo2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="XiangGuanYingXiang1" xml:space="preserve">
     <value />
   </data>
   <data name="XiangGuanYingXiang2" xml:space="preserve">
@@ -31684,5 +31657,41 @@
   <data name="LianXian" xml:space="preserve">
     <value>连线</value>
     <comment>连线</comment>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>招标人</value>
+    <comment>招标人</comment>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>项目经办人</value>
+    <comment>Projektbearbeiter</comment>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>内外属性</value>
+    <comment>内外属性</comment>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>投标报价</value>
+    <comment>投标报价</comment>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>控制价</value>
+    <comment>控制价</comment>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>项目所属专业</value>
+    <comment>Projektfachgebiet</comment>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>本年度此类型已加班总天数</value>
+    <comment>本年度此类型已加班总天数</comment>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>加班事由</value>
+    <comment>加班事由</comment>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>加班时间</value>
+    <comment>加班时间</comment>
   </data>
 </root>

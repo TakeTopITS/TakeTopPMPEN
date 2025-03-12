@@ -17431,7 +17431,7 @@
     <value>Expert 1</value>
   </data>
   <data name="ZhuanJiaYiJian" xml:space="preserve">
-    <value>Les experts proposent de construire</value>
+    <value>Avis d'expert</value>
   </data>
   <data name="ZhuanJiaZhiCheng" xml:space="preserve">
     <value>Titre d'experts</value>
@@ -30743,5 +30743,32 @@
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Connexion</value>
+  </data>
+  <data name="ZhaoBiaoRen" xml:space="preserve">
+    <value>Soumissionnaire</value>
+  </data>
+  <data name="XiangMuJinBanRen" xml:space="preserve">
+    <value>Gestionnaire de projet</value>
+  </data>
+  <data name="NiWaiSuoXing" xml:space="preserve">
+    <value>Attributs internes et externes</value>
+  </data>
+  <data name="TouBiaoBaoJia" xml:space="preserve">
+    <value>Offre de soumission</value>
+  </data>
+  <data name="KongZhiJia" xml:space="preserve">
+    <value>Prix de contrôle</value>
+  </data>
+  <data name="XiangMuSuoSuoZhuanYe" xml:space="preserve">
+    <value>Spécialité du projet</value>
+  </data>
+  <data name="BenNianDuZiLeiXingJiaBanZongTianShu" xml:space="preserve">
+    <value>Nombre total de jours supplémentaires de ce type cette année</value>
+  </data>
+  <data name="JiaBanShiYou" xml:space="preserve">
+    <value>Raison des heures supplémentaires</value>
+  </data>
+  <data name="JiaBanShiJian" xml:space="preserve">
+    <value>Heures supplémentaires</value>
   </data>
 </root>
