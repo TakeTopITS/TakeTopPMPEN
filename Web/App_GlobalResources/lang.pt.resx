@@ -30795,4 +30795,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>Horas extras</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>Moeda local</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>Tipo de fatura</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>Tipo de venda</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>Proporção de receitas e despesas do contrato</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>Especialidade de licitação</value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>Fonte de recursos</value>
+  </data>
 </root>

@@ -30847,4 +30847,22 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>Overtime Hours</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>Local Currency</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>Invoice Type</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>Sales Type</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>Contract Income and Expenditure Ratio</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>Bidding Specialty </value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>Source of Funds</value>
+  </data>
 </root>

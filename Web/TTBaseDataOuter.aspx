@@ -1457,7 +1457,7 @@
                                                 </strong>
                                                 </td>
                                                 <td align="center" width="20%"><strong>
-                                                    <asp:Label ID="Label61" runat="server" Text="本币"></asp:Label>
+                                                    <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,BenBi%>"></asp:Label>
                                                 </strong>
                                                 </td>
                                             </tr>
@@ -1487,7 +1487,7 @@
                                     <asp:BoundColumn DataField="SortNo" HeaderText="顺充号">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="IsHome" HeaderText="本币">
+                                    <asp:BoundColumn DataField="IsHome" HeaderText="<%$ Resources:lang,BenBi%>">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1495,7 +1495,7 @@
                             <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
                             <asp:TextBox ID="TB_CurrencyType" runat="server" Width="110px"></asp:TextBox>
 
-                            <asp:Label ID="Label60" runat="server" Text="本币"></asp:Label>
+                            <asp:Label ID="Label60" runat="server" Text="<%$ Resources:lang,BenBi%>"></asp:Label>
                             <asp:DropDownList ID="DL_IsHomeCurrency" runat="server">
                                 <asp:ListItem Value="NO">NO</asp:ListItem>
                                 <asp:ListItem Value="YES">YES</asp:ListItem>
@@ -2453,13 +2453,14 @@
                                     </tr>
                                     <tr>
                                         <td style="height: 19px;"><strong>
-                                            <asp:Label ID="Label16" runat="server" Text="发票类型"></asp:Label>
+                                            <asp:Label ID="Label16" runat="server"  Text="<%$ Resources:lang,FaPiaoLiXing%>"></asp:Label>
                                         </strong></td>
                                         <td><strong>
-                                            <asp:Label ID="Label18" runat="server" Text="销售类型"></asp:Label>
+                                            <asp:Label ID="Label18" runat="server"  Text="<%$ Resources:lang,XiaoShouLeiXing%>"></asp:Label>
                                         </strong></td>
-                                        <td align="center">&nbsp;</td>
-                                        <td>&nbsp;</td>
+                                        <td><strong>
+                                            <asp:Label ID="Label106" runat="server" Text="<%$ Resources:lang,HeTongShouZiBiLei%>"></asp:Label>
+                                        </strong></td>
                                         <td align="center" colspan="4">&nbsp;</td>
                                     </tr>
                                     <tr>
@@ -2554,7 +2555,43 @@
                                             <asp:Button ID="BT_SaleTypeNew" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_SaleTypeNew_Click" />
                                             <asp:Button ID="BT_SaleTypeDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_SaleTypeDelete_Click" />
                                         </td>
-                                        <td valign="top" align="center">&nbsp;</td>
+                                        <td valign="top" align="center">
+                                            <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="98%">
+                                                <tr>
+                                                    <td>
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td align="center" width="100%"><strong>
+                                                                    <asp:Label ID="Label103" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
+                                                                </strong></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <asp:DataGrid ID="DataGrid21" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid21_ItemCommand" ShowHeader="false" Width="98%">
+                                                <FooterStyle BackColor="#57CD1" Font-Bold="True" ForeColor="White" />
+                                                <EditItemStyle BackColor="#2461BF" />
+                                                <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
+                                                <ItemStyle CssClass="itemStyle" />
+                                                <Columns>
+                                                    <asp:TemplateColumn HeaderText="收支比例">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="BT_ConstractRadio" runat="server" CssClass="inpuLongest" Text='<%# DataBinder.Eval(Container.DataItem,"Radio") %>' />
+                                                        </ItemTemplate>
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100%" />
+                                                    </asp:TemplateColumn>
+                                                </Columns>
+                                            </asp:DataGrid>
+                                            <asp:Label ID="Label105" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
+                                            <asp:TextBox ID="TB_ConstractRadio" runat="server" Width="250px"></asp:TextBox>
+                                            <br />
+                                            <br />
+                                            <asp:Button ID="BT_ConstractRadioNew" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_ConstractRadioNew_Click" />
+                                            <asp:Button ID="BT_ConstractRadioDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_ConstractRadioDelete_Click" />
+
+                                        </td>
                                         <td valign="top" align="center">&nbsp;</td>
                                         <td colspan="4" align="center">&nbsp;</td>
                                     </tr>
@@ -3592,10 +3629,10 @@
                                     </tr>
                                     <tr>
                                         <td align="center" colspan="3"><strong>
-                                            <asp:Label ID="Label10" runat="server" Text="投标专业"></asp:Label>
+                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,TouBiaoZhuanYe%>"></asp:Label>
                                         </strong></td>
                                         <td style="height: 7px;">
-                                            <asp:Label ID="Label19" runat="server" Text="资金来源"></asp:Label>
+                                            <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ZiJunLaiYuan%>"></asp:Label>
                                         </td>
                                         <td style="height: 7px;">&nbsp;</td>
                                         <td style="height: 7px;" colspan="2">&nbsp;</td>
@@ -3611,7 +3648,7 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" width="100%"><strong>
-                                                                    <asp:Label ID="Label98" runat="server" Text="专业"></asp:Label>
+                                                                    <asp:Label ID="Label98" runat="server" Text="<%$ Resources:lang,ZhuanYe%>"></asp:Label>
                                                                 </strong></td>
 
                                                             </tr>
@@ -3640,7 +3677,7 @@
                                             </asp:DataGrid>
                                             <br />
                                             <br />
-                                            <asp:Label ID="Label107" runat="server" Text="所属专业"></asp:Label>
+                                            <asp:Label ID="Label107" runat="server" Text="<%$ Resources:lang,XiangMuSuoSuoZhuanYe%>"></asp:Label>
                                             <asp:TextBox ID="TB_TenderContent" runat="server" Width="99%"></asp:TextBox>
                                             <br />
                                             <br />
@@ -3658,7 +3695,7 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" width="100%"><strong>
-                                                                    <asp:Label ID="Label24" runat="server" Text="资金来源"></asp:Label>
+                                                                    <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,ZiJunLaiYuan%>"></asp:Label>
                                                                 </strong></td>
 
                                                             </tr>
@@ -3687,7 +3724,7 @@
                                             </asp:DataGrid>
                                             <br />
                                             <br />
-                                            <asp:Label ID="Label28" runat="server" Text="资金来源"></asp:Label>
+                                           <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,ZiJunLaiYuan%>"></asp:Label>
                                             <asp:TextBox ID="TB_FundingSource" runat="server" Width="99%"></asp:TextBox>
                                             <br />
                                             <br />

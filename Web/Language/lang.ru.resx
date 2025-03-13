@@ -30819,4 +30819,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>Сверхурочные часы</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>Местная валюта</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>Тип счёта</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>Тип продажи</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>Соотношение доходов и расходов по контракту</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>Специализация тендера </value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>Источник финансирования</value>
+  </data>
 </root>

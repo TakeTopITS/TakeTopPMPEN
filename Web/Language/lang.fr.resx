@@ -30771,4 +30771,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>Heures supplémentaires</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>Monnaie locale</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>Type de facture</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>Type de vente</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>Ratio des recettes et dépenses du contrat</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>Spécialité de soumission</value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>Source de financement</value>
+  </data>
 </root>

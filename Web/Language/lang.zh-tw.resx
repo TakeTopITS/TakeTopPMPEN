@@ -31182,4 +31182,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>加班時間</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>本幣</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>發票類型</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>銷售類型</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>合同收支比例</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>投標專業</value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>資金來源</value>
+  </data>
 </root>

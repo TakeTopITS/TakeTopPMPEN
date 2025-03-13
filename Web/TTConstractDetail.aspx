@@ -28,7 +28,7 @@
     <script type="text/javascript" src="js/popwindow.js"></script>
 
     <!--pageoffic.js一定要引用-->
-   <%-- <script type="text/javascript" src="pageoffice.js"></script>--%>
+    <%-- <script type="text/javascript" src="pageoffice.js"></script>--%>
 
     <script type="text/javascript" language="javascript">
         $(function () {
@@ -232,16 +232,16 @@
                                                                                     <tr>
                                                                                         <td style="padding-right: 20px;">
                                                                                             <div onclick="popShowByURL('TTConstractMainContentEdit.aspx?ConstractID=<%# ShareClass.URLEncode(Eval("ConstractID").ToString()) %>','ContractContent', 600, 500)">
-                                                                                                 --><asp:Label ID="Label19011" Text="<%$ Resources:lang, BianJi%>" runat="server"></asp:Label>
+                                                                                                --><asp:Label ID="Label19011" Text="<%$ Resources:lang, BianJi%>" runat="server"></asp:Label>
                                                                                             </div>
                                                                                         </td>
-                                                                                       <%-- <td>
+                                                                                        <%-- <td>
                                                                                             <div onclick="popShowByURL('<%# ShareClass.URLEncode(Eval("ConstractMainDocURL").ToString().Trim()) %>','Download', 600, 500)">
                                                                                                 <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:Label>
                                                                                             </div>
 
                                                                                         </td>--%>
-                                                                                       <%-- <td style="padding-left: 20px;">
+                                                                                        <%-- <td style="padding-left: 20px;">
                                                                                             <div id="divEdit" onclick="javascript:POBrowser.openWindowModeless('TTOpenWord.aspx?DocURL=<%# ShareClass.URLEncode(Eval("ConstractMainDocURL").ToString()) %>','fullscreen=yes;');">
                                                                                                 <asp:Label ID="LB_OpenWord" Text="<%$ Resources:lang,BianJi %>" runat="server"></asp:Label>
                                                                                             </div>
@@ -1886,42 +1886,34 @@
                                     <td class="formItemBgStyle" align="left">
                                         <table>
                                             <tr>
-                                                <td>
+                                                <td width="100px">
                                                     <asp:Label ID="LB_ReceivablesCurrency" runat="server"></asp:Label></td>
-                                                <td style="width: 100px; text-align: right;">
-                                                    <asp:Label ID="Label373" runat="server" Text="收支比例"></asp:Label>：
+                                                <td align="right">
+                                                    <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,TiQianTianShu %>"></asp:Label>： </td>
+                                                <td align="left">
+                                                    <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_ReceivablesPreDays" runat="server" MinAmount="1" OnBlur=""
+                                                        OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="40px">0</NickLee:NumberBox>
                                                 </td>
-                                                <td>
-                                                    <asp:DropDownList ID="DL_ReceivablesIncomeRatio" runat="server">
-                                                        <asp:ListItem Value="" Text="--Select--"></asp:ListItem>
-                                                        <asp:ListItem Value="ContractAgreedAdvancePaymentRatio" Text="ContractAgreedAdvancePaymentRatio"></asp:ListItem>
-                                                        <asp:ListItem Value="ContractAgreedMonthlyProgressPaymentRatio" Text="ContractAgreedMonthlyProgressPaymentRatio"></asp:ListItem>
-                                                        <asp:ListItem Value="ContractAgreedCompletionPaymentRatio" Text="ContractAgreedCompletionPaymentRatio"></asp:ListItem>
-                                                        <asp:ListItem Value="ContractAgreedSettlementPaymentRatio" Text="ContractAgreedSettlementPaymentRatio"></asp:ListItem>
-                                                    </asp:DropDownList>
-                                                </td>
+
                                             </tr>
                                         </table>
-
-
-
-
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle" align="right">
-                                        <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,TiQianTianShu %>"></asp:Label>： </td>
-                                    <td class="formItemBgStyle" align="left">
-                                        <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_ReceivablesPreDays" runat="server" MinAmount="1" OnBlur=""
-                                            OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="80px">0</NickLee:NumberBox>
+                                    <td class="formItemBgStyle" style="width: 100px; text-align: right;">
+                                        <asp:Label ID="Label373" runat="server" Text="收支比例"></asp:Label>：
+                                    </td>
+                                    <td class="formItemBgStyle">
+                                        <asp:DropDownList ID="DL_ReceivablesIncomeRatio" DataValueField="Radio" DataTextField="Radio" runat="server">
+                                        </asp:DropDownList>
                                     </td>
                                     <td class="formItemBgStyle" align="right">
                                         <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>： </td>
                                     <td class="formItemBgStyle" align="left">
                                         <asp:DropDownList ID="DL_ReceivablesStatus" runat="server">
-                                            <asp:ListItem Value="Plan"  Text="<%$ Resources:lang,JiHua %>"/>
-                                            <asp:ListItem Value="Completed"  Text="<%$ Resources:lang,WanCheng %>"/>
-                                            <asp:ListItem Value="Cancel"  Text="<%$ Resources:lang,QuXiao %>"/>
+                                            <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>" />
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>" />
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
@@ -1929,9 +1921,9 @@
                                         <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,GuanLian %>"></asp:Label>： </td>
                                     <td class="formItemBgStyle" align="left" colspan="3">
                                         <asp:DropDownList ID="DL_ReceivablesRelatedType" runat="server" OnSelectedIndexChanged="DL_RelatedType_SelectedIndexChanged" AutoPostBack="True">
-                                            <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa %>"/>
-                                            <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu %>"/>
-                                            <asp:ListItem Value="GoodsSO" Text="<%$ Resources:lang,XiaoShouDingDan %>"/>
+                                            <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa %>" />
+                                            <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu %>" />
+                                            <asp:ListItem Value="GoodsSO" Text="<%$ Resources:lang,XiaoShouDingDan %>" />
                                         </asp:DropDownList>&#160;ID:<NickLee:NumberBox ID="NB_ReceivablesRelatedID" runat="server" MaxAmount="1000000000000" MinAmount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="50px">0</NickLee:NumberBox>&#160;<asp:DropDownList ID="DL_ReceiveRelatedProjectID" runat="server" DataTextField="ProjectID" Visible="False"
                                             DataValueField="ProjectID" OnSelectedIndexChanged="DL_ReceiveRelatedProjectID_SelectedIndexChanged" AutoPostBack="True" Width="80px">
                                         </asp:DropDownList><asp:DropDownList ID="DL_ReceiveRelatedGoodsSOID" runat="server" DataTextField="SOID" DataValueField="SOID" Visible="False"
@@ -2063,8 +2055,8 @@
                                     <td class="formItemBgStyle" align="left">
                                         <asp:DropDownList ID="DL_PayableStatus" runat="server">
                                             <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
-                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
-                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>" />
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>" />
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
@@ -2083,10 +2075,10 @@
                                             <tr>
                                                 <td>
                                                     <asp:DropDownList ID="DL_PayablesRelatedType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_PayablesRelatedType_SelectedIndexChanged">
-                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
-                                                        <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu%>"/>
-                                                        <asp:ListItem Value="GoodsPO" Text="<%$ Resources:lang,GoodsPO%>"/>
-                                                        <asp:ListItem Value="AssetPO" Text="<%$ Resources:lang,AssetPO%>"/>
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
+                                                        <asp:ListItem Value="Project" Text="<%$ Resources:lang,XiangMu%>" />
+                                                        <asp:ListItem Value="GoodsPO" Text="<%$ Resources:lang,GoodsPO%>" />
+                                                        <asp:ListItem Value="AssetPO" Text="<%$ Resources:lang,AssetPO%>" />
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>ID:
@@ -2429,8 +2421,8 @@
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_CommissionStatus" runat="server">
-                                            <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,WeiFa %>"/>
-                                           <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
+                                            <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,WeiFa %>" />
+                                            <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>" />
                                         </asp:DropDownList></td>
                                     <td style="text-align: Right;" class="formItemBgStyle"></td>
                                     <td style="text-align: left;" class="formItemBgStyle"></td>
@@ -2832,9 +2824,9 @@
                                                     <asp:Label ID="Label118" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>：</td>
                                                 <td colspan="5" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_DeliveryStatus" runat="server">
-                                                         <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
-                                                        <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
-                                                        <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
+                                                        <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
+                                                        <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>" />
+                                                        <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>" />
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>
@@ -3197,9 +3189,9 @@
                                         <asp:Label ID="Label174" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>：</td>
                                     <td colspan="5" class="formItemBgStyle" style="text-align: left;">
                                         <asp:DropDownList ID="DL_ReceiptStatus" runat="server">
-                                             <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
-                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>"/>
-                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>"/>
+                                            <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua %>" />
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng %>" />
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao %>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

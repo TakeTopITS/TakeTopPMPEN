@@ -31023,4 +31023,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>Ore straordinarie</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>Valuta locale</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>Tipo di fattura</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>Tipo di vendita</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>Rapporto tra entrate e uscite del contratto</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>Specialità di gara </value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>Fonte di finanziamento</value>
+  </data>
 </root>

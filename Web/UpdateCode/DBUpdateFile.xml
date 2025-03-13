@@ -10673,4 +10673,30 @@ CREATE INDEX idx_workflowstepdetail_covering ON public.t_workflowstepdetail (ste
     <ID>3709</ID>
     <SQLText>Update public.t_wltype Set HomeName = Type Where LangCode &lt;&gt; 'zh-CN';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3710</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_constractradio
+(
+    radio character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT t_contractradio_pkey PRIMARY KEY (radio)
+)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3711</ID>
+    <SQLText>Insert Into public.t_constractradio(Radio) values('ContractAgreedAdvancePaymentRatio');
+Insert Into public.t_constractradio(Radio) values('ContractAgreedMonthlyProgressPaymentRatio');
+Insert Into public.t_constractradio(Radio) values('ContractAgreedCompletionPaymentRatio');
+Insert Into public.t_constractradio(Radio) values('ContractAgreedSettlementPaymentRatio');</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3712</ID>
+    <SQLText>Delete From public.t_constractradio;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3713</ID>
+    <SQLText>Insert Into public.t_constractradio(Radio) values('合同约定预付款比例');
+Insert Into public.t_constractradio(Radio) values('合同约定月进度支付比例');
+Insert Into public.t_constractradio(Radio) values('合同约定竣工支付比例');
+Insert Into public.t_constractradio(Radio) values('合同约定结算支付比例');</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

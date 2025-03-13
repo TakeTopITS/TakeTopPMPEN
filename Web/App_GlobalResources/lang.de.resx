@@ -30969,4 +30969,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>Überstunden</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>Lokalwährung</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>Rechnungstyp</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>Verkaufstyp</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>Vertragliches Einnahmen- und Ausgabenverhältnis</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>Bieterfachgebiet </value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>Quelle der Mittel </value>
+  </data>
 </root>

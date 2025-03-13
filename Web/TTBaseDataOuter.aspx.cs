@@ -116,6 +116,9 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
 
             LoadPackingType();
             LoadSaleType();
+
+            LoadConstractRadio();
+
             LoadInvoiceType();
             LoadOvertimeType();
             LoadFestivalsType();
@@ -291,6 +294,13 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
 
         TB_SaleType.Text = strType;
         TB_SaleTypeSort.Text = strSortNumber;
+    }
+
+    protected void DataGrid21_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+        string strRadio = ((Button)e.Item.FindControl("BT_ConstractRadio")).Text;
+
+        TB_ConstractRadio.Text = strRadio;
     }
 
     protected void DataGrid11_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -1195,6 +1205,17 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
 
         DataGrid12.DataSource = ds;
         DataGrid12.DataBind();
+    }
+
+    protected void LoadConstractRadio()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_ConstractRadio ";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ConstractRadio");
+
+        DataGrid21.DataSource = ds;
+        DataGrid21.DataBind();
     }
 
     protected void LoadInvoiceType()
@@ -3075,6 +3096,37 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
         {
             ShareClass.RunSqlCommand(strHQL);
             LoadSaleType();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_ConstractRadioNew_Click(object sender, EventArgs e)
+    {
+        string strRadio = TB_ConstractRadio.Text.Trim();
+
+        string strHQL = "Insert Into T_ConstractRadio(Radio) VAlues (" + "'" + strRadio + "')";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadConstractRadio();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_ConstractRadioDelete_Click(object sender, EventArgs e)
+    {
+        string strRadio = TB_ConstractRadio.Text.Trim();
+        string strHQL = "Delete From T_ConstractRadio Where Radio =  '" + strRadio + "'";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadConstractRadio();
         }
         catch
         {

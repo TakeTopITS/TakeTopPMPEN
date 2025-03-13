@@ -31,7 +31,7 @@
     <script type="text/javascript" src="js/allAHandler.js"></script>
 
     <!--pageoffic.js一定要引用-->
-  <%--  <script type="text/javascript" src="pageoffice.js"></script>--%>
+    <%--  <script type="text/javascript" src="pageoffice.js"></script>--%>
 
 
     <script type="text/javascript" language="javascript">
@@ -303,7 +303,7 @@
                                                                                             </div>
                                                                                         </td>
                                                                                     </tr>
-                                                                                 <%--   <tr>
+                                                                                    <%--   <tr>
                                                                                         <td style="text-align: center;">
                                                                                             <div onclick="popShowByURL('TTAttachWorkFlowTemplate.aspx?RelatedType=Constract&RelatedID=<%# ShareClass.URLEncode(Eval("ConstractID").ToString()) %>','ConstractReview', 600, 500)">
                                                                                                 <asp:Label ID="Label206" Text="<%$ Resources:lang, GuanLian%>" runat="server"></asp:Label>
@@ -633,21 +633,20 @@
                                                                                 <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
                                                                             </div>
                                                                         </td>
+                                                                        <td style="width: 100px; text-align: center;">
+                                                                            <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
+                                                                                OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
+                                                                        </td>
                                                                         <td style="padding-left: 10px;">
                                                                             <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
                                                                         </td>
                                                                         <td style="display: none;">
                                                                             <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
                                                                         </td>
-                                                                        <td style="width: 100px; text-align: center;">
-                                                                            <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
-                                                                                OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
-                                                                        </td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                         </tr>
-
                                                         <tr>
                                                             <td align="right" valign="top" class="formItemBgStyle">
                                                                 <asp:Label ID="Label211" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>：
@@ -2309,8 +2308,8 @@
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_CommissionStatus" runat="server">
-                                             <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
-                                           <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>"/>
+                                            <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>" />
+                                            <asp:ListItem Value="Unsent" Text="<%$ Resources:lang,FaSong %>" />
                                         </asp:DropDownList></td>
                                     <td style="text-align: Right;" class="formItemBgStyle"></td>
                                     <td style="text-align: left;" class="formItemBgStyle"></td>

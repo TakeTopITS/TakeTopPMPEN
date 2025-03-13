@@ -30906,4 +30906,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>초과 근무 시간</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>현지 통화</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>송장 유형</value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>판매 유형 </value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>계약 수입 및 지출 비율</value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>입찰 전공</value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>자금 출처</value>
+  </data>
 </root>

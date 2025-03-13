@@ -140,6 +140,8 @@ public partial class TTConstractDetail : System.Web.UI.Page
             LoadConstractRelatedEntry(strConstractCode);
             LoadConstractRelatedEntryForInner(strConstractCode);
 
+            LoadConstractRadio();
+
             //LoadRelatedDocByDocType(strConstractCode, "ºÏÍ¬ÄÚÈÝ", DataGrid18);
 
             LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("BuChongXieYi").ToString().Trim(), DataGrid19);
@@ -2708,6 +2710,17 @@ public partial class TTConstractDetail : System.Web.UI.Page
         DataGrid10.DataBind();
     }
 
+    protected void LoadConstractRadio()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_ConstractRadio ";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ConstractRadio");
+
+        DL_ReceivablesIncomeRatio.DataSource = ds;
+        DL_ReceivablesIncomeRatio.DataBind();
+    }
+
     protected void LoadConstractRelatedEntryForInner(string strConstractCode)
     {
         string strHQL;
@@ -2819,7 +2832,14 @@ public partial class TTConstractDetail : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_constractReceivables");
 
         NB_ReceivaleTaxRate.Amount = decimal.Parse(ds.Tables[0].Rows[0]["TaxRate"].ToString());
-        DL_ReceivablesIncomeRatio.SelectedValue = ds.Tables[0].Rows[0]["IncomeRatio"].ToString().Trim();
+
+        try
+        {
+            DL_ReceivablesIncomeRatio.SelectedValue = ds.Tables[0].Rows[0]["IncomeRatio"].ToString().Trim();
+        }
+        catch
+        {
+        }
     }
 
     protected void DataGrid2_ItemCommand(object sender, DataGridCommandEventArgs e)

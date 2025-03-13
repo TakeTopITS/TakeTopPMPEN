@@ -840,8 +840,8 @@ public partial class TTMakeConstract_BYJF : System.Web.UI.Page
         TB_ConstractCode.Text = constract.ConstractCode.Trim();
         TB_ConstractName.Text = constract.ConstractName.Trim();
 
-        DL_ConstractClass.SelectedValue = constract.ConstractClass;
-        DL_Type.SelectedValue = constract.Type;
+        DL_ConstractClass.SelectedValue = constract.ConstractClass.Trim();
+        DL_Type.SelectedValue = constract.Type.Trim();
         DL_Currency.SelectedValue = constract.Currency.Trim();
         DL_ReAndPayType.SelectedValue = constract.ReAndPayType;
 
@@ -1977,8 +1977,8 @@ public partial class TTMakeConstract_BYJF : System.Web.UI.Page
                 TB_ConstractCode.Text = constract.ConstractCode.Trim();
                 TB_ConstractName.Text = constract.ConstractName.Trim();
 
-                DL_ConstractClass.SelectedValue = constract.ConstractClass;
-                DL_Type.SelectedValue = constract.Type;
+                DL_ConstractClass.SelectedValue = constract.ConstractClass.Trim();
+                DL_Type.SelectedValue = constract.Type.Trim();
                 DL_Currency.SelectedValue = constract.Currency.Trim();
                 try
                 {
@@ -2410,8 +2410,8 @@ public partial class TTMakeConstract_BYJF : System.Web.UI.Page
                 TB_ConstractCode.Text = constract.ConstractCode.Trim();
                 TB_ConstractName.Text = constract.ConstractName.Trim();
 
-                DL_ConstractClass.SelectedValue = constract.ConstractClass;
-                DL_Type.SelectedValue = constract.Type;
+                DL_ConstractClass.SelectedValue = constract.ConstractClass.Trim();
+                DL_Type.SelectedValue = constract.Type.Trim();
                 DL_Currency.SelectedValue = constract.Currency.Trim();
                 DL_ReAndPayType.SelectedValue = constract.ReAndPayType;
 

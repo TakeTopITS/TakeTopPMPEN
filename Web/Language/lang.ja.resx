@@ -30828,4 +30828,22 @@
   <data name="JiaBanShiJian" xml:space="preserve">
     <value>残業時間</value>
   </data>
+  <data name="BenBi" xml:space="preserve">
+    <value>現地通貨</value>
+  </data>
+  <data name="FaPiaoLiXing" xml:space="preserve">
+    <value>請求書タイプ </value>
+  </data>
+  <data name="XiaoShouLeiXing" xml:space="preserve">
+    <value>販売タイプ</value>
+  </data>
+  <data name="HeTongShouZiBiLei" xml:space="preserve">
+    <value>契約の収支比率 </value>
+  </data>
+  <data name="TouBiaoZhuanYe" xml:space="preserve">
+    <value>入札専門</value>
+  </data>
+  <data name="ZiJunLaiYuan" xml:space="preserve">
+    <value>資金源</value>
+  </data>
 </root>

@@ -446,13 +446,13 @@ Ext.define("MyApp.DemoGanttPanel", {
 
         switch (operation.type) {
             case 'add':
-                taskStore.remove(task);
+                taskStore.remove(task); // 撤销添加操作：删除任务
                 break;
             case 'update':
-                task.set(operation.oldValue);
+                task.set(operation.oldValue); // 撤销更新操作：恢复旧值
                 break;
             case 'delete':
-                taskStore.add(task);
+                taskStore.add(task); // 撤销删除操作：重新添加任务
                 break;
         }
 
@@ -467,19 +467,18 @@ Ext.define("MyApp.DemoGanttPanel", {
 
         switch (operation.type) {
             case 'add':
-                taskStore.add(task);
+                taskStore.add(task); // 重做添加操作：重新添加任务
                 break;
             case 'update':
-                task.set(operation.newValue);
+                task.set(operation.newValue); // 重做更新操作：应用新值
                 break;
             case 'delete':
-                taskStore.remove(task);
+                taskStore.remove(task); // 重做删除操作：删除任务
                 break;
         }
 
         this.refreshViews(); // 刷新视图
     },
-
 
 
     createToolbar: function () {
@@ -867,17 +866,19 @@ Ext.define("MyApp.DemoGanttPanel", {
                             // 调用撤销逻辑
                             this.onUndo();
                         }
-                    },
-                    {
-                        text: '重做',
-                        iconCls: 'icon-redo',
-                        scope: this,
-                        xtype: 'button',
-                        handler: function () {
-                            // 调用重做逻辑
-                            this.onRedo();
-                        }
                     }
+
+                    //,
+                    //{
+                    //    text: '重做',
+                    //    iconCls: 'icon-redo',
+                    //    scope: this,
+                    //    xtype: 'button',
+                    //    handler: function () {
+                    //        // 调用重做逻辑
+                    //        this.onRedo();
+                    //    }
+                    //}
                 ]
             },
 
