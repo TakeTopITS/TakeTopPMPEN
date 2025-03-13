@@ -10669,4 +10669,8 @@ CREATE INDEX idx_workflowstepdetail_covering ON public.t_workflowstepdetail (ste
     <ID>3708</ID>
     <SQLText>Update public.t_systemanalystchartrelateduser Set SortNumber = 0  Where ChartName = '在执行项目状态';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3709</ID>
+    <SQLText>Update public.t_wltype Set HomeName = Type Where LangCode &lt;&gt; 'zh-CN';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

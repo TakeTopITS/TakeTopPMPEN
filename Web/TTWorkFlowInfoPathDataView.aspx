@@ -405,7 +405,7 @@
                         </tr>
                         <tr>
                             <td class="tdLeft" style="width: 7%; text-align: center; font-size: 10pt">
-                                <asp:Label ID="Label13" runat="server" Text="合同内容"></asp:Label>
+                                <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,HeTongNeiRong %>"></asp:Label>
                             </td>
                             <td class="tdRight" colspan="10" style="text-align: left; padding-left: 5px">
                                 <table>
@@ -546,8 +546,8 @@
                             <td style="width: 12%; text-align: center" class="tdLeft">
                                 <%#DataBinder.Eval(Container.DataItem, "MakeDate", "{0:yyyy/MM/dd}")%>
                             </td>
-                            <td style="width: 8%; text-align: center" class="tdRight">
-                                <%#DataBinder .Eval (Container .DataItem, "Status") %>
+                            <td style="width: 8%; text-align:left" class="tdLeft">
+                                 <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                             </td>
                         </tr>
                         <tr>

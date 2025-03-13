@@ -202,7 +202,7 @@
                                                                                                         <%#DataBinder .Eval (Container .DataItem,"ScoringByLeader") %>
                                                                                                     </td>
                                                                                                     <td class="tdLeft" style="width: 8%; text-align: center;">
-                                                                                                        <%#DataBinder .Eval (Container .DataItem, "Status") %>
+                                                                                                        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                     </td>
                                                                                                     <td class="tdRight" style="width: 10%; text-align: center;">
                                                                                                         <%#DataBinder .Eval (Container .DataItem, "CreatorName") %>

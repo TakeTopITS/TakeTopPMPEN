@@ -145,7 +145,7 @@
                                                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>:
                                                                     </td>
                                                                     <td style="text-align: left">
-                                                                        <%#DataBinder .Eval (Container .DataItem, "Status") %>
+                                                                        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>

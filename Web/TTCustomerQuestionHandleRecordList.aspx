@@ -137,7 +137,7 @@
                                                                         <td class="tdLeft" style="width: 10%; text-align: center;"><%#DataBinder .Eval (Container .DataItem,"PhoneNumber") %></td>
                                                                         <td class="tdLeft" style="width: 10%; text-align: center;"><%#DataBinder .Eval (Container .DataItem,"EMail") %></td>
                                                                         <td class="tdLeft" style="width: 10%; text-align: center;"><%#DataBinder.Eval(Container.DataItem, "SummitTime", "{0:yyyy/MM/dd hh:MM:ss}")%></td>
-                                                                        <td class="tdLeft" style="width: 5%; text-align: center;"><%#DataBinder .Eval (Container .DataItem, "Status") %></td>
+                                                                        <td class="tdLeft" style="width: 5%; text-align: center;"><%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %></td>
                                                                         <td class="tdRight" style="width: 7%; text-align: center;"><%#DataBinder .Eval (Container .DataItem, "OperatorName") %></td>
                                                                         <td class="tdRight" style="width: 5%; text-align: center;"><%#DataBinder .Eval (Container .DataItem, "RecorderCode") %></td>
                                                                     </tr>

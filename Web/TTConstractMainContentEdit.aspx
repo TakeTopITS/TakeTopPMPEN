@@ -84,7 +84,10 @@
                                 <td class="formItemBgStyle" align="right">
                                     <table>
                                         <tr>
-
+                                            
+                                            <td class="formItemBgStyle" style="width: 100px; text-align: center;">
+                                                <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server"  OnClick="BT_Import_Click" />
+                                            </td>
                                             <td class="formItemBgStyle">
                                                 <asp:Button ID="BT_Save" Text="<%$ Resources:lang,BaoCun %>" CssClass="inpu" runat="server" OnClick="BT_Save_Click" />
                                             </td>
@@ -98,9 +101,6 @@
                                                 <asp:Button ID="BT_Export" Text="<%$ Resources:lang,DaoChu %>" CssClass="inpu" runat="server" OnClick="BT_Export_Click" />
                                             </td>
 
-                                            <td class="formItemBgStyle" style="width: 100px; text-align: center;">
-                                                <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server"  OnClick="BT_Import_Click" />
-                                            </td>
                                         </tr>
                                     </table>
                                 </td>

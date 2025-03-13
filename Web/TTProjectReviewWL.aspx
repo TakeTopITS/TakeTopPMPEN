@@ -151,7 +151,7 @@
                                                                 <%#DataBinder.Eval(Container.DataItem, "MakeDate", "{0:yyyy/MM/dd}")%>
                                                             </td>
                                                             <td style="width: 8%; text-align: center" class="tdRight">
-                                                                <%#DataBinder .Eval (Container .DataItem, "Status") %>
+                                                                <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </td>
                                                         </tr>
                                                         <tr>

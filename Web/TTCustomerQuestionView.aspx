@@ -143,7 +143,7 @@
                                                         <%#DataBinder.Eval(Container.DataItem, "SummitTime", "{0:yyyy/MM/dd hh:MM:ss}")%>
                                                     </td>
                                                     <td class="tdLeft" style="width: 7%; text-align: center;">
-                                                        <%#DataBinder .Eval (Container .DataItem, "Status") %>
+                                                        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                     </td>
                                                     <td class="tdRight" style="width: 7%; text-align: center;">
                                                         <%#DataBinder .Eval (Container .DataItem, "RecorderCode") %>

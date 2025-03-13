@@ -393,13 +393,7 @@
                                                         <%# Convert.ToDateTime(DataBinder.Eval(Container.DataItem, "ApplyTime")).ToString("yyyy/MM/dd")%>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td style="text-align: right"></td>
-                                                    <td align="left">
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTExpenseApplyWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
-                                                    </td>
-                                                </tr>
+                                            
                                             </table>
                                         </ItemTemplate>
                                     </asp:DataList>
@@ -574,7 +568,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td colspan="9" style="text-align: left" class="tdRight">
-                                                        <a href='TTNoTitleDocumentTreeView.aspx?RelatedType=Project&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>'
+                                                        <a id="aDetailView" href='TTNoTitleDocumentTreeView.aspx?RelatedType=Project&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,XiangGuanWenDang%>"></asp:Label></a>&nbsp;&nbsp;<a href='TTWorkPlanViewMain.aspx?ProjectID=<%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>'
                                                                 target="DetailArea"><asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,XiangMuJiHua%>"></asp:Label></a>&nbsp;&nbsp;<a href='TTProjectSummaryAnalystChart.aspx?ProjectID=<%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>'
@@ -583,6 +577,12 @@
                                                             target="DetailArea"><asp:Label ID="Label246" runat="server" Text="<%$ Resources:lang,XiangMuChengYuan%>"></asp:Label></a>
                                                         &nbsp;&nbsp;<a href='TTProjectBudgetReport.aspx?ProjectID=<%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>'
                                                             target="DetailArea"><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMuYuSuan%>"></asp:Label></a>
+
+                                                        &nbsp;&nbsp;
+                                                                <a href='TTRelatedDIYBusinessForm.aspx?RelatedType=Project&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>&IdentifyString= <%# ShareClass.GetWLTemplateIdentifyString(ShareClass.getBusinessFormTemName("Project", Eval("ProjectID").ToString())) %>&NoPop=YES' target="DetailArea">
+                                                                    <asp:Label ID="Label248" runat="server" Text="<%$ Resources:lang,XiangGuanYeWuDan%>"></asp:Label>
+                                                                </a>
+
                                                     </td>
                                                 </tr>
                                             </table>
@@ -658,7 +658,7 @@
                                                     <td style="width: 130px; text-align: right;"></td>
                                                     <td colspan="4" style="text-align: left">
 
-                                                        <span style="color: #0000ff;"><a href='TTNoTitleDocumentTreeView.aspx?RelatedType=Req&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ReqID")%>'
+                                                        <span style="color: #0000ff;"><a id="aDetailView" href='TTNoTitleDocumentTreeView.aspx?RelatedType=Req&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ReqID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,XiangGuanWenJian%>"></asp:Label></a> &nbsp;<a href='TTReqAssignRecord.aspx?ReqID=<%#DataBinder .Eval (Container .DataItem ,"ReqID")%>'
                                                                 target="DetailArea"><asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,PingShenJiLu%>"></asp:Label></a> </span>
@@ -831,17 +831,7 @@
                                                     <td colspan="2" style="height: 18px; text-align: left"></td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td style="text-align: right"></td>
-                                                    <td style="text-align: left;" colspan="5">
-                                                        <a id="aDetailView" href='TTAssetApplicationDetailView.aspx?AAID=<%#DataBinder.Eval(Container.DataItem, "DetailAAID")%>&NoPop=YES'
-                                                            target="DetailArea">
-                                                            <asp:Label ID="Label78" runat="server" Text="<%$ Resources:lang,ZhiChanLingYongMingXi%>"></asp:Label></a>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTAssetApplicationWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-                                                    </td>
-                                                </tr>
+                                               
                                             </table>
                                         </ItemTemplate>
                                     </asp:DataList>
@@ -913,6 +903,7 @@
                                         </HeaderTemplate>
                                         <ItemTemplate>
                                             <table cellpadding="4" cellspacing="0" width="100%">
+
                                                 <tr>
                                                     <td style="width: 7%; text-align: center;"
                                                         class="tdLeft">
@@ -960,32 +951,55 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 7%; text-align: center; font-size: 10pt"
-                                                        class="tdLeft">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuYaoNeiRong%>"></asp:Label>
-                                                    </td>
-                                                    <td colspan="9" style="text-align: left; padding-left: 5px"
-                                                        class="tdRight">
-                                                        <%#DataBinder .Eval (Container .DataItem,"MainContent") %>
+                                                    <td colspan="10" style="text-align: right; padding-right: 20px;">
+                                                        <a href='TTRelatedDIYBusinessForm.aspx?RelatedType=Constract&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ConstractID") %>&IdentifyString= <%# ShareClass.GetWLTemplateIdentifyString(ShareClass.getBusinessFormTemName("Constract", Eval("ConstractID").ToString())) %>'>
+                                                            <asp:Label ID="Label249" runat="server" Text="<%$ Resources:lang,XiangGuanYeWuDan%>"></asp:Label>
+                                                        </a>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a id="aDetailView" href='TTConstractRelatedDocView.aspx?RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ConstractID") %>&NoPop=YES'
+                                                            target="DetailArea">
+                                                            <asp:Label ID="Label91" runat="server" Text="<%$ Resources:lang,XiangGuanWenDang%>"></asp:Label>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="width: 7%; text-align: center; font-size: 10pt"
                                                         class="tdLeft">
-                                                        <asp:Label ID="Label90" runat="server" Text="<%$ Resources:lang,YiChangMiaoShu%>"></asp:Label>
+                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,HeTongNeiRong%>"></asp:Label>
+                                                    </td>
+                                                    <td colspan="9" style="text-align: left; padding-left: 5px" class="tdRight">
+                                                        <div style="height: 200px; overflow-y: auto;">
+                                                            <%#DataBinder .Eval (Container .DataItem,"MainContent") %>
+                                                        </div>
+
+                                                        <%-- <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <a id="aDownload" href='<%#DataBinder.Eval(Container.DataItem, "MainContent") %>' target="_blank">
+                                                                        <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:Label>
+                                                                    </a>
+
+                                                                </td>
+                                                                <td style="padding-left: 20px;">
+                                                                    <div id="divEdit" onclick="javascript:POBrowser.openWindowModeless('TTOpenWord.aspx?DocURL=<%# ShareClass.URLEncode(Eval("MainContent").ToString()) %>','fullscreen=yes;');">
+                                                                        <asp:Label ID="LB_OpenWord" Text="<%$ Resources:lang,BianJi %>" runat="server"></asp:Label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>--%>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 7%; text-align: center; font-size: 10pt"
+                                                        class="tdLeft">
+                                                        <asp:Label ID="Label90" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>
                                                     </td>
                                                     <td colspan="9" style="text-align: left; padding-left: 5px"
                                                         class="tdRight">
                                                         <%#DataBinder .Eval (Container .DataItem,"Exception") %>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td colspan="10" style="text-align: left" class="tdRight">
-                                                        <a href='TTConstractRelatedDocView.aspx?RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ConstractID") %>'
-                                                            target="DetailArea">
-                                                            <asp:Label ID="Label91" runat="server" Text="<%$ Resources:lang,XiangGuanWenDang%>"></asp:Label></a>
-                                                    </td>
-                                                </tr>
+
                                             </table>
                                         </ItemTemplate>
                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -1041,12 +1055,11 @@
                                                         </td>
                                                     </td>
                                                 </tr>
-
                                                 <tr>
                                                     <td style="width: 130px; text-align: right;">&nbsp;
                                                     </td>
                                                     <td colspan="3" style="text-align: left">
-                                                        <a href='TTNoTitleDocumentTreeView.aspx?RelatedType=Risk&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ID")%>'
+                                                        <a id="aDetailView" href='TTNoTitleDocumentTreeView.aspx?RelatedType=Risk&RelatedID=<%#DataBinder .Eval (Container .DataItem ,"ID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label97" runat="server" Text="<%$ Resources:lang,XiangGuanWenJian%>"></asp:Label></a>
                                                     </td>
@@ -1167,7 +1180,7 @@
                                                 <tr>
                                                     <td class="tdLeft" style="width: 5%; text-align: center; font-size: 10pt;"></td>
                                                     <td class="tdRight" colspan="9" style="width: 95%; text-align: left; padding-left: 5px">
-                                                        <a href='TTCustomerQuestionHandleRecord.aspx?QuestionID=<%#DataBinder .Eval (Container .DataItem ,"ID")%>'
+                                                        <a id="aDetailView" href='TTCustomerQuestionHandleRecord.aspx?QuestionID=<%#DataBinder .Eval (Container .DataItem ,"ID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label107" runat="server" Text="<%$ Resources:lang,KeFuJiLu%>"></asp:Label></a>
                                                     </td>
@@ -1320,14 +1333,6 @@
                                                         <asp:Label ID="Label126" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label>:<%#DataBinder.Eval(Container.DataItem, "HourNum")%><asp:Label ID="Label236" runat="server" Text="<%$ Resources:lang,XiaoShi%>"></asp:Label>&nbsp;&nbsp;
                                                     </td>
                                                 </tr>
-
-                                                <tr>
-                                                    <td style="text-align: right"></td>
-                                                    <td align="left">
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTLeaveApplyFormWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>' Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
-                                                    </td>
-                                                </tr>
                                             </table>
                                         </ItemTemplate>
                                     </asp:DataList>
@@ -1357,12 +1362,12 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right">
-                                                        <asp:Label ID="Label23" runat="server" Text="加班类型"></asp:Label>
+                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,TianXieRiQi%>"></asp:Label>
                                                         ：</td>
                                                     <td style="text-align: left" colspan="7">
                                                         <asp:Label ID="LB_OvertimeType" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "OvertimeType")%>'></asp:Label>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:Label ID="Label10" runat="server" Text="本年度此类型已加班总天数"></asp:Label>：
+                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BenNianDuZiLeiXingJiaBanZongTianShu%>"></asp:Label>：
 
                                                         当月：<asp:Label ID="LB_TotalOvertimeDaysForCurrrentMonth" runat="server"></asp:Label>
                                                         当年：<asp:Label ID="LB_TotalOvertimeDaysForCurrrentYear" runat="server"></asp:Label>
@@ -1370,12 +1375,12 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right">
-                                                        <asp:Label ID="Label121" runat="server" Text="加班事由"></asp:Label>：</td>
+                                                        <asp:Label ID="Label121" runat="server" Text="<%$ Resources:lang,JiaBanShiYou%>"></asp:Label>：</td>
                                                     <td style="text-align: left" colspan="7"><%#DataBinder.Eval(Container.DataItem, "ApplyBecause")%></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right">
-                                                        <asp:Label ID="Label122" runat="server" Text="加班时间"></asp:Label>：</td>
+                                                        <asp:Label ID="Label122" runat="server" Text="<%$ Resources:lang,JiaBanShiJian%>"></asp:Label>：</td>
                                                     <td style="text-align: left" colspan="7">
                                                         <asp:Label ID="Label123" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>
 
@@ -1388,7 +1393,6 @@
                                                         <asp:Label ID="Label126" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label>:<%#DataBinder.Eval(Container.DataItem, "HourNum")%><asp:Label ID="Label236" runat="server" Text="<%$ Resources:lang,XiaoShi%>"></asp:Label>&nbsp;&nbsp;
                                                     </td>
                                                 </tr>
-
 
                                             </table>
                                         </ItemTemplate>
@@ -1735,8 +1739,8 @@
                                                 <tr>
                                                     <td style="text-align: right"></td>
                                                     <td style="text-align: left;" colspan="5">
-                                                        <a href='TTBMWinResultView.aspx?AnnID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="DetailArea">
-                                                            <asp:Label ID="Label167" runat="server" Text="专家意见"></asp:Label>
+                                                        <a id="aDetailView" href='TTBMWinResultView.aspx?AnnID=<%#DataBinder.Eval(Container.DataItem, "ID")%>&NoPop=YES' target="DetailArea">
+                                                            <asp:Label ID="Label167" runat="server" Text="<%$ Resources:lang,ZhuanJiaYiJian%>"></asp:Label>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -1832,7 +1836,7 @@
                                                 <tr>
                                                     <td style="text-align: right"></td>
                                                     <td style="text-align: left;" colspan="5">
-                                                        <a href='TTBMBidFileView.aspx?BidPlanID=<%#DataBinder.Eval(Container.DataItem, "ID")%>'
+                                                        <a id="aDetailView" href='TTBMBidFileView.aspx?BidPlanID=<%#DataBinder.Eval(Container.DataItem, "ID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label178" runat="server" Text="<%$ Resources:lang,ZhaoBiaoWenJian%>"></asp:Label></a>
                                                     </td>
@@ -1913,9 +1917,7 @@
                                                         <a id="aDetailView" href='TTGoodsPurchaseOrderDetailView.aspx?POID=<%#DataBinder.Eval(Container.DataItem, "DetailPOID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label191" runat="server" Text="<%$ Resources:lang,CaiGouMingXi%>"></asp:Label></a>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTMakeGoodsPurchase.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "POID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
+                                                  
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1996,9 +1998,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label199" runat="server" Text="<%$ Resources:lang,ShangPingLingYongMingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationOrderForFilling.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "FillingAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2079,9 +2078,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label199" runat="server" Text="<%$ Resources:lang,ShangPingLingYongMingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationOrderForProduction.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ProductionAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2161,9 +2157,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label199" runat="server" Text="<%$ Resources:lang,ShangPingLingYongMingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationOrderForSale.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SaleAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2243,9 +2236,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label199" runat="server" Text="<%$ Resources:lang,ShangPingLingYongMingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsApplicationWFForOther.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "OtherAAID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2326,9 +2316,7 @@
                                                         <a id="aDetailView" href='TTGoodsSaleOrderDetailView.aspx?SOID=<%#DataBinder.Eval(Container.DataItem, "DetailSOID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label208" runat="server" Text="<%$ Resources:lang,ShangPingXiaoShouMingXi%>"></asp:Label></a>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsSaleOrderWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
+                                                     
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2404,9 +2392,7 @@
                                                         <a id="aDetailView" href='TTGoodsSaleQuotationOrderDetailView.aspx?QOID=<%#DataBinder.Eval(Container.DataItem, "DetailQOID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label217" runat="server" Text="<%$ Resources:lang,ShangPingBaoJiaMingXi%>"></asp:Label></a>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsSaleQuotationOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "QOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
+                                                    
 
                                                     </td>
                                                 </tr>
@@ -2443,7 +2429,7 @@
                                                     </td>
                                                     <td style="text-align: left" colspan="2">
                                                         <%#DataBinder.Eval(Container.DataItem, "Supplier")%>
-                                               电话： <%#DataBinder.Eval(Container.DataItem, "SupplierPhone")%>
+                                                        电话： <%#DataBinder.Eval(Container.DataItem, "SupplierPhone")%>
                                                     </td>
                                                 </tr>
 
@@ -2453,10 +2439,7 @@
                                                         <a id="aDetailView" href='TTGoodsSupplyOrderDetailView.aspx?SUID=<%#DataBinder.Eval(Container.DataItem, "DetailSUID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label222" runat="server" Text="<%$ Resources:lang,GongHuoMingXi%>"></asp:Label></a>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsSupplyOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SUID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
+                                                     
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2509,9 +2492,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label227" runat="server" Text="<%$ Resources:lang,ShengChanDanMingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsProductionOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "PDID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
                                                 </tr>
@@ -2563,7 +2543,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left;" colspan="6">
-                                                        <a href='TTGoodsShipmentApplicationOrderDetailView.aspx?ShipmentNO=<%#DataBinder.Eval(Container.DataItem, "ShipmentNO")%>'
+                                                        <a id="aDetailView" href='TTGoodsShipmentApplicationOrderDetailView.aspx?ShipmentNO=<%#DataBinder.Eval(Container.DataItem, "ShipmentNO")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,ChuHuoShenQingDanMingXi%>"></asp:Label></a>
                                                     </td>
@@ -2629,11 +2609,7 @@
                                                         <a id="aDetailView" href='TTGoodsReturnOrderDetailView.aspx?ROID=<%#DataBinder.Eval(Container.DataItem, "DetailROID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
-
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForBorrow.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "BorrowROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
+=
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2698,9 +2674,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForProduction.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ProductionROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2764,9 +2737,7 @@
                                                         <a id="aDetailView" href='TTGoodsReturnOrderDetailView.aspx?ROID=<%#DataBinder.Eval(Container.DataItem, "DetailROID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForPurchase.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "PurchaseROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
+                                                 
 
                                                     </td>
                                                 </tr>
@@ -2831,10 +2802,7 @@
                                                         <a id="aDetailView" href='TTGoodsReturnOrderDetailView.aspx?ROID=<%#DataBinder.Eval(Container.DataItem, "DetailROID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsReturnOrderForSale.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "SaleROID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
+                                                     
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2923,10 +2891,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsBorrowOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "BorrowNO") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2968,7 +2932,7 @@
                                         </ItemTemplate>
                                     </asp:DataList>
 
-                                    <asp:DataList ID="DataList6" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="ECID">
+                                    <asp:DataList ID="DataList6" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="ECID" OnItemCommand="DataList6_ItemCommand">
                                         <ItemTemplate>
                                             <table class="bian" style="width: 700px;" cellpadding="4" cellspacing="0">
                                                 <tr style="color: #000000">
@@ -3021,16 +2985,14 @@
                                                     </td>
                                                 </tr>
                                                 <tr style="color: #000000">
-                                                    <td align="left" style="width: 100px"></td>
+                                                    <td align="left" style="width: 100px">
+                                                        <asp:Button ID="BT_GoodsPOPayOpenAccount" CommandName="OpenAccount" CommandArgument="ECID" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
+                                                    </td>
                                                     <td align="left" style="width: 600px">
                                                         <a id="aDetailView" href='TTExpenseClaimListView.aspx?RelatedID=<%#DataBinder.Eval(Container.DataItem, "DetailECID")%>&NoPop=YES'
                                                             target="DetailArea">
                                                             <asp:Label ID="Label58" runat="server" Text="<%$ Resources:lang,FeiYongMingXi%>"></asp:Label></a>
 
-
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTExpenseClaimWF.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ECID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                     </td>
 
@@ -3039,7 +3001,7 @@
                                         </ItemTemplate>
                                     </asp:DataList>
 
-                                    <asp:DataList ID="DataList31" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="AOID">
+                                    <asp:DataList ID="DataList31" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="AOID" OnItemCommand="DataList31_ItemCommand">
                                         <ItemTemplate>
                                             <table style="width: 980px;">
                                                 <tr>
@@ -3195,16 +3157,13 @@
                                                             </tr>
 
                                                             <tr>
-                                                                <td class="formItemBgStyle" style="text-align: left;"></td>
+                                                                <td class="formItemBgStyle" style="text-align: left;">
+                                                                    <asp:Button ID="BT_OpenAccount" CommandName="OpenAccount" CommandArgument="AOID" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
+                                                                </td>
                                                                 <td class="formItemBgStyle" style="text-align: left" colspan="3">
                                                                     <a id="aDetailView" href='TTProjectMaterialPaymentApplicantDetailView.aspx?AOID=<%#DataBinder.Eval(Container.DataItem, "DetailAOID")%>&NoPop=YES'
                                                                         target="DetailArea">
                                                                         <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
-
-
-                                                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTProjectMaterialPaymentApplicant.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                                 </td>
 
@@ -3251,9 +3210,7 @@
                                                         <%#Convert.ToDateTime(DataBinder.Eval(Container.DataItem, "ApplicationDate")).ToString("yyyy-MM-dd")%>
                                                     </td>
                                                 </tr>
-
                                                 <tr>
-
                                                     <td style="width: 10%; text-align: left">
                                                         <asp:Label ID="Label179" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>：
                                                     </td>
@@ -3359,7 +3316,8 @@
                                         </ItemTemplate>
                                     </asp:DataList>
 
-                                    <asp:DataList ID="DataList32" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="ID">
+                                    <asp:DataList ID="DataList32" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="ID" OnItemCommand="DataList32_ItemCommand">
+
                                         <ItemTemplate>
                                             <table class="bian" border="1" style="border-collapse: collapse;" cellpadding="4"
                                                 cellspacing="0">
@@ -3562,7 +3520,10 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td style="width: 10%; text-align: left"></td>
+                                                    <td style="width: 10%; text-align: left">
+
+                                                        <asp:Button ID="BT_BMPayAccount" CommandName="OpenAccount" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
+                                                    </td>
                                                     <td style="width: 10%; text-align: left">
                                                         <asp:Label ID="Label241" runat="server" Text="<%$ Resources:lang,YingFuZongJi%>"></asp:Label>：
                                                     </td>
@@ -3585,7 +3546,7 @@
                                         </ItemTemplate>
                                     </asp:DataList>
 
-                                    <asp:DataList ID="DataList33" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="AOID">
+                                    <asp:DataList ID="DataList33" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="AOID" OnItemCommand="DataList33_ItemCommand">
                                         <ItemTemplate>
                                             <table style="width: 980px;">
                                                 <tr>
@@ -3725,15 +3686,13 @@
                                                             </tr>
                                                             <tr>
 
-                                                                <td class="formItemBgStyle" style="text-align: left;"></td>
+                                                                <td class="formItemBgStyle" style="text-align: left;">
+                                                                    <asp:Button ID="BT_GoodsPOPayOpenAccount" CommandName="OpenAccount" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
+                                                                </td>
                                                                 <td class="formItemBgStyle" style="text-align: left;" colspan="3">
                                                                     <a id="aDetailView" href='TTProjectMaterialPaymentApplicantDetailView.aspx?AOID=<%#DataBinder.Eval(Container.DataItem, "DetailAOID")%>&NoPop=YES'
                                                                         target="DetailArea">
                                                                         <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
-
-                                                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTSupplierMaterialPaymentApplicant.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
 
                                                                 </td>
@@ -3747,7 +3706,7 @@
                                         </ItemTemplate>
                                     </asp:DataList>
 
-                                    <asp:DataList ID="DataList34" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="AOID">
+                                    <asp:DataList ID="DataList34" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="AOID" OnItemCommand="DataList34_ItemCommand">
                                         <ItemTemplate>
                                             <table style="width: 980px;">
                                                 <tr>
@@ -3887,20 +3846,15 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="formItemBgStyle" style="text-align: left;"></td>
+                                                                <td class="formItemBgStyle" style="text-align: left;">
+                                                                    <asp:Button ID="BT_AssetPOPayOpenAccount" CommandName="OpenAccount" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
+                                                                </td>
                                                                 <td class="formItemBgStyle" style="text-align: left;" colspan="3">
                                                                     <a id="aDetailView" href='TTSupplierAssetPaymentApplicantDetailView.aspx?AOID=<%#DataBinder.Eval(Container.DataItem, "DetailAOID")%>&NoPop=YES'
                                                                         target="DetailArea">
                                                                         <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
 
-                                                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                                                    <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTSupplierAssetPaymentApplicant.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "AOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
-
                                                                 </td>
-
-
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -3909,7 +3863,7 @@
                                         </ItemTemplate>
                                     </asp:DataList>
 
-                                    <asp:DataList ID="DataList35" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="ID">
+                                    <asp:DataList ID="DataList35" runat="server" Width="980px" CellPadding="0" CellSpacing="0" DataKeyField="ID" OnItemCommand="DataList35_ItemCommand">
                                         <ItemTemplate>
                                             <table style="width: 980px;">
                                                 <tr>
@@ -3923,7 +3877,7 @@
                                                                     <%#DataBinder.Eval(Container.DataItem, "ID")%>&nbsp;&nbsp; <%#DataBinder.Eval(Container.DataItem, "VisaName")%>
                                                                 </td>
                                                                 <td class="formItemBgStyle" style="width: 15%; text-align: left">
-                                                                    <asp:Label ID="Label8" runat="server" Text="签证人"></asp:Label>：
+                                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,QianZengRen%>"></asp:Label>：
                                                                 </td>
                                                                 <td class="formItemBgStyle" style="text-align: left">
                                                                     <%#DataBinder.Eval(Container.DataItem, "VisaSignMan")%>
@@ -3970,25 +3924,25 @@
 
                                                             <tr style="font-weight: 600;">
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label11" runat="server" Text="RelatedProject"></asp:Label>：
+                                                                    <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GuanLianXiangMu%>"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="2" class="formItemBgStyle" style="text-align: left;">
                                                                     <%#DataBinder.Eval(Container.DataItem, "ProjectID")%>
                                                                     <asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                                                     &nbsp;&nbsp;
-                                                                    <asp:Label ID="Label2" runat="server" Text="关联合同应付计划"></asp:Label>：
+                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GuanLianHeTongYingFuJiHua%>"></asp:Label>：
                                                                     <%#DataBinder.Eval(Container.DataItem, "ConstractPayableID")%>
                                                                     <asp:Label ID="LB_ConstractPayablePlanName" runat="server"></asp:Label>
                                                                 </td>
                                                                 <td class="formItemBgStyle" style="text-align: left;">
-                                                                    <a href='TTConstractPayableVisaDetailView.aspx?VisaID=<%#DataBinder.Eval(Container.DataItem, "ID")%>&NoPop=YES'
+                                                                    <a href='TTConstractPayableVisaDetailView.aspx?VisaID=<%#DataBinder.Eval(Container.DataItem, "ID")%>'
                                                                         target="DetailArea">
                                                                         <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
                                                                 </td>
                                                             </tr>
                                                             <tr style="font-weight: 600;">
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label56" runat="server" Text="相关影响"></asp:Label>：
+                                                                    <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,XiangGuanYingXiang%>"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="3" class="formItemBgStyle" style="text-align: left;">
                                                                     <asp:TextBox ID="TB_RelatedImpact" TextMode="MultiLine" Style="width: 99%; height: 80px;" runat="server"> </asp:TextBox>
@@ -3999,7 +3953,7 @@
                                                             </tr>
                                                             <tr style="font-weight: 600;">
                                                                 <td class="formItemBgStyle" style="text-align: left">
-                                                                    <asp:Label ID="Label245" runat="server" Text="处理结论"></asp:Label>：
+                                                                    <asp:Label ID="Label245" runat="server" Text="<%$ Resources:lang,ChuLiJieRen%>"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="3" class="formItemBgStyle" style="text-align: left;">
                                                                     <asp:TextBox ID="TB_RelatedResult" TextMode="MultiLine" Style="width: 99%; height: 80px;" runat="server"> </asp:TextBox>
@@ -4023,10 +3977,6 @@
                                                                     <a id="aDetailView" href='TTConstractPayableVisaDetailView.aspx?VisaID=<%#DataBinder.Eval(Container.DataItem, "DetailVisaID")%>&NoPop=YES'
                                                                         target="DetailArea">
                                                                         <asp:Label ID="Label247" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
-
-                                                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                                                    <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTConstractPayableVisaEdit.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
 
                                                                 </td>
                                                             </tr>
@@ -4116,10 +4066,6 @@
                                                             target="DetailArea">
                                                             <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>
 
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTGoodsCheckOutNoticeOrder.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "COOID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                            Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
                                                     </td>
                                                 </tr>
                                             </table>
@@ -4128,8 +4074,7 @@
                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                     </asp:DataList>
 
-
-                                        <asp:DataList ID="DataList44" runat="server" Width="850px" CellPadding="0" CellSpacing="0">
+                                    <asp:DataList ID="DataList44" runat="server" Width="850px" CellPadding="0" CellSpacing="0">
                                         <ItemTemplate>
                                             <table style="width: 100%;" cellpadding="0" cellspacing="0">
                                                 <tr>
@@ -4171,7 +4116,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label7" runat="server" Text="招标人"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhaoBiaoRen%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="3">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"UserCode") %>
@@ -4214,7 +4159,7 @@
                                                                     </table>
                                                                 </td>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label10" runat="server" Text="技术负责人"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JiShuFuZeRen%>"></asp:Label>：</td>
                                                                 <td colspan="2" style="text-align: left;">
                                                                     <table>
                                                                         <tr>
@@ -4231,7 +4176,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label46" runat="server" Text="项目经办人"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,XiangMuJinBanRen%>"></asp:Label>：</td>
                                                                 <td align="right" colspan="2">
                                                                     <table width="100%">
                                                                         <tr>
@@ -4246,7 +4191,7 @@
                                                                     </table>
                                                                 </td>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label49" runat="server" Text="内外属性"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,NiWaiSuoXing%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="2">
 
 
@@ -4274,13 +4219,13 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label47" runat="server" Text="投标报价"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,TouBiaoBaoJia%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="3">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"BiddingPrice") %>
                                                                 </td>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label48" runat="server" Text="控制价"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,KongZhiJia%>"></asp:Label>：</td>
                                                                 <td align="left" colspan="3">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"ControlPrice") %>
@@ -4378,7 +4323,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left;">
-                                                                    <asp:Label ID="Label28" runat="server" Text="项目所属专业"></asp:Label>：</td>
+                                                                    <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,XiangMuSuoSuoZhuanYe%>"></asp:Label>：</td>
                                                                 <td colspan="6" align="left" class="formItemBgStyle">
 
                                                                     <%# DataBinder.Eval(Container.DataItem,"TenderContent") %>
@@ -4398,9 +4343,6 @@
                                                                 <td align="right" class="formItemBgStyle"></td>
                                                                 <td colspan="3" class="formItemBgStyle" align="left">
 
-                                                                    <asp:HyperLink ID="HL_WLBusinessUpdate" runat="server" NavigateUrl='<%#"TTTenderList.aspx?BusinessID=" + DataBinder.Eval(Container.DataItem, "ID") + "&WLID=" + strWLID + "&WLStepDetailID=" + strID  %>'
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;" />
-
                                                                 </td>
                                                             </tr>
 
@@ -4410,7 +4352,6 @@
                                             </table>
                                         </ItemTemplate>
                                     </asp:DataList>
-
 
                                 </td>
                             </tr>

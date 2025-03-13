@@ -139,7 +139,7 @@
                                                                 <%#DataBinder .Eval (Container .DataItem,"UserPosition") %>&nbsp;
                                                             </td>
                                                             <td class="tdLeft" style="width: 5%; text-align: center;">
-                                                                <%#DataBinder .Eval (Container .DataItem, "Status") %>&nbsp;
+                                                                <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>&nbsp;
                                                             </td>
                                                             <td class="tdRight" style="width: 5%; text-align: center;">
                                                                 <%# ShareClass.GetUserName(DataBinder.Eval(Container.DataItem, "RecorderCode").ToString()) %>&nbsp;
