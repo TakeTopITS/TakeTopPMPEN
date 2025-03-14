@@ -494,11 +494,13 @@ Ext.define("MyApp.DemoGanttPanel", {
         return this.down('#undoButton');
     },
 
-    // 撤销操作
     onUndo: function () {
         console.log('Undo button clicked, undoStack:', this.undoStack); // 调试日志
 
         if (this.undoStack.length > 0) {
+            // 暂停任务存储的监听器，避免撤销操作触发新的记录
+            this.pauseTaskStoreListeners();
+
             // 获取栈顶的批次操作
             var batchToUndo = this.undoStack.pop();
             console.log('Undoing batch:', batchToUndo); // 调试日志
@@ -512,12 +514,27 @@ Ext.define("MyApp.DemoGanttPanel", {
             // 将撤销的批次操作放入重做栈
             this.redoStack.push(batchToUndo);
 
+            // 恢复任务存储的监听器
+            this.resumeTaskStoreListeners();
+
             // 更新按钮计数
             this.updateUndoButtonText(this.getUndoButton(), this.undoStack.length);
         } else {
             console.log('No operations to undo'); // 调试日志
-            Ext.Msg.alert('提示', '沒有可撤銷的操作');
+            Ext.Msg.alert('Prompt', 'No Undo Operation Available!');
         }
+    },
+
+    // 暂停任务存储的监听器
+    pauseTaskStoreListeners: function () {
+        var taskStore = this.getTaskStore();
+        taskStore.suspendEvents(); // 暂停所有事件
+    },
+
+    // 恢复任务存储的监听器
+    resumeTaskStoreListeners: function () {
+        var taskStore = this.getTaskStore();
+        taskStore.resumeEvents(); // 恢复所有事件
     },
 
     // 执行撤销操作

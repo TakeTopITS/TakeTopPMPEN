@@ -305,7 +305,7 @@
                 Width="100%">
                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                 <HeaderTemplate>
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style=" background-color:lightgreen;">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:url('ImagesSkin/main_n_bj.jpg')" >
                         <tr>
                             <td width="7">
                                 
@@ -459,7 +459,7 @@
                 ForeColor="#333333">
                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                 <HeaderTemplate>
-                    <table width="98%" border="0" cellpadding="0" cellspacing="0" style=" background-color:lightgreen;">
+                    <table width="98%" border="0" cellpadding="0" cellspacing="0" style="background:url('ImagesSkin/main_n_bj.jpg')" >
                         <tr>
                             <td width="7">
                                 
@@ -590,7 +590,7 @@
                 ForeColor="#333333">
                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                 <HeaderTemplate>
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style=" background-color:lightgreen;">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:url('ImagesSkin/main_n_bj.jpg')" >
                         <tr>
                             <td width="7">
                                 </td>
@@ -992,7 +992,7 @@
                         <img src="ImagesSkin/print.gif" alt="Print" border="0" />Comment
                     </a>
                     <!--startprint2-->
-                    <%--  <table width="700px" border="0" cellpadding="0" cellspacing="0" style=" background-color:lightgreen;">
+                    <%--  <table width="700px" border="0" cellpadding="0" cellspacing="0" style="background-color:lightgreen;">
                         <tr>
                             <td width="7">
                                 
