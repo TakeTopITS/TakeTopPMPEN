@@ -26,7 +26,6 @@ Ext.define("MyApp.DemoGanttPanel", {
         this.undoStack = [];  // 撤销栈
         this.redoStack = [];  // 重做栈
 
-
         Ext.apply(this, {
             enableBaseline: true,
             baselineVisible: false,
@@ -355,25 +354,68 @@ Ext.define("MyApp.DemoGanttPanel", {
 
         });
 
+        // 初始化当前批次操作
+        this.currentBatch = []; // 当前批次的操作
 
         this.callParent(arguments);
 
-        // 监听任务存储事件
+        // 初始化任务存储监听器
         this.initTaskStoreListeners();
+
+        // 页面加载完成后，初始化按钮计数为 0，并监听鼠标移动事件
+        Ext.onReady(function () {
+
+            // 监听鼠标移动事件
+            Ext.getBody().on('mousemove', this.onMouseMove, this);
+
+            console.log('Component initialized, setting undo button text to 0'); // 调试日志
+            this.updateUndoButtonText(this.getUndoButton(), 0); // 初始化按钮文本为 0
+
+       
+        }.bind(this));
     },
 
-    // 初始化任务存储事件监听
     initTaskStoreListeners: function () {
         var taskStore = this.getTaskStore();
 
         // 监听任务添加事件
-        taskStore.on('add', this.onTaskAdd, this);
+        taskStore.on('add', function (store, records) {
+            console.log('Task added:', records); // 调试日志
+            this.onTaskAdd(store, records);
+        }, this);
 
         // 监听任务更新事件
-        taskStore.on('update', this.onTaskUpdate, this);
+        taskStore.on('update', function (store, record, operation) {
+            console.log('Task updated:', record, operation); // 调试日志
+            this.onTaskUpdate(store, record, operation);
+        }, this);
 
         // 监听任务删除事件
-        taskStore.on('remove', this.onTaskRemove, this);
+        taskStore.on('remove', function (store, record) {
+            console.log('Task removed:', record); // 调试日志
+            this.onTaskRemove(store, record);
+        }, this);
+    },
+
+    // 鼠标移动事件处理
+    onMouseMove: function () {
+        console.log('Mouse moved, current batch:', this.currentBatch); // 调试日志
+
+        // 如果当前批次有操作，则将其记录到撤销栈中
+        if (this.currentBatch.length > 0) {
+            console.log('Recording current batch to undo stack:', this.currentBatch); // 调试日志
+            this.undoStack.push(this.currentBatch); // 将当前批次的操作记录到撤销栈
+            this.currentBatch = []; // 清空当前批次
+
+            // 更新按钮计数
+            this.updateUndoButtonText(this.getUndoButton(), this.undoStack.length);
+        }
+
+        // 移除鼠标移动事件监听（确保只执行一次）
+        Ext.getBody().un('mousemove', this.onMouseMove, this);
+
+        // 重新绑定鼠标移动事件，确保下一次操作也能触发
+        Ext.getBody().on('mousemove', this.onMouseMove, this);
     },
 
     // 任务添加时记录操作
@@ -385,6 +427,9 @@ Ext.define("MyApp.DemoGanttPanel", {
                 taskData: record.getData() // 任务数据
             });
         }, this);
+
+        // 更新按钮计数
+        this.updateUndoButtonText(this.getUndoButton(), this.undoStack.length + (this.currentBatch.length > 0 ? 1 : 0));
     },
 
     // 任务更新时记录操作
@@ -398,6 +443,9 @@ Ext.define("MyApp.DemoGanttPanel", {
             oldValue: oldData,    // 修改前的值
             newValue: newData     // 修改后的值
         });
+
+        // 更新按钮计数
+        this.updateUndoButtonText(this.getUndoButton(), this.undoStack.length + (this.currentBatch.length > 0 ? 1 : 0));
     },
 
     // 任务删除时记录操作
@@ -407,42 +455,82 @@ Ext.define("MyApp.DemoGanttPanel", {
             taskId: record.getId(), // 任务ID
             taskData: record.getData() // 任务数据
         });
+
+        // 更新按钮计数
+        this.updateUndoButtonText(this.getUndoButton(), this.undoStack.length + (this.currentBatch.length > 0 ? 1 : 0));
     },
 
-    // 记录操作到撤销栈
+    // 记录操作到当前批次
     recordOperation: function (operation) {
-        console.log('Record Operation:', operation); // 调试日志
-        this.undoStack.push(operation);
+        console.log('Recording operation:', operation); // 调试日志
+        this.currentBatch.push(operation); // 将操作记录到当前批次
         this.redoStack = [];  // 清空重做栈
+
+        // 更新按钮计数
+        console.log('Current undoStack length:', this.undoStack.length); // 调试日志
+        this.updateUndoButtonText(this.getUndoButton(), this.undoStack.length + 1); // 当前批次未提交，计数加 1
+    },
+
+    // 更新撤销按钮文本
+    updateUndoButtonText: function (button, remainingUndos) {
+        if (button && button.el) {
+            // 找到 <div id="divNumber"> 并更新其内容
+            var divNumber = button.el.down('#divNumber');
+            if (divNumber) {
+                console.log('Updating divNumber with:', remainingUndos); // 调试日志
+                // 确保 remainingUndos 不小于 0
+                var displayCount = Math.max(remainingUndos, 0);
+                divNumber.update(displayCount);
+            } else {
+                console.error('divNumber not found in button'); // 调试日志
+            }
+        } else {
+            console.error('Button or button.el is undefined'); // 调试日志
+        }
+    },
+
+    // 获取撤销按钮
+    getUndoButton: function () {
+        // 假设撤销按钮的 itemId 是 'undoButton'
+        return this.down('#undoButton');
     },
 
     // 撤销操作
     onUndo: function () {
-        if (this.undoStack.length > 0) {
-            var operation = this.undoStack.pop(); // 从撤销栈中弹出最后一个操作
-            this.redoStack.push(operation);       // 将操作推入重做栈
-            this.performUndo(operation);         // 执行撤销操作
-        } else {
-            Ext.Msg.alert('提示', '没有可撤销的操作');
-        }
-    },
+        console.log('Undo button clicked, undoStack:', this.undoStack); // 调试日志
 
-    // 重做操作
-    onRedo: function () {
-        if (this.redoStack.length > 0) {
-            var operation = this.redoStack.pop(); // 从重做栈中弹出最后一个操作
-            this.undoStack.push(operation);      // 将操作推入撤销栈
-            this.performRedo(operation);         // 执行重做操作
+        if (this.undoStack.length > 0) {
+            // 获取栈顶的批次操作
+            var batchToUndo = this.undoStack.pop();
+            console.log('Undoing batch:', batchToUndo); // 调试日志
+
+            // 执行撤销操作
+            for (var i = batchToUndo.length - 1; i >= 0; i--) {
+                var operation = batchToUndo[i];
+                this.performUndo(operation);
+            }
+
+            // 将撤销的批次操作放入重做栈
+            this.redoStack.push(batchToUndo);
+
+            // 更新按钮计数
+            this.updateUndoButtonText(this.getUndoButton(), this.undoStack.length);
         } else {
-            Ext.Msg.alert('提示', '没有可重做的操作');
+            console.log('No operations to undo'); // 调试日志
+            Ext.Msg.alert('提示', '没有可撤销的操作');
         }
     },
 
     // 执行撤销操作
     performUndo: function (operation) {
-        console.log('Perform Undo:', operation); // 调试日志
+        console.log('Performing undo:', operation); // 调试日志
         var taskStore = this.getTaskStore();
         var task = taskStore.getById(operation.taskId);
+
+        if (!task) {
+            console.error('Task not found for operation:', operation); // 调试日志
+            return;
+        }
 
         switch (operation.type) {
             case 'add':
@@ -453,27 +541,6 @@ Ext.define("MyApp.DemoGanttPanel", {
                 break;
             case 'delete':
                 taskStore.add(task); // 撤销删除操作：重新添加任务
-                break;
-        }
-
-        this.refreshViews(); // 刷新视图
-    },
-
-    // 执行重做操作
-    performRedo: function (operation) {
-        console.log('Perform Redo:', operation); // 调试日志
-        var taskStore = this.getTaskStore();
-        var task = taskStore.getById(operation.taskId);
-
-        switch (operation.type) {
-            case 'add':
-                taskStore.add(task); // 重做添加操作：重新添加任务
-                break;
-            case 'update':
-                task.set(operation.newValue); // 重做更新操作：应用新值
-                break;
-            case 'delete':
-                taskStore.remove(task); // 重做删除操作：删除任务
                 break;
         }
 
@@ -857,14 +924,25 @@ Ext.define("MyApp.DemoGanttPanel", {
                         }
                     },
 
+                    // 撤销按钮定义
                     {
-                        text: '撤消',
+                        text: '撤消<div id="divNumber">0</div>', // 使用 HTML
                         iconCls: 'icon-undo', // 修正图标类名
                         scope: this,
                         xtype: 'button',
+                        enableHtml: true, // 启用 HTML 支持
+                        itemId: 'undoButton', // 添加 itemId 以便获取按钮引用
                         handler: function () {
                             // 调用撤销逻辑
                             this.onUndo();
+                        },
+                        listeners: {
+                            afterrender: function (button) {
+                                // 初始化按钮文本为 0
+                                console.log('Initializing undo button text to 0'); // 调试日志
+                                this.updateUndoButtonText(button, 0);
+                            },
+                            scope: this
                         }
                     }
 
