@@ -112324,4 +112324,802 @@ Message Input string '63.1578947368421' is not a valid integer. Path '[0].percen
 An error occurred while executing the query.
 
 ------------------------------------
+
+Log Entry : 21:28:32 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 21:28:33 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 21:28:34 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 21:28:34 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 21:28:34 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 21:28:34 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 21:28:34 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:28:32 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:28:32 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:28:32 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:28:33 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:28:33 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:28:33 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:28:34 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:44:22 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:44:22 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:44:22 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:44:22 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:44:22 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:44:22 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:44:23 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:45:08 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:45:08 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:45:08 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:45:28 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:45:28 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:45:29 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:46:07 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:46:11 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:46:13 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:46:13 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:46:13 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:50:09 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:50:13 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:50:15 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:50:15 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:50:15 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:50:15 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:50:16 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:54:15 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:54:15 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 22:54:15 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 23:11:12 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 23:11:12 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 23:11:12 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 23:11:12 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 23:11:12 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 23:11:12 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 23:11:12 2025年3月14日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:06 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:07 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:07 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:07 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:07 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:07 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:08 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:08 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:09 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:09 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:10 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:10 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:08:11 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:11:03 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:11:04 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:11:04 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:19 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:19 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:25 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:29 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:29 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:30 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:30 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:31 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:31 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:22:33 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:23:47 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:23:48 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:23:48 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:01 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:01 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:01 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:04 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:05 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:06 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:07 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:07 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:08 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:08 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:08 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:08 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:53 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:25:53 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:15 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:15 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:15 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:15 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:16 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:16 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:17 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:17 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:23 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:24 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 10:48:24 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:14 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:15 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:16 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:23 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:23 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:24 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:24 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:24 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:24 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:24 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:37 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:37 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:49:38 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:51:04 2025年3月15日 
+URL: http://10.211.55.24:5000/ENSource/Web/handler/TaskController.aspx?action=update&_dc=1742007063903&pid=50204
+Message Input string '66.66666666666667' is not a valid integer. Path '[0].percent_done', line 1, position 57.
+   在 Newtonsoft.Json.JsonTextReader.ParseReadNumber(ReadType readType, Char firstChar, Int32 initialPosition)
+   在 Newtonsoft.Json.JsonTextReader.ParseNumber(ReadType readType)
+   在 Newtonsoft.Json.JsonTextReader.ReadNumberValue(ReadType readType)
+   在 Newtonsoft.Json.JsonTextReader.ReadAsInt32()
+   在 Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 TakeTopGantt.handler.TaskController.dispachAction()
+   在 TakeTopGantt.handler.TaskController.Page_Load(Object sender, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 11:46:48 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:49 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:49 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:51 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:51 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:51 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:51 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:58 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:58 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:46:59 AM Saturday, March 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:13 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:13 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:14 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:19 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:20 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:20 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:20 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:20 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:21 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:21 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:22 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:26 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:26 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 上午 11:48:27 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:54 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:54 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:55 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:55 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:57 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:58 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:59 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:59 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:59 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:59 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:50:59 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:51:08 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:51:09 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:51:09 2025年3月15日 
+An error occurred while executing the query.
+
+------------------------------------
 
