@@ -1039,7 +1039,7 @@ Ext.define("MyApp.DemoGanttPanel", {
                             // 调用撤销逻辑
                             this.onUndo();
                             this.onUndo();
-                            this.onUndo();
+                          /*  this.onUndo();*/
                         },
                         listeners: {
                             afterrender: function (button) {
@@ -1063,7 +1063,7 @@ Ext.define("MyApp.DemoGanttPanel", {
                             // 调用重做逻辑
                             this.onRedo();
                             this.onRedo();
-                            this.onRedo();
+                         /*   this.onRedo();*/
                         },
                         listeners: {
                             afterrender: function (button) {
