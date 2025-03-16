@@ -1,5 +1,4 @@
 
-
 Ext.define("MyApp.DemoGanttPanel", {
     extend: "Gnt.panel.Gantt",
     requires: [
