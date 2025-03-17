@@ -1228,7 +1228,7 @@
                 }
             }
 
-            e.append('<tr id="TakeTopFlowDelTR"><th>删除(Delete)</th><td><input type="button" value="删除(Delete)" onclick="if(confirm(\'确认删除(Are you sure you want to delete it)？\'))jQuery(document).trigger(\'keydown\',true);"/></td></tr>');
+            e.append('<tr id="TakeTopFlowDelTR"><th>Delete</th><td><input type="button" value="Delete" onclick="if(confirm(\'Are you sure you want to delete it？\'))jQuery(document).trigger(\'keydown\',true);"/></td></tr>');
 
             //选择“连线”菜单，就不显示属性框，方便连线操作
             if (document.getElementById("path").className == "node selectable selected") {

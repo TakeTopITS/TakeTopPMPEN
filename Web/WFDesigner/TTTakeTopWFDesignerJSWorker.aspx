@@ -195,7 +195,9 @@
         <div id="TakeTopFlow_props"
             style="position: absolute; top: 30; left: 30; background-color: #fff; width: 320px; padding: 3px;"
             class="ui-widget-content">
-            <div id="TakeTopFlow_props_handle" class="ui-widget-header" style="left: 500;">属性(Property)</div>
+            <div id="TakeTopFlow_props_handle" class="ui-widget-header" style="left: 500;">
+                <%=LanguageHandle.GetWord("JieDianShuXing").ToString() %>
+            </div>
             <table border="1" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>aaa</td>

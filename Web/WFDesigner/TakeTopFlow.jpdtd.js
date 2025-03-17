@@ -93,7 +93,7 @@ $.extend(true,TakeTopFlow.config.tools.states,{
 				img : {src : 'img/48/task_empty.png',width :48, height:48},
 				props : {
 					guid: {name:'guid', label : 'GUID', value:'', editor: function(){return new TakeTopFlow.editors.labelEditor();}},
-					text: {name:'text', label: '步骤(Step)', value:'', editor: function(){return new TakeTopFlow.editors.textEditor();}, value:''}
+					text: {name:'text', label: 'Step', value:'', editor: function(){return new TakeTopFlow.editors.textEditor();}, value:''}
 				}}
 });
 })(jQuery);
