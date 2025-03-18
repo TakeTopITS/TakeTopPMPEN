@@ -141,7 +141,7 @@ public partial class TTAttachWorkFlowTemplate : System.Web.UI.Page
     {
         if (e.CommandName != "Page")
         {
-            string strWFType = ((Button)e.Item.FindControl("BT_WFType")).Text.Trim();
+            string strWFType = ((Button)e.Item.FindControl("BT_WFType")).ToolTip.Trim();
 
             string strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = " + "'" + strWFType + "'";
             strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
