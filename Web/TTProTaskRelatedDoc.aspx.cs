@@ -20,7 +20,7 @@ using TakeTopCore;
 
 public partial class TTProTaskRelatedDoc : System.Web.UI.Page
 {
-    string strProjectID,strProjectName, strTaskID, strTaskName, strProjectType;
+    string strProjectID, strProjectName, strTaskID, strTaskName, strProjectType;
     string strLangCode;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -32,8 +32,8 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
         string strFromProjectID, strFromProjectPlanVerID;
 
         strUserCode = Session["UserCode"].ToString();
-        strUserName = GetUserName(strUserCode);
-        strDepartCode = GetDepartCode(strUserCode);
+        strUserName = ShareClass.GetUserName(strUserCode);
+        strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
         strTaskID = Request.QueryString["TaskID"];
 
@@ -111,7 +111,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
         IList lst1, lst2;
 
         strUserCode = LB_UserCode.Text.Trim();
-        strDepartCode = GetDepartCode(strUserCode);
+        strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
         TreeNode treeNode = new TreeNode();
         treeNode = TreeView1.SelectedNode;
@@ -158,7 +158,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
-    
+
     protected void BT_LoadDoc_Click(object sender, EventArgs e)
     {
         LoadRelatedDoc();
@@ -172,13 +172,13 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
         if (e.CommandName != "Page")
         {
             string strUserCode = LB_UserCode.Text.Trim();
-            string strUserName = GetUserName(strUserCode);
+            string strUserName = ShareClass.GetUserName(strUserCode);
             string strDocID = e.Item.Cells[0].Text.Trim();
-           string strDocName = e.Item.Cells[3].Text.Trim();
+            string strDocName = e.Item.Cells[3].Text.Trim();
             string strUploadMan = e.Item.Cells[6].Text.Trim();
             string strTaskID = LB_TaskID.Text.Trim();
             string strProjectID = LB_ProjectID.Text.Trim();
-            string strDepartCode = GetDepartCode(strUserCode);
+            string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
             if (e.CommandName == "Delete")
             {
@@ -218,7 +218,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim()  + strDocID  + strDocName ;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID + strDocName;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -251,7 +251,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
             }
             string strDocType = GetDocTypeName(strDocTypeID);
 
-            string strDepartCode = GetDepartCode(strUserCode);
+            string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
             string strVisible = DL_Visible.SelectedValue.Trim();
 
@@ -306,7 +306,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
                 document.DocName = strFileName2;
                 document.Address = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\Doc\\" + strFileName3;
                 document.UploadManCode = strUserCode;
-                document.UploadManName = GetUserName(strUserCode);
+                document.UploadManName = ShareClass.GetUserName(strUserCode);
                 document.UploadTime = DateTime.Now;
                 document.Visible = strVisible;
                 document.DepartCode = strDepartCode; document.DepartName = ShareClass.GetDepartName(strDepartCode);
@@ -325,7 +325,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
                     LoadRelatedDoc();
                     ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Task", strTaskID, strTaskName);
 
-                    TB_Message.Text = GetUserName(strUserCode) + LanguageHandle.GetWord("ShangChuanLeWenJian").ToString().Trim() + strFileName2 + LanguageHandle.GetWord("QingJiShiChaKan").ToString().Trim();
+                    TB_Message.Text = ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("ShangChuanLeWenJian").ToString().Trim() + strFileName2 + LanguageHandle.GetWord("QingJiShiChaKan").ToString().Trim();
                 }
                 catch
                 {
@@ -370,7 +370,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         strDescription = TB_Description.Text.Trim();
         strCreatorCode = LB_UserCode.Text.Trim();
-        strCreatorName = GetUserName(strCreatorCode);
+        strCreatorName = ShareClass.GetUserName(strCreatorCode);
         dtCreateTime = DateTime.Now;
 
         strXMLFileName = strWLType + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
@@ -484,7 +484,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
 
                 if (CB_SMS.Checked == true)
                 {
-                    msg.SendMSM("Message",strRelatedUserCode, strMsg, strUserCode);
+                    msg.SendMSM("Message", strRelatedUserCode, strMsg, strUserCode);
                 }
 
                 if (CB_Mail.Checked == true)
@@ -638,7 +638,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
     {
         string strHQL;
         string strUserCode = LB_UserCode.Text.Trim();
-        string strDepartCode = GetDepartCode(strUserCode);
+        string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
         IList lst;
         DocumentBLL documentBLL = new DocumentBLL();
 
@@ -646,7 +646,7 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
         strHQL += " (((document.RelatedType = 'Task' and document.RelatedID = " + strTaskID + " )";
         strHQL += " or ( document.RelatedType = 'Plan' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strTaskID + ")))";
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
+        strHQL += " or (document.Visible in ( 'Department','Entire'))))";
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         documentBLL = new DocumentBLL();
@@ -689,27 +689,4 @@ public partial class TTProTaskRelatedDoc : System.Web.UI.Page
         return docType.Type.Trim();
     }
 
-    protected string GetDepartCode(string strUserCode)
-    {
-        string strDepartCode, strHQL;
-
-        strHQL = " from ProjectMember as projectMember where projectMember.UserCode = " + "'" + strUserCode + "'";
-        ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        IList lst = projectMemberBLL.GetAllProjectMembers(strHQL);
-        ProjectMember projectMember = (ProjectMember)lst[0];
-        strDepartCode = projectMember.DepartCode.Trim();
-        return strDepartCode;
-    }
-
-    protected string GetUserName(string strUserCode)
-    {
-        string strUserName, strHQL;
-
-        strHQL = " from ProjectMember as projectMember where projectMember.UserCode = " + "'" + strUserCode + "'";
-        ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        IList lst = projectMemberBLL.GetAllProjectMembers(strHQL);
-        ProjectMember projectMember = (ProjectMember)lst[0];
-        strUserName = projectMember.UserName.Trim();
-        return strUserName.Trim();
-    }
 }
