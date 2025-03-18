@@ -2,7 +2,7 @@
 
 document.write("<script language=javascript src='../js/layer/layer/layer.js'></script>");
 document.write("<script language=javascript src='../js/popwindow.js'></script>");
-document.write("<script language=javascript src='../js/MoreLanguageCode.js'></script>");
+document.write("<script language=javascript src='../js/allLanguageHandler.js'></script>");
 
 
 (function (b) {
