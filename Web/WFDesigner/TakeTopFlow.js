@@ -1,5 +1,9 @@
+
+
 document.write("<script language=javascript src='../js/layer/layer/layer.js'></script>");
 document.write("<script language=javascript src='../js/popwindow.js'></script>");
+document.write("<script language=javascript src='../js/MoreLanguageCode.js'></script>");
+
 
 (function (b) {
 
@@ -1371,7 +1375,7 @@ document.write("<script language=javascript src='../js/popwindow.js'></script>")
                 }
             }
 
-            e.append('<tr id="TakeTopFlowDelTR"><th>Delete</th><td><input type="button" value="Delete" onclick="if(confirm(\'Are you sure you want to delete it？\'))jQuery(document).trigger(\'keydown\',true);"/></td></tr>');
+            e.append('<tr id="TakeTopFlowDelTR"><th>Delete</th><td><input type="button" value="Delete" onclick="if(confirm(getDeleteMsgByLangCode()))jQuery(document).trigger(\'keydown\',true);"/></td></tr>');
 
             //选择“连线”菜单，就不显示属性框，方便连线操作
             if (document.getElementById("path").className == "node selectable selected") {
@@ -1696,3 +1700,4 @@ function getUrlParam(name) {
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]); return null;
 }
+
