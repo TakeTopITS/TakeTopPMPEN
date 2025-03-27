@@ -1029,8 +1029,8 @@ Ext.define("MyApp.DemoGanttPanel", {
 
                     // 撤销按钮定义
                     {
-                        text: 'Undo<div id="divNumber">0</div>', // 使用 HTML
-                        iconCls: 'icon-undo', // 修正图标类名
+                        text: 'UndoUpdate<div id="divNumber">0</div>', // 使用 HTML
+                       /* iconCls: 'icon-undo', // 修正图标类名*/
                         scope: this,
                         xtype: 'button',
                         enableHtml: true, // 启用 HTML 支持
@@ -1053,8 +1053,8 @@ Ext.define("MyApp.DemoGanttPanel", {
 
                     // 重做按钮定义
                     {
-                        text: 'Redo<div id="divRedoNumber">0</div>', // 使用 HTML
-                        iconCls: 'icon-redo', // 修正图标类名
+                        text: 'RedoUpdate<div id="divRedoNumber">0</div>', // 使用 HTML
+                  /*      iconCls: 'icon-redo', // 修正图标类名*/
                         scope: this,
                         xtype: 'button',
                         enableHtml: true, // 启用 HTML 支持
