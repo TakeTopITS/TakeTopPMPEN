@@ -49,10 +49,19 @@
             autoHeight();
         });
 
-        function autoHeight() {
+        function autoheight() { //函数：获取尺寸
+            //获取浏览器窗口高度
+            var winHeight = 0;
+            if (window.innerHeight)
+                winHeight = window.innerHeight;
+            else if ((document.body) && (document.body.clientHeight))
+                winHeight = document.body.clientHeight;
 
-            var b_height = Math.max(document.body.scrollHeight, document.body.clientHeight);
-            this.document.getElementById("_WFDesignerFrame").style.height = (b_height) + "px";
+            if (document.documentElement && document.documentElement.clientHeight)
+                winHeight = document.documentElement.clientHeight;
+
+            document.getElementById("_WFDesignerFrame").style.height = (winHeight + 0) + "px";
+            document.getElementById("_WFSetAreaFrame").style.height = (winHeight + 0) + "px";
         }
 
         function ReloadLeftBar() {

@@ -18,7 +18,7 @@
     <style type="text/css">
         body {
             margin: 0;
-            pading: 0;
+            padding: 0;
             text-align: left;
             font-family: Arial, sans-serif, Helvetica, Tahoma;
             font-size: 12px;
