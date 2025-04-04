@@ -41,12 +41,12 @@
                                     <!-- 标题开始 -->
                                     <div class="TabTitle">
                                         <ul id="myTab5r">
-                                            <li class="active" onmouseover="nTabs(this,0);">
+                                            <li class="active" onmouseover="nTabs(this,0);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 
                                                 <asp:Label ID="LB_MyMember" runat="server" Text="<%$ Resources:lang,MyMember%>" />
                                             </li>
 
-                                            <li class="normal" onmouseover="nTabs(this,1);">
+                                            <li class="normal" onmouseover="nTabs(this,1);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WebSite%>" />
                                             </li>
                                         </ul>

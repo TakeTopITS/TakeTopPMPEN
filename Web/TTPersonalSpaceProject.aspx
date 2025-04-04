@@ -50,11 +50,11 @@
                                     <!-- 标题开始 -->
                                     <div class="TabTitle">
                                         <ul id="myTab6r">
-                                            <li class="active" onmouseover="nTabs(this,0);">
+                                            <li class="active" onmouseover="nTabs(this,0);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_MyProject" runat="server" Text="<%$ Resources:lang,MyProject%>"></asp:Label></li>
-                                            <li class="normal" onmouseover="nTabs(this,1);">
+                                            <li class="normal" onmouseover="nTabs(this,1);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_InvolvedProject" runat="server" Text="<%$ Resources:lang,InvolvedProject%>"></asp:Label></li>
-                                            <li class="normal" onmouseover="nTabs(this,2);">
+                                            <li class="normal" onmouseover="nTabs(this,2);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_CreateProject" runat="server" Text="<%$ Resources:lang,CreateProject%>"></asp:Label></li>
                                         </ul>
                                     </div>
@@ -68,7 +68,7 @@
                                                             Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="8" Width="100%"
                                                             CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="False">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" visible="false">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" Visible="false">
                                                                     <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
@@ -102,7 +102,7 @@
                                                             Font-Strikeout="False" Font-Underline="False" ForeColor="#333333" GridLines="None"
                                                             PageSize="8" Height="1px" OnPageIndexChanged="DataGrid4_PageIndexChanged" Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" visible="false">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" Visible="false">
                                                                     <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTInvolvedProDetail.aspx?ProjectID={0}"
@@ -134,7 +134,7 @@
                                                             Font-Strikeout="False" Font-Underline="False" ForeColor="#333333" GridLines="None"
                                                             PageSize="8" Height="1px" OnPageIndexChanged="DataGrid8_PageIndexChanged" Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" visible="false">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="Number" Visible="false">
                                                                     <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTCreatedProjectDetail.aspx?ProjectID={0}"

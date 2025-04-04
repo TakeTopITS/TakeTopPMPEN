@@ -50,10 +50,10 @@
                                     <!-- 标题开始 -->
                                     <div class="TabTitle">
                                         <ul id="myTab4r">
-                                            <li class="active" onmouseover="nTabs(this,0);">
+                                            <li class="active" onmouseover="nTabs(this,0);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_MyTask" runat="server" Text="<%$ Resources:lang,MyTask%>" />
                                             </li>
-                                            <li class="normal" onmouseover="nTabs(this,1);">
+                                            <li class="normal" onmouseover="nTabs(this,1);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_AssignTask" runat="server" Text="<%$ Resources:lang,AssignTask%>" />
                                             </li>
                                         </ul>
@@ -69,10 +69,10 @@
                                                             ShowHeader="False" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="8"
                                                             Width="100%" CssClass="auto-style1">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" visible="false">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                            
+
                                                                 <asp:TemplateColumn HeaderText="优先级" Visible="false">
                                                                     <ItemTemplate>
                                                                         <%# GetTaskPriority(Eval("TaskID").ToString()) %>
@@ -83,7 +83,7 @@
                                                                     DataTextField="Operation" HeaderText="受理人的工作" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="55%" />
                                                                 </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="Type" HeaderText="Type">
+                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
@@ -110,10 +110,10 @@
                                                             ShowHeader="False" OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="8"
                                                             Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" visible="false">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                           
+
                                                                 <asp:TemplateColumn HeaderText="优先级" Visible="false">
                                                                     <ItemTemplate>
                                                                         <%# GetTaskPriority(Eval("TaskID").ToString()) %>
@@ -124,7 +124,7 @@
                                                                     DataTextField="Operation" HeaderText="受理人的工作" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="55%" />
                                                                 </asp:HyperLinkColumn>
-                                                                     <asp:BoundColumn DataField="Type" HeaderText="Type">
+                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">

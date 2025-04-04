@@ -41,7 +41,7 @@
                                     <!-- 标题开始 -->
                                     <div class="TabTitle">
                                         <ul id="myTab2r">
-                                            <li id="LI_ToDoList" class="active" onmouseover="nTabs(this,0);">
+                                            <li id="LI_ToDoList" class="active" onmouseover="nTabs(this,0);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_ToDoList" runat="server" Text="<%$ Resources:lang,ToDoList%>"></asp:Label>
                                             </li>
                                         </ul>

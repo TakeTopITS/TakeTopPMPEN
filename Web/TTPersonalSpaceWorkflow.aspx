@@ -63,14 +63,14 @@
                                     <div class="TabTitle">
                                         <ul id="myTab3r">
 
-                                            <li class="active" onmouseover="nTabs(this,0);">
+                                            <li class="active" onmouseover="nTabs(this,0);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_ToBeApproved" runat="server" Text="<%$ Resources:lang,ToBeApproved%>"></asp:Label>
                                             </li>
-                                            <li class="normal" onmouseover="nTabs(this,1);">
+                                            <li class="normal" onmouseover="nTabs(this,1);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_MyWorkflow" runat="server" Text="<%$ Resources:lang,MyWorkflow%>"></asp:Label>
                                             </li>
 
-                                            <li class="normal" onmouseover="nTabs(this,2);">
+                                            <li class="normal" onmouseover="nTabs(this,2);" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                 <asp:Label ID="LB_WFTemplate" runat="server" Text="<%$ Resources:lang,FaQiShengQing%>"></asp:Label>
                                             </li>
                                         </ul>
