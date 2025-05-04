@@ -189,6 +189,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             BT_Delete.Enabled = false;
 
             LB_SelectedModuleName.Text = "";
+            LB_HomeSelectedModuleName.Text = "";
 
             LB_OldModuleName.Text = "";
             LB_OldModuleName.Text = "";
@@ -226,6 +227,8 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             IM_ModuleIcon.ImageUrl = ds.Tables[0].Rows[0][8].ToString().Trim();
 
             LB_SelectedModuleName.Text = strModuleName;
+            LB_HomeSelectedModuleName.Text = GetHomeModuleNameByModuleNme(strModuleName, strLangCode);
+
             LB_OldModuleName.Text = strModuleName;
             LB_OldModuleType.Text = strModuleType;
             LB_OldParentModuleName.Text = strParentModuleName;

@@ -107,12 +107,11 @@
                                             <td style="text-align: left; padding-right: 5px; padding-top: 4px;">
                                                 <asp:Button ID="BT_DeleteUnVisibleModule" runat="server" CssClass="inpu" Width="150px" OnClick="BT_DeleteUnVisibleModule_Click" Text="隐藏所有不可视模组" />
                                             </td>
-
-                                            <td align="center" style="padding-right: 5px; padding-top: 4px;">
-                                             </td>
                                             <td align="center" style="padding-right: 5px; padding-top: 4px;">
                                                 <asp:Button ID="BT_ClearSystemBeginnerData" runat="server" CssClass="inpu" Width="150px" Text="实施初始数据清除" OnClick="BT_ClearSystemBeginnerData_Click" />
                                             </td>
+                                            <td align="center" style="padding-right: 5px; padding-top: 4px;"></td>
+
                                             <td align="center" style="padding-right: 5px; padding-top: 4px;">&nbsp;</td>
                                         </tr>
 

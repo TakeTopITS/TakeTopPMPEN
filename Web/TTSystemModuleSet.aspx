@@ -346,6 +346,7 @@
                                                     <tr>
                                                         <td style="text-align: left;">
                                                             <asp:Label ID="LB_SelectedModuleName" runat="server" Style="font-weight: 700"></asp:Label>
+                                                            <asp:Label ID="LB_HomeSelectedModuleName" runat="server" Style="font-weight: 700"></asp:Label>
                                                             <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZiMoZuLieBiao%>"></asp:Label>(<asp:Label ID="LB_ModuleNumber" runat="server"></asp:Label>)£º
                                                             <table style="width: 100%;">
                                                                 <tr>
