@@ -174,6 +174,8 @@
                                                                                         CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150">
                                                                                     </cc2:ModalPopupExtender>
                                                                                     <asp:Label ID="LB_ID" runat="server" Visible="false"></asp:Label>
+                                                                                    <br />
+                                                                                    <asp:Label ID="LB_HomeParentName" runat="server"></asp:Label>
                                                                                 </td>
 
                                                                                 <td style="width: 80px; text-align: right; background-color: #EFF3FB" class="tdLeft3">
@@ -211,8 +213,13 @@
                                                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeMian%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td style="text-align: left;" class="tdRight3">
-                                                                                    <asp:TextBox ID="TB_PageName" runat="server" Width="99%">TakeTopPersonalSpace.aspx</asp:TextBox>
                                                                                     <table>
+                                                                                        <tr>
+                                                                                            <td colspan="4">
+                                                                                                <asp:TextBox ID="TB_PageName" runat="server" Width="97%">TakeTopPersonalSpace.aspx</asp:TextBox>
+
+                                                                                            </td>
+                                                                                        </tr>
                                                                                         <tr>
                                                                                             <td colspan="2" align="center">
                                                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,LiuChengLeiXing%>"></asp:Label>

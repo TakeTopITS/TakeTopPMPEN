@@ -290,6 +290,7 @@ public partial class TTSystemModuleSet : System.Web.UI.Page
         {
             LB_ID.Text = "";
             TB_ParentModuleName.Text = "";
+            LB_HomeParentName.Text = "";
 
             TB_ModuleName.Text = "";
             TB_HomeModuleName.Text = "";
@@ -330,6 +331,8 @@ public partial class TTSystemModuleSet : System.Web.UI.Page
 
             TB_ParentModuleName.Text = ds.Tables[0].Rows[0]["ParentModule"].ToString().Trim();
             strParentModuleName = ds.Tables[0].Rows[0]["ParentModule"].ToString().Trim();
+            LB_HomeParentName.Text = ShareClass.GetHomeModuleName(strParentModuleName,strLangCode);
+
 
             TB_ModuleName.Text = ds.Tables[0].Rows[0]["ModuleName"].ToString().Trim();
             strModuleName = ds.Tables[0].Rows[0]["ModuleName"].ToString().Trim();

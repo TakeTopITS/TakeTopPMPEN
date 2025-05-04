@@ -172,6 +172,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         {
             LB_ID.Text = "";
             TB_ParentModuleName.Text = "";
+            LB_HomeParentName.Text = "";
 
             TB_ModuleName.Text = "";
             TB_HomeModuleName.Text = "";
@@ -207,6 +208,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
 
             TB_ParentModuleName.Text = ds.Tables[0].Rows[0]["ParentModule"].ToString().Trim();
             strParentModuleName = ds.Tables[0].Rows[0]["ParentModule"].ToString().Trim();
+            LB_HomeParentName.Text = GetHomeModuleNameByModuleNme(strParentModuleName, strLangCode);
 
             TB_ModuleName.Text = ds.Tables[0].Rows[0]["ModuleName"].ToString().Trim();
             strModuleName = ds.Tables[0].Rows[0]["ModuleName"].ToString().Trim();
@@ -739,8 +741,6 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         }
     }
 
-  
-
     protected void BT_ModuleSave_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -817,6 +817,23 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         }
     }
 
+    protected string GetHomeModuleNameByModuleNme(string strModuleName, string strLangCode)
+    {
+        string strHQL;
+
+        strHQL = "Select HomeModuleName From T_ProModuleLevelForPage Where ModuleName = " + "'" + strModuleName + "'";
+        strHQL += " and LangCode   = " + "'" + strLangCode   + "'";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            return ds.Tables[0].Rows[0][0].ToString().Trim();
+        }
+        else
+        {
+            return "";
+        }
+    }
+
     protected int GetChildModuleNumber(string strParentModule, string strModuleName, string strModuleType, string strUserType, string strLangCode)
     {
         string strHQL;
@@ -825,7 +842,6 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
 
         return ds.Tables[0].Rows.Count;
-
     }
 
     protected void LoadChildModule(string strParentModuleName, string strModuleType, string strUserType, string strLangCode)

@@ -124,6 +124,8 @@
                                                                                         CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150">
                                                                                     </cc2:ModalPopupExtender>
                                                                                     <asp:Label ID="LB_ID" runat="server" Visible="false"></asp:Label>
+                                                                                    <br />
+                                                                                    <asp:Label ID="LB_HomeParentName" runat="server"></asp:Label>
                                                                                 </td>
 
                                                                                 <td style="width: 80px; text-align: right; background-color: #EFF3FB" class="tdLeft3">
@@ -159,8 +161,8 @@
                                                                                 <td style="width: 80px; text-align: right; background-color: #EFF3FB" class="tdLeft3">
                                                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeMian%>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td style="text-align: left; width: 300px;" class="tdRight3">
-                                                                                    <asp:TextBox ID="TB_PageName" runat="server" Width="99%" Text="TakeTopPersonalSpace.aspx"></asp:TextBox>
+                                                                                <td style="text-align: left; width: 300px; padding-left: 3px;" class="tdRight3">
+                                                                                    <asp:TextBox ID="TB_PageName" runat="server" Width="96%" Text="TakeTopPersonalSpace.aspx"></asp:TextBox>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>

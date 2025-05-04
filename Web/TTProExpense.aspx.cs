@@ -839,10 +839,20 @@ public partial class TTProExpense : System.Web.UI.Page
         expenseClaim.ApplicantName = LB_UserName.Text.Trim();
         expenseClaim.Status = "New";
 
+        //string strHQL;
+        //strHQL = string.Format(@"Insert Into T_ExpenseClaim(RelatedType,RelatedID,ExpenseName,Purpose,Amount,CurrencyType,ApplyTime,ApplicantCode,ApplicantName,Status)
+        //                       Values('{0}','{1}','{2}','{3}',{4},'{5}',{6},'{7}','{8}','{9}')", "Project", int.Parse(strProjectID), strExpenseName, strPurpose, 0, LB_CurrencyType.Text.Trim(),
+        //                       DateTime.Now, strUserCode, LB_UserName.Text.Trim(), "New");
+        //LogClass.WriteLogFile(strHQL);
 
-        expenseClaimBLL.AddExpenseClaim(expenseClaim);
+        //ShareClass.RunSqlCommand(strHQL);
+                                
+
+
         try
         {
+            expenseClaimBLL.AddExpenseClaim(expenseClaim);
+
             strECID = ShareClass.GetMyCreatedMaxExpenseClaimWLID(strUserCode);
             LB_ECID.Text = strECID;
 
@@ -901,6 +911,8 @@ public partial class TTProExpense : System.Web.UI.Page
         }
         catch (Exception err)
         {
+            LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
+
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }

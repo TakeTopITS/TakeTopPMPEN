@@ -933,7 +933,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel19" runat="server" HeaderText="补充协议">
+                                                                <cc2:TabPanel ID="TabPanel19" runat="server" HeaderText="补充协议" Visible="false">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label227" runat="server" Text="<%$ Resources:lang,BuConXieYi %>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -1131,7 +1131,7 @@
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
 
-                                                                <cc2:TabPanel ID="TabPanel21" runat="server" HeaderText="项目其他信息">
+                                                                <cc2:TabPanel ID="TabPanel21" runat="server" HeaderText="项目其他信息" Visible="false">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label348" runat="server" ext="<%$ Resources:lang,XiangMuQiTaXinXi %>"></asp:Label>
                                                                     </HeaderTemplate>
