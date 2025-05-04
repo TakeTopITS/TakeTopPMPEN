@@ -164,6 +164,8 @@ public partial class TTSuperSystemModuleSet : System.Web.UI.Page
         if (strModuleID == "0")
         {
             LB_SelectedModuleName.Text = "";
+            LB_HomeSelectedModuleName.Text = "";
+
             LoadChildModule("", strModuleType, strUserType, strLangCode);
         }
         else
@@ -174,6 +176,7 @@ public partial class TTSuperSystemModuleSet : System.Web.UI.Page
             strModuleType = ds.Tables[0].Rows[0][5].ToString().Trim();
 
             LB_SelectedModuleName.Text = strModuleName;
+            LB_HomeSelectedModuleName.Text = ShareClass.GetHomeModuleName(strModuleName,strLangCode);
             LB_ModuleType.Text = strModuleType;
 
             LoadChildModule(strModuleName, strModuleType, strUserType, strLangCode);
