@@ -1,5 +1,6 @@
 using ProjectMgt.BLL;
 using ProjectMgt.Model;
+
 using System;
 using System.Collections;
 using System.Drawing;
@@ -108,7 +109,7 @@ public partial class TTSuperActorGroup : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        string strGroupName = "%" + TB_ActorGroup.Text.Trim()+ "%";
+        string strGroupName = "%" + TB_ActorGroup.Text.Trim() + "%";
 
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         strHQL = "from ActorGroup as actorGroup ";
@@ -301,11 +302,11 @@ public partial class TTSuperActorGroup : System.Web.UI.Page
 
                 ActorGroupDetail actorGroupDetail = (ActorGroupDetail)lst[0];
 
-       
+
                 LB_ID.Text = actorGroupDetail.GroupID.ToString();
                 LB_RelatedUserCode.Text = actorGroupDetail.UserCode;
                 LB_RelatedUserName.Text = actorGroupDetail.UserName;
-         
+
                 TB_Actor.Text = actorGroupDetail.Actor;
                 TB_WorkDetail.Text = actorGroupDetail.WorkDetail;
 
@@ -473,7 +474,21 @@ public partial class TTSuperActorGroup : System.Web.UI.Page
                         actorGroupDetail.Actor = strActor;
                         actorGroupDetail.WorkDetail = strWorkDetail;
 
-                        actorGroupDetailBLL.AddActorGroupDetail(actorGroupDetail);
+                        string strHQL = string.Format(@"INSERT INTO T_ActorGroupDetail (GroupName, UserCode, UserName, DepartCode, DepartName, Actor, WorkDetail) 
+                                        VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", strGroupName, strRelatedUserCode, strRelatedUserName, strDepartCode, strDepartName, strActor, strWorkDetail);
+
+                        try
+                        {
+                            ShareClass.RunSqlCommand(strHQL);
+
+                            //actorGroupDetailBLL.AddActorGroupDetail(actorGroupDetail);
+                        }
+                        catch (Exception err)
+                        {
+
+                            LogClass.WriteLogFile(strHQL);
+                            LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace + " " + strRelatedUserCode);
+                        }
 
                         strGroupID = ShareClass.GetMyCreatedMaxActorGroupDetailID(strGroupName);
                         LB_ID.Text = strGroupID;
@@ -485,14 +500,15 @@ public partial class TTSuperActorGroup : System.Web.UI.Page
 
                 LoadActorGroupDetail(strGroupName);
             }
-            catch
+            catch (Exception err)
             {
+
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoJiaoSeBuNengWeiKongQi").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJingGaoJiaoSeBuNengWeiKongQi").ToString().Trim() + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }
     }
@@ -564,6 +580,8 @@ public partial class TTSuperActorGroup : System.Web.UI.Page
         string strRelatedUserCode = LB_RelatedUserCode.Text.Trim();
         string strRelatedUserName = LB_RelatedUserName.Text.Trim();
         string strDepartCode = LB_DepartCode.Text.Trim();
+        LogClass.WriteLogFile(strDepartCode);
+
         string strDepartName = ShareClass.GetDepartName(strDepartCode);
         string strActor = TB_Actor.Text.Trim();
         string strWorkDetail = TB_WorkDetail.Text.Trim();

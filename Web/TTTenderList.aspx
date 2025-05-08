@@ -887,7 +887,7 @@
                                 <td class="formItemBgStyle" style="text-align: left">
 
                                     <asp:DropDownList ID="DL_WFType" runat="server">
-                                        <asp:ListItem Value="BidManagement" Text="BidManagement" />
+                                        <asp:ListItem Value="BidManagement" Text="<%$ Resources:lang,TouBiaoGuanLi%>"  />
                                     </asp:DropDownList>
 
                                     <asp:Label ID="Label58" runat="server" Text="<%$ Resources:lang,GongZuoLiuMuBan%>"></asp:Label>£º<asp:DropDownList ID="DL_TemName" runat="server" DataTextField="TemName" DataValueField="TemName"

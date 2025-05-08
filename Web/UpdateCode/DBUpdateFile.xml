@@ -1,11 +1,11 @@
 <DataBaseUpgradeFiles>
-	<DataBaseUpgradeFile>
-		<ID>3295</ID>
-		<SQLText>Select * From T_JNUnit</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3296</ID>
-		<SQLText>
+  <DataBaseUpgradeFile>
+    <ID>3295</ID>
+    <SQLText>Select * From T_JNUnit</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3296</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ImplePlan_Insert()
 
 			-- DROP FUNCTION public."Func_tg_ImplePlan_Insert"();
@@ -87,10 +87,10 @@
 			ALTER FUNCTION public."Func_tg_ImplePlan_Insert"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3297</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3297</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ImplePlan_Insert()
 
 			-- DROP FUNCTION public."Func_tg_ImplePlan_Insert"();
@@ -172,78 +172,78 @@
 			ALTER FUNCTION public."Func_tg_ImplePlan_Insert"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3298</ID>
-		<SQLText>alter table t_taskstatus alter  COLUMN  status  type character(10);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3299</ID>
-		<SQLText>Alter Table t_schedule Add Column color character(20)</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3300</ID>
-		<SQLText>Update t_schedule Set color = 'green'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3301</ID>
-		<SQLText>Alter Table t_schedule Add Column "column" character(100)</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3302</ID>
-		<SQLText>Update t_schedule Set "column" = ''</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3303</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3298</ID>
+    <SQLText>alter table t_taskstatus alter  COLUMN  status  type character(10);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3299</ID>
+    <SQLText>Alter Table t_schedule Add Column color character(20)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3300</ID>
+    <SQLText>Update t_schedule Set color = 'green'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3301</ID>
+    <SQLText>Alter Table t_schedule Add Column "column" character(100)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3302</ID>
+    <SQLText>Update t_schedule Set "column" = ''</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3303</ID>
+    <SQLText>
 			ALTER TABLE t_schedule RENAME begintime TO "start";
 			ALTER TABLE t_schedule RENAME endtime TO "end";
 			ALTER TABLE t_schedule RENAME plantitle TO "name";
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3304</ID>
-		<SQLText>ALTER TABLE t_schedule RENAME plandetail TO "detail";</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3305</ID>
-		<SQLText>ALTER TABLE t_schedule RENAME plandate TO "scheduledate";</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3306</ID>
-		<SQLText>ALTER TABLE t_schedule  ALTER COLUMN id SET data TYPE char(100) USING id::char(100);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3307</ID>
-		<SQLText>ALTER TABLE t_schedule RENAME scheduledate TO createdate</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3308</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3304</ID>
+    <SQLText>ALTER TABLE t_schedule RENAME plandetail TO "detail";</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3305</ID>
+    <SQLText>ALTER TABLE t_schedule RENAME plandate TO "scheduledate";</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3306</ID>
+    <SQLText>ALTER TABLE t_schedule  ALTER COLUMN id SET data TYPE char(100) USING id::char(100);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3307</ID>
+    <SQLText>ALTER TABLE t_schedule RENAME scheduledate TO createdate</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3308</ID>
+    <SQLText>
 			Update t_promodulelevel set isdeleted = 'YES' where modulename in ('成员日程','查看所有成员日程');
 			Update t_promodulelevelforpage set isdeleted = 'YES' where modulename in ('工作日程');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3309</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3309</ID>
+    <SQLText>
 			--更改商品盘点视图，适合集团版----------------
 			CREATE OR REPLACE View V_GoodsCheckReport
 			as
 			Select OwnerCode,GoodsCode,GoodsName,Type,ModelNumber,Spec,SN,UnitName, Sum(Number) As TotalNumber,Sum(Price*Number) As TotalAmount
 			From T_Goods Group By OwnerCode, GoodsCode,Goodsname,Type,ModelNumber,Spec,SN,UnitName
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3310</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3310</ID>
+    <SQLText>
 			truncate table t_report;
 			truncate table t_reporttemplate;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3311</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3311</ID>
+    <SQLText>
 			CREATE OR REPLACE PROCEDURE public.pro_deleteuserauthorizationbysupermodule(
 			)
 			LANGUAGE 'plpgsql'
@@ -254,57 +254,57 @@
 			end
 			$BODY$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3312</ID>
-		<SQLText>Delete from t_promodulelevelforpage where modulename = '工作日程'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3313</ID>
-		<SQLText>update t_promodulelevel set pagename = 'TTMakeDefect.aspx' where modulename = '记录缺陷'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3314</ID>
-		<SQLText>update t_promodulelevel set pagename = trim(pagename)</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3315</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3312</ID>
+    <SQLText>Delete from t_promodulelevelforpage where modulename = '工作日程'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3313</ID>
+    <SQLText>update t_promodulelevel set pagename = 'TTMakeDefect.aspx' where modulename = '记录缺陷'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3314</ID>
+    <SQLText>update t_promodulelevel set pagename = trim(pagename)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3315</ID>
+    <SQLText>
 			update t_promodulelevel set modulename = '记录需求',homemodulename= '记录需求' where modulename = '建立和分派需求';
 			update t_promodule set modulename = '记录需求' where modulename = '建立和分派需求';
 			update t_promodulelevelforpage set modulename = '记录需求',homemodulename = '记录需求' where modulename = '建立和分派需求';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3316</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3316</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('计划完成进度','计划完成进度','css/Images/output.png',5,'TTProjectPlanScheduleReport.aspx?ProjectID=','INNER','项目报表列表','YES','zh-CN','NO')
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3317</ID>
-		<SQLText>alter table "t_projectstatus" alter  COLUMN  status  type  character(10) ;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3318</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3317</ID>
+    <SQLText>alter table "t_projectstatus" alter  COLUMN  status  type  character(10) ;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3318</ID>
+    <SQLText>
 			alter table "t_wlstatus" alter COLUMN status type character(10) ;
 			alter table "t_planstatus" alter COLUMN status type character(10) ;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3319</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3319</ID>
+    <SQLText>
 			alter table "t_reqstatus" alter COLUMN status type character(10) ;
 			alter table "t_defectstatus" alter COLUMN status type character(10) ;
 			alter table "t_teststatus" alter COLUMN status type character(10) ;
 			alter table "t_otherstatus" alter COLUMN status type character(10) ;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3320</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3320</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ImplePlan_Update()
 
 			-- DROP FUNCTION public."Func_tg_ImplePlan_Update"();
@@ -480,10 +480,10 @@
 			ALTER FUNCTION public."Func_tg_ImplePlan_Update"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3321</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3321</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ImplePlan_Delete()
 
 			-- DROP FUNCTION public."Func_tg_ImplePlan_Delete"();
@@ -504,10 +504,10 @@
 			ALTER FUNCTION public."Func_tg_ImplePlan_Delete"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3322</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3322</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ImplePlan_Insert()
 
 			-- DROP FUNCTION public."Func_tg_ImplePlan_Insert"();
@@ -589,74 +589,74 @@
 			ALTER FUNCTION public."Func_tg_ImplePlan_Insert"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3323</ID>
-		<SQLText>update t_promodulelevel set pagename = 'TTUpLoadDoc.aspx' where pagename = 'TTUpLoadDoc.aspx';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3324</ID>
-		<SQLText>update t_promodulelevel set pagename = 'TTUpLoadDoc.aspx' where pagename = 'TTUploadDoc.aspx';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3325</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3323</ID>
+    <SQLText>update t_promodulelevel set pagename = 'TTUpLoadDoc.aspx' where pagename = 'TTUpLoadDoc.aspx';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3324</ID>
+    <SQLText>update t_promodulelevel set pagename = 'TTUpLoadDoc.aspx' where pagename = 'TTUploadDoc.aspx';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3325</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('--&gt;资金预算','--&gt;资金预算','',5,'TTMakeProjectBudget.aspx?ProjectID=','INNER','主管项目第一行','YES','zh-CN','NO');
 
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('--&gt;物资预算','--&gt;物资预算','',5,'TTProjectRelatedItem.aspx?ProjectID=','INNER','主管项目第一行','YES','zh-CN','NO');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3326</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3326</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('关联流程模板','关联流程模板','',12,'TTAttachWorkFlowTemplate.aspx?RelatedType=ProjectPlan&amp;RelatedID=','INNER','项目计划菜单','YES','zh-CN','NO');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3327</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3327</ID>
+    <SQLText>
 			Update t_promodulelevel set pagename = 'TTTenderList.aspx' where pagename = 'TTTenderList_HYYQ.aspx';
 			Update t_promodulelevel set pagename = 'TTTenderFinanceList.aspx' where pagename = 'TTTenderFinanceList_HYYQ.aspx'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3328</ID>
-		<SQLText>Update T_ProModuleLevelForPage Set ModuleName = '项目收益',HomeModuleName = '项目收益' Where ModuleName = '合同收入与费用'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3329</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3328</ID>
+    <SQLText>Update T_ProModuleLevelForPage Set ModuleName = '项目收益',HomeModuleName = '项目收益' Where ModuleName = '合同收入与费用'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3329</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set ModuleName = '项目收益',HomeModuleName = '项目收益' Where ModuleName = '项目收入与费用';
 			Update T_ProModule Set ModuleName = '项目收益' Where ModuleName = '项目收入与费用';
 
 			Update T_ProModuleLevel Set ModuleName = '项目收益报告',HomeModuleName = '项目收益报告' Where ModuleName = '项目收益';
 			Update T_ProModule Set ModuleName = '项目收益报告' Where ModuleName = '项目收益';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3330</ID>
-		<SQLText>select setval('T_WorkFlowTStep_stepid_seq',(select max(stepid) from T_WorkFlowTStep))</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3331</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3330</ID>
+    <SQLText>select setval('T_WorkFlowTStep_stepid_seq',(select max(stepid) from T_WorkFlowTStep))</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3331</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('计划拼接','计划拼接','',13,'TTProjectPlanJoint.aspx?PlanID=','INNER','项目计划菜单','YES','zh-CN','NO');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3332</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3332</ID>
+    <SQLText>
 			Update T_ProModuleLevelForPage Set IconURL = 'css/Images/note.png' where ModuleName = '计划备注';
 			Update T_ProModuleLevelForPage Set IconURL = 'css/Images/doc.png' where ModuleName = '计划文档'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3333</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3333</ID>
+    <SQLText>
 			CREATE View V_GoodsMainPlanBusinessObjectMaterialData
 			AS
 			Select PlanVerID,PlanMRPVerID, 'SaleOrder' as RelatedType, (Select SOID From T_GoodsSaleRecord Where ID = SourceRecordID) as RelatedID,ItemCode,ItemName,ModelNumber,Specification,Brand,RequireNumber,0 as CheckOutNumber,0 as CheckInNumber,0 AS ReturnNumber,Unit From T_ItemMainPlanRelatedItemPurchasePlan Where SourceType = 'GoodsSORecord'
@@ -683,10 +683,10 @@
 			Select 0,0,B.RelatedType,B.RelatedID, A.GoodsCode,A.GoodsName,A.ModelNumber , A.Spec,A.manufacturer as Brand,0,0,0,A.Number,A.UnitName From T_GoodsCheckInOrderDetail A,T_GoodsCheckInOrder B,T_GoodsReturnDetail C
 			Where A.CheckInID = B.CheckInID  AND A.SourceID = C.ID
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3334</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3334</ID>
+    <SQLText>
 			CREATE View V_GoodsMainPlanBusinessObjectMaterialDataReport
 			as
 			Select PlanVerID,PlanMRPVerID, RelatedType,RelatedID,ItemCode,ItemName,ModelNumber,Specification,Brand,Unit,sum(RequireNumber) as TotalRequireNumber,sum(CheckOutNumber) as TotalCheckOutNumber,Sum(CheckInNumber) as TotalCheckInNumber, Sum(ReturnNumber) as TotalReturnNumber
@@ -694,26 +694,26 @@
 			From V_GoodsMainPlanBusinessObjectMaterialData
 			Group By PlanVerID,PlanMRPVerID,RelatedType,RelatedID,ItemCode,ItemName,ModelNumber,Specification,Brand,UNit
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3335</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3335</ID>
+    <SQLText>
 			CREATE View V_GoodsMainPlanBusinessObjectMaterialDataSummaryReport
 			as
 			Select PlanVerID,PlanMRPVerID, RelatedType,RelatedID,ItemCode,ItemName,ModelNumber,Specification,Brand,Unit, TotalRequireNumber,TotalCheckOutNumber, COALESCE (CASE WHEN MoreThanCheckOutNumber &lt; 0 then 0 END,0) AS MoreThanCheckOutNumber ,LessThanCheckInNumber, TotalReturnNumber,TotalCheckInNumber
 			From V_GoodsMainPlanBusinessObjectMaterialDataReport
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3336</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3336</ID>
+    <SQLText>
 			drop view v_goodsmainplanmaterialdatareport;
 			drop view V_GoodsMainPlanMaterialData;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3337</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3337</ID>
+    <SQLText>
 			Create OR Replace View V_GoodsMainPlanMaterialData
 			AS
 
@@ -732,10 +732,10 @@
 			Select B.RelatedID,0,A.GoodsCode,A.GoodsName,A.ModelNumber , A.Spec,A.manufacturer as Brand,0,0,A.Number,A.Number,A.UnitName From T_GoodsCheckInOrderDetail A,T_GoodsCheckInOrder B,T_GoodsReturnDetail C
 			Where A.CheckInID = B.CheckInID and A.SourceID = C.ID  AND B.RelatedType ='MRPPlan'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3338</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3338</ID>
+    <SQLText>
 			Create View V_GoodsMainPlanMaterialDataReport
 			as
 			Select PlanVerID,PlanMRPVerID,ItemCode,ItemName,ModelNumber,Specification,Brand,Unit,sum(RequireNumber) as TotalRequireNumber,sum(CheckOutNumber) as TotalCheckOutNumber,Sum(CheckInNumber) as TotalCheckInNumber, Sum(ReturnNumber) as TotalReturnNumber
@@ -743,38 +743,38 @@
 			From V_GoodsMainPlanMaterialData
 			Group By PlanVerID,PlanMRPVerID,ItemCode,ItemName,ModelNumber,Specification,Brand,UNit
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3339</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3339</ID>
+    <SQLText>
 			Create View V_GoodsMainPlanMaterialDataSummaryReport
 			as
 			Select PlanVerID,PlanMRPVerID,ItemCode,ItemName,ModelNumber,Specification,Brand,Unit, TotalRequireNumber,TotalCheckOutNumber, CASE WHEN MoreThanCheckOutNumber &lt; 0 then 0 END AS MoreThanCheckOutNumber ,LessThanCheckInNumber, TotalReturnNumber,TotalCheckInNumber
 			From V_GoodsMainPlanMaterialDataReport
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3340</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3340</ID>
+    <SQLText>
 			Alter Table t_itemmainplanmrpversion Add RelatedProjectID int default 0;
 			Alter Table t_itemmainplanmrpversion Add RelatedProjectPlanVerID int default 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3341</ID>
-		<SQLText>update t_itemmainplanmrpversion set  RelatedProjectID = 0,RelatedProjectPlanVerID = 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3342</ID>
-		<SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/liuchengguanliAPP.png' where ModuleName = '发起申请' and ModuleType = 'APP'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3343</ID>
-		<SQLText>Delete from T_ProjectRelatedItem Where id = 1147</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3344</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3341</ID>
+    <SQLText>update t_itemmainplanmrpversion set  RelatedProjectID = 0,RelatedProjectPlanVerID = 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3342</ID>
+    <SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/liuchengguanliAPP.png' where ModuleName = '发起申请' and ModuleType = 'APP'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3343</ID>
+    <SQLText>Delete from T_ProjectRelatedItem Where id = 1147</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3344</ID>
+    <SQLText>
 			Alter Table public.t_tender_hyyq add PMCode character varying(20) COLLATE pg_catalog."default";
 			Alter Table public.t_tender_hyyq add PMName character varying(20) COLLATE pg_catalog."default";
 
@@ -789,10 +789,10 @@
 			Alter Table public.t_tender_hyyq add BiddingPrice numeric(18,2) DEFAULT 0;
 			Alter Table public.t_tender_hyyq add ControlPrice numeric(18,2) DEFAULT 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3345</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3345</ID>
+    <SQLText>
 			Update public.t_tender_hyyq set PMCode = '';
 			Update public.t_tender_hyyq set PMName = '';
 			Update public.t_tender_hyyq set TechnicalDirectorCode = '';
@@ -806,10 +806,10 @@
 			Update public.t_tender_hyyq set BiddingPrice = 0;
 			Update public.t_tender_hyyq set ControlPrice = 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3346</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3346</ID>
+    <SQLText>
 
 			CREATE TABLE public.t_tender_content
 			(
@@ -818,21 +818,21 @@
 			CONSTRAINT t_tender_content_pkey PRIMARY KEY (tendercontent)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3347</ID>
-		<SQLText>alter table t_tender_hyyq alter COLUMN receivemargintime type character varying;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3348</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3347</ID>
+    <SQLText>alter table t_tender_hyyq alter COLUMN receivemargintime type character varying;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3348</ID>
+    <SQLText>
 			CREATE TABLE t_tenderexpense ( expenseid bigserial NOT NULL, tenderid bigint,expensename character varying(200) COLLATE pg_catalog."default", expenseamount numeric(18,2), remarks text COLLATE pg_catalog."default", expensedate character varying(200) COLLATE pg_catalog."default", CONSTRAINT t_tenderexpense_pkey PRIMARY KEY (expenseid) )
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3349</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3349</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_projectmembertaskdetailreport
 			AS
 			SELECT COALESCE(f.departcode, ''::bpchar) AS departcode,
@@ -876,10 +876,10 @@
 			FROM t_impleplan)) AND (a.projectid IN ( SELECT t_project.projectid
 			FROM t_project));
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3350</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3350</ID>
+    <SQLText>
 			select setval('t_goods_id_seq',(select max(id) from t_goods));
 			select setval('t_goodsadjustrecord_id_seq',(select max(id) from t_goodsadjustrecord));
 			select setval('t_goodsapplication_aaid_seq',(select max(aaid) from t_goodsapplication));
@@ -910,10 +910,10 @@
 			select setval('t_goodssupplyorderdetail_id_seq',(select max(id) from t_goodssupplyorderdetail));
 			select setval('t_goodsuserrecord_id_seq',(select max(id) from t_goodsuserrecord));
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3351</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3351</ID>
+    <SQLText>
 			select setval('t_asset_id_seq',(select max(id) from t_asset));
 			select setval('t_assetadjustrecord_id_seq',(select max(id) from t_assetadjustrecord));
 			select setval('t_assetapplication_aaid_seq',(select max(aaid) from t_assetapplication));
@@ -935,23 +935,23 @@
 
 			select setval('t_assetuserrecord_id_seq',(select max(id) from t_assetuserrecord));
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3352</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3352</ID>
+    <SQLText>
 			Alter Table t_constract Add ProvisionalAmount numeric default 0;
 			Alter Table t_constract Add SafeCivilizedFee numeric default 0;
 			Alter Table t_constract Add PartAConnectWay character varying(100) Default '';
 			Alter Table t_constract Add PartBConnectWay character varying(100) Default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3353</ID>
-		<SQLText>Update t_constract set ProvisionalAmount = 0,SafeCivilizedFee = 0,PartAConnectWay = '',PartBConnectWay = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3354</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3353</ID>
+    <SQLText>Update t_constract set ProvisionalAmount = 0,SafeCivilizedFee = 0,PartAConnectWay = '',PartBConnectWay = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3354</ID>
+    <SQLText>
 			CREATE TABLE public.T_ConstractPartC
 			(
 			partcid bigserial NOT NULL,
@@ -962,10 +962,10 @@
 			CONSTRAINT T_ConstractPartC_pkey PRIMARY KEY (partcid)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3355</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3355</ID>
+    <SQLText>
 			CREATE TABLE public.t_ContractBasisDocument
 			(
 			docid bigint NOT NULL DEFAULT nextval('t_document_docid_seq'::regclass),
@@ -980,14 +980,14 @@
 			CONSTRAINT t_ContractBasisDocument_pkey PRIMARY KEY (docid)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3356</ID>
-		<SQLText>Update T_Constract Set MainContent = ''  Where Length(MainContent) &gt; 100</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3357</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3356</ID>
+    <SQLText>Update T_Constract Set MainContent = ''  Where Length(MainContent) &gt; 100</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3357</ID>
+    <SQLText>
 			Update  t_goodsapplication set status = '处理中' Where Status = '审批中';
 			Update  t_goodsborroworder set status = '处理中' Where Status = '审批中';
 
@@ -1011,10 +1011,10 @@
 
 			Update  t_assetapplication set status = '处理中' Where Status = '审批中';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3358</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3358</ID>
+    <SQLText>
 			Update T_WorkFlow Set Status = '处理中' Where Status = '活动';
 			Update T_WorkFlowBackup Set Status = '处理中' Where Status = '活动';
 
@@ -1039,10 +1039,10 @@
 			Update t_otherstatus Set Status = '处理中' Where Status = '活动';
 			Update t_teststatus Set Status = '处理中' Where Status = '活动';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3359</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3359</ID>
+    <SQLText>
 			Update t_wlstatus Set HomeName = '处理中' Where HomeName in ('活动','进行中');
 
 			Update t_projectstatus Set HomeName = '处理中' Where HomeName in ('活动','进行中');
@@ -1058,10 +1058,10 @@
 			Update t_otherstatus Set HomeName = '处理中' Where HomeName in ('活动','进行中');
 			Update t_teststatus Set HomeName = '处理中' Where HomeName in ('活动','进行中');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3360</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3360</ID>
+    <SQLText>
 			Update t_project Set Status = '处理中' Where Status = '活动';
 			Update t_requirement Set Status = '处理中' Where Status = '活动';
 			Update t_defectment Set Status = '处理中' Where Status ='活动';
@@ -1069,10 +1069,10 @@
 			Update t_impleplan Set Status = '处理中' Where Status = '活动';
 			Update t_plan Set Status = '处理中' Where Status = '活动';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3361</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3361</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION public."Func_TG_InsertWLStepByStatus"()
 			RETURNS trigger
 			LANGUAGE 'plpgsql'
@@ -1115,10 +1115,10 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepByStatus"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3362</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3362</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION public."Func_TG_InsertWLStepDetail"()
 			RETURNS trigger
 			LANGUAGE 'plpgsql'
@@ -1480,47 +1480,47 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepDetail"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3363</ID>
-		<SQLText>Update t_workflowstepdetail Set Status = '处理中' Where Status = '活动';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3364</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3363</ID>
+    <SQLText>Update t_workflowstepdetail Set Status = '处理中' Where Status = '活动';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3364</ID>
+    <SQLText>
 			Update T_Leaveapplyform set Status = '处理中' Where Status = '审批中';
 			Update t_overtimeapplyform set Status = '处理中' Where Status = '审批中';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3365</ID>
-		<SQLText>Update t_funinfordialbox set sqlcode = replace(sqlcode,'活动','处理中')</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3366</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3365</ID>
+    <SQLText>Update t_funinfordialbox set sqlcode = replace(sqlcode,'活动','处理中')</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3366</ID>
+    <SQLText>
 			Delete from t_workflowtsteprelatedmodule
 			Where ID in (Select Max(ID) from t_workflowtsteprelatedmodule Group By StepGuid,modulename);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3367</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3367</ID>
+    <SQLText>
 			delete from t_workflowtsteprelatedmodule
 			Where ID in (Select Max(A.ID) from t_workflowtsteprelatedmodule A,t_workflowtsteprelatedmodule B
 			Where A.StepGuid = B.StepGuid and A.ModuleName = B.ModuleName and A.ID &lt;&gt; B.ID)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3368</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3368</ID>
+    <SQLText>
 			Delete From T_WorkFlowStepDetail Where WLID Not IN (Select  WLID From T_WorkFlowStepDetail Where OPeratorCode = 'C7094' LIMIT 5)
 			AND OperatorCode = 'C7094'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3369</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3369</ID>
+    <SQLText>
 			select setval('t_defectment_defectid_seq',(select max(defectid) from t_defectment));
 			select setval('t_defectassignrecord_id_seq',(select max(id) from t_defectassignrecord));
 
@@ -1530,14 +1530,14 @@
 			select setval('t_projecttask_taskid_seq',(select max(taskid) from t_projecttask));
 			select setval('t_taskassignrecord_id_seq',(select max(id) from t_taskassignrecord));
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3370</ID>
-		<SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/renwuzhixingchaxun.png' Where ModuleName = '任务执行查询'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3371</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3370</ID>
+    <SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/renwuzhixingchaxun.png' Where ModuleName = '任务执行查询'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3371</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set IconURL = 'ImagesSkin/wodezhuye.png' Where ModuleName = '我的主页';
 			Update T_ProModuleLevel Set IconURL = 'ImagesSkin/wodericheng.png' Where ModuleName = '我的日程';
 			Update T_ProModuleLevel Set IconURL = 'ImagesSkin/wodexiezuo.png' Where ModuleName = '我的协作';
@@ -1547,18 +1547,18 @@
 			Update T_ProModuleLevel Set IconURL = 'ImagesSkin/wodekefu.png' Where ModuleName = '我的客服';
 			Update T_ProModuleLevel Set IconURL = 'ImagesSkin/wodeliucheng.png' Where ModuleName = '我的流程';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3372</ID>
-		<SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/woderenwu.png' Where ModuleName = '我的任务'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3373</ID>
-		<SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/KPIAPP.png' Where PageName = 'TTAPPKPIManagement.aspx'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3374</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3372</ID>
+    <SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/woderenwu.png' Where ModuleName = '我的任务'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3373</ID>
+    <SQLText>Update T_ProModuleLevel Set IconURL = 'ImagesSkin/KPIAPP.png' Where PageName = 'TTAPPKPIManagement.aspx'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3374</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_promodulelevelforpageuser
 			(
 			id bigserial NOT NULL,
@@ -1570,38 +1570,38 @@
 			CONSTRAINT t_promodulelevelforpageuser_pkey PRIMARY KEY (id)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3375</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3375</ID>
+    <SQLText>
 			Delete From t_promodulelevelforpage Where PageName = 'TTPersonalSpaceMyMonthSchedule.aspx';
 			Update t_promodulelevelforpage Set PageName = 'TTPersonalSpaceProjectForOuter.aspx'
 			Where modulename = '我的项目' and parentModule = '个人空间外部';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3376</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3376</ID>
+    <SQLText>
 			Update t_funinfordialbox Set linkaddress = 'TTTaskHandlePage.aspx' where inforname = '待处理的任务';
 			Update t_funinfordialbox Set linkaddress = 'TTReqHandlePage.aspx' where inforname = '待处理的需求';
 			Update t_funinfordialbox Set linkaddress = 'TTDefectHandlePage.aspx' where inforname = '待处理的缺陷';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3377</ID>
-		<SQLText>Update T_ProModuleLevel set PageName = 'TTProjectManageOuter.aspx' Where ModuleName = '项目管理' and UserType = 'OUTER'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3378</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3377</ID>
+    <SQLText>Update T_ProModuleLevel set PageName = 'TTProjectManageOuter.aspx' Where ModuleName = '项目管理' and UserType = 'OUTER'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3378</ID>
+    <SQLText>
 			Alter Table t_constract Add Column TaxRate13 numeric(18,2) DEFAULT 0;
 			Alter Table t_constract Add Column TaxRate9 numeric(18,2) DEFAULT 0;
 			Alter Table t_constract Add Column TaxRate6 numeric(18,2) DEFAULT 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3379</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3379</ID>
+    <SQLText>
 			Alter Table t_constract Add Column Part1 character varying(100) default '';
 			Alter Table t_constract Add Column Part2 character varying(100) default '';
 			Alter Table t_constract Add Column Part3 character varying(100) default '';
@@ -1611,17 +1611,17 @@
 			Alter Table t_constract Add Column Part7 character varying(100) default '';
 			Alter Table t_constract Add Column Part8 character varying(100) default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3380</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3380</ID>
+    <SQLText>
 			UPdate t_constract Set TaxRate13 = 0,TaxRate9 = 0,TaxRate6 = 0;
 			Update t_constract Set Part1 = '',Part2 = '',Part3 = '',Part4 = '',Part5 = '',Part6= '',Part7='',Part8='';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3381</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3381</ID>
+    <SQLText>
 			Alter Table t_constract Add Column Part1Operator character varying(100) default '';
 			Alter Table t_constract Add Column Part1ConnectWay character varying(100) default '';
 			Alter Table t_constract Add Column Part2Operator character varying(100) default '';
@@ -1639,47 +1639,47 @@
 			Alter Table t_constract Add Column Part8Operator character varying(100) default '';
 			Alter Table t_constract Add Column Part8ConnectWay character varying(100) default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3382</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3382</ID>
+    <SQLText>
 			Update t_constract Set Part1Operator = '',Part2Operator = '',Part3Operator = '',Part4Operator = '',Part5Operator = '',Part6Operator= '',Part7Operator='',Part8Operator='';
 			Update t_constract Set Part1ConnectWay = '',Part2ConnectWay = '',Part3ConnectWay = '',Part4ConnectWay = '',Part5ConnectWay = '',Part6ConnectWay= '',Part7ConnectWay='',Part8ConnectWay='';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3383</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3383</ID>
+    <SQLText>
 			Alter Table t_constract Add Column TaxRate13Amount numeric(18,2) DEFAULT 0;
 			Alter Table t_constract Add Column TaxRate9Amount numeric(18,2) DEFAULT 0;
 			Alter Table t_constract Add Column TaxRate6Amount numeric(18,2) DEFAULT 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3384</ID>
-		<SQLText>Update T_Constract Set TaxRate13Amount = 0,TaxRate6Amount = 0,TaxRate9Amount = 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3385</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3384</ID>
+    <SQLText>Update T_Constract Set TaxRate13Amount = 0,TaxRate6Amount = 0,TaxRate9Amount = 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3385</ID>
+    <SQLText>
 			Alter Table t_constractpayable Add TaxRate numeric(18,2) Default 0;
 			Alter Table t_constractpayablerecord Add TaxRate numeric(18,2) Default 0;
 			Alter Table t_constractreceivables Add TaxRate numeric(18,2) Default 0;
 			Alter Table t_constractreceivablesrecord Add TaxRate numeric(18,2) Default 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3386</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3386</ID>
+    <SQLText>
 			Update t_constractpayable Set TaxRate = 0;
 			Update t_constractpayablerecord Set TaxRate = 0;
 			Update t_constractreceivables Set TaxRate = 0;
 			Update t_constractreceivablesrecord Set TaxRate = 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3387</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3387</ID>
+    <SQLText>
 			-------------------------------业务表单数据源-------------------------------------------------
 			Insert into T_ProModuleLevel(ModuleName,HomeModuleName ,ParentModule ,PageName,ModuleType,UserType,SortNumber,Visible,IsDeleted,LangCode,IconURL )
 			Values('业务表单数据源','业务表单数据源','流程管理','TTExcelFormImportToDB.aspx','SYSTEM','INNER',7,'YES','NO','zh-CN','');
@@ -1693,10 +1693,10 @@
 			Insert into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType)
 			Values('业务表单数据源','ADMIN','YES','SYSTEM','INNER');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3388</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3388</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_excelformdata
 			(
 			id bigserial NOT NULL,
@@ -1716,105 +1716,105 @@
 			CONSTRAINT t_excelformdata_pkey PRIMARY KEY (id)
 			);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3389</ID>
-		<SQLText>Alter Table T_Constract Add column Warranty int Default 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3390</ID>
-		<SQLText>Update T_Constract Set Warranty = 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3391</ID>
-		<SQLText>Alter Table T_Constract Add column WarrantyDate date Default now();</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3392</ID>
-		<SQLText>Update T_Constract Set WarrantyDate = EndDate;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3393</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3389</ID>
+    <SQLText>Alter Table T_Constract Add column Warranty int Default 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3390</ID>
+    <SQLText>Update T_Constract Set Warranty = 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3391</ID>
+    <SQLText>Alter Table T_Constract Add column WarrantyDate date Default now();</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3392</ID>
+    <SQLText>Update T_Constract Set WarrantyDate = EndDate;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3393</ID>
+    <SQLText>
 			Alter Table t_constract add column OperatorName character varying(20) default '';
 			Alter Table t_constract add column SignName character varying(20) default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3394</ID>
-		<SQLText>Update t_constract set operatorname = '',signname = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3395</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3394</ID>
+    <SQLText>Update t_constract set operatorname = '',signname = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3395</ID>
+    <SQLText>
 			Update T_SystemAnalystChartManagement Set charttype = 'Line' where charttype = 'SplineArea';
 			Update T_SystemAnalystChartManagement Set charttype = 'Line' where charttype = 'SplineRange';
 			Update T_SystemAnalystChartManagement Set charttype = 'Funnel' where charttype = 'Pyramid';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3396</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3396</ID>
+    <SQLText>
 			Insert Into t_wltype(Type,SortNumber,HomeName,LangCode,MakeType)
 			Values('投标管理',10,'投标管理','zh-CN','SYS');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3397</ID>
-		<SQLText>delete from t_promodulelevelforpage Where ModuleName = '关联工作流模板'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3398</ID>
-		<SQLText>Alter Table T_Constract Add Column PartyConstractCode character varying(50) default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3399</ID>
-		<SQLText>Update T_Constract Set PartyConstractCode = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3400</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3397</ID>
+    <SQLText>delete from t_promodulelevelforpage Where ModuleName = '关联工作流模板'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3398</ID>
+    <SQLText>Alter Table T_Constract Add Column PartyConstractCode character varying(50) default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3399</ID>
+    <SQLText>Update T_Constract Set PartyConstractCode = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3400</ID>
+    <SQLText>
 			Alter Table t_constractpayable Add Column FromCode character varying(200) default '';
 			Alter Table t_constractreceivables Add Column FromCode character varying(200) default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3401</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3401</ID>
+    <SQLText>
 			Update t_constractpayable set FromCode = '';
 			Update t_constractreceivables set FromCode = '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3402</ID>
-		<SQLText>alter table t_industrytype alter column type type character(100);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3403</ID>
-		<SQLText>alter table t_vendor add DeviceName character varying(200) default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3404</ID>
-		<SQLText>update t_vendor Set DeviceName = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3405</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3402</ID>
+    <SQLText>alter table t_industrytype alter column type type character(100);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3403</ID>
+    <SQLText>alter table t_vendor add DeviceName character varying(200) default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3404</ID>
+    <SQLText>update t_vendor Set DeviceName = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3405</ID>
+    <SQLText>
 			select setval('T_WFTemplateRelatedJSCode_id_seq',(select max(id) from T_WFTemplateRelatedJSCode));
 			select setval('t_wftemplatesteprelatedjscode_id_seq',(select max(id) from t_wftemplatesteprelatedjscode));
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3406</ID>
-		<SQLText>update t_wftemplaterelatedjscode set jscode = replace(jscode,'function saveWFFormDataToDatabase()','function saveWFFormDataToDatabase(intWLID)');</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3407</ID>
-		<SQLText>update t_wftemplaterelatedjscode set jscode = replace(jscode,'调用一般处理程序，保存表单数据到后台数据库','调用一般处理程序，保存表单数据到后台数据库,intWLID是传入的工作流编号')</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3408</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3406</ID>
+    <SQLText>update t_wftemplaterelatedjscode set jscode = replace(jscode,'function saveWFFormDataToDatabase()','function saveWFFormDataToDatabase(intWLID)');</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3407</ID>
+    <SQLText>update t_wftemplaterelatedjscode set jscode = replace(jscode,'调用一般处理程序，保存表单数据到后台数据库','调用一般处理程序，保存表单数据到后台数据库,intWLID是传入的工作流编号')</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3408</ID>
+    <SQLText>
 			-- PROCEDURE: public.pr_initialmodules(character, character)
 
 			-- DROP PROCEDURE IF EXISTS public.pr_initialmodules(character, character);
@@ -1843,10 +1843,10 @@
 			COMMENT ON PROCEDURE public.pr_initialmodules(character, character)
 			IS '更改模组初始化存储过程';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3409</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3409</ID>
+    <SQLText>
 			-- PROCEDURE: public.pro_deleteuserauthorizationbysupermodule()
 
 			-- DROP PROCEDURE IF EXISTS public.pro_deleteuserauthorizationbysupermodule();
@@ -1862,42 +1862,42 @@
 			end
 			$BODY$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3410</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3410</ID>
+    <SQLText>
 			Update t_commonworkflowrelatedpage set PageName = 'TTMakeAssetPurchase.aspx' where PageName = 'TTAssetPurchaseWF.aspx';
 			Update t_commonworkflowrelatedpage set PageName = 'TTMakeGoodsPurchase.aspx' where PageName = 'TTGoodsPurchaseWF.aspx';
 
 			Update t_workflowtemplate set PageFile = 'TTMakeAssetPurchase.aspx' where PageFile = 'TTAssetPurchaseWF.aspx';
 			Update t_workflowtemplate set PageFile = 'TTMakeGoodsPurchase.aspx' where PageFile = 'TTGoodsPurchaseWF.aspx';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3411</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3411</ID>
+    <SQLText>
 			Alter Table t_workflowtemplate add column OverTimeAutoAgree char(10) Default 'NO';
 			Alter Table t_workflowtemplate add column OverTimeHourNumber int Default 24;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3412</ID>
-		<SQLText>Update t_workflowtemplate Set OverTimeAutoAgree = 'NO',OverTimeHourNumber =24;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3413</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3412</ID>
+    <SQLText>Update t_workflowtemplate Set OverTimeAutoAgree = 'NO',OverTimeHourNumber =24;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3413</ID>
+    <SQLText>
 			Alter Table t_workflowtstep add column OverTimeAutoAgree char(10) Default 'NO';
 			Alter Table t_workflowtstep add column OverTimeHourNumber int Default 24;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3414</ID>
-		<SQLText>Update t_workflowtstep Set OverTimeAutoAgree = 'NO',OverTimeHourNumber =24;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3415</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3414</ID>
+    <SQLText>Update t_workflowtstep Set OverTimeAutoAgree = 'NO',OverTimeHourNumber =24;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3415</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_prorelateduser
 			AS
 			SELECT a.id,
@@ -1935,42 +1935,42 @@
 			JOIN t_project b ON a.projectid = b.projectid
 			WHERE b.status &lt;&gt; ALL (ARRAY['新建'::bpchar, '评审'::bpchar, '隐藏'::bpchar, '删除'::bpchar, '归档'::bpchar]);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3416</ID>
-		<SQLText>select setval('t_dailywork_workid_seq',(select max(workid) from t_dailywork));</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3417</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3416</ID>
+    <SQLText>select setval('t_dailywork_workid_seq',(select max(workid) from t_dailywork));</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3417</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('我的日程','我的日程','',7,'TTPersonalSpaceMyMonthSchedule.aspx','INNER','PersonalSpace','NO','zh-CN','NO');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3418</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3418</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('项目地图','项目地图','',8,'TTPersonalSpaceMyProjectPositionMap.aspx','INNER','PersonalSpace','NO','zh-CN','NO');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3419</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3419</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('项目总览','项目总览','',9,'TTPersonalSpaceProjectSummary.aspx','INNER','PersonalSpace','NO','zh-CN','NO');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3420</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3420</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevelForPage(ModuleName,HomeModuleName,IconURL,SortNumber,PageName,UserType,ParentModule,Visible,LangCode,IsDeleted)
 			Values('数据分析','数据分析','',10,'TTPersonalSpaceAnalysisChart.aspx','INNER','PersonalSpace','NO','zh-CN','NO');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3421</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3421</ID>
+    <SQLText>
 			-------------------------------合同管理台账-------------------------------------------------
 			Insert into T_ProModuleLevel(ModuleName,HomeModuleName ,ParentModule ,PageName,ModuleType,UserType,SortNumber,Visible,IsDeleted,LangCode,IconURL )
 			Values('合同台账','合同台账','合同管理','TTConstractManageAccount.aspx','SYSTEM','INNER',10,'YES','NO','zh-CN','');
@@ -1984,38 +1984,38 @@
 			Insert into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType)
 			Values('合同台账','ADMIN','YES','SYSTEM','INNER');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3422</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3422</ID>
+    <SQLText>
 			Alter Table t_constractpayable Add IncomeRatio  varchar(100) default '';
 			Alter Table t_constractreceivables Add IncomeRatio  varchar(100) default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3423</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3423</ID>
+    <SQLText>
 			Update t_constractpayable set IncomeRatio = '';
 			Update t_constractreceivables set IncomeRatio = '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3425</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3425</ID>
+    <SQLText>
 			Alter Table t_constract Add projectbasis  varchar(100) default '';
 			Alter Table t_constract Add biddingdate date default now();
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3426</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3426</ID>
+    <SQLText>
 			update t_constract set projectbasis = '';
 			update t_constract set biddingdate =  now();
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3427</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3427</ID>
+    <SQLText>
 			-------------------------------制定合同[工程]-------------------------------------------------
 			Insert into T_ProModuleLevel(ModuleName,HomeModuleName ,ParentModule ,PageName,ModuleType,UserType,SortNumber,Visible,IsDeleted,LangCode,IconURL )
 			Values('制定合同[工程]','制定合同[工程]','合同管理','TTMakeConstract_BYJF.aspx','SYSTEM','INNER',1,'YES','NO','zh-CN','');
@@ -2029,10 +2029,10 @@
 			Insert into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType)
 			Values('制定合同[工程]','ADMIN','YES','SYSTEM','INNER');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3428</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3428</ID>
+    <SQLText>
 			Insert into T_ProModuleLevel(ModuleName,HomeModuleName ,ParentModule ,PageName,ModuleType,UserType,SortNumber,Visible,IsDeleted,LangCode,IconURL )
 			Values('分析图','分析图','','TTAPPPersonalSpaceAnalysisChart.aspx','APP','INNER',1,'YES','NO','zh-CN','');
 
@@ -2056,10 +2056,10 @@
 			Insert into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType)
 			Values('分析图','ADMIN','YES','APP','OUTER');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3429</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3429</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set IsDeleted = 'NO',Visible = 'YES' Where ModuleName = '知识管理';
 			Update T_ProModuleLevel Set IsDeleted = 'NO',Visible = 'YES' Where ModuleName = '上传文档';
 			Update T_ProModuleLevel Set IsDeleted = 'NO',Visible = 'YES' Where ModuleName = '已删除文档管理';
@@ -2074,76 +2074,76 @@
 			Insert into T_ProModule(ModuleName,UserCode,Visible,ModuleType ,UserType)
 			Values('已删除文档管理','SAMPLE','YES','SYSTEM','INNER');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3430</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3430</ID>
+    <SQLText>
 			Delete From T_ProModule Where ModuleName = '知识管理' and ModuleType = 'APP';
 			Delete From T_ProModule Where ModuleName = '上传文档' and ModuleType = 'APP';
 			Delete From T_ProModule Where ModuleName = '已删除文档管理' and ModuleType = 'APP';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3431</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3431</ID>
+    <SQLText>
 			Update T_ProModule Set Visible = 'YES' Where ModuleName = '知识管理' and UserCode = 'SAMPLE';
 			Update T_ProModule Set Visible = 'YES' Where ModuleName = '上传文档' and UserCode = 'SAMPLE';
 			Update T_ProModule Set Visible = 'YES' Where ModuleName = '已删除文档管理' and UserCode = 'SAMPLE';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3432</ID>
-		<SQLText>CALL Pro_DeleteDoubleModule();</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3433</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3432</ID>
+    <SQLText>CALL Pro_DeleteDoubleModule();</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3433</ID>
+    <SQLText>
 			Update T_ProModule Set Visible = 'YES' Where ModuleName = '知识管理' ;
 			Update T_ProModule Set Visible = 'YES' Where ModuleName = '上传文档' ;
 			Update T_ProModule Set Visible = 'YES' Where ModuleName = '已删除文档管理';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3434</ID>
-		<SQLText>Alter Table public.t_promodulelevel Add DIYFlow character(10) Default 'NO';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3435</ID>
-		<SQLText>Update public.t_promodulelevel Set DIYFlow = 'NO';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3436</ID>
-		<SQLText>Update T_ProModuleLevel Set ICONUrl = 'ImagesSkin/SiteEdit.png' Where ModuleName = '网站编辑';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3437</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3434</ID>
+    <SQLText>Alter Table public.t_promodulelevel Add DIYFlow character(10) Default 'NO';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3435</ID>
+    <SQLText>Update public.t_promodulelevel Set DIYFlow = 'NO';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3436</ID>
+    <SQLText>Update T_ProModuleLevel Set ICONUrl = 'ImagesSkin/SiteEdit.png' Where ModuleName = '网站编辑';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3437</ID>
+    <SQLText>
 			Alter Table T_Project Add column longitude char(100) default '';
 			Alter Table T_Project Add column latitude char(100) default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3438</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3438</ID>
+    <SQLText>
 			Update T_Project set longitude = '';
 			Update T_Project set latitude = '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3439</ID>
-		<SQLText>UPdate T_Project set Longitude='116.404',Latitude='39.915';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3440</ID>
-		<SQLText>Insert Into t_newstype(type,homename,langcode,pagename,visible,sortnumber) values('项目地图','项目地图','zh-CN','TTPersonalSpaceMyProjectPositionMap.aspx','NO',1);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3441</ID>
-		<SQLText>Delete From T_ProModuleLevelForPage Where ModuleName = '项目总览';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3442</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3439</ID>
+    <SQLText>UPdate T_Project set Longitude='116.404',Latitude='39.915';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3440</ID>
+    <SQLText>Insert Into t_newstype(type,homename,langcode,pagename,visible,sortnumber) values('项目地图','项目地图','zh-CN','TTPersonalSpaceMyProjectPositionMap.aspx','NO',1);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3441</ID>
+    <SQLText>Delete From T_ProModuleLevelForPage Where ModuleName = '项目总览';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3442</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_MemberForprojectdailywork
 			AS
 			SELECT DISTINCT on( usercode,
@@ -2156,10 +2156,10 @@
 			FROM
 			t_relateduser b
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3443</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3443</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_projectdailywork
 			AS
 			SELECT DISTINCT a.workid,
@@ -2190,86 +2190,86 @@
 			WHERE a.projectid = b.projectid AND b.projectid = c.projectid AND a.usercode = b.usercode;
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3444</ID>
-		<SQLText>Alter Table public.t_constract Add ConstractMainDocURL char(300) Default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3445</ID>
-		<SQLText>Update public.t_constract Set ConstractMainDocURL = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3446</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3444</ID>
+    <SQLText>Alter Table public.t_constract Add ConstractMainDocURL char(300) Default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3445</ID>
+    <SQLText>Update public.t_constract Set ConstractMainDocURL = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3446</ID>
+    <SQLText>
 			Alter Table T_Project Add AttachFile char(200) Default '';
 			Alter Table T_Project Add ProjectDirection char(100) Default '';
 			Alter Table T_Project Add BudgetAccount char(100) Default '';
 			Alter Table T_Project Add ProjectLocation char(300) Default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3447</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3447</ID>
+    <SQLText>
 			Update T_Project Set AttachFile = '';
 			Update T_Project Set ProjectDirection = '';
 			Update T_Project Set BudgetAccount = '';
 			Update T_Project Set ProjectLocation = '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3448</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3448</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.T_FundingSource
 			(
 			FundingSource character(200) COLLATE pg_catalog."default" NOT NULL,
 			CONSTRAINT T_FundingSource_pkey PRIMARY KEY (FundingSource)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3449</ID>
-		<SQLText>Alter Table T_Project Add Column FundingSource char(200) Default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3450</ID>
-		<SQLText>Update T_Project Set FundingSource = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3451</ID>
-		<SQLText>Alter Table public.t_userattendancerule Add Address char(300) Default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3452</ID>
-		<SQLText>Update public.t_userattendancerule Set Address = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3453</ID>
-		<SQLText>Alter Table public.t_attendancerule Add Address char(300) Default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3454</ID>
-		<SQLText>Update public.t_attendancerule Set Address = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3455</ID>
-		<SQLText>Alter Table public.t_headline Add Column contentdocurl character(300) default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3456</ID>
-		<SQLText>Update T_headline set contentdocurl = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3457</ID>
-		<SQLText>Alter Table public.t_officialdocument Add Column contentdocurl character(300) default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3458</ID>
-		<SQLText>Update public.t_officialdocument set contentdocurl = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3459</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3449</ID>
+    <SQLText>Alter Table T_Project Add Column FundingSource char(200) Default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3450</ID>
+    <SQLText>Update T_Project Set FundingSource = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3451</ID>
+    <SQLText>Alter Table public.t_userattendancerule Add Address char(300) Default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3452</ID>
+    <SQLText>Update public.t_userattendancerule Set Address = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3453</ID>
+    <SQLText>Alter Table public.t_attendancerule Add Address char(300) Default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3454</ID>
+    <SQLText>Update public.t_attendancerule Set Address = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3455</ID>
+    <SQLText>Alter Table public.t_headline Add Column contentdocurl character(300) default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3456</ID>
+    <SQLText>Update T_headline set contentdocurl = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3457</ID>
+    <SQLText>Alter Table public.t_officialdocument Add Column contentdocurl character(300) default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3458</ID>
+    <SQLText>Update public.t_officialdocument set contentdocurl = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3459</ID>
+    <SQLText>
 			-- FUNCTION: public.change_field_size()
 
 			-- DROP FUNCTION IF EXISTS public.change_field_size();
@@ -2301,46 +2301,46 @@
 			$BODY$;
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3460</ID>
-		<SQLText>DROP VIEW public.v_bmpurchaseapplication;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3461</ID>
-		<SQLText>DROP VIEW public.v_bmpurchaseapplicationpayform;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3462</ID>
-		<SQLText>DROP VIEW public.v_conatractchangereport;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3463</ID>
-		<SQLText>DROP VIEW public.v_projectmembermanhoursummary;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3464</ID>
-		<SQLText>DROP VIEW public.v_projectmembertaskdetailreport;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3465</ID>
-		<SQLText>DROP VIEW public.v_userkpilist;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3467</ID>
-		<SQLText>select change_field_size();</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3468</ID>
-		<SQLText>DROP VIEW public.v_conatractexecutereport;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3469</ID>
-		<SQLText>select change_field_size();</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3470</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3460</ID>
+    <SQLText>DROP VIEW public.v_bmpurchaseapplication;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3461</ID>
+    <SQLText>DROP VIEW public.v_bmpurchaseapplicationpayform;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3462</ID>
+    <SQLText>DROP VIEW public.v_conatractchangereport;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3463</ID>
+    <SQLText>DROP VIEW public.v_projectmembermanhoursummary;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3464</ID>
+    <SQLText>DROP VIEW public.v_projectmembertaskdetailreport;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3465</ID>
+    <SQLText>DROP VIEW public.v_userkpilist;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3467</ID>
+    <SQLText>select change_field_size();</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3468</ID>
+    <SQLText>DROP VIEW public.v_conatractexecutereport;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3469</ID>
+    <SQLText>select change_field_size();</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3470</ID>
+    <SQLText>
 			-- View: public.v_bmpurchaseapplication
 
 			-- DROP VIEW public.v_bmpurchaseapplication;
@@ -2373,10 +2373,10 @@
 			FROM t_bmpurchaseapplication;
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3471</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3471</ID>
+    <SQLText>
 			-- View: public.v_bmpurchaseapplicationpayform
 
 			-- DROP VIEW public.v_bmpurchaseapplicationpayform;
@@ -2419,10 +2419,10 @@
 			FROM t_bmpurchaseapplication;
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3472</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3472</ID>
+    <SQLText>
 			-- View: public.v_conatractchangereport
 
 			-- DROP VIEW public.v_conatractchangereport;
@@ -2447,10 +2447,10 @@
 			LEFT JOIN t_constract b ON a.constractcode::text = b.constractcode::text;
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3473</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3473</ID>
+    <SQLText>
 			-- View: public.v_projectmembermanhoursummary
 
 			-- DROP VIEW public.v_projectmembermanhoursummary;
@@ -2472,10 +2472,10 @@
 			WHERE a.usercode = b.usercode AND b.departcode = c.departcode;
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3474</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3474</ID>
+    <SQLText>
 			-- View: public.v_projectmembertaskdetailreport
 
 			-- DROP VIEW public.v_projectmembertaskdetailreport;
@@ -2524,10 +2524,10 @@
 			FROM t_project));
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3475</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3475</ID>
+    <SQLText>
 			-- View: public.v_userkpilist
 
 			-- DROP VIEW public.v_userkpilist;
@@ -2554,10 +2554,10 @@
 			FULL JOIN t_userkpicheck b ON a.usercode = b.usercode::bpchar;
 
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3476</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3476</ID>
+    <SQLText>
 			-- View: public.v_conatractexecutereport
 
 			-- DROP VIEW public.v_conatractexecutereport;
@@ -2581,10 +2581,10 @@
 			LEFT JOIN t_constractrelatedproject c ON a.constractcode::text = c.constractcode::text
 			WHERE a.signdate &gt; a.startdate;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3477</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3477</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION public.change_field_size_parameter(
 			in_column_name TEXT,
 			in_data_type TEXT,
@@ -2614,18 +2614,18 @@
 			END;
 			$BODY$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3478</ID>
-		<SQLText>alter table t_projectmember add column leftbarextend character(10) default 'NO';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3479</ID>
-		<SQLText>Update t_projectmember set leftbarextend = 'NO';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3480</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3478</ID>
+    <SQLText>alter table t_projectmember add column leftbarextend character(10) default 'NO';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3479</ID>
+    <SQLText>Update t_projectmember set leftbarextend = 'NO';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3480</ID>
+    <SQLText>
 			-- View: public.v_projectmembermanhoursummary
 
 			-- DROP VIEW public.v_projectmembermanhoursummary;
@@ -2646,10 +2646,10 @@
 			t_department c
 			WHERE a.usercode = b.usercode AND b.departcode = c.departcode;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3481</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3481</ID>
+    <SQLText>
 			-- View: public.v_bmpurchaseapplication
 
 			-- DROP VIEW public.v_bmpurchaseapplication;
@@ -2681,10 +2681,10 @@
 			t_bmpurchaseapplication.projectid
 			FROM t_bmpurchaseapplication;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3482</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3482</ID>
+    <SQLText>
 			-- View: public.v_bmpurchaseapplicationpayform
 
 			-- DROP VIEW public.v_bmpurchaseapplicationpayform;
@@ -2726,10 +2726,10 @@
 			t_bmpurchaseapplication.comment
 			FROM t_bmpurchaseapplication;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3483</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3483</ID>
+    <SQLText>
 			-- View: public.v_conatractchangereport
 
 			-- DROP VIEW public.v_conatractchangereport;
@@ -2753,10 +2753,10 @@
 			FROM t_constractchangerecord a
 			LEFT JOIN t_constract b ON a.constractcode::text = b.constractcode::text;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3484</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3484</ID>
+    <SQLText>
 			-- View: public.v_projectmembermanhoursummary
 
 			-- DROP VIEW public.v_projectmembermanhoursummary;
@@ -2777,10 +2777,10 @@
 			t_department c
 			WHERE a.usercode = b.usercode AND b.departcode = c.departcode;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3485</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3485</ID>
+    <SQLText>
 			-- View: public.v_projectmembertaskdetailreport
 
 			-- DROP VIEW public.v_projectmembertaskdetailreport;
@@ -2828,10 +2828,10 @@
 			FROM t_impleplan)) AND (a.projectid IN ( SELECT t_project.projectid
 			FROM t_project));
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3486</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3486</ID>
+    <SQLText>
 			-- View: public.v_userkpilist
 
 			-- DROP VIEW public.v_userkpilist;
@@ -2857,10 +2857,10 @@
 			FROM t_projectmember a
 			FULL JOIN t_userkpicheck b ON a.usercode = b.usercode::bpchar;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3487</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3487</ID>
+    <SQLText>
 			-- View: public.v_conatractexecutereport
 
 			-- DROP VIEW public.v_conatractexecutereport;
@@ -2884,80 +2884,80 @@
 			LEFT JOIN t_constractrelatedproject c ON a.constractcode::text = c.constractcode::text
 			WHERE a.signdate &gt; a.startdate;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3488</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3488</ID>
+    <SQLText>
 			Alter Table T_Project Add PMDuty char(100) default '';
 			Alter Table T_project Add PMPhoneNumber char(100) default '';
 			Alter Table T_project Add ProjectOperator char(20) default '';
 			Alter Table T_project Add ProjectOperatorPhoneNumber char(20) default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3489</ID>
-		<SQLText>Update T_Project set PMDuty = '',PMPhoneNumber = '',ProjectOperator = '',ProjectOperatorPhoneNumber = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3490</ID>
-		<SQLText>Alter table public.t_qmqualitydefectnotice Add column purchasingcontractcode character(50) Default ''</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3491</ID>
-		<SQLText>Update public.t_qmqualitydefectnotice Set purchasingcontractcode = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3492</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3489</ID>
+    <SQLText>Update T_Project set PMDuty = '',PMPhoneNumber = '',ProjectOperator = '',ProjectOperatorPhoneNumber = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3490</ID>
+    <SQLText>Alter table public.t_qmqualitydefectnotice Add column purchasingcontractcode character(50) Default ''</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3491</ID>
+    <SQLText>Update public.t_qmqualitydefectnotice Set purchasingcontractcode = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3492</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set Visible = 'NO',IsDeleted = 'NO' Where ModuleName = '项目基础设置';
 			Update T_ProModuleLevel Set Visible = 'NO',IsDeleted = 'NO' Where ModuleName = '项目导入/导出';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3493</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3493</ID>
+    <SQLText>
 			Delete From T_WLType Where Type = '招标管理';
 			Insert Into T_WLType(Type,HomeName,LangCode,MakeType,SortNumber) values('招标管理','招标管理','zh-CN','SYS',0)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3494</ID>
-		<SQLText>Update T_WLType Set Type='招标管理',HomeName='招标管理' Where Type ='招投标管理';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3495</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3494</ID>
+    <SQLText>Update T_WLType Set Type='招标管理',HomeName='招标管理' Where Type ='招投标管理';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3495</ID>
+    <SQLText>
 			Delete From T_WLType Where Type = '招标管理';
 			Insert Into T_WLType(Type,HomeName,LangCode,MakeType,SortNumber) values('招标管理','招标管理','zh-CN','SYS',0)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3496</ID>
-		<SQLText>DROP TRIGGER IF EXISTS "TG_InsertWLStepByStatus" ON public.t_workflow;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3497</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3496</ID>
+    <SQLText>DROP TRIGGER IF EXISTS "TG_InsertWLStepByStatus" ON public.t_workflow;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3497</ID>
+    <SQLText>
 			Create TRIGGER "TG_InsertWLStepByStatus"
 			AFTER INSERT
 			ON public.t_workflow
 			FOR EACH ROW
 			EXECUTE FUNCTION public."Func_TG_InsertWLStepByStatus"();
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3498</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3498</ID>
+    <SQLText>
 			CREATE TRIGGER "TG_UpdateWLStepByStatus"
 			AFTER UPDATE
 			ON public.t_workflow
 			FOR EACH ROW
 			EXECUTE FUNCTION public."Func_TG_InsertWLStepByStatus"();
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3499</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3499</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION public."Func_TG_InsertWLStepByStatus"()
 			RETURNS trigger
 			LANGUAGE 'plpgsql'
@@ -3005,49 +3005,49 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepByStatus"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3500</ID>
-		<SQLText>Delete From T_RelatedWorkflowTemplate Where wfTemplateName Like '项目153%';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3501</ID>
-		<SQLText>Delete From T_WorkflowTemplate Where TemName Like '项目153%';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3502</ID>
-		<SQLText>Delete From T_Workflow Where TemName Like '项目153%';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3503</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3500</ID>
+    <SQLText>Delete From T_RelatedWorkflowTemplate Where wfTemplateName Like '项目153%';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3501</ID>
+    <SQLText>Delete From T_WorkflowTemplate Where TemName Like '项目153%';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3502</ID>
+    <SQLText>Delete From T_Workflow Where TemName Like '项目153%';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3503</ID>
+    <SQLText>
 			Update public.t_systemlanguage Set language = 'Español' Where LangCode = 'es';
 			Update public.t_systemlanguage Set language = 'Français' Where LangCode = 'fr';
 			insert into public.t_systemlanguage(LangCode,Language,SortNumber) values('ko','Coreano','11')
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3504</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3504</ID>
+    <SQLText>
 			Update public.t_systemlanguage Set Language = '한국어' Where LangCode = 'ko';
 			Update public.t_systemlanguage Set Language = '日本語' Where LangCode = 'ja';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3505</ID>
-		<SQLText>Delete From T_ProModule Where UserCode Not In (Select UserCode From T_ProjectMember)</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3506</ID>
-		<SQLText>Alter Table T_Project Add ApprovedAmount Decimal(18,2) Default 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3507</ID>
-		<SQLText>Update T_Project Set ApprovedAmount = 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3508</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3505</ID>
+    <SQLText>Delete From T_ProModule Where UserCode Not In (Select UserCode From T_ProjectMember)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3506</ID>
+    <SQLText>Alter Table T_Project Add ApprovedAmount Decimal(18,2) Default 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3507</ID>
+    <SQLText>Update T_Project Set ApprovedAmount = 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3508</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_documentForProjectPlanTemplate
 			(
 			docid bigint NOT NULL,
@@ -3070,10 +3070,10 @@
 			CONSTRAINT t_documentForProjectPlanTemplate_pkey PRIMARY KEY (docid)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3509</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3509</ID>
+    <SQLText>
 			CREATE SEQUENCE IF NOT EXISTS public.t_documentForProjectPlanTemplate_docid_seq
 			INCREMENT 1
 			START 1
@@ -3085,14 +3085,14 @@
 			ALTER SEQUENCE public.t_documentForProjectPlanTemplate_docid_seq
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3510</ID>
-		<SQLText>Drop Table t_documentForProjectPlanTemplate</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3511</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3510</ID>
+    <SQLText>Drop Table t_documentForProjectPlanTemplate</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3511</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_documentForProjectPlanTemplate
 			(
 			docid bigint NOT NULL DEFAULT nextval('t_document_docid_seq'::regclass),
@@ -3115,14 +3115,14 @@
 			CONSTRAINT t_documentForProjectPlanTemplate_pkey PRIMARY KEY (docid)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3512</ID>
-		<SQLText>Drop Table t_documentForProjectPlanTemplate;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3513</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3512</ID>
+    <SQLText>Drop Table t_documentForProjectPlanTemplate;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3513</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_documentForProjectPlanTemplate
 			(
 			docid bigint NOT NULL DEFAULT nextval('t_document_docid_seq'::regclass),
@@ -3145,10 +3145,10 @@
 			CONSTRAINT t_documentForProjectPlanTemplate_pkey PRIMARY KEY (docid)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3514</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3514</ID>
+    <SQLText>
 			CREATE SEQUENCE IF NOT EXISTS public.t_documentForProjectPlanTemplate_docid_seq
 			INCREMENT 1
 			START 1
@@ -3160,17 +3160,17 @@
 			ALTER SEQUENCE public.t_documentForProjectPlanTemplate_docid_seq
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3515</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3515</ID>
+    <SQLText>
 			ALTER TABLE public.t_documentForProjectPlanTemplate
 			ALTER COLUMN docid SET DEFAULT nextval('t_documentForProjectPlanTemplate_docid_seq'::regclass);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3516</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3516</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION find_longest_common_substring(str1 text, str2 text)
 			RETURNS text AS
 			$$
@@ -3213,18 +3213,18 @@
 			$$
 			LANGUAGE plpgsql;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3517</ID>
-		<SQLText>Alter Table T_Project Add Column PMCanUpdatePlan char(10) Default 'YES';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3518</ID>
-		<SQLText>Update T_Project Set PMCanUpdateplan = 'YES';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3519</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3517</ID>
+    <SQLText>Alter Table T_Project Add Column PMCanUpdatePlan char(10) Default 'YES';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3518</ID>
+    <SQLText>Update T_Project Set PMCanUpdateplan = 'YES';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3519</ID>
+    <SQLText>
 			Alter Table T_Project Add Column LockStartupedPlan char(10) Default 'NO';
 			Alter Table T_Project Add Column allowpmchangestatus char(10) Default 'NO';
 			Alter Table T_Project Add Column autorunwfaftermakeproject char(10) Default 'NO';
@@ -3232,10 +3232,10 @@
 			Alter Table T_Project Add Column planprogressneedplanerconfirm char(10) Default 'NO';
 			Alter Table T_Project Add Column projectstartupneedsupperconfirm char(10) Default 'NO';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3520</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3520</ID>
+    <SQLText>
 			Update T_Project Set LockStartupedPlan = 'NO';
 			Update T_Project Set allowpmchangestatus = 'NO';
 			Update T_Project Set autorunwfaftermakeproject = 'NO';
@@ -3243,10 +3243,10 @@
 			Update T_Project Set planprogressneedplanerconfirm = 'NO';
 			Update T_Project Set projectstartupneedsupperconfirm = 'NO';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3521</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3521</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_prorelateduser
 			AS
 			SELECT a.id,
@@ -3286,71 +3286,71 @@
 			JOIN t_project b ON a.projectid = b.projectid
 			WHERE b.status &lt;&gt; ALL (ARRAY['新建'::bpchar, '评审'::bpchar, '隐藏'::bpchar, '删除'::bpchar, '归档'::bpchar]);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3522</ID>
-		<SQLText>SELECT setval('t_project_projectid_seq', (SELECT MAX(ProjectID) FROM T_Project) + 1);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3523</ID>
-		<SQLText>Alter Table T_Project Add Column ProjectPlanStartupStatus char(10) Default 'NO';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3524</ID>
-		<SQLText>UPdate T_Project Set ProjectPlanStartupStatus = 'NO';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3525</ID>
-		<SQLText>Alter Table public.t_document Add Column MustUploadDoc char(200) Default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3526</ID>
-		<SQLText>Update T_Document Set MustUploadDoc = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3527</ID>
-		<SQLText>SELECT setval('t_document_docid_seq', (SELECT MAX(DocID) FROM T_Document) + 1);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3528</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3522</ID>
+    <SQLText>SELECT setval('t_project_projectid_seq', (SELECT MAX(ProjectID) FROM T_Project) + 1);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3523</ID>
+    <SQLText>Alter Table T_Project Add Column ProjectPlanStartupStatus char(10) Default 'NO';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3524</ID>
+    <SQLText>UPdate T_Project Set ProjectPlanStartupStatus = 'NO';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3525</ID>
+    <SQLText>Alter Table public.t_document Add Column MustUploadDoc char(200) Default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3526</ID>
+    <SQLText>Update T_Document Set MustUploadDoc = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3527</ID>
+    <SQLText>SELECT setval('t_document_docid_seq', (SELECT MAX(DocID) FROM T_Document) + 1);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3528</ID>
+    <SQLText>
 			Update T_ActorGroup Set  GroupName = trim(GroupName);
 			Update T_ActorGroup Set  HomeName = trim(GroupName);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3529</ID>
-		<SQLText>Alter Table T_Project Add Column PlanStartupRelatedWorkflowTemplate char(50) Default '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3530</ID>
-		<SQLText>Update T_Project Set PlanStartupRelatedWorkflowTemplate = '';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3531</ID>
-		<SQLText>Update public.t_userattendancerule Set Status = '在用' Where Status = '处理中' or Status = '活动'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3532</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3529</ID>
+    <SQLText>Alter Table T_Project Add Column PlanStartupRelatedWorkflowTemplate char(50) Default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3530</ID>
+    <SQLText>Update T_Project Set PlanStartupRelatedWorkflowTemplate = '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3531</ID>
+    <SQLText>Update public.t_userattendancerule Set Status = '在用' Where Status = '处理中' or Status = '活动'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3532</ID>
+    <SQLText>
 			Alter Table public.t_customer Add Column SimpleName Char(60) Default '';
 			Alter Table public.t_customer Add Column WorkSiteURL Char(100) Default '';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3533</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3533</ID>
+    <SQLText>
 			Update T_Customer Set SimpleName = customername;
 			Update T_Customer Set WorkSiteURL = WebSite;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3534</ID>
-		<SQLText>CREATE EXTENSION IF NOT EXISTS tablefunc;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3535</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3534</ID>
+    <SQLText>CREATE EXTENSION IF NOT EXISTS tablefunc;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3535</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION f_userattendancereport(
 			startdate text,
 			enddate text,
@@ -3585,10 +3585,10 @@
 			END;
 			$$ LANGUAGE plpgsql;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3536</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3536</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION f_userattendancereport(
 			startdate text,
 			enddate text,
@@ -3823,10 +3823,10 @@
 			END;
 			$$ LANGUAGE plpgsql;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3537</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3537</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION f_userattendancereport(
 			startdate text,
 			enddate text,
@@ -4061,10 +4061,10 @@
 			END;
 			$$ LANGUAGE plpgsql;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3538</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3538</ID>
+    <SQLText>
 			CREATE OR REPLACE FUNCTION f_userattendancereport(
 			startdate text,
 			enddate text,
@@ -4299,80 +4299,80 @@
 			END;
 			$$ LANGUAGE plpgsql;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3539</ID>
-		<SQLText>Update T_ProjectMember Set cssdirectory = 'CssGreen'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3540</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3539</ID>
+    <SQLText>Update T_ProjectMember Set cssdirectory = 'CssGreen'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3540</ID>
+    <SQLText>
 			Delete From T_NewsType Where type = '模块图';
 
 			Insert Into T_NewsType(type,homename,langcode,pagename,visible,SortNumber) values('模块图','模块图','zh-CN','TTPersonalSpaceModuleFlowView.aspx','YES',0);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3541</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3541</ID>
+    <SQLText>
 			Delete From T_NewsType Where type = '模块图';
 
 			Insert Into T_NewsType(type,homename,langcode,pagename,visible,SortNumber) values('模块图','模块图','zh-CN','TTPersonalSpaceModuleFlowView.aspx','YES',6);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3542</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3542</ID>
+    <SQLText>
 			Delete From T_NewsType Where type = '模块图';
 			Insert Into T_NewsType(type,homename,langcode,pagename,visible,SortNumber) values('模块图','模块图','zh-CN','TTPersonalSpaceModuleFlowView.aspx','YES',6);
 			Insert Into T_NewsType(type,homename,langcode,pagename,visible,SortNumber) values('模块图','ModuleChart','en','TTPersonalSpaceModuleFlowView.aspx','YES',6);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3543</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3543</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set  ModuleName = '工作流管理'  Where ModuleName = '流程管理' and LangCode = 'zh-CN';
 			Update T_ProModuleLevel Set  ModuleName = '项目立项'  Where ModuleName = '建立与分派项目' and LangCode = 'zh-CN';
 
 			Update T_ProModule Set  ModuleName = '工作流管理'  Where ModuleName = '流程管理';
 			Update T_ProModule Set  ModuleName = '项目立项'  Where ModuleName = '建立与分派项目';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3544</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3544</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set  ModuleName = '工作流管理'  Where ModuleName = '流程管理';
 			Update T_ProModuleLevel Set  ModuleName = '项目立项'  Where ModuleName = '建立与分派项目';
 
 			Update T_ProModule Set  ModuleName = '工作流管理'  Where ModuleName = '流程管理';
 			Update T_ProModule Set  ModuleName = '项目立项'  Where ModuleName = '建立与分派项目';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3545</ID>
-		<SQLText>Update T_ProModuleLevel Set  HomeModuleName = '项目立项'  Where HomeModuleName = '建立与分派项目';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3546</ID>
-		<SQLText>Update T_ProModuleLevel Set ParentModule = '工作流管理' Where ParentModule = '流程管理';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3547</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3545</ID>
+    <SQLText>Update T_ProModuleLevel Set  HomeModuleName = '项目立项'  Where HomeModuleName = '建立与分派项目';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3546</ID>
+    <SQLText>Update T_ProModuleLevel Set ParentModule = '工作流管理' Where ParentModule = '流程管理';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3547</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set ModuleDefinition = replace(ModuleDefinition,'项目任务管理','项目管理') Where ModuleName = 'PersonalSpace';
 			Update T_ProModuleLevel Set ModuleDefinition = replace(ModuleDefinition,'招聘管理','合同管理') Where ModuleName = 'PersonalSpace';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3548</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3548</ID>
+    <SQLText>
 			Update T_NewsType Set Type = '模块导航',HomeName = 'ModuleGuide' Where Type = '模块图' and LangCode = 'en';
 			Update T_NewsType Set Type = '模块导航',HomeName = '模块导航' Where Type = '模块图' and LangCode = 'zh-CN';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3549</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3549</ID>
+    <SQLText>
 			Update T_NewsType Set SortNumber = 1  Where Type = '驾驶舱';
 			Update T_NewsType Set SortNumber = 2  Where Type = '模块导航';
 			Update T_NewsType Set SortNumber = 3  Where Type = '头条新闻';
@@ -4381,17 +4381,17 @@
 			Update T_NewsType Set SortNumber = 6  Where Type = '公告通知';
 			Update T_NewsType Set SortNumber = 7  Where Type = '项目地图';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3550</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3550</ID>
+    <SQLText>
 			Update T_NewsType Set Type = '操作导航',HomeName = 'WorkGuide' Where Type = '模块导航' and LangCode = 'en';
 			Update T_NewsType Set Type = '操作导航',HomeName = '操作导航' Where Type = '模块导航' and LangCode = 'zh-CN';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3551</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3551</ID>
+    <SQLText>
 			Update T_NewsType Set SortNumber = 1 Where Type = '驾驶舱';
 			Update T_NewsType Set SortNumber = 2 Where Type = '操作导航';
 			Update T_NewsType Set SortNumber = 3 Where Type = '头条新闻';
@@ -4400,68 +4400,68 @@
 			Update T_NewsType Set SortNumber = 6 Where Type = '公告通知';
 			Update T_NewsType Set SortNumber = 7 Where Type = '项目地图';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3552</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3552</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set PageName = 'TTMyMemProjectsRunStatus.aspx' Where ModuleName = '领导监控';
 			Update T_ProModuleLevel Set PageName = 'TTCustomerQuestionManage.aspx' Where ModuleName = '客户关系';
 			Update T_ProModuleLevel Set PageName = 'TTGoodsManage.aspx' Where ModuleName = '供应链管理';
 			Update T_ProModuleLevel Set PageName = 'TTReceivablesPayableAlert.aspx' Where ModuleName = '财务管理';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3553</ID>
-		<SQLText>Update T_ProModuleLevel Set PageName = 'TTUserManagement.aspx' Where ModuleName = '人事行政';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3554</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3553</ID>
+    <SQLText>Update T_ProModuleLevel Set PageName = 'TTUserManagement.aspx' Where ModuleName = '人事行政';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3554</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set PageName = 'TTBaseDataOuter.aspx' Where ModuleName = '参数设置';
 			Update T_ProModuleLevel Set PageName = 'TTDocumentManage.aspx' Where ModuleName = '办公管理';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3555</ID>
-		<SQLText>Update T_ProModuleLevel Set PageName = 'TTTenderUNHandleList.aspx' Where ModuleName = '投标管理';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3556</ID>
-		<SQLText>Update T_ProModuleLevel Set PageName = 'TTAllProjectsRunStatus.aspx' Where ModuleName = '领导监控';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3557</ID>
-		<SQLText>Update T_ProModuleLevel Set PageName = 'TakeTopPersonalSpace.aspx' Where ModuleName = '办公管理';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3558</ID>
-		<SQLText>Alter Table T_ProModuleLevel Add Column UpdateMark int Default 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3559</ID>
-		<SQLText>UPdate T_ProModuleLevel Set UpdateMark = 0;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3560</ID>
-		<SQLText>Update T_NewsType Set SortNumber = 0 Where Type = '操作导航';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3561</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3555</ID>
+    <SQLText>Update T_ProModuleLevel Set PageName = 'TTTenderUNHandleList.aspx' Where ModuleName = '投标管理';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3556</ID>
+    <SQLText>Update T_ProModuleLevel Set PageName = 'TTAllProjectsRunStatus.aspx' Where ModuleName = '领导监控';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3557</ID>
+    <SQLText>Update T_ProModuleLevel Set PageName = 'TakeTopPersonalSpace.aspx' Where ModuleName = '办公管理';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3558</ID>
+    <SQLText>Alter Table T_ProModuleLevel Add Column UpdateMark int Default 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3559</ID>
+    <SQLText>UPdate T_ProModuleLevel Set UpdateMark = 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3560</ID>
+    <SQLText>Update T_NewsType Set SortNumber = 0 Where Type = '操作导航';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3561</ID>
+    <SQLText>
 			Alter Table T_ProModule Add Column moduledefinition text Default '';
 			Alter Table T_ProModule Add Column diyflow character(10) Default 'NO';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3562</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3562</ID>
+    <SQLText>
 			Update T_ProModule Set moduledefinition = '';
 			Update T_ProModule Set diyflow = 'NO';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3563</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3563</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
 			values('操作导航','操作导航','','','SYSTEM','INNER','zh-CN','ImagesSkin/OperateGuide.png','','YES',0,0,'NO','YES');
 
@@ -4473,28 +4473,28 @@
 			Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition,DiyFlow,Visible)
 			values('SAMPLE','操作导航','SYSTEM','OUTER','','YES','YES');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3564</ID>
-		<SQLText>Alter Table public.t_newstype Add NewsScope Char(10) Default 'ALL';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3565</ID>
-		<SQLText>Update T_NewsType Set NewsScope = 'ALL';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3566</ID>
-		<SQLText>SELECT setval('t_msgpushlog_id_seq', (SELECT MAX(id) FROM t_msgpushlog)+1);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3567</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3564</ID>
+    <SQLText>Alter Table public.t_newstype Add NewsScope Char(10) Default 'ALL';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3565</ID>
+    <SQLText>Update T_NewsType Set NewsScope = 'ALL';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3566</ID>
+    <SQLText>SELECT setval('t_msgpushlog_id_seq', (SELECT MAX(id) FROM t_msgpushlog)+1);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3567</ID>
+    <SQLText>
 			Update public.t_promodulelevelforpage Set pagename = 'TTProjectRelatedDocSAAS.aspx?ProjectID=' Where PageName = 'TTProjectRelatedDoc.aspxSAAS?ProjectID=';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3568</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3568</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_AIInterface
 			(
 			AItype character(20) COLLATE pg_catalog."default" NOT NULL,
@@ -4502,16 +4502,16 @@
 			Model character(200) COLLATE pg_catalog."default" NOT NULL
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3569</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3569</ID>
+    <SQLText>
 			Insert Into t_AIInterface(AIType,URL,Model) values('Local','http://127.0.0.1:11434','deepseek-r1:1.5b');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3570</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3570</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_procurrentyearrealcharge
 			AS
 			SELECT t_proexpense.projectid,effectdate,
@@ -4519,18 +4519,18 @@
 			FROM t_proexpense Where EXTRACT(YEAR FROM effectdate) = EXTRACT(YEAR FROM CURRENT_DATE)
 			GROUP BY t_proexpense.projectid,effectdate
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3571</ID>
-		<SQLText>Delete From public.t_funinfordialbox Where InforName IN ('在执行项目状态','项目年度回款状态','延误项目状态','年度项目工时状态','在执行任务状态')</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3572</ID>
-		<SQLText>Delete From public.t_systemanalystchartmanagement Where ChartName IN ('在执行项目状态','项目年度回款状态','延误项目状态','年度项目工时状态','在执行任务状态')</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3573</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3571</ID>
+    <SQLText>Delete From public.t_funinfordialbox Where InforName IN ('在执行项目状态','项目年度回款状态','延误项目状态','年度项目工时状态','在执行任务状态')</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3572</ID>
+    <SQLText>Delete From public.t_systemanalystchartmanagement Where ChartName IN ('在执行项目状态','项目年度回款状态','延误项目状态','年度项目工时状态','在执行任务状态')</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3573</ID>
+    <SQLText>
 			--T_ProjectStatus,T_TaskStatus,T_ReqStatus,T_PlanStatus,T_WLStatus,T_TestStatus,T_OtherStatus
 
 
@@ -4791,10 +4791,10 @@
 			ELSE Status
 			END;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3574</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3574</ID>
+    <SQLText>
 			--T_ProjectStatus,T_TaskStatus,T_ReqStatus,T_PlanStatus,T_WLStatus,T_TestStatus,T_OtherStatus
 
 
@@ -4993,10 +4993,10 @@
 			ELSE Status
 			END;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3575</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3575</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox
 			SET SqlCode = REPLACE(
 			REPLACE(
@@ -5032,10 +5032,10 @@
 			OR SqlCode LIKE '%完成%'
 			OR SqlCode LIKE '%转项%';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3576</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3576</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox
 			SET SqlCode = REPLACE(
 			REPLACE(
@@ -5071,10 +5071,10 @@
 			OR SqlCode LIKE '%延期%'
 			OR SqlCode LIKE '%拖期%'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3577</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3577</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox
 			SET SqlCode = REPLACE(
 			REPLACE(
@@ -5110,10 +5110,10 @@
 			OR SqlCode LIKE '%归档%'
 			OR SqlCode LIKE '%分派%'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3578</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3578</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox
 			SET SqlCode = REPLACE(
 			REPLACE(
@@ -5149,10 +5149,10 @@
 			OR SqlCode LIKE '%归档%'
 			OR SqlCode LIKE '%隐藏%'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3579</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3579</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox
 			SET SqlCode = REPLACE(
 			REPLACE(
@@ -5188,10 +5188,10 @@
 			OR SqlCode LIKE '%归档%'
 			OR SqlCode LIKE '%隐藏%'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3580</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3580</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox
 			SET SqlCode = REPLACE(
 			REPLACE(
@@ -5227,10 +5227,10 @@
 			OR SqlCode LIKE '%归档%'
 			OR SqlCode LIKE '%隐藏%'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3581</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3581</ID>
+    <SQLText>
 			UPDATE t_systemanalystchartmanagement
 			SET SqlCode = REPLACE(
 			REPLACE(
@@ -5266,10 +5266,10 @@
 			OR SqlCode LIKE '%归档%'
 			OR SqlCode LIKE '%隐藏%'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3582</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3582</ID>
+    <SQLText>
 			UPDATE t_systemanalystchartmanagement SET SqlCode = REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( SqlCode, '取消', 'Cancel' ), 'Plan', 'Plan' ), 'ToHandle', 'ToHandle' ), '结案', 'CaseClosed' ), '拒绝', 'Rejected' ), '删除', 'Deleted' ), '归档', 'Archived' ), '隐藏', 'Hided' ) WHERE SqlCode LIKE '%取消%' OR SqlCode LIKE '%计划%' OR SqlCode LIKE '%待处理%' OR SqlCode LIKE '%结案%' OR SqlCode LIKE '%拒绝%' OR SqlCode LIKE '%删除%' OR SqlCode LIKE '%归档%' OR SqlCode LIKE '%隐藏%';
 
 			UPDATE t_systemanalystchartmanagement SET SqlCode = REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( SqlCode, '复核中', 'ReReview' ), '挂起', 'Suspended' ), '关闭', 'Closed' ), '结案', 'CaseClosed' ), '拒绝', 'Rejected' ), '删除', 'Deleted' ), '归档', 'Archived' ), '隐藏', 'Hided' ) WHERE SqlCode LIKE '%复核中%' OR SqlCode LIKE '%挂起%' OR SqlCode LIKE '%关闭%' OR SqlCode LIKE '%结案%' OR SqlCode LIKE '%拒绝%' OR SqlCode LIKE '%删除%' OR SqlCode LIKE '%归档%' OR SqlCode LIKE '%隐藏%';
@@ -5280,10 +5280,10 @@
 
 			UPDATE t_systemanalystchartmanagement SET SqlCode = REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( SqlCode, '新建', 'New' ), '评审', 'Review' ), '批准', 'Approved' ), '受理', 'Accepted' ), '驳回', 'Rejected' ), '测试', 'Testing' ), '完成', 'Completed' ), '转项', 'ToProject' ) WHERE SqlCode LIKE '%新建%' OR SqlCode LIKE '%评审%' OR SqlCode LIKE '%批准%' OR SqlCode LIKE '%受理%' OR SqlCode LIKE '%驳回%' OR SqlCode LIKE '%测试%' OR SqlCode LIKE '%完成%' OR SqlCode LIKE '%转项%';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3583</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3583</ID>
+    <SQLText>
 			--T_ProjectStatus,T_TaskStatus,T_ReqStatus,T_PlanStatus,T_WLStatus,T_TestStatus,T_OtherStatus
 
 
@@ -5345,10 +5345,10 @@
 			ELSE Status
 			END;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3584</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3584</ID>
+    <SQLText>
 			--T_ProjectStatus,T_TaskStatus,T_ReqStatus,T_PlanStatus,T_WLStatus,T_TestStatus,T_OtherStatus
 
 			UPDATE T_ProjectStatus
@@ -5424,23 +5424,23 @@
 			ELSE Status
 			END;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3585</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3585</ID>
+    <SQLText>
 			UPDATE t_systemanalystchartmanagement SET SqlCode = REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( SqlCode, '取消', 'Cancel' ), '计划', 'Plan' ), '处理中', 'InProgress' ), '结案', 'CaseClosed' ), '拒绝', 'Rejected' ), '删除', 'Deleted' ), '归档', 'Archived' ), '隐藏', 'Hided' ) WHERE SqlCode LIKE '%取消%' OR SqlCode LIKE '%计划%' OR SqlCode LIKE '%处理中%' OR SqlCode LIKE '%结案%' OR SqlCode LIKE '%拒绝%' OR SqlCode LIKE '%删除%' OR SqlCode LIKE '%归档%' OR SqlCode LIKE '%隐藏%';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3586</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3586</ID>
+    <SQLText>
 			ALTER TABLE public.t_approveflow
 			ALTER COLUMN operation TYPE VARCHAR(200);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3587</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3587</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_InsertWLStepByStatus()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_InsertWLStepByStatus"();
@@ -5492,10 +5492,10 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepByStatus"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3588</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3588</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_InsertWLStepDetail()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_InsertWLStepDetail"();
@@ -5861,10 +5861,10 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepDetail"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3589</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3589</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_DeleteWorkFlow()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_DeleteWorkFlow"();
@@ -5919,10 +5919,10 @@
 			ALTER FUNCTION public."Func_TG_DeleteWorkFlow"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3590</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3590</ID>
+    <SQLText>
 			DO $$
 			DECLARE
 			tbl_name text;  -- 表名
@@ -5970,10 +5970,10 @@
 			END LOOP;
 			END $$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3591</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3591</ID>
+    <SQLText>
 			DO $$
 			DECLARE
 			tbl_name text;  -- 表名
@@ -6021,14 +6021,14 @@
 			END LOOP;
 			END $$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3592</ID>
-		<SQLText>Update T_Project Set StatusValue = 'InProgress' Where StatusValue = '进行中';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3593</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3592</ID>
+    <SQLText>Update T_Project Set StatusValue = 'InProgress' Where StatusValue = '进行中';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3593</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_InsertWLStepDetail()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_InsertWLStepDetail"();
@@ -6394,10 +6394,10 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepDetail"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3594</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3594</ID>
+    <SQLText>
 			DO $$
 			DECLARE
 			table_name TEXT;
@@ -6426,10 +6426,10 @@
 			END LOOP;
 			END $$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3595</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3595</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox
 			SET inforname = CASE
 			WHEN inforname = '要审核的申请' THEN 'ApplicationToBeReviewed'
@@ -6451,32 +6451,32 @@
 			ELSE inforname -- 如果没有匹配，则保留原值
 			END;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3596</ID>
-		<SQLText>Update public.t_funinfordialbox Set HomeName = InforName Where LangCode = 'en';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3597</ID>
-		<SQLText>Update public.t_wltype Set HomeName = type Where LangCode = 'en';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3598</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3596</ID>
+    <SQLText>Update public.t_funinfordialbox Set HomeName = InforName Where LangCode = 'en';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3597</ID>
+    <SQLText>Update public.t_wltype Set HomeName = type Where LangCode = 'en';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3598</ID>
+    <SQLText>
 			Update public.t_actorgroup Set HomeName = groupname Where LangCode = 'en';
 			Update public.t_actorgroup Set type = '所有' Where LangCode = 'en';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3599</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3599</ID>
+    <SQLText>
 			Update public.t_projectstatus Set reviewcontrol = 'YES' Where reviewcontrol = '是';
 			Update public.t_projectstatus Set reviewcontrol = 'NO' Where reviewcontrol = '否';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3600</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3600</ID>
+    <SQLText>
 			-- FUNCTION: public.f_getcustomerrelateduserstring(character varying)
 
 			-- DROP FUNCTION IF EXISTS public.f_getcustomerrelateduserstring(character varying);
@@ -6505,10 +6505,10 @@
 			COMMENT ON FUNCTION public.f_getcustomerrelateduserstring(character varying)
 			IS 'Retrieve all visible user strings for the client.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3601</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3601</ID>
+    <SQLText>
 			-- FUNCTION: public.get_createdproject_info(text)
 
 			-- DROP FUNCTION IF EXISTS public.get_createdproject_info(text);
@@ -6552,10 +6552,10 @@
 			ALTER FUNCTION public.get_createdproject_info(text)
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3602</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3602</ID>
+    <SQLText>
 			-- FUNCTION: public.get_involvedproject_info(text)
 
 			-- DROP FUNCTION IF EXISTS public.get_involvedproject_info(text);
@@ -6604,10 +6604,10 @@
 			ALTER FUNCTION public.get_involvedproject_info(text)
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3603</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3603</ID>
+    <SQLText>
 			-- FUNCTION: public.get_undertakedproject_info(text)
 
 			-- DROP FUNCTION IF EXISTS public.get_undertakedproject_info(text);
@@ -6654,10 +6654,10 @@
 			ALTER FUNCTION public.get_undertakedproject_info(text)
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3604</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3604</ID>
+    <SQLText>
 			-- PROCEDURE: public.pr_copyimpleplandependencyandresources(bigint, bigint)
 
 			-- DROP PROCEDURE IF EXISTS public.pr_copyimpleplandependencyandresources(bigint, bigint);
@@ -6702,10 +6702,10 @@
 			COMMENT ON PROCEDURE public.pr_copyimpleplandependencyandresources(bigint, bigint)
 			IS 'Copy plan dependencies';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3605</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3605</ID>
+    <SQLText>
 			-- PROCEDURE: public.pr_creatertxaccountdata()
 
 			-- DROP PROCEDURE IF EXISTS public.pr_creatertxaccountdata();
@@ -6766,10 +6766,10 @@
 			COMMENT ON PROCEDURE public.pr_creatertxaccountdata()
 			IS 'Retrieve the parent department string function, used for generating RTX account data.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3606</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3606</ID>
+    <SQLText>
 			-- PROCEDURE: public.pr_initialmodules(character, character)
 
 			-- DROP PROCEDURE IF EXISTS public.pr_initialmodules(character, character);
@@ -6801,10 +6801,10 @@
 			COMMENT ON PROCEDURE public.pr_initialmodules(character, character)
 			IS 'Modify the module initialization stored procedure.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3607</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3607</ID>
+    <SQLText>
 			-- PROCEDURE: public.pro_deleteadminunvisiblemodule()
 
 			-- DROP PROCEDURE IF EXISTS public.pro_deleteadminunvisiblemodule();
@@ -6827,10 +6827,10 @@
 			COMMENT ON PROCEDURE public.pro_deleteadminunvisiblemodule()
 			IS 'Delete the ADMIN invisible module.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3608</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3608</ID>
+    <SQLText>
 			-- PROCEDURE: public.pro_deletedoublemodule()
 
 			-- DROP PROCEDURE IF EXISTS public.pro_deletedoublemodule();
@@ -6852,10 +6852,10 @@
 			COMMENT ON PROCEDURE public.pro_deletedoublemodule()
 			IS 'Create a stored procedure to delete duplicate modules.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3609</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3609</ID>
+    <SQLText>
 			-- PROCEDURE: public.pro_rcjauditfundstartplan(bigint, bigint, character varying, smallint, money, time without time zone, character varying)
 
 			-- DROP PROCEDURE IF EXISTS public.pro_rcjauditfundstartplan(bigint, bigint, character varying, smallint, money, time without time zone, character varying);
@@ -6889,10 +6889,10 @@
 			COMMENT ON PROCEDURE public.pro_rcjauditfundstartplan(bigint, bigint, character varying, smallint, money, time without time zone, character varying)
 			IS 'Review owner plan';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3610</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3610</ID>
+    <SQLText>
 			-- PROCEDURE: public.pro_rcjdeleteconfirmrelated(bigint, bigint)
 
 			-- DROP PROCEDURE IF EXISTS public.pro_rcjdeleteconfirmrelated(bigint, bigint);
@@ -6914,10 +6914,10 @@
 			COMMENT ON PROCEDURE public.pro_rcjdeleteconfirmrelated(bigint, bigint)
 			IS 'Delete the corresponding work and payment confirmation records.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3611</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3611</ID>
+    <SQLText>
 			-- PROCEDURE: public.pro_rcjupdateconfirmpercent(bigint, bigint, bigint, bigint, bigint)
 
 			-- DROP PROCEDURE IF EXISTS public.pro_rcjupdateconfirmpercent(bigint, bigint, bigint, bigint, bigint);
@@ -6957,10 +6957,10 @@
 			COMMENT ON PROCEDURE public.pro_rcjupdateconfirmpercent(bigint, bigint, bigint, bigint, bigint)
 			IS 'Update the confirmed workload ratio.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3612</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3612</ID>
+    <SQLText>
 			-- PROCEDURE: public.pro_rcjupdatetotalworknum(bigint, bigint, bigint)
 
 			-- DROP PROCEDURE IF EXISTS public.pro_rcjupdatetotalworknum(bigint, bigint, bigint);
@@ -6990,10 +6990,10 @@
 			COMMENT ON PROCEDURE public.pro_rcjupdatetotalworknum(bigint, bigint, bigint)
 			IS 'Update the confirmed workload ratio.';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3613</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3613</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_Insert_T_TakeTopSalaryMain()
 
 			-- DROP FUNCTION IF EXISTS public."Func_Insert_T_TakeTopSalaryMain"();
@@ -7019,10 +7019,10 @@
 			ALTER FUNCTION public."Func_Insert_T_TakeTopSalaryMain"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3614</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3614</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_Insert_T_TestStudentInformation()
 
 			-- DROP FUNCTION IF EXISTS public."Func_Insert_T_TestStudentInformation"();
@@ -7047,10 +7047,10 @@
 			ALTER FUNCTION public."Func_Insert_T_TestStudentInformation"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3615</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3615</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_Insert_T_TestWuPingLingYongMain()
 
 			-- DROP FUNCTION IF EXISTS public."Func_Insert_T_TestWuPingLingYongMain"();
@@ -7073,10 +7073,10 @@
 			ALTER FUNCTION public."Func_Insert_T_TestWuPingLingYongMain"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3616</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3616</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_DeleteWorkFlow()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_DeleteWorkFlow"();
@@ -7132,10 +7132,10 @@
 			ALTER FUNCTION public."Func_TG_DeleteWorkFlow"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3617</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3617</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_InsertWLStepDetail()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_InsertWLStepDetail"();
@@ -7502,10 +7502,10 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepDetail"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3618</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3618</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_Insert_T_ExpenseApplyWL()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_Insert_T_ExpenseApplyWL"();
@@ -7533,10 +7533,10 @@
 			ALTER FUNCTION public."Func_TG_Insert_T_ExpenseApplyWL"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3619</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3619</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ImplePlan_Insert()
 
 			-- DROP FUNCTION IF EXISTS public."Func_tg_ImplePlan_Insert"();
@@ -7618,10 +7618,10 @@
 			ALTER FUNCTION public."Func_tg_ImplePlan_Insert"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3620</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3620</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ProjectPlanVersion_insert_impleplan()
 
 			-- DROP FUNCTION IF EXISTS public."Func_tg_ProjectPlanVersion_insert_impleplan"();
@@ -7669,10 +7669,10 @@
 			ALTER FUNCTION public."Func_tg_ProjectPlanVersion_insert_impleplan"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3621</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3621</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_insert_RelatedUser()
 
 			-- DROP FUNCTION IF EXISTS public."Func_tg_insert_RelatedUser"();
@@ -7718,18 +7718,18 @@
 			ALTER FUNCTION public."Func_tg_insert_RelatedUser"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3622</ID>
-		<SQLText>ALTER TABLE public.sms_send ALTER COLUMN msg TYPE VARCHAR(1000);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3623</ID>
-		<SQLText>ALTER TABLE public.sms_accept ALTER COLUMN msg TYPE VARCHAR(1000);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3624</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3622</ID>
+    <SQLText>ALTER TABLE public.sms_send ALTER COLUMN msg TYPE VARCHAR(1000);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3623</ID>
+    <SQLText>ALTER TABLE public.sms_accept ALTER COLUMN msg TYPE VARCHAR(1000);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3624</ID>
+    <SQLText>
 			--T_ProjectStatus,T_TaskStatus,T_ReqStatus,T_PlanStatus,T_WLStatus,T_TestStatus,T_OtherStatus
 			Update T_ProjectStatus Set HomeName= Status Where LangCode = 'en';
 			Update T_TaskStatus Set HomeName= Status Where LangCode = 'en';
@@ -7741,29 +7741,29 @@
 			Update T_TestStatus Set HomeName= Status Where LangCode = 'en';
 			Update T_OtherStatus Set HomeName= Status Where LangCode = 'en';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3625</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3625</ID>
+    <SQLText>
 
 			CREATE INDEX idx_module_level ON T_ProModuleLevel (ModuleName, ModuleType, UserType, Visible, IsDeleted, LangCode);
 			CREATE INDEX idx_module ON T_ProModule (ModuleName, ModuleType, UserType, Visible, UserCode);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3626</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3626</ID>
+    <SQLText>
 
 			Update T_ProModuleLevel Set PageName = 'Outer/TTDatabaseUpgrade.aspx' Where ModuleName = 'DatabaseUpgradeMaintenance';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3627</ID>
-		<SQLText>Update T_ProModuleLevel Set PageName = 'TTDatabaseUpgrade.aspx' Where ModuleName = 'DatabaseUpgradeMaintenance';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3628</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3627</ID>
+    <SQLText>Update T_ProModuleLevel Set PageName = 'TTDatabaseUpgrade.aspx' Where ModuleName = 'DatabaseUpgradeMaintenance';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3628</ID>
+    <SQLText>
 			Update T_NewsType Set SortNumber = 1 Where Type = '驾驶舱';
 			Update T_NewsType Set SortNumber = 2 Where Type = '操作导航';
 			Update T_NewsType Set SortNumber = 3 Where Type = '头条新闻';
@@ -7772,17 +7772,17 @@
 			Update T_NewsType Set SortNumber = 6 Where Type = '公告通知';
 			Update T_NewsType Set SortNumber = 7 Where Type = '项目地图';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3629</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3629</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set ModuleName = 'OperateNavigation' Where ModuleName = '操作导航';
 			Update T_ProModule Set ModuleName = 'OperateNavigation' Where ModuleName = '操作导航';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3630</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3630</ID>
+    <SQLText>
 			Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
 			Select 'OperateNavigation','OperateNavigation','','','SYSTEM','INNER',LangCode,'ImagesSkin/OperateGuide.png','','YES',0,0,'NO','YES' From t_systemlanguage
 			Where LangCode &lt;&gt; 'zh-CN';
@@ -7791,32 +7791,32 @@
 			Select 'OperateNavigation','OperateNavigation','','','SYSTEM','OUTER',LangCode,'ImagesSkin/OperateGuide.png','','YES',0,0,'NO','YES' From t_systemlanguage
 			Where LangCode &lt;&gt; 'zh-CN';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3631</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3631</ID>
+    <SQLText>
 			Update public.t_funinfordialbox Set InforName = 'DefectToBeHandled' Where InforName = '待处理的缺陷';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3632</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3632</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox SET sqlcode = REPLACE(REPLACE(REPLACE(sqlcode, '处理中', 'InProgress'), '计划', 'Plan'), '待处理', 'ToHandle');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3633</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3633</ID>
+    <SQLText>
 			UPDATE t_funinfordialbox SET sqlcode = REPLACE(REPLACE(REPLACE(sqlcode, '处理中', 'InProgress'), '计划', 'Plan'), '待处理', 'ToHandle');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3634</ID>
-		<SQLText>UPDATE t_funinfordialbox SET sqlcode = REPLACE(REPLACE(REPLACE(sqlcode, '处理中', 'InProgress'), '计划', 'Plan'), '待处理', 'ToHandle');</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3635</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3634</ID>
+    <SQLText>UPDATE t_funinfordialbox SET sqlcode = REPLACE(REPLACE(REPLACE(sqlcode, '处理中', 'InProgress'), '计划', 'Plan'), '待处理', 'ToHandle');</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3635</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_OtherCodeRunMark
 			(
 
@@ -7828,59 +7828,59 @@
 			ALTER TABLE IF EXISTS public.t_OtherCodeRunMark
 			OWNER to postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3636</ID>
-		<SQLText>Insert Into t_OtherCodeRunMark(RunMark) values(0);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3637</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3636</ID>
+    <SQLText>Insert Into t_OtherCodeRunMark(RunMark) values(0);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3637</ID>
+    <SQLText>
 			Update public.t_systemanalystchartrelateduser Set SortNumber = 1
 			Where ChartName in (Select ChartName From public.t_systemanalystchartmanagement Where ChartType Like 'H%' );
 
 			Update public.t_systemanalystchartrelateduser Set SortNumber = 13
 			Where ChartName in (Select ChartName From public.t_systemanalystchartmanagement Where ChartType Not Like 'H%' );
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3638</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3638</ID>
+    <SQLText>
 			ALTER TABLE t_othercoderunmark
 			RENAME COLUMN runmark TO NormalCodeRunmark;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3639</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3639</ID>
+    <SQLText>
 			ALTER TABLE t_othercoderunmark
 			ADD COLUMN  ImportantCodeRunMark int default 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3640</ID>
-		<SQLText>Update t_othercoderunmark Set ImportantCodeRunMark = 0</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3641</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3640</ID>
+    <SQLText>Update t_othercoderunmark Set ImportantCodeRunMark = 0</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3641</ID>
+    <SQLText>
 			ALTER TABLE t_othercoderunmark
 			RENAME COLUMN ImportantCodeRunMark TO UpdateColumnValueCodeRunmark;
 
 			ALTER TABLE t_othercoderunmark
 			ADD COLUMN  UpdateModuleNameCodeRunMark int default 0;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3642</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3642</ID>
+    <SQLText>
 			Update t_othercoderunmark Set UpdateColumnValueCodeRunmark = 0;
 			Update t_othercoderunmark Set UpdateModuleNameCodeRunMark = 0
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3643</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3643</ID>
+    <SQLText>
 			DO $$
 			DECLARE
 			table_name TEXT;
@@ -7909,14 +7909,14 @@
 			END LOOP;
 			END $$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3644</ID>
-		<SQLText>ALTER TABLE t_memberlevel ALTER COLUMN agencystatus SET data TYPE char(100) USING agencystatus::int;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3645</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3644</ID>
+    <SQLText>ALTER TABLE t_memberlevel ALTER COLUMN agencystatus SET data TYPE char(100) USING agencystatus::int;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3645</ID>
+    <SQLText>
 			-- 先更新数据，移除非数字字符
 			UPDATE t_memberlevel
 			SET agencystatus = regexp_replace(agencystatus, '[^0-9]', '', 'g')
@@ -7926,14 +7926,14 @@
 			ALTER TABLE t_memberlevel
 			ALTER COLUMN agencystatus TYPE int USING agencystatus::int;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3646</ID>
-		<SQLText>DROP VIEW public.v_projectmember_workloadschedule;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3647</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3646</ID>
+    <SQLText>DROP VIEW public.v_projectmember_workloadschedule;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3647</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_projectmember_workload
 			AS
 			SELECT '项目'::text AS type,
@@ -8013,18 +8013,18 @@
 			ALTER TABLE public.v_projectmember_workload
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3648</ID>
-		<SQLText>ALTER TABLE t_plan ALTER COLUMN status SET data TYPE char(100) USING status::char(100);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3649</ID>
-		<SQLText>ALTER TABLE t_plan ALTER COLUMN status SET data TYPE bpchar(100) USING status::bpchar(100)</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3650</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3648</ID>
+    <SQLText>ALTER TABLE t_plan ALTER COLUMN status SET data TYPE char(100) USING status::char(100);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3649</ID>
+    <SQLText>ALTER TABLE t_plan ALTER COLUMN status SET data TYPE bpchar(100) USING status::bpchar(100)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3650</ID>
+    <SQLText>
 			-- View: public.v_projectmember_workload
 
 			-- DROP VIEW public.v_projectmember_workload;
@@ -8117,10 +8117,10 @@
 			ALTER TABLE public.v_projectmember_workload
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3651</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3651</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_projectmember_workloadschedule
 			AS
 			SELECT '项目'::text AS type,
@@ -8209,14 +8209,14 @@
 			ALTER TABLE public.v_projectmember_workloadschedule
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3652</ID>
-		<SQLText>ALTER TABLE public.t_bmsupplierlink ALTER COLUMN gender SET data TYPE char(100) USING gender::char(10)</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3653</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3652</ID>
+    <SQLText>ALTER TABLE public.t_bmsupplierlink ALTER COLUMN gender SET data TYPE char(100) USING gender::char(10)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3653</ID>
+    <SQLText>
 			DO $$
 			DECLARE
 			tbl_name TEXT;
@@ -8285,10 +8285,10 @@
 			END LOOP;
 			END $$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3654</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3654</ID>
+    <SQLText>
 			DO $$
 			DECLARE
 			tbl_name TEXT;
@@ -8357,14 +8357,14 @@
 			END LOOP;
 			END $$;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3655</ID>
-		<SQLText>Delete from  t_funinfordialbox Where inforname = '待处理的缺陷'</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3656</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3655</ID>
+    <SQLText>Delete from  t_funinfordialbox Where inforname = '待处理的缺陷'</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3656</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_TG_InsertWLStepDetail()
 
 			-- DROP FUNCTION IF EXISTS public."Func_TG_InsertWLStepDetail"();
@@ -8731,10 +8731,10 @@
 			ALTER FUNCTION public."Func_TG_InsertWLStepDetail"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3657</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3657</ID>
+    <SQLText>
 			-- View: public.v_projectplanlist
 
 			-- DROP VIEW public.v_projectplanlist;
@@ -8773,10 +8773,10 @@
 			ALTER TABLE public.v_projectplanlist
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3658</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3658</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set HomeModuleName = '操作導航' Where ModuleName = 'OperateNavigation' and LangCode = 'zh-tw';
 			Update T_ProModuleLevel Set HomeModuleName = 'Operación de Navegación' Where ModuleName = 'OperateNavigation' and LangCode = 'es';
 			Update T_ProModuleLevel Set HomeModuleName = 'Opération de Navigation' Where ModuleName = 'OperateNavigation' and LangCode = 'fr';
@@ -8787,32 +8787,32 @@
 			Update T_ProModuleLevel Set HomeModuleName = 'Operação de Navegação' Where ModuleName = 'OperateNavigation' and LangCode = 'pt';
 			Update T_ProModuleLevel Set HomeModuleName = 'Операция навигации' Where ModuleName = 'OperateNavigation' and LangCode = 'ru';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3659</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3659</ID>
+    <SQLText>
 			Update T_Project Set ProjectClass = 'Normal' Where ProjectClass = '常规项目 ';
 			Update T_Project Set ProjectClass = 'Template' Where ProjectClass = '模板项目 '
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3660</ID>
-		<SQLText>DROP VIEW public.v_projectplanlist;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3661</ID>
-		<SQLText>alter table public.t_project alter column projectclass type char(100);</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3662</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3660</ID>
+    <SQLText>DROP VIEW public.v_projectplanlist;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3661</ID>
+    <SQLText>alter table public.t_project alter column projectclass type char(100);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3662</ID>
+    <SQLText>
 			Update T_Project Set ProjectClass = 'NormalProject' Where ProjectClass = 'Normal';
 			Update T_Project Set ProjectClass = 'TemplateProject' Where ProjectClass = 'Template'
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3663</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3663</ID>
+    <SQLText>
 			CREATE OR REPLACE VIEW public.v_projectplanlist
 			AS
 			SELECT a.verid,
@@ -8847,29 +8847,29 @@
 			ALTER TABLE public.v_projectplanlist
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3664</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3664</ID>
+    <SQLText>
 			Insert Into public.t_systemanalystchartrelateduser(UserCode,chartName,FormType,SortNumber)
 			Select B.UserCode,A.chartName,'PersonalSpacePage',0 From t_systemanalystchartmanagement A,public.t_systemactiveuser B
 			Where A.ChartName
 			Not In (Select ChartName From t_systemanalystchartrelateduser Where UserCode = B.UserCode and FormType = 'PersonalSpacePage' )
 			and A.ChartName in ('在执行项目状态','延误项目状态','年度项目工时状态','在执行任务状态','项目年度回款状态');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3665</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3665</ID>
+    <SQLText>
 			Update t_systemanalystchartrelateduser Set SortNumber = 1 Where ChartName = '延误项目状态';
 			Update t_systemanalystchartrelateduser Set SortNumber = 2 Where ChartName = '年度项目工时状态';
 			Update t_systemanalystchartrelateduser Set SortNumber = 3 Where ChartName = '在执行任务状态';
 			Update t_systemanalystchartrelateduser Set SortNumber = 4 Where ChartName = '项目年度回款状态';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3666</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3666</ID>
+    <SQLText>
 			-- View: public.v_projectmember_workload
 
 			-- DROP VIEW public.v_projectmember_workload;
@@ -8965,10 +8965,10 @@
 			GRANT ALL ON TABLE public.v_projectmember_workload TO postgres;
 			GRANT SELECT ON TABLE public.v_projectmember_workload TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3667</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3667</ID>
+    <SQLText>
 			-- View: public.v_projectmember_workloadbyprojecttask
 
 			-- DROP VIEW public.v_projectmember_workloadbyprojecttask;
@@ -9006,10 +9006,10 @@
 			GRANT ALL ON TABLE public.v_projectmember_workloadbyprojecttask TO postgres;
 			GRANT SELECT ON TABLE public.v_projectmember_workloadbyprojecttask TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3668</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3668</ID>
+    <SQLText>
 			-- View: public.v_projectmember_workloadschedule
 
 			-- DROP VIEW public.v_projectmember_workloadschedule;
@@ -9105,10 +9105,10 @@
 			GRANT ALL ON TABLE public.v_projectmember_workloadschedule TO postgres;
 			GRANT SELECT ON TABLE public.v_projectmember_workloadschedule TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3669</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3669</ID>
+    <SQLText>
 			-- View: public.v_projectmembertaskdetailreport
 
 			-- DROP VIEW public.v_projectmembertaskdetailreport;
@@ -9162,10 +9162,10 @@
 			GRANT ALL ON TABLE public.v_projectmembertaskdetailreport TO postgres;
 			GRANT SELECT ON TABLE public.v_projectmembertaskdetailreport TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3670</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3670</ID>
+    <SQLText>
 			-- View: public.v_prorelateduser
 
 			-- DROP VIEW public.v_prorelateduser;
@@ -9214,10 +9214,10 @@
 			GRANT ALL ON TABLE public.v_prorelateduser TO postgres;
 			GRANT SELECT ON TABLE public.v_prorelateduser TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3671</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3671</ID>
+    <SQLText>
 			-- View: public.v_projectstatusnumberchart
 
 			-- DROP VIEW public.v_projectstatusnumberchart;
@@ -9250,10 +9250,10 @@
 			GRANT ALL ON TABLE public.v_projectstatusnumberchart TO postgres;
 			GRANT SELECT ON TABLE public.v_projectstatusnumberchart TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3672</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3672</ID>
+    <SQLText>
 			-- View: public.v_projectprofitandcostchart
 
 			-- DROP VIEW public.v_projectprofitandcostchart;
@@ -9290,10 +9290,10 @@
 			GRANT ALL ON TABLE public.v_projectprofitandcostchart TO postgres;
 			GRANT SELECT ON TABLE public.v_projectprofitandcostchart TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3673</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3673</ID>
+    <SQLText>
 			-- View: public.v_projectplanforwanring
 
 			-- DROP VIEW public.v_projectplanforwanring;
@@ -9334,10 +9334,10 @@
 			GRANT ALL ON TABLE public.v_projectplanforwanring TO postgres;
 			GRANT SELECT ON TABLE public.v_projectplanforwanring TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3674</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3674</ID>
+    <SQLText>
 			-- View: public.v_projectbasedatasummaryreport
 
 			-- DROP VIEW public.v_projectbasedatasummaryreport;
@@ -9383,10 +9383,10 @@
 			GRANT ALL ON TABLE public.v_projectbasedatasummaryreport TO postgres;
 			GRANT SELECT ON TABLE public.v_projectbasedatasummaryreport TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3675</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3675</ID>
+    <SQLText>
 			-- View: public.v_mymember_workload
 
 			-- DROP VIEW public.v_mymember_workload;
@@ -9412,10 +9412,10 @@
 			GRANT ALL ON TABLE public.v_mymember_workload TO postgres;
 			GRANT SELECT ON TABLE public.v_mymember_workload TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3676</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3676</ID>
+    <SQLText>
 			-- View: public.v_impleplanactive
 
 			-- DROP VIEW public.v_impleplanactive;
@@ -9598,10 +9598,10 @@
 			GRANT ALL ON TABLE public.v_impleplanactive TO postgres;
 			GRANT SELECT ON TABLE public.v_impleplanactive TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3677</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3677</ID>
+    <SQLText>
 			-- View: public.v_documenttypefilter
 
 			-- DROP VIEW public.v_documenttypefilter;
@@ -9621,10 +9621,10 @@
 			GRANT ALL ON TABLE public.v_documenttypefilter TO postgres;
 			GRANT SELECT ON TABLE public.v_documenttypefilter TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3678</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3678</ID>
+    <SQLText>
 			-- View: public.v_constractincomeexpensereport
 
 			-- DROP VIEW public.v_constractincomeexpensereport;
@@ -9664,10 +9664,10 @@
 			GRANT ALL ON TABLE public.v_constractincomeexpensereport TO postgres;
 			GRANT SELECT ON TABLE public.v_constractincomeexpensereport TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3679</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3679</ID>
+    <SQLText>
 			-- FUNCTION: public.Func_tg_ImplePlan_Update()
 
 			-- DROP FUNCTION IF EXISTS public."Func_tg_ImplePlan_Update"();
@@ -9843,10 +9843,10 @@
 			ALTER FUNCTION public."Func_tg_ImplePlan_Update"()
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3680</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3680</ID>
+    <SQLText>
 			-- FUNCTION: public.f_userattendancereport(text, text, text, text)
 
 			-- DROP FUNCTION IF EXISTS public.f_userattendancereport(text, text, text, text);
@@ -10088,10 +10088,10 @@
 			ALTER FUNCTION public.f_userattendancereport(text, text, text, text)
 			OWNER TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3681</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3681</ID>
+    <SQLText>
 			-- View: public.v_projectmember_workload
 
 			-- DROP VIEW public.v_projectmember_workload;
@@ -10187,31 +10187,31 @@
 			GRANT ALL ON TABLE public.v_projectmember_workload TO postgres;
 			GRANT SELECT ON TABLE public.v_projectmember_workload TO taketoppgdbreadonlyuser;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3682</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3682</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set IsDeleted = 'YES'
 			Where PageName In ('TTProjectManHourIncomeAndExpenseReport.aspx','TTProjectManHourAndExpenseReport','TTProjectImplementTotalFinanceReport.aspx','TTProjectIncomeExpenseMain.aspx')
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3683</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3683</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set IsDeleted = 'YES'
 			Where PageName In ('TTProjectManHourAndExpenseReport.aspx','TTProjectManHourIncomeAndExpenseReport.aspx','TTProjectManHourAndExpenseReport','TTProjectImplementTotalFinanceReport.aspx','TTProjectIncomeExpenseMain.aspx')
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3684</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3684</ID>
+    <SQLText>
 			Update T_ProModuleLevel Set IsDeleted = 'YES'
 			Where PageName In ('TTProjectManHourAndExpenseReport.aspx','TTProjectManHourIncomeAndExpenseReport.aspx','TTGoodsCheckInOutInventoryReport.aspx','TTProjectImplementTotalFinanceReport.aspx','TTProjectIncomeExpenseMain.aspx')
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3685</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3685</ID>
+    <SQLText>
 			-- View: public.v_projectconstractamountincome
 
 			-- DROP VIEW public.v_projectconstractamountincome;
@@ -10233,10 +10233,10 @@
 
 			GRANT ALL ON TABLE public.v_projectconstractamountincome TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3686</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3686</ID>
+    <SQLText>
 			-- View: public.v_projectincomeexpensesum
 
 			-- DROP VIEW public.v_projectincomeexpensesum;
@@ -10260,10 +10260,10 @@
 
 			GRANT ALL ON TABLE public.v_projectincomeexpensesum TO postgres;
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3687</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3687</ID>
+    <SQLText>
 			-- T_ProjectCostManage 表
 			CREATE INDEX idx_t_projectcostmanage_projectid_type ON T_ProjectCostManage(ProjectID, Type);
 
@@ -10276,10 +10276,10 @@
 			-- 组合索引（可选）
 			CREATE INDEX idx_t_project_filter ON T_Project(PMCode, ProjectStartupNeedSupperConfirm, ConfirmedBySupper, Status);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3688</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3688</ID>
+    <SQLText>
 			-- T_WorkFlowStepDetail 表
 			CREATE INDEX idx_t_workflowstepdetail_wlid ON T_WorkFlowStepDetail(WLID);
 			CREATE INDEX idx_t_workflowstepdetail_status ON T_WorkFlowStepDetail(Status);
@@ -10295,10 +10295,10 @@
 			CREATE INDEX idx_t_workflow_wlid ON T_WorkFlow(WLID);
 			CREATE INDEX idx_t_workflow_status ON T_WorkFlow(Status);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3689</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3689</ID>
+    <SQLText>
 			-- 常用查询字段索引
 			CREATE INDEX idx_t_impleplan_projectid ON public.t_impleplan(projectid);
 			CREATE INDEX idx_t_impleplan_workid ON public.t_impleplan(workid);
@@ -10338,10 +10338,10 @@
 			CREATE INDEX idx_t_impleplan_lockstatus ON public.t_impleplan(lockstatus);
 			CREATE INDEX idx_t_impleplan_type ON public.t_impleplan(type);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3690</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3690</ID>
+    <SQLText>
 			-- T_TaskAssignRecord 表
 			CREATE INDEX idx_t_taskassignrecord_operatorcode ON public.t_taskassignrecord(operatorcode);
 			CREATE INDEX idx_t_taskassignrecord_status ON public.t_taskassignrecord(status);
@@ -10356,10 +10356,10 @@
 			CREATE INDEX idx_t_projecttask_status ON public.t_projecttask(status);
 			CREATE INDEX idx_t_projecttask_projectid ON public.t_projecttask(projectid);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3691</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3691</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_approveflow_pkey PRIMARY KEY (id)
 
@@ -10383,10 +10383,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_approveflow_covering ON public.t_approveflow (relatedid, stepid) INCLUDE (usercode, operation);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3692</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3692</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_workflowtemplate_pkey PRIMARY KEY (temname)
 
@@ -10411,10 +10411,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_workflowtemplate_covering ON public.t_workflowtemplate (type, status) INCLUDE (temname, createtime);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3693</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3693</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_workflowtstep_pkey PRIMARY KEY (stepid)
 
@@ -10439,10 +10439,10 @@
 			-- 4. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_workflowtstep_covering ON public.t_workflowtstep (temname, sortnumber) INCLUDE (stepname, nextsortnumber);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3694</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3694</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_workflowtstepoperator_pkey PRIMARY KEY (id)
 
@@ -10462,10 +10462,10 @@
 			-- 4. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_workflowtstepoperator_covering ON public.t_workflowtstepoperator (stepid, actor) INCLUDE (actorgroup, workdetail);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3695</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3695</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_workflowstep_pkey PRIMARY KEY (stepid)
 
@@ -10487,10 +10487,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_workflowstep_covering ON public.t_workflowstep (wlid, sortnumber) INCLUDE (stepname, status);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3696</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3696</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_constract_pkey PRIMARY KEY (constractid)
 
@@ -10522,10 +10522,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_constract_covering ON public.t_constract (constractcode, type) INCLUDE (constractname, signdate, status);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3697</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3697</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_constractreceivables_pkey PRIMARY KEY (id)
 
@@ -10558,10 +10558,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_constractreceivables_covering ON public.t_constractreceivables (constractcode, status) INCLUDE (billcode, receivablesaccount, receivablestime);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3698</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3698</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_constractreceivablesrecord_pkey PRIMARY KEY (id)
 
@@ -10585,10 +10585,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_constractreceivablesrecord_covering ON public.t_constractreceivablesrecord (receivablesid, constractcode) INCLUDE (receiveraccount, receivertime, operatorcode);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3699</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3699</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_constractpayable_pkey PRIMARY KEY (id)
 
@@ -10621,10 +10621,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_constractpayable_covering ON public.t_constractpayable (constractcode, status) INCLUDE (billcode, payableaccount, payabletime);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3700</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3700</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_constractpayablerecord_pkey PRIMARY KEY (id)
 
@@ -10648,10 +10648,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_constractpayablerecord_covering ON public.t_constractpayablerecord (payableid, constractcode) INCLUDE (outofpocketaccount, outofpockettime, operatorcode);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3701</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3701</ID>
+    <SQLText>
 			-- 1. 单列索引（针对常用于 WHERE 条件的列）
 			CREATE INDEX idx_projectmember_usercode ON public.t_projectmember (usercode);
 			CREATE INDEX idx_projectmember_departcode ON public.t_projectmember (departcode);
@@ -10678,10 +10678,10 @@
 			-- 4. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_projectmember_covering ON public.t_projectmember (usercode, status) INCLUDE (username, departcode, email);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3702</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3702</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_project_pkey PRIMARY KEY (projectid)
 
@@ -10713,10 +10713,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_project_covering ON public.t_project (projectid, projectname) INCLUDE (usercode, begindate, enddate, status);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3703</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3703</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_workflow_pkey PRIMARY KEY (wlid)
 
@@ -10744,10 +10744,10 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_workflow_covering ON public.t_workflow (wlid, wlname) INCLUDE (wltype, relatedtype, relatedid, status);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3704</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3704</ID>
+    <SQLText>
 			-- 1. 主键索引（已存在，无需额外创建）
 			-- CONSTRAINT t_workflowstepdetail_pkey PRIMARY KEY (id)
 
@@ -10772,63 +10772,141 @@
 			-- 5. 覆盖索引（针对只查询索引列的查询）
 			CREATE INDEX idx_workflowstepdetail_covering ON public.t_workflowstepdetail (stepid, wlid) INCLUDE (operatorcode, status, checkingtime);
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3705</ID>
-		<SQLText>Update T_ProjectMember Set Status = 'Employed' Where Status = 'InPosition';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3706</ID>
-		<SQLText>Update T_ProjectMember Set Status = 'Resign' Where Status = 'Depart';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3707</ID>
-		<SQLText>Delete From  public.t_funinfordialbox Where InforName = '待处理的缺陷';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3708</ID>
-		<SQLText>Update public.t_systemanalystchartrelateduser Set SortNumber = 0  Where ChartName = '在执行项目状态';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3709</ID>
-		<SQLText>Update public.t_wltype Set HomeName = Type Where LangCode &lt;&gt; 'zh-CN';</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3710</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3705</ID>
+    <SQLText>Update T_ProjectMember Set Status = 'Employed' Where Status = 'InPosition';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3706</ID>
+    <SQLText>Update T_ProjectMember Set Status = 'Resign' Where Status = 'Depart';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3707</ID>
+    <SQLText>Delete From  public.t_funinfordialbox Where InforName = '待处理的缺陷';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3708</ID>
+    <SQLText>Update public.t_systemanalystchartrelateduser Set SortNumber = 0  Where ChartName = '在执行项目状态';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3709</ID>
+    <SQLText>Update public.t_wltype Set HomeName = Type Where LangCode &lt;&gt; 'zh-CN';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3710</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_constractradio
 			(
 			radio character varying(200) COLLATE pg_catalog."default" NOT NULL,
 			CONSTRAINT t_contractradio_pkey PRIMARY KEY (radio)
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3711</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3711</ID>
+    <SQLText>
 			Insert Into public.t_constractradio(Radio) values('ContractAgreedAdvancePaymentRatio');
 			Insert Into public.t_constractradio(Radio) values('ContractAgreedMonthlyProgressPaymentRatio');
 			Insert Into public.t_constractradio(Radio) values('ContractAgreedCompletionPaymentRatio');
 			Insert Into public.t_constractradio(Radio) values('ContractAgreedSettlementPaymentRatio');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3712</ID>
-		<SQLText>Delete From public.t_constractradio;</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3713</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3712</ID>
+    <SQLText>Delete From public.t_constractradio;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3713</ID>
+    <SQLText>
 			Insert Into public.t_constractradio(Radio) values('合同约定预付款比例');
 			Insert Into public.t_constractradio(Radio) values('合同约定月进度支付比例');
 			Insert Into public.t_constractradio(Radio) values('合同约定竣工支付比例');
 			Insert Into public.t_constractradio(Radio) values('合同约定结算支付比例');
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3714</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3714</ID>
+    <SQLText>
 			SELECT setval(pg_get_serial_sequence('T_ExpenseClaim', 'ecid'), COALESCE((SELECT MAX(ecid) FROM T_ExpenseClaim), 0) + 1);
 		</SQLText>
-	</DataBaseUpgradeFile>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3715</ID>
+    <SQLText>UPdate T_ProModuleLevel Set ParentModule = 'TenderAndBiddingManagement' Where ParentModule = 'BiddingManagement';
+UPdate T_ProModuleLevel Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
+UPdate T_ProModule Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
+
+UPdate T_ProModuleLevel Set HomeModuleName = '招投标管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-CN';
+UPdate T_ProModuleLevel Set HomeModuleName = '招投標管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-tw';
+UPdate T_ProModuleLevel Set HomeModuleName = 'Bieterverfahrensmanagement' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'de';
+UPdate T_ProModuleLevel Set HomeModuleName = 'GestiónDeLicitaciones' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'es';
+UPdate T_ProModuleLevel Set HomeModuleName = 'GestionDesAppelsD’Offres' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'fr';
+UPdate T_ProModuleLevel Set HomeModuleName = 'GestioneDelleGareD’Appalto' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'it';
+UPdate T_ProModuleLevel Set HomeModuleName = 'にゅうさつ・ちょうたつかん' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ja';
+UPdate T_ProModuleLevel Set HomeModuleName = 'GestãoDeLicitaçõesEConcursos' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'pt';
+
+UPdate T_ProModuleLevel Set HomeModuleName = 'Управлениетендерами' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ru';
+UPdate T_ProModuleLevel Set HomeModuleName = '입찰및계약관리' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ko';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3716</ID>
+    <SQLText>UPdate T_ProModuleLevel Set HomeModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'en';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3717</ID>
+    <SQLText>UPdate T_ProModuleLevel Set SortNumber = 100 Where ModuleName = 'BidRegistration';
+UPdate T_ProModuleLevel Set SortNumber = 101 Where ModuleName = 'BidConfirmation';
+UPdate T_ProModuleLevel Set SortNumber = 102 Where ModuleName = 'BidWarning';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3718</ID>
+    <SQLText>SELECT setval(pg_get_serial_sequence('t_actorgroupdetail', 'groupid'), COALESCE((SELECT MAX(groupid) FROM t_actorgroupdetail), 0) + 1);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3719</ID>
+    <SQLText>DO $$
+DECLARE
+    rec RECORD;
+    seq_name TEXT;
+    max_id BIGINT;
+    sql_stmt TEXT;
+    error_msg TEXT;
+BEGIN
+    -- 查询所有包含序列列的表
+    FOR rec IN 
+        SELECT 
+            n.nspname AS schema_name,
+            c.relname AS table_name,
+            a.attname AS column_name
+        FROM pg_class c
+        JOIN pg_attribute a ON a.attrelid = c.oid
+        JOIN pg_namespace n ON n.oid = c.relnamespace
+        WHERE c.relkind = 'r'
+        AND n.nspname NOT IN ('pg_catalog', 'information_schema')
+        AND a.attnum &gt; 0
+        AND NOT a.attisdropped
+        AND pg_get_serial_sequence(n.nspname || '.' || c.relname, a.attname) IS NOT NULL
+    LOOP
+        BEGIN
+            -- 获取关联的序列名称
+            seq_name := pg_get_serial_sequence(rec.schema_name || '.' || rec.table_name, rec.column_name);
+            
+            -- 查询表中该列的最大值
+            EXECUTE 'SELECT COALESCE(MAX(' || quote_ident(rec.column_name) || '), 0) FROM ' || 
+                    quote_ident(rec.schema_name) || '.' || quote_ident(rec.table_name) INTO max_id;
+            
+            -- 生成并执行setval语句
+            sql_stmt := 'SELECT setval(' || quote_literal(seq_name) || ', ' || (max_id + 1) || ', false);';
+            EXECUTE sql_stmt;
+        EXCEPTION WHEN OTHERS THEN
+            GET STACKED DIAGNOSTICS error_msg = MESSAGE_TEXT;
+            RAISE WARNING '处理表 %.% 的列 % 时出错: %', 
+                          rec.schema_name, rec.table_name, rec.column_name, error_msg;
+        END;
+    END LOOP;
+    
+    RAISE NOTICE '序列重置操作完成';
+END $$;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
