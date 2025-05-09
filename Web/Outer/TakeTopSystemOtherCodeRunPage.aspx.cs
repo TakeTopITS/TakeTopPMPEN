@@ -107,6 +107,9 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
             //设额外代码运行标记
             SetNormalOtherCodeMark(intRunMark);
 
+            //增加横向分析图给用户
+            AddHChartToUser(strUserCode);
+
 
             ////判断现有系统是否已经在使用，正式使用了则执行下面代码
             //if (intUserNumber > 2)
@@ -567,6 +570,34 @@ SELECT
             LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
         }
     }
+
+    //增加横向分析图给用户
+    public static void AddHChartToUser(string strUserCode)
+    {
+        string strHQL;
+
+        try
+        {
+            strHQL = string.Format(@"Insert Into t_systemanalystchartrelateduser(UserCode,ChartName,FormType,SortNumber) Select '{0}',ChartName,'PersonalSpacePage',1
+                    From t_systemanalystchartmanagement Where ChartType Like 'H%'
+                    and ChartName Not In (Select ChartName From t_systemanalystchartrelateduser Where UserCode = '{0}')", strUserCode);
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = string.Format(@"Update public.t_systemanalystchartrelateduser Set SortNumber = 1 Where ChartName = '在执行项目状态';
+                    Update public.t_systemanalystchartrelateduser Set SortNumber = 2 Where ChartName = '延误项目状态';
+                    Update public.t_systemanalystchartrelateduser Set SortNumber = 3 Where ChartName = '年度项目工时状态';
+                    Update public.t_systemanalystchartrelateduser Set SortNumber = 4 Where ChartName = '项目年度回款状态';
+                    Update public.t_systemanalystchartrelateduser Set SortNumber = 5 Where ChartName = '在执行任务状态';
+                    Update public.t_systemanalystchartrelateduser Set SortNumber = 10 Where ChartName Not In ('在执行项目状态','延误项目状态','年度项目工时状态','项目年度回款状态','在执行任务状态');
+                    ");
+            ShareClass.RunSqlCommand(strHQL);
+        }
+        catch (Exception err)
+        {
+            LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+        }
+    }
+
 
     //Copy 管理员ADMIN用户的分析图给其它用户
     public static void AddChartToUserFromADMIN(string strUserCode)
