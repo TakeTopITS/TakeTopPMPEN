@@ -1,11 +1,12 @@
-using ProjectMgt.BLL;
-using ProjectMgt.Model;
-
 using System;
 using System.Collections;
 using System.Drawing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+using ProjectMgt.BLL;
+using ProjectMgt.Model;
+
 
 public partial class TTSuperActorGroup : System.Web.UI.Page
 {
@@ -485,8 +486,7 @@ public partial class TTSuperActorGroup : System.Web.UI.Page
                         }
                         catch (Exception err)
                         {
-
-                            LogClass.WriteLogFile(strHQL);
+                            //LogClass.WriteLogFile(strHQL);
                             LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace + " " + strRelatedUserCode);
                         }
 
