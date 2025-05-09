@@ -311,7 +311,37 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td  style="padding-left: 5px;">
+                                <asp:Panel ID="Panel_ChildWF" runat="server" Style="border: 1px solid red; width: 58%;" Visible="False">
+                                    <div>
+                                        <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
+                                            <tr>
+                                                <td align="right" class="formItemBgStyle">
+                                                    <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,ZiLiuCheng %>"></asp:Label></td>
+                                                <td class="formItemBgStyle">
+                                                    <asp:DropDownList ID="DL_RelatedWFTemplate" runat="server" AutoPostBack="True" DataTextField="RelatedWFTemName" DataValueField="RelatedWFTemName" OnSelectedIndexChanged="DL_RelatedWFTemplate_SelectedIndexChanged"></asp:DropDownList></td>
+                                                <td class="formItemBgStyle">
+                                                    <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,BiXu %>"></asp:Label></td>
+                                                <td align="right" class="formItemBgStyle">
+                                                    <asp:Label ID="LB_ChildWFRequisite" runat="server"></asp:Label></td>
+                                                <td class="formItemBgStyle">
+                                                    <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,GuiShuBuXu %>"></asp:Label></td>
+                                                <td align="right" class="formItemBgStyle">
+                                                    <asp:Label ID="LB_BelongStepSortNumber" runat="server"></asp:Label></td>
+                                                <td align="right" class="formItemBgStyle">
+                                                    <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,YaoQiuTongGuo %>"></asp:Label></td>
+                                                <td class="formItemBgStyle">
+                                                    <asp:Label ID="LB_BelongIsPassed" runat="server"></asp:Label></td>
+                                                <td class="formItemBgStyle">
+                                                    <asp:HyperLink ID="HL_ChildWF" runat="server" Target="_blank">
+                                                        <b><span style="color: red;">
+                                                            <asp:Label ID="Label81" runat="server" Text="<%$ Resources:lang,QiDong %>"></asp:Label>
+                                                    </asp:HyperLink>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </asp:Panel>
                                 <table style="width: 100%;">
                                     <tr>
                                         <td style="width: 60%; padding-top: 10px; padding-left: 10px;">
@@ -345,36 +375,7 @@
                                 <table>
                                     <tr>
                                         <td class="formItemBgStyle" style="text-align: left;">
-                                            <asp:Panel ID="Panel_ChildWF" runat="server" Style="border: 1px solid red;" Visible="False">
-                                                <div>
-                                                    <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
-                                                        <tr>
-                                                            <td align="right" class="formItemBgStyle">
-                                                                <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,ZiLiuCheng %>"></asp:Label></td>
-                                                            <td class="formItemBgStyle">
-                                                                <asp:DropDownList ID="DL_RelatedWFTemplate" runat="server" AutoPostBack="True" DataTextField="RelatedWFTemName" DataValueField="RelatedWFTemName" OnSelectedIndexChanged="DL_RelatedWFTemplate_SelectedIndexChanged"></asp:DropDownList></td>
-                                                            <td class="formItemBgStyle">
-                                                                <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,BiXu %>"></asp:Label></td>
-                                                            <td align="right" class="formItemBgStyle">
-                                                                <asp:Label ID="LB_ChildWFRequisite" runat="server"></asp:Label></td>
-                                                            <td class="formItemBgStyle">
-                                                                <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,GuiShuBuXu %>"></asp:Label></td>
-                                                            <td align="right" class="formItemBgStyle">
-                                                                <asp:Label ID="LB_BelongStepSortNumber" runat="server"></asp:Label></td>
-                                                            <td align="right" class="formItemBgStyle">
-                                                                <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,YaoQiuTongGuo %>"></asp:Label></td>
-                                                            <td class="formItemBgStyle">
-                                                                <asp:Label ID="LB_BelongIsPassed" runat="server"></asp:Label></td>
-                                                            <td class="formItemBgStyle">
-                                                                <asp:HyperLink ID="HL_ChildWF" runat="server" Target="_blank">
-                                                                    <b><span style="color: red;">
-                                                                        <asp:Label ID="Label81" runat="server" Text="<%$ Resources:lang,QiDong %>"></asp:Label>
-                                                                </asp:HyperLink>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </asp:Panel>
+
                                             <asp:Panel ID="Panel_BelongChildWF" runat="server" Style="border: 2px solid red;" Visible="False">
                                                 <div>
                                                     <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ZhunJieGuiShuChiBuDeGongZuoLiu %>"></asp:Label><table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
