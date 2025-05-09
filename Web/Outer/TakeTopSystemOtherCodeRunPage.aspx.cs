@@ -45,6 +45,9 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
             //最后登录用户
             ShareClass.SystemLatestLoginUser = "";
         }
+
+        //增加横向分析图给用户
+        AddHChartToUser(strUserCode);
     }
 
     //执行特殊代码
@@ -107,8 +110,7 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
             //设额外代码运行标记
             SetNormalOtherCodeMark(intRunMark);
 
-            //增加横向分析图给用户
-            AddHChartToUser(strUserCode);
+      
 
 
             ////判断现有系统是否已经在使用，正式使用了则执行下面代码
@@ -1596,16 +1598,17 @@ FROM (
         string strHQL;
 
         strHQL = @"Insert Into public.t_systemanalystchartrelateduser(UserCode,chartName,FormType,SortNumber)
-               Select B.UserCode,A.chartName,'PersonalSpacePage',0 From t_systemanalystchartmanagement A,public.t_systemactiveuser B
+               Select B.UserCode,A.chartName,'PersonalSpacePage',1 From t_systemanalystchartmanagement A,public.t_systemactiveuser B
                  Where A.ChartName 
 	             Not In (Select ChartName From t_systemanalystchartrelateduser Where UserCode = B.UserCode and FormType = 'PersonalSpacePage' )
 	             and A.ChartName in ('在执行项目状态','延误项目状态','年度项目工时状态','在执行任务状态','项目年度回款状态');";
         ShareClass.RunSqlCommand(strHQL);
 
-        strHQL = @"Update t_systemanalystchartrelateduser Set SortNumber = 1 Where ChartName = '延误项目状态';
-                Update t_systemanalystchartrelateduser Set SortNumber = 2 Where ChartName = '年度项目工时状态';
-                Update t_systemanalystchartrelateduser Set SortNumber = 3 Where ChartName = '在执行任务状态';
-                Update t_systemanalystchartrelateduser Set SortNumber = 4 Where ChartName = '项目年度回款状态';";
+        strHQL = @"Update t_systemanalystchartrelateduser Set SortNumber = 2 Where ChartName = '延误项目状态';
+                Update t_systemanalystchartrelateduser Set SortNumber = 3 Where ChartName = '年度项目工时状态';
+                Update t_systemanalystchartrelateduser Set SortNumber = 5 Where ChartName = '项目年度回款状态';
+                Update t_systemanalystchartrelateduser Set SortNumber = 4 Where ChartName = '在执行任务状态';";
+             
         ShareClass.RunSqlCommand(strHQL);
 
     }
