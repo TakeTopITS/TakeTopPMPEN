@@ -23,5 +23,5 @@
 To promote the development of project management software in the industry and enhance corporate project management capabilities, TaiDingTuo Ding Group has adopted an open strategy. It offers its own intellectual property rights, a comprehensive and mature **TakeTop Project Management Software [Integrated Platform]** with full source code download, including test data. The source code should be compiled using Visual Studio 2022. Note that this open-source release is based on the AGPL-3.0 license agreement and is intended for learning and research purposes only. Commercial use requires an application.
 
 For any questions, please contact TaiDing Customer Service:
-- Phone: 021-51085119
+- Phone: （086）021-51085119
 - Email: 623077337@qq.com
