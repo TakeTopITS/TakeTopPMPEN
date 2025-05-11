@@ -313,7 +313,7 @@
                         <tr>
                             <td style="padding-left: 5px;">
 
-                                <table style="width: 100%;padding-bottom:5px;">
+                                <table style="width: 100%; padding-bottom: 5px;">
                                     <tr>
                                         <td style="width: 60%; padding-top: 10px; padding-left: 10px;">
                                             <asp:Button ID="BT_Refuse" runat="server" Height="30px" CssClass="inpu" OnClientClick="SaveDIYFormData('Refuse');" Text="<%$ Resources:lang,BoHui %>" />
@@ -453,86 +453,82 @@
 
                                     </div>
                                 </asp:Panel>
+                                <asp:Panel ID="Panel_BelongChildWF" runat="server" Style="border: 1px solid red; width: 58%;" Visible="False">
+                                    <div>
+                                        <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ZhunJieGuiShuChiBuDeGongZuoLiu %>"></asp:Label><table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td width="7">
+                                                    <img height="26" src="ImagesSkin/main_n_l.jpg" width="7" /></td>
+                                                <td>
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td align="center" width="8%"><strong>
+                                                                <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label></strong></td>
+                                                            <td align="center" width="30%"><strong>
+                                                                <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GongZuo %>"></asp:Label></strong></td>
+                                                            <td align="center" width="10%"><strong>
+                                                                <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label></strong></td>
+                                                            <td align="center" width="12%"><strong>
+                                                                <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ChuangJianZhe %>"></asp:Label></strong></td>
+                                                            <td align="center" width="12%"><strong>
+                                                                <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,QiDongBuXu %>"></asp:Label></strong></td>
+                                                            <td align="center" width="16%"><strong>
+                                                                <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,BiXuTongGuo %>"></asp:Label></strong></td>
+                                                            <td align="center" width="10%"><strong>
+                                                                <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,ZhuagTai %>"></asp:Label></strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td align="right" width="6">
+                                                    <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" /></td>
+                                            </tr>
+                                        </table>
+                                        <asp:DataGrid ID="DataGrid6" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="False" Width="100%">
+                                            <Columns>
+                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
+                                                </asp:BoundColumn>
+                                                <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}" DataTextField="WLName" HeaderText="Workflow" Target="_blank">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
+                                                </asp:HyperLinkColumn>
+                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                    <ItemTemplate>
+                                                        <%# ShareClass.GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                    </ItemTemplate>
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                </asp:TemplateColumn>
+                                                <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
+                                                </asp:HyperLinkColumn>
+                                                <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="启动步序">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
+                                                </asp:BoundColumn>
+                                                <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="必须">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
+                                                </asp:BoundColumn>
+                                                <asp:TemplateColumn HeaderText="Status">
+                                                    <ItemTemplate>
+                                                        <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
+                                                    </ItemTemplate>
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+                                                </asp:TemplateColumn>
+                                            </Columns>
+                                            <EditItemStyle BackColor="#2461BF" />
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
+                                            <ItemStyle CssClass="itemStyle" />
+                                            <PagerStyle HorizontalAlign="Center" />
+                                            <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        </asp:DataGrid>
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="formItemBgStyle" align="left">
                                 <table>
-                                    <tr>
-                                        <td class="formItemBgStyle" style="text-align: left;">
 
-                                            <asp:Panel ID="Panel_BelongChildWF" runat="server" Style="border: 2px solid red;" Visible="False">
-                                                <div>
-                                                    <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ZhunJieGuiShuChiBuDeGongZuoLiu %>"></asp:Label><table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td width="7">
-                                                                <img height="26" src="ImagesSkin/main_n_l.jpg" width="7" /></td>
-                                                            <td>
-                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                    <tr>
-                                                                        <td align="center" width="8%"><strong>
-                                                                            <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label></strong></td>
-                                                                        <td align="center" width="30%"><strong>
-                                                                            <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GongZuo %>"></asp:Label></strong></td>
-                                                                        <td align="center" width="10%"><strong>
-                                                                            <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label></strong></td>
-                                                                        <td align="center" width="12%"><strong>
-                                                                            <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ChuangJianZhe %>"></asp:Label></strong></td>
-                                                                        <td align="center" width="12%"><strong>
-                                                                            <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,QiDongBuXu %>"></asp:Label></strong></td>
-                                                                        <td align="center" width="16%"><strong>
-                                                                            <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,BiXuTongGuo %>"></asp:Label></strong></td>
-                                                                        <td align="center" width="10%"><strong>
-                                                                            <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,ZhuagTai %>"></asp:Label></strong></td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                            <td align="right" width="6">
-                                                                <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" /></td>
-                                                        </tr>
-                                                    </table>
-                                                    <asp:DataGrid ID="DataGrid6" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="False" Width="100%">
-                                                        <Columns>
-                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
-                                                            </asp:BoundColumn>
-                                                            <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}" DataTextField="WLName" HeaderText="Workflow" Target="_blank">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
-                                                            </asp:HyperLinkColumn>
-                                                            <asp:TemplateColumn HeaderText="HomeName">
-                                                                <ItemTemplate>
-                                                                    <%# ShareClass.GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
-                                                                </ItemTemplate>
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
-                                                            </asp:TemplateColumn>
-                                                            <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
-                                                            </asp:HyperLinkColumn>
-                                                            <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="启动步序">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
-                                                            </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="必须">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
-                                                            </asp:BoundColumn>
-                                                            <asp:TemplateColumn HeaderText="Status">
-                                                                <ItemTemplate>
-                                                                    <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
-                                                                </ItemTemplate>
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-                                                            </asp:TemplateColumn>
-                                                        </Columns>
-                                                        <EditItemStyle BackColor="#2461BF" />
-                                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
-                                                        <ItemStyle CssClass="itemStyle" />
-                                                        <PagerStyle HorizontalAlign="Center" />
-                                                        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    </asp:DataGrid>
-                                                </div>
-                                            </asp:Panel>
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <td style="height: 15px; text-align: left;">
                                             <asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,FaXinXi %>" Checked="True" /><asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,FaYouJian %>" Checked="True" /><span style="font-size: 10pt"><asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,TongZhiShenQingRen %>"></asp:Label><asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,Huo %>"></asp:Label><asp:HyperLink ID="HL_BusinessMember" runat="server" Target="_blank" Text="<%$ Resources:lang,QiTaChengYuan %>"></asp:HyperLink><asp:TextBox ID="TB_Message" runat="server" Width="380px"></asp:TextBox>&#160;&#160;<asp:Button ID="BT_Send" runat="server" CssClass="inpu" OnClick="BT_Send_Click" Text="<%$ Resources:lang,FaSong %>" /></span>
