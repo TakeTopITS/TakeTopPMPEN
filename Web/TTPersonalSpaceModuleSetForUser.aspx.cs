@@ -92,6 +92,13 @@ public partial class TTPersonalSpaceModuleSetForUser : System.Web.UI.Page
         string strHQL;
         string strSortNumber, strVisible, strModuleName;
 
+
+        strHQL = string.Format(@"Insert Into T_ProModuleLevelForPageUser(ModuleName,UserCode,UserType,Visible,SortNumber)
+                Select ModuleName,'{1}',UserType,Visible,SortNumber From t_promodulelevelforpage
+	            Where ParentModule = 'PersonalSpace'  and LangCode = '{0}'
+		        and ModuleName Not In (Select ModuleName From T_ProModuleLevelForPageUser Where UserCode = '{1}');", strLangCode, strUserCode);
+        ShareClass.RunSqlCommand(strHQL);
+
         if (Session["SystemVersionType"].ToString() != "SAAS")
         {
             if (strUserType == "INNER")
@@ -113,6 +120,8 @@ public partial class TTPersonalSpaceModuleSetForUser : System.Web.UI.Page
                        where A.ModuleName = B.ModuleName and B.Visible = 'YES' and B.IsDeleted = 'NO' and A.UserCode = '{0}' and A.UserType = '{1}' and B.LangCode = '{2}' 
                        and B.ParentModule = 'PersonalSpaceSaaS' Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
         }
+
+        LogClass.WriteLogFile(strHQL);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
 

@@ -272,6 +272,151 @@ public partial class TTVersionRegister : System.Web.UI.Page
 
     protected void IMB_Copyright_Click(object sender, ImageClickEventArgs e)
     {
+        try
+        {
+            UpdateLeftBarModules();
+            UpdatePageBarModules();
+
+           
+            //设置缓存更改标志，并刷新页面缓存
+            ChangePageCache();
+
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click11", "alert('" + LanguageHandle.GetWord("ZZTBMZYYSJCG").ToString().Trim() + "')", true);
+        }
+
+        catch (System.Exception err)
+        {
+            LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
+
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click22", "alert('" + LanguageHandle.GetWord("SBKNWJGSBDHLCDBGQJC").ToString().Trim() + "')", true);
+        }
+
+        return;
+    }
+
+    //更新左边样模组
+    protected void UpdateLeftBarModules()
+    {
+        string strHQL1;
+        string strModuleName, strParentModule, strLangCode, strHomeModuleName, strPageName, strModuleType, strUserType, strVisible, strIsDeleted, strSortNUmber, strIconURL;
+
+        DataSet ds1;
+        DataTable dt1;
+
+        dt1 = new DataTable();
+
+        string strpath = Server.MapPath("UpdateCode\\Modules.xls");
+        dt1 = MSExcelHandler.ReadExcelToDataTable(strpath, "");
+
+        DataRow[] dr = dt1.Select();  //定义一个DataRow数组
+        int rowsnum = dt1.Rows.Count;
+        if (rowsnum == 0)
+        {
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() + "')", true);
+        }
+        else
+        {
+            for (int i = 0; i < dr.Length; i++)
+            {
+                strModuleName = dr[i]["ModuleName"].ToString().Trim();
+                strParentModule = dr[i]["ParentModule"].ToString().Trim();
+                strLangCode = dr[i]["LangCode"].ToString().Trim();
+                strHomeModuleName = dr[i]["HomeModuleName"].ToString().Trim();
+                strPageName = dr[i]["PageName"].ToString().Trim();
+                strModuleType = dr[i]["ModuleType"].ToString().Trim();
+                strUserType = dr[i]["UserType"].ToString().Trim();
+                strVisible = dr[i]["Visible"].ToString().Trim();
+                strIsDeleted = dr[i]["IsDeleted"].ToString().Trim();
+                strSortNUmber = dr[i]["SortNumber"].ToString().Trim();
+                strIconURL = dr[i]["IconURL"].ToString().Trim();
+                strIconURL = strIconURL.Replace("//", "/");
+                strIconURL = strIconURL.Replace("\\", "/");
+
+                strHQL1 = "Select * From T_ProModuleLevel Where ParentModule = '" + strParentModule + "' and ModuleName = '" + strModuleName + "' and ModuleType = '" + strModuleType + "' and LangCode='" + strLangCode + "' and UserType = '" + strUserType + "'";
+                ds1 = ShareClass.GetDataSetFromSql(strHQL1, "T_ProModuleLevel");
+                if (ds1.Tables[0].Rows.Count > 0)
+                {
+                    strHQL1 = "Update T_ProModuleLevel Set HomeModuleName = '" + strHomeModuleName.Replace("'", "").Replace("\"", "").Replace("\\", "") + "'" + ",IconURL = " + "'" + strIconURL + "'";
+                    strHQL1 += " Where ParentModule = '" + strParentModule + "' and ModuleName = '" + strModuleName + "' and LangCode='" + strLangCode + "' and ModuleType = '" + strModuleType + "' and UserType = '" + strUserType + "'";
+
+                    ShareClass.RunSqlCommand(strHQL1);
+                }
+            }
+
+            string strDefaultLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+            strHQL1 = string.Format(@"UPDATE T_ProModuleLevel B
+                        SET SortNumber = A.SortNumber
+                        FROM T_ProModuleLevel A
+                        WHERE A.ModuleName = B.ModuleName 
+                        AND A.ModuleType = B.ModuleType 
+                        AND A.UserType = B.UserType 
+                        AND A.LangCode <> B.LangCode 
+                        AND A.LangCode = '{0}'", strDefaultLangCode);
+            ShareClass.RunSqlCommand(strHQL1);
+        }
+    }
+
+    //更新页面模组
+    protected void UpdatePageBarModules()
+    {
+        string strHQL1;
+        string strModuleName, strParentModule, strLangCode, strHomeModuleName, strPageName, strModuleType, strUserType, strVisible, strIsDeleted, strSortNUmber, strIconURL;
+
+        DataSet ds1;
+
+        string strpath = Server.MapPath("UpdateCode\\PageModules.xls");
+
+        DataTable dt1;
+        dt1 = new DataTable();
+        dt1 = MSExcelHandler.ReadExcelToDataTable(strpath, "");
+        DataRow[] dr = dt1.Select();  //定义一个DataRow数组
+        int rowsnum = dt1.Rows.Count;
+
+        if (rowsnum == 0)
+        {
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() + "')", true);
+        }
+        else
+        {
+            for (int i = 0; i < dr.Length; i++)
+            {
+                strModuleName = dr[i]["ModuleName"].ToString().Trim();
+                strParentModule = dr[i]["ParentModule"].ToString().Trim();
+                strLangCode = dr[i]["LangCode"].ToString().Trim();
+                strHomeModuleName = dr[i]["HomeModuleName"].ToString().Trim();
+                strPageName = dr[i]["PageName"].ToString().Trim();
+                strModuleType = dr[i]["ModuleType"].ToString().Trim();
+                strUserType = dr[i]["UserType"].ToString().Trim();
+                strVisible = dr[i]["Visible"].ToString().Trim();
+                strIsDeleted = dr[i]["IsDeleted"].ToString().Trim();
+                strSortNUmber = dr[i]["SortNumber"].ToString().Trim();
+                strIconURL = dr[i]["IconURL"].ToString().Trim();
+                strIconURL = strIconURL.Replace("//", "/");
+                strIconURL = strIconURL.Replace("\\", "/");
+
+
+                strHQL1 = "Select * From T_ProModuleLevelForPage  Where ParentModule = '" + strParentModule + "' and ModuleName = '" + strModuleName + "' and ModuleType = '" + strModuleType + "' and LangCode='" + strLangCode + "' and UserType = '" + strUserType + "'";
+                ds1 = ShareClass.GetDataSetFromSql(strHQL1, "T_ProModuleLevel");
+                if (ds1.Tables[0].Rows.Count > 0)
+                {
+                    strHQL1 = "Update T_ProModuleLevelForPage Set HomeModuleName = '" + strHomeModuleName.Replace("'", "").Replace("\"", "").Replace("\\", "") + "'" + ",IconURL = " + "'" + strIconURL + "'";
+                    strHQL1 += " Where ParentModule = '" + strParentModule + "' and ModuleName = '" + strModuleName + "' and LangCode='" + strLangCode + "' and ModuleType = '" + strModuleType + "' and UserType = " + "'" + strUserType + "'";
+
+                    ShareClass.RunSqlCommand(strHQL1);
+                }
+            }
+
+            string strDefaultLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+            strHQL1 = string.Format(@"UPDATE T_ProModuleLevelForPage B
+                        SET SortNumber = A.SortNumber
+                        FROM T_ProModuleLevelForPage A
+                        WHERE A.ModuleName = B.ModuleName 
+                        AND A.ModuleType = B.ModuleType 
+                        AND A.UserType = B.UserType 
+                        AND A.LangCode <> B.LangCode 
+                        AND A.LangCode = '{0}'", strDefaultLangCode);
+            ShareClass.RunSqlCommand(strHQL1);
+        }
     }
 
     //设置缓存更改标志，并刷新页面缓存

@@ -10833,21 +10833,23 @@
   </DataBaseUpgradeFile>
   <DataBaseUpgradeFile>
     <ID>3715</ID>
-    <SQLText>UPdate T_ProModuleLevel Set ParentModule = 'TenderAndBiddingManagement' Where ParentModule = 'BiddingManagement';
-UPdate T_ProModuleLevel Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
-UPdate T_ProModule Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
+    <SQLText>
+			UPdate T_ProModuleLevel Set ParentModule = 'TenderAndBiddingManagement' Where ParentModule = 'BiddingManagement';
+			UPdate T_ProModuleLevel Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
+			UPdate T_ProModule Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
 
-UPdate T_ProModuleLevel Set HomeModuleName = '招投标管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-CN';
-UPdate T_ProModuleLevel Set HomeModuleName = '招投標管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-tw';
-UPdate T_ProModuleLevel Set HomeModuleName = 'Bieterverfahrensmanagement' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'de';
-UPdate T_ProModuleLevel Set HomeModuleName = 'GestiónDeLicitaciones' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'es';
-UPdate T_ProModuleLevel Set HomeModuleName = 'GestionDesAppelsD’Offres' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'fr';
-UPdate T_ProModuleLevel Set HomeModuleName = 'GestioneDelleGareD’Appalto' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'it';
-UPdate T_ProModuleLevel Set HomeModuleName = 'にゅうさつ・ちょうたつかん' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ja';
-UPdate T_ProModuleLevel Set HomeModuleName = 'GestãoDeLicitaçõesEConcursos' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'pt';
+			UPdate T_ProModuleLevel Set HomeModuleName = '招投标管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-CN';
+			UPdate T_ProModuleLevel Set HomeModuleName = '招投標管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-tw';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'Bieterverfahrensmanagement' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'de';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestiónDeLicitaciones' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'es';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestionDesAppelsD’Offres' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'fr';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestioneDelleGareD’Appalto' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'it';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'にゅうさつ・ちょうたつかん' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ja';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestãoDeLicitaçõesEConcursos' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'pt';
 
-UPdate T_ProModuleLevel Set HomeModuleName = 'Управлениетендерами' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ru';
-UPdate T_ProModuleLevel Set HomeModuleName = '입찰및계약관리' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ko';</SQLText>
+			UPdate T_ProModuleLevel Set HomeModuleName = 'Управлениетендерами' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ru';
+			UPdate T_ProModuleLevel Set HomeModuleName = '입찰및계약관리' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ko';
+		</SQLText>
   </DataBaseUpgradeFile>
   <DataBaseUpgradeFile>
     <ID>3716</ID>
@@ -10855,9 +10857,11 @@ UPdate T_ProModuleLevel Set HomeModuleName = '입찰및계약관리' Where Modul
   </DataBaseUpgradeFile>
   <DataBaseUpgradeFile>
     <ID>3717</ID>
-    <SQLText>UPdate T_ProModuleLevel Set SortNumber = 100 Where ModuleName = 'BidRegistration';
-UPdate T_ProModuleLevel Set SortNumber = 101 Where ModuleName = 'BidConfirmation';
-UPdate T_ProModuleLevel Set SortNumber = 102 Where ModuleName = 'BidWarning';</SQLText>
+    <SQLText>
+			UPdate T_ProModuleLevel Set SortNumber = 100 Where ModuleName = 'BidRegistration';
+			UPdate T_ProModuleLevel Set SortNumber = 101 Where ModuleName = 'BidConfirmation';
+			UPdate T_ProModuleLevel Set SortNumber = 102 Where ModuleName = 'BidWarning';
+		</SQLText>
   </DataBaseUpgradeFile>
   <DataBaseUpgradeFile>
     <ID>3718</ID>
@@ -10865,49 +10869,51 @@ UPdate T_ProModuleLevel Set SortNumber = 102 Where ModuleName = 'BidWarning';</S
   </DataBaseUpgradeFile>
   <DataBaseUpgradeFile>
     <ID>3719</ID>
-    <SQLText>DO $$
-DECLARE
-    rec RECORD;
-    seq_name TEXT;
-    max_id BIGINT;
-    sql_stmt TEXT;
-    error_msg TEXT;
-BEGIN
-    -- 查询所有包含序列列的表
-    FOR rec IN 
-        SELECT 
-            n.nspname AS schema_name,
-            c.relname AS table_name,
-            a.attname AS column_name
-        FROM pg_class c
-        JOIN pg_attribute a ON a.attrelid = c.oid
-        JOIN pg_namespace n ON n.oid = c.relnamespace
-        WHERE c.relkind = 'r'
-        AND n.nspname NOT IN ('pg_catalog', 'information_schema')
-        AND a.attnum &gt; 0
-        AND NOT a.attisdropped
-        AND pg_get_serial_sequence(n.nspname || '.' || c.relname, a.attname) IS NOT NULL
-    LOOP
-        BEGIN
-            -- 获取关联的序列名称
-            seq_name := pg_get_serial_sequence(rec.schema_name || '.' || rec.table_name, rec.column_name);
-            
-            -- 查询表中该列的最大值
-            EXECUTE 'SELECT COALESCE(MAX(' || quote_ident(rec.column_name) || '), 0) FROM ' || 
-                    quote_ident(rec.schema_name) || '.' || quote_ident(rec.table_name) INTO max_id;
-            
-            -- 生成并执行setval语句
-            sql_stmt := 'SELECT setval(' || quote_literal(seq_name) || ', ' || (max_id + 1) || ', false);';
-            EXECUTE sql_stmt;
-        EXCEPTION WHEN OTHERS THEN
-            GET STACKED DIAGNOSTICS error_msg = MESSAGE_TEXT;
-            RAISE WARNING '处理表 %.% 的列 % 时出错: %', 
-                          rec.schema_name, rec.table_name, rec.column_name, error_msg;
-        END;
-    END LOOP;
-    
-    RAISE NOTICE '序列重置操作完成';
-END $$;</SQLText>
+    <SQLText>
+			DO $$
+			DECLARE
+			rec RECORD;
+			seq_name TEXT;
+			max_id BIGINT;
+			sql_stmt TEXT;
+			error_msg TEXT;
+			BEGIN
+			-- 查询所有包含序列列的表
+			FOR rec IN
+			SELECT
+			n.nspname AS schema_name,
+			c.relname AS table_name,
+			a.attname AS column_name
+			FROM pg_class c
+			JOIN pg_attribute a ON a.attrelid = c.oid
+			JOIN pg_namespace n ON n.oid = c.relnamespace
+			WHERE c.relkind = 'r'
+			AND n.nspname NOT IN ('pg_catalog', 'information_schema')
+			AND a.attnum &gt; 0
+			AND NOT a.attisdropped
+			AND pg_get_serial_sequence(n.nspname || '.' || c.relname, a.attname) IS NOT NULL
+			LOOP
+			BEGIN
+			-- 获取关联的序列名称
+			seq_name := pg_get_serial_sequence(rec.schema_name || '.' || rec.table_name, rec.column_name);
+
+			-- 查询表中该列的最大值
+			EXECUTE 'SELECT COALESCE(MAX(' || quote_ident(rec.column_name) || '), 0) FROM ' ||
+			quote_ident(rec.schema_name) || '.' || quote_ident(rec.table_name) INTO max_id;
+
+			-- 生成并执行setval语句
+			sql_stmt := 'SELECT setval(' || quote_literal(seq_name) || ', ' || (max_id + 1) || ', false);';
+			EXECUTE sql_stmt;
+			EXCEPTION WHEN OTHERS THEN
+			GET STACKED DIAGNOSTICS error_msg = MESSAGE_TEXT;
+			RAISE WARNING '处理表 %.% 的列 % 时出错: %',
+			rec.schema_name, rec.table_name, rec.column_name, error_msg;
+			END;
+			END LOOP;
+
+			RAISE NOTICE '序列重置操作完成';
+			END $$;
+		</SQLText>
   </DataBaseUpgradeFile>
   <DataBaseUpgradeFile>
     <ID>3720</ID>
@@ -10916,5 +10922,49 @@ END $$;</SQLText>
   <DataBaseUpgradeFile>
     <ID>3721</ID>
     <SQLText>Update T_WorkFlow Set DiyNextStep = 'NO' Where DiyNextStep = 'No';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3722</ID>
+    <SQLText>
+			UPdate T_ProModuleLevel Set ParentModule = 'TenderAndBiddingManagement' Where ParentModule = 'BiddingManagement';
+			UPdate T_ProModuleLevel Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
+			UPdate T_ProModule Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement';
+
+			UPdate T_ProModuleLevel Set HomeModuleName = '招投标管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-CN';
+			UPdate T_ProModuleLevel Set HomeModuleName = '招投標管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-tw';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'Bieterverfahrensmanagement' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'de';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestiónDeLicitaciones' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'es';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestionDesAppelsD’Offres' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'fr';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestioneDelleGareD’Appalto' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'it';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'にゅうさつ・ちょうたつかん' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ja';
+			UPdate T_ProModuleLevel Set HomeModuleName = 'GestãoDeLicitaçõesEConcursos' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'pt';
+
+			UPdate T_ProModuleLevel Set HomeModuleName = 'Управлениетендерами' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ru';
+			UPdate T_ProModuleLevel Set HomeModuleName = '입찰및계약관리' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ko';
+		</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3723</ID>
+    <SQLText>UPdate T_ProModuleLevel Set HomeModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'en';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3724</ID>
+    <SQLText>
+			UPdate T_ProModuleLevel Set SortNumber = 100 Where ModuleName = 'BidRegistration';
+			UPdate T_ProModuleLevel Set SortNumber = 101 Where ModuleName = 'BidConfirmation';
+			UPdate T_ProModuleLevel Set SortNumber = 102 Where ModuleName = 'BidWarning';
+		</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3725</ID>
+    <SQLText>UPdate T_ProModuleLevel Set ParentModule = 'TenderAndBiddingManagement' Where ParentModule = 'BiddingManagement'; UPdate T_ProModuleLevel Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement'; UPdate T_ProModule Set ModuleName = 'TenderAndBiddingManagement' Where ModuleName = 'BiddingManagement'; UPdate T_ProModuleLevel Set HomeModuleName = '招投标管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-CN'; UPdate T_ProModuleLevel Set HomeModuleName = '招投標管理' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'zh-tw'; UPdate T_ProModuleLevel Set HomeModuleName = 'Bieterverfahrensmanagement' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'de'; UPdate T_ProModuleLevel Set HomeModuleName = 'GestiónDeLicitaciones' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'es'; UPdate T_ProModuleLevel Set HomeModuleName = 'GestionDesAppelsD’Offres' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'fr'; UPdate T_ProModuleLevel Set HomeModuleName = 'GestioneDelleGareD’Appalto' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'it'; UPdate T_ProModuleLevel Set HomeModuleName = 'にゅうさつ・ちょうたつかん' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ja'; UPdate T_ProModuleLevel Set HomeModuleName = 'GestãoDeLicitaçõesEConcursos' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'pt'; UPdate T_ProModuleLevel Set HomeModuleName = 'Управлениетендерами' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ru'; UPdate T_ProModuleLevel Set HomeModuleName = '입찰및계약관리' Where ModuleName = 'TenderAndBiddingManagement' and LangCode = 'ko';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3726</ID>
+    <SQLText>UPdate T_ProModuleLevel Set SortNumber = 100 Where ModuleName = 'BidRegistration'; UPdate T_ProModuleLevel Set SortNumber = 101 Where ModuleName = 'BidConfirmation'; UPdate T_ProModuleLevel Set SortNumber = 102 Where ModuleName = 'BidWarning';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3727</ID>
+    <SQLText>Update public.t_funinfordialbox Set InforName = 'DefectToBeHandled' Where InforName = '待处理的缺陷';</SQLText>
   </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
