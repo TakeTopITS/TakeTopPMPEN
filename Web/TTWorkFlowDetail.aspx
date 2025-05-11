@@ -311,7 +311,33 @@
                             </td>
                         </tr>
                         <tr>
-                            <td  style="padding-left: 5px;">
+                            <td style="padding-left: 5px;">
+
+                                <table style="width: 100%;padding-bottom:5px;">
+                                    <tr>
+                                        <td style="width: 60%; padding-top: 10px; padding-left: 10px;">
+                                            <asp:Button ID="BT_Refuse" runat="server" Height="30px" CssClass="inpu" OnClientClick="SaveDIYFormData('Refuse');" Text="<%$ Resources:lang,BoHui %>" />
+                                            &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;
+                                            <asp:Button ID="BT_AddApprover" runat="server" Text="<%$ Resources:lang,JiaJian %>" Height="30px" CssClass="inpu" OnClientClick="window.parent.document.getElementById('bodyFrame').rows = '175,*';" OnClick="BT_AddApprover_Click" />
+
+
+                                            &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;
+                                            <asp:Button ID="BT_Agree" runat="server" CssClass="inpu" Height="30px" Style="border: 1px solid red" OnClientClick="SaveDIYFormData('Agree');" Text="<%$ Resources:lang,WanChengTongGuo %>" />
+
+
+                                            &#160;&#160;&#160;&#160;  &#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  &#160;&#160;&#160;&#160;
+                                            <asp:Button ID="BT_Cancel" runat="server" CssClass="inpu" Height="30px" Enabled="False" OnClientClick="SaveDIYFormData('Cancel');" Text="<%$ Resources:lang,CheXiao %>" />
+                                        </td>
+                                        <td style="text-align: left; padding-top: 10px;">
+                                            <asp:Repeater ID="RP_RelatedModule" runat="server">
+                                                <ItemTemplate>
+                                                    <a href='<%# DataBinder.Eval(Container.DataItem,"PageName") %>&MainTableCanAdd=<%# DataBinder.Eval(Container.DataItem,"MainTableCanAdd").ToString().Trim() %>&DetailTableCanAdd=<%# DataBinder.Eval(Container.DataItem,"DetailTableCanAdd").ToString().Trim() %>&MainTableCanEdit=<%# DataBinder.Eval(Container.DataItem,"MainTableCanEdit").ToString().Trim() %>&MainTableCanDelete=<%# DataBinder.Eval(Container.DataItem,"MainTableCanDelete").ToString().Trim() %>&DetailTableCanEdit=<%# DataBinder.Eval(Container.DataItem,"DetailTableCanEdit").ToString().Trim() %>&&DetailTableCanDelete=<%# DataBinder.Eval(Container.DataItem,"DetailTableCanDelete").ToString().Trim() %>&RelatedWorkFlowID=<%# DataBinder.Eval(Container.DataItem,"WorkflowID").ToString().Trim() %>&RelatedWorkflowStepID=<%# DataBinder.Eval(Container.DataItem,"WorkflowStepID") %>&RelatedWorkflowStepDetailID=<%# DataBinder.Eval(Container.DataItem,"WorkflowStepDetailID") %>' target="_blank"><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %> </a>
+                                                    &nbsp;
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </td>
+                                    </tr>
+                                </table>
                                 <asp:Panel ID="Panel_ChildWF" runat="server" Style="border: 1px solid red; width: 58%;" Visible="False">
                                     <div>
                                         <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
@@ -340,36 +366,96 @@
                                                 </td>
                                             </tr>
                                         </table>
+                                        <%--<asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,ZiGongZuoLiuLieBiao %>"></asp:Label>--%>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
+                                            <tr>
+                                                <td width="7">
+                                                    <img height="26" src="ImagesSkin/main_n_l.jpg" width="7" /></td>
+                                                <td>
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td align="center" width="10%"><strong>
+                                                                <asp:Label ID="Label82" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label>
+                                                            </strong></td>
+                                                            <td align="center" width="35%"><strong>
+                                                                <asp:Label ID="Label83" runat="server" Text="<%$ Resources:lang,GongZuoLiu %>"></asp:Label>
+                                                            </strong></td>
+                                                            <td align="center" width="10%"><strong>
+                                                                <asp:Label ID="Label84" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>
+                                                            </strong></td>
+                                                            <td align="center" width="10%"><strong>
+                                                                <asp:Label ID="Label85" runat="server" Text="<%$ Resources:lang,ShenQingRen %>"></asp:Label>
+                                                            </strong></td>
+                                                            <td align="center" width="20%"><strong>
+                                                                <asp:Label ID="Label86" runat="server" Text="<%$ Resources:lang,ShenQingShiJian %>"></asp:Label>
+                                                            </strong></td>
+                                                            <td align="center" width="10%"><strong>
+                                                                <asp:Label ID="Label87" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
+                                                            </strong></td>
+                                                            <td align="center" width="5%"><strong></strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td width="6" align="right">
+                                                    <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" /></td>
+                                            </tr>
+                                        </table>
+                                        <asp:DataGrid ID="DataGrid7" runat="server" AutoGenerateColumns="False"
+                                            ShowHeader="False" Height="1px"
+                                            Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                            <Columns>
+                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                </asp:BoundColumn>
+                                                <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
+                                                    DataTextField="WLName" HeaderText="Workflow" Target="_blank">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
+                                                </asp:HyperLinkColumn>
+                                                <asp:TemplateColumn HeaderText="HomeName">
+                                                    <ItemTemplate>
+                                                        <%# ShareClass.GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
+                                                    </ItemTemplate>
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                </asp:TemplateColumn>
+                                                <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
+                                                    DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                </asp:HyperLinkColumn>
+                                                <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                </asp:BoundColumn>
+                                                <asp:TemplateColumn HeaderText="Status">
+                                                    <ItemTemplate>
+                                                    </ItemTemplate>
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+                                                </asp:TemplateColumn>
+                                                <asp:TemplateColumn>
+                                                    <ItemTemplate>
+                                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?RelatedType=WorkFlow&WLID={0}") %>'
+                                                            Target="_blank"><img src="ImagesSkin/Doc.gif" class="noBorder" /></asp:HyperLink>
+
+                                                    </ItemTemplate>
+
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                </asp:TemplateColumn>
+                                            </Columns>
+
+                                            <EditItemStyle BackColor="#2461BF" />
+
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+
+                                            <ItemStyle CssClass="itemStyle" />
+
+                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+
+                                            <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        </asp:DataGrid>
+
                                     </div>
                                 </asp:Panel>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td style="width: 60%; padding-top: 10px; padding-left: 10px;">
-                                            <asp:Button ID="BT_Refuse" runat="server" Height="30px" CssClass="inpu" OnClientClick="SaveDIYFormData('Refuse');" Text="<%$ Resources:lang,BoHui %>" />
-                                            &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;
-                                            <asp:Button ID="BT_AddApprover" runat="server" Text="<%$ Resources:lang,JiaJian %>" Height="30px" CssClass="inpu" OnClientClick="window.parent.document.getElementById('bodyFrame').rows = '175,*';" OnClick="BT_AddApprover_Click" />
-
-
-                                            &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;
-                                            <asp:Button ID="BT_Agree" runat="server" CssClass="inpu" Height="30px" Style="border: 1px solid red" OnClientClick="SaveDIYFormData('Agree');" Text="<%$ Resources:lang,WanChengTongGuo %>" />
-
-
-                                            &#160;&#160;&#160;&#160;  &#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  &#160;&#160;&#160;&#160;
-                                            <asp:Button ID="BT_Cancel" runat="server" CssClass="inpu" Height="30px" Enabled="False" OnClientClick="SaveDIYFormData('Cancel');" Text="<%$ Resources:lang,CheXiao %>" />
-                                        </td>
-                                        <td style="text-align: left; padding-top: 10px;">
-                                            <asp:Repeater ID="RP_RelatedModule" runat="server">
-                                                <ItemTemplate>
-                                                    <a href='<%# DataBinder.Eval(Container.DataItem,"PageName") %>&MainTableCanAdd=<%# DataBinder.Eval(Container.DataItem,"MainTableCanAdd").ToString().Trim() %>&DetailTableCanAdd=<%# DataBinder.Eval(Container.DataItem,"DetailTableCanAdd").ToString().Trim() %>&MainTableCanEdit=<%# DataBinder.Eval(Container.DataItem,"MainTableCanEdit").ToString().Trim() %>&MainTableCanDelete=<%# DataBinder.Eval(Container.DataItem,"MainTableCanDelete").ToString().Trim() %>&DetailTableCanEdit=<%# DataBinder.Eval(Container.DataItem,"DetailTableCanEdit").ToString().Trim() %>&&DetailTableCanDelete=<%# DataBinder.Eval(Container.DataItem,"DetailTableCanDelete").ToString().Trim() %>&RelatedWorkFlowID=<%# DataBinder.Eval(Container.DataItem,"WorkflowID").ToString().Trim() %>&RelatedWorkflowStepID=<%# DataBinder.Eval(Container.DataItem,"WorkflowStepID") %>&RelatedWorkflowStepDetailID=<%# DataBinder.Eval(Container.DataItem,"WorkflowStepDetailID") %>' target="_blank"><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %> </a>
-                                                    &nbsp;
-                                                </ItemTemplate>
-                                            </asp:Repeater>
-                                        </td>
-                                    </tr>
-                                </table>
-
                             </td>
                         </tr>
+
                         <tr>
                             <td class="formItemBgStyle" align="left">
                                 <table>
@@ -820,94 +906,7 @@
                                                                     </table>
                                                                 </td>
                                                             </tr>
-                                                            <tr>
-                                                                <td valign="top" style="padding: 5px 5px 5px 5px; text-align: left;">
-                                                                    <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,ZiGongZuoLiuLieBiao %>"></asp:Label>
-                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
-                                                                        <tr>
-                                                                            <td width="7">
-                                                                                <img height="26" src="ImagesSkin/main_n_l.jpg" width="7" /></td>
-                                                                            <td>
-                                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                                    <tr>
-                                                                                        <td align="center" width="10%"><strong>
-                                                                                            <asp:Label ID="Label82" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label>
-                                                                                        </strong></td>
-                                                                                        <td align="center" width="35%"><strong>
-                                                                                            <asp:Label ID="Label83" runat="server" Text="<%$ Resources:lang,GongZuoLiu %>"></asp:Label>
-                                                                                        </strong></td>
-                                                                                        <td align="center" width="10%"><strong>
-                                                                                            <asp:Label ID="Label84" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>
-                                                                                        </strong></td>
-                                                                                        <td align="center" width="10%"><strong>
-                                                                                            <asp:Label ID="Label85" runat="server" Text="<%$ Resources:lang,ShenQingRen %>"></asp:Label>
-                                                                                        </strong></td>
-                                                                                        <td align="center" width="20%"><strong>
-                                                                                            <asp:Label ID="Label86" runat="server" Text="<%$ Resources:lang,ShenQingShiJian %>"></asp:Label>
-                                                                                        </strong></td>
-                                                                                        <td align="center" width="10%"><strong>
-                                                                                            <asp:Label ID="Label87" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
-                                                                                        </strong></td>
-                                                                                        <td align="center" width="5%"><strong></strong></td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                            <td width="6" align="right">
-                                                                                <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" /></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                    <asp:DataGrid ID="DataGrid7" runat="server" AutoGenerateColumns="False"
-                                                                        ShowHeader="False" Height="1px"
-                                                                        Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
-                                                                        <Columns>
-                                                                            <asp:BoundColumn DataField="WLID" HeaderText="Number">
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                            </asp:BoundColumn>
-                                                                            <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
-                                                                                DataTextField="WLName" HeaderText="Workflow" Target="_blank">
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
-                                                                            </asp:HyperLinkColumn>
-                                                                            <asp:TemplateColumn HeaderText="HomeName">
-                                                                                <ItemTemplate>
-                                                                                    <%# ShareClass.GetWorkflowTypeHomeName(Eval("WLType").ToString()) %>
-                                                                                </ItemTemplate>
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
-                                                                            </asp:TemplateColumn>
-                                                                            <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                            </asp:HyperLinkColumn>
-                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
-                                                                            </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="Status">
-                                                                                <ItemTemplate>
-                                                                                </ItemTemplate>
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-                                                                            </asp:TemplateColumn>
-                                                                            <asp:TemplateColumn>
-                                                                                <ItemTemplate>
-                                                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?RelatedType=WorkFlow&WLID={0}") %>'
-                                                                                        Target="_blank"><img src="ImagesSkin/Doc.gif" class="noBorder" /></asp:HyperLink>
 
-                                                                                </ItemTemplate>
-
-                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
-                                                                            </asp:TemplateColumn>
-                                                                        </Columns>
-
-                                                                        <EditItemStyle BackColor="#2461BF" />
-
-                                                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-
-                                                                        <ItemStyle CssClass="itemStyle" />
-
-                                                                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
-
-                                                                        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                    </asp:DataGrid>
-                                                                </td>
-                                                            </tr>
                                                         </table>
                                                     </ContentTemplate>
                                                 </cc1:TabPanel>

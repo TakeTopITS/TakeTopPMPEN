@@ -196,7 +196,7 @@ public partial class TTWorkFlowDetail : System.Web.UI.Page
                 LoadWFStepChildWF(strWLID, strStepID, strTemName, int.Parse(strCurrentStepSortNumber));
 
                 //列出子工作流
-                LoadChildWorkflow(strWLID);
+                LoadChildWorkflow(strWLID,strStepID);
 
                 try
                 {
@@ -2084,18 +2084,6 @@ public partial class TTWorkFlowDetail : System.Web.UI.Page
         }
     }
 
-    //取得此工作流相关子工作流列表
-    protected void LoadChildWorkflow(string strWLID)
-    {
-        string strHQL;
-
-        strHQL = "Select * From T_Workflow Where WLID in ( Select WFChildID From T_WFStepRelatedWF Where WFID = " + strWLID + ")";
-        strHQL += " Order By WLID DESC";
-        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlow");
-
-        DataGrid7.DataSource = ds;
-        DataGrid7.DataBind();
-    }
 
     protected string GetWorkFlowStepDetailOperatorStatus(string strID)
     {
@@ -2474,6 +2462,25 @@ public partial class TTWorkFlowDetail : System.Web.UI.Page
         LB_WorkFlow.Text = strTemName;
     }
 
+    //取得此工作流相关子工作流列表
+    protected void LoadChildWorkflow(string strWLID, string strStepID)
+    {
+        string strHQL;
+
+        //strHQL = "Select * From T_Workflow Where WLID in ( Select WFChildID From T_WFStepRelatedWF Where WFID = " + strWLID + ")";
+        //strHQL += " Order By WLID DESC";
+
+        strHQL = string.Format(@"Select * From T_Workflow Where WLID in ( Select wfchildid From T_WFStepRelatedWF Where WFID = {0}
+             and wfstepid in (Select A.StepID From T_WorkFlowTStep A,T_WorkFlowStep B 
+							  Where A.SortNumber = B.SortNumber and B.StepID = {1} and A.TemName In (Select TemName From T_WorkFlow Where WLID = {0} ))) ", strWLID, strStepID);
+
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlow");
+
+        DataGrid7.DataSource = ds;
+        DataGrid7.DataBind();
+    }
+
+    //判断是否存在必须通过的归属流程
     protected void LoadWFStepChildWF(string strParentWLID, string strParentStepID, string strTemName, int intSortNumber)
     {
         string strHQL;
@@ -2503,6 +2510,8 @@ public partial class TTWorkFlowDetail : System.Web.UI.Page
             Panel_BelongChildWF.Visible = true;
         }
     }
+
+
 
     protected void LoadWorkFlowTStep(string strTemName, string strCurrentStepSortNumber)
     {

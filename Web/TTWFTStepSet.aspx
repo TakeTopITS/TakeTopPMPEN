@@ -752,7 +752,7 @@
                                                                         <asp:Label ID="LB_ChildTemID" runat="server" Visible="False"></asp:Label><asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,LiuChengMoBanLeiXing %>"></asp:Label>£º </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DL_RelatedWFType" runat="server" AutoPostBack="True"
-                                                                            DataTextField="Type" DataValueField="Type"
+                                                                            DataTextField="HomeName" DataValueField="Type"
                                                                             OnSelectedIndexChanged="DL_RelatedWFType_SelectedIndexChanged">
                                                                         </asp:DropDownList></td>
                                                                     <td align="right" class="formItemBgStyle">

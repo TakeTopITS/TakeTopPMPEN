@@ -1205,11 +1205,10 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
         strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
 
-        strHQL = "Select distinct Type From T_WorkFlowTemplate Where Authority = 'All'";
-        strHQL += " and char_length(rtrim(ltrim(XSNFile)))>0 ";
-        strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
-        strHQL += " Or BelongDepartCode in " + strDepartString + ")";
-
+        strHQL = string.Format(@"Select Type,HomeName From T_WLType Where Type In (Select distinct Type From T_WorkFlowTemplate Where Authority = 'All'
+                and char_length(rtrim(ltrim(XSNFile)))>0
+                and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode('{0}'))
+                Or BelongDepartCode in {1})) and LangCode ='{2}'", strDepartCode,strDepartString,strLangCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
 
         DL_RelatedWFType.DataSource = ds;

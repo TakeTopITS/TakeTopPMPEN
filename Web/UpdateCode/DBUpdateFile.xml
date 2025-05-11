@@ -10909,4 +10909,12 @@ BEGIN
     RAISE NOTICE '序列重置操作完成';
 END $$;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3720</ID>
+    <SQLText>Update T_WorkFlow Set DiyNextStep = 'YES' Where DiyNextStep = 'Yes';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3721</ID>
+    <SQLText>Update T_WorkFlow Set DiyNextStep = 'NO' Where DiyNextStep = 'No';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
