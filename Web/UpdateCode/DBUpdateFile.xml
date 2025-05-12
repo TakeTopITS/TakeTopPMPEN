@@ -10967,4 +10967,8 @@
     <ID>3727</ID>
     <SQLText>Update public.t_funinfordialbox Set InforName = 'DefectToBeHandled' Where InforName = '待处理的缺陷';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3728</ID>
+    <SQLText>Update T_ProModuleLevel Set IsDeleted = 'NO',Visible ='YES' Where ModuleName = '数据库升级维护';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

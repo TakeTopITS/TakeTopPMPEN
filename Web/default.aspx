@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" %>
 
 <%@ Import Namespace="System.Globalization" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -238,7 +238,7 @@
                                     &nbsp;&nbsp;<asp:HyperLink ID="HL_UserManual" NavigateUrl="UserManual/TakeTopGLBGuide.zip" Text="<%$ Resources:lang,YongHuShouCe%>" runat="server"></asp:HyperLink>
                                 </em>
                                 <em class="copy">
-                                    <asp:Label ID="LB_Copyright" runat="server" Text="<a href=TTVersionRegister.aspx>Copyright? TakeTop Software</a> 2006-2026 <a href=https://www.taketopits.com>http://www.taketopits.com</a>"></asp:Label>
+                                    <asp:Label ID="LB_Copyright" runat="server" Text="<a href=Outer/TTVersionRegister.aspx>Copyright? TakeTop Software</a> 2006-2026 <a href=https://www.taketopits.com>http://www.taketopits.com</a>"></asp:Label>
                                 </em>
                             </center>
                         </div>
