@@ -28698,11 +28698,17 @@
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>第{0}行、トン当たり消費量が空です</value>
   </data>
+  <data name="PiHao" xml:space="preserve">
+    <value>ロット番号 </value>
+  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>第{0}行、トン当たり消費量は小数のみ可能です</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>第{0}行、製品番号が空です</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value>材質証明書番号</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>製品名</value>
@@ -30845,5 +30851,8 @@
   </data>
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>資金源</value>
+  </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>未完量</value>
   </data>
 </root>

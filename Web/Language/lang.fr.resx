@@ -28695,11 +28695,17 @@
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Ligne {0}, la consommation par tonne ne peut pas être vide</value>
   </data>
+  <data name="PiHao" xml:space="preserve">
+    <value>Numéro de lot</value>
+  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Ligne {0}, la consommation par tonne ne peut être qu'un nombre décimal</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Ligne {0}, le numéro du produit ne peut pas être vide</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value>Numéro de certificat de matériau</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>Nom du produit</value>
@@ -30788,5 +30794,8 @@
   </data>
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>Source de financement</value>
+  </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>Quantité incomplète</value>
   </data>
 </root>

@@ -28695,11 +28695,17 @@
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Строка {0}, расход на тонну не может быть пустым</value>
   </data>
+  <data name="PiHao" xml:space="preserve">
+    <value>Номер партии</value>
+  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Строка {0}, расход на тонну может быть только десятичным числом</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Строка {0}, номер продукта не может быть пустым</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value>Номер сертификата материала</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>Название продукта</value>
@@ -30836,5 +30842,8 @@
   </data>
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>Источник финансирования</value>
+  </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>Неполное количество</value>
   </data>
 </root>

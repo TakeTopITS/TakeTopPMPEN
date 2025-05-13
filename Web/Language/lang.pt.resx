@@ -28695,11 +28695,17 @@
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Linha {0}, o consumo por tonelada não pode estar vazio</value>
   </data>
+  <data name="PiHao" xml:space="preserve">
+    <value>Número do lote</value>
+  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Linha {0}, o consumo por tonelada só pode ser um número decimal</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Linha {0}, o número do produto não pode estar vazio</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value>Número do certificado de material</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>Nome do produto</value>
@@ -30812,5 +30818,8 @@
   </data>
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>Fonte de recursos</value>
+  </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>Quantidade incompleta</value>
   </data>
 </root>

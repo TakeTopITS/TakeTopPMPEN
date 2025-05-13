@@ -30924,4 +30924,7 @@
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>자금 출처</value>
   </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>미완량 </value>
+  </data>
 </root>

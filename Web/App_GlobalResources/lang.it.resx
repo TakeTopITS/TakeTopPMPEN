@@ -28705,11 +28705,17 @@
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Riga {0}, il costo di produzione non può essere vuoto</value>
   </data>
+  <data name="PiHao" xml:space="preserve">
+    <value>Numero di lotto</value>
+  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Riga {0}, il costo di produzione può essere solo un numero decimale</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Riga {0}, il consumo per tonnellata non può essere vuoto</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value>Numero del certificato del materiale</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>Riga {0}, il consumo per tonnellata può essere solo un numero decimale</value>
@@ -31040,5 +31046,8 @@
   </data>
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>Fonte di finanziamento</value>
+  </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>Quantità incompleta</value>
   </data>
 </root>

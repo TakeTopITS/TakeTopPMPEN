@@ -120,20 +120,20 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: right;">
-                                                                        <asp:Label ID="Label10" runat="server" Text="批号"></asp:Label>：
+                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,PiHao%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="height: 8px; text-align: left;">
                                                                         <%# DataBinder.Eval(Container.DataItem,"BatchNumber") %>
                                                                     </td>
                                                                     <td style="text-align: right; height: 8px;">
-                                                                        <asp:Label ID="Label11" runat="server" Text="生产日期"></asp:Label>：
+                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShengChanRiJi%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="height: 8px; text-align: left;">
                                                                         <table>
                                                                             <tr>
                                                                                 <td><%#  DateTime.Parse( DataBinder.Eval(Container.DataItem,"ProductDate").ToString()).ToString("yyyy-MM-dd") %></td>
                                                                                 <td>
-                                                                                    <asp:Label ID="Label14" runat="server" Text="失效日期"></asp:Label>：</td>
+                                                                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ShiXiaoRiJi%>"></asp:Label>：</td>
                                                                                 <td>
                                                                                     <%# DateTime.Parse( DataBinder.Eval(Container.DataItem,"ExpiryDate").ToString()).ToString("yyyy-MM-dd") %></td>
                                                                             </tr>
@@ -143,13 +143,13 @@
                                                                 <tr>
 
                                                                     <td style="text-align: right; height: 8px;">
-                                                                        <asp:Label ID="Label13" runat="server" Text="生产设备号"></asp:Label>：
+                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ShengChanSheBeiHao%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="height: 8px; text-align: left;">
                                                                         <%# DataBinder.Eval(Container.DataItem,"ProductionEquipmentNumber") %>
                                                                     </td>
                                                                     <td style="text-align: right;">
-                                                                        <asp:Label ID="Label12" runat="server" Text="材质单号"></asp:Label>：
+                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,CaiZhiChanHao%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="height: 8px; text-align: left;">
                                                                         <%# DataBinder.Eval(Container.DataItem,"MaterialFormNumber") %>

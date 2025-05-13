@@ -28695,11 +28695,17 @@
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Zeile {0}, Tonnenverbrauch darf nicht leer sein</value>
   </data>
+  <data name="PiHao" xml:space="preserve">
+    <value>Chargennummer</value>
+  </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Zeile {0}, Tonnenverbrauch muss eine Dezimalzahl sein</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Zeile {0}, Produktnummer darf nicht leer sein</value>
+  </data>
+  <data name="CaiZhiChanHao" xml:space="preserve">
+    <value>Materialzertifikatnummer</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
     <value>Produktname</value>
@@ -30986,5 +30992,8 @@
   </data>
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>Quelle der Mittel </value>
+  </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>Unvollständige Menge</value>
   </data>
 </root>

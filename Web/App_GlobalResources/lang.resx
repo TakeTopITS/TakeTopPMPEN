@@ -31718,4 +31718,8 @@
     <value>资金来源</value>
     <comment>Quelle der Mittel </comment>
   </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>末完量</value>
+    <comment>末完量</comment>
+  </data>
 </root>

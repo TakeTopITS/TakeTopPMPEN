@@ -235,10 +235,10 @@
                                                                                                                             PositiveColor="" Precision="0" Width="40px">0</NickLee:NumberBox><asp:Label ID="Label52" runat="server" Font-Bold="True" Text="%"></asp:Label>
                                                                                                                     </td>
                                                                                                                      <td style="text-align: right;" >
-                                                                                                                         <asp:Label ID="Label7" runat="server"  Text="末完量" />： <asp:Label ID="LB_RequireNumber" runat="server"  />
+                                                                                                                         <asp:Label ID="Label7" runat="server"  Text="<%$ Resources:lang,WeiHuanLiang %>" />： <asp:Label ID="LB_RequireNumber" runat="server"  />
                                                                                                                     </td>
                                                                                                                     <td style="text-align: right;" >
-                                                                                                                        <asp:Label ID="Label6" runat="server" Text="完成量" />：
+                                                                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,WanChengLiang %>" />：
                                                                                                                     </td>
                                                                                                                     <td style="text-align: left;" >
                                                                                                                         <NickLee:NumberBox ID="NB_FinishedNumber" runat="server" Amount="0" MaxAmount="1000000000000" MinAmount="0" Precision="2" Width="60px">

@@ -30937,4 +30937,7 @@
   <data name="ZiJunLaiYuan" xml:space="preserve">
     <value>资金来源</value>
   </data>
+  <data name="WeiHuanLiang" xml:space="preserve">
+    <value>末完量</value>
+  </data>
 </root>
