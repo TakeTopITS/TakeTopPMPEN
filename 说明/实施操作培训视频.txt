@@ -1,9 +1,6 @@
 ﻿实施操作培训视频：
 https://www.taketopits.com/Download/TrainVideo/Implementation/KeyModuleImplementationVideo.rar
-<<<<<<< HEAD
 或
 百度网盘
 https://pan.baidu.com/s/12SWT4Wd7x0YJJmhUYwR3sQ
  提取码: b727 
-=======
->>>>>>> a5a97bc6e5940d4b1e9e561d5e8a0ba1d01d2327
