@@ -1,4 +1,2 @@
 ﻿功能特点讲解视频：
 https://www.taketopits.com/Download/TrainVideo/Sales/KeyFunctionSaleVideo.rar
-或
-https://github.com/TakeTopITS/ECMP
