@@ -1,4 +1,4 @@
-﻿1、用Visual Studio 2022打开安装目录下Source目录下的TakeTopMPWinPGSolution.sln 解决方案进行开发和编译，有问题请联系泰顶客服，电话：021-51085119，EMail: 623077337@qq.com
+﻿1、用Visual Studio 2022打开安装目录下Source目录下的TakeTopDECMPWinPGSolutionENCore.sln解决方案进行开发和编译，有问题请联系泰顶客服，电话：021-51085119，EMail: 623077337@qq.com
 
 2、如果编译时组件引用的DLL出错，那么可以把出错的引用删除掉，并重新把Npgsql,NHibernate,newtown.json,System.Text.Json,ProjectMgt.DAL等组件从主程序Web/Bin目录下引用就可以了！
 
