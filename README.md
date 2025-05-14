@@ -46,5 +46,5 @@ For any questions, please contact TaiDing Customer Service:
 功能俱全，成熟可靠的泰顶项目管理软件[综合平台]全套源码下载，含测试数据，源码请用visual studio 2022编译，
 注意此开源基于AGPL-3.0 license协议发布，仅供学习研究，如要商用需申请！
 
-有问题请联系泰顶客服，电话：021-51085119，EMail: 623077337@qq.com
+有问题请联系泰顶客服，电话：（086）021-51085119，EMail: 623077337@qq.com
       
