@@ -1261,7 +1261,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 										  where ((relatedWorkFlowTemplate.RelatedType ='{0}' and relatedWorkFlowTemplate.RelatedID = {1})
 										 Or (relatedWorkFlowTemplate.WFTemplateName in (Select PlanStartupRelatedWorkflowTemplate From T_Project 
 										 Where ProjectID = {1})))) Or wlType.Type like '{2}'|| '%'))
-										 and wlType.LangCode = 'zh-CN'  order by wlType.SortNumber ASC", strRelatedType, strRelatedID, strCNRelatedType);
+										 and wlType.LangCode = '{3}'  order by wlType.SortNumber ASC", strRelatedType, strRelatedID, strCNRelatedType,strLangCode);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WLType");
 

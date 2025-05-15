@@ -10971,4 +10971,8 @@
     <ID>3728</ID>
     <SQLText>Update T_ProModuleLevel Set IsDeleted = 'NO',Visible ='YES' Where ModuleName = '数据库升级维护';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3729</ID>
+    <SQLText>Update public.t_wltype Set HomeName = Type Where LangCode = 'en';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
