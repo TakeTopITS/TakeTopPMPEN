@@ -10987,4 +10987,8 @@ Update public.T_ProModuleLevel Set HomeModuleName = '조작내비게이션' Wher
 Update public.T_ProModuleLevel Set HomeModuleName = 'NavegaçãoDeOperação' Where ModuleName = 'OperateNavigation' and LangCode = 'pt';
 Update public.T_ProModuleLevel Set HomeModuleName = 'ОперационнаяHавигация' Where ModuleName = 'OperateNavigation' and LangCode = 'ru';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3731</ID>
+    <SQLText>Update T_ProModuleLevel Set IsDeleted = 'YES' Where ModuleName = 'MaterialManagement';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

@@ -189,7 +189,7 @@
                                                                                         <asp:ListItem Value="DIYAPP" Text="<%$ Resources:lang,ZiDingYiAPPMoZu%>" />
                                                                                         <asp:ListItem Value="SYSTEM" Text="<%$ Resources:lang,XiTongMoZu%>" />
                                                                                         <asp:ListItem Value="APP" Text="<%$ Resources:lang,APPMoZu%>" />
-                                                                                        <asp:ListItem Value="SITE" Text="<%$ Resources:lang,WangZhanMoZu%>" />
+                                                                                    <%--    <asp:ListItem Value="SITE" Text="<%$ Resources:lang,WangZhanMoZu%>" />--%>
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td style="text-align: right;" class="tdLeft3" colspan="2">
