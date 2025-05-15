@@ -33,16 +33,16 @@ public partial class TTPnPCameraView : System.Web.UI.Page
     private void BindPnPCameraData()
     {
 
-        string strCameraInfoHQL = string.Format(@"select (case when i.CameraType = 1 then 'OrganizationalStructureDepartment'
-			when i.CameraType = 2 then 'ProjectDepartment'
+        string strCameraInfoHQL = string.Format(@"select (case when i.CameraType = '1' then 'OrganizationalStructureDepartment'
+			when i.CameraType = '2' then 'ProjectDepartment'
 			end ) TypeName
-            ,(case when i.CameraType = 1 then d.DepartName
-			            when i.CameraType = 2 then p.ProjectName
+            ,(case when i.CameraType = '1' then d.DepartName
+			            when i.CameraType = '2' then p.ProjectName
 			            end ) DPName
             ,i.CameraName,i.ServerIP,i.CameraUserName,
             i.CameraPass,i.CreatorName,i.CreateTime,i.ID,i.CameraType from T_CameraInfo i 
-            left join T_Department d on i.ForeignID = d.DepartCode and i.CameraType = 1
-            left join T_Project p on i.ForeignID = cast(p.ProjectID as varchar(50)) and i.CameraType = 2
+            left join T_Department d on i.ForeignID = d.DepartCode and i.CameraType = '1'
+            left join T_Project p on i.ForeignID = cast(p.ProjectID as varchar(50)) and i.CameraType = '2'
             order by i.CreateTime desc");   
         DataTable dtCameraInfo = ShareClass.GetDataSetFromSql(strCameraInfoHQL, "strCameraInfoHQL").Tables[0];
 
