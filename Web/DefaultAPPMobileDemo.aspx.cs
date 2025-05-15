@@ -258,12 +258,7 @@ public partial class DefaultAPPMobileDemo : System.Web.UI.Page
                 try
                 {
                     TakeTopLicense license = new TakeTopLicense();
-                    if (!license.CheckWEBLicense(strServerName))
-                    {
-                        Response.Redirect("TTDisplayErrors.aspx");
-                        return;
-                    }
-
+                   
                     Session["SystemVersionType"] = license.GetVerType(strServerName);
                     Session["ForbitModule"] = license.GetForbitModuleString(strServerName);
                 }

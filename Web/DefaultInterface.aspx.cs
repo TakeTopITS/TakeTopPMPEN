@@ -55,11 +55,7 @@ public partial class DefaultInterface : System.Web.UI.Page
 
             string strServerName = System.Configuration.ConfigurationManager.AppSettings["ServerName"];
             TakeTopLicense license = new TakeTopLicense();
-            if (!license.CheckWEBLicense(strServerName))
-            {
-                Response.Redirect("TTDisplayErrors.aspx");
-                return;
-            }
+           
             Session["SystemVersionType"] = license.GetVerType(strServerName);
             if (System.Configuration.ConfigurationManager.AppSettings["ProductType"].IndexOf("SAAS") > -1)
             {
@@ -516,11 +512,6 @@ public partial class DefaultInterface : System.Web.UI.Page
                 try
                 {
                     TakeTopLicense license = new TakeTopLicense();
-                    if (!license.CheckWEBLicense(strServerName))
-                    {
-                        Response.Redirect("TTDisplayErrors.aspx");
-                        return;
-                    }
 
                     Session["SystemVersionType"] = license.GetVerType(strServerName);
                     Session["ForbitModule"] = license.GetForbitModuleString(strServerName);

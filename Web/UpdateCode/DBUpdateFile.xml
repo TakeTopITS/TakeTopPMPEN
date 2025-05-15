@@ -10975,4 +10975,16 @@
     <ID>3729</ID>
     <SQLText>Update public.t_wltype Set HomeName = Type Where LangCode = 'en';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3730</ID>
+    <SQLText>Update public.T_ProModuleLevel Set HomeModuleName = 'Bedienungsnavigation' Where ModuleName = 'OperateNavigation' and LangCode = 'de';
+Update public.T_ProModuleLevel Set HomeModuleName = 'NavegaciónDeOperación' Where ModuleName = 'OperateNavigation' and LangCode = 'es';
+Update public.T_ProModuleLevel Set HomeModuleName = 'NavigationOpérationnelle' Where ModuleName = 'OperateNavigation' and LangCode = 'fr';
+Update public.T_ProModuleLevel Set HomeModuleName = 'NavigazioneOperativa' Where ModuleName = 'OperateNavigation' and LangCode = 'it';
+Update public.T_ProModuleLevel Set HomeModuleName = '操作ナビゲーション' Where ModuleName = 'OperateNavigation' and LangCode = 'ja';
+Update public.T_ProModuleLevel Set HomeModuleName = '操作導航' Where ModuleName = 'OperateNavigation' and LangCode = 'zh-tw';
+Update public.T_ProModuleLevel Set HomeModuleName = '조작내비게이션' Where ModuleName = 'OperateNavigation' and LangCode = 'ko';
+Update public.T_ProModuleLevel Set HomeModuleName = 'NavegaçãoDeOperação' Where ModuleName = 'OperateNavigation' and LangCode = 'pt';
+Update public.T_ProModuleLevel Set HomeModuleName = 'ОперационнаяHавигация' Where ModuleName = 'OperateNavigation' and LangCode = 'ru';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

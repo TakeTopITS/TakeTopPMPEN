@@ -395,12 +395,7 @@ public class Msg
             try
             {
                 TakeTopLicense license = new TakeTopLicense();
-                if (!license.CheckWEBLicense(strServerName))
-                {
-                    HttpContext.Current.Response.Redirect("TTDisplayErrors.aspx");
-                    return;
-                }
-
+              
                 HttpContext.Current.Session["SystemVersionType"] = license.GetVerType(strServerName);
                 HttpContext.Current.Session["ForbitModule"] = license.GetForbitModuleString(strServerName);
             }
