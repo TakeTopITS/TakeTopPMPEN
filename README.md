@@ -20,7 +20,7 @@
 
 **TakeTop Project Management Platform** is fully open-source. Users can visit the TakeTopITS Group website ([https://www.taketopits.com](https://www.taketopits.com)) to try it online and experience its features.
 
-To promote the development of project management software in the industry and enhance corporate project management capabilities, TaiDingTuo Ding Group has adopted an open strategy. It offers its own intellectual property rights, a comprehensive and mature **TakeTop Project Management Platform [Integrated Platform]** with full source code download, including test data. The source code should be compiled using Visual Studio 2022. Note that this open-source release is based on the AGPL-3.0 license agreement and is intended for learning and research purposes only. Commercial use requires an application.
+To promote the development of project management software in the industry and enhance corporate project management capabilities, TaiDingTuo Ding Group has adopted an open strategy. It offers its own intellectual property rights, a comprehensive and mature **TakeTop Project Management Platform** with full source code download, including test data. The source code should be compiled using Visual Studio 2022. Note that this open-source release is based on the AGPL-3.0 license agreement and is intended for learning and research purposes only. Commercial use requires an application.
 
 For any questions, please contact TaiDing Customer Service:
 - Phone: （086）021-51085119
