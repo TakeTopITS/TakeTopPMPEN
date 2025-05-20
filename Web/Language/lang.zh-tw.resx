@@ -12375,20 +12375,11 @@
   <data name="StatusValue" xml:space="preserve">
     <value>狀態值</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>終止</value>
-  </data>
   <data name="String10" xml:space="preserve">
     <value>評標</value>
   </data>
   <data name="String11" xml:space="preserve">
     <value>i</value>
-  </data>
-  <data name="String3" xml:space="preserve">
-    <value>o</value>
-  </data>
-  <data name="String4" xml:space="preserve">
-    <value>儲備人數</value>
   </data>
   <data name="String4ChengDao" xml:space="preserve">
     <value>層-道：</value>
@@ -24051,9 +24042,6 @@
   <data name="BaoFeiLiaoPing" xml:space="preserve">
     <value>報廢物料</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>在用</value>
-  </data>
   <data name="ZaiYongLiaoPing" xml:space="preserve">
     <value>在用物料</value>
   </data>
@@ -25262,9 +25250,6 @@
   </data>
   <data name="BianGengFang" xml:space="preserve">
     <value>變更方</value>
-  </data>
-  <data name="BianGengHaoJinE" xml:space="preserve">
-    <value>變更後金額</value>
   </data>
   <data name="SuoShuXiangMu" xml:space="preserve">
     <value>所屬項目</value>
@@ -27780,9 +27765,6 @@
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>網站創建通知</value>
   </data>
-  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
-    <value>&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;登錄帳號：ADMIN    密碼： 12345678</value>
-  </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>恢復資料庫失敗！</value>
   </data>
@@ -28272,9 +28254,6 @@
   <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
     <value>問題整改通知單</value>
   </data>
-  <data name="brbrNeiRong" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;內容：</value>
-  </data>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
     <value>此協作不存在，可能已被刪除,請檢查!</value>
   </data>
@@ -28289,9 +28268,6 @@
   </data>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
     <value>提示，文檔類型不能為空，請檢查！</value>
-  </data>
-  <data name="BuChongXieYi" xml:space="preserve">
-    <value>補充協議</value>
   </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>專案其他資訊</value>
@@ -28560,9 +28536,6 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>常規專案</value>
   </data>
-  <data name="brbrbWoDeYiJianbbr" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;&lt;b&gt;我的意見：&lt;/b&gt;&lt;br/&gt;</value>
-  </data>
   <data name="BaQueXian" xml:space="preserve">
     <value>把缺陷：</value>
   </data>
@@ -28605,9 +28578,6 @@
   <data name="QingJiShiChaKan" xml:space="preserve">
     <value>，請及時查看！</value>
   </data>
-  <data name="WenJianChaYueTongZhi" xml:space="preserve">
-    <value>文件查閱通知</value>
-  </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>文檔列表&lt;/B&gt;</value>
   </data>
@@ -28616,9 +28586,6 @@
   </data>
   <data name="GouHuoChanWei" xml:space="preserve">
     <value>購貨單位</value>
-  </data>
-  <data name="ChanPinChangDaiMa" xml:space="preserve">
-    <value>產品長代碼</value>
   </data>
   <data name="GongYiKaBianHao" xml:space="preserve">
     <value>工藝卡編號</value>
@@ -28674,12 +28641,6 @@
   <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
     <value>第{0}行，財務費用只能是小數&lt;br/&gt;</value>
   </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
-    <value>&lt;br/&gt;已成功導入 {0} 條資料</value>
-  </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
-    <value>&lt;br/&gt;已成功導入 {0} 條資料， 共有 {1} 條資料驗證失敗</value>
-  </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>&lt;br/&gt;未導入資料， 共有 {0} 條資料驗證失敗</value>
   </data>
@@ -28725,23 +28686,11 @@
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>&gt;無產品記錄&lt;/td&gt;</value>
   </data>
-  <data name="BianJia" xml:space="preserve">
-    <value>&gt;編輯&lt;/a&gt;</value>
-  </data>
-  <data name="BaoCuna" xml:space="preserve">
-    <value>&gt;保存&lt;/a&gt;</value>
-  </data>
-  <data name="ZongShuLiangtdtr" xml:space="preserve">
-    <value>&gt;總數量&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
     <value>&gt;&lt;p&gt;無原料記錄&lt;/p&gt;&amp;nbsp;&lt;/td&gt;</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>&gt;總數量&lt;/td&gt;&lt;td class=\</value>
-  </data>
-  <data name="BenSeChengBentdtdclass" xml:space="preserve">
-    <value>&gt;本色成本&lt;/td&gt;&lt;td class=\</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>&gt;顏色料成本&lt;/td&gt;&lt;td class=\</value>
@@ -28772,9 +28721,6 @@
   </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
     <value>警告，複製到的年份不能等於或小於被複製的年份，請檢查！</value>
-  </data>
-  <data name="ShouHouFuWu" xml:space="preserve">
-    <value>售後服務</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>提示，領料量超出需求量，請檢查！</value>
@@ -28829,9 +28775,6 @@
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>生產加工費用</value>
-  </data>
-  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
-    <value>採購訂單報表.xls</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>採購退貨報表.xls</value>
@@ -29775,9 +29718,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>錯誤提示： 只可以選擇Excel檔!</value>
   </data>
-  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
-    <value>]無數據，導入下一個類型。\n</value>
-  </data>
   <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
     <value>從Excel檔導入成本績效基準資料共{0:D}條，成功{1:D}條,專業分類：{2:s}\n</value>
   </data>
@@ -30066,15 +30006,6 @@
   <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
     <value>獲取使用者許可權資訊失敗！</value>
   </data>
-  <data name="trtdMoMoKuaiMingChenShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;無模組名稱資料&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
-  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;無類型資料&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
-  <data name="trtdMoShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;無數據&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="XueShengShu" xml:space="preserve">
     <value>學生數：</value>
   </data>
@@ -30168,12 +30099,6 @@
   <data name="TongJiShiJian0Zhi1" xml:space="preserve">
     <value>統計時間：{0}至{1}</value>
   </data>
-  <data name="GongHao1" xml:space="preserve">
-    <value>工號1</value>
-  </data>
-  <data name="GongHao2" xml:space="preserve">
-    <value>工號2</value>
-  </data>
   <data name="SongTi" xml:space="preserve">
     <value>宋體</value>
   </data>
@@ -30230,9 +30155,6 @@
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
     <value>批量"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
-    <value>刪除" + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>修改" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
@@ -30858,150 +30780,6 @@
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>導入語言資料</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生產總結</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>招待費用，差旅費，報銷人員 TODO待定 ，錯誤：" + ex.Message + "！</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>域規則：員工代碼：[TAKETOPUSERCODE]，部門串：[TAKETOPDEPARTMENT] ,出於安全考慮，不能使用含Delete,Update,Drop,Insert,Alter語句）</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>有</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>勞務分包申請表</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>關聯合同</value>
-  </data>
-  <data name="HSE生產總結" xml:space="preserve">
-    <value>HSE生產總結</value>
-  </data>
-  <data name="APPURLShouChang1" xml:space="preserve">
-    <value>收藏后，以后用此地址登录APP！</value>
-  </data>
-  <data name="APPURLShouChang2" xml:space="preserve">
-    <value>收藏後，以後用此地址登錄APP！</value>
-  </data>
-  <data name="BuTongYi1" xml:space="preserve">
-    <value>不同意</value>
-  </data>
-  <data name="BuTongYi2" xml:space="preserve">
-    <value>不同意</value>
-  </data>
-  <data name="ChuLiJieRen2" xml:space="preserve">
-    <value>處理結論</value>
-  </data>
-  <data name="ChuLiRen1" xml:space="preserve">
-    <value>处理人</value>
-  </data>
-  <data name="ChuLiRen2" xml:space="preserve">
-    <value>處理人</value>
-  </data>
-  <data name="CuoWu2" xml:space="preserve">
-    <value>錯誤</value>
-  </data>
-  <data name="FaQiRen1" xml:space="preserve">
-    <value>发起人</value>
-  </data>
-  <data name="FaQiRen2" xml:space="preserve">
-    <value>發起人</value>
-  </data>
-  <data name="FaQiShiJian1" xml:space="preserve">
-    <value>发起时间</value>
-  </data>
-  <data name="FaQiShiJian2" xml:space="preserve">
-    <value>發起時間</value>
-  </data>
-  <data name="FESTIVALSDAY1" xml:space="preserve">
-    <value>节假日</value>
-  </data>
-  <data name="FESTIVALSDAY2" xml:space="preserve">
-    <value>節假日</value>
-  </data>
-  <data name="FESTIVALSDAYMONTH1" xml:space="preserve">
-    <value>月份</value>
-  </data>
-  <data name="FESTIVALSDAYMONTH2" xml:space="preserve">
-    <value>月份</value>
-  </data>
-  <data name="FESTIVALSDAYTITLE1" xml:space="preserve">
-    <value>节假日设置</value>
-  </data>
-  <data name="FESTIVALSDAYTITLE2" xml:space="preserve">
-    <value>節假日設置</value>
-  </data>
-  <data name="FESTIVALSDAYYEAR1" xml:space="preserve">
-    <value>年度</value>
-  </data>
-  <data name="FESTIVALSDAYYEAR2" xml:space="preserve">
-    <value>年度</value>
-  </data>
-  <data name="GeRenKongJianLanWeiSheZhi1" xml:space="preserve">
-    <value>个人空间栏比特设置</value>
-  </data>
-  <data name="GeRenKongJianLanWeiSheZhi2" xml:space="preserve">
-    <value>個人空間欄比特設置</value>
-  </data>
-  <data name="GongHuoZiJianDan1" xml:space="preserve">
-    <value>供货质检单</value>
-  </data>
-  <data name="GongHuoZiJianDan2" xml:space="preserve">
-    <value>供貨質檢單</value>
-  </data>
-  <data name="GongZuoMingCheng1" xml:space="preserve">
-    <value>工作名称</value>
-  </data>
-  <data name="GongZuoMingCheng2" xml:space="preserve">
-    <value>工作名稱</value>
-  </data>
-  <data name="GuanLianHeTongYingFuJiHua1" xml:space="preserve">
-    <value>关联契约应付计划</value>
-  </data>
-  <data name="GuanLianHeTongYingFuJiHua2" xml:space="preserve">
-    <value>關聯契約應付計劃</value>
-  </data>
-  <data name="GuanLianTaoHuangYeMian1" xml:space="preserve">
-    <value>点周打开导航页面</value>
-  </data>
-  <data name="GuanLianTaoHuangYeMian2" xml:space="preserve">
-    <value>關聯導航頁面</value>
-  </data>
-  <data name="HeBing2" xml:space="preserve">
-    <value>合併</value>
-  </data>
-  <data name="HuanYingNiShiYong1" xml:space="preserve">
-    <value>欢迎使用</value>
-  </data>
-  <data name="HuanYingNiShiYong2" xml:space="preserve">
-    <value>歡迎使用</value>
-  </data>
-  <data name="JiaXuQiu1" xml:space="preserve">
-    <value>+需求</value>
-  </data>
-  <data name="JiaXuQiu2" xml:space="preserve">
-    <value>+需求</value>
-  </data>
-  <data name="MoZuCaoZuoDaoHang1" xml:space="preserve">
-    <value>模块操作导航</value>
-  </data>
-  <data name="MoZuCaoZuoDaoHang2" xml:space="preserve">
-    <value>模塊操作導航</value>
-  </data>
-  <data name="MYQXSYCGN1" xml:space="preserve">
-    <value>你没有权限使用此功能！</value>
-  </data>
-  <data name="MYQXSYCGN2" xml:space="preserve">
-    <value>你沒有權限使用此功能！</value>
-  </data>
-  <data name="NianTie1" xml:space="preserve">
-    <value>粘贴</value>
-  </data>
-  <data name="NianTie2" xml:space="preserve">
-    <value>粘貼</value>
-  </data>
   <data name="QCSYYGWXID1" xml:space="preserve">
     <value>清除所有员工微信ID</value>
   </data>
@@ -31029,80 +30807,14 @@
   <data name="QingChu2" xml:space="preserve">
     <value>清除</value>
   </data>
-  <data name="ShouYiBiao1" xml:space="preserve">
-    <value>收益表</value>
-  </data>
-  <data name="ShouYiBiao2" xml:space="preserve">
-    <value>收益表</value>
-  </data>
-  <data name="TaoHuangTu1" xml:space="preserve">
-    <value>导航图</value>
-  </data>
-  <data name="TaoHuangTu2" xml:space="preserve">
-    <value>導航圖</value>
-  </data>
-  <data name="TJZGZLQCL1" xml:space="preserve">
-    <value>提交处理</value>
-  </data>
-  <data name="TJZGZLQCL2" xml:space="preserve">
-    <value>提交處理</value>
-  </data>
-  <data name="TongYi1" xml:space="preserve">
-    <value>同意</value>
-  </data>
-  <data name="TongYi2" xml:space="preserve">
-    <value>同意</value>
-  </data>
-  <data name="WanChengTongGuo1" xml:space="preserve">
-    <value>完成通过</value>
-  </data>
-  <data name="WanChengTongGuo2" xml:space="preserve">
-    <value>完成通過</value>
-  </data>
   <data name="XiangGuanYingXiang2" xml:space="preserve">
     <value>相關影響</value>
-  </data>
-  <data name="XiangMuDingYiYiShuan1" xml:space="preserve">
-    <value>项目定义预算</value>
-  </data>
-  <data name="XiangMuDingYiYiShuan2" xml:space="preserve">
-    <value>項目定義預算</value>
   </data>
   <data name="XuQiuLeiBie1" xml:space="preserve">
     <value>需求类别</value>
   </data>
   <data name="XuQiuLeiBie2" xml:space="preserve">
     <value>需求類別</value>
-  </data>
-  <data name="YuanMiMa1" xml:space="preserve">
-    <value>原密码</value>
-  </data>
-  <data name="YuanMiMa2" xml:space="preserve">
-    <value>原密碼</value>
-  </data>
-  <data name="YuLieYuShuanZongE1" xml:space="preserve">
-    <value>已列预算总额</value>
-  </data>
-  <data name="YuLieYuShuanZongE2" xml:space="preserve">
-    <value>已列預算總額</value>
-  </data>
-  <data name="ZDYBZGDWZBGDYYKQDYG1" xml:space="preserve">
-    <value>注：对于不在固定位置办公但也要考勤的员工，要把经纬度设为！</value>
-  </data>
-  <data name="ZDYBZGDWZBGDYYKQDYG2" xml:space="preserve">
-    <value>注：對於不在固定位置辦公但也要考勤的員工，要把經緯度設為！</value>
-  </data>
-  <data name="ZiDong1" xml:space="preserve">
-    <value>自动</value>
-  </data>
-  <data name="ZiDong2" xml:space="preserve">
-    <value>自動</value>
-  </data>
-  <data name="ZSYYWXGZHDFWHBSDYH1" xml:space="preserve">
-    <value>注：适用于微信公众号的服务号，不是订阅号</value>
-  </data>
-  <data name="ZSYYWXGZHDFWHBSDYH2" xml:space="preserve">
-    <value>注：適用於微信公眾號的服務號，不是訂閱號</value>
   </data>
   <data name="ZZDLSBNDWXIDYPLYZHSY1" xml:space="preserve">
     <value>登录失败，你的微信ID已经被</value>
@@ -31127,30 +30839,6 @@
   </data>
   <data name="ZZJGCGZLMBBCZQJC2" xml:space="preserve">
     <value>警告，此工作流相應的範本或數據文件不存在，請檢查！</value>
-  </data>
-  <data name="ZZSBWZYSYBCYBNSCQJC1" xml:space="preserve">
-    <value>失败，物资预算已被采用，不能删除，请检查！</value>
-  </data>
-  <data name="ZZSBWZYSYBCYBNSCQJC2" xml:space="preserve">
-    <value>失敗，物資預算已被採用，不能刪除，請檢查！</value>
-  </data>
-  <data name="ZZSYQLXXTGLY1" xml:space="preserve">
-    <value>使用，请联系系统管理员处理！</value>
-  </data>
-  <data name="ZZSYQLXXTGLY2" xml:space="preserve">
-    <value>使用，請聯繫系統管理員處理！</value>
-  </data>
-  <data name="ZZTSWXIDBNWKQJC1" xml:space="preserve">
-    <value>提示，微信ID不能为空，请检查！</value>
-  </data>
-  <data name="ZZTSWXIDBNWKQJC2" xml:space="preserve">
-    <value>提示，微信ID不能為空，請檢查！</value>
-  </data>
-  <data name="ZZYuanMiMaChuWuHouWeiKong1" xml:space="preserve">
-    <value>保存失败，原密码错误或为空，请检查！</value>
-  </data>
-  <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
-    <value>保存失敗，原密碼錯誤或為空，請檢查！</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>連線</value>

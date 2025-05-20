@@ -255,7 +255,7 @@
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn HeaderText="VisiblePersonnel">
                                                         <ItemTemplate>
-                                                            <asp:Button ID="BT_VisualMember" CommandName="Select" runat="server" Text='VisiblePersonnel'
+                                                            <asp:Button ID="BT_VisualMember" CommandName="Select" runat="server" Text="<%$ Resources:lang,KeShiRenYuan%>"
                                                                 CssClass="inpuLong" />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />

@@ -12375,20 +12375,11 @@
   <data name="StatusValue" xml:space="preserve">
     <value>State value</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>Termination</value>
-  </data>
   <data name="String10" xml:space="preserve">
     <value>Bid</value>
   </data>
   <data name="String11" xml:space="preserve">
     <value>i</value>
-  </data>
-  <data name="String3" xml:space="preserve">
-    <value>o</value>
-  </data>
-  <data name="String4" xml:space="preserve">
-    <value>The number of reserves</value>
   </data>
   <data name="String4ChengDao" xml:space="preserve">
     <value>Layer - said:</value>
@@ -24051,9 +24042,6 @@
   <data name="BaoFeiLiaoPing" xml:space="preserve">
     <value>Scrape Item</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>With</value>
-  </data>
   <data name="ZaiYongLiaoPing" xml:space="preserve">
     <value>Using Item</value>
   </data>
@@ -25262,9 +25250,6 @@
   </data>
   <data name="BianGengFang" xml:space="preserve">
     <value>Change Party</value>
-  </data>
-  <data name="BianGengHaoJinE" xml:space="preserve">
-    <value>Amount changed</value>
   </data>
   <data name="SuoShuXiangMu" xml:space="preserve">
     <value>View project</value>
@@ -27781,11 +27766,11 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>Site creation notification</value>
   </data>
-  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
-    <value>&lt;/a&gt;</value>
-  </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>Database restoration failed!</value>
+  </data>
+  <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
+    <value>Deleting your application site, which will take about 5 minutes. Please wait patiently……</value>
   </data>
   <data name="ZhanDianShanChuChengGong" xml:space="preserve">
     <value>Site deletion successful!</value>
@@ -28282,9 +28267,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
     <value>Prompt, document type cannot be empty, please check!</value>
   </data>
-  <data name="BuChongXieYi" xml:space="preserve">
-    <value>Volume</value>
-  </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>Other project information</value>
   </data>
@@ -28552,9 +28534,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>Project-based ERP platform</value>
   </data>
-  <data name="brbrbWoDeYiJianbbr" xml:space="preserve">
-    <value>All assignment records of!</value>
-  </data>
   <data name="BaQueXian" xml:space="preserve">
     <value>Collaborative OA platform</value>
   </data>
@@ -28563,6 +28542,9 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
     <value>Submission failed, verification code error, please check!</value>
+  </data>
+  <data name="WanChengLeNiDeQueXian" xml:space="preserve">
+    <value>Completed your defects</value>
   </data>
   <data name="GuaQiLeNiDeQueXian" xml:space="preserve">
     <value>Safety certificate validity period</value>
@@ -28576,6 +28558,9 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="QueXianZhuaiXiangTongZhi" xml:space="preserve">
     <value>Special operation certificate number</value>
   </data>
+  <data name="ZhuaiChengXiangMuGeiNiQingJiSh" xml:space="preserve">
+    <value>I'm transferring this to a project for you, please handle it promptly!</value>
+  </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
     <value>Special operation review time</value>
   </data>
@@ -28588,9 +28573,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="QingJiShiChaKan" xml:space="preserve">
     <value>, please check promptly!</value>
   </data>
-  <data name="WenJianChaYueTongZhi" xml:space="preserve">
-    <value>Special equipment review time</value>
-  </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>Document List&lt;/B&gt;</value>
   </data>
@@ -28599,9 +28581,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="GouHuoChanWei" xml:space="preserve">
     <value>Purchasing unit</value>
-  </data>
-  <data name="ChanPinChangDaiMa" xml:space="preserve">
-    <value>Scan file path</value>
   </data>
   <data name="GongYiKaBianHao" xml:space="preserve">
     <value>Process card number</value>
@@ -28648,9 +28627,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
     <value>Defect assignment notification</value>
   </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
-    <value>Successfully imported {0} records, a total of {1} records failed validation</value>
-  </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Row {0}, tax-inclusive unit price cannot be empty</value>
   </data>
@@ -28669,23 +28645,26 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
     <value>Row {0}, manufacturing cost cannot be empty</value>
   </data>
+  <data name="ChanPinMingChen" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
   <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
     <value>Row {0}, ton consumption cannot be empty</value>
   </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>Successfully imported {0} records</value>
   </data>
-  <data name="ZongShuLiangtdtr" xml:space="preserve">
-    <value>Row {0}, product number cannot be empty</value>
-  </data>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
     <value>No data imported, a total of {0} records failed validation</value>
   </data>
-  <data name="BenSeChengBentdtdclass" xml:space="preserve">
-    <value>Row {0}, cost cannot be empty</value>
+  <data name="ZongShuLiangtdtdclass" xml:space="preserve">
+    <value>Total number</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>Row {0}, product name cannot be empty</value>
+  </data>
+  <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
+    <value>Raw Material Product Archiving</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
     <value>Row {0}, type cannot be empty</value>
@@ -28699,17 +28678,17 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>&gt;Edit&lt;/a&gt;</value>
   </data>
-  <data name="ShouHouFuWu" xml:space="preserve">
-    <value>&gt;Total quantity&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>Row {0}, ton consumption must be a decimal</value>
   </data>
   <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
-    <value>*&gt;Total quantity&lt;/td&gt;&lt;td class=*</value>
+    <value>Material Withdrawal Report.xls</value>
+  </data>
+  <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
+    <value>Material Receipt, Issue, and Inventory Report.xls</value>
   </data>
   <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
-    <value>*&gt;Color material cost&lt;/td&gt;&lt;td class=*</value>
+    <value>Material Inbound Report.xls</value>
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Product name</value>
@@ -28736,7 +28715,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Please enter the form type!</value>
   </data>
   <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
-    <value>&gt;Save&lt;/a&gt;</value>
+    <value>Material Maintenance Report.xls</value>
   </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
     <value>Prompt, copied successfully!</value>
@@ -28748,13 +28727,10 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>After-sales service</value>
   </data>
   <data name="WuLiaoShengChanChan" xml:space="preserve">
-    <value>*&gt;Natural cost&lt;/td&gt;&lt;td class=*</value>
+    <value>Material Production Order</value>
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>Material withdrawal report.xls</value>
-  </data>
-  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
-    <value>*&gt;Formula price&lt;/td&gt;&lt;td class=*</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>Material In stock report.xls</value>
@@ -28763,13 +28739,16 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Material loss</value>
   </data>
   <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
-    <value>Batch number</value>
+    <value>Material Safety Stock Report.xls</value>
   </data>
   <data name="WuLiaoXiaoShouChan" xml:space="preserve">
-    <value>Row {0}, material loss must be a decimal</value>
+    <value>Material Sales Order</value>
   </data>
   <data name="WuLiaoBaoJiaChan" xml:space="preserve">
     <value>Expiration date</value>
+  </data>
+  <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
+    <value>Material Sales Report.xls</value>
   </data>
   <data name="DeWuLiaoLieBiao" xml:space="preserve">
     <value>Material list number</value>
@@ -29695,9 +29674,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>Error: Only Excel files can be selected!</value>
   </data>
-  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
-    <value>] No data, importing the next type.\n</value>
-  </data>
   <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
     <value>Imported {0:D } cost performance benchmark data records from Excel file, successfully {1:D }, professional classification: {2:s }\n</value>
   </data>
@@ -29986,15 +29962,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
     <value>Sent successfully!</value>
   </data>
-  <data name="trtdMoMoKuaiMingChenShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;No module name data&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
-  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
-    <value>Failed to retrieve user status!</value>
-  </data>
-  <data name="trtdMoShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;No data&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="XueShengShu" xml:space="preserve">
     <value>Failed to retrieve user permission information!</value>
   </data>
@@ -30088,17 +30055,11 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="TongJiShiJian0Zhi1" xml:space="preserve">
     <value>Welding certification_</value>
   </data>
-  <data name="GongHao1" xml:space="preserve">
-    <value>Employee ID 1</value>
-  </data>
-  <data name="GongHao2" xml:space="preserve">
-    <value>Error, department and sub-department employee count is too large, insufficient memory, please check!</value>
-  </data>
   <data name="SongTi" xml:space="preserve">
     <value>Song font</value>
   </data>
   <data name="GongHao" xml:space="preserve">
-    <value>Statistical time: {0} to {1}</value>
+    <value>Employee ID</value>
   </data>
   <data name="ChuQinTianShu" xml:space="preserve">
     <value>Attendance days</value>
@@ -30145,8 +30106,8 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>Prompt, this " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
   </data>
-  <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
-    <value>Delete " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
+  <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
+    <value> Batch</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>Member list:</value>
@@ -30772,56 +30733,11 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>Import language data</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Summarizing HSE</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Entertainment expenses, travel expenses, personnel TODO pending claims, the error: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Domain Rules: employee code: [TAKETOPUSERCODE], department string: [TAKETOPDEPARTMENT], the language code [TAKETOPLANGCODE], for security reasons, can not be used including Delete, Update, Drop, Insert, Alter statement)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Have</value>
-  </data>
   <data name="ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD" xml:space="preserve">
     <value> + DtBeginTime + to "+ dtEndTime +" has been used "+ count +" point!</value>
   </data>
   <data name="ZZDTVERSIONROWSCOUNT|STRALERTTEXT" xml:space="preserve">
     <value>  + DtVersion.Rows.Count + | "+ strAlertText +"</value>
-  </data>
-  <data name="ZZRESULTTOSTRING" xml:space="preserve">
-    <value> + Result.ToString () +!</value>
-  </data>
-  <data name="ZZSTRNEWUSERCODEYHDRSB" xml:space="preserve">
-    <value> + StrNewUserCode + User Import failed!</value>
-  </data>
-  <data name="BOMQuery" xml:space="preserve">
-    <value>BOM Item Query</value>
-  </data>
-  <data name="ChongDianFuWuXuQiuHuoShangJi1" xml:space="preserve">
-    <value>Important service requirement or business apportunity</value>
-  </data>
-  <data name="Membes1" xml:space="preserve">
-    <value>Members</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>Association contract</value>
-  </data>
-  <data name="YuanSuDingYi1" xml:space="preserve">
-    <value>Element definition</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>CHENGYUANSHOURUFENPEI</value>
-  </data>
-  <data name="GongYingShangZiChanCaiGouFuKuanShengQing1" xml:space="preserve">
-    <value>Supplier asset purchase payment application</value>
-  </data>
-  <data name="GongHuoZhiJianDan" xml:space="preserve">
-    <value>Quality Order For Supply</value>
-  </data>
-  <data name="TaoHuangYeMian" xml:space="preserve">
-    <value>navigation page</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Connection</value>

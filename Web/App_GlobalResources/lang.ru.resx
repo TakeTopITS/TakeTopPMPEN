@@ -12375,20 +12375,11 @@
   <data name="StatusValue" xml:space="preserve">
     <value>Оценка состояния</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>Прекращение</value>
-  </data>
   <data name="String10" xml:space="preserve">
     <value>Заявка</value>
   </data>
   <data name="String11" xml:space="preserve">
     <value>Мне</value>
-  </data>
-  <data name="String3" xml:space="preserve">
-    <value>о</value>
-  </data>
-  <data name="String4" xml:space="preserve">
-    <value>Количество запасов</value>
   </data>
   <data name="String4ChengDao" xml:space="preserve">
     <value>Слой - сказал:</value>
@@ -24051,9 +24042,6 @@
   <data name="BaoFeiLiaoPing" xml:space="preserve">
     <value>Ежедневные отходы</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>С</value>
-  </data>
   <data name="ZaiYongLiaoPing" xml:space="preserve">
     <value>С позиций</value>
   </data>
@@ -25262,9 +25250,6 @@
   </data>
   <data name="BianGengFang" xml:space="preserve">
     <value>Изменение партии</value>
-  </data>
-  <data name="BianGengHaoJinE" xml:space="preserve">
-    <value>Сумма изменился</value>
   </data>
   <data name="SuoShuXiangMu" xml:space="preserve">
     <value>Посмотреть проект</value>
@@ -27780,11 +27765,11 @@
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>, логин: ADMIN, пароль: 12345678, пожалуйста, используйте с уверенностью, при возникновении вопросов свяжитесь с службой поддержки (021-51085119), спасибо, это письмо отправлено от группы Тайдинг Тодинг!</value>
   </data>
-  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
-    <value>Уведомление о создании сайта</value>
-  </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
-    <value>&lt;/a&gt;</value>
+    <value>Ошибка восстановления базы данных!</value>
+  </data>
+  <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
+    <value>Удаляю ваш сайт приложения, это займет около 5 минут. Пожалуйста, подождите……</value>
   </data>
   <data name="ZhanDianShanChuChengGong" xml:space="preserve">
     <value>Логин: ADMIN, пароль: 12345678</value>
@@ -28269,20 +28254,17 @@
   <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
     <value>Код отдела</value>
   </data>
-  <data name="brbrNeiRong" xml:space="preserve">
-    <value>Количество заправки</value>
-  </data>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
-    <value>Цена за единицу</value>
+    <value>Это сотрудничество не существует или, возможно, было удалено. Пожалуйста, проверьте!</value>
   </data>
   <data name="Juan" xml:space="preserve">
     <value>Уведомление о исправлении проблем</value>
   </data>
+  <data name="ShuRuXiangMuXiangGuanFeiYong" xml:space="preserve">
+    <value>Введите расходы по проекту</value>
+  </data>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
     <value>Содержание:</value>
-  </data>
-  <data name="BuChongXieYi" xml:space="preserve">
-    <value>Это сотрудничество не существует, возможно, было удалено, проверьте!</value>
   </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>Том</value>
@@ -28554,6 +28536,9 @@
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;Мое мнение:&lt;/b&gt;</value>
   </data>
+  <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
+    <value>Обработка ваших недостатков:</value>
+  </data>
   <data name="WanChengLeNiDeQueXian" xml:space="preserve">
     <value>Преобразовал дефект:</value>
   </data>
@@ -28592,9 +28577,6 @@
   </data>
   <data name="GouHuoChanWei" xml:space="preserve">
     <value>Покупающая организация</value>
-  </data>
-  <data name="ChanPinChangDaiMa" xml:space="preserve">
-    <value>Загрузил файл:</value>
   </data>
   <data name="GongYiKaBianHao" xml:space="preserve">
     <value>, пожалуйста, просмотрите вовремя!</value>
@@ -28635,9 +28617,6 @@
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Строка {0}, тип продукта отсутствует в базовой таблице типов</value>
   </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
-    <value>Строка {0}, длинный код продукта не может быть пустым</value>
-  </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Строка {0}, номер технологической карты не может быть пустым</value>
   </data>
@@ -28654,16 +28633,13 @@
     <value>Строка {0}, цена с НДС может быть только десятичным числом</value>
   </data>
   <data name="ChanPinMingChen" xml:space="preserve">
-    <value>Строка {0}, сумма не может быть пустой</value>
+    <value>Название продукта</value>
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>Строка {0}, сумма может быть только десятичным числом</value>
   </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>Строка {0}, финансовые расходы не могут быть пустыми</value>
-  </data>
-  <data name="BaoCuna" xml:space="preserve">
-    <value>Строка {0}, финансовые расходы могут быть только десятичным числом</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>Успешно импортировано {0} записей</value>
@@ -28689,8 +28665,14 @@
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>Строка {0}, производственные затраты не могут быть пустыми</value>
   </data>
+  <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
+    <value>Отчет о выдаче материалов.xls</value>
+  </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
     <value>Строка {0}, производственные затраты могут быть только десятичным числом</value>
+  </data>
+  <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
+    <value>Отчет о поступлении материалов.xls</value>
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>Строка {0}, расход на тонну не может быть пустым</value>
@@ -28700,6 +28682,9 @@
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>Строка {0}, расход на тонну может быть только десятичным числом</value>
+  </data>
+  <data name="ShiXiaoRiJi" xml:space="preserve">
+    <value>Срок действия</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Строка {0}, номер продукта не может быть пустым</value>
@@ -28713,17 +28698,21 @@
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Строка {0}, название продукта не может быть пустым</value>
   </data>
+  <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
+    <value>Отчет о техническом обслуживании материалов
+.xls</value>
+  </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
     <value>Строка {0}, тип продукта не может быть пустым</value>
   </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
     <value>Строка {0}, тип продукта: {1} отсутствует в таблице типов продуктов</value>
   </data>
+  <data name="WuLiaoShengChanChan" xml:space="preserve">
+    <value>Заказ на производство материалов</value>
+  </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>Нет записей о продукте&lt;/td&gt;</value>
-  </data>
-  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
-    <value>Редактировать&lt;/a&gt;</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>Сохранить&lt;/a&gt;</value>
@@ -28731,8 +28720,14 @@
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>Общее количество&lt;/td&gt;&lt;/tr&gt;</value>
   </data>
+  <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
+    <value>Отчёт о страховом запасе.xls</value>
+  </data>
   <data name="WuLiaoXiaoShouChan" xml:space="preserve">
     <value>&lt;p&gt;Нет записей о сырье&lt;/p&gt;&amp;nbsp;&lt;/td&gt; Общее количество&lt;/td&gt;&lt;td class=\ Себестоимость&lt;/td&gt;&lt;td class=\ Себестоимость цветного материала&lt;/td&gt;&lt;td class=\ Цена рецептуры&lt;/td&gt;&lt;td class=\</value>
+  </data>
+  <data name="WuLiaoBaoJiaChan" xml:space="preserve">
+    <value>Котировка материалов</value>
   </data>
   <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
     <value>Архив продуктов сырья</value>
@@ -28743,8 +28738,14 @@
   <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
     <value>Строка {0}, компенсация материала не может быть пустой</value>
   </data>
+  <data name="ZZShanChuShiBaiZhiNengShanChuD" xml:space="preserve">
+    <value>Ошибка удаления! Можно удалять только сегодняшние записи.</value>
+  </data>
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
     <value>Строка {0}, компенсация материала может быть только десятичным числом</value>
+  </data>
+  <data name="WuLiaoChuHuo" xml:space="preserve">
+    <value>Отгрузка материалов</value>
   </data>
   <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
     <value>Пожалуйста, введите тип формы!</value>
@@ -29655,9 +29656,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>Ошибка: [</value>
   </data>
-  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
-    <value>Импорт базовых данных о производительности из файла Excel, всего {0:D } записей, успешно {1:D }, категория: {2:s }\n</value>
-  </data>
   <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
     <value>[Номер подпункта] введен неверно, должен быть числом, введите правильно и попробуйте снова!\n</value>
   </data>
@@ -29946,15 +29944,6 @@
   <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
     <value>Не удалось получить информацию о правах пользователя!</value>
   </data>
-  <data name="trtdMoMoKuaiMingChenShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;Нет данных о названии модуля&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
-  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;Нет данных о типе&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
-  <data name="trtdMoShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;Нет данных&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="XueShengShu" xml:space="preserve">
     <value>Количество студентов:</value>
   </data>
@@ -30048,12 +30037,6 @@
   <data name="TongJiShiJian0Zhi1" xml:space="preserve">
     <value>Время статистики: с {0} по {1}</value>
   </data>
-  <data name="GongHao1" xml:space="preserve">
-    <value>Табельный номер 1</value>
-  </data>
-  <data name="GongHao2" xml:space="preserve">
-    <value>Табельный номер 2</value>
-  </data>
   <data name="SongTi" xml:space="preserve">
     <value>Шрифт Song</value>
   </data>
@@ -30093,20 +30076,23 @@
   <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
     <value>Строка {0}, код студента не может быть пустым</value>
   </data>
+  <data name="XueShengXingMing" xml:space="preserve">
+    <value>Имя студента</value>
+  </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
     <value>Имя студента</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>Строка {0}, имя студента не может быть пустым</value>
   </data>
+  <data name="ChengYuanLieBiao" xml:space="preserve">
+    <value>Список участников</value>
+  </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>Учится ли</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
     <value>Список участников:</value>
-  </data>
-  <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
-    <value>Подсказка: " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>Пакетная " + LanguageHandle.GetWord("ZZCZCG").ToString().Trim() + "</value>
@@ -30731,69 +30717,6 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>Импорт языковых данных</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>Резюме HSE Производство</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>Представительские расходы, командировочные расходы, возмещение персонала TODO определяется, ошибка: "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Правила домена: Код сотрудника: [TAKETOPUSERCODE], строка отдел: [TAKETOPDEPARTMENT], по соображениям безопасности, не могут быть использованы в том числе удаление, обновление, падения, Вставить, Альтер заявление)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Имеют</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Резюме HSE Производство</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Заявка на подачу заявки на субподряд</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>Ассоциация контракт</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>Расходы на реализацию по статистике отдела</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>Расходы на реализацию по статистике счета</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>Платное - общий доход</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>Скрыть Состояние</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>Желтый: Синий доход: платить</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>ответить</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>Государственный план распределения</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>Сумма фактически выплаченных профиль учетной записи</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>Доходы - всего платить</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>Распределение суммы, уплаченной аккаунт</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>Фактические платежи, полученные за тот же период сравнительную таблицу</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>Распределение бюджета</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>определение элемента</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>Чжоу</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Соединение </value>

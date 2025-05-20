@@ -12375,20 +12375,11 @@
   <data name="StatusValue" xml:space="preserve">
     <value>状態値</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>終止</value>
-  </data>
   <data name="String10" xml:space="preserve">
     <value>ビッド</value>
   </data>
   <data name="String11" xml:space="preserve">
     <value>私</value>
-  </data>
-  <data name="String3" xml:space="preserve">
-    <value>O</value>
-  </data>
-  <data name="String4" xml:space="preserve">
-    <value>埋蔵量の数</value>
   </data>
   <data name="String4ChengDao" xml:space="preserve">
     <value>レイヤ - 言いました：</value>
@@ -24051,9 +24042,6 @@
   <data name="BaoFeiLiaoPing" xml:space="preserve">
     <value>毎日の廃棄物</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>と</value>
-  </data>
   <data name="ZaiYongLiaoPing" xml:space="preserve">
     <value>項目と</value>
   </data>
@@ -25262,9 +25250,6 @@
   </data>
   <data name="BianGengFang" xml:space="preserve">
     <value>変更パーティー</value>
-  </data>
-  <data name="BianGengHaoJinE" xml:space="preserve">
-    <value>量を変化します</value>
   </data>
   <data name="SuoShuXiangMu" xml:space="preserve">
     <value>Viewプロジェクト</value>
@@ -27777,11 +27762,11 @@
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>、ログインアカウント：ADMIN パスワード：12345678 、ご安心してご利用ください。問題があればカスタマーサービス（021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
   </data>
-  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
-    <value>サイト作成通知</value>
-  </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
-    <value>&lt;/a&gt;</value>
+    <value>データベースの復元に失敗しました！</value>
+  </data>
+  <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
+    <value>アプリケーションサイトを削除中で、概算で5分かかります。しばらくお待ちください……</value>
   </data>
   <data name="ZhanDianShanChuChengGong" xml:space="preserve">
     <value>ログインアカウント：ADMIN パスワード：12345678</value>
@@ -28266,11 +28251,8 @@
   <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
     <value>所属部門コード</value>
   </data>
-  <data name="brbrNeiRong" xml:space="preserve">
-    <value>給油数量</value>
-  </data>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
-    <value>単価</value>
+    <value>このコラボレーションは存在しないか、削除された可能性があります。確認してください！</value>
   </data>
   <data name="Juan" xml:space="preserve">
     <value>巻</value>
@@ -28283,9 +28265,6 @@
   </data>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
     <value>ヒント：ドキュメントタイプが空です。確認してください！</value>
-  </data>
-  <data name="BuChongXieYi" xml:space="preserve">
-    <value>補足協議</value>
   </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>プロジェクトその他の情報</value>
@@ -28557,6 +28536,9 @@
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;私の意見：&lt;/b&gt;</value>
   </data>
+  <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
+    <value>あなたの欠点を処理しています</value>
+  </data>
   <data name="WanChengLeNiDeQueXian" xml:space="preserve">
     <value>不具合：</value>
   </data>
@@ -28595,9 +28577,6 @@
   </data>
   <data name="GouHuoChanWei" xml:space="preserve">
     <value>購入先</value>
-  </data>
-  <data name="ChanPinChangDaiMa" xml:space="preserve">
-    <value>ファイルをアップロードしました：</value>
   </data>
   <data name="GongYiKaBianHao" xml:space="preserve">
     <value>, 早めに確認してください！</value>
@@ -28638,9 +28617,6 @@
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>第{0}行、製品種類が基本テーブルに存在しません</value>
   </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
-    <value>第{0}行、製品長コードが空です</value>
-  </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>第{0}行、工芸カード番号が空です</value>
   </data>
@@ -28657,16 +28633,13 @@
     <value>第{0}行、税込単価は小数のみ可能です</value>
   </data>
   <data name="ChanPinMingChen" xml:space="preserve">
-    <value>第{0}行、金額が空です</value>
+    <value>Nome del prodotto</value>
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>第{0}行、金額は小数のみ可能です</value>
   </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>第{0}行、財務費用が空です</value>
-  </data>
-  <data name="BaoCuna" xml:space="preserve">
-    <value>第{0}行、財務費用は小数のみ可能です</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>{0} 件のデータを正常にインポートしました</value>
@@ -28692,8 +28665,14 @@
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>第{0}行、製造コストが空です</value>
   </data>
+  <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
+    <value>材料引出一覧表.xls</value>
+  </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
     <value>第{0}行、製造コストは小数のみ可能です</value>
+  </data>
+  <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
+    <value>物料入庫報告書.xls</value>
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
     <value>第{0}行、トン当たり消費量が空です</value>
@@ -28703,6 +28682,9 @@
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
     <value>第{0}行、トン当たり消費量は小数のみ可能です</value>
+  </data>
+  <data name="ShiXiaoRiJi" xml:space="preserve">
+    <value>有効期限</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>第{0}行、製品番号が空です</value>
@@ -28716,23 +28698,26 @@
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>第{0}行、製品名が空です</value>
   </data>
+  <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
+    <value>物料保守報告書.xls</value>
+  </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
     <value>第{0}行、製品タイプが空です</value>
   </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
     <value>第{0}行、製品タイプ:{1}が製品タイプテーブルに存在しません</value>
   </data>
+  <data name="WuLiaoShengChanChan" xml:space="preserve">
+    <value>物料生産伝票</value>
+  </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>&gt;製品記録なし&lt;/td&gt;</value>
-  </data>
-  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
-    <value>&gt;編集&lt;/a&gt;</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>&gt;保存&lt;/a&gt;</value>
   </data>
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>&gt;総数量&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>売上返品レポート.xls</value>
   </data>
   <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
     <value>&gt;&lt;p&gt;原料記録なし&lt;/p&gt; &lt;/td&gt;</value>
@@ -28744,7 +28729,7 @@
     <value>*&gt;本色コスト&lt;/td&gt;&lt;td class=*</value>
   </data>
   <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
-    <value>*&gt;カラー材料コスト&lt;/td&gt;&lt;td class=*</value>
+    <value>物料販売報告書.xls</value>
   </data>
   <data name="DeWuLiaoLieBiao" xml:space="preserve">
     <value>*&gt;配合価格&lt;/td&gt;&lt;td class=*</value>
@@ -28758,8 +28743,14 @@
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
     <value>第{0}行、賠償材料が空です</value>
   </data>
+  <data name="WuLiaoChuHuo" xml:space="preserve">
+    <value>材料出荷</value>
+  </data>
   <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
     <value>第{0}行、賠償材料は小数のみ可能です</value>
+  </data>
+  <data name="WuLiaoHuiZongBaoBiaoxls" xml:space="preserve">
+    <value>材料サマリーレポート.xls</value>
   </data>
   <data name="WuLiaoDiaoBoBaoBiaoxls" xml:space="preserve">
     <value>フォームタイプを入力してください！</value>
@@ -29664,9 +29655,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>エラーメッセージ：Excelファイルのみ選択できます！</value>
   </data>
-  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
-    <value>] データなし、次のタイプをインポートします。\n</value>
-  </data>
   <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
     <value>Excelファイルからコストパフォーマンス基準データをインポートしました。合計{0:D }件、成功{1:D }件, 専門分類：{2:s }\n</value>
   </data>
@@ -29950,18 +29938,9 @@
     <value>RTXサービスの作成に失敗しました。確認してください！</value>
   </data>
   <data name="HuoQuBanBenXinXiShiBai" xml:space="preserve">
-    <value>送信成功！</value>
-  </data>
-  <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
-    <value>送信失敗！</value>
-  </data>
-  <data name="trtdMoMoKuaiMingChenShuJutdtr" xml:space="preserve">
-    <value>ユーザー状態の取得に失敗しました！</value>
-  </data>
-  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
     <value>バージョン情報の取得に失敗しました！</value>
   </data>
-  <data name="trtdMoShuJutdtr" xml:space="preserve">
+  <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
     <value>ユーザー権限情報の取得に失敗しました！</value>
   </data>
   <data name="XueShengShu" xml:space="preserve">
@@ -30057,12 +30036,6 @@
   <data name="TongJiShiJian0Zhi1" xml:space="preserve">
     <value>警告、まず部門を選択してから検索してください！</value>
   </data>
-  <data name="GongHao1" xml:space="preserve">
-    <value>エラー、部門と子部門の従業員数が多すぎます。メモリが不足しています。確認してください！</value>
-  </data>
-  <data name="GongHao2" xml:space="preserve">
-    <value>警告、開始日と終了日は同じ月を選択してください！</value>
-  </data>
   <data name="SongTi" xml:space="preserve">
     <value>統計時間：{0}から{1}</value>
   </data>
@@ -30110,6 +30083,9 @@
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>第{0}行、学生コードは空にできません</value>
+  </data>
+  <data name="ChengYuanLieBiao" xml:space="preserve">
+    <value>メンバーリスト</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>学生名</value>
@@ -30740,69 +30716,6 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>言語データをインポート</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>交際費、旅費、スタッフのTODOの償還を求め、エラー： "+ ex.Message +"！</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>ドメインルール：社員コード：[TAKETOPUSERCODE]、部門列：[TAKETOPDEPARTMENT]、セキュリティ上の理由から、削除など、使用することはできません、更新、ドロップ、挿入、ALTER文）</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>持っています</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>HSE生産概要</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>労働委託申請書</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>協会契約</value>
-  </data>
-  <data name="String" xml:space="preserve">
-    <value>部門の統計による物流コスト</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>アカウントの統計情報により流通コスト</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>ペイ - 総所得</value>
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value>隠すステータス</value>
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value>イエロー：ブルー収入：有料</value>
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value>返事</value>
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value>状態分布プラン</value>
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value>量は、実際にアカウントプロファイルを支払っ</value>
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value>収入 - 総給与</value>
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value>分配金額有料アカウント</value>
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value>実際の支払いは、同期間の比較表を介して受信</value>
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value>予算配分</value>
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value>要素定義</value>
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value>周</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>接続</value>

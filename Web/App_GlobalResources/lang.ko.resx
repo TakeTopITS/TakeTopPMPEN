@@ -12375,20 +12375,11 @@
   <data name="StatusValue" xml:space="preserve">
     <value>상태 값</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>종료</value>
-  </data>
   <data name="String10" xml:space="preserve">
     <value>입찰</value>
   </data>
   <data name="String11" xml:space="preserve">
     <value>나는</value>
-  </data>
-  <data name="String3" xml:space="preserve">
-    <value>O</value>
-  </data>
-  <data name="String4" xml:space="preserve">
-    <value>보유 수</value>
   </data>
   <data name="String4ChengDao" xml:space="preserve">
     <value>레이어 - 말했다 :</value>
@@ -24051,9 +24042,6 @@
   <data name="BaoFeiLiaoPing" xml:space="preserve">
     <value>매일 폐기물</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>와</value>
-  </data>
   <data name="ZaiYongLiaoPing" xml:space="preserve">
     <value>항목</value>
   </data>
@@ -25262,9 +25250,6 @@
   </data>
   <data name="BianGengFang" xml:space="preserve">
     <value>변경 파티</value>
-  </data>
-  <data name="BianGengHaoJinE" xml:space="preserve">
-    <value>금액 변경</value>
   </data>
   <data name="SuoShuXiangMu" xml:space="preserve">
     <value>보기 프로젝트</value>
@@ -27780,9 +27765,6 @@
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>데이터베이스 복구 실패!</value>
   </data>
-  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
-    <value>당신의 애플리케이션 사이트를 삭제하고 있습니다. 약 5분 정도 걸릴 예정이니 기다려 주십시오......</value>
-  </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>사이트 삭제 성공!</value>
   </data>
@@ -28272,11 +28254,8 @@
   <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
     <value>&lt;br/&gt;&lt;br/&gt;내용:</value>
   </data>
-  <data name="brbrNeiRong" xml:space="preserve">
-    <value>이 협업은 존재하지 않거나 이미 삭제되었을 수 있습니다. 확인해 주십시오!</value>
-  </data>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
-    <value>권</value>
+    <value>이 협업이 존재하지 않거나 삭제되었을 수 있습니다. 확인해 주세요!</value>
   </data>
   <data name="Juan" xml:space="preserve">
     <value>권 내 문서</value>
@@ -28289,9 +28268,6 @@
   </data>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
     <value>보충 계약</value>
-  </data>
-  <data name="BuChongXieYi" xml:space="preserve">
-    <value>프로젝트 기타 정보</value>
   </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>가져오기 실패, 데이터가 잘못되었습니다. 확인해 주십시오!</value>
@@ -28560,9 +28536,6 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>일반 프로젝트</value>
   </data>
-  <data name="brbrbWoDeYiJianbbr" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;&lt;b&gt;내 의견 :&lt;/b&gt;&lt;br/&gt;</value>
-  </data>
   <data name="BaQueXian" xml:space="preserve">
     <value>결함을 프로젝트로:</value>
   </data>
@@ -28605,9 +28578,6 @@
   <data name="QingJiShiChaKan" xml:space="preserve">
     <value>신속히 확인해 주십시오!</value>
   </data>
-  <data name="WenJianChaYueTongZhi" xml:space="preserve">
-    <value>파일 열람 통지</value>
-  </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>문서 목록</value>
   </data>
@@ -28616,9 +28586,6 @@
   </data>
   <data name="GouHuoChanWei" xml:space="preserve">
     <value>구매 단위</value>
-  </data>
-  <data name="ChanPinChangDaiMa" xml:space="preserve">
-    <value>제품 긴 코드</value>
   </data>
   <data name="GongYiKaBianHao" xml:space="preserve">
     <value>공정 카드 번호</value>
@@ -28674,12 +28641,6 @@
   <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
     <value>{0}행, 재무 비용은 소수점일 수 있습니다</value>
   </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
-    <value>&lt;br/&gt;{0}건의 데이터를 성공적으로 가져왔습니다</value>
-  </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
-    <value>&lt;br/&gt;{0}건의 데이터를 성공적으로 가져왔습니다. 총 {1}건의 데이터가 검증에 실패했습니다</value>
-  </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>&lt;br/&gt;데이터를 가져오지 못했습니다. 총 {0}건의 데이터가 검증에 실패했습니다</value>
   </data>
@@ -28725,23 +28686,11 @@
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>&gt;제품 기록이 없습니다</value>
   </data>
-  <data name="BianJia" xml:space="preserve">
-    <value>&gt;편집</value>
-  </data>
-  <data name="BaoCuna" xml:space="preserve">
-    <value>&gt;저장</value>
-  </data>
-  <data name="ZongShuLiangtdtr" xml:space="preserve">
-    <value>&gt;총 수량</value>
-  </data>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
     <value>&gt;원료 기록이 없습니다</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>&gt;총 수량</value>
-  </data>
-  <data name="BenSeChengBentdtdclass" xml:space="preserve">
-    <value>&gt;기본색 비용</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>&gt;색상료 비용</value>
@@ -28772,9 +28721,6 @@
   </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
     <value>경고: 복사된 연도는 복사된 연도보다 같거나 작을 수 없습니다. 확인해 주십시오!</value>
-  </data>
-  <data name="ShouHouFuWu" xml:space="preserve">
-    <value>사후 서비스</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>팁: 인출량이 필요량을 초과합니다. 확인해 주십시오!</value>
@@ -28829,9 +28775,6 @@
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>생산 가공 비용</value>
-  </data>
-  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
-    <value>구매 주문서 보고서.xls</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>구매 반품 보고서.xls</value>
@@ -29775,9 +29718,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>오류 메시지: Excel 파일만 선택 가능합니다!</value>
   </data>
-  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
-    <value>] 데이터 없음, 다음 유형을 가져옵니다.\n</value>
-  </data>
   <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
     <value>Excel 파일에서 비용 성과 기준 데이터를 가져옴, 총 {0:D }건, 성공 {1:D }건, 전문 분류: {2:s }\n</value>
   </data>
@@ -30066,12 +30006,6 @@
   <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
     <value>사용자 권한 정보 가져오기 실패!</value>
   </data>
-  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;모듈 이름 데이터 없음&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;유형 데이터 없음&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;데이터 없음&lt;/td&gt;&lt;/tr&gt; 학생 수: 모든 프로젝트 목록 템플릿 프로젝트 내용, 이는 실제 삭제입니다. 주의하세요. 특별히 알립니다! 프로젝트 목록: 내 구성원의 모든 프로젝트 목록: 숨기기 성공! 비밀번호 오류, 숨기기 실패, 확인하세요! 오류 발생 &lt;B&gt;일부&lt;/B&gt; 프로젝트 변경: 프로젝트 계획 변경 알림 자산 구매 비용 배정 성공! 사용자 로그인 기록_ RTX 내선 번호 &lt;b&gt;페이지 모듈&lt;b&gt; 경고, 제작비와 대리비는 숫자 유형이어야 합니다. 확인하세요! 입찰 오류, 입찰가와 제어가는 숫자여야 합니다. 확인하세요! 실패, 이 입찰은 이미 완료되었으며 삭제할 수 없습니다. 확인하세요 입찰 신청 생성 성공 경고, 입찰 신청 생성 실패, 확인하세요! 특수 작업_ 특수 장비_ 용접 자격증_ 경고, 먼저 부서를 선택하세요! 오류, 부서 및 하위 부서 직원 수가 너무 많아 메모리가 부족합니다. 확인하세요! 경고, 시작 및 종료 날짜는 같은 달만 선택 가능합니다! 통계 시간: {0}부터 {1}까지 사원 번호 1 사원 번호 2 송체 사원 번호 출근 일수 필요 출근 일수 지각 횟수 지각 시간(분) 결근 지각 횟수 조퇴 횟수 조퇴 시간(분) 결근 일수 야간 근무 일수 학생 코드 {0}행, 학생 코드는 비워둘 수 없습니다.&lt;br/&gt; 학생 이름 {0}행, 학생 이름은 비워둘 수 없습니다.&lt;br/&gt; 학교 다니는지 여부 구성원 목록: 알림, " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + " 일괄"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+" 삭제" + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + " 수정" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + " 종료" + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + " 재시도" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 취소" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + " 입찰 계획 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 계정" + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + " 신청 계획 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 신청 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 첨부 파일" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + " 자격증 프로젝트"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+" 교육 프로젝트"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+" 회사"+LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim()+" 경고, 환경 요소는 필수 항목입니다. 작업" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 경고, 환경 요소가 이미 존재합니다. 작업" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 경고, 이 환경 요소는 만료되었거나 비정상입니다. 작업" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 업로드"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+" 저장 실패, 당신은 이 프로세스 템플릿의 작성자가 아니므로 프로세스 이미지를 저장할 수 없습니다! 취소" + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + " 보관" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 노드" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + " 정보 전송" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 전환" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 저장" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 경고, 백업 디렉토리 생성"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+" 경고, 플로우 차트에 이 단계 노드가 있습니다. 삭제할 수 없습니다. 확인하세요! 삭제 성공! 삭제 실패, 확인하세요! 경고, 이 프로세스는 당신이 생성한 것이 아니며, 당신은 슈퍼 관리자도 아닙니다. 삭제 권한이 없습니다. 확인하세요! 일괄 표시" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + " 검사 번호" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + " 계약" + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + " 계약 재료 검사" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + " 비교"+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+" &gt;입찰 문서 목록&lt;/td&gt; &lt;td&gt;입찰 문서&lt;/td&gt; &gt;평가 문서 목록&lt;/td&gt; &lt;td &gt;평가 방법 및 기준&lt;/td&gt; &gt;공급자&lt; &gt;입찰 문서&lt;/td&gt; &gt;평가 방법 및 기준&lt;/td&gt; 공급자 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " 매일 현금 잔액 이상 상황 사전 기록 번호 실제 지불 총액(로컬 통화) 특수 재료 코드 재료 이름 사용량 출판 지연 일수 책임자 코드 프로젝트 관리자 코드 프로젝트 관리자 이름 새 프로세스 생성 컴퓨터 이름 마지막 작업 시간 연락처 관계 계약 회사 첫 계약 시작일 계획 예상 시작 시간 계획 예상 종료 시간 작업 예상 시작 시간 작업 접수 시간 작업 예상 종료 시간 작업 최신 작업 시간 내보내기 성공 다음 단계로 돌아가기 재료 또는 자산 유형 총 유형 기록자 코드 기록자 이름 역할 그룹 확장 작업은 이전 작업 데이터를 덮어씁니다. 진행하시겠습니까? 고객을 선택하세요. 이 기록을 삭제하시겠습니까? 이 계획에서 복사한 다른 구성원의 계획을 삭제하시겠습니까? 출근 날짜 오전 출근 시간 오전 퇴근 시간 오후 출근 시간 오후 퇴근 시간 자정 출근 시간 자정 퇴근 시간 허용 최대 거리 초과 근무 시간(시간) 월별 요약 통계 날짜 보고서 생성 시간 1급 부서 근속 기간 직원 유형 직원 상태 수습 기간 실제 정규화 날짜 가구 유형 정치적 소속 첫 계약 만료일 첫 계약 기간 두 번째 계약 시작일 두 번째 계약 만료일 두 번째 계약 기간 세 번째 계약 시작일 세 번째 계약 만료일 세 번째 계약 기간 서명 횟수 현 계약 시작일 현 계약 기간 권한 유형 사이트 이름 권한 사용자 수 비활성화 모듈 은행 기록자 이름 환율 실제 수령량 실제 수령 시간 자재 발송 검수 미수금 평가 이름 해당 방문 기록을 찾을 수 없습니다. 책임자 이름 선택한 데이터 항목을 삭제하시겠습니까? 지연 프로젝트 계획 경고, 파일 유형</value>
-  </data>
-  <data name="trtdMoShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;데이터 없음&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="XueShengShu" xml:space="preserve">
     <value>학생 수:</value>
   </data>
@@ -30165,12 +30099,6 @@
   <data name="TongJiShiJian0Zhi1" xml:space="preserve">
     <value>통계 시간: {0}부터 {1}까지</value>
   </data>
-  <data name="GongHao1" xml:space="preserve">
-    <value>사원 번호 1</value>
-  </data>
-  <data name="GongHao2" xml:space="preserve">
-    <value>사원 번호 2</value>
-  </data>
   <data name="SongTi" xml:space="preserve">
     <value>송체</value>
   </data>
@@ -30227,9 +30155,6 @@
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
     <value>일괄"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
-    <value>삭제" + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>수정" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
@@ -30854,27 +30779,6 @@
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>언어 데이터 가져오기</value>
-  </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value>테스트 기록</value>
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value>엔터테인먼트 비용, 여행 경비, 직원 TODO의 상환이 결정 오류 : "+ ex.Message +"!</value>
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>도메인 규칙 : 직​​원 코드 : [TAKETOPUSERCODE, 부서 문자열 : [TAKETOPDEPARTMENT, 보안상의 이유로 포함하여 사용할 수 없습니다 삭제, 업데이트, 드롭, 삽입, ALTER 문)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>있다</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>HSE 생산 개요</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>노동 하도급 신청서</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>협회 계약</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>연결</value>

@@ -12376,20 +12376,11 @@
   <data name="StatusValue" xml:space="preserve">
     <value>状态值</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>终止</value>
-  </data>
   <data name="String10" xml:space="preserve">
     <value>评标</value>
   </data>
   <data name="String11" xml:space="preserve">
     <value>i</value>
-  </data>
-  <data name="String3" xml:space="preserve">
-    <value>o</value>
-  </data>
-  <data name="String4" xml:space="preserve">
-    <value>储备人数</value>
   </data>
   <data name="String4ChengDao" xml:space="preserve">
     <value>层-道：</value>
@@ -24052,9 +24043,6 @@
   <data name="BaoFeiLiaoPing" xml:space="preserve">
     <value>报废物料</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>在用</value>
-  </data>
   <data name="ZaiYongLiaoPing" xml:space="preserve">
     <value>在用物料</value>
   </data>
@@ -25263,9 +25251,6 @@
   </data>
   <data name="BianGengFang" xml:space="preserve">
     <value>变更方</value>
-  </data>
-  <data name="BianGengHaoJinE" xml:space="preserve">
-    <value>变更后金额</value>
   </data>
   <data name="SuoShuXiangMu" xml:space="preserve">
     <value>所属项目</value>
@@ -27794,9 +27779,6 @@
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>站点创建通知</value>
   </data>
-  <data name="abrbrDengLuZhangHaoADMINMiMa12" xml:space="preserve">
-    <value>&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;登录帐号：ADMIN    密码： 12345678</value>
-  </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>恢复数据库失败！</value>
   </data>
@@ -28286,9 +28268,6 @@
   <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
     <value>问题整改通知单</value>
   </data>
-  <data name="brbrNeiRong" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;内容：</value>
-  </data>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
     <value>此协作不存在，可能已被删除,请检查!</value>
   </data>
@@ -28303,9 +28282,6 @@
   </data>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
     <value>提示，文档类型不能为空，请检查！</value>
-  </data>
-  <data name="BuChongXieYi" xml:space="preserve">
-    <value>补充协议</value>
   </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>项目其他信息</value>
@@ -28574,9 +28550,6 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>常规项目</value>
   </data>
-  <data name="brbrbWoDeYiJianbbr" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;&lt;b&gt;我的意见：&lt;/b&gt;&lt;br/&gt;</value>
-  </data>
   <data name="BaQueXian" xml:space="preserve">
     <value>把缺陷：</value>
   </data>
@@ -28619,9 +28592,6 @@
   <data name="QingJiShiChaKan" xml:space="preserve">
     <value>，请及时查看！</value>
   </data>
-  <data name="WenJianChaYueTongZhi" xml:space="preserve">
-    <value>文件查阅通知</value>
-  </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>文档列表&lt;/B&gt;</value>
   </data>
@@ -28630,9 +28600,6 @@
   </data>
   <data name="GouHuoChanWei" xml:space="preserve">
     <value>购货单位</value>
-  </data>
-  <data name="ChanPinChangDaiMa" xml:space="preserve">
-    <value>产品长代码</value>
   </data>
   <data name="GongYiKaBianHao" xml:space="preserve">
     <value>工艺卡编号</value>
@@ -28688,12 +28655,6 @@
   <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
     <value>第{0}行，财务费用只能是小数&lt;br/&gt;</value>
   </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJu" xml:space="preserve">
-    <value>&lt;br/&gt;已成功导入 {0} 条数据</value>
-  </data>
-  <data name="brYiChengGongDaoRu0TiaoShuJuGo" xml:space="preserve">
-    <value>&lt;br/&gt;已成功导入 {0} 条数据， 共有 {1} 条数据验证失败</value>
-  </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>&lt;br/&gt;未导入数据， 共有 {0} 条数据验证失败</value>
   </data>
@@ -28739,23 +28700,11 @@
   <data name="MoChanPinJiLutd" xml:space="preserve">
     <value>&gt;无产品记录&lt;/td&gt;</value>
   </data>
-  <data name="BianJia" xml:space="preserve">
-    <value>&gt;编辑&lt;/a&gt;</value>
-  </data>
-  <data name="BaoCuna" xml:space="preserve">
-    <value>&gt;保存&lt;/a&gt;</value>
-  </data>
-  <data name="ZongShuLiangtdtr" xml:space="preserve">
-    <value>&gt;总数量&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
     <value>&gt;&lt;p&gt;无原料记录&lt;/p&gt;&amp;nbsp;&lt;/td&gt;</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>&gt;总数量&lt;/td&gt;&lt;td class=\</value>
-  </data>
-  <data name="BenSeChengBentdtdclass" xml:space="preserve">
-    <value>&gt;本色成本&lt;/td&gt;&lt;td class=\</value>
+    <value>总数量</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
     <value>&gt;颜色料成本&lt;/td&gt;&lt;td class=\</value>
@@ -28786,9 +28735,6 @@
   </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
     <value>警告，复制到的年份不能等于或小于被复制的年份，请检查！</value>
-  </data>
-  <data name="ShouHouFuWu" xml:space="preserve">
-    <value>售后服务</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
     <value>提示，领料量超出需求量，请检查！</value>
@@ -28844,9 +28790,6 @@
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
     <value>生产加工费用</value>
   </data>
-  <data name="CaiGouDingChanBaoBiaoxls" xml:space="preserve">
-    <value>采购订单报表.xls</value>
-  </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>采购退货报表</value>
   </data>
@@ -28863,7 +28806,7 @@
     <value>物料报价单</value>
   </data>
   <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
-    <value>物料销售报表.xls</value>
+    <value>物料销售物料销售报表.xls</value>
   </data>
   <data name="DeWuLiaoLieBiao" xml:space="preserve">
     <value>的物料列表：</value>
@@ -29789,9 +29732,6 @@
   <data name="CuoWuDiShiZhiKeYiShuaZeExcelWe" xml:space="preserve">
     <value>错误提示： 只可以选择Excel文件!</value>
   </data>
-  <data name="MoShuJuDaoRuXiaYiGeLeiXingn" xml:space="preserve">
-    <value>]无数据，导入下一个类型。\n</value>
-  </data>
   <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
     <value>从Excel文件导入成本绩效基准数据共{0:D}条，成功{1:D}条,专业分类：{2:s}\n</value>
   </data>
@@ -30080,15 +30020,6 @@
   <data name="HuoQuYongHuQuanXianXinXiShiBai" xml:space="preserve">
     <value>获取用户权限信息失败！</value>
   </data>
-  <data name="trtdMoMoKuaiMingChenShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;无模块名称数据&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
-  <data name="trtdMoLeiXingShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;无类型数据&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
-  <data name="trtdMoShuJutdtr" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;无数据&lt;/td&gt;&lt;/tr&gt;</value>
-  </data>
   <data name="XueShengShu" xml:space="preserve">
     <value>学生数：</value>
   </data>
@@ -30182,12 +30113,6 @@
   <data name="TongJiShiJian0Zhi1" xml:space="preserve">
     <value>统计时间：{0}至{1}</value>
   </data>
-  <data name="GongHao1" xml:space="preserve">
-    <value>工号1</value>
-  </data>
-  <data name="GongHao2" xml:space="preserve">
-    <value>工号2</value>
-  </data>
   <data name="SongTi" xml:space="preserve">
     <value>宋体</value>
   </data>
@@ -30243,10 +30168,7 @@
     <value>提示，该" + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
-    <value>批量"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZShanChuLanguageHandleGetWord" xml:space="preserve">
-    <value>删除" + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
+    <value>批量</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>修改" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
@@ -30892,151 +30814,7 @@
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>导入语言数据</value>
   </data>
-  <data name="HSE生产总结" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZZDFYCLFBXRYTODODDCWEXMESSAGE1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value />
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BaseEndTime1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BaseStartTime1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BeiAnZhuangTai1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BianGengEDu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BianGengFang1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BianGengHaoJinE1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BianGengHouJinE1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BianGengLeiXing1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BianGengNeiRong1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BianGengZongE1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CaiWuZhangWuLei1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DaiChuLiYeWu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DaJiaGou1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GSCSNDDASWXH1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GuiDangRiQi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HeTongBianGengBaoBiao1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HeTongChaXunBaobiao1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HeTongFengLiTaiZhuang1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HeTongTiQianZhiXingBaoBiao1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HTLXBLT1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HTZCQST1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HTZTBLT1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="JianDangAn1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="JiBenLeiXingLei1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="KeHuBeiAn1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LiaoPinReiXing1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LiuChenYeWuRenYuan1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MoQingKuanE1" xml:space="preserve">
-    <value />
-  </data>
   <data name="QianDingShiJianWanYuKaiShiShiJian1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RenShiXinZhunLei1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SBKNWJGSBDHLCDBGQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SheYongHu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ShouQuanXian1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ShuJiJiaoHanFuWuQiDong1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SuoShuXiangMu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TianShu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TongXunJieKouLei1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="XiangMuRenWuLei1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="XiangMuShiTu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="XuanMoKuai1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YGXBBLT1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YGZCQST1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YGZTBLT1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YiJiaoDanMingXiBianJi1" xml:space="preserve">
     <value />
   </data>
   <data name="YuJiao1" xml:space="preserve">
@@ -31045,463 +30823,16 @@
   <data name="ZiChanLiaoPinLei1" xml:space="preserve">
     <value />
   </data>
-  <data name="ZiDingYiBaoBiao1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZiXingMingLing1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZiXingShiJian1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZongFengShu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZuYong1" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZZCZXTDMQJC1" xml:space="preserve">
     <value />
   </data>
   <data name="ZZJGSJBHBXDYXZDBHDZSQJC1" xml:space="preserve">
     <value />
   </data>
-  <data name="ZZNDKHBAYBJQQGZ1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZNDKHBAYBPZTGQGZ1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZPZBACG1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZPZBASBQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZQQBACG1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZQQBASBQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZSHOUCHECG1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZTJBACG1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZTJBASBQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZYJBACGQBYCFTJ1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value />
-  </data>
   <data name="ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD" xml:space="preserve">
     <value />
   </data>
   <data name="ZZDTVERSIONROWSCOUNT|STRALERTTEXT" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZRESULTTOSTRING" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZSTRNEWUSERCODEYHDRSB" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BOMQuery" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ChongDianFuWuXuQiuHuoShangJi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Membes1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YuanSuDingYi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GongYingShangZiChanCaiGouFuKuanShengQing1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GongHuoZhiJianDan" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TaoHuangYeMian" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String15" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String16" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String17" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String18" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String19" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String20" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String21" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String22" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String23" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String24" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String25" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String26" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String27" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String28" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String29" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String30" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String31" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String32" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String33" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String34" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String35" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String36" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String37" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String38" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String39" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String40" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String41" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String42" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String43" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String44" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String45" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String46" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String47" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String48" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String49" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String50" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String51" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String52" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String53" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String54" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String55" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String56" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String57" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String58" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String59" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String60" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String61" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String62" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String63" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String64" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String65" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String66" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String67" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String68" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String69" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String70" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String71" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String72" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String73" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String74" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String75" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String76" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String77" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String78" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String79" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String80" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String81" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String82" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String83" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String84" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String85" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String86" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String87" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String88" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String89" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String121" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HSE生產總結" xml:space="preserve">
-    <value />
-  </data>
-  <data name="APPURLMiaoShu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="APPURLMiaoShu2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="APPURLShouChang1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="APPURLShouChang2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BuTongYi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BuTongYi2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ChuLiJieRen2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ChuLiRen1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ChuLiRen2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CuoWu2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FaQiRen1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FaQiRen2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FaQiShiJian1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FaQiShiJian2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAY1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAY2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAYMONTH1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAYMONTH2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAYTITLE1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAYTITLE2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAYYEAR1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FESTIVALSDAYYEAR2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GeRenKongJianLanWeiSheZhi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GeRenKongJianLanWeiSheZhi2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GongHuoZiJianDan1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GongHuoZiJianDan2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GongZuoMingCheng1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GongZuoMingCheng2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GuanLianHeTongYingFuJiHua1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GuanLianHeTongYingFuJiHua2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GuanLianTaoHuangYeMian1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GuanLianTaoHuangYeMian2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HeBing2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HuanYingNiShiYong1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HuanYingNiShiYong2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="JiaXuQiu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="JiaXuQiu2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MoZuCaoZuoDaoHang1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MoZuCaoZuoDaoHang2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MYQXSYCGN1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MYQXSYCGN2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="NianTie1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="NianTie2" xml:space="preserve">
     <value />
   </data>
   <data name="QCSYYGWXID1" xml:space="preserve">
@@ -31531,79 +30862,13 @@
   <data name="QingChu2" xml:space="preserve">
     <value />
   </data>
-  <data name="ShouYiBiao1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ShouYiBiao2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TaoHuangTu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TaoHuangTu2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TJZGZLQCL1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TJZGZLQCL2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TongYi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TongYi2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="WanChengTongGuo1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="WanChengTongGuo2" xml:space="preserve">
-    <value />
-  </data>
   <data name="XiangGuanYingXiang2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="XiangMuDingYiYiShuan1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="XiangMuDingYiYiShuan2" xml:space="preserve">
     <value />
   </data>
   <data name="XuQiuLeiBie1" xml:space="preserve">
     <value />
   </data>
   <data name="XuQiuLeiBie2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YuanMiMa1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YuanMiMa2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YuLieYuShuanZongE1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="YuLieYuShuanZongE2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZDYBZGDWZBGDYYKQDYG1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZDYBZGDWZBGDYYKQDYG2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZiDong1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZiDong2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZSYYWXGZHDFWHBSDYH1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZSYYWXGZHDFWHBSDYH2" xml:space="preserve">
     <value />
   </data>
   <data name="ZZDLSBNDWXIDYPLYZHSY1" xml:space="preserve">
@@ -31628,30 +30893,6 @@
     <value />
   </data>
   <data name="ZZJGCGZLMBBCZQJC2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZSBWZYSYBCYBNSCQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZSBWZYSYBCYBNSCQJC2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZSYQLXXTGLY1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZSYQLXXTGLY2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZTSWXIDBNWKQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZTSWXIDBNWKQJC2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZYuanMiMaChuWuHouWeiKong1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value />
   </data>
   <data name="LianXian" xml:space="preserve">
