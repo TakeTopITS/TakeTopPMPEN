@@ -1141,9 +1141,9 @@
                                                 </ContentTemplate>
                                             </cc1:TabPanel>
 
-                                            <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="项目BOM" TabIndex="22">
+                                            <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="ProjectBOM" TabIndex="22">
                                                 <HeaderTemplate>
-                                                    <asp:Label ID="Label172" runat="server" Text="项目BOM"></asp:Label>
+                                                    <asp:Label ID="Label172" runat="server" Text="ProjectBOM"></asp:Label>
                                                 </HeaderTemplate>
                                                 <ContentTemplate>
                                                     <br />

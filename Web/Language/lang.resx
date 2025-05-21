@@ -30907,4 +30907,16 @@
     <value>关联模块</value>
     <comment>关联模块</comment>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>包含子项</value>
+    <comment>包含子项</comment>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>节日</value>
+    <comment>节日</comment>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>调休</value>
+    <comment>调休</comment>
+  </data>
 </root>

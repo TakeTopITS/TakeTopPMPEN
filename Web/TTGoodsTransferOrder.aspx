@@ -655,7 +655,7 @@
                                                             </td>
                                                             <td align="left">
 
-                                                                <asp:Button ID="BT_SelectPD" runat="server" Text="生产作业单" Visible="false" />
+                                                                <asp:Button ID="BT_SelectPD" runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>" Visible="false" />
                                                                 <cc1:ModalPopupExtender ID="BT_SelectPD_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground"
                                                                     CancelControlID="IMBT_ClosePD" Enabled="True" PopupControlID="Panel8" TargetControlID="BT_SelectPD" Y="150">
                                                                 </cc1:ModalPopupExtender>
@@ -912,7 +912,7 @@
                                             <cc1:TabPanel ID="TabPanel8" runat="server" TabIndex="7">
 
                                                 <HeaderTemplate>
-                                                    <asp:Label runat="server" Text="生产作业单"></asp:Label>:
+                                                    <asp:Label runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>"></asp:Label>:
 
                                                                         <asp:Label ID="LB_PDID" runat="server"></asp:Label>&#160;<asp:Label runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label>：
                                                 </HeaderTemplate>

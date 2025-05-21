@@ -30843,4 +30843,13 @@
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>Módulos Relacionados</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>Inclui Subitens</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>Feriado</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>Período de Compensação</value>
+  </data>
 </root>

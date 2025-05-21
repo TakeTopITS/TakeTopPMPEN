@@ -1261,7 +1261,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         }
     }
 
-    //把物资固化到项目BOM中
+    //把物资固化到ProjectBOM中
     public static void SolidifyProjectItemBom(string strProjectID, string strVerID)
     {
         string strHQL; ;
@@ -1492,7 +1492,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
     }
 
 
-    //取得项目BOM物资已采购量
+    //取得ProjectBOM物资已采购量
     public static decimal GetAleadyPurchasedNumber(string strBomRecordID)
     {
         string strHQL;
@@ -1510,7 +1510,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         }
     }
 
-    //取得项目BOM物资已生产量
+    //取得ProjectBOM物资已生产量
     public static decimal GetAleadyProductionNumber(string strBomRecordID)
     {
         string strHQL;
@@ -1528,7 +1528,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         }
     }
 
-    //取得项目BOM物资已出库量
+    //取得ProjectBOM物资已出库量
     public static decimal GetAleadyCheckOutNumber(string strBomRecordID)
     {
         string strHQL;
@@ -1546,7 +1546,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         }
     }
 
-    //取得项目BOM物资已入库量
+    //取得ProjectBOM物资已入库量
     public static decimal GetAleadyCheckInNumber(string strBomRecordID)
     {
         string strHQL;

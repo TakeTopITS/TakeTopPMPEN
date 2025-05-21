@@ -30843,4 +30843,13 @@
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>Verknüpfte Module</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>Enthält Unterpunkte</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>Feiertag</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>Ausgleichsurlaub</value>
+  </data>
 </root>

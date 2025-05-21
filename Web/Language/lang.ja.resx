@@ -30843,4 +30843,13 @@
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>関連モジュール</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>子項目が含まれています</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>祝日</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>振替休日</value>
+  </data>
 </root>

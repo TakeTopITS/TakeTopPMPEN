@@ -712,7 +712,7 @@
                                                                     <asp:Button ID="BT_CreateBOMReport" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_CreateBOMReport_Click" Text="<%$ Resources:lang,BaoBiao%>" />
                                                                 </td>
                                                                 <td align="left">
-                                                                    <asp:CheckBox ID="CB_IncludeChildItem" runat="server" Checked="false" Text="°üº¬×ÓÏî" />
+                                                                    <asp:CheckBox ID="CB_IncludeChildItem" runat="server" Checked="false" Text="<%$ Resources:lang,BaoHanZiXiang%>"  />
                                                                 </td>
                                                                 <td>
                                                                     <asp:Button ID="BT_AddToBom" runat="server" CssClass ="inpu" Enabled="false" OnClick="BT_AddToBom_Click" Text="<%$ Resources:lang,AddToBOM%>" />

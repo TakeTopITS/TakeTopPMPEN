@@ -509,7 +509,7 @@
                                                             <td>
                                                                 <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LaiYuan%>"></asp:Label>：   </td>
                                                             <td align="left">
-                                                                <asp:Button ID="BT_SelectPD" runat="server" Text="生产作业单" />
+                                                                <asp:Button ID="BT_SelectPD" runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>" />
                                                                 <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server" BackgroundCssClass="modalBackground" Y="150"
                                                                     CancelControlID="IMBT_ClosePD" Enabled="True" PopupControlID="Panel5" TargetControlID="BT_SelectPD">
                                                                 </cc1:ModalPopupExtender>
@@ -521,7 +521,7 @@
                                                             </td>
                                                             <td align="right">
                                                                 <asp:DropDownList ID="DL_SourceType" runat="server" AutoPostBack="True" Visible="false" OnSelectedIndexChanged="DL_SourceType_SelectedIndexChanged">
-                                                                    <asp:ListItem Value="GoodsPD" Text="生产作业单" />
+                                                                    <asp:ListItem Value="GoodsPD" Text="<%$ Resources:lang,ShengChanZuoYeDan%>" />
                                                                 </asp:DropDownList>
                                                             </td>
                                                         </tr>
@@ -675,7 +675,7 @@
                                             </cc1:TabPanel>
                                             <cc1:TabPanel ID="TabPanel4" runat="server" TabIndex="4">
                                                 <HeaderTemplate>
-                                                    <asp:Label runat="server" Text="生产作业单"></asp:Label>:
+                                                    <asp:Label runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>"></asp:Label>:
                                                     <asp:Label ID="LB_PDID" runat="server"></asp:Label>&#160;<asp:Label runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label>：
                                                 </HeaderTemplate>
                                                 <ContentTemplate>
@@ -1006,9 +1006,9 @@
                                                 </ContentTemplate>
                                             </cc1:TabPanel>
 
-                                            <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="项目BOM" TabIndex="22">
+                                            <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="ProjectBOM" TabIndex="22">
                                                 <HeaderTemplate>
-                                                    <asp:Label ID="Label172" runat="server" Text="项目BOM"></asp:Label>
+                                                    <asp:Label ID="Label172" runat="server" Text="ProjectBOM"></asp:Label>
                                                 </HeaderTemplate>
                                                 <ContentTemplate>
                                                     <br />

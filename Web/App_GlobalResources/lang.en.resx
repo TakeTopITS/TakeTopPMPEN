@@ -30844,4 +30844,13 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>Related Modules</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>Includes Subitems</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>Holiday</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>Compensatory Leave</value>
+  </data>
 </root>

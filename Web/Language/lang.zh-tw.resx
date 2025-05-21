@@ -30849,4 +30849,13 @@
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>關聯模塊</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>包含子項</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>节日</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>調休</value>
+  </data>
 </root>

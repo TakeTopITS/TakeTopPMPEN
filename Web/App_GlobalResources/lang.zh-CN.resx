@@ -30877,4 +30877,13 @@
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>关联模块</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>包含子项</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>节日</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>调休</value>
+  </data>
 </root>

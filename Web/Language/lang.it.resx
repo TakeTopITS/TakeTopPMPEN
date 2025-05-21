@@ -30845,4 +30845,13 @@
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>Moduli Correlati</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>Include Sottopunti</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>Festa</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>Permesso Compensativo</value>
+  </data>
 </root>

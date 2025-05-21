@@ -30845,4 +30845,13 @@
   <data name="GanLianMuGuai" xml:space="preserve">
     <value>Связанные модули</value>
   </data>
+  <data name="BaoHanZiXiang" xml:space="preserve">
+    <value>Содержит подпункты</value>
+  </data>
+  <data name="JieRi" xml:space="preserve">
+    <value>Праздник</value>
+  </data>
+  <data name="TiaoXiu" xml:space="preserve">
+    <value>Компенсационный отпуск</value>
+  </data>
 </root>

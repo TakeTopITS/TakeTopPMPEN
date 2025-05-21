@@ -806,7 +806,7 @@
                                                                 <cc1:ModalPopupExtender ID="BT_SelectSU_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" CancelControlID="IMBT_SUClose" Enabled="True" PopupControlID="Panel1" TargetControlID="BT_SelectSU" Y="150">
                                                                 </cc1:ModalPopupExtender>
 
-                                                                <asp:Button ID="BT_SelectPD" runat="server" Text="生产作业单" Visible="false" />
+                                                                <asp:Button ID="BT_SelectPD" runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>" Visible="false" />
                                                                 <cc1:ModalPopupExtender ID="BT_SelectPD_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" CancelControlID="IMBT_PDClose" Enabled="True" PopupControlID="Panel2" TargetControlID="BT_SelectPD" Y="150">
                                                                 </cc1:ModalPopupExtender>
 
@@ -1158,11 +1158,11 @@
                                                 </ContentTemplate>
                                             </cc1:TabPanel>
 
-                                            <cc1:TabPanel ID="TabPanel11" runat="server" HeaderText="项目BOM" TabIndex="3">
+                                            <cc1:TabPanel ID="TabPanel11" runat="server" HeaderText="ProjectBOM" TabIndex="3">
 
                                                 <HeaderTemplate>
 
-                                                    <asp:Label ID="Label71" runat="server" Text="项目BOM"></asp:Label>
+                                                    <asp:Label ID="Label71" runat="server" Text="ProjectBOM"></asp:Label>
                                                 </HeaderTemplate>
 
                                                 <ContentTemplate>
@@ -1300,7 +1300,7 @@
 
                                             <cc1:TabPanel ID="TabPanel2" runat="server" TabIndex="5">
                                                 <HeaderTemplate>
-                                                    <asp:Label ID="Label92" runat="server" Text="生产作业单"></asp:Label>:
+                                                    <asp:Label ID="Label92" runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>"></asp:Label>:
                                                     <asp:Label ID="LB_PDID" runat="server"></asp:Label><asp:Label ID="Label93" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label>：
                                                 </HeaderTemplate>
                                                 <ContentTemplate>
