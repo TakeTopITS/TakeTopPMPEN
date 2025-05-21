@@ -225,7 +225,7 @@
                                                                         </tr>
                                                                         <tr>
                                                                             <td style="width: 7%; text-align: center; font-size: 10pt" class="tdLeft">
-                                                                                <asp:Label ID="Label16" runat="server" Text="ºÏÍ¬ÄÚÈÝ"></asp:Label>
+                                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,HeTongNeiRong%>"></asp:Label>
                                                                             </td>
                                                                             <td colspan="12" style="text-align: left; padding-left: 5px" class="tdRight">
                                                                                 <table>
