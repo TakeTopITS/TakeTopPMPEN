@@ -30856,4 +30856,7 @@
   <data name="WeiHuanLiang" xml:space="preserve">
     <value>末完量</value>
   </data>
+  <data name="BianGengHaoJinE" xml:space="preserve">
+    <value>变更后金额</value>
+  </data>
 </root>

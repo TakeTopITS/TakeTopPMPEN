@@ -30915,4 +30915,8 @@
     <value>末完量</value>
     <comment>末完量</comment>
   </data>
+  <data name="BianGengHaoJinE" xml:space="preserve">
+    <value>变更后金额</value>
+    <comment>变更后金额</comment>
+  </data>
 </root>

@@ -14076,9 +14076,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>インポート用品置換コード</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>材料エージェント</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>選択する前に、素材のプロジェクト</value>
   </data>
@@ -28569,6 +28566,9 @@
   <data name="ShangChuanLeWenJian" xml:space="preserve">
     <value>プロジェクトに変換しました。早めに受領してください！</value>
   </data>
+  <data name="QingJiShiChaKan" xml:space="preserve">
+    <value>時間内に確認してください！</value>
+  </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>検収基準：</value>
   </data>
@@ -28579,7 +28579,7 @@
     <value>購入先</value>
   </data>
   <data name="GongYiKaBianHao" xml:space="preserve">
-    <value>, 早めに確認してください！</value>
+    <value>早めに確認してください！</value>
   </data>
   <data name="HanShuiChanJia" xml:space="preserve">
     <value>ファイル閲覧通知</value>
@@ -28656,26 +28656,32 @@
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>第{0}行、費用が空です</value>
   </data>
+  <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
+    <value>フォームの種類を入力してください！</value>
+  </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>第{0}行、費用は小数のみ可能です</value>
   </data>
+  <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
+    <value>Avviso: Copia riuscita!</value>
+  </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
-    <value>第{0}行、タイプが空です</value>
+    <value>警告：コピー先の年はコピー元の年より小さいか等しくはいけません。確認してください！</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
-    <value>第{0}行、製造コストが空です</value>
+    <value>警告：材料の引き取り量が要求量を超えています。確認してください！</value>
   </data>
   <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
     <value>材料引出一覧表.xls</value>
   </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
-    <value>第{0}行、製造コストは小数のみ可能です</value>
+    <value>物料の収発在庫報告書.xls</value>
   </data>
   <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
     <value>物料入庫報告書.xls</value>
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
-    <value>第{0}行、トン当たり消費量が空です</value>
+    <value>物料棚卸報告書.xls</value>
   </data>
   <data name="PiHao" xml:space="preserve">
     <value>ロット番号 </value>
@@ -28696,16 +28702,19 @@
     <value>製品名</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
-    <value>第{0}行、製品名が空です</value>
+    <value>失効日：日付が空欄または形式が間違っています。形式は次のようになります：2021-04-01</value>
   </data>
   <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
     <value>物料保守報告書.xls</value>
   </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
-    <value>第{0}行、製品タイプが空です</value>
+    <value>警告：この材料の数は0です。保守の必要はありません！</value>
+  </data>
+  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
+    <value>警告：この材料の数は0です。保守の必要はありません！</value>
   </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
-    <value>第{0}行、製品タイプ:{1}が製品タイプテーブルに存在しません</value>
+    <value>警告：生産量が要求量を超えています。確認してください！</value>
   </data>
   <data name="WuLiaoShengChanChan" xml:space="preserve">
     <value>物料生産伝票</value>
@@ -28741,13 +28750,13 @@
     <value>賠償材料</value>
   </data>
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
-    <value>第{0}行、賠償材料が空です</value>
+    <value>インポート失敗、小分類：" + strSmallType + " が存在しません。まず【基本データ（外部）】モジュールで設定してください！</value>
   </data>
   <data name="WuLiaoChuHuo" xml:space="preserve">
     <value>材料出荷</value>
   </data>
   <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
-    <value>第{0}行、賠償材料は小数のみ可能です</value>
+    <value>物料出庫報告書.xls</value>
   </data>
   <data name="WuLiaoHuiZongBaoBiaoxls" xml:space="preserve">
     <value>材料サマリーレポート.xls</value>
@@ -29640,9 +29649,6 @@
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>メッセージ：この子項番号は既に存在します。正しく入力してください！</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>メッセージ：データの追加に成功しました！</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>メッセージ：追加操作に異常があります：</value>
   </data>
@@ -30037,7 +30043,7 @@
     <value>警告、まず部門を選択してから検索してください！</value>
   </data>
   <data name="SongTi" xml:space="preserve">
-    <value>統計時間：{0}から{1}</value>
+    <value>宋体</value>
   </data>
   <data name="GongHao" xml:space="preserve">
     <value>従業員番号1</value>
@@ -30082,7 +30088,7 @@
     <value>学生コード</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
-    <value>第{0}行、学生コードは空にできません</value>
+    <value>学校に行く</value>
   </data>
   <data name="ChengYuanLieBiao" xml:space="preserve">
     <value>メンバーリスト</value>
@@ -30091,7 +30097,7 @@
     <value>学生名</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
-    <value>第{0}行、学生名は空にできません</value>
+    <value>バッチ</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>就学中かどうか</value>

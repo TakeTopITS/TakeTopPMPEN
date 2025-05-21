@@ -30775,4 +30775,7 @@
   <data name="WeiHuanLiang" xml:space="preserve">
     <value>Неполное количество</value>
   </data>
+  <data name="BianGengHaoJinE" xml:space="preserve">
+    <value>Сумма изменился</value>
+  </data>
 </root>

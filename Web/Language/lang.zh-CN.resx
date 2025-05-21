@@ -14077,9 +14077,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>物资替换代码导入</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>物资委托代理人</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>物资项目才选择</value>
   </data>
@@ -29717,9 +29714,6 @@
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>消息提示：该子项序号已经存在，请正确输入后再试！</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>消息提示：新增数据成功！</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>消息提示：新增操作出现异常：</value>
   </data>
@@ -30165,10 +30159,10 @@
     <value>成员列表：</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
-    <value>提示，该" + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+    <value>提示，该</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
-    <value>批量"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
+    <value>批量</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>修改" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>

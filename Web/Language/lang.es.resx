@@ -14076,9 +14076,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>Importación suministra código de reemplazo</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>Agente de Materiales</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>Proyectos de material antes de la elección</value>
   </data>
@@ -28266,6 +28263,9 @@
   <data name="ShuRuXiangMuXiangGuanFeiYong" xml:space="preserve">
     <value>Ingresar gastos del proyecto</value>
   </data>
+  <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
+    <value>Aviso: El tipo de documento no puede estar vacío. ¡Por favor, revise!</value>
+  </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>Esta colaboración no existe, puede haber sido eliminada, ¡por favor verifica!</value>
   </data>
@@ -28569,6 +28569,9 @@
   <data name="ShangChuanLeWenJian" xml:space="preserve">
     <value>Convertido en un proyecto para ti, ¡por favor procesa a tiempo!</value>
   </data>
+  <data name="QingJiShiChaKan" xml:space="preserve">
+    <value>¡Por favor, revise esto a tiempo!</value>
+  </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>Criterios de aceptación:</value>
   </data>
@@ -28656,26 +28659,32 @@
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Línea {0}, el costo no puede estar vacío</value>
   </data>
+  <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
+    <value>¡Por favor, ingrese el tipo de formulario!</value>
+  </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>Línea {0}, el costo solo puede ser un decimal</value>
   </data>
+  <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
+    <value>Aviso: ¡Copia exitosa!</value>
+  </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
-    <value>Línea {0}, el tipo no puede estar vacío</value>
+    <value>Advertencia: El año al que se copia no puede ser igual o menor que el año del cual se copia. ¡Por favor, revise!</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
-    <value>Línea {0}, el costo de fabricación no puede estar vacío</value>
+    <value>Aviso: La cantidad de material retirado supera la cantidad requerida. ¡Por favor, revise!</value>
   </data>
   <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
     <value>Informe de retiro de materiales.xls</value>
   </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
-    <value>Línea {0}, el costo de fabricación solo puede ser un decimal</value>
+    <value>Informe de Recepción, Emisión y Existencias de Materiales.xls</value>
   </data>
   <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
     <value>Informe de Recepción de Materiales.xls</value>
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
-    <value>Línea {0}, el consumo por tonelada no puede estar vacío</value>
+    <value>Informe de Inventario de Materiales.xls</value>
   </data>
   <data name="PiHao" xml:space="preserve">
     <value>Número de lote</value>
@@ -28696,16 +28705,19 @@
     <value>Nombre del producto</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
-    <value>Línea {0}, el nombre del producto no puede estar vacío</value>
+    <value>Fecha de Caducidad: La fecha está vacía o el formato es incorrecto. El formato debe ser como este: 2021-04-01</value>
   </data>
   <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
     <value>Informe de Mantenimiento de Materiales.xls</value>
   </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
-    <value>Línea {0}, el tipo de producto no puede estar vacío</value>
+    <value>Advertencia: La cantidad de este material es 0. ¡No requiere mantenimiento!</value>
+  </data>
+  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
+    <value>Advertencia: La cantidad del material es 0. ¡No requiere mantenimiento!</value>
   </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
-    <value>Línea {0}, el tipo de producto:{1} no existe en la tabla de tipos de producto</value>
+    <value>Aviso: La cantidad de producción supera la cantidad requerida. ¡Por favor, revise!</value>
   </data>
   <data name="WuLiaoShengChanChan" xml:space="preserve">
     <value>Orden de Producción de Materiales</value>
@@ -28735,13 +28747,13 @@
     <value>Materiales perdidos</value>
   </data>
   <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
-    <value>Línea {0}, los materiales perdidos no pueden estar vacíos</value>
+    <value>Informe de Desecho de Materiales.xls</value>
   </data>
   <data name="ZZShanChuShiBaiZhiNengShanChuD" xml:space="preserve">
     <value>¡Error al eliminar! Solo se pueden borrar registros de hoy.</value>
   </data>
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
-    <value>Línea {0}, los materiales perdidos solo pueden ser un decimal</value>
+    <value>Número de versión BOM</value>
   </data>
   <data name="WuLiaoChuHuo" xml:space="preserve">
     <value>Envío de materiales</value>
@@ -29640,9 +29652,6 @@
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>Mensaje: Este número de subelemento ya existe, ¡ingrese correctamente!</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>Mensaje: ¡Datos añadidos con éxito!</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>Mensaje: Excepción en la operación de añadir:</value>
   </data>
@@ -29845,10 +29854,10 @@
     <value>Error: Excepción en la operación de obtención de lista de meses:</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuSh" xml:space="preserve">
-    <value>Mensaje: Ingrese correctamente la cantidad de trabajo. Actualmente, la cantidad máxima de trabajo que se puede confirmar es: {0:f4 }</value>
+    <value>Mensaje de error: ¡Por favor, introduzca la cantidad de trabajo real correctamente e inténtelo de nuevo!</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuGo" xml:space="preserve">
-    <value>Añadir registro de trabajo real</value>
+    <value>Mensaje de error: ¡Por favor, introduzca la cantidad de trabajo correctamente e inténtelo de nuevo! La cantidad de trabajo máxima que se puede confirmar actualmente es: {0:f4}</value>
   </data>
   <data name="ZengJiaShiJiGongZuoJiLu" xml:space="preserve">
     <value>Añadir registro de trabajo real</value>
@@ -30082,7 +30091,7 @@
     <value>Nombre del estudiante</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
-    <value>Línea {0}, el nombre del estudiante no puede estar vacío</value>
+    <value>Attending School</value>
   </data>
   <data name="ChengYuanLieBiao" xml:space="preserve">
     <value>Lista de miembros：</value>
