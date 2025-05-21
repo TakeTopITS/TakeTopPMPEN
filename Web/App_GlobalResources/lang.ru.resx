@@ -14074,10 +14074,7 @@
     <value>Поставки Имя</value>
   </data>
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
-    <value>Импорт поставляет код замены</value>
-  </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>Материалы агент</value>
+    <value>Импорт кодов замены материалов</value>
   </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>Материал проекты, прежде чем выбрать</value>
@@ -28264,7 +28261,7 @@
     <value>Введите расходы по проекту</value>
   </data>
   <data name="ZZDiShiWenDangLeiXingBuNengWei" xml:space="preserve">
-    <value>Содержание:</value>
+    <value>Предупреждение: Тип документа не может быть пустым. Пожалуйста, проверьте!</value>
   </data>
   <data name="XiangMuJiTaXinXi" xml:space="preserve">
     <value>Том</value>
@@ -28569,6 +28566,9 @@
   <data name="ShangChuanLeWenJian" xml:space="preserve">
     <value>Преобразовал в проект для вас, пожалуйста, обработайте вовремя!</value>
   </data>
+  <data name="QingJiShiChaKan" xml:space="preserve">
+    <value>Пожалуйста, проверьте это своевременно!</value>
+  </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
     <value>Критерии приемки:</value>
   </data>
@@ -28656,26 +28656,32 @@
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Строка {0}, расходы не могут быть пустыми</value>
   </data>
+  <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
+    <value>Пожалуйста, введите тип формы!</value>
+  </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>Строка {0}, расходы могут быть только десятичным числом</value>
   </data>
+  <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
+    <value>Сообщение: Копирование успешно завершено!</value>
+  </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
-    <value>Строка {0}, тип не может быть пустым</value>
+    <value>Предупреждение: Год, в который производится копирование, не может быть равен или меньше года, из которого производится копирование. Пожалуйста, проверьте!</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
-    <value>Строка {0}, производственные затраты не могут быть пустыми</value>
+    <value>Предупреждение: Количество извлеченного материала превышает требуемое количество. Пожалуйста, проверьте!</value>
   </data>
   <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
     <value>Отчет о выдаче материалов.xls</value>
   </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
-    <value>Строка {0}, производственные затраты могут быть только десятичным числом</value>
+    <value>Отчет о поступлении, отпуске и остатках материалов.xls</value>
   </data>
   <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
     <value>Отчет о поступлении материалов.xls</value>
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
-    <value>Строка {0}, расход на тонну не может быть пустым</value>
+    <value>Отчет о инвентаризации материалов.xls</value>
   </data>
   <data name="PiHao" xml:space="preserve">
     <value>Номер партии</value>
@@ -28696,17 +28702,20 @@
     <value>Название продукта</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
-    <value>Строка {0}, название продукта не может быть пустым</value>
+    <value>Дата истечения срока: Дата пуста или формат неправильный. Формат должен быть таким: 2021-04-01</value>
   </data>
   <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
     <value>Отчет о техническом обслуживании материалов
 .xls</value>
   </data>
   <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
-    <value>Строка {0}, тип продукта не может быть пустым</value>
+    <value>Предупреждение: Количество этого материала равно 0. Обслуживание не требуется!</value>
+  </data>
+  <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
+    <value>Предупреждение: Количество материала равно 0. Обслуживание не требуется!</value>
   </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
-    <value>Строка {0}, тип продукта: {1} отсутствует в таблице типов продуктов</value>
+    <value>Предупреждение: Количество производства превышает требуемое количество. Пожалуйста, проверьте!</value>
   </data>
   <data name="WuLiaoShengChanChan" xml:space="preserve">
     <value>Заказ на производство материалов</value>
@@ -28736,13 +28745,13 @@
     <value>Компенсация материала</value>
   </data>
   <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
-    <value>Строка {0}, компенсация материала не может быть пустой</value>
+    <value>Отчет о списании материалов.xls</value>
   </data>
   <data name="ZZShanChuShiBaiZhiNengShanChuD" xml:space="preserve">
     <value>Ошибка удаления! Можно удалять только сегодняшние записи.</value>
   </data>
   <data name="ZZDiShiChuKuLiangChaoChuXuQiuL" xml:space="preserve">
-    <value>Строка {0}, компенсация материала может быть только десятичным числом</value>
+    <value>Номер версии BOM</value>
   </data>
   <data name="WuLiaoChuHuo" xml:space="preserve">
     <value>Отгрузка материалов</value>
@@ -29641,9 +29650,6 @@
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>Сообщение: данные успешно добавлены!</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>Сообщение: при добавлении произошла ошибка:</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>Исходная цена</value>
   </data>
@@ -30083,7 +30089,7 @@
     <value>Имя студента</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
-    <value>Строка {0}, имя студента не может быть пустым</value>
+    <value>Посещает школу</value>
   </data>
   <data name="ChengYuanLieBiao" xml:space="preserve">
     <value>Список участников</value>

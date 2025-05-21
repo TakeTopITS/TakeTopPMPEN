@@ -14076,9 +14076,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>Importa fornisce codice sostitutivo</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>Materiali agente</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>Progetti di materiale prima di scegliere</value>
   </data>
@@ -28545,6 +28542,9 @@
   <data name="QueXianChuLiQingKuangFanKui" xml:space="preserve">
     <value>&lt;b&gt;La mia opinione:&lt;/b&gt;</value>
   </data>
+  <data name="QueXianFenPaTongZhi" xml:space="preserve">
+    <value>Notifica di distribuzione dei difetti</value>
+  </data>
   <data name="BZongXiangMuB" xml:space="preserve">
     <value>Ha trasformato il difetto:</value>
   </data>
@@ -28574,6 +28574,9 @@
   </data>
   <data name="GouHuoChanWei" xml:space="preserve">
     <value>Unità di acquisto</value>
+  </data>
+  <data name="GongYiKaBianHao" xml:space="preserve">
+    <value>Numero di Carta di Processo</value>
   </data>
   <data name="HanShuiChanJia" xml:space="preserve">
     <value>Standard di accettazione:</value>
@@ -28655,28 +28658,31 @@
     <value>Importazione completata con successo di {0} dati, {1} dati non superano la verifica</value>
   </data>
   <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
-    <value>Nessun dato importato, {0} dati non superano la verifica</value>
+    <value>Inserisci il tipo di modulo!</value>
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>Riga {0}, il nome del cliente non può essere vuoto</value>
   </data>
+  <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
+    <value>Avviso: Copia riuscita!</value>
+  </data>
   <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
-    <value>Riga {0}, il costo non può essere vuoto</value>
+    <value>Avviso: L'anno di destinazione della copia non può essere uguale o inferiore all'anno di origine della copia. Per favore, verifica!</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
-    <value>Riga {0}, il costo può essere solo un numero decimale</value>
+    <value>Avviso: La quantità di materiale prelevato supera la quantità richiesta. Per favore, verifica!</value>
   </data>
   <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
     <value>Report prelievo materiali.xls</value>
   </data>
   <data name="WuLiaoShouFaCunBaoBiaoxls" xml:space="preserve">
-    <value>Riga {0}, il tipo non può essere vuoto</value>
+    <value>Rapporto di Ricezione, Uscita e Inventario dei Materiali.xls</value>
   </data>
   <data name="WuLiaoRuKuBaoBiaoxls" xml:space="preserve">
     <value>Rapporto di Ingresso dei Materiali.xls</value>
   </data>
   <data name="WuLiaoPanDianBaoBiaoxls" xml:space="preserve">
-    <value>Riga {0}, il costo di produzione non può essere vuoto</value>
+    <value>Rapporto di Inventario dei Materiali.xls</value>
   </data>
   <data name="PiHao" xml:space="preserve">
     <value>Numero di lotto</value>
@@ -28697,16 +28703,19 @@
     <value>Riga {0}, il consumo per tonnellata può essere solo un numero decimale</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
-    <value>*Data di scadenza non valida! Formato richiesto: AAAA-MM-GG (es. 2021-04-01)*</value>
+    <value>Data di Scadenza: La data è vuota o il formato è errato. Il formato dovrebbe essere come questo: 2021-04-01</value>
   </data>
   <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
-    <value>Riga {0}, il numero del prodotto non può essere vuoto</value>
+    <value>Rapporto di Manutenzione dei Materiali.xls</value>
+  </data>
+  <data name="ZZJingGaoCiWuLiaoShuLiangWei0B" xml:space="preserve">
+    <value>Avviso: La quantità di questo materiale è 0. Non necessita di manutenzione!</value>
   </data>
   <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
-    <value>Nome del prodotto</value>
+    <value>Avviso: La quantità del materiale è 0. Non necessita di manutenzione!</value>
   </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
-    <value>Riga {0}, il nome del prodotto non può essere vuoto</value>
+    <value>Avviso: La quantità di produzione supera la quantità richiesta. Per favore, verifica!</value>
   </data>
   <data name="WuLiaoShengChanChan" xml:space="preserve">
     <value>Ordine di Produzione di Materiali</value>
@@ -29261,10 +29270,10 @@
     <value>Numero di completamenti</value>
   </data>
   <data name="WanChengShu" xml:space="preserve">
-    <value>{0} anno {1} mese</value>
+    <value>Numero di Completamento</value>
   </data>
   <data name="0Nian1Yue" xml:space="preserve">
-    <value>Settimana {0}</value>
+    <value>{0} anno {1} mese</value>
   </data>
   <data name="Di0Zhou" xml:space="preserve">
     <value>Tutti i record di assegnazione del compito!</value>
@@ -29641,9 +29650,6 @@
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>Messaggio: si è verificata un'eccezione durante l'operazione di aggiunta:</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>Prezzo originale</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>Errore: si prega di selezionare un file Excel!</value>
   </data>
@@ -29849,7 +29855,7 @@
     <value>Aggiungi record di lavoro effettivo</value>
   </data>
   <data name="XiaoXiDiShiQingZhengQueShuRuGo" xml:space="preserve">
-    <value>Messaggio: aggiunta della quantità di lavoro effettivo completata con successo!</value>
+    <value>Messaggio di errore: Inserisci correttamente il carico di lavoro e riprova! La quantità di lavoro massima confermabile attualmente è: {0:f4}</value>
   </data>
   <data name="ZengJiaShiJiGongZuoJiLu" xml:space="preserve">
     <value>Messaggio: seleziona la quantità di lavoro effettivo da modificare e riprovare!</value>
@@ -30083,7 +30089,7 @@
     <value>Nome studente</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
-    <value>Riga {0}, il nome dello studente non può essere vuoto</value>
+    <value>Frequenta la Scuola</value>
   </data>
   <data name="ChengYuanLieBiao" xml:space="preserve">
     <value>Elenco dei membri</value>

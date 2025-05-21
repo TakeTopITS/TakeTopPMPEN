@@ -14076,9 +14076,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>Replace the code to import materials</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>Materials agent</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>Material projects before choosing</value>
   </data>
@@ -28549,6 +28546,9 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="GuaQiLeNiDeQueXian" xml:space="preserve">
     <value>Safety certificate validity period</value>
   </data>
+  <data name="QueXianChuLiQingKuangFanKui" xml:space="preserve">
+    <value>Feedback on Defect Handling</value>
+  </data>
   <data name="QueXianFenPaTongZhi" xml:space="preserve">
     <value>Employee name</value>
   </data>
@@ -28672,14 +28672,20 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
     <value>Row {0}, product type: {1} does not exist in the product type table</value>
   </data>
+  <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
+    <value>Please enter the form type!</value>
+  </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
     <value>Row {0}, manufacturing cost must be a decimal</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
-    <value>&gt;Edit&lt;/a&gt;</value>
+    <value>Prompt: Copy successful!</value>
+  </data>
+  <data name="ZZJingGaoFuZhiDaoDeNianFenBuNe" xml:space="preserve">
+    <value>Warning: The year being copied to cannot be equal to or less than the year being copied from. Please check!</value>
   </data>
   <data name="ZZDiShiLingLiaoLiangChaoChuXuQ" xml:space="preserve">
-    <value>Row {0}, ton consumption must be a decimal</value>
+    <value>Warning: The material withdrawal quantity exceeds the required quantity. Please check!</value>
   </data>
   <data name="WuLiaoLingYongBaoBiaoxls" xml:space="preserve">
     <value>Material Withdrawal Report.xls</value>
@@ -28700,7 +28706,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Row {0}, product type cannot be empty</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
-    <value>Row {0}, material loss cannot be empty</value>
+    <value>Expiry Date</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
     <value>Production Equipment Number</value>
@@ -28712,7 +28718,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>&gt;No product records&lt;/td&gt;</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
-    <value>Please enter the form type!</value>
+    <value>Expiry Date: The date is empty or the format is incorrect. The format should be like this: 2021-04-01</value>
   </data>
   <data name="WuLiaoWeiHuBaoBiaoxls" xml:space="preserve">
     <value>Material Maintenance Report.xls</value>
@@ -28721,10 +28727,10 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Prompt, copied successfully!</value>
   </data>
   <data name="ZZJingGaoWuLiaoShuLiangWei0BuY" xml:space="preserve">
-    <value>&gt;&lt;p&gt;No raw material records&lt;/p&gt; &lt;/td&gt;</value>
+    <value>Warning: The quantity of the material is 0. No maintenance required!</value>
   </data>
   <data name="ZZDiShiShengChanLiangChaoChuXu" xml:space="preserve">
-    <value>After-sales service</value>
+    <value>Warning: The production quantity exceeds the required quantity. Please check!</value>
   </data>
   <data name="WuLiaoShengChanChan" xml:space="preserve">
     <value>Material Production Order</value>
@@ -28766,7 +28772,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Warning, the quantity of this material is 0, no maintenance required!</value>
   </data>
   <data name="WuLiaoChuKuBaoBiaoxls" xml:space="preserve">
-    <value>Parent material code</value>
+    <value>Material Outbound Report.xls</value>
   </data>
   <data name="WuLiaoHuiZongBaoBiaoxls" xml:space="preserve">
     <value>Prompt, production quantity exceeds demand, please check!</value>
@@ -29659,9 +29665,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>Message: This sub-item serial number already exists, please enter correctly and try again!</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>Message: New data added successfully!</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>Message: Addition operation encountered an exception:</value>
   </data>
@@ -30104,7 +30107,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Row {0}, student name cannot be empty</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
-    <value>Prompt, this " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+    <value>Prompt, this </value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
     <value> Batch</value>
@@ -30732,12 +30735,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>Import language data</value>
-  </data>
-  <data name="ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD" xml:space="preserve">
-    <value> + DtBeginTime + to "+ dtEndTime +" has been used "+ count +" point!</value>
-  </data>
-  <data name="ZZDTVERSIONROWSCOUNT|STRALERTTEXT" xml:space="preserve">
-    <value>  + DtVersion.Rows.Count + | "+ strAlertText +"</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>Connection</value>

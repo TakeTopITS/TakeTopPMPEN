@@ -14077,9 +14077,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>物资替换代码导入</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>物资委托代理人</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>物资项目才选择</value>
   </data>
@@ -29717,9 +29714,6 @@
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>消息提示：该子项序号已经存在，请正确输入后再试！</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>消息提示：新增数据成功！</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>消息提示：新增操作出现异常：</value>
   </data>
@@ -30165,7 +30159,7 @@
     <value>成员列表：</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
-    <value>提示，该" + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+    <value>提示，该</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
     <value>批量</value>
@@ -30823,58 +30817,16 @@
   <data name="ZiChanLiaoPinLei1" xml:space="preserve">
     <value />
   </data>
-  <data name="ZZCZXTDMQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZJGSJBHBXDYXZDBHDZSQJC1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZDTVERSIONROWSCOUNT|STRALERTTEXT" xml:space="preserve">
-    <value />
-  </data>
   <data name="QCSYYGWXID1" xml:space="preserve">
     <value />
   </data>
   <data name="QCSYYGWXID2" xml:space="preserve">
     <value />
   </data>
-  <data name="QianZengMIngXi1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="QianZengMIngXi2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="QianZengRen2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="QianZengShuMing1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="QianZengShuMing2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="QingChu1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="QingChu2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="XiangGuanYingXiang2" xml:space="preserve">
-    <value />
-  </data>
   <data name="XuQiuLeiBie1" xml:space="preserve">
     <value />
   </data>
   <data name="XuQiuLeiBie2" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZDLSBNDWXIDYPLYZHSY1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZZDLSBNDWXIDYPLYZHSY2" xml:space="preserve">
     <value />
   </data>
   <data name="ZZHHCG1" xml:space="preserve">

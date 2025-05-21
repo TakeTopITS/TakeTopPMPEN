@@ -14076,9 +14076,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>가져 오기는 대체 코드를 제공합니다</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>재료 에이전트</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>선택하기 전에 재료 프로젝트</value>
   </data>
@@ -29323,10 +29320,10 @@
     <value>완료 수</value>
   </data>
   <data name="WanChengShu" xml:space="preserve">
-    <value>{0}년 {1}월</value>
+    <value>완료 수</value>
   </data>
   <data name="0Nian1Yue" xml:space="preserve">
-    <value>제 {0}주</value>
+    <value>{0}년{1}월</value>
   </data>
   <data name="Di0Zhou" xml:space="preserve">
     <value>작업의 모든 배정 기록!</value>
@@ -29702,9 +29699,6 @@
   </data>
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>메시지: 이 하위 항목 번호는 이미 존재합니다. 올바르게 입력하세요!</value>
-  </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>메시지: 새 데이터 추가 성공!</value>
   </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>메시지: 추가 작업 중 예외 발생:</value>
@@ -30151,10 +30145,10 @@
     <value>구성원 목록:</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
-    <value>알림, " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+    <value>알림,</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
-    <value>일괄"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
+    <value>일괄</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>수정" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>

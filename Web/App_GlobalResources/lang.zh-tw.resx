@@ -14076,9 +14076,6 @@
   <data name="WuZiTiHuanDaiMaDaoRu" xml:space="preserve">
     <value>物資替換代碼導入</value>
   </data>
-  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
-    <value>物資委託代理人</value>
-  </data>
   <data name="WuZiXiangMuCaiXuanZe" xml:space="preserve">
     <value>物資項目才選擇</value>
   </data>
@@ -29703,9 +29700,6 @@
   <data name="XiaoXiDiShiGaiZiXiangXuHaoYiJi" xml:space="preserve">
     <value>消息提示：該子項序號已經存在，請正確輸入後再試！</value>
   </data>
-  <data name="XiaoXiDiShiXinZengShuJuChengGo" xml:space="preserve">
-    <value>消息提示：新增資料成功！</value>
-  </data>
   <data name="XiaoXiDiShiXinZengCaoZuoChuXia" xml:space="preserve">
     <value>消息提示：新增操作出現異常：</value>
   </data>
@@ -30151,10 +30145,10 @@
     <value>成員列表：</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
-    <value>提示，該" + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+    <value>提示，該</value>
   </data>
   <data name="ZZPiLiangLanguageHandleGetWord" xml:space="preserve">
-    <value>批量"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
+    <value>批量</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
     <value>修改" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
@@ -30786,41 +30780,11 @@
   <data name="QCSYYGWXID2" xml:space="preserve">
     <value>清除所有員工微信ID</value>
   </data>
-  <data name="QianZengMIngXi1" xml:space="preserve">
-    <value>签证明细</value>
-  </data>
-  <data name="QianZengMIngXi2" xml:space="preserve">
-    <value>簽證明細</value>
-  </data>
-  <data name="QianZengRen2" xml:space="preserve">
-    <value>簽證人</value>
-  </data>
-  <data name="QianZengShuMing1" xml:space="preserve">
-    <value>签证说明</value>
-  </data>
-  <data name="QianZengShuMing2" xml:space="preserve">
-    <value>簽證說明</value>
-  </data>
-  <data name="QingChu1" xml:space="preserve">
-    <value>清除</value>
-  </data>
-  <data name="QingChu2" xml:space="preserve">
-    <value>清除</value>
-  </data>
-  <data name="XiangGuanYingXiang2" xml:space="preserve">
-    <value>相關影響</value>
-  </data>
   <data name="XuQiuLeiBie1" xml:space="preserve">
     <value>需求类别</value>
   </data>
   <data name="XuQiuLeiBie2" xml:space="preserve">
     <value>需求類別</value>
-  </data>
-  <data name="ZZDLSBNDWXIDYPLYZHSY1" xml:space="preserve">
-    <value>登录失败，你的微信ID已经被</value>
-  </data>
-  <data name="ZZDLSBNDWXIDYPLYZHSY2" xml:space="preserve">
-    <value>登錄失敗，你的微信ID已經被</value>
   </data>
   <data name="ZZHHCG1" xml:space="preserve">
     <value>返回成功！</value>
