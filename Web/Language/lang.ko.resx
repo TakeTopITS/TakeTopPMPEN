@@ -30825,4 +30825,7 @@
   <data name="WeiHuanLiang" xml:space="preserve">
     <value>미완량 </value>
   </data>
+  <data name="BianGengHaoJinE" xml:space="preserve">
+    <value>금액 변경</value>
+  </data>
 </root>

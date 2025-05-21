@@ -30787,4 +30787,7 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="WeiHuanLiang" xml:space="preserve">
     <value>Incomplete quantity</value>
   </data>
+  <data name="BianGengHaoJinE" xml:space="preserve">
+    <value>Amount Changed</value>
+  </data>
 </root>

@@ -30774,4 +30774,7 @@
   <data name="WeiHuanLiang" xml:space="preserve">
     <value>Cantidad incompleta</value>
   </data>
+  <data name="BianGengHaoJinE" xml:space="preserve">
+    <value>monto cambió</value>
+  </data>
 </root>

@@ -30774,4 +30774,7 @@
   <data name="WeiHuanLiang" xml:space="preserve">
     <value>未完量</value>
   </data>
+  <data name="BianGengHaoJinE" xml:space="preserve">
+    <value>量を変化します</value>
+  </data>
 </root>
