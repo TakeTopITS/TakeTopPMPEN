@@ -811,7 +811,7 @@
                                                     </cc1:TabPanel>
                                                     <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="关联模块" TabIndex="2">
                                                         <HeaderTemplate>
-                                                            <asp:Label ID="Label38" runat="server" Text="关联模块"></asp:Label>
+                                                            <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,GanLianMuGuai %>"></asp:Label>
                                                         </HeaderTemplate>
                                                         <ContentTemplate>
                                                             <table cellpadding="0" cellspacing="0" width="100%">

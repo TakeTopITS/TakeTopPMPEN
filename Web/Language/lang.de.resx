@@ -28687,19 +28687,19 @@
     <value>Chargennummer</value>
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
-    <value>Zeile {0}, Tonnenverbrauch muss eine Dezimalzahl sein</value>
+    <value>Produktionsdatum</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>Ablaufdatum</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
-    <value>Zeile {0}, Produktnummer darf nicht leer sein</value>
+    <value>Produktionsgerätenummer</value>
   </data>
   <data name="CaiZhiChanHao" xml:space="preserve">
     <value>Materialzertifikatnummer</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
-    <value>Produktname</value>
+    <value>Produktionsdatum: Das Datum ist leer oder das Format ist falsch. Das Format sollte wie folgt sein: 2021-04-01</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Ablaufdatum: Das Datum ist leer oder das Format ist falsch. Das Format sollte wie folgt sein: 2021-04-01</value>
@@ -30785,5 +30785,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>Betrag geändert</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>Materialbeauftragter</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>Überstundenart</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>Grund für Überstunden</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>Anzahl der Überstundentage in diesem Jahr</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>Historische Preise</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>Verknüpfte Module</value>
   </data>
 </root>

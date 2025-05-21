@@ -28623,9 +28623,6 @@
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>第{0}行，含稅單價不能為空&lt;br/&gt;</value>
   </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
-    <value>第{0}行，含稅單價只能是小數&lt;br/&gt;</value>
-  </data>
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行，金額不能為空&lt;br/&gt;</value>
   </data>
@@ -30792,9 +30789,6 @@
   <data name="ZZHHCG2" xml:space="preserve">
     <value>返回成功！</value>
   </data>
-  <data name="ZZJBSCCG1" xml:space="preserve">
-    <value>加班申请生成成功！</value>
-  </data>
   <data name="ZZJBSCCG2" xml:space="preserve">
     <value>加班申請生成成功！</value>
   </data>
@@ -30857,5 +30851,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>變更後金額</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>物資委託代理人</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>加班類型</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>加班理由</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>本年度已加班天数</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>歷史價格</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>關聯模塊</value>
   </data>
 </root>

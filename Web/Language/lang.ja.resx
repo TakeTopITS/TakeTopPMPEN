@@ -28687,19 +28687,19 @@
     <value>ロット番号 </value>
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
-    <value>第{0}行、トン当たり消費量は小数のみ可能です</value>
+    <value>生産日</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>有効期限</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
-    <value>第{0}行、製品番号が空です</value>
+    <value>生産設備番号</value>
   </data>
   <data name="CaiZhiChanHao" xml:space="preserve">
     <value>材質証明書番号</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
-    <value>製品名</value>
+    <value>生産日：日付が空欄または形式が間違っています。形式は次のようになります：2021-04-01</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>失効日：日付が空欄または形式が間違っています。形式は次のようになります：2021-04-01</value>
@@ -30776,5 +30776,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>量を変化します</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>物資委託代理人</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>残業の種類</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>残業の理由</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>今年の残業日数</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>歴史的価格</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>関連モジュール</value>
   </data>
 </root>

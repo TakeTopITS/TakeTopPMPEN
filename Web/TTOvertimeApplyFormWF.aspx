@@ -20,7 +20,8 @@
     <script type="text/javascript" src="js/layer/layer/layer.js"></script>
     <script type="text/javascript" src="js/popwindow.js"></script>
     <script type="text/javascript" language="javascript">
-        $(function () { if (top.location != self.location) { } else { CloseWebPage(); }
+        $(function () {
+            if (top.location != self.location) { } else { CloseWebPage(); }
 
 
 
@@ -48,7 +49,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="加班申请"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,JiaBanShenQing %>"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%--<img src="ImagesSkin/main_top_r.jpg" width="5" height="31" alt="" />--%>
@@ -64,7 +65,7 @@
                                 <td class="formItemBgStyle" colspan="2" style="padding: 5px 5px 5px 5px;">
                                     <table style="width: 100%;">
                                         <tr>
-                                            <td align="left" style="padding-left:10px;">
+                                            <td align="left" style="padding-left: 10px;">
                                                 <asp:Button ID="BT_Create" runat="server" CssClass="inpuYello" OnClick="BT_Create_Click" Text="<%$ Resources:lang,New%>" />
                                             </td>
                                         </tr>
@@ -78,9 +79,6 @@
                                                         <td>
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                 <tr>
-                                                                    <td align="center" width="5%"><strong></strong></td>
-                                                                    <td align="center" width="5%"><strong></strong></td>
-                                                                    <td align="center" width="5%"><strong></strong></td>
                                                                     <td align="center" width="5%"><strong>
                                                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,DanHao %>"></asp:Label>
                                                                     </strong></td>
@@ -97,10 +95,10 @@
                                                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,JieShuShiJian %>"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="center" width="10%"><strong>
-                                                                        <asp:Label ID="Label18" runat="server" Text="加班类型"></asp:Label>
+                                                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JiaBanLeiXing %>"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="center" width="18%"><strong>
-                                                                        <asp:Label ID="Label19" runat="server" Text="加班理由"></asp:Label>
+                                                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JianBanLeiYou %>"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="center"><strong>
                                                                         <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
@@ -108,78 +106,81 @@
                                                                 </tr>
                                                             </table>
                                                         </td>
-                                                        <td align="right" width="6">
-                                                            <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
-                                                        </td>
                                                     </tr>
                                                 </table>
-                                                <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid2_ItemCommand" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="15" ShowHeader="False" Width="100%">
-                                                    <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
-                                                        </asp:ButtonColumn>
-                                                        <asp:TemplateColumn HeaderText="Delete">
-                                                            <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Delete" runat="server" CommandName="Delete" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
-                                                            </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
-                                                        </asp:TemplateColumn>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Assign" Text="&lt;div&gt;&lt;img src=ImagesSkin/Assign.png border=0 alt='Deleted' /&gt;&lt;/div&gt;">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                        </asp:ButtonColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="ID">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
-                                                        </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DepartName" HeaderText="所属部门">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                        </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="Applicant">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                        </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="StartTime">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
-                                                        </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="EndTime">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
-                                                        </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="OvertimeType" HeaderText="加班类型">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-                                                        </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ApplyBecause" HeaderText="加班事由">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
-                                                        </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="Status">
-                                                            <ItemTemplate>
-                                                                <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
-                                                            </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
-                                                        </asp:TemplateColumn>
-                                                    </Columns>
-                                                    <EditItemStyle BackColor="#2461BF" />
-                                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                    <ItemStyle CssClass="itemStyle" />
-                                                    <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
-                                                    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                </asp:DataGrid>
+                                            </td>
+                                            <td align="right" width="6">
+                                                <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
                                             </td>
                                         </tr>
                                     </table>
+                                    <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid2_ItemCommand" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="15" ShowHeader="False" Width="100%">
+                                        <Columns>
+                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                            </asp:ButtonColumn>
+                                            <asp:TemplateColumn HeaderText="Delete">
+                                                <ItemTemplate>
+                                                    <asp:LinkButton ID="LBT_Delete" runat="server" CommandName="Delete" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                </ItemTemplate>
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                            </asp:TemplateColumn>
+                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Assign" Text="&lt;div&gt;&lt;img src=ImagesSkin/Assign.png border=0 alt='Deleted' /&gt;&lt;/div&gt;">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                            </asp:ButtonColumn>
+                                            <asp:BoundColumn DataField="ID" HeaderText="ID">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                            </asp:BoundColumn>
+                                            <asp:BoundColumn DataField="DepartName" HeaderText="所属部门">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                            </asp:BoundColumn>
+                                            <asp:BoundColumn DataField="UserName" HeaderText="Applicant">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                            </asp:BoundColumn>
+                                            <asp:BoundColumn DataField="StartTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="StartTime">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
+                                            </asp:BoundColumn>
+                                            <asp:BoundColumn DataField="EndTime" DataFormatString="{0:yyyy/MM/dd HH:mm}" HeaderText="EndTime">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
+                                            </asp:BoundColumn>
+                                            <asp:BoundColumn DataField="OvertimeType" HeaderText="加班类型">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+                                            </asp:BoundColumn>
+                                            <asp:BoundColumn DataField="ApplyBecause" HeaderText="加班事由">
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
+                                            </asp:BoundColumn>
+                                            <asp:TemplateColumn HeaderText="Status">
+                                                <ItemTemplate>
+                                                    <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
+                                                </ItemTemplate>
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
+                                            </asp:TemplateColumn>
+                                        </Columns>
+                                        <EditItemStyle BackColor="#2461BF" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <ItemStyle CssClass="itemStyle" />
+                                        <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
+                                        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                    </asp:DataGrid>
                                 </td>
+                            </tr>
+                        </table>
+                        </td>
                         </table>
 
                     </div>
 
                     <div class="layui-layer layui-layer-iframe" id="popwindow" name="fixedDiv"
-                        style="z-index: 9999; width: 98%; height: 500px; position: absolute; overflow: hidden; display: none; border-radius:10px;">
-                        <div class="layui-layer-title"  style="background:#e7e7e8;" id="popwindow_title">
+                        style="z-index: 9999; width: 98%; height: 500px; position: absolute; overflow: hidden; display: none; border-radius: 10px;">
+                        <div class="layui-layer-title" style="background: #e7e7e8;" id="popwindow_title">
                             <asp:Label ID="Label11" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label>
                         </div>
-                        <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding :0px 5px 0px 5px;">
+                        <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
 
                             <table class="formBgStyle" style="width: 100%;" cellpadding="3" cellspacing="0">
                                 <tr>
                                     <td align="right" style="width: 10%" class="formItemBgStyle">
-                                        <asp:Label ID="Label3" runat="server" Text="加班类型"></asp:Label>
+                                      <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JiaBanLeiXing %>"></asp:Label>
                                         ：
                                     </td>
                                     <td align="left" style="width: 40%" class="formItemBgStyle">
@@ -187,7 +188,7 @@
                                         </asp:RadioButtonList>
                                     </td>
                                     <td align="right" class="formItemBgStyle" style="width: 10%">
-                                        <asp:Label ID="Label2" runat="server" Text="本年度已加班天数"></asp:Label>
+                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BenNianDuYiJiaBanTianShu %>"></asp:Label>
                                         ：
                                     </td>
                                     <td align="left" class="formItemBgStyle" style="width: 40%">
@@ -283,7 +284,7 @@
                                             Width="90%"></asp:TextBox>
                                     </td>
                                 </tr>
-                               <tr style="display:none;">
+                                <tr style="display: none;">
                                     <td align="right" style="height: 6px" class="formItemBgStyle">
                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>：
                                     </td>
@@ -318,11 +319,11 @@
 
 
                     <div class="layui-layer layui-layer-iframe" id="popAssignWindow" name="fixedDiv"
-                        style="z-index: 9999; width: 98%; height: 500px; position: absolute; overflow: hidden; display: none; border-radius:10px;">
-                        <div class="layui-layer-title"  style="background:#e7e7e8;" id="popwindow_title1">
+                        style="z-index: 9999; width: 98%; height: 500px; position: absolute; overflow: hidden; display: none; border-radius: 10px;">
+                        <div class="layui-layer-title" style="background: #e7e7e8;" id="popwindow_title1">
                             <asp:Label ID="Label34" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label>
                         </div>
-                        <div id="popwindow_content1" class="layui-layer-content" style="overflow: auto; padding :0px 5px 0px 5px;">
+                        <div id="popwindow_content1" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
 
                             <table width="98%" cellpadding="4" cellspacing="0">
                                 <tr>
@@ -444,7 +445,7 @@
                                             <RootNodeStyle CssClass="rootNode" />
                                             <NodeStyle CssClass="treeNode" />
                                             <LeafNodeStyle CssClass="leafNode" />
-                                            <SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
+                                            <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
                                     <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
@@ -464,8 +465,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 420px; padding: 5px 5px 5px 5px;" valign="top" align="left">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="BT_ActiveYes" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Shi%>" OnClick="BT_ActiveYes_Click" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button
+                                    <td style="width: 420px; padding: 5px 5px 5px 5px;" valign="top" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="BT_ActiveYes" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Shi%>" OnClick="BT_ActiveYes_Click" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button
                                             ID="BT_ActiveNo" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Fou%>" OnClick="BT_ActiveNo_Click" />
                                     </td>
                                 </tr>
@@ -486,4 +487,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

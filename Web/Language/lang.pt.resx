@@ -28687,19 +28687,19 @@
     <value>Número do lote</value>
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
-    <value>Linha {0}, o consumo por tonelada só pode ser um número decimal</value>
+    <value>Data de Produção</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>Data de validade</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
-    <value>Linha {0}, o número do produto não pode estar vazio</value>
+    <value>Número do Equipamento de Produção</value>
   </data>
   <data name="CaiZhiChanHao" xml:space="preserve">
     <value>Número do certificado de material</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
-    <value>Nome do produto</value>
+    <value>Data de Produção: A data está vazia ou o formato está incorreto. O formato deve ser assim: 2021-04-01</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Data de Expiração: A data está vazia ou o formato está incorreto. O formato deve ser assim: 2021-04-01</value>
@@ -30770,5 +30770,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>montante alterado</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>Agente de Materiais</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>Tipo de Horas Extras</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>Motivo das Horas Extras</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>Número de Dias de Horas Extras Este Ano</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>Preços Históricos</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>Módulos Relacionados</value>
   </data>
 </root>

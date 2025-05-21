@@ -28687,19 +28687,19 @@
     <value>Номер партии</value>
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
-    <value>Строка {0}, расход на тонну может быть только десятичным числом</value>
+    <value>Дата производства</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>Срок действия</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
-    <value>Строка {0}, номер продукта не может быть пустым</value>
+    <value>Номер производственного оборудования</value>
   </data>
   <data name="CaiZhiChanHao" xml:space="preserve">
     <value>Номер сертификата материала</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
-    <value>Название продукта</value>
+    <value>Дата производства: Дата пуста или формат неправильный. Формат должен быть таким: 2021-04-01</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Дата истечения срока: Дата пуста или формат неправильный. Формат должен быть таким: 2021-04-01</value>
@@ -30777,5 +30777,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>Сумма изменился</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>Агент по материалам</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>Тип сверхурочной работы</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>Причина сверхурочной работы</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>Количество дней сверхурочной работы в этом году</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>Исторические Цены</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>Связанные модули</value>
   </data>
 </root>

@@ -28623,9 +28623,6 @@
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>{0}행, 세금 포함 단가가 비워둘 수 없습니다</value>
   </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
-    <value>{0}행, 세금 포함 단가는 소수점일 수 있습니다</value>
-  </data>
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>{0}행, 금액이 비워둘 수 없습니다</value>
   </data>
@@ -30827,5 +30824,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>금액 변경</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>물자 위탁 대리인</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>연장근무 유형</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>연장근무 사유</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>올해까지의 연장근무 일수</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>역사적 가격</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>연관 모듈</value>
   </data>
 </root>

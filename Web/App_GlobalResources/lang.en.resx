@@ -28255,6 +28255,9 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
     <value>This collaboration does not exist, it may have been deleted, please check!</value>
   </data>
+  <data name="Juan" xml:space="preserve">
+    <value>Volume</value>
+  </data>
   <data name="JuanNeiJian" xml:space="preserve">
     <value>File within volume</value>
   </data>
@@ -28532,7 +28535,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Project-based ERP platform</value>
   </data>
   <data name="BaQueXian" xml:space="preserve">
-    <value>Collaborative OA platform</value>
+    <value>The defects:</value>
   </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>Rejected your defect:</value>
@@ -28592,40 +28595,46 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Financial expenses</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
-    <value>Organizer</value>
+    <value>Row {0}: The date cannot be empty</value>
   </data>
   <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
     <value>Row {0}, date format is incorrect</value>
   </data>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
-    <value>Customer visit statistics table</value>
+    <value>Row {0}: The purchasing unit cannot be empty</value>
+  </data>
+  <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
+    <value>Row {0}: The product type cannot be empty</value>
   </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
-    <value>Accepted your defect:</value>
+    <value>Row {0}: The product type does not exist in the base table of types</value>
   </data>
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>Row {0}, product category cannot be empty</value>
   </data>
   <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
-    <value>Regular project</value>
+    <value>Row {0}: The process card number cannot be empty</value>
+  </data>
+  <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
+    <value>Row {0}: The quantity cannot be empty</value>
   </data>
   <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
-    <value>Defect:</value>
+    <value>Row {0}: The quantity can only be a decimal</value>
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Row {0}, product long code cannot be empty</value>
   </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
-    <value>Processing your defect:</value>
+  <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
+    <value>Row {0}: The amount cannot be empty</value>
   </data>
   <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
-    <value>Suspended your defect:</value>
+    <value>Row {0}: The amount can only be a decimal</value>
   </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Row {0}, quantity cannot be empty</value>
   </data>
   <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
-    <value>Defect assignment notification</value>
+    <value>Row {0}: Financial costs can only be decimals</value>
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Row {0}, tax-inclusive unit price cannot be empty</value>
@@ -28633,11 +28642,23 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
     <value>Row {0}, customer name cannot be empty</value>
   </data>
+  <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
+    <value>Row {0}: The cost cannot be empty</value>
+  </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value>Row {0}: The cost can only be a decimal number</value>
+  </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Row {0}, amount cannot be empty</value>
   </data>
   <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
     <value>Row {0}, cost must be a decimal</value>
+  </data>
+  <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
+    <value>Zeile {0}: Die Herstellungskosten können nur Dezimalzahlen sein</value>
+  </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Row {0}: The ton consumption cannot be empty</value>
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Row {0}, financial expenses cannot be empty</value>
@@ -28648,35 +28669,47 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Product Name</value>
   </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value>Row {0}: The product name cannot be empty</value>
+  </data>
+  <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
+    <value>Row {0}: The product type cannot be empty</value>
+  </data>
   <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
-    <value>Row {0}, ton consumption cannot be empty</value>
+    <value>Row {0}: Product type: {1} does not exist in the product type table</value>
   </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>Successfully imported {0} records</value>
+    <value>No product record found</value>
   </data>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
-    <value>No data imported, a total of {0} records failed validation</value>
+    <value>No raw material record found</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
     <value>Total number</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>Row {0}, product name cannot be empty</value>
+    <value>Cost of Colorants</value>
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value>Recipe Price</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
     <value>Raw Material Product Archiving</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
-    <value>Row {0}, type cannot be empty</value>
+    <value>Compensation Material</value>
   </data>
   <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
-    <value>Row {0}, product type: {1} does not exist in the product type table</value>
+    <value>Row {0}: The compensation materials cannot be empty</value>
+  </data>
+  <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
+    <value>Row {0}: The compensation materials can only be decimals</value>
   </data>
   <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
     <value>Please enter the form type!</value>
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
-    <value>Row {0}, manufacturing cost must be a decimal</value>
+    <value>Excel format error or Excel is being accessed by another process</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>Prompt: Copy successful!</value>
@@ -28703,7 +28736,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Raw material product archive</value>
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
-    <value>Row {0}, product type cannot be empty</value>
+    <value>Production Date</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>Expiry Date</value>
@@ -28715,7 +28748,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Material Certificate Number</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
-    <value>&gt;No product records&lt;/td&gt;</value>
+    <value>Production Date: The date is empty or the format is incorrect. The format should be like this: 2021-04-01</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Expiry Date: The date is empty or the format is incorrect. The format should be like this: 2021-04-01</value>
@@ -30100,6 +30133,9 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="XueShengXingMing" xml:space="preserve">
     <value>Student name</value>
   </data>
+  <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
+    <value>Row {0}: The student name cannot be empty</value>
+  </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>Whether attending school</value>
   </data>
@@ -30218,7 +30254,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>&lt;td&gt;Bidding documents&lt;/td&gt;</value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
-    <value>&gt;Bid evaluation document directory&lt;/td&gt;</value>
+    <value>Directory of Bidding Documents</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>&lt;td&gt;Bid evaluation method and standards&lt;/td&gt;</value>
@@ -30789,5 +30825,23 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>Amount Changed</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>Material Agent</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>Overtime Type</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>Reason for Overtime</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>Number of Overtime Days This Year</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>Historical Prices</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>Related Modules</value>
   </data>
 </root>

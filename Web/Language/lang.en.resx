@@ -28615,9 +28615,6 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Row {0}, product long code cannot be empty</value>
   </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
-    <value>Processing your defect:</value>
-  </data>
   <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
     <value>Suspended your defect:</value>
   </data>
@@ -28703,7 +28700,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Raw material product archive</value>
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
-    <value>Row {0}, product type cannot be empty</value>
+    <value>Production Date</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>Expiry Date</value>
@@ -28715,7 +28712,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Material Certificate Number</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
-    <value>&gt;No product records&lt;/td&gt;</value>
+    <value>Production Date: The date is empty or the format is incorrect. The format should be like this: 2021-04-01</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>Expiry Date: The date is empty or the format is incorrect. The format should be like this: 2021-04-01</value>
@@ -30789,5 +30786,23 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>Amount Changed</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>Material Agent</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>Overtime Type</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>Reason for Overtime</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>Number of Overtime Days This Year</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>Historical Prices</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>Related Modules</value>
   </data>
 </root>

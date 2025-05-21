@@ -28594,106 +28594,103 @@
     <value>財務費用</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行，日期不能為空&lt;br/&gt;</value>
+    <value>第{0}行，日期不能為空</value>
   </data>
   <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
-    <value>第{0}行，日期格式不正確&lt;br/&gt;</value>
+    <value>第{0}行，日期格式不正確</value>
   </data>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
-    <value>第{0}行，購貨單位不能為空&lt;br/&gt;</value>
+    <value>第{0}行，購貨單位不能為空</value>
   </data>
   <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
-    <value>第{0}行，產品種類不能為空&lt;br/&gt;</value>
+    <value>第{0}行，產品種類不能為空</value>
   </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
-    <value>第{0}行，產品種類在類型的基礎資料表中不存在&lt;br/&gt;</value>
+    <value>第{0}行，產品種類在類型的基礎資料表中不存在</value>
   </data>
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
-    <value>第{0}行，產品長代碼不能為空&lt;br/&gt;</value>
+    <value>第{0}行，產品長代碼不能為空&gt;</value>
   </data>
   <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
-    <value>第{0}行，工藝卡編號不能為空&lt;br/&gt;</value>
+    <value>第{0}行，工藝卡編號不能為空</value>
   </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行，數量不能為空&lt;br/&gt;</value>
+    <value>第{0}行，數量不能為空</value>
   </data>
   <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
-    <value>第{0}行，數量只能是小數&lt;br/&gt;</value>
+    <value>第{0}行，數量只能是小數</value>
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
-    <value>第{0}行，含稅單價不能為空&lt;br/&gt;</value>
-  </data>
-  <data name="Di0HangHanShuiChanJiaZhiNengSh" xml:space="preserve">
-    <value>第{0}行，含稅單價只能是小數&lt;br/&gt;</value>
+    <value>第{0}行，含稅單價不能為空</value>
   </data>
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行，金額不能為空&lt;br/&gt;</value>
+    <value>第{0}行，金額不能為空</value>
   </data>
   <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
-    <value>第{0}行，金額只能是小數&lt;br/&gt;</value>
+    <value>第{0}行，金額只能是小數</value>
   </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
-    <value>第{0}行，財務費用不能為空&lt;br/&gt;</value>
+    <value>第{0}行，財務費用不能為空</value>
   </data>
   <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
-    <value>第{0}行，財務費用只能是小數&lt;br/&gt;</value>
+    <value>第{0}行，財務費用只能是小數</value>
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>&lt;br/&gt;未導入資料， 共有 {0} 條資料驗證失敗</value>
   </data>
   <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
-    <value>第{0}行，客戶名稱不能為空&lt;br/&gt;</value>
+    <value>第{0}行，客戶名稱不能為空</value>
   </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行，費用不能為空&lt;br/&gt;</value>
+    <value>第{0}行，費用不能為空</value>
   </data>
   <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
-    <value>第{0}行，費用只能是小數&lt;br/&gt;</value>
+    <value>第{0}行，費用只能是小數</value>
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行，類型不能為空&lt;br/&gt;</value>
+    <value>第{0}行，類型不能為空</value>
   </data>
   <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
-    <value>第{0}行，製造成本不能為空&lt;br/&gt;</value>
+    <value>第{0}行，製造成本不能為空</value>
   </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>第{0}行，製造成本只能是小數&lt;br/&gt;</value>
   </data>
   <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行，噸耗不能為空&lt;br/&gt;</value>
+    <value>第{0}行，噸耗不能為空</value>
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
-    <value>第{0}行，噸耗只能是小數&lt;br/&gt;</value>
+    <value>第{0}行，噸耗只能是小數</value>
   </data>
   <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
-    <value>第{0}行，產品編號不能為空&lt;br/&gt;</value>
+    <value>第{0}行，產品編號不能為空</value>
   </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>產品名稱</value>
   </data>
   <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
-    <value>第{0}行，產品名稱不能為空&lt;br/&gt;</value>
+    <value>第{0}行，產品名稱不能為空</value>
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
-    <value>第{0}行，產品類型不能為空&lt;br/&gt;</value>
+    <value>第{0}行，產品類型不能為空</value>
   </data>
   <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
     <value>第{0}行，產品類型:{1}在產品類型表中不存在&lt;br/&gt;</value>
   </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>&gt;無產品記錄&lt;/td&gt;</value>
+    <value>無產品記錄</value>
   </data>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
-    <value>&gt;&lt;p&gt;無原料記錄&lt;/p&gt;&amp;nbsp;&lt;/td&gt;</value>
+    <value>無原料記錄</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>&gt;總數量&lt;/td&gt;&lt;td class=\</value>
+    <value>總數量</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>&gt;顏色料成本&lt;/td&gt;&lt;td class=\</value>
+    <value>顏色料成本</value>
   </data>
   <data name="PeiFangJiatdtdclass" xml:space="preserve">
-    <value>&gt;配方價&lt;/td&gt;&lt;td class=\</value>
+    <value>配方價</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
     <value>原料產品存檔</value>
@@ -28702,10 +28699,10 @@
     <value>賠料</value>
   </data>
   <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行，賠料不能為空&lt;br/&gt;</value>
+    <value>第{0}行，賠料不能為空</value>
   </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
-    <value>第{0}行，賠料只能是小數&lt;br/&gt;</value>
+    <value>第{0}行，賠料只能是小數</value>
   </data>
   <data name="QingShuRuBiaoChanLeiXing" xml:space="preserve">
     <value>請輸入表單類型！</value>
@@ -30130,13 +30127,13 @@
     <value>學生編碼</value>
   </data>
   <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
-    <value>第{0}行，學生編碼不能為空&lt;br/&gt;</value>
+    <value>第{0}行，學生編碼不能為空</value>
   </data>
   <data name="XueShengXingMing" xml:space="preserve">
     <value>學生姓名</value>
   </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
-    <value>第{0}行，學生姓名不能為空&lt;br/&gt;</value>
+    <value>第{0}行，學生姓名不能為空</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>是否上學</value>
@@ -30256,7 +30253,7 @@
     <value>&lt;td&gt;招標文件&lt;/td&gt;</value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
-    <value>&gt;評標檔目錄&lt;/td&gt;</value>
+    <value>評標檔目錄</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>&lt;td &gt;評標方法及標準&lt;/td&gt;</value>
@@ -30774,35 +30771,11 @@
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>導入語言資料</value>
   </data>
-  <data name="QCSYYGWXID1" xml:space="preserve">
-    <value>清除所有员工微信ID</value>
-  </data>
-  <data name="QCSYYGWXID2" xml:space="preserve">
-    <value>清除所有員工微信ID</value>
-  </data>
-  <data name="XuQiuLeiBie1" xml:space="preserve">
-    <value>需求类别</value>
-  </data>
-  <data name="XuQiuLeiBie2" xml:space="preserve">
-    <value>需求類別</value>
-  </data>
   <data name="ZZHHCG1" xml:space="preserve">
     <value>返回成功！</value>
   </data>
   <data name="ZZHHCG2" xml:space="preserve">
     <value>返回成功！</value>
-  </data>
-  <data name="ZZJBSCCG1" xml:space="preserve">
-    <value>加班申请生成成功！</value>
-  </data>
-  <data name="ZZJBSCCG2" xml:space="preserve">
-    <value>加班申請生成成功！</value>
-  </data>
-  <data name="ZZJGCGZLMBBCZQJC1" xml:space="preserve">
-    <value>警告，此工作流相应的范本或数据文件不存在，请检查！</value>
-  </data>
-  <data name="ZZJGCGZLMBBCZQJC2" xml:space="preserve">
-    <value>警告，此工作流相應的範本或數據文件不存在，請檢查！</value>
   </data>
   <data name="LianXian" xml:space="preserve">
     <value>連線</value>
@@ -30857,5 +30830,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>變更後金額</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>物資委託代理人</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>加班類型</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>加班理由</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>本年度已加班天数</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>歷史價格</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>關聯模塊</value>
   </data>
 </root>

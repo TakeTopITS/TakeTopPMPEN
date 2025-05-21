@@ -518,7 +518,7 @@
 
                                                                                     </strong></td>
                                                                                     <td align="center" width="8%"><strong>
-                                                                                        <asp:Label ID="Label28" runat="server" Text="含税单价"></asp:Label>
+                                                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,HanShuiChanJia %>"></asp:Label>
 
 
 
@@ -769,7 +769,7 @@
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Price" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
                                                         PositiveColor="" Width="60px" Precision="4">
                                                         0.0000</NickLee:NumberBox>
-                                                    <asp:Button ID="BT_HistoryPriceSelect" CssClass="inpu" runat="server" Text="历史价格" OnClick="BT_HistoryPriceSelect_Click" />
+                                                    <asp:Button ID="BT_HistoryPriceSelect" CssClass="inpu" runat="server" Text="<%$ Resources:lang,LiShiJiaGe %>" OnClick="BT_HistoryPriceSelect_Click" />
                                                 </td>
                                             </tr>
                                             <tr>

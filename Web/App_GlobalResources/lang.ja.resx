@@ -27543,6 +27543,9 @@
   <data name="ZZGSMCBCZQJC" xml:space="preserve">
     <value>警告：会社名が間違っているか存在しません。確認してください！</value>
   </data>
+  <data name="DianJiDaKaiTaoHuangYeMian" xml:space="preserve">
+    <value>ナビゲーションページを開くにはクリックしてください</value>
+  </data>
   <data name="SheJi" xml:space="preserve">
     <value>ナビゲーションページを開く</value>
   </data>
@@ -28530,6 +28533,9 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>通常プロジェクト</value>
   </data>
+  <data name="BaQueXian" xml:space="preserve">
+    <value>欠点：</value>
+  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;私の意見：&lt;/b&gt;</value>
   </data>
@@ -28588,70 +28594,112 @@
     <value>ドキュメントリスト&lt;/B&gt;</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
-    <value>日付</value>
+    <value>{0}行目、日付は空にできません</value>
   </data>
   <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
-    <value>製品長コード</value>
+    <value>{0}行目、日付の形式が正しくありません</value>
   </data>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
-    <value>工芸カード番号</value>
+    <value>{0}行目、購入単位は空にできません</value>
   </data>
   <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
-    <value>税込単価</value>
+    <value>{0}行目、製品の種類は空にできません</value>
   </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
-    <value>財務費用</value>
+    <value>{0}行目、製品の種類はタイプの基本表に存在しません</value>
   </data>
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>第{0}行、日付が空です</value>
   </data>
+  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
+    <value>{0}行目、工程カード番号は空にできません</value>
+  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行、日付形式が正しくありません</value>
+  </data>
+  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
+    <value>{0}行目、数量は小数でなければなりません</value>
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>第{0}行、購入先が空です</value>
   </data>
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
-    <value>第{0}行、製品種類が空です</value>
+    <value>{0}行目、金額は空にできません</value>
+  </data>
+  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
+    <value>{0}行目、金額は空にできません</value>
   </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>第{0}行、製品種類が基本テーブルに存在しません</value>
   </data>
+  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
+    <value>{0}行目、財務費用は小数でなければなりません（{0}ぎょうめ、ざいむひようはしょうすうでなければなりません）</value>
+  </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>第{0}行、工芸カード番号が空です</value>
+  </data>
+  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
+    <value>{0}行目、顧客名は空にできません</value>
   </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行、数量が空です</value>
   </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value>{0}行目、費用は小数でなければなりません</value>
+  </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>第{0}行、数量は小数のみ可能です</value>
+  </data>
+  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
+    <value>{0}行目、製造コストは空にできません</value>
   </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>第{0}行、税込単価が空です</value>
   </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value>{0}行目、トンあたりの消費量は空にできません</value>
+  </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>第{0}行、税込単価は小数のみ可能です</value>
+  </data>
+  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
+    <value>{0}行目、製品番号は空にできません</value>
   </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Nome del prodotto</value>
   </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value>{0}行目、製品名は空にできません</value>
+  </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>第{0}行、金額は小数のみ可能です</value>
   </data>
+  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
+    <value>{0}行目、製品の種類{1}は製品の種類の表に存在しません</value>
+  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>第{0}行、財務費用が空です</value>
+    <value>製品記録が見つかりません</value>
+  </data>
+  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
+    <value>原材料の記録が見つかりません</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>{0} 件のデータを正常にインポートしました</value>
+    <value>総数</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>{0} 件のデータを正常にインポートしましたが、 {1} 件のデータが検証に失敗しました</value>
+    <value>色料のコスト</value>
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value>レシピ価格</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
-    <value>データをインポートできませんでした。 {0} 件のデータが検証に失敗しました</value>
+    <value>原材料製品のアーカイブ</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
-    <value>第{0}行、顧客名が空です</value>
+    <value>補償材料</value>
+  </data>
+  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
+    <value>{0}行目、補償材料は空にできません</value>
   </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>第{0}行、費用が空です</value>
@@ -28660,7 +28708,7 @@
     <value>フォームの種類を入力してください！</value>
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
-    <value>第{0}行、費用は小数のみ可能です</value>
+    <value>Excelの書式が間違っていますか、Excelは別のプロセスによってアクセスされています</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>Avviso: Copia riuscita!</value>
@@ -28687,19 +28735,19 @@
     <value>ロット番号 </value>
   </data>
   <data name="ShengChanRiJi" xml:space="preserve">
-    <value>第{0}行、トン当たり消費量は小数のみ可能です</value>
+    <value>生産日</value>
   </data>
   <data name="ShiXiaoRiJi" xml:space="preserve">
     <value>有効期限</value>
   </data>
   <data name="ShengChanSheBeiHao" xml:space="preserve">
-    <value>第{0}行、製品番号が空です</value>
+    <value>生産設備番号</value>
   </data>
   <data name="CaiZhiChanHao" xml:space="preserve">
     <value>材質証明書番号</value>
   </data>
   <data name="ShengChanRiJiRiJiGeShiBuDuiHuo" xml:space="preserve">
-    <value>製品名</value>
+    <value>生産日：日付が空欄または形式が間違っています。形式は次のようになります：2021-04-01</value>
   </data>
   <data name="ShiXiaoRiJiRiJiGeShiBuDuiHuoWe" xml:space="preserve">
     <value>失効日：日付が空欄または形式が間違っています。形式は次のようになります：2021-04-01</value>
@@ -28720,7 +28768,7 @@
     <value>物料生産伝票</value>
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
-    <value>&gt;製品記録なし&lt;/td&gt;</value>
+    <value>生産加工費</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>&gt;保存&lt;/a&gt;</value>
@@ -29959,7 +30007,7 @@
     <value>&lt;tr&gt;&lt;td&gt;データなし&lt;/td&gt;&lt;/tr&gt;</value>
   </data>
   <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
-    <value>学生数：</value>
+    <value>内容が完全に削除されました。ご注意ください。ここに通知します！</value>
   </data>
   <data name="DeXiangMuLieBiao" xml:space="preserve">
     <value>全てのプロジェクトリスト</value>
@@ -30079,13 +30127,13 @@
     <value>早退時間（分）</value>
   </data>
   <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
-    <value>無断欠勤日数</value>
+    <value>{0}行目、学生コードは空にできません</value>
   </data>
   <data name="XueShengXingMing" xml:space="preserve">
     <value>夜勤日数</value>
   </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
-    <value>学生コード</value>
+    <value>{0}行目、生徒の名前は空にできません</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>学校に行く</value>
@@ -30205,7 +30253,7 @@
     <value>検査番号" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
-    <value>契約" + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "</value>
+    <value>入札評価書類の目録</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>契約材検査" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
@@ -30776,5 +30824,23 @@
   </data>
   <data name="BianGengHaoJinE" xml:space="preserve">
     <value>量を変化します</value>
+  </data>
+  <data name="WuZiWeiTuoDaiLiRen" xml:space="preserve">
+    <value>物資委託代理人</value>
+  </data>
+  <data name="JiaBanLeiXing" xml:space="preserve">
+    <value>残業の種類</value>
+  </data>
+  <data name="JianBanLeiYou" xml:space="preserve">
+    <value>残業の理由</value>
+  </data>
+  <data name="BenNianDuYiJiaBanTianShu" xml:space="preserve">
+    <value>今年の残業日数</value>
+  </data>
+  <data name="LiShiJiaGe" xml:space="preserve">
+    <value>歴史的価格</value>
+  </data>
+  <data name="GanLianMuGuai" xml:space="preserve">
+    <value>関連モジュール</value>
   </data>
 </root>
