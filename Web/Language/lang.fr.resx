@@ -28254,8 +28254,11 @@
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
     <value>Cette collaboration n'existe pas ou a peut-être été supprimée. Veuillez vérifier !</value>
   </data>
+  <data name="Juan" xml:space="preserve">
+    <value>Volume</value>
+  </data>
   <data name="JuanNeiJian" xml:space="preserve">
-    <value>Contenu :</value>
+    <value>Documents à l'intérieur du volume</value>
   </data>
   <data name="ShuRuXiangMuXiangGuanFeiYong" xml:space="preserve">
     <value>Cette collaboration n'existe pas, elle a peut-être été supprimée, veuillez vérifier !</value>
@@ -28530,6 +28533,9 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>Projet régulier</value>
   </data>
+  <data name="BaQueXian" xml:space="preserve">
+    <value>Les défauts:</value>
+  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;Mon avis :&lt;/b&gt;</value>
   </data>
@@ -28588,25 +28594,31 @@
     <value>Liste des documents&lt;/B&gt;</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
-    <value>Date</value>
+    <value>Ligne {0} : La date ne peut pas être vide</value>
   </data>
   <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
-    <value>Code long du produit</value>
+    <value>Ligne {0} : Le format de la date n'est pas correct</value>
   </data>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
-    <value>Numéro de la fiche de processus</value>
+    <value>Ligne {0} : L'unité d'achat ne peut pas être vide</value>
   </data>
   <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
-    <value>Prix unitaire TTC</value>
+    <value>Ligne {0} : Le type de produit ne peut pas être vide</value>
   </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
-    <value>Frais financiers</value>
+    <value>Ligne {0} : Le type de produit n'existe pas dans la table de base des types</value>
   </data>
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>Ligne {0}, la date ne peut pas être vide</value>
   </data>
+  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
+    <value>Ligne {0} : Le numéro de carte de processus ne peut pas être vide</value>
+  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>Ligne {0}, le format de la date est incorrect</value>
+  </data>
+  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
+    <value>Ligne {0} : La quantité ne peut être qu'un nombre décimal</value>
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Ligne {0}, l'unité d'achat ne peut pas être vide</value>
@@ -28614,44 +28626,80 @@
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>Ligne {0}, le type de produit ne peut pas être vide</value>
   </data>
+  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
+    <value>Ligne {0} : Le montant ne peut être qu'un nombre décimal</value>
+  </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Ligne {0}, le type de produit n'existe pas dans la table de base des types</value>
+  </data>
+  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
+    <value>Ligne {0} : Les coûts financiers ne peuvent être que des nombres décimaux</value>
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Ligne {0}, le numéro de la fiche de processus ne peut pas être vide</value>
   </data>
+  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
+    <value>Ligne {0} : Le nom du client ne peut pas être vide</value>
+  </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>Ligne {0}, la quantité ne peut pas être vide</value>
+  </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value>Ligne {0} : Le coût ne peut être qu'un nombre décimal</value>
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Ligne {0}, la quantité ne peut être qu'un nombre décimal</value>
   </data>
+  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
+    <value>Ligne {0} : Le coût de fabrication ne peut pas être vide</value>
+  </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>Ligne {0}, le prix unitaire TTC ne peut pas être vide</value>
+  </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Ligne {0} : La consommation par tonne ne peut pas être vide</value>
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Ligne {0}, le prix unitaire TTC ne peut être qu'un nombre décimal</value>
   </data>
+  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
+    <value>Ligne {0} : Le numéro de produit ne peut pas être vide</value>
+  </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Nom du produit</value>
+  </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value>Ligne {0} : Le nom du produit ne peut pas être vide</value>
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>Ligne {0}, le montant ne peut être qu'un nombre décimal</value>
   </data>
+  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
+    <value>Ligne {0} : Type de produit: {1} n'existe pas dans la table des types de produit</value>
+  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>Ligne {0}, les frais financiers ne peuvent pas être vides</value>
+    <value>Aucun enregistrement de produit trouvé</value>
+  </data>
+  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
+    <value>Aucun enregistrement de matière première trouvé</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>Importation réussie de {0} données</value>
+    <value>Quantité Totale</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>Importation réussie de {0} données, {1} données ont échoué à la validation</value>
+    <value>Coût des colorants</value>
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value>Prix de la Recette</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
-    <value>Aucune donnée importée, {0} données ont échoué à la validation</value>
+    <value>Archivage des Produits de Matière Première</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
-    <value>Ligne {0}, le nom du client ne peut pas être vide</value>
+    <value>Matériel de Compensation</value>
+  </data>
+  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Ligne {0} : Les matériaux de compensation ne peuvent pas être vides</value>
   </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Ligne {0}, les frais ne peuvent pas être vides</value>
@@ -28660,7 +28708,7 @@
     <value>Veuillez entrer le type de formulaire !</value>
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
-    <value>Ligne {0}, les frais ne peuvent être qu'un nombre décimal</value>
+    <value>Erreur de format Excel ou Excel est accédé par un autre processus</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>Avertissement : Copie réussie !</value>
@@ -30085,7 +30133,7 @@
     <value>Nom de l'Étudiant</value>
   </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
-    <value>Nom de l'étudiant</value>
+    <value>Ligne {0} : Le nom de l'élève ne peut pas être vide</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>Aller à l'école</value>
@@ -30203,6 +30251,9 @@
   </data>
   <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
     <value>Comparaison "+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+"</value>
+  </data>
+  <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
+    <value>Répertoire des Documents d'Évaluation</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>Répertoire des documents d'appel d'offres&lt;/td&gt;</value>

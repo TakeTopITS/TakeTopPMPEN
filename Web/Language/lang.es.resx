@@ -28255,7 +28255,7 @@
     <value>Cantidad de combustible</value>
   </data>
   <data name="Juan" xml:space="preserve">
-    <value>Precio unitario</value>
+    <value>Volumen</value>
   </data>
   <data name="JuanNeiJian" xml:space="preserve">
     <value>Notificación de orden de rectificación de problemas</value>
@@ -28533,6 +28533,9 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>Proyecto regular</value>
   </data>
+  <data name="BaQueXian" xml:space="preserve">
+    <value>Los defectos:</value>
+  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;Mi opinión:&lt;/b&gt;</value>
   </data>
@@ -28591,25 +28594,31 @@
     <value>Lista de documentos&lt;/B&gt;</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
-    <value>Fecha</value>
+    <value>Fila {0}: La fecha no puede estar vacía</value>
   </data>
   <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
-    <value>Código largo del producto</value>
+    <value>Fila {0}: El formato de la fecha no es correcto</value>
   </data>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
-    <value>Número de la tarjeta de proceso</value>
+    <value>Fila {0}: La unidad de compra no puede estar vacía</value>
   </data>
   <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
-    <value>Precio unitario con impuestos</value>
+    <value>Fila {0}: El tipo de producto no puede estar vacío</value>
   </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
-    <value>Gastos financieros</value>
+    <value>Fila {0}: El tipo de producto no existe en la tabla base de tipos</value>
   </data>
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>Línea {0}, la fecha no puede estar vacía</value>
   </data>
+  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
+    <value>Fila {0}: El número de tarjeta de proceso no puede estar vacío</value>
+  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>Línea {0}, el formato de la fecha es incorrecto</value>
+  </data>
+  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
+    <value>Fila {0}: La cantidad solo puede ser un número decimal</value>
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Línea {0}, la unidad de compra no puede estar vacía</value>
@@ -28617,44 +28626,80 @@
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>Línea {0}, el tipo de producto no puede estar vacío</value>
   </data>
+  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
+    <value>Fila {0}: La cantidad solo puede ser un número decimal</value>
+  </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Línea {0}, el tipo de producto no existe en la tabla de tipos base</value>
+  </data>
+  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
+    <value>Fila {0}: Los gastos financieros solo pueden ser números decimales</value>
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Línea {0}, el número de la tarjeta de proceso no puede estar vacío</value>
   </data>
+  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
+    <value>Fila {0}: El nombre del cliente no puede estar vacío</value>
+  </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>Línea {0}, la cantidad no puede estar vacía</value>
+  </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value>Fila {0}: El costo solo puede ser un número decimal</value>
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Línea {0}, la cantidad solo puede ser un decimal</value>
   </data>
+  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
+    <value>Fila {0}: El costo de fabricación no puede estar vacío</value>
+  </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>Línea {0}, el precio unitario con impuestos no puede estar vacío</value>
+  </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Fila {0}: El consumo por tonelada no puede estar vacío</value>
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Línea {0}, el precio unitario con impuestos solo puede ser un decimal</value>
   </data>
+  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
+    <value>Fila {0}: El número de producto no puede estar vacío</value>
+  </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Nombre del producto</value>
+  </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value>Fila {0}: El nombre del producto no puede estar vacío</value>
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>Línea {0}, el monto solo puede ser un decimal</value>
   </data>
+  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
+    <value>Fila {0}: Tipo de producto: {1} no existe en la tabla de tipos de producto</value>
+  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>Línea {0}, los gastos financieros no pueden estar vacíos</value>
+    <value>No se encontraron registros de productos</value>
+  </data>
+  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
+    <value>No se encontraron registros de materias primas</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>Se importaron con éxito {0} filas de datos</value>
+    <value>Cantidad Total</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>Se importaron con éxito {0} filas de datos, un total de {1} filas fallaron la validación</value>
+    <value>Costo de Colorantes</value>
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value>Precio de la Receta</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
-    <value>No se importaron datos, un total de {0} filas fallaron la validación</value>
+    <value>Archivo de Productos de Materia Prima</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
-    <value>Línea {0}, el nombre del cliente no puede estar vacío</value>
+    <value>Material de Compensación</value>
+  </data>
+  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Fila {0}: Los materiales de compensación no pueden estar vacíos</value>
   </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Línea {0}, el costo no puede estar vacío</value>
@@ -28663,7 +28708,7 @@
     <value>¡Por favor, ingrese el tipo de formulario!</value>
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
-    <value>Línea {0}, el costo solo puede ser un decimal</value>
+    <value>Error de formato de Excel o Excel está siendo accedido por otro proceso</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>Aviso: ¡Copia exitosa!</value>
@@ -30088,7 +30133,7 @@
     <value>Nombre del Estudiante</value>
   </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
-    <value>Nombre del estudiante</value>
+    <value>Fila {0}: El nombre del estudiante no puede estar vacío</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>Attending School</value>
@@ -30206,6 +30251,9 @@
   </data>
   <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
     <value>Comparar " + LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim() + "</value>
+  </data>
+  <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
+    <value>Directorio de Documentos de Evaluación</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>Directorio de documentos de licitación&lt;/td&gt;</value>

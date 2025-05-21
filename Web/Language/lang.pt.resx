@@ -27768,6 +27768,9 @@
   <data name="ZhengZaiShanChuNiDeYingYongZha" xml:space="preserve">
     <value>Excluindo seu site de aplicativo, o que levará cerca de 5 minutos. Por favor, aguarde pacientemente……</value>
   </data>
+  <data name="ZhanDianShanChuChengGong" xml:space="preserve">
+    <value>O site foi excluído com sucesso!</value>
+  </data>
   <data name="ShanChuShiBaiQingJianCha" xml:space="preserve">
     <value>Conta de login: ADMIN Senha: 12345678</value>
   </data>
@@ -28252,7 +28255,7 @@
     <value>Código do departamento responsável</value>
   </data>
   <data name="Juan" xml:space="preserve">
-    <value>Quantidade de abastecimento</value>
+    <value>Volume</value>
   </data>
   <data name="JuanNeiJian" xml:space="preserve">
     <value>Preço unitário</value>
@@ -28530,6 +28533,9 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>Projeto regular</value>
   </data>
+  <data name="BaQueXian" xml:space="preserve">
+    <value>Os defeitos:</value>
+  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;Minha opinião:&lt;/b&gt;</value>
   </data>
@@ -28588,25 +28594,31 @@
     <value>Lista de documentos&lt;/B&gt;</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
-    <value>Data</value>
+    <value>Linha {0}: Os materiais de compensação podem ser apenas números decimais</value>
   </data>
   <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
-    <value>Código longo do produto</value>
+    <value>Linha {0}: O formato da data não está correto</value>
   </data>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
-    <value>Número do cartão de processo</value>
+    <value>Linha {0}: A unidade de compra não pode estar vazia</value>
   </data>
   <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
-    <value>Preço unitário com impostos</value>
+    <value>Linha {0}: O tipo de produto não pode estar vazio</value>
   </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
-    <value>Custos financeiros</value>
+    <value>Linha {0}: O tipo de produto não existe na tabela base de tipos</value>
   </data>
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>Linha {0}, a data não pode estar vazia</value>
   </data>
+  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
+    <value>Linha {0}: O número da carta de processo não pode estar vazio</value>
+  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, o formato da data está incorreto</value>
+  </data>
+  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
+    <value>Linha {0}: A quantidade pode ser apenas um número decimal</value>
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Linha {0}, a unidade de compra não pode estar vazia</value>
@@ -28614,44 +28626,80 @@
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, o tipo de produto não pode estar vazio</value>
   </data>
+  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
+    <value>Linha {0}: O valor pode ser apenas um número decimal</value>
+  </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Linha {0}, o tipo de produto não existe na tabela de tipos básicos</value>
+  </data>
+  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
+    <value>Linha {0}: Custos financeiros podem ser apenas decimais</value>
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Linha {0}, o número do cartão de processo não pode estar vazio</value>
   </data>
+  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
+    <value>Linha {0}: O nome do cliente não pode estar vazio</value>
+  </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, a quantidade não pode estar vazia</value>
+  </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value>Linha {0}: O custo pode ser apenas um número decimal</value>
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}, a quantidade só pode ser um número decimal</value>
   </data>
+  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
+    <value>Linha {0}: O custo de fabricação não pode estar vazio</value>
+  </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>Linha {0}, o preço unitário com impostos não pode estar vazio</value>
+  </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Linha {0}: O consumo por tonelada não pode estar vazio</value>
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Linha {0}, o preço unitário com impostos só pode ser um número decimal</value>
   </data>
+  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
+    <value>Linha {0}: O número do produto não pode estar vazio</value>
+  </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Nome do produto</value>
+  </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value>Linha {0}: O nome do produto não pode estar vazio</value>
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>Linha {0}, o valor só pode ser um número decimal</value>
   </data>
+  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
+    <value>Linha {0}: Tipo de produto: {1} não existe na tabela de tipos de produto</value>
+  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>Linha {0}, os custos financeiros não podem estar vazios</value>
+    <value>Nenhum registro de produto encontrado</value>
+  </data>
+  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
+    <value>Nenhum registro de matéria-prima encontrado</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>Importação bem-sucedida de {0} registros</value>
+    <value>Quantidade Total</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>Importação bem-sucedida de {0} registros, total de {1} registros com falha na validação</value>
+    <value>Custo de colorantes</value>
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value>Preço da Receita</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
-    <value>Nenhum dado importado, total de {0} registros com falha na validação</value>
+    <value>Arquivamento de Produtos de Matéria-Prima</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
-    <value>Linha {0}, o nome do cliente não pode estar vazio</value>
+    <value>Material de Compensação</value>
+  </data>
+  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Linha {0}: Os materiais de compensação não podem estar vazios</value>
   </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Linha {0}, o custo não pode estar vazio</value>
@@ -28660,7 +28708,7 @@
     <value>Por favor, insira o tipo de formulário!</value>
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
-    <value>Linha {0}, o custo só pode ser um número decimal</value>
+    <value>Erro de formato do Excel ou o Excel está sendo acessado por outro processo</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>Aviso: Cópia bem-sucedida!</value>
@@ -29958,6 +30006,9 @@
   <data name="MoBanXiangMu" xml:space="preserve">
     <value>Projeto modelo</value>
   </data>
+  <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
+    <value>O conteúdo foi excluído permanentemente. Por favor, preste atenção. Aqui se notifica!</value>
+  </data>
   <data name="DeXiangMuLieBiao" xml:space="preserve">
     <value>O conteúdo foi realmente excluído. Por favor, fique atento. Esta é uma notificação!</value>
   </data>
@@ -30076,7 +30127,7 @@
     <value>Dias de ausência</value>
   </data>
   <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
-    <value>Dias de turno noturno</value>
+    <value>Linha {0}: O código do aluno não pode estar vazio</value>
   </data>
   <data name="XueShengXingMing" xml:space="preserve">
     <value>Código do estudante</value>
@@ -30202,7 +30253,7 @@
     <value>Contrato " + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "</value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
-    <value>Inspeção de materiais do contrato " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
+    <value>Diretório de Documentos de Avaliação</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>Comparação "+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+"</value>
@@ -30503,6 +30554,9 @@
   </data>
   <data name="MeiYouZhaoDaoXiangYingDeBaiFangJiLu" xml:space="preserve">
     <value>Nome do responsável</value>
+  </data>
+  <data name="FuZeRenMingCheng" xml:space="preserve">
+    <value>Nome do Responsável</value>
   </data>
   <data name="NiQuedYaoShanChuSuoXuanZeDeShuJuXiangMa" xml:space="preserve">
     <value>Tem certeza que deseja excluir os itens de dados selecionados?</value>

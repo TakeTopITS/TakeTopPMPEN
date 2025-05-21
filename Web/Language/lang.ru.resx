@@ -9439,7 +9439,7 @@
     <value>Дата PMI</value>
   </data>
   <data name="POP3DiZhi" xml:space="preserve">
-    <value>POP3 адрес</value>
+    <value>Адрес POP3</value>
   </data>
   <data name="POP3DuanKou" xml:space="preserve">
     <value>Порт POP3</value>
@@ -27769,7 +27769,7 @@
     <value>Удаляю ваш сайт приложения, это займет около 5 минут. Пожалуйста, подождите……</value>
   </data>
   <data name="ZhanDianShanChuChengGong" xml:space="preserve">
-    <value>Логин: ADMIN, пароль: 12345678</value>
+    <value>Сайт был успешно удален!</value>
   </data>
   <data name="ShanChuShiBaiQingJianCha" xml:space="preserve">
     <value>Восстановление базы данных не удалось!</value>
@@ -28255,7 +28255,10 @@
     <value>Это сотрудничество не существует или, возможно, было удалено. Пожалуйста, проверьте!</value>
   </data>
   <data name="Juan" xml:space="preserve">
-    <value>Уведомление о исправлении проблем</value>
+    <value>Том</value>
+  </data>
+  <data name="JuanNeiJian" xml:space="preserve">
+    <value>Документы в томе</value>
   </data>
   <data name="ShuRuXiangMuXiangGuanFeiYong" xml:space="preserve">
     <value>Введите расходы по проекту</value>
@@ -28530,6 +28533,9 @@
   <data name="ChangGuiXiangMu" xml:space="preserve">
     <value>Обычный проект</value>
   </data>
+  <data name="BaQueXian" xml:space="preserve">
+    <value>Дефекты:</value>
+  </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>&lt;b&gt;Мое мнение:&lt;/b&gt;</value>
   </data>
@@ -28588,25 +28594,32 @@
     <value>Список документов&lt;/B&gt;</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
-    <value>Дата</value>
+    <value>Строка {0}: Материалы компенсации могут быть только десятичными
+</value>
   </data>
   <data name="Di0HangRiJiGeShiBuZhengQuebr" xml:space="preserve">
-    <value>Длинный код продукта</value>
+    <value>Строка {0}: Формат даты некорректен</value>
   </data>
   <data name="Di0HangGouHuoChanWeiBuNengWeiK" xml:space="preserve">
-    <value>Номер технологической карты</value>
+    <value>Строка {0}: Единица закупки не может быть пустой</value>
   </data>
   <data name="Di0HangChanPinChongLeiBuNengWe" xml:space="preserve">
-    <value>Цена с НДС</value>
+    <value>Строка {0}: Тип продукта не может быть пустым</value>
   </data>
   <data name="Di0HangChanPinChongLeiZaiLeiXi" xml:space="preserve">
-    <value>Финансовые расходы</value>
+    <value>Строка {0}: Тип продукта не существует в базовой таблице типов</value>
   </data>
   <data name="Di0HangChanPinChangDaiMaBuNeng" xml:space="preserve">
     <value>Строка {0}, дата не может быть пустой</value>
   </data>
+  <data name="Di0HangGongYiKaBianHaoBuNengWe" xml:space="preserve">
+    <value>Строка {0}: Номер технологической карты не может быть пустым</value>
+  </data>
   <data name="Di0HangShuLiangBuNengWeiKongbr" xml:space="preserve">
     <value>Строка {0}, неверный формат даты</value>
+  </data>
+  <data name="Di0HangShuLiangZhiNengShiXiaoS" xml:space="preserve">
+    <value>Строка {0}: Количество может быть только десятичным</value>
   </data>
   <data name="Di0HangHanShuiChanJiaBuNengWei" xml:space="preserve">
     <value>Строка {0}, покупающая организация не может быть пустой</value>
@@ -28614,44 +28627,80 @@
   <data name="Di0HangJinEBuNengWeiKongbr" xml:space="preserve">
     <value>Строка {0}, тип продукта не может быть пустой</value>
   </data>
+  <data name="Di0HangJinEZhiNengShiXiaoShubr" xml:space="preserve">
+    <value>Строка {0}: Сумма может быть только десятичной</value>
+  </data>
   <data name="Di0HangCaiWuFeiYongBuNengWeiKo" xml:space="preserve">
     <value>Строка {0}, тип продукта отсутствует в базовой таблице типов</value>
+  </data>
+  <data name="Di0HangCaiWuFeiYongZhiNengShiX" xml:space="preserve">
+    <value>Строка {0}: Финансовые расходы могут быть только десятичными</value>
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
     <value>Строка {0}, номер технологической карты не может быть пустым</value>
   </data>
+  <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
+    <value>Строка {0}: Имя клиента не может быть пустым</value>
+  </data>
   <data name="Di0HangFeiYongBuNengWeiKongbr" xml:space="preserve">
     <value>Строка {0}, количество не может быть пустым</value>
+  </data>
+  <data name="Di0HangFeiYongZhiNengShiXiaoSh" xml:space="preserve">
+    <value>Строка {0}: Стоимость может быть только десятичной</value>
   </data>
   <data name="Di0HangLeiXingBuNengWeiKongbr" xml:space="preserve">
     <value>Строка {0}, количество может быть только десятичным числом</value>
   </data>
+  <data name="Di0HangZhiZaoChengBenBuNengWei" xml:space="preserve">
+    <value>Строка {0}: Стоимость производства не может быть пустой</value>
+  </data>
   <data name="Di0HangZhiZaoChengBenZhiNengSh" xml:space="preserve">
     <value>Строка {0}, цена с НДС не может быть пустой</value>
+  </data>
+  <data name="Di0HangDunHaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Строка {0}: Расход на тонну не может быть пустым</value>
   </data>
   <data name="Di0HangDunHaoZhiNengShiXiaoShu" xml:space="preserve">
     <value>Строка {0}, цена с НДС может быть только десятичным числом</value>
   </data>
+  <data name="Di0HangChanPinBianHaoBuNengWei" xml:space="preserve">
+    <value>Строка {0}: Номер продукта не может быть пустым</value>
+  </data>
   <data name="ChanPinMingChen" xml:space="preserve">
     <value>Название продукта</value>
+  </data>
+  <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
+    <value>Строка {0}: Название продукта не может быть пустым</value>
   </data>
   <data name="Di0HangChanPinLeiXingBuNengWei" xml:space="preserve">
     <value>Строка {0}, сумма может быть только десятичным числом</value>
   </data>
+  <data name="Di0HangChanPinLeiXing1ZaiChanP" xml:space="preserve">
+    <value>Строка {0}: Тип продукта: {1} не существует в таблице типов продуктов</value>
+  </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>Строка {0}, финансовые расходы не могут быть пустыми</value>
+    <value>Нет записи о продукте</value>
+  </data>
+  <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
+    <value>Нет записи о сырье</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>Успешно импортировано {0} записей</value>
+    <value>Общее Количество</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>Успешно импортировано {0} записей, всего {1} записей не прошли проверку</value>
+    <value>Стоимость пигментов</value>
+  </data>
+  <data name="PeiFangJiatdtdclass" xml:space="preserve">
+    <value>Цена рецепта</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
-    <value>Данные не импортированы, всего {0} записей не прошли проверку</value>
+    <value>Архивирование продуктов сырья</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
-    <value>Строка {0}, название клиента не может быть пустым</value>
+    <value>Материалы компенсации</value>
+  </data>
+  <data name="Di0HangPeiLiaoBuNengWeiKongbr" xml:space="preserve">
+    <value>Строка {0}: Материалы компенсации не могут быть пустыми</value>
   </data>
   <data name="Di0HangPeiLiaoZhiNengShiXiaoSh" xml:space="preserve">
     <value>Строка {0}, расходы не могут быть пустыми</value>
@@ -28660,7 +28709,7 @@
     <value>Пожалуйста, введите тип формы!</value>
   </data>
   <data name="ExcelGeShiCuoWuHuoZheExcelZhen" xml:space="preserve">
-    <value>Строка {0}, расходы могут быть только десятичным числом</value>
+    <value>Ошибка формата Excel или Excel используется другим процессом</value>
   </data>
   <data name="ZZDiShiFuZhiChengGong" xml:space="preserve">
     <value>Сообщение: Копирование успешно завершено!</value>
@@ -30086,7 +30135,7 @@
     <value>Имя студента</value>
   </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
-    <value>Имя студента</value>
+    <value>Строка {0}: Имя студента не может быть пустым</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>Посещает школу</value>
@@ -30206,7 +30255,7 @@
     <value>Сравнение " + LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim() + "</value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
-    <value>&gt;Каталог тендерных документов&lt;/td&gt;</value>
+    <value>Список документов для оценки</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>&lt;td&gt;Тендерные документы&lt;/td&gt;</value>
@@ -30509,7 +30558,7 @@
     <value>Название проверки</value>
   </data>
   <data name="FuZeRenMingCheng" xml:space="preserve">
-    <value>Не найдено соответствующих записей о посещениях</value>
+    <value>Имя ответственного</value>
   </data>
   <data name="NiQuedYaoShanChuSuoXuanZeDeShuJuXiangMa" xml:space="preserve">
     <value>Имя ответственного</value>

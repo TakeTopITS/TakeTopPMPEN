@@ -28255,7 +28255,7 @@
     <value>이 협업이 존재하지 않거나 삭제되었을 수 있습니다. 확인해 주세요!</value>
   </data>
   <data name="Juan" xml:space="preserve">
-    <value>권 내 문서</value>
+    <value>권</value>
   </data>
   <data name="JuanNeiJian" xml:space="preserve">
     <value>프로젝트 관련 비용 입력</value>
@@ -28534,7 +28534,7 @@
     <value>일반 프로젝트</value>
   </data>
   <data name="BaQueXian" xml:space="preserve">
-    <value>결함을 프로젝트로:</value>
+    <value>결점</value>
   </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
     <value>전환하여 당신에게 전달되었습니다. 신속히 처리해 주십시오!</value>
@@ -28678,22 +28678,22 @@
     <value>{0}행, 제품 유형: {1}은 제품 유형 테이블에 존재하지 않습니다</value>
   </data>
   <data name="MoChanPinJiLutd" xml:space="preserve">
-    <value>&gt;제품 기록이 없습니다</value>
+    <value>제품 기록이 없습니다</value>
   </data>
   <data name="pMoYuanLiaoJiLupnbsptd" xml:space="preserve">
-    <value>&gt;원료 기록이 없습니다</value>
+    <value>원료 기록이 없습니다</value>
   </data>
   <data name="ZongShuLiangtdtdclass" xml:space="preserve">
-    <value>&gt;총 수량</value>
+    <value>총 수량</value>
   </data>
   <data name="YanSeLiaoChengBentdtdclass" xml:space="preserve">
-    <value>&gt;색상료 비용</value>
+    <value>색료 비용</value>
   </data>
   <data name="PeiFangJiatdtdclass" xml:space="preserve">
     <value>&gt;조합 가격</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
-    <value>&gt;원료 제품 아카이브</value>
+    <value>원료 제품 보관</value>
   </data>
   <data name="PeiLiao" xml:space="preserve">
     <value>보상</value>
@@ -29323,7 +29323,7 @@
     <value>{0}년{1}월</value>
   </data>
   <data name="Di0Zhou" xml:space="preserve">
-    <value>작업의 모든 배정 기록!</value>
+    <value>{0}주차</value>
   </data>
   <data name="RenWuDeSuoYouFenPaJiLu" xml:space="preserve">
     <value>이 계획은 존재하지 않거나 삭제되었을 수 있습니다. 확인하세요!</value>
@@ -30127,13 +30127,13 @@
     <value>학생 코드</value>
   </data>
   <data name="Di0HangXueShengBianMaBuNengWei" xml:space="preserve">
-    <value>{0}행, 학생 코드는 비워둘 수 없습니다.&lt;br/&gt;</value>
+    <value>{0}행, 학생 코드는 비워둘 수 없습니다.</value>
   </data>
   <data name="XueShengXingMing" xml:space="preserve">
     <value>학생 이름</value>
   </data>
   <data name="Di0HangXueShengXingMingBuNengW" xml:space="preserve">
-    <value>{0}행, 학생 이름은 비워둘 수 없습니다.&lt;br/&gt;</value>
+    <value>{0}행, 학생 이름은 비워둘 수 없습니다.</value>
   </data>
   <data name="ShiFouShangXue" xml:space="preserve">
     <value>학교 다니는지 여부</value>
@@ -30253,7 +30253,7 @@
     <value>&lt;td&gt;입찰 문서&lt;/td&gt;</value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
-    <value>&gt;평가 문서 목록&lt;/td&gt;</value>
+    <value>평가서류목록</value>
   </data>
   <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
     <value>&lt;td &gt;평가 방법 및 기준&lt;/td&gt;</value>
