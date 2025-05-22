@@ -281,7 +281,7 @@
 
                                                        <td colspan="2" style="padding-top: 5px; text-align: center;">
                                                               <asp:HyperLink ID="HL_TranferToProjectplan" runat="server" Target="_blank" Enabled="false">
-                                                                --><asp:Label ID="Label95" runat="server" Text="转成项目计划"></asp:Label>
+                                                                --><asp:Label ID="Label95" runat="server" Text="<%$ Resources:lang,ZhuanChengXiangMuJiHua%>"></asp:Label>
                                                             </asp:HyperLink>
 
                                                          

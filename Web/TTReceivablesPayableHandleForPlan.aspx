@@ -481,7 +481,7 @@
                                     <td class="formItemBgStyle" align="left">
                                         <asp:Label ID="LB_ReceivablesRelatedPlanID" runat="server"></asp:Label>
                                         <asp:Label ID="LB_ReceivablesRelatedPlanName" runat="server"></asp:Label>
-                                        <asp:Button ID="BT_ReceivablesSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_ReceivablesSelectPJPlan_Click" Text="计划选择" />
+                                        <asp:Button ID="BT_ReceivablesSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_ReceivablesSelectPJPlan_Click" Text="<%$ Resources:lang,JiHuaXuanZhe %>" />
 
                                     </td>
                                 </tr>
@@ -585,7 +585,7 @@
                                     <td class="formItemBgStyle" align="left">
                                         <asp:Label ID="LB_PayableRelatedPlanID" runat="server"></asp:Label>
                                         <asp:Label ID="LB_PayableRelatedPlanName" runat="server"></asp:Label>
-                                        <asp:Button ID="BT_PayableSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_PayableSelectPJPlan_Click" Text="计划选择" />
+                                        <asp:Button ID="BT_PayableSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_PayableSelectPJPlan_Click" Text="<%$ Resources:lang,JiHuaXuanZhe %>" />
 
                                     </td>
                                 </tr>

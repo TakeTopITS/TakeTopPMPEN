@@ -10991,4 +10991,20 @@ Update public.T_ProModuleLevel Set HomeModuleName = 'ОперационнаяHа
     <ID>3731</ID>
     <SQLText>Update T_ProModuleLevel Set IsDeleted = 'YES' Where ModuleName = 'MaterialManagement';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3732</ID>
+    <SQLText>Update T_ProModuleLevel Set ModuleName = 'MaterialProcurementPaymentAccounting' Where ModuleName = '物料采购付款记账';
+Update T_ProModule Set ModuleName = 'MaterialProcurementPaymentAccounting' Where ModuleName = '物料采购付款记账';
+
+Update T_ProModuleLevel Set HomeModuleName = '物料採購付款記帳' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'zh-tw';
+Update T_ProModuleLevel Set ModuleName = 'BuchungDerZahlungFürDieMaterialbeschaffung' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'ge';
+Update T_ProModuleLevel Set HomeModuleName = 'ContabilidadDePagosDeComprasCeMateriales' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'es';
+Update T_ProModuleLevel Set HomeModuleName = 'MaterialProcurementPaymentAccounting' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'en';
+Update T_ProModuleLevel Set HomeModuleName = 'ComptabilitéDesPaiementsAchatDeMatériaux' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'fr';
+Update T_ProModuleLevel Set HomeModuleName = 'ContabilitàDeiPagamentiPerAcquistoDiMateriali' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'it';
+Update T_ProModuleLevel Set HomeModuleName = '物料調達の支払い記帳' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'ja';
+Update T_ProModuleLevel Set HomeModuleName = '물자구매지불회계' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'ko';
+Update T_ProModuleLevel Set HomeModuleName = 'ContabilidadeDePagamentosDeComprasDeMateriais' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'pt';
+Update T_ProModuleLevel Set HomeModuleName = 'БухгалтерскийYчетNлатежей3а3акупкуматериалов' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'ru';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

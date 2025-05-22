@@ -275,7 +275,7 @@
 
                                                         <td style="width: 100px; height: 20px; text-align: right">
 
-                                                            <asp:Label ID="Label67" runat="server" Text="Éè±¸Ãû³Æ"></asp:Label>£º </td>
+                                                            <asp:Label ID="Label67" runat="server" TText="<%$ Resources:lang,SheBeiMingCheng%>"></asp:Label>£º </td>
 
                                                         <td colspan="5" style="height: 20px; text-align: left"><%#DataBinder .Eval (Container .DataItem ,"DeviceName") %></td>
                                                     </tr>

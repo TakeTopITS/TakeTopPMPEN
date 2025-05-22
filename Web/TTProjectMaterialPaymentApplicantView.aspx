@@ -61,7 +61,7 @@
                                         <img src="Logo/FormLogo.png" /></td>
                                     <td width="550px" style="font-size: xx-large; text-align: center;" class="auto-style1">
                                         <br />
-                                        <asp:Label ID="LB_ReportName" runat="server" Text="项目物资费用付款申请"></asp:Label>
+                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,XiangMuWZFYFKSQ%>"></asp:Label>
                                         <br />
                                     </td>
                                     <td>&nbsp;</td>
@@ -98,7 +98,7 @@
                                                 <%#DataBinder.Eval(Container.DataItem, "ProjectName")%>
                                             </td>
                                             <td class="formItemBgStyle" style="width: 15%; text-align: left">
-                                                <asp:Label ID="Label9" runat="server" Text="申请时间"></asp:Label>：
+                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShenQingShiJian%>"></asp:Label>：
                                             </td>
                                             <td class="formItemBgStyle" style="text-align: left">
 
@@ -118,12 +118,12 @@
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle" style="text-align: left">
-                                                <asp:Label ID="Label45" runat="server" Text="合同签约方"></asp:Label>： </td>
+                                                <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,HeTongQianYueFang%>"></asp:Label>： </td>
                                             <td class="formItemBgStyle" align="left">
                                                 <%#DataBinder.Eval(Container.DataItem, "PartA")%>
                                             </td>
                                             <td class="formItemBgStyle" style="text-align: left">
-                                                <asp:Label ID="Label23" runat="server" Text="联系方式"></asp:Label>： </td>
+                                                <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,LianXiFangShi%>"></asp:Label>： </td>
                                             <td class="formItemBgStyle" colspan="3" align="left">
                                                 <%#DataBinder.Eval(Container.DataItem, "PartAContactInformation")%>
                                             </td>
@@ -131,12 +131,12 @@
                                         
                                         <tr>
                                             <td class="formItemBgStyle" style="text-align: left">
-                                                <asp:Label ID="Label47" runat="server" Text="支付方式"></asp:Label>：</td>
+                                                <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,ZhiFuFangShi%>"></asp:Label>：</td>
                                             <td colspan="3" class="formItemBgStyle" style="text-align: left">
                                                 <%#DataBinder.Eval(Container.DataItem, "PaymentMethod")%>
 
                                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                                <asp:Label ID="Label48" runat="server" Text="累计已交发票"></asp:Label>：
+                                                <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,LeiJiYuJiaoFaPiao%>"></asp:Label>：
 
                                                  <%#DataBinder.Eval(Container.DataItem, "AleadyTotalInvoice")%>
                                                 &nbsp;&nbsp;
@@ -151,17 +151,17 @@
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle" style="text-align: left">
-                                                <asp:Label ID="Label103" runat="server" Text="开户银行"></asp:Label>：</td>
+                                                <asp:Label ID="Label103" runat="server" Text="<%$ Resources:lang,KaiHuYingHang%>"></asp:Label>：</td>
                                             <td class="formItemBgStyle" style="text-align: left">
                                                 <%#DataBinder.Eval(Container.DataItem, "BankName")%></td>
                                             <td class="formItemBgStyle" style="text-align: left">
-                                                <asp:Label ID="Label111" runat="server" Text="银行帐号"></asp:Label>：</td>
+                                                <asp:Label ID="Label111" runat="server" Text="<%$ Resources:lang,YinHangZhangHao%>"></asp:Label>：</td>
                                             <td class="formItemBgStyle" align="left">
                                                 <%#DataBinder.Eval(Container.DataItem, "BankCode")%></td>
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle" style="text-align: left">
-                                                <asp:Label ID="Label1112212" runat="server" Text="合同付款条件和依据描述"></asp:Label>：</td>
+                                                <asp:Label ID="Label1112212" runat="server" ext="<%$ Resources:lang,HeTongFuKuanTiaoJianHeYuJiMiaoShu%>"></asp:Label>：</td>
                                             <td colspan="3" class="formItemBgStyle" style="text-align: left">
 
                                                 <%#DataBinder.Eval(Container.DataItem, "ContractPayCondition")%></td>
@@ -260,10 +260,10 @@
 
                     <tr>
                         <td class="formItemBgStyle" style="text-align: left">
-                            <asp:Label ID="Label1331" runat="server" Text="本次请款金额"></asp:Label>：
+                            <asp:Label ID="Label1331" runat="server" Text="<%$ Resources:lang,BenChiQingKuanJinE %>"></asp:Label>：
                             <asp:Label ID="LB_CurrentTotalPaymentAmount" runat="server"></asp:Label>
                             &nbsp;&nbsp;
-                            <asp:Label ID="Label8882" runat="server" Text="大写"></asp:Label>：
+                            <asp:Label ID="Label8882" runat="server" Text="<%$ Resources:lang,DaXie %>"></asp:Label>：
                             <asp:Label ID="LB_CurrentTotalPaymentAmountLarge" runat="server"></asp:Label>
                         </td>
                     </tr>

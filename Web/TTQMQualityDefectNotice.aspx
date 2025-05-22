@@ -214,7 +214,7 @@
                                 </tr>
                                 <tr>
                                     <td align="right" class="formItemBgStyle" style="width: 150px">
-                                        <asp:Label ID="Label4" runat="server" Text="项目验收单"></asp:Label>：</td>
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuNianSouDan%>"></asp:Label>：</td>
                                     <td align="left" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_MatEquInsCode" runat="server" AutoPostBack="True" CssClass="shuru" DataTextField="Name" DataValueField="Code" OnSelectedIndexChanged="DL_MatEquInsCode_SelectedIndexChanged">
                                         </asp:DropDownList>

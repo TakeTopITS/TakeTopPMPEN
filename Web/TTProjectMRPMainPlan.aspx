@@ -270,7 +270,7 @@
                                                 <td>
                                                     <NickLee:NumberBox ID="NB_FromPlanVerID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="60px">0</NickLee:NumberBox></td>
                                                 <td>
-                                                    <asp:Button ID="BT_CopyDetailFromPlan" runat="server" CssClass="inpu" Enabled="False" Text="¸´ÖÆ" OnClick="BT_CopyDetailFromPlan_Click" />
+                                                    <asp:Button ID="BT_CopyDetailFromPlan" runat="server" CssClass="inpu" Enabled="False" Text="<%$ Resources:lang,FuZhi%>" OnClick="BT_CopyDetailFromPlan_Click" />
                                                 </td>
                                             </tr>
                                         </table>

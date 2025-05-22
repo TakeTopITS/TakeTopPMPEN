@@ -30852,4 +30852,85 @@
   <data name="TiaoXiu" xml:space="preserve">
     <value>대체휴일</value>
   </data>
+  <data name="ZhuanChengXiangMuJiHua" xml:space="preserve">
+    <value>프로젝트 계획으로 전환</value>
+  </data>
+  <data name="HeTongLiXiangYiJi" xml:space="preserve">
+    <value>계약에 기반한 프로젝트 시작 근거</value>
+  </data>
+  <data name="ZhongBiaoRiQi" xml:space="preserve">
+    <value>낙찰일</value>
+  </data>
+  <data name="QianShuRen" xml:space="preserve">
+    <value>서명자</value>
+  </data>
+  <data name="ZhanLieQing" xml:space="preserve">
+    <value>임시금</value>
+  </data>
+  <data name="AnQuanWenMingSiGongFei" xml:space="preserve">
+    <value>안전 문명 시공비</value>
+  </data>
+  <data name="YeDingKaiGongRiQi" xml:space="preserve">
+    <value>약정된 착공일</value>
+  </data>
+  <data name="YeDingWanGongRiQi" xml:space="preserve">
+    <value>약정된 완료일</value>
+  </data>
+  <data name="ZiBaoQi" xml:space="preserve">
+    <value>품질 보증 기간</value>
+  </data>
+  <data name="DiYeFang" xml:space="preserve">
+    <value>계약締結자</value>
+  </data>
+  <data name="DiYeFangHeTongHao" xml:space="preserve">
+    <value>계약締결자의 계약번호</value>
+  </data>
+  <data name="JSCODEDescription" xml:space="preserve">
+    <value>(도메인 규칙: 현재 사용자 코드: [TAKETOPUSERCODE], 현재 사용자 이름: [TAKETOPUSERNAME], 현재 사용자 부서 코드: [TAKETOPDEPARTCODE], 현재 사용자 부서 이름: [TAKETOPDEPARTNAME], 신청자 코드: [TAKETOPWFCREATORCODE], 신청자 이름: [TAKETOPWFCREATORNAME], 신청자 부서 코드: [TAKETOPWFCREATORDEPARTCODE], 신청자 부서 이름: [TAKETOPWFCREATORDEPARTNAME], 관련 유형: [TAKETOPRELATEDTYPE], 관련 ID: [TAKETOPRELATEDID], 관련 코드: [TAKETOPRELATEDCODE])</value>
+  </data>
+  <data name="BaoDanLeiXing" xml:space="preserve">
+    <value>양식 유형</value>
+  </data>
+  <data name="BiaoDanMing" xml:space="preserve">
+    <value>양식 이름</value>
+  </data>
+  <data name="BiaoDanHao" xml:space="preserve">
+    <value>양식 번호</value>
+  </data>
+  <data name="HangChuan" xml:space="preserve">
+    <value>행 시퀀스</value>
+  </data>
+  <data name="LieMing" xml:space="preserve">
+    <value>열 이름</value>
+  </data>
+  <data name="LieZhi" xml:space="preserve">
+    <value>열 값</value>
+  </data>
+  <data name="BiaoDanShuangChuan" xml:space="preserve">
+    <value>양식 업로드</value>
+  </data>
+  <data name="BiaoDanYangShiXieZai" xml:space="preserve">
+    <value>양식 스타일 다운로드</value>
+  </data>
+  <data name="ShouHuoDiZi" xml:space="preserve">
+    <value>수령지 주소</value>
+  </data>
+  <data name="XiangMuNianSouDan" xml:space="preserve">
+    <value>프로젝트 검수서</value>
+  </data>
+  <data name="SheBeiMingCheng" xml:space="preserve">
+    <value>장비 이름</value>
+  </data>
+  <data name="XiangMuWZFYFKSQ" xml:space="preserve">
+    <value>프로젝트 물자 비용 지불 신청</value>
+  </data>
+  <data name="ZiDongJiHuo" xml:space="preserve">
+    <value>자동 활성화</value>
+  </data>
+  <data name="XiaoShiZiDongPiZheng" xml:space="preserve">
+    <value>시간 자동 승인</value>
+  </data>
+  <data name="JiHuaXuanZhe" xml:space="preserve">
+    <value>계획 선택</value>
+  </data>
 </root>

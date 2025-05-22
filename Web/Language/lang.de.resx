@@ -30852,4 +30852,85 @@
   <data name="TiaoXiu" xml:space="preserve">
     <value>Ausgleichsurlaub</value>
   </data>
+  <data name="ZhuanChengXiangMuJiHua" xml:space="preserve">
+    <value>In einen Projektplan umwandeln</value>
+  </data>
+  <data name="HeTongLiXiangYiJi" xml:space="preserve">
+    <value>Vertragsgrundlage für die Projektinanspruchnahme</value>
+  </data>
+  <data name="ZhongBiaoRiQi" xml:space="preserve">
+    <value>Datum der Vergabe</value>
+  </data>
+  <data name="QianShuRen" xml:space="preserve">
+    <value>Unterzeichner</value>
+  </data>
+  <data name="ZhanLieQing" xml:space="preserve">
+    <value>Vorläufige Summe</value>
+  </data>
+  <data name="AnQuanWenMingSiGongFei" xml:space="preserve">
+    <value>Sicherheits- und Umweltschutzkosten</value>
+  </data>
+  <data name="YeDingKaiGongRiQi" xml:space="preserve">
+    <value>Vereinbartes Startdatum</value>
+  </data>
+  <data name="YeDingWanGongRiQi" xml:space="preserve">
+    <value>Vereinbartes Fertigstellungdatum</value>
+  </data>
+  <data name="ZiBaoQi" xml:space="preserve">
+    <value>Garantiezeit</value>
+  </data>
+  <data name="DiYeFang" xml:space="preserve">
+    <value>Vertragspartei</value>
+  </data>
+  <data name="DiYeFangHeTongHao" xml:space="preserve">
+    <value>Vertragsnummer der Vertragspartei</value>
+  </data>
+  <data name="JSCODEDescription" xml:space="preserve">
+    <value>(Domain-Regel: Aktueller Benutzercode: [TAKETOPUSERCODE], Aktueller Benutzername: [TAKETOPUSERNAME], Aktueller Abteilungscode des Benutzers: [TAKETOPDEPARTCODE], Aktueller Abteilungname des Benutzers: [TAKETOPDEPARTNAME], Antragstellercode: [TAKETOPWFCREATORCODE], Antragstellername: [TAKETOPWFCREATORNAME], Abteilungscode des Antragstellers: [TAKETOPWFCREATORDEPARTCODE], Abteilungsname des Antragstellers: [TAKETOPWFCREATORDEPARTNAME], Verwandter Typ: [TAKETOPRELATEDTYPE], Verwandte ID: [TAKETOPRELATEDID], Verwandter Code: [TAKETOPRELATEDCODE])</value>
+  </data>
+  <data name="BaoDanLeiXing" xml:space="preserve">
+    <value>Formular-Typ</value>
+  </data>
+  <data name="BiaoDanMing" xml:space="preserve">
+    <value>Formularname</value>
+  </data>
+  <data name="BiaoDanHao" xml:space="preserve">
+    <value>Formularnummer</value>
+  </data>
+  <data name="HangChuan" xml:space="preserve">
+    <value>Zeilenfolge / Zeilensequenz</value>
+  </data>
+  <data name="LieMing" xml:space="preserve">
+    <value>Spaltenname</value>
+  </data>
+  <data name="LieZhi" xml:space="preserve">
+    <value>Spaltenwert</value>
+  </data>
+  <data name="BiaoDanShuangChuan" xml:space="preserve">
+    <value>Formular hochladen</value>
+  </data>
+  <data name="BiaoDanYangShiXieZai" xml:space="preserve">
+    <value>Formular-Stil herunterladen</value>
+  </data>
+  <data name="ShouHuoDiZi" xml:space="preserve">
+    <value>Lieferadresse</value>
+  </data>
+  <data name="XiangMuNianSouDan" xml:space="preserve">
+    <value>Projektabnahmeschein</value>
+  </data>
+  <data name="SheBeiMingCheng" xml:space="preserve">
+    <value>Gerätenamen</value>
+  </data>
+  <data name="XiangMuWZFYFKSQ" xml:space="preserve">
+    <value>Antrag auf Zahlung für Projektmaterialkosten</value>
+  </data>
+  <data name="ZiDongJiHuo" xml:space="preserve">
+    <value>Automatische Aktivierung</value>
+  </data>
+  <data name="XiaoShiZiDongPiZheng" xml:space="preserve">
+    <value>Stündliche automatische Genehmigung</value>
+  </data>
+  <data name="JiHuaXuanZhe" xml:space="preserve">
+    <value>Planwahl</value>
+  </data>
 </root>

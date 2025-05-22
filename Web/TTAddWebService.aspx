@@ -121,7 +121,7 @@
                                     </tr>
                                     <tr style="font-weight: bold; font-size: 11pt">
                                         <td style="text-align: left" class="formItemBgStyle" colspan="4">
-                                            <input type="button" value="±£´æ" id="BT_Save" class="inpu" />
+                                            <input type="button" value="New" id="BT_Save" class="inpu" />
                                         </td>
                                     </tr>
                                 </table>

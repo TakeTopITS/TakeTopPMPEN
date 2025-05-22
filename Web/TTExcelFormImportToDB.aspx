@@ -59,7 +59,7 @@
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="Label2" runat="server" Text="表单类型"></asp:Label>：</td>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BaoDanLeiXing%>"></asp:Label>：</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FormType" runat="server" Width="100px"></asp:TextBox> 
                                                             <asp:DropDownList ID="DL_FormType" Width="80px" DataValueField="FormType" DataTextField="FormType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_FormType_SelectedIndexChanged">
@@ -67,12 +67,12 @@
                                                         </td>
                                                         <td>
                                                           
-                                                            <asp:Label ID="Label17" runat="server" Text="表单名"></asp:Label>：</td>
+                                                            <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,BiaoDanMing%>"></asp:Label>：</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FormName" runat="server" Width="80px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label3" runat="server" Text="表单号"></asp:Label>：</td>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BiaoDanHao%>"></asp:Label>：</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FormCode" runat="server" Width="100px"></asp:TextBox>
                                                         </td>
@@ -81,22 +81,22 @@
 
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label4" runat="server" Text="行串"></asp:Label>：</td>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HangChuan%>"></asp:Label>：</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_RowCode" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label5" runat="server" Text="列名"></asp:Label>：</td>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LieMing%>"></asp:Label>：</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FieldName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label6" runat="server" Text="列值"></asp:Label>：</td>
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LieZhi%>"></asp:Label>：</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FieldValue" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label7" runat="server" Text="上传人"></asp:Label>：</td>
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShangChuanZhe%>"></asp:Label>：</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_OperatorName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
@@ -108,7 +108,7 @@
                                                     <tr>
 
                                                         <td align="right">
-                                                            <asp:Label ID="Label22" runat="server" Text="表单上传"></asp:Label>：
+                                                            <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,BiaoDanShuangChuan%>"></asp:Label>：
 
                                                         </td>
                                                         <td align="left" colspan="9">
@@ -118,7 +118,7 @@
                                                                         <Upload:InputFile ID="FileUpload_Training" runat="server" Width="400px" />
 
                                                                         <asp:Button ID="btn_ExcelToDB" runat="server" CssClass="inpu" OnClick="btn_ExcelToDB_Click" Text="<%$ Resources:lang,DaoRuShuJu%>" />
-                                                                        <a href="Template/数据源表单样式.xls"><strong style="font-size:smaller;color:white;"><asp:Label ID="Label23" runat="server" Text="表单样式下载"></asp:Label></strong></a>
+                                                                        <a href="Template/数据源表单样式.xls"><strong style="font-size:smaller;color:white;"><asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,BiaoDanYangShiXieZai%>"></asp:Label></strong></a>
                                                                         <div id="ProgressBar">
                                                                             <Upload:ProgressBar ID="ProgressBar1" runat="server" Height="100px" Width="500px">
                                                                             </Upload:ProgressBar>
@@ -164,40 +164,40 @@
                                                                 <tr>
                                                                     <td width="6%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label20" runat="server" Text="序号(id)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="6%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label9" runat="server" Text="表单类型(formtype)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BaoDanLeiXing%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="6%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label10" runat="server" Text="表单号(formcode)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BiaoDanHao%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="6%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label11" runat="server" Text="表单名(formname)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BiaoDanMing%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="6%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label12" runat="server" Text="行标识串(rowcode)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,HangChuan%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="6%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label13" runat="server" Text="列名(fieldname)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,LieMing%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="13%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label14" runat="server" Text="列值(fieldvalue)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,LieZhi%>"></asp:Label></strong>
                                                                     </td>
 
                                                                     <td width="4%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label16" runat="server" Text="上传人(operatorcode)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShangChuanZhe%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="6%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label18" runat="server" Text="上传时间(operatetime)"></asp:Label></strong>
+                                                                            <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ShangChuanShiJian%>"></asp:Label></strong>
                                                                     </td>
                                                                 </tr>
                                                             </table>

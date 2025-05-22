@@ -27433,7 +27433,7 @@
     <value>Other project information</value>
   </data>
   <data name="CongWordDocDaoRu" xml:space="preserve">
-    <value>从Word文档导入</value>
+    <value>Import from Word Document</value>
   </data>
   <data name="ZhanKaiZouBianLian" xml:space="preserve">
     <value>Extend left bar</value>
@@ -30852,5 +30852,86 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="TiaoXiu" xml:space="preserve">
     <value>Compensatory Leave</value>
+  </data>
+  <data name="ZhuanChengXiangMuJiHua" xml:space="preserve">
+    <value>Convert to Project Plan</value>
+  </data>
+  <data name="HeTongLiXiangYiJi" xml:space="preserve">
+    <value>Contract Basis for Project Initiation</value>
+  </data>
+  <data name="ZhongBiaoRiQi" xml:space="preserve">
+    <value>Date of Award</value>
+  </data>
+  <data name="QianShuRen" xml:space="preserve">
+    <value>Signatory</value>
+  </data>
+  <data name="ZhanLieQing" xml:space="preserve">
+    <value>Provisional Sum</value>
+  </data>
+  <data name="AnQuanWenMingSiGongFei" xml:space="preserve">
+    <value>Safety and Civilized Construction Costs</value>
+  </data>
+  <data name="YeDingKaiGongRiQi" xml:space="preserve">
+    <value>Agreed Commencement Date</value>
+  </data>
+  <data name="YeDingWanGongRiQi" xml:space="preserve">
+    <value>Agreed Completion Date</value>
+  </data>
+  <data name="ZiBaoQi" xml:space="preserve">
+    <value>Warranty Period</value>
+  </data>
+  <data name="DiYeFang" xml:space="preserve">
+    <value>Contracting Party</value>
+  </data>
+  <data name="DiYeFangHeTongHao" xml:space="preserve">
+    <value>Contract Number of the Contracting Party</value>
+  </data>
+  <data name="JSCODEDescription" xml:space="preserve">
+    <value>(Domain rule: Current user code: [TAKETOPUSERCODE], Current user name: [TAKETOPUSERNAME], Current user department code: [TAKETOPDEPARTCODE], Current user department name: [TAKETOPDEPARTNAME], Applicant code: [TAKETOPWFCREATORCODE], Applicant name: [TAKETOPWFCREATORNAME], Applicant department code: [TAKETOPWFCREATORDEPARTCODE], Applicant department name: [TAKETOPWFCREATORDEPARTNAME], Related type: [TAKETOPRELATEDTYPE], Related ID: [TAKETOPRELATEDID], Related code: [TAKETOPRELATEDCODE])</value>
+  </data>
+  <data name="BaoDanLeiXing" xml:space="preserve">
+    <value>Form Type</value>
+  </data>
+  <data name="BiaoDanMing" xml:space="preserve">
+    <value>Form Name</value>
+  </data>
+  <data name="BiaoDanHao" xml:space="preserve">
+    <value>Form Number</value>
+  </data>
+  <data name="HangChuan" xml:space="preserve">
+    <value>Line Sequence</value>
+  </data>
+  <data name="LieMing" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="LieZhi" xml:space="preserve">
+    <value>Column Value</value>
+  </data>
+  <data name="BiaoDanShuangChuan" xml:space="preserve">
+    <value>Upload Form</value>
+  </data>
+  <data name="BiaoDanYangShiXieZai" xml:space="preserve">
+    <value>Download Form Style</value>
+  </data>
+  <data name="ShouHuoDiZi" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="XiangMuNianSouDan" xml:space="preserve">
+    <value>Project Acceptance Form</value>
+  </data>
+  <data name="SheBeiMingCheng" xml:space="preserve">
+    <value>Equipment Name</value>
+  </data>
+  <data name="XiangMuWZFYFKSQ" xml:space="preserve">
+    <value>Application for Payment of Project Material Costs</value>
+  </data>
+  <data name="ZiDongJiHuo" xml:space="preserve">
+    <value>Automatic Activation</value>
+  </data>
+  <data name="XiaoShiZiDongPiZheng" xml:space="preserve">
+    <value>Hourly Automatic Approval</value>
+  </data>
+  <data name="JiHuaXuanZhe" xml:space="preserve">
+    <value>Plan Selection</value>
   </data>
 </root>

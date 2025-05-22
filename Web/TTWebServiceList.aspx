@@ -46,7 +46,7 @@
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt;">
                                             <td align="right" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="新增Web Service" onclick="window.location.href = 'TTAddWebService.aspx'" />
+                                                <input type="button" class="inpuLong" value="Add Web Service" onclick="window.location.href = 'TTAddWebService.aspx'" />
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">
@@ -55,19 +55,19 @@
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                     Width="100%" OnItemCommand="DG_WebServiceList_ItemCommand" OnItemDataBound="DG_WebServiceList_ItemDataBound">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="WebServiceName" HeaderText="Web Service名称">
+                                                        <asp:BoundColumn DataField="WebServiceName" HeaderText="Web Service Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WebServiceURI" HeaderText="Web Service地址">
+                                                        <asp:BoundColumn DataField="WebServiceURI" HeaderText="Web Service IP">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MethodName" HeaderText="方法名">
+                                                        <asp:BoundColumn DataField="MethodName" HeaderText="Method Name">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ArgArray" HeaderText="参数">
+                                                        <asp:BoundColumn DataField="ArgArray" HeaderText="Parameter">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreatorName" HeaderText="创建人">
+                                                        <asp:BoundColumn DataField="CreatorName" HeaderText="Creator">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
@@ -78,7 +78,7 @@
                                                                 <a href='TTAddWebService.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>
                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label>
                                                                 </a>&nbsp;&nbsp;
-                                                            <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del">删除</asp:LinkButton>
+                                                            <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del">Delete</asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>

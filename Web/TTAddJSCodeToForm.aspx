@@ -184,7 +184,7 @@
                                                         <textarea id="TXT_JSCode" cols="150" rows="80" runat="server" onmouseout="javascript:setEditorValue();">
                                                         </textarea>
                                                         <br />
-                                                        <asp:Label ID="LBL_JSCODEDescription" runat="server" Text="（域规则：当前用户代码：[TAKETOPUSERCODE]，当前用户名称：[TAKETOPUSERNAME]，当前用户部门代码：[TAKETOPDEPARTCODE],当前用户部门名称：[TAKETOPDEPARTNAME],申请者代码：[TAKETOPWFCREATORCODE]，申请者名称：[TAKETOPWFCREATORNAME]，申请者部门代码：[TAKETOPWFCREATORDEPARTCODE]，申请者部门名称：[TAKETOPWFCREATORDEPARTNAME]，关联类型：[TAKETOPRELATEDTYPE]，关联ID:[TAKETOPRELATEDID],关联代码：[TAKETOPRELATEDCODE]）"></asp:Label>
+                                                        <asp:Label ID="LBL_JSCODEDescription" runat="server" Text="<%$ Resources:lang,JSCODEDescription%>"></asp:Label>
 
                                                     </td>
                                                 </tr>

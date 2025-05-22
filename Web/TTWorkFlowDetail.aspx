@@ -1009,7 +1009,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="background-color: buttonface; text-align: left; height: 12px;"><strong>
-                                                                    <asp:Label ID="LB_StepID" runat="server" Font-Bold="False" Visible="False"></asp:Label></strong><asp:HyperLink ID="HL_StepApproveRecord" runat="server" Target="_blank">ÉóÅú¼ÇÂ¼</asp:HyperLink></td>
+                                                                    <asp:Label ID="LB_StepID" runat="server" Font-Bold="False" Visible="False"></asp:Label></strong><asp:HyperLink ID="HL_StepApproveRecord" runat="server" Target="_blank" Text="<%$ Resources:lang,ApprovedRecord %>"></asp:HyperLink></td>
                                                             </tr>
                                                         </table>
                                                         <br />

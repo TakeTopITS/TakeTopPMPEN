@@ -163,7 +163,7 @@
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:Label ID="Label61" runat="server" Text="自动激活"></asp:Label>：
+                                                                                    <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,ZiDongJiHuo%>"></asp:Label>：
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_AutoActive" runat="server">
@@ -172,14 +172,14 @@
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:Label ID="Label66" runat="server" Text="超"></asp:Label>
+                                                                                    <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,CaoShi%>"></asp:Label>
                                                                                 </td>
                                                                                 <td>
                                                                                     <NickLee:NumberBox ID="NB_OverTimeHourNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="40px" Precision="0" Amount="24">24</NickLee:NumberBox>
                                                                                 </td>
 
                                                                                 <td>
-                                                                                    <asp:Label ID="Label68" runat="server" Text="小时自动批准"></asp:Label>
+                                                                                    <asp:Label ID="Label68" runat="server" Text="<%$ Resources:lang,XiaoShiZiDongPiZheng%>"></asp:Label>
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_OverTimeAutoAgree" runat="server">

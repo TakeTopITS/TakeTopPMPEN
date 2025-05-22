@@ -30886,4 +30886,85 @@
   <data name="TiaoXiu" xml:space="preserve">
     <value>调休</value>
   </data>
+  <data name="ZhuanChengXiangMuJiHua" xml:space="preserve">
+    <value>转成项目计划</value>
+  </data>
+  <data name="HeTongLiXiangYiJi" xml:space="preserve">
+    <value>合同立项依据</value>
+  </data>
+  <data name="ZhongBiaoRiQi" xml:space="preserve">
+    <value>中标日期</value>
+  </data>
+  <data name="QianShuRen" xml:space="preserve">
+    <value>签署人</value>
+  </data>
+  <data name="ZhanLieQing" xml:space="preserve">
+    <value>暂列金</value>
+  </data>
+  <data name="AnQuanWenMingSiGongFei" xml:space="preserve">
+    <value>安全文明施工费</value>
+  </data>
+  <data name="YeDingKaiGongRiQi" xml:space="preserve">
+    <value>约定开工日期</value>
+  </data>
+  <data name="YeDingWanGongRiQi" xml:space="preserve">
+    <value>约定完工日期</value>
+  </data>
+  <data name="ZiBaoQi" xml:space="preserve">
+    <value>质保期</value>
+  </data>
+  <data name="DiYeFang" xml:space="preserve">
+    <value>缔约方</value>
+  </data>
+  <data name="DiYeFangHeTongHao" xml:space="preserve">
+    <value>缔约方合同号</value>
+  </data>
+  <data name="JSCODEDescription" xml:space="preserve">
+    <value>域规则：当前用户代码：[TAKETOPUSERCODE]，当前用户名称：[TAKETOPUSERNAME]，当前用户部门代码：[TAKETOPDEPARTCODE],当前用户部门名称：[TAKETOPDEPARTNAME],申请者代码：[TAKETOPWFCREATORCODE]，申请者名称：[TAKETOPWFCREATORNAME]，申请者部门代码：[TAKETOPWFCREATORDEPARTCODE]，申请者部门名称：[TAKETOPWFCREATORDEPARTNAME]，关联类型：[TAKETOPRELATEDTYPE]，关联ID:[TAKETOPRELATEDID],关联代码：[TAKETOPRELATEDCODE]）</value>
+  </data>
+  <data name="BaoDanLeiXing" xml:space="preserve">
+    <value>表单类型</value>
+  </data>
+  <data name="BiaoDanMing" xml:space="preserve">
+    <value>表单名</value>
+  </data>
+  <data name="BiaoDanHao" xml:space="preserve">
+    <value>表单号</value>
+  </data>
+  <data name="HangChuan" xml:space="preserve">
+    <value>行串</value>
+  </data>
+  <data name="LieMing" xml:space="preserve">
+    <value>列名</value>
+  </data>
+  <data name="LieZhi" xml:space="preserve">
+    <value>列值</value>
+  </data>
+  <data name="BiaoDanShuangChuan" xml:space="preserve">
+    <value>表单上传</value>
+  </data>
+  <data name="BiaoDanYangShiXieZai" xml:space="preserve">
+    <value>表单样式下载</value>
+  </data>
+  <data name="ShouHuoDiZi" xml:space="preserve">
+    <value>收货地址</value>
+  </data>
+  <data name="XiangMuNianSouDan" xml:space="preserve">
+    <value>项目验收单</value>
+  </data>
+  <data name="SheBeiMingCheng" xml:space="preserve">
+    <value>设备名称</value>
+  </data>
+  <data name="XiangMuWZFYFKSQ" xml:space="preserve">
+    <value>项目物资费用付款申请</value>
+  </data>
+  <data name="ZiDongJiHuo" xml:space="preserve">
+    <value>自动激活</value>
+  </data>
+  <data name="XiaoShiZiDongPiZheng" xml:space="preserve">
+    <value>小时自动批准</value>
+  </data>
+  <data name="JiHuaXuanZhe" xml:space="preserve">
+    <value>计划选择</value>
+  </data>
 </root>

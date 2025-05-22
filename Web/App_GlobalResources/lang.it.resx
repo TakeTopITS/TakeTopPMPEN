@@ -30854,4 +30854,85 @@
   <data name="TiaoXiu" xml:space="preserve">
     <value>Permesso Compensativo</value>
   </data>
+  <data name="ZhuanChengXiangMuJiHua" xml:space="preserve">
+    <value>Converti in Piano di Progetto</value>
+  </data>
+  <data name="HeTongLiXiangYiJi" xml:space="preserve">
+    <value>Base contrattuale per l'avvio del progetto</value>
+  </data>
+  <data name="ZhongBiaoRiQi" xml:space="preserve">
+    <value>Data di Assegnazione</value>
+  </data>
+  <data name="QianShuRen" xml:space="preserve">
+    <value>Firmatario</value>
+  </data>
+  <data name="ZhanLieQing" xml:space="preserve">
+    <value>Importo Provvisorio</value>
+  </data>
+  <data name="AnQuanWenMingSiGongFei" xml:space="preserve">
+    <value>Costi di Costruzione Sicura e Civile</value>
+  </data>
+  <data name="YeDingKaiGongRiQi" xml:space="preserve">
+    <value>Data di Inizio Convenuta</value>
+  </data>
+  <data name="YeDingWanGongRiQi" xml:space="preserve">
+    <value>Data di Completamento Convenuta</value>
+  </data>
+  <data name="ZiBaoQi" xml:space="preserve">
+    <value>Periodo di Garanzia</value>
+  </data>
+  <data name="DiYeFang" xml:space="preserve">
+    <value>Parte contraente</value>
+  </data>
+  <data name="DiYeFangHeTongHao" xml:space="preserve">
+    <value>Numero di contratto della parte contraente</value>
+  </data>
+  <data name="JSCODEDescription" xml:space="preserve">
+    <value>(Regola di dominio: Codice dell'utente attuale: [TAKETOPUSERCODE], Nome dell'utente attuale: [TAKETOPUSERNAME], Codice del dipartimento dell'utente attuale: [TAKETOPDEPARTCODE], Nome del dipartimento dell'utente attuale: [TAKETOPDEPARTNAME], Codice del richiedente: [TAKETOPWFCREATORCODE], Nome del richiedente: [TAKETOPWFCREATORNAME], Codice del dipartimento del richiedente: [TAKETOPWFCREATORDEPARTCODE], Nome del dipartimento del richiedente: [TAKETOPWFCREATORDEPARTNAME], Tipo correlato: [TAKETOPRELATEDTYPE], ID correlato: [TAKETOPRELATEDID], Codice correlato: [TAKETOPRELATEDCODE])</value>
+  </data>
+  <data name="BaoDanLeiXing" xml:space="preserve">
+    <value>Tipo di Modulo</value>
+  </data>
+  <data name="BiaoDanMing" xml:space="preserve">
+    <value>Nome del Modulo</value>
+  </data>
+  <data name="BiaoDanHao" xml:space="preserve">
+    <value>Numero di Modulo</value>
+  </data>
+  <data name="HangChuan" xml:space="preserve">
+    <value>Sequenza di Righe</value>
+  </data>
+  <data name="LieMing" xml:space="preserve">
+    <value>Nome della Colonna</value>
+  </data>
+  <data name="LieZhi" xml:space="preserve">
+    <value>Valore della Colonna</value>
+  </data>
+  <data name="BiaoDanShuangChuan" xml:space="preserve">
+    <value>Caricare il Modulo</value>
+  </data>
+  <data name="BiaoDanYangShiXieZai" xml:space="preserve">
+    <value>Scaricare lo Stile del Modulo</value>
+  </data>
+  <data name="ShouHuoDiZi" xml:space="preserve">
+    <value>Indirizzo di Consegna</value>
+  </data>
+  <data name="XiangMuNianSouDan" xml:space="preserve">
+    <value>Modulo di Accettazione del Progetto</value>
+  </data>
+  <data name="SheBeiMingCheng" xml:space="preserve">
+    <value>Nome dell'Equipaggiamento</value>
+  </data>
+  <data name="XiangMuWZFYFKSQ" xml:space="preserve">
+    <value>Richiesta di Pagamento per i Costi dei Materiali del Progetto</value>
+  </data>
+  <data name="ZiDongJiHuo" xml:space="preserve">
+    <value>Attivazione Automatica</value>
+  </data>
+  <data name="XiaoShiZiDongPiZheng" xml:space="preserve">
+    <value>Approvazione Automatica Ora</value>
+  </data>
+  <data name="JiHuaXuanZhe" xml:space="preserve">
+    <value>Selezione del Piano</value>
+  </data>
 </root>

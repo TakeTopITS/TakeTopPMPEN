@@ -30854,4 +30854,85 @@
   <data name="TiaoXiu" xml:space="preserve">
     <value>Компенсационный отпуск</value>
   </data>
+  <data name="ZhuanChengXiangMuJiHua" xml:space="preserve">
+    <value>Преобразовать в план проекта</value>
+  </data>
+  <data name="HeTongLiXiangYiJi" xml:space="preserve">
+    <value>Договорная основа для инициации проекта</value>
+  </data>
+  <data name="ZhongBiaoRiQi" xml:space="preserve">
+    <value>Дата присуждения</value>
+  </data>
+  <data name="QianShuRen" xml:space="preserve">
+    <value>Подписант</value>
+  </data>
+  <data name="ZhanLieQing" xml:space="preserve">
+    <value>Временная сумма</value>
+  </data>
+  <data name="AnQuanWenMingSiGongFei" xml:space="preserve">
+    <value>Стоимость безопасного и цивилизованного строительства</value>
+  </data>
+  <data name="YeDingKaiGongRiQi" xml:space="preserve">
+    <value>Дата начала по соглашению</value>
+  </data>
+  <data name="YeDingWanGongRiQi" xml:space="preserve">
+    <value>Дата завершения по соглашению</value>
+  </data>
+  <data name="ZiBaoQi" xml:space="preserve">
+    <value>Срок гарантии</value>
+  </data>
+  <data name="DiYeFang" xml:space="preserve">
+    <value>Сторона договора</value>
+  </data>
+  <data name="DiYeFangHeTongHao" xml:space="preserve">
+    <value>Номер договора стороны договора</value>
+  </data>
+  <data name="JSCODEDescription" xml:space="preserve">
+    <value>(Правило домена: Код текущего пользователя: [TAKETOPUSERCODE], Имя текущего пользователя: [TAKETOPUSERNAME], Код отдела текущего пользователя: [TAKETOPDEPARTCODE], Название отдела текущего пользователя: [TAKETOPDEPARTNAME], Код заявителя: [TAKETOPWFCREATORCODE], Имя заявителя: [TAKETOPWFCREATORNAME], Код отдела заявителя: [TAKETOPWFCREATORDEPARTCODE], Название отдела заявителя: [TAKETOPWFCREATOR</value>
+  </data>
+  <data name="BaoDanLeiXing" xml:space="preserve">
+    <value>Тип формы</value>
+  </data>
+  <data name="BiaoDanMing" xml:space="preserve">
+    <value>Название формы</value>
+  </data>
+  <data name="BiaoDanHao" xml:space="preserve">
+    <value>Номер формы</value>
+  </data>
+  <data name="HangChuan" xml:space="preserve">
+    <value>Последовательность строк</value>
+  </data>
+  <data name="LieMing" xml:space="preserve">
+    <value>Название столбца</value>
+  </data>
+  <data name="LieZhi" xml:space="preserve">
+    <value>Значение столбца</value>
+  </data>
+  <data name="BiaoDanShuangChuan" xml:space="preserve">
+    <value>Загрузить форму</value>
+  </data>
+  <data name="BiaoDanYangShiXieZai" xml:space="preserve">
+    <value>Скачать стиль формы</value>
+  </data>
+  <data name="ShouHuoDiZi" xml:space="preserve">
+    <value>Адрес доставки</value>
+  </data>
+  <data name="XiangMuNianSouDan" xml:space="preserve">
+    <value>Акт приемки проекта</value>
+  </data>
+  <data name="SheBeiMingCheng" xml:space="preserve">
+    <value>Название оборудования</value>
+  </data>
+  <data name="XiangMuWZFYFKSQ" xml:space="preserve">
+    <value>Заявка на оплату расходов на материалы проекта</value>
+  </data>
+  <data name="ZiDongJiHuo" xml:space="preserve">
+    <value>Автоматическая активация</value>
+  </data>
+  <data name="XiaoShiZiDongPiZheng" xml:space="preserve">
+    <value>Часовая автоматическая одобрение</value>
+  </data>
+  <data name="JiHuaXuanZhe" xml:space="preserve">
+    <value>Выбор плана</value>
+  </data>
 </root>

@@ -30852,4 +30852,85 @@
   <data name="TiaoXiu" xml:space="preserve">
     <value>振替休日</value>
   </data>
+  <data name="ZhuanChengXiangMuJiHua" xml:space="preserve">
+    <value>プロジェクト計画に変換する</value>
+  </data>
+  <data name="HeTongLiXiangYiJi" xml:space="preserve">
+    <value>契約に基づくプロジェクトの立ち上げ根拠</value>
+  </data>
+  <data name="ZhongBiaoRiQi" xml:space="preserve">
+    <value>当選日</value>
+  </data>
+  <data name="QianShuRen" xml:space="preserve">
+    <value>署名者</value>
+  </data>
+  <data name="ZhanLieQing" xml:space="preserve">
+    <value>暫定金</value>
+  </data>
+  <data name="AnQuanWenMingSiGongFei" xml:space="preserve">
+    <value>安全文明施工費</value>
+  </data>
+  <data name="YeDingKaiGongRiQi" xml:space="preserve">
+    <value>約束された開始日</value>
+  </data>
+  <data name="YeDingWanGongRiQi" xml:space="preserve">
+    <value>約束された完了日</value>
+  </data>
+  <data name="ZiBaoQi" xml:space="preserve">
+    <value>保証期間</value>
+  </data>
+  <data name="DiYeFang" xml:space="preserve">
+    <value>契約締結者</value>
+  </data>
+  <data name="DiYeFangHeTongHao" xml:space="preserve">
+    <value>契約締結者の契約番号</value>
+  </data>
+  <data name="JSCODEDescription" xml:space="preserve">
+    <value>（ドメインルール：現在のユーザーのコード：[TAKETOPUSERCODE]、現在のユーザーの名前：[TAKETOPUSERNAME]、現在のユーザーの部門コード：[TAKETOPDEPARTCODE]、現在のユーザーの部門名：[TAKETOPDEPARTNAME]、申請者のコード：[TAKETOPWFCREATORCODE]、申請者の名前：[TAKETOPWFCREATORNAME]、申請者の部門コード：[TAKETOPWFCREATORDEPARTCODE]、申請者の部門名：[TAKETOPWFCREATORDEPARTNAME]、関連タイプ：[TAKETOPRELATEDTYPE]、関連ID：[TAKETOPRELATEDID]、関連コード：[TAKETOPRELATEDCODE]）</value>
+  </data>
+  <data name="BaoDanLeiXing" xml:space="preserve">
+    <value>フォームの種類</value>
+  </data>
+  <data name="BiaoDanMing" xml:space="preserve">
+    <value>フォーム名</value>
+  </data>
+  <data name="BiaoDanHao" xml:space="preserve">
+    <value>フォーム番号</value>
+  </data>
+  <data name="HangChuan" xml:space="preserve">
+    <value>行の連鎖</value>
+  </data>
+  <data name="LieMing" xml:space="preserve">
+    <value>列の名前</value>
+  </data>
+  <data name="LieZhi" xml:space="preserve">
+    <value>列の値</value>
+  </data>
+  <data name="BiaoDanShuangChuan" xml:space="preserve">
+    <value>フォームをアップロードする</value>
+  </data>
+  <data name="BiaoDanYangShiXieZai" xml:space="preserve">
+    <value>フォームスタイルのダウンロード</value>
+  </data>
+  <data name="ShouHuoDiZi" xml:space="preserve">
+    <value>配送先住所</value>
+  </data>
+  <data name="XiangMuNianSouDan" xml:space="preserve">
+    <value>プロジェクト検収書</value>
+  </data>
+  <data name="SheBeiMingCheng" xml:space="preserve">
+    <value>設備の名前</value>
+  </data>
+  <data name="XiangMuWZFYFKSQ" xml:space="preserve">
+    <value>プロジェクト資材費の支払い申請</value>
+  </data>
+  <data name="ZiDongJiHuo" xml:space="preserve">
+    <value>自動活性化</value>
+  </data>
+  <data name="XiaoShiZiDongPiZheng" xml:space="preserve">
+    <value>時間自動承認</value>
+  </data>
+  <data name="JiHuaXuanZhe" xml:space="preserve">
+    <value>計画の選択</value>
+  </data>
 </root>

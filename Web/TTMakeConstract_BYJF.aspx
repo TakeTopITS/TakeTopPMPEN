@@ -535,7 +535,7 @@
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td id="td1" runat="server">
-                                                                            <asp:Label ID="Label245" runat="server" Text="合同立项依据"></asp:Label>
+                                                                            <asp:Label ID="Label245" runat="server" Text="<%$ Resources:lang,HeTongLiXiangYiJi %>"></asp:Label>
                                                                         </td>
                                                                         <td>
                                                                             <asp:DropDownList ID="DL_ProjectBasis" runat="server">
@@ -548,7 +548,7 @@
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td tyle="text-align: right;">
-                                                                            <asp:Label ID="Label246" runat="server" Text="中标日期"></asp:Label>
+                                                                            <asp:Label ID="Label246" runat="server" Text="<%$ Resources:lang,ZhongBiaoRiQi %>"></asp:Label>
                                                                         </td>
                                                                         <td>
                                                                             <asp:TextBox ID="DLC_BiddingDate" runat="server" Width="100px"></asp:TextBox>
@@ -585,12 +585,12 @@
                                                                             <asp:Label ID="LB_DepartName" runat="server"></asp:Label>
                                                                             <span style="color: #ff0000">*</span></td>
                                                                         <td>
-                                                                            <asp:Label ID="Label233" runat="server" Text="经办人"></asp:Label></td>
+                                                                            <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,JingBanRen %>"></asp:Label></td>
                                                                         <td>
                                                                             <asp:TextBox ID="TB_OperatorName" runat="server" Width="100px"></asp:TextBox>
                                                                         </td>
                                                                         <td>
-                                                                            <asp:Label ID="Label234" runat="server" Text="签署人"></asp:Label></td>
+                                                                            <asp:Label ID="Label234" runat="server" Text="<%$ Resources:lang,QianShuRen %>"></asp:Label></td>
                                                                         <td>
                                                                             <asp:TextBox ID="TB_SignName" runat="server" Width="100px"></asp:TextBox></td>
                                                                     </tr>
@@ -620,39 +620,39 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label112" runat="server" Text="税率"></asp:Label>：
+                                                                <asp:Label ID="Label112" runat="server" Text="<%$ Resources:lang,ShuiLv %>"></asp:Label>：
 
                                                             </td>
                                                             <td colspan="3" class="formItemBgStyle" style="text-align: right;">
                                                                 <table>
                                                                     <tr>
                                                                         <td>
-                                                                            <asp:Label ID="Label106" runat="server" Text="税率1"></asp:Label>：</td>
+                                                                            <asp:Label ID="Label106" runat="server" Text="<%$ Resources:lang,ShuiLv %>"></asp:Label>1：</td>
                                                                         <td>
                                                                             <NickLee:NumberBox ID="NB_TaxRate13" runat="server" AutoPostBack="True" Width="50px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnAmountChanged="NB_TaxRate13_AmountChanged" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
                                                                         </td>
                                                                         <td>
-                                                                            <asp:Label ID="Label108" runat="server" Text="合同额"></asp:Label>：</td>
+                                                                            <asp:Label ID="Label108" runat="server" Text="<%$ Resources:lang,HeTongE %>"></asp:Label>：</td>
                                                                         <td>
                                                                             <NickLee:NumberBox ID="NB_TaxRate13Amount" runat="server" Width="100px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
                                                                         </td>
                                                                         <td>
-                                                                            <asp:Label ID="Label107" runat="server" Text="税率2"></asp:Label>：</td>
+                                                                            <asp:Label ID="Label107" runat="server" Text="<%$ Resources:lang,ShuiLv %>"></asp:Label>2：</td>
                                                                         <td>
                                                                             <NickLee:NumberBox ID="NB_TaxRate9" runat="server" AutoPostBack="True" Width="50px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnAmountChanged="NB_TaxRate9_AmountChanged" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
                                                                         </td>
                                                                         <td>
-                                                                            <asp:Label ID="Label109" runat="server" Text="合同额"></asp:Label>：</td>
+                                                                            <asp:Label ID="Label109" runat="server" Text="<%$ Resources:lang,HeTongE %>"></asp:Label>：</td>
                                                                         <td>
                                                                             <NickLee:NumberBox ID="NB_TaxRate9Amount" runat="server" Width="100px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
                                                                         </td>
                                                                         <td>
-                                                                            <asp:Label ID="Label110" runat="server" Text="税率3"></asp:Label>：</td>
+                                                                            <asp:Label ID="Label110" runat="server" Text="<%$ Resources:lang,ShuiLv %>"></asp:Label>3：</td>
                                                                         <td>
                                                                             <NickLee:NumberBox ID="NB_TaxRate6" runat="server" AutoPostBack="True" Width="50px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnAmountChanged="NB_TaxRate6_AmountChanged" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
                                                                         </td>
                                                                         <td>
-                                                                            <asp:Label ID="Label111" runat="server" Text="合同额"></asp:Label>：</td>
+                                                                            <asp:Label ID="Label111" runat="server" Text="<%$ Resources:lang,HeTongE %>"></asp:Label>：</td>
                                                                         <td>
                                                                             <NickLee:NumberBox ID="NB_TaxRate6Amount" runat="server" Width="100px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
                                                                         </td>
@@ -662,13 +662,13 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label101" runat="server" Text="暂列金"></asp:Label>：
+                                                                <asp:Label ID="Label101" runat="server" Text="<%$ Resources:lang,ZhanLieQing %>"></asp:Label>：
                                                             </td>
                                                             <td class="formItemBgStyle">
                                                                 <NickLee:NumberBox ID="NB_ProvisionalAmount" runat="server" Width="150px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
                                                             </td>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label102" runat="server" Text="安全文明施工费"></asp:Label>：
+                                                                <asp:Label ID="Label102" runat="server" Text="<%$ Resources:lang,AnQuanWenMingSiGongFei %>"></asp:Label>：
                                                             </td>
                                                             <td class="formItemBgStyle">
                                                                 <NickLee:NumberBox ID="NB_SafeCivilizedFee" runat="server" Width="150px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.000</NickLee:NumberBox>
@@ -676,7 +676,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label10" runat="server" Text="约定开工日期"></asp:Label>：
+                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YeDingKaiGongRiQi %>"></asp:Label>：
                                                             </td>
                                                             <td class="formItemBgStyle">
                                                                 <asp:TextBox ID="DLC_BeginDate" runat="server"></asp:TextBox>
@@ -684,7 +684,7 @@
                                                                 </ajaxToolkit:CalendarExtender>
                                                             </td>
                                                             <td class="formItemBgStyle" style="width: 15%; text-align: right;">
-                                                                <asp:Label ID="Label11" runat="server" Text="约定完工日期"></asp:Label>：
+                                                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YeDingWanGongRiQi %>"></asp:Label>：
                                                             </td>
                                                             <td class="formItemBgStyle">
                                                                 <asp:TextBox ID="DLC_EndDate" runat="server"></asp:TextBox>
@@ -692,8 +692,9 @@
                                                                     runat="server" TargetControlID="DLC_EndDate" Enabled="True">
                                                                 </ajaxToolkit:CalendarExtender>
 
-                                                                <asp:Label ID="Label232" runat="server" Text="质保期"></asp:Label>：
-                                                                   <NickLee:NumberBox ID="NB_Warranty" runat="server" Width="80px" AutoPostBack="True" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" OnAmountChanged="NB_Warranty_AmountChanged">0</NickLee:NumberBox>天
+                                                                <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,ZiBaoQi %>"></asp:Label>：
+                                                                   <NickLee:NumberBox ID="NB_Warranty" runat="server" Width="80px" AutoPostBack="True" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" OnAmountChanged="NB_Warranty_AmountChanged">0</NickLee:NumberBox>
+                                                                <asp:Label ID="Label248" runat="server" Text="<%$ Resources:lang,Tian %>"></asp:Label>
                                                                     <asp:TextBox ID="DLC_WarrantyDate" runat="server"></asp:TextBox>
                                                                 <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender8"
                                                                     runat="server" TargetControlID="DLC_WarrantyDate" Enabled="True">
@@ -757,7 +758,7 @@
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label103" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label103" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_PartAConnectWay" runat="server"></asp:TextBox>
@@ -786,7 +787,7 @@
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label104" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label104" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_PartBConnectWay" runat="server"></asp:TextBox>
@@ -797,7 +798,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label235" runat="server" Text="缔约方合同号"></asp:Label>：
+                                                                <asp:Label ID="Label235" runat="server" Text="<%$ Resources:lang,DiYeFangHeTongHao %>"></asp:Label>：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
 
@@ -807,7 +808,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label113" runat="server" Text="缔约方1"></asp:Label>：
+                                                                <asp:Label ID="Label113" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>1：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -823,7 +824,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label203" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label203" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part1ConnectWay" runat="server"></asp:TextBox>
@@ -834,7 +835,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label114" runat="server" Text="缔约方2"></asp:Label>：
+                                                                <asp:Label ID="Label114" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>2：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -850,7 +851,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label211" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label211" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part2ConnectWay" runat="server"></asp:TextBox>
@@ -861,7 +862,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label214" runat="server" Text="缔约方3"></asp:Label>：
+                                                                <asp:Label ID="Label214" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>3：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -877,7 +878,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label216" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label216" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part3ConnectWay" runat="server"></asp:TextBox>
@@ -888,7 +889,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label217" runat="server" Text="缔约方4"></asp:Label>：
+                                                                <asp:Label ID="Label217" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>4：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -904,7 +905,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label219" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label219" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part4ConnectWay" runat="server"></asp:TextBox>
@@ -915,7 +916,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label220" runat="server" Text="缔约方5"></asp:Label>：
+                                                                <asp:Label ID="Label220" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>5：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -931,7 +932,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label222" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label222" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part5ConnectWay" runat="server"></asp:TextBox>
@@ -942,7 +943,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label223" runat="server" Text="缔约方6"></asp:Label>：
+                                                                <asp:Label ID="Label223" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>6：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -958,7 +959,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label225" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label225" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part6ConnectWay" runat="server"></asp:TextBox>
@@ -969,7 +970,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label226" runat="server" Text="缔约方7"></asp:Label>：
+                                                                <asp:Label ID="Label226" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>7：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -985,7 +986,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label228" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label228" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part7ConnectWay" runat="server"></asp:TextBox>
@@ -996,7 +997,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyle" style="text-align: right;">
-                                                                <asp:Label ID="Label229" runat="server" Text="缔约方8"></asp:Label>：
+                                                                <asp:Label ID="Label229" runat="server" Text="<%$ Resources:lang,DiYeFang %>"></asp:Label>8：
                                                             </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <table>
@@ -1012,7 +1013,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label231" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label231" Text="<%$ Resources:lang,LianXiFangFa %>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_Part8ConnectWay" runat="server"></asp:TextBox>

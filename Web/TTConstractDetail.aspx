@@ -1918,7 +1918,7 @@
                                         </asp:DropDownList>
                                         &#160;PlanID:<NickLee:NumberBox ID="NB_ReceivablesRelatedPlanID" runat="server" MaxAmount="1000000000000" MinAmount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="50px">0</NickLee:NumberBox>
                                         <asp:Label ID="LB_ReceivablesPlanName" runat="server"></asp:Label>
-                                        <asp:Button ID="BT_ReceivablesSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_ReceivablesSelectPJPlan_Click" Text="计划选择" />
+                                        <asp:Button ID="BT_ReceivablesSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_ReceivablesSelectPJPlan_Click" Text="<%$ Resources:lang,JiHuaXuanZhe %>" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -2090,7 +2090,7 @@
                                                     <asp:Label ID="LB_PayablePlanName" runat="server"></asp:Label>
                                                 </td>
                                                 <td>
-                                                    <asp:Button ID="BT_PayableSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_PayableSelectPJPlan_Click" Text="计划选择" />
+                                                    <asp:Button ID="BT_PayableSelectPJPlan" runat="server" CssClass="inpu" OnClick="BT_PayableSelectPJPlan_Click" Text="<%$ Resources:lang,JiHuaXuanZhe %>" />
 
                                                 </td>
                                             </tr>

@@ -136545,4 +136545,899 @@ Message Input string '80.55555555555556' is not a valid integer. Path '[0].perce
 An error occurred while executing the query.
 
 ------------------------------------
+
+Log Entry : 12:39:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:39:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:39:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:39:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:39:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:29:59 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:29:59 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:30:00 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:30:01 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:30:01 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:30:01 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:38:33 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:38:33 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:38:34 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:38:34 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:38:35 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:15 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:15 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:27 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:28 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:50 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:50 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:51 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:40:51 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:41:00 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:41:00 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:41:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:41:04 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:41:04 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:41:07 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:52:46 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:52:46 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:52:47 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:52:47 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:52:48 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:52:48 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:52:49 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:36 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:37 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:39 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:41 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:41 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:42 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:43 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:43 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:44 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:45 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:46 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 8:55:47 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:17 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:17 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:17 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:17 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:18 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:18 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:40 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:40 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:45 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:45 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:46 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:46 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:47 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:31:48 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:32:19 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:32:20 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:14 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:14 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:14 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:14 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:16 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:16 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:17 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:17 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:18 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:45:22 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:46:10 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:46:10 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:46:11 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:49:14 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 9:49:15 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:51 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:53 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:53 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:53 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:54 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:56 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:56 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:56 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:57 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:57 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:02:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:07 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:08 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:11 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:12 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:13 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:13 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:13 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:14 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:14 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:15 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:03:33 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:04:01 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:04:02 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:04:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:04:05 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:04:06 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:18:51 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:18:54 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:18:57 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:18:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:18:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:18:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:31:06 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:31:06 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:31:06 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:31:06 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:31:06 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:54 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:55 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:56 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:56 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:57 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:34:59 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:41:52 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:41:59 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:42:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:42:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:42:03 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:42:18 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 10:42:19 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:52 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:52 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:53 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:53 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:54 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:55 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:55 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:56 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:28:57 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:29:34 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:29:34 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:29:38 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:29:38 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:29:38 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:30:01 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:30:01 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:32:31 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:32:32 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:32:34 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:32:39 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:32:39 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:04 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:05 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:07 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:15 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:16 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:22 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:24 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:26 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:26 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:40 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:33:41 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:53:56 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:53:57 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:53:57 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:53:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:53:58 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:53:59 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:54:44 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:54:44 AM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:09:01 PM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:09:01 PM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:09:01 PM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:09:02 PM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:09:02 PM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:09:03 PM Thursday, May 22, 2025 
+An error occurred while executing the query.
+
+------------------------------------
 

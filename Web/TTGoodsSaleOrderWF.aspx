@@ -233,7 +233,7 @@
                                                     <asp:Label ID="LB_SOID" runat="server" Visible="false"></asp:Label>
                                                 </td>
                                                 <td width="25%" class="formItemBgStyle" style="text-align: right">
-                                                    <asp:Label ID="Label152" runat="server" Text="销售类型"></asp:Label>：
+                                                    <asp:Label ID="Label152" runat="server" Text="<%$ Resources:lang,XiaoShouLeiXing %>"></asp:Label>：
                                                 </td>
                                                 <td class="formItemBgStyle" style="text-align: left">
                                                     <asp:DropDownList ID="DL_SaleType" runat="server" DataTextField="Type" DataValueField="Type">
@@ -261,7 +261,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label102" runat="server" Text="联系人"></asp:Label>：
+                                                    <asp:Label ID="Label102" runat="server" Text="<%$ Resources:lang,LianJiRen %>"></asp:Label>：
                                                 </td>
                                                 <td class="formItemBgStyle" style="text-align: left;">
                                                     <asp:TextBox ID="TB_ContactPerson" runat="server" Width="100px"></asp:TextBox>
@@ -276,7 +276,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right">
-                                                    <asp:Label ID="Label146" runat="server" Text="收货地址"></asp:Label>：
+                                                    <asp:Label ID="Label146" runat="server" Text="<%$ Resources:lang,ShouHuoDiZi %>"></asp:Label>：
                                                 </td>
                                                 <td colspan="5" class="formItemBgStyle" style="text-align: left">
                                                     <asp:TextBox ID="TB_ReceiverAddress" runat="server" Width="90%"></asp:TextBox>
@@ -333,7 +333,7 @@
                                                                 </ajaxToolkit:CalendarExtender>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label118" runat="server" Text="发票类型"></asp:Label>：
+                                                                <asp:Label ID="Label118" runat="server" Text="<%$ Resources:lang,FaPiaoLiXing%>"></asp:Label>：
                                                             </td>
                                                             <td>
                                                                 <asp:DropDownList ID="DL_InvoiceType" DataValueField="Type" DataTextField="Type" runat="server">
