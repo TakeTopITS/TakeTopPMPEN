@@ -3064,7 +3064,7 @@
     <value>Registrant</value>
   </data>
   <data name="DengLu" xml:space="preserve">
-    <value>Log in</value>
+    <value>Login</value>
   </data>
   <data name="DengLuChuan" xml:space="preserve">
     <value>Login string</value>
@@ -8446,7 +8446,7 @@
     <value>Lock status</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>log in</value>
+    <value>login</value>
   </data>
   <data name="LookupAllProjects" xml:space="preserve">
     <value>See all projects</value>

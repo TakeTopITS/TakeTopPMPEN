@@ -8446,7 +8446,7 @@
     <value>锁定状态</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>登  录</value>
+    <value>登录</value>
   </data>
   <data name="LookupAllProjects" xml:space="preserve">
     <value>查看所有项目</value>
@@ -30063,7 +30063,7 @@
     <value>RTX分机号</value>
   </data>
   <data name="bXieMianMoZub" xml:space="preserve">
-    <value>&lt;b&gt;页面模组&lt;b&gt;</value>
+    <value>页面模组</value>
   </data>
   <data name="ZZJingGaoGongBenFeiHeDaiLiFeiB" xml:space="preserve">
     <value>警告，工本费和代理费必须为数字类型，请检查！</value>

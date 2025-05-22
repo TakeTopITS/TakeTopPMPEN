@@ -30049,7 +30049,7 @@
     <value>RTX-Durchwahlnummer</value>
   </data>
   <data name="bXieMianMoZub" xml:space="preserve">
-    <value>&lt;b&gt;Seitenmodul&lt;b&gt;</value>
+    <value>Seitenmodul</value>
   </data>
   <data name="ZZJingGaoGongBenFeiHeDaiLiFeiB" xml:space="preserve">
     <value>Warnung, Gebühren und Agenturgebühren müssen numerisch sein, bitte überprüfen!</value>
