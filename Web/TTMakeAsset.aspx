@@ -346,7 +346,7 @@
                                     <td class="formItemBgStyle" align="right" style="padding: 5px 5px 0px 5px;">
                                         <asp:Button ID="BT_CreateDetail" runat="server" CssClass="inpuYello" OnClick="BT_CreateDetail_Click" Text="<%$ Resources:lang,New %>" />
                                         &nbsp;&nbsp; 
-                                        <input type="button" class="inpuLong" value="´òÓ¡ÌõÐÎÂë" onclick="ClickBarPrintMore();" />
+                                        <input type="button" class="inpuLong" value="Print BarCode" onclick="ClickBarPrintMore();" />
                                     </td>
                                 </tr>
                             </table>

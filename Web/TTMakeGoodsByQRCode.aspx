@@ -398,7 +398,7 @@
 
                                                 </td>
                                                 <td style="text-align: right; padding-top: 12px;">
-                                                    <input type="button" class="inpuLong" value="´òÓ¡ÌõÐÎÂë" onclick="ClickBarPrintMore();" />
+                                                    <input type="button" class="inpuLong" value="Print BarCode" onclick="ClickBarPrintMore();" />
                                                 </td>
                                             </tr>
                                         </table>

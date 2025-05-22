@@ -131,7 +131,7 @@
                                                             <asp:TextBox ID="TB_AssetName" runat="server" Width="150px"></asp:TextBox></td>
                                                         <td>
                                                             <asp:Button ID="BT_Find" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Find_Click" />
-                                                            <input type="button" class="inpuLong" onclick="ClickBarPrintMore();" value="´òÓ¡ÌõÐÎÂë" />
+                                                            <input type="button" class="inpuLong" onclick="ClickBarPrintMore();" value="Print BarCode" />
                                                         </td>
                                                     </tr>
                                                 </table>

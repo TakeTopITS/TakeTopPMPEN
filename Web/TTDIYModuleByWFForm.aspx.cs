@@ -71,6 +71,10 @@ public partial class TTDIYModuleByWFForm : System.Web.UI.Page
         DataSet ds = new DataSet();
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
 
+        if (ds.Tables[0].Rows.Count == 0)
+        {
+            Response.Redirect("TTDisplayErrors.aspx");
+        }
         strTemName = ds.Tables[0].Rows[0][0].ToString().Trim();
         strWFType = ds.Tables[0].Rows[0][1].ToString().Trim();
 
@@ -106,6 +110,7 @@ public partial class TTDIYModuleByWFForm : System.Web.UI.Page
             //设置表格属性
             ClientScript.RegisterStartupScript(this.GetType(), "HH88H", "<script>setWorkflowForm();</script>");
         }
+
     }
 
     protected void UploadWFDIYFormTemplate(string strWFTemName)
@@ -276,7 +281,7 @@ public partial class TTDIYModuleByWFForm : System.Web.UI.Page
                     try
                     {
                         //保存表单数据到数据库，用于开发平台一般处理程序方式
-                        ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                     }
                     catch
                     {
@@ -373,7 +378,7 @@ public partial class TTDIYModuleByWFForm : System.Web.UI.Page
                     try
                     {
                         //保存表单数据到数据库，用于开发平台一般处理程序方式
-                        ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                     }
                     catch
                     {
@@ -458,7 +463,7 @@ public partial class TTDIYModuleByWFForm : System.Web.UI.Page
                     TakeTopXML.FormConvertToTable(int.Parse(strWLID), 0);
 
                     //保存表单数据到数据库
-                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
                 }
                 catch
                 {
@@ -531,7 +536,7 @@ public partial class TTDIYModuleByWFForm : System.Web.UI.Page
                     TakeTopXML.FormConvertToTable(int.Parse(strWLID), 0);
 
                     //保存表单数据到数据库
-                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
                 }
                 catch
                 {
@@ -608,7 +613,7 @@ public partial class TTDIYModuleByWFForm : System.Web.UI.Page
     protected void LoadWorkFlow(string strWFType, string strTemName, string strRelatedCode)
     {
         string strHQL;
-     
+
         if (!string.IsNullOrEmpty(strRelatedCode))
         {
             strHQL = "Select * from T_WorkFlow as workFlow where workFlow.WLType = " + "'" + strWFType + "'" + " and workFlow.TemName = " + "'" + strTemName + "'" + " and workFlow.CreatorCode = " + "'" + strUserCode + "'" + " and workFlow.RelatedCode = '" + strRelatedCode + "' and char_length(rtrim(ltrim(workFlow.XSNFile)))>0 Order by workFlow.CreateTime DESC Limit 50";

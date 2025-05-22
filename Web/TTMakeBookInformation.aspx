@@ -131,7 +131,7 @@
                                                 <asp:Button ID="BT_Query" runat="server" CssClass="inpu" OnClick="BT_Query_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                             </td>
                                             <td width="140px" align="center">
-                                                <input type="button" class="inpuLong" onclick="ClickBarPrintMore();" value="´òÓ¡ÌõÐÎÂë" />
+                                                <input type="button" class="inpuLong" onclick="ClickBarPrintMore();" value="Print BarCode" />
                                             </td>
                                         </tr>
                                     </table>
