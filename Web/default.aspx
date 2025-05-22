@@ -201,17 +201,17 @@
                             <!-- <h3>taketop login</h3> -->
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_UserID" runat="server" Text="<%$ Resources:lang,UserAccount%>"></asp:Label>:</em>
+                                    <asp:Label ID="LB_UserID" runat="server" Text="<%$ Resources:lang,UserAccount%>"></asp:Label></em>
                                 <asp:TextBox ID="TB_UserCode" runat="server" class="text"></asp:TextBox>
                             </p>
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_Password" runat="server" Text="<%$ Resources:lang,PWD%>"></asp:Label>:</em>
+                                    <asp:Label ID="LB_Password" runat="server" Text="<%$ Resources:lang,PWD%>"></asp:Label></em>
                                 <asp:TextBox ID="TB_Password" runat="server" class="text" TextMode="Password"></asp:TextBox>
                             </p>
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_Verification" runat="server" Text="<%$ Resources:lang,Verification%>"></asp:Label>:</em>
+                                    <asp:Label ID="LB_Verification" runat="server" Text="<%$ Resources:lang,Verification%>"></asp:Label></em>
                                 <em>
                                     <asp:TextBox ID="TB_CheckCode" runat="server" class="textcode" Width="75px"></asp:TextBox></em>
                                 <em><a href="#" class="codea">

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultInterface.aspx.cs" Inherits="DefaultInterface" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultInterface.aspx.cs" Inherits="DefaultInterface" %>
 
 <%@ Import Namespace="System.Globalization" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -141,17 +141,17 @@
                             <!-- <h3>taketop login</h3> -->
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_UserID" runat="server" Text="<%$ Resources:lang,UserAccount%>"></asp:Label>:</em>
+                                    <asp:Label ID="LB_UserID" runat="server" Text="<%$ Resources:lang,UserAccount%>"></asp:Label></em>
                                 <asp:TextBox ID="TB_UserCode" runat="server" class="text"></asp:TextBox>
                             </p>
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_Password" runat="server" Text="<%$ Resources:lang,PWD%>"></asp:Label>:</em>
+                                    <asp:Label ID="LB_Password" runat="server" Text="<%$ Resources:lang,PWD%>"></asp:Label></em>
                                 <asp:TextBox ID="TB_Password" runat="server" class="text" TextMode="Password"></asp:TextBox>
                             </p>
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_Verification" runat="server" Text="<%$ Resources:lang,Verification%>"></asp:Label>:</em>
+                                    <asp:Label ID="LB_Verification" runat="server" Text="<%$ Resources:lang,Verification%>"></asp:Label></em>
                                 <em>
                                     <asp:TextBox ID="TB_CheckCode" runat="server" class="textcode" Width="75px"></asp:TextBox></em>
                                 <em><a href="#" class="codea">

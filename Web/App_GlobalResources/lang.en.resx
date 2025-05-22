@@ -289,7 +289,7 @@
     <value>Security risks rectification notice list</value>
   </data>
   <data name="Archive" xml:space="preserve">
-    <value>File</value>
+    <value>Archive</value>
   </data>
   <data name="ArchiveProject" xml:space="preserve">
     <value>Archiving</value>
@@ -5125,7 +5125,7 @@
     <value>Shareholding</value>
   </data>
   <data name="GuiDang" xml:space="preserve">
-    <value>File</value>
+    <value>Archive</value>
   </data>
   <data name="GuiDangDanWei" xml:space="preserve">
     <value>Archiving Unit</value>
@@ -13300,7 +13300,7 @@
     <value>User</value>
   </data>
   <data name="UserAccount" xml:space="preserve">
-    <value>UserID</value>
+    <value>UserCode</value>
   </data>
   <data name="UserCode" xml:space="preserve">
     <value>Code</value>

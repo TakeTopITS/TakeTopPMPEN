@@ -13300,7 +13300,7 @@
     <value>사용자</value>
   </data>
   <data name="UserAccount" xml:space="preserve">
-    <value>계좌 번호</value>
+    <value>계좌번호</value>
   </data>
   <data name="UserCode" xml:space="preserve">
     <value>코드</value>
