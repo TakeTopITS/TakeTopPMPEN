@@ -388,7 +388,7 @@
                                                                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ShuLiang %>"></asp:Label>
                                                                                     </strong></td>
                                                                                     <td align="center" width="6%"><strong>
-                                                                                        <asp:Label ID="Label28" runat="server" Text="º¬Ë°µ¥¼Û"></asp:Label>
+                                                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,HanShuiChanJia %>"></asp:Label>
                                                                                     </strong></td>
                                                                                     <td align="center" width="6%"><strong>
                                                                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,DanWei %>"></asp:Label>

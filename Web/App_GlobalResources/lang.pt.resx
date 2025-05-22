@@ -30933,4 +30933,25 @@
   <data name="JiHuaXuanZhe" xml:space="preserve">
     <value>Seleção de Plano</value>
   </data>
+  <data name="ZuoYeShiJian" xml:space="preserve">
+    <value>Horário de Trabalho</value>
+  </data>
+  <data name="ZuoYeFei" xml:space="preserve">
+    <value>Custos de trabalho</value>
+  </data>
+  <data name="JiaoFuRiQi" xml:space="preserve">
+    <value>Data de Entrega</value>
+  </data>
+  <data name="ChengFangChuangWei" xml:space="preserve">
+    <value>Local de Armazenamento</value>
+  </data>
+  <data name="ChuKuChuangWei" xml:space="preserve">
+    <value>Local de Saída do Armazenamento</value>
+  </data>
+  <data name="XiangMuFangXiang" xml:space="preserve">
+    <value>프로젝트 방향</value>
+  </data>
+  <data name="XiangMuYiShuanKeMu" xml:space="preserve">
+    <value>Item de Orçamento do Projeto</value>
+  </data>
 </root>

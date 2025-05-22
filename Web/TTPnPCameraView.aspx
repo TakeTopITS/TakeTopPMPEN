@@ -59,7 +59,7 @@
                                                 <span>
                                                     <input type="radio" value="Department" id="RD_Department" name="add" checked="checked" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZuZhiJiaGou%>"></asp:Label></span>
                                                 <span>
-                                                    <input type="radio" value="Project" id="RD_Project" name="add" /><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBu%>"></asp:Label></span>&nbsp;&nbsp;<input type="button" class="inpuLong" value="ÐÂÔöÉãÏñÍ·" onclick="OnClickHandler();" />
+                                                    <input type="radio" value="Project" id="RD_Project" name="add" /><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBu%>"></asp:Label></span>&nbsp;&nbsp;<input type="button" class="inpuLong" value="Add" onclick="OnClickHandler();" />
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">

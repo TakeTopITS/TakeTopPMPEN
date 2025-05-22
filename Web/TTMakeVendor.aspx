@@ -95,7 +95,7 @@
                                                         </td>
                                                         <td style="text-align: right;">
 
-                                                            <asp:Label ID="Label84" runat="server" Text="设备名称"></asp:Label>：
+                                                            <asp:Label ID="Label84" runat="server" Text="<%$ Resources:lang,SheBeiMingCheng%>"></asp:Label>：
                                                         </td>
 
                                                         <td style="text-align: left;">
@@ -175,7 +175,7 @@
 
                                                                     <td width="15%" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label85" runat="server" Text="设备名称"></asp:Label></strong>
+                                                                            <asp:Label ID="Label85" runat="server" Text="<%$ Resources:lang,SheBeiMingCheng%>"></asp:Label></strong>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -230,7 +230,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                         </asp:HyperLinkColumn>
 
-                                                        <asp:BoundColumn DataField="DeviceName" HeaderText="设备名称">
+                                                        <asp:BoundColumn DataField="DeviceName" HeaderText="<%$ Resources:lang,SheBeiMingCheng%>">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -620,7 +620,7 @@
 
                                                             <td style="text-align: right;" class="formItemBgStyle">
 
-                                                                <asp:Label ID="Label2" runat="server" Text="设备名称"></asp:Label>：
+                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SheBeiMingCheng%>"></asp:Label>：
                                                             </td>
 
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">

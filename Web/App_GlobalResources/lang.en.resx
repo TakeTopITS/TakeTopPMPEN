@@ -30934,4 +30934,25 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="JiHuaXuanZhe" xml:space="preserve">
     <value>Plan Selection</value>
   </data>
+  <data name="ZuoYeShiJian" xml:space="preserve">
+    <value>Working Hours</value>
+  </data>
+  <data name="ZuoYeFei" xml:space="preserve">
+    <value>Work Charges</value>
+  </data>
+  <data name="JiaoFuRiQi" xml:space="preserve">
+    <value>Delivery Date</value>
+  </data>
+  <data name="ChengFangChuangWei" xml:space="preserve">
+    <value>Storage Location</value>
+  </data>
+  <data name="ChuKuChuangWei" xml:space="preserve">
+    <value>Outbound Storage Location</value>
+  </data>
+  <data name="XiangMuFangXiang" xml:space="preserve">
+    <value>Project Direction</value>
+  </data>
+  <data name="XiangMuYiShuanKeMu" xml:space="preserve">
+    <value>Project Budget Item</value>
+  </data>
 </root>

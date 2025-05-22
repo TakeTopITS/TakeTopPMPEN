@@ -580,7 +580,7 @@
                                                             </td>
                                                             <td></td>
                                                             <td>
-                                                                <asp:Label ID="Label228" runat="server" Text="³ö¿â²ÖÎ»"></asp:Label>
+                                                                <asp:Label ID="Label228" runat="server" Text="<%$ Resources:lang,ChuKuChuangWei%>"></asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:TextBox ID="TB_FromWHPosition" runat="server" Width="90%"></asp:TextBox>

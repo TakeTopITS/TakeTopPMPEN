@@ -28,9 +28,16 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            DLC_YearMonth.Text = DateTime.Now.ToString("yyyy-MM");
-            BindDDLOther();
-            LoadProjectMemberScheduleList(ddl_ProjectID.SelectedValue.Trim(), DLC_YearMonth.Text.Trim());
+            try
+            {
+                DLC_YearMonth.Text = DateTime.Now.ToString("yyyy-MM");
+                BindDDLOther();
+                LoadProjectMemberScheduleList(ddl_ProjectID.SelectedValue.Trim(), DLC_YearMonth.Text.Trim());
+            }
+            catch
+            {
+
+            }
         }
     }
 
@@ -71,36 +78,75 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
                 Label24.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
                 Label25.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
                 Label26.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                strHQL = "select * from (select WorkType," +
-                    " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal2 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal3 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal4 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal5 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal6 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal7 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal8 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal9 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal10 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal11 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12  " +
-                    "from T_ProjectMemberSchedule group by WorkType " +
-                    "union all " +
-                    "select WorkType ||'ReserveQuantity' WorkType, sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal ," +   
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal1 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal2 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal3 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal4 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal5 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal6 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal7 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal8 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal9 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal10 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal11 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal12 " +
-                    "from T_ProjectMemberScheduleBase group by WorkType) A order by WorkType";
+                //strHQL = "select * from (select WorkType," +
+                //    " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal2 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal3 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal4 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal5 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal6 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal7 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal8 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal9 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal10 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal11 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12  " +
+                //    "from T_ProjectMemberSchedule group by WorkType " +
+                //    "union all " +
+                //    "select WorkType ||'ReserveQuantity' WorkType, sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal1 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal2 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal3 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal4 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal5 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal6 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal7 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal8 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal9 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal10 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal11 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal12 " +
+                //    "from T_ProjectMemberScheduleBase group by WorkType) A order by WorkType";
+
+                strHQL = @"select * from (
+                    select WorkType,
+                        sum(case when '" + strYearMonth.Trim() + @"' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal2,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal3,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal4,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal5,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal6,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal7,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal8,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal9,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal10,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal11,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12
+                    from T_ProjectMemberSchedule 
+                    group by WorkType
+    
+                    union all
+    
+                    select WorkType ||'ReserveQuantity' WorkType, 
+                        sum(case when '" + strYearMonth.Trim() + @"' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal1,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal2,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal3,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal4,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal5,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal6,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal7,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal8,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal9,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal10,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal11,
+                        sum(case when SUBSTRING(to_char(to_timestamp('" + dt.ToString("MM/dd/yyyy HH:mm:ss") + @"', 'MM/DD/YYYY HH24:MI:SS')+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal12
+                    from T_ProjectMemberScheduleBase 
+                    group by WorkType
+                ) A 
+                order by WorkType";
             }
 
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMemberSchedule");
@@ -137,21 +183,38 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
                 Label11.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
                 Label12.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
                 Label13.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                //strHQL = "select WorkType," +
+                //    " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal2 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal3 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal4 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal5 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal6 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal7 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal8 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal9 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal10 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal11 ," +
+                //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12 = " +
+                //    "from T_ProjectMemberSchedule where ProjectID='" + strProjectID.Trim() + "' group by WorkType";
+
+                string isoDate = dt.ToString("yyyy-MM-dd HH:mm:ss");
                 strHQL = "select WorkType," +
-                    " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal2 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal3 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal4 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal5 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal6 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal7 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal8 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal9 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal10 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal11 ," +
-                    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12 = " +
-                    "from T_ProjectMemberSchedule where ProjectID='" + strProjectID.Trim() + "' group by WorkType";
+                " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal2," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal3," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'4 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal4," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'5 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal5," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'6 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal6," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'7 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal7," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'8 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal8," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'9 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal9," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'10 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal10," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'11 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal11," +
+                " sum(case when SUBSTRING(to_char(to_timestamp('" + isoDate + "', 'YYYY-MM-DD HH24:MI:SS')+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12 " +
+                "from T_ProjectMemberSchedule where ProjectID='" + strProjectID.Trim() + "' group by WorkType";
             }
 
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMemberSchedule");

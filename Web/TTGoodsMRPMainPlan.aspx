@@ -255,7 +255,7 @@
                                                             <td>
                                                                 <NickLee:NumberBox ID="NB_FromPlanVerID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="60px">0</NickLee:NumberBox></td>
                                                             <td>
-                                                                <asp:Button ID="BT_CopyDetailFromPlan" runat="server" CssClass="inpu" Enabled="False" Text="¸´ÖÆ" OnClick="BT_CopyDetailFromPlan_Click" />
+                                                                <asp:Button ID="BT_CopyDetailFromPlan" runat="server" CssClass="inpu" Enabled="False" Text="<%$ Resources:lang,FuZhi%>" OnClick="BT_CopyDetailFromPlan_Click" />
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -554,7 +554,7 @@
                                                 <td class="formItemBgStyle" style="text-align: left">
                                                     <asp:DropDownList ID="DL_BomVerID" runat="server" DataTextField="VerID" AutoPostBack="true" DataValueField="VerID" OnSelectedIndexChanged="DL_BomVerID_SelectedIndexChanged">
                                                     </asp:DropDownList>
-                                                    <asp:Button ID="BT_GoodsBOM" runat="server" CssClass="inpu" Text="²é¿´BOM"></asp:Button>
+                                                    <asp:Button ID="BT_GoodsBOM" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaKanBOM%>"></asp:Button>
                                                     <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server"
                                                         Enabled="True" TargetControlID="BT_GoodsBOM" PopupControlID="Panel4"
                                                         CancelControlID="IMBT_CloseBOM" BackgroundCssClass="modalBackground" Y="150">

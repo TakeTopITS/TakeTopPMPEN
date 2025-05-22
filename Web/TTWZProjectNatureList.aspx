@@ -44,7 +44,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="新增项目性质" onclick="window.location.href = 'TTWZProjectNatureEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="Add" onclick="window.location.href = 'TTWZProjectNatureEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -90,7 +90,7 @@
                                                                 <ItemTemplate>
                                                                     <a href='TTWZProjectNatureEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>' class="notTab">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>删除</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>Delete</asp:LinkButton>
                                                                     <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="删除" />--%>
                                                                     
                                                                 </ItemTemplate>

@@ -514,7 +514,7 @@
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td style="text-align: right;" class="formItemBgStyle">
-                                                                            <asp:Label ID="Label29" runat="server" Text="项目方向" />：
+                                                                            <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,XiangMuFangXiang%>" />：
                                                                         </td>
                                                                         <td style="text-align: left;" class="formItemBgStyle">
                                                                             <asp:TextBox ID="TB_ProjectDirection" runat="server"></asp:TextBox>
@@ -532,7 +532,7 @@
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td class="formItemBgStyle" align="right">
-                                                                            <asp:Label ID="Label32" runat="server" Text="资金来源"></asp:Label>：</td>
+                                                                            <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,ZiJunLaiYuan%>"></asp:Label>：</td>
                                                                         <td class="formItemBgStyle" align="left">
                                                                             <asp:DropDownList ID="DL_FundingSource" runat="server" DataTextField="FundingSource" DataValueField="FundingSource" AutoPostBack="false">
                                                                             </asp:DropDownList>
@@ -633,7 +633,7 @@
 
                                                                         </td>
                                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                                            <asp:Label ID="Label30" runat="server" Text="项目预算科目" />：
+                                                                            <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,XiangMuYiShuanKeMu%>" />：
                                                                         </td>
                                                                         <td style="text-align: left" class="formItemBgStyle">
                                                                             <asp:TextBox ID="TB_BudgetAccount" runat="server"></asp:TextBox>

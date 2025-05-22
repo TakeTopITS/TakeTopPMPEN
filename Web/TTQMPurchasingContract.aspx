@@ -212,7 +212,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyle" style="width: 15%; text-align: right;">
-                                        <asp:Label ID="Label180" runat="server" Text="关联合同"></asp:Label>：</td>
+                                        <asp:Label ID="Label180" runat="server" Text="<%$ Resources:lang,GuanLianHeTong%>"></asp:Label>：</td>
                                     <td colspan="3" class="formItemBgStyle" align="left">
                                         <asp:Label ID="LB_RelatedConstractCode" runat="server" Font-Bold="False" Text="" Visible="True"> </asp:Label>
                                         <asp:TextBox ID="TB_RelatedConstractName" Width="80%" runat="server"></asp:TextBox>

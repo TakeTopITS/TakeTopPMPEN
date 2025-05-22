@@ -86,7 +86,7 @@
                                             <%#DataBinder.Eval(Container.DataItem, "RouteName")%>
                                             </td>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label9" runat="server" Text="作业时间"></asp:Label>：
+                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ZuoYeShiJian%>"></asp:Label>：
                                             <%# Convert.ToDateTime(DataBinder.Eval(Container.DataItem, "ProductionDate")).ToString("yyyy/MM/dd")%>
                                             </td>
                                         </tr>
@@ -96,7 +96,7 @@
                                             <%#DataBinder.Eval(Container.DataItem, "ProductionType")%>
                                             </td>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label86" runat="server" Text="作业费"></asp:Label>：
+                                                <asp:Label ID="Label86" runat="server" Text="<%$ Resources:lang,ZuoYeFei%>"></asp:Label>：
                                             <%#DataBinder.Eval(Container.DataItem, "Amount")%>
                                             </td>
                                             <td style="text-align: left;">
@@ -170,7 +170,7 @@
                                                 </td>
                                                 <td align="center" >
                                                     <strong>
-                                                        <asp:Label ID="Label12" runat="server" Text="交付日期"></asp:Label></strong>
+                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,JiaoFuRiQi%>"></asp:Label></strong>
                                                 </td>
                                                <%-- <td align="center" width="10%">
                                                     <strong>

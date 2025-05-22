@@ -30933,4 +30933,25 @@
   <data name="JiHuaXuanZhe" xml:space="preserve">
     <value>計画の選択</value>
   </data>
+  <data name="ZuoYeShiJian" xml:space="preserve">
+    <value>業務時間</value>
+  </data>
+  <data name="ZuoYeFei" xml:space="preserve">
+    <value>業務手数料</value>
+  </data>
+  <data name="JiaoFuRiQi" xml:space="preserve">
+    <value>納品日</value>
+  </data>
+  <data name="ChengFangChuangWei" xml:space="preserve">
+    <value>保管場所</value>
+  </data>
+  <data name="ChuKuChuangWei" xml:space="preserve">
+    <value>出庫場所</value>
+  </data>
+  <data name="XiangMuFangXiang" xml:space="preserve">
+    <value>プロジェクトの方向</value>
+  </data>
+  <data name="XiangMuYiShuanKeMu" xml:space="preserve">
+    <value>プロジェクト予算科目</value>
+  </data>
 </root>

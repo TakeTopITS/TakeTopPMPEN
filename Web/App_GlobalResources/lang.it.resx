@@ -30935,4 +30935,25 @@
   <data name="JiHuaXuanZhe" xml:space="preserve">
     <value>Selezione del Piano</value>
   </data>
+  <data name="ZuoYeShiJian" xml:space="preserve">
+    <value>Orario di Lavoro</value>
+  </data>
+  <data name="ZuoYeFei" xml:space="preserve">
+    <value>Costi di lavoro</value>
+  </data>
+  <data name="JiaoFuRiQi" xml:space="preserve">
+    <value>Data di Consegna</value>
+  </data>
+  <data name="ChengFangChuangWei" xml:space="preserve">
+    <value>Posizione di Magazzino</value>
+  </data>
+  <data name="ChuKuChuangWei" xml:space="preserve">
+    <value>Posizione di Uscita del Magazzino</value>
+  </data>
+  <data name="XiangMuFangXiang" xml:space="preserve">
+    <value>Direzione del Progetto</value>
+  </data>
+  <data name="XiangMuYiShuanKeMu" xml:space="preserve">
+    <value>Voce di Bilancio del Progetto</value>
+  </data>
 </root>

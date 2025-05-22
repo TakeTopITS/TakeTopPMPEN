@@ -31027,4 +31027,32 @@
     <value>计划选择</value>
     <comment>计划选择</comment>
   </data>
+  <data name="ZuoYeShiJian" xml:space="preserve">
+    <value>作业时间</value>
+    <comment>作业时间</comment>
+  </data>
+  <data name="ZuoYeFei" xml:space="preserve">
+    <value>作业费</value>
+    <comment>作业费</comment>
+  </data>
+  <data name="JiaoFuRiQi" xml:space="preserve">
+    <value>交付日期</value>
+    <comment>交付日期</comment>
+  </data>
+  <data name="ChengFangChuangWei" xml:space="preserve">
+    <value>存放仓位</value>
+    <comment>存放仓位</comment>
+  </data>
+  <data name="ChuKuChuangWei" xml:space="preserve">
+    <value>出库仓位</value>
+    <comment>出库仓位</comment>
+  </data>
+  <data name="XiangMuFangXiang" xml:space="preserve">
+    <value>项目方向</value>
+    <comment>项目方向</comment>
+  </data>
+  <data name="XiangMuYiShuanKeMu" xml:space="preserve">
+    <value>项目预算科目</value>
+    <comment>项目预算科目</comment>
+  </data>
 </root>

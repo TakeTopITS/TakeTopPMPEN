@@ -544,7 +544,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right">
-                                                    <asp:Label ID="Label1345346" runat="server" Text="´æ·Å²ÖÎ»"></asp:Label>
+                                                    <asp:Label ID="Label1345346" runat="server" Text="<%$ Resources:lang,ChengFangChuangWei%>"></asp:Label>
                                                 </td>
                                                 <td class="formItemBgStyle" style="text-align: left;" colspan="2">
                                                     <asp:DropDownList ID="DL_WHPosition" runat="server" DataTextField="PositionName" DataValueField="PositionName">

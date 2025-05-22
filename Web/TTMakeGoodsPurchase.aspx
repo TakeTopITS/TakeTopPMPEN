@@ -2109,7 +2109,7 @@
                                                                 <asp:Label ID="Label206" runat="server" Text="UnitPrice"></asp:Label>
                                                             </strong></td>
                                                             <td align="center" width="6%"><strong>
-                                                                <asp:Label ID="Label191" runat="server" Text="含税单价"></asp:Label>
+                                                                <asp:Label ID="Label191" runat="server" Text="<%$ Resources:lang,HanShuiChanJia %>"></asp:Label>
                                                             </strong></td>
                                                             <td align="center" width="6%"><strong>
                                                                 <asp:Label ID="Label192" runat="server" Text="<%$ Resources:lang,DanWei %>"></asp:Label>
@@ -2212,10 +2212,10 @@
                                                                 <asp:Label ID="Label201" runat="server" Text="<%$ Resources:lang,ShuLiang %>"></asp:Label>
                                                             </strong></td>
                                                             <td align="center" width="6%"><strong>
-                                                                <asp:Label ID="Label205" runat="server" Text="UnitPrice"></asp:Label>
+                                                                <asp:Label ID="Label205" runat="server" Text="<%$ Resources:lang,DanJia %>"></asp:Label>
                                                             </strong></td>
                                                             <td align="center" width="6%"><strong>
-                                                                <asp:Label ID="Label202" runat="server" Text="含税单价"></asp:Label>
+                                                                <asp:Label ID="Label202" runat="server" Text="<%$ Resources:lang,HanShuiChanJia %>"></asp:Label>
                                                             </strong></td>
                                                             <td align="center" width="6%"><strong>
                                                                 <asp:Label ID="Label203" runat="server" Text="<%$ Resources:lang,DanWei %>"></asp:Label>

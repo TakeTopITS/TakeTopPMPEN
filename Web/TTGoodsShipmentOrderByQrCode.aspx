@@ -692,13 +692,13 @@
                                             </tr>
                                             <tr>
                                                 <td style="text-align: right;" class="formItemBgStyle">
-                                                    <asp:Label ID="Label9" runat="server" Text="批号"></asp:Label>：
+                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,PiHao%>"></asp:Label>：
                                                 </td>
                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_BatchNumber" runat="server"></asp:TextBox>
                                                 </td>
                                                 <td style="text-align: right;" class="formItemBgStyle">
-                                                    <asp:Label ID="Label198" runat="server" Text="生产日期"></asp:Label>：
+                                                    <asp:Label ID="Label198" runat="server" Text="<%$ Resources:lang,ShengChanRiJi%>"></asp:Label>：
                                                 </td>
                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                     <asp:TextBox ID="DLC_ProductionDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -709,7 +709,7 @@
 
                                             <tr>
                                                 <td style="text-align: right;" class="formItemBgStyle">
-                                                    <asp:Label ID="Label207" runat="server" Text="失效日期"></asp:Label>：
+                                                    <asp:Label ID="Label207" runat="server" Text="<%$ Resources:lang,ShiXiaoRiJi%>"></asp:Label>：
                                                 </td>
                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                     <asp:TextBox ID="DLC_ExpiryDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -717,14 +717,14 @@
                                                     </ajaxToolkit:CalendarExtender>
                                                 </td>
                                                 <td style="text-align: right;" class="formItemBgStyle">
-                                                    <asp:Label ID="Label224" runat="server" Text="生产设备号"></asp:Label></td>
+                                                    <asp:Label ID="Label224" runat="server" Text="<%$ Resources:lang,ShengChanSheBeiHao%>"></asp:Label></td>
                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_ProductionEquipmentNumber" runat="server"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="text-align: right;" class="formItemBgStyle">
-                                                    <asp:Label ID="Label225" runat="server" Text="材质单号"></asp:Label>：
+                                                    <asp:Label ID="Label225" runat="server" Text="<%$ Resources:lang,CaiZhiChanHao%>"></asp:Label>：
                                                 </td>
                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_MaterialFormNumber" runat="server"></asp:TextBox>
@@ -765,7 +765,7 @@
                                                             </td>
                                                             <td></td>
                                                             <td>
-                                                                <asp:Label ID="Label228" runat="server" Text="出库仓位"></asp:Label>
+                                                                <asp:Label ID="Label228" runat="server" Text="<%$ Resources:lang,ChuKuChuangWei%>"></asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:TextBox ID="TB_FromWHPosition" runat="server" Width="90%"></asp:TextBox>
@@ -832,7 +832,7 @@
                                                                                 <asp:ListItem Value="GoodsSO" Text="<%$ Resources:lang,XiaoShouDan%>" />
                                                                                 <asp:ListItem Value="GoodsPF" Text="<%$ Resources:lang,BuLiaoDan%>" />
                                                                                 <asp:ListItem Value="GoodsPUR" Text="<%$ Resources:lang,TuiHuoDan%>" />
-                                                                                <asp:ListItem Value="GoodsPD" Text="生产作业单" />
+                                                                                <asp:ListItem Value="GoodsPD" Text="<%$ Resources:lang,ShengChanZuoYeDan%>" />
                                                                                 <asp:ListItem Value="GoodsBO" Text="<%$ Resources:lang,JieChuDan%>" />
                                                                                 <asp:ListItem Value="Contract" Text="<%$ Resources:lang,HeTong%>" />
                                                                                 <asp:ListItem Value="GoodsCIO" Text="<%$ Resources:lang,RuKuDan%>" />

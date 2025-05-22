@@ -589,7 +589,7 @@
                                                                 </asp:DropDownList>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label1345346" runat="server" Text="存放仓位"></asp:Label>
+                                                                <asp:Label ID="Label1345346" runat="server" Text="<%$ Resources:lang,ChengFangChuangWei%>"></asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:DropDownList ID="DL_WHPosition" runat="server" DataTextField="PositionName" DataValueField="PositionName">
@@ -612,7 +612,7 @@
                                                             </td>
                                                             <td></td>
                                                             <td>
-                                                                <asp:Label ID="Label228" runat="server" Text="出库仓位"></asp:Label>
+                                                                <asp:Label ID="Label228" runat="server" Text="<%$ Resources:lang,ChuKuChuangWei%>"></asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:TextBox ID="TB_FromWHPosition" runat="server" Width="90%"></asp:TextBox>
@@ -645,7 +645,7 @@
                                                             <td align="right">
                                                                 <asp:DropDownList ID="DL_SourceType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_SourceType_SelectedIndexChanged">
                                                                     <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
-                                                                    <asp:ListItem Value="GoodsPD" Text="生产作业单" />
+                                                                    <asp:ListItem Value="GoodsPD" Text="<%$ Resources:lang,ShengChanZuoYeDan%>"  />
                                                                 </asp:DropDownList>
                                                             </td>
                                                             <td align="right">ID:</td>

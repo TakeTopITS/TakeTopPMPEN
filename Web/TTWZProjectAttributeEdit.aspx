@@ -75,7 +75,7 @@
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="2">
                                                                         <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                                                    <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectAttributeList.aspx'" />
+                                                                                    <input type="button" value="Back" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectAttributeList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

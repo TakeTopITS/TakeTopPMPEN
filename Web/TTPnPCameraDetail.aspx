@@ -142,7 +142,7 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-size: 12pt; display: none;">
                                                         <td align="right" class="formItemBgStyle" colspan="5">
-                                                            <input type="button" class="inpu" value="ÐÂÔöÉãÏñÍ·" onclick="window.location.href = 'TTPnPCameraAdd.aspx'" />
+                                                            <input type="button" class="inpu" value="Add" onclick="window.location.href = 'TTPnPCameraAdd.aspx'" />
                                                         </td>
                                                     </tr>
                                                     <tr style="font-size: 12pt">

@@ -590,7 +590,7 @@
                                                     <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,DanJia %>"></asp:Label>£º
                                             <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Price" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
                                                 PositiveColor="" Width="80px" Precision="4">0.0000</NickLee:NumberBox>
-                                                    <asp:Button ID="BT_Count" runat="server" CssClass="inpu" OnClick="BT_Count_Click" Text="¼ÆËã" />
+                                                    <asp:Button ID="BT_Count" runat="server" CssClass="inpu" OnClick="BT_Count_Click" Text="<%$ Resources:lang,JiSuan %>" />
                                                     &nbsp;
                                                      <asp:Label ID="Label89" runat="server" Text="<%$ Resources:lang,JinE %>"></asp:Label>£º
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Amount" runat="server" OnBlur="" OnFocus="" OnKeyPress=""

@@ -30935,4 +30935,25 @@
   <data name="JiHuaXuanZhe" xml:space="preserve">
     <value>Выбор плана</value>
   </data>
+  <data name="ZuoYeShiJian" xml:space="preserve">
+    <value>Рабочее время</value>
+  </data>
+  <data name="ZuoYeFei" xml:space="preserve">
+    <value>Стоимость работ</value>
+  </data>
+  <data name="JiaoFuRiQi" xml:space="preserve">
+    <value>Дата доставки</value>
+  </data>
+  <data name="ChengFangChuangWei" xml:space="preserve">
+    <value>Место хранения</value>
+  </data>
+  <data name="ChuKuChuangWei" xml:space="preserve">
+    <value>Место хранения для выдачи</value>
+  </data>
+  <data name="XiangMuFangXiang" xml:space="preserve">
+    <value>Direção do Projeto</value>
+  </data>
+  <data name="XiangMuYiShuanKeMu" xml:space="preserve">
+    <value>Статья бюджета проекта</value>
+  </data>
 </root>
