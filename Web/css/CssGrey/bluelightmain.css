@@ -37,23 +37,23 @@ a:hover {
 }
 
 .page_topbj {
-    background-color:lightslategray; 2
-    cursor: move;
+    background-color: lightslategray;
+    2 cursor: move;
     color: black;
     border-radius: 12px 0px 0px 0px;
     margin: 1px 1px 1px 1px;
 }
 
     .page_topbj a {
-        color: black; 2
-        text-decoration: none;
+        color: black;
+        2 text-decoration: none;
         cursor: pointer;
         font-size: 14px;
     }
 
         .page_topbj a:hover {
-            color: black; 2
-                        text-decoration: underline;
+            color: black;
+            2 text-decoration: underline;
         }
 
 .main_topbj {
@@ -61,17 +61,17 @@ a:hover {
     color: white;
 }
 
-    .page_topbj a {
-        color: white;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 14px;
-    }
+.page_topbj a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
 
-        .page_topbj a:hover {
-            color: #018efb;
-            /*            text-decoration: underline;*/
-        }
+    .page_topbj a:hover {
+        color: #018efb;
+        /*            text-decoration: underline;*/
+    }
 
 
 td {
@@ -1276,12 +1276,21 @@ html {
     overflow-x: auto;
     overflow-y: auto;
 }
+
 /* CSS样式 */
 .ajax_tab_menu .ajax__tab_header /*整体按钮底样式*/ {
     font-family: 宋体;
     height: 28px;
     font-size: 12px;
     background: url("ImagesSkin/Tab_Option_bg.gif") repeat-x bottom;
+    background-size: 100% 100%; /* 保持宽度自动，高度填满 */
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .ajax_tab_menu .ajax__tab_body /*资料区*/ {
@@ -1289,35 +1298,63 @@ html {
     font-size: 12px;
     border-top: 0;
     border-top: 1px solid #D6DAE2;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .ajax_tab_menu .ajax__tab_tab /*预设样式*/ {
     background: url(ImagesSkin/Tab_Option_bg_OFF.gif) repeat-x;
-    width: 78px;
+    background-size: 100% 100%; /* 保持宽度自动，高度填满 */
     height: 29px;
     line-height: 28px;
     text-align: center;
     margin-right: 4px;
     margin: 0;
     cursor: pointer;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .ajax_tab_menu .ajax__tab_hover .ajax__tab_tab /*鼠标经过样式*/ {
     background: #fff url(ImagesSkin/Tab_Option_bg_hover.gif) repeat-x;
-    width: 78px;
+    background-size: 100% 100%; /* 保持宽度自动，高度填满 */
     height: 28px;
     color: #333;
     line-height: 29px;
     text-align: center;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .ajax_tab_menu .ajax__tab_active .ajax__tab_tab /*当前使用中样式*/ {
     background: url(ImagesSkin/Tab_Option_bg_ON.gif) repeat-x;
-    width: 78px;
+    background-size: 100% 100%; /* 保持宽度自动，高度填满 */
     height: 28px;
     line-height: 28px;
     text-align: center;
     color: #333;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .dibian {
@@ -1407,7 +1444,3 @@ html {
     position: absolute;
     overflow-x: auto;
 }
-
-
-
-
