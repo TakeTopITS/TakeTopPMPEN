@@ -11007,4 +11007,8 @@ Update T_ProModuleLevel Set HomeModuleName = '물자구매지불회계' Where Mo
 Update T_ProModuleLevel Set HomeModuleName = 'ContabilidadeDePagamentosDeComprasDeMateriais' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'pt';
 Update T_ProModuleLevel Set HomeModuleName = 'БухгалтерскийYчетNлатежей3а3акупкуматериалов' Where ModuleName = 'MaterialProcurementPaymentAccounting' and langCode = 'ru';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3733</ID>
+    <SQLText>Update public.t_funinfordialbox Set homename = inforname Where LangCode Not In ('zh-CN','zh-tw');</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
