@@ -11011,4 +11011,23 @@ Update T_ProModuleLevel Set HomeModuleName = 'БухгалтерскийYчетN
     <ID>3733</ID>
     <SQLText>Update public.t_funinfordialbox Set homename = inforname Where LangCode Not In ('zh-CN','zh-tw');</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3734</ID>
+    <SQLText>Update T_NewsType Set Type = 'Guide' Where Type = '驾驶舱';
+Update T_NewsType Set Type = 'WorkGuide' Where Type = '操作导航';
+Update T_NewsType Set Type = 'HeadLine' Where Type = '头条新闻';
+Update T_NewsType Set Type = 'News' Where Type = '公司动态';
+Update T_NewsType Set Type = 'Message' Where Type = '综合信息';
+Update T_NewsType Set Type = 'Notice' Where Type = '公告通知';
+Update T_NewsType Set Type = 'ProjectMap' Where Type = '项目地图';
+
+
+Update t_headline Set Type = 'Guide' Where Type = '驾驶舱';
+Update t_headline Set Type = 'WorkGuide' Where Type = '操作导航';
+Update t_headline Set Type = 'HeadLine' Where Type = '头条新闻';
+Update t_headline Set Type = 'News' Where Type = '公司动态';
+Update t_headline Set Type = 'Message' Where Type = '综合信息';
+Update t_headline Set Type = 'Notice' Where Type = '公告通知';
+Update t_headline Set Type = 'ProjectMap' Where Type = '项目地图';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
