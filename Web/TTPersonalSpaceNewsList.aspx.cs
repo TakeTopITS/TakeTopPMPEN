@@ -119,9 +119,9 @@ public partial class TTPersonalSpaceNewsList : System.Web.UI.Page
         {
             strHQL += " And Type = 'External'";
         }
-        strHQL += " and Status = 'Publish' Order By ID DESC";   
+        strHQL += " and Status = 'Publish' Order By ID DESC";
 
-
+        LogClass.WriteLogFile(strHQL);
 
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
         DataGrid9.DataSource = ds;

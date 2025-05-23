@@ -390,10 +390,16 @@ public partial class TTHeadLineEdit : System.Web.UI.Page
             headLine.LangCode = ddlLangSwitcher.SelectedValue.Trim();
             headLine.NewsType = DL_NewsType.SelectedValue.Trim();
 
+           
+
             headLineBLL.UpdateHeadLine(headLine, int.Parse(strID));
 
-            //保存内容文件URL
-            SaveHeadlineDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
+            new System.Threading.Thread(delegate ()
+            {
+                //保存内容文件URL
+                SaveHeadlineDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
+
+            }).Start();
 
             LoadHeadLine();
 
@@ -402,8 +408,9 @@ public partial class TTHeadLineEdit : System.Web.UI.Page
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
-        catch
+        catch(Exception err)
         {
+            LogClass.WriteLogFile(err.Message.ToString());
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
     }
@@ -473,8 +480,12 @@ public partial class TTHeadLineEdit : System.Web.UI.Page
 
             headLineBLL.UpdateHeadLine(headLine, int.Parse(strID));
 
-            ////保存内容文件URL
-            SaveHeadlineDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
+            new System.Threading.Thread(delegate ()
+            {
+                //保存内容文件URL
+                SaveHeadlineDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
+
+            }).Start();
 
             DL_Statu.SelectedValue = "Publish";   
         
@@ -485,8 +496,9 @@ public partial class TTHeadLineEdit : System.Web.UI.Page
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFBCG").ToString().Trim() + "')", true);
         }
-        catch
+        catch (Exception err)
         {
+            LogClass.WriteLogFile(err.Message.ToString());
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFBSBJC").ToString().Trim() + "')", true);
         }
 
@@ -561,8 +573,12 @@ public partial class TTHeadLineEdit : System.Web.UI.Page
 
             headLineBLL.UpdateHeadLine(headLine, int.Parse(strID));
 
-            ////保存内容文件URL
-            SaveHeadlineDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
+            new System.Threading.Thread(delegate ()
+            {
+                //保存内容文件URL
+                SaveHeadlineDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
+
+            }).Start();
 
 
             DL_Statu.SelectedValue = "Archived";
@@ -573,8 +589,9 @@ public partial class TTHeadLineEdit : System.Web.UI.Page
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true);
         }
-        catch
+        catch (Exception err)
         {
+            LogClass.WriteLogFile(err.Message.ToString());
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDSBJC").ToString().Trim() + "')", true);
         }
 
