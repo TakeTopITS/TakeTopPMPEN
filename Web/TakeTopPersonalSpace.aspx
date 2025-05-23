@@ -330,7 +330,7 @@
                 </asp:UpdatePanel>
                 <table border="0" align="right" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td width="20px" align="center" style="padding-top: 10px;">
+                        <td width="20px" align="center" style="padding-top: 10px;display:none;">
                             <asp:Button ID="BT_PopMsg" runat="server" CssClass="inpu" OnClientClick="javascript:clickPopMsgWindow();"
                                 Text="M" Width="23px" Height="20px" />
                         </td>

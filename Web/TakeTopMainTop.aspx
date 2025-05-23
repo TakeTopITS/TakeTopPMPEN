@@ -250,7 +250,7 @@
                                                 <td align="right">
                                                     <table>
                                                         <tr>
-                                                            <td width="20px" align="center" style="padding-top: 4px; padding-right: 10px;">
+                                                            <td width="20px" align="center" style="padding-top: 4px; padding-right: 10px; display:none;">
                                                                 <asp:Button ID="BT_PopMsg" runat="server" CssClass="inpu" OnClick="BT_PopMsg_Click" Text="M" Width="23px" Height="20px" />
                                                             </td>
                                                             <td style="width: 10px;"></td>

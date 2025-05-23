@@ -237,7 +237,9 @@ button:visited, input[type="submit"]:visited {
 .inpu {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
-    width: 71px;
+    min-width: 71px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -276,7 +278,9 @@ button:visited, input[type="submit"]:visited {
 /*-----------------------------TAB按钮----------------------------*/
 .inpuTab {
     border-style: none;
-    width: 71px;
+    min-width: 71px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -315,7 +319,9 @@ button:visited, input[type="submit"]:visited {
 .inpuLong {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
-    width: 110px;
+    min-width: 110px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -358,7 +364,9 @@ button:visited, input[type="submit"]:visited {
 .inpuLongest {
     background-image: url(ImagesSkin/butbjLongest.jpg);
     height: 25px;
-    width: 260px;
+    min-width: 260px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -397,7 +405,9 @@ button:visited, input[type="submit"]:visited {
 .inpuYello {
     border-style: none;
     background: #f37c00;
-    width: 71px;
+    min-width: 71px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     height: 25px;
     /*padding-bottom: 7px;*/
     margin: -2px 0;
@@ -435,7 +445,9 @@ button:visited, input[type="submit"]:visited {
 .inpuRepeat {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
-    width: 71px;
+    min-width: 71px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -473,7 +485,9 @@ button:visited, input[type="submit"]:visited {
 .inpuLongRepeat {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
-    width: 110px;
+    min-width: 110px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -517,7 +531,9 @@ button:visited, input[type="submit"]:visited {
     border-style: none;
     background-image: url('ImagesSkin/Update.png');
     height: 22px;
-    width: 22px;
+    min-width: 22px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -529,7 +545,9 @@ button:visited, input[type="submit"]:visited {
     border-style: none;
     background-image: url('Images/Save.gif');
     height: 22px;
-    width: 22px;
+    min-width: 22px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -542,7 +560,9 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Active.jpg');
     background-repeat: no-repeat;
     height: 22px;
-    width: 22px;
+    min-width: 22px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -555,7 +575,9 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Close.jpg');
     background-repeat: no-repeat;
     height: 22px;
-    width: 22px;
+    min-width: 22px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -568,7 +590,9 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Query.gif');
     background-repeat: no-repeat;
     height: 24px;
-    width: 24px;
+    min-width: 24px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -581,7 +605,9 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/QrCode.gif');
     background-repeat: no-repeat;
     height: 24px;
-    width: 24px;
+    min-width: 24px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -594,7 +620,9 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Delete.png');
     background-repeat: no-repeat;
     height: 22px;
-    width: 22px;
+    min-width: 22px;
+    width: auto;
+    max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
