@@ -56,11 +56,12 @@
                                                             <ul>
                                                                 <asp:Repeater ID="RP_ToDoList" runat="server">
                                                                     <ItemTemplate>
-                                                                        <li style="color: #333;">
+                                                                        <li style="color: #333; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                                                                             <a href='<%# DataBinder.Eval(Container.DataItem, "LinkAddress") %>' target="rightFrame">
-                                                                                <span style="display: inline-block; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+
+                                                                                <%--<span style="min-width: 80px; width: auto; max-width: 80px; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */">--%>
                                                                                     <%# DataBinder.Eval(Container.DataItem, "HomeName") %>
-                                                                                </span>
+                                                                             <%--   </span>--%>
                                                                                 : <%# GetNumberCount(Eval("SQLCode").ToString()) %>
                                                                             </a>
                                                                         </li>

@@ -116,7 +116,7 @@
                                                         <td>
                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
-                                                                 <td width="5%" align="center">
+                                                                    <td width="5%" align="center">
                                                                         <strong>
                                                                             <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BianJi %>" /></strong>
                                                                     </td>
@@ -400,7 +400,7 @@
                                                                 </asp:DropDownList>&#160;&#160;
                                                         <asp:Label ID="LB_StatusValue" runat="server" Text="<%$ Resources:lang,StatusValue %>" />:<asp:DropDownList ID="DL_StatusValue" OnSelectedIndexChanged="DL_StatusValue_SelectedIndexChanged"
                                                             AutoPostBack="True" runat="server">
-                                                             <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong %>"/>
+                                                            <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong %>" />
                                                             <asp:ListItem Value="Passed" />
                                                         </asp:DropDownList>
                                                             </td>

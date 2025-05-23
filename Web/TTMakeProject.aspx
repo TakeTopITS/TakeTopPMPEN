@@ -427,7 +427,7 @@
                                                                             <asp:DropDownList ID="DL_StatusValue" OnSelectedIndexChanged="DL_StatusValue_SelectedIndexChanged"
                                                                                 AutoPostBack="True" runat="server">
 
-                                                                                 <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong %>"/>
+                                                                                <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong %>" />
                                                                                 <asp:ListItem Value="Passed" />
                                                                             </asp:DropDownList>
 
@@ -465,47 +465,34 @@
                             
                                                             </td>
                                                             <td colspan="3" style="text-align: left" class="formItemBgStyle">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <asp:DropDownList ID="DL_LockStartupedPlan" runat="server">
-                                                                                <asp:ListItem Value="NO">NO</asp:ListItem>
-                                                                                <asp:ListItem Value="YES">YES</asp:ListItem>
-                                                                            </asp:DropDownList>
 
-                                                                        </td>
-                                                                        <td>
-                                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,YINGXXMJLGXMZT%>"></asp:Label>:
-                                                                        </td>
-                                                                        <td>
+                                                                <asp:DropDownList ID="DL_LockStartupedPlan" runat="server">
+                                                                    <asp:ListItem Value="NO">NO</asp:ListItem>
+                                                                    <asp:ListItem Value="YES">YES</asp:ListItem>
+                                                                </asp:DropDownList>
+
+
+                                                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,YINGXXMJLGXMZT%>"></asp:Label>:
+                                                                       
                                                                             <asp:DropDownList ID="DL_AllowPMChangeStatus" runat="server">
                                                                                 <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                 <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                             </asp:DropDownList>
-                                                                        </td>
-
-
-                                                                        <td style="text-align: right">
-                                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JDHGQSHDBDXMJHYH%>"></asp:Label>:
-                                                                        </td>
-                                                                        <td>
+                                                                <br />
+                                                                <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JDHGQSHDBDXMJHYH%>"></asp:Label>:
+                                                                    
                                                                             <asp:DropDownList ID="DL_ProgressByDetailImpact" runat="server">
                                                                                 <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                                 <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                             </asp:DropDownList>
-                                                                        </td>
-
-                                                                        <td style="text-align: right">
-                                                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,RWJDYHJHJDYQR%>"></asp:Label>:
-                                                                        </td>
-                                                                        <td>
+                                                                <br />
+                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,RWJDYHJHJDYQR%>"></asp:Label>:
+                                                                    
                                                                             <asp:DropDownList ID="DL_PlanProgressNeedPlanerConfirm" runat="server">
                                                                                 <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                 <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                             </asp:DropDownList>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -513,41 +500,31 @@
                                                                 <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,RXZDFQLC%>"></asp:Label>:
                                                             </td>
                                                             <td colspan="3" style="text-align: left" class="formItemBgStyle">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <asp:DropDownList ID="DL_AutoRunWFAfterMakeProject" runat="server">
-                                                                                <asp:ListItem Value="NO">NO</asp:ListItem>
-                                                                                <asp:ListItem Value="YES">YES</asp:ListItem>
-                                                                            </asp:DropDownList>
-                                                                        </td>
-                                                                        <td>
-                                                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,XMQDXYZJYHQR%>"></asp:Label>:
-                                                                        </td>
-                                                                        <td>
+
+                                                                <asp:DropDownList ID="DL_AutoRunWFAfterMakeProject" runat="server">
+                                                                    <asp:ListItem Value="NO">NO</asp:ListItem>
+                                                                    <asp:ListItem Value="YES">YES</asp:ListItem>
+                                                                </asp:DropDownList>
+
+                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,XMQDXYZJYHQR%>"></asp:Label>:
+                                                                       
                                                                             <asp:DropDownList ID="DL_ProjectStartupNeedSupperConfirm" runat="server">
                                                                                 <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                 <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                             </asp:DropDownList>
-                                                                        </td>
-                                                                        <td>
-                                                                            <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XMJHYQD%>"></asp:Label>:
-                                                                        </td>
-                                                                        <td>
+                                                                <br />
+                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XMJHYQD%>"></asp:Label>:
+                                                                    
                                                                             <asp:DropDownList ID="DL_ProjectPlanStartupSatus" runat="server">
                                                                                 <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                 <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                             </asp:DropDownList>
-                                                                        </td>
-                                                                        <td>
-                                                                           <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,XMJHTGGLGZLMB%>"></asp:Label>:
-                                                                        </td>
-                                                                        <td>
-                                                                            <asp:DropDownList ID="DL_PlanStartupRelatedWorkflowTemplate" runat="server" DataTextField="TemName" DataValueField="TemName"  Width="150px">
+                                                                <br />
+                                                                <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,XMJHTGGLGZLMB%>"></asp:Label>:
+                                                                      
+                                                                            <asp:DropDownList ID="DL_PlanStartupRelatedWorkflowTemplate" runat="server" DataTextField="TemName" DataValueField="TemName" Width="150px">
                                                                             </asp:DropDownList>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
+
                                                             </td>
                                                         </tr>
 

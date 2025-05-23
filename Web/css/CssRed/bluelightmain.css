@@ -762,7 +762,8 @@ select {
 	padding:0px 0px 0px 0px;*/
 }
 
-.formItemBgStyle { /*border-bottom:dotted  1px #C6CFD4;
+.formItemBgStyle {
+    /*border-bottom:dotted  1px #C6CFD4;
         height: 19px;
         line-height: 18px;*/
     background-color: #fff;
@@ -771,6 +772,12 @@ select {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #cccccc;
+    vertical-align: top;
+    line-height: 23px;
+    max-width: 100px; /* 限制最大宽度 */
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    text-overflow: ellipsis; /* 显示省略号 */
 }
 
 /*-----------------------------编辑图片按钮------------------------------*/

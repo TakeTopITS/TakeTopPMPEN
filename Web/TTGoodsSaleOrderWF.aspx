@@ -267,7 +267,7 @@
                                                     <asp:TextBox ID="TB_ContactPerson" runat="server" Width="100px"></asp:TextBox>
                                                 </td>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label111" runat="server" Text="Telephone"></asp:Label>£º
+                                                    <asp:Label ID="Label111" runat="server" Text="<%$ Resources:lang,DianHua %>"></asp:Label>£º
                                                 </td>
                                                 <td colspan="3" class="formItemBgStyle" style="text-align: left;">
                                                     <asp:TextBox ID="TB_ContactPhoneNumber" runat="server" Width="150px"></asp:TextBox>
@@ -322,7 +322,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right">
-                                                    <asp:Label ID="Label23" runat="server" Text="InvoiceTime"></asp:Label>£º
+                                                    <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,KaiPiaoShiJian%>"></asp:Label>£º
                                                 </td>
                                                 <td colspan="5" class="formItemBgStyle" align="left">
                                                     <table>
@@ -340,7 +340,7 @@
                                                                 </asp:DropDownList>
                                                             </td>
                                                             <td style="text-align: right">
-                                                                <asp:Label ID="Label157" runat="server" Text="InvoiceNumber"></asp:Label>£º
+                                                                <asp:Label ID="Label157" runat="server" Text="<%$ Resources:lang,FaPiaoHaoMa%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left">
                                                                 <asp:TextBox ID="TB_InvoiceCodeString" runat="server" Width="150px"></asp:TextBox>
@@ -359,10 +359,23 @@
                                                 </td>
                                             </tr>
                                             <tr>
+
+                                                <td class="formItemBgStyle" style="text-align: right">
+                                                    <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
+                                                </td>
+                                                <td class="formItemBgStyle" style="text-align: left; width: 106px;">
+                                                    <asp:DropDownList ID="DL_SOStatus" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_SOStatus_SelectedIndexChanged">
+                                                        <asp:ListItem Value="New" Text="<%$ Resources:lang,XinJian%>" />
+                                                        <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ShenPiZhong%>" />
+                                                        <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng%>" />
+                                                        <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao%>" />
+                                                    </asp:DropDownList>
+                                                </td>
                                                 <td class="formItemBgStyle" style="text-align: right">
                                                     <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,GuanLian%>"></asp:Label>£º
                                                 </td>
-                                                <td align="left" class="formItemBgStyle">
+
+                                                <td colspan="3" align="left" class="formItemBgStyle">
                                                     <table>
                                                         <tr>
                                                             <td>
@@ -387,17 +400,6 @@
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                </td>
-                                                <td class="formItemBgStyle" style="text-align: right">
-                                                    <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
-                                                </td>
-                                                <td colspan="3" class="formItemBgStyle" style="text-align: left; width: 106px;">
-                                                    <asp:DropDownList ID="DL_SOStatus" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_SOStatus_SelectedIndexChanged">
-                                                        <asp:ListItem Value="New" Text="<%$ Resources:lang,XinJian%>" />
-                                                        <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ShenPiZhong%>" />
-                                                        <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng%>" />
-                                                        <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao%>" />
-                                                    </asp:DropDownList>
                                                 </td>
                                             </tr>
                                         </table>
@@ -792,7 +794,7 @@
                                                 </td>
                                                 <td align="left" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_RecordSourceType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_RecordSourceType_SelectedIndexChanged">
-                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
+                                                        <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
                                                         <asp:ListItem Value="GoodsPJRecord" />
                                                         <asp:ListItem Value="ProjectBOMRecord" />
                                                     </asp:DropDownList>

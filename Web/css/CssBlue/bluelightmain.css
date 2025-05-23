@@ -305,9 +305,11 @@ button:visited, input[type="submit"]:visited {
 /*-----------------------------TAB按钮----------------------------*/
 .inpuTab {
     border-style: none;
+
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
+
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -346,9 +348,11 @@ button:visited, input[type="submit"]:visited {
 .inpuLong {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
+
     min-width: 110px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
+
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -391,9 +395,11 @@ button:visited, input[type="submit"]:visited {
 .inpuLongest {
     background-image: url(ImagesSkin/butbjLongest.jpg);
     height: 25px;
+
     min-width: 220px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
+
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -432,9 +438,11 @@ button:visited, input[type="submit"]:visited {
 .inpuYello {
     border-style: none;
     background: #f37c00;
+
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
+
     height: 25px;
     /*padding-bottom: 7px;*/
     margin: -2px 0;
@@ -472,9 +480,11 @@ button:visited, input[type="submit"]:visited {
 .inpuRepeat {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
+
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
+
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -512,9 +522,11 @@ button:visited, input[type="submit"]:visited {
 .inpuLongRepeat {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
+
     min-width: 110px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
+
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -812,7 +824,8 @@ select {
 	padding:0px 0px 0px 0px;*/
 }
 
-.formItemBgStyle { /*border-bottom:dotted  1px #C6CFD4;
+.formItemBgStyle {
+    /*border-bottom:dotted  1px #C6CFD4;
         height: 19px;
         line-height: 18px;*/
     background-color: #fff;
@@ -821,6 +834,12 @@ select {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #cccccc;
+    vertical-align: top;
+    line-height: 23px;
+    max-width: 100px; /* 限制最大宽度 */
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    text-overflow: ellipsis; /* 显示省略号 */
 }
 
 /*-----------------------------编辑图片按钮------------------------------*/

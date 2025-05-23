@@ -118,11 +118,11 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: left">
-                                                <asp:Label ID="Label10" runat="server" Text="InvoiceTime"></asp:Label>£º
+                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,KaiPiaoShiJian%>"></asp:Label>£º
                                             <%#DataBinder.Eval(Container.DataItem, "OpenInvoiceTime","{0:yyyy/MM/dd}")%>
                                             </td>
                                             <td style="text-align: left" colspan="2">
-                                                <asp:Label ID="Label16" runat="server" Text="·¢Æ±ºÅ"></asp:Label>£º
+                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FaPiaoHaoMa%>"></asp:Label>£º
                                             <%#DataBinder.Eval(Container.DataItem, "InvoiceCode")%>
                                             </td>
                                         </tr>
