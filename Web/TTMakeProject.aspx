@@ -461,11 +461,11 @@
                                                         <tr>
                                                             <td style="text-align: right" class="formItemBgStyle">
 
-                                                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,SDYJDDJH%>"></asp:Label>:
+                                                               
                             
                                                             </td>
                                                             <td colspan="3" style="text-align: left" class="formItemBgStyle">
-
+                                                                 <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,SDYJDDJH%>"></asp:Label>:
                                                                 <asp:DropDownList ID="DL_LockStartupedPlan" runat="server">
                                                                     <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                     <asp:ListItem Value="YES">YES</asp:ListItem>
@@ -497,10 +497,10 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right" class="formItemBgStyle">
-                                                                <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,RXZDFQLC%>"></asp:Label>:
+                                                               
                                                             </td>
                                                             <td colspan="3" style="text-align: left" class="formItemBgStyle">
-
+                                                                 <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,RXZDFQLC%>"></asp:Label>:
                                                                 <asp:DropDownList ID="DL_AutoRunWFAfterMakeProject" runat="server">
                                                                     <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                     <asp:ListItem Value="YES">YES</asp:ListItem>
