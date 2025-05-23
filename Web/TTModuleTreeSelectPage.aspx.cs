@@ -32,10 +32,10 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
         licenseKey = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
         Session["LicenseKey"] = licenseKey;
 
-        if (licenseKey != LanguageHandle.GetWord("TaiDingTaDingZhongLiYue").ToString().Trim())
-        {
-            HttpContext.Current.Response.Redirect("TTDisplayErrors.aspx");
-        }
+        //if (licenseKey != LanguageHandle.GetWord("TaiDingTaDingZhongLiYue").ToString().Trim())
+        //{
+        //    HttpContext.Current.Response.Redirect("TTDisplayErrors.aspx");
+        //}
 
         strUserCode = Session["UserCode"].ToString();
         strUserType = ShareClass.GetUserType(strUserCode);
