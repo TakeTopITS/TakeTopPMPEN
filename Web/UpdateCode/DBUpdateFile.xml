@@ -11030,4 +11030,8 @@ Update t_headline Set Type = 'Message' Where Type = '综合信息';
 Update t_headline Set Type = 'Notice' Where Type = '公告通知';
 Update t_headline Set Type = 'ProjectMap' Where Type = '项目地图';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3735</ID>
+    <SQLText>Update T_ProjectMember Set CssDirectory = 'CssGrey';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

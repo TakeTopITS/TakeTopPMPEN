@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainSkinSelect.aspx.cs" Inherits="TakeTopMainSkinSelect" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainSkinSelect.aspx.cs" Inherits="TakeTopMainSkinSelect" %>
 
 
 <!DOCTYPE html>
@@ -49,6 +49,9 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <asp:Button ID="BT_Grey" runat="server" ToolTip="CssGrey" Style="background-color: #3e526c; width: 200px; height: 200px;" OnClick="BT_Grey_Click" />
+                                </td>
+                                <td>
                                     <asp:Button ID="BT_Green" runat="server" ToolTip="CssGreen" Style="background-color: #0E553B; width: 200px; height: 200px;" OnClick="BT_Green_Click" />
                                 </td>
                                 <td id="TD_Blue" runat="server">
@@ -60,9 +63,7 @@
                                 <td>
                                     <asp:Button ID="BT_Gold" runat="server" ToolTip="CssGolden" Style="background-color: gold; width: 200px; height: 200px;" OnClick="BT_Gold_Click" />
                                 </td>
-                                <td>
-                                    <asp:Button ID="BT_Grey" runat="server" ToolTip="CssGrey" Style="background-color: #3e526c; width: 200px; height: 200px;" OnClick="BT_Grey_Click" />
-                                </td>
+
                                 <td>
                                     <asp:Button ID="BT_Black" runat="server" ToolTip="CssBlack" Style="background-color: black; width: 200px; height: 200px;" OnClick="BT_Black_Click" />
                                 </td>

@@ -171,44 +171,35 @@
                                                                                         <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
-                                                                                <td>
-                                                                                    <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,CaoShi%>"></asp:Label>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <NickLee:NumberBox ID="NB_OverTimeHourNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="40px" Precision="0" Amount="24">24</NickLee:NumberBox>
-                                                                                </td>
 
-                                                                                <td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="15">
+                                                                                    <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,CaoShi%>"></asp:Label>
+
+                                                                                    <NickLee:NumberBox ID="NB_OverTimeHourNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="40px" Precision="0" Amount="24">24</NickLee:NumberBox>
+
                                                                                     <asp:Label ID="Label68" runat="server" Text="<%$ Resources:lang,XiaoShiZiDongPiZheng%>"></asp:Label>
-                                                                                </td>
-                                                                                <td>
+
                                                                                     <asp:DropDownList ID="DL_OverTimeAutoAgree" runat="server">
                                                                                         <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                         <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                                     </asp:DropDownList>
-                                                                                </td>
 
-
-
-                                                                                <td align="center">
                                                                                     <asp:Button ID="BT_SaveBelongDepartment" runat="server" CssClass="inpu" Enabled="false"
                                                                                         Text="<%$ Resources:lang,BaoCun%>" OnClick="BT_SaveBelongDepartment_Click" />
-                                                                                </td>
 
-                                                                                <td>
-                                                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：<asp:Label ID="LB_WFType" runat="server"></asp:Label>
-                                                                                </td>
-                                                                                <td>
                                                                                     <asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,EWai%>"></asp:Label>：
                                                                                               <asp:HyperLink ID="HL_BusinessMember" runat="server" Target="_blank" Text="<%$ Resources:lang,RenYuan%>" Style="text-decoration: none;"></asp:HyperLink>
                                                                                     &nbsp;
                                                                                               <asp:HyperLink ID="HL_BusinessDepartment" runat="server" Target="_blank" Text="<%$ Resources:lang,BuMen%>" Style="text-decoration: none;"></asp:HyperLink>
-                                                                                </td>
 
-                                                                                <td style="padding-left: 10px;">
-                                                                                    <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>：</td>
-                                                                                <td>
+                                                                                    <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>：
+                                                                              
                                                                                     <asp:HyperLink ID="HL_Creator" runat="server" Target="_blank" Style="text-decoration: none;"></asp:HyperLink>
+                                                                                    &nbsp;&nbsp;
+                                                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：<asp:Label ID="LB_WFType" runat="server"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
