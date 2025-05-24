@@ -78,7 +78,7 @@
                                     <td valign="top" style="padding-top: 5px;">
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td class="formItemBgStyle" width="100%">
+                                                <td class="formItemBgStyleForAlignLeft" width="100%">
                                                     <div>
                                                         <asp:Button ID="BT_All" runat="server" CssClass="inpu" Text="<%$ Resources:lang,QuanBu%>" OnClick="BT_All_Click" />
                                                         &nbsp;&nbsp;
@@ -145,7 +145,7 @@
                                                 </td>
                                             </tr>
                                             <tr style="display:none;">
-                                                <td class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <div style="text-align: center">
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="È·¶¨" />
                                                         &nbsp;&nbsp;

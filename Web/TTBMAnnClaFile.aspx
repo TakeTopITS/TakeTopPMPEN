@@ -74,12 +74,12 @@
                                     </table>
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                         <tr>
-                                            <td align="right" class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
+                                            <td class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
                                                 <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td>
@@ -206,10 +206,10 @@
 
                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="900px">
                                 <tr>
-                                    <td align="right" style="width: 150px" class="formItemBgStyle">
+                                    <td style="width: 150px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XinXiLeiXing%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="3" align="left" class="formItemBgStyle">
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                         <asp:DropDownList ID="DL_Type" runat="server">
                                             <asp:ListItem Value="ClarificationDocument" Text="<%$ Resources:lang,ChengQingWenJian%>" />
@@ -218,40 +218,40 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAn%>"></asp:Label>£º</td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_BidPlanID" runat="server" DataTextField="Name" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="DL_BidPlanID_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignRight">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XinXiDengJiRen%>"></asp:Label>£º</td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_EnterPer" runat="server" CssClass="shuru"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChengBaoShang%>"></asp:Label>£º</td>
-                                    <td align="left" class="formItemBgStyle" colspan="3">
+                                    <td class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:ListBox ID="LB_SupplierCode" runat="server" Height="150px" DataTextField="Name" DataValueField="ID" SelectionMode="Multiple"></asp:ListBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" class="formItemBgStyle" style="height: 30px; width: 150px;" rowspan="1">
+                                    <td class="formItemBgStyleForAlignRight" style="height: 30px; width: 150px;" rowspan="1">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ChengQingRiQi%>"></asp:Label>£º</td>
-                                    <td align="left" class="formItemBgStyle" style="height: 30px" rowspan="1">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px" rowspan="1">
                                         <asp:TextBox ID="DLC_SentDate" runat="server" ReadOnly="false" CssClass="shuru"></asp:TextBox>
                                         <cc1:CalendarExtender ID="CalendarExtender3" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_SentDate">
                                         </cc1:CalendarExtender>
                                     </td>
-                                    <td align="right" class="formItemBgStyle" style="height: 30px">&nbsp;</td>
-                                    <td align="left" class="formItemBgStyle" style="height: 30px">&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignRight" style="height: 30px">&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px">&nbsp;</td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ChengJiNeiRong%>"></asp:Label>£º </td>
-                                    <td align="left" class="formItemBgStyle" style="height: 30px" colspan="3">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px" colspan="3">
                                         <asp:TextBox ID="TB_SendContent" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="90%"></asp:TextBox>
                                     </td>
                                 </tr>

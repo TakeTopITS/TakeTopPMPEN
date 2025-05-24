@@ -173,21 +173,21 @@
 
                             <table align="left" cellpadding="3" cellspacing="0" class="formBgStyle" width="600px">
                                 <tr>
-                                    <td style=" height: 19px;" class="formItemBgStyle">
+                                    <td style="height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_PDID" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_tbAccount" runat="server" Text="<%$ Resources:lang,Account%>"></asp:Label>
                                         :
                                     </td>
-                                    <td style="text-align: left; height: 19px;" class="formItemBgStyle">
+                                    <td style="height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_Account" runat="server" AutoPostBack="True" DataTextField="AccountName"
                                             DataValueField="AccountCode" Height="25px" OnSelectedIndexChanged="DL_Account_SelectedIndexChanged">
                                         </asp:DropDownList>
                                         <asp:Label ID="lbl_AccountCode" runat="server"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyle" style="">
+                                    <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,ZhiFuFangShi%>"></asp:Label>£º
                                     </td>
-                                    <td style="text-align: left; height: 19px;" class="formItemBgStyle">
+                                    <td style="height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_PaymentMethod" runat="server" Width="100px"></asp:TextBox>
                                         <asp:DropDownList ID="DL_PaymentMethod" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_PaymentMethod_SelectedIndexChanged">
                                             <asp:ListItem Value="">---Select=-- </asp:ListItem>
@@ -196,7 +196,7 @@
                                         </asp:DropDownList>
                                     </td>
 
-                                    <td style="text-align: left; height: 19px;" class="formItemBgStyle">
+                                    <td style="height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="BT_KeepAccount" runat="server" CssClass="inpu" Text="<%$ Resources:lang,jiZhang%>" OnClick="BT_KeepAccount_Click" />
                                     </td>
                                 </tr>

@@ -160,16 +160,16 @@
                                                             <table border="1" style="width: 98%; border-collapse: collapse; margin: 0px auto;"
                                                                 cellpadding="4" cellspacing="0">
                                                                 <tr>
-                                                                    <td colspan="3" align="left" class="formItemBgStyle">
+                                                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                                                         <b>
                                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LiChengFeiYong%>"></asp:Label></b>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2" align="left" class="formItemBgStyle">
+                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                         <table>
                                                                             <tr>
-                                                                                <td align="right" class="formItemBgStyle" style="">
+                                                                                <td class="formItemBgStyleForAlignRight" >
                                                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZongLiCheng%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td>
@@ -218,7 +218,7 @@
                                                                     <table border="1" style="width: 100%; border-collapse: collapse; margin: 0px auto;"
                                                                         cellpadding="4" cellspacing="0">
                                                                         <tr>
-                                                                            <td colspan="4" align="left" class="formItemBgStyle">&nbsp;
+                                                                            <td colspan="4"  class="formItemBgStyleForAlignLeft">&nbsp;
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
@@ -266,7 +266,7 @@
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="4" height="40px" align="left" class="formItemBgStyle"></td>
+                                                                            <td colspan="4" height="40px"  class="formItemBgStyleForAlignLeft"></td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td style="width: 15%; text-align: right">

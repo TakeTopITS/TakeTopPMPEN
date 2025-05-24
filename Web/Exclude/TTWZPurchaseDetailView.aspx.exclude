@@ -64,10 +64,10 @@
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                  
                                                     <tr style="height: 300px;">
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyle" valign="top">
+                                                        <td style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <div style="width: 2000px;">
                                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                 <tr>

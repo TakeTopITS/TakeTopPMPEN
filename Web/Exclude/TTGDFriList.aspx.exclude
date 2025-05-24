@@ -68,7 +68,7 @@
                                 <td style="padding: 0px 5px 5px 5px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:DropDownList ID="DDL_GDProject" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_GDProject_SelectedIndexChanged"></asp:DropDownList>&nbsp;
                                                 <asp:Button ID="BT_Search" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Search_Click" />&nbsp;
                                                 <input type="button" class="inpuLong" value="ÐÂÔöFRI" onclick="AlertAddEditPage('TTGDFriEdit.aspx?id=');" />

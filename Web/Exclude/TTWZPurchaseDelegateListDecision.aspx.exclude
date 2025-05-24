@@ -56,12 +56,12 @@
                                 <td>
                                     <table class="formBgStyle">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,CaiGouJueCe%>"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BiaoDuanXuanZe%>"></asp:Label>£º
                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BiaoDuanYi%>"></asp:Label>£º<asp:TextBox ID="TXT_SupplierCode1" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button2" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiaoDuanEr%>"></asp:Label>£º<asp:TextBox ID="TXT_SupplierCode2" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button3" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
@@ -71,12 +71,12 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JueCeYiJian%>"></asp:Label>£º<asp:TextBox ID="TXT_Suggest" runat="server" TextMode="MultiLine" Width="600px" Height="50px"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JueCeRen%>"></asp:Label>£º<asp:TextBox ID="TXT_ExpertCode" runat="server" Width="50"></asp:TextBox>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

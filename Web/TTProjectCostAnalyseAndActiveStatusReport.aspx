@@ -2501,11 +2501,11 @@
                                                 </td>
                                             </tr>
                                             <%-- 
-                                            <tr height="16" style=" height: 12.0px">
+                                            <tr height="16" style="height: 12.0px">
                                                 <td class="xl255" height="16" style="height: 12.0px">累计已发放奖金额<span style="mso-spacerun: yes">&nbsp;</span></td>
                                                 <td class="xl288" colspan="5" style="border-right: .5pt solid black">截至到上个月的下面单元格B17的“本次可发放额”值的总和（就是不含本月累计值），其中项目开始第一个月的累计值取“0”</td>
                                             </tr>
-                                            <tr height="65" style=" height: 48.75px">
+                                            <tr height="65" style="height: 48.75px">
                                                 <td class="xl256"  height="65" style="height: 48.75px; width: 104px" width="139">本次可发放额</td>
                                                 <td class="xl285" colspan="5"  style="border-left: none; width: 550px"
                                                     width="733"><font class="font75">项目部每月可动用奖金额=奖金包干总额*（进度、结算、回款及HSE综合打分系数）-累计已发放奖金额+单项奖+事件考核奖励+超额利润提成<span style="mso-spacerun: yes">&nbsp;</span></font><font class="font25"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font class="font8"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font class="font25"><br>

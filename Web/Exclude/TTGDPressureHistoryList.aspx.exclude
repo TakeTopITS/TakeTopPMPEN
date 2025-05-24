@@ -56,10 +56,10 @@
                                             <td>
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-weight: bold; font-size: 11pt">
-                                                        <td align="left" class="formItemBgStyle">Testloop No.£º<asp:DropDownList ID="DDL_Testlopp" runat="server" OnSelectedIndexChanged="DDL_Testlopp_SelectedIndexChanged"></asp:DropDownList><br />
+                                                        <td class="formItemBgStyleForAlignLeft">Testloop No.£º<asp:DropDownList ID="DDL_Testlopp" runat="server" OnSelectedIndexChanged="DDL_Testlopp_SelectedIndexChanged"></asp:DropDownList><br />
                                                             Isome NO.£º<asp:TextBox ID="TXT_Isom_no" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DataGrid ID="DG_PictureList" runat="server" AllowPaging="False" AutoGenerateColumns="False"
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                                 Width="100%" OnItemCommand="DG_PictureList_ItemCommand">
@@ -96,42 +96,42 @@
                                                 <div style="width: 1300px;">
                                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                         <tr>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="3">Jt.No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="3">Size</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="3">Fluid Code</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="3">Type</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="3">S/F</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="3">Welding Date</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" colspan="2">Welder</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="3">Fit-Up/Visual<br />
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="3">Jt.No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="3">Size</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="3">Fluid Code</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="3">Type</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="3">S/F</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="3">Welding Date</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" colspan="2">Welder</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="3">Fit-Up/Visual<br />
                                                                 Date/Rec.No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" colspan="3">RT</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">PT</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">MT</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">PMI</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">AT</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">PWHT</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" colspan="3">RT</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">PT</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">MT</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">PMI</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">AT</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">PWHT</td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="2">Root</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="2">Cover</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Lot No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle" rowspan="2">Res.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Date</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Date</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Date</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Date</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Date</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Date</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="2">Root</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="2">Cover</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Lot No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft" rowspan="2">Res.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Date</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Date</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Date</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Date</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Date</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Date</td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="text-align: center" class="formItemBgStyle">Sample No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Rec No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Rec No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Rec No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Rec No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Rec No.</td>
-                                                            <td style="text-align: center" class="formItemBgStyle">Rec No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Sample No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Rec No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Rec No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Rec No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Rec No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Rec No.</td>
+                                                            <td style="text-align: center" class="formItemBgStyleForAlignLeft">Rec No.</td>
                                                         </tr>
                                                         <asp:Repeater ID="rptList" runat="server">
                                                             <ItemTemplate>

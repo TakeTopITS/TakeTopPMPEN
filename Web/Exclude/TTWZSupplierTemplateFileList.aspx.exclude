@@ -67,7 +67,7 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <input type="button" class="inpuLong" value="新增供应商模板" onclick="AlertTemplatePage('TTWZSupplierTemplateFileEdit.aspx?id=')" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongYingShangMoBanJiLu%>"></asp:Label>
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
@@ -76,7 +76,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <div style="width: 90%;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>
@@ -155,27 +155,27 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <table class="formBgStyle" width="80%">
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZiDongShengCheng%>"></asp:Label></font>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left; vertical-align :top;" class="formItemBgStyle">
+                                                                    <td style="text-align: left; vertical-align :top;" class="formItemBgStyleForAlignLeft">
                                                                         <textarea id="TXT_TemplateContent" runat="server" cols="160" rows="15"></textarea>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                      
                                                                     </td>
-                                                                    <td class="formItemBgStyle">   <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />
+                                                                    <td class="formItemBgStyleForAlignLeft">   <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

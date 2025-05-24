@@ -726,7 +726,7 @@
                         </tr>
                         <tr style="display: none;">
 
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
 
                                 <asp:HyperLink ID="HL_ProjectDetail" runat="server">
                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,DangTianXiangMuRiZhi%>"></asp:Label>
@@ -767,10 +767,10 @@
                         </tr>
                         <tr style="display: none;">
 
-                            <td style="width: 50px;" class="formItemBgStyle">
+                            <td style="width: 50px;" class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FeiYong %>"></asp:Label></td>
 
-                            <td style="text-align: Left;" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
 
                                 <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="TB_Expense" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
                                     PositiveColor="" Visible="False" Width="100px">0.00</NickLee:NumberBox>
@@ -782,7 +782,7 @@
                                 </span></td>
                         </tr>
                         <tr style="display: none;">
-                            <td width="65%" style="text-align: left;" class="formItemBgStyle">
+                            <td width="65%"  class="formItemBgStyleForAlignLeft">
                                 <asp:DataList ID="DataList2" runat="server" Width="100%" Height="1px" CellPadding="0"
                                     ForeColor="#333333">
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

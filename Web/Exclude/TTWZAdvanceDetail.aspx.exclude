@@ -56,17 +56,17 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyle" valign="top">
+                                                        <td  style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle" width="40%">
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuFuKuan%>"></asp:Label>£º</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_PayMoney" runat="server"></asp:TextBox>
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongTu%>"></asp:Label>£º</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DDL_UseWay" runat="server">
                                                                             <asp:ListItem Text="" Value=""/>
                                                                             <asp:ListItem Text="<%$ Resources:lang,FuCaiLiaoKuan%>" Value="¸¶²ÄÁÏ¿î"/>
@@ -76,7 +76,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: center" class="formItemBgStyle" colspan="4">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="4">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                                         <asp:Button ID="BT_Reset" runat="server" Text="<%$ Resources:lang,QuXiao%>" CssClass="inpu" OnClick="BT_Reset_Click" />&nbsp;
                                                                         <asp:Button ID="BT_MoreAdd" runat="server" Text="<%$ Resources:lang,HeTongBiaoZhu%>" CssClass="inpu" OnClick="BT_MoreAdd_Click" />&nbsp;
@@ -86,10 +86,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr style="height: 350px;">
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyle" valign="top">
+                                                        <td  style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <div style="width: 1500px;" id="KeyManage1">
                                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                 <tr>
@@ -243,10 +243,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyle" valign="top">
+                                                        <td  style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" colspan="2">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="2">
                                                                         <div style="width: 3600px;">
                                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                 <tr>

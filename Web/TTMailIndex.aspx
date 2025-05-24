@@ -9,7 +9,7 @@
 
     <frameset id="Frame" cols="180,*"  border="0" framespacing="0" framepadding="0">
 	    <frame name="Left" src="TTMailLeftTree.aspx" scrolling="auto" frameborder="0"  framepadding="0" framespacing="0"  >
-	    <frame name="Desktop" src="TTMailDesktop.aspx" scrolling="auto" frameborder="0" framepadding="0" framespacing="0" style=" border-left:solid 1px #D8D8D8;border-right:solid 1px #D8D8D8;border-bottom:solid 1px #D8D8D8;">
+	    <frame name="Desktop" src="TTMailDesktop.aspx" scrolling="auto" frameborder="0" framepadding="0" framespacing="0" style="border-left:solid 1px #D8D8D8;border-right:solid 1px #D8D8D8;border-bottom:solid 1px #D8D8D8;">
     </frameset>
 
 <script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>

@@ -95,7 +95,7 @@
                                                     <!--startprint-->
                                                     <table width="100%">
                                                         <tr>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>: <asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
                                                                       <asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                                             </td>

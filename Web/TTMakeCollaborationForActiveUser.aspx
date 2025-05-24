@@ -239,19 +239,19 @@
                                     <td valign="top" align="left" style="padding: 5px 5px 5px 5px; border-right: solid 1px #D8D8D8;">
                                         <table style="width: 100%;" align="left" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td align="right" class="formItemBgStyle" style="width: 15%; height: 24px">
+                                                <td class="formItemBgStyleForAlignRight" style="width: 15%; height: 24px">
                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                 </td>
-                                                <td align="left" class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_CoID" runat="server" Visible="false"></asp:Label><asp:TextBox ID="TB_CollaborationName"
                                                         runat="server" Width="90%" Text="<%$ Resources:lang,LinShiXiaoXi%>"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="right" style="width: 15%; height: 24px" class="formItemBgStyle">
+                                                <td  style="width: 15%; height: 24px" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,CanYuRenYuan%>"></asp:Label>£º
                                                 </td>
-                                                <td align="left" class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Repeater ID="RP_Attendant" runat="server" OnItemCommand="Repeater1_ItemCommand">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_UserName" runat="server" CssClass="inpuRepeat" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
@@ -261,26 +261,26 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="right" style="width: 15%; height: 24px" class="formItemBgStyle">
+                                                <td  style="width: 15%; height: 24px" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                                 </td>
-                                                <td align="left" class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <CKEditor:CKEditorControl ID="HTEditor1" runat="server" Toolbar="TextColor|BGColor|Bold|Font|FontSize|Image" Width="99%" Height="150px" Visible="false" />
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="right" style="width: 15%; height: 24px" class="formItemBgStyle">
+                                                <td  style="width: 15%; height: 24px" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                 </td>
-                                                <td align="left" style="height: 21px;" class="formItemBgStyle">
+                                                <td  style="height: 21px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_Status" runat="server" Text="<%$ Resources:lang,XinJian%>"></asp:Label>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="right" style="width: 15%; height: 21px;" class="formItemBgStyle">
+                                                <td style="width: 15%; height: 21px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                                 </td>
-                                                <td align="left" style="height: 24px;" class="formItemBgStyle">
+                                                <td align="left" style="height: 24px;" class="formItemBgStyleForAlignLeft">
 
                                                     <asp:Button ID="BT_Close" runat="server" Enabled="False"
                                                         CssClass="inpuClose" ToolTip="<%$ Resources:lang,GuanBi%>" OnClick="BT_Close_Click" />
@@ -293,8 +293,8 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="right" style="height: 29px;" class="formItemBgStyle"></td>
-                                                <td align="left" class="formItemBgStyle">
+                                                <td style="height: 29px;" class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:CheckBox ID="CB_MSM" runat="server" Text="<%$ Resources:lang,FaXinXi%>" />
                                                     <asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,FaYouJian%>" />
                                                     &nbsp;

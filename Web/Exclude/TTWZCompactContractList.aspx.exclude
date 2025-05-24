@@ -64,7 +64,7 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LieBiaoChaXun%>"></asp:Label>£º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º<asp:DropDownList ID="DDL_Progress" runat="server">
                                                             <%--    <asp:ListItem Text="<%$ Resources:lang,CaiJian%>" Value="²Ä¼ì" />--%>
@@ -78,7 +78,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>£º&nbsp;&nbsp;
                                                             <asp:Button ID="BT_NewCompactDetail" CssClass="inpu" runat="server" Enabled="false" Text="<%$ Resources:lang,HeTongMingXi%>" OnClick="BT_NewCompactDetail_Click" />&nbsp;
                                                             <asp:Button ID="BT_NewSign" CssClass="inpu" runat="server" Enabled="false" Text="<%$ Resources:lang,QianShou%>" OnClick="BT_NewSign_Click" />&nbsp;
@@ -88,7 +88,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,HeTongJiLu%>"></asp:Label>&nbsp;
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_RowNumber" runat="server" Text="*"></asp:Label><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -104,7 +104,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <div style="width: 3600px;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>

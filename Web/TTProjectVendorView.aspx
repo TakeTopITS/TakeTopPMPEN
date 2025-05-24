@@ -54,7 +54,7 @@
                             <td align="left" style="padding: 5px 5px 5px 5px;">
                                 <table width="90%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                     <tr>
-                                        <td class="formItemBgStyle" rowspan="2">
+                                        <td class="formItemBgStyleForAlignLeft" rowspan="2">
                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                 <tr>
                                                     <td width="7">
@@ -101,7 +101,7 @@
                                                 <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             </asp:DataGrid>
                                         </td>
-                                        <td class="formItemBgStyle" style="width: 80%;">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 80%;">
                                             <asp:DataList ID="DataList2" runat="server" Height="1px" Width="100%" CellPadding="0"
                                                 ForeColor="#333333">
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
@@ -295,7 +295,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                                    <td align="left" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:HyperLink ID="HL_RelatedContactInfor" runat="server" Enabled="False" Target="_blank">
                                                             ---&gt;<asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,XiangGuanLianXiRen %>"></asp:Label>
                                                         </asp:HyperLink>

@@ -134,7 +134,7 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="formItemBgStyle">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GuiShu %>"></asp:Label></td>
                                                                 <td colspan="2">
                                                                     <asp:Label ID="LB_BelongDepartCode" runat="server"></asp:Label>
@@ -411,7 +411,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:CheckBox ID="CB_MSM" runat="server" Text="<%$ Resources:lang,FaXinXi%>" />
                                                 <asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,FaYouJian%>" />
                                                 <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,TongZhi%>"></asp:Label>

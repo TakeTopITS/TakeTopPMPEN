@@ -85,14 +85,14 @@
                                 <td style="padding: 0px 5px 5px 5px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
 
                                                     <tr>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongYingShang%>"></asp:Label>：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
 
                                                             <asp:HiddenField ID="HF_Supplier1" runat="server" />
                                                             <asp:HiddenField ID="HF_Supplier2" runat="server" />
@@ -103,27 +103,27 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">1：
+                                                        <td class="formItemBgStyleForAlignLeft">1：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier1" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectSupplier1" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectSupplier1_Click" Height="21px" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier1" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier1_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">2：
+                                                        <td class="formItemBgStyleForAlignLeft">2：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier2" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectSupplier2" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectSupplier2_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier2" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier2_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">3：
+                                                        <td class="formItemBgStyleForAlignLeft">3：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier3" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectSupplier3" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectSupplier3_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier3" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier3_Click" />
@@ -131,9 +131,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">4：
+                                                        <td class="formItemBgStyleForAlignLeft">4：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier4" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectSupplier4" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectSupplier4_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier4" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier4_Click" />
@@ -141,9 +141,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">5：
+                                                        <td class="formItemBgStyleForAlignLeft">5：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier5" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectSupplier5" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectSupplier5_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier5" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier5_Click" />
@@ -151,9 +151,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">6：
+                                                        <td class="formItemBgStyleForAlignLeft">6：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier6" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectSupplier6" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectSupplier6_Click" />
                                                             &nbsp;
@@ -162,10 +162,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuanJiaZu%>"></asp:Label>：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
 
                                                             <asp:HiddenField ID="HF_Expert1" runat="server" />
                                                             <asp:HiddenField ID="HF_Expert2" runat="server" />
@@ -173,35 +173,35 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">1：
+                                                        <td class="formItemBgStyleForAlignLeft">1：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Expert1" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectExpert1" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectExpert1_Click" />
 
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">2：
+                                                        <td class="formItemBgStyleForAlignLeft">2：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Expert2" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectExpert2" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectExpert2_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">3：
+                                                        <td class="formItemBgStyleForAlignLeft">3：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:TextBox ID="TXT_Expert3" runat="server" Width="90px"></asp:TextBox>
                                                             <asp:Button ID="BT_SelectExpert3" runat="server" Text="▼" CssClass="inpu" OnClick="BT_SelectExpert3_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CaiGouFangShi%>"></asp:Label>：
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="5">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="5">
                                                             <asp:DropDownList ID="DDL_PurchaseMethod" runat="server">
                                                                 <asp:ListItem Text="<%$ Resources:lang,XunBiJia%>" Value="询比价" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,ZhaoBiao%>" Value="招标" />
@@ -214,7 +214,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: center" class="formItemBgStyle" colspan="6">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
                                                                 type="button" value="关闭" />

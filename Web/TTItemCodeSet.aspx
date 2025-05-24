@@ -65,7 +65,7 @@
                                             <table style="width: 99%">
                                                 <tr>
                                                     
-                                                    <td align="left" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Repeater ID="RP_ItemType" runat="server" OnItemCommand="Repeater1_ItemCommand">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_TypeName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
@@ -75,17 +75,17 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TeZhengMa %>"></asp:Label>:<br /> <asp:TextBox ID="TB_TypeCharString" runat="server"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DanQianZuiDaMa %>"></asp:Label>:<br /> <asp:TextBox ID="TB_MaxItemCode" runat="server"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianMaJieGu %>"></asp:Label>:<br /> <asp:TextBox ID="TB_ItemCode" runat="server"></asp:TextBox>
                                                         <asp:Button ID="BT_Refresh" runat="server" Text="<%$ Resources:lang,ShuaXin %>" OnClick="BT_Refresh_Click" />
                                                     </td>

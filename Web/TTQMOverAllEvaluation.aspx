@@ -81,18 +81,18 @@
                             <td align="left" style="padding-top: 5px;">
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="900px">
                                     <tr>
-                                        <td align="right" style="width: 150px" class="formItemBgStyle">
+                                        <td style="width: 150px" class="formItemBgStyleForAlignLeft">
                                         
                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuHeTong%>"></asp:Label>£º
                                         </td>
-                                        <td colspan ="3" align="left" class="formItemBgStyle">
+                                        <td colspan ="3"  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="LB_Code" runat="server"></asp:Label>
                                             <asp:DropDownList ID="DL_PurchasingContractCode" runat="server" CssClass="shuru" DataTextField="Name" DataValueField="Code">
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr style="color: #000000">
-                                        <td align="right" style="width: 150px; height: 30px" class="formItemBgStyle">
+                                        <td  style="width: 150px; height: 30px" class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChuangJianRen%>"></asp:Label>£º
                                         </td>
                                         <td align="left" class="auto-style2">
@@ -100,7 +100,7 @@
                                         </td>
                                         <td align="right" class="auto-style4">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º</td>
-                                        <td align="left" class="formItemBgStyle" style="height: 30px">
+                                        <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                             <asp:DropDownList ID="DL_Status" runat="server" CssClass="shuru">
                                                 <asp:ListItem Value="Qualified" Text="<%$ Resources:lang,HeGe%>" />
                                                 <asp:ListItem Value="Unqualified" Text="<%$ Resources:lang,BuHeGe%>" />
@@ -108,16 +108,16 @@
                                         </td>
                                     </tr>
                                     <tr style="color: #000000;">
-                                        <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
+                                        <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZongTiPingJia%>"></asp:Label>£º</td>
-                                        <td align="left" class="formItemBgStyle" style="height: 30px" colspan="3">
+                                        <td class="formItemBgStyleForAlignLeft" style="height: 30px" colspan="3">
 
                                             <asp:TextBox ID="TB_OverAllEvaluation" runat="server" CssClass="shuru" Height="35px" TextMode="MultiLine" Width="90%"></asp:TextBox>
 
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="right" style="width: 150px;" class="formItemBgStyle"></td>
+                                        <td  style="width: 150px;" class="formItemBgStyleForAlignLeft"></td>
                                         <td align="left" class="auto-style1">
                                             <asp:Button ID="BT_Add" runat="server" OnClick="BT_Add_Click" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" />&nbsp;
                                         <asp:Button ID="BT_Update" runat="server" OnClick="BT_Update_Click" CssClass="inpu"
@@ -127,7 +127,7 @@
                                             Text="<%$ Resources:lang,ShanChu%>" Enabled="False" />
                                         </td>
                                         <td align="left" class="auto-style3">&nbsp;</td>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="lbl_sql" runat="server" Visible="False"></asp:Label>
                                         </td>
                                     </tr>
@@ -156,12 +156,12 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="1000px">
                                     <tr>
-                                        <td align="left" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;
+                                        <td   class="formItemBgStyleForAlignLeft">&nbsp;&nbsp;&nbsp;
                                             <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,CaiGouYeWuPingJiaLieBiao%>"></asp:Label>£º &nbsp; &nbsp;
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <table width="98%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                 <tr>
                                                     <td>

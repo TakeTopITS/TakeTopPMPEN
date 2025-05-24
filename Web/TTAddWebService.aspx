@@ -85,42 +85,42 @@
                             <td valign="top" style="padding-top: 5px;">
                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                     <tr>
-                                        <td align="left" class="formItemBgStyle" style="width: 10%">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 10%">
                                             <span style="font-size: 11pt">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WebServiceMingCheng%>"></asp:Label>£º</span>
                                         </td>
-                                        <td align="left" class="formItemBgStyle" style="width: 15%">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 15%">
                                             <asp:TextBox ID="TXT_WebServiceName" runat="server" Width="320"></asp:TextBox>
                                         </td>
-                                        <td align="left" class="formItemBgStyle"><span style="font-size: 11pt">
+                                        <td class="formItemBgStyleForAlignLeft"><span style="font-size: 11pt">
                                             <asp:Label ID="Label3" runat="server" ></asp:Label>WebServiceURL£º</span></td>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TXT_WebServiceURL" runat="server" Width="500"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <span style="font-size: 11pt">
                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FangFaMing%>"></asp:Label>£º</span>
                                         </td>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TXT_MethodName" runat="server" Width="320"></asp:TextBox>
                                         </td>
-                                        <td align="left" class="formItemBgStyle"><span style="font-size: 11pt">
+                                        <td class="formItemBgStyleForAlignLeft"><span style="font-size: 11pt">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,CanShuShuZu%>"></asp:Label>£º</span></td>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TXT_ArgArray" runat="server" Width="500"></asp:TextBox><font color="red"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DuoGeYiFenKaiBanJiao%>"></asp:Label></font>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: left" class="formItemBgStyle" colspan="4">
+                                        <td  class="formItemBgStyleForAlignLeft" colspan="4">
                                             <span style="font-size: 11pt">
                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>£º</span><br />
                                             <textarea id="TXT_Comment" cols="150" rows="4" runat="server"></textarea>
                                         </td>
                                     </tr>
                                     <tr style="font-weight: bold; font-size: 11pt">
-                                        <td style="text-align: left" class="formItemBgStyle" colspan="4">
+                                        <td  class="formItemBgStyleForAlignLeft" colspan="4">
                                             <input type="button" value="New" id="BT_Save" class="inpu" />
                                         </td>
                                     </tr>

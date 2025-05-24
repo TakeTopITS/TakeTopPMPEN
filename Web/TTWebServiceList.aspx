@@ -45,12 +45,12 @@
                                 <td valign="top" style="padding-top: 5px;">
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt;">
-                                            <td align="right" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignRight">
                                                 <input type="button" class="inpuLong" value="Add Web Service" onclick="window.location.href = 'TTAddWebService.aspx'" />
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">
-                                            <td align="left" style="width: 10%;" class="formItemBgStyle">
+                                            <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                 <asp:DataGrid ID="DG_WebServiceList" runat="server" AllowPaging="False" AutoGenerateColumns="False"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                     Width="100%" OnItemCommand="DG_WebServiceList_ItemCommand" OnItemDataBound="DG_WebServiceList_ItemDataBound">

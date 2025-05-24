@@ -64,7 +64,7 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>£º&nbsp;
                                                             <asp:Button ID="BT_NewRecordDelete" runat="server" CssClass="inpu" Enabled="false" Text="<%$ Resources:lang,JiLuShanChu%>" OnClick="BT_NewRecordDelete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())"/>&nbsp;
                                                             <asp:Button ID="BT_NewCheckCodeEdit" runat="server" CssClass="inpu" Enabled="false" Text="<%$ Resources:lang,JianHaoBianJi%>" OnClick="BT_NewCheckCodeEdit_Click" />&nbsp;
@@ -78,7 +78,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JianHaoJiLu%>"></asp:Label>&nbsp;
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_CheckRecord" runat="server" Text="*"></asp:Label><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -92,7 +92,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <div style="width: 3600px;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>
@@ -421,12 +421,12 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" width="5%">
+                                                                    <td class="formItemBgStyleForAlignLeft" width="5%">
                                                                         <asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,HeTongBianHao%>"></asp:Label>£º</td>
-                                                                    <td class="formItemBgStyle" width="95%">
+                                                                    <td class="formItemBgStyleForAlignLeft" width="95%">
                                                                         <asp:Label ID="Label54" runat="server" Text="<%$ Resources:lang,HeTongMingXiJiLu%>"></asp:Label>&nbsp;
                                                                         <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_CompactNumber" runat="server" Text="*"></asp:Label><asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -435,11 +435,11 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" width="5%">
+                                                                    <td class="formItemBgStyleForAlignLeft" width="5%">
                                                                         <asp:ListBox ID="LB_Compact" name="LB_Compact" runat="server" Width="180px" Height="300px"
                                                                             DataTextField="CompactCode" DataValueField="CompactCode" AutoPostBack="true" OnSelectedIndexChanged="LB_Compact_SelectedIndexChanged"></asp:ListBox>
                                                                     </td>
-                                                                    <td class="formItemBgStyle" width="95%">
+                                                                    <td class="formItemBgStyleForAlignLeft" width="95%">
                                                                         <div style="width: 1800px;">
                                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                 <tr>

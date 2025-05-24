@@ -246,11 +246,11 @@
 
                             <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td style="width: 15%; " class="formItemBgStyle">
+                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbAccount" runat="server" Text="<%$ Resources:lang,Account%>"></asp:Label>
                                     </td>
 
-                                    <td colspan="3" style="text-align: left;" class="formItemBgStyle">
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Account" runat="server" Width="150px"></asp:TextBox>
                                         <asp:DropDownList ID="DL_Account" runat="server" AutoPostBack="True" DataTextField="AccountName"
                                             DataValueField="AccountCode" OnSelectedIndexChanged="DL_Account_SelectedIndexChanged"
@@ -261,26 +261,26 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 15%;" class="formItemBgStyle">
+                                    <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,Description%>"></asp:Label>:
                                     </td>
-                                    <td colspan="3" style="text-align: left" class="formItemBgStyle">
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Description" runat="server" Width="99%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 15%;" class="formItemBgStyle">
+                                    <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbEffectTime" runat="server" Text="<%$ Resources:lang,EffectTime%>"></asp:Label>:
                                     </td>
-                                    <td style="width: 15%; text-align: left" class="formItemBgStyle">
+                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_EffectDate" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_EffectDate">
                                         </ajaxToolkit:CalendarExtender>
                                     </td>
-                                    <td style="width: 15%;" class="formItemBgStyle">
+                                    <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbAmount" runat="server" Text="<%$ Resources:lang,Amount%>"></asp:Label>:
                                     </td>
-                                    <td style="width: 55%;" class="formItemBgStyle" align="left">
+                                    <td style="width: 55%;" class="formItemBgStyleForAlignLeft" >
                                         <table>
                                             <tr>
                                                 <td>

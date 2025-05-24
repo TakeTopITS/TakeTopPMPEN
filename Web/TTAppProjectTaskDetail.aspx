@@ -714,7 +714,7 @@
                             </td>
                         </tr>
                         <tr style="display: none;">
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:HyperLink ID="HL_TaskReview" runat="server" Enabled="False">---&gt;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,RenWuPingShen%>"></asp:Label></asp:HyperLink>
 
                                 <asp:HyperLink ID="HL_MakeProjectReq" runat="server">--&gt;<asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JianLiHeFenPaiXuQiu%>"></asp:Label></asp:HyperLink>
@@ -749,7 +749,7 @@
                             </td>
                         </tr>
                         <tr style="display: none;">
-                            <td width="65%" style="text-align: left;" class="formItemBgStyle">
+                            <td width="65%"  class="formItemBgStyleForAlignLeft">
                                 <asp:DataList ID="DataList2" runat="server" Width="100%" Height="1px" CellPadding="0"
                                     ForeColor="#333333">
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -874,7 +874,7 @@
                             <table>
                                 <tr>
                                     <td style="padding: 5px 5px 0px 5px; text-align: left; vertical-align: top;" width="200px"
-                                        class="formItemBgStyle">
+                                        class="formItemBgStyleForAlignLeft">
                                         <asp:TreeView ID="TreeView2" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView2_SelectedNodeChanged"
                                             ShowLines="True" Width="220px">
                                             <RootNodeStyle CssClass="rootNode" />

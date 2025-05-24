@@ -37,7 +37,7 @@
                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QiDongRiQi%>"></asp:Label>&nbsp;<asp:Label ID="LB_StartTime" runat="server" Text="*"></asp:Label></td>
             </tr>
             <tr>
-                    <td class="formItemBgStyle">
+                    <td class="formItemBgStyleForAlignLeft">
                         <div id="divOver" style="text-align: center">
                             <br />
                             <p class="noprint">

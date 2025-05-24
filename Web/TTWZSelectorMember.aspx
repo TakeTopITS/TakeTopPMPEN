@@ -79,7 +79,7 @@
                                 <td style="padding: 0px 5px 5px 5px;" valign="top">
                                     <table width="80%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle" style="width: 30%;">
+                                            <td class="formItemBgStyleForAlignLeft" style="width: 30%;">
                                                 <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                     <tr>
                                                         <td width="7">
@@ -122,7 +122,7 @@
                                                     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
                                                 </asp:DataGrid>
                                             </td>
-                                            <td class="formItemBgStyle" style="width: 70%;">
+                                            <td class="formItemBgStyleForAlignLeft" style="width: 70%;">
                                                 <asp:TreeView ID="TreeView2" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView2_SelectedNodeChanged" ShowLines="True" Width="400px">
                                                     <RootNodeStyle CssClass="rootNode" />
                                                     <NodeStyle CssClass="treeNode" />

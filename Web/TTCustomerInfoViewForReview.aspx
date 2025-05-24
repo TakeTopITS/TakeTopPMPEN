@@ -73,31 +73,31 @@
 
                                                                         <tr>
 
-                                                                            <td style="width: 10%; " class="formItemBgStyle">
+                                                                            <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
 
                                                                                 <asp:Label ID="Label114" runat="server" Text="<%$ Resources:lang,BeiZhu %>"></asp:Label>£º </td>
 
-                                                                            <td style="text-align: left;" class="formItemBgStyle">
+                                                                            <td class="formItemBgStyleForAlignLeft">
 
                                                                                 <asp:TextBox ID="TB_Comment" runat="server" Height="60px" TextMode="MultiLine" Width="98%"></asp:TextBox></td>
                                                                         </tr>
 
                                                                         <tr>
 
-                                                                            <td align="right" class="formItemBgStyle">
+                                                                            <td class="formItemBgStyleForAlignRight">
 
                                                                                 <asp:Label ID="Label125" runat="server" Text="±¸°¸×´Ì¬"></asp:Label>:</td>
 
-                                                                            <td align="left" class="formItemBgStyle">
+                                                                            <td class="formItemBgStyleForAlignLeft">
 
                                                                                 <asp:Label ID="LB_ReviewStatus" runat="server"></asp:Label></td>
                                                                         </tr>
 
                                                                         <tr>
 
-                                                                            <td class="formItemBgStyle"></td>
+                                                                            <td class="formItemBgStyleForAlignLeft"></td>
 
-                                                                            <td style="text-align: left;" class="formItemBgStyle">
+                                                                            <td class="formItemBgStyleForAlignLeft">
 
                                                                                 <asp:Button ID="BT_Approve" runat="server" CssClass="inpu"
                                                                                     Text="<%$ Resources:lang,pizhun %>" OnClick="BT_Approve_Click" />&#160;&#160;<asp:Button ID="BT_Refuse" runat="server" CssClass="inpu"

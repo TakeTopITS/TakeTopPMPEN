@@ -69,30 +69,30 @@
                                                         <td align="left">
                                                             <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,CaiWuZhangTao%>"></asp:Label>£º</td>
-                                                                    <td class="formItemBgStyle" style="text-align: left">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_Financial" runat="server" DataTextField="FinancialName" DataValueField="FinancialCode" AutoPostBack="True" OnSelectedIndexChanged="DL_Financial_SelectedIndexChanged">
                                                                         </asp:DropDownList>
                                                                     </td>
-                                                                    <td align="right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignRight">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,CaiWuQuJian%>"></asp:Label>£º</td>
-                                                                    <td align="left" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_Interval" runat="server" DataTextField="IntervalName" DataValueField="IntervalCode">
                                                                         </asp:DropDownList>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:DropDownList ID="ddl_Type" runat="server">
                                                                         <asp:ListItem Value="0" Text="<%$ Resources:lang,ShouZhiMingXiHuiZongBiao%>"/>
                                                                         <asp:ListItem Value="1" Text="<%$ Resources:lang,ShouKuanMingXiHuiZongBiao%>"/>
                                                                         <asp:ListItem Value="2" Text="<%$ Resources:lang,FuKuanMingXiHuiZongBiao%>"/>
                                                                     </asp:DropDownList>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,KeMu%>"></asp:Label>£º<asp:DropDownList ID="ddl_Account" runat="server" DataTextField="AccountName" DataValueField="AccountCode">
                                                                     </asp:DropDownList>
                                                                     </td>
-                                                                    <td class="formItemBgStyle" style="text-align: left">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="lbl_sql" runat="server" Visible="False"></asp:Label>
                                                                         <asp:Button ID="BT_Query" runat="server" CssClass="inpu" OnClick="BT_Query_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                                                         &nbsp;

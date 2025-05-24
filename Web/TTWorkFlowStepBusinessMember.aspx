@@ -116,7 +116,7 @@
                                                     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
                                                 </asp:DataGrid>
                                             </td>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
 
                                                 <asp:Repeater ID="RP_Attendant" runat="server" OnItemCommand="RP_Attendant_ItemCommand">
                                                     <ItemTemplate>
@@ -131,17 +131,17 @@
                                                 <table cellpadding="5" cellspacing="0" class="formBgStyle" width="95%">
 
                                                     <tr>
-                                                        <td align="right" class="formItemBgStyle" style="width: 80px;">
+                                                        <td class="formItemBgStyleForAlignRight" style="width: 80px;">
                                                             <asp:Label ID="Label7" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label>£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_Message" runat="server" Height="96px" TextMode="MultiLine" Width="90%"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right" class="formItemBgStyle">&nbsp;
+                                                        <td class="formItemBgStyleForAlignRight">&nbsp;
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
 
                                                             <asp:Button ID="BT_Send" runat="server" CssClass="inpu" OnClick="BT_Send_Click"
                                                                 Text="<%$ Resources:lang,TuiSong%>" />

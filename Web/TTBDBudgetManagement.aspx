@@ -68,7 +68,7 @@
                                             <td align="left">
                                                 <table width="85%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: center;">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º
                                                             <asp:TextBox ID="TB_DepartName" runat="server" Width="100px"></asp:TextBox>
                                                             <asp:Label ID="LB_DepartCode" runat="server" Visible="False"></asp:Label>

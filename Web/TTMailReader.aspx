@@ -36,60 +36,60 @@
                 <td valign="top" style="padding: 10px 5px 10px 5px;">
                     <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                         <tr>
-                            <td style="width: 69px" align="right" class="formItemBgStyle"></td>
-                            <td align="left" class="formItemBgStyle"><asp:Button ID="RecieverBtn" runat="server" Text="<%$ Resources:lang,HuiHu%>" CssClass="inpu" OnClick="RecieverBtn_Click" />&nbsp;
+                            <td style="width: 69px"  class="formItemBgStyleForAlignLeft"></td>
+                            <td class="formItemBgStyleForAlignLeft"><asp:Button ID="RecieverBtn" runat="server" Text="<%$ Resources:lang,HuiHu%>" CssClass="inpu" OnClick="RecieverBtn_Click" />&nbsp;
                             <asp:Button ID="TransferBtn" runat="server" Text="<%$ Resources:lang,ZhuanFa%>" CssClass="inpu" OnClick="TransferBtn_Click" />&nbsp;&nbsp;
                             <asp:Button ID="ReturnBtn" runat="server" Text="<%$ Resources:lang,FanHui%>" CssClass="inpu" OnClick="ReturnBtn_Click"
                                 CausesValidation="False" />
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 69px" align="right" class="formItemBgStyle">
+                            <td style="width: 69px"  class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,FaJianRen%>" />
 
                             </td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="From" runat="server" Width="300px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td align="right" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignRight">
                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShouJianRen%>" />
 
                             </td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="To" runat="server" Width="300px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td align="right" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignRight">
                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChaoSong%>" />
 
                             </td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="CC" runat="server" Width="300px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td align="right" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignRight">
                                   <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuTi%>" />
                                 </td> 
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="Title" runat="server" Width="300px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td align="right" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignRight">
                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YouJianGeShi%>" />
                             </td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 &nbsp;<input id="HtmlCB" type="checkbox"  runat ="server" />HTML</td>
                         </tr>
                         <tr>
-                            <td align="right" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignRight">
                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,NeiRong%>" />
                             </td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <%--  <div id="mess_box" style="width: 100%; height: 550px; overflow: auto;">--%>
                                 <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" Width="100%">
                                     
@@ -116,10 +116,10 @@
                     <asp:Panel ID="Panel_Attachment" runat="server" Style="width: 100%;" Visible="False">
                         <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                             <tr>
-                                <td style="width: 69px;" align="right" valign="top" class="formItemBgStyle">
+                                <td style="width: 69px;"  valign="top" class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YouJianFuJian%>" />
                                 </td>
-                                <td align="left" class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <table width="90%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                         <tr>
                                             <td width="7">

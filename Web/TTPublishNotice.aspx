@@ -172,13 +172,13 @@
                                             <td>
                                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                                     <tr style="font-size: 12pt">
-                                                        <td class="formItemBgStyle" align="left">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <span style="font-size: 10pt;">
                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>£º</span>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <table>
                                                                 <tr>
                                                                     <td>
@@ -222,7 +222,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr style="font-size: 10pt">
-                                                        <td style="text-align: left; width: 100%;" class="formItemBgStyle">
+                                                        <td style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                                                 <ContentTemplate>
                                                                     <div>

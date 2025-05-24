@@ -727,7 +727,7 @@
                         </tr>
                         <tr style="display: none;">
 
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
 
                                 <asp:HyperLink ID="HL_TaskReview" runat="server" Enabled="False">---&gt;<asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,RenWuPingShen%>"></asp:Label></asp:HyperLink>
 
@@ -751,7 +751,7 @@
                             </td>
                         </tr>
                         <tr style="display: none;">
-                            <td width="65%" style="text-align: left;" class="formItemBgStyle">
+                            <td width="65%"  class="formItemBgStyleForAlignLeft">
                                 <asp:DataList ID="DataList2" runat="server" Width="100%" Height="1px" CellPadding="0"
                                     ForeColor="#333333">
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

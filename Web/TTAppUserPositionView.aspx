@@ -64,7 +64,7 @@
                     <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                         <tr>
                             <td>
-                                <div id="container" style=" margin: 0px auto"></div>
+                                <div id="container" style="margin: 0px auto"></div>
                             </td>
                         </tr>
                         <tr>

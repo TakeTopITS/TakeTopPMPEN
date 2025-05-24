@@ -54,7 +54,7 @@
                                 <td style="padding: 5px 5px 5px 5px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£º<asp:TextBox ID="TXT_StartTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>&nbsp;
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Zhi%>"></asp:Label>&nbsp;
                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º<asp:TextBox ID="TXT_EndTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>&nbsp;

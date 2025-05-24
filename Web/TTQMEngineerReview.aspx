@@ -78,7 +78,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td>
@@ -192,33 +192,33 @@
 
                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="900px">
                                 <tr>
-                                    <td align="right" style="width: 150px" class="formItemBgStyle">
+                                    <td style="width: 150px" class="formItemBgStyleForAlignLeft">
 
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuHeTong%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="3" align="left" class="formItemBgStyle">
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_Code" runat="server"></asp:Label>
                                         <asp:DropDownList ID="DL_PurchasingContractCode" runat="server" AutoPostBack="True" CssClass="shuru" DataTextField="Name" DataValueField="Code" OnSelectedIndexChanged="DL_PurchasingContractCode_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" style="width: 150px; height: 30px" class="formItemBgStyle">
+                                    <td  style="width: 150px; height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GongYingShang%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" style="height: 30px" class="formItemBgStyle">
+                                    <td  style="height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Supplier" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                     </td>
-                                    <td align="right" class="formItemBgStyle" style="height: 30px">
+                                    <td class="formItemBgStyleForAlignRight" style="height: 30px">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChuangJianRen%>"></asp:Label>£º</td>
-                                    <td align="left" class="formItemBgStyle" style="height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                         <asp:TextBox ID="TB_CreatePer" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" style="width: 150px; height: 30px" class="formItemBgStyle">
+                                    <td  style="width: 150px; height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,HuiFangNeiRong%>"></asp:Label>£º</td>
-                                    <td align="left" style="height: 30px" class="formItemBgStyle" colspan="3">
+                                    <td  style="height: 30px" class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:TextBox ID="TB_ReviewContent" runat="server" CssClass="shuru" Height="35px" TextMode="MultiLine" Width="90%"></asp:TextBox>
                                     </td>
                                 </tr>

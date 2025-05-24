@@ -54,7 +54,7 @@
     <form id="form1" runat="server">
         <table style="text-align: left;">
             <tr>
-                <td class="formItemBgStyle">
+                <td class="formItemBgStyleForAlignLeft">
                     <div style="top: 29px; width: 100%;">
                         <table width="100%">
                             <tr>

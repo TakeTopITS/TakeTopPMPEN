@@ -92,63 +92,63 @@
                                             <td style="text-align: center; width: 980px;">
                                                 <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: left" width="15%">
+                                                        <td class="formItemBgStyleForAlignLeft"  width="15%">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DanHao%>"></asp:Label>£º
                                                         </td>
-                                                        <td class="formItemBgStyle" style="width: 35%; text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 35%; ">
                                                             <%#DataBinder.Eval(Container.DataItem, "ID")%>&nbsp;&nbsp; <%#DataBinder.Eval(Container.DataItem, "VisaName")%>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="width: 15%; text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 15%; ">
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,QianZengRen%>"></asp:Label>£º
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <%#DataBinder.Eval(Container.DataItem, "VisaSignMan")%>
                                                         </td>
                                                     </tr>
                                                     <tr>
 
-                                                        <td class="formItemBgStyle" style="width: 15%; text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 15%; ">
                                                             <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShiJian%>"></asp:Label>£º
                                                         </td>
-                                                        <td colspan="3" class="formItemBgStyle" style="text-align: left">
+                                                        <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                             <%#DataBinder.Eval(Container.DataItem, "VisaSignTime", "{0:yyyy/MM/dd}")%>
                                                         </td>
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,jinE%>"></asp:Label>£º </td>
-                                                        <td class="formItemBgStyle" align="left">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <%#DataBinder.Eval(Container.DataItem, "VisaAmount")%>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,BiBie%>"></asp:Label>£º </td>
-                                                        <td class="formItemBgStyle" colspan="3" align="left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3" >
                                                             <%#DataBinder.Eval(Container.DataItem, "CurrencyType")%>
                                                         </td>
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label1112212" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º</td>
-                                                        <td colspan="3" class="formItemBgStyle" style="text-align: left">
+                                                        <td colspan="3" class="formItemBgStyleForAlignLeft" >
 
                                                             <%#DataBinder.Eval(Container.DataItem, "Comment")%></td>
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º </td>
-                                                        <td class="formItemBgStyle" colspan="3" align="left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3" >
                                                             <%#DataBinder.Eval(Container.DataItem, "Status")%>
                                                         </td>
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GuanLianXiangMu%>"></asp:Label>£º
                                                         </td>
-                                                        <td colspan="3" class="formItemBgStyle" style="text-align: left;">
+                                                        <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                             <%#DataBinder.Eval(Container.DataItem, "ProjectID")%>
                                                             <asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                                             &nbsp;&nbsp;
@@ -159,28 +159,28 @@
                                                      
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,XiangGuanYingXiang%>"></asp:Label>£º
                                                         </td>
-                                                        <td colspan="3" class="formItemBgStyle" style="text-align: left;">
+                                                        <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                             <%#DataBinder.Eval(Container.DataItem, "RelatedImpact")%>
                                                         </td>
 
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label245" runat="server" Text="<%$ Resources:lang,ChuLiJieRen%>"></asp:Label>£º
                                                         </td>
-                                                        <td colspan="3" class="formItemBgStyle" style="text-align: left;">
+                                                        <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                             <%#DataBinder.Eval(Container.DataItem, "RelatedResult")%>
                                                         </td>
 
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle" style="width: 100px; height: 30px">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 100px; height: 30px">
                                                             <asp:Label ID="Label240" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                         </td>
-                                                        <td colspan="3" class="formItemBgStyle" align="left">
+                                                        <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                             <%#DataBinder.Eval(Container.DataItem, "Status")%>
                                                         </td>
                                                     </tr>

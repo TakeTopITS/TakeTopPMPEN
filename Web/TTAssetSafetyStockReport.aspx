@@ -182,7 +182,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style=" text-align: center;">
+                                <td style="text-align: center;">
                                     <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                     &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                     <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>

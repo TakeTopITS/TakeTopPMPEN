@@ -109,11 +109,11 @@
                                     </table>
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                         <tr>
-                                            <td align="left" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;
+                                            <td   class="formItemBgStyleForAlignLeft">&nbsp;&nbsp;&nbsp;
                                             <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ZhaoBiaoYaoQingHanLieBiao%>"></asp:Label>£º</td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td>
@@ -229,11 +229,11 @@
                                         </table>
                                         <table cellpadding="2" cellspacing="0" class="formBgStyle" width="98%">
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Button ID="btnConfirmUp" runat="server" CssClass="inpu" OnClick="btnConfirm_Click" Text="<%$ Resources:lang,QueRen%>" /></td>
                                             </tr>
                                             <tr>
-                                                <td align="left" class="formItemBgStyle" colspan="3">
+                                                <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                     <table width="98%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                         <tr>
                                                             <td>
@@ -404,10 +404,10 @@
 
                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                 <tr>
-                                    <td align="left" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;<asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,TouBiaoRenLieBiao%>"></asp:Label>£º</td>
+                                    <td   class="formItemBgStyleForAlignLeft">&nbsp;&nbsp;<asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,TouBiaoRenLieBiao%>"></asp:Label>£º</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                             <tr>
                                                 <td>

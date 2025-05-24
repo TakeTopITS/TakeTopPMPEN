@@ -207,14 +207,14 @@
                                                             <asp:View ID="View1" runat="server">
                                                                 <table width="100%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                     <tr>
-                                                                        <td class="formItemBgStyle" align="left">
+                                                                        <td class="formItemBgStyleForAlignLeft" >
                                                                             <span><strong>
                                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>£º</strong>
                                                                             </span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td class="formItemBgStyle" align="left">
+                                                                        <td class="formItemBgStyleForAlignLeft" >
                                                                             <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                                           <asp:Label ID="LB_DocTypeID" runat="server"></asp:Label>
                                                                             <asp:TextBox ID="TB_DocType" runat="server" Width="125px"></asp:TextBox>
@@ -232,7 +232,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%; text-align: left;" class="formItemBgStyle">
+                                                                        <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"
                                                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                                                                 <ContentTemplate>
                                                                                     <div>
@@ -265,7 +265,7 @@
                                                                         <td>
                                                                             <table width="100%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                                 <tr style="font-size: 10pt">
-                                                                                    <td style="text-align: left; width: 100%;" class="formItemBgStyle">
+                                                                                    <td style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º<asp:TextBox ID="TB_WLName" runat="server" Width="309px"></asp:TextBox>&nbsp;
                                                                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º 
                                                                                         <asp:DropDownList ID="DL_WFType" runat="server">
@@ -281,13 +281,13 @@
                                                                                         <asp:Button ID="BT_Refrash" runat="server" Text="<%$ Resources:lang,ShuaXin%>" CssClass="inpu" OnClick="BT_Refrash_Click" />
                                                                                     </td>
                                                                                 </tr>
-                                                                                <tr style="font-size: 10pt" class="formItemBgStyle">
+                                                                                <tr style="font-size: 10pt" class="formItemBgStyleForAlignLeft">
                                                                                     <td style="text-align: left; width: 100%; height: 51px;">
                                                                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£º<asp:TextBox ID="TB_Description" runat="server" TextMode="MultiLine" Width="441px"
                                                                                             Height="48px"></asp:TextBox>&nbsp;
                                                                                     </td>
                                                                                 </tr>
-                                                                                <tr style="font-size: 10pt" class="formItemBgStyle">
+                                                                                <tr style="font-size: 10pt" class="formItemBgStyleForAlignLeft">
                                                                                     <td style="text-align: left; width: 100%;">
                                                                                         <span style="font-size: 10pt">£¨<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoXinXi%>"></asp:Label>£º<asp:CheckBox ID="CB_RequiredMail" runat="server"
                                                                                             Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" />

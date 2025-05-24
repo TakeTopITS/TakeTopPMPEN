@@ -210,18 +210,18 @@
                             <br />
                             <table width="80%">
                                 <tr>
-                                    <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;" width="150px">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" style="text-align: left;"></td>
-                                    <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;"></td>
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;" width="150px">
                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BuMenZhuGuan%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" style="text-align: left;"></td>
-                                    <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;"></td>
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;" width="150px">
                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,CangGuan%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" style="text-align: left;"></td>
-                                    <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;"></td>
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;" width="150px">
                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" style="text-align: left;"></td>
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;"></td>
                                 </tr>
                             </table>
                         </td>

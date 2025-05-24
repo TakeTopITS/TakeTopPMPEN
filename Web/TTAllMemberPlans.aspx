@@ -655,13 +655,13 @@
 
                                                                                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                                                                                     <tr>
-                                                                                                        <td align="right" class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
+                                                                                                        <td class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
                                                                                                             <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                                                                         </td>
                                                                                                     </tr>
 
                                                                                                     <tr>
-                                                                                                        <td align="left" class="formItemBgStyle" style="padding: 5px 5px 5px 5px;">
+                                                                                                        <td class="formItemBgStyleForAlignLeft" style="padding: 5px 5px 5px 5px;">
                                                                                                             <asp:DataList ID="DataList4" runat="server" CellPadding="0" ForeColor="#333333" OnItemCommand="DataList4_ItemCommand"
                                                                                                                 Height="1px" Width="100%">
 
@@ -840,11 +840,11 @@
                                 class="formBgStyle">
 
                                 <tr>
-                                    <td style="width: 90px; " class="formItemBgStyle">
+                                    <td style="width: 90px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label><asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>£º
                                     </td>
 
-                                    <td style="text-align: left;" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
 
                                         <CKEditor:CKEditorControl ID="HE_ReviewDetail" runat="server" Height="180px" Width="90%" Visible="false" />
 
@@ -855,11 +855,11 @@
 
                                 <tr>
 
-                                    <td style="width: 90px; " class="formItemBgStyle">
+                                    <td style="width: 90px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>£º
                                     </td>
 
-                                    <td style="text-align: left;" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
 
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Scoring" runat="server" Width="80px" OnBlur="" OnFocus=""
                                             OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>

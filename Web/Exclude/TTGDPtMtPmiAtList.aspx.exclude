@@ -54,7 +54,7 @@
                                 <td style="padding: 2px 2px 2px 2px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleAlignLeft">
                                                 <cc1:tabcontainer id="TabContainer1" runat="server" activetabindex="0" width="100%">
                                                     <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="Dye Penetrant Test">
                                                         <HeaderTemplate>

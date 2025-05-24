@@ -462,20 +462,20 @@
                                                                                             <td valign="top">
                                                                                                 <table cellpadding="3" cellspacing="0" class="formBgStyle" style="width: 100%;">
                                                                                                     <tr style="display: none;">
-                                                                                                        <td class="formItemBgStyle" style="height: 20px; ">&nbsp;<asp:Label ID="LB_DepartModuleIndex" runat="server" Visible="False"></asp:Label><asp:Label ID="LB_DepartModuleID" runat="server"></asp:Label><asp:Label ID="LB_DepartCode" runat="server"></asp:Label><asp:Label ID="LB_DepartName" runat="server"></asp:Label><asp:Label ID="LB_DepartModuleName" runat="server"></asp:Label></td>
+                                                                                                        <td class="formItemBgStyleForAlignLeft" style="height: 20px; ">&nbsp;<asp:Label ID="LB_DepartModuleIndex" runat="server" Visible="False"></asp:Label><asp:Label ID="LB_DepartModuleID" runat="server"></asp:Label><asp:Label ID="LB_DepartCode" runat="server"></asp:Label><asp:Label ID="LB_DepartName" runat="server"></asp:Label><asp:Label ID="LB_DepartModuleName" runat="server"></asp:Label></td>
                                                                                                     </tr>
                                                                                                     <tr>
-                                                                                                        <td align="left" class="formItemBgStyle">
+                                                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                                                             <asp:Button ID="BT_DepartAuthoritySave" runat="server" CssClass="inpu" OnClick="BT_DepartAuthoritySave_Click" Text="<%$ Resources:lang,BaoCun %>" />
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>
-                                                                                                        <td class="formItemBgStyle" style="text-align: left;"><strong><span style="font-size: 11pt;">
+                                                                                                        <<td class="formItemBgStyleForAlignLeft"><strong><span style="font-size: 11pt;">
                                                                                                             <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,QuanXianFuZhi %>"></asp:Label>
                                                                                                             £º</span></strong> </td>
                                                                                                     </tr>
                                                                                                     <tr style="font-size: 12pt;">
-                                                                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                                                             <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,DaiMaWei %>"></asp:Label>
                                                                                                             <asp:TextBox ID="TB_FromDepartCode" runat="server" Width="65px"></asp:TextBox>
                                                                                                             <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,DBMDQXSJFZDDMW %>"></asp:Label>

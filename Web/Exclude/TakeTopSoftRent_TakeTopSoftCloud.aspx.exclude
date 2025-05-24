@@ -63,7 +63,7 @@
                 <center>
                     <table style="text-align: left;">
                         <tr>
-                            <td class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <div style="top: 29px; width: 980px;">
                                     <table width="100%">
                                         <tr>
@@ -79,7 +79,7 @@
                                                     <div class="main">
                                                         <p style="text-align :center;padding-bottom:30px; font-size :28px;">
                                                             <br />
-                                                            <span style=" text-align :center; font-size:small;">
+                                                            <span style="text-align :center; font-size:small;">
                                                               <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">功能模块与价格</a>
                                                             </span>
                                                         </p>
@@ -147,9 +147,9 @@
                                                     <h3>2&nbsp;&nbsp;租用申请</h3>
                                                     <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                         <tr>
-                                                            <td class="formItemBgStyle" width="100px">
+                                                            <td class="formItemBgStyleForAlignLeft" width="100px">
                                                                 产品</td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:DropDownList ID="DL_Type" runat="server" Style="height: 50px;">
                                                                     <asp:ListItem>项目宝</asp:ListItem>
                                                                     <asp:ListItem>系统集成项目管理平台</asp:ListItem>
@@ -165,9 +165,9 @@
                                                             </td>
                                                         </tr>
                                                           <tr>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 版本</td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                  <table>
                                                                     <tr>
                                                                         <td>
@@ -186,23 +186,23 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyle" >
+                                                            <td class="formItemBgStyleForAlignLeft" >
                                                                 公司</td>
-                                                            <td class="formItemBgStyle" >
+                                                            <td class="formItemBgStyleForAlignLeft" >
                                                                 <asp:TextBox ID="TB_Company" runat="server" ForeColor="#000000"  Style="width: 350px; height: 30px;" ></asp:TextBox>
                                                                 &nbsp;<font color="#FF0000">*</font> </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 联系人</td>
-                                                            <td class="formItemBgStyle" >
+                                                            <td class="formItemBgStyleForAlignLeft" >
                                                                 <asp:TextBox ID="TB_ContactPerson" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;" ></asp:TextBox>
                                                                 &nbsp;<font color="#FF0000">*</font> &nbsp;&nbsp;</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyle"  style="padding-bottom:25px;" >
+                                                            <td class="formItemBgStyleForAlignLeft"  style="padding-bottom:25px;" >
                                                                 手机</td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_PhoneNumber" runat="server" ForeColor="#000000"  Style="width: 350px; height: 30px;" ></asp:TextBox>
                                                                 &nbsp;<font color="#FF0000">*</font> 
                                                                 <br />
@@ -210,9 +210,9 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyle"  style="padding-bottom:25px;" >
+                                                            <td class="formItemBgStyleForAlignLeft"  style="padding-bottom:25px;" >
                                                                 Email </td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_EMail" runat="server" Style="width: 350px; height: 30px;" onclick ="checkEmailFormat('TB_EMail')" ></asp:TextBox>
                                                                 &nbsp;<font color="#FF0000">*</font> 
                                                                 <br />
@@ -220,16 +220,16 @@
                                                              </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 用户数</td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000"  Style="width: 150px; height: 30px;" ></asp:TextBox>
                                                                 <strong>人</strong> <font color="#FF0000">*</font> </td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="left" class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 验证码</td>
-                                                            <td align="left" class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <table>
                                                                     <tr>
                                                                         <td>
@@ -243,9 +243,9 @@
                                                             </td>
                                                         </tr>
                                                         <tr >
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 &nbsp;</td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click"  Style="width:130px; height: 30px;" Text="提 交" />
                                                                 <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
                                                                 <br />
@@ -254,16 +254,16 @@
                                                       
                                                         <tr style="display: none;">
                                                           
-                                                            <td class="formItemBgStyle">联系地址</td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">联系地址</td>
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_Address" runat="server" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                 &nbsp;<font color="#FF0000">*</font>
                                                             </td>
                                                         </tr>
                                                         <tr style="display: none;">
                                                             
-                                                            <td class="formItemBgStyle">存储容量</td>
-                                                            <td class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">存储容量</td>
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:DropDownList ID="DL_ServerType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ServerType_SelectedIndexChanged">
                                                                     <asp:ListItem>租用</asp:ListItem>
                                                                     <asp:ListItem>自备</asp:ListItem>

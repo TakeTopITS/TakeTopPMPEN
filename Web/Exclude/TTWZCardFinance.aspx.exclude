@@ -100,7 +100,7 @@
                                 <td style="padding: 0px 5px 5px 5px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuSuanJinE%>"></asp:Label>£º<asp:TextBox ID="TXT_PlanMoney" runat="server"></asp:TextBox>&nbsp;
                                                 <asp:Button ID="BT_CalcPrice" runat="server" Text="<%$ Resources:lang,JiSuan%>" OnClick="BT_CalcPrice_Click" CssClass="inpu" />&nbsp;
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YuSuanDanJia%>"></asp:Label>£º<asp:TextBox ID="TXT_PlanPrice" runat="server"></asp:TextBox>&nbsp;
@@ -113,11 +113,11 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:ListBox ID="LB_Card" name="LB_Card" runat="server" Width="180px" Height="300px"
                                                                 DataTextField="CardName" DataValueField="CardCode" AutoPostBack="true" OnSelectedIndexChanged="LB_Card_SelectedIndexChanged"></asp:ListBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <div style="width: 2200px;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>
@@ -349,22 +349,22 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,PingZhengBianHao%>"></asp:Label>£º<asp:TextBox ID="TXT_CardCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YiJiaoDanHao%>"></asp:Label>£º<asp:TextBox ID="TXT_TurnCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" colspan="2">NoCode£º<asp:TextBox ID="TXT_NoCode" runat="server"></asp:TextBox>
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2">NoCode£º<asp:TextBox ID="TXT_NoCode" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" colspan="2">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2">
                                                             <asp:Button ID="BT_Add" runat="server" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_Add_Click" CssClass="inpu" />
                                                         </td>
                                                     </tr>
@@ -372,7 +372,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <div style="width: 2200px;">
                                                     <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                         <tr>

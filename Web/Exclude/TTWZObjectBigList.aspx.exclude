@@ -53,12 +53,12 @@
                                 <td style="padding: 5px 5px 5px 5px;" valign="top">
                                     <table width="80%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <input type="button" class="inpuLong" value="列表导入" onclick="window.location.href = 'TTWZObjectBigEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaLeiShuoMing%>"></asp:Label>：<asp:TextBox ID="TXT_DLDesc" Width="350px" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Button ID="BT_Save" CssClass="inpu" runat="server" Text="<%$ Resources:lang,BaoCun%>" OnClick="BT_Save_Click" />&nbsp;
                                         <asp:Button ID="BT_Cancel" CssClass="inpu" runat="server" Text="<%$ Resources:lang,QuXiao%>" OnClick="BT_Cancel_Click" />

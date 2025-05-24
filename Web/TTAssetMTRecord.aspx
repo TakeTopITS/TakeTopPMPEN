@@ -58,7 +58,7 @@
                             <td valign="top" style="padding: 5px 5px 5px 5px;">
                                 <table style="width: 100%; margin-top: 5px" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td align="right" class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
+                                        <td class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
                                             <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                         </td>
                                     </tr>
@@ -177,54 +177,54 @@
 
                             <table style="width: 90%;" class="formBgStyle" cellpadding="3" cellspacing="0">
                                 <tr style="display: none;">
-                                    <td style="width: 10%; " class="formItemBgStyle">
+                                    <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="3" style="text-align: left;" class="formItemBgStyle">&nbsp;
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">&nbsp;
                                         <asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_AssetID" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_AssetCode" runat="server" Visible="False"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle" style="width: 10%; ">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%; ">
                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,WeiHuZhe%>"></asp:Label>£º
                                     </td>
-                                    <td class="formItemBgStyle" style="width: 20%; text-align: left;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 20%; ">
                                         <asp:TextBox ID="TB_MTManCode" runat="server" Width="130px"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyle" style="width: 20%; ">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 20%; ">
                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,WeiHuLeiXing%>"></asp:Label>£º
                                     </td>
-                                    <td class="formItemBgStyle" style="text-align: left;">
+                                    <<td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_Type" runat="server" CssClass="DDList" DataTextField="Type"
                                             DataValueField="Type">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 10%; " class="formItemBgStyle">
+                                    <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,WeiHuNeiRong%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="3" style="text-align: left;" class="formItemBgStyle">
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Description" runat="server" Width="77%" Height="60px" TextMode="MultiLine"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 10%;" class="formItemBgStyle">
+                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,WeiHuShiJian%>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 200px; text-align: left" class="formItemBgStyle">
+                                    <td style="width: 200px; " class="formItemBgStyleForAlignLeft">
 
 
                                         <asp:TextBox ID="DLC_MTTime" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_MTTime">
                                         </ajaxToolkit:CalendarExtender>
                                     </td>
-                                    <td style="width: 20%;" class="formItemBgStyle">
+                                    <td style="width: 20%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,FeiYong%>"></asp:Label>£º
                                     </td>
-                                    <td style="text-align: left;" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="TB_Cost" runat="server" Width="100px">0.00</NickLee:NumberBox>
                                     </td>
                                 </tr>

@@ -315,66 +315,66 @@
 
                             <table width="100%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_ID" runat="server" Font-Bold="False" Visible ="false" ></asp:Label>
                                                     <asp:Label ID="Label18" runat="server" Font-Bold="True" Text="<%$ Resources:lang,BanGongSheFeiYongBiLi%>" ></asp:Label>
                                                     
                                                     £º</td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_KeSheGuanLiFeiBiLi" runat="server" Width="80px" Amount="0.08">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                      <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JianChaFeiYongBiLi%>" />£º</td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_JianChaFeiBiLi" runat="server" Width="80px" Amount="0.04">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label1833" runat="server" Font-Bold="True" Text="<%$ Resources:lang,ShiJiMeiTianFeiYong%>" ></asp:Label>£º
 
                                                 </td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_ShiJiRiXin" Amount ="200" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle"> <asp:Label ID="Label23" runat="server" Font-Bold="True" Text="<%$ Resources:lang,MeiGongLiFeiYong%>" ></asp:Label>£º
+                                                <td  class="formItemBgStyleForAlignLeft"> <asp:Label ID="Label23" runat="server" Font-Bold="True" Text="<%$ Resources:lang,MeiGongLiFeiYong%>" ></asp:Label>£º
 
                                                 </td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_MeiGongLiFeiYong" runat="server" Amount ="0.6" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle"><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,GongLiShu%>" />£º</td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft"><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,GongLiShu%>" />£º</td>
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_GongLiShu" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>
 
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,CheFei%>" />£º</td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_CheFei" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,CanFei%>" />£º</td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_CanFei" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>

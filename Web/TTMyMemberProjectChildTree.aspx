@@ -128,7 +128,7 @@
                                                                     <td style="text-align: right">
                                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>:
                                                                     </td>
-                                                                    <td style=" text-align: left">
+                                                                    <td style="text-align: left">
                                                                         <%#DataBinder .Eval (Container .DataItem, "BeginDate","{0:yyyy/MM/dd}") %>
                                                                     </td>
                                                                     <td style="text-align: right">

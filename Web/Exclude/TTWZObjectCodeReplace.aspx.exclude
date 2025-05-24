@@ -86,12 +86,12 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     
                                                     <tr>
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyle">
+                                                        <td style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft">
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>£º</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:FileUpload ID="fileExcel" runat="server" />
                                                                         <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;
                                                                         <asp:Button ID="BT_Pass" runat="server" Text="<%$ Resources:lang,TiHuan%>" OnClick="BT_Pass_Click" CssClass="inpuLong" />&nbsp;
@@ -107,7 +107,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <table style="width: 100%">
                                                                 <tr>
                                                                     <td style="padding-top: 5px;">
@@ -132,7 +132,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>
                                                                     <td width="7">

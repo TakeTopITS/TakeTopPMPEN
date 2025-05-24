@@ -58,23 +58,23 @@
                                     <td  style="font-size: x-small; text-align: center; vertical-align: bottom;">
                                         <table width="200" cellpadding="3" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td width="80px" class="formItemBgStyle" align="left">File NO.</td>
-                                                <td class="formItemBgStyle" align="left"></td>
+                                                <td width="80px" class="formItemBgStyleForAlignLeft" >File NO.</td>
+                                                <td class="formItemBgStyleForAlignLeft" ></td>
 
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle" >Edition</td>
-                                                <td class="formItemBgStyle"></td>
+                                                <td class="formItemBgStyleForAlignLeft" >Edition</td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
 
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle" >Date</td>
-                                                <td class="formItemBgStyle" ></td>
+                                                <td class="formItemBgStyleForAlignLeft" >Date</td>
+                                                <td class="formItemBgStyleForAlignLeft" ></td>
 
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle" >Page</td>
-                                                <td class="formItemBgStyle" ></td>
+                                                <td class="formItemBgStyleForAlignLeft" >Page</td>
+                                                <td class="formItemBgStyleForAlignLeft" ></td>
 
                                             </tr>
                                         </table>
@@ -181,15 +181,15 @@
                                                 <td align="left">
                                                     <table width="80%">
                                                         <tr>
-                                                            <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                            <td class="formItemBgStyleForAlignLeft" width="150px">
                                                                 <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ZhiDing%>"></asp:Label>£º</td>
-                                                            <td class="formItemBgStyle" style="text-align: left;"></td>
-                                                            <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                            <<td class="formItemBgStyleForAlignLeft"></td>
+                                                            <td class="formItemBgStyleForAlignLeft" width="150px">
                                                                 <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>£º</td>
-                                                            <td class="formItemBgStyle" style="text-align: left;"></td>
-                                                            <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                            <<td class="formItemBgStyleForAlignLeft"></td>
+                                                            <td class="formItemBgStyleForAlignLeft" width="150px">
                                                                 <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,PiZhunRen%>"></asp:Label>£º</td>
-                                                            <td class="formItemBgStyle" style="text-align: left;"></td>
+                                                            <<td class="formItemBgStyleForAlignLeft"></td>
                                                         </tr>
                                                     </table>
 

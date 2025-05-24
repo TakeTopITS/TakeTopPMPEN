@@ -62,11 +62,11 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-size: 12pt">
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                 <tr style="font-size: 12pt">
 
-                                                                    <td class="formItemBgStyle" width="80%">
+                                                                    <td class="formItemBgStyleForAlignLeft" width="80%">
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label><asp:DropDownList ID="DDL_SYear" runat="server"></asp:DropDownList>&nbsp;
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>£º<asp:DropDownList ID="DDL_SMonth" runat="server"></asp:DropDownList>&nbsp;
                                                                         <asp:Button ID="BT_Seach" runat="server" Text="<%$ Resources:lang,ChaXun%>" CssClass="inpu" OnClick="BT_Seach_Click" /><br />

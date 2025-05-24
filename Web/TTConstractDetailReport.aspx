@@ -57,49 +57,49 @@
                 <ContentTemplate>
                         <table cellpadding="3" cellspacing="0" class="formBgStyle" style="width: 1000px;">
                             <tr>
-                                <td colspan="5" align="left" style="height: 80px; font-size: xx-large;" class="formItemBgStyle">
+                                <td colspan="5"  style="height: 80px; font-size: xx-large;" class="formItemBgStyleForAlignLeft">
                                     <br />
                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HeTongLiRunBaoBiao%>"></asp:Label>
                                     <br />
                                 </td>
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>£º
                                 </td>
-                                <td class="formItemBgStyle" align="left">
+                                <td class="formItemBgStyleForAlignLeft" >
                                     <asp:TextBox ID="TB_ConstractCode" runat="server" Width="139px"></asp:TextBox>
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HeTongMingCheng%>"></asp:Label>£º</td>
-                                <td class="formItemBgStyle" align="left">
+                                <td class="formItemBgStyleForAlignLeft" >
                                     <asp:TextBox ID="TB_ConstractName" runat="server" Width="50%"></asp:TextBox>
                                 </td>
-                                <td class="formItemBgStyle">&nbsp;</td>
+                                <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
 
 
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShenBaoKaiShiShiJian%>"></asp:Label>£º
                                 </td>
-                                <td class="formItemBgStyle" align="left">
+                                <td class="formItemBgStyleForAlignLeft" >
                                     <asp:TextBox ID="DLC_StartTime" ReadOnly="false" runat="server"></asp:TextBox>
                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_StartTime">
                                     </ajaxToolkit:CalendarExtender>
 
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShenBaoJieShuShiJian%>"></asp:Label>£º
                                 </td>
-                                <td class="formItemBgStyle" align="left">
+                                <td class="formItemBgStyleForAlignLeft" >
 
                                     <asp:TextBox ID="DLC_EndTime" ReadOnly="false" runat="server"></asp:TextBox>
                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_EndTime">
                                     </ajaxToolkit:CalendarExtender>
 
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />&nbsp;
                                     <a href="javascript:window.print()">
                                         <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />

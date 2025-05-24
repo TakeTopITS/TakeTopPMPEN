@@ -184,19 +184,19 @@
 
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formBgStyle">
                                 <tr>
-                                    <td width="8%" align="right" class="formItemBgStyle">
+                                    <td width="8%"  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" Visible="false" runat="server"></asp:Label>
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Title" runat="server" Width="97%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignRight">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td>
@@ -225,8 +225,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle"></td>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignRight">
                                         <table>
                                             <tr>
                                                 <td style="padding-left: 30px;">
@@ -254,18 +254,18 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td  valign="top" class="formItemBgStyle">
+                                    <td  valign="top" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <CKEditor:CKEditorControl ID="CKE_MainContent" Width="98%" Height="550px" runat="server" Visible="False">
                                         </CKEditor:CKEditorControl>
                                         <CKEditor:CKEditorControl runat="server" ID="HTEditor1" Width="98%" Height="550px" Visible="False" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle"></td>
-                                    <td align="left" style="height: 29px" class="formItemBgStyle"></td>
+                                    <td class="formItemBgStyleForAlignRight"></td>
+                                    <td style="height: 29px" class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                             </table>
 
@@ -305,13 +305,13 @@
 
                             <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
                                 <tr style="font-size: 10pt">
-                                    <td class="formItemBgStyle" colspan="2" style="height: 10px; text-align: left"><strong>
+                                    <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 10px; "><strong>
                                         <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,GMSQGZL%>"></asp:Label>£º</strong> </td>
                                 </tr>
                                 <tr style="font-size: 10pt">
-                                    <td class="formItemBgStyle" style="">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label101" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º </td>
-                                    <td class="formItemBgStyle" style="text-align: left">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_WFType" runat="server">
                                             <asp:ListItem Value="OfficialDocumentApproval" Text="<%$ Resources:lang,GongWenShenPi%>" />
                                         </asp:DropDownList><asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,GongZuoLiuMuBan%>"></asp:Label>£º<asp:DropDownList ID="DL_TemName" runat="server" DataTextField="TemName" DataValueField="TemName"
@@ -323,21 +323,21 @@
                                             Text="<%$ Resources:lang,ShuaXin%>" /></td>
                                 </tr>
                                 <tr style="font-size: 10pt">
-                                    <td class="formItemBgStyle" style="">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º </td>
-                                    <td class="formItemBgStyle" style="text-align: left">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_WLName" runat="server" Width="387px"></asp:TextBox></td>
                                 </tr>
                                 <tr style="font-size: 10pt">
-                                    <td class="formItemBgStyle" style="">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label54" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£º </td>
-                                    <td class="formItemBgStyle" style="text-align: left">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Description" runat="server" Height="48px" TextMode="MultiLine"
                                             Width="441px"></asp:TextBox></td>
                                 </tr>
                                 <tr style="font-size: 10pt">
-                                    <td class="formItemBgStyle" style=""></td>
-                                    <td class="formItemBgStyle" style="text-align: left; height: 19px;">£¨<asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoChuLiXinXi%>"></asp:Label>£º<asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,DuanXin%>" /><asp:CheckBox
+                                    <td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 19px;">£¨<asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoChuLiXinXi%>"></asp:Label>£º<asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,DuanXin%>" /><asp:CheckBox
                                         ID="CB_Mail" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" /><span style="font-size: 10pt">) </span>
                                         <asp:Button ID="BT_SubmitApply" runat="server" Enabled="False" Text="<%$ Resources:lang,TiJiaoShenQing%>" CssClass="inpu" /><cc1:ModalPopupExtender ID="BT_SubmitApply_ModalPopupExtender" runat="server" Enabled="True"
                                             TargetControlID="BT_SubmitApply" PopupControlID="Panel2" BackgroundCssClass="modalBackground" Y="150"

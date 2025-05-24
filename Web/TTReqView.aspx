@@ -78,7 +78,7 @@
                                         <td style="text-align: right;">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XuQiuMingCheng%>"></asp:Label>£º
                                         </td>
-                                        <td style="" colspan="5" align="left">
+                                        <td  colspan="5" align="left">
                                             <%# DataBinder.Eval(Container.DataItem,"ReqName") %>
                                         </td>
                                     </tr>

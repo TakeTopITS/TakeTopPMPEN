@@ -53,23 +53,23 @@
                         <div style="width:100%;text-align: left;">
                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle" >
                                 <tr>
-                                    <td style="width: 10%;" class="formItemBgStyle">
+                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label2" runat="server" Text="SQLCode"></asp:Label>£º
                                     </td>
-                                    <td class="formItemBgStyle" style="width: 80%;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 80%;">
                                         <asp:TextBox ID="TB_SQLCode" runat="server" Width="99%" Height="300px" TextMode="MultiLine"></asp:TextBox>
                                     </td>
 
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle" style=" width: 10%;">&nbsp;</td>
-                                    <td class="formItemBgStyle" style="width: 80%; text-align: left;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%;">&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 80%; text-align: left;">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,YGZYGDMCYAQKLBNSYDeleteUpdateDropInsertAlterYuJu%>"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle" style=" width: 10%;">&nbsp;</td>
-                                    <td class="formItemBgStyle" style="width: 80%;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%;">&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 80%;">
                                         <table>
                                             <tr>
                                                 <td>

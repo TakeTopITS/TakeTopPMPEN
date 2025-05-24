@@ -64,28 +64,28 @@
                                 <td style="padding: 0px 2px 2px 2px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr style="display: none;">
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,CaiGouBianHao%>"></asp:Label>£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_PurchaseCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,CaiGouMingCheng%>"></asp:Label>£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_PurchaseName" runat="server" ReadOnly="true"></asp:TextBox>
                                                         </td>
                                                     </tr>
 
                                                     <tr>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BaoJiaWenJian%>"></asp:Label>£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="3">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:FileUpload ID="FUP_PurchaseDocument" runat="server" />
                                                             <asp:Button ID="BT_PurchaseFile" runat="server" Text="<%$ Resources:lang,ShangChuan%>" CssClass="inpu" OnClick="BT_PurchaseFile_Click" /><br />
                                                             <asp:Literal ID="LT_PurchaseDocument" runat="server"></asp:Literal>
@@ -114,7 +114,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,CaiGouWenJianLieBiaoJiLu%>"></asp:Label>&nbsp;&nbsp;
                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_RowCount" runat="server" Text="*"></asp:Label><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>&nbsp;&nbsp;
                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£º&nbsp;&nbsp;

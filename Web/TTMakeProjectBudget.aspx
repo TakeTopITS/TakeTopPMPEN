@@ -58,7 +58,7 @@
                                         <td align="right" style="padding-bottom: 5px;">
                                             <table width="100%">
                                                 <tr>
-                                                    <td align="right" style=" padding-right:10px;">
+                                                    <td align="right" style="padding-right:10px;">
                                                         <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                         &nbsp;&nbsp;
                                                         <asp:Button ID="BT_CopyFromParentProject" runat="server" CssClass="inpuLong" OnClick="BT_CopyFromParentProject_Click" OnClientClick="window.scrollTo(0, 0);" Text="<%$ Resources:lang,ChongFuXiangMuFuZhi%>" />
@@ -204,22 +204,22 @@
 
                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyle">
+                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbAccount" runat="server" Text="<%$ Resources:lang,Account%>"></asp:Label>
                                         :
                                     </td>
-                                    <td style="width: 35%; text-align: left; height: 19px;" class="formItemBgStyle">
+                                    <td style="width: 35%; text-align: left; height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Account" runat="server" Width="45%"></asp:TextBox>
                                         <asp:DropDownList ID="DL_Account" runat="server" AutoPostBack="True" DataTextField="AccountName"
                                             DataValueField="AccountName" Height="25px" OnSelectedIndexChanged="DL_Account_SelectedIndexChanged">
                                         </asp:DropDownList>
                                         <asp:Label ID="lbl_AccountCode" runat="server" Visible="False"></asp:Label>
                                     </td>
-                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyle">
+                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbAmount" runat="server" Text="<%$ Resources:lang,Amount%>"></asp:Label>
                                         :
                                     </td>
-                                    <td style="height: 25px;" align="left" class="formItemBgStyle">
+                                    <td style="height: 25px;"  class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td>
@@ -233,21 +233,21 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 15%; " class="formItemBgStyle">
+                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_TBStartTime" runat="server" Text="<%$ Resources:lang,shengxiaoshijian%>" />: </td>
-                                    <td style="width: 35%; height: 35px; text-align: left;" class="formItemBgStyle">
+                                    <td style="width: 35%; height: 35px; "  class="formItemBgStyleForAlignLeft"
                                         <asp:TextBox ID="DLC_CreateTime" ReadOnly="false" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_CreateTime"></ajaxToolkit:CalendarExtender>
                                     </td>
-                                    <td style="width: 15%;" class="formItemBgStyle">
+                                    <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,Description%>"></asp:Label>:
                                     </td>
-                                    <td style="text-align: left" class="formItemBgStyle">
+                                    <td  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Description" runat="server" Width="99%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="display: none;">
-                                    <td style="width: 15%; height: 1px;" class="formItemBgStyle"></td>
-                                    <td colspan="3" style="" class="formItemBgStyle">
+                                    <td style="width: 15%; height: 1px;" class="formItemBgStyleForAlignLeft"></td>
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_UserName" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_ProjectID" runat="server" Visible="False"></asp:Label>
@@ -286,7 +286,7 @@
                             </table>
                             <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td width="220px" align="left" class="formItemBgStyle">
+                                    <td width="220px"  class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="BT_AllMember" runat="server" Width="220px" OnClick="BT_AllMember_Click"
                                             Text="<%$ Resources:lang,SuoYouXiangMuFeiYong%>" />
                                         <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
@@ -297,7 +297,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DataList ID="DataList1" runat="server" CellPadding="0" ForeColor="#333333" Width="100%">
                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                             <HeaderTemplate>

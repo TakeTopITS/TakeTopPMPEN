@@ -68,10 +68,10 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="1000px">
                                     <tr>
-                                        <td align="left" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhaoBiaoWenJianLieBiao%>"></asp:Label>£º</td>
+                                        <td   class="formItemBgStyleForAlignLeft">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhaoBiaoWenJianLieBiao%>"></asp:Label>£º</td>
                                     </tr>
                                     <tr>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <table width="98%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                 <tr>
                                                     <td>

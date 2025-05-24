@@ -219,12 +219,12 @@
                                 <td valign="top" style="padding-top: 5px;">
                                     <table style="width: 2000px;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-weight: bold; font-size: 11pt; display: none">
-                                            <td style="text-align: left" class="formItemBgStyle"></td>
+                                            <td  class="formItemBgStyleForAlignLeft"></td>
                                         </tr>
                                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                             <ContentTemplate>
                                                 <tr>
-                                                    <td align="left" class="formItemBgStyle" rowspan="5">
+                                                    <td class="formItemBgStyleForAlignLeft" rowspan="5">
                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LiuChengLeiXing%>"></asp:Label>£º
                                                             <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="Type" DataValueField="Type"
                                                                 Width="150px" AutoPostBack="true" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
@@ -241,7 +241,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                    <td  class="formItemBgStyleForAlignLeft">
 
                                                         <asp:Button ID="BT_Save" class="inpu" runat="server" Text="<%$ Resources:lang,BaoCun%>" />
                                                         <asp:Label ID="LBL_Description" runat="server" Text=""></asp:Label>
@@ -257,13 +257,13 @@
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>£º</span><br />
                                                         <textarea id="TXT_Comment" cols="70" rows="4" runat="server"></textarea>
                                                     </td>
-                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                    <td  class="formItemBgStyleForAlignLeft">
                                                         <span style="font-size: 11pt">
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GuanLianWebService%>"></asp:Label>£º</span><br />
                                                         <select name="DL_WebService" id="DL_WebService" size="5" multiple style="height: 500px!important; width: 150px;" runat="server">
                                                         </select>
                                                     </td>
-                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                    <td  class="formItemBgStyleForAlignLeft">
                                                         <span style="font-size: 11pt">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SuoYouWebService%>"></asp:Label>£º</span><br />
                                                         <asp:ListBox ID="LIB_WebService" name="LIB_WebService" runat="server" DataTextField="WebServiceName" DataValueField="WebServiceName"

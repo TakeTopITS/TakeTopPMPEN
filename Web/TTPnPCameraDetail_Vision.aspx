@@ -142,19 +142,19 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-size: 12pt; display: none;">
-                                                        <td align="right" class="formItemBgStyle" colspan="5">
+                                                        <td class="formItemBgStyleForAlignRight" colspan="5">
                                                             <input type="button" class="inpu" value="Add" onclick="window.location.href = 'TTPnPCameraAdd.aspx'" />
                                                         </td>
                                                     </tr>
                                                     <tr style="font-size: 12pt">
-                                                        <td align="left" style="width: 10%;" class="formItemBgStyle">
+                                                        <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
 
                                                             <asp:TreeView ID="TV_DepartMent" runat="server" OnSelectedNodeChanged="TV_DepartMent_SelectedNodeChanged" ShowLines="True" NodeWrap="True">
                                                                 <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                             </asp:TreeView>
 
                                                         </td>
-                                                        <td align="left" style="width: 10%;" class="formItemBgStyle">
+                                                        <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                             <table width="100%" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>
                                                                     <td width="7">
@@ -195,12 +195,12 @@
                                                                 </Columns>
                                                             </asp:DataGrid>
                                                         </td>
-                                                        <td class="formItemBgStyle" width="60%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="60%">
                                                             <label id="LB_Area">
                                                             </label>
                                                             <iframe id="rightCamera" frameborder="0" height="700" name="rightCamera" src="" style="margin-top: 0px;" width="100%"></iframe>
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle" style="width: 10%;">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 10%;">
                                                             <table background="ImagesSkin/main_n_bj.jpg" cellpadding="0" cellspacing="0" width="100%">
                                                                 <tr>
                                                                     <td width="7">
@@ -236,7 +236,7 @@
                                                                 </Columns>
                                                             </asp:DataGrid>
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle" style="width: 10%;">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 10%;">
                                                             <asp:TreeView ID="TV_Organization" runat="server" NodeWrap="True" OnSelectedNodeChanged="TV_Organization_SelectedNodeChanged" ShowLines="True">
                                                                 <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                             </asp:TreeView>

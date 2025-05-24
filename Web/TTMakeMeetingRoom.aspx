@@ -192,34 +192,34 @@
 
                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="733px">
                                 <tr style="display: none;">
-                                    <td align="right" style="width: 150px" class="formItemBgStyle">
+                                    <td style="width: 150px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" style="width: 150px;" class="formItemBgStyle">
+                                    <td  style="width: 150px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HuiYiShiMingCheng%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_RoomName" runat="server" Width="150px" CssClass="shuru"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" style="width: 150px; height: 30px" class="formItemBgStyle">
+                                    <td  style="width: 150px; height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SuoZaiDiDian%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" style="height: 30px" class="formItemBgStyle">
+                                    <td  style="height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Address" runat="server" Width="359px" CssClass="shuru"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle" style="height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                         <asp:TextBox ID="TB_DepartCode" runat="server" Width="80px"></asp:TextBox>
                                         <cc1:ModalPopupExtender ID="TB_DepartCode_ModalPopupExtender" runat="server" BackgroundCssClass="modalBackground" Y="150"
                                             CancelControlID="IMBT_Close" Enabled="True" PopupControlID="Panel1" TargetControlID="TB_DepartCode">
@@ -228,18 +228,18 @@
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" style="width: 150px; height: 30px" class="formItemBgStyle">
+                                    <td  style="width: 150px; height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KeYiRongNaRenShu%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" style="height: 30px" class="formItemBgStyle">
+                                    <td  style="height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Count" runat="server" Width="150px" CssClass="shuru">0</asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" style="width: 150px; height: 30px" class="formItemBgStyle">
+                                    <td  style="width: 150px; height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,HuiYiShiMiaoShu%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" style="height: 30px" class="formItemBgStyle">
+                                    <td  style="height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Note" runat="server" Height="97px" TextMode="MultiLine" Width="360px"
                                             CssClass="shuru"></asp:TextBox>
                                     </td>

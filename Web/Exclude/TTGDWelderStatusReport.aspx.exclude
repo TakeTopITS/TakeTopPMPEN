@@ -56,13 +56,13 @@
                                             <td>
                                                 <table style="width: 80%;" cellpadding="0" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <h2>
                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,HanGongZhuangTaiBaoGaoDaDi%>"></asp:Label></h2>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <font style="color: black;">
                                                                 <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JDDHGDHJJTHZB%>"></asp:Label></font>
                                                         </td>
@@ -75,63 +75,63 @@
                                                 <div style="width: 1300px;">
                                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                         <tr>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DaDiHanGong%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiBie%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HanJieRiQi%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">.<asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DanXianTuHao%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">.<asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DanXianTuHao%>"></asp:Label></th>
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JieTouShuLiang%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ChiCun%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 8%;" class="formItemBgStyle">S/F</th>
-                                                            <th style="text-align: center" class="formItemBgStyle">
+                                                            <th style="width: 8%;" class="formItemBgStyleForAlignLeft">S/F</th>
+                                                            <th  class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,GaiMianHanGong%>"></asp:Label></th>
                                                         </tr>
                                                         <tr>
-                                                            <th style="text-align: center" class="formItemBgStyle" colspan="9">
+                                                            <th  class="formItemBgStyleForAlignLeft" colspan="9">
                                                                 <hr />
                                                             </th>
                                                         </tr>
                                                         <asp:Repeater ID="rptList" runat="server">
                                                             <ItemTemplate>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <font style="color: black;"><%# Container.ItemIndex+1 %></font>&nbsp;<%# Eval("Welders")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("Status")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("RanderTime")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("Isom_no")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("JointNo")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("Mold")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("Size")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("SF")%>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <%# Eval("CoveringWelder1")%>
                                                                     </td>
                                                                 </tr>
                                                             </ItemTemplate>
                                                         </asp:Repeater>
                                                         <tr>
-                                                            <td style="text-align: left" class="formItemBgStyle" colspan="9">
+                                                            <td  class="formItemBgStyleForAlignLeft" colspan="9">
                                                                 <hr />
                                                             </td>
                                                         </tr>

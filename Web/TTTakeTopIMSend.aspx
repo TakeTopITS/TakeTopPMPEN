@@ -77,7 +77,7 @@
                                         <br />
                                         <table cellpadding="2" cellspacing="0" class="formBgStyle" style="width: 98%">
                                             <tr>
-                                                <td class="formItemBgStyle" style="width: 100%; text-align: left;">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 100%; ">
                                                     <span><strong>
                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>£º</strong>
                                                     </span>
@@ -85,7 +85,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle" style="width: 100%; height: 25px; text-align: left;">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 100%; height: 25px; text-align: left;">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:DropDownList ID="DL_DocType" runat="server" DataTextField="Type" DataValueField="ID"
                                                         Width="166px">
                                                     </asp:DropDownList>
@@ -99,7 +99,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle" style="width: 100%; text-align: left;">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 100%; ">
                                                     <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
                                                             <div>

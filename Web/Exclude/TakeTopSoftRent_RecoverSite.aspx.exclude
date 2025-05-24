@@ -58,7 +58,7 @@
         <center>
             <table style="text-align: left;">
                 <tr>
-                    <td class="formItemBgStyle">
+                    <td class="formItemBgStyleForAlignLeft">
                         <div style="top: 29px; width: 100%;">
                             <table width="100%">
                                 <tr>
@@ -87,7 +87,7 @@
                                             <h3>3&nbsp;站点信息</h3>
                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                 <tr>
-                                                    <td class="formItemBgStyle" style="text-align:left;" >
+                                                    <td class="formItemBgStyleForAlignLeft"  >
                                                         平台名称  &nbsp;<font color="#FF0000">*</font>
                                                         <br />
                                                         <asp:TextBox ID="TB_SiteAppSystemName" runat="server" ForeColor="#000000"  Style="width: 350px; height: 30px;" ></asp:TextBox>
@@ -97,7 +97,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                       <td class="formItemBgStyle" style="text-align:left;" >
+                                                       <td class="formItemBgStyleForAlignLeft"  >
                                                            站点名称&nbsp;<font color="#FF0000">*</font>
                                                            <br />
                                                         <asp:TextBox ID="TB_SiteAppName" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;" ></asp:TextBox>
@@ -108,7 +108,7 @@
                                                 </tr>
                                                 <tr >
                                                     
-                                                    <td class="formItemBgStyle" align="left" >
+                                                    <td class="formItemBgStyleForAlignLeft"  >
                                                         <asp:Button ID="BT_Summit" runat="server" CssClass="inpu"  Height="30px" OnClientClick ="displayRelatedUI()"  OnClick="BT_Summit_Click"  Text="恢复站点" />
                                                         <br />
                                                         <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>

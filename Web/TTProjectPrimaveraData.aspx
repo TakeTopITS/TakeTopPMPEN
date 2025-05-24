@@ -62,42 +62,42 @@
                                             <td align="left">
                                                 <table width="50%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XMDCJKBM%>"></asp:Label>
                                                             £º</td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:DropDownList ID="ddl_Code" runat="server" DataTextField="Code" DataValueField="Code">
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="<%$ Resources:lang,DaoChuXiangMuWBS%>" Width="120px" />
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: center">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="<%$ Resources:lang,DaoRuXiangMuWBS%>" Width="120px"  />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XMDRJKBM%>"></asp:Label>
                                                             £º</td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZYEJXMGLPT%>"></asp:Label>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="<%$ Resources:lang,DaoChuXiangMuZuoYe%>" Width="120px" />
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: center">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="<%$ Resources:lang,DaoRuZuoYeShuJu%>" Width="120px" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: center" colspan="2">
+                                                        <td class="formItemBgStyleForAlignLeft" style="text-align: center" colspan="2">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QAZDRXMWBS%>"></asp:Label>
                                                             ¡ª&gt;<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaoRuZuoYeShuJu%>"></asp:Label>¡ª&gt;<asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DRXMFYBZYCJXQWDLSXFZWFDRSJ%>"></asp:Label></td>
-                                                        <td class="formItemBgStyle" style="text-align: center">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="<%$ Resources:lang,DaoChuXiangMuFeiYong%>" Width="120px" />
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: center">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="<%$ Resources:lang,DaoRuXiangMuFeiYong%>"  Width="120px" />
                                                         </td>
                                                     </tr>

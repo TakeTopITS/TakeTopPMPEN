@@ -130,7 +130,7 @@
         <div id="AboveDiv">
                <table width="70%" border="0" align="left" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td style=" padding-left:0px;">
+                        <td style="padding-left:0px;">
                             <img alt="" src="Logo/APPLoginLogo.png"  width="100%" />
                             <br /><br />
                         </td>

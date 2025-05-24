@@ -115,7 +115,7 @@
 
         <table style="width: 100%;">
             <tr>
-                <td style="width: 100%; padding-top: 40px;" class="formItemBgStyle" valign="top" align="left">
+                <td style="width: 100%; padding-top: 40px;" class="formItemBgStyleForAlignLeft" valign="top" align="left">
                     <%-- <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                         <tr>
                             <td width="7">

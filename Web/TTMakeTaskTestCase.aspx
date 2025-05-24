@@ -206,38 +206,38 @@
                                         <table style="width: 90%;" align="left" cellpadding="3" cellspacing="0" class="formBgStyle">
 
                                             <tr>
-                                                <td style="width: 100px; height: 16px;" class="formItemBgStyle">
+                                                <td style="width: 100px; height: 16px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_CaseID" runat="server" Visible="false"></asp:Label>
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YongLiMing%>"></asp:Label>£º
                                                 </td>
-                                                <td style="height: 16px; text-align: left" class="formItemBgStyle">
+                                                <td style="height: 16px; " class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_CaseName" runat="server" Width="95%"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 100px; height: 16px;" class="formItemBgStyle">
+                                                <td style="width: 100px; height: 16px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XiangXiShuoMing%>"></asp:Label>£º
                                                 </td>
-                                                <td style="height: 16px; text-align: left" class="formItemBgStyle">
+                                                <td style="height: 16px; " class="formItemBgStyleForAlignLeft">
                                                     <CKEditor:CKEditorControl ID="HE_Description" runat="server" Toolbar="TextColor|BGColor|Bold|FontSize|Image" Height="150px" Width="90%" Visible="false" />
                                                     <CKEditor:CKEditorControl runat="server" ID="HT_Description" Toolbar="TextColor|BGColor|Bold|FontSize|Image" Width="90%" Height="150px" Visible="false" />
 
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 100px; height: 10px;" class="formItemBgStyle">
+                                                <td style="width: 100px; height: 10px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,TongGuoTiaoJian%>"></asp:Label>£º
                                                 </td>
-                                                <td style="height: 10px; text-align: left" class="formItemBgStyle">
+                                                <td style="height: 10px; " class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_Requisite" runat="server" Height="44px" TextMode="MultiLine"
                                                         Width="95%"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 100px;" class="formItemBgStyle">
+                                                <td style="width: 100px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                 </td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:DropDownList ID="DL_Status" runat="server" DataTextField="HomeName" DataValueField="Status"
                                                         Width="100px">
                                                     </asp:DropDownList>

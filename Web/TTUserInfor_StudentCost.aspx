@@ -64,19 +64,19 @@
                                                         <table class="formBgStyle" style="width: 98%; text-align: left;" cellpadding="3"
                                                             cellspacing="0">
                                                             <tr>
-                                                                <td style="width: 25%;" class="formItemBgStyle">
+                                                                <td style="width: 25%;" class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NianJi%>"></asp:Label>
                                                                 </td>
-                                                                <td class="formItemBgStyle">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:DropDownList ID="DDL_ProjectMemberGrade" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_ProjectMemberGrade_SelectedIndexChanged"></asp:DropDownList>
                                                                 </td>
 
                                                             </tr>
                                                             <tr>
-                                                                <td class="formItemBgStyle">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BanJi%>"></asp:Label>
                                                                 </td>
-                                                                <td class="formItemBgStyle">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:DropDownList ID="DDL_ProjectMemberClass" runat="server"></asp:DropDownList>
                                                                     <%--<br>
                                                                     <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="²é Ñ¯" />--%>
@@ -86,7 +86,7 @@
 
 
                                                             <tr>
-                                                                <td class="formItemBgStyle" colspan="3" style="text-align: center">
+                                                                <td class="formItemBgStyleForAlignLeft" colspan="3" >
                                                                     <asp:Button ID="BT_Add" runat="server" OnClick="BT_Add_Click" CssClass="inpu" Text="<%$ Resources:lang,ShengChengShouFei%>" />
                                                             </tr>
                                                         </table>
@@ -95,10 +95,10 @@
                                                     <td>
                                                         <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                             <tr>
-                                                                <td align="left" class="formItemBgStyle">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XueShengMingChen%>"></asp:Label>£º<asp:TextBox ID="txt_Name" runat="server" Width="80px"></asp:TextBox>
                                                                 </td>
-                                                                <td align="left" class="formItemBgStyle" style="vertical-align: middle; text-align: center">
+                                                                <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle; text-align: center">
                                                                     <asp:Button ID="BT_Query" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Query_Click" />
                                                                 </td>
                                                             </tr>

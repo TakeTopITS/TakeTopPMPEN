@@ -620,19 +620,19 @@
 
                                                                             <tr>
 
-                                                                                <td style="width: 15%; " class="formItemBgStyle">
+                                                                                <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
 
                                                                                     <span>
 
                                                                                         <asp:Label ID="LB_ProjectName" runat="server" Text="<%$ Resources:lang,ProjectName %>"></asp:Label>:</span>
                                                                                 </td>
 
-                                                                                <td style="width: 35%; text-align: left;" class="formItemBgStyle">
+                                                                                <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
 
                                                                                     <asp:TextBox ID="TB_ProjectName" runat="server" Width="95%" Font-Size="10pt"></asp:TextBox>
                                                                                 </td>
 
-                                                                                <td style="width: 15%;" align="left" class="formItemBgStyle">
+                                                                                <td style="width: 15%;"  class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Button ID="BT_HazyFind" runat="server" OnClick="BT_HazyFind_Click" Text="<%$ Resources:lang,FuzzySearch %>"
                                                                                         Font-Size="10pt" CssClass="inpuLong" />
@@ -642,19 +642,19 @@
 
                                                                             <tr>
 
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <span>
 
                                                                                         <asp:Label ID="LB_ProjectID" runat="server" Text="<%$ Resources:lang,ProjectID %>"></asp:Label>:</span>
                                                                                 </td>
 
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="TB_ProjectID" runat="server"></asp:TextBox>
                                                                                 </td>
 
-                                                                                <td align="left" class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Button ID="BT_ProjectIDFind" runat="server" Text="<%$ Resources:lang,Find %>"
                                                                                         OnClick="BT_ProjectIDFind_Click" CssClass="inpuLong" />
@@ -664,19 +664,19 @@
 
                                                                             <tr>
 
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <span>
 
                                                                                         <asp:Label ID="LB_ProjectCreator" runat="server" Text="<%$ Resources:lang,ProjectCreator %>"></asp:Label>:</span>
                                                                                 </td>
 
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="TB_MakeUser" runat="server" Width="95%"></asp:TextBox>
                                                                                 </td>
 
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Button ID="BT_MakeUserFind" runat="server" OnClick="BT_MakeUserFind_Click" Text="<%$ Resources:lang,Find %>"
                                                                                         CssClass="inpuLong" />
@@ -686,12 +686,12 @@
 
                                                                             <tr>
 
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Label ID="LB_StartTime" runat="server" Text="<%$ Resources:lang,StartTime %>"></asp:Label>:<br />
                                                                                 </td>
 
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="DLC_BeginDate" runat="server"></asp:TextBox>
 
@@ -699,7 +699,7 @@
                                                                                     </ajaxToolkit:CalendarExtender>
                                                                                 </td>
 
-                                                                                <td rowspan="2" style="vertical-align: middle; text-align: left;" class="formItemBgStyle">
+                                                                                <td rowspan="2" style="vertical-align: middle; "  class="formItemBgStyleForAlignLeft"
 
                                                                                     <asp:Button ID="BT_DateFind" runat="server" OnClick="BT_DateFind_Click" Text="<%$ Resources:lang,Find %>"
                                                                                         CssClass="inpuLong" />
@@ -709,12 +709,12 @@
 
                                                                             <tr>
 
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Label ID="LB_EndTime" runat="server" Text="<%$ Resources:lang,EndTime %>"></asp:Label>:
                                                                                 </td>
 
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="DLC_EndDate" runat="server"></asp:TextBox>
 

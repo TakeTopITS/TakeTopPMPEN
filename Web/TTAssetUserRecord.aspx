@@ -172,58 +172,58 @@
                         <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
                             <table class="formBgStyle" cellpadding="3" cellspacing="0" width="100%">
                                 <tr>
-                                    <td style="width: 15%; " class="formItemBgStyle">
+                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YongHuDaiMa%>"></asp:Label>£º
                                     </td>
-                                    <td style="text-align: left;" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
 
                                         <asp:TextBox ID="TB_UserCode" runat="server" Width="80px"></asp:TextBox>
                                         <asp:Label ID="LB_UserName" runat="server"></asp:Label>
                                         <asp:Button ID="BT_Select" runat="server" Text="<%$ Resources:lang,XuanZhe %>" CssClass="inpu" OnClick="BT_Select_Click" />
 
                                     </td>
-                                    <td class="formItemBgStyle" style="width: 15%; ">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%; ">
                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,CunFangWeiZhi%>"></asp:Label>£º
                                     </td>
-                                    <td class="formItemBgStyle" colspan="3" style="text-align: left;">
+                                    <td class="formItemBgStyleForAlignLeft" colspan="3" >
                                         <asp:DropDownList ID="DL_WareHouse" runat="server" DataTextField="WHName" DataValueField="WHName">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 15%; " class="formItemBgStyle">
+                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 35%; text-align: left;" class="formItemBgStyle">
+                                    <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
                                         <asp:DropDownList ID="DL_Type" runat="server" CssClass="DDList" DataTextField="Type"
                                             DataValueField="Type">
                                         </asp:DropDownList>
                                     </td>
-                                    <td style="width: 15%; " class="formItemBgStyle">
+                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ShuLiang%>"></asp:Label>£º
                                     </td>
-                                    <td style="text-align: left;" class="formItemBgStyle" width="35%">
+                                    <td  class="formItemBgStyleForAlignLeft" width="35%">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Number" runat="server" Width="79px">0.00</NickLee:NumberBox>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td style="width: 170px; " class="formItemBgStyle">
+                                    <td style="width: 170px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,KaiShiShiYongShiJian%>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 200px; text-align: left;" class="formItemBgStyle">
+                                    <td style="width: 200px; "  class="formItemBgStyleForAlignLeft"
 
                                         <asp:TextBox ID="DLC_BeginUseTime" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_BeginUseTime">
                                         </ajaxToolkit:CalendarExtender>
 
                                     </td>
-                                    <td style="width: 183px; " class="formItemBgStyle">
+                                    <td style="width: 183px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JieShuShiShiYongShiJian%>"></asp:Label>
                                         £º
                                     </td>
-                                    <td style="text-align: left; width: 200px;" class="formItemBgStyle">
+                                    <td style="text-align: left; width: 200px;" class="formItemBgStyleForAlignLeft">
 
                                         <asp:TextBox ID="DLC_EndUseTime" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_EndUseTime">
@@ -232,8 +232,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style=" height: 20px;" class="formItemBgStyle"></td>
-                                    <td colspan="3" style="text-align: left; padding-bottom: 10px;" class="formItemBgStyle">
+                                    <td style="height: 20px;" class="formItemBgStyleForAlignLeft"></td>
+                                    <td colspan="3" style="text-align: left; padding-bottom: 10px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="BT_New" runat="server" CssClass="inpu" OnClick="BT_New_Click" Text="<%$ Resources:lang,TiaoPei%>" />
                                         &nbsp; &nbsp;
                                     </td>
@@ -259,7 +259,7 @@
                         <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
                             <table>
                                 <tr>
-                                    <td class="formItemBgStyle" rowspan="11" style="padding: 5px 5px 5px 5px;">
+                                    <td class="formItemBgStyleForAlignLeft" rowspan="11" style="padding: 5px 5px 5px 5px;">
                                         <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
                                             ShowLines="True" Width="220px">
                                             <RootNodeStyle CssClass="rootNode" />
@@ -268,7 +268,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td width="170px" class="formItemBgStyle" rowspan="11" style="padding: 5px 5px 5px 5px;" valign="top">
+                                    <td width="170px" class="formItemBgStyleForAlignLeft" rowspan="11" style="padding: 5px 5px 5px 5px;" valign="top">
                                         <table width="170px" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                             <tr>
                                                 <td width="7">

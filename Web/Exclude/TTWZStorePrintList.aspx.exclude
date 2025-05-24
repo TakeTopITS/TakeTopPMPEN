@@ -30,21 +30,21 @@
         <div>
             <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td align="left" class="formItemBgStyle">
+                    <td class="formItemBgStyleForAlignLeft">
                         <table class="formBgStyle" style="width: 60%;">
                             <tr>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>£º</td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:DropDownList ID="DDL_StockCode" runat="server" DataTextField="StockCode" DataValueField="StockCode"></asp:DropDownList>
                                 </td>
-                                <td class="formItemBgStyle" colspan="3">
+                                <td class="formItemBgStyleForAlignLeft" colspan="3">
                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>£º<asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;&nbsp;
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>£º<asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="formItemBgStyle">
+                                <td colspan="4" class="formItemBgStyleForAlignLeft">
                                     <asp:Button ID="BT_Seach" runat="server" Text="<%$ Resources:lang,ChaXun%>" CssClass="inpu" OnClick="BT_Seach_Click" />&nbsp;
                                     <input type="button" value="´òÓ¡Ô¤ÀÀ" class="inpuLong" onclick="clickPrint();" />
                                 </td>
@@ -158,35 +158,35 @@
                     </td>
                 </tr>
                 <tr style="display: none;">
-                    <td class="formItemBgStyle">
+                    <td class="formItemBgStyleForAlignLeft">
                         <table class="formBgStyle" style="width: 100%;">
                             <tr>
-                                <td class="formItemBgStyle" colspan="9">
+                                <td class="formItemBgStyleForAlignLeft" colspan="9">
                                     <hr />
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" class="formItemBgStyle">
+                                <td colspan="2" class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,HeJi%>"></asp:Label>£º</td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Literal ID="LT_PreviousMoney" runat="server"></asp:Literal>
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Literal ID="LT_CurrentCollectMoney" runat="server"></asp:Literal>
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Literal ID="LT_TotalCollectMoney" runat="server"></asp:Literal>
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Literal ID="LT_CurrentSendMoney" runat="server"></asp:Literal>
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Literal ID="LT_TotalSendMoney" runat="server"></asp:Literal>
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Literal ID="LT_CurrentMoney" runat="server"></asp:Literal>
                                 </td>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Literal ID="LT_AvgMoney" runat="server"></asp:Literal>
                                 </td>
                             </tr>

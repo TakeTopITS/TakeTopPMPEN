@@ -122,35 +122,35 @@
                                             <td>
                                                 <table width="100%" class="formBgStyle">
                                                     <tr>
-                                                        <td align="right" width="80px" class="formItemBgStyle">
+                                                        <td width="80px" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ContentID" runat="server"></asp:Label>
 
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignRight">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_Title" runat="server" Width="95%"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td  valign="top" class="formItemBgStyle">
+                                                        <td  valign="top" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <CKEditor:CKEditorControl ID="CKEditor1" Width="98%" Height="550px" runat="server" Visible="False">
                                                             </CKEditor:CKEditorControl>
                                                             <CKEditor:CKEditorControl runat="server" ID="HTEditor1" Width="98%" Height="550px" Visible="False" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right" style="width: 50px; height: 29px" class="formItemBgStyle"></td>
-                                                        <td align="left" style="height: 29px" class="formItemBgStyle">
+                                                        <td style="width: 50px; height: 29px" class="formItemBgStyleForAlignLeft"></td>
+                                                        <td style="height: 29px" class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="BT_Add" runat="server" Text="<%$ Resources:lang,XinZeng%>" CssClass="inpu" OnClick="BT_Add_Click" />
                                                             &nbsp;<asp:Button ID="BT_Update" runat="server" Enabled="false" CssClass="inpu" OnClick="BT_Update_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                             &nbsp;<asp:Button ID="BT_Delete" runat="server" Enabled="false" CssClass="inpu" OnClick="BT_Delete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />

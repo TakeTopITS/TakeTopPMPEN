@@ -223,20 +223,20 @@
                         <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
                             <table style="width: 95%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td style="width: 10%; " class="formItemBgStyle">
+                                    <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_RiskLevel" runat="server" Text="<%$ Resources:lang,Level%>"></asp:Label>
                                         :</td>
-                                    <td style="width: 20%; text-align: left;" class="formItemBgStyle">
+                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
                                         <asp:DropDownList ID="DL_RiskLevel" runat="server">
                                             <asp:ListItem Value="Medium" Text="<%$ Resources:lang,Zhong%>" />
                                             <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao%>" />
                                             <asp:ListItem Value="Low" Text="<%$ Resources:lang,Di2%>" />
                                         </asp:DropDownList>
                                     </td>
-                                    <td style="width: 10%;" class="formItemBgStyle">
+                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbStatus" runat="server" Text="<%$ Resources:lang,Status%>"></asp:Label>:
                                     </td>
-                                    <td colspan ="3" class="formItemBgStyle" align="left">
+                                    <td colspan ="3" class="formItemBgStyleForAlignLeft" >
                                         <asp:DropDownList ID="DL_Status" runat="server">
                                             <asp:ListItem Value="Potential" Text="<%$ Resources:lang,QianZai%>" />
                                             <asp:ListItem Value="Exposed" Text="<%$ Resources:lang,BaoLu%>" />
@@ -248,44 +248,44 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbRiskName" runat="server" Text="<%$ Resources:lang,Name%>"></asp:Label>:
                                     </td>
-                                    <td colspan="5" style="text-align: left;" class="formItemBgStyle">
+                                    <td colspan="5"  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_RiskName" runat="server" Width="90%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style=" height: 61px;" class="formItemBgStyle">
+                                    <td style="height: 61px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,Description%>"></asp:Label>:
                                     </td>
-                                    <td colspan="5" style="height: 61px; text-align: left;" class="formItemBgStyle">
+                                    <td colspan="5" style="height: 61px; "  class="formItemBgStyleForAlignLeft"
                                         <asp:TextBox ID="TB_RiskDetail" runat="server" Height="50px" TextMode="MultiLine"
                                             Width="90%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbPredictEffectTime" runat="server" Text="<%$ Resources:lang,PredictEffectTime%>"></asp:Label>:
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
 
                                         <asp:TextBox ID="DLC_EffectDate" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_EffectDate">
                                         </ajaxToolkit:CalendarExtender>
 
                                     </td>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbFindTime" runat="server" Text="<%$ Resources:lang,DiscoveryTime%>"></asp:Label>:
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
 
                                         <asp:TextBox ID="DLC_FindDate" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_FindDate">
                                         </ajaxToolkit:CalendarExtender>
 
                                     </td>
-                                    <td style="text-align: Left;" class="formItemBgStyle" colspan="2"></td>
+                                    <td  class="formItemBgStyleForAlignLeft" colspan="2"></td>
                                 </tr>
 
                             </table>
@@ -310,7 +310,7 @@
                                     <td align="left">
                                         <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td colspan="5" style="text-align: left; height: 4px;" class="formItemBgStyle">
+                                                <td colspan="5" style="height: 4px;" class="formItemBgStyleForAlignLeft">
 
                                                     <asp:HyperLink ID="HL_RiskToTask" runat="server" Enabled="false"
                                                         Target="_blank" Text="<%$ Resources:lang,ToTask%>"></asp:HyperLink>

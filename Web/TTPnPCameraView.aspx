@@ -55,7 +55,7 @@
                                 <td valign="top" style="padding-top: 5px;">
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt;">
-                                            <td align="right" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignRight">
                                                 <span>
                                                     <input type="radio" value="Department" id="RD_Department" name="add" checked="checked" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZuZhiJiaGou%>"></asp:Label></span>
                                                 <span>
@@ -63,7 +63,7 @@
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">
-                                            <td align="left" style="width: 10%;" class="formItemBgStyle">
+                                            <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                 <asp:DataGrid ID="DG_CameraList" runat="server" AllowPaging="False" AutoGenerateColumns="False"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                     Width="100%">

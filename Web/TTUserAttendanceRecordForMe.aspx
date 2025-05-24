@@ -282,7 +282,7 @@
                                                 </table>
                                                 <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                          
                                                             <asp:Label ID="Label2120" runat="server" Text="<%$ Resources:lang,WoDeKaoQinJiLu%>" ></asp:Label>
                                                             <asp:DropDownList ID="DL_DisplayType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_DisplayType_SelectedIndexChanged">
@@ -292,7 +292,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>
                                                                     <td width="7">
@@ -538,7 +538,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr style="display: none;">
-                                                        <td style="width: 100%; text-align: left;" class="formItemBgStyle">&nbsp; &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                                        <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"&nbsp; &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                                             <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label><asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>

@@ -356,7 +356,7 @@
                                                 </table>
                                                 <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td colspan="3" align="left" class="formItemBgStyle">
+                                                        <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                                             <table>
 
                                                                 <tr>
@@ -396,13 +396,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td colspan="3" class="formItemBgStyle">
+                                                        <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                             <span style="color: #CC0000;">
                                                                 <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,GSSL0903ZYFZHFW%>"></asp:Label></span>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" colspan="3" class="formItemBgStyle">
+                                                        <td  colspan="3" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label285" runat="server" Text="<%$ Resources:lang,ZaoBanShangBanKaiShiShiJian%>"></asp:Label>
                                                             <asp:TextBox ID="TB_MCheckInStart" runat="server" Width="50px"></asp:TextBox>
                                                             &nbsp;<asp:Label ID="Label286" runat="server" Text="<%$ Resources:lang,ZaoBanShangBanJieShuShiJian%>"></asp:Label>
@@ -425,7 +425,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" colspan="3" class="formItemBgStyle">
+                                                        <td  colspan="3" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label289" runat="server" Text="<%$ Resources:lang,ZhongBanShangBanKaiShiShiJian%>"></asp:Label>
                                                             <asp:TextBox ID="TB_ACheckInStart" runat="server" Width="50px"></asp:TextBox>
                                                             &nbsp;<asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ZhongBanShangBanJieShuShiJian%>"></asp:Label>
@@ -447,7 +447,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" colspan="3" class="formItemBgStyle">
+                                                        <td  colspan="3" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label293" runat="server" Text="<%$ Resources:lang,WanBanShangBanKaiShiShiJian%>"></asp:Label>
                                                             <asp:TextBox ID="TB_NCheckInStart" runat="server" Width="50px"></asp:TextBox>
                                                             &nbsp;<asp:Label ID="Label294" runat="server" Text="<%$ Resources:lang,WanBanShangBanJieShuShiJian%>"></asp:Label>
@@ -469,7 +469,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" colspan="3" class="formItemBgStyle">
+                                                        <td  colspan="3" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label297" runat="server" Text="<%$ Resources:lang,JiaBanShangBanKaiShiShiJian%>"></asp:Label>
                                                             <asp:TextBox ID="TB_OCheckInStart" runat="server" Width="50px"></asp:TextBox>
                                                             &nbsp;<asp:Label ID="Label298" runat="server" Text="<%$ Resources:lang,JiaBanShangBanJieShuShiJian%>"></asp:Label>
@@ -491,7 +491,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" colspan="3" class="formItemBgStyle">
+                                                        <td  colspan="3" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Longitude%>"></asp:Label>
                                                             <asp:TextBox ID="TB_Longitude" runat="server" Width="100px" Text="0"></asp:TextBox>
                                                             <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,Latitude%>"></asp:Label>
@@ -508,12 +508,12 @@
                                                         
                                                     </tr>
                                                     <tr>
-                                                        <td align="left"  colspan="3" class="formItemBgStyle">
+                                                        <td align="left"  colspan="3" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label2120" runat="server" Text="<%$ Resources:lang,ZDYBZGDWZBGDYYKQDYG%>"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: Left;" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="BT_AddUserAttendanceRule" runat="server" CssClass="inpu"
                                                                 Enabled="False" OnClick="BT_AddUserAttendanceRule_Click" Text="<%$ Resources:lang,XinZeng%>" />
                                                             &nbsp;<asp:Button ID="BT_UpdateUserAttendanceRule" runat="server" CssClass="inpu"
@@ -522,8 +522,8 @@
                                                                 Enabled="False" OnClick="BT_DeleteUserAttendanceRule_Click" Text="<%$ Resources:lang,ShanChu%>" />
                                                             &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_PaiBanRule_Click"  Text="ее╟Ю" />
                                                         </td>
-                                                        <td style="text-align: Right;" width="130px" class="formItemBgStyle"></td>
-                                                        <td style="text-align: left;" width="130px" class="formItemBgStyle"></td>
+                                                        <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
+                                                        <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
                                                     </tr>
                                                 </table>
                                         </tr>

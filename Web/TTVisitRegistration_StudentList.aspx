@@ -72,7 +72,7 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>£º&nbsp;
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>£º&nbsp;
                                                             <%--<asp:Button ID="BT_NewAdd" runat="server" CssClass="inpu" Enabled="false" Text="ÐÂÔö°Ý·Ã" OnClick="BT_NewAdd_Click" />&nbsp;--%>
                                                             <input type="button" value="New" class="inpuLong" onclick="window.location.href='TTVisitRegistration_StudentEdit.aspx'" />
                                                             
@@ -86,7 +86,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                  
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>

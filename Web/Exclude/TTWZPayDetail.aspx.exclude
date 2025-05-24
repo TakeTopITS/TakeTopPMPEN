@@ -56,17 +56,17 @@
                                             <td>
                                                 <table style="width: 80%;" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <table class="formBgStyle" width="40%">
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaFuKuan%>"></asp:Label> </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_PlanMoney" runat="server"></asp:TextBox>
                                                                     </td>
-                                                                    <td style="text-align: left; display: none;" class="formItemBgStyle">
+                                                                    <td style="display: none;" class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongTu%>"></asp:Label></td>
-                                                                    <td style="text-align: left; display: none;" class="formItemBgStyle">
+                                                                    <td style="display: none;" class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DDL_UseWay" runat="server">
                                                                             <asp:ListItem Text="" Value=""/>
                                                                             <asp:ListItem Text="<%$ Resources:lang,FuCaiLiaoKuan%>" Value="¸¶²ÄÁÏ¿î"/>
@@ -76,7 +76,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: center" class="formItemBgStyle" colspan="4">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="4">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                                         <asp:Button ID="BT_Reset" runat="server" Text="<%$ Resources:lang,QuXiao%>" CssClass="inpu" OnClick="BT_Reset_Click" />&nbsp;
                                                                         <asp:Button ID="BT_MoreAdd" runat="server" Text="<%$ Resources:lang,HeTongBiaoZhu%>" CssClass="inpu" OnClick="BT_MoreAdd_Click" />&nbsp;
@@ -86,7 +86,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr style="height: 350px;">
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
 
                                                             <div style="width: 1500px;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
@@ -219,7 +219,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
 
                                                             <div style="width: 2200px;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">

@@ -82,25 +82,25 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyle" valign="top">
+                                                        <td style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle">
                                                                 <tr style="display: none;">
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaShuLiang%>"></asp:Label>£º</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_PlanNumber" runat="server"></asp:TextBox>&nbsp;<asp:Button ID="btnPlan" runat="server" Text="<%$ Resources:lang,HuanSuanShuLiang%>" CssClass="inpu" OnClick="btnPlan_Click" />
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HuanSuanShuLiang%>"></asp:Label></td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_ConvertPlanNumber" runat="server"></asp:TextBox>&nbsp;<asp:Button ID="btnConvert" runat="server" Text="<%$ Resources:lang,JiHuaShuLiang%>" CssClass="inpu" OnClick="btnConvert_Click" />
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label></td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_Remark" runat="server"></asp:TextBox>
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;
                                                                         <%--<input type="button" value="·µ»Ø" id="Button1" class="inpu" onclick="window.location.href = 'TTWZPlanList.aspx'" />--%>
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
@@ -108,7 +108,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="7" style="text-align: left" class="formItemBgStyle">
+                                                                    <td colspan="7"  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£º<asp:Button ID="BT_NewEdit" runat="server" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" CssClass="inpu" />&nbsp;
                                                                         <asp:Button ID="BT_NewDelete" runat="server" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_NewDelete_Click" CssClass="inpu" OnClientClick="return confirm(getDeleteMsgByLangCode())"/>&nbsp;
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -123,10 +123,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr style="height: 200px;">
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyle" valign="top">
+                                                        <td style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <div style="width: 1600px;">
                                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                 <tr>
@@ -371,10 +371,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyle" valign="top">
+                                                        <td style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="width: 180px">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="width: 180px">
                                                                         <asp:TreeView ID="TV_Type" runat="server" ShowLines="True" NodeWrap="True" OnSelectedNodeChanged="TV_Type_SelectedNodeChanged">
                                                                             <RootNodeStyle CssClass="rootNode" />
                                                                             <NodeStyle CssClass="treeNode" />
@@ -382,7 +382,7 @@
                                                                             <SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                                         </asp:TreeView>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <div style="width: 1200px;">
 
                                                                             <table border="0" cellspacing="0" cellpadding="0">

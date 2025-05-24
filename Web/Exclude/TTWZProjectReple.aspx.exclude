@@ -131,13 +131,13 @@
                                 <td style="padding: 5px 5px 5px 5px;" valign="top">
                                     <table width="100%" cellpadding="1" cellspacing="0" style="word-break: break-all; word-wrap: break-word;">
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                 <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value=""/>
                                                                 <asp:ListItem Text="<%$ Resources:lang,LuRu%>" Value="Â¼Èë"/>
@@ -146,19 +146,19 @@
                                                                 <asp:ListItem Text="<%$ Resources:lang,HeXiao%>" Value="ºËÏú"/>
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_ProjectCode" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_ProjectName" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="btnSeach" runat="server" Text="<%$ Resources:lang,ChaXun%>" CssClass="inpu" OnClick="btnSeach_Click" />
                                                         </td>
                                                     </tr>
@@ -167,11 +167,11 @@
 
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table style="width: 30%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
 
-                                                        <td align="left" class="formItemBgStyle" colspan="4">&nbsp;
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="4">&nbsp;
                                                             &nbsp;&nbsp;
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LieBiaoPaiXu%>"></asp:Label>£º
                                                             <asp:Button ID="BT_SortProjectCode" CssClass="inpu" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>" OnClick="BT_SortProjectCode_Click" />&nbsp;
@@ -192,7 +192,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,GongChengXiangMuJiLuGong%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>&nbsp;
                                                 <asp:Button ID="BT_NewEdit" CssClass="inpu" runat="server" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" />&nbsp;
                                                 <asp:Button ID="BT_NewStart" CssClass="inpu" runat="server" Text="<%$ Resources:lang,KaiGong%>" OnClick="BT_NewStart_Click" Enabled="true" />&nbsp;

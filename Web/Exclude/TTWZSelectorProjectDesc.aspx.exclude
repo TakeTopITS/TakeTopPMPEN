@@ -42,29 +42,29 @@
                                     <td valign="top" style="padding-top: 5px;">
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>£º
                                                 </td>
-                                                <td class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TXT_ProjectCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                 </td>
-                                                <td class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>£º
                                                 </td>
-                                                <td class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TXT_ProjectName" runat="server" ReadOnly="true"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuMiaoShu%>"></asp:Label>£º
                                                 </td>
-                                                <td class="formItemBgStyle" colspan="3">
+                                                <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                     <textarea cols="50" rows="4" runat="server" id="TXT_ProjectDesc" readonly="readonly"></textarea>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle" colspan="4">
+                                                <td class="formItemBgStyleForAlignLeft" colspan="4">
                                                     <div style="text-align: center">
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
                                                             type="button" value="¹Ø±Õ" />

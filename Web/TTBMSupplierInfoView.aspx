@@ -304,33 +304,33 @@
                                                     <tr>
                                                         <td class="auto-style2" style="text-align: right;">
                                                             <asp:Label ID="Label90" runat="server" Text="<%$ Resources:lang,DiZhi%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyle" align="left" colspan="3"><asp:Label ID="lbl_Address" runat="server"></asp:Label>
+                                                        <td class="formItemBgStyleForAlignLeft"  colspan="3"><asp:Label ID="lbl_Address" runat="server"></asp:Label>
                                                         </td>
                                                         <td class="auto-style6" align="right">
                                                             <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,QiYeWangZhi%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_WebUrl" runat="server"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="auto-style2" style="text-align: right;">
                                                             <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,GongHuoJingYing%>"></asp:Label><br /> <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,FanWei%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_SupplyScope" runat="server"></asp:Label>
                                                         </td>
                                                         <td align="right" class="auto-style6">
                                                             <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,QiYeWangZhi%>"></asp:Label><br /> <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,FanWei%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3"><asp:Label ID="lbl_Qualification" runat="server"></asp:Label>
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3"><asp:Label ID="lbl_Qualification" runat="server"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="auto-style2" style="text-align: right;">
                                                             <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,FenBaoZhuanYe%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_SubcontractProfessional" runat="server"></asp:Label>
                                                         </td>
                                                         <td align="right" class="auto-style6">&nbsp;</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">&nbsp;</td>
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <td align="right" class="auto-style2">
@@ -358,7 +358,7 @@
                                                     <tr>
                                                         <td class="auto-style2" style="text-align: right;">
                                                             <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_Remark" runat="server"></asp:Label>
                                                         </td>
                                                         <td align="right" class="auto-style6">

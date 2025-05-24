@@ -81,18 +81,18 @@
                                                                         <br />
                                                                         <table class="formBgStyle" style="width: 98%;" cellpadding="3" cellspacing="0">
                                                                             <tr>
-                                                                                <td style="width: 100px;  height: 28px;" class="formItemBgStyle">
+                                                                                <td style="width: 100px;  height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="width: 20%; text-align: left; height: 28px;" class="formItemBgStyle">
+                                                                                <td style="width: 20%; text-align: left; height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_TaskNO" runat="server" Width="60px" Enabled="False"></asp:Label>
                                                                                 </td>
-                                                                                <td style="width: 20%;  height: 28px;" class="formItemBgStyle">
+                                                                                <td style="width: 20%;  height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                                                      <asp:DropDownList ID="DL_Type" runat="server" DataTextField="Type" DataValueField="Type">
                                                                                     </asp:DropDownList>
                                                                                 </td>
-                                                                                <td style=" height: 28px;" class="formItemBgStyle">
+                                                                                <td style="height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YouXianJi%>"></asp:Label>£º<asp:DropDownList ID="DL_Priority" runat="server" DataTextField="Priority" DataValueField="Priority">
 
                                                                                         <asp:ListItem Value="Normal" Text="<%$ Resources:lang,PuTong %>" ></asp:ListItem>
@@ -103,10 +103,10 @@
                                                                                 </td>
 
 
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,WanChengChengDu%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left;" class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="TB_FinishPercent" Enabled="false" runat="server" Width="60px" OnBlur="" OnFocus=""
                                                                                         OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                                                     %
@@ -114,44 +114,44 @@
 
                                                                             </tr>
                                                                             <tr>
-                                                                                <td rowspan="2" style="" class="formItemBgStyle">
+                                                                                <td rowspan="2"  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,RenWu%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td colspan="3" rowspan="2" style="text-align: left" class="formItemBgStyle">
+                                                                                <td colspan="3" rowspan="2"  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="TB_Task" runat="server" Width="90%" Height="50px" TextMode="MultiLine"></asp:TextBox>
                                                                                 </td>
-                                                                                <td style="height: 28px;" class="formItemBgStyle">
+                                                                                <td style="height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,GongShiYuSuan%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="height: 28px; text-align: left" class="formItemBgStyle">
+                                                                                <td style="height: 28px; " class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ManHour" runat="server" Width="80px" OnBlur="" OnFocus=""
                                                                                         OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
 
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShiJiGongShi%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_RealManHour" runat="server" Width="80px" Enabled="False"
                                                                                         OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                                                 </td>
 
                                                                             </tr>
                                                                             <tr>
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="width: 170px; text-align: left" class="formItemBgStyle">
+                                                                                <td style="width: 170px; " class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_BeginDate">
                                                                                     </ajaxToolkit:CalendarExtender>
                                                                                 </td>
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="width: 170px; text-align: left;" class="formItemBgStyle">
+                                                                                <td style="width: 170px; "  class="formItemBgStyleForAlignLeft"
                                                                                     <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"
                                                                                         runat="server" TargetControlID="DLC_EndDate">
@@ -159,10 +159,10 @@
                                                                                 </td>
 
 
-                                                                                <td style="width: 10%;  height: 28px;" class="formItemBgStyle">
+                                                                                <td style="width: 10%;  height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FeiYongYuSuan%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left; height: 28px;" class="formItemBgStyle">
+                                                                                <td style="text-align: left; height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="TB_Budget" runat="server" Width="80px" OnBlur="" OnFocus=""
                                                                                         OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                                                 </td>
@@ -170,36 +170,36 @@
 
                                                                             </tr>
                                                                             <tr>
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left; width: 170px;" class="formItemBgStyle">
+                                                                                <td style="text-align: left; width: 170px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:DropDownList ID="DL_Status" runat="server" DataTextField="HomeName" DataValueField="Status">
                                                                                     </asp:DropDownList>
                                                                                 </td>
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JianLiShiJian%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="width: 170px; text-align: left;" class="formItemBgStyle">
+                                                                                <td style="width: 170px; "  class="formItemBgStyleForAlignLeft"
                                                                                     <asp:Label ID="LB_MakeDate" runat="server" Font-Size="10pt" Width="188px"></asp:Label>
                                                                                 </td>
 
 
-                                                                                <td style="height: 28px;" class="formItemBgStyle">
+                                                                                <td style="height: 28px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShiJiFeiYong%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="height: 28px; text-align: left" class="formItemBgStyle">
+                                                                                <td style="height: 28px; " class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="TB_Expense" runat="server" Enabled="False" Width="80px" OnBlur=""
                                                                                         OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                                                 </td>
 
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="width: 100px;  height: 2px;" class="formItemBgStyle">
+                                                                                <td style="width: 100px;  height: 2px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_Status" runat="server" Visible="False"></asp:Label>
 
                                                                                 </td>
-                                                                                <td colspan="5" style="text-align: left; height: 2px;" class="formItemBgStyle">&nbsp;
+                                                                                <td colspan="5" style="text-align: left; height: 2px;" class="formItemBgStyleForAlignLeft">&nbsp;
                                                                                         <table>
                                                                                            <tr>
                                                                                                <td>
@@ -268,33 +268,33 @@
 
                                                                         <table class="formBgStyle" style="width: 80%" cellpadding="3" cellspacing="0">
                                                                             <tr>
-                                                                                <td colspan="5" style="text-align: left;" class="formItemBgStyle">
+                                                                                <td colspan="5"  class="formItemBgStyleForAlignLeft">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,FPXMRWGXMZCY %>"></asp:Label>£º</strong>
                                                                                  </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style=" width: 100px;" class="formItemBgStyle">
+                                                                                <td style="width: 100px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ShouLiRen %>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left; width: 20%;" class="formItemBgStyle">
+                                                                                <td style="text-align: left; width: 20%;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:DropDownList ID="DL_OperatorCode" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                                         Width="119px">
                                                                                     </asp:DropDownList>
                                                                                 </td>
-                                                                                <td style=" width: 15%;" class="formItemBgStyle">
+                                                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,LeiXingShi %>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left;" colspan="2" class="formItemBgStyle">
+                                                                                <td style="text-align: left;" colspan="2" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:DropDownList ID="DL_RecordType" runat="server" DataTextField="Type" DataValueField="Type">
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,GongZuoYaoQiu %>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td align="left" colspan="4" class="formItemBgStyle">
+                                                                                <td align="left" colspan="4" class="formItemBgStyleForAlignLeft">
                                                                                     <CKEditor:CKEditorControl ID="HE_Operation" runat="server" Height="150px" Width="99%" Visible="False" />
                                                                                     <CKEditor:CKEditorControl runat="server" ID="HT_Operation" Width="99%" Height="150px" Visible="False" />
                                                                                     <asp:DropDownList ID="DL_WorkRequest" runat="server" AutoPostBack="True" DataTextField="Operation"
@@ -304,10 +304,10 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,KaiShiShiJian %>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left;" class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="DLC_TaskBegin" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3"
@@ -315,10 +315,10 @@
                                                                                     </ajaxToolkit:CalendarExtender>
 
                                                                                 </td>
-                                                                                <td class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,JieShuShiJian %>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="text-align: left;" class="formItemBgStyle" colspan="2">
+                                                                                <td  class="formItemBgStyleForAlignLeft" colspan="2">
 
                                                                                     <asp:TextBox ID="DLC_TaskEnd" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4"
@@ -329,8 +329,8 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td class="formItemBgStyle"></td>
-                                                                                <td colspan="3" style="text-align: left;" class="formItemBgStyle">
+                                                                                <td class="formItemBgStyleForAlignLeft"></td>
+                                                                                <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Button ID="BT_UpdateAssign" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_UpdateAssign_Click"
                                                                                         Text="<%$ Resources:lang,BaoCun %>" />
                                                                                     &nbsp;<asp:Button ID="BT_DeleteAssign" runat="server" CssClass="inpu" Enabled="False" OnClientClick="return confirm(getDeleteMsgByLangCode())"
@@ -338,11 +338,11 @@
                                                                                     &nbsp;<asp:Button ID="BT_Assign" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_Assign_Click"
                                                                                         Text="<%$ Resources:lang,FenPai %>" />
                                                                                 </td>
-                                                                                <td style="text-align: center" class="formItemBgStyle"></td>
+                                                                                <td class="formItemBgStyleForAlignLeft"></td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="height: 19px;" class="formItemBgStyle"></td>
-                                                                                <td colspan="4" style="height: 19px; text-align: left" class="formItemBgStyle">
+                                                                                <td style="height: 19px;" class="formItemBgStyleForAlignLeft"></td>
+                                                                                <td colspan="4" style="height: 19px; " class="formItemBgStyleForAlignLeft">
                                                                                     <asp:CheckBox ID="CB_SendMsg" runat="server" Font-Bold="False" Font-Size="10pt" Text="<%$ Resources:lang,FaXinXi %>" />
                                                                                     <asp:CheckBox ID="CB_SendMail" runat="server" Font-Bold="False" Font-Size="10pt"
                                                                                         Text="<%$ Resources:lang,FaYouJian %>" />
@@ -353,7 +353,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="5" style="height: 19px; text-align: left;" class="formItemBgStyle">
+                                                                                <td colspan="5" style="height: 19px; "  class="formItemBgStyleForAlignLeft"
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                                                                         <asp:Label ID="LB_TaskName" runat="server" Visible="False"></asp:Label>

@@ -68,9 +68,9 @@
                                             <td align="left">
                                                 <table width="80%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YuSuanLeiXing%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DropDownList1" Width="110px" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                                                                 <asp:ListItem />
                                                                 <asp:ListItem Value="BudgetStandard" Text="<%$ Resources:lang,YuSuanBiaoZhun%>" />
@@ -80,39 +80,39 @@
                                                             <asp:Label ID="lbl_sql1" runat="server" Visible="False"></asp:Label>
                                                             <asp:Label ID="lbl_DepartString" runat="server" Visible="False"></asp:Label>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="txt_DepartName" runat="server" Width="100px"></asp:TextBox>
                                                             <asp:Label ID="lbl_DepartCode" runat="server" Visible="False"></asp:Label>
                                                         </td>
 
 
 
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,KeMu%>"></asp:Label>£º
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="txt_AccountName" runat="server" Width="100px"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,NianFen%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="txt_Year" runat="server" ReadOnly="false" Width="100px"></asp:TextBox>
                                                             <cc1:CalendarExtender ID="DLC_MonthNum_CalendarExtender" runat="server" Format="yyyy" TargetControlID="txt_Year">
                                                             </cc1:CalendarExtender>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YueFen%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyle" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="txt_Month" runat="server" ReadOnly="false" Width="100px"></asp:TextBox>
                                                             <cc1:CalendarExtender ID="CalendarExtender1" runat="server" Format="MM" TargetControlID="txt_Month">
                                                             </cc1:CalendarExtender>
                                                         </td>
 
-                                                        <td colspan="2" class="formItemBgStyle" style="text-align: center">
+                                                        <td colspan="2" class="formItemBgStyleForAlignLeft" >
                                                             <asp:Button ID="BT_Query" runat="server" CssClass="inpu" OnClick="BT_Query_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                                             <asp:Button ID="Button1" runat="server" CssClass="inpu" OnClick="Button1_Click" Text="<%$ Resources:lang,DaoChu%>" />
                                                         </td>

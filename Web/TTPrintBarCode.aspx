@@ -40,7 +40,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="formItemBgStyle">&nbsp;
+                            <td class="formItemBgStyleForAlignLeft">&nbsp;
                             </td>
                             <td>&nbsp; </td>
 

@@ -71,40 +71,40 @@
 
                     <table cellpadding="3" cellspacing="0" class="formBgStyle" style="width: 800px;">
                         <tr>
-                            <td class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>£º
                             </td>
-                            <td class="formItemBgStyle" align="left">
+                            <td class="formItemBgStyleForAlignLeft" >
                                 <asp:TextBox ID="TB_ConstractCode" runat="server" Width="200px"></asp:TextBox>
                             </td>
-                            <td class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiaFang%>"></asp:Label>£º</td>
-                            <td class="formItemBgStyle" align="left" colspan="3">
+                            <td class="formItemBgStyleForAlignLeft"  colspan="3">
                                 <asp:TextBox ID="TB_PartA" runat="server" Width="99%"></asp:TextBox>
 
                             </td>
 
                         </tr>
                         <tr>
-                            <td class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HeTongQianDingShiJianCong%>"></asp:Label>£º
                             </td>
-                            <td class="formItemBgStyle" align="left">
+                            <td class="formItemBgStyleForAlignLeft" >
                                 <asp:TextBox ID="DLC_StartTime" ReadOnly="false" runat="server" Width="200px"></asp:TextBox>
                                 <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_StartTime">
                                 </ajaxToolkit:CalendarExtender>
 
                             </td>
-                            <td class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>£º
                             </td>
-                            <td class="formItemBgStyle" align="left" colspan="2">
+                            <td class="formItemBgStyleForAlignLeft"  colspan="2">
 
                                 <asp:TextBox ID="DLC_EndTime" ReadOnly="false" runat="server"></asp:TextBox>
                                 <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_EndTime">
                                 </ajaxToolkit:CalendarExtender>
                             </td>
-                            <td class="formItemBgStyle" align="left" colspan="2">
+                            <td class="formItemBgStyleForAlignLeft"  colspan="2">
                                 <table>
                                     <tr>
                                         <td>

@@ -345,30 +345,30 @@
 
                             <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td class="formItemBgStyle" align="right" style="width: 10%;">
+                                    <td class="formItemBgStyleForAlignLeft"  style="width: 10%;">
                                         <asp:Label ID="LB_ReceivablesRecordID" runat="server" Visible="false"></asp:Label>
                                         <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,ShouKuanFangShi%>"></asp:Label>£º
                                     </td>
-                                    <td class="formItemBgStyle" align="left" style="width: 15%;">
+                                    <td class="formItemBgStyleForAlignLeft"  style="width: 15%;">
                                         <asp:DropDownList ID="DL_ReAndPayType" runat="server" DataTextField="Type" DataValueField="Type">
                                         </asp:DropDownList></td>
-                                    <td class="formItemBgStyle" align="right" style="width: 10%;">
+                                    <td class="formItemBgStyleForAlignLeft"  style="width: 10%;">
                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,BiBie%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" align="left" style="width: 15%;">
+                                    <td class="formItemBgStyleForAlignLeft"  style="width: 15%;">
                                         <asp:DropDownList ID="DL_Currency" runat="server" AutoPostBack="true" DataTextField="Type" DataValueField="Type" OnSelectedIndexChanged="DL_Currency_SelectedIndexChanged">
                                         </asp:DropDownList></td>
-                                    <td class="formItemBgStyle" align="right" style="width: 10%;">
+                                    <td class="formItemBgStyleForAlignLeft"  style="width: 10%;">
                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,HuiLv%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" align="left">
+                                    <td class="formItemBgStyleForAlignLeft" >
                                         <NickLee:NumberBox ID="NB_ExchangeRate" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="5" Width="80px" Amount="1">1.0001.000</NickLee:NumberBox>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignRight">
                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,ShiShouJinE%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="3" class="formItemBgStyle">
+                                    <td colspan="3" class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ReceiverAccount" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
                                             PositiveColor="" Width="80px" Precision="2">0.000</NickLee:NumberBox>
                                         <asp:Label ID="LB_ReceivablesAccountCurre" runat="server" Text="<%$ Resources:lang,Yuan %>"></asp:Label>
@@ -383,10 +383,10 @@
                                             <asp:ListItem Value="0.06" Text="6%"></asp:ListItem>
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShiShouRiQi%>"></asp:Label>£º
                                     </td>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_ReceiverTime" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4"
                                             runat="server" TargetControlID="DLC_ReceiverTime" Enabled="True">
@@ -394,9 +394,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YinHang%>"></asp:Label>£º</td>
-                                    <td colspan="5" class="formItemBgStyle">
+                                    <td colspan="5" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Bank" runat="server" Width="50%"></asp:TextBox>
                                         <asp:DropDownList ID="DL_Bank" runat="server" DataTextField="BankName" DataValueField="BankName" OnSelectedIndexChanged="DL_Bank_SelectedIndexChanged" AutoPostBack="True">
                                         </asp:DropDownList>
@@ -404,10 +404,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,FuKuanRen%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="5" class="formItemBgStyle">
+                                    <td colspan="5" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Payer" runat="server" Width="50%"></asp:TextBox>
                                         <asp:DropDownList ID="DL_Payer" runat="server" AutoPostBack="True" DataTextField="Payer" DataValueField="Payer" Height="25px" OnSelectedIndexChanged="DL_Payer_SelectedIndexChanged">
                                         </asp:DropDownList>
@@ -415,18 +415,18 @@
 
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="5" class="formItemBgStyle">
+                                    <td colspan="5" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_ReceiveComment" runat="server" Width="80%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignRight">
                                         <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,DengJiRenYuan%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="5" class="formItemBgStyle">
+                                    <td colspan="5" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ReceivablesOperatorCode" runat="server"></asp:Label>
                                         <asp:Label ID="LB_ReceivablesOperatorName" runat="server"></asp:Label>
                                     </td>

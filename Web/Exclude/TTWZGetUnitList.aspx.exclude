@@ -91,63 +91,63 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 90%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <%--<input type="button" class="inpuLong" value="新增领料单位" onclick="window.location.href = 'TTWZGetUnitEdit.aspx'" />--%>
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DanWeiBianHao%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_UnitCode" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiTongZiDongShengCheng%>"></asp:Label></font>
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LingLiaoDanWei%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle" colspan="2">
+                                                                    <td  class="formItemBgStyleForAlignLeft" colspan="2">
                                                                         <asp:TextBox ID="TXT_UnitName" runat="server" Width="300px"></asp:TextBox>&nbsp;
                                                                         <input type="button" id="Button1" class="inpu" value="选择" onclick="SelectDepartment()" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuGuanLingDao%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_Leader" runat="server" ReadOnly="true"></asp:TextBox>&nbsp;
                                                                         <input type="button" id="btnLeader" class="inpu" value="选择" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Leader', 'TXT_Leader')" />
                                                                         <asp:HiddenField ID="HF_Leader" runat="server" />
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DanWeiLeiXing%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DDL_UnitType" runat="server">
                                                                             <asp:ListItem Text="<%$ Resources:lang,XingZhengDanWei%>" Value="行政单位"/>
                                                                             <asp:ListItem Text="<%$ Resources:lang,XiangMuBu%>" Value="项目部"/>
                                                                         </asp:DropDownList>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">&nbsp;</td>
+                                                                    <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_FeeManage" runat="server" ReadOnly="true"></asp:TextBox>&nbsp;
                                                                         <input type="button" id="btnFeeManage" class="inpu" value="选择" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_FeeManage', 'TXT_FeeManage')" />
                                                                         <asp:HiddenField ID="HF_FeeManage" runat="server" />
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,CaiLiaoYuan%>"></asp:Label>：</td>
-                                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                                    <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_MaterialPerson" runat="server" ReadOnly="true"></asp:TextBox>&nbsp;
                                                                         <input type="button" id="btnMaterialPerson" class="inpu" value="选择" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_MaterialPerson', 'TXT_MaterialPerson')" />
                                                                         <asp:HiddenField ID="HF_MaterialPerson" runat="server" />
                                                                     </td>
-                                                                    <td style="text-align: center" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;
                                                                         <asp:Button ID="BT_Cancel" runat="server" Text="<%$ Resources:lang,QuXiao%>" CssClass="inpu" OnClick="BT_Cancel_Click" />
                                                                         <%--<input type="button" value="返回" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZGetUnitList.aspx'" />--%>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" colspan="5">&nbsp;&nbsp;
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="5">&nbsp;&nbsp;
                                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,LingLiaoDanWeiJiLu%>"></asp:Label>&nbsp;<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_Record" runat="server" Text="*"></asp:Label><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Button ID="BT_Add" runat="server" Text="<%$ Resources:lang,XinZengLingLiaoDanWei%>" CssClass="inpuLong" OnClick="BT_Add_Click" />
@@ -161,7 +161,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>
                                                                     <td width="7">

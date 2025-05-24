@@ -94,17 +94,17 @@
                                     <td valign="top" style="padding-top: 5px;">
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td align="left" style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyle" valign="top">
+                                                <td style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                     &nbsp;
                                                     </td>
                                                 </tr>
                                             <tr>
-                                                <td align="left" style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyle">
+                                                <td style="width: 45%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft">
                                                     <table class="formBgStyle" width="100%">
                                                         <tr>
-                                                            <td style="text-align: left" class="formItemBgStyle">
+                                                            <td  class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>£º</td>
-                                                            <td style="text-align: left" class="formItemBgStyle">
+                                                            <td  class="formItemBgStyleForAlignLeft">
                                                                 <asp:FileUpload ID="fileExcel" runat="server" />
                                                                 <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;&nbsp;
                                                                 <input type="button" value="·µ»Ø" onclick="window.location.href = 'TTWZObjectBigList.aspx'" class="inpu" />
@@ -117,7 +117,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyle">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <table style="width: 100%">
                                                         <tr>
                                                             <td>

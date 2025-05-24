@@ -91,7 +91,7 @@
                                             valign="top">
                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                 <tr>
-                                                    <td align="left" class="formItemBgStyle" style="padding-left: 10px;">
+                                                    <td class="formItemBgStyleForAlignLeft" style="padding-left: 10px;">
                                                         <table style="text-align: center;">
                                                             <tr>
                                                                 <td>
@@ -123,7 +123,7 @@
                                                             </tr>
                                                         </table>
                                                     </td>
-                                                    <td align="right" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignRight">
                                                         <asp:Button ID="BT_CreateMain" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateMain_Click" />
 
                                                     </td>
@@ -456,7 +456,7 @@
                                         <tr>
                                             <td style="text-align: left;">
                                                 <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,XiangMuSuoSuoZhuanYe%>"></asp:Label>：</td>
-                                            <td colspan="6" align="left" class="formItemBgStyle">
+                                            <td colspan="6"  class="formItemBgStyleForAlignLeft">
                                                 <asp:DropDownList ID="DL_TenderContent" DataTextField="tendercontent" DataValueField="tendercontent" Width="95%" runat="server">
                                                 </asp:DropDownList>
                                             </td>
@@ -464,7 +464,7 @@
                                         <tr>
                                             <td style="text-align: left;">
                                                 <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>：</td>
-                                            <td align="left" class="formItemBgStyle" colspan="6">
+                                            <td class="formItemBgStyleForAlignLeft" colspan="6">
                                                 <asp:TextBox ID="TB_Remarks" runat="server" Height="35px" TextMode="MultiLine" Width="95%"></asp:TextBox>
                                             </td>
                                         </tr>
@@ -888,7 +888,7 @@
 
                             <tr style="font-size: 10pt">
 
-                                <td class="formItemBgStyle" colspan="2" style="height: 10px; text-align: left">
+                                <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 10px; ">
 
                                     <strong>
                                         <asp:Label ID="Label36" runat="server" Text="投标流程申请"></asp:Label>：</strong>
@@ -897,11 +897,11 @@
 
                             <tr style="font-size: 10pt">
 
-                                <td class="formItemBgStyle" style="">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：
                                 </td>
 
-                                <td class="formItemBgStyle" style="text-align: left">
+                                <td class="formItemBgStyleForAlignLeft">
 
                                     <asp:DropDownList ID="DL_WFType" runat="server">
                                         <asp:ListItem Value="BidManagement" Text="BidManagement" />
@@ -923,11 +923,11 @@
 
                             <tr style="font-size: 10pt">
 
-                                <td class="formItemBgStyle" style="">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label60" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>：
                                 </td>
 
-                                <td class="formItemBgStyle" style="text-align: left">
+                                <td class="formItemBgStyleForAlignLeft">
 
                                     <asp:TextBox ID="TB_WLName" runat="server" Width="387px"></asp:TextBox>
                                 </td>
@@ -935,11 +935,11 @@
 
                             <tr style="font-size: 10pt">
 
-                                <td class="formItemBgStyle" style="">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>：
                                 </td>
 
-                                <td class="formItemBgStyle" style="text-align: left">
+                                <td class="formItemBgStyleForAlignLeft">
 
                                     <asp:TextBox ID="TB_Description" runat="server" Height="48px" TextMode="MultiLine"
                                         Width="441px"></asp:TextBox>
@@ -948,9 +948,9 @@
 
                             <tr style="font-size: 10pt">
 
-                                <td class="formItemBgStyle" style=""></td>
+                                <td class="formItemBgStyleForAlignLeft"></td>
 
-                                <td class="formItemBgStyle" style="text-align: left; height: 19px;">（<asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>要求收到处理信息：<asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,DuanXin%>" /><asp:CheckBox
+                                <td class="formItemBgStyleForAlignLeft" style="height: 19px;">（<asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>要求收到处理信息：<asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,DuanXin%>" /><asp:CheckBox
                                     ID="CB_Mail" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" />
 
                                     <span style="font-size: 10pt">) </span>

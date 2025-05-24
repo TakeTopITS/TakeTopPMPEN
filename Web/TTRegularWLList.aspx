@@ -12,7 +12,7 @@
         <form id="form1" runat="server">
         <table style="width: 100%;">
             <tr>
-                <td style="width: 100%;" class="formItemBgStyle" valign="top" align="left">
+                <td style="width: 100%;" class="formItemBgStyleForAlignLeft" valign="top" align="left">
                     <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
                         ShowLines="True" Width="100%">
                         <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />

@@ -186,7 +186,7 @@
                                         <td align="left">
                                             <table width="95%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                 <tr>
-                                                    <td align="left" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <b style="text-align: left">
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,KFXGPSGZL%>"></asp:Label>:</b> (<asp:HyperLink ID="HL_RelatedWorkFlowTemplate"
                                                                 runat="server" Enabled="false" Target="_blank">
@@ -195,7 +195,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr style="font-size: 10pt">
-                                                    <td style="text-align: left; width: 100%;" class="formItemBgStyle">
+                                                    <td style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º<asp:TextBox ID="TB_WLName" runat="server" Width="234px"></asp:TextBox>&nbsp;
                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:DropDownList ID="DL_WFType" runat="server">
                                                         <asp:ListItem Value="CustomerServiceReview" Text="<%$ Resources:lang,KeFuPingSheng%>" />
@@ -208,13 +208,13 @@
                                                     </td>
                                                 </tr>
                                                 <tr style="font-size: 10pt">
-                                                    <td style="text-align: left; width: 100%; height: 51px;" class="formItemBgStyle">
+                                                    <td style="width: 100%; height: 51px;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£º<asp:TextBox ID="TB_Description" runat="server" TextMode="MultiLine" Width="712px"
                                                             Height="79px"></asp:TextBox>&nbsp;
                                                     </td>
                                                 </tr>
                                                 <tr style="font-size: 10pt">
-                                                    <td style="text-align: left; width: 100%;" class="formItemBgStyle">
+                                                    <td style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                         <span style="font-size: 10pt">£¨<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoXinXi%>"></asp:Label>£º<asp:CheckBox ID="CB_Mail" runat="server"
                                                             Text="<%$ Resources:lang,YouJian%>" />
                                                             <asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,DuanXin%>" />£© </span>

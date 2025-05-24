@@ -119,7 +119,7 @@
                     </table>
                     <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                         <tr>
-                            <td align="left" colspan="3" class="formItemBgStyle">
+                            <td  colspan="3" class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º<asp:Label ID="LB_ID" runat="server"></asp:Label>
                                 &nbsp;<asp:Label ID="Label1" runat="server" Text="°à´ÎÃû³Æ"></asp:Label>
                                 <asp:TextBox ID="tb_Name" runat="server" Width="50px"></asp:TextBox>
@@ -141,7 +141,7 @@
 
                         </tr>
                         <tr>
-                            <td style="text-align: Left;" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Button ID="BT_AddUserAttendanceRule" runat="server" CssClass="inpu"
                                     OnClick="BT_AddUserAttendanceRule_Click" Text="<%$ Resources:lang,XinZeng%>" />
                                 &nbsp;<asp:Button ID="BT_UpdateUserAttendanceRule" runat="server" CssClass="inpu"
@@ -149,8 +149,8 @@
                                 &nbsp;<asp:Button ID="BT_DeleteUserAttendanceRule" runat="server" CssClass="inpu"
                                     Enabled="False" OnClick="BT_DeleteUserAttendanceRule_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />
                             </td>
-                            <td style="text-align: Right;" width="130px" class="formItemBgStyle"></td>
-                            <td style="text-align: left;" width="130px" class="formItemBgStyle"></td>
+                            <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
+                            <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
                         </tr>
                     </table>
                 </ContentTemplate>

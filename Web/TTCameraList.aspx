@@ -91,12 +91,12 @@
                                 <td valign="top" style="padding-top: 5px;">
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt">
-                                            <td align="right" class="formItemBgStyle" colspan="2">
+                                            <td class="formItemBgStyleForAlignRight" colspan="2">
                                                 <input type="button" class="inpu" value="Add" onclick="window.location.href = 'TTCameraAdd.aspx'" />
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">
-                                            <td align="left" style="width: 10%;" class="formItemBgStyle">
+                                            <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
 
                                                 <% if (CameraListCollect != null && CameraListCollect.Count > 0)
                                                    {
@@ -110,7 +110,7 @@
                                                        } %>
 
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <div align="left">
                                                     <table width="100%">
                                                         <tr>

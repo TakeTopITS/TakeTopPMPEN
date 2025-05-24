@@ -163,7 +163,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyle" align="left">
+                                        <td class="formItemBgStyleForAlignLeft" >
                                             <div id="mess_box" style="width: 100%; height: 150px; overflow: auto;">
                                                 <asp:DataList ID="DataList2" runat="server" CellPadding="4" ForeColor="#333333" Width="100%">
 

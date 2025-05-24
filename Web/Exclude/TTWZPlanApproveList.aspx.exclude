@@ -154,7 +154,7 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º<asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                 <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value="" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,LuRu%>" Value="Â¼Èë" />
@@ -169,7 +169,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <td class="formItemBgStyleForAlignLeft">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LieBiaoPaiXu%>"></asp:Label>£º<asp:Button ID="BT_SortPlanCode" runat="server" CssClass="inpu" OnClick="BT_SortPlanCode_Click" Text="<%$ Resources:lang,JiHuaBianHao%>" />&nbsp;
                                                             <asp:Button ID="BT_SortPlanName" runat="server" CssClass="inpu" OnClick="BT_SortPlanName_Click" Text="<%$ Resources:lang,JiHuaMingCheng%>" />&nbsp;
                                                             <asp:Button ID="BT_SortProjectCode" runat="server" CssClass="inpu" OnClick="BT_SortProjectCode_Click" Text="<%$ Resources:lang,XiangMuBianMa%>" />
@@ -181,7 +181,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">&nbsp;
+                                                        <td class="formItemBgStyleForAlignLeft">&nbsp;
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LingLiaoJiHuaJiLu%>"></asp:Label>&nbsp;<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>¹²<asp:Label ID="LB_ShowRecordCount" runat="server" Text="**"></asp:Label><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>&nbsp;&nbsp;
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£º
                                                             <asp:Button ID="BT_NewAudit" runat="server" Text="<%$ Resources:lang,ShenHe%>" CssClass="inpu" OnClick="BT_NewAudit_Click" />&nbsp;
@@ -202,7 +202,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <div style="width: 2200px;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>

@@ -81,7 +81,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td>
@@ -190,17 +190,17 @@
 
                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="900px">
                                 <tr>
-                                    <td align="right" style="width: 150px" class="formItemBgStyle">
+                                    <td style="width: 150px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,CanPingZhuanJia%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="3" align="left" class="formItemBgStyle">
+                                    <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" runat="server" Visible="false"></asp:Label>
                                         <asp:DropDownList ID="ddl_ExpertID" runat="server" DataTextField="Name" DataValueField="ID">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GeRenBiaoXian%>"></asp:Label>£º</td>
                                     <td align="left" class="auto-style1">
                                         <asp:DropDownList ID="DL_CooperateDegree" runat="server">
@@ -210,12 +210,12 @@
                                         </asp:DropDownList>
                                     </td>
                                     <td align="right" class="auto-style2">&nbsp;</td>
-                                    <td align="left" class="formItemBgStyle">&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º</td>
-                                    <td align="left" class="formItemBgStyle" colspan="3" style="height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 30px">
                                         <asp:TextBox ID="TB_Remark" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="95%"></asp:TextBox>
                                     </td>
                                 </tr>

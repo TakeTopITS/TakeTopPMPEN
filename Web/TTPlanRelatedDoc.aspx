@@ -295,12 +295,12 @@
                                                                             <table style="width: 100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                                 <tr>
                                                                                     <td style="background-color: ButtonFace; width: 100%; text-align: left; height: 11px;"
-                                                                                        class="formItemBgStyle">
+                                                                                        class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,WenJianPingShenShenQing%>"></asp:Label>£º<asp:Label ID="LB_DocID" runat="server"></asp:Label>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="formItemBgStyle">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º<asp:TextBox ID="TB_WLName" runat="server" Width="309px"></asp:TextBox>&nbsp;
                                                                                     <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                                                         <asp:DropDownList ID="DL_WFType" runat="server">
@@ -317,13 +317,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr style="font-size: 10pt">
-                                                                                    <td style="text-align: left; width: 100%; height: 51px;" class="formItemBgStyle">
+                                                                                    <td style="width: 100%; height: 51px;" class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£º<asp:TextBox ID="TB_Description" runat="server" TextMode="MultiLine" Width="441px"
                                                                                             Height="48px"></asp:TextBox>&nbsp;
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr style="font-size: 10pt">
-                                                                                    <td style="text-align: left; width: 100%;" class="formItemBgStyle">
+                                                                                    <td style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                                                         <span style="font-size: 10pt">£¨<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoXinXi%>"></asp:Label>£º<asp:CheckBox ID="CB_RequiredMail" runat="server"
                                                                                             Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" />
                                                                                             <asp:CheckBox ID="CB_RequiredSMS" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,DuanXin%>" />£©

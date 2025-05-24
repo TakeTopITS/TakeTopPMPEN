@@ -152,7 +152,7 @@
                                             <ContentTemplate>
                                                 <table cellpadding="0" cellspacing="0" width="100%">
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle" width="23%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="23%">
                                                             <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                 <tr>
                                                                     <td width="7">
@@ -209,7 +209,7 @@
                                                             </div>
                                                         </td>
                                                         <td width="10px"></td>
-                                                        <td align="left" class="formItemBgStyle" width="23%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="23%">
                                                             <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0"
                                                                 width="100%">
                                                                 <tr>
@@ -255,7 +255,7 @@
                                                             </div>
                                                         </td>
                                                         <td width="10px"></td>
-                                                        <td align="left" class="formItemBgStyle" width="23%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="23%">
                                                             <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0"
                                                                 width="100%">
                                                                 <tr>
@@ -302,7 +302,7 @@
                                                             </div>
                                                         </td>
                                                         <td width="10px"></td>
-                                                        <td align="left" class="formItemBgStyle" width="23%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="23%">
                                                             <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0"
                                                                 width="100%">
                                                                 <tr>

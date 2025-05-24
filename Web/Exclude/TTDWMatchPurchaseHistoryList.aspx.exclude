@@ -57,7 +57,7 @@
                                                 <div style="width:1300px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="80%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="80%">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>£º
                                                             <asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XuanZeYuanLiaoLeiXing%>"></asp:Label>£º

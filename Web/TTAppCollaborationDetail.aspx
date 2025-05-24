@@ -145,9 +145,9 @@
 
                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                     <tr style="display: none;">
-                        <td style="text-align: Right; vertical-align: middle;" class="formItemBgStyle">
+                        <td style="text-align: Right; vertical-align: middle;" class="formItemBgStyleForAlignLeft">
                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º </td>
-                        <td class="formItemBgStyle" align="left">
+                        <td class="formItemBgStyleForAlignLeft" >
                             <div id="mess_box" style="width: 100%; height: 150px; overflow: auto;">
                                 <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" Width="100%">
                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -166,9 +166,9 @@
                         </td>
                     </tr>
                     <tr style="display: none;">
-                        <td class="formItemBgStyle">
+                        <td class="formItemBgStyleForAlignLeft">
                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>£º </td>
-                        <td style="text-align: left;" class="formItemBgStyle">
+                        <td class="formItemBgStyleForAlignLeft">
                             <asp:Label ID="LB_Creator" runat="server" Text="<%$ Resources:lang,ChuangJianShiJian%>"></asp:Label>£º
                                                     <asp:Label ID="LB_CreateTime" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                     <asp:Label ID="LB_Status" runat="server"></asp:Label>

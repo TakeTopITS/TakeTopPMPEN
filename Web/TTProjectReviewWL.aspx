@@ -210,7 +210,7 @@
                                         <td style="text-align: center;">
                                             <table style="width: 98%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                 <tr style="font-size: 10pt">
-                                                    <td style="text-align: left; width: 100%;" class="formItemBgStyle">
+                                                    <td style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="LB_tbName" runat="server" Text="<%$ Resources:lang,Name%>"></asp:Label>:<asp:TextBox
                                                             ID="TB_WLName" runat="server" Width="250px"></asp:TextBox>&nbsp;
                                                     <asp:Label ID="LB_tbType" runat="server" Text="<%$ Resources:lang,Type%>"></asp:Label>:<asp:TextBox
@@ -228,13 +228,13 @@
                                                     </td>
                                                 </tr>
                                                 <tr style="font-size: 10pt">
-                                                    <td style="width: 100%; height: 51px;" class="formItemBgStyle" align="left">
+                                                    <td style="width: 100%; height: 51px;" class="formItemBgStyleForAlignLeft" >
                                                         <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,Description%>"></asp:Label>:<asp:TextBox
                                                             ID="TB_Description" runat="server" TextMode="MultiLine" Width="486px" Height="58px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr style="font-size: 10pt">
-                                                    <td style="text-align: left; width: 100%;" class="formItemBgStyle">
+                                                    <td style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                         <span style="font-size: 10pt">ги
                                                         <asp:Label ID="LB_tbRequestFeedback" runat="server" Text="<%$ Resources:lang,RequestFeedback%>"></asp:Label>:<asp:CheckBox
                                                             ID="CB_Mail" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,SendEMail%>" />

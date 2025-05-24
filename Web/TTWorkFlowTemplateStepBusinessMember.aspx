@@ -114,7 +114,7 @@
                                                     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
                                                 </asp:DataGrid>
                                             </td>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <div id="GoodsListDivID" style="width: 100%; overflow: auto;">
                                                     <asp:Repeater ID="RP_Attendant" runat="server" OnItemCommand="RP_Attendant_ItemCommand">
                                                         <ItemTemplate>

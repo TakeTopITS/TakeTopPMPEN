@@ -86,38 +86,38 @@
                                     <table width="70%" cellpadding="0" cellspacing="0" class="formBgStyle">
 
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
 
                                                 <asp:Literal ID="LT_PurchaseDocument" runat="server"></asp:Literal>
 
 
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
 
                                                 <asp:Literal ID="LT_AssessmentDocument" runat="server"></asp:Literal>
 
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
 
                                                 <asp:Literal ID="LT_Supplier1" runat="server"></asp:Literal>
 
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Literal ID="LT_Supplier2" runat="server"></asp:Literal>
                                             </td>
                                         </tr>
 
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Literal ID="LT_Supplier3" runat="server"></asp:Literal>
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Literal ID="LT_Supplier4" runat="server"></asp:Literal>
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Literal ID="LT_Supplier5" runat="server"></asp:Literal>
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Literal ID="LT_Supplier6" runat="server"></asp:Literal>
                                             </td>
 
@@ -132,24 +132,24 @@
                                 <td>
                                     <table class="formBgStyle">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZBXZCYPBJL%>"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,CaiGouBianHao%>"></asp:Label>£º<asp:TextBox ID="TXT_PurchaseCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <asp:Button ID="BT_Assessment" runat="server" Text="<%$ Resources:lang,PingBiao%>" CssClass="inpu" Enabled="true" OnClick="BT_Assessment_Click" />
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,PingBiaoYiJian%>"></asp:Label>£º<asp:TextBox ID="TXT_Suggest" runat="server" TextMode="MultiLine" Width="600px" Height="50px"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiaoDuanXuanZe%>"></asp:Label>£º
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BiaoDuanYi%>"></asp:Label>£º
                                                 <asp:DropDownList ID="DL_Supplier1" runat="server" DataTextField="SupplierName" DataValueField="SupplierCode" >
@@ -173,7 +173,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                 <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
                                                     type="button" value="¹Ø±Õ" />

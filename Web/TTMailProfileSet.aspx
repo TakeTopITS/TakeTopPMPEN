@@ -38,10 +38,10 @@
                 <td valign="top" style="padding: 10px 5px 10px 5px;">
                     <table align="left" cellspacing="0" cellpadding="3" width="98%" class="formBgStyle">
                         <tr style="line-height: 2;">
-                            <td style="width: 150" align="right" class="formItemBgStyle">
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YongHuMingCheng%>"></asp:Label>:
                             </td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_UserName" runat="server" Width="300px">Admin</asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfN" runat="server" ControlToValidate="TB_UserName"
                                     Display="Dynamic" ErrorMessage="名称不能为空！"></asp:RequiredFieldValidator>
@@ -49,10 +49,10 @@
                             </td>
                         </tr>
                         <tr style="line-height: 2;">
-                            <td style="width: 150; height: 31px;" align="right" class="formItemBgStyle">
+                            <td style="width: 150; height: 31px;"  class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DianZiYouJian%>"></asp:Label>(Email)
                             </td>
-                            <td style="height: 31px" align="left" class="formItemBgStyle">
+                            <td style="height: 31px"  class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_Email" runat="server" Width="300px" CssClass="InputCss">admin@gmail.com</asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfE" runat="server" ControlToValidate="TB_Email"
                                     Display="Dynamic" ErrorMessage="电子邮件不能为空！"></asp:RequiredFieldValidator>
@@ -61,20 +61,20 @@
                             </td>
                         </tr>
                         <tr style="line-height: 2;">
-                            <td style="width: 150" align="right" class="formItemBgStyle">
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DengLuMing%>"></asp:Label>:
                             </td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_AliasName" runat="server" Width="300px" CssClass="InputCss">Admin</asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfA" runat="server" ControlToValidate="TB_AliasName"
                                     Display="Dynamic" ErrorMessage="名称不能为空！"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr style="line-height: 2">
-                            <td align="right" style="height: 31px" class="formItemBgStyle">
+                            <td style="height: 31px" class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,MiMa%>"></asp:Label>:
                             </td>
-                            <td style="height: 31px" align="left" class="formItemBgStyle">
+                            <td style="height: 31px"  class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_Password" runat="server" CssClass="InputCss" TextMode="Password"
                                     Width="300px"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TB_Password"
@@ -83,46 +83,46 @@
                         </tr>
 
                         <tr style="line-height: 2">
-                            <td align="right" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignRight">
                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,POP3DiZhi%>"></asp:Label>&nbsp;</td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_Pop3ServerIP" runat="server" CssClass="InputCss" Width="300px">pop.gmail.com</asp:TextBox>
                             </td>
                         </tr>
                         <tr style="line-height: 2;">
-                            <td style="width: 150" align="right" class="formItemBgStyle"></td>
-                            <td style="width: 150" align="left" class="formItemBgStyle">
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft"></td>
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft">
                                 <asp:CheckBox ID="CB_EnablePOPSSL" runat="server" Text="EnablePOPSSL" />
                             </td>
                         </tr>
                         <tr style="line-height: 2;">
-                            <td style="width: 150" align="right" class="formItemBgStyle">
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,POP3DuanKou%>"></asp:Label>&nbsp;</td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <font face="宋体">
                                     <asp:TextBox ID="TB_Pop3ServerPort" runat="server" CssClass="InputCss" Width="300px">25</asp:TextBox></font>
                             </td>
                         </tr>
 
                         <tr style="line-height: 2;">
-                            <td style="width: 150; height: 31px;" align="right" class="formItemBgStyle">
+                            <td style="width: 150; height: 31px;"  class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,SMTPDiZhi%>"></asp:Label>&nbsp;</td>
-                            <td style="height: 31px" align="left" class="formItemBgStyle">
+                            <td style="height: 31px"  class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_SmtpIP" runat="server" Width="300px" CssClass="InputCss">smtp.gmail.com</asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfI" runat="server" ControlToValidate="TB_SmtpIP"
                                     Display="Dynamic" ErrorMessage="IP地址不能为空！"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr style="line-height: 2;">
-                            <td style="width: 150" align="right" class="formItemBgStyle"></td>
-                            <td style="width: 150" align="left" class="formItemBgStyle">
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft"></td>
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft">
                                 <asp:CheckBox ID="CB_EnableSMTPSSL" runat="server" Text="EnableSMTPSSL" />
                             </td>
                         </tr>
                         <tr style="line-height: 2;">
-                            <td style="width: 150" align="right" class="formItemBgStyle">
+                            <td style="width: 150"  class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,SMTPDuanKou%>"></asp:Label>&nbsp;</td>
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_SmtpPort" runat="server" Width="300px" CssClass="InputCss">25</asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfP" runat="server" ControlToValidate="TB_SmtpPort"
                                     Display="Dynamic" ErrorMessage="端口不能为空！"></asp:RequiredFieldValidator>
@@ -133,8 +133,8 @@
 
 
                         <tr style="line-height: 2;">
-                            <td style="width: 150" width="150" align="right" class="formItemBgStyle"></td>
-                            <td align="left" class="formItemBgStyle">
+                            <td style="width: 150" width="150"  class="formItemBgStyleForAlignLeft"></td>
+                            <td class="formItemBgStyleForAlignLeft">
                                 <font face="宋体"></font>
                                 <asp:Button ID="BT_Add" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Add_Click" /><font
                                     face="宋体"></font>

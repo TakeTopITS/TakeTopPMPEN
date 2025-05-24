@@ -400,7 +400,7 @@
 
                             <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td>
@@ -420,7 +420,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td>
@@ -466,7 +466,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td style="text-align: Left;" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="BT_UpdateUserAttendanceRule" runat="server" CssClass="inpu"
                                             Enabled="False" OnClick="BT_UpdateUserAttendanceRule_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                         &nbsp;<asp:Button ID="BT_DeleteUserAttendanceRule" runat="server" CssClass="inpu"

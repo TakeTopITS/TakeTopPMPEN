@@ -47,7 +47,7 @@
                                     <td valign="top" style="padding-top: 5px;">
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td class="formItemBgStyle" width="100%">
+                                                <td class="formItemBgStyleForAlignLeft" width="100%">
                                                     <div>
                                                         <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                             <tr>
@@ -124,7 +124,7 @@
                                                 </td>
                                             </tr>
                                            <tr style="display:none;">
-                                               <td class="formItemBgStyle">
+                                               <td class="formItemBgStyleForAlignLeft">
 
                                                    <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />
 

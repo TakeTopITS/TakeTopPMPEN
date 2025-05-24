@@ -297,18 +297,18 @@
                                         <td align="left" width="100%">
                                             <table style="width: 98%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                 <tr>
-                                                    <td style="width: 10%;" class="formItemBgStyle">
+                                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
 
                                                         <asp:Label ID="Label3" runat="server" Text="建站应用"></asp:Label>
                                                         ：
                                                     </td>
-                                                    <td style="width: 15%; text-align: left" class="formItemBgStyle">
+                                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SiteCreatorAppName" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
-                                                    <td style="width: 10%; " class="formItemBgStyle">
+                                                    <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label23" runat="server" Text="产品"></asp:Label>：
                                                     </td>
-                                                    <td style="width: 20%; text-align: left;" class="formItemBgStyle">
+                                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
                                                         <asp:DropDownList ID="DL_RentProductName" runat="server">
                                                             <asp:ListItem>项目管理平台</asp:ListItem>
                                                             <asp:ListItem>研发项目管理平台</asp:ListItem>
@@ -327,20 +327,20 @@
                                                             <asp:ListItem>演示测试平台</asp:ListItem>
                                                         </asp:DropDownList>
                                                     </td>
-                                                    <td style="width: 10%;" class="formItemBgStyle">
+                                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label24" runat="server" Text="版本"></asp:Label>:
                                                     </td>
-                                                    <td style="text-align: left; width: 10%;" class="formItemBgStyle">
+                                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:DropDownList ID="DL_ProductVerType" runat="server">
                                                             <asp:ListItem>标准版</asp:ListItem>
                                                             <asp:ListItem>企业版</asp:ListItem>
                                                             <asp:ListItem>集团版</asp:ListItem>
                                                         </asp:DropDownList>
                                                     </td>
-                                                    <td style="width: 10%;" class="formItemBgStyle">
+                                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label8" runat="server" Text="类型"></asp:Label>:
                                                     </td>
-                                                    <td style="text-align: left;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:DropDownList ID="DL_RentProductType" runat="server">
                                                             <asp:ListItem>GEPMP</asp:ListItem>
                                                             <asp:ListItem>RDPMP</asp:ListItem>
@@ -362,26 +362,26 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label25" runat="server" Text="主站URL"></asp:Label>：
                                                     </td>
-                                                    <td style="width: 15%; text-align: left" class="formItemBgStyle">
+                                                    <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SiteURL" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label26" runat="server" Text="主站端口"></asp:Label>：
                                                     </td>
-                                                    <td colspan="5" style="text-align: left" class="formItemBgStyle">
+                                                    <td colspan="5"  class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SiteBindingInfo" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
 
                                                         <asp:Label ID="Label27" runat="server" Text="站点目录"></asp:Label>：
                                                     </td>
 
-                                                    <td colspan="7" style="text-align: left" class="formItemBgStyle">
+                                                    <td colspan="7"  class="formItemBgStyleForAlignLeft">
 
                                                         <asp:TextBox ID="TB_SiteDirectory" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
@@ -389,12 +389,12 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
 
                                                         <asp:Label ID="Label28" runat="server" Text="站点模板目录"></asp:Label>：
                                                     </td>
 
-                                                    <td colspan="7" style="text-align: left" class="formItemBgStyle">
+                                                    <td colspan="7"  class="formItemBgStyleForAlignLeft">
 
                                                         <asp:TextBox ID="TB_SiteTemplateDirectory" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
@@ -402,44 +402,44 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label29" runat="server" Text="站点虚拟路径"></asp:Label>：
                                                     </td>
 
-                                                    <td colspan="7" style="text-align: left" class="formItemBgStyle">
+                                                    <td colspan="7"  class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SiteVirtualDirectoryPhysicalPath" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label30" runat="server" Text="数据库恢复文件路径"></asp:Label>：</td>
 
-                                                    <td colspan="7" style="text-align: left" class="formItemBgStyle">
+                                                    <td colspan="7"  class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SiteDBRestoreFile" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label31" runat="server" Text="数据库安装目录"></asp:Label>：
                                                     </td>
 
-                                                    <td colspan="7" style="text-align: left" class="formItemBgStyle">
+                                                    <td colspan="7"  class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SiteDBSetupDirectory" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label61" runat="server" Text="数据库登录帐号"></asp:Label>：</td>
 
-                                                    <td colspan="5" style="text-align: left" class="formItemBgStyle">
+                                                    <td colspan="5"  class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SiteDBLoginUserID" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
-                                                    <td class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label9" runat="server" Text="自动建站"></asp:Label>：</td>
 
-                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                    <td  class="formItemBgStyleForAlignLeft">
                                                         <asp:DropDownList ID="DL_AutoBuildSite" runat="server">
                                                             <asp:ListItem Value="NO">NO</asp:ListItem>
                                                             <asp:ListItem Value="YES">YES</asp:ListItem>

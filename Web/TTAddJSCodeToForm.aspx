@@ -155,7 +155,7 @@
                                             <ContentTemplate>
 
                                                 <tr>
-                                                    <td align="left" class="formItemBgStyle">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                             <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="Type" DataValueField="Type"
                                                                 Width="110px" AutoPostBack="true" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
@@ -173,13 +173,13 @@
                                                     </td>
                                                 </tr>
                                                 <tr style="font-weight: bold; font-size: 11pt">
-                                                    <td style="text-align: left" class="formItemBgStyle" onclick="javascript:displayWaitingImg('img_processing');">
+                                                    <td  class="formItemBgStyleForAlignLeft" onclick="javascript:displayWaitingImg('img_processing');">
                                                         <asp:Button ID="BT_Save" class="inpu" runat="server" Text="<%$ Resources:lang,BaoCun%>" />
                                                         <img id="img_processing" src="img/Processing.gif" alt="Loading,please wait..." style="display: none;" />
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: left" class="formItemBgStyle">
+                                                    <td  class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JSDaiMa%>"></asp:Label>£º<br />
                                                         <textarea id="TXT_JSCode" cols="150" rows="80" runat="server" onmouseout="javascript:setEditorValue();">
                                                         </textarea>
@@ -193,7 +193,7 @@
                                         </asp:UpdatePanel>
 
                                         <tr>
-                                            <td style="text-align: left" class="formItemBgStyle">
+                                            <td  class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>£º<br />
                                                 <textarea id="TXT_Comment" cols="150" rows="4" runat="server"></textarea>
                                             </td>

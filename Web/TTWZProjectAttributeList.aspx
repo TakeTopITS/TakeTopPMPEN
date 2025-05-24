@@ -46,7 +46,7 @@
                             <td style="padding: 0px 5px 5px 5px;" valign="top">
                                 <table width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <input type="button" class="inpuLong" value="Add" onclick="window.location.href = 'TTWZProjectAttributeEdit.aspx'" />
                                         </td>
                                     </tr>
@@ -132,7 +132,7 @@
 
                                 <table width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td align="left" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <input type="button" class="inpuLong" value="Add" onclick="window.location.href = 'TTWZProjectNatureEdit.aspx'" />
                                         </td>
                                     </tr>

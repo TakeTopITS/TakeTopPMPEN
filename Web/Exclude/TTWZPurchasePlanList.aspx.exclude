@@ -80,10 +80,10 @@
                                 <td style="padding: 0px 5px 5px 5px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" colspan="6">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="6">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º<asp:DropDownList ID="DDL_SearchProgress" runat="server" OnSelectedIndexChanged="DDL_SearchProgress_SelectedIndexChanged" AutoPostBack="true">
 
                                                                 <asp:ListItem Text="<%$ Resources:lang,TiJiao%>" Value="Ìá½»" />
@@ -100,7 +100,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" colspan="6">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="6">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£º
                                                             <asp:Button ID="BT_NewSetVolume" runat="server" Text="<%$ Resources:lang,ZuJuan%>" CssClass="inpu" OnClick="BT_NewSetVolume_Click" Enabled="false" />&nbsp;
                                                             <asp:Button ID="BT_NewReport" runat="server" Text="<%$ Resources:lang,ShangBao%>" CssClass="inpu" OnClick="BT_NewReport_Click" Enabled="false" />&nbsp;
@@ -121,7 +121,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" colspan="6">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="6">
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,CaiGouWenJianJiLu%>"></asp:Label>&nbsp;&nbsp;
                                                             <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text="*"></asp:Label><asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

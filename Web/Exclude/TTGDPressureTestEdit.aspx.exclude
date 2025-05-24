@@ -85,71 +85,71 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle">Test Loop No£º
+                                                        <td class="formItemBgStyleForAlignLeft">Test Loop No£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DDL_TestLoopNo" runat="server"></asp:DropDownList>
                                                             <%--<asp:TextBox ID="TXT_TestLoopNo" runat="server"></asp:TextBox>--%>
                                                         </td>
-                                                        <td class="formItemBgStyle">Press Test Rec£º
+                                                        <td class="formItemBgStyleForAlignLeft">Press Test Rec£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_PressTestRec" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">Date£º
+                                                        <td class="formItemBgStyleForAlignLeft">Date£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_PressDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">Reinst Rec£º
+                                                        <td class="formItemBgStyleForAlignLeft">Reinst Rec£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_ReinstRec" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">Date£º
+                                                        <td class="formItemBgStyleForAlignLeft">Date£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_ReinstDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">Flushing Block£º
+                                                        <td class="formItemBgStyleForAlignLeft">Flushing Block£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_FlushingBlock" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">Flushing Rec£º
+                                                        <td class="formItemBgStyleForAlignLeft">Flushing Rec£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_FlushingRec" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">Date£º
+                                                        <td class="formItemBgStyleForAlignLeft">Date£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_FlushingDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">Leak Test Rec£º
+                                                        <td class="formItemBgStyleForAlignLeft">Leak Test Rec£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_LeakTestRec" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle">Date£º
+                                                        <td class="formItemBgStyleForAlignLeft">Date£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">
+                                                        <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_LeakDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyle">Remarks£º
+                                                        <td class="formItemBgStyleForAlignLeft">Remarks£º
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle" colspan="3">
+                                                        <td  class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:TextBox ID="TXT_Remarks" runat="server" Width="400"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: center" class="formItemBgStyle" colspan="6">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
                                                                 type="button" value="Closed" />

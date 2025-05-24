@@ -83,21 +83,21 @@
                                     <td valign="top" style="padding-top: 5px;">
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr style="font-weight: bold; font-size: 11pt">
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShuJuBiaoMing%>"></asp:Label>£º
                                                 </td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <input type="text" id="TXT_TableName" style="width: 320px" runat="server" />
                                                 </td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>£º
                                                 </td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <textarea id="TXT_Description" cols="50" rows="4" runat="server" runat="server"></textarea>
                                                 </td>
                                             </tr>
                                             <tr style="font-weight: bold; font-size: 11pt">
-                                                <td style="text-align: left" class="formItemBgStyle" colspan="6">
+                                                <td  class="formItemBgStyleForAlignLeft" colspan="6">
                                                     <input type="button" value="Save" id="BT_Save" class="inpu" />
                                                 </td>
                                             </tr>

@@ -284,7 +284,7 @@
                                                     <ContentTemplate>
                                                         <table style="width: 98%; padding: 5px 0px 0px 5px" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                             <tr>
-                                                                <td width="200px" align="left" valign="top" class="formItemBgStyle">
+                                                                <td width="200px" valign="top" class="formItemBgStyleForAlignLeft">
                                                                     <table width="98%">
                                                                         <tr>
                                                                             <td width="200px" align="left" valign="top">
@@ -337,7 +337,7 @@
                                                                     </table>
                                                                 </td>
                                                                
-                                                                <td  align="left" valign="top" class="formItemBgStyle">
+                                                                <td  valign="top" class="formItemBgStyleForAlignLeft">
 
                                                                     <asp:Label ID="LB_CandidateName" runat="server"></asp:Label>
                                                                     <div id="DivID" style="width: 600px; height: 800px; overflow: auto;">

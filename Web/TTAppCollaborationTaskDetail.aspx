@@ -747,7 +747,7 @@
 
                         <tr style="display: none;">
 
-                            <td align="left" class="formItemBgStyle">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:HyperLink ID="HL_TaskReview" runat="server" Enabled="False">---&gt;<asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,RenWuPingShen%>"></asp:Label></asp:HyperLink><asp:HyperLink ID="HL_MakeProjectReq" runat="server">--&gt;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JianLiHeFenPaiXuQiu%>"></asp:Label></asp:HyperLink><asp:HyperLink ID="HL_TestCase" runat="server" NavigateUrl="TTMakeTaskTestCase.aspx">
                                     <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,CeShiYongLi%>"></asp:Label>
                                 </asp:HyperLink><asp:HyperLink ID="HL_TaskRelatedDoc" runat="server" NavigateUrl="TTProTaskRelatedDoc.aspx">
@@ -763,7 +763,7 @@
                             </td>
                         </tr>
                         <tr style="display: none;">
-                            <td width="65%" style="text-align: left;" class="formItemBgStyle">
+                            <td width="65%"  class="formItemBgStyleForAlignLeft">
                                 <asp:DataList ID="DataList2" runat="server" Width="100%" Height="1px" CellPadding="0"
                                     ForeColor="#333333">
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

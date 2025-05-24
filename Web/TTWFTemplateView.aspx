@@ -346,23 +346,23 @@
                                 <br />
                                 <table cellpadding="3" cellspacing="0" class="formBgStyle" width="70%">
                                     <tr>
-                                        <td class="formItemBgStyle" style="width: 10%; height: 24px; ">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 10%; height: 24px; ">
                                             <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>
                                             £º </td>
-                                        <td class="formItemBgStyle" style="height: 24px;">
+                                        <td class="formItemBgStyleForAlignLeft" style="height: 24px;">
                                             <asp:Label ID="LB_XMLNodeID" runat="server"></asp:Label>
                                         </td>
-                                        <td class="formItemBgStyle" style="font-size: 10pt; width: 20%; height: 24px; ">XMLNode£º </td>
-                                        <td class="formItemBgStyle" style="width: 35%; height: 24px; text-align: left;">
+                                        <td class="formItemBgStyleForAlignLeft" style="font-size: 10pt; width: 20%; height: 24px; ">XMLNode£º </td>
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 35%; height: 24px; text-align: left;">
                                             <asp:TextBox ID="TB_XMLNode" runat="server" Width="500px"></asp:TextBox>
                                         </td>
-                                        <td class="formItemBgStyle" style="font-size: 10pt; width: 20%; height: 24px; ">
+                                        <td class="formItemBgStyleForAlignLeft" style="font-size: 10pt; width: 20%; height: 24px; ">
 
                                             <asp:Label ID="Label22" runat="server" Text="Field"></asp:Label>:
 
 
                                         </td>
-                                        <td class="formItemBgStyle" style="width: 35%; height: 24px; text-align: left;">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 35%; height: 24px; text-align: left;">
                                             <asp:DropDownList ID="DL_GlobalVariable" runat="server">
                                                 <asp:ListItem Value="[TAKETOPUSERCODE]">[TAKETOPUSERCODE]</asp:ListItem>
                                                 <asp:ListItem Value="[TAKETOPUSERNAME]">[TAKETOPUSERNAME]</asp:ListItem>
@@ -375,8 +375,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyle" style="width: 10%; height: 24px; ">&nbsp; </td>
-                                        <td class="formItemBgStyle" colspan="5" style="height: 24px;">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 10%; height: 24px; ">&nbsp; </td>
+                                        <td class="formItemBgStyleForAlignLeft" colspan="5" style="height: 24px;">
                                             <asp:Button ID="BT_Add" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_Add_Click" />
                                             &nbsp;
                                     <asp:Button ID="BT_Update" runat="server" CssClass="inpu" Enabled="False" Text="<%$ Resources:lang,BaoCun%>" OnClick="BT_Update_Click" />

@@ -61,29 +61,29 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-size: 12pt">
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                 <tr style="font-size: 12pt">
-                                                                    <td align="left" style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyle" valign="top">
+                                                                    <td  style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyleForAlignLeft" valign="top">
 
                                                                         <table class="formBgStyle" width="100%">
 
                                                                             <tr>
-                                                                                <td style="text-align: left" class="formItemBgStyle" colspan="2">
+                                                                                <td  class="formItemBgStyleForAlignLeft" colspan="2">
                                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label><asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label><asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>&nbsp;
                                                                                 </td>
                                                                             </tr>
 
                                                                             <tr>
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XuanZheWenJian%>"></asp:Label></td>
-                                                                                <td style="text-align: left" class="formItemBgStyle" colspan="3">
+                                                                                <td  class="formItemBgStyleForAlignLeft" colspan="3">
                                                                                     <asp:FileUpload ID="fileExcel" runat="server" />
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="text-align: left" class="formItemBgStyle" colspan="4">
+                                                                                <td  class="formItemBgStyleForAlignLeft" colspan="4">
                                                                                     <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;
                                                                                     <asp:HyperLink ID="HyperLink1" NavigateUrl="Template/学生考勤数据导入表.xls" Text="<%$ Resources:lang,ShuJuDaoRuMuBan%>" runat="server">
                                                                                        
@@ -91,14 +91,14 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="padding-top: 5px;" class="formItemBgStyle" colspan="4">
+                                                                                <td style="padding-top: 5px;" class="formItemBgStyleForAlignLeft" colspan="4">
                                                                                     <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
 
                                                                     </td>
-                                                                    <td class="formItemBgStyle" width="80%">
+                                                                    <td class="formItemBgStyleForAlignLeft" width="80%">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label><asp:DropDownList ID="DDL_SYear" runat="server"></asp:DropDownList>&nbsp;
                                                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label><asp:DropDownList ID="DDL_SMonth" runat="server"></asp:DropDownList>&nbsp;
                                                                         <asp:Button ID="BT_Seach" runat="server" Text="<%$ Resources:lang,ChaXun%>" CssClass="inpu" OnClick="BT_Seach_Click" /><br />

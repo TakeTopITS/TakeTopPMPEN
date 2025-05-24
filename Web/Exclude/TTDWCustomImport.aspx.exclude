@@ -57,14 +57,14 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>£º<asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>£º<asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>&nbsp;
                                                                     </td>
-                                                                    <td class="formItemBgStyle" style="display:none;">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="display:none;">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KeHuMingCheng%>"></asp:Label>£º<asp:TextBox ID="TXT_CustomName" runat="server"></asp:TextBox>
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HuoZhe%>"></asp:Label>
                                                                     <asp:DropDownList ID="DDL_CustomName" runat="server" DataTextField="CustomName" DataValueField="CustomName"></asp:DropDownList>
@@ -80,10 +80,10 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle" width="100%">
+                                            <td class="formItemBgStyleForAlignLeft" width="100%">
                                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" style="width: 100%;">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                                 <div style="width: 2200px;">
                                                                     <asp:DataGrid ID="DG_CustomValue" runat="server" AllowPaging="false" AutoGenerateColumns="False" CellPadding="4"
                                                                         ForeColor="#333333" GridLines="None" Height="1px" PageSize="10" ShowHeader="True" Width="100%" OnPageIndexChanged="DG_CustomValue_PageIndexChanged">

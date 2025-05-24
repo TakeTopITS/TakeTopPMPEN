@@ -79,7 +79,7 @@
                                         <td style="text-align: right;">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QueXianMingCheng%>"></asp:Label>£º
                                         </td>
-                                        <td style="" colspan="5" align="left">
+                                        <td  colspan="5" align="left">
                                             <%# DataBinder.Eval(Container.DataItem,"DefectName") %>
                                         </td>
                                     </tr>

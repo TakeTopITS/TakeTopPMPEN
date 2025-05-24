@@ -54,10 +54,10 @@
                             <td style="width: 45%; padding-top: 5px; text-align: center; vertical-align: top;">
                                 <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                     <tr>
-                                        <td width="20%" style="" class="formItemBgStyle">
+                                        <td width="20%"  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                         </td>
-                                        <td style="text-align: left; overflow-y: auto;" class="formItemBgStyle">
+                                        <td style="text-align: left; overflow-y: auto;" class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="LB_CollaborationName" runat="server"></asp:Label>
                                             <div id="mess_box" style="width: 100%; height: 150px; overflow: auto;">
                                                 <asp:DataList ID="DataList2" runat="server" CellPadding="4" ForeColor="#333333" Width="98%">
@@ -79,10 +79,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CanYuRenYuan%>"></asp:Label>£º
                                         </td>
-                                        <td style="text-align: left;" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Repeater ID="RP_Attendant" runat="server">
                                                 <ItemTemplate>
                                                     <asp:Button ID="BT_UserName" runat="server" CssClass="ButtonCss" style="margin:1px 0;" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>'
@@ -92,20 +92,20 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>£º
                                         </td>
-                                        <td style="text-align: left;" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="LB_Creator" runat="server"></asp:Label>&nbsp;&nbsp;
                                             <asp:Label ID="LB_CreateTime" runat="server"></asp:Label>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                         </td>
-                                        <td style="text-align: left;" class="formItemBgStyle">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="LB_Status" runat="server"></asp:Label>
                                         </td>
                                     </tr>

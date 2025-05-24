@@ -104,7 +104,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="formItemBgStyle" style="text-align: left; width: 100%;">
+                        <td class="formItemBgStyleAlignLeft" style="text-align: left; width: 100%;">
                             <table width="100%" cellpadding="4" cellspacing="4">
                                 <tr>
                                     <td>
@@ -297,12 +297,12 @@
                                                 <td align="left">
                                                     <table width="80%">
                                                         <tr>
-                                                            <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                            <td class="formItemBgStyleAlignLeft" style="text-align: left;" width="150px">
                                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>£º</td>
-                                                            <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                            <td class="formItemBgStyleAlignLeft" style="text-align: left;" width="150px">
                                                                 <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhiXing%>"></asp:Label>£º</td>
 
-                                                            <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                            <td class="formItemBgStyleAlignLeft" style="text-align: left;" width="150px">
                                                                 <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label>£º</td>
                                                         </tr>
                                                     </table>

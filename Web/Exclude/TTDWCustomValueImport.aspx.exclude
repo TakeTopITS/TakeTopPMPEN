@@ -89,19 +89,19 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-size: 12pt">
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                 <tr style="font-size: 12pt">
-                                                                    <td align="left" style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyle">
+                                                                    <td  style="width: 45%; padding: 5px 5px 5px 5px; font-size: 12px;" class="formItemBgStyleForAlignLeft">
                                                                         <table class="formBgStyle" width="60%">
                                                                             <tr>
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>£º<asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
                                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>£º<asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>&nbsp;
                                                                                 </td>
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>£º</td>
-                                                                                <td style="text-align: left" class="formItemBgStyle">
+                                                                                <td  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:FileUpload ID="fileExcel" runat="server" />
                                                                                     <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" OnClientClick="importFile();" CssClass="inpu" />&nbsp;&nbsp;
                                                                                     <input type="button" class="inpu" value="·µ»Ø" style="display:none;" />&nbsp;&nbsp;
@@ -109,7 +109,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="text-align: left" class="formItemBgStyle" colspan="3">
+                                                                                <td  class="formItemBgStyleForAlignLeft" colspan="3">
                                                                                     <font color="red">
                                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DDJDRSHQKXQDRSJMGYSJDRCGWWHQDJBC%>"></asp:Label></font>
                                                                                 </td>
@@ -118,7 +118,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <div style="width: 2200px; overflow-x: auto;">
                                                                             <asp:DataGrid ID="DG_CustomValue" runat="server" AllowPaging="false" AutoGenerateColumns="False"
                                                                                  CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
@@ -197,7 +197,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <table style="width: 100%">
                                                                             <tr style="display: none;">
                                                                                 <td style="font-size: 10pt; padding-top: 5px;">

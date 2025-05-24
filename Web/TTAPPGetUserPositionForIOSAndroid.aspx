@@ -71,7 +71,7 @@
 
         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
             <tr>
-                <td style="" height="31" class="page_topbj">
+                <td  height="31" class="page_topbj">
                     <table width="99%">
                         <tr>
                             <td style="width: 50%; text-align: left;">

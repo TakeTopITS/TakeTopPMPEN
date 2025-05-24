@@ -285,17 +285,17 @@
                         <td valign="top" align="left" style="padding: 5px 2px  0px 5px;">
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignRight">
                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,fenpaiRen%>" />£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_AssignManName" runat="server" Width="80px"></asp:TextBox>
                                     </td>
-                                    <td align="left" class="formItemBgStyle" style="padding-left: 10px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="padding-left: 10px;">
                                         <asp:Button ID="BT_FindAll" runat="server" CssClass="inpuQuery" OnClick="BT_FindAll_Click" />
 
                                     </td>
-                                    <td align="left" class="formItemBgStyle" style="padding-left: 10px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="padding-left: 10px;">
 
                                         <asp:Button ID="BT_Qrcode" runat="server" CssClass="inpuQrCode" OnClientClick="qrcode()" />
                                         <asp:TextBox ID="TB_QrCode" runat="server" Style="display: none;"></asp:TextBox>

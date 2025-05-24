@@ -29,23 +29,23 @@
                         </td>
         </tr>
         <tr>
-            <td valign="top" style=" padding:5px 5px 5px 5px;">
+            <td valign="top" style="padding:5px 5px 5px 5px;">
                 <table align="left" cellspacing="0" cellpadding="3" width="98%" class="formBgStyle">
                 
                     <tr >
-                        <td style="width: 5%" align="right" class="formItemBgStyle">
+                        <td style="width: 5%"  class="formItemBgStyleForAlignLeft">
                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>:
                         </td>
-                        <td align="left" class="formItemBgStyle">
+                        <td class="formItemBgStyleForAlignLeft">
                             <asp:TextBox ID="Name" runat="server" Width="300px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfN" runat="server" ControlToValidate="Name" CssClass="GbText"
                                 Display="Dynamic" ErrorMessage="名称不能为空！"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr >
-                        <td  align="right" class="formItemBgStyle">
+                        <td   class="formItemBgStyleForAlignLeft">
                         </td>
-                        <td align="left" class="formItemBgStyle">
+                        <td class="formItemBgStyleForAlignLeft">
                             <font face="宋体">&nbsp;</font><asp:Button ID="NewBtn" runat="server" Text="<%$ Resources:lang,QueDing%>" 
                                 CssClass="inpu" OnClick="NewBtn_Click" /><font face="宋体">&nbsp;</font><asp:Button
                                     ID="ReturnBtn" runat="server" Text="<%$ Resources:lang,FanHui%>"  CssClass="inpu" OnClick="ReturnBtn_Click"

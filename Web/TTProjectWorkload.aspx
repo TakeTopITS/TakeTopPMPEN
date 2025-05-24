@@ -197,25 +197,25 @@
                                     <td>
                                         <table width="100%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td align="right" style="width: 10%;" class="formItemBgStyle">
+                                                <td align="right" style="width: 10%;" class="formItemBgStyleAlignLeft">
                                                     <asp:Label ID="LB_ID" runat="server" />
                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LeiXing%>" />
                                                     :
                                                 </td>
-                                                <td align="left" style="width: 30%;" class="formItemBgStyle">
+                                                <td align="left" style="width: 30%;" class="formItemBgStyleAlignLeft">
                                                     <asp:TextBox ID="TB_WorkType" runat="server" Width="60%"></asp:TextBox>
                                                     <asp:DropDownList ID="DL_WorkType" runat="server" DataTextField="WorkType"
                                                         AutoPostBack="true" OnSelectedIndexChanged="DL_WorkType_SelectedIndexChanged"
                                                         DataValueField="WorkType" CssClass="DDList">
                                                     </asp:DropDownList>
                                                 </td>
-                                                <td style="width: 15%;" class="formItemBgStyle"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongZuoLiang%>" />£º</td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td style="width: 15%;" class="formItemBgStyleAlignLeft"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongZuoLiang%>" />£º</td>
+                                                <td style="text-align: left" class="formItemBgStyleAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_GongZuoLiang" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>
-                                                <td style="width: 15%;" class="formItemBgStyle"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DanJia%>" />£º</td>
-                                                <td style="text-align: left" class="formItemBgStyle">
+                                                <td style="width: 15%;" class="formItemBgStyleAlignLeft"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DanJia%>" />£º</td>
+                                                <td style="text-align: left" class="formItemBgStyleAlignLeft">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_DanJia" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>

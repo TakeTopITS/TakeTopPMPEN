@@ -117,7 +117,7 @@
 
                                                     <table width="50%" border="0" class="formBgStyle" cellpadding="2" cellspacing="0">
                                                         <tr>
-                                                            <td align="left" class="formItemBgStyle" style="padding-top: 0px;">
+                                                            <td class="formItemBgStyleForAlignLeft" style="padding-top: 0px;">
                                                                 <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand" Width="90%">
                                                                     <Columns>
                                                                         <asp:BoundColumn DataField="ID" HeaderText="Number">
@@ -156,7 +156,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyle" colspan="2">
+                                                            <td class="formItemBgStyleForAlignLeft" colspan="2">
                                                                 <asp:Button ID="BT_Save" runat="server" CssClass="inpu" OnClick="BT_Save_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                             </td>
                                                         </tr>

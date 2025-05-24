@@ -81,23 +81,23 @@
                     <div id="AboveDiv">
                         <table style="width: 100%;">
                             <tr>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <table>
                                         <tr>
                                             
-                                            <td class="formItemBgStyle" style="width: 100px; text-align: center;">
+                                            <td class="formItemBgStyleForAlignLeft" style="width: 100px; text-align: center;">
                                                 <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server"  OnClick="BT_Import_Click" />
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Button ID="BT_Save" Text="<%$ Resources:lang,BaoCun %>" CssClass="inpu" runat="server" OnClick="BT_Save_Click" />
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="LB_Watermark" Text="Ë®Ó¡×Ö·û" runat="server"></asp:Label>
                                             </td>
-                                            <td class="formItemBgStyle" width="100px">
+                                            <td class="formItemBgStyleForAlignLeft" width="100px">
                                                 <asp:TextBox ID="TB_Watermark" runat="server" Width="99%"></asp:TextBox>
                                             </td>
-                                            <td class="formItemBgStyle" style=" padding-right: 5px; padding-left: 5px;">
+                                            <td class="formItemBgStyleForAlignLeft" style="padding-right: 5px; padding-left: 5px;">
                                                 <asp:Button ID="BT_Export" Text="<%$ Resources:lang,DaoChu %>" CssClass="inpu" runat="server" OnClick="BT_Export_Click" />
                                             </td>
 
@@ -106,7 +106,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <CKEditor:CKEditorControl ID="TB_ConstractMainContent" runat="server" Width="100%" Height="850px" Visible="false" />
                                     <CKEditor:CKEditorControl runat="server" ID="HT_ConstractMainContent" Width="100%" Height="850px" Visible="false" />
                                 </td>

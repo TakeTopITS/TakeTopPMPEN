@@ -218,7 +218,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td align="left" class="formItemBgStyle" style="padding: 5px 5px 5px 5px;">
+                                                                            <td class="formItemBgStyleForAlignLeft" style="padding: 5px 5px 5px 5px;">
                                                                                 <asp:DataList ID="DataList3" runat="server" CellPadding="0" ForeColor="#333333" OnItemCommand="DataList3_ItemCommand"
                                                                                     Height="1px" Width="100%">
 
@@ -483,12 +483,12 @@
                             <table style="width: 100%;" cellpadding="3" cellspacing="0"
                                 class="formBgStyle">
                                 <tr>
-                                    <td style="width: 90px; " class="formItemBgStyle">
+                                    <td style="width: 90px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" runat="server" Visible ="false"></asp:Label>
                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>£º
                                     </td>
 
-                                    <td style="text-align: left;" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
 
                                         <CKEditor:CKEditorControl ID="HE_ReviewDetail" runat="server" Height="180px" Width="90%" Visible="false" />
 
@@ -499,11 +499,11 @@
 
                                 <tr>
 
-                                    <td style="width: 90px; " class="formItemBgStyle">
+                                    <td style="width: 90px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>£º
                                     </td>
 
-                                    <td style="text-align: left;" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
 
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Scoring" runat="server" Width="53px" OnBlur="" OnFocus=""
                                             OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>

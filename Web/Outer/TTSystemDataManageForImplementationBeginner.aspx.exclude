@@ -73,13 +73,13 @@
                                                             valign="top">
                                                             <table style="width: 98%;" border="1" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                 <tr>
-                                                                    <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
+                                                                    <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top" align="left">
                                                                         <asp:Label ID="Label44" runat="server" Text="删除基础数据"></asp:Label>（<span style="color: red;">
                                                                             <asp:Label ID="Label45" runat="server" Text="只能系统实施开始阶段进行操作，操作之前请先备份数据库，相关数据正确后，请点击【禁用】按钮，禁用功能只能操作一次，禁用后，不能再操作相关功能"></asp:Label></span> ）：
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2" align="left" class="formItemBgStyle">
+                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
 
                                                                         <table>
                                                                             <tr>
@@ -93,7 +93,7 @@
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="text-align: left; width: 70%; height: 25px;">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="width: 70%; height: 25px;">
                                                                         <asp:Button ID="BT_ClearDepartmentData" runat="server" CssClass="inpuLong" OnClick="BT_ClearDepartmentData_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="清除组织架构" Visible="false" />
                                                                         &nbsp;&nbsp;
                                                                         <asp:Button ID="BT_ClearUserData" runat="server" CssClass="inpuLong" OnClick="BT_ClearUserData_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="清除员工档案" Visible="false" />
@@ -113,7 +113,7 @@
                                                                         &nbsp;&nbsp; 
                                                                         <asp:Button ID="BT_ClearWorkflowData" runat="server" CssClass="inpuLongest" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="清除已删除流程模板的流程" OnClick="BT_ClearWorkflowData_Click" Visible="false" />
                                                                     </td>
-                                                                    <td class="formItemBgStyle" style="text-align: left; vertical-align: middle; height: 25px;">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle; height: 25px;">
                                                                         <asp:Button ID="BT_ForbitClear" runat="server" CssClass="inpuLong" OnClick="BT_ForbitClear_Click" OnClientClick="return confirm('禁用功能只能操作一次，您确定要禁用前面功能吗？')" Text="禁用前面功能" />
                                                                     </td>
                                                                 </tr>

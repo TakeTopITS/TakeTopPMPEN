@@ -110,7 +110,7 @@
                                 <td style="padding: 0px 5px 5px 5px;" valign="top">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr style="display: none;">
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <input type="button" class="inpuLong" value="新增小类代码" onclick="window.location.href = 'TTObjectSmallEdit.aspx'" />
                                             </td>
                                         </tr>
@@ -118,46 +118,46 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td style="text-align: left; width: 80%;" class="formItemBgStyle" colspan="2">
+                                                        <td style="width: 80%;" class="formItemBgStyleForAlignLeft" colspan="2">
                                                             <table class="formBgStyle" style="width: 60%;">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaLeiDaiMa%>"></asp:Label>：</td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_DLCode" runat="server" ReadOnly="true" Width="50"></asp:TextBox>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaLeiDaiMa%>"></asp:Label>：</td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_XLCode" runat="server"></asp:TextBox>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiaoLeiMingCheng%>"></asp:Label>：</td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_XLName" runat="server"></asp:TextBox>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhongLeiDaiMa%>"></asp:Label>：</td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_ZLCode" runat="server" ReadOnly="true" Width="50"></asp:TextBox>
                                                                     </td>
-                                                                    <td class="formItemBgStyle" colspan="2">&nbsp;</td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="2">&nbsp;</td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XiaoLeiShuoMing%>"></asp:Label>：</td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TXT_XLDesc" runat="server" Width="300px"></asp:TextBox>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Button ID="BT_Cancel" runat="server" Text="<%$ Resources:lang,QuXiao%>" CssClass="inpu" OnClick="BT_Cancel_Click" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" colspan="7">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="7">
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,LieBiaoPaiXu%>"></asp:Label>：<asp:Button ID="BT_XLCode" runat="server" Text="<%$ Resources:lang,XiaoLeiDaiMa%>" CssClass="inpu" OnClick="BT_XLCode_Click" />
                                                                         
@@ -170,7 +170,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" colspan="7">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="7">
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>：<asp:Button ID="BT_NewEdit" runat="server" Text="<%$ Resources:lang,BianJi%>" CssClass="inpu" OnClick="BT_NewEdit_Click" />&nbsp;
                                                                         <asp:Button ID="BT_NewApprove" runat="server" Text="<%$ Resources:lang,PiZhun%>" CssClass="inpu" OnClick="BT_NewApprove_Click" />&nbsp;
@@ -186,12 +186,12 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="width: 30%;">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 30%;">
                                                             <asp:TreeView ID="TV_BigObject" runat="server" ShowLines="True" NodeWrap="True" OnSelectedNodeChanged="TV_BigObject_SelectedNodeChanged" Width="300">
                                                                 <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                             </asp:TreeView>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="width: 70%;">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 70%;">
                                                             <div style="width: 1500px;">
                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>

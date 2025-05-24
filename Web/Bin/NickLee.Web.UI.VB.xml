@@ -251,7 +251,7 @@ NickLee.Web.UI.VB
  </summary>
 </member><member name="M:NickLee.Web.UI.VB.CaptchaControl.CssStyle">
 	<summary>
- returns css "style=" tag for this control
+ returns css "style="tag for this control
  based on standard control visual properties
  </summary>
 </member><member name="M:NickLee.Web.UI.VB.CaptchaControl.Render(System.Web.UI.HtmlTextWriter)">

@@ -232,7 +232,7 @@
 
                                                             <table width="95%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                 <tr>
-                                                                    <td style="text-align: left; padding-top: 10px; width: 280px" class="formItemBgStyle">
+                                                                    <td style="padding-top: 10px; width: 280px" class="formItemBgStyleForAlignLeft">
 
                                                                         <asp:Button ID="BT_Receive" runat="server" Text="<%$ Resources:lang,ProjectAgree%>"
                                                                             CssClass="inpu" OnClick="BT_Receive_Click" />&nbsp;
@@ -241,7 +241,7 @@
                                                                                 <asp:Button ID="BT_Activity" runat="server" Text="<%$ Resources:lang,Running%>" CssClass="inpu"
                                                                                     OnClick="BT_Activity_Click" />
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
 
                                                                         <asp:Repeater ID="Repeater1" runat="server">
                                                                             <ItemTemplate>
@@ -267,7 +267,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2" style="text-align: left" class="formItemBgStyle">
+                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                         <asp:CheckBox ID="CB_ReturnMsg" runat="server" Font-Bold="False" Text="<%$ Resources:lang,SendSMS%>" /><asp:CheckBox
                                                                             ID="CB_ReturnMail" runat="server" Font-Bold="False" Text="<%$ Resources:lang,SendEMail%>" />
                                                                         <asp:Label ID="LB_NoticeProjectCreator" runat="server" Text="<%$ Resources:lang,NoticeProjectCreator%>" />
@@ -276,13 +276,13 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2" style="text-align: left;" class="formItemBgStyle">
+                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="LB_TodaySummary" runat="server" Text="<%$ Resources:lang,TodaySummary%>" />
                                                                         <asp:Label ID="LB_WorkID" runat="server" Text="-1" Visible="False"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2" align="left" class="formItemBgStyle">
+                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                         <table>
                                                                             <tr>
 
@@ -319,7 +319,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2" align="left" class="formItemBgStyle">
+                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                         <table width="80%">
                                                                             <tr>
                                                                                 <td width="40px">
@@ -353,7 +353,7 @@
                                                 <br />
                                             </td>
                                         </tr>
-                                        <tr style="height: 15px" class="formItemBgStyle">
+                                        <tr style="height: 15px" class="formItemBgStyleForAlignLeft">
                                             <td style="text-align: left; padding-left: 30px;">
                                                 <asp:Button ID="BT_Summit" runat="server" Text="<%$ Resources:lang,Submit%>" CssClass="inpu"
                                                     OnClick="BT_Summit_Click" Height="21px" />

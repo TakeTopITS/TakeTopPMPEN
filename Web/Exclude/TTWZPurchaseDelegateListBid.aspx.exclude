@@ -56,22 +56,22 @@
                                 <td>
                                     <table class="formBgStyle">
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZBXZCYPBJL%>"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,PingBiaoRen%>"></asp:Label>£º<asp:DropDownList ID="DDL_Bids" runat="server"></asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,PingBiaoYiJian%>"></asp:Label>£º<asp:TextBox ID="TXT_Suggest" runat="server" TextMode="MultiLine" Width="600px" Height="50px"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiaoDuanXuanZe%>"></asp:Label>£º
                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BiaoDuanYi%>"></asp:Label> £º<asp:TextBox ID="TXT_SupplierCode1" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button2" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BiaoDuanEr%>"></asp:Label>£º<asp:TextBox ID="TXT_SupplierCode2" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button3" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
@@ -80,7 +80,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
                                                                 type="button" value="¹Ø±Õ" />
                                             </td>

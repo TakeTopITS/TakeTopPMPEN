@@ -82,7 +82,7 @@
                     <div id="AboveDiv" style="padding-left: 25px;">
                         <table width="99%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td class="formItemBgStyle" style="font-size: xx-large; text-align: center; border-radius: 10px 10px 0px 0px; padding-top: 30px; height: 80px; border-bottom-style: none;">
+                                <td class="formItemBgStyleForAlignLeft" style="font-size: xx-large; text-align: center; border-radius: 10px 10px 0px 0px; padding-top: 30px; height: 80px; border-bottom-style: none;">
                                     <img src="ImagesSkin/ZhuCeLogo.png"> </img>
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhaoHuiMiMa%>"></asp:Label>
 
@@ -90,26 +90,26 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle" width="80px" align="left" style="vertical-align: bottom;">
+                                <td class="formItemBgStyleForAlignLeft" width="80px" align="left" style="vertical-align: bottom;">
 
                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShouJiHao%>"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
 
-                                <td class="formItemBgStyle" style="text-align: left;">
+                                <<td class="formItemBgStyleForAlignLeft">
                                     <asp:TextBox ID="TB_UserCode" runat="server" Height="25px" Width="90%"></asp:TextBox>
                                     <span style="color: #ff0000">*</span> </td>
 
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle" align="left" style="vertical-align: middle">
+                                <td class="formItemBgStyleForAlignLeft"  style="vertical-align: middle">
                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
 
                                 </td>
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle" align="left">
+                                <td class="formItemBgStyleForAlignLeft" >
                                     <table width="100%">
                                         <tr>
                                             <td width="35%">
@@ -124,19 +124,19 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle" align="left" style="vertical-align: bottom;">
+                                <td class="formItemBgStyleForAlignLeft"  style="vertical-align: bottom;">
                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XinMiMa%>"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="formItemBgStyle" align="left">
+                                <td class="formItemBgStyleForAlignLeft" >
                                     <asp:TextBox ID="TB_Password" runat="server" Height="25px" Width="90%"></asp:TextBox>
 
                                     <span style="color: #ff0000">*<span> </span></span></td>
                             </tr>
 
                             <tr>
-                                <td class="formItemBgStyle" align="left">
+                                <td class="formItemBgStyleForAlignLeft" >
                                     <asp:Button ID="BT_UpdatePWD" runat="server" CssClass="inpuLongest" Widt="100%" Height="30px" OnClick="BT_UpdatePWD_Click" Text="<%$ Resources:lang, BaoCun%>" />
                                     <br />
                                     <br />

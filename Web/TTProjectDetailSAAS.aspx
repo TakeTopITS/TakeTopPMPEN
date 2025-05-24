@@ -333,7 +333,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="2" align="left" class="formItemBgStyle">
+                                                                                <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                                     <table width="80%">
                                                                                         <tr>
                                                                                             <td width="40px">

@@ -70,42 +70,42 @@
                                             <td align="left" style="padding: 5px 5px 0px 5px; border-right: solid 1px #D8D8D8; width:90%;">
                                                 <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" align="left" colspan="4">&nbsp; <span class="auto-style1">
+                                                        <td class="formItemBgStyleForAlignLeft"  colspan="4">&nbsp; <span class="auto-style1">
                                                             <asp:Label ID="LB_YiXuanDingDeCaiWuZhangTaoQuJian" runat="server" Text="<%$ Resources:lang,YiXuanDingDeCaiWuZhangTaoQuJian%>"></asp:Label></span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhangTaoMingCheng" runat="server" Text="<%$ Resources:lang,ZhangTaoMingCheng%>"></asp:Label></td>
-                                                        <td class="formItemBgStyle" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
                                                             <asp:Label ID="lbl_FinancialName" runat="server"></asp:Label>
                                                         </td>
-                                                        <td align="right" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignRight">
                                                             <asp:Label ID="LB_QuJianMingCheng" runat="server" Text="<%$ Resources:lang,QuJianMingCheng%>"></asp:Label></td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="lbl_IntervalName" runat="server"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle" colspan="4">&nbsp; <b><span class="auto-style2">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="4">&nbsp; <b><span class="auto-style2">
                                                             <asp:Label ID="LB_GengGaiCaiWuZhangTaoQuJian" runat="server" Text="<%$ Resources:lang,GengGaiCaiWuZhangTaoQuJian%>"></asp:Label></span></b></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhangTaoMingCheng1" runat="server" Text="<%$ Resources:lang,ZhangTaoMingCheng%>"></asp:Label></td>
-                                                        <td class="formItemBgStyle" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
                                                             <asp:DropDownList ID="DL_FinancialID" runat="server" AutoPostBack="True" DataTextField="FinancialName" DataValueField="FinancialCode" OnSelectedIndexChanged="DL_FinancialID_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td align="right" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignRight">
                                                             <asp:Label ID="LB_QuJianMingCheng1" runat="server" Text="<%$ Resources:lang,QuJianMingCheng%>"></asp:Label></td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DL_IntervalID" runat="server" DataTextField="IntervalName" DataValueField="IntervalCode">
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style=" vertical-align: middle;">&nbsp;</td>
-                                                        <td class="formItemBgStyle" colspan="3" style="text-align: left; vertical-align: middle;">
+                                                        <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle;">&nbsp;</td>
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3" style="text-align: left; vertical-align: middle;">
                                                             <asp:Button ID="BT_Add" runat="server" OnClick="BT_Add_Click" CssClass="inpu" Text="<%$ Resources:lang,XuanDing%>" />
                                                         </td>
                                                     </tr>

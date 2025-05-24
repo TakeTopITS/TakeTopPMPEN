@@ -64,26 +64,26 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td align="left" style="width: 100%; padding: 5px 5px 5px 5px;" class="formItemBgStyle" valign="top">
+                                                        <td style="width: 100%; padding: 5px 5px 5px 5px;" class="formItemBgStyleForAlignLeft" valign="top">
                                                             <table class="formBgStyle">
                                                                 <tr>
-                                                                    <td style="text-align: center" class="formItemBgStyle" colspan="3">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                                         <h1>
                                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XianELingLiaoJiHuaMingXiDan%>"></asp:Label></h1>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle" colspan="2">
+                                                                    <td  class="formItemBgStyleForAlignLeft" colspan="2">
                                                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,JiHuaBianHao%>"></asp:Label>£º
                                                                         <asp:Label ID="LB_PlanCode" runat="server" Text="**"></asp:Label>
                                                                     </td>
-                                                                    <td class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_TotalPage" runat="server" Text="**"></asp:Label><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label><asp:Label ID="LB_CurrentPage" runat="server" Text="**"></asp:Label><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: center" class="formItemBgStyle" colspan="3">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                                         <div style="width: 900px;">
                                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                 <tr>
@@ -217,12 +217,12 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: center" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>£º<asp:Label ID="LB_FeeManageName" runat="server" Text="**"></asp:Label>
                                                                     </td>
-                                                                    <td style="text-align: center" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JiHuaBianZhi%>"></asp:Label>£º<asp:Label ID="LB_PlanMarkerName" runat="server" Text="**"></asp:Label>
+                                                                    <td class="formItemBgStyleForAlignLeft">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JiHuaBianZhi%>"></asp:Label>£º<asp:Label ID="LB_PlanMarkerName" runat="server" Text="**"></asp:Label>
                                                                     </td>
-                                                                    <td style="text-align: center" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,BianZhiRiQi%>"></asp:Label>£º
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="LB_Year" runat="server" Text="yyyy"></asp:Label><asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -231,7 +231,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: center" class="formItemBgStyle" colspan="3">
+                                                                    <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                                         <p class="noprint">
                                                                             <input id="print" class="inpu" onclick="window.returnValue = false; CloseLayer();"
                                                                                 type="button" value="¹Ø±Õ" />

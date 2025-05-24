@@ -1110,7 +1110,7 @@
                                                                             <tr>
                                                                                 <td style="text-align: left;">
                                                                                     <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,XiangMuSuoSuoZhuanYe%>"></asp:Label>£º</td>
-                                                                                <td colspan="6" align="left" class="formItemBgStyle">
+                                                                                <td colspan="6"  class="formItemBgStyleForAlignLeft">
 
                                                                                     <%# DataBinder.Eval(Container.DataItem,"TenderContent") %>
                                                        
@@ -1119,7 +1119,7 @@
                                                                             <tr>
                                                                                 <td style="text-align: left;">
                                                                                     <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º</td>
-                                                                                <td align="left" class="formItemBgStyle" colspan="6">
+                                                                                <td class="formItemBgStyleForAlignLeft" colspan="6">
 
                                                                                     <%# DataBinder.Eval(Container.DataItem,"Remarks") %>
                                                                                 </td>

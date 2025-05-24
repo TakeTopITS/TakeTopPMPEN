@@ -148,13 +148,13 @@
                                                         <table border="1" style="width: 98%; border-collapse: collapse; margin: 0px auto;"
                                                             cellpadding="4" cellspacing="0">
                                                             <tr>
-                                                                <td colspan="3" align="left" class="formItemBgStyle">
+                                                                <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                                                     <b>
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JiaYouJiLuDan%>"></asp:Label></b>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td colspan="2" align="left" class="formItemBgStyle">
+                                                                <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                     <table>
                                                                         <tr>
                                                                             <td align="right">

@@ -228,15 +228,15 @@
                             <br />
                             <table width="80%" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td class="formItemBgStyle" style="text-align: left;" width="150px">&nbsp;
+                                    <td class="formItemBgStyleForAlignLeft" width="150px">&nbsp;
                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" style="text-align: left;"></td>
-                                    <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                    <<td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignLeft" width="150px">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhiXing%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" style="text-align: left;"></td>
-                                    <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                    <<td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignLeft" width="150px">
                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyle" style="text-align: left;"></td>
+                                    <<td class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                             </table>
                         </td>

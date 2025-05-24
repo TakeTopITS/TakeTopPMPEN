@@ -71,7 +71,7 @@
                                                     <SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                 </asp:TreeView>
                                             </td>
-                                            <td align="left" class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
 
                                                 <asp:Repeater ID="RP_Attendant" runat="server" OnItemCommand="RP_Attendant_ItemCommand">
                                                     <ItemTemplate>

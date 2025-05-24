@@ -81,9 +81,9 @@
                                             <td align="left" style="padding: 2px 2px 2px 2px; vertical-align: top; border-right: solid 1px #D8D8D8">
                                                 <table cellpadding="5" cellspacing="0" class="formBgStyle" width="99%">
                                                      <tr>
-                                                        <td align="right" width="60px" class="formItemBgStyle" ><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,JieShouRen%>"></asp:Label>
+                                                        <td align="right" width="60px" class="formItemBgStyleForAlignLeft" ><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,JieShouRen%>"></asp:Label>
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Repeater ID="RP_Attendant" runat="server" OnItemCommand="Repeater1_ItemCommand">
                                                                 <ItemTemplate>
                                                                     <asp:Button ID="BT_UserName" runat="server" CssClass="inpuRepeat" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
@@ -94,14 +94,14 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right" class="formItemBgStyle" ><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>
+                                                        <td class="formItemBgStyleForAlignRight" ><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_Message" runat="server" width="220px" Height="120px" TextMode="MultiLine" ></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                         <tr>
-                                                            <td align="left" class="formItemBgStyle" colspan="2">
+                                                            <td class="formItemBgStyleForAlignLeft" colspan="2">
                                                              
                                                                 <asp:Button ID="BT_Send" runat="server" CssClass="inpu"  OnClick="BT_Send_Click" Text="<%$ Resources:lang,FaSong%>" />
                                                             </td>

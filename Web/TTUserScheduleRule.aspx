@@ -197,7 +197,7 @@
                                                 </table>
                                                 <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td colspan="3" align="left" class="formItemBgStyle">
+                                                        <td colspan="3"  class="formItemBgStyleForAlignLeft">
                                                             <table>
                                                                 <tr>
                                                                     <td>
@@ -220,14 +220,14 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" colspan="3" class="formItemBgStyle">日期：<asp:TextBox ID="tb_Date" ReadOnly="false" runat="server"></asp:TextBox>
+                                                        <td  colspan="3" class="formItemBgStyleForAlignLeft">日期：<asp:TextBox ID="tb_Date" ReadOnly="false" runat="server"></asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="tb_Date">
                                                             </ajaxToolkit:CalendarExtender>
                                                             &nbsp; 班次：
                                                             <asp:DropDownList ID="tb_Schedule" runat="server"></asp:DropDownList>
                                                         </td>
                                                         <tr>
-                                                            <td style="text-align: Left;" class="formItemBgStyle">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Button ID="BT_AddUserAttendanceRule" runat="server" CssClass="inpu"
                                                                     Enabled="False" OnClick="BT_AddUserAttendanceRule_Click" Text="<%$ Resources:lang,XinZeng%>" />
                                                                 &nbsp;<asp:Button ID="BT_UpdateUserAttendanceRule" runat="server" CssClass="inpu"
@@ -236,8 +236,8 @@
                                                                     Enabled="False" OnClick="BT_DeleteUserAttendanceRule_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />
                                                                 &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" OnClick="BT_PaiBanRule_Click" Text="设置班次" />
                                                             </td>
-                                                            <td style="text-align: Right;" width="130px" class="formItemBgStyle"></td>
-                                                            <td style="text-align: left;" width="130px" class="formItemBgStyle"></td>
+                                                            <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
+                                                            <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
                                                         </tr>
                                                 </table>
                                         </tr>

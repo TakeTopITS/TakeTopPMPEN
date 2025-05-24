@@ -197,19 +197,19 @@
 
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formBgStyle">
                                 <tr>
-                                    <td width="8%" align="right" class="formItemBgStyle">
+                                    <td width="8%"  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" Visible="false" runat="server"></asp:Label>
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Title" runat="server" Width="97%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignRight">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td>
@@ -271,8 +271,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle"></td>
-                                    <td align="right" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignRight">
                                         <table>
                                             <tr>
                                                 <td colspan="13" align="right">
@@ -309,18 +309,18 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td  valign="top" class="formItemBgStyle">
+                                    <td  valign="top" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" class="formItemBgStyle">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <CKEditor:CKEditorControl ID="CKE_MainContent" Width="98%" Height="550px" runat="server" Visible="False">
                                         </CKEditor:CKEditorControl>
                                         <CKEditor:CKEditorControl runat="server" ID="HTEditor1" Width="98%" Height="550px" Visible="False" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" class="formItemBgStyle"></td>
-                                    <td align="left" style="height: 29px" class="formItemBgStyle"></td>
+                                    <td class="formItemBgStyleForAlignRight"></td>
+                                    <td style="height: 29px" class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                             </table>
 

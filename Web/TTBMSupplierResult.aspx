@@ -190,31 +190,31 @@
                                                     <tr>
                                                         <td class="auto-style2" style="text-align: right;">
                                                             <asp:Label ID="Label58" runat="server" Text="<%$ Resources:lang,DiZhi%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyle" align="left" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft"  colspan="3">
                                                             <asp:Label ID="lbl_Address" runat="server"></asp:Label>
                                                         </td>
                                                         <td class="auto-style6" align="right">
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,QiYeWangZhi%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_WebUrl" runat="server"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="auto-style2" style="text-align: right;">
                                                             <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,GongHuoFanWei%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_SupplyScope" runat="server"></asp:Label>
                                                         </td>
                                                         <td align="right" class="auto-style6">
                                                             <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,QiYeZiZhi%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_Qualification" runat="server"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="auto-style2" style="text-align: right;">
                                                             <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>£º</td>
-                                                        <td align="left" class="formItemBgStyle" colspan="3">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Label ID="lbl_Remark" runat="server"></asp:Label>
                                                         </td>
                                                         <td align="left" class="auto-style6">&nbsp;</td>

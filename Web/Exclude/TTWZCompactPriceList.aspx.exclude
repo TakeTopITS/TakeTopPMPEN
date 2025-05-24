@@ -55,7 +55,7 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,LieBiaoChaXun%>"></asp:Label>£º&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º
                                                             <asp:DropDownList ID="DDL_WhereProgress" runat="server" OnSelectedIndexChanged="DDL_WhereProgress_SelectedIndexChanged" AutoPostBack ="true" >
@@ -70,7 +70,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>£º
                                                             <asp:Button ID="BT_NewCompactDetail" runat="server" Text="<%$ Resources:lang,HeTongMingXi%>" CssClass="inpu" OnClick="BT_NewCompactDetail_Click" />&nbsp;
                                                             <asp:Button ID="BT_NewAudit" runat="server" Text="<%$ Resources:lang,ShenHe%>" CssClass="inpu" OnClick="BT_NewAudit_Click" />&nbsp;
@@ -80,7 +80,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
                                                             <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,HeTongJiLu%>"></asp:Label>&nbsp;&nbsp;
                                                             <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text="*"></asp:Label><asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -96,7 +96,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%">
+                                                        <td class="formItemBgStyleForAlignLeft" width="100%">
 
 
                                                             <div style="width: 3300px;">

@@ -119,7 +119,7 @@
                                                                 <tr>
                                                                     <td style="text-align: right">
                                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>                                                                    </td>
-                                                                    <td style=" text-align: left">
+                                                                    <td style="text-align: left">
                                                                         <%#DataBinder .Eval (Container .DataItem, "BeginDate","{0:yyyy/MM/dd}") %>
                                                                     </td>
                                                                     <td style="text-align: right">
@@ -141,7 +141,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right;">
+                                                                    <td style="text-align: right;">
                                                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,XiangXiYaoQiu%>"></asp:Label>                                                                    </td>
                                                                     <td colspan="7" style="text-align: left">
                                                                         <%#DataBinder .Eval (Container .DataItem,"ProjectDetail") %>

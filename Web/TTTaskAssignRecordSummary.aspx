@@ -211,30 +211,30 @@
                                                                             </asp:Chart>--%>
                                                                             <table style="width: 100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                                 <tr>
-                                                                                    <td class="formItemBgStyle">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                                         <strong>
                                                                                             <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,RenWuFeiYongHuiZong%>"></asp:Label>:</strong>
                                                                                         <asp:Label ID="LB_Member1" runat="server"></asp:Label>
                                                                                     </td>
-                                                                                    <td class="formItemBgStyle">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FaShengFeiYong%>"></asp:Label>:
                                                                                     <asp:Label ID="LB_Amount" runat="server" Font-Bold="True"></asp:Label>
                                                                                     </td>
-                                                                                    <td class="formItemBgStyle">(<asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XiangMuFeiYongZongYuSuan%>"></asp:Label>:&nbsp;
+                                                                                    <td class="formItemBgStyleForAlignLeft">(<asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XiangMuFeiYongZongYuSuan%>"></asp:Label>:&nbsp;
                                                                                     <asp:Label ID="LB_ProExpenseBudget" runat="server" Font-Bold="True"></asp:Label>)
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="formItemBgStyle">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                                         <strong>
                                                                                             <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,RenWuRenLiHuiZong%>"></asp:Label>: </strong>
                                                                                         <asp:Label ID="LB_Member2" runat="server"></asp:Label>
                                                                                     </td>
-                                                                                    <td class="formItemBgStyle">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ShiJiRenLi%>"></asp:Label>:
                                                                                     <asp:Label ID="LB_ManHour" runat="server" Font-Bold="True"></asp:Label>
                                                                                     </td>
-                                                                                    <td class="formItemBgStyle">(<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,XiangMuRenLiZongYuSuan%>"></asp:Label>:
+                                                                                    <td class="formItemBgStyleForAlignLeft">(<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,XiangMuRenLiZongYuSuan%>"></asp:Label>:
                                                                                     <asp:Label ID="LB_ProManHourBudget" runat="server" Font-Bold="True"></asp:Label>
                                                                                         )
                                                                                     </td>

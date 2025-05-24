@@ -392,14 +392,14 @@
                         <td style="padding: 0px 5px 5px 5px;" valign="top">
                             <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td colspan="8" class="formItemBgStyle" align="left">
+                                    <td colspan="8" class="formItemBgStyleForAlignLeft" >
                                         <input type="button" value="Save" id="BT_Save" class="inpu" />
                                     </td>
                                 </tr>
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                     <ContentTemplate>
                                         <tr>
-                                            <td colspan="3" class="formItemBgStyle">
+                                            <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                 <span style="font-size: 11pt">
                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º</span>
                                                 <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="Type" DataValueField="Type"
@@ -410,26 +410,26 @@
                                                     Width="210px" AutoPostBack="true" Height="20px" OnSelectedIndexChanged="DL_WFTemplate_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                             </td>
-                                            <th class="formItemBgStyle">&nbsp;</th>
-                                            <td colspan="3" class="formItemBgStyle" style="">
+                                            <th class="formItemBgStyleForAlignLeft">&nbsp;</th>
+                                            <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                 <span style="font-size: 11pt">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XuanZeBiao%>"></asp:Label>£º</span>
                                                 <asp:DropDownList ID="DL_Table" name="DL_Table" runat="server" DataTextField="TableName" DataValueField="TableName"
                                                     Width="110px" AutoPostBack="true" Height="20px" OnSelectedIndexChanged="DL_Table_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                             </td>
-                                            <td rowspan="2" class="formItemBgStyle">
+                                            <td rowspan="2" class="formItemBgStyleForAlignLeft">
                                                 <asp:ListBox ID="selectTableName" name="selectTableName" runat="server" DataTextField="TableName" DataValueField="TableName"
                                                     OnSelectedIndexChanged="DL_TableName_SelectedIndexChanged" AutoPostBack="true"></asp:ListBox>
 
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:TreeView ID="TV_WFTemplate" runat="server">
                                                 </asp:TreeView>
                                             </td>
-                                            <td style="width: 100px; text-align: center;" class="formItemBgStyle">
+                                            <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                 <%--<input type="button" id="buttonToRight" value="&raquo;" style="background: none; width: 50px;" />
                                                 <br />--%>
                                                 <br />
@@ -441,13 +441,13 @@
                                                 <br />
                                                 <input type="button" value="&darr;" id="buttonToDown" style="background: none; width: 50px;" />
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <textarea class="KeyNum" id="TT_Two" name="wordsnum" cols="2" style="height: 500px!important; font-size: 11px;" readonly="readonly"></textarea>
                                                 <select name="selectTwo" id="selectTwo" size="5" multiple style="height: 500px!important; width: 150px; font-size: 11px; border: none;" runat="server">
                                                 </select>
                                                 <asp:HiddenField ID="HF_SelectTwo" runat="server" />
                                             </td>
-                                            <td class="formItemBgStyle">|<br />
+                                            <td class="formItemBgStyleForAlignLeft">|<br />
                                                 |<br />
                                                 |<br />
                                                 |<br />
@@ -462,11 +462,11 @@
                                                 |<br />
                                                 |
                                             </td>
-                                            <td class="formItemBgStyle" style="vertical-align: top;">
+                                            <td class="formItemBgStyleForAlignLeft" style="vertical-align: top;">
                                                 <textarea class="KeyNum" id="TT_Three" name="wordsnum" style="height: 500px!important; font-size: 11px;" cols="2" readonly="readonly"></textarea><select name="selectThree" id="selectThree" size="5" multiple style="height: 500px!important; width: 150px; font-size: 11px; border: none; overflow-y: hidden;" runat="server">
                                                 </select><asp:HiddenField ID="HF_SelectThree" runat="server" />
                                             </td>
-                                            <td style="width: 100px; text-align: center;" class="formItemBgStyle">
+                                            <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                 <%--<input type="button" value="&laquo;" id="buttonOtherToLeft" style="background: none; width: 50px;" />
                                                 <br />--%>
                                                 <br />
@@ -478,7 +478,7 @@
                                                 <br />
                                                 <input type="button" value="&darr;" id="buttonOtherToDown" style="background: none; width: 50px;" />
                                             </td>
-                                            <td class="formItemBgStyle">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:TreeView ID="TV_Table" runat="server">
                                                 </asp:TreeView>
                                             </td>

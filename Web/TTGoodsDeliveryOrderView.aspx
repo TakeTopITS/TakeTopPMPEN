@@ -253,12 +253,12 @@
                                     <td align="left">
                                         <table width="80%">
                                             <tr>
-                                                <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                <td class="formItemBgStyleForAlignLeft" style="text-align: left;" width="150px">
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>£º</td>
-                                                <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                <td class="formItemBgStyleForAlignLeft" style="text-align: left;" width="150px">
                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZhiXing%>"></asp:Label>£º</td>
 
-                                                <td class="formItemBgStyle" style="text-align: left;" width="150px">
+                                                <td class="formItemBgStyleForAlignLeft" style="text-align: left;" width="150px">
                                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label>£º</td>
                                             </tr>
                                         </table>
