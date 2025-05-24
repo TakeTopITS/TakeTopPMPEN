@@ -268,7 +268,7 @@
                                                                             </tr>
                                                                             <tr>
 
-                                                                                <td align="left" style="vertical-align: bottom;">
+                                                                                <td align="center" style="vertical-align: bottom;">
 
                                                                                     <asp:HyperLink ID="HL_SystemAnalystChartRelatedUserSet" runat="server" Text="<%$ Resources:lang,FenXiTuSheZhi%>"></asp:HyperLink>
                                                                                 </td>

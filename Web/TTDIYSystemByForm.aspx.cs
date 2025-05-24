@@ -72,6 +72,12 @@ public partial class TTDIYSystemByForm : System.Web.UI.Page
         DataSet ds = new DataSet();
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
 
+
+        if (ds.Tables[0].Rows.Count == 0)
+        {
+            Response.Redirect("TTDisplayErrors.aspx");
+        }
+
         strTemName = ds.Tables[0].Rows[0][0].ToString().Trim();
         strWFType = ds.Tables[0].Rows[0][1].ToString().Trim();
 
