@@ -257,7 +257,7 @@
                                         <table width="100%" cellpadding="2" cellspacing="0" class="formBgStyle">
 
                                             <tr>
-                                                <td class="formItemBgStyleForAlignLeft">
+                                                <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_TBParentProject" runat="server" Text="<%$ Resources:lang,ParentProject%>" />:
                                                 </td>
                                                 <td colspan="3" class="formItemBgStyleForAlignLeft">
@@ -270,7 +270,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label1888" runat="server" Text="<%$ Resources:lang,XiangMuDaiMa%>"></asp:Label>:
                                                 </td>
                                                 <td style="width: 25%;" class="formItemBgStyleForAlignLeft">
@@ -279,7 +279,7 @@
                                                     </asp:HyperLink>
                                                     <asp:Label ID="LB_ProjectID" runat="server" Visible="false"></asp:Label>
                                                 </td>
-                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_TBProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>" />
                                                     :
                                                 </td>
@@ -295,7 +295,7 @@
                                                     <asp:Label ID="LB_PMCode" runat="server"></asp:Label>&nbsp;&nbsp;<asp:Label ID="LB_PMName"
                                                         runat="server"></asp:Label>
                                                 </td>
-                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_CustomerPM" runat="server" Text="<%$ Resources:lang,CustomerPM%>" />
                                                     :
                                                 </td>

@@ -384,13 +384,13 @@
                                                             <td>
                                                                 <table width="100%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                     <tr>
-                                                                        <td class="formItemBgStyleForAlignLeft">
+                                                                        <td width="10%" class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WuZiXiangMuShuXing%>"></asp:Label>£º</td>
                                                                         <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:DropDownList ID="DDL_ProjectAttribute" runat="server">
                                                                             </asp:DropDownList>(<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WuZiXiangMuCaiXuanZe%>"></asp:Label>)
                                                                         </td>
-                                                                        <td class="formItemBgStyleForAlignLeft">
+                                                                        <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,FuJian%>"></asp:Label>£º
                                                                         </td>
                                                                         <td class="formItemBgStyleForAlignLeft">
@@ -467,14 +467,14 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                                        <td  class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label77771" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>£º
                                                                         </td>
                                                                         <td style="width: 25%;" class="formItemBgStyleForAlignLeft">
                                                                             <asp:TextBox ID="TB_ProjectCode" runat="server" Width="95%"></asp:TextBox>
                                                                             <asp:Label ID="LB_ProjectID" runat="server" Visible="false"></asp:Label>
                                                                         </td>
-                                                                        <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                                        <td  class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="LB_TBProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>" />£º
                                                                         </td>
                                                                         <td class="formItemBgStyleForAlignLeft">

@@ -340,7 +340,7 @@
 
                                         <table width="100%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td class="formItemBgStyleForAlignLeft">
+                                                <td  style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_TBParentProject" runat="server" Text="<%$ Resources:lang,ParentProject%>" />:
                                                 </td>
                                                 <td colspan="3" class="formItemBgStyleForAlignLeft">
@@ -353,7 +353,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label881" runat="server" Text="<%$ Resources:lang,XiangMuDaiMa%>"></asp:Label>
                                                     :
                                                 </td>
@@ -362,7 +362,7 @@
                                                     <asp:HyperLink ID="HL_ProjectTask" Text="<%$ Resources:lang,XiangMuZuoYeRenWu%>" runat="server" Target="_blank" Enabled="false">
                                                     </asp:HyperLink>
                                                     <asp:Label ID="LB_ProjectID" runat="server" Visible="false"></asp:Label>
-                                                    <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="LB_TBProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>" />:
                                                     </td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -383,7 +383,7 @@
                                                         CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150">
                                                     </cc1:ModalPopupExtender>
                                                 </td>
-                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
+                                                <td  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_CustomerPM" runat="server" Text="<%$ Resources:lang,CustomerPM%>" Visible="false" />
                                                  
                                                 </td>

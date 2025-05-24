@@ -297,7 +297,7 @@
                                                                 &#160;&#160;
                                                         <asp:HyperLink ID="HL_ProjectTask" Text="<%$ Resources:lang,XiangMuZuoYeRenWu %>" runat="server" Target="_blank" Enabled="False" Visible="False"></asp:HyperLink>
                                                             </td>
-                                                            <td style="width: 15%" class="formItemBgStyleForAlignLeft">
+                                                            <td style="width: 10%" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="LB_TBProjectName" runat="server" Text="<%$ Resources:lang,ProjectName %>" />: </td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_ProjectName" runat="server" Width="98%"></asp:TextBox>
