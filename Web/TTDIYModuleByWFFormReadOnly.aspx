@@ -332,7 +332,7 @@
                 <table cellpadding="0" cellspacing="0" width="100%">
                     <tr>
                         <td height="31" class="page_topbj">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
                                         <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -340,7 +340,7 @@
                                                 <td width="29">
                                                     <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                 </td>
-                                                <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                     <asp:Label ID="LB_ModuleName" runat="server" Visible="false"></asp:Label>
                                                 </td>
                                                 <td width="5">
@@ -441,7 +441,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 520px; padding: 5px 25px 5px 5px;" valign="top" align="center">
+                            <td style="width: 520px; padding: 5px 25px 5px 5px;" valign="top" align="left">
                                 <asp:Button ID="BT_ActiveYes" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Shi%>" OnClick="BT_ActiveYes_Click" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button
                                     ID="BT_ActiveNo" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Fou%>" OnClick="BT_ActiveNo_Click" />
@@ -539,7 +539,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="tdRight" align="center" width="100%" style="padding: 20px 1px 1px 1px;" onmousemove="document.getElementById('DL_WorkFlow').style.width = '500px'" onmouseout="document.getElementById('DL_WorkFlow').style.width = '300px'">
+                                            <td class="tdRight" align="left" width="100%" style="padding: 20px 1px 1px 1px;" onmousemove="document.getElementById('DL_WorkFlow').style.width = '500px'" onmouseout="document.getElementById('DL_WorkFlow').style.width = '300px'">
                                                 <asp:DropDownList ID="DL_WorkFlow" runat="server" AutoPostBack="True" Width="100%" Height="300px"
                                                     DataTextField="WLName" DataValueField="WLID" OnSelectedIndexChanged="DL_WorkFlow_SelectedIndexChanged"></asp:DropDownList>
                                             </td>

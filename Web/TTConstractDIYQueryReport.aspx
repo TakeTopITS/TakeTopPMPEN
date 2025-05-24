@@ -53,7 +53,7 @@
                         <div style="text-align: left;">
                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td style="text-align: right; width: 10%;" class="formItemBgStyle">
+                                    <td style="width: 10%;" class="formItemBgStyle">
                                         <asp:Label ID="Label2" runat="server" Text="SQLCode"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyle" style="width: 80%;">
@@ -62,20 +62,20 @@
 
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle" style="text-align: right; width: 10%;">&nbsp;</td>
+                                    <td class="formItemBgStyle" style=" width: 10%;">&nbsp;</td>
                                     <td class="formItemBgStyle" style="width: 80%; text-align: left;">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,YGZYGDMCYAQKLBNSYDeleteUpdateDropInsertAlterYuJu%>"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyle" style="text-align: right; width: 10%;">&nbsp;</td>
+                                    <td class="formItemBgStyle" style=" width: 10%;">&nbsp;</td>
                                     <td class="formItemBgStyle" style="width: 80%;">
                                         <table>
                                             <tr>
                                                 <td>
                                                     <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                                 </td>
-                                                <td align="center" width="100px">
+                                                <td align="left" width="100px">
                                                     <asp:Button ID="BT_ExportToExcel" runat="server" CssClass="inpu" OnClick="BT_ExportToExcel_Click" Text="<%$ Resources:lang,DaoChuDaoExcel%>" />
                                                 </td>
                                                 <td width="140px"><a href="#" onclick="preview()">
@@ -92,7 +92,7 @@
 
                         <table width="100%" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td colspan="2" style="width: 100%; height: 80px; font-size: xx-large;" align="center">
+                                <td colspan="2" style="width: 100%; height: 80px; font-size: xx-large;" align="left">
                                     <br />
                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HeTongChaXunBaobiao%>"></asp:Label>
                                     <br />
@@ -112,7 +112,7 @@
 
                             <tr>
                                 <td colspan="2">
-                                    <asp:DataGrid ID="DataGrid1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" Height="1px" ShowHeader="true" Width="100%" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
+                                    <asp:DataGrid ID="DataGrid1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" Height="1px" ShowHeader="true" Width="100%" HeaderStyle-Horizontalalign="left" ItemStyle-Horizontalalign="left">
                                     </asp:DataGrid>
                                     <br />
                                     <br />

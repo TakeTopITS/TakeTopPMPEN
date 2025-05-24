@@ -9,13 +9,13 @@
 </head>
 <body><center>
     <form id="form1" runat="server">
-		<table cellSpacing="0" cellPadding="0" width="75%" align="center" border="0">
+		<table cellSpacing="0" cellPadding="0" width="75%" align="left" border="0">
 			<TR>
 				<TD bgColor="#d8e4f8" colSpan="2" height="4"></TD>
 			</TR>
 			<tr>
 				<td vAlign="top" width="153" bgColor="#eff7f4"><asp:image id="RegisterImage" Runat="server" Width="153"></asp:image></td>
-				<TD align="center" bgColor="#ebebff">
+				<TD align="left" bgColor="#ebebff">
 					<TABLE cellSpacing="4" cellPadding="0" width="580">
 						<TR vAlign="top" height="*">
 							<TD colSpan="2" height="148">
@@ -39,7 +39,7 @@
 										<td height="220"></td>
 									</tr>
 									<tr>
-										<td vAlign="middle" align="center" height="80"><asp:button id="BackBtn" runat="server" Width="100" CssClass="ButtonCss" Text="·µ»Ø" OnClick="BackBtn_Click"></asp:button></td>
+										<td vAlign="middle" align="left" height="80"><asp:button id="BackBtn" runat="server" Width="100" CssClass="ButtonCss" Text="·µ»Ø" OnClick="BackBtn_Click"></asp:button></td>
 									</tr>
 									<tr>
 										<td colspan="2" width="100%">

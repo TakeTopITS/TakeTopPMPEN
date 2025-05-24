@@ -29,12 +29,12 @@
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td align="center">
+                                        <td align="left">
                                             <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
                                                 <tr>
-                                                    <td align="center" class="titlezi">
+                                                    <td align="left" class="titlezi">
                                                         <asp:Button ID="BT_PirorProjectList" CssClass="inpuPiror" runat="server" OnClick="BT_PirorProjectList_Click" />
                                                     </td>
                                                     <td>

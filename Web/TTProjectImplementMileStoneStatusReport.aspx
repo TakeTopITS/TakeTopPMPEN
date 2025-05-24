@@ -40,7 +40,7 @@
                      <div id="AboveDiv">
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
-                            <td height="31" align="center" class="page_topbj">
+                            <td height="31" align="left" class="page_topbj">
 
                                 <table width="900px" border="0" cellpadding="0" cellspacing="0" style="padding: 5px 5px 5px 5px;">
                                     <tr>
@@ -92,7 +92,7 @@
                                                 Text="<%$ Resources:lang,ChaXun%>" />
 
                                         </td>
-                                        <td align="center" style="padding-top: 5px;">
+                                        <td align="left" style="padding-top: 5px;">
                                             <a href="#" onclick="preview1()">
                                                 <img src="ImagesSkin/print.gif" alt="打印" border="0" />
                                             </a>
@@ -149,26 +149,26 @@
                                         <td>
                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                    <td width="5%" align="center">
+                                                    <td width="5%" align="left">
                                                         <strong>
                                                             <asp:Label ID="LB_DGProjectID" runat="server" Text="<%$ Resources:lang,DGProjectID%>"></asp:Label>
                                                         </strong>
                                                     </td>
-                                                    <td width="10%" align="center">
+                                                    <td width="10%" align="left">
                                                         <strong>
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ProjectCode%>"></asp:Label>
                                                         </strong>
                                                     </td>
-                                                    <td width="22%" align="center">
+                                                    <td width="22%" align="left">
                                                         <strong>
                                                             <asp:Label ID="LB_DGProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>"></asp:Label>
                                                         </strong>
                                                     </td>
-                                                    <td width="8%" align="center">
+                                                    <td width="8%" align="left">
                                                         <strong>
                                                             <asp:Label ID="LB_Status" runat="server" Text="<%$ Resources:lang,Status%>"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <strong>
                                                             <asp:Label ID="LB_DGProgress" runat="server" Text="<%$ Resources:lang,lichengbei%>"></asp:Label></strong>
                                                     </td>
@@ -186,10 +186,10 @@
                                     ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                     <Columns>
                                         <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                         </asp:BoundColumn>
                                         <asp:BoundColumn DataField="ProjectCode" HeaderText="Code">
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                         </asp:BoundColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
                                             DataTextField="ProjectName" HeaderText="项目名称" Target="_blank">
@@ -225,7 +225,7 @@
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                     <EditItemStyle BackColor="#2461BF" />
                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                 </asp:DataGrid>
 
                             </td>
@@ -249,7 +249,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                         <asp:ImageButton ID="IMBT_Close" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                     </td>
                                 </tr>
@@ -270,7 +270,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                         <asp:ImageButton ID="ImageButton1" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                     </td>
                                 </tr>

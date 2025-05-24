@@ -27,7 +27,7 @@
             <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                 <tr>
                     <td height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <table width="300" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -35,7 +35,7 @@
                                             <td width="29">
                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                             </td>
-                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,SheXiangTouLieBiao%>"></asp:Label>
                                             </td>
                                             <td width="5">
@@ -72,41 +72,41 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="DPName" HeaderText="组织架构或项目部">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="CameraName" HeaderText="摄像头名称">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="ServerIP" HeaderText="IP">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="CameraUserName" HeaderText="摄像头用户名">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="CameraPass" HeaderText="摄像头密码">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="CreatorName" HeaderText="创建人">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>
                                                             <ItemTemplate>
                                                                 <a href='<%# Eval("CameraType").ToString() =="1" ? "TTPnPCameraAdd.aspx" : "TTPnPCameraProjectAdd.aspx" %>?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>
                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
                                                         </asp:TemplateColumn>
                                                     </Columns>
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                     <ItemStyle CssClass="itemStyle" />
-                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
+                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Horizontalalign="left" />
                                                 </asp:DataGrid>
                                             </td>
                                         </tr>

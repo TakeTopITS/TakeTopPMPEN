@@ -11,7 +11,7 @@
         <table cellpadding="0" cellspacing="0" width="100%" class="bian">
             <tr>
                 <td height="31" class="page_topbj">
-                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                         <tr>
                             <td align="left">
                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -19,7 +19,7 @@
                                         <td width="29">
                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                         </td>
-                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">、
+                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">、
                                              <asp:Label ID="LB_RunInvolvedProject" runat="server" Text="<%$ Resources:lang,ChaKanYouJian%>" />
                                         </td>
                                         <td width="5">
@@ -128,19 +128,19 @@
                                             <td>
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tr>
-                                                        <td width="70%" align="center">
+                                                        <td width="70%" align="left">
                                                             <strong>
 
                                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,WenJianMing%>" />
                                                             </strong>
                                                         </td>
-                                                        <td width="15%" align="center">
+                                                        <td width="15%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,WenJianLeiXing%>" />
 
                                                             </strong>
                                                         </td>
-                                                        <td width="15%" align="center">
+                                                        <td width="15%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,WenJianDaXiao%>" />
 
@@ -172,18 +172,18 @@
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem,"Type") %>
                                                 </ItemTemplate>
-                                                <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="15%" />
+                                                <ItemStyle Horizontalalign="left" CssClass="itemBorder" Width="15%" />
                                             </asp:TemplateField>
                                             <asp:TemplateField HeaderText="文件大小">
                                                 <ItemTemplate>
                                                     <%# (int)DataBinder.Eval(Container.DataItem,"Contain")/1024 %>KB
                                                 </ItemTemplate>
-                                                <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="15%" />
+                                                <ItemStyle Horizontalalign="left" CssClass="itemBorder" Width="15%" />
                                             </asp:TemplateField>
                                         </Columns>
                                         <AlternatingRowStyle BorderColor="CornflowerBlue" BackColor="White" BorderStyle="Solid"
                                             BorderWidth="1px" />
-                                        <PagerStyle HorizontalAlign="Center" />
+                                        <PagerStyle Horizontalalign="center" />
                                         <EditRowStyle BorderColor="CornflowerBlue" BorderWidth="1px" BackColor="#2461BF" />
                                     </asp:GridView>
                                     <br />

@@ -30954,4 +30954,19 @@
   <data name="XiangMuYiShuanKeMu" xml:space="preserve">
     <value>Ítem de Presupuesto del Proyecto</value>
   </data>
+  <data name="YaoQiuShuLiang" xml:space="preserve">
+    <value>Cantidad Requerida</value>
+  </data>
+  <data name="YiWanChenLiang" xml:space="preserve">
+    <value>Cantidad Completada</value>
+  </data>
+  <data name="DaiLiFei" xml:space="preserve">
+    <value>Tarifa de Agencia</value>
+  </data>
+  <data name="GongBenFei" xml:space="preserve">
+    <value>Costo de Materiales</value>
+  </data>
+  <data name="ZiZhiWenJian" xml:space="preserve">
+    <value>Documentos de Calificación</value>
+  </data>
 </root>

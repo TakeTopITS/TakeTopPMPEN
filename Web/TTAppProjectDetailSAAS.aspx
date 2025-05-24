@@ -204,7 +204,7 @@
                     <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <%-- <a href="TTAppProject.aspx" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
@@ -214,7 +214,7 @@
                                                         <td width="29">
                                                             <img src="ImagesSkin/return.png" alt="" />
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                             <asp:Label runat="server" Text="<%$ Resources:lang,Back%>" />
                                                         </td>
                                                         <td width="5">
@@ -456,47 +456,47 @@
                                                                                         <td>
                                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                                 <tr>
-                                                                                                    <td width="5%" align="center">
+                                                                                                    <td width="5%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLProjectID" runat="server" Text="<%$ Resources:lang,ProjectID%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="23%" align="center">
+                                                                                                    <td width="23%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLProjectType" runat="server" Text="<%$ Resources:lang,ProjectType%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLProjectCreator" runat="server" Text="<%$ Resources:lang,ProjectCreator%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_CustomerPM" runat="server" Text="<%$ Resources:lang,CustomerPM%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLBudget" runat="server" Text="<%$ Resources:lang,Budget%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="5%" align="center">
+                                                                                                    <td width="5%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLManHour" runat="server" Text="<%$ Resources:lang,ManHour%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="5%" align="center">
+                                                                                                    <td width="5%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLManPower" runat="server" Text="<%$ Resources:lang,ManPower%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLStartTime" runat="server" Text="<%$ Resources:lang,StartTime%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLEndTime" runat="server" Text="<%$ Resources:lang,EndTime%>" /></strong>
                                                                                                     </td>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="LB_DLCreateTime" runat="server" Text="<%$ Resources:lang,CreateTime%>" /></strong>
                                                                                                     </td>

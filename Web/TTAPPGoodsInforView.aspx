@@ -47,7 +47,7 @@
             <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                 <tr>
                     <td height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <a href="TTAPPGoodsSummaryReport.aspx" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -56,7 +56,7 @@
                                             <tr>
                                                 <td width="29">
                                                     <img src="ImagesSkin/return.png" alt="" width="29" height="31" /></td>
-                                                <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                 </td>
                                                 <td width="5">
@@ -71,7 +71,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
+                    <td align="left">
                         <table style="width: 100%;">
                             <tr>
                                 <td style="text-align: right;">
@@ -80,7 +80,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="center">
+                                <td align="left">
                                     <asp:DataList ID="DataList1" runat="server" Width="98%" CellPadding="0" CellSpacing="0" ForeColor="#333333">
                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                         <ItemTemplate>

@@ -84,7 +84,7 @@
                 <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                     <tr>
                         <td height="31" class="page_topbj">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
 
@@ -93,7 +93,7 @@
                                                 <tr>
                                                     <td width="29">
                                                         <img src="ImagesSkin/return.png" alt="" width="29" height="31" /></td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                         <asp:Label runat="server" Text="<%$ Resources:lang,Back%>" />
                                                     </td>
                                                     <td width="5">
@@ -150,14 +150,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center" style="background-color:ButtonFace;">
+                                    <td align="left" style="background-color:ButtonFace;">
                                      
                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,chaxun%>" ></asp:Label>
                                        
                                     </td>
                                 </tr>
                                 <tr>
-                                   <td valign="top" align="center" style="padding-top:10px;">
+                                   <td valign="top" align="left" style="padding-top:10px;">
                                      
                                         <DayPilot:DayPilotNavigator ID="DayPilotNavigator1" runat="server"
                                             BoundDayPilotID="DayPilotMonth1"

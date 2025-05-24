@@ -42,7 +42,7 @@
                         <table id="Table1" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="145" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -50,7 +50,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整列表
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整列表
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -83,7 +83,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top" width="100%">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound">
@@ -115,7 +115,7 @@
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <PagerSettings Mode="NextPreviousFirstLast" />
-                                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                    <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                     <SortedAscendingCellStyle BackColor="#E9E7E2" />
@@ -134,7 +134,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="145" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -142,7 +142,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整管理
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整管理
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -156,7 +156,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="280">
@@ -378,7 +378,7 @@
                                         </tr>
                                         <tr>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="btnSavePriceAdjust" runat="server" OnClick="btnSavePriceAdjust_Click" Text="新增价格调整数据" Width="146px" />
                                                 </table>
                                             </td>
@@ -404,7 +404,7 @@
                         <table id="Table2" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="145" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -412,7 +412,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整日志
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整日志
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -426,7 +426,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top" width="100%">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" AllowPaging="True" OnPageIndexChanging="GridView2_PageIndexChanging" OnRowDataBound="GridView2_RowDataBound">
@@ -450,7 +450,7 @@
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <PagerSettings Mode="NextPreviousFirstLast" />
-                                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                    <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                     <SortedAscendingCellStyle BackColor="#E9E7E2" />

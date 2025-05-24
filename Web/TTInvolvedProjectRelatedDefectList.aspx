@@ -16,7 +16,7 @@
 
                 <table class="FullBorderTable">
                     <tr>
-                        <td width="10%" align="center" height="32" valign="middle" style="padding-right: 5px;">
+                        <td width="10%" align="left" height="32" valign="middle" style="padding-right: 5px;">
                             <img src="ImagesSkin/docdtl.gif" alt="" />
                         </td>
                         <td height="32" align="left">
@@ -26,7 +26,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="10%" align="center" height="32" valign="middle" style="padding-right: 5px;">
+                        <td width="10%" align="left" height="32" valign="middle" style="padding-right: 5px;">
                             <img src="ImagesSkin/docdtl.gif" alt="" />
                         </td>
                         <td height="32" align="left">

@@ -35,14 +35,14 @@
                             <td height="31">
                                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td width="95%" height="108" align="center" style="font-size: 20pt;">
+                                        <td width="95%" height="108" align="left" style="font-size: 20pt;">
                                             <br />
 
                                             <br />
                                             <br />
                                             <asp:Label ID="Label1" runat="server" Text="预算变更记录"></asp:Label>
                                         </td>
-                                        <td align="center" valign="bottom">
+                                        <td align="left" valign="bottom">
                                             <a href="javascript:window.print()">
                                                 <img src="ImagesSkin/print.gif" alt="打印" border="0" /></a>
                                         </td>
@@ -63,31 +63,31 @@
                                                     <td>
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
-                                                                <td width="10%" align="center">
+                                                                <td width="10%" align="left">
                                                                     <strong>ID</strong>
                                                                 </td>
-                                                                <td width="15%" align="center">
+                                                                <td width="15%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="LB_dgAccount" runat="server" Text="原科目"></asp:Label></strong>
                                                                 </td>
-                                                                <td width="15%" align="center">
+                                                                <td width="15%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="LB_dgAmount" runat="server" Text="原金额"></asp:Label></strong>
                                                                 </td>
-                                                                <td width="20%" align="center">
+                                                                <td width="20%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label2" runat="server" Text="原描述"></asp:Label></strong>
                                                                 </td>
-                                                                <td width="15%" align="center">
+                                                                <td width="15%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label3" runat="server" Text="登记人"></asp:Label></strong>
                                                                 </td>
                                                                
-                                                                <td width="15%" align="center">
+                                                                <td width="15%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label8" runat="server" Text="变更人"></asp:Label></strong>
                                                                 </td>
-                                                                <td align="center">
+                                                                <td align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label6" runat="server" Text="变更时间"></asp:Label></strong>
                                                                 </td>
@@ -103,34 +103,34 @@
                                                 ShowHeader="false" CellPadding="4" GridLines="None">
                                                 <Columns>
                                                     <asp:BoundColumn DataField="ID" HeaderText="">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Account" HeaderText="Subject">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Amount" HeaderText="Amount">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Description" HeaderText="描述">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                         DataTextField="CreatorName" HeaderText="Name" Target="_blank">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="UpdaterCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                         DataTextField="UpdaterName" HeaderText="Name" Target="_blank">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:BoundColumn DataField="UpdateTime" HeaderText="变更时间">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                     </asp:BoundColumn>
                                                 </Columns>
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             </asp:DataGrid>
                                         </td>
                                     </tr>

@@ -77,7 +77,6 @@ a:hover {
 td {
     vertical-align: top;
     line-height: 23px;
-
 }
 
     td a {
@@ -206,7 +205,7 @@ button:visited, input[type="submit"]:visited {
     background-image: url(ImagesSkin/lb_line_bj.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    text-align: center;
+    text-align: left;
     height: 24px;
 }
 
@@ -222,14 +221,14 @@ button:visited, input[type="submit"]:visited {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #cccccc;
-    text-align: center;
+    text-align: left;
 }
 
 .lb_bjright {
     background-image: url(ImagesSkin/lb_line_bj.jpg);
     background-repeat: no-repeat;
     background-position: left;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -237,7 +236,6 @@ button:visited, input[type="submit"]:visited {
 .inpu {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
-    
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -286,7 +284,6 @@ button:visited, input[type="submit"]:visited {
 /*-----------------------------TAB按钮----------------------------*/
 .inpuTab {
     border-style: none;
-
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -387,11 +384,10 @@ button:visited, input[type="submit"]:visited {
 .inpuLongest {
     background-image: url(ImagesSkin/butbjLongest.jpg);
     height: 25px;
-
     min-width: 260px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
-   
+
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -436,7 +432,6 @@ button:visited, input[type="submit"]:visited {
 .inpuYello {
     border-style: none;
     background: #f37c00;
-
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -478,7 +473,6 @@ button:visited, input[type="submit"]:visited {
 .inpuRepeat {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
-
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -526,7 +520,6 @@ button:visited, input[type="submit"]:visited {
 .inpuLongRepeat {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
-
     min-width: 110px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -580,7 +573,6 @@ button:visited, input[type="submit"]:visited {
     border-style: none;
     background-image: url('ImagesSkin/Update.png');
     height: 22px;
-
     min-width: 22px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -589,6 +581,7 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     color: #000000;
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -601,7 +594,6 @@ button:visited, input[type="submit"]:visited {
     border-style: none;
     background-image: url('Images/Save.gif');
     height: 22px;
-
     min-width: 22px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -623,7 +615,6 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Active.jpg');
     background-repeat: no-repeat;
     height: 22px;
-
     min-width: 22px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -641,7 +632,6 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Close.jpg');
     background-repeat: no-repeat;
     height: 22px;
-
     min-width: 22px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -664,7 +654,6 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Query.gif');
     background-repeat: no-repeat;
     height: 24px;
-
     min-width: 22px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -673,6 +662,12 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------扫码按钮-------------------------------*/
@@ -681,7 +676,7 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/QrCode.gif');
     background-repeat: no-repeat;
     height: 24px;
-   /* width: 24px;*/
+    /* width: 24px;*/
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -700,7 +695,6 @@ button:visited, input[type="submit"]:visited {
     background-image: url('ImagesSkin/Delete.png');
     background-repeat: no-repeat;
     height: 22px;
-
     min-width: 22px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -724,7 +718,7 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     height: 25px;
     width: 14px;
-    text-align: center;
+    text-align: left;
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: none;
@@ -740,7 +734,7 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     height: 25px;
     width: 14px;
-    text-align: center;
+    text-align: left;
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: none;
@@ -763,10 +757,11 @@ select {
     border-style: dotted;
     border-color: #cccccc;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
 }
 
 .itemBorderBlack {
@@ -774,10 +769,11 @@ select {
     border-style: dotted;
     border-color: black;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
 }
 
 
@@ -858,13 +854,29 @@ select {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #cccccc;
+    vertical-align: top;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
+}
+
+.formItemBgStyleForAlignRight {
+    /*border-bottom:dotted  1px #C6CFD4;
+        height: 19px;
+        line-height: 18px;*/
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #cccccc;
 
     vertical-align: top;
     line-height: 23px;
-    max-width: 100px; /* 限制最大宽度 */
-    white-space: nowrap; /* 禁止换行 */
-    overflow: hidden; /* 隐藏溢出内容 */
-    text-overflow: ellipsis; /* 显示省略号 */
+    white-space: collapse; /* 换行 */
+
+    text-align: right;
 }
 
 /*-----------------------------编辑图片按钮------------------------------*/
@@ -1002,7 +1014,7 @@ select {
         BORDER-LEFT: #fff 1px solid;
         PADDING-TOP: 1px;
         BORDER-BOTTOM: #000 1px solid;
-        TEXT-ALIGN: center;
+        text-align: left;
     }
 
     .calendar THEAD .title {
@@ -1017,7 +1029,7 @@ select {
         COLOR: #fff;
         PADDING-TOP: 1px;
         BORDER-BOTTOM: #000 1px solid;
-        TEXT-ALIGN: center;
+        text-align: left;
     }
 
     .calendar THEAD .headrow {
@@ -1033,7 +1045,7 @@ select {
         PADDING-BOTTOM: 2px;
         PADDING-TOP: 2px;
         BORDER-BOTTOM: #000 1px solid;
-        TEXT-ALIGN: center;
+        text-align: left;
     }
 
     .calendar THEAD .weekend {
@@ -1169,7 +1181,7 @@ select {
         COLOR: #fff;
         PADDING-TOP: 1px;
         BORDER-BOTTOM: #000 1px solid;
-        TEXT-ALIGN: center;
+        text-align: left;
     }
 
     .calendar TFOOT .hilite {
@@ -1220,7 +1232,7 @@ select {
             PADDING-LEFT: 1px;
             PADDING-BOTTOM: 1px;
             PADDING-TOP: 1px;
-            TEXT-ALIGN: center;
+            text-align: left;
         }
 
         .calendar .combo .label-IEfix {
@@ -1228,7 +1240,7 @@ select {
             PADDING-LEFT: 1px;
             PADDING-BOTTOM: 1px;
             PADDING-TOP: 1px;
-            TEXT-ALIGN: center;
+            text-align: left;
         }
 
         .calendar .combo .label-IEfix {
@@ -1259,7 +1271,7 @@ select {
         PADDING-BOTTOM: 1px;
         PADDING-TOP: 1px;
         BACKGROUND-COLOR: #e8f0f4;
-        TEXT-ALIGN: center;
+        text-align: left;
     }
 
         .calendar TD.time .hour {
@@ -1302,7 +1314,7 @@ select {
         }
 
         .calendar TD.time .ampm {
-            TEXT-ALIGN: center;
+            text-align: left;
         }
 
         .calendar TD.time .colon {
@@ -1437,7 +1449,7 @@ html {
     background-size: 100% 100%; /* 保持宽度自动，高度填满 */
     height: 29px;
     line-height: 28px;
-    text-align: center;
+    text-align: left;
     margin-right: 4px;
     margin: 0;
     cursor: pointer;
@@ -1456,7 +1468,7 @@ html {
     height: 28px;
     color: #333;
     line-height: 29px;
-    text-align: center;
+    text-align: left;
     display: block;
     width: 100%;
     white-space: nowrap;
@@ -1471,7 +1483,7 @@ html {
     background-size: 100% 100%; /* 保持宽度自动，高度填满 */
     height: 28px;
     line-height: 28px;
-    text-align: center;
+    text-align: left;
     color: #333;
     display: block;
     width: 100%;

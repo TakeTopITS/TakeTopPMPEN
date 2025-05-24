@@ -98,7 +98,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100%; padding: 5px 5px 5px 5px;">
-                                            <table width="100%" border="0" cellpadding="0" align="center" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
+                                            <table width="100%" border="0" cellpadding="0" align="left" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                 <tr>
                                                     <td width="7">
                                                         <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" />
@@ -106,15 +106,15 @@
                                                     <td>
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
-                                                                <td width="25%" align="center">
+                                                                <td width="25%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiaShiYuan%>"></asp:Label></strong>
                                                                 </td>
-                                                                <td width="50%" align="center">
+                                                                <td width="50%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChuCheRiQi%>"></asp:Label></strong>
                                                                 </td>
-                                                                <td width="25%" align="center">
+                                                                <td width="25%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,LiChengGongLi%>"></asp:Label></strong>
                                                                 </td>
@@ -131,13 +131,13 @@
                                                 Width="100%"  CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
                                                     <asp:BoundColumn DataField="DriverName" HeaderText="驾驶员">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="25%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="DepartDay" HeaderText="出车日期">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="50%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="50%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="TotalMileage" HeaderText="里程（公里）">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="25%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="25%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
                                                 
@@ -145,7 +145,7 @@
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             </asp:DataGrid>
                                         </td>
                                     </tr>

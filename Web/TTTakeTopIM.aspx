@@ -55,7 +55,7 @@
                                             <td>
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tr>
-                                                        <td align="center">
+                                                        <td align="left">
                                                             <strong>
                                                                 <asp:Label ID="LB_UserType" runat="server" Text="<%$ Resources:lang,ZaiXianYongHu%>"></asp:Label></strong>
                                                         </td>
@@ -72,7 +72,7 @@
                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                         <EditItemStyle BackColor="#2461BF" />
                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
                                         
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
@@ -91,7 +91,7 @@
                                                    
                                                
                                                 </ItemTemplate>
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                             </asp:TemplateColumn>
                                         </Columns>
                                     </asp:DataGrid>

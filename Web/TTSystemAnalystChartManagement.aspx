@@ -39,7 +39,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -47,7 +47,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,FengXiTuXinSheJi%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
@@ -63,26 +63,26 @@
                             <tr>
                                 <td style="padding: 5px 5px 5px 5px;">
 
-                                    <table cellpadding="0" cellspacing="0" width="100%" align="center" class="bian">
+                                    <table cellpadding="0" cellspacing="0" width="100%" align="left" class="bian">
                                         <tr>
-                                            <td align="center" style="padding-top: 5px; width: 350px;">
+                                            <td align="left" style="padding-top: 5px; width: 350px;">
 
                                                 <table width="98%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td>
                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
-                                                                    <td width="20%" align="center">
+                                                                    <td width="20%" align="left">
                                                                         <strong>
                                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                                     </td>
-                                                                    <td width="40%" align="center">
+                                                                    <td width="40%" align="left">
                                                                         <strong>
                                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,TuXingMingCheng%>"></asp:Label></strong></td>
-                                                                    <td width="20%" align="center">
+                                                                    <td width="20%" align="left">
                                                                         <strong>
                                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label></strong></td>
-                                                                    <td width="10%" align="center">
+                                                                    <td width="10%" align="left">
                                                                         <strong>
                                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label></strong></td>
 
@@ -96,25 +96,25 @@
                                                     GridLines="None" ShowHeader="False">
 
                                                     <ItemStyle CssClass="itemStyle" />
-                                                    <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                    <HeaderStyle Horizontalalign="left" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
                                                         <asp:TemplateColumn HeaderText="Number">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                             </ItemTemplate>
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
-                                                                HorizontalAlign="Center" />
+                                                                Horizontalalign="left" />
                                                         </asp:TemplateColumn>
                                                         <asp:BoundColumn DataField="ChartName" HeaderText="Í¼ÐÎÃû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
-                                                                HorizontalAlign="Center" />
+                                                                Horizontalalign="left" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="ChartType" HeaderText="Type">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
-                                                                HorizontalAlign="Center" />
+                                                                Horizontalalign="left" />
                                                         </asp:BoundColumn>
 
                                                         <asp:TemplateColumn HeaderText="Status">
@@ -130,7 +130,7 @@
 
                                                 </asp:DataGrid>
                                             </td>
-                                            <td align="center" style="padding: 5px 5px 5px 5px;">
+                                            <td align="left" style="padding: 5px 5px 5px 5px;">
                                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                                     <tr>
 
@@ -203,11 +203,11 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td colspan="4" align="center" class="formItemBgStyle">
+                                                        <td colspan="4" align="left" class="formItemBgStyle">
 
                                                             <table width="98%" cellpadding="0" cellspacing="0">
                                                                 <tr>
-                                                                    <td valign="top" align="center" style="padding: 10px 1px 1px 1px; border: 0px solid rgba(193, 189, 189, 0.39)">
+                                                                    <td valign="top" align="left" style="padding: 10px 1px 1px 1px; border: 0px solid rgba(193, 189, 189, 0.39)">
                                                                         <div class="renyList" style="width: 100%; height: 310px; overflow: auto; text-align: left; padding-left: 40px;">
                                                                             <asp:Repeater ID="RP_ChartList" runat="server">
                                                                                 <ItemTemplate>

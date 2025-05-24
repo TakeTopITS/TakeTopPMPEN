@@ -61,7 +61,7 @@
         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
             <tr>
                 <td height="31" class="page_topbj">
-                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                         <tr>
                             <td width="480" align="left">
 
@@ -70,7 +70,7 @@
                                         <td width="30" align="right">
                                             <img src="ImagesSkin/Return.png" alt="" />
                                         </td>
-                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                             <a href="javascript:window.history.go(-1)" target="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
                                                 <asp:Label ID="Label8" runat="server" Style="color: red;" Text="<%$ Resources:lang,Back%>" />
                                             </a>

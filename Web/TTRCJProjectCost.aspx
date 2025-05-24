@@ -42,7 +42,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="220" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -50,7 +50,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">项目收支绩效汇总信息</td>
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">项目收支绩效汇总信息</td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
                                                         </td>
@@ -63,7 +63,7 @@
                             </tr>
                             <tr>
                                 <td style="padding: 5px 5px 5px 5px" valign="top" align="left">
-                                    <table width="96%" border="1" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="1" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -333,7 +333,7 @@
                         <table id="Table1" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="220" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -341,7 +341,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">成本绩效信息列表
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">成本绩效信息列表
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -349,10 +349,10 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td align="center" class="titlezi">
+                                            <td align="left" class="titlezi">
                                                 <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">手工录入基准信息</asp:LinkButton>
                                             </td>
-                                            <td align="center" class="titlezi">
+                                            <td align="left" class="titlezi">
                                                 <asp:Button ID="Button3" runat="server" Text="清除所有测试数据(测试专用)" OnClick="Button2_Click" Visible="False" />
                                             </td>
                                             <td align="left">
@@ -364,7 +364,7 @@
                             </tr>
                             <tr>
                                 <td style="padding: 5px 5px 5px 5px" valign="top" align="left">
-                                    <table width="96%" border="1" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="1" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table class="tableitem">
@@ -441,12 +441,12 @@
                             </tr>
                             <tr>
                                 <td height="31">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td align="center" class="titlezi" colspan="3">
+                                                        <td align="left" class="titlezi" colspan="3">
                                                             <table>
                                                                 <tr>
                                                                     <td>
@@ -523,7 +523,7 @@
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <PagerSettings Mode="NextPreviousFirstLast" />
-                                                                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                                            <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                                             <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                                             <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                                             <SortedAscendingCellStyle BackColor="#E9E7E2" />
@@ -546,7 +546,7 @@
                         <table id="Table2" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="220" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -554,7 +554,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整信息列表
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">价格调整信息列表
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -568,12 +568,12 @@
                             </tr>
                             <tr>
                                 <td height="31">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td align="center" class="titlezi" colspan="3">
+                                                        <td align="left" class="titlezi" colspan="3">
                                                             <table>
                                                                 <tr>
                                                                     <td>
@@ -612,7 +612,7 @@
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <PagerSettings Mode="NextPreviousFirstLast" />
-                                                                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                                            <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                                             <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                                             <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                                             <SortedAscendingCellStyle BackColor="#E9E7E2" />

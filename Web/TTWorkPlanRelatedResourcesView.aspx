@@ -69,7 +69,7 @@
                                                         <td>
                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
-                                                                    <td align="center">
+                                                                    <td align="left">
                                                                      <strong> <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZiYuan%>"></asp:Label></strong></td>
                                                                 </tr>
                                                             </table>

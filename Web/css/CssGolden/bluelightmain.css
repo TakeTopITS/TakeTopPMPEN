@@ -249,6 +249,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 2px;
     color: #ffffff;
     background: #d6bc3d; /*Æ¤·ô*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpu:disabled {
@@ -290,6 +296,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 2px;
     color: #ffffff;
     background: #d6bc3d; /*Æ¤·ô*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuTab:disabled {
@@ -334,6 +346,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 5px;
     color: #ffffff;
     background: #d6bc3d; /*Æ¤·ô*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLong:disabled {
@@ -377,6 +395,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 5px;
     color: #ffffff;
     background: #d6bc3d; /*Æ¤·ô*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLongest:disabled {
@@ -416,6 +440,13 @@ button:visited, input[type="submit"]:visited {
     border-radius: 2px;
     color: #FDFCFC;
     cursor: pointer;
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuYello:disabled {
@@ -457,6 +488,13 @@ button:visited, input[type="submit"]:visited {
     border-radius: 2px;
     color: #ffffff;
     background: #d6bc3d; /*Æ¤·ô*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuRepeat:disabled {
@@ -500,6 +538,12 @@ button:visited, input[type="submit"]:visited {
     cursor: pointer;
     color: #ffffff;
     background: #d6bc3d; /*Æ¤·ô*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLongRepeat:disabled {
@@ -538,6 +582,12 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     color: #000000;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------±£´æ°´Å¥-------------------------------*/
@@ -552,6 +602,12 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     color: #000000;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------¼¤»î°´Å¥-------------------------------*/
@@ -567,6 +623,12 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------¹Ø±Õ°´Å¥-------------------------------*/
@@ -582,6 +644,13 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------²éÑ¯°´Å¥-------------------------------*/
@@ -597,6 +666,13 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------É¨Âë°´Å¥-------------------------------*/
@@ -612,6 +688,13 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------É¾³ý°´Å¥-------------------------------*/
@@ -675,10 +758,11 @@ select {
     border-style: dotted;
     border-color: #cccccc;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* »»ÐÐ */
+
+    text-align: left;
 }
 
 .itemBorderBlack {
@@ -686,10 +770,11 @@ select {
     border-style: dotted;
     border-color: black;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* »»ÐÐ */
+
+    text-align: left;
 }
 
 
@@ -772,10 +857,26 @@ select {
     border-bottom-color: #cccccc;
     vertical-align: top;
     line-height: 23px;
-    max-width: 100px; /* ÏÞÖÆ×î´ó¿í¶È */
-    white-space: nowrap; /* ½ûÖ¹»»ÐÐ */
-    overflow: hidden; /* Òþ²ØÒç³öÄÚÈÝ */
-    text-overflow: ellipsis; /* ÏÔÊ¾Ê¡ÂÔºÅ */
+    white-space: collapse; /* »»ÐÐ */
+
+    text-align: left;
+}
+
+.formItemBgStyleForAlignRight {
+    /*border-bottom:dotted  1px #C6CFD4;
+        height: 19px;
+        line-height: 18px;*/
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #cccccc;
+    vertical-align: top;
+    line-height: 23px;
+    white-space: collapse; /* »»ÐÐ */
+
+    text-align: right;
 }
 
 /*-----------------------------±à¼­Í¼Æ¬°´Å¥------------------------------*/

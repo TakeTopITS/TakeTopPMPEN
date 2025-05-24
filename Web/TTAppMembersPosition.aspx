@@ -68,7 +68,7 @@
                 <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                     <tr>
                         <td height="31" class="page_topbj" width="100%">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
                                         <a href="TakeTopAPPMain.aspx" target="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -76,7 +76,7 @@
                                                 <tr>
                                                     <td width="29">
                                                         <img src="ImagesSkin/return.png" alt="" width="29" height="31" /></td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                     </td>
                                                     <td width="5">
@@ -91,7 +91,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td valign="top" align="center" width="100%">
+                        <td valign="top" align="left" width="100%">
                             <div style="width: 100%;">
                                 <iframe id="IFR_UserPositionMap" name="IFR_UserPositionMap" src="TTAppUserPositionView.aspx" style="width: 100%; height: 200px;" frameborder="no" border="0" framespacing="0"></iframe>
                             </div>
@@ -107,17 +107,17 @@
                                             <td>
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tr>
-                                                        <td width="15%" align="center">
+                                                        <td width="15%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,UserName%>"></asp:Label></strong>
                                                         </td>
 
-                                                        <td width="60%" align="center">
+                                                        <td width="60%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="LB_UserPosition" runat="server" Text="<%$ Resources:lang,Position%>"></asp:Label></strong>
                                                         </td>
 
-                                                        <td width="25%" align="center">
+                                                        <td width="25%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="LB_CreateTime" runat="server" Text="<%$ Resources:lang,Time%>"></asp:Label></strong>
                                                         </td>
@@ -161,7 +161,7 @@
 
 
                                         <%--                                            <asp:BoundColumn DataField="UserName" HeaderText="Name">
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:TemplateColumn HeaderText="Î»ÖÃ£º">
                                                 <ItemTemplate>
@@ -190,7 +190,7 @@
                                             </asp:TemplateColumn>
 
                                             <asp:BoundColumn DataField="CreateTime" HeaderText="Time">
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
+                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="25%" />
                                             </asp:BoundColumn>--%>
                                     </Columns>
 
@@ -198,14 +198,14 @@
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                     <EditItemStyle BackColor="#2461BF" />
                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                 </asp:DataGrid>
                             </div>
 
                         </td>
                     </tr>
                     <tr style="display: none;">
-                        <td align="center">
+                        <td align="left">
                             <asp:Label ID="LB_UserName" runat="server" Visible="false"></asp:Label>
                             <asp:Label ID="LB_UserCode" runat="server" Visible="false"></asp:Label>
                             <asp:Label ID="LB_PlanID" runat="server" Visible="false"></asp:Label>

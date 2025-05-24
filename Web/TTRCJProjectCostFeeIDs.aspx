@@ -43,7 +43,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -51,7 +51,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">成本费项大类信息
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">成本费项大类信息
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -74,12 +74,12 @@
                             </tr>
                             <tr>
                                 <td height="31">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td align="center" class="titlezi">
+                                                        <td align="left" class="titlezi">
                                                             <table>
                                                                 <tr>
                                                                     <td>
@@ -102,7 +102,7 @@
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <PagerSettings Mode="NextPreviousFirstLast" />
-                                                                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                                            <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                                             <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                                             <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                                             <SortedAscendingCellStyle BackColor="#E9E7E2" />
@@ -116,8 +116,8 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="center" class="titlezi">
-                                                            <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+                                                        <td align="left" class="titlezi">
+                                                            <table width="100%" border="1" align="left" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td align="left">
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -191,7 +191,7 @@
                         <table id="Table1" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -199,7 +199,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">成本费项子类列表
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">成本费项子类列表
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -213,12 +213,12 @@
                             </tr>
                             <tr>
                                 <td height="31">
-                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                     <tr>
-                                                        <td align="center" class="titlezi">
+                                                        <td align="left" class="titlezi">
                                                             <table>
                                                                 <tr>
                                                                     <td>
@@ -242,7 +242,7 @@
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                             <PagerSettings Mode="NextPreviousFirstLast" />
-                                                                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                                            <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                                             <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                                             <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                                             <SortedAscendingCellStyle BackColor="#E9E7E2" />
@@ -263,13 +263,13 @@
                             </tr>
                             <tr>
                                 <td height="31">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td align="center" class="titlezi">
-                                                            <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+                                                        <td align="left" class="titlezi">
+                                                            <table width="100%" border="1" align="left" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td align="left">
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">

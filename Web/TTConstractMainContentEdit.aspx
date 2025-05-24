@@ -81,7 +81,7 @@
                     <div id="AboveDiv">
                         <table style="width: 100%;">
                             <tr>
-                                <td class="formItemBgStyle" align="right">
+                                <td class="formItemBgStyle">
                                     <table>
                                         <tr>
                                             
@@ -97,7 +97,7 @@
                                             <td class="formItemBgStyle" width="100px">
                                                 <asp:TextBox ID="TB_Watermark" runat="server" Width="99%"></asp:TextBox>
                                             </td>
-                                            <td class="formItemBgStyle" style="text-align: right; padding-right: 5px; padding-left: 5px;">
+                                            <td class="formItemBgStyle" style=" padding-right: 5px; padding-left: 5px;">
                                                 <asp:Button ID="BT_Export" Text="<%$ Resources:lang,DaoChu %>" CssClass="inpu" runat="server" OnClick="BT_Export_Click" />
                                             </td>
 

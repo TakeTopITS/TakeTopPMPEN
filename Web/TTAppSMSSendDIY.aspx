@@ -48,7 +48,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <%--<a href="javascript:window.history.go(-1)" target ="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
@@ -60,7 +60,7 @@
                                                             <td width="29">
                                                                 <img src="ImagesSkin/return.png" alt="" width="29" height="31" />
                                                             </td>
-                                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
+                                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
                                                             </td>
                                                             <td width="5">
                                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -78,7 +78,7 @@
                                 <td>
                                     <table style="width: 100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td align="center" style="padding: 2px 2px 2px 2px; vertical-align: top; border-right: solid 1px #D8D8D8">
+                                            <td align="left" style="padding: 2px 2px 2px 2px; vertical-align: top; border-right: solid 1px #D8D8D8">
                                                 <table cellpadding="5" cellspacing="0" class="formBgStyle" width="99%">
                                                      <tr>
                                                         <td align="right" width="60px" class="formItemBgStyle" ><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,JieShouRen%>"></asp:Label>
@@ -101,7 +101,7 @@
                                                         </td>
                                                     </tr>
                                                         <tr>
-                                                            <td align="center" class="formItemBgStyle" colspan="2">
+                                                            <td align="left" class="formItemBgStyle" colspan="2">
                                                              
                                                                 <asp:Button ID="BT_Send" runat="server" CssClass="inpu"  OnClick="BT_Send_Click" Text="<%$ Resources:lang,FaSong%>" />
                                                             </td>
@@ -118,7 +118,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="center" colspan="2" style="height: 29px;">
+                                                        <td align="left" colspan="2" style="height: 29px;">
                                                             <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0"
                                                                 width="100%">
                                                                 <tr>
@@ -128,10 +128,10 @@
                                                                     <td>
                                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                             <tr>
-                                                                                <td align="center" width="25%">
+                                                                                <td align="left" width="25%">
                                                                                     <strong><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td align="center" width="55%">
+                                                                                <td align="left" width="55%">
                                                                                     <strong><asp:Label ID="Label5" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label></strong>
                                                                                 </td>
                                                                                
@@ -148,7 +148,7 @@
                                                                 OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="false" Width="100%">
                                                                 <Columns>
                                                                     <asp:TemplateColumn HeaderText="Number">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="25%" />
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                         </ItemTemplate>
@@ -163,7 +163,7 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                             </asp:DataGrid>
                                                         </td>
                                                     </tr>
@@ -178,7 +178,7 @@
                                                             <td>
                                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                     <tr>
-                                                                        <td align="center" width="100%">
+                                                                        <td align="left" width="100%">
                                                                             <strong><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BuMenRenYuan%>"></asp:Label></strong>
                                                                         </td>
                                                                     </tr>
@@ -195,7 +195,7 @@
                                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                         <EditItemStyle BackColor="#2461BF" />
                                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                        <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
                                                         
                                                         <ItemStyle CssClass="itemStyle" />
                                                         <Columns>
@@ -204,7 +204,7 @@
                                                                     <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu"  Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
                                                                     <asp:Button ID="BT_UserName" runat="server" CssClass="inpu"  Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
                                                                 </ItemTemplate>
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                             </asp:TemplateColumn>
                                                         </Columns>
                                                         <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />

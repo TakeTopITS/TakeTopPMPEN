@@ -61,7 +61,7 @@
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <a href="TakeTopAPPMain.aspx" target="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -70,7 +70,7 @@
                                                         <td width="29">
                                                             <img src="ImagesSkin/return.png" alt="" />
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                         </td>
                                                         <td width="5">
@@ -106,7 +106,7 @@
                                                 <asp:DataGrid ID="DataGrid4" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                                                     Height="1px" OnPageIndexChanged="DataGrid4_PageIndexChanged" PageSize="5" Width="100%" ShowHeader="false"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None">
-                                                    <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                    <HeaderStyle Horizontalalign="left" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
 
 
                                                     <Columns>
@@ -138,7 +138,7 @@
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                 </asp:DataGrid>
                                                 <asp:Label ID="LB_Sql4" runat="server" Visible="False"></asp:Label>
                                             </div>
@@ -160,7 +160,7 @@
                                                 <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                                                     Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" Width="100%"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="false">
-                                                    <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                    <HeaderStyle Horizontalalign="left" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
 
                                                         <asp:TemplateColumn HeaderText="">
@@ -189,7 +189,7 @@
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                 </asp:DataGrid>
                                                 <asp:Label ID="LB_Sql1" runat="server" Visible="False"></asp:Label>
                                             </div>
@@ -212,7 +212,7 @@
                                                 <asp:DataGrid ID="DataGrid3" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                                                     Height="1px" OnPageIndexChanged="DataGrid3_PageIndexChanged" PageSize="5" Width="100%" ShowHeader="false"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None">
-                                                    <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                    <HeaderStyle Horizontalalign="left" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
 
                                                     <Columns>
 
@@ -242,7 +242,7 @@
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                 </asp:DataGrid>
                                                 <asp:Label ID="LB_Sql3" runat="server" Visible="False"></asp:Label>
                                                 <asp:Label ID="LB_UserCode" runat="server" Visible="false"></asp:Label>

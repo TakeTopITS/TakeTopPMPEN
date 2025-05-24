@@ -164,7 +164,7 @@
     <center>
         <form id="form1" runat="server">
             <div id="AboveDiv">
-                <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <table width="70%" border="0" align="left" cellpadding="0" cellspacing="0">
                     <tr>
                         <td style="padding-left: 0px;">
                             <img alt="" src="Logo/APPLoginLogo.png" width="100%" />
@@ -175,7 +175,7 @@
                 </table>
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td colspan="2" align="center">
+                        <td colspan="2" align="left">
 
                             <%--  <asp:TextBox ID="TB_UserCode" runat="server" Text="«Î ‰»Îƒ„µƒµ«¬º’ ∫≈(UserCode)" OnFocus="javascript:if(this.value=='«Î ‰»Îƒ„µƒµ«¬º’ ∫≈(UserCode)') {this.value='';this.style.color='blue'}"
 OnBlur="javascript:if(this.value==''){this.value='«Î ‰»Îƒ„µƒµ«¬º’ ∫≈(UserCode)';this.style.color='gray'}" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>--%>
@@ -197,7 +197,7 @@ OnBlur="javascript:if(this.value==''){this.value='«Î ‰»Îƒ„µƒµ«¬º’ ∫≈(UserCode)';
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center">
+                        <td colspan="2" align="left">
 
                             <%--   <asp:TextBox ID="TB_Password" runat="server" Text="«Î ‰»Î√‹¬Î(Password)" OnFocus="javascript:if(this.value=='«Î ‰»Î√‹¬Î(Password)') {this.value='';this.style.color='blue'}"
 OnBlur="javascript:if(this.value==''){this.value='«Î ‰»Î√‹¬Î(Password)';this.style.color='gray'}"  ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>--%>
@@ -221,7 +221,7 @@ OnBlur="javascript:if(this.value==''){this.value='«Î ‰»Î√‹¬Î(Password)';this.sty
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center">
+                        <td colspan="2" align="left">
                             <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                             <asp:Button ID="BT_Login" runat="server" CssClass="inpuLogon" Text="<%$ Resources:lang,Login%>" OnClick="LB_Login_Click" OnClientClick="javascript:RemmberUserNameAndPassord();document.getElementById('IMG_Waiting').style.display = 'block';" />
 
@@ -240,17 +240,17 @@ OnBlur="javascript:if(this.value==''){this.value='«Î ‰»Î√‹¬Î(Password)';this.sty
                         <td colspan="2" height="14"></td>
                     </tr>
                 </table>
-                <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <table width="60%" border="0" align="left" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td align="center">
+                        <td align="left">
                             <table width="100%">
                                 <tr>
-                                    <td align="center">
+                                    <td align="left">
                                         <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? TakeTop Software 2006-2026 "></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center">[
+                                    <td align="left">[
                                     <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language"
                                         AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged"
                                         Style="height: 22px;">

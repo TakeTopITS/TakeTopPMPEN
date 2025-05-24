@@ -30956,4 +30956,19 @@
   <data name="XiangMuYiShuanKeMu" xml:space="preserve">
     <value>Voce di Bilancio del Progetto</value>
   </data>
+  <data name="YaoQiuShuLiang" xml:space="preserve">
+    <value>Quantità Richiesta</value>
+  </data>
+  <data name="YiWanChenLiang" xml:space="preserve">
+    <value>Quantità Completata</value>
+  </data>
+  <data name="DaiLiFei" xml:space="preserve">
+    <value>Tassa di Agenzia</value>
+  </data>
+  <data name="GongBenFei" xml:space="preserve">
+    <value>Costo dei materiali di lavoro</value>
+  </data>
+  <data name="ZiZhiWenJian" xml:space="preserve">
+    <value>Documenti di Qualificazione</value>
+  </data>
 </root>

@@ -41,7 +41,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -49,7 +49,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,WeDeYeWuFenXiTu%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
@@ -66,7 +66,7 @@
                                 <td style="padding: 5px 5px 5px 5px;">
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td width="180px" class="tdMain" align="center" valign="top">
+                                            <td width="180px" class="tdMain" align="left" valign="top">
                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td width="7">
@@ -75,7 +75,7 @@
                                                         <td>
                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
-                                                                    <td align="center">
+                                                                    <td align="left">
                                                                         <strong>
                                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FenXiTu%>"></asp:Label></strong>
                                                                     </td>
@@ -87,7 +87,7 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
@@ -121,11 +121,11 @@
                                                                 <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand" Width="90%">
                                                                     <Columns>
                                                                         <asp:BoundColumn DataField="ID" HeaderText="Number">
-                                                                            <ItemStyle Width="15%" BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                                                                            <ItemStyle Width="15%" BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="5%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="ChartName" HeaderText="Ä£¿éÃû³Æ">
-                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="45%" />
                                                                         </asp:BoundColumn>
 
@@ -134,11 +134,11 @@
                                                                                 <asp:TextBox ID="TB_SortNumber" runat="server" Text="0" Width="40px"></asp:TextBox>
                                                                             </ItemTemplate>
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="5%" />
-                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
                                                                         </asp:TemplateColumn>
 
                                                                         <asp:TemplateColumn HeaderText="">
-                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
                                                                             <ItemTemplate>
                                                                                 <asp:Button ID="BT_DeleteChart" runat="server" CommandName="DELETE" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" />
                                                                             </ItemTemplate>
@@ -148,10 +148,10 @@
                                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                     <EditItemStyle BackColor="#2461BF" />
                                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                                    <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
 
                                                                     <ItemStyle BackColor="#EFF3FB" CssClass="dg_item" />
-                                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
+                                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Horizontalalign="left" />
                                                                 </asp:DataGrid>
                                                             </td>
                                                         </tr>

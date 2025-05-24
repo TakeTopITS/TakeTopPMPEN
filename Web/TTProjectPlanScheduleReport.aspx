@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPlanScheduleReport.aspx.cs" Inherits="TTProjectPlanScheduleReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPlanScheduleReport.aspx.cs" Inherits="TTProjectPlanScheduleReport" %>
 
 <!DOCTYPE html>
 
@@ -37,14 +37,14 @@
             <table style="width: 100%;">
                 <tr>
                     <td style="width: 40%; text-align: left;">
-                        <asp:LinkButton ID="LinkButton_Up" runat="server" OnClick="LinkButton2_Click"> <<< 上一页 </asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton_Up" runat="server" OnClick="LinkButton2_Click"> <<< ��һҳ </asp:LinkButton>
                         &nbsp;&nbsp;&nbsp;&nbsp;   
-                        <asp:LinkButton ID="LinkButton_Down" runat="server" OnClick="LinkButton1_Click"> >>> 下一页 </asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton_Down" runat="server" OnClick="LinkButton1_Click"> >>> ��һҳ </asp:LinkButton>
                         &nbsp;&nbsp;&nbsp;&nbsp;   
                     </td>
                     <td style="text-align: right;">
                         <a href="#" onclick="preview1()">
-                            <img src="ImagesSkin/print.gif" alt="��ӡ" border="0" /></a>
+                            <img src="ImagesSkin/print.gif" alt="???" border="0" /></a>
                     </td>
                 </tr>
             </table>

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTImplementationGuide.aspx.cs" Inherits="TTImplementationGuide" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTImplementationGuide.aspx.cs" Inherits="TTImplementationGuide" %>
 
 
 <!DOCTYPE html>
@@ -64,43 +64,43 @@
                                 <td class="title"><a href="TTSystemActiveUserSet.aspx">5.<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,SheYongHu%>"></asp:Label></a></td>
                             </tr>
                             <tr>
-                                <td align="center">
+                                <td align="left">
                                     <a href="PlayVideo/TakeTopPlay_player.html?MP4Name=SelectModule.mp4" target="_blank">
                                         <img src="Images/shipin.png" width="80"></a>
                                 </td>
-                                <td align="center">
+                                <td align="left">
                                     <a href="PlayVideo/TakeTopPlay_player.html?MP4Name=BuildArchitecture.mp4" target="_blank">
                                         <img src="Images/shipin.png" width="80"></a>
                                 </td>
-                                <td align="center">
+                                <td align="left">
                                     <a href="PlayVideo/TakeTopPlay_player.html?MP4Name=AddUserInformation.mp4" target="_blank">
                                         <img src="Images/shipin.png" width="80"></a>
                                 </td>
-                                <td align="center">
+                                <td align="left">
                                     <a href="PlayVideo/TakeTopPlay_player.html?MP4Name=Authorization.mp4" target="_blank">
                                         <img src="Images/shipin.png" width="80"></a>
                                 </td>
-                                <td align="center">
+                                <td align="left">
                                     <a href="PlayVideo/TakeTopPlay_player.html?MP4Name=SetSystemUser.mp4" target="_blank">
                                         <img src="Images/shipin.png" width="80"></a>
                                 </td>
                             </tr>
 
                             <%--                         <tr>
-                                <td class="title" align="center" colspan="5">
+                                <td class="title" align="left" colspan="5">
                                     <br />
                                     <br />
-                                    <asp:Label ID="Label6" runat="server" Text="¹Ø¼üÄ£×éÅàÑµÊÓÆµÏÂÔØ"></asp:Label>
+                                    <asp:Label ID="Label6" runat="server" Text="ï¿½Ø¼ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ñµï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½"></asp:Label>
                                     <br />
                                     <br />
                                 </td>
                             </tr>
                             <tr>
-                                <td class="title"  align="center"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Workflow.zip">Á÷³Ì¹ÜÀí</a></td>
-                                <td class="title"  align="center"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Knowledget.zip">ÖªÊ¶¹ÜÀí</a></td>
-                                <td class="title"  align="center"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/CRM.zip">¿Í»§¹ÜÀí</a></td>
-                                <td class="title"  align="center"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Contract.zip">ºÏÍ¬¹ÜÀí</a></td>
-                                <td class="title"  align="center"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/ProjectPlan.zip">ÏîÄ¿¼Æ»®</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Workflow.zip">ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Knowledget.zip">ÖªÊ¶ï¿½ï¿½ï¿½ï¿½</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/CRM.zip">ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Contract.zip">ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/ProjectPlan.zip">ï¿½ï¿½Ä¿ï¿½Æ»ï¿½</a></td>
                             </tr>--%>
                         </table>
                     </div>

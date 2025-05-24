@@ -29,10 +29,10 @@
             </asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <table style="width: 100%" cellpadding="0" cellspacing="0" align="center">
+                    <table style="width: 100%" cellpadding="0" cellspacing="0" align="left">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <table width="245" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -40,7 +40,7 @@
                                                     <td width="29">
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XieZuoJiLu%>"></asp:Label>
                                                     </td>
                                                     <td width="5">
@@ -108,7 +108,7 @@
                                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                         <tr>
 
-                                                                            <td align="center">
+                                                                            <td align="left">
                                                                                 <strong>
                                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WemJianMing%>"></asp:Label></strong>
                                                                             </td>
@@ -132,7 +132,7 @@
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                             
                                                             <ItemStyle CssClass="itemStyle" />
                                                         </asp:DataGrid>

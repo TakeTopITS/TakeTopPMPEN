@@ -76,15 +76,15 @@
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
 
-                                                <td width="15%" align="center">
+                                                <td width="15%" align="left">
                                                     <strong>
                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label></strong>
                                                 </td>
-                                                <td width="20%" align="center">
+                                                <td width="20%" align="left">
                                                     <strong>
                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label></strong>
                                                 </td>
-                                                <td width="65%" align="center">
+                                                <td width="65%" align="left">
                                                     <strong>
                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JiangJin%>"></asp:Label></strong>
                                                 </td>
@@ -103,10 +103,10 @@
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="UserName" HeaderText="Name">
-                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Bonus" HeaderText="½±½ð">
-                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="65%" />
+                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="65%" />
                                     </asp:BoundColumn>
                                 </Columns>
                                 
@@ -114,7 +114,7 @@
                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                 <EditItemStyle BackColor="#2461BF" />
                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                             </asp:DataGrid>
                         </td>
                     </tr>

@@ -36,7 +36,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -44,7 +44,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YuSuanFeiYongFenXi%>"></asp:Label></td>
                                                         <td width="5">
                                                             <%--<img src="ImagesSkin/main_top_r.jpg" width="5" height="31" alt="" />--%>
@@ -68,17 +68,17 @@
                                                     <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                                 </asp:TreeView>
                                             </td>
-                                            <td align="center">
+                                            <td align="left">
                                                 <table width="70%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: right">
+                                                        <td class="formItemBgStyle" style="">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NianFen%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:TextBox ID="txt_Year" runat="server" ReadOnly="false" Width="100px"></asp:TextBox>
                                                             <cc1:CalendarExtender ID="DLC_MonthNum_CalendarExtender" runat="server" Format="yyyy" TargetControlID="txt_Year">
                                                             </cc1:CalendarExtender>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: right">
+                                                        <td class="formItemBgStyle" style="">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YueFen%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:TextBox ID="txt_Month" runat="server" ReadOnly="false" Width="100px"></asp:TextBox>
@@ -90,7 +90,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: right">
+                                                        <td class="formItemBgStyle" style="">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FenXiLeiXing%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
@@ -99,7 +99,7 @@
                                                                 <asp:ListItem Value="DepartmentSubject" Text="<%$ Resources:lang,BuMenKeMu%>" />
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td class="formItemBgStyle" style="text-align: right">
+                                                        <td class="formItemBgStyle" style="">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList2" runat="server" Visible="False">
@@ -118,7 +118,7 @@
                                             </td>
                                         </tr>
                                         <tr style="font-size: 10pt">
-                                            <td align="center">
+                                            <td align="left">
 
 
                                                 <iframe runat="server" id="IFrame_Chart_Budget" src="TTTakeTopAnalystChartSet.aspx" style="width: 800px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
@@ -171,7 +171,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                         <asp:ImageButton ID="IMBT_Close" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                     </td>
                                 </tr>

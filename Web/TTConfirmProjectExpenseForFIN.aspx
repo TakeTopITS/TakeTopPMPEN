@@ -42,7 +42,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="350" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -50,7 +50,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QueRenFeiYong%>"></asp:Label>
                                                             <asp:Label ID="LB_QueryScope" runat="server" Font-Size="9pt" Font-Underline="True"
@@ -132,28 +132,28 @@
                                                                                         <td>
                                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                                 <tr>
-                                                                                                    <td width="6%" align="center">
+                                                                                                    <td width="6%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                                                                     </td>
 
-                                                                                                    <td width="14%" align="center">
+                                                                                                    <td width="14%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,RiQi%>"></asp:Label></strong>
                                                                                                     </td>
-                                                                                                    <td width="20%" align="center">
+                                                                                                    <td width="20%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZeRenRen%>"></asp:Label></strong>
                                                                                                     </td>
-                                                                                                    <td width="20%" align="center">
+                                                                                                    <td width="20%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,KeMu%>"></asp:Label></strong>
                                                                                                     </td>
-                                                                                                    <td width="15%" align="center">
+                                                                                                    <td width="15%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FeiYong%>"></asp:Label></strong>
                                                                                                     </td>
-                                                                                                    <td width="25%" align="center">
+                                                                                                    <td width="25%" align="left">
                                                                                                         <strong>
                                                                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QueRenFeiYong%>"></asp:Label></strong>
                                                                                                     </td>

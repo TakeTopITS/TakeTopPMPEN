@@ -30955,4 +30955,19 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="XiangMuYiShuanKeMu" xml:space="preserve">
     <value>Project Budget Item</value>
   </data>
+  <data name="YaoQiuShuLiang" xml:space="preserve">
+    <value>Required Quantity</value>
+  </data>
+  <data name="YiWanChenLiang" xml:space="preserve">
+    <value>Completed Quantity</value>
+  </data>
+  <data name="DaiLiFei" xml:space="preserve">
+    <value>Agency Fee</value>
+  </data>
+  <data name="GongBenFei" xml:space="preserve">
+    <value>Cost of Materials</value>
+  </data>
+  <data name="ZiZhiWenJian" xml:space="preserve">
+    <value>Qualification Documents</value>
+  </data>
 </root>

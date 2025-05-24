@@ -158,7 +158,7 @@
                                             &nbsp;&nbsp;&nbsp;</td>
                                         <td style="padding-top: 5px;" width="2px" align="right">(
                                         </td>
-                                        <td align="center" style="padding-top: 5px;" background="ImagesSkin/main_top_bj.jpg">
+                                        <td align="left" style="padding-top: 5px;" background="ImagesSkin/main_top_bj.jpg">
                                             <asp:Label ID="LB_AddNewVersion" runat="server" Text="<%$ Resources:lang,AddNewVersion%>"></asp:Label>
                                             <asp:Label ID="LB_VersionID" runat="server" Text="<%$ Resources:lang,VersionID%>"></asp:Label>:
                                         </td>
@@ -377,7 +377,7 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td style="width: 15%; text-align: right;" class="formItemBgStyle">
+                                                    <td style="width: 15%; " class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbPlanType" runat="server" Text="<%$ Resources:lang,Type%>" />:
                                                     </td>
                                                     <td colspan="3" style="text-align: left;" class="formItemBgStyle">
@@ -414,7 +414,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbPlanDetail" runat="server" Text="<%$ Resources:lang,PlanDetail%>" />
                                                     </td>
                                                     <td colspan="3" style="text-align: left" class="formItemBgStyle">
@@ -422,7 +422,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbStartTime" runat="server" Text="<%$ Resources:lang,StartTime%>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -430,7 +430,7 @@
                                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_BeginDate">
                                                         </ajaxToolkit:CalendarExtender>
                                                     </td>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbEndTime" runat="server" Text="<%$ Resources:lang,EndTime%>" /></td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -439,7 +439,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BaseStartTime%>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -447,7 +447,7 @@
                                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender5" runat="server" TargetControlID="DLC_BaseBeginDate">
                                                         </ajaxToolkit:CalendarExtender>
                                                     </td>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BaseEndTime%>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -457,7 +457,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbBudget" runat="server" Text="<%$ Resources:lang,Budget%>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -467,7 +467,7 @@
 
                                                     </td>
 
-                                                    <td style="text-align: right;" class="formItemBgStyle">&nbsp;<asp:Label ID="LB_tbBudget1" runat="server" Text="<%$ Resources:lang,GongShi2%>" />
+                                                    <td class="formItemBgStyle">&nbsp;<asp:Label ID="LB_tbBudget1" runat="server" Text="<%$ Resources:lang,GongShi2%>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <NickLee:NumberBox ID="NB_PlanWorkhour" runat="server" Amount="0" MaxAmount="1000000000000" MinAmount="0" Precision="0" Width="60px">
@@ -476,8 +476,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label8" runat="server" Text="要求数量" />
+                                                    <td class="formItemBgStyle">
+                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YaoQiuShuLiang %>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
 
@@ -490,8 +490,8 @@
                                                         </NickLee:NumberBox>
 
                                                     </td>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label11" runat="server" Text="已完成量" />
+                                                    <td class="formItemBgStyle">
+                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YiWanChenLiang %>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <NickLee:NumberBox ID="NB_FinishedNumber" runat="server" Amount="0" MaxAmount="1000000000000" MinAmount="0" Precision="2" Width="60px">
@@ -505,7 +505,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -514,7 +514,7 @@
                                                                                 0</NickLee:NumberBox>
                                                         %
                                                     </td>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
 
                                                         <asp:Label ID="LB_tbBudget0" runat="server" Text="<%$ Resources:lang,ShunXuHao%>" />
                                                     </td>
@@ -537,7 +537,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr style="display: none;">
-                                                    <td class="formItemBgStyle" style="text-align: right;">
+                                                    <td class="formItemBgStyle" style="">
                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhanXiangMuZhengTiJingDuYuGu%>"></asp:Label>
                                                     </td>
                                                     <td class="formItemBgStyle" style="text-align: left;">
@@ -545,7 +545,7 @@
                                                                                          0 0.00
                                                         </NickLee:NumberBox>
                                                         % </td>
-                                                    <td class="formItemBgStyle" style="text-align: right;">
+                                                    <td class="formItemBgStyle" style="">
                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhanXiangMuZhenTiChengBenYuGu%>"></asp:Label>
                                                     </td>
                                                     <td class="formItemBgStyle" style="text-align: left;">
@@ -555,7 +555,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbResource" runat="server" Text="<%$ Resources:lang,BeiZhu%>" />
                                                     </td>
                                                     <td colspan="3" style="text-align: left" class="formItemBgStyle">
@@ -563,7 +563,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbStatus" runat="server" Text="<%$ Resources:lang,Status%>" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -571,7 +571,7 @@
                                                             DataValueField="Status" class="formItemBgStyle">
                                                         </asp:DropDownList>
                                                     </td>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_tbLockStatus" runat="server" Text="<%$ Resources:lang,LockStatus%>" /></td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_LockStatus" runat="server" Enabled="false" AutoPostBack="true"
@@ -598,7 +598,7 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td style="text-align: right;" class="formItemBgStyle">
+                                                    <td class="formItemBgStyle">
                                                         <asp:Label ID="LB_NoticePlanMember" runat="server" Text="<%$ Resources:lang,NoticePlanMember%>" />:
                                                     </td>
                                                     <td colspan="3" style="text-align: left" class="formItemBgStyle">
@@ -657,7 +657,7 @@
                                         <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                     </asp:TreeView>
                                 </td>
-                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                     <asp:ImageButton ID="IMBT_Close" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                 </td>
                             </tr>
@@ -678,7 +678,7 @@
                                         <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                     </asp:TreeView>
                                 </td>
-                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                     <asp:ImageButton ID="IMBT_CloseTree2" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                 </td>
                             </tr>

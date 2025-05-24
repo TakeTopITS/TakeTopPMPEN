@@ -184,9 +184,9 @@
     <center>
         <form id="form1" runat="server">
             <div id="AboveDiv">
-                <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <table width="70%" border="0" align="left" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td align="center" style="padding-right: 15px;">
+                        <td align="left" style="padding-right: 15px;">
                             <asp:Label ID="Label1" runat="server" Text="»¶Ó­Ê¹ÓÃ"></asp:Label>
                             <br />
                             <br />
@@ -197,10 +197,10 @@
                 </table>
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td colspan="2" align="center">
+                        <td colspan="2" align="left">
                             <table width="100%">
                                 <tr>
-                                    <td align="center">
+                                    <td align="left">
                                         <%--<asp:TextBox ID="TB_UserCode" runat="server" Text="ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)" OnFocus="javascript:if(this.value=='ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)') {this.value='';this.style.color='blue'}"
                                         OnBlur="javascript:if(this.value==''){this.value='ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)';this.style.color='gray'}"
                                         ForeColor="#000000" class="dengl" Width="100%"></asp:TextBox>--%>
@@ -228,7 +228,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center">
+                        <td colspan="2" align="left">
                             <%--   <asp:TextBox ID="TB_Password" runat="server" Text="ÇëÊäÈëÃÜÂë(Password)" OnFocus="javascript:if(this.value=='ÇëÊäÈëÃÜÂë(Password)') {this.value='';this.style.color='blue'}"
                             OnBlur="javascript:if(this.value==''){this.value='ÇëÊäÈëÃÜÂë(Password)';this.style.color='gray'}"
                             ForeColor="#000000" class="dengl" Width="100%"></asp:TextBox>--%>
@@ -256,7 +256,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center">
+                        <td colspan="2" align="left">
                             <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                             <asp:Button ID="BT_Login" runat="server" CssClass="inpuLogon" Text="<%$ Resources:lang,Login%>" OnClientClick="RemmberUserNameAndPassord()"
                                 OnClick="LB_Login_Click" />
@@ -276,17 +276,17 @@
                         <td colspan="2" height="14"></td>
                     </tr>
                 </table>
-                <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <table width="60%" border="0" align="left" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td align="center">
+                        <td align="left">
                             <table width="100%">
                                 <tr style="display: none;">
-                                    <td align="center">
+                                    <td align="left">
                                         <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? TakeTop Software 2006-2026 "></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center">[
+                                    <td align="left">[
                                     <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language"
                                         AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged">
                                     </asp:DropDownList>

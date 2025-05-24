@@ -162,7 +162,7 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div id="AboveDiv">
-                        <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="70%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td style="padding-left: 0px;">
                                     <img alt="" src="Logo/APPLoginLogo.png" width="100%" />
@@ -174,7 +174,7 @@
 
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td align="center">
+                                <td align="left">
                                     <asp:TextBox ID="TB_UserCode" runat="server" Text="ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#cdcccc" class="dengl" Width="103%"></asp:TextBox>
 
                                 </td>
@@ -188,7 +188,7 @@
                                 <td style="text-align: left;">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td align="center">
+                                <td align="left">
                                     <asp:TextBox ID="TB_Password" runat="server" Text="******" TextMode="Password" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#cdcccc" class="dengl" Width="103%"></asp:TextBox>
                                     <asp:Label ID="LB_ErrorMsg" runat="server" Visible="false" ForeColor="Red"></asp:Label>
 
@@ -213,7 +213,7 @@
                                 <td style="text-align: left;">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td colspan="2" align="center">
+                                <td colspan="2" align="left">
                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                     <asp:Button ID="BT_Login" runat="server" CssClass="inpuLogon" Text="<%$ Resources:lang,Login%>" OnClientClick="RemmberUserNameAndPassord()"
                                         OnClick="LB_Login_Click" />
@@ -229,24 +229,24 @@
                             </tr>
                         </table>
 
-                        <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="60%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td align="center">
+                                <td align="left">
                                     <table width="100%">
                                         <tr>
-                                            <td align="center">
+                                            <td align="left">
                                                 <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? TakeTop Software 2006-2026 "></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="center">[
+                                            <td align="left">[
                                                   <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged" Style="height: 22px;">
                                                   </asp:DropDownList>
                                                 ]
                                             </td>
                                         </tr>
                                         <tr style="display: none;">
-                                            <td align="center">
+                                            <td align="left">
                                                 <br />
                                                 <asp:HyperLink ID="HL_UserRegister" NavigateUrl="TTUserRegisteredSAAS.aspx" Text="<%$ Resources:lang,MianFeiZhuCe%>" runat="server"></asp:HyperLink>
 
@@ -260,7 +260,7 @@
                                 </td>
                             </tr>
                             <tr style="display: none;">
-                                <td align="center">
+                                <td align="left">
                                     <asp:Label ID="LB_WeChatOpenID" runat="server" Visible="false"></asp:Label>
                                 </td>
                             </tr>

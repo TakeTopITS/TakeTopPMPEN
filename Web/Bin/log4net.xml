@@ -18332,10 +18332,10 @@
             			<th>comment</th>
             		</tr>
             		<tr>
-            			<td align="center">%20logger</td>
-            			<td align="center">false</td>
-            			<td align="center">20</td>
-            			<td align="center">none</td>
+            			<td align="left">%20logger</td>
+            			<td align="left">false</td>
+            			<td align="left">20</td>
+            			<td align="left">none</td>
             			<td>
             				<para>
             				Left pad with spaces if the logger name is less than 20
@@ -18344,10 +18344,10 @@
             			</td>
             		</tr>
             		<tr>
-            			<td align="center">%-20logger</td>
-            			<td align="center">true</td>
-            			<td align="center">20</td>
-            			<td align="center">none</td>
+            			<td align="left">%-20logger</td>
+            			<td align="left">true</td>
+            			<td align="left">20</td>
+            			<td align="left">none</td>
             			<td>
             				<para>
             				Right pad with spaces if the logger 
@@ -18356,10 +18356,10 @@
             			</td>
             		</tr>
             		<tr>
-            			<td align="center">%.30logger</td>
-            			<td align="center">NA</td>
-            			<td align="center">none</td>
-            			<td align="center">30</td>
+            			<td align="left">%.30logger</td>
+            			<td align="left">NA</td>
+            			<td align="left">none</td>
+            			<td align="left">30</td>
             			<td>
             				<para>
             				Truncate from the beginning if the logger 
@@ -18368,10 +18368,10 @@
             			</td>
             		</tr>
             		<tr>
-            			<td align="center"><nobr>%20.30logger</nobr></td>
-            			<td align="center">false</td>
-            			<td align="center">20</td>
-            			<td align="center">30</td>
+            			<td align="left"><nobr>%20.30logger</nobr></td>
+            			<td align="left">false</td>
+            			<td align="left">20</td>
+            			<td align="left">30</td>
             			<td>
             				<para>
             				Left pad with spaces if the logger name is shorter than 20
@@ -18381,10 +18381,10 @@
             			</td>
             		</tr>
             		<tr>
-            			<td align="center">%-20.30logger</td>
-            			<td align="center">true</td>
-            			<td align="center">20</td>
-            			<td align="center">30</td>
+            			<td align="left">%-20.30logger</td>
+            			<td align="left">true</td>
+            			<td align="left">20</td>
+            			<td align="left">30</td>
             			<td>
             				<para>
             				Right pad with spaces if the logger name is shorter than 20

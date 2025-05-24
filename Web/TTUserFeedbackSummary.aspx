@@ -20,7 +20,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <table align="center" style="width: 700px">
+        <table align="left" style="width: 700px">
             <tr>
                 <td colspan="5" style="text-align: right; width: 700px;">&nbsp; 
                     <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label> <strong><span
@@ -30,7 +30,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="5" style="width: 700px" align="center">
+                <td colspan="5" style="width: 700px" align="left">
                     <span>
                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,FanKuiYiJianLieBiao%>"></asp:Label>:
                 </td>
@@ -72,18 +72,18 @@
                                     <td>
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
-                                                <td width="150" align="center">
+                                                <td width="150" align="left">
                                                     <strong>
                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                 </td>
-                                                <td width="200" align="center">
+                                                <td width="200" align="left">
                                                     <strong>
                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,RiQi%>"></asp:Label></strong>
                                                 </td>
-                                                <td width="200" align="center">
+                                                <td width="200" align="left">
                                                     <strong></strong>
                                                 </td>
-                                                <td width="150" align="center">
+                                                <td width="150" align="left">
                                                     <strong></strong>
                                                 </td>
                                             </tr>

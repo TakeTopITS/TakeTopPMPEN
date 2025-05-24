@@ -39,7 +39,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -47,7 +47,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ChaKanChenYuanJiHua%>"></asp:Label> 
                                                         </td>
                                                         <td width="5">
@@ -109,43 +109,43 @@
                                                                                                     <td>
                                                                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                                                             <tr>
-                                                                                                                <td align="center" width="5%">
+                                                                                                                <td align="left" width="5%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="6%">
+                                                                                                                <td align="left" width="6%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="25%">
+                                                                                                                <td align="left" width="25%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiHua%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="10%">
+                                                                                                                <td align="left" width="10%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,KaiShishiJian%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="10%">
+                                                                                                                <td align="left" width="10%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="10%">
+                                                                                                                <td align="left" width="10%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JingDu%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="8%">
+                                                                                                                <td align="left" width="8%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZiPingFen%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="8%">
+                                                                                                                <td align="left" width="8%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShangJiPingFen%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="8%">
+                                                                                                                <td align="left" width="8%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label> </strong>
                                                                                                                 </td>
-                                                                                                                <td align="center" width="10%">
+                                                                                                                <td align="left" width="10%">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhiDngXhe%>"></asp:Label> </strong>
                                                                                                                 </td>
@@ -264,7 +264,7 @@
                                                                                                                         <tr>
                                                                                                                             
 
-                                                                                                                            <td align="center" width="10%">
+                                                                                                                            <td align="left" width="10%">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -273,7 +273,7 @@
                                                                                                                             </td>
                                                                                                                             
 
-                                                                                                                            <td align="center" width="60%">
+                                                                                                                            <td align="left" width="60%">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -282,7 +282,7 @@
                                                                                                                             </td>
                                                                                                                             
 
-                                                                                                                            <td align="center" width="10%">
+                                                                                                                            <td align="left" width="10%">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -291,7 +291,7 @@
                                                                                                                             </td>
                                                                                                                             
 
-                                                                                                                            <td align="center" width="20%">
+                                                                                                                            <td align="left" width="20%">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -438,7 +438,7 @@
                                                                                                                             <tr>
                                                                                                                                 
 
-                                                                                                                                <td align="center" width="10%">
+                                                                                                                                <td align="left" width="10%">
                                                                                                                                     
 
                                                                                                                                     <strong>
@@ -447,7 +447,7 @@
                                                                                                                                 </td>
                                                                                                                                 
 
-                                                                                                                                <td align="center" width="70%">
+                                                                                                                                <td align="left" width="70%">
                                                                                                                                     
 
                                                                                                                                     <strong>
@@ -456,7 +456,7 @@
                                                                                                                                 </td>
                                                                                                                                 
 
-                                                                                                                                <td align="center" width="20%">
+                                                                                                                                <td align="left" width="20%">
                                                                                                                                     
 
                                                                                                                                     <strong>
@@ -502,7 +502,7 @@
                                                                                                                     <asp:BoundColumn DataField="ID" HeaderText="Number">
                                                                                                                         
 
-                                                                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
+                                                                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                                                                                         
 
                                                                                                                     </asp:BoundColumn>
@@ -531,7 +531,7 @@
                                                                                                                         </ItemTemplate>
                                                                                                                         
 
-                                                                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                                                                                         
 
                                                                                                                     </asp:TemplateColumn>
@@ -549,7 +549,7 @@
                                                                                                                 <ItemStyle CssClass="itemStyle" />
                                                                                                                 
 
-                                                                                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                                                                                 
 
                                                                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
@@ -629,7 +629,7 @@
                                                                                                                                     <tr>
                                                                                                                                         
 
-                                                                                                                                        <td align="center" width="10%">
+                                                                                                                                        <td align="left" width="10%">
                                                                                                                                             
 
                                                                                                                                             <strong>
@@ -638,7 +638,7 @@
                                                                                                                                         </td>
                                                                                                                                         
 
-                                                                                                                                        <td align="center" width="10%">
+                                                                                                                                        <td align="left" width="10%">
                                                                                                                                             
 
                                                                                                                                             <strong>
@@ -647,7 +647,7 @@
                                                                                                                                         </td>
                                                                                                                                         
 
-                                                                                                                                        <td align="center" width="50%">
+                                                                                                                                        <td align="left" width="50%">
                                                                                                                                             
 
                                                                                                                                             <strong>
@@ -656,7 +656,7 @@
                                                                                                                                         </td>
                                                                                                                                         
 
-                                                                                                                                        <td align="center" width="10%">
+                                                                                                                                        <td align="left" width="10%">
                                                                                                                                             
 
                                                                                                                                             <strong>
@@ -665,7 +665,7 @@
                                                                                                                                         </td>
                                                                                                                                         
 
-                                                                                                                                        <td align="center" width="20%">
+                                                                                                                                        <td align="left" width="20%">
                                                                                                                                             
 
                                                                                                                                             <strong>
@@ -810,7 +810,7 @@
                                                                                                     <tr>
                                                                                                         
 
-                                                                                                        <td style="width: 90px; text-align: right;" class="formItemBgStyle">
+                                                                                                        <td style="width: 90px; " class="formItemBgStyle">
                                                                                                             <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>   
 
                                                                                                         </td>
@@ -831,7 +831,7 @@
                                                                                                     <tr>
                                                                                                         
 
-                                                                                                        <td style="width: 90px; text-align: right;" class="formItemBgStyle">
+                                                                                                        <td style="width: 90px; " class="formItemBgStyle">
                                                                                                             <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label> 
 
                                                                                                         </td>
@@ -858,7 +858,7 @@
                                                                                                     <tr>
                                                                                                         
 
-                                                                                                        <td style="width: 90px; text-align: right;" class="formItemBgStyle">
+                                                                                                        <td style="width: 90px; " class="formItemBgStyle">
                                                                                                             <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label> 
 
                                                                                                         </td>
@@ -880,7 +880,7 @@
                                                                                                     <tr>
                                                                                                         
 
-                                                                                                        <td style="width: 90px; text-align: right;" class="formItemBgStyle"></td>
+                                                                                                        <td style="width: 90px; " class="formItemBgStyle"></td>
                                                                                                         
 
                                                                                                         <td style="text-align: left;" class="formItemBgStyle">
@@ -944,7 +944,7 @@
                                                                                                                         <tr>
                                                                                                                             
 
-                                                                                                                            <td width="10%" align="center">
+                                                                                                                            <td width="10%" align="left">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -953,7 +953,7 @@
                                                                                                                             </td>
                                                                                                                             
 
-                                                                                                                            <td width="60%" align="center">
+                                                                                                                            <td width="60%" align="left">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -962,7 +962,7 @@
                                                                                                                             </td>
                                                                                                                             
 
-                                                                                                                            <td width="10%" align="center">
+                                                                                                                            <td width="10%" align="left">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -971,7 +971,7 @@
                                                                                                                             </td>
                                                                                                                             
 
-                                                                                                                            <td width="20%" align="center">
+                                                                                                                            <td width="20%" align="left">
                                                                                                                                 
 
                                                                                                                                 <strong>
@@ -1105,12 +1105,12 @@
                                                                                 <td align="left" valign="top">
                                                                                     <table width="800px">
                                                                                         <tr>
-                                                                                            <td align="center">
+                                                                                            <td align="left">
                                                                                                 <b></b>
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr>
-                                                                                            <td align="center">
+                                                                                            <td align="left">
                                                                                                     <iframe runat="server" id="IFrame_Chart1" src="TTTakeTopAnalystChartSet.aspx" style="width: 300px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
 
 

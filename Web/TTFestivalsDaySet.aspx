@@ -56,7 +56,7 @@
                     <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                         <tr>
                             <td colspan="2" height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -64,7 +64,7 @@
                                                     <td width="29">
                                                         <%-- <img src="ImagesSkin/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYTITLE%>"></asp:Label>
                                                     </td>
                                                     <td width="5">
@@ -87,8 +87,8 @@
                                                     <td width="30%">
                                                         <table class="formBgStyle" cellpadding="3" cellspacing="0" style="width: 100%;">
                                                             <tr>
-                                                                <td style="width: 80px; text-align: right" class="formItemBgStyle">
-                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYYEAR%>"></asp:Label>：
+                                                                <td style="width: 80px;" class="formItemBgStyle">
+                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYYEAR%>"></asp:Label>��
                                                                 </td>
                                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                                     <asp:DropDownList ID="ddl_year" runat="server" AutoPostBack="True" CssClass="DDList" OnSelectedIndexChanged="ddl_year_SelectedIndexChanged"></asp:DropDownList>
@@ -102,8 +102,8 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="formItemBgStyle" style="text-align: right">
-                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FESTIVALSDAY%>"></asp:Label>：
+                                                                <td class="formItemBgStyle" style="">
+                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FESTIVALSDAY%>"></asp:Label>��
                                                                 </td>
                                                                 <td class="formItemBgStyle festivals" style="text-align: left;" colspan="4">
                                                                     <asp:ListBox ID="lb_festivals" runat="server" DataTextField="Type" DataValueField="SortNumber" AutoPostBack="True" OnSelectedIndexChanged="lb_festivals_SelectedIndexChanged"></asp:ListBox>
@@ -112,12 +112,12 @@
                                                         </table>
 
                                                     </td>
-                                                    <td align="center" style="padding: 0px 0px 0px 5px;">
+                                                    <td align="left" style="padding: 0px 0px 0px 5px;">
                                                         <div id="AssetListDivID" style="width: 100%; height: 800px; overflow: auto;">
                                                             <table class="formBgStyle" cellpadding="3" cellspacing="0" style="width: 100%;">
                                                                 <tr>
-                                                                    <td style="width: 80px; text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYMONTH%>"></asp:Label>：
+                                                                    <td style="width: 80px;" class="formItemBgStyle">
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYMONTH%>"></asp:Label>��
                                                                     </td>
                                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="ddl_moths" runat="server" CssClass="DDList" AutoPostBack="True" OnSelectedIndexChanged="ddl_moths_SelectedIndexChanged">
@@ -137,15 +137,15 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="text-align: right">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieRi%>"></asp:Label>：</td>
+                                                                    <td class="formItemBgStyle" style="">
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieRi%>"></asp:Label>��</td>
                                                                     <td class="formItemBgStyle" style="text-align: left;">
                                                                         <asp:Calendar ID="cal_days" runat="server" ShowNextPrevMonth="False" ShowTitle="False" Height="300px" Width="100%" OnSelectionChanged="Calendar1_SelectionChanged" OnDayRender="Calendar1_DayRender"></asp:Calendar>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="text-align: right">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TiaoXiu%>"></asp:Label>：</td>
+                                                                    <td class="formItemBgStyle" style="">
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TiaoXiu%>"></asp:Label>��</td>
                                                                     <td class="formItemBgStyle" style="text-align: left;">
                                                                         <asp:Calendar ID="cal_exchange" runat="server" ShowNextPrevMonth="False" ShowTitle="False" Height="300px" Width="100%" OnSelectionChanged="cal_exchange_SelectionChanged" OnDayRender="cal_exchange_DayRender"></asp:Calendar>
                                                                     </td>

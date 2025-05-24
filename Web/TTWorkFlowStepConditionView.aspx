@@ -14,14 +14,14 @@
             <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                 <tr>
                     <td height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td width="29">
                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></td>
-                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TiaoJianSeZhi%>"></asp:Label>
                                             </td>
                                             <td width="5">
@@ -42,17 +42,17 @@
                                 <td>
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tr>
-                                            <td width="10%" align="center">
+                                            <td width="10%" align="left">
                                                 <strong>
                                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BuXu%>"></asp:Label>
                                                 </strong>
                                             </td>
-                                            <td width="70%" align="center">
+                                            <td width="70%" align="left">
                                                 <strong>
                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TiaoJianMiaoShu%>"></asp:Label>
                                                 </strong>
                                             </td>
-                                            <td width="20%" align="center">
+                                            <td width="20%" align="left">
                                                 <strong>
                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiaYiBu%>"></asp:Label>
                                                 </strong>
@@ -69,13 +69,13 @@
 
                             <Columns>
                                 <asp:BoundColumn DataField="StepID" HeaderText="步序">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="ConDetail" HeaderText="条件描述">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="NextSortNumber" HeaderText="下一步">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                 </asp:BoundColumn>
                             </Columns>
                             <ItemStyle CssClass="itemStyle" />

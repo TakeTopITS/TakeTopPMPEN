@@ -130,7 +130,7 @@
                                 </ajaxToolkit:CalendarExtender>
 
                             </td>
-                            <td align="center">
+                            <td align="left">
 
                                 <asp:Button ID="BT_ExportToExcel" runat="server" CssClass="inpuLong" OnClick="BT_ExportToExcel_Click" Text="<%$ Resources:lang,DaoChuDaoExcel%>" />
 
@@ -159,10 +159,10 @@
                             <td style="text-align: left;">
                                 <asp:TextBox ID="TB_UserName" runat="server"></asp:TextBox>
                             </td>
-                            <td align="center">
+                            <td align="left">
                                 <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />
                             </td>
-                            <td align="center">
+                            <td align="left">
                                 <a href="#" onclick="preview1()">
                                     <img src="ImagesSkin/print.gif" alt="打印" border="0" /></a>
                             </td>
@@ -171,7 +171,7 @@
                     </table>
                     <table cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                            <td align="center">
+                            <td align="left">
 
                                 <!--startprint1-->
 
@@ -202,69 +202,69 @@
                                         <td>
                                             <table width="100%" border="1" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label></strong>
                                                     </td>
 
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label9" runat="server" Text="Department"></asp:Label></strong>
                                                     </td>
 
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label10" runat="server" Text="工号"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label11" runat="server" Text="Position"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" runat="server" id="leaveTd">
+                                                    <td align="left" runat="server" id="leaveTd">
                                                         <strong>
                                                             <asp:Label ID="Label12" runat="server" Text="请假(小时)"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label19" runat="server" Text="出勤天数"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label20" runat="server" Text="应出勤天数"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label21" runat="server" Text="迟到次数"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label27" runat="server" Text="迟到时长(分钟)"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label28" runat="server" Text="旷工迟到次数"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label29" runat="server" Text="早退次数"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label30" runat="server" Text="早退时长(分钟)"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label31" runat="server" Text="旷工天数"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" rowspan="2">
+                                                    <td align="left" rowspan="2">
                                                         <strong>
                                                             <asp:Label ID="Label32" runat="server" Text="夜班天数"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" runat="server" id="overtimeTd">
+                                                    <td align="left" runat="server" id="overtimeTd">
                                                         <strong>
                                                             <asp:Label ID="Label33" runat="server" Text="加班时长(小时)"></asp:Label></strong>
                                                     </td>
-                                                    <td align="center" runat="server" id="kqjgTd">
+                                                    <td align="left" runat="server" id="kqjgTd">
                                                         <strong>
                                                             <asp:Label ID="Label34" runat="server" Text="AttendanceResult"></asp:Label></strong>
                                                     </td>
@@ -272,7 +272,7 @@
                                                 <tr>
                                                     <asp:Repeater runat="server" ID="rpLeaveCol">
                                                         <ItemTemplate>
-                                                            <td align="center">
+                                                            <td align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label35" runat="server" Text='<%#Eval("Type") %>'></asp:Label></strong>
                                                             </td>
@@ -281,7 +281,7 @@
 
                                                     <asp:Repeater runat="server" ID="rpOvertimeCol">
                                                         <ItemTemplate>
-                                                            <td align="center">
+                                                            <td align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label36" runat="server" Text='<%#Eval("Type") %>'></asp:Label></strong>
                                                             </td>
@@ -289,7 +289,7 @@
                                                     </asp:Repeater>
                                                     <asp:Repeater runat="server" ID="rpDays">
                                                         <ItemTemplate>
-                                                            <td align="center">
+                                                            <td align="left">
                                                                 <strong>
                                                                     <asp:Label runat="server" Text="<%# GetDataItem()%>"></asp:Label></strong>
                                                             </td>
@@ -299,34 +299,34 @@
                                                 <asp:Repeater runat="server" ID="rpReport" OnItemDataBound="rpReport_ItemDataBound">
                                                     <ItemTemplate>
                                                         <tr class="reportTr">
-                                                            <td align="center"><%#Eval("Name") %></td>
+                                                            <td align="left"><%#Eval("Name") %></td>
 
-                                                            <td align="center"><%#Eval("Department") %></td>
-                                                            <td align="center"><%#Eval("工号") %></td>
-                                                            <td align="center"><%#Eval("Position") %></td>
+                                                            <td align="left"><%#Eval("Department") %></td>
+                                                            <td align="left"><%#Eval("工号") %></td>
+                                                            <td align="left"><%#Eval("Position") %></td>
                                                             <asp:Repeater runat="server" ID="rpReportLeave">
                                                                 <ItemTemplate>
-                                                                    <td align="center"><%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,(GetDataItem() as DataRowView).Row["Type"].ToString()) %></td>
+                                                                    <td align="left"><%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,(GetDataItem() as DataRowView).Row["Type"].ToString()) %></td>
                                                                 </ItemTemplate>
                                                             </asp:Repeater>
-                                                            <td align="center"><%#Eval("出勤天数") %></td>
-                                                            <td align="center"><%#Eval("应出勤天数") %></td>
-                                                            <td align="center"><%#Eval("迟到次数") %></td>
-                                                            <td align="center"><%#Eval("迟到时长") %></td>
-                                                            <td align="center"><%#Eval("旷工迟到次数") %></td>
-                                                            <td align="center"><%#Eval("早退次数") %></td>
-                                                            <td align="center"><%#Eval("早退时长") %></td>
-                                                            <td align="center"><%#Eval("旷工天数") %></td>
-                                                            <td align="center"><%#Eval("夜班天数") %></td>
+                                                            <td align="left"><%#Eval("出勤天数") %></td>
+                                                            <td align="left"><%#Eval("应出勤天数") %></td>
+                                                            <td align="left"><%#Eval("迟到次数") %></td>
+                                                            <td align="left"><%#Eval("迟到时长") %></td>
+                                                            <td align="left"><%#Eval("旷工迟到次数") %></td>
+                                                            <td align="left"><%#Eval("早退次数") %></td>
+                                                            <td align="left"><%#Eval("早退时长") %></td>
+                                                            <td align="left"><%#Eval("旷工天数") %></td>
+                                                            <td align="left"><%#Eval("夜班天数") %></td>
                                                             <asp:Repeater runat="server" ID="rpReportOvertime">
                                                                 <ItemTemplate>
-                                                                    <td align="center"><%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,(GetDataItem() as DataRowView).Row["Type"].ToString()) %></td>
+                                                                    <td align="left"><%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,(GetDataItem() as DataRowView).Row["Type"].ToString()) %></td>
                                                                 </ItemTemplate>
                                                             </asp:Repeater>
 
                                                             <asp:Repeater runat="server" ID="rpReportDays">
                                                                 <ItemTemplate>
-                                                                    <td align="center">
+                                                                    <td align="left">
                                                                         <%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,GetDataItem().ToString()) %>
                                                                     </td>
                                                                 </ItemTemplate>
@@ -372,7 +372,7 @@
                                     <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                 </asp:TreeView>
                             </td>
-                            <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                            <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                 <asp:ImageButton ID="IMBT_Close" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                             </td>
                         </tr>

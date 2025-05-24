@@ -18,7 +18,7 @@
                 <div style="z-index: 101; left: 5px; width: 170px; position: absolute; top: 1px; height: 1px; border-width: 0px;">
                     <table style="border-collapse: collapse; width: 170px;" cellpadding="2">
                         <tr>
-                            <td style="width: 170px; height: 22px; padding-top: 5px;" align="center">
+                            <td style="width: 170px; height: 22px; padding-top: 5px;" align="left">
                                 <asp:Button ID="BT_SendRecive" runat="server" OnClick="BT_SendRecive_Click" Text="<%$ Resources:lang,FaSongHeJieShouYouJian%>"
                                     CssClass="inpuLong" />
                             </td>

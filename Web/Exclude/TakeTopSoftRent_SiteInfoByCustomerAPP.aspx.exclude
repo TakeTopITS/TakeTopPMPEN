@@ -51,7 +51,7 @@
                                                                         <td width="30" align="right">
                                                                             <img src="ImagesSkin/return.png" alt="" />
                                                                         </td>
-                                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                                             <asp:Label ID="Label1" runat ="server" Text="<%$ Resources:lang,Back%>" />
                                                                         </td>
 
@@ -117,7 +117,7 @@
                                                          <td align="left" width="100%">
                                                             <table cellpadding="3" cellspacing="0" style="width: 100%">
                                                                 <tr>
-                                                                    <td align="center" width="100%">
+                                                                    <td align="left" width="100%">
                                                                         <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                             <tr>
                                                                                 <td width="7">
@@ -126,22 +126,22 @@
                                                                                 <td>
                                                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                                         <tr>
-                                                                                            <td width="2%" align="center">
+                                                                                            <td width="2%" align="left">
                                                                                                 <strong></strong>
                                                                                             </td>
-                                                                                            <td width="2%" align="center">
+                                                                                            <td width="2%" align="left">
                                                                                                 <strong></strong>
                                                                                             </td>
-                                                                                            <td width="2%" align="center">
+                                                                                            <td width="2%" align="left">
                                                                                                 <strong></strong>
                                                                                             </td>
-                                                                                            <td width="2%" align="center">
+                                                                                            <td width="2%" align="left">
                                                                                                 <strong></strong>
                                                                                             </td>
-                                                                                             <td width="2%" align="center">
+                                                                                             <td width="2%" align="left">
                                                                                                 <strong></strong>
                                                                                             </td>
-                                                                                            <td width="1%" align="center">
+                                                                                            <td width="1%" align="left">
                                                                                                 <strong>&nbsp;</strong>
                                                                                             </td>
                                                                                             <td width="4%" align="left">
@@ -156,110 +156,110 @@
                                                                                                     </tr>
                                                                                                 </table>
                                                                                             </td>
-                                                                                            <td align="center" width="2%">
+                                                                                            <td align="left" width="2%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label2" runat="server" Text="序号"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="2%">
+                                                                                            <td align="left" width="2%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label4" runat="server" Text="用户名"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="3%">
+                                                                                            <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label5" runat="server" Text="手机号"></asp:Label></strong>
                                                                                             </td>
 
-                                                                                            <td align="center" class="auto-style1">
+                                                                                            <td align="left" class="auto-style1">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label7" runat="server" Text="公司"></asp:Label></strong>
                                                                                             </td>
                                                                                            
-                                                                                            <td align="center" width="4%">
+                                                                                            <td align="left" width="4%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label23" runat="server" Text="应用名"></asp:Label></strong>
                                                                                             </td>
-                                                                                             <td align="center" width="6%">
+                                                                                             <td align="left" width="6%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label8" runat="server" Text="应用URL"></asp:Label></strong>
                                                                                             </td>
                                                                                              
-                                                                                           <%-- <td align="center" width="3%">
+                                                                                           <%-- <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label3" runat="server" Text="应用站点"></asp:Label></strong>
                                                                                             </td>--%>
-                                                                                             <td align="center" width="4%">
+                                                                                             <td align="left" width="4%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label11" runat="server" Text="产品名"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="3%">
+                                                                                            <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label12" runat="server" Text="版本"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="3%">
+                                                                                            <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label3" runat="server" Text="IsOEM"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="2%">
+                                                                                            <td align="left" width="2%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label6" runat="server" Text="用户数"></asp:Label></strong>
                                                                                             </td>
                                                                                           
-                                                                                              <td align="center" width="5%">
+                                                                                              <td align="left" width="5%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label15" runat="server" Text="站点目录"></asp:Label></strong>
                                                                                             </td>
-                                                                                                <td align="center" width="6%">
+                                                                                                <td align="left" width="6%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label17" runat="server" Text="站点虚拟路径"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="2%">
+                                                                                            <td align="left" width="2%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label22" runat="server" Text="状态"></asp:Label></strong>
                                                                                             </td>
-                                                                                               <td align="center" width="3%">
+                                                                                               <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label25" runat="server" ></asp:Label></strong>
                                                                                             </td>
                                                                                           
-                                                                                            <td align="center" width="4%">
+                                                                                            <td align="left" width="4%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label13" runat="server" Text="主站URL"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="2%">
+                                                                                            <td align="left" width="2%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label14" runat="server" Text="端口"></asp:Label></strong>
                                                                                             </td>
                                                                                           
-                                                                                            <td align="center" width="5%">
+                                                                                            <td align="left" width="5%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label16" runat="server" Text="站点模板目录"></asp:Label></strong>
                                                                                             </td>
                                                                                           
-                                                                                            <td align="center" width="6%">
+                                                                                            <td align="left" width="6%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label18" runat="server" Text="数据库恢复文件路径"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="6%">
+                                                                                            <td align="left" width="6%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label19" runat="server" Text="数据库安装目录"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="3%">
+                                                                                            <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label20" runat="server" Text="登录帐号"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="3%">
+                                                                                            <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label21" runat="server" Text="登录密码"></asp:Label></strong>
                                                                                             </td>
-                                                                                            <td align="center" width="4%">
+                                                                                            <td align="left" width="4%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label24" runat="server" Text="EMail"></asp:Label></strong>
                                                                                             </td>
-                                                                                          <%--  <td align="center" width="3%">
+                                                                                          <%--  <td align="left" width="3%">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label9" runat="server" Text="创建人"></asp:Label></strong>
                                                                                             </td>--%>
-                                                                                            <td align="center">
+                                                                                            <td align="left">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label10" runat="server" Text="创建时间"></asp:Label></strong>
                                                                                             </td>
@@ -276,28 +276,28 @@
                                                                             Width="100%" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
                                                                                 <asp:ButtonColumn ButtonType="LinkButton" CommandName="BuildSite" Text="建站">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:ButtonColumn ButtonType="LinkButton" CommandName="UpdateSite" Text="升级">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:ButtonColumn ButtonType="LinkButton" CommandName="SendSiteBackupDoc" Text="发送备份">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="DeleteSite">
                                                                                     <ItemTemplate>
                                                                                         <asp:LinkButton ID="LBT_DeleteSite" CommandName="DeleteSite" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="删站"></asp:LinkButton>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
                                                                                 </asp:TemplateColumn>
                                                                                  <asp:ButtonColumn ButtonType="LinkButton" CommandName="RecoverSite" Text="恢复">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
                                                                                     <ItemTemplate>
                                                                                         <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='删除' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="1%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:TemplateColumn HeaderText="Capacity">
                                                                                     <ItemTemplate>
@@ -332,23 +332,23 @@
                                                                                             </tr>
                                                                                         </table>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="3%" />
                                                                                 </asp:TemplateColumn>
                                                                           
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="RentUserName" HeaderText="用户名">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="RentUserPhoneNumber" HeaderText="电话">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="3%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="3%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="RentUserCompanyName" HeaderText="公司">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="3%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SiteAppSystemName" HeaderText="应用名">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="4%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="4%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn>
                                                                                     <ItemTemplate>
@@ -358,22 +358,22 @@
                                                                                 </asp:TemplateColumn>
                                                                              
                                                                               <%-- <asp:BoundColumn DataField="SiteAppName" HeaderText="站点名">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="3%" />
                                                                                 </asp:BoundColumn>--%>
                                                                                  <asp:TemplateColumn>
                                                                                     <ItemTemplate>
                                                                                         <a href='<%#DataBinder .Eval (Container .DataItem ,"SiteAppURL") %>' target="_blank"><%#DataBinder .Eval (Container .DataItem ,"RentProductName") %>  </a>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
                                                                                 </asp:TemplateColumn>
                                                                                   <asp:BoundColumn DataField="RentProductVersion" HeaderText="版本">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="3%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="3%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="IsOEM" HeaderText="IsOEM">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="3%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="3%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="RentUserNumber" HeaderText="用户数">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                                <asp:BoundColumn DataField="SiteDirectory" HeaderText="站点目录">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
@@ -393,23 +393,23 @@
                                                                                             </tr>
                                                                                         </table>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="SiteStatus" HeaderText="状态">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
                                                                                 </asp:BoundColumn>
                                                                                  <asp:TemplateColumn>
                                                                                     <ItemTemplate>
                                                                                         <a href='TTCustomerQuestionHandleDetail.aspx?ID=<%#DataBinder .Eval (Container .DataItem ,"CustomerQuestionID") %> '><%#DataBinder .Eval (Container .DataItem ,"ServerType") %>服务</a>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="3%" />
                                                                                 </asp:TemplateColumn>
                                                                               
                                                                                 <asp:BoundColumn DataField="SiteURL" HeaderText="主站URL">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SiteBindingInfo" HeaderText="端口">
-                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Width="2%" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                               
                                                                                 <asp:BoundColumn DataField="SiteTemplateDirectory" HeaderText="站点模板目录">
@@ -423,19 +423,19 @@
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SiteDBLoginUserID" HeaderText="数据库登录帐号">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="3%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SiteDBUserLoginPassword" HeaderText="登录密码">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="3%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="RentUserEmail" HeaderText="EMail">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%"  />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%"  />
                                                                                 </asp:BoundColumn>
                                                                                <%-- <asp:BoundColumn DataField="SiteCreatorName" HeaderText="创建人">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
                                                                                 </asp:BoundColumn>--%>
                                                                                 <asp:BoundColumn DataField="SiteCreateTime" HeaderText="创建时间">
-                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

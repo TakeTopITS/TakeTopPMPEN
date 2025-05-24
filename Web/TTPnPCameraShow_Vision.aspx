@@ -67,7 +67,7 @@ function IsValid()
             <div style="margin: 0px auto; width: 591px; height: 100px; border-bottom: solid 2px blue;
                 border-left: solid 2px blue; border-right: solid 2px blue; background-color: #7183B0;">
                 <table cellpadding="0" cellspacing="0" style="margin: 0px auto; width: 590px;">
-                    <tr align="center" style="height: 40px;">
+                    <tr align="left" style="height: 40px;">
                         <td align="right" style="width: 70px;">
                             IP:</td>
                         <td align="left" style="width: 100px;">
@@ -89,13 +89,13 @@ function IsValid()
                             <input id="tbPwd" type="text" style="width: 50px" value="admin" />
                         </td>
                     </tr>
-                    <tr align="center" style="height: 40px;">
+                    <tr align="left" style="height: 40px;">
                         <td align="right" style="width: 70px;">
                             No:</td>
                         <td align="left" style="width: 100px;">
                             <input id="tbChannel" type="text" style="width: 100px" value="0" />
                         </td>
-                        <td align="center" colspan="2" style="width: 120px;">
+                        <td align="left" colspan="2" style="width: 120px;">
                             <input id="btRealPlay" type="button" value="Play" style="width: 65px" onclick="return btRealPlay_onclick()" />
                         </td>
                         <td align="right" style="width: 70px;">

@@ -22,7 +22,7 @@
         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
             <tr>
                 <td height="31" class="page_topbj">
-                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                         <tr>
                             <td align="left">
                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -30,7 +30,7 @@
                                         <td width="29">
                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                         </td>
-                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                             <asp:Label ID="LB_Folder" runat="server" Font-Bold="False" Font-Size="10pt" Text="<%$ Resources:lang,WenJianJia%>"></asp:Label>
                                         </td>
                                         <td width="5">
@@ -56,22 +56,22 @@
                                         <td>
                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                    <td width="5%" align="center">
+                                                    <td width="5%" align="left">
                                                         <strong></strong>
                                                     </td>
-                                                    <td width="35%" align="center">
+                                                    <td width="35%" align="left">
                                                         <strong>
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label> </strong>
                                                     </td>
-                                                    <td width="30%" align="center">
+                                                    <td width="30%" align="left">
                                                         <strong>
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FaJianRen%>"></asp:Label> </strong>
                                                     </td>
-                                                    <td width="15%" align="center">
+                                                    <td width="15%" align="left">
                                                         <strong>
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChuangJianShiJian%>"></asp:Label> </strong>
                                                     </td>
-                                                    <td width="15%" align="center">
+                                                    <td width="15%" align="left">
                                                         <strong>
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YouJianDaXiao%>"></asp:Label> </strong>
                                                     </td>
@@ -94,7 +94,7 @@
                                             <ItemTemplate>
                                                 <asp:CheckBox ID="checkMail" runat="server" Checked="false" />
                                             </ItemTemplate>
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="主题">
                                             <ItemTemplate>
@@ -115,18 +115,18 @@
                                             <ItemTemplate>
                                                 <%# DataBinder.Eval(Container.DataItem,"SenderDate")%>
                                             </ItemTemplate>
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="邮件大小">
                                             <ItemTemplate>
                                                 <%# DataBinder.Eval(Container.DataItem,"Contain") %>B&nbsp;<asp:Image runat="server"
                                                     ID="AttachmentFlag" ImageUrl="Images/attach.gif" Visible='<%# (bool)DataBinder.Eval(Container.DataItem,"AttachmentFlag") %>' />
                                             </ItemTemplate>
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                         </asp:TemplateField>
                                     </Columns>
                                     <AlternatingRowStyle BackColor="White" />
-                                    <PagerStyle HorizontalAlign="Center"  />
+                                    <PagerStyle Horizontalalign="center"  />
                                     <EditRowStyle BorderColor="CornflowerBlue" BorderWidth="1px" BackColor="#2461BF" />
                                 </asp:GridView>
                             </td>

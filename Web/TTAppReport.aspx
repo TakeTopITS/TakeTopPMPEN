@@ -50,7 +50,7 @@
                 <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                     <tr>
                         <td colspan="2" height="31" class="page_topbj">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
                                         <a href="javascript:window.history.go(-1)" target="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -60,7 +60,7 @@
                                                     <td width="29">
                                                         <img src="ImagesSkin/return.png" alt="" />
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                     </td>
                                                     <td width="5">
@@ -89,28 +89,28 @@
                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
                                                 <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
                                                 </asp:BoundColumn>
                                                 <asp:TemplateColumn HeaderText="报表文件">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ReportName" CommandName="Open" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ReportName") %>'
                                                             CssClass="inpuLongest" Width="99%" />
                                                     </ItemTemplate>
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="35%" />
                                                 </asp:TemplateColumn>
                                                 <%--<asp:HyperLinkColumn DataNavigateUrlField="ReportURL" DataNavigateUrlFormatString="{0}"
                                                      DataTextField="ReportName" HeaderText="报表文件" Target="_blank">
                                                      <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                  </asp:HyperLinkColumn>--%>
                                                 <%--<asp:BoundColumn DataField="TemName" HeaderText="模板">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                     DataTextField="CreatorName" HeaderText="上传者" Target="_blank">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                 </asp:HyperLinkColumn>
                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="18%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>
 
@@ -118,7 +118,7 @@
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <EditItemStyle BackColor="#2461BF" />
                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                         </asp:DataGrid>
                                     </td>
                                 </tr>
@@ -138,28 +138,28 @@
                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
                                                 <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="false">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
                                                 </asp:BoundColumn>
                                                 <asp:TemplateColumn HeaderText="报表文件">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ReportName" CommandName="Open" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ReportName") %>'
                                                             CssClass="inpuLongest" Width="99%" />
                                                     </ItemTemplate>
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="35%" />
                                                 </asp:TemplateColumn>
                                                 <%--<asp:HyperLinkColumn DataNavigateUrlField="ReportURL" DataNavigateUrlFormatString="{0}"
                                DataTextField="ReportName" HeaderText="报表文件" Target="_blank">
                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                            </asp:HyperLinkColumn>--%>
                                                 <%--<asp:BoundColumn DataField="TemName" HeaderText="模板">
-                              <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                              <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                           </asp:BoundColumn>
                           <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                               DataTextField="CreatorName" HeaderText="上传者" Target="_blank">
-                              <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                              <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                           </asp:HyperLinkColumn>
                           <asp:BoundColumn DataField="CreateTime" HeaderText="CreationTime">
-                              <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
+                              <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="18%" />
                           </asp:BoundColumn>--%>
                                             </Columns>
 
@@ -167,7 +167,7 @@
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <EditItemStyle BackColor="#2461BF" />
                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                         </asp:DataGrid>
                                     </td>
                                 </tr>

@@ -12,14 +12,14 @@
         <table cellpadding="0" cellspacing="0" width="100%" class="bian">
             <tr>
                 <td height="31" class="page_topbj">
-                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                         <tr>
                             <td align="left">
                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td width="29">
                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></td>
-                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ChongMingMingWenJianJia%>"></asp:Label>
                                         </td>
                                         <td width="5">
@@ -32,7 +32,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center" style="padding: 10px 5px 5px 5px;">
+                <td align="left" style="padding: 10px 5px 5px 5px;">
                     <table cellspacing="0" cellpadding="3" width="98%" class="formBgStyle">
 
                         <tr style="line-height: 2;">

@@ -24,7 +24,7 @@
                         <td>
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td align="center">
+                                    <td align="left">
                                         <strong>
                                             <asp:Label ID="LB_FindByStatus" runat="server" Text="报表列表"></asp:Label></strong>
                                     </td>
@@ -42,7 +42,7 @@
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <EditItemStyle BackColor="#2461BF" />
                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                     <ItemStyle CssClass="itemStyle" />
                     <Columns>
                         <asp:TemplateColumn HeaderText="报表列表">
@@ -57,7 +57,7 @@
                                     </tr>
                                 </table>
                             </ItemTemplate>
-                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                         </asp:TemplateColumn>
                     </Columns>
                 </asp:DataGrid>

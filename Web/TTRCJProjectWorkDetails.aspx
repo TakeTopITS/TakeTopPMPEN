@@ -43,7 +43,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="145" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -51,7 +51,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作录入
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作录入
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -74,7 +74,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 319px">
@@ -147,22 +147,22 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_SaveWorkDetails" runat="server" Text="新增工作记录" Width="146px" OnClick="BT_SaveWorkDetails_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_EditWorkDetails" runat="server" Text="修改工作记录" Width="127px" OnClick="BT_EditWorkDetails_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_DelWorkDetails" runat="server" Text="删除工作记录" Width="127px" OnClientClick="return confirm('删除该记录则对应的工作确认记录和收款记录一起被删除，您确认删除该记录吗?')" OnClick="BT_DelWorkDetails_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                 </table>
                                             </td>
                                         </tr>
@@ -174,7 +174,7 @@
                         <table id="Table1" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -182,7 +182,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作量信息列表
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作量信息列表
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -215,7 +215,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top" width="100%">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <asp:GridView ID="gvWorkDetails" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="gvWorkDetails_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="gvWorkDetails_PageIndexChanging" OnRowDataBound="gvWorkDetails_RowDataBound">
@@ -239,7 +239,7 @@
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <PagerSettings Mode="NextPreviousFirstLast" />
-                                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                    <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                     <SortedAscendingCellStyle BackColor="#E9E7E2" />
@@ -258,7 +258,7 @@
                         <table id="Table3" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="145" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -266,7 +266,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作确认
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作确认
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -280,7 +280,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 319px">
@@ -311,17 +311,17 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_SaveWorkConfirm" runat="server" Text="新增工作确认" Width="146px" OnClick="BT_SaveWorkConfirm_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_EditWorkConfirm" runat="server" Text="修改工作确认" Width="127px" OnClick="BT_EditWorkConfirm_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_DelWorkConfirm" runat="server" Text="删除工作确认" Width="127px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelWorkConfirm_Click" />
                                                 </table>
                                             </td>
@@ -334,7 +334,7 @@
                         <table id="Table2" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -342,7 +342,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">确认工作量信息列表
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">确认工作量信息列表
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -365,7 +365,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top" width="100%">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <asp:GridView ID="gvWorkConfirm" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="gvWorkConfirm_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="gvWorkConfirm_PageIndexChanging" OnRowDataBound="gvWorkConfirm_RowDataBound">
@@ -392,7 +392,7 @@
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <PagerSettings Mode="NextPreviousFirstLast" />
-                                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                    <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                     <SortedAscendingCellStyle BackColor="#E9E7E2" />
@@ -411,7 +411,7 @@
                         <table id="Table5" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="145" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -419,7 +419,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">收款工作记录
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">收款工作记录
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -433,7 +433,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 319px">
@@ -464,17 +464,17 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_SaveWorkMoney" runat="server" Text="新增收款记录" Width="146px" OnClick="BT_SaveWorkMoney_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_EditWorkMoney" runat="server" Text="修改收款记录" Width="127px" OnClick="BT_EditWorkMoney_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
-                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="240">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
                                                     <asp:Button ID="BT_DelWorkMoney" runat="server" Text="删除收款记录" Width="127px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelWorkMoney_Click" />
                                                 </table>
                                             </td>
@@ -487,7 +487,7 @@
                         <table id="Table4" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -495,7 +495,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">收款工作信息列表
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">收款工作信息列表
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -518,7 +518,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top" width="100%">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <asp:GridView ID="gvMoneyConfirm" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="gvMoneyConfirm_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="gvMoneyConfirm_PageIndexChanging" OnRowDataBound="gvMoneyConfirm_RowDataBound">
@@ -536,7 +536,7 @@
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <PagerSettings Mode="NextPreviousFirstLast" />
-                                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                    <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                     <SortedAscendingCellStyle BackColor="#E9E7E2" />

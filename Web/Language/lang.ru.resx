@@ -30956,4 +30956,19 @@
   <data name="XiangMuYiShuanKeMu" xml:space="preserve">
     <value>Статья бюджета проекта</value>
   </data>
+  <data name="YaoQiuShuLiang" xml:space="preserve">
+    <value>Требуемое количество</value>
+  </data>
+  <data name="YiWanChenLiang" xml:space="preserve">
+    <value>Выполненное количество</value>
+  </data>
+  <data name="DaiLiFei" xml:space="preserve">
+    <value>Агентская плата</value>
+  </data>
+  <data name="GongBenFei" xml:space="preserve">
+    <value>Стоимость материалов</value>
+  </data>
+  <data name="ZiZhiWenJian" xml:space="preserve">
+    <value>Документы о квалификации</value>
+  </data>
 </root>

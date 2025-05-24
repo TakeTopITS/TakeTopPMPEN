@@ -28,13 +28,13 @@
                 <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                     <tr>
                         <td height="31" class="page_topbj">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
                                         <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="29"><%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></td>
-                                                <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMuShu%>"></asp:Label>
                                                 </td>
                                                 <td width="5"><%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>

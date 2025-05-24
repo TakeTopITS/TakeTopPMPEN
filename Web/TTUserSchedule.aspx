@@ -52,23 +52,23 @@
                                         <td>
                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                    <td width="10%" align="center">
+                                                    <td width="10%" align="left">
                                                         <strong>ID</strong>
                                                     </td>
 
-                                                    <td width="30%" align="center">
+                                                    <td width="30%" align="left">
                                                         <strong>
                                                             <asp:Label ID="Label3" runat="server" Text="班次名称"></asp:Label></strong>
                                                     </td>
 
-                                                    <td align="center" width="20%"><strong>
+                                                    <td align="left" width="20%"><strong>
                                                         <asp:Label ID="Label268" runat="server" Text="上班开始时间"></asp:Label>
                                                     </strong></td>
-                                                    <td align="center" width="20%"><strong>
+                                                    <td align="left" width="20%"><strong>
                                                         <asp:Label ID="Label269" runat="server" Text="下班结束时间"></asp:Label>
                                                     </strong></td>
 
-                                                    <td align="center" width="20%"><strong>
+                                                    <td align="left" width="20%"><strong>
                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YunXiZuiDaJuLi%>"></asp:Label>
                                                     </strong>(<asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,Mi%>"></asp:Label>)</td>
 
@@ -86,7 +86,7 @@
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                     <EditItemStyle BackColor="#2461BF" />
                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                    <PagerStyle HorizontalAlign="Center" />
+                                    <PagerStyle Horizontalalign="center" />
 
                                     <ItemStyle CssClass="itemStyle" />
                                     <Columns>
@@ -94,22 +94,22 @@
                                             <ItemTemplate>
                                                 <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                             </ItemTemplate>
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                         </asp:TemplateColumn>
 
                                         <asp:BoundColumn DataField="ScheduleName" HeaderText="班次名称">
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
                                         </asp:BoundColumn>
 
                                         <asp:BoundColumn DataField="CheckInStart" HeaderText="上班开始时间">
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                         </asp:BoundColumn>
                                         <asp:BoundColumn DataField="CheckInEnd" HeaderText="上班结束时间">
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                         </asp:BoundColumn>
 
                                         <asp:BoundColumn DataField="LargestDistance" HeaderText="MaximumAllowedDistance">
-                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                         </asp:BoundColumn>
 
                                     </Columns>

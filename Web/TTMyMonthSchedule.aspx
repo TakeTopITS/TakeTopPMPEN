@@ -82,7 +82,7 @@
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -226,7 +226,7 @@
                                         <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                     </asp:TreeView>
                                 </td>
-                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                     <asp:ImageButton ID="IMBT_Close" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                 </td>
                             </tr>

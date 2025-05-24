@@ -26,7 +26,7 @@
 
     <form id="form1" runat="server">
         <div id="AboveDiv">
-            <asp:DataList runat="server" HorizontalAlign="Center" CellPadding="0" ForeColor="#333333" Height="1px" Width="98%"
+            <asp:DataList runat="server" Horizontalalign="left" CellPadding="0" ForeColor="#333333" Height="1px" Width="98%"
                 ID="DataList3">
                 <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></FooterStyle>
@@ -38,35 +38,35 @@
                             <td>
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td width="7%" align="center">
+                                        <td width="7%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                         </td>
-                                        <td width="10%" align="center">
+                                        <td width="10%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label></strong>
                                         </td>
-                                        <td width="20%" align="center">
+                                        <td width="20%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LianXiFangShi%>"></asp:Label></strong>
                                         </td>
-                                        <td width="15%" align="center">
+                                        <td width="15%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FuWuFangFa%>"></asp:Label></strong>
                                         </td>
-                                        <td width="20%" align="center">
+                                        <td width="20%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChuLiShiJian%>"></asp:Label></strong>
                                         </td>
-                                        <td width="8%" align="center">
+                                        <td width="8%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YongShiChangDu%>"></asp:Label></strong>
                                         </td>
-                                        <td width="10%" align="center">
+                                        <td width="10%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label></strong>
                                         </td>
-                                        <td width="10%" align="center">
+                                        <td width="10%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label></strong>
                                         </td>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDatabaseUpdateHandle.aspx.cs" Inherits="TTDatabaseUpdateHandle" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDatabaseUpdateHandle.aspx.cs" Inherits="TTDatabaseUpdateHandle" %>
 
 <!DOCTYPE html>
 

@@ -66,10 +66,10 @@
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
 
-                <table style="width: 100%" cellpadding="0" cellspacing="0" align="center">
+                <table style="width: 100%" cellpadding="0" cellspacing="0" align="left">
                     <tr>
                         <td height="31" class="page_topbj">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
                                         <a href="TTAppCollaboration.aspx" target="_parent" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -79,7 +79,7 @@
                                                     <td width="29">
                                                         <img src="ImagesSkin/return.png" alt="" />
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                         <asp:Label runat="server" Text="<%$ Resources:lang,Back%>" />
                                                     </td>
                                                     <td width="5">
@@ -166,7 +166,7 @@
                         </td>
                     </tr>
                     <tr style="display: none;">
-                        <td style="text-align: Right;" class="formItemBgStyle">
+                        <td class="formItemBgStyle">
                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>£º </td>
                         <td style="text-align: left;" class="formItemBgStyle">
                             <asp:Label ID="LB_Creator" runat="server" Text="<%$ Resources:lang,ChuangJianShiJian%>"></asp:Label>£º

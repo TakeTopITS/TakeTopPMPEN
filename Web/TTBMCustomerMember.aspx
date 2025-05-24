@@ -32,7 +32,7 @@
                                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                                         <tr>
                                             <td height="31" class="page_topbj">
-                                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="left">
                                                             <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -40,7 +40,7 @@
                                                                     <td width="29">
                                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                                     </td>
-                                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ChengBaoShangZhangHaoGuanLi%>"></asp:Label>
                                                                     </td>
                                                                     <td width="5">
@@ -75,7 +75,7 @@
                                                                     <td>
                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                             <tr>
-                                                                                <td width="5%" align="center">
+                                                                                <td width="5%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DepartmentMember" runat="server" Text="<%$ Resources:lang,DepartmentMember%>"></asp:Label></strong>
                                                                                 </td>
@@ -92,10 +92,10 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
                                                                 <Columns>
                                                                     <asp:TemplateColumn HeaderText="Resources.lang.ZZXMZY">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Style="text-align: center"
                                                                                 Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
@@ -110,7 +110,7 @@
                                                             <table class="formBgStyle" style="width: 98%; text-align: left;" cellpadding="3"
                                                                 cellspacing="0">
                                                                 <tr>
-                                                                    <td style="width: 15%; text-align: right" class="formItemBgStyle">
+                                                                    <td style="width: 15%;" class="formItemBgStyle">
                                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -122,7 +122,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -133,7 +133,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XingBie%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
@@ -144,7 +144,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,NianLing%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
@@ -153,7 +153,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,MiMa%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -164,7 +164,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -174,7 +174,7 @@
                                                                 </tr>
 
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiCheng%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -201,7 +201,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -222,7 +222,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZiBuMen%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -231,7 +231,7 @@
                                                                     <td class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BanGongDianHua%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -240,7 +240,7 @@
                                                                     <td style="text-align: left;" class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="height: 28px; text-align: right" class="formItemBgStyle">
+                                                                    <td style="height: 28px;" class="formItemBgStyle">
                                                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShouJi%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -250,7 +250,7 @@
                                                                     <td style="height: 28px; text-align: left;" class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">E_Mail：
+                                                                    <td class="formItemBgStyle">E_Mail：
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_EMail" runat="server" Width="120px"></asp:TextBox>
@@ -259,7 +259,7 @@
                                                                     <td style="text-align: left;" class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="height: 23px; text-align: right" class="formItemBgStyle">
+                                                                    <td style="height: 23px;" class="formItemBgStyle">
                                                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,GongZuoFanWei%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="height: 23px" class="formItemBgStyle">
@@ -269,7 +269,7 @@
                                                                     <td style="height: 23px" class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -282,7 +282,7 @@
                                                                     <td style="text-align: left;" class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: right" class="formItemBgStyle">
+                                                                    <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YongGongLeiXing%>"></asp:Label>：</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DL_WorkType" runat="server" DataTextField="TypeName" DataValueField="TypeName">
@@ -291,7 +291,7 @@
                                                                     <td style="text-align: left;" class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="height: 12px; text-align: right;" class="formItemBgStyle">
+                                                                    <td style="height: 12px; " class="formItemBgStyle">
                                                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JiaRuRiQi%>"></asp:Label>：
                                                                     </td>
                                                                     <td style="height: 12px; text-align: left;" class="formItemBgStyle">
@@ -304,7 +304,7 @@
                                                                     <td style="height: 12px; text-align: left;" class="formItemBgStyle"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="height: 12px; text-align: right;">
+                                                                    <td class="formItemBgStyle" style="height: 12px; ">
                                                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XingZhi%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">
@@ -317,7 +317,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="height: 12px; text-align: right;">
+                                                                    <td class="formItemBgStyle" style="height: 12px; ">
                                                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>：</td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">
                                                                         <asp:DropDownList ID="DL_SystemMDIStyle" runat="server" Enabled="false">
@@ -328,7 +328,7 @@
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="height: 12px; text-align: right;">
+                                                                    <td class="formItemBgStyle" style="height: 12px; ">
                                                                         <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,JieMianYuYan%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyle" colspan="2" style="height: 12px; text-align: left;">
@@ -337,7 +337,7 @@
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="height: 12px; text-align: right;">
+                                                                    <td class="formItemBgStyle" style="height: 12px; ">
                                                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KeDengLuSheBei%>"></asp:Label>：</td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">
                                                                         <asp:DropDownList ID="DL_AllowDevice" runat="server" Enabled="false">
@@ -349,7 +349,7 @@
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="height: 12px; text-align: right;">
+                                                                    <td class="formItemBgStyle" style="height: 12px; ">
                                                                         <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,CanKaoGongHao%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">
@@ -358,7 +358,7 @@
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;"></td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyle" style="height: 12px; text-align: right;">
+                                                                    <td class="formItemBgStyle" style="height: 12px; ">
                                                                         <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,RTXZhangHu%>"></asp:Label>：</td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">
                                                                         <asp:TextBox ID="TB_UserRTXCode" runat="server" Width="120px"></asp:TextBox>
@@ -366,7 +366,7 @@
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">&nbsp;</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="height: 12px; text-align: right;">
+                                                                    <td class="formItemBgStyle" style="height: 12px; ">
                                                                         <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>：
                                                                     </td>
                                                                     <td class="formItemBgStyle" style="height: 12px; text-align: left;">
@@ -387,7 +387,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <%-- <tr>
-                                                                <td style="text-align: right" class="formItemBgStyle">
+                                                                <td class="formItemBgStyle">
                                                                     <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ZhaoPianShangChuan%>"></asp:Label>：
                                                                 </td>
                                                                 <td colspan="2" style="text-align: left" class="formItemBgStyle">
@@ -432,23 +432,23 @@
                                                                     <td colspan="2">
                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                             <tr>
-                                                                                <td width="25%" align="center">
+                                                                                <td width="25%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,QiYeHuoGeRenBianMa%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="25%" align="center">
+                                                                                <td width="25%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,QiYeMingCheng%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="10%" align="center">
+                                                                                <td width="10%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,KaiTong%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="10%" align="center">
+                                                                                <td width="10%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,JiHuo%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="15%" align="center">
+                                                                                <td width="15%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,PingJiaDengJi%>"></asp:Label></strong>
                                                                                 </td>
@@ -462,17 +462,17 @@
                                                                 ShowHeader="false" CellPadding="1" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
                                                                     <asp:BoundColumn DataField="LinkPerID" HeaderText="联系人编号" Visible="false">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="1%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="企业或个人编码">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="25%" />
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_SupplierID" runat="server" CssClass="inpu" Style="text-align: center; width: 110px" Text='<%# DataBinder.Eval(Container.DataItem,"LinkCode") %>' />
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTBMSupplierInfoView.aspx?SupplierID={0}" DataTextField="Name" HeaderText="企业名称" Target="_blank">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
-                                                                        <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="25%" />
+                                                                        <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" Horizontalalign="left" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:TemplateColumn HeaderText="开通">
                                                                         <ItemTemplate>
@@ -487,13 +487,13 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:BoundColumn DataField="EvalueDegree" HeaderText="评价等级">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                             </asp:DataGrid>

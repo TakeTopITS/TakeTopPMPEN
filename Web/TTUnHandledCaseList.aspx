@@ -25,7 +25,7 @@
                                         CellPadding="0" ForeColor="#333333" GridLines="None" ShowHeader="False" Height="1px">
                                         <Columns>
                                             <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
-                                                <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="1%" />
+                                                <ItemStyle CssClass="dibian2" Horizontalalign="left" Width="1%" />
                                             </asp:BoundColumn>
                                             <asp:TemplateColumn>
                                                 <ItemTemplate>
@@ -41,7 +41,7 @@
                                                         </table>
                                                     </a>
                                                 </ItemTemplate>
-                                                <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
+                                                <ItemStyle CssClass="dibian2" Horizontalalign="left" Width="10%" />
                                             </asp:TemplateColumn>
                                         </Columns>
 
@@ -49,7 +49,7 @@
                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                         <EditItemStyle BackColor="#2461BF" />
                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                     </asp:DataGrid>
                                 </td>
                             </tr>

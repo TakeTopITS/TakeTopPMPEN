@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleFlowDesignerJS.aspx.cs" Inherits="TTModuleFlowDesignerJS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleFlowDesignerJS.aspx.cs" Inherits="TTModuleFlowDesignerJS" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -49,8 +49,8 @@
             autoHeight();
         });
 
-        function autoheight() {Â //å‡½æ•°ï¼šè·å–å°ºå¯¸
-            //è·å–æµè§ˆå™¨çª—å£é«˜åº¦
+        function autoheight() {?//º¯Êı£º»ñÈ¡³ß´ç
+            //»ñÈ¡ä¯ÀÀÆ÷´°¿Ú¸ß¶È
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;

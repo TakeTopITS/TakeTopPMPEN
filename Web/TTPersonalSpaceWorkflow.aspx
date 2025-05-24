@@ -88,7 +88,7 @@
 
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="ID" HeaderText="¡À¨¤o?" Visible="false">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="10%" />
                                                                 </asp:BoundColumn>
 
                                                                 <asp:TemplateColumn HeaderText="1¡è¡Á¡Â¨¢¡Â">
@@ -114,7 +114,7 @@
 
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                                     DataTextField="CreatorName" HeaderText="¨¦¨º??¨¨?" Target="_blank">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="20%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="20%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:TemplateColumn HeaderText="¡Á¡ä¨¬?">
                                                                     <ItemTemplate>
@@ -126,7 +126,7 @@
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <ItemStyle CssClass="itemStyle" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                                         </asp:DataGrid>
                                                     </td>
@@ -140,10 +140,10 @@
                                                         <asp:DataGrid ID="DataGrid3" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                                                             ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid3_PageIndexChanged"
                                                             PageSize="8" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
-                                                            <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                            <HeaderStyle Horizontalalign="left" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="WLID" HeaderText="¡À¨¤o?" Visible="false">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}&RelatedType=Null"
                                                                     DataTextField="WLName" HeaderText="Workflow" Target="_blank">
@@ -166,7 +166,7 @@
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                         </asp:DataGrid>
                                                     </td>
                                                 </tr>

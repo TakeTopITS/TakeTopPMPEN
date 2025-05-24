@@ -357,7 +357,7 @@
                 <cc1:JSInfoPathRefer ID="JSInfoPathRefer1" runat="server" />
                 <table cellpadding="0" cellspacing="0" width="100%">
                     <tr>
-                        <td height="31" class="page_topbj" align="center" style="font-weight:500;">
+                        <td height="31" class="page_topbj" align="left" style="font-weight:500;">
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                    
@@ -470,7 +470,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 520px; padding: 5px 25px 5px 5px;" valign="top" align="center">
+                            <td style="width: 520px; padding: 5px 25px 5px 5px;" valign="top" align="left">
                                 <asp:Button ID="BT_ActiveYes" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Shi%>" OnClick="BT_ActiveYes_Click" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button
                                     ID="BT_ActiveNo" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Fou%>" OnClick="BT_ActiveNo_Click" />
@@ -512,12 +512,12 @@
                                             <td>
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tr>
-                                                        <td width="40%" align="center" style="font-size: smaller;">
+                                                        <td width="40%" align="left" style="font-size: smaller;">
                                                             <a onclick="toIncreaseSize('LLB_WorkFlowTemplate',300)" style="font-size: large;">++</a> <strong>
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,GongZuoLiuMuBan%>"></asp:Label></strong>
                                                             <a onclick="toRestoreOriginalSize('LLB_WorkFlowTemplate',140)" style="font-size: large;">--</a>
                                                         </td>
-                                                        <td align="center" style="font-size: smaller;">
+                                                        <td align="left" style="font-size: smaller;">
                                                             <a onclick="toIncreaseSize('LLB_WokFlow',400)" style="font-size: large;">++</a> <strong>
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongZuoLiu%>"></asp:Label></strong>
                                                             <a onclick="toRestoreOriginalSize('LLB_WokFlow',220)" style="font-size: large;">--</a>
@@ -533,8 +533,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tdLeft" align="center" width="40%" style="padding: 1px 1px 1px 1px;">&nbsp;</td>
-                                <td class="tdRight" align="center" width="60%" style="padding: 1px 1px 1px 1px;">&nbsp;</td>
+                                <td class="tdLeft" align="left" width="40%" style="padding: 1px 1px 1px 1px;">&nbsp;</td>
+                                <td class="tdRight" align="left" width="60%" style="padding: 1px 1px 1px 1px;">&nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="tdLeft" colspan="2" style="padding: 1px 1px 1px 1px; border-bottom: solid 1px #D8D8D8; border-right: solid 1px #D8D8D8;">
@@ -544,7 +544,7 @@
                                             <td class="tdLeft" width="110">
                                                 <asp:Label ID="LB_WLID" runat="server" Font-Size="10pt"></asp:Label>
                                             </td>
-                                            <td class="tdRight" align="center" width="210">
+                                            <td class="tdRight" align="left" width="210">
                                                 <asp:HyperLink ID="HL_WFChartView" runat="server" Text="<%$ Resources:lang,LiuChengTu %>" Target="top.frames[0].frames[2].parent.frames['rightTabFrame']">  </asp:HyperLink>
                                             </td>
 
@@ -558,7 +558,7 @@
                                         </tr>
 
                                         <tr style="display: none;">
-                                            <td class="tdLeft" align="center" colspan="3">
+                                            <td class="tdLeft" align="left" colspan="3">
 
 
                                                 <asp:Button ID="BT_Download" runat="server" OnClick="BT_Download_Click" Text="<%$ Resources:lang,XiaZai%>" Enabled="False" />

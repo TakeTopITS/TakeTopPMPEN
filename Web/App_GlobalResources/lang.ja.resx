@@ -30954,4 +30954,19 @@
   <data name="XiangMuYiShuanKeMu" xml:space="preserve">
     <value>プロジェクト予算科目</value>
   </data>
+  <data name="YaoQiuShuLiang" xml:space="preserve">
+    <value>要求数量</value>
+  </data>
+  <data name="YiWanChenLiang" xml:space="preserve">
+    <value>完了数量</value>
+  </data>
+  <data name="DaiLiFei" xml:space="preserve">
+    <value>代理手数料</value>
+  </data>
+  <data name="GongBenFei" xml:space="preserve">
+    <value>工本費</value>
+  </data>
+  <data name="ZiZhiWenJian" xml:space="preserve">
+    <value>資格ファイル</value>
+  </data>
 </root>

@@ -52,7 +52,7 @@
                         <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <%--<a href="javascript:window.history.go(-1)" target ="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
@@ -61,7 +61,7 @@
                                                         <tr>
                                                             <td width="29">
                                                                 <img src="ImagesSkin/return.png" alt="" width="29" height="31" /></td>
-                                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
+                                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
                                                             </td>
                                                             <td width="5">
                                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
@@ -89,7 +89,7 @@
                                                                     <td>
                                                                             <table width="100%" cellpadding="4" cellspacing="0">
                                                                             <tr>
-                                                                                <td width="100%" align="center">
+                                                                                <td width="100%" align="left">
                                                                                     <asp:TextBox ID="TB_ContactName" runat="server"
                                                                                         Width="60%"></asp:TextBox>
                                                                                     &nbsp;<asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click"
@@ -109,13 +109,13 @@
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
                                                                     <asp:BoundColumn DataField="ID" HeaderText="SerialNumber" Visible="False">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="Name">
                                                                         <ItemTemplate>
                                                                             <asp:Button CssClass="inpuLongest" ID="BT_FirstName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"FirstName") %>' />
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="100%" />
                                                                     </asp:TemplateColumn>
                                                                 </Columns>
                                                                 
@@ -132,7 +132,7 @@
                                                         <ContentTemplate>
                                                             <table style="width: 99%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_FirstName" runat="server" Width="99%"></asp:TextBox>
@@ -140,7 +140,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right; height: 3px;" class="formItemBgStyle"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
+                                                                    <td style="  height: 3px;" class="formItemBgStyle"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
                                                                     </td>
                                                                     <td  align="left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DL_Type" runat="server">
@@ -156,7 +156,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="width: 90px; text-align: right; height: 3px;"><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,XingBie%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyle" style="width: 90px;  height: 3px;"><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,XingBie%>"></asp:Label></td>
                                                                     <td align="left" class="formItemBgStyle" >
                                                                         <asp:DropDownList ID="DL_Gender" runat="server">
                                                                             <asp:ListItem Value="Male" Text="<%$ Resources:lang,Nan%>"/>
@@ -165,7 +165,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right;" class="formItemBgStyle"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,NianLing%>"></asp:Label>
+                                                                    <td style=" " class="formItemBgStyle"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,NianLing%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <NickLee:NumberBox ID="NB_Age" runat="server" MaxAmount="100" MinAmount="0" OnBlur=""
@@ -173,120 +173,120 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style=" text-align: right;"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BanGongDianHua%>"></asp:Label> </td>
+                                                                    <td class="formItemBgStyle" style=" "><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BanGongDianHua%>"></asp:Label> </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_OfficePhone" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right; height: 22px;" class="formItemBgStyle"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiaTingDianHua%>"></asp:Label>
+                                                                    <td style="  height: 22px;" class="formItemBgStyle"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiaTingDianHua%>"></asp:Label>
                                                                     </td>
                                                                     <td style="height: 22px;" align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_HomePhone" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style=" text-align: right; height: 22px;"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShouJi%>"></asp:Label> </td>
+                                                                    <td class="formItemBgStyle" style="  height: 22px;"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShouJi%>"></asp:Label> </td>
                                                                     <td align="left" class="formItemBgStyle" style="height: 22px;">
                                                                         <asp:TextBox ID="TB_MobilePhone" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right;" class="formItemBgStyle">EMail
+                                                                    <td style=" " class="formItemBgStyle">EMail
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_EMail1" runat="server" Width="99%"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                <%-- <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle">EMail2
+                                                                    <td style="" class="formItemBgStyle">EMail2
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_EMail2" runat="server" Width="99%"></asp:TextBox>
                                                                     </td>
                                                                 </tr>--%>
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WangZhan%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WangZhan%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_WebSite" runat="server" Width="99%"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <%--<tr>
-                                                                    <td style=" text-align: right;" class="formItemBgStyle">MSN
+                                                                    <td style=" " class="formItemBgStyle">MSN
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Msn" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style=" text-align: right;"><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YaHuTong%>"></asp:Label> </td>
+                                                                    <td class="formItemBgStyle" style=" "><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YaHuTong%>"></asp:Label> </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Ysn" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>--%>
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,IM%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,IM%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_QQ" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Company" runat="server" Width="99%"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right;" class="formItemBgStyle"><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>
+                                                                    <td style=" " class="formItemBgStyle"><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Department" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style=" text-align: right;"><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label> </td>
+                                                                    <td class="formItemBgStyle" style=" "><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label> </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Duty" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,GongSiDiZhi%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,GongSiDiZhi%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_CompanyAddress" runat="server" Width="99%"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,YouZhengBianMa%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,YouZhengBianMa%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_PostCode" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style=" text-align: right"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,GuoJia%>"></asp:Label> </td>
+                                                                    <td class="formItemBgStyle" style=" "><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,GuoJia%>"></asp:Label> </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Country" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ShengFen%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ShengFen%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_State" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style=" text-align: right"><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ChengShi%>"></asp:Label> </td>
+                                                                    <td class="formItemBgStyle" style=" "><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ChengShi%>"></asp:Label> </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_City" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style=" text-align: right" class="formItemBgStyle"><asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,JiaTingDiZhi%>"></asp:Label>
+                                                                    <td style="" class="formItemBgStyle"><asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,JiaTingDiZhi%>"></asp:Label>
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_HomeAddress" runat="server" Width="99%"></asp:TextBox>

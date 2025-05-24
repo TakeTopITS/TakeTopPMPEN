@@ -259,7 +259,7 @@
                         <asp:DataGrid ID="DataGrid1" runat="server" Height="19px" Visible="False" Width="682px">
                             <PagerStyle CssClass="Page" HorizontalAlign="Left" />
                             <ItemStyle />
-                            <HeaderStyle HorizontalAlign="Center" />
+                            <HeaderStyle Horizontalalign="left" />
                         </asp:DataGrid>
                     </td>
                 </tr>

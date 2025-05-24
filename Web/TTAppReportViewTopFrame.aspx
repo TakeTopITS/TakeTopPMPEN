@@ -13,7 +13,7 @@
             <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                 <tr>
                     <td colspan="2" height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <%--<a href="TTAppReport.aspx" target ="_parent"  onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>

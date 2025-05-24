@@ -70,24 +70,24 @@
                                                             Width="100%" CssClass="auto-style1">
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="10%" />
                                                                 </asp:BoundColumn>
 
                                                                 <asp:TemplateColumn HeaderText="优先级" Visible="false">
                                                                     <ItemTemplate>
                                                                         <%# GetTaskPriority(Eval("TaskID").ToString()) %>
                                                                     </ItemTemplate>
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="10%" />
                                                                 </asp:TemplateColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTTaskDetail.aspx?ID={0}"
                                                                     DataTextField="Operation" HeaderText="受理人的工作" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="55%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:BoundColumn DataField="Type" HeaderText="Type">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="20%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
 
@@ -95,7 +95,7 @@
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                         </asp:DataGrid>
                                                     </td>
                                                 </tr>
@@ -111,24 +111,24 @@
                                                             Width="100%">
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="ID" HeaderText="Number" Visible="false">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="10%" />
                                                                 </asp:BoundColumn>
 
                                                                 <asp:TemplateColumn HeaderText="优先级" Visible="false">
                                                                     <ItemTemplate>
                                                                         <%# GetTaskPriority(Eval("TaskID").ToString()) %>
                                                                     </ItemTemplate>
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="10%" />
                                                                 </asp:TemplateColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTTaskDetail.aspx?ID={0}"
                                                                     DataTextField="Operation" HeaderText="受理人的工作" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="55%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:BoundColumn DataField="Type" HeaderText="Type">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="EndTime">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="20%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
 
@@ -136,7 +136,7 @@
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                         </asp:DataGrid>
                                                     </td>
                                                 </tr>

@@ -43,7 +43,7 @@
                         <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="220" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -51,7 +51,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">项目收支绩效汇总列表信息
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">项目收支绩效汇总列表信息
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -74,12 +74,12 @@
                             </tr>
                             <tr>
                                 <td height="31">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td align="center" class="titlezi">
+                                                        <td align="left" class="titlezi">
                                                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand">
                                                                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                 <Columns>
@@ -112,7 +112,7 @@
                                                                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                                 <PagerSettings Mode="NextPreviousFirstLast" />
-                                                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                                <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                                 <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                                 <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                                 <SortedAscendingCellStyle BackColor="#E9E7E2" />
@@ -123,7 +123,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="center" class="titlezi">
+                                                        <td align="left" class="titlezi">
                                                             <asp:Label ID="lb_showMessage" runat="server" Text="" ForeColor="Red"></asp:Label>
                                                         </td>
                                                     </tr>
@@ -137,7 +137,7 @@
                         <table id="Table1" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="220" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -145,7 +145,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi"><u><span style="font-size:10.5pt;mso-bidi-font-size:
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi"><u><span style="font-size:10.5pt;mso-bidi-font-size:
 11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;
 mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:
 minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;
@@ -162,12 +162,12 @@ mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">挣值
                             </tr>
                             <tr>
                                 <td height="31">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td align="center" class="titlezi">      
+                                                        <td align="left" class="titlezi">      
                                                             
                                                                <iframe runat="server" id="IFrame_Chart1" src="TTTakeTopAnalystChartSet.aspx" style="width: 800px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
 

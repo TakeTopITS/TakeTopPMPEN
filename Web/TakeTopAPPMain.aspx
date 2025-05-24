@@ -284,13 +284,13 @@
 
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="right">
                                         <tr>
-                                              <td align="center" width="50%">
+                                              <td align="left" width="50%">
                                                 <a class="titleSpan" href="TTAPPUpdateUserInfor.aspx">
                                                      <img id="IMG_UpdateUserInfor" src="ImagesSkin/PersonalInfor.png" width="20" height="20" />
                                                 </a>
                                             </td>
                                              
-                                            <td align="center" width="50%">
+                                            <td align="left" width="50%">
                                                 <a href="#" class="titleSpan" onclick="if (confirm('确定要退出管理平台吗?')){;href='DefaultAPP.html';target='_top';}">
                                                     <img id="IMG_ExitSystem" src="ImagesSkin/ExitAPP.png" width="20" height="20" />
                                                 </a>

@@ -93,7 +93,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="right" valign="top" class="formItemBgStyle">
+                        <td  valign="top" class="formItemBgStyle">
                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WenTiMiaoShu%>"></asp:Label>£º
                         </td>
                         <td class="formItemBgStyle" align="left">
@@ -102,7 +102,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="right" valign="top" class="formItemBgStyle">
+                        <td  valign="top" class="formItemBgStyle">
                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>£º</td>
                         <td align="left" class="formItemBgStyle" align="left">
                             <asp:TextBox ID="TB_CheckCode" runat="server" Style="width: 50px;"></asp:TextBox>

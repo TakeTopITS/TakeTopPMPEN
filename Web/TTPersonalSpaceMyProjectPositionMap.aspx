@@ -66,7 +66,7 @@
                     <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                         <tr style="display: none;">
                             <td height="31">
-                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <table>

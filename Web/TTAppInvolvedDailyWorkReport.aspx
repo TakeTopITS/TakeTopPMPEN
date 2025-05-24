@@ -66,7 +66,7 @@
                                     <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                         <tr>
                                             <td height="31" class="page_topbj">
-                                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="left">
                                                             <%--<a href="TTAppProject.aspx" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
@@ -76,7 +76,7 @@
                                                                         <td width="29">
                                                                             <img src="ImagesSkin/return.png" alt="" />
                                                                         </td>
-                                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
+                                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
                                                                         </td>
                                                                         <td width="5">
                                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -106,7 +106,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="center">
+                                                            <td align="left">
                                                                 <table width="100%" cellpadding="0" cellspacing="0">
                                                                     <tr>
                                                                         <td>
@@ -123,7 +123,7 @@
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr>
-                                                                                            <td align="center" valign="top" style="width: 8%; padding-left: 5px" class="tdLeft">
+                                                                                            <td align="left" valign="top" style="width: 8%; padding-left: 5px" class="tdLeft">
                                                                                                 <span style="font-size: 10pt"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MeiRiZongJie%>"></asp:Label></span>
                                                                                             </td>
                                                                                             <td  valign="top" style="text-align: left; padding-left: 5px"
@@ -131,7 +131,7 @@
                                                                                                 <span style="font-size: 9pt"><%#DataBinder .Eval (Container .DataItem ,"DailySummary") %></span></td>
                                                                                         </tr>
                                                                                         <tr>
-                                                                                             <td align="center" valign="top" style="width: 8%; padding-left: 5px" class="tdLeft">
+                                                                                             <td align="left" valign="top" style="width: 8%; padding-left: 5px" class="tdLeft">
                                                                                                 <span style="font-size: 10pt"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChengGuo%>"></asp:Label></span>
                                                                                             </td>
                                                                                             <td class="tdLeft"  style="text-align: left; padding-left: 5px" valign="top">
@@ -139,7 +139,7 @@
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr>
-                                                                                             <td align="center" valign="top" style="width: 8%; padding-left: 5px" class="tdLeft">
+                                                                                             <td align="left" valign="top" style="width: 8%; padding-left: 5px" class="tdLeft">
                                                                                                 <span style="font-size: 10pt"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DiZhi%>"></asp:Label></span>
                                                                                             </td>
                                                                                             <td valign="top" style="text-align: left; padding-left: 5px"

@@ -40,7 +40,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
+                    <td align="left">
                         <!--startprint1-->
                         <div>
                             <br />

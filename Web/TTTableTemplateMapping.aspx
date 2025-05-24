@@ -367,7 +367,7 @@
                 <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                     <tr>
                         <td height="31" class="page_topbj">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
                                         <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -375,7 +375,7 @@
                                                 <td width="29">
                                                     <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                 </td>
-                                                <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BDJDYSBZD%>"></asp:Label>
                                                 </td>
                                                 <td width="5">
@@ -392,7 +392,7 @@
                         <td style="padding: 0px 5px 5px 5px;" valign="top">
                             <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td colspan="8" class="formItemBgStyle" align="center">
+                                    <td colspan="8" class="formItemBgStyle" align="left">
                                         <input type="button" value="±£´æ" id="BT_Save" class="inpu" />
                                     </td>
                                 </tr>
@@ -411,7 +411,7 @@
                                                 </asp:DropDownList>
                                             </td>
                                             <th class="formItemBgStyle">&nbsp;</th>
-                                            <td colspan="3" class="formItemBgStyle" style="text-align: right;">
+                                            <td colspan="3" class="formItemBgStyle" style="">
                                                 <span style="font-size: 11pt">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XuanZeBiao%>"></asp:Label>£º</span>
                                                 <asp:DropDownList ID="DL_Table" name="DL_Table" runat="server" DataTextField="TableName" DataValueField="TableName"

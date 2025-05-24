@@ -357,7 +357,7 @@
                 <table id="tableMain" cellpadding="0" cellspacing="0" width="100%">
                     <tr>
                         <td id="tdTop" height="31" class="page_topbj">
-                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td width="20px" style="padding-left: 15px; padding-top: 5px; vertical-align: middle;">
 
@@ -465,7 +465,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 520px; padding: 5px 25px 5px 5px;" valign="top" align="center">
+                            <td style="width: 520px; padding: 5px 25px 5px 5px;" valign="top" align="left">
                                 <asp:Button ID="BT_ActiveYes" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Shi%>" OnClick="BT_ActiveYes_Click" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button
                                     ID="BT_ActiveNo" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Fou%>" OnClick="BT_ActiveNo_Click" />
@@ -509,7 +509,7 @@
                                                 <td>
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
-                                                            <td align="center" style="font-size: smaller;">
+                                                            <td align="left" style="font-size: smaller;">
                                                                 <strong>
                                                                     <asp:Label ID="Label12222" runat="server" Text="<%$ Resources:lang,YeWuDan%>"></asp:Label></strong>
                                                             </td>
@@ -584,7 +584,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="tdRight" align="center" width="100%" style="padding: 20px 1px 1px 1px;">
+                                    <td class="tdRight" align="left" width="100%" style="padding: 20px 1px 1px 1px;">
 
                                         <asp:DropDownList ID="DL_WorkFlow" runat="server" AutoPostBack="True" Width="100%" Height="300px"
                                             DataTextField="WLName" DataValueField="WLID" OnSelectedIndexChanged="DL_WorkFlow_SelectedIndexChanged">

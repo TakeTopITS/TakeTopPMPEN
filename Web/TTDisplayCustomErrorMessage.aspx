@@ -29,7 +29,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <table width="800" height="520" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <table width="800" height="520" border="0" align="left" cellpadding="0" cellspacing="0" >
             <tr>
                 <td valign="top" class ="huizi" style="padding-top :60px;">
                    ¡¤<asp:Label ID="LB_ErrorText" runat="server"></asp:Label>

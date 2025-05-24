@@ -81,7 +81,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4" align="center">
+                    <td colspan="4" align="left">
                         <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                             <ContentTemplate>
                                 <div>
@@ -102,10 +102,10 @@
                   
                 </tr>
                 <tr>
-                    <td colspan="2" align="center">
+                    <td colspan="2" align="left">
                         <asp:Button ID="BtnUP" runat="server" CssClass ="inpuLong" OnClick="BtnUP_Click" Text="<%$ Resources:lang,ShangChuan%>" />
                     </td>
-                      <td colspan="2" align="center">
+                      <td colspan="2" align="left">
                         <asp:Button ID="BtnClose" runat="server" CssClass="inpuLong" OnClientClick="CloseLayer()" Text="<%$ Resources:lang,GuanBi%>" />
                     </td>
                  </tr>
@@ -124,7 +124,7 @@
                                     <SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                 </asp:TreeView>
                             </td>
-                            <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                            <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                 <asp:ImageButton ID="IMBT_Close1" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                             </td>
                         </tr>

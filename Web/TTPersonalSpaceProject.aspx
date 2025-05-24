@@ -69,7 +69,7 @@
                                                             CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="False">
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="ProjectID" HeaderText="Number" Visible="false">
-                                                                    <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian2" Horizontalalign="left" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
                                                                     DataTextField="ProjectName" HeaderText="项目名称" Target="_blank">
@@ -87,7 +87,7 @@
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                         </asp:DataGrid>
                                                     </td>
                                                 </tr>
@@ -103,14 +103,14 @@
                                                             PageSize="8" Height="1px" OnPageIndexChanged="DataGrid4_PageIndexChanged" Width="100%">
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="ProjectID" HeaderText="Number" Visible="false">
-                                                                    <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian2" Horizontalalign="left" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTInvolvedProDetail.aspx?ProjectID={0}"
                                                                     DataTextField="ProjectName" HeaderText="项目名称" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="70%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束日期">
-                                                                    <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="20%" />
+                                                                    <ItemStyle CssClass="dibian2" Horizontalalign="left" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
 
@@ -118,7 +118,7 @@
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                         </asp:DataGrid>
                                                     </td>
                                                 </tr>
@@ -135,14 +135,14 @@
                                                             PageSize="8" Height="1px" OnPageIndexChanged="DataGrid8_PageIndexChanged" Width="100%">
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="ProjectID" HeaderText="Number" Visible="false">
-                                                                    <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian2" Horizontalalign="left" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTCreatedProjectDetail.aspx?ProjectID={0}"
                                                                     DataTextField="ProjectName" HeaderText="项目名称" Target="_blank">
                                                                     <ItemStyle CssClass="dibian" HorizontalAlign="Left" Width="70%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束日期">
-                                                                    <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="20%" />
+                                                                    <ItemStyle CssClass="dibian2" Horizontalalign="left" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
 
@@ -150,7 +150,7 @@
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                         </asp:DataGrid>
                                                     </td>
                                                 </tr>

@@ -341,7 +341,7 @@
                                                 <td class="tdLeft" width="110">
                                                     <asp:Label ID="LB_WLID" runat="server" Font-Size="10pt"></asp:Label>
                                                 </td>
-                                                <td class="tdRight" align="center" width="210">
+                                                <td class="tdRight" align="left" width="210">
                                                     <asp:HyperLink ID="HL_WFChartView" runat="server" Text="<%$ Resources:lang,LiuChengTu %>" Target="_blank"></asp:HyperLink>
                                                 </td>
                                             </tr>
@@ -387,7 +387,7 @@
                                                 </td>
                                             </tr>
                                             <tr style="display: none;">
-                                                <td class="tdLeft" align="center" colspan="3">
+                                                <td class="tdLeft" align="left" colspan="3">
 
                                                     <asp:HyperLink ID="HL_RelatedDoc" runat="server" Enabled="False" Font-Size="10pt" Text="<%$ Resources:lang,XiangGuanWenDang%>" Target="_blank"></asp:HyperLink>
                                                 </td>
@@ -436,18 +436,18 @@
             <div id="divToolBar" name="divTooBar" class="ToolBar" style="width: 100%;">
                 <table width="100%">
                     <tr>
-                        <td align="center">
+                        <td align="left">
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td width="30px;">&nbsp;</td>
-                                    <td align="center" style="padding-top: 5px;">
+                                    <td align="left" style="padding-top: 5px;">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeWuDan%>"></asp:Label>£º
                                     </td>
-                                    <td align="center" style="padding-top: 5px;">
+                                    <td align="left" style="padding-top: 5px;">
                                         <asp:DropDownList ID="DL_WorkflowTemplate" runat="server" DataTextField="TemName" DataValueField="XSNFile" AutoPostBack="true" OnSelectedIndexChanged="DL_WorkflowTemplate_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
-                                    <td align="center" style="padding-top: 7px;padding-left:20px;">
+                                    <td align="left" style="padding-top: 7px;padding-left:20px;">
                                         <asp:Button ID="BT_SaveXMLFile" runat="server" CssClass="inpuSave" OnClick="BT_SaveXMLFile_Click" />
                                         <asp:Label ID="LB_Msg" runat="server" ForeColor="Red"></asp:Label>
                                     </td>
@@ -456,7 +456,7 @@
                                             <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                         </a>
                                     </td>
-                                    <td align="center" style="padding-top: 7px;padding-left:20px;">
+                                    <td align="left" style="padding-top: 7px;padding-left:20px;">
                                         <asp:Button ID="BT_DeleteWorkflowTemplate" runat="server" CssClass="inpuDelete" Text="X" OnClientClick="return confirm(getDeleteMsgByLangCode())" OnClick="BT_DeleteWorkflowTemplate_Click" />
                                     </td>
                                 </tr>

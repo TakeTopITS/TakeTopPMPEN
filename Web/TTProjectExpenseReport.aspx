@@ -37,7 +37,7 @@
             <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                 <tr>
                     <td height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -45,7 +45,7 @@
                                             <td width="29">
                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                             </td>
-                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMuFeiYong%>"></asp:Label>
                                             </td>
                                             <td width="5">
@@ -78,7 +78,7 @@
                                 <td valign="top">
                                     <table cellpadding="0" cellspacing="0" width="98%">
                                         <tr>
-                                            <td align="center" style="padding: 0px 5px 0px 5px; font-weight: bold; height: 24px; color: #394f66;">
+                                            <td align="left" style="padding: 0px 5px 0px 5px; font-weight: bold; height: 24px; color: #394f66;">
                                                 <table style="width: 100%;">
                                                     <tr>
                                                         <td style="background: #f0f0f0; text-align: left; width: 65%; height: 25px;">
@@ -99,7 +99,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="tdTopLine" align="center">
+                                            <td class="tdTopLine" align="left">
                                                 <!--startprint1-->
                                                 <table style="width: 980px;">
                                                     <tr>
@@ -115,7 +115,7 @@
                                                     </tr>
 
                                                     <tr>
-                                                        <td align="center">
+                                                        <td align="left">
 
                                                              <iframe runat="server" id="IFrame_Chart1" src="TTTakeTopAnalystChartSet.aspx" style="width: 800px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
 
@@ -177,12 +177,12 @@
                                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                     <tr>
 
-                                                                                        <td width="15%" align="center">
+                                                                                        <td width="15%" align="left">
                                                                                             <strong>
                                                                                                 <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ZeRenRen%>"></asp:Label></strong>
                                                                                         </td>
 
-                                                                                        <td width="15%" align="center">
+                                                                                        <td width="15%" align="left">
                                                                                             <strong>
                                                                                                 <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,QueRenFeiYong%>"></asp:Label></strong>
                                                                                         </td>

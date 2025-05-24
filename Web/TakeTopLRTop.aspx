@@ -98,7 +98,7 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                                 <td id="topTD" style="display: block;" height="45" valign="bottom">
-                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td height="45" valign="top" style="text-align: center;">
                                                 <asp:Image ID="IM_Logo" src="Logo/logoLR.png" Height="45px" runat="server" />

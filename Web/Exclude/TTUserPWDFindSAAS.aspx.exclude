@@ -80,7 +80,7 @@
                 <ContentTemplate>
 
                     <div id="AboveDiv" style="padding-left: 25px;">
-                        <table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="99%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td class="formItemBgStyle" style="font-size: xx-large; text-align: center; border-radius: 10px 10px 0px 0px; padding-top: 30px; height: 80px; border-bottom-style: none;">
                                     <img src="ImagesSkin/ZhuCeLogo.png"> </img>
@@ -136,7 +136,7 @@
                             </tr>
 
                             <tr>
-                                <td class="formItemBgStyle" align="center">
+                                <td class="formItemBgStyle" align="left">
                                     <asp:Button ID="BT_UpdatePWD" runat="server" CssClass="inpuLongest" Widt="100%" Height="30px" OnClick="BT_UpdatePWD_Click" Text="<%$ Resources:lang, BaoCun%>" />
                                     <br />
                                     <br />

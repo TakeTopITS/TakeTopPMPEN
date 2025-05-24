@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTab.aspx.cs" Inherits="TakeTopMainTab" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTab.aspx.cs" Inherits="TakeTopMainTab" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,15 +26,15 @@
         }
 
         .loading {
-            position: fixed; /* å›ºå®šå®šä½ï¼Œè¦†ç›–æ•´ä¸ªé¡µé¢ */
-            top: 50%; /* ä¸Šè¾¹è· 50% */
-            left: 50%; /* å·¦è¾¹è· 50% */
-            transform: translate(-50%, -50%); /* é€šè¿‡åç§»å®ç°å±…ä¸­ */
-            z-index: 9999; /* ç¡®ä¿åœ¨æœ€é¡¶å±‚ */
-            background-color: rgba(255, 255, 255, 0.8); /* åŠé€æ˜èƒŒæ™¯ */
-            padding: 20px; /* å†…è¾¹è· */
-            border-radius: 10px; /* åœ†è§’ */
-            text-align: center; /* å†…å®¹å±…ä¸­ */
+            position: fixed; /* ¹Ì¶¨¶¨Î»£¬¸²¸ÇÕû¸öÒ³Ãæ */
+            top: 50%; /* ÉÏ±ß¾à 50% */
+            left: 50%; /* ×ó±ß¾à 50% */
+            transform: translate(-50%, -50%); /* Í¨¹ıÆ«ÒÆÊµÏÖ¾ÓÖĞ */
+            z-index: 9999; /* È·±£ÔÚ×î¶¥²ã */
+            background-color: rgba(255, 255, 255, 0.8); /* °ëÍ¸Ã÷±³¾° */
+            padding: 20px; /* ÄÚ±ß¾à */
+            border-radius: 10px; /* Ô²½Ç */
+            text-align: center; /* ÄÚÈİ¾ÓÖĞ */
         }
     </style>
 
@@ -62,7 +62,7 @@
 
             window.parent.document.getElementById("rightFrame").rows = '0,0,*';
 
-            //è®¾ç½®åŠ è½½åŠ¨ç”»
+            //ÉèÖÃ¼ÓÔØ¶¯»­
             DisplayLoadingIcon();
 
             var intSelectTabIndex = 0;
@@ -70,7 +70,7 @@
             var tabs = $('#tt').tabs("tabs");
             if (tabs.length == 0) {
 
-                //ä¾ç‰ˆæœ¬ç±»å‹å’Œç”¨æˆ·ç±»å‹æ‰“å¼€ç›¸åº”çš„ä¸ªäººç©ºé—´é¡µé¢
+                //ÒÀ°æ±¾ÀàĞÍºÍÓÃ»§ÀàĞÍ´ò¿ªÏàÓ¦µÄ¸öÈË¿Õ¼äÒ³Ãæ
                 var varSystemVerType = '<%=Session["SystemVersionType"].ToString() %>'.trim();
                 if (varSystemVerType == "SAAS") {
 
@@ -96,7 +96,7 @@
 
                     intSelectTabIndex = currentTabIndex - 1;
 
-                    //å¾—åˆ°ç„¦ç‚¹æ—¶ï¼Œåˆ·æ–°æ­¤é¡µé¢
+                    //µÃµ½½¹µãÊ±£¬Ë¢ĞÂ´ËÒ³Ãæ
                     if (tabs.length > 0) {
                         var iframe = $(currentTab).find("iframe").get(0);
 
@@ -125,48 +125,48 @@
             changeIFrameDivWidth();
         });
 
-        //è®¾ç½®åŠ è½½åŠ¨ç”»
+        //ÉèÖÃ¼ÓÔØ¶¯»­
         function DisplayLoadingIcon() {
 
-            // è·å–åŠ è½½åŠ¨ç”»å…ƒç´ å’Œç›®æ ‡å®¹å™¨
+            // »ñÈ¡¼ÓÔØ¶¯»­ÔªËØºÍÄ¿±êÈİÆ÷
             const loadingDiv = document.getElementById('loading');
             const ttDiv = document.getElementById('tt');
 
-            // å®šæ—¶å™¨æ£€æŸ¥å†…å®¹
+            // ¶¨Ê±Æ÷¼ì²éÄÚÈİ
             const checkContent = setInterval(function () {
-                // è·å– ttDiv ä¸­çš„æ‰€æœ‰ iframe
+                // »ñÈ¡ ttDiv ÖĞµÄËùÓĞ iframe
                 const iframes = ttDiv.getElementsByTagName('iframe');
 
-                let hasEmptyIframeBody = false; // æ ‡è®°æ˜¯å¦æœ‰ iframe çš„ body ä¸ºç©º
+                let hasEmptyIframeBody = false; // ±ê¼ÇÊÇ·ñÓĞ iframe µÄ body Îª¿Õ
 
-                // éå†æ‰€æœ‰ iframe
+                // ±éÀúËùÓĞ iframe
                 for (let iframe of iframes) {
                     try {
-                        // æ£€æŸ¥ iframe çš„ body å†…å®¹
+                        // ¼ì²é iframe µÄ body ÄÚÈİ
                         const iframeBody = iframe.contentDocument.body;
                         if (iframeBody.innerHTML.trim() === '') {
-                            hasEmptyIframeBody = true; // å¦‚æœ iframe çš„ body ä¸ºç©ºï¼Œæ ‡è®°ä¸º true
-                            break; // åªè¦æœ‰ä¸€ä¸ª iframe çš„ body ä¸ºç©ºï¼Œå°±è·³å‡ºå¾ªç¯
+                            hasEmptyIframeBody = true; // Èç¹û iframe µÄ body Îª¿Õ£¬±ê¼ÇÎª true
+                            break; // Ö»ÒªÓĞÒ»¸ö iframe µÄ body Îª¿Õ£¬¾ÍÌø³öÑ­»·
                         }
                     } catch (error) {
-                        console.error('æ— æ³•è®¿é—® iframe å†…å®¹:', error);
-                        // å¦‚æœæ— æ³•è®¿é—® iframe çš„å†…å®¹ï¼ˆä¾‹å¦‚è·¨åŸŸé™åˆ¶ï¼‰ï¼Œå‡è®¾å…¶å†…å®¹ä¸ºç©º
+                        console.error('ÎŞ·¨·ÃÎÊ iframe ÄÚÈİ:', error);
+                        // Èç¹ûÎŞ·¨·ÃÎÊ iframe µÄÄÚÈİ£¨ÀıÈç¿çÓòÏŞÖÆ£©£¬¼ÙÉèÆäÄÚÈİÎª¿Õ
                         hasEmptyIframeBody = true;
                         break;
                     }
                 }
 
-                // æ ¹æ®æ£€æŸ¥ç»“æœæ›´æ–°åŠ è½½åŠ¨ç”»
+                // ¸ù¾İ¼ì²é½á¹û¸üĞÂ¼ÓÔØ¶¯»­
                 if (hasEmptyIframeBody) {
-                    loadingDiv.style.display = "block"; // å¦‚æœæœ‰ iframe çš„ body ä¸ºç©ºï¼Œæ˜¾ç¤ºåŠ è½½åŠ¨ç”»
+                    loadingDiv.style.display = "block"; // Èç¹ûÓĞ iframe µÄ body Îª¿Õ£¬ÏÔÊ¾¼ÓÔØ¶¯»­
                 } else {
-                    loadingDiv.style.display = "none"; // å¦‚æœæ‰€æœ‰ iframe çš„ body éƒ½æœ‰å†…å®¹ï¼Œéšè—åŠ è½½åŠ¨ç”»
-                    clearInterval(checkContent); // åœæ­¢å®šæ—¶å™¨
+                    loadingDiv.style.display = "none"; // Èç¹ûËùÓĞ iframe µÄ body ¶¼ÓĞÄÚÈİ£¬Òş²Ø¼ÓÔØ¶¯»­
+                    clearInterval(checkContent); // Í£Ö¹¶¨Ê±Æ÷
                 }
-            }, 500); // æ¯ 500 æ¯«ç§’æ£€æŸ¥ä¸€æ¬¡
+            }, 500); // Ã¿ 500 ºÁÃë¼ì²éÒ»´Î
         }
 
-        //æ·»åŠ TABæ 
+        //Ìí¼ÓTABÀ¸
         function addTab(title, url, type) {
 
             if (type == "new") {
@@ -177,10 +177,10 @@
 
        
 
-            ////å¼¹å‡ºæ–°é¡µé¢
+            ////µ¯³öĞÂÒ³Ãæ
             //if (url.indexOf('TakeTopPersonalSpace') == -1) {
 
-            //    //å…³é—­æ‰€æœ‰å­å±‚
+            //    //¹Ø±ÕËùÓĞ×Ó²ã
             //    CloseChildLayer();
 
             //    popShowByURL(url, 800, 600,window.location);
@@ -201,10 +201,10 @@
 
             if (type == "new") {
 
-                //å…³é—­æ‰€æœ‰å±‚
+                //¹Ø±ÕËùÓĞ²ã
                 layer.closeAll();
 
-                //å…ˆåˆ é™¤å…¶å®ƒtab
+                //ÏÈÉ¾³ıÆäËütab
                 $('.tabs-inner span').each(function (i, n) {
                     var t = $(n).text();
                     if (t != 'Home') {
@@ -212,7 +212,7 @@
                     }
                 });
 
-                //å†åˆ›å»º
+                //ÔÙ´´½¨
                 if ($('#tt').tabs('exists', title)) {
                     $('#tt').tabs('select', title);
                 } else {
@@ -243,15 +243,15 @@
             DisplayLoadingIcon();
         }
 
-        //å…³è”æ‰€æœ‰å­å±‚
+        //¹ØÁªËùÓĞ×Ó²ã
         function CloseChildLayer() {
             layer.closeAll('iframe');
         }
 
-        //åˆ é™¤å½“å‰TAB
+        //É¾³ıµ±Ç°TAB
         function CloseCurrentTabPage() {
 
-            //åˆ é™¤æŒ‡å®štab
+            //É¾³ıÖ¸¶¨tab
             $('.tabs-inner span').each(function (i, n) {
 
                 var t = $(n).text();
@@ -264,10 +264,10 @@
             });
         }
 
-        //åˆ é™¤å½“å‰TAB
+        //É¾³ıµ±Ç°TAB
         function CloseCurrentTabPageAndOpenSpecialPage() {
 
-            //åˆ é™¤æŒ‡å®štab
+            //É¾³ıÖ¸¶¨tab
             $('.tabs-inner span').each(function (i, n) {
 
                 var t = $(n).text();
@@ -281,7 +281,7 @@
 
             $('.tabs-selected').remove();
 
-            //ä¾ç‰ˆæœ¬ç±»å‹å’Œç”¨æˆ·ç±»å‹æ‰“å¼€ç›¸åº”çš„ä¸ªäººç©ºé—´é¡µé¢
+            //ÒÀ°æ±¾ÀàĞÍºÍÓÃ»§ÀàĞÍ´ò¿ªÏàÓ¦µÄ¸öÈË¿Õ¼äÒ³Ãæ
             var varSystemVerType = '<%=Session["SystemVersionType"].ToString() %>'.trim();
             if (varSystemVerType == "SAAS") {
                 addTab('PersonalSpace', 'TakeTopPersonalSpaceSAAS.aspx', 'new');
@@ -301,24 +301,24 @@
 
         function test_confirm() {
             $.confirm({
-                title: 'æç¤ºï¼',
-                content: 'å°†ç¡®è®¤å’Œå–æ¶ˆæŒ‰é’®è®¾ç½®ä¸ºä¸­æ–‡æ˜¾ç¤ºï¼',
+                title: 'ÌáÊ¾£¡',
+                content: '½«È·ÈÏºÍÈ¡Ïû°´Å¥ÉèÖÃÎªÖĞÎÄÏÔÊ¾£¡',
                 buttons: {
                     ok: {
-                        text: "ç¡®å®š",
+                        text: "È·¶¨",
                         btnClass: 'btn-primary',
                         keys: ['enter'],
                         action: function () {
-                            alert("ä½ ç‚¹å‡»äº†ç¡®è®¤æŒ‰é’®ï¼")
+                            alert("Äãµã»÷ÁËÈ·ÈÏ°´Å¥£¡")
 
                         }
                     },
                     cancel: {
-                        text: "å–æ¶ˆ",
+                        text: "È¡Ïû",
                         btnClass: 'btn-primary',
                         keys: ['esc'],
                         action: function () {
-                            alert("ä½ ç‚¹å‡»äº†å–æ¶ˆæŒ‰é’®ï¼")
+                            alert("Äãµã»÷ÁËÈ¡Ïû°´Å¥£¡")
                         }
 
                     }
@@ -327,7 +327,7 @@
         }
 
 
-        //åˆ·æ–°é¡µé¢
+        //Ë¢ĞÂÒ³Ãæ
         function reloadPage() {
 
             location.reload();
@@ -341,7 +341,7 @@
 
 
 
-        //è®¾ç½®Tabå†…å®¹çš„å®½åº¦ï¼Œä½¿ä¹‹è‡ªé€‚åº”æ¡†æ¶çš„å®½åº¦
+        //ÉèÖÃTabÄÚÈİµÄ¿í¶È£¬Ê¹Ö®×ÔÊÊÓ¦¿ò¼ÜµÄ¿í¶È
         function changeIFrameDivWidth() {
 
             var cNodes = document.getElementsByClassName("panel-body panel-body-noheader panel-body-noborder");

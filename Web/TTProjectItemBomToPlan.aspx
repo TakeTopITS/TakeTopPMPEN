@@ -65,10 +65,10 @@
                         <tr>
                             <td>
 
-                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="bian">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left" class="bian">
                                     <tr>
                                         <td height="31" class="page_topbj">
-                                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td align="left">
                                                         <table border="0" align="left" cellpadding="0" cellspacing="0">
@@ -200,11 +200,11 @@
                                                                     <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_PlanVerID" runat="server" Amount="1" MinAmount="1" Precision="0"
                                                                         Width="30px"> 1</NickLee:NumberBox>
                                                                 </td>
-                                                                <td align="center">
+                                                                <td align="left">
                                                                     <asp:Button ID="BT_AddPlanVersion" runat="server" CssClass="inpu" Text="<%$ Resources:lang,New%>"
                                                                         OnClick="BT_AddPlanVersion_Click" />
                                                                 </td>
-                                                                <td align="center">
+                                                                <td align="left">
                                                                     <asp:Button ID="BT_DeletePlanVersion" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Delete%>"
                                                                         OnClick="BT_DeletePlanVersion_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" />
                                                                 </td>

@@ -80,10 +80,10 @@
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td height="31" class="page_topbj">
-                                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td align="left">
                                                         <a href="TakeTopAPPMain.aspx" target="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -92,7 +92,7 @@
                                                                     <td width="29">
                                                                         <img src="ImagesSkin/return.png" alt="" />
                                                                     </td>
-                                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                                     </td>
                                                                     <td width="5">
@@ -151,7 +151,7 @@
 
 
                                                     <%--                                                    <asp:BoundColumn DataField="CustomerCode" HeaderText="Code">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
                                                         DataTextField="CustomerName" HeaderText="CustomerName" Target="_blank">
@@ -164,7 +164,7 @@
                                                                 <asp:Label ID="LB_KHFW" runat="server" Text="<%$ Resources:lang,ZZKeHuFuWu%>"></asp:Label>
                                                             </a>
                                                         </ItemTemplate>
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                     </asp:TemplateColumn>--%>
                                                 </Columns>
 
@@ -172,7 +172,7 @@
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             </asp:DataGrid>
                                         </td>
                                     </tr>
@@ -276,7 +276,7 @@
                                     <td>&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td align="center" colspan="2" style="padding-top: 10px;">
+                                    <td align="left" colspan="2" style="padding-top: 10px;">
                                         <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                     </td>
                                 </tr>

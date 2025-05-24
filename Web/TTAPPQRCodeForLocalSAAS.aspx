@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPQRCodeForLocalSAAS.aspx.cs" Inherits="TTAPPQRCodeForLocalSAAS" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPQRCodeForLocalSAAS.aspx.cs" Inherits="TTAPPQRCodeForLocalSAAS" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
         <div>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td align="center" style="padding-top: 40px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td align="left" style="padding-top: 40px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="<%$ Resources:lang,APPURLMiaoShu%>"></asp:Label>
                         <br />
                         <br />
@@ -20,7 +20,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td align="center" style="padding-top: 10px;">
+                    <td align="left" style="padding-top: 10px;">
                         <asp:Image ID="IMG_APPQRCode" runat="server" />
 
                         <br />
@@ -32,22 +32,22 @@
                     </td>
                 </tr>
                 <tr id="TD_SAAS" runat="server">
-                    <td align="center" style="padding-top: 10px;">
+                    <td align="left" style="padding-top: 10px;">
 
-                        <p style="font-size: larger; font-weight: 400;"><b>Ì©¶¥ÍØ¶¦Èí¼þSAAS°æ±¾Î¢ÐÅ¶ËAPPÊ¹ÓÃ·½·¨ </b></p>
+                        <p style="font-size: larger; font-weight: 400;"><b>Ì©ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½SAASï¿½æ±¾Î¢ï¿½Å¶ï¿½APPÊ¹ï¿½Ã·ï¿½ï¿½ï¿½ </b></p>
 
                         <br />
-                        1¡¢	Èç¹ûÄãÊÇÔÚÌ©¶¥ÍØ¶¦ÍøÕ¾ÉÏ×âÓÃµÄÌ©¶¥ÍØ¶¦Èí¼þ£¬ÄÇÃ´¿ÉÒÔÓÃÄãµÄÎ¢ÐÅÉ¨ÃèÏÂÃæµÄ¶þÎ¬Âë¹Ø×¢£ºÌ©¶¥ÍØ¶¦  Î¢ÐÅ¹«ÖÚºÅ
+                        1ï¿½ï¿½	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì©ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½Ì©ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½É¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Î¬ï¿½ï¿½ï¿½×¢ï¿½ï¿½Ì©ï¿½ï¿½ï¿½Ø¶ï¿½  Î¢ï¿½Å¹ï¿½ï¿½Úºï¿½
                          <br />
                         <br />
                         <img src="ImagesSkin/TakeTopWXGZHQRCode.png" style="width: 150px; height: 150px;" />
                         <br />
                         <br />
-                        2¡¢	µã»÷¹«ÖÚºÅÉÏµÄ£º¹ÜÀíÆ½Ì¨£¬´ò¿ªÄãµÄAPPµÇÂ¼½çÃæ
+                        2ï¿½ï¿½	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ÏµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½Æ½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½APPï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
                         <br />
                         <br />
 
-                        3¡¢	ÔÚµÇÂ¼½çÃæµÚÒ»ÐÐÊäÈëÄãµÄ¹«Ë¾¼ò³Æ£¨ÎÊÏµÍ³¹ÜÀíÔ±£©£¬µÚ¶þÐÐÊäÈëÄãµÄµÇÂ¼ÕÊºÅ£¬µÚÈýÐÐÊäÈëÃÜÂë£¬ÈçÏÂÍ¼£º
+                        3ï¿½ï¿½	ï¿½Úµï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½Ë¾ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Â¼ï¿½ÊºÅ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
                         <br />
                        
                         <br />
@@ -55,11 +55,11 @@
                         <br />
 
 
-                        ×¢£ºÉÏÃæÐÅÏ¢»á±£´æÔÚ»º´æÀï£¬µÚ¶þ´ÎµÇÂ¼Ê±»á×Ô¶¯Ìî³ä£¬²»ÓÃÖØ¸´ÊäÈë£¡
+                        ×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½á±£ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½Ú¶ï¿½ï¿½Îµï¿½Â¼Ê±ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ë£¡
                         <br />
                         <br />
 
-                        4¡¢	µã»÷  µÇÂ¼ °´Å¥£¬ÏµÍ³»á×Ô¶¯µÇÂ¼ÄãµÄAPP£¬²¢ÇÒÒÔºóÔÚÆ½Ì¨ÍÆËÍ¸øÄãµÄÐÅÏ¢¶¼»áÏÔÊ¾ÔÚÕâ¸ö¹«ÖÚºÅÀï£¡
+                        4ï¿½ï¿½	ï¿½ï¿½ï¿½  ï¿½ï¿½Â¼ ï¿½ï¿½Å¥ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½APPï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½Æ½Ì¨ï¿½ï¿½ï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï£¡
                         <br />
                         <br />
                         <img src="ImagesSkin/TakeTopWXGZHForSAAS.jpg" />

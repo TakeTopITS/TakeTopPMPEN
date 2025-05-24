@@ -27,7 +27,7 @@
                     <table cellpadding="0" cellspacing="0" border="0" width="100%">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -35,7 +35,7 @@
                                                     <td width="29">
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,SJJHZXJL%>"></asp:Label>
                                                     </td>
                                                     <td width="5">
@@ -64,7 +64,7 @@
                                                                 <td>
                                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                         <tr>
-                                                                            <td align="center">
+                                                                            <td align="left">
                                                                                 <strong>
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiaoHuanShuJuLKu%>"></asp:Label></strong>
                                                                             </td>
@@ -79,7 +79,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="tdLeft" align="center" width="40%" style="padding: 1px 1px 1px 1px;">
+                                                    <td class="tdLeft" align="left" width="40%" style="padding: 1px 1px 1px 1px;">
                                                         <asp:ListBox ID="LLB_DBServerName" runat="server" AutoPostBack="True" Style="width: 250px; height: 450px;"
                                                             DataTextField="DBServerName" DataValueField="DBServerName" OnSelectedIndexChanged="LLB_DBServerName_SelectedIndexChanged"></asp:ListBox>
                                                     </td>
@@ -99,15 +99,15 @@
                                                                 <td>
                                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                         <tr>
-                                                                            <td width="10%" align="center">
+                                                                            <td width="10%" align="left">
                                                                                 <strong>
                                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                                             </td>
-                                                                            <td width="75%" align="center">
+                                                                            <td width="75%" align="left">
                                                                                 <strong>
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhiXingMingLing%>"></asp:Label></strong>
                                                                             </td>
-                                                                            <td width="15%" align="center">
+                                                                            <td width="15%" align="left">
                                                                                 <strong>
                                                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhiXingShiJian%>"></asp:Label></strong>
                                                                             </td>

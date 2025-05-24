@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanOneStepTransferChildPlanToTask.aspx.cs" Inherits="TTWorkPlanOneStepTransferChildPlanToTask" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanOneStepTransferChildPlanToTask.aspx.cs" Inherits="TTWorkPlanOneStepTransferChildPlanToTask" %>
 
 <!DOCTYPE html>
 
@@ -31,7 +31,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <table width="697" height="220" border="0" align="center" cellpadding="0" cellspacing="0">
+        <table width="697" height="220" border="0" align="left" cellpadding="0" cellspacing="0">
             <tr>
                 <td valign="top">
                     <table width="100%" border="0" cellspacing="4" cellpadding="3">

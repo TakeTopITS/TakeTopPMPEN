@@ -79,7 +79,7 @@
             <table style="width: 100%;">
                 <tr>
                     <td class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td style="width: 30%; text-align: left;">
                                     <a href="TakeTopAPPMain.aspx" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" target="_top">
@@ -88,7 +88,7 @@
                                                 <td width="29">
                                                     <img src="ImagesSkin/return.png" alt="" />
                                                 </td>
-                                                <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                 </td>
                                                 <td width="5">
@@ -124,7 +124,7 @@
                             <td>
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td width="100%" align="center">
+                                        <td width="100%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShenQingLeiXing%>"></asp:Label></strong>
                                         </td>
@@ -174,7 +174,7 @@
                                         <asp:Label ID="LB_TemName" runat="server" Text='<%#DataBinder .Eval (Container .DataItem ,"HomeName") %>'></asp:Label>
                                     </a>
                                 </ItemTemplate>
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100px" />
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="100px" />
                             </asp:TemplateColumn>--%>
 
 
@@ -183,7 +183,7 @@
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                         <EditItemStyle BackColor="#2461BF" />
                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                     </asp:DataGrid>
                     <br />
                     <%--<table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
@@ -194,7 +194,7 @@
                             <td>
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td width="100%" align="center">
+                                        <td width="100%" align="left">
                                             <strong>
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,CYLC%>"></asp:Label></strong>
                                         </td>
@@ -242,14 +242,14 @@
                                         <asp:Label ID="LB_TemName" runat="server" Text='<%#DataBinder .Eval (Container .DataItem ,"TemName") %>'></asp:Label>
                                     </a>
                                 </ItemTemplate>
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100px" />
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="100px" />
                             </asp:TemplateColumn>--%>
                         </Columns>
                         <ItemStyle CssClass="itemStyle" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                         <EditItemStyle BackColor="#2461BF" />
                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                     </asp:DataGrid>
 
                 </td>

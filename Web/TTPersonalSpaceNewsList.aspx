@@ -56,27 +56,27 @@
                                                             OnPageIndexChanged="DataGrid9_PageIndexChanged" PageSize="8" Width="100%">
                                                             <Columns>
                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="False">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" />
                                                                 </asp:BoundColumn>
 
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTNews.aspx?ID={0}" DataTextField="Title" Target="_blank">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="60%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="60%" />
                                                                 </asp:HyperLinkColumn>
 
                                                                 <asp:BoundColumn DataField="RelatedDepartName" HeaderText="归属部门">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="PublisherCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="PublisherName" HeaderText="发布者" Target="_blank">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="10%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="10%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="发布时间">
-                                                                    <ItemStyle CssClass="dibian" HorizontalAlign="Center" Width="15%" />
+                                                                    <ItemStyle CssClass="dibian" Horizontalalign="left" Width="15%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
                                                             <EditItemStyle BackColor="#2461BF" />
                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                             <ItemStyle CssClass="itemStyle" />
-                                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                                         </asp:DataGrid>
                                                     </td>

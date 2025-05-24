@@ -631,10 +631,11 @@ select {
     border-style: dotted;
     border-color: #cccccc;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
 }
 
 .itemBorderBlack {
@@ -642,10 +643,11 @@ select {
     border-style: dotted;
     border-color: black;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
 }
 
 
@@ -717,6 +719,7 @@ select {
 	padding:0px 0px 0px 0px;*/
 }
 
+
 .formItemBgStyle {
     /*border-bottom:dotted  1px #C6CFD4;
         height: 19px;
@@ -729,10 +732,26 @@ select {
     border-bottom-color: #cccccc;
     vertical-align: top;
     line-height: 23px;
-    max-width: 100px; /* 限制最大宽度 */
-    white-space: nowrap; /* 禁止换行 */
-    overflow: hidden; /* 隐藏溢出内容 */
-    text-overflow: ellipsis; /* 显示省略号 */
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
+}
+
+.formItemBgStyleForAlignRight {
+    /*border-bottom:dotted  1px #C6CFD4;
+        height: 19px;
+        line-height: 18px;*/
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #cccccc;
+    vertical-align: top;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: right;
 }
 
 /*-----------------------------编辑图片按钮------------------------------*/

@@ -66,7 +66,7 @@
                             <tr>
                                 <td>
                                     <asp:Button ID="ButtonOK" runat="server" CssClass="inpu" OnClick="ButtonOK_Click" Text="<%$ Resources:lang,baocun%>" /></td>
-                                <td align="center">
+                                <td align="left">
                                     <asp:Button ID="ButtonCancel" runat="server" CssClass="inpu" OnClick="ButtonCancel_Click" Text="<%$ Resources:lang,quxiao%>" /></td>
                             </tr>
                         </table>

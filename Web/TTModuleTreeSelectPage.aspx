@@ -67,7 +67,7 @@
                                 <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                             </asp:TreeView>
                         </td>
-                        <td style="width: 30px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                        <td style="width: 30px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                             <asp:ImageButton ID="IMBT_Close" OnClientClick="javascript:hideParentDivModuleSelect();"
                                 ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                         </td>

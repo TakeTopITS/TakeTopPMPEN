@@ -130,41 +130,41 @@
                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                             Width="100%">
                             <Columns>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="大类">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="<%$ Resources:lang,DaLei%>">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLName" HeaderText="大类名称">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLCode" HeaderText="上期结额">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLCode" HeaderText="本期收额">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLCode" HeaderText="累计收额">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLCode" HeaderText="本期发额">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLCode" HeaderText="累计发额">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLCode" HeaderText="本期结额">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                                 <asp:BoundColumn DataField="DLCode" HeaderText="平均占用">
-                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
+                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="9%" />
                                 </asp:BoundColumn>
                             </Columns>
                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                             <EditItemStyle BackColor="#2461BF" />
                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                             
                             <ItemStyle CssClass="itemStyle" />
-                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
+                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Horizontalalign="left" />
                         </asp:DataGrid>--%>
                     </td>
                 </tr>

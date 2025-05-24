@@ -30,13 +30,13 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
 
-                    <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="bian">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" align="left" class="bian">
                         <tr>
                             <td>
                                 <table cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td class="page_topbj" height="31">
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="96%">
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="96%">
                                                 <tr>
                                                     <td align="left">
                                                         <table align="left" border="0" cellpadding="0" cellspacing="0">
@@ -44,7 +44,7 @@
                                                                 <td width="29">
                                                                     <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                                 </td>
-                                                                <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                                <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                                     <span class="style1">
                                                                         <asp:Label ID="LB_tiMakeBOM" runat="server" Text="<%$ Resources:lang,MakeBOM%>"></asp:Label>
                                                                         &nbsp;&nbsp; </span>

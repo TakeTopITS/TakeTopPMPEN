@@ -34,7 +34,7 @@
                         <table id="AboveTable" cellpadding="0" width="1500px" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -42,7 +42,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMuDaoChuDaoRu%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
@@ -57,12 +57,12 @@
                             </tr>
                             <tr>
                                 <td style="padding-left: 5px;">
-                                    <table align="center" cellpadding="0" cellspacing="0" width="100%">
+                                    <table align="left" cellpadding="0" cellspacing="0" width="100%">
                                         <tr>
                                             <td align="left">
                                                 <table width="50%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: right">
+                                                        <td class="formItemBgStyle" style="">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XMDCJKBM%>"></asp:Label>
                                                             £º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
@@ -77,7 +77,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyle" style="text-align: right">
+                                                        <td class="formItemBgStyle" style="">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XMDRJKBM%>"></asp:Label>
                                                             £º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">

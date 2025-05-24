@@ -49,7 +49,7 @@
                     <table id="AboveTable" cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <%--<a href="TTAPPRegularWLMain.aspx" target ="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
@@ -58,7 +58,7 @@
                                                     <tr>
                                                         <td width="29">
                                                             <img src="ImagesSkin/return.png" alt="" width="29" height="31" /></td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                             <asp:Label runat="server" Text="<%$ Resources:lang,Back%>" />
                                                         </td>
                                                         <td width="5">
@@ -90,29 +90,29 @@
                                                     <td>
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
-                                                                <td width="5%" align="center">
+                                                                <td width="5%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BianJi %>" /></strong>
                                                                 </td>
-                                                                <td width="5%" align="center">
+                                                                <td width="5%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label63" runat="server" Text="<%$ Resources:lang,ShanChu %>" /></strong>
                                                                 </td>
-                                                                <td width="10%" align="center">
+                                                                <td width="10%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label64" runat="server" Text="<%$ Resources:lang,FaQiShengQing%>" /></strong>
                                                                 </td>
 
-                                                                <td width="15%" align="center">
+                                                                <td width="15%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,DanHao%>"></asp:Label></strong>
                                                                 </td>
-                                                                <td width="40%" align="center">
+                                                                <td width="40%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label></strong>
                                                                 </td>
 
-                                                                <td align="center">
+                                                                <td align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label></strong>
                                                                 </td>
@@ -129,20 +129,20 @@
                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
                                                     <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
                                                         <ItemTemplate>
                                                             <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                         </ItemTemplate>
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                     </asp:TemplateColumn>
                                                     <asp:ButtonColumn ButtonType="LinkButton" CommandName="Assign" Text="&lt;div&gt;&lt;img src=ImagesSkin/Assign.png border=0 alt='Deleted' /&gt;&lt;/div&gt;">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                     </asp:ButtonColumn>
 
                                                     <asp:BoundColumn DataField="ECID" HeaderText="ECID">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="ExpenseName" HeaderText="Name">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="40%" />
@@ -158,7 +158,7 @@
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                 <ItemStyle CssClass="itemStyle" />
                                             </asp:DataGrid>
@@ -179,7 +179,7 @@
 
                             <table class="formBgStyle" width="200%" cellpadding="3" cellspacing="0">
                                 <tr style="display: none;">
-                                    <td align="left" style="width: 15%; text-align: right;" class="formItemBgStyle">
+                                    <td align="left" style="width: 15%; " class="formItemBgStyle">
                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>：
                                     </td>
                                     <td align="left" class="formItemBgStyle">
@@ -187,7 +187,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="left" style="text-align: right;" class="formItemBgStyle">
+                                    <td align="left" style="" class="formItemBgStyle">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,FeiYongMingCheng%>"></asp:Label>：
                                     </td>
                                     <td align="left" class="formItemBgStyle">
@@ -206,7 +206,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="left" style="height: 30px; text-align: right;" class="formItemBgStyle">
+                                    <td align="left" style="height: 30px; " class="formItemBgStyle">
                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>：
                                     </td>
                                     <td align="left" style="height: 30px" class="formItemBgStyle">
@@ -238,24 +238,24 @@
                                                 <td>
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
-                                                            <td width="5%" align="center">
+                                                            <td width="5%" align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,BianJi %>" /></strong>
                                                             </td>
-                                                            <td width="5%" align="center">
+                                                            <td width="5%" align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShanChu %>" /></strong>
                                                             </td>
 
-                                                            <td align="center" width="5%"><strong></strong></td>
+                                                            <td align="left" width="5%"><strong></strong></td>
 
-                                                            <td width="30%" align="center"><strong>
+                                                            <td width="30%" align="left"><strong>
                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KeMu %>"></asp:Label></strong> </td>
-                                                            <td width="35%" align="center"><strong>
+                                                            <td width="35%" align="left"><strong>
                                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,MiaoShu %>"></asp:Label></strong> </td>
-                                                            <td width="10%" align="center"><strong>
+                                                            <td width="10%" align="left"><strong>
                                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JinE %>"></asp:Label></strong> </td>
-                                                            <td width="15%" align="center"><strong>
+                                                            <td width="15%" align="left"><strong>
                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,FaShengShiJian %>"></asp:Label></strong> </td>
                                                         </tr>
                                                     </table>
@@ -269,34 +269,34 @@
                                             ForeColor="#333333" GridLines="None">
                                             <Columns>
                                                 <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
                                                     <ItemTemplate>
                                                         <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                     </ItemTemplate>
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                 </asp:TemplateColumn>
                                                 <asp:BoundColumn DataField="ID" HeaderText="ID">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="Account" HeaderText="Subject">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="Description" HeaderText="描述">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="Amount" HeaderText="Amount">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="RegisterDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="发生时间">
-                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                 </asp:BoundColumn>
                                             </Columns>
                                             <EditItemStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <ItemStyle CssClass="itemStyle" />
-                                            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                         </asp:DataGrid><asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label>
 
@@ -321,19 +321,19 @@
 
                             <table class="formBgStyle" cellpadding="3" cellspacing="0" style="width: 200%; text-align: left;">
                                 <tr>
-                                    <td style="width: 155px; text-align: right;" class="formItemBgStyle">
+                                    <td style="width: 155px; " class="formItemBgStyle">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XuHao %>"></asp:Label>： </td>
                                     <td style="width: 150px; text-align: left;" class="formItemBgStyle">
                                         <asp:Label ID="LB_DetailID" runat="server"></asp:Label>
                                     </td>
-                                    <td style="width: 106px; text-align: right;" class="formItemBgStyle">
+                                    <td style="width: 106px; " class="formItemBgStyle">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JinE %>"></asp:Label>： </td>
                                     <td style="" class="formItemBgStyle">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Amount" runat="server" Width="85px" OnBlur="" OnFocus=""
                                             OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 155px; text-align: right;" class="formItemBgStyle">
+                                    <td style="width: 155px; " class="formItemBgStyle">
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KeMu %>"></asp:Label>： </td>
                                     <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_Account" runat="server" Width="202px"></asp:TextBox><asp:DropDownList ID="DL_Account" runat="server" AutoPostBack="True" DataTextField="AccountName"
@@ -342,13 +342,13 @@
                                         </asp:DropDownList><asp:Label ID="lbl_AccountCode" runat="server" Visible="False"></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 155px; text-align: right" class="formItemBgStyle">
+                                    <td style="width: 155px;" class="formItemBgStyle">
                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MiaoShu %>"></asp:Label>： </td>
                                     <td colspan="3" style="text-align: left" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_Description" runat="server" Width="543px"></asp:TextBox></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 155px; text-align: right" class="formItemBgStyle">
+                                    <td style="width: 155px;" class="formItemBgStyle">
                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,FaShengShiJian %>"></asp:Label>： </td>
                                     <td colspan="3" style="width: 150px; text-align: left" class="formItemBgStyle">
                                         <asp:TextBox ID="DLC_RegisterDate" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_RegisterDate" Enabled="True"></ajaxToolkit:CalendarExtender>
@@ -400,11 +400,11 @@
                                                 <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label><asp:Label ID="LB_UserName" runat="server" Visible="False"></asp:Label></td>
                                         </tr>
                                         <tr>
-                                            <td align="center" style="height: 22px; text-align: left;">
+                                            <td align="left" style="height: 22px; text-align: left;">
                                                 <asp:Label ID="Label21" runat="server"></asp:Label><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,DuiYingGongZuoLiuLieBiao%>"></asp:Label>： </td>
                                         </tr>
                                         <tr>
-                                            <td align="center">
+                                            <td align="left">
                                                 <table width="98%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td width="7">
@@ -412,15 +412,15 @@
                                                         <td>
                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
-                                                                    <td width="10%" align="center"><strong>
+                                                                    <td width="10%" align="left"><strong>
                                                                         <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong> </td>
-                                                                    <td width="40%" align="center"><strong>
+                                                                    <td width="40%" align="left"><strong>
                                                                         <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,GongZuoLiu%>"></asp:Label></strong> </td>
-                                                                    <td width="20%" align="center"><strong>
+                                                                    <td width="20%" align="left"><strong>
                                                                         <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,ShenQingShiJian%>"></asp:Label></strong> </td>
-                                                                    <td width="20%" align="center"><strong>
+                                                                    <td width="20%" align="left"><strong>
                                                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label></strong> </td>
-                                                                    <td width="10%" align="center"><strong></strong></td>
+                                                                    <td width="10%" align="left"><strong></strong></td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -434,19 +434,19 @@
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
                                                         <asp:BoundColumn DataField="WLID" HeaderText="Number">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
                                                             DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn HeaderText="Status">
                                                             <ItemTemplate>
@@ -459,7 +459,7 @@
                                                                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=WorkFlow&WLID={0}") %>'
                                                                     Target="_blank"><img  class="noBorder" src="ImagesSkin/Doc.gif" /></asp:HyperLink>
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:TemplateColumn>
                                                     </Columns>
                                                 </asp:DataGrid>

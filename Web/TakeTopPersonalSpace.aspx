@@ -330,12 +330,12 @@
                 </asp:UpdatePanel>
                 <table border="0" align="right" cellpadding="0" cellspacing="0">
                     <tr>
-                        <td width="20px" align="center" style="padding-top: 10px;display:none;">
+                        <td width="20px" align="left" style="padding-top: 10px;display:none;">
                             <asp:Button ID="BT_PopMsg" runat="server" CssClass="inpu" OnClientClick="javascript:clickPopMsgWindow();"
                                 Text="M" Width="23px" Height="20px" />
                         </td>
                         <td style="width: 20px;"></td>
-                        <td align="center" style="padding-top: 7px; padding-bottom: 0px;">
+                        <td align="left" style="padding-top: 7px; padding-bottom: 0px;">
                             <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTUpdateUserInfor.aspx', 'UserInformation', 800, 600, window.location);">
                                 <div class="container">
                                     <div id="div_username">
@@ -348,15 +348,15 @@
                             </a>
                         </td>
                         <td style="width: 5px;"></td>
-                        <td width="40px" align="center" style="padding-top: 7px; padding-bottom: 4px;">
+                        <td width="40px" align="left" style="padding-top: 7px; padding-bottom: 4px;">
                             <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTSystemAnalystChartRelatedUserSet.aspx?FormType=PersonalSpacePage', 'AnalysisChartSelect', 800, 600, window.location);">
                                 <img src="ImagesSkin/AnalystChart.png" width="22" height="22"></a>
                         </td>
-                        <td width="40px" align="center" style="padding-top: 7px; padding-bottom: 5px;">
+                        <td width="40px" align="left" style="padding-top: 7px; padding-bottom: 5px;">
                             <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTPersonalSpaceModuleSetForUser.aspx', 'ModuleSelect', 800, 600, window.location);">
                                 <img src="ImagesSkin/ModuleSelect.png" width="22" height="22"></a>
                         </td>
-                        <td width="40px" align="center" style="padding-top: 7px; padding-bottom: 5px;">
+                        <td width="40px" align="left" style="padding-top: 7px; padding-bottom: 5px;">
                             <asp:HyperLink ID="HL_AIURL" runat="server" NavigateUrl="https://www.deepseek.com" Target="_blank" Visible="false">
                                 <img src="ImagesSkin/AI.png" width="22" height="22" alt="">
                             </asp:HyperLink>
@@ -365,11 +365,11 @@
                             </a>
                         </td>
 
-                        <td width="40px" align="center" style="padding-top: 7px; padding-bottom: 5px;">
+                        <td width="40px" align="left" style="padding-top: 7px; padding-bottom: 5px;">
                             <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAPPQRCodeForLocalSAAS.aspx', '', 800, 600,window.location);">
                                 <img src="ImagesSkin/App.png" width="22" height="22"></a>
                         </td>
-                        <td width="40px" align="center" style="padding-top: 7px; padding-bottom: 5px;">
+                        <td width="40px" align="left" style="padding-top: 7px; padding-bottom: 5px;">
                             <asp:ImageButton ID="IM_ExitSystem" ImageUrl="ImagesSkin/exit.png" Width="25" Height="23"
                                 OnClientClick="javascript:if (confirm(getExitMsgByLangCode())){top.location.href = 'Default.aspx';}"
                                 runat="server" />

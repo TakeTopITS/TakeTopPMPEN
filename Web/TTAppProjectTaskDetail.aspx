@@ -386,7 +386,7 @@
                                 <table cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td height="31" class="page_topbj">
-                                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td align="left">
                                                         <%--<a href="TTAppTask.aspx" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
@@ -396,7 +396,7 @@
                                                                     <td width="29">
                                                                         <img src="ImagesSkin/return.png" alt="" />
                                                                     </td>
-                                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                                         <asp:Label runat="server" Text="<%$ Resources:lang,Back%>" />
                                                                     </td>
                                                                     <td width="5">
@@ -690,7 +690,7 @@
 
                                                                                                     <%-- <ItemStyle CssClass="itemStyle" />--%>
 
-                                                                                                    <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                                                                                 </asp:DataGrid>
@@ -883,7 +883,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td style="width: 60px; padding: 2px 2px 2px 2px;" valign="top" align="center">
+                                    <td style="width: 60px; padding: 2px 2px 2px 2px;" valign="top" align="left">
                                         <asp:ImageButton ID="IMBT_Close" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                     </td>
                                 </tr>

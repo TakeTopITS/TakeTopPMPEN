@@ -26,7 +26,7 @@
             <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                 <tr>
                     <td height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -34,7 +34,7 @@
                                             <td width="29">
                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                             </td>
-                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YouJianLieBiao%>"></asp:Label>
                                             </td>
                                             <td width="5">
@@ -60,23 +60,23 @@
                                             <td>
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tr>
-                                                        <td width="40%" align="center">
+                                                        <td width="40%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WenJianJiaMingCheng%>"></asp:Label></strong>
                                                         </td>
-                                                        <td width="15%" align="center">
+                                                        <td width="15%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YouJianZongShu%>"></asp:Label></strong>
                                                         </td>
-                                                        <td width="15%" align="center">
+                                                        <td width="15%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YouJianShuLiang%>"></asp:Label></strong>
                                                         </td>
-                                                        <td width="10%" align="center">
+                                                        <td width="10%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenJianJiaDaXiao%>"></asp:Label></strong>
                                                         </td>
-                                                        <td width="20%" align="center">
+                                                        <td width="20%" align="left">
                                                             <strong>
                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label></strong>
                                                         </td>
@@ -108,19 +108,19 @@
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem,"Total") %>
                                                 </ItemTemplate>
-                                                <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="15%" />
+                                                <ItemStyle Horizontalalign="left" CssClass="itemBorder" Width="15%" />
                                             </asp:TemplateField>
                                             <asp:TemplateField HeaderText="邮件数量">
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem,"NoReader") %>
                                                 </ItemTemplate>
-                                                <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="15%" />
+                                                <ItemStyle Horizontalalign="left" CssClass="itemBorder" Width="15%" />
                                             </asp:TemplateField>
                                             <asp:TemplateField HeaderText="文件夹大小">
                                                 <ItemTemplate>
                                                     <%# (int)DataBinder.Eval(Container.DataItem,"Contain")/1024 %>KB
                                                 </ItemTemplate>
-                                                <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="10%" />
+                                                <ItemStyle Horizontalalign="left" CssClass="itemBorder" Width="10%" />
                                             </asp:TemplateField>
                                             <asp:TemplateField HeaderText="Operation">
                                                 <ItemTemplate>
@@ -129,11 +129,11 @@
                                             <asp:ImageButton ID="DeleteBtn" runat="server" CommandName="delete" Visible='<%# (bool)DataBinder.Eval(Container.DataItem,"Flag") && ((int)DataBinder.Eval(Container.DataItem,"Total") > 0 ? false : true) %>'
                                                 ImageUrl="~/Images/delete.gif" AlternateText="删除文件夹" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"FolderID") %>' />&nbsp;&nbsp;&nbsp;
                                                 </ItemTemplate>
-                                                <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="20%" />
+                                                <ItemStyle Horizontalalign="left" CssClass="itemBorder" Width="20%" />
                                             </asp:TemplateField>
                                         </Columns>
                                         <AlternatingRowStyle BackColor="White" />
-                                        <PagerStyle HorizontalAlign="Center" />
+                                        <PagerStyle Horizontalalign="center" />
                                         <EditRowStyle BorderColor="CornflowerBlue" BorderWidth="1px" BackColor="#2461BF" />
                                     </asp:GridView>
                                 </td>

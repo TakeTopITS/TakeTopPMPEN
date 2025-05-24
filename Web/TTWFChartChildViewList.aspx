@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartChildViewList.aspx.cs" Inherits="TTWFChartChildViewList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartChildViewList.aspx.cs" Inherits="TTWFChartChildViewList" %>
 
 <!DOCTYPE html>
 
@@ -41,16 +41,16 @@
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
 
-                                        <td align="center" width="10%"><strong>
+                                        <td align="left" width="10%"><strong>
                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label>
                                         </strong></td>
-                                        <td width="30%" align="center"><strong>
+                                        <td width="30%" align="left"><strong>
                                             <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,MingChen %>"></asp:Label></strong></td>
-                                        <td align="center" width="10%"><strong>
+                                        <td align="left" width="10%"><strong>
                                             <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FaQiRen %>"></asp:Label>
                                         </strong></td>
 
-                                        <td align="center" width="8%"><strong>
+                                        <td align="left" width="8%"><strong>
                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
                                         </strong></td>
 
@@ -66,7 +66,7 @@
                         PageSize="5" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <Columns>
                             <asp:BoundColumn DataField="WLID" HeaderText="Number">
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                             </asp:BoundColumn>
                             <asp:TemplateColumn>
                                 <ItemTemplate>
@@ -79,11 +79,11 @@
 
                                     </div>
                                 </ItemTemplate>
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
                             </asp:TemplateColumn>
                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                 DataTextField="CreatorName" HeaderText="Applicant" Target="_blank">
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                             </asp:HyperLinkColumn>
                             <asp:TemplateColumn HeaderText="Status">
                                 <ItemTemplate>
@@ -96,7 +96,7 @@
                         <EditItemStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                         <ItemStyle CssClass="itemStyle" />
-                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                     </asp:DataGrid>
                 </div>

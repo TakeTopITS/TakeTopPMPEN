@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfoExtend.aspx.cs" Inherits="TTUserInfoExtend" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfoExtend.aspx.cs" Inherits="TTUserInfoExtend" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -36,7 +36,7 @@
                     <table id="AboveTable" cellpadding="0" width="100%" cellspacing="0" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left" width="380">
                                             <table width="345" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -44,11 +44,11 @@
                                                     <td width="29">
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                         <asp:Label ID="LB_SelectUserCode" runat="server"></asp:Label>
                                                         &nbsp;&nbsp; 
                                                         <asp:Label ID="LB_SelectUserName" runat="server"></asp:Label>&nbsp;
-                                                        <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuanGongDanAnSeZhi%>"></asp:Label>£¨2£©
+                                                        <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuanGongDanAnSeZhi%>"></asp:Label>ï¿½ï¿½2ï¿½ï¿½
                                                     </td>
                                                     <td width="5">
                                                         <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -57,7 +57,7 @@
                                             </table>
                                         </td>
                                         <td style="text-align: center; padding-top: 5px;">
-                                            <asp:Button runat="server" ID="BT_Save" CssClass="inpuYello " Visible="true" Text="±£´æ" OnClick="BT_Save_Click" />
+                                            <asp:Button runat="server" ID="BT_Save" CssClass="inpuYello " Visible="true" Text="ï¿½ï¿½ï¿½ï¿½" OnClick="BT_Save_Click" />
                                         </td>
                                     </tr>
                                 </table>
@@ -70,7 +70,7 @@
                                     cellpadding="3" cellspacing="0">
                                     <tr>
                                         <td style="width: 15%; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label4" runat="server" Text="1¼¶²¿ÃÅ"></asp:Label></td>
+                                            <asp:Label ID="Label4" runat="server" Text="1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"></asp:Label></td>
                                         <td style="width: 35%; text-align: left;" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_TopDepartCode" runat="server"></asp:TextBox>
                                             <asp:Label ID="LB_TopDepartName" runat="server"></asp:Label>
@@ -87,7 +87,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label10" runat="server" Text="°ì¹«µØµã"></asp:Label></td>
+                                            <asp:Label ID="Label10" runat="server" Text="ï¿½ì¹«ï¿½Øµï¿½"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_OfficeAddress" runat="server">
                                                 <asp:ListItem Value="Group" Text="Group" />
@@ -296,7 +296,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label21" runat="server" Text="Éí·ÝÖ¤(ÈËÏñÃæ)"></asp:Label>
+                                            <asp:Label ID="Label21" runat="server" Text="ï¿½ï¿½ï¿½Ö¤(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel6" runat="server" UpdateMode="Conditional">
@@ -315,7 +315,7 @@
                                             </asp:UpdatePanel>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label22" runat="server" Text="Éí·ÝÖ¤(¹ú»ÕÃæ)"></asp:Label>
+                                            <asp:Label ID="Label22" runat="server" Text="ï¿½ï¿½ï¿½Ö¤(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
@@ -336,7 +336,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label23" runat="server" Text="Ñ§ÀúÖ¤Êé"></asp:Label>
+                                            <asp:Label ID="Label23" runat="server" Text="Ñ§ï¿½ï¿½Ö¤ï¿½ï¿½"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
@@ -353,7 +353,7 @@
                                             </asp:UpdatePanel>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label24" runat="server" Text="Ñ§Î»Ö¤Êé"></asp:Label>
+                                            <asp:Label ID="Label24" runat="server" Text="Ñ§Î»Ö¤ï¿½ï¿½"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel4" runat="server" UpdateMode="Conditional">
@@ -372,7 +372,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label25" runat="server" Text="Ç°¹«Ë¾ÀëÖ°Ö¤Ã÷"></asp:Label>
+                                            <asp:Label ID="Label25" runat="server" Text="Ç°ï¿½ï¿½Ë¾ï¿½ï¿½Ö°Ö¤ï¿½ï¿½"></asp:Label>
                                         </td>
                                         <td colspan="3" class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">
@@ -410,7 +410,7 @@
                                         <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                     </asp:TreeView>
                                 </td>
-                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                     <asp:ImageButton ID="IMB_CloseDepartment" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                 </td>
                             </tr>

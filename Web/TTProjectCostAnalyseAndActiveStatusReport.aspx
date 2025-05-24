@@ -43,7 +43,7 @@
                                     <td width="100px" style="padding-top: 5px;">
                                         <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,chaxun%>" />
                                     </td>
-                                    <td width="100px" align="center" style="padding-top: 5px;">
+                                    <td width="100px" align="left" style="padding-top: 5px;">
                                         <a href="#" onclick="document.getElementById('DIV_HidePrint').style.display='none';print();document.getElementById('DIV_HidePrint').style.display='block';">
 
                                             <img src="ImagesSkin/print.gif" alt="打印" border="0" />
@@ -56,7 +56,7 @@
 
                             <table border="0" cellpadding="0" cellspacing="0" width="2000" style="border-collapse: collapse;">
                                 <tr>
-                                    <td colspan="19" align="center" style="font-size: xx-large; padding-top: 10px; border: unset; height: 20px;">
+                                    <td colspan="19" align="left" style="font-size: xx-large; padding-top: 10px; border: unset; height: 20px;">
                                         <br />
                                         项目成本分析及动态管理表
                                         <br />
@@ -76,7 +76,7 @@
                                     </td>
                                     <td class="auto-style374" colspan="5" style="text-align: center;">项目名称：<asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                     </td>
-                                    <td colspan="3" class="auto-style262" width="216" align="center">日期：<asp:Label ID="LB_ReportTime" runat="server"></asp:Label>
+                                    <td colspan="3" class="auto-style262" width="216" align="left">日期：<asp:Label ID="LB_ReportTime" runat="server"></asp:Label>
                                     </td>
                                     <td class="auto-style374" width="186" align="left" colspan="6">
                                         <asp:Label ID="LB_YearMonth" runat="server" Visible="false"></asp:Label>
@@ -2359,7 +2359,7 @@
                                     <td width="40%">
                                         <table border="1" cellpadding="0" cellspacing="0" width="800" style='border-collapse: collapse; text-align: center;'>
                                             <tr height="53" style="height: 39.65px">
-                                                <td colspan="3" height="53" align="center" style="height: 39.65px; font-size: x-large;">
+                                                <td colspan="3" height="53" align="left" style="height: 39.65px; font-size: x-large;">
                                                     <br />
                                                     奖金包干总额月度奖金额明细表
                                                     <br />
@@ -2422,7 +2422,7 @@
                                                 </td>
                                             </tr>
                                             <tr height="17" style="height: 13.0px">
-                                                <td colspan="3" height="17" align="center" style="height: 13.0px; border-top-style: none; border-top-color: inherit; border-top-width: medium;">
+                                                <td colspan="3" height="17" align="left" style="height: 13.0px; border-top-style: none; border-top-color: inherit; border-top-width: medium;">
 
                                                     <table border="1" cellpadding="0" cellspacing="0" width="100%" style="text-align: center;">
                                                         <tr height="31" style="height: 23.0px">
@@ -2446,27 +2446,27 @@
                                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                         <EditItemStyle BackColor="#2461BF" />
                                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
-                                                        <ItemStyle CssClass="itemStyle" HorizontalAlign="Center" />
+                                                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                        <ItemStyle CssClass="itemStyle" Horizontalalign="left" />
                                                         <Columns>
 
                                                             <asp:BoundColumn DataField="MonthNumber" HeaderText="Month">
-                                                                <ItemStyle CssClass="itemBorder" BorderWidth="1" HorizontalAlign="center" Width="15%" />
+                                                                <ItemStyle CssClass="itemBorder" BorderWidth="1" Horizontalalign="left" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Profit" HeaderText="利润">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="15%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Clearing" HeaderText="结算">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="15%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ReturnMoney" HeaderText="回款">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="QHSE" HeaderText="QHSE 打分">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Progress" HeaderText="Progress">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                             </asp:BoundColumn>
 
                                                         </Columns>
@@ -2519,7 +2519,7 @@
                                     <td width="60%">
                                         <table border="1" cellpadding="0" cellspacing="0" width="1180px" style='border-collapse: collapse;'>
                                             <tr height="53">
-                                                <td height="53" align="center" style="font-size: x-large;">
+                                                <td height="53" align="left" style="font-size: x-large;">
                                                     <br />
                                                     项目成本收入分析总图
                                                     <br />
@@ -2527,7 +2527,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="center">
+                                                <td align="left">
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr height="31" style="height: 23.0px">
                                                             <td height="31" style="height: 23.0px; border-top: none; text-align: center; width: 20%">时段</td>
@@ -2546,30 +2546,30 @@
                                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                         <EditItemStyle BackColor="#2461BF" />
                                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
-                                                        <ItemStyle CssClass="itemStyle" HorizontalAlign="Center" />
+                                                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                        <ItemStyle CssClass="itemStyle" Horizontalalign="left" />
                                                         <Columns>
                                                             <asp:BoundColumn DataField="MonthNumber" HeaderText="Month">
-                                                                <ItemStyle CssClass="itemBorder" BorderWidth="1" HorizontalAlign="center" Width="20%" />
+                                                                <ItemStyle CssClass="itemBorder" BorderWidth="1" Horizontalalign="left" Width="20%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="CurrentMonthTotalCost" HeaderText="目标成本（二次）">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="20%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="CumulativeActualTaxCost" HeaderText="累计实际发生成本（税前 ）">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="20%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="CumulativeActualAfterTaxCost" HeaderText="累计实际发生成本（税后）">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="AccumulationSettlement" HeaderText="累计结算">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                                                             </asp:BoundColumn>
                                                         </Columns>
                                                     </asp:DataGrid>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="center">
+                                                <td align="left">
                                                       <iframe runat="server" id="IFrame_Chart1" src="TTTakeTopAnalystChartSet.aspx" style="width: 800px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
 
 

@@ -18,27 +18,27 @@
                 <td>
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td width="10%" align="center">
+                            <td width="10%" align="left">
                                 <strong>
                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label></strong>
                             </td>
-                            <td width="30%" align="center">
+                            <td width="30%" align="left">
                                 <strong>
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaNeiRong%>"></asp:Label></strong>
                             </td>
-                            <td width="15%" align="center">
+                            <td width="15%" align="left">
                                 <strong>
                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label></strong>
                             </td>
-                            <td width="15%" align="center">
+                            <td width="15%" align="left">
                                 <strong>
                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label></strong>
                             </td>
-                            <td width="20%" align="center">
+                            <td width="20%" align="left">
                                 <strong>
                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZiYuan%>"></asp:Label></strong>
                             </td>
-                            <td width="10%" align="center">
+                            <td width="10%" align="left">
                                 <strong>
                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChengBen%>"></asp:Label></strong>
                             </td>
@@ -54,22 +54,22 @@
             ShowHeader="false">
             <Columns>
                 <asp:BoundColumn DataField="WorkID" HeaderText="SerialNumber">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="PlanDetail" HeaderText="计划内容">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="BeginTime" HeaderText="StartTime">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="EndTime" HeaderText="EndTime">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="Resource" HeaderText="资源">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="Cost" HeaderText="Cost">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                 </asp:BoundColumn>
             </Columns>
             <ItemStyle CssClass="itemStyle" />

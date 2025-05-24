@@ -46,7 +46,7 @@
             <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                 <tr>
                     <td colspan="2" height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <%--<a href ="TTAPPNews.aspx" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
@@ -56,7 +56,7 @@
                                             <td width="29">
                                                 <img src="ImagesSkin/return.png" alt=""  />
                                             </td>
-                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
+                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP"><asp:Label runat ="server" Text="<%$ Resources:lang,Back%>" />
                                             </td>
                                             <td width="5">
                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -74,7 +74,7 @@
                     <td align="left" valign="top">
                         <table width="100%" cellpadding="5" cellspacing="0">
                             <tr>
-                                <td align="center">
+                                <td align="left">
                                     <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                     &nbsp;<asp:Label ID="LB_Title" runat="server"></asp:Label>
                                     <br />

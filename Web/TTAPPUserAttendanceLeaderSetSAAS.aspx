@@ -54,7 +54,7 @@
                    
                         <tr>
                             <td height="31" class="page_topbj" width="100%">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <a href="TakeTopAPPMain.aspx" target ="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -62,7 +62,7 @@
                                                     <tr>
                                                         <td width="29">
                                                             <img src="ImagesSkin/return.png" alt="" width="29" height="31" /></td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                             <asp:Label ID="Label1" runat ="server" Text="<%$ Resources:lang,Back%>" />
                                                         </td>
                                                         <td width="5">
@@ -103,11 +103,11 @@
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
                                                               
-                                                                <td width="4%" align="center">
+                                                                <td width="4%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuGuan%>"></asp:Label></strong>
                                                                 </td>
-                                                                  <td align="center" width="6%"><strong></strong> </td>
+                                                                  <td align="left" width="6%"><strong></strong> </td>
 
                                                             </tr>
                                                         </table>
@@ -121,15 +121,15 @@
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle HorizontalAlign="Center" />
+                                                <PagerStyle Horizontalalign="center" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
                                                      <asp:BoundColumn DataField="ID" HeaderText="ID" Visible ="false" >
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center"  />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left"  />
                                                     </asp:BoundColumn>
 
                                                      <asp:TemplateColumn HeaderText="ID">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
+                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                                             <ItemTemplate>
                                                                   <%# DataBinder.Eval(Container.DataItem,"LeaderName") %>
                                                                 <br />
@@ -137,10 +137,10 @@
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
                                                     <%--<asp:BoundColumn DataField="LeaderName" HeaderText="Ö÷¹Ü">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
                                                     </asp:BoundColumn>--%>
                                                       <asp:TemplateColumn HeaderText="ID">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu"
                                                                Text="<%$ Resources:lang,TuiChu%>"/>

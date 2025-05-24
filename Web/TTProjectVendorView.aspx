@@ -31,14 +31,14 @@
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <table width="300" border="0" align="left" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td width="29">
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,GongYingShangZiLiao%>"></asp:Label>
                                                     </td>
                                                     <td width="5">
@@ -62,11 +62,11 @@
                                                     <td>
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
-                                                                <td width="10%" align="center">
+                                                                <td width="10%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label></strong>
                                                                 </td>
-                                                                <td width="30%" align="center">
+                                                                <td width="30%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label></strong>
                                                                 </td>
@@ -86,7 +86,7 @@
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_VendorCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"VendorCode") %>' CssClass="inpu" />
                                                         </ItemTemplate>
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                     </asp:TemplateColumn>
                                                     <asp:BoundColumn DataField="VendorName" HeaderText="Name">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
@@ -98,7 +98,7 @@
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             </asp:DataGrid>
                                         </td>
                                         <td class="formItemBgStyle" style="width: 80%;">
@@ -295,7 +295,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                                    <td align="center" class="formItemBgStyle">
+                                                    <td align="left" class="formItemBgStyle">
                                                         <asp:HyperLink ID="HL_RelatedContactInfor" runat="server" Enabled="False" Target="_blank">
                                                             ---&gt;<asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,XiangGuanLianXiRen %>"></asp:Label>
                                                         </asp:HyperLink>

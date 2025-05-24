@@ -42,7 +42,7 @@
                         <table id="Table4" cellpadding="0" width="100%" cellspacing="0" class="bian">
                             <tr>
                                 <td height="31" class="page_topbj">
-                                    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -50,7 +50,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作量登记日志
+                                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">实际工作量登记日志
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -73,7 +73,7 @@
                             </tr>
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px" valign="top" width="100%">
-                                    <table align="center" border="1" cellpadding="0" cellspacing="0" width="96%">
+                                    <table align="left" border="1" cellpadding="0" cellspacing="0" width="96%">
                                         <tr>
                                             <td>
                                                 <asp:GridView ID="gvConfirmWorkLog" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" AllowPaging="True" OnPageIndexChanging="gvConfirmWorkLog_PageIndexChanging" OnRowDataBound="gvConfirmWorkLog_RowDataBound">
@@ -94,7 +94,7 @@
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                                                     <PagerSettings Mode="NextPreviousFirstLast" />
-                                                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                                    <PagerStyle BackColor="#284775" ForeColor="White" Horizontalalign="left" />
                                                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                                     <SortedAscendingCellStyle BackColor="#E9E7E2" />

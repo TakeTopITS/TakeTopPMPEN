@@ -336,7 +336,7 @@
 
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
                                         <tr style="height: 37px;">
-                                            <td align="center" width="20">
+                                            <td align="left" width="20">
                                                 <a href="javascript:ChangeMenu(1)">¡ñ
                                                 </a>
                                             </td>
@@ -386,7 +386,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td align="center">
-                                            <table width="91%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <table width="91%" border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
                                                     <td height="45">
 
@@ -434,7 +434,7 @@
                             <td>
                                 <table width="87%" border="0" cellspacing="0" cellpadding="0" align="right">
                                     <tr>
-                                        <td width="10%" align="center" height="3" valign="middle" style="padding-right: 5px;"></td>
+                                        <td width="10%" align="left" height="3" valign="middle" style="padding-right: 5px;"></td>
                                         <td height="3"></td>
                                     </tr>
                                 </table>

@@ -157,7 +157,7 @@
                             <ItemTemplate>
                                 <%#DataBinder .Eval (Container.DataItem ,"Content") %>
                             </ItemTemplate>
-                            <%--  <ItemStyle HorizontalAlign="center" />--%>
+                            <%--  <ItemStyle Horizontalalign="left" />--%>
                         </asp:DataList>
                     </td>
                 </tr>

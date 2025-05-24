@@ -18,27 +18,27 @@
                 <td>
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td width="10%" align="center">
+                            <td width="10%" align="left">
                                 <strong>
                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label></strong>
                             </td>
-                            <td width="15%" align="center">
+                            <td width="15%" align="left">
                                 <strong>
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FeiYongID%>"></asp:Label></strong>
                             </td>
-                            <td width="20%" align="center">
+                            <td width="20%" align="left">
                                 <strong>
                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KeMu%>"></asp:Label></strong>
                             </td>
-                            <td width="30%" align="center">
+                            <td width="30%" align="left">
                                 <strong>
                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label></strong>
                             </td>
-                            <td width="10%" align="center">
+                            <td width="10%" align="left">
                                 <strong>
                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JinE%>"></asp:Label></strong>
                             </td>
-                            <td width="15%" align="center">
+                            <td width="15%" align="left">
                                 <strong>
                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,FaShengShiJian%>"></asp:Label></strong>
                             </td>
@@ -55,27 +55,27 @@
             
             <Columns>
                 <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="RelatedExpenseID" HeaderText="费用ID">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="Account" HeaderText="Subject">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="Description" HeaderText="描述">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="Amount" HeaderText="Amount">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                 </asp:BoundColumn>
                 <asp:BoundColumn DataField="RegisterDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="登记时间">
-                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                 </asp:BoundColumn>
             </Columns>
             <ItemStyle CssClass="itemStyle" />
             <HeaderStyle />
-            <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
         </asp:DataGrid>
         </form>
     </center>

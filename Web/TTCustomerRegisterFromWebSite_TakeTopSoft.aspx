@@ -81,7 +81,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="center" style="padding-top :15px;" >
+                                <td align="left" style="padding-top :15px;" >
                                   <table border="0" cellpadding="0" cellspacing="3" class="zi" style="width: 100%; text-align: left;">
                                         <tr>
                                             <td align="right" class="formItemBgStyle" style="width: 27%;">
@@ -177,7 +177,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2" align="center" class="formItemBgStyle">
+                                                <td colspan="2" align="left" class="formItemBgStyle">
                                                     <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes" ><img align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a class="call" href="tel:02151085119" >021-51085119</a>
                                                 </td>
                                             </tr>

@@ -81,7 +81,7 @@
                                             <td width="30" align="right">
                                                 <img src="ImagesSkin/Return.png" alt="" />
                                             </td>
-                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                             </td>
 

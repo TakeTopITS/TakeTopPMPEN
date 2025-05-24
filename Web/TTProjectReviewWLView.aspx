@@ -20,23 +20,23 @@
                     <td>
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td width="10%" align="center">
+                                <td width="10%" align="left">
                                     <strong>
                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                 </td>
-                                <td width="40%" align="center">
+                                <td width="40%" align="left">
                                     <strong>
                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongZuoLiu%>"></asp:Label></strong>
                                 </td>
-                                <td width="20%" align="center">
+                                <td width="20%" align="left">
                                     <strong>
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShenQingShiJian%>"></asp:Label></strong>
                                 </td>
-                                <td width="20%" align="center">
+                                <td width="20%" align="left">
                                     <strong>
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label></strong>
                                 </td>
-                                <td width="10%" align="center">
+                                <td width="10%" align="left">
                                     <strong></strong>
                                 </td>
                             </tr>
@@ -48,18 +48,18 @@
             </table>
             <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" Height="1px" ShowHeader="false"
                 PageSize="5" Width="99%">
-                <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                 <ItemStyle CssClass="itemStyle" />
 
                 <Columns>
                     <asp:BoundColumn DataField="WLID" HeaderText="Number">
-                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                     </asp:BoundColumn>
                     <asp:BoundColumn DataField="WLName" HeaderText="Workflow">
-                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
+                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="40%" />
                     </asp:BoundColumn>
                     <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
-                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
                     </asp:BoundColumn>
                     <asp:TemplateColumn HeaderText="Status">
                         <ItemTemplate>
@@ -72,10 +72,10 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=Review&WLID={0}") %>'
                                 Target="_blank"><img src="ImagesSkin/Doc.gif" class="noBorder"/></asp:HyperLink>
                         </ItemTemplate>
-                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                     </asp:TemplateColumn>
                 </Columns>
-                <HeaderStyle HorizontalAlign="Center" />
+                <HeaderStyle Horizontalalign="left" />
             </asp:DataGrid>
         </form>
     </center>

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateChildTemplateList.aspx.cs" Inherits="TTWorkFlowTemplateChildTemplateList" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateChildTemplateList.aspx.cs" Inherits="TTWorkFlowTemplateChildTemplateList" %>
 
 <!DOCTYPE html>
 
@@ -41,13 +41,13 @@
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                        
-                                        <td width="30%" align="center"><strong>
+                                        <td width="30%" align="left"><strong>
                                             <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,MoBanMingChen %>"></asp:Label></strong></td>
-                                        <td width="15%" align="center"><strong>
+                                        <td width="15%" align="left"><strong>
                                             <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,ShiFouBiXu2 %>"></asp:Label></strong></td>
-                                        <td width="15%" align="center"><strong>
+                                        <td width="15%" align="left"><strong>
                                             <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,JieShuGuiShuBuXu %>"></asp:Label></strong></td>
-                                        <td width="15%" align="center"><strong>
+                                        <td width="15%" align="left"><strong>
                                             <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,JieShuYaoQiuTongGuo %>"></asp:Label></strong></td>
                                     </tr>
                                 </table>
@@ -62,23 +62,23 @@
                         <Columns>
                           
                             <asp:HyperLinkColumn DataNavigateUrlField="identifystring" DataNavigateUrlFormatString="TTWorkFlowDesignerJS.aspx?identifystring={0}"
-                                DataTextField="RelatedWFTemName" HeaderText="Ä£°åÃû³Æ" Target="_blank">
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                DataTextField="RelatedWFTemName" HeaderText="Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Target="_blank">
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
                             </asp:HyperLinkColumn>
-                            <asp:BoundColumn DataField="Requisite" HeaderText="ÊÇ·ñ±ØÐë">
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                            <asp:BoundColumn DataField="Requisite" HeaderText="ï¿½Ç·ï¿½ï¿½ï¿½ï¿½">
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                             </asp:BoundColumn>
-                            <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="½áÊø¹éÊô²½Öè">
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                            <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½">
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                             </asp:BoundColumn>
-                            <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="½áÊøÒªÇóÍ¨¹ý">
-                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                            <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Í¨ï¿½ï¿½">
+                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                             </asp:BoundColumn>
                         </Columns>
                         <EditItemStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                         <ItemStyle CssClass="itemStyle" />
-                        <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                     </asp:DataGrid>
                 </div>

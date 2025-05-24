@@ -44,7 +44,7 @@
                      <div id="AboveDiv">
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
-                            <td height="31" align="center" s class="page_topbj">
+                            <td height="31" align="left" s class="page_topbj">
                                 <table width="900px" border="0" cellpadding="0" cellspacing="0" style="padding: 5px 5px 5px 5px;">
                                     <tr>
                                         <td>
@@ -97,7 +97,7 @@
                                             <asp:Button ID="BT_Export" runat="server" CssClass="inpu" Font-Size="10pt" OnClick="BT_Export_Click"
                                                 Text="<%$ Resources:lang,DaoChu%>" />
                                         </td>
-                                        <td align="center" style="padding-top: 5px;">
+                                        <td align="left" style="padding-top: 5px;">
                                             <a href="#" onclick="preview1()">
                                                 <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                             </a>
@@ -131,7 +131,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="center">
+                            <td align="left">
                                 <!--startprint1-->
                                 <table cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
@@ -168,7 +168,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                         <asp:ImageButton ID="IMBT_Close" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                     </td>
                                 </tr>
@@ -189,7 +189,7 @@
                                             <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                         </asp:TreeView>
                                     </td>
-                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="center">
+                                    <td style="width: 60px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                         <asp:ImageButton ID="ImageButton1" ImageUrl="ImagesSkin/Close4.jpg" runat="server" />
                                     </td>
                                 </tr>

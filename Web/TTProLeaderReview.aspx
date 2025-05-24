@@ -34,7 +34,7 @@
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
                             <td height="31" class="page_topbj">
-                                <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left">
                                             <table width="300" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -42,7 +42,7 @@
                                                     <td width="29">
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMuPingHe %>"></asp:Label>
                                                     </td>
                                                     <td width="5">
@@ -80,7 +80,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" style="padding: 5px 5px 5px 5px;">
+                            <td align="left" style="padding: 5px 5px 5px 5px;">
                                 <br />
                                 <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click" Text="<%$ Resources:lang,FaSong %>" CssClass="inpuLong" />
                                 &nbsp; &nbsp;
@@ -133,13 +133,13 @@
                                                 <td>
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
-                                                            <td width="10%" align="center">
+                                                            <td width="10%" align="left">
                                                                 <strong><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label></strong>
                                                             </td>
-                                                            <td width="70%" align="center">
+                                                            <td width="70%" align="left">
                                                                 <strong><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,PingHeRiQi %>"></asp:Label></strong>
                                                             </td>
-                                                            <td width="20%" align="center">
+                                                            <td width="20%" align="left">
                                                                 <strong><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,PingHeRen %>"></asp:Label></strong>
                                                             </td>
                                                         </tr>

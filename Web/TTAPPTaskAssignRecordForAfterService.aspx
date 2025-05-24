@@ -251,7 +251,7 @@
                 <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                     <tr>
                         <td height="31" class="page_topbj">
-                            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
                                         <a href="TakeTopAPPMain.aspx" target="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -260,7 +260,7 @@
                                                     <td width="29">
                                                         <img src="ImagesSkin/return.png" alt="" />
                                                     </td>
-                                                    <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                    <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                     </td>
                                                     <td width="5">
@@ -277,7 +277,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td valign="top" align="center" style="padding: 5px 2px  0px 5px;">
+                        <td valign="top" align="left" style="padding: 5px 2px  0px 5px;">
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="right" class="formItemBgStyle">
@@ -290,7 +290,7 @@
                                         <asp:Button ID="BT_FindAll" runat="server" CssClass="inpuQuery" OnClick="BT_FindAll_Click" />
 
                                     </td>
-                                    <td align="center" class="formItemBgStyle" style="padding-left: 30px; padding-top: 10px;">
+                                    <td align="left" class="formItemBgStyle" style="padding-left: 30px; padding-top: 10px;">
 
                                         <asp:Button ID="BT_Qrcode" runat="server" CssClass="inpuQrCode" OnClientClick="qrcode()" />
                                         <asp:TextBox ID="TB_QrCode" runat="server" Style="display: none;"></asp:TextBox>
@@ -304,10 +304,10 @@
                     <tr>
                         <td>
                             <!--startprint1-->
-                            <table style="width: 98%" align="center">
+                            <table style="width: 98%" align="left">
 
                                 <tr>
-                                    <td align="center">
+                                    <td align="left">
                                         <asp:Image ID="IMG_QrCode" runat="server" />
                                         <asp:DataList ID="DataList2" runat="server" Width="100%" OnItemCommand="DataList2_ItemCommand"
                                             DataKeyField="ID" CellPadding="0" ForeColor="#333333">

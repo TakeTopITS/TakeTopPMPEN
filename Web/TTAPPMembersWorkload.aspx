@@ -74,7 +74,7 @@
             <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                 <tr>
                     <td height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <table width="96%" border="0" align="left" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="left">
                                     <a href="TakeTopAPPMain.aspx" target ="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
@@ -82,7 +82,7 @@
                                             <tr>
                                                 <td width="29">
                                                     <img src="ImagesSkin/return.png" alt="" width="29" height="31" /></td>
-                                                <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
+                                                <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titleziAPP">
                                                     <asp:Label ID="Label8" runat ="server" Text="<%$ Resources:lang,Back%>" />
                                                 </td>
                                                 <td width="5">

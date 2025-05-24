@@ -277,6 +277,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 2px;
     color: #ffffff;
     background: #2e8ded; /*皮肤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpu:disabled {
@@ -305,7 +311,6 @@ button:visited, input[type="submit"]:visited {
 /*-----------------------------TAB按钮----------------------------*/
 .inpuTab {
     border-style: none;
-
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -319,6 +324,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 2px;
     color: #ffffff;
     background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%); /*皮肤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuTab:disabled {
@@ -348,7 +359,6 @@ button:visited, input[type="submit"]:visited {
 .inpuLong {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
-
     min-width: 110px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -365,6 +375,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 5px;
     color: #ffffff;
     background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%); /*皮肤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLong:disabled {
@@ -395,7 +411,6 @@ button:visited, input[type="submit"]:visited {
 .inpuLongest {
     background-image: url(ImagesSkin/butbjLongest.jpg);
     height: 25px;
-
     min-width: 220px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -410,6 +425,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 5px;
     color: #ffffff;
     background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%); /*皮肤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLongest:disabled {
@@ -480,7 +501,6 @@ button:visited, input[type="submit"]:visited {
 .inpuRepeat {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
-
     min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -494,6 +514,12 @@ button:visited, input[type="submit"]:visited {
     border-radius: 2px;
     color: #ffffff;
     background: #2e8ded; /*皮肤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuRepeat:disabled {
@@ -522,7 +548,6 @@ button:visited, input[type="submit"]:visited {
 .inpuLongRepeat {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
-
     min-width: 110px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
@@ -539,6 +564,12 @@ button:visited, input[type="submit"]:visited {
     cursor: pointer;
     color: #ffffff;
     background: #2e8ded; /*皮肤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLongRepeat:disabled {
@@ -577,6 +608,13 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     color: #000000;
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------保存按钮-------------------------------*/
@@ -632,6 +670,13 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------关闭按钮-------------------------------*/
@@ -647,6 +692,13 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------查询按钮-------------------------------*/
@@ -662,6 +714,12 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------扫码按钮-------------------------------*/
@@ -677,6 +735,12 @@ button:visited, input[type="submit"]:visited {
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*----------------------------删除按钮-------------------------------*/
@@ -708,6 +772,7 @@ button:visited, input[type="submit"]:visited {
     border-left-style: none;
     /*font-size: 12px;*/
     /*color: #29728D;*/
+
 }
 
 
@@ -739,10 +804,11 @@ select {
     border-style: dotted;
     border-color: #cccccc;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
 }
 
 .itemBorderBlack {
@@ -750,10 +816,11 @@ select {
     border-style: dotted;
     border-color: black;
     border-top: none;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
     vertical-align: middle;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
 }
 
 
@@ -824,6 +891,7 @@ select {
 	padding:0px 0px 0px 0px;*/
 }
 
+
 .formItemBgStyle {
     /*border-bottom:dotted  1px #C6CFD4;
         height: 19px;
@@ -836,10 +904,26 @@ select {
     border-bottom-color: #cccccc;
     vertical-align: top;
     line-height: 23px;
-    max-width: 100px; /* 限制最大宽度 */
-    white-space: nowrap; /* 禁止换行 */
-    overflow: hidden; /* 隐藏溢出内容 */
-    text-overflow: ellipsis; /* 显示省略号 */
+    white-space: collapse; /* 换行 */
+
+    text-align: left;
+}
+
+.formItemBgStyleForAlignRight {
+    /*border-bottom:dotted  1px #C6CFD4;
+        height: 19px;
+        line-height: 18px;*/
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #cccccc;
+    vertical-align: top;
+    line-height: 23px;
+    white-space: collapse; /* 换行 */
+
+    text-align: right;
 }
 
 /*-----------------------------编辑图片按钮------------------------------*/

@@ -106,7 +106,7 @@
                                             </tr>
                                             <tr>
 
-                                                <td colspan="2" align="center"><span style="font-size: 10pt">
+                                                <td colspan="2" align="left"><span style="font-size: 10pt">
                                                     <table>
                                                         <tr>
                                                             <td>
