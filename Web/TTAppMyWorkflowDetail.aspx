@@ -220,7 +220,7 @@
                                                                                 <asp:Label ID="LB_WLID" runat="server"></asp:Label>.<asp:Label ID="LB_WFName" runat="server"></asp:Label></td>
                                                                             <td class="formItemBgStyleForAlignRight" width="80px">
                                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>£º </td>
-                                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_Status" runat="server"></asp:Label></td>
                                                                         </tr>
                                                                         <tr>

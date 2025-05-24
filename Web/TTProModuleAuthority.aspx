@@ -470,7 +470,7 @@
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>
-                                                                                                        <<td class="formItemBgStyleForAlignLeft"><strong><span style="font-size: 11pt;">
+                                                                                                        <td class="formItemBgStyleForAlignLeft"><strong><span style="font-size: 11pt;">
                                                                                                             <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,QuanXianFuZhi %>"></asp:Label>
                                                                                                             £º</span></strong> </td>
                                                                                                     </tr>

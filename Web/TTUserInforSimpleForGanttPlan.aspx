@@ -224,7 +224,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="TB_RefUserCode" Enabled="False" runat="server" />
                                 </td>
-                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                <td class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr style="display: none;">
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
@@ -242,7 +242,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="NB_SortNumber" runat="server"></asp:Label>
                                 </td>
-                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                <td class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr>
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">

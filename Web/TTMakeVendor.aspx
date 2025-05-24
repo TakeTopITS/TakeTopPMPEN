@@ -508,7 +508,7 @@
 
                                                                 £º</td>
 
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
 
                                                                 <asp:DropDownList ID="DL_ClearingForm" runat="server" DataTextField="Type" DataValueField="Type">
                                                                 </asp:DropDownList>
@@ -590,7 +590,7 @@
 
                                                                 <asp:Label ID="Label76" runat="server" Text="<%$ Resources:lang,GuiShuBuMen %>"></asp:Label>£º</td>
 
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <table>
                                                                     <tr>
                                                                         <td>
@@ -1643,7 +1643,7 @@
 
                                                     <asp:Label ID="Label144" runat="server" Text="<%$ Resources:lang,DaiMa %>"></asp:Label>£º </td>
 
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
 
                                                     <asp:TextBox ID="TB_GoodsCode" runat="server" Height="20px" Width="95%"></asp:TextBox></td>
 

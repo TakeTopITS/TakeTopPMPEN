@@ -286,7 +286,7 @@
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZongJinE%>"></asp:Label>£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Amount" runat="server" Enabled="False" OnBlur="" OnFocus=""
                                                         OnKeyPress="" PositiveColor="" Width="80px" Precision="3">
                                                         0.000
@@ -998,16 +998,16 @@
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label211" runat="server" Text="<%$ Resources:lang,Specification%>"></asp:Label>
                                                                 : </td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_FindItemSpec" runat="server" Width="80px"></asp:TextBox>
                                                             </td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label212" runat="server" Text="<%$ Resources:lang,XingHao%>"></asp:Label>
                                                                 : </td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_FindModelNumber" runat="server" Width="80px"></asp:TextBox>
                                                             </td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Button ID="BT_MaterialBudgetFind" CssClass="inpu" runat="server" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_MaterialBudgetFind_Click" />
                                                             </td>
                                                         </tr>

@@ -653,7 +653,7 @@
                                                                     </tr>
                                                                 </table>
                                                             </td>
-                                                            <<td class="formItemBgStyleForAlignLeft"></td>
+                                                            <td class="formItemBgStyleForAlignLeft"></td>
                                                         </tr>
                                                     </table>
                                                 </td>

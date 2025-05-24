@@ -540,7 +540,7 @@
                                                     <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhanXiangMuZhengTiJingDuYuGu%>"></asp:Label>
                                                     </td>
-                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <NickLee:NumberBox ID="NB_DefaultSchedule" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="79px">
                                                                                          0 0.00
                                                         </NickLee:NumberBox>
@@ -548,7 +548,7 @@
                                                     <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhanXiangMuZhenTiChengBenYuGu%>"></asp:Label>
                                                     </td>
-                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <NickLee:NumberBox ID="NB_DefaultCost" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="79px">
                                                                                   0 0.00
                                                         </NickLee:NumberBox>

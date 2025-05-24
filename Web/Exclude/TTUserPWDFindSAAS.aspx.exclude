@@ -97,7 +97,7 @@
                             </tr>
                             <tr>
 
-                                <<td class="formItemBgStyleForAlignLeft">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:TextBox ID="TB_UserCode" runat="server" Height="25px" Width="90%"></asp:TextBox>
                                     <span style="color: #ff0000">*</span> </td>
 

@@ -825,7 +825,7 @@
                                                 <tr>
                                                     <td>
                                                         <asp:Label ID="Label67" runat="server" Text="<%$ Resources:lang,XingHao%>"></asp:Label>£º</td>
-                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SelectModelNumber" runat="server" Width="99%" Enabled="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
@@ -840,7 +840,7 @@
                                                  <tr>
                                                     <td>
                                                         <asp:Label ID="Label72" runat="server" Text="<%$ Resources:lang,PinPai%>"></asp:Label>£º</td>
-                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_SelectBrand" runat="server" Width="99%" Enabled="false"></asp:TextBox>
                                                     </td>
                                                 </tr>

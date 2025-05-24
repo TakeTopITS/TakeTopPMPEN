@@ -111,7 +111,7 @@
                                                                             <tr>
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º </td>
-                                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:DropDownList ID="DL_Status" runat="server" AutoPostBack="true" CssClass="DDList" >
                                                                                         <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>" />
                                                                                         <asp:ListItem Value="Deactivated" Text="<%$ Resources:lang,TingYong%>" />
@@ -119,7 +119,7 @@
                                                                                 </td>
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>£º</td>
-                                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_SortNumber" runat="server" Width="53px" Precision="0">0</NickLee:NumberBox>
                                                                                 </td>
                                                                             </tr>

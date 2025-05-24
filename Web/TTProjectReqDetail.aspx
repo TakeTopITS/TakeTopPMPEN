@@ -327,11 +327,11 @@
 
                                                                                 <table width="100%">
                                                                                     <tr>
-                                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                                             <strong>
                                                                                                 <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,RYJXFPXQQSRNDYQ %>"></asp:Label>£º</strong><asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label>
                                                                                         </td>
-                                                                                        <<td class="formItemBgStyleForAlignLeft">&nbsp;</td>
+                                                                                        <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
                                                                                     </tr>
 
                                                                                     <tr>
@@ -404,13 +404,13 @@
                                                                                                     <td class="formItemBgStyleForAlignLeft" colspan="4" >
                                                                                                         <table width="100%">
                                                                                                             <tr>
-                                                                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                                                     <strong>
                                                                                                                         <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,CFPJLDZJL %>"></asp:Label>£¨<span style="font-size: 9pt"><asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,XuanZeKeZaiShangMianXiuGai %>"></asp:Label>£©£º</span></strong>
                                                                                                                 </td>
                                                                                                             </tr>
                                                                                                             <tr>
-                                                                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                                                     <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                                                                         <tr>
                                                                                                                             <td width="7">

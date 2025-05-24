@@ -693,12 +693,12 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label65" runat="server" Text="<%$ Resources:lang,BanGongDianHua%>"></asp:Label>£º
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_OfficePhone" runat="server" Width="110px"></asp:TextBox>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,DianZiYouJian%>"></asp:Label>£º</td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_EmailLink" runat="server" Width="110px"></asp:TextBox>
                                     </td>
                                 </tr>

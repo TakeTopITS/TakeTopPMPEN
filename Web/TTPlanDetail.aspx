@@ -437,14 +437,14 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 90px; ">
                                         <asp:Label ID="LB_ID" runat="server" Visible ="false"></asp:Label>
                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <CKEditor:CKEditorControl ID="HE_LogDetail" runat="server" Width="100%" Height="200px" Visible="false" /><CKEditor:CKEditorControl runat="server" ID="HT_LogDetail" Width="100%" Height="200px" Visible="False" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 90px; ">
                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_PlanProgress" runat="server" MaxAmount="100" MinAmount="0"
                                             OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="50px">0</NickLee:NumberBox>% </td>
                                 </tr>

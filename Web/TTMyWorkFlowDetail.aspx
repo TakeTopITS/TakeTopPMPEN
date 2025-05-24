@@ -266,13 +266,13 @@
                                                         <td class="formItemBgStyleForAlignRight">
                                                             <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label>
                                                         </td>
-                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <%#DataBinder .Eval (Container .DataItem,"TemName") %>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignRight">
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>
                                                         </td>
-                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                         </td>
                                                     </tr>
@@ -517,7 +517,7 @@
                                             </td>
                                             <td class="formItemBgStyleForAlignRight" width="80px">
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º </td>
-                                            <<td class="formItemBgStyleForAlignLeft">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="LB_Status" runat="server"></asp:Label>
                                             </td>
                                         </tr>

@@ -403,7 +403,7 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,XingHao %>"></asp:Label>£º </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_ModelNumber" runat="server" Width="90%"></asp:TextBox>
                                                 </td>
                                             </tr>
@@ -436,13 +436,13 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,ShengChanChangJia %>"></asp:Label>£º </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_Manufacturer" runat="server" Width="70%"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft">IP£º </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_IP" runat="server" Width="50%"></asp:TextBox>
                                                 </td>
                                             </tr>

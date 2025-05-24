@@ -3157,7 +3157,7 @@
                                                             </tr>
 
                                                             <tr>
-                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Button ID="BT_OpenAccount" CommandName="OpenAccount" CommandArgument="AOID" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
                                                                 </td>
                                                                 <td class="formItemBgStyleForAlignLeft"  colspan="3">
@@ -3686,7 +3686,7 @@
                                                             </tr>
                                                             <tr>
 
-                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Button ID="BT_GoodsPOPayOpenAccount" CommandName="OpenAccount" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
                                                                 </td>
                                                                 <td class="formItemBgStyleForAlignLeft" colspan="3">
@@ -3846,7 +3846,7 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Button ID="BT_AssetPOPayOpenAccount" CommandName="OpenAccount" runat="server" Text="<%$ Resources:lang,JiZhang%>" />
                                                                 </td>
                                                                 <td class="formItemBgStyleForAlignLeft" colspan="3">
@@ -3934,7 +3934,7 @@
                                                                     <%#DataBinder.Eval(Container.DataItem, "ConstractPayableID")%>
                                                                     <asp:Label ID="LB_ConstractPayablePlanName" runat="server"></asp:Label>
                                                                 </td>
-                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                <td class="formItemBgStyleForAlignLeft">
                                                                     <a href='TTConstractPayableVisaDetailView.aspx?VisaID=<%#DataBinder.Eval(Container.DataItem, "ID")%>'
                                                                         target="DetailArea">
                                                                         <asp:Label ID="Label232" runat="server" Text="<%$ Resources:lang,MingXi%>"></asp:Label></a>

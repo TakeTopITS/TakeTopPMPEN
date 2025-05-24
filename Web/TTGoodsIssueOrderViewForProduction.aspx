@@ -339,19 +339,19 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft"  width="100px">
                                                     <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,DiYiLianBaiLian%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,ShengChan%>"></asp:Label></td>
                                                 <td class="formItemBgStyleForAlignLeft"  width="150px">
                                                     <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,DiErLianHongLian%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,CaiWu%>"></asp:Label></td>
                                                 <td class="formItemBgStyleForAlignLeft"  width="150px">
                                                     <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,DiSanLianHuangLian%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,CangKu%>"></asp:Label></td>
                                                 <td class="formItemBgStyleForAlignLeft"  width="150px">
                                                     <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,DiSiLianLanLian%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,TongJi%>"></asp:Label></td>
                                             </tr>
                                         </table>
@@ -368,13 +368,13 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft" width="150px">
                                                     <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,CangGuan%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
                                                 <td class="formItemBgStyleForAlignLeft" width="150px">
                                                     <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
                                                 <td class="formItemBgStyleForAlignLeft" width="150px">
                                                     <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
                                             </tr>
                                         </table>
 

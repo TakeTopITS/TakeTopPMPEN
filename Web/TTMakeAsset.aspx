@@ -316,7 +316,7 @@
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZongJinE%>"></asp:Label>£º </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_Amount" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="85px">
                                          0.00
                                         </NickLee:NumberBox>
@@ -520,7 +520,7 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft" style="width: 12%; ">
                                                     <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:DropDownList ID="DL_Type" runat="server" CssClass="DDList" DataTextField="Type" DataValueField="Type">
                                                     </asp:DropDownList>
                                                 </td>
@@ -597,7 +597,7 @@
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,DanJia%>"></asp:Label>£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Price" runat="server" Width="79px">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>
@@ -631,13 +631,13 @@
                                             <tr style="display: none;">
                                                 <td class="formItemBgStyleForAlignLeft">IP£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_IP" runat="server" Width="99%"></asp:TextBox>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,BaoGuanRen%>"></asp:Label>£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_OwnerCode" runat="server"></asp:Label>
                                                     <asp:Label ID="LB_OwnerName" runat="server"></asp:Label>
                                                 </td>

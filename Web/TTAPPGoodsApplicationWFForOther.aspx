@@ -528,7 +528,7 @@
                                                                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,XingHao %>"></asp:Label>
 
                                                                                     </td>
-                                                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:TextBox ID="TB_ModelNumber" runat="server" Width="99%"></asp:TextBox></td>
                                                                                 </tr>
                                                                                 <tr>
@@ -549,7 +549,7 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <<td class="formItemBgStyleForAlignLeft" colspan="2">
+                                                                                    <td class="formItemBgStyleForAlignLeft" colspan="2">
                                                                                         <table>
                                                                                             <tr>
                                                                                                 <td>

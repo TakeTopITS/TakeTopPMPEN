@@ -131,7 +131,7 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
                                                                                     £º</td>
-                                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_Status" runat="server"></asp:Label>
                                                                                 </td>
                                                                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="padding-left: 20px;">

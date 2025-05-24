@@ -262,7 +262,7 @@
                                                                                                             <tr>
                                                                                                                 <td class="formItemBgStyleForAlignLeft" style="width: 10%; ">
                                                                                                                     <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,YiJian %>"></asp:Label>£º </td>
-                                                                                                                <<td class="formItemBgStyleForAlignLeft">
+                                                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                                                     <asp:TextBox ID="TB_Content" runat="server" Height="59px" TextMode="MultiLine"
                                                                                                                         Width="100%"></asp:TextBox></td>
                                                                                                             </tr>
@@ -350,7 +350,7 @@
                                                                                                     <td class="formItemBgStyleForAlignLeft" colspan="4" >
                                                                                                         <table cellpadding="0" cellspacing="0" width="98%">
                                                                                                             <tr>
-                                                                                                                <<td class="formItemBgStyleForAlignLeft"><strong>
+                                                                                                                <td class="formItemBgStyleForAlignLeft"><strong>
                                                                                                                     <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,CFPJLDZJL %>"></asp:Label>£¨<span style="font-size: 9pt"><asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,XuanZeKeZaiShangMianXiuGai %>"></asp:Label>£©£º</span></strong> </td>
                                                                                                             </tr>
                                                                                                             <tr>

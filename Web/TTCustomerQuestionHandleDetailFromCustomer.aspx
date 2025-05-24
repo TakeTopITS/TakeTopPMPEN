@@ -700,7 +700,7 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 15%;">
                                         <asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,YingLu%>"></asp:Label>£º
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_Possibility" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="50px">0</NickLee:NumberBox>
                                         %
                                     </td>
@@ -717,7 +717,7 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 15%;">
                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,SHANGJIDAILI%>"></asp:Label>
                                         £º</td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_AgencyName" runat="server" Width="99%" />
                                     </td>
                                 </tr>

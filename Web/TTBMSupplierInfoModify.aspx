@@ -672,12 +672,12 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,BanGongDianHua%>"></asp:Label>£º
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_OfficePhone" runat="server" Width="110px" CssClass="shuru"></asp:TextBox>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,DianZiYouJian%>"></asp:Label>£º</td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_EmailLink" runat="server" Width="110px" CssClass="shuru"></asp:TextBox>
                                     </td>
                                 </tr>

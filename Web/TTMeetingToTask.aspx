@@ -479,7 +479,7 @@
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label>£º
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_OperatorCode" runat="server" DataTextField="UserName" DataValueField="UserCode" AutoPostBack="True" OnSelectedIndexChanged="DL_OperatorCode_SelectedIndexChanged">
                                         </asp:DropDownList>
                                         <asp:HyperLink ID="HL_MemberWorkload" runat="server" Target="_blank">

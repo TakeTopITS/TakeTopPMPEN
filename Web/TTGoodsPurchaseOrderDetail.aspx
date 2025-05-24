@@ -529,7 +529,7 @@
 
                                                                     </td>
 
-                                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <table cellpadding="0" cellspacing="0">
                                                                             <tr>
                                                                                 <td style="border-right: solid 1px #D8D8D8;" valign="top" width="170">

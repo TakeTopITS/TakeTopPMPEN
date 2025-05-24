@@ -230,13 +230,13 @@
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft" width="150px">&nbsp;
                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>£º</td>
-                                    <<td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignLeft"></td>
                                     <td class="formItemBgStyleForAlignLeft" width="150px">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhiXing%>"></asp:Label>£º</td>
-                                    <<td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignLeft"></td>
                                     <td class="formItemBgStyleForAlignLeft" width="150px">
                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label>£º</td>
-                                    <<td class="formItemBgStyleForAlignLeft"></td>
+                                    <td class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                             </table>
                         </td>

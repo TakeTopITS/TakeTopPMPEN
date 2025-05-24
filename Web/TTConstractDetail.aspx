@@ -2255,7 +2255,7 @@
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label233" runat="server" Text="<%$ Resources:lang,ShenBaoRiQi %>"></asp:Label>£º</td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_EntryReportDate" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender10"
                                             runat="server" TargetControlID="DLC_EntryReportDate" Enabled="True">
                                         </ajaxToolkit:CalendarExtender>

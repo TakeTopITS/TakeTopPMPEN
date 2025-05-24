@@ -877,13 +877,13 @@
                                                                 <asp:TextBox ID="TB_FindItemName" runat="server" Width="80px"></asp:TextBox></td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label211" runat="server" Text="<%$ Resources:lang,Specification%>"></asp:Label>: </td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_FindItemSpec" runat="server" Width="80px"></asp:TextBox></td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label212" runat="server" Text="<%$ Resources:lang,XingHao%>"></asp:Label>: </td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_FindModelNumber" runat="server" Width="80px"></asp:TextBox></td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Button ID="BT_MaterialBudgetFind" CssClass="inpu" runat="server" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_MaterialBudgetFind_Click" /></td>
                                                         </tr>
                                                     </table>

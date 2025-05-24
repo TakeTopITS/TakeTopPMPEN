@@ -266,7 +266,7 @@
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft"></td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
                                             </tr>
 
                                         </table>
@@ -598,7 +598,7 @@
                                                     <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,BaoXiuQi %>"></asp:Label>
 
                                                     £º</td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox ID="NB_WarrantyPeriod" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="79px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0</NickLee:NumberBox>
 
                                                     <asp:Label ID="Label110" runat="server" Text="<%$ Resources:lang,Tian %>"></asp:Label>

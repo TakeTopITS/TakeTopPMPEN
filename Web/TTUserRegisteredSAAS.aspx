@@ -335,7 +335,7 @@
                                 <td class="formItemBgStyleForAlignLeft"  width="15%">
                                     <asp:Label ID="Label135" runat="server" Text="<%$ Resources:lang,YueXin %>"></asp:Label>
                                     £º</td>
-                                <<td class="formItemBgStyleForAlignLeft">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <nicklee:numberbox id="NB_MonthlySalary" runat="server" maxamount="1000000000000" minamount="-1000000000000" onblur="" onfocus="" onkeypress="" positivecolor="">0.00</nicklee:numberbox></td>
                             </tr>
                             <tr style="display: none;">

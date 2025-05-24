@@ -245,14 +245,14 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft" width="150px">
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
                                                 <td class="formItemBgStyleForAlignLeft" width="150px">
                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZhiXing%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
 
                                                 <td class="formItemBgStyleForAlignLeft" width="150px">
                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label>£º</td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
                                             </tr>
                                         </table>
                                     </td>

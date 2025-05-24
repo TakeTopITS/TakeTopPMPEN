@@ -875,7 +875,7 @@
                                                                 <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,GuiShuBuMen %>"></asp:Label>£º</td>
 
 
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
 
 
                                                                 <table>
@@ -924,7 +924,7 @@
                                                                 <asp:Label ID="Label154" runat="server" Text="<%$ Resources:lang,FenGuanDaiLiShang %>"></asp:Label>£º</td>
 
 
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
 
 
                                                                 <table>
@@ -4099,7 +4099,7 @@
 
                                                     <asp:Label ID="Label144" runat="server" Text="<%$ Resources:lang,DaiMa %>"></asp:Label>£º </td>
 
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
 
                                                     <asp:TextBox ID="TB_GoodsCode" runat="server" Height="20px" Width="95%"></asp:TextBox></td>
 

@@ -128,54 +128,40 @@
                                                                             <tr>
                                                                                 <td>
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YXSPGCZBJSJ%>"></asp:Label>：
-                                                                                </td>
-                                                                                <td>
+                                                                                
                                                                                     <asp:DropDownList ID="DL_EnableEdit" runat="server" AutoPostBack="True" Enabled="False"
                                                                                         OnSelectedIndexChanged="DL_EnableEdit_SelectedIndexChanged">
                                                                                         <asp:ListItem Value="YES" Text="<%$ Resources:lang,Shi%>" />
                                                                                         <asp:ListItem Value="NO" Text="<%$ Resources:lang,Fou%>" />
                                                                                     </asp:DropDownList>
-                                                                                </td>
-                                                                                <td>
+
                                                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>：
-                                                                                </td>
-                                                                                <td>
+                                                                             
                                                                                     <asp:TextBox ID="TB_BelongDepartName" Width="100px" runat="server" Enabled="false"></asp:TextBox>
                                                                                     <cc1:ModalPopupExtender ID="TB_BelongDepartName_ModalPopupExtender" runat="server"
                                                                                         Enabled="True" TargetControlID="TB_BelongDepartName" PopupControlID="Panel1"
                                                                                         CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150">
                                                                                     </cc1:ModalPopupExtender>
-                                                                                </td>
-                                                                                <td>
+
                                                                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>：
-                                                                                </td>
-                                                                                <td>
+                                                                              
                                                                                     <NickLee:NumberBox ID="NB_SortNumber" runat="server" MaxAmount="1000000000000" MinAmount="-100" Width="20px" Precision="0">00</NickLee:NumberBox>
 
-                                                                                </td>
-                                                                                <td>
+
                                                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,KeShi%>"></asp:Label>：
-                                                                                </td>
-                                                                                <td>
+                                                                               
                                                                                     <asp:DropDownList ID="DL_Visible" runat="server">
                                                                                         <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                                         <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                     </asp:DropDownList>
-                                                                                </td>
-                                                                                <td>
+
                                                                                     <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,ZiDongJiHuo%>"></asp:Label>：
-                                                                                </td>
-                                                                                <td>
+                                                                               
                                                                                     <asp:DropDownList ID="DL_AutoActive" runat="server">
                                                                                         <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                         <asp:ListItem Value="YES">YES</asp:ListItem>
                                                                                     </asp:DropDownList>
-                                                                                </td>
 
-
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td colspan="15">
                                                                                     <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,CaoShi%>"></asp:Label>
 
                                                                                     <NickLee:NumberBox ID="NB_OverTimeHourNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="40px" Precision="0" Amount="24">24</NickLee:NumberBox>

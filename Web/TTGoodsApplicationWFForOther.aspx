@@ -496,7 +496,7 @@
                                                                                 <tr>
                                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,XingHao %>"></asp:Label>£º </td>
-                                                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:TextBox ID="TB_ModelNumber" runat="server" Width="90%"></asp:TextBox></td>
                                                                                 </tr>
                                                                                 <tr>

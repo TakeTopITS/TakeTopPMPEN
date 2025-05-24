@@ -114,11 +114,11 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YouXianJi%>"></asp:Label></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:DropDownList ID="DL_Priority" runat="server" DataTextField="Priority" DataValueField="Priority" Width="99%">
 
                                                                                 <asp:ListItem Value="Normal" Text="<%$ Resources:lang,PuTong %>" ></asp:ListItem>
@@ -139,7 +139,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -150,7 +150,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -171,12 +171,12 @@
                                                                             &nbsp;%</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FeiYongYuSuan%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <NickLee:NumberBox ID="TB_Budget" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="99%">0.00</NickLee:NumberBox>
                                                                         </td>
                                                                     </tr>
@@ -191,29 +191,29 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,GongShiYuSuan%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <NickLee:NumberBox ID="NB_ManHour" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="99%">0.00</NickLee:NumberBox>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShiJiGongShi%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <NickLee:NumberBox ID="NB_RealManHour" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="99%">0.00</NickLee:NumberBox>
                                                                         </td>
                                                                     </tr>
 
 
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,JianLiShiJian%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -281,12 +281,12 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,LeiXingShi%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:DropDownList ID="DL_RecordType" runat="server" DataTextField="Type" DataValueField="Type" Width="99%">
                                                                             </asp:DropDownList>
                                                                         </td>
@@ -318,12 +318,12 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:TextBox ID="DLC_TaskEnd" runat="server" ReadOnly="false" Width="99%" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" onFocus="WdatePicker({lang:'auto'})"></asp:TextBox>
 
                                                                         </td>

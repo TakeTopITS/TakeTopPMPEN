@@ -79,7 +79,7 @@
                                             valign="top" align="left" colspan="3">
                                             <table align="left" cellpadding="2" cellspacing="0" class="formBgStyle" style="width: 98%;">
                                                 <tr style="font-size: 12pt; padding-top: 5px">
-                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <br />
                                                         <span style="font-size: 11pt">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QingShuRuJueSeZuMing%>"></asp:Label>
@@ -89,7 +89,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr style="font-weight: bold; font-size: 11pt">
-                                                    <<td class="formItemBgStyleForAlignLeft">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_GroupName" runat="server" CssClass="inpuLongRepeat" Text='<%# DataBinder.Eval(Container.DataItem,"GroupName") %>' />

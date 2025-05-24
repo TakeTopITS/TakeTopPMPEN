@@ -190,7 +190,7 @@
                                         <tr>
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ZhiChen%>"></asp:Label></td>
-                                            <<td class="formItemBgStyleForAlignLeft">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:TextBox ID="TB_JobTitle" runat="server" Enabled="False" ReadOnly="True"></asp:TextBox>
                                             </td>
                                             <td class="formItemBgStyleForAlignLeft">&nbsp;</td>

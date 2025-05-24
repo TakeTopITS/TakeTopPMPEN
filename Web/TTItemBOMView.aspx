@@ -183,13 +183,13 @@
                                                         <tr>
                                                             <td class="formItemBgStyleForAlignLeft" width="150px">
                                                                 <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ZhiDing%>"></asp:Label>£º</td>
-                                                            <<td class="formItemBgStyleForAlignLeft"></td>
+                                                            <td class="formItemBgStyleForAlignLeft"></td>
                                                             <td class="formItemBgStyleForAlignLeft" width="150px">
                                                                 <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>£º</td>
-                                                            <<td class="formItemBgStyleForAlignLeft"></td>
+                                                            <td class="formItemBgStyleForAlignLeft"></td>
                                                             <td class="formItemBgStyleForAlignLeft" width="150px">
                                                                 <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,PiZhunRen%>"></asp:Label>£º</td>
-                                                            <<td class="formItemBgStyleForAlignLeft"></td>
+                                                            <td class="formItemBgStyleForAlignLeft"></td>
                                                         </tr>
                                                     </table>
 

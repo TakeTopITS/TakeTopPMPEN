@@ -114,7 +114,7 @@
                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="TB_JobTitle" runat="server" Width="220px" />
                                                                 </td>
-                                                                <<td class="formItemBgStyleForAlignLeft">&nbsp;</td>
+                                                                <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="formItemBgStyleForAlignLeft">

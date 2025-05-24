@@ -482,7 +482,7 @@
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                     </td>
                                     <td style="width: 10%;" class="formItemBgStyleForAlignLeft">&nbsp;<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label>£º</td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_OperatorCode" runat="server" DataTextField="UserName" DataValueField="UserCode">
                                         </asp:DropDownList>
                                     </td>

@@ -254,7 +254,7 @@
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BenChiQingKuanJinE%>"></asp:Label>£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_CurrentTotalPaymentAmount" runat="server" Enabled="False" OnBlur="" OnFocus=""
                                                         OnKeyPress="" PositiveColor="" Width="150px" Precision="3">
                                                  0.000
@@ -708,7 +708,7 @@
                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,RuKuDanMingXi%>"></asp:Label>£º </td>
                                                             </tr>
                                                             <tr>
-                                                                <<td class="formItemBgStyleForAlignLeft" colspan="2">
+                                                                <td class="formItemBgStyleForAlignLeft" colspan="2">
                                                                     <table width="100%" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                         <tr>
                                                                             <td width="7">

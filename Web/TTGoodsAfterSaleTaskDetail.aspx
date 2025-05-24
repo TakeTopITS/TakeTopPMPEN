@@ -172,7 +172,7 @@
                                                                                 <ContentTemplate>
                                                                                     <table cellpadding="3" cellspacing="0" class="formBgStyle" width="80%">
                                                                                         <tr>
-                                                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                                 <table width="100%">
                                                                                                     <tr>
                                                                                                         <td align="left" width="20%">
@@ -221,7 +221,7 @@
                                                                                                         <td class="formItemBgStyleForAlignLeft" style="width: 10%; ">
                                                                                                             <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,FeiYong %>"></asp:Label>
                                                                                                             £º </td>
-                                                                                                        <<td class="formItemBgStyleForAlignLeft">
+                                                                                                        <td class="formItemBgStyleForAlignLeft">
                                                                                                             <asp:HyperLink ID="HL_Expense" runat="server" NavigateUrl="TTProExpense.aspx" Target="_blank">
                                                                                                                 <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,FeiYongMingXi %>"></asp:Label>
                                                                                                             </asp:HyperLink>

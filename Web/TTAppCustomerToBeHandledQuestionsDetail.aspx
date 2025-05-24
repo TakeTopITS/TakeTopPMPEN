@@ -557,10 +557,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label> </td>
+                                        <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label> </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:DropDownList ID="DL_HandleStatus" runat="server"  Width="99%" >
                                                 <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong%>" />
                                                 <asp:ListItem Value="Reviewing" Text="<%$ Resources:lang,PingShenZhong%>" />
@@ -571,10 +571,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YongShi%>"></asp:Label> </td>
+                                        <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YongShi%>"></asp:Label> </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <NickLee:NumberBox ID="NB_UsedTime" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000"  Width="50%" Amount="1">1.00</NickLee:NumberBox>
                                             <asp:DropDownList ID="DL_TimeUnit" runat="server">
                                                 <asp:ListItem Value="Minutes" Text="<%$ Resources:lang,FenZhong%>" />
@@ -594,10 +594,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LianXiFangFa%>"></asp:Label> </td>
+                                        <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LianXiFangFa%>"></asp:Label> </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_AcceptorContactWay" runat="server" Width="90%"></asp:TextBox>
                                         </td>
                                     </tr>
@@ -648,10 +648,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,TiQian%>"></asp:Label> </td>
+                                        <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,TiQian%>"></asp:Label> </td>
                                     </tr>
                                     <tr> 
-                                        <<td class="formItemBgStyleForAlignLeft">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <NickLee:NumberBox ID="NB_PreDays" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0"  Width="80%">0</NickLee:NumberBox>
                                             <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,Tian%>"></asp:Label></td>
                                     </tr>

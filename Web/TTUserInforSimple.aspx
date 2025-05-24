@@ -54,7 +54,7 @@
                                             <td width="29">
                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                             </td>
-                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi"></asp:Label><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YongHuXinXi%>"></asp:Label>
+                                            <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YongHuXinXi%>"></asp:Label>
                                             </td>
                                             <td width="5">
                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -68,7 +68,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-top: 5px; padding-bottom: 5px;" align="left">
+                    <td style="padding-top: 5px; padding-bottom: 5px;" align="center">
                         <table cellpadding="2" cellspacing="0" class="formBgStyle" width="550px">
                             <tr>
                                 <td style="width: 150px;" class="formItemBgStyleForAlignLeft">
@@ -224,7 +224,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="TB_RefUserCode" Enabled="False" runat="server" />
                                 </td>
-                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                <td class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr style="display: none;">
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
@@ -242,7 +242,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="NB_SortNumber" runat="server"></asp:Label>
                                 </td>
-                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                <td class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr>
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">

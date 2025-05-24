@@ -236,7 +236,7 @@
                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_SortNumber" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
                                         PositiveColor="" Precision="0" Width="80px" Enabled="False">0</NickLee:NumberBox>
                                 </td>
-                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                <td class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr>
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">

@@ -97,7 +97,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <<td class="formItemBgStyleForAlignLeft">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShenQingYuanYin%>"></asp:Label>
                                                 £º </td>
                                             <td class="formItemBgStyleForAlignLeft" colspan="3">
@@ -105,7 +105,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <<td class="formItemBgStyleForAlignLeft">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZongJinE%>"></asp:Label>
                                                 £º</td>
                                             <td class="formItemBgStyleForAlignLeft">
@@ -120,7 +120,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <<td class="formItemBgStyleForAlignLeft">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ShenQingShiJian%>"></asp:Label>
                                                 £º </td>
                                             <td class="formItemBgStyleForAlignLeft">

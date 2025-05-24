@@ -251,7 +251,7 @@
                                                 <td class="auto-style1" style="text-align: right;">
                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_ReqName" runat="server" Width="99%"></asp:TextBox>
                                                     <div style="display: none;">
                                                         <asp:Label ID="LB_ReqID" runat="server"></asp:Label></div>

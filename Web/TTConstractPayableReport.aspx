@@ -84,7 +84,7 @@
                             <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_PartAOperator" runat="server" Width="139px"></asp:TextBox>
                             </td>
-                            <<td class="formItemBgStyleForAlignLeft">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,Shou%>"></asp:Label>
                                 <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,Kuan%>"></asp:Label>
                                 <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,Fang%>"></asp:Label>£º

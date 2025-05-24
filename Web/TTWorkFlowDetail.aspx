@@ -558,13 +558,13 @@
                                                             <td class="formItemBgStyleForAlignRight">
                                                                 <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label>
                                                             </td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <%#DataBinder .Eval (Container .DataItem,"TemName") %>
                                                             </td>
                                                             <td class="formItemBgStyleForAlignRight">
                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>
                                                             </td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                                             </td>
                                                         </tr>
@@ -583,7 +583,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Panel ID="Panel_NextStep" runat="server" Style="width: 110%; border: 2px solid red;" Visible="False">
                                                 <div>
                                                     <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
@@ -846,7 +846,7 @@
                                                                             <td class="formItemBgStyleForAlignRight" width="80px">
                                                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
                                                                             </td>
-                                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_Status" runat="server" Font-Bold="False" Font-Size="10pt" Font-Underline="False" ForeColor="#FF0033"></asp:Label>
                                                                             </td>
                                                                         </tr>

@@ -270,12 +270,12 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QiYeBianMa %>"></asp:Label>： </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_Code" runat="server" CssClass="shuru"></asp:TextBox>
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QiYeMingCheng %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_Name" runat="server" CssClass="shuru"></asp:TextBox>
@@ -299,12 +299,12 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LianXiDianHua %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_PhoneNum" runat="server" CssClass="shuru"></asp:TextBox>
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ChuanZhen %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_Fax" runat="server" CssClass="shuru"></asp:TextBox>
@@ -321,12 +321,12 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,FaDingDaiBiaoRen %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_LegalRepresentative" runat="server" CssClass="shuru"></asp:TextBox>
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,FaDingDaiBiaoRenJiShuZhiCheng %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_TechnicalTitles" runat="server" CssClass="shuru"></asp:TextBox>
@@ -345,12 +345,12 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,JiShuFuZeRen %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_TechnicalDirector" runat="server" CssClass="shuru"></asp:TextBox>
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,JiShuFuZeRenJiShuZhiCheng %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_TechnicalTitles_T" runat="server" CssClass="shuru"></asp:TextBox>
@@ -367,12 +367,12 @@
                                                     人</td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZiZhiZhengShu %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_QualificationCertificate" runat="server" CssClass="shuru"></asp:TextBox>
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YingYeZhiZhao %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_BusinessLicense" runat="server" CssClass="shuru"></asp:TextBox>
@@ -389,12 +389,12 @@
                                                     人</td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ZhuCeZiJin %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_RegisteredCapital" runat="server" CssClass="shuru"></asp:TextBox>
                                                     元</td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,KaiHuYinHang %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_Bank" runat="server" CssClass="shuru"></asp:TextBox>
@@ -411,12 +411,12 @@
                                                     人</td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,ShuiHao %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_EinNo" runat="server" CssClass="shuru"></asp:TextBox>
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,KaiHuZhangHao %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_BankNo" runat="server" CssClass="shuru"></asp:TextBox>
@@ -478,7 +478,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,ShangNianDuGongSi %>"></asp:Label><br />
                                                     <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,RuWeiBianHao %>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft" colspan="1">
@@ -1721,7 +1721,7 @@
 
                                                     <asp:Label ID="Label144" runat="server" Text="<%$ Resources:lang,DaiMa %>"></asp:Label>： </td>
 
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
 
                                                     <asp:TextBox ID="TB_GoodsCode" runat="server" Height="20px" Width="95%"></asp:TextBox></td>
 

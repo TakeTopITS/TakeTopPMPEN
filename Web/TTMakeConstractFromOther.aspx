@@ -1858,7 +1858,7 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft" style="width: 15%; ">
                                                     <asp:Label ID="Label87" runat="server" Text="<%$ Resources:lang,DaiMa %>"></asp:Label>£º </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_GoodsCode" runat="server" Height="20px" Width="95%"></asp:TextBox></td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label88" runat="server" Text="<%$ Resources:lang,MingCheng %>"></asp:Label>£º </td>

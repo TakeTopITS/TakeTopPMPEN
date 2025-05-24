@@ -288,7 +288,7 @@
                                                 <td class="formItemBgStyleForAlignLeft" style="width: 15%;">
                                                     <asp:Label ID="LB_tbUserCode" runat="server" Text="<%$ Resources:lang,UserCode %>"></asp:Label>£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_RelatedUserCode" runat="server" Style="text-align: left"></asp:Label>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">
@@ -298,7 +298,7 @@
                                                     <asp:Label ID="LB_RelatedUserName" runat="server"></asp:Label>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft"></td>
-                                                <<td class="formItemBgStyleForAlignLeft"></td>
+                                                <td class="formItemBgStyleForAlignLeft"></td>
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft">
@@ -313,14 +313,14 @@
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_tbCommissionRate" runat="server" Text="<%$ Resources:lang,CommissionRate %>" />£º
                                                 </td>
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_PromissionScale" runat="server" Width="80px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_tbUnitSalary" runat="server" Text="<%$ Resources:lang,UnitSalary %>" />£º
                                                 </td>
 
-                                                <<td class="formItemBgStyleForAlignLeft">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_UnitHourSalary" runat="server" Width="80px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                 </td>
                                             </tr>

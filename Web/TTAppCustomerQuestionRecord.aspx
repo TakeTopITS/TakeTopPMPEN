@@ -441,7 +441,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_Possibility" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="90%">0</NickLee:NumberBox>
                                     %                                
                                 </tr>
@@ -462,7 +462,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_AgencyName" runat="server" Width="99%" />
                                     </td>
                                 </tr>

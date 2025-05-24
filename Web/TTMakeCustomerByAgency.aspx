@@ -504,7 +504,7 @@
                                                         <tr>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,GuiShuBuMen %>"></asp:Label>£º</td>
-                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="LB_BelongDepartCode" runat="server"></asp:Label>
                                                                 <asp:Label ID="LB_BelongDepartName" runat="server"></asp:Label>
                                                             </td>

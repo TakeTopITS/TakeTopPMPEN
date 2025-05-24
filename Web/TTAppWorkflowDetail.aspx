@@ -335,7 +335,7 @@
                             <td class="formItemBgStyleForAlignLeft" >
                                 <table>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Panel ID="Panel_ChildWF" runat="server" Style="border: 1px solid red;" Visible="False">
                                                 <div>
                                                     <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
@@ -512,7 +512,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <<td class="formItemBgStyleForAlignLeft">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Panel ID="Panel_NextStep" runat="server" Style="width: 110%; border: 2px solid red;" Visible="False">
                                                 <div>
                                                     <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
@@ -834,7 +834,7 @@
 
 
                                                                             </td>
-                                                                            <<td class="formItemBgStyleForAlignLeft">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_Status" runat="server" Font-Bold="False" Font-Size="10pt" Font-Underline="False" ForeColor="#FF0033"></asp:Label>
 
 

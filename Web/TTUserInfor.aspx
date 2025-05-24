@@ -524,7 +524,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,JiaRuRiQi %>"></asp:Label>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_JoinDate" runat="server"></asp:TextBox>
                                         <cc1:CalendarExtender ID="CalendarExtender1" runat="server" Enabled="True" Format="yyyy-MM-dd" TargetControlID="DLC_JoinDate">
                                         </cc1:CalendarExtender>
@@ -532,7 +532,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,XingZhi %>"></asp:Label>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_UserType" runat="server">
                                             <asp:ListItem Text="<%$ Resources:lang,NeiBu %>" Value="INNER" />
                                             <asp:ListItem Text="<%$ Resources:lang,WaiBu %>" Value="OUTER" />
@@ -581,7 +581,7 @@
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,HeTongDaoQiShiJian %>"></asp:Label></td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TXT_ContractEndTime" runat="server" Width="99%" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox></td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,HeTongWenJian %>"></asp:Label></td>
@@ -616,7 +616,7 @@
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label135" runat="server" Text="<%$ Resources:lang,YueXin %>"></asp:Label>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_MonthlySalary" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="80px">0.00</NickLee:NumberBox>
                                     </td>
                                 </tr>
@@ -625,10 +625,10 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,CanKaoGongHao %>"></asp:Label>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_RefUserCode" runat="server" Width="99%"></asp:TextBox></td>
                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_CssDirectory" runat="server" Visible="false">
                                             <asp:ListItem Value="CssBlue" Text="<%$ Resources:lang,LanSe%>" />
                                             <asp:ListItem Value="CssGreen" Text="<%$ Resources:lang,LuSe%>" />
@@ -644,7 +644,7 @@
 
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,YXDLSB %>"></asp:Label></td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_AllowDevice" runat="server">
                                             <asp:ListItem Value="ALL" />
                                             <asp:ListItem Value="PC" />
@@ -653,7 +653,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JieMianYuYan %>"></asp:Label>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language"></asp:DropDownList>
 
                                     </td>
@@ -663,13 +663,13 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShunXuHao %>"></asp:Label>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_SortNumber" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="80px">0</NickLee:NumberBox>
                                     </td>
 
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,RTXZhangHu %>" Visible="false"></asp:Label></td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_UserRTXCode" runat="server" Width="99%" Visible="false"></asp:TextBox></td>
                                 </tr>
 
@@ -686,7 +686,7 @@
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,MingZhu %>"></asp:Label>
                                     </td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Nationality" runat="server" Width="99%"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -934,7 +934,7 @@
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft"  width="15%">
                                         <asp:Label ID="Label78" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label></td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_WorkEndTime" ReadOnly="false" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_WorkEndTime"></ajaxToolkit:CalendarExtender>
                                     </td>
                                 </tr>
@@ -1101,7 +1101,7 @@
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label92" runat="server" Text="<%$ Resources:lang,JieShuShiJian %>"></asp:Label></td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_SchoolEndTime" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender6"
                                             runat="server" TargetControlID="DLC_SchoolEndTime" Enabled="True">
                                         </ajaxToolkit:CalendarExtender>
@@ -1264,7 +1264,7 @@
                                         <asp:TextBox ID="TB_MemberName" runat="server" Width="200px"></asp:TextBox></td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label105" runat="server" Text="<%$ Resources:lang,ChenWei%>"></asp:Label></td>
-                                    <<td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Relation" runat="server" Width="200px"></asp:TextBox></td>
                                 </tr>
                                 <tr>
