@@ -326,7 +326,7 @@
                                     £º</td>
                                 <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                     <asp:DropDownList ID="DL_WorkType" runat="server" DataTextField="TypeName" DataValueField="TypeName"></asp:DropDownList></td>
-                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"&nbsp;</td>
+                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">&nbsp;</td>
                             </tr>
                             <tr style="display: none;">
                                 <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
@@ -338,7 +338,7 @@
                                         runat="server" TargetControlID="DLC_JoinDate">
                                     </ajaxToolkit:CalendarExtender>
                                 </td>
-                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"</td>
+                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr style="display: none;">
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">

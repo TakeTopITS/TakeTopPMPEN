@@ -124,10 +124,10 @@
                                                                 AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
                                                                     <asp:BoundColumn DataField="ProjectID" HeaderText="Number">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ProjectCode" HeaderText="Code">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="12%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="12%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTCreatedProjectDetailSAAS.aspx?ProjectID={0}"
                                                                         DataTextField="ProjectName" HeaderText="ÏîÄ¿Ãû³Æ" Target="_blank">
@@ -200,7 +200,7 @@
                                                                                     BackColor="YellowGreen"></asp:Label>
                                                                             </a>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" VerticalAlign="Middle" Width="70px" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" VerticalAlign="Middle" Width="70px" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:TemplateColumn>
                                                                         <ItemTemplate>
@@ -208,20 +208,20 @@
                                                                                 <img src="ImagesSkin/plan.png" alt="ProjectPlan" width="32px" height="32px" style="border: none;" />
                                                                             </a>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="75px" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="75px" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:TemplateColumn HeaderText="Status">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:TemplateColumn>
                                                                         <ItemTemplate>
                                                                             <asp:HyperLink ID="HL_ProjectReport" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.ProjectID", "TTProjectReportMain.aspx?ProjectID={0}") %>'
                                                                                 Target="_blank"><img src="ImagesSkin/dian.gif" class="noBorder" /></asp:HyperLink>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                     </asp:TemplateColumn>
                                                                 </Columns>
 
@@ -229,7 +229,7 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText=">" PrevPageText="<" CssClass="notTab" />
+                                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText=">" PrevPageText="<" CssClass="notTab" />
                                                             </asp:DataGrid>
                                                         </td>
                                                     </tr>
@@ -620,19 +620,19 @@
 
                                                                             <tr>
 
-                                                                                <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
+                                                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
 
                                                                                     <span>
 
                                                                                         <asp:Label ID="LB_ProjectName" runat="server" Text="<%$ Resources:lang,ProjectName %>"></asp:Label>:</span>
                                                                                 </td>
 
-                                                                                <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 35%;" class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="TB_ProjectName" runat="server" Width="95%" Font-Size="10pt"></asp:TextBox>
                                                                                 </td>
 
-                                                                                <td style="width: 15%;"  class="formItemBgStyleForAlignLeft">
+                                                                                <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Button ID="BT_HazyFind" runat="server" OnClick="BT_HazyFind_Click" Text="<%$ Resources:lang,FuzzySearch %>"
                                                                                         Font-Size="10pt" CssClass="inpuLong" />
@@ -649,7 +649,7 @@
                                                                                         <asp:Label ID="LB_ProjectID" runat="server" Text="<%$ Resources:lang,ProjectID %>"></asp:Label>:</span>
                                                                                 </td>
 
-                                                                                <td  class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="TB_ProjectID" runat="server"></asp:TextBox>
                                                                                 </td>
@@ -671,12 +671,12 @@
                                                                                         <asp:Label ID="LB_ProjectCreator" runat="server" Text="<%$ Resources:lang,ProjectCreator %>"></asp:Label>:</span>
                                                                                 </td>
 
-                                                                                <td  class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="TB_MakeUser" runat="server" Width="95%"></asp:TextBox>
                                                                                 </td>
 
-                                                                                <td  class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Button ID="BT_MakeUserFind" runat="server" OnClick="BT_MakeUserFind_Click" Text="<%$ Resources:lang,Find %>"
                                                                                         CssClass="inpuLong" />
@@ -691,7 +691,7 @@
                                                                                     <asp:Label ID="LB_StartTime" runat="server" Text="<%$ Resources:lang,StartTime %>"></asp:Label>:<br />
                                                                                 </td>
 
-                                                                                <td  class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="DLC_BeginDate" runat="server"></asp:TextBox>
 
@@ -699,7 +699,7 @@
                                                                                     </ajaxToolkit:CalendarExtender>
                                                                                 </td>
 
-                                                                                <td rowspan="2" style="vertical-align: middle; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td rowspan="2" style="vertical-align: middle;" class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:Button ID="BT_DateFind" runat="server" OnClick="BT_DateFind_Click" Text="<%$ Resources:lang,Find %>"
                                                                                         CssClass="inpuLong" />
@@ -714,7 +714,7 @@
                                                                                     <asp:Label ID="LB_EndTime" runat="server" Text="<%$ Resources:lang,EndTime %>"></asp:Label>:
                                                                                 </td>
 
-                                                                                <td  class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="DLC_EndDate" runat="server"></asp:TextBox>
 
@@ -768,7 +768,7 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
@@ -779,7 +779,7 @@
                                                                             <asp:Button ID="BT_HomeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>'
                                                                                 CssClass="inpu" />
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                     </asp:TemplateColumn>
                                                                 </Columns>
                                                             </asp:DataGrid>

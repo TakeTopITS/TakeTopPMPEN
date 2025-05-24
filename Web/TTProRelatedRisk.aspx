@@ -84,15 +84,15 @@
                                                     <td>
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
-                                                               <td width="5%" align="left">
-                                                                        <strong>
-                                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BianJi %>" /></strong>
-                                                                    </td>
-                                                                    <td width="5%" align="left">
-                                                                        <strong>
-                                                                            <asp:Label ID="Label63" runat="server" Text="<%$ Resources:lang,ShanChu %>" /></strong>
-                                                                    </td>
-                                                                 
+                                                                <td width="5%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BianJi %>" /></strong>
+                                                                </td>
+                                                                <td width="5%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="Label63" runat="server" Text="<%$ Resources:lang,ShanChu %>" /></strong>
+                                                                </td>
+
                                                                 <td width="7%" align="left">
                                                                     <strong>
                                                                         <asp:Label ID="LB_dgRiskID" runat="server" Text="<%$ Resources:lang,ID%>"></asp:Label></strong>
@@ -125,7 +125,7 @@
                                                                     <strong></strong>
                                                                 </td>
 
-                                                             <%--   <td align="left">
+                                                                <%--   <td align="left">
                                                                     <strong>&nbsp;
                                                                     </strong>
                                                                 </td>--%>
@@ -142,33 +142,33 @@
                                                 PageSize="8" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
                                                     <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
                                                         <ItemTemplate>
                                                             <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                         </ItemTemplate>
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                     </asp:TemplateColumn>
                                                     <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="RiskLevel" HeaderText="Level">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Risk" HeaderText="Risk">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="EffectDate" HeaderText="预计发生时间" DataFormatString="{0:yyyy/MM/dd}">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="13%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="13%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="EffectDate" HeaderText="发现时间" DataFormatString="{0:yyyy/MM/dd}">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="13%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="13%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
                                                         <ItemTemplate>
@@ -176,7 +176,7 @@
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhuanChengRenWu%>"></asp:Label>
                                                             </a>
                                                         </ItemTemplate>
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                     </asp:TemplateColumn>
                                                     <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
@@ -189,10 +189,10 @@
                                                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.ID", "TTRiskRelatedDoc.aspx?RelatedID={0}") %>'
                                                                 Target="_blank"><img src ="ImagesSkin/Doc.gif" class="noBorder" /></asp:HyperLink>
                                                         </ItemTemplate>
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                     </asp:TemplateColumn>
 
-<%--                                                      <asp:ButtonColumn ButtonType="LinkButton" CommandName="Other" Text="- - -">
+                                                    <%--                                                      <asp:ButtonColumn ButtonType="LinkButton" CommandName="Other" Text="- - -">
                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                     </asp:ButtonColumn>--%>
                                                 </Columns>
@@ -223,10 +223,10 @@
                         <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
                             <table style="width: 95%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
+                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_RiskLevel" runat="server" Text="<%$ Resources:lang,Level%>"></asp:Label>
                                         :</td>
-                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 20%;" class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_RiskLevel" runat="server">
                                             <asp:ListItem Value="Medium" Text="<%$ Resources:lang,Zhong%>" />
                                             <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao%>" />
@@ -236,14 +236,14 @@
                                     <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbStatus" runat="server" Text="<%$ Resources:lang,Status%>"></asp:Label>:
                                     </td>
-                                    <td colspan ="3" class="formItemBgStyleForAlignLeft" >
+                                    <td colspan="3" class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_Status" runat="server">
                                             <asp:ListItem Value="Potential" Text="<%$ Resources:lang,QianZai%>" />
                                             <asp:ListItem Value="Exposed" Text="<%$ Resources:lang,BaoLu%>" />
                                             <asp:ListItem Value="Occurred" Text="<%$ Resources:lang,FaSheng%>" />
                                             <asp:ListItem Value="Resolved" Text="<%$ Resources:lang,JieChu%>" />
                                             <asp:ListItem Value="ToTask" Text="<%$ Resources:lang,ZhuanRen%>" />
-                                        </asp:DropDownList> 
+                                        </asp:DropDownList>
                                         <asp:Label ID="LB_ID" runat="server" Visible="false"></asp:Label>
                                     </td>
                                 </tr>
@@ -251,7 +251,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbRiskName" runat="server" Text="<%$ Resources:lang,Name%>"></asp:Label>:
                                     </td>
-                                    <td colspan="5"  class="formItemBgStyleForAlignLeft">
+                                    <td colspan="5" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_RiskName" runat="server" Width="90%"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -259,7 +259,7 @@
                                     <td style="height: 61px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,Description%>"></asp:Label>:
                                     </td>
-                                    <td colspan="5" style="height: 61px; "  class="formItemBgStyleForAlignLeft"
+                                    <td colspan="5" style="height: 61px;" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_RiskDetail" runat="server" Height="50px" TextMode="MultiLine"
                                             Width="90%"></asp:TextBox>
                                     </td>
@@ -285,7 +285,7 @@
                                         </ajaxToolkit:CalendarExtender>
 
                                     </td>
-                                    <td  class="formItemBgStyleForAlignLeft" colspan="2"></td>
+                                    <td class="formItemBgStyleForAlignLeft" colspan="2"></td>
                                 </tr>
 
                             </table>
@@ -368,4 +368,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

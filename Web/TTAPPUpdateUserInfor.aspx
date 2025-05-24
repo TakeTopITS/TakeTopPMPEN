@@ -79,7 +79,7 @@
                             <td style="padding-top: 5px; padding-bottom: 5px;" align="left">
                                 <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                     <tr>
-                                        <td style="width: 15%; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>
                                         </td>
                                     </tr>

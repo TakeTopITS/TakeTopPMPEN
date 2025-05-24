@@ -564,7 +564,7 @@
                                             </td>
                                         </tr>
                                         <tr style="display :none;">
-                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"
+                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft">
                                                     &nbsp; &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                                 &nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                                 <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>

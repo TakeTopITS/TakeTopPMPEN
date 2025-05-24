@@ -172,7 +172,7 @@
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_VendorCode" Width="99%" runat="server"></asp:TextBox>
                                         <asp:Label ID="LB_VendorCode" runat="server" Visible="false"></asp:Label>
                                     </td>

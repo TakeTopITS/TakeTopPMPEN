@@ -69,9 +69,9 @@
                                 <table class="formBgStyle" style="width: 90%; text-align: left;" class="formBgStyle"
                                     cellpadding="3" cellspacing="0">
                                     <tr>
-                                        <td style="width: 15%; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label4" runat="server" Text="1������"></asp:Label></td>
-                                        <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 35%; "  class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_TopDepartCode" runat="server"></asp:TextBox>
                                             <asp:Label ID="LB_TopDepartName" runat="server"></asp:Label>
                                             <cc1:ModalPopupExtender ID="ModalPopupExtender5"
@@ -79,7 +79,7 @@
                                                 CancelControlID="IMB_CloseDepartment" BackgroundCssClass="modalBackground" Y="150">
                                             </cc1:ModalPopupExtender>
                                         </td>
-                                        <td style="width: 15%; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label5" runat="server" Text="CompanySeniority"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_EntryTotalYearMonth" Width="100" runat="server" ReadOnly></asp:TextBox>

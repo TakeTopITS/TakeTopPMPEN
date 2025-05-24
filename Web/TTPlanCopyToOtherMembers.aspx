@@ -123,7 +123,7 @@
                                                                     <tr>
                                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,KaiShiShiJian %>"></asp:Label>£º </td>
-                                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                                             <asp:TextBox ID="DLC_StartTime" runat="server"></asp:TextBox>
                                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4"
                                                                                 runat="server" TargetControlID="DLC_StartTime" Enabled="True">
@@ -131,7 +131,7 @@
                                                                         </td>
                                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JieShuShiJian %>"></asp:Label>£º </td>
-                                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                                             <asp:TextBox ID="DLC_EndTime" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"
                                                                                 runat="server" TargetControlID="DLC_EndTime" Enabled="True">
                                                                             </ajaxToolkit:CalendarExtender>
@@ -156,7 +156,7 @@
                                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,TiJiaoShiJian %>"></asp:Label>£º
                                                                         </td>
-                                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="LB_SubmitTime" runat="server"></asp:Label>
                                                                         </td>
                                                                     </tr>

@@ -75,7 +75,7 @@
                                                         <td align="right">
                                                             <asp:DropDownList ID="DL_LogOperator" runat="server">
                                                                 <asp:ListItem Value="<"><</asp:ListItem>
-                                                                <asp:ListItem Value=">=">>=</asp:ListItem>
+                                                                <asp:ListItem Value=">=">=</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </td>
 

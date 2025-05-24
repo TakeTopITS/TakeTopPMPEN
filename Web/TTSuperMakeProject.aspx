@@ -386,14 +386,14 @@
                                                                                     <span style="font-size: 10pt">
                                                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XiangMuE%>"></asp:Label>£º</span>
                                                                                 </td>
-                                                                                <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 35%; "  class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ProjectAmount" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                                                 </td>
                                                                                 <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                                                                     <span style="font-size: 10pt">
                                                                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YuSuan%>"></asp:Label>£º</span>
                                                                                 </td>
-                                                                                <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 35%; "  class="formItemBgStyleForAlignLeft">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Budget" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                                                 </td>
                                                                             </tr>

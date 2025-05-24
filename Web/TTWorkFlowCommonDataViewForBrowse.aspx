@@ -3798,7 +3798,7 @@
                                                                     <%#DataBinder.Eval(Container.DataItem, "PaymentMethod")%>
 
                                                                     &nbsp;&nbsp;&nbsp;&nbsp;
-                                                                    <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,LeiJiYuJiaoFaPiao%>">></asp:Label>£º
+                                                                    <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,LeiJiYuJiaoFaPiao%>"></asp:Label>£º
 
                                                                      <%#DataBinder.Eval(Container.DataItem, "AleadyTotalInvoice")%>
                                                                     &nbsp;&nbsp;

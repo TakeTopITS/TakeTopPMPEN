@@ -18,7 +18,8 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        $(function () { if (top.location != self.location) { } else { CloseWebPage(); }
+        $(function () {
+            if (top.location != self.location) { } else { CloseWebPage(); }
         });
 
     </script>
@@ -49,9 +50,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td align="left" width="345">
-                                              
-                                            </td>
+                                            <td align="left" width="345"></td>
                                             <td>&nbsp;</td>
                                         </tr>
                                     </table>
@@ -79,7 +78,7 @@
                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                             <tr>
                                                                                 <td align="left" width="3%"><strong>ID</strong> </td>
-                                                                                
+
                                                                                 <td width="6%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JianLiShiJian%>"></asp:Label></strong>
@@ -177,103 +176,103 @@
                                                                 </tr>
                                                             </table>
                                                             <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" ShowHeader="false" CellPadding="4" ForeColor="#333333"
-                                                                GridLines="None"  Width="100%" PageSize="20">
+                                                                GridLines="None" Width="100%" PageSize="20">
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle Horizontalalign="center" />
+                                                                <PagerStyle HorizontalAlign="center" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
                                                                     <asp:BoundColumn DataField="ID" HeaderText="ID">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="3%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="3%" />
                                                                     </asp:BoundColumn>
-                                                                 
+
                                                                     <asp:BoundColumn DataField="CreateDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="建立时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="MCheckInStart" HeaderText="早班上班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="MCheckInEnd" HeaderText="早班上班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="MCheckInIsMust" HeaderText="早班上班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="MCheckOutStart" HeaderText="早班下班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="MCheckOutEnd" HeaderText="早班下班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="MCheckOutIsMust" HeaderText="早班下班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="ACheckInStart" HeaderText="中班上班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ACheckInEnd" HeaderText="中班上班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ACheckInIsMust" HeaderText="中上午上班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="ACheckOutStart" HeaderText="中班下班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ACheckOutEnd" HeaderText="中班下班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="ACheckOutIsMust" HeaderText="中午下班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="NCheckInStart" HeaderText="晚班上班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="NCheckInEnd" HeaderText="晚班上班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="NCheckInIsMust" HeaderText="晚班上班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="NCheckOutStart" HeaderText="晚班下班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="NCheckOutEnd" HeaderText="晚班下班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="NCheckOutIsMust" HeaderText="晚班下班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="OCheckInStart" HeaderText="加班上班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="OCheckInEnd" HeaderText="加班上班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="OCheckInIsMust" HeaderText="加班上班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:BoundColumn DataField="OCheckOutStart" HeaderText="加班下班开始时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="OCheckOutEnd" HeaderText="加班下班结束时间">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="OCheckOutIsMust" HeaderText="加班下班必须">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="LargestDistance" HeaderText="MaximumAllowedDistance">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
                                                             </asp:DataGrid>
@@ -283,8 +282,8 @@
                                                 <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
-                                                         
-                                                            <asp:Label ID="Label2120" runat="server" Text="<%$ Resources:lang,WoDeKaoQinJiLu%>" ></asp:Label>
+
+                                                            <asp:Label ID="Label2120" runat="server" Text="<%$ Resources:lang,WoDeKaoQinJiLu%>"></asp:Label>
                                                             <asp:DropDownList ID="DL_DisplayType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_DisplayType_SelectedIndexChanged">
                                                                 <asp:ListItem Value="DisplayAbnormal" Text="<%$ Resources:lang,XianShiYiChang%>" />
                                                                 <asp:ListItem Value="DisplayAll" Text="<%$ Resources:lang,XianShiQuanBu%>" />
@@ -384,21 +383,21 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
                                                                     <asp:BoundColumn DataField="ID" HeaderText="Number">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="2%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="2%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="UserName" HeaderText="Name">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="LeaderName" HeaderText="主管">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="AttendanceDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="考勤日期">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:TemplateColumn>
@@ -412,7 +411,7 @@
                                                                  <br />
                                                                             IsMust:<%# Eval("MCheckInIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
 
@@ -427,7 +426,7 @@
                                                                 <br />
                                                                             IsMust:<%# Eval("MCheckOutIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
 
@@ -442,7 +441,7 @@
                                                                   <br />
                                                                             IsMust:<%# Eval("ACheckInIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
                                                                     <asp:TemplateColumn>
@@ -456,7 +455,7 @@
                                                                   <br />
                                                                             IsMust:<%# Eval("ACheckOutIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
                                                                     <asp:TemplateColumn>
@@ -470,7 +469,7 @@
                                                                   <br />
                                                                             IsMust:<%# Eval("NCheckInIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
                                                                     <asp:TemplateColumn>
@@ -484,7 +483,7 @@
                                                                   <br />
                                                                             IsMust: <%# Eval("NCheckOutIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
                                                                     <asp:TemplateColumn>
@@ -498,7 +497,7 @@
                                                                     <br />
                                                                             IsMust: <%# Eval("OCheckInIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
                                                                     <asp:TemplateColumn>
@@ -512,17 +511,17 @@
                                                                   <br />
                                                                             IsMust: <%# Eval("OCheckOutIsMust").ToString().Trim () %>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
 
                                                                     <asp:BoundColumn DataField="LargestDistance" HeaderText="MaximumAllowedDistance">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="LateMinute" HeaderText="迟到分钟">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="EarlyMinute" HeaderText="早退分钟">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn>
                                                                         <ItemTemplate>
@@ -531,14 +530,14 @@
                                                                                 <img id="IMG_GPS" src="ImagesSkin/GPS.jpg" width="20" height="20" /></a>
 
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                     </asp:TemplateColumn>
                                                                 </Columns>
                                                             </asp:DataGrid>
                                                         </td>
                                                     </tr>
                                                     <tr style="display: none;">
-                                                        <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"&nbsp; &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>：<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                                        <td style="width: 100%;" class="formItemBgStyleForAlignLeft">&nbsp; &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>：<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                                             <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label><asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>
@@ -565,4 +564,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

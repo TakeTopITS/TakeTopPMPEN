@@ -75,10 +75,10 @@
 
                                                                         <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                             <tr>
-                                                                                <td style="width: 100px;  height: 13px;" class="formItemBgStyleForAlignLeft">
+                                                                                <td style="width: 100px; height: 13px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td style="height: 13px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="height: 13px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_DefectID" runat="server"></asp:Label>
                                                                                     <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                                                                     <asp:Label ID="LB_UserName" runat="server" Visible="False"></asp:Label>
@@ -107,7 +107,7 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiangXiMiaoShu%>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td  class="formItemBgStyleForAlignLeft">
+                                                                                <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="TB_DefectDetail" runat="server" Height="55px" TextMode="MultiLine"
                                                                                         Width="90%"></asp:TextBox>
                                                                                 </td>
@@ -178,17 +178,17 @@
                                                                                         <tr>
                                                                                             <td>
 
-                                                                                                <asp:Button ID="BT_Update" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_Update_Click"   Text="<%$ Resources:lang,BaoCun%>" />
+                                                                                                <asp:Button ID="BT_Update" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_Update_Click" Text="<%$ Resources:lang,BaoCun%>" />
 
                                                                                             </td>
                                                                                             <td style="padding-left: 20px;">
 
                                                                                                 <asp:Button ID="BT_Close" runat="server" CssClass="inpuClose" ToolTip="<%$ Resources:lang,GuanBi%>" Enabled="False" OnClick="BT_Close_Click" />
 
-                                                                                                            &nbsp;
+                                                                                                &nbsp;
                                                                                                 <asp:Button ID="BT_Open" runat="server" CssClass="inpuActive" ToolTip="<%$ Resources:lang,JiHuo%>" Enabled="False" OnClick="BT_Open_Click" />
 
-                                                                                                            &nbsp;
+                                                                                                &nbsp;
                                                                                                 <asp:Button ID="BT_Delete" runat="server" CssClass="inpuDelete" ToolTip="<%$ Resources:lang,ShanChu%>" Enabled="False" OnClick="BT_Delete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" />
 
                                                                                             </td>
@@ -207,13 +207,13 @@
 
                                                                         <table style="width: 90%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                             <tr>
-                                                                                <td valign="top"  class="formItemBgStyleForAlignLeft">
+                                                                                <td valign="top" class="formItemBgStyleForAlignLeft">
                                                                                     <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                                         <tr>
                                                                                             <td style="width: 100px;" class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShouLiRenDaiMa%>"></asp:Label>:
                                                                                             </td>
-                                                                                            <td colspan="3"  class="formItemBgStyleForAlignLeft">
+                                                                                            <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:TextBox ID="TB_ReceiverCode" runat="server" Width="87px"></asp:TextBox>
                                                                                                 <asp:Label ID="LB_ReceiverName" runat="server" Visible="False" Width="72px"></asp:Label>
                                                                                                 <asp:Button ID="BT_Select" runat="server" Text="<%$ Resources:lang,XuanZhe %>" CssClass="inpu" OnClick="BT_Select_Click" />
@@ -223,7 +223,7 @@
                                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,GongZuoYaoQiu%>"></asp:Label>£º
                                                                                             </td>
-                                                                                            <td colspan="3"  class="formItemBgStyleForAlignLeft">
+                                                                                            <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                                                                 <CKEditor:CKEditorControl ID="HE_Operation" runat="server" Width="100%" Height="150px" Visible="False" />
                                                                                                 <CKEditor:CKEditorControl runat="server" ID="HT_Operation" Width="100%" Height="150px" Visible="False" />
                                                                                             </td>
@@ -249,13 +249,13 @@
                                                                                         </tr>
                                                                                         <tr>
                                                                                             <td class="formItemBgStyleForAlignLeft"></td>
-                                                                                            <td colspan="3"  class="formItemBgStyleForAlignLeft">
+                                                                                            <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:Button ID="BT_Assign" runat="server" OnClick="BT_Assign_Click" CssClass="inpu"
                                                                                                     Text="·Ö ÅÉ" Enabled="False" />
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr>
-                                                                                            <td  colspan="4" class="formItemBgStyleForAlignLeft">
+                                                                                            <td colspan="4" class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:CheckBox ID="CB_SendMsg" runat="server" Text="<%$ Resources:lang,FaXinXi%>" />
                                                                                                 <asp:CheckBox ID="CB_SendMail" runat="server" Text="<%$ Resources:lang,FaYouJian%>" />
                                                                                                 &nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,TongZhiShouLiRen%>"></asp:Label>&nbsp;
@@ -322,4 +322,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

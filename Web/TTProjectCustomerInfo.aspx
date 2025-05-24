@@ -183,7 +183,7 @@
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DaiMa %>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_CustomerCode" Width="99%" runat="server"></asp:TextBox>
                                         <asp:Label ID="LB_CustomerCode" runat="server" Visible="false"></asp:Label>
                                     </td>
@@ -237,7 +237,7 @@
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BiBie %>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_Currency" runat="server">
                                             <asp:ListItem Value="Renminbi" Text="<%$ Resources:lang,RenMinBi %>"/>
                                             <asp:ListItem Value="UsDollar" Text="<%$ Resources:lang,MeiYuan %>"/>
@@ -256,7 +256,7 @@
                                     </td>
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">&nbsp;<asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZheKouLv %>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Discount" runat="server" Width="44px" Height="23px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                     </td>
                                 </tr>
@@ -270,7 +270,7 @@
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XinYongDengJi %>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_CreditRate" runat="server" Width="44px" Height="22px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                     </td>
                                 </tr>

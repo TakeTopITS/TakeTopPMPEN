@@ -341,7 +341,7 @@
                                                     <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,JieShuShiJian %>"></asp:Label>£º
                                                 </td>
                                                 <td  class="formItemBgStyleForAlignLeft">
-                                                    <asp:TextBox ID="DLC_EndDate" runat="server" Width="100px">></asp:TextBox>
+                                                    <asp:TextBox ID="DLC_EndDate" runat="server" Width="100px"></asp:TextBox>
                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"
                                                         runat="server" TargetControlID="DLC_EndDate" Enabled="True">
                                                     </ajaxToolkit:CalendarExtender>

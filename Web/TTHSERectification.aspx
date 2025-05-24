@@ -119,7 +119,7 @@
                                                                     </td>
                                                                     <td width="10%" align="left">
                                                                         <strong>
-                                                                            <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuJiWanChengRiQi%>"></asp:Label>></strong>
+                                                                            <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuJiWanChengRiQi%>"></asp:Label></strong>
                                                                     </td>
                                                                     <td width="30%" align="left">
                                                                         <strong>

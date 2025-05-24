@@ -294,7 +294,7 @@
                                                                                 <ContentTemplate>
                                                                                     <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                                         <tr>
-                                                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"<strong>
+                                                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"><strong>
                                                                                                 <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,YJXFPRWQXZSLRHSRGZYQ %>"></asp:Label>£º<asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label></strong></td>
                                                                                         </tr>
                                                                                         <tr>

@@ -116,13 +116,13 @@
                                                                         <td  width="15%" class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                                                         </td>
-                                                                        <td style="width="19%" class="formItemBgStyleForAlignLeft">
+                                                                        <td style="width:19%" class="formItemBgStyleForAlignLeft">
                                                                             <asp:TextBox ID="TB_CustomerCode" runat="server" Width="150px"></asp:TextBox>
                                                                         </td>
                                                                         <td  width="15%" class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                                         </td>
-                                                                        <td style="width="19%" class="formItemBgStyleForAlignLeft">
+                                                                        <td style="width:19%" class="formItemBgStyleForAlignLeft">
                                                                             <asp:TextBox ID="TB_CustomerName" runat="server" Style="margin-left: 0px" Width="95%"></asp:TextBox>
                                                                         </td>
                                                                         <td class="formItemBgStyleForAlignLeft" style="text-align: end; display:none;" valign="middle">&nbsp;&nbsp;

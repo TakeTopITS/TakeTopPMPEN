@@ -220,7 +220,7 @@
                                                                         <asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>
                                                                         <asp:Label ID="LB_Sql4" runat="server" Visible="False"></asp:Label>
                                                                     </td>
-                                                                    <td style="height: 15px; "  class="formItemBgStyleForAlignLeft"
+                                                                    <td style="height: 15px; "  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Button ID="BT_Reduce" runat="server" OnClick="BT_Reduce_Click" Text="<%$ Resources:lang,HuanYuanCiBaoFeiShangPin%>"
                                                                             CssClass="inpuLong" Enabled="False" />
                                                                     </td>

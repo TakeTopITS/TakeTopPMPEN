@@ -308,7 +308,7 @@
                                                     <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label23" runat="server" Text="产品"></asp:Label>：
                                                     </td>
-                                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
                                                         <asp:DropDownList ID="DL_RentProductName" runat="server">
                                                             <asp:ListItem>项目管理平台</asp:ListItem>
                                                             <asp:ListItem>研发项目管理平台</asp:ListItem>

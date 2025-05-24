@@ -778,7 +778,7 @@
                                                                                                                 <asp:Label ID="LB_ProjectName" runat="server" Text="<%$ Resources:lang,ProjectName %>"></asp:Label>:</span>
                                                                                                         </td>
 
-                                                                                                        <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
+                                                                                                        <td style="width: 35%; "  class="formItemBgStyleForAlignLeft">
 
                                                                                                             <asp:TextBox ID="TB_ProjectName" runat="server" Width="95%" Font-Size="10pt"></asp:TextBox>
                                                                                                         </td>
@@ -850,7 +850,7 @@
                                                                                                             </ajaxToolkit:CalendarExtender>
                                                                                                         </td>
 
-                                                                                                        <td rowspan="2" style="vertical-align: middle; "  class="formItemBgStyleForAlignLeft"
+                                                                                                        <td rowspan="2" style="vertical-align: middle; "  class="formItemBgStyleForAlignLeft">
 
                                                                                                             <asp:Button ID="BT_DateFind" runat="server" OnClick="BT_DateFind_Click" Text="<%$ Resources:lang,Find %>"
                                                                                                                 CssClass="inpuLong" />

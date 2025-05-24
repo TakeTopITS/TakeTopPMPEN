@@ -27,7 +27,7 @@
     <script src="js/allAHandler.js" type="text/javascript"></script>
     <script language="javascript" type="text/javascript">
         $(function () {
-            
+
         });
     </script>
 </head>
@@ -68,7 +68,7 @@
                                 <td style="width: 150px;" class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>
                                 </td>
-                                <td style="width: 130px; "  class="formItemBgStyleForAlignLeft"
+                                <td style="width: 130px; "  class="formItemBgStyleForAlignLeft">
                                     <asp:TextBox ID="TB_UserCode" runat="server" Enabled="False"></asp:TextBox>
                                 </td>
                                 <td style="text-align: left;" class="auto-style1" rowspan="6">
@@ -166,7 +166,7 @@
                                 <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,GongZuoFanWei%>"></asp:Label>
                                 </td>
-                                <td style="width: 250px; "  class="formItemBgStyleForAlignLeft"
+                                <td style="width: 250px; "  class="formItemBgStyleForAlignLeft">
                                     <asp:TextBox ID="TB_WorkScope" runat="server" Enabled="False" Height="73px" ReadOnly="True"
                                         TextMode="MultiLine" Width="260px"></asp:TextBox>
                                 </td>

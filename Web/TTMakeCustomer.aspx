@@ -3982,7 +3982,7 @@
                                                                     <asp:Label ID="Label3333" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>: </td>
 
 
-                                                                <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                                                <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
 
 
                                                                     <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="HomeName" DataValueField="Type"

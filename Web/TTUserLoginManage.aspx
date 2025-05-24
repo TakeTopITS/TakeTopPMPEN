@@ -85,7 +85,7 @@
                                                                     <td align="left" width="20%"><strong>
                                                                         <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,DiSanFangYeMobile %>"></asp:Label></strong> </td>
                                                                     <td align="left" width="10%"><strong>
-                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,PaiXu %>"></asp:Label>></strong> </td>
+                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,PaiXu %>"></asp:Label></strong> </td>
                                                                 </tr>
                                                             </table>
                                                         </td>

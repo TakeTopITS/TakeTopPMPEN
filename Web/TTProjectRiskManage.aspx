@@ -106,21 +106,21 @@
                                                 Width="100%" ShowHeader="false">
                                                 <Columns>
                                                     <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetailView.aspx?ProjectID={0}"
                                                         DataTextField="ProjectID" HeaderText="ProjectNumber" Target="_blank">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:BoundColumn DataField="RiskLevel" HeaderText="Level">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectRiskDetail.aspx?ID={0}"
                                                         DataTextField="Risk" HeaderText="风险名称" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:BoundColumn DataField="EffectDate" HeaderText="预计发生时间" DataFormatString="{0:yyyy/MM/dd}">
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn HeaderText="Status">
                                                         <ItemTemplate>
@@ -133,7 +133,7 @@
                                                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.ID", "TTDocumentTreeView.aspx?RelatedType=Risk&RelatedID={0}") %>'
                                                                 Target="_blank"><img src ="ImagesSkin/Doc.gif" class="noBorder" /></asp:HyperLink>
                                                         </ItemTemplate>
-                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="19%" />
+                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="19%" />
                                                     </asp:TemplateColumn>
                                                 </Columns>
 
@@ -141,7 +141,7 @@
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <EditItemStyle BackColor="#2461BF" />
                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                             </asp:DataGrid>
                                         </td>
                                     </tr>

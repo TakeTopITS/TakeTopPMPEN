@@ -294,7 +294,7 @@
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,RuXueRiQi%>"></asp:Label>
                                                         </td>
-                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="DLC_AdmissionDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
                                                         <td style="height: 12px; text-align: left;" class="formItemBgStyleForAlignLeft" colspan="4">&nbsp;</td>

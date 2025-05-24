@@ -75,7 +75,7 @@
                                             <td style="width: 130px; " class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>
                                             </td>
-                                            <td style="width: 250px; "  class="formItemBgStyleForAlignLeft"
+                                            <td style="width: 250px; "  class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="TB_UserCode" runat="server" Enabled="False"></asp:Label>
                                             </td>
                                             <td style="width: 154px" class="formItemBgStyleForAlignLeft" rowspan="4">

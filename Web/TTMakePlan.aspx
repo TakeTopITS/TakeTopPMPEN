@@ -357,7 +357,7 @@
                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£º
                                                 </td>
 
-                                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">
 
                                                     <asp:TextBox ID="DLC_StartTime" runat="server"></asp:TextBox>
 
@@ -370,7 +370,7 @@
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º
                                                 </td>
 
-                                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">
 
                                                     <asp:TextBox ID="DLC_EndTime" runat="server"></asp:TextBox>
 
@@ -404,7 +404,7 @@
                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,TiJiaoShiJian%>"></asp:Label>£º
                                                 </td>
 
-                                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                <td style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_SubmitTime" runat="server"></asp:Label>
                                                 </td>
                                             </tr>

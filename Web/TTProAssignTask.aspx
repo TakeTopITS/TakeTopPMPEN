@@ -305,7 +305,7 @@
                                                     <asp:Label ID="LB_tbType" runat="server" Text="<%$ Resources:lang,Type %>"></asp:Label>
                                                     :
                                                 </td>
-                                                <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                                <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
                                                     <asp:DropDownList ID="DL_Type" runat="server" DataTextField="Type" DataValueField="Type">
                                                     </asp:DropDownList>
                                                 </td>
@@ -445,7 +445,7 @@
                                                 <tr>
                                                     <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label3333" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>: </td>
-                                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
                                                         <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="HomeName" DataValueField="Type"
                                                             AutoPostBack="true" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                         </asp:DropDownList>

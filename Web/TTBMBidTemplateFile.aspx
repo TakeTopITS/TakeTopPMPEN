@@ -99,7 +99,7 @@
                                                                     </td>
                                                                     <td width="30%" align="left">
                                                                         <strong>
-                                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,WenJianXiaZai%>">></asp:Label></strong>
+                                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,WenJianXiaZai%>"></asp:Label></strong>
                                                                     </td>
                                                                 </tr>
                                                             </table>

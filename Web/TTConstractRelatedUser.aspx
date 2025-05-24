@@ -10,9 +10,10 @@
      <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        $(function () { if (top.location != self.location) { } else { CloseWebPage(); }
+        $(function () {
+            if (top.location != self.location) { } else { CloseWebPage(); }
 
-           
+
 
         });
 
@@ -259,7 +260,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="width: 85px; height: 6px;" class="formItemBgStyleForAlignLeft"></td>
-                                                                <td colspan="5" style="width: 100px; height: 6px; "  class="formItemBgStyleForAlignLeft"
+                                                                <td colspan="5" style="width: 100px; height: 6px; "  class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="LB_ID" runat="server"  Visible="False" Font-Size="10pt"></asp:Label>
                                                                 </td>
                                                             </tr>

@@ -141,7 +141,7 @@
                                     <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer2" runat="server" ActiveTabIndex="0" Width="100%">
                                         <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="正处理的缺陷：">
                                             <HeaderTemplate>
-                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhenChuLiDeQueXian%>"></asp:Label>></asp:Label>
+                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhenChuLiDeQueXian%>"></asp:Label></asp:Label>
                                             </HeaderTemplate>
                                             <ContentTemplate>
                                                 <table cellpadding="0" cellspacing="0" width="100%">

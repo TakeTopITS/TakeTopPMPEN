@@ -118,15 +118,15 @@
                                                                         <tr>
                                                                             <td width="10%" align="left">
                                                                                 <strong>
-                                                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BianHao%>">></asp:Label></strong>
+                                                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                                             </td>
                                                                             <td width="20%" align="left">
                                                                                 <strong>
-                                                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaiMa%>">></asp:Label></strong>
+                                                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label></strong>
                                                                             </td>
                                                                             <td width="20%" align="left">
                                                                                 <strong>
-                                                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,XingMing%>">></asp:Label>
+                                                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label>
                                                                                 </strong>
                                                                             </td>
                                                                             <td width="20%" align="left">
@@ -136,7 +136,7 @@
                                                                             </td>
                                                                             <td width="30%" align="left">
                                                                                 <strong>
-                                                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,CaoZuoShiJian%>">></asp:Label></strong>
+                                                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,CaoZuoShiJian%>"></asp:Label></strong>
                                                                             </td>
 
                                                                         </tr>
@@ -176,7 +176,7 @@
                                                                     <tr>
                                                                         <td align="left" valign="top" style="width: 10%; padding-left: 5px" class="tdLeft">
                                                                             <span style="font-size: 10pt">
-                                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,CaoZuoYuJu%>">></asp:Label></span>
+                                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,CaoZuoYuJu%>"></asp:Label></span>
                                                                         </td>
                                                                         <td colspan="4" valign="top" style="text-align: left; padding-left: 5px; word-break: break-all;"
                                                                             class="tdLeft">

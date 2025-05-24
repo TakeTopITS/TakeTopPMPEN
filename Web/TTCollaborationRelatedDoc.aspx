@@ -50,7 +50,7 @@
 
                 //判断文档类型是否为空
                 if (document.getElementById("TB_DocType").value == "") {
-                     alert("<%=LanguageHandle.GetWord("JingGaoQingXuanZeWenJianLeiXing").ToString() %>");
+                    alert("<%=LanguageHandle.GetWord("JingGaoQingXuanZeWenJianLeiXing").ToString() %>");
                     return;
                 }
 
@@ -400,7 +400,7 @@
                                                 <asp:View ID="View1" runat="server">
                                                     <table style="width: 100%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                         <tr>
-                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft">
                                                                 <span><strong>
                                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>：</strong>
                                                                 </span>
@@ -408,7 +408,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="width: 100%; height: 25px; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="width: 100%; height: 25px; "  class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：
                                                                   <asp:Label ID="LB_DocTypeID" runat="server"></asp:Label>
                                                                 <asp:TextBox ID="TB_DocType" runat="server" Width="125px"></asp:TextBox>
@@ -426,7 +426,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft">
 
                                                                 <div>
                                                                     <asp:Label ID="Label27" Text="<%$ Resources:lang,WenJianShangChuan%>" runat="server"></asp:Label>：

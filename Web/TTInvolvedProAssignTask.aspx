@@ -281,7 +281,7 @@
                                 <tr>
                                     <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbID" runat="server" Text="<%$ Resources:lang,ID %>"></asp:Label>: </td>
-                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_TaskNO" runat="server"></asp:Label>
                                         <asp:Label ID="LB_TaskID" runat="server" Visible="False"></asp:Label>
                                     </td>

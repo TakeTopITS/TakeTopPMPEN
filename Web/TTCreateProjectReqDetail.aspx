@@ -79,7 +79,7 @@
                                                                                 <td style="width: 100px;  height: 13px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td style="height: 13px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="height: 13px; "  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_ReqID" runat="server"></asp:Label>
                                                                                     <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                                                                     <asp:Label ID="LB_UserName" runat="server" Visible="False"></asp:Label>

@@ -328,7 +328,7 @@
 
                                                                                         <tr>
 
-                                                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"
+                                                                                            <td style="width: 100%; "  class="formItemBgStyleForAlignLeft">
 
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YJXFPRWQXZSLRHSRGZYQ %>"></asp:Label>£º<asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label>

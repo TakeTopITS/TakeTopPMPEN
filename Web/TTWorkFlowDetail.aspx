@@ -551,7 +551,7 @@
                                                             <td style="height: 15px; " class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FaQiRen%>"></asp:Label>
                                                             </td>
-                                                            <td style="height: 15px; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="height: 15px; "  class="formItemBgStyleForAlignLeft">
                                                                 <%#DataBinder .Eval (Container .DataItem,"CreatorCode") %>
                                                                 <%#DataBinder .Eval (Container .DataItem,"CreatorName") %>
                                                             </td>

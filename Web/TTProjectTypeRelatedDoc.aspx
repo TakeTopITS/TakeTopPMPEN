@@ -232,7 +232,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%; "  class="formItemBgStyleForAlignLeft"
+                                                                        <td style="width: 100%; "  class="formItemBgStyleForAlignLeft">
                                                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                                                                 <ContentTemplate>
                                                                                     <div>

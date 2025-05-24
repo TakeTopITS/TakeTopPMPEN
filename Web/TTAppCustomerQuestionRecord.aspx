@@ -306,7 +306,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,KeHuMingCheng%>"></asp:Label>
                                     </td>
                                 </tr>

@@ -195,7 +195,7 @@
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 35%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 35%; "  class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_Type" runat="server" CssClass="DDList" DataTextField="Type"
                                             DataValueField="Type">
                                         </asp:DropDownList>

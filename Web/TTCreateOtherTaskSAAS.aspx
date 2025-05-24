@@ -295,7 +295,7 @@
 
                                                                 <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,YouXianJi%>"></asp:Label>£º
                                                             </td>
-                                                            <td style="width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="width: 20%; "  class="formItemBgStyleForAlignLeft">
                                                                 <asp:DropDownList ID="DL_Priority" runat="server" DataTextField="Priority" DataValueField="Priority">
 
                                                                     <asp:ListItem Value="Normal" Text="<%$ Resources:lang,PuTong %>" ></asp:ListItem>

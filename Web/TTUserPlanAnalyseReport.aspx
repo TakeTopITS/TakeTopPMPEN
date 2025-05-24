@@ -75,7 +75,7 @@
                                                         <td align="right">
                                                             <asp:DropDownList ID="DL_PlanOperator" runat="server">
                                                                 <asp:ListItem Value="<"><</asp:ListItem>
-                                                                <asp:ListItem Value=">=">>=</asp:ListItem>
+                                                                <asp:ListItem Value=">=">=</asp:ListItem>
                                                             </asp:DropDownList></td>
                                                         <td width="80px" align="right">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiHuaShu%>"></asp:Label>

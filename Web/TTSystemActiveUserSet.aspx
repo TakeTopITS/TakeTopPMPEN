@@ -143,13 +143,13 @@
                                                                 <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Width="45%" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
                                                                 <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Width="45%" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                         </asp:TemplateColumn>
                                                     </Columns>
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                 </asp:DataGrid>
@@ -167,7 +167,7 @@
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                                         </td>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_UserCode" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
@@ -175,7 +175,7 @@
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                         </td>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_UserName" runat="server" Enabled="false"></asp:TextBox>
                                                         </td>
                                                     </tr>
@@ -203,7 +203,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="height: 25px" class="formItemBgStyleForAlignLeft"></td>
-                                                        <td style="height: 25px; " class="formItemBgStyleForAlignLeft">
+                                                        <td style="height: 25px;" class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="BT_New" runat="server" OnClick="BT_New_Click" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" />
                                                         </td>
                                                     </tr>
@@ -234,7 +234,7 @@
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                                         </td>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_UserCodeFind" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
@@ -242,7 +242,7 @@
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                         </td>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_UserNameFind" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
@@ -313,14 +313,14 @@
                                                                 <asp:Button ID="BT_SystemUserCode" runat="server" CssClass="inpu" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
 
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                                         </asp:TemplateColumn>
 
                                                         <asp:TemplateColumn HeaderText="<%$ Resources:lang,MingCheng%>">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_SystemUserName" runat="server" CssClass="inpu" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                                         </asp:TemplateColumn>
 
                                                         <asp:TemplateColumn HeaderText="<%$ Resources:lang,KeYongWEB%>">
@@ -330,7 +330,7 @@
                                                                     <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                 </asp:DropDownList>
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                         </asp:TemplateColumn>
                                                         <asp:TemplateColumn HeaderText="<%$ Resources:lang,KeYongAPP%>">
                                                             <ItemTemplate>
@@ -339,28 +339,28 @@
                                                                     <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                 </asp:DropDownList>
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                         </asp:TemplateColumn>
                                                         <asp:TemplateColumn HeaderText="">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_Save" CommandName="Save" CssClass="inpu" runat="server" Text="<%$ Resources:lang,baocun%>"></asp:Button>
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                         </asp:TemplateColumn>
                                                         <asp:TemplateColumn HeaderText="<%$ Resources:lang,ShanChu%>">
                                                             <ItemTemplate>
                                                                 <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                         </asp:TemplateColumn>
 
                                                     </Columns>
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
-                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Horizontalalign="left" />
+                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="left" />
                                                     <ItemStyle CssClass="itemStyle" />
                                                 </asp:DataGrid>
                                             </td>

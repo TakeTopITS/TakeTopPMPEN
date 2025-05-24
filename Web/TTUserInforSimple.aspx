@@ -74,7 +74,7 @@
                                 <td style="width: 150px;" class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>
                                 </td>
-                                <td style="width: 130px; "  class="formItemBgStyleForAlignLeft"
+                                <td style="width: 130px; "  class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="TB_UserCode" runat="server" Enabled="False" />
                                 </td>
                                 <td  class="formItemBgStyleForAlignLeft" rowspan="6">
@@ -172,7 +172,7 @@
                                 <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,GongZuoFanWei%>"></asp:Label>
                                 </td>
-                                <td style="width: 250px; "  class="formItemBgStyleForAlignLeft"
+                                <td style="width: 250px; "  class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="TB_WorkScope" runat="server" />
                                 </td>
                                 <td class="formItemBgStyleForAlignLeft"></td>
