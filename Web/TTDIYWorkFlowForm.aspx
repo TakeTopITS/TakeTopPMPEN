@@ -357,7 +357,7 @@
                 <cc1:JSInfoPathRefer ID="JSInfoPathRefer1" runat="server" />
                 <table cellpadding="0" cellspacing="0" width="100%">
                     <tr>
-                        <td height="31" class="page_topbj" align="left" style="font-weight:500;">
+                        <td height="31" class="page_topbj" align="center" style="font-weight:500;">
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                    
