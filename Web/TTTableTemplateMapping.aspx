@@ -393,7 +393,7 @@
                             <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                 <tr>
                                     <td colspan="8" class="formItemBgStyle" align="left">
-                                        <input type="button" value="±£´æ" id="BT_Save" class="inpu" />
+                                        <input type="button" value="Save" id="BT_Save" class="inpu" />
                                     </td>
                                 </tr>
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">

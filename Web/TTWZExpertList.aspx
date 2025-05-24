@@ -93,7 +93,7 @@
                                                                     <td class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_Name" runat="server"></asp:TextBox>
                                                                         <asp:HiddenField ID="HF_Name" runat="server" />&nbsp;
-                                                                        <input type="button" id="btnName" class="inpu" runat="server" value="选择" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Name', 'TXT_Name')" />
+                                                                        <input type="button" id="btnName" class="inpu" runat="server" value="Select" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Name', 'TXT_Name')" />
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>：</td>
@@ -107,7 +107,7 @@
                                                                     <td class="formItemBgStyle">
                                                                         <asp:HiddenField ID="HF_ExpertType" runat="server" />
                                                                         <asp:TextBox ID="TXT_ExpertTypeChina" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" class="inpu" value="选择" id="btnSelect" onclick="SelectDLCode('TTWZSelectorDLCode.aspx', 'TB_ExpertType2', '')" />
+                                                                        <input type="button" class="inpu" value="Select" id="btnSelect" onclick="SelectDLCode('TTWZSelectorDLCode.aspx', 'TB_ExpertType2', '')" />
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YiDongDianHua%>"></asp:Label>：</td>
@@ -138,7 +138,7 @@
                                                                     </td>
                                                                 </tr>
                                                             </table>
-                                                            <input type="button" class="inpuLong" value="新增专家" onclick="window.location.href = 'TTWZExpertEdit.aspx'" style="display:none;" />
+                                                            <input type="button" class="inpuLong" value="New" onclick="window.location.href = 'TTWZExpertEdit.aspx'" style="display:none;" />
                                                         </td>
                                                     </tr>
                                                     <tr>

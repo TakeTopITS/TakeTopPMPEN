@@ -51,7 +51,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr style="font-size: 12pt;">
                                     <td align="right" class="formItemBgStyle">
-                                        <input type="button" class="inpuLong" value="新增交互配对表" onclick="window.location.href = 'TTAddTableNameMapping.aspx'" />
+                                        <input type="button" class="inpuLong" value="New" onclick="window.location.href = 'TTAddTableNameMapping.aspx'" />
                                     </td>
                                 </tr>
                                 <tr>

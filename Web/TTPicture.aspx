@@ -22,7 +22,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <input type="button" value="È¥ÅÄÕÕ" onclick="AlertPicturePage('TTPictureFile.aspx')" /><br />
+            <input type="button" value="TakeTopPhoto" onclick="AlertPicturePage('TTPictureFile.aspx')" /><br />
             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BaoCunPaiZhaoLuJing%>"></asp:Label>£º<asp:TextBox ID="TXT_PictureUrl" runat="server" Width="500"></asp:TextBox>
 
         </div>

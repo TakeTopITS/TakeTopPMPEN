@@ -691,7 +691,7 @@
                                                                         <td class="formItemBgStyle" align="left">
                                                                             <asp:HiddenField ID="HF_Leader" runat="server" />
                                                                             <asp:TextBox ID="TXT_Leader" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="btnLeader" class="inpu" runat="server" value="Ñ¡Ôñ" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'TabContainer1_TabPanel1_HF_Leader', 'TabContainer1_TabPanel1_TXT_Leader')" />
+                                                                        <input type="button" id="btnLeader" class="inpu" runat="server" value="Select" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'TabContainer1_TabPanel1_HF_Leader', 'TabContainer1_TabPanel1_TXT_Leader')" />
                                                                             <%--<asp:DropDownList ID="DDL_Leader" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                             Width="120px" >
                                                                         </asp:DropDownList>
@@ -706,7 +706,7 @@
                                                                         <td class="formItemBgStyle" align="left">
                                                                             <asp:HiddenField ID="HF_FeeManage" runat="server" />
                                                                             <asp:TextBox ID="TXT_FeeManage" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="BT_FeeManage" class="inpu" runat="server" value="Ñ¡Ôñ" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'TabContainer1_TabPanel1_HF_FeeManage', 'TabContainer1_TabPanel1_TXT_FeeManage')" />
+                                                                        <input type="button" id="BT_FeeManage" class="inpu" runat="server" value="Select" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'TabContainer1_TabPanel1_HF_FeeManage', 'TabContainer1_TabPanel1_TXT_FeeManage')" />
                                                                             <%--<asp:DropDownList ID="DDL_FeeManage" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                             Width="120px" >
                                                                         </asp:DropDownList>
@@ -723,7 +723,7 @@
                                                                         <td class="formItemBgStyle" align="left">
                                                                             <asp:HiddenField ID="HF_MaterialPerson" runat="server" />
                                                                             <asp:TextBox ID="TXT_MaterialPerson" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="BT_MaterialPerson" class="inpu" runat="server" value="Ñ¡Ôñ" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'TabContainer1_TabPanel1_HF_MaterialPerson', 'TabContainer1_TabPanel1_TXT_MaterialPerson')" />
+                                                                        <input type="button" id="BT_MaterialPerson" class="inpu" runat="server" value="Select" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'TabContainer1_TabPanel1_HF_MaterialPerson', 'TabContainer1_TabPanel1_TXT_MaterialPerson')" />
                                                                             <%--<asp:DropDownList ID="DDL_MaterialPerson" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                             Width="120px" >
                                                                         </asp:DropDownList>

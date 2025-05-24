@@ -355,7 +355,7 @@
                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ZhuanYeFanWeiEr%>"></asp:Label>£º</td>
                                                 <td class="formItemBgStyle" style="text-align: left" colspan="5">
                                                     <asp:TextBox ID="TB_ExpertType2" runat="server" Height="30px" TextMode="MultiLine" Width="85%"></asp:TextBox>&nbsp;
-                                                    <input type="button" class="inpu" value="Ñ¡Ôñ" id="btnSelect" onclick="SelectDLCode('TTWZSelectorDLCode.aspx','TB_ExpertType2','')" />
+                                                    <input type="button" class="inpu" value="Select" id="btnSelect" onclick="SelectDLCode('TTWZSelectorDLCode.aspx','TB_ExpertType2','')" />
                                                 </td>
                                             </tr>
                                             <tr>

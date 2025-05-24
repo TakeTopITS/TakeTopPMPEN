@@ -74,7 +74,7 @@
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_Name" runat="server"></asp:TextBox>
                                                                         <asp:HiddenField ID="HF_UserCode" runat="server" />&nbsp;
-                                                                        <input type="button" id="btnName" class="inpu" runat="server" value="Ñ¡Ôñ" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_UserCode', 'TXT_Name')" />
+                                                                        <input type="button" id="btnName" class="inpu" runat="server" value="Select" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_UserCode', 'TXT_Name')" />
 
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
@@ -106,7 +106,7 @@
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;&nbsp;
-                                                                        <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZExpertList.aspx'" />
+                                                                        <input type="button" value="Select" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZExpertList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

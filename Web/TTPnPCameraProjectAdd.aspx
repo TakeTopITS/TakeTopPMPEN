@@ -145,7 +145,7 @@
                                                                 <tr style="font-weight: bold; font-size: 11pt">
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;&nbsp;
-                                                                        <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" />
+                                                                        <input type="button" value="Back" id="BT_Return" class="inpu" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

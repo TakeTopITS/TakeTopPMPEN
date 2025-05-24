@@ -72,7 +72,7 @@
                                             </tr>
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: center" class="formItemBgStyle" colspan="2">
-                                                    <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;<input type="button" value="·µ»Ø" id="BT_Return" onclick="javascript:history.go(-1)" class="inpu" />
+                                                    <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;<input type="button" value="Back" id="BT_Return" onclick="javascript:history.go(-1)" class="inpu" />
                                                 </td>
                                             </tr>
                                         </table>

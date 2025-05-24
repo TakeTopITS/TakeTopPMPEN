@@ -74,7 +74,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyle" width="100%"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>：&nbsp;
                                                             <%--<asp:Button ID="BT_NewAdd" runat="server" CssClass="inpu" Enabled="false" Text="新增拜访" OnClick="BT_NewAdd_Click" />&nbsp;--%>
-                                                            <input type="button" value="新增拜访" class="inpuLong" onclick="window.location.href='TTVisitRegistration_StudentEdit.aspx'" />
+                                                            <input type="button" value="New" class="inpuLong" onclick="window.location.href='TTVisitRegistration_StudentEdit.aspx'" />
                                                             
                                                             <asp:Button ID="BT_RelaceLoad" runat="server" Text="<%$ Resources:lang,ChongXinJiaZaiLieBiao%>" OnClick="BT_RelaceLoad_Click" CssClass="inpu" style="display:none;" />
 

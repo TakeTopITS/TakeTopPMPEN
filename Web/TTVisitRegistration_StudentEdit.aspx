@@ -273,7 +273,7 @@
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                                         <%--<input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
                                                                             type="button" value="Closed" />--%>
-                                                                        <input type="button" value="返回列表" class="inpuLong" onclick="window.location.href = 'TTVisitRegistration_StudentList.aspx'" />
+                                                                        <input type="button" value="Back" class="inpuLong" onclick="window.location.href = 'TTVisitRegistration_StudentList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -284,7 +284,7 @@
                                                             <table id="oTable" width="800" border="1" cellspacing="0" cellpadding="0">
                                                                 <tr>
                                                                     <td colspan="3">
-                                                                        <input type="button" value="读身份证" onclick="Idcard();"></td>
+                                                                        <input type="button" value="ReadCardID" onclick="Idcard();"></td>
                                                                 </tr>
                                                                 <tr style="display:none;">
                                                                     <td width="200">
