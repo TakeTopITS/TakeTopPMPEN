@@ -291,8 +291,8 @@
                                     </td>
                                     <td style="height: 3px;" class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_Gender" runat="server">
-                                            <asp:ListItem Value="Male" />
-                                            <asp:ListItem Value="Female" />
+                                            <asp:ListItem Value="Male" Text="<%$ Resources:lang,Nan %>"/>
+                                            <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv %>"/>
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

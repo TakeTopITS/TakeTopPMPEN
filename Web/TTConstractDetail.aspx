@@ -1822,11 +1822,11 @@
 
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,YuanShiDanHao %>"></asp:Label>： </td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:TextBox ID="TB_ReceivablesBillCode" runat="server" Width="99%"></asp:TextBox></td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,ShouFeiKeMu %>"></asp:Label>： </td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:TextBox ID="TB_ReceiveAccount" runat="server" Width="135px"></asp:TextBox><asp:DropDownList ID="DL_ReceiveAccount" runat="server" AutoPostBack="True" DataTextField="AccountName"
@@ -1834,7 +1834,7 @@
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,YingShouJinE %>"></asp:Label>： </td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ReceivablesAccount" runat="server" OnBlur="" OnFocus=""
@@ -1868,7 +1868,7 @@
                                         <asp:DropDownList ID="DL_Payer" runat="server" AutoPostBack="True" DataTextField="Payer" DataValueField="Payer" Height="25px" OnSelectedIndexChanged="DL_Payer_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,BiBie %>"></asp:Label>：</td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <table>
@@ -2007,19 +2007,18 @@
                                         <asp:DropDownList ID="DL_Receiver" runat="server" AutoPostBack="True" DataTextField="Receiver" DataValueField="Receiver" Height="25px" OnSelectedIndexChanged="DL_Receiver_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,BiBie %>"></asp:Label>：</td>
                                     <td class="formItemBgStyleForAlignLeft" >
 
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <asp:Label ID="LB_PayableCurrency" runat="server"></asp:Label></td>
-                                                <td style="width: 100px; text-align: right;">
-                                                    <asp:Label ID="Label375" runat="server" Text="收支比例"></asp:Label>：
-                                                </td>
-                                                <td>
-                                                    <asp:DropDownList ID="DL_PayableIncomeRatio" runat="server">
+                                                    <asp:Label ID="LB_PayableCurrency" runat="server"></asp:Label></
+
+                                                    <asp:Label ID="Label375" runat="server" Text="<%$ Resources:lang,HeTongShouZiBiLei %>"></asp:Label>：
+                                             
+                                                    <asp:DropDownList ID="DL_PayableIncomeRatio" runat="server" Width="100px">
                                                         <asp:ListItem Value="" Text="--Select--"></asp:ListItem>
                                                         <asp:ListItem Value="ContractAgreedAdvancePaymentRatio" Text="ContractAgreedAdvancePaymentRatio"></asp:ListItem>
                                                         <asp:ListItem Value="ContractAgreedMonthlyProgressPaymentRatio" Text="ContractAgreedMonthlyProgressPaymentRatio"></asp:ListItem>
@@ -2032,12 +2031,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label58" runat="server" Text="<%$ Resources:lang,TiQianTianShu %>"></asp:Label>： </td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <NickLee:NumberBox ID="NB_PayablePreDays" runat="server" MaxAmount="1000000000000" MinAmount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="80px">0</NickLee:NumberBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label59" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>： </td>
                                     <td class="formItemBgStyleForAlignLeft" >
                                         <asp:DropDownList ID="DL_PayableStatus" runat="server">
@@ -2047,7 +2046,7 @@
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,BeiZhu %>"></asp:Label>：
                                     </td>
                                     <td colspan="3" class="formItemBgStyleForAlignLeft" >
@@ -2055,7 +2054,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,GuanLian %>"></asp:Label>： </td>
                                     <td class="formItemBgStyleForAlignLeft"  colspan="3">
                                         <table>
@@ -2098,8 +2097,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
-                                        <asp:Label ID="Label311" runat="server" Text="预算科目"></asp:Label>：
+                                    <td class="formItemBgStyleForAlignLeft">
+                                        <asp:Label ID="Label311" runat="server" Text="<%$ Resources:lang,XiangMuYiShuanKeMu %>"></asp:Label>：
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft"  colspan="3">
                                         <table>
@@ -2114,7 +2113,7 @@
                                                 </td>
 
                                                 <td align="left">
-                                                    <asp:Label ID="Label322" runat="server" Text="合同签证"></asp:Label>：
+                                                    <asp:Label ID="Label322" runat="server" Text="<%$ Resources:lang,GeTongQianZheng %>"></asp:Label>：
                                                 </td>
                                                 <td colspan="5" align="left">
                                                     <asp:Repeater ID="RP_RelatedConstractPayableVisa" runat="server" OnItemCommand="RP_RelatedConstractPayableVisa_ItemCommand">

@@ -87,8 +87,8 @@
                                                                 </td>
                                                                 <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                     <asp:DropDownList ID="DL_Gender" runat="server" Enabled="false">
-                                                                        <asp:ListItem Selected="True" Value="Male"></asp:ListItem>
-                                                                        <asp:ListItem Value="Female" />
+                                                                        <asp:ListItem Selected="True" Value="Male" Text="<%$ Resources:lang,Nan %>"/>
+                                                                        <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv %>"/>
                                                                     </asp:DropDownList></td>
                                                             </tr>
                                                             <tr>

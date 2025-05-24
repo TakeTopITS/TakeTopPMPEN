@@ -194,8 +194,8 @@
                                                                     </td>
                                                                     <td class="formItemBgStyleAlignLeft" style="text-align: left;" width="130px">
                                                                         <asp:DropDownList ID="ddl_TrainingSex" runat="server">
-                                                                            <asp:ListItem Selected="True" Value="Male" />
-                                                                            <asp:ListItem Value="Female" />
+                                                                            <asp:ListItem Selected="True" Value="Male" Text="<%$ Resources:lang,Nan %>"/>
+                                                                           <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv %>"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
