@@ -69,15 +69,15 @@
                                                 <div style="width: 1300px;">
                                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                         <tr>
-                                                            <th style="text-align: center; width: 20%;" class="formItemBgStyleForAlignLeft">
+                                                            <th style="width: 20%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,QuYu%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 20%;" class="formItemBgStyleForAlignLeft">
+                                                            <th style="width: 20%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,HanJieXingShi%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 20%;" class="formItemBgStyleForAlignLeft">
+                                                            <th style="width: 20%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,HanJieDB%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 20%;" class="formItemBgStyleForAlignLeft">
+                                                            <th style="width: 20%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,HanJieJieTou%>"></asp:Label></th>
-                                                            <th style="text-align: center; width: 20%;" class="formItemBgStyleForAlignLeft">
+                                                            <th style="width: 20%;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,GuanXianChangDu%>"></asp:Label></th>
                                                         </tr>
                                                         <tr>

@@ -309,7 +309,7 @@
                 <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"</td>
               </tr>
               <tr style="display: none;">
-                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;"><asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XingZhi%>"></asp:Label>
+                <td class="formItemBgStyleForAlignLeft" style="height: 12px; "><asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XingZhi%>"></asp:Label>
                   £º </td>
                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; "><asp:DropDownList ID="DL_UserType" Enabled="false" runat="server">
                     <asp:ListItem Value="INNER" Text="<%$ Resources:lang,NeiBu%>" />
@@ -318,13 +318,13 @@
                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
               </tr>
               <tr style="display: none;">
-                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;"><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>
+                <td class="formItemBgStyleForAlignLeft" style="height: 12px; "><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>
                   £º</td>
                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; "><asp:DropDownList ID="DL_SystemMDIStyle" runat="server"  DataTextField="MDIStyle" DataValueField="MDIStyle"> </asp:DropDownList></td>
                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; "></td>
               </tr>
               <tr style="display: none;">
-                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;"><asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KeDengLuSheBei%>"></asp:Label>
+                <td class="formItemBgStyleForAlignLeft" style="height: 12px; "><asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KeDengLuSheBei%>"></asp:Label>
                   £º</td>
                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; "><asp:DropDownList ID="DL_AllowDevice" runat="server"  Enabled="false">
                     <asp:ListItem Value="ALL" Text="<%$ Resources:lang,QuanBu%>" />
@@ -334,19 +334,19 @@
                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; "></td>
               </tr>
               <tr style="display: none;">
-                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;"><asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,CanKaoGongHao%>"></asp:Label>
+                <td class="formItemBgStyleForAlignLeft" style="height: 12px; "><asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,CanKaoGongHao%>"></asp:Label>
                   £º </td>
                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; "><asp:TextBox ID="TB_RefUserCode" runat="server" ></asp:TextBox></td>
                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; "></td>
               </tr>
               <tr style="display: none;">
-                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;"><asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,RTXZhangHu%>"></asp:Label>
+                <td class="formItemBgStyleForAlignLeft" style="height: 12px; "><asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,RTXZhangHu%>"></asp:Label>
                   £º</td>
                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; "><asp:TextBox ID="TB_UserRTXCode" runat="server" ></asp:TextBox></td>
                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
               </tr>
               <tr style="display: none;">
-                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;"><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>
+                <td class="formItemBgStyleForAlignLeft" style="height: 12px; "><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>
                   £º </td>
                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; "><NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_SortNumber" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
                                             PositiveColor="" Precision="0">0</NickLee:NumberBox></td>
@@ -386,7 +386,7 @@
                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
               </tr>
               <tr style="display: none;">
-                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">&nbsp;</td>
+                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; "><asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" >
                     <RootNodeStyle CssClass="rootNode" />
                     <NodeStyle CssClass="treeNode" />

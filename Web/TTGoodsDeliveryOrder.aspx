@@ -197,7 +197,7 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft"  width="15%">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SongHuoShiJian%>"></asp:Label>£º </td>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; text-align: left">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; ">
                                                     <asp:TextBox ID="DLC_DeliveryTime" runat="server" ReadOnly="false"></asp:TextBox>
                                                     <cc1:CalendarExtender ID="CalendarExtender2" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_DeliveryTime">
                                                     </cc1:CalendarExtender>

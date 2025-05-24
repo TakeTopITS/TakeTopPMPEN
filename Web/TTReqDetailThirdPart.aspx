@@ -307,7 +307,7 @@
                                                                                                         <asp:Label ID="LB_Type" runat="server"></asp:Label></td>
                                                                                                     <td class="formItemBgStyleForAlignLeft" style="width: 15%; ">
                                                                                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,ShouLiRenDaiMa %>"></asp:Label>£º </td>
-                                                                                                    <td class="formItemBgStyleForAlignLeft" style="width: 45%; text-align: left;">
+                                                                                                    <td class="formItemBgStyleForAlignLeft" style="width: 45%; ">
                                                                                                         <asp:TextBox ID="TB_ReceiverCode" runat="server" Width="80px"></asp:TextBox><asp:Label ID="LB_ReceiverName" runat="server"></asp:Label><asp:Button ID="BT_Select" runat="server" Text="<%$ Resources:lang,XuanZhe %>" CssClass="inpu" OnClick="BT_Select_Click" /></td>
                                                                                                 </tr>
                                                                                                 <tr>

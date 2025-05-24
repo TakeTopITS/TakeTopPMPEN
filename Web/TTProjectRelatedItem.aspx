@@ -139,7 +139,7 @@
                                                                 <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Code%>"></asp:Label>
                                                                 </td>
-                                                                <td style="text-align: left; width: 30%;" class="formItemBgStyleForAlignLeft">
+                                                                <td style=" width: 30%;" class="formItemBgStyleForAlignLeft">
                                                                     <asp:TextBox ID="TB_ProjectItemCode" runat="server" Width="91%"></asp:TextBox>
                                                                 </td>
 
@@ -420,7 +420,7 @@
                                                             </tr>
 
                                                             <tr>
-                                                                <td class="formItemBgStyleForAlignLeft" colspan="4" style="text-align: center;">
+                                                                <td class="formItemBgStyleForAlignLeft" colspan="4">
 
                                                                     <asp:Image ID="IM_ItemPhoto" runat="server" Height="180px" Width="200px" AlternateText="ÔªËØÕÕÆ¬" />
                                                                     <asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>
@@ -432,7 +432,7 @@
                                                     <td style="width: 600px; padding: 0px 1px 0px 1px; text-align: left; vertical-align: top; border-right: solid 1px #D8D8D8;">
                                                         <table width="600px">
                                                             <tr>
-                                                                <td class="formItemBgStyleForAlignLeft" colspan="4" style="text-align: left; height: 1px;">
+                                                                <td class="formItemBgStyleForAlignLeft" colspan="4" style="height: 1px;">
                                                                     <table width="100%">
                                                                         <tr>
                                                                             <td align="left">

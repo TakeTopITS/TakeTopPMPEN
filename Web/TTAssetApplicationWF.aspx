@@ -173,7 +173,7 @@
                                                 <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                 </td>
-                                                <td align="left" style="width: 25%;" class="formItemBgStyleForAlignLeft">
+                                                <td style="width: 25%;" class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_AAName" runat="server" Width="99%"></asp:TextBox>
                                                 </td>
                                                 <td  width="15%" class="formItemBgStyleForAlignLeft">

@@ -107,7 +107,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignLeft" style="text-align: right">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>：</td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_ID" runat="server" Width="80px"></asp:TextBox>
@@ -117,7 +117,7 @@
                                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DeZhengShu%>"></asp:Label></span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignLeft" style="text-align: right">
+                                                        <td class="formItemBgStyleForAlignLeft" >
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,NeiRongSQL%>"></asp:Label>：</td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_NewUpdateSQL" runat="server" CssClass="shuru" Width="99%" Height="300px" TextMode="MultiLine"></asp:TextBox>

@@ -517,7 +517,7 @@
                                                                                 <tr>
                                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,DanJia %>"></asp:Label>£º</td>
-                                                                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; text-align: left">
+                                                                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; ">
                                                                                         <NickLee:NumberBox ID="NB_Price" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="85px" Precision="3">0.000</NickLee:NumberBox>
                                                                                     </td>
                                                                                 </tr>

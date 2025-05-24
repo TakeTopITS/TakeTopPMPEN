@@ -270,7 +270,7 @@
 
                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                 <tr>
-                                    <td align="right" style="width: 130px" class="formItemBgStyleForAlignLeft">
+                                    <td  style="width: 130px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label14334" runat="server" Text="<%$ Resources:lang,BiaoZhunHao%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -423,7 +423,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" colspan="4" class="formItemBgStyleForAlignLeft"></td>
+                                    <td colspan="4" class="formItemBgStyleForAlignLeft"></td>
 
                                     <asp:Label ID="lbl_ID" runat="server" Visible="False"></asp:Label>
                                 </tr>

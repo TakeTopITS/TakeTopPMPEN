@@ -460,7 +460,7 @@
                                                             <asp:View ID="View2" runat="server">
                                                                 <table style="width: 98%" align="left" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                     <tr>
-                                                                        <td style="background-color: ButtonFace; width: 100%; text-align: left; height: 11px;" class="formItemBgStyleForAlignLeft">
+                                                                        <td style="background-color: ButtonFace; width: 100%; height: 11px;" class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,WenJianPingShenShenQing %>"></asp:Label>£º<asp:Label ID="LB_DocID" runat="server"></asp:Label>
                                                                         </td>
                                                                     </tr>

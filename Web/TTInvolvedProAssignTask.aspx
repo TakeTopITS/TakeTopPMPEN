@@ -366,7 +366,7 @@
                                 <tr style="display: none;">
                                     <td style="height: 2px;" class="formItemBgStyleForAlignLeft"></td>
 
-                                    <td colspan="5" style="text-align: left; height: 2px;" class="formItemBgStyleForAlignLeft">
+                                    <td colspan="5" style="height: 2px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="BT_Close" runat="server" OnClick="BT_Close_Click" CssClass="inpu" Visible="false"
                                             Text="<%$ Resources:lang,Close %>" Enabled="False" />&#160;<asp:Button ID="BT_Active" runat="server" OnClick="BT_Active_Click" Text="<%$ Resources:lang,Activate %>" Visible="false"
                                                 CssClass="inpu" Enabled="False" />

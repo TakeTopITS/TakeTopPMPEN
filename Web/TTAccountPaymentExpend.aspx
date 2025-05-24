@@ -211,7 +211,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ShouKuanBianMa" runat="server" Text="<%$ Resources:lang,ShouKuanBianMa%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:Label ID="lbl_PayableRecordID" runat="server"></asp:Label>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignRight">

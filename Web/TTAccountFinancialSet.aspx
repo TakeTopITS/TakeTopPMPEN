@@ -63,7 +63,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhangTaoBianMa" runat="server" Text="<%$ Resources:lang,ZhangTaoBianMa%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:TextBox ID="TB_FinancialCode" runat="server" CssClass="shuru" ReadOnly="false" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignRight">
@@ -75,7 +75,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_HangYe" runat="server" Text="<%$ Resources:lang,HangYe%>"></asp:Label>£º </td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:TextBox ID="TB_Industry" runat="server" CssClass="shuru" ReadOnly="false" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignRight">

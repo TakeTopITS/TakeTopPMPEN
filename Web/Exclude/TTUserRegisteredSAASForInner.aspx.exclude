@@ -341,7 +341,7 @@
                                 <td style="height: 12px; "  class="formItemBgStyleForAlignLeft"</td>
                             </tr>
                             <tr style="display: none;">
-                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">
+                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XingZhi%>"></asp:Label>
                                     ： </td>
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; ">
@@ -352,7 +352,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
                             </tr>
                             <tr style="display: none;">
-                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">
+                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>
                                     ：</td>
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; ">
@@ -360,7 +360,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; "></td>
                             </tr>
                             <tr style="display: none;">
-                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">
+                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KeDengLuSheBei%>"></asp:Label>
                                     ：</td>
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; ">
@@ -372,7 +372,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; "></td>
                             </tr>
                             <tr style="display: none;">
-                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">
+                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,CanKaoGongHao%>"></asp:Label>
                                     ： </td>
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; ">
@@ -380,7 +380,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; "></td>
                             </tr>
                             <tr style="display: none;">
-                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">
+                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,RTXZhangHu%>"></asp:Label>
                                     ：</td>
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; ">
@@ -388,7 +388,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
                             </tr>
                             <tr style="display: none;">
-                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">
+                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">
                                     <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>
                                     ： </td>
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; ">
@@ -436,7 +436,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
                             </tr>
                             <tr style="display: none;">
-                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; text-align: right;">&nbsp;</td>
+                                <td class="formItemBgStyleForAlignLeft" style="height: 12px; ">&nbsp;</td>
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 12px; ">
                                     <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True">
                                         <RootNodeStyle CssClass="rootNode" />

@@ -585,7 +585,7 @@
                                                 <tr>
                                                     <td class="formItemBgStyleForAlignLeft">&nbsp;
                                                     </td>
-                                                    <td colspan="3" style="text-align: left; padding-top: 20px;" class="formItemBgStyleForAlignLeft">
+                                                    <td colspan="3" style="padding-top: 20px;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Button ID="BT_New" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_New_Click" Text="<%$ Resources:lang,AddChildPlan%>" />
 
                                                         &nbsp; &nbsp; &nbsp; &nbsp; 

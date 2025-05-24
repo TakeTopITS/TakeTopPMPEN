@@ -142,7 +142,7 @@
                                                                 Width="100px" AutoPostBack="True" OnSelectedIndexChanged="DDL_JobTitle_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="2" align="left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2" >
                                                             <asp:Button ID="BT_TakePhoto" runat="server" CssClass="inpu"
                                                                 Enabled="False" OnClick="BT_TakePhoto_Click" Text="<%$ Resources:lang,PaiZhao%>" />
                                                             <cc1:ModalPopupExtender ID="BT_TakePhoto_ModalPopupExtender" runat="server"
@@ -163,7 +163,7 @@
                                                                 DataValueField="DepartCode" CssClass="DDList" Enabled="false">
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="2" align="left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2">
 
                                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                                                 <ContentTemplate>

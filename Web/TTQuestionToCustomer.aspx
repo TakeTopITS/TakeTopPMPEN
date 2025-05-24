@@ -237,7 +237,7 @@
                                                     <tr>
                                                         <td  width="10%" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FuWuMiaoShu%>"></asp:Label>£º</td>
-                                                        <td style="text-align: left; width: 35%;" class="formItemBgStyleForAlignLeft">
+                                                        <td style="width: 35%;" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_QuestionID" runat="server"></asp:Label>
                                                             <asp:Label ID="LB_QuestionName" runat="server"></asp:Label>
                                                         </td>

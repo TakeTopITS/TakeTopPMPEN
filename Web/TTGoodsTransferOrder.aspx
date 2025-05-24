@@ -212,7 +212,7 @@
                                                 <td class="formItemBgStyleForAlignLeft"  width="15%">
                                                     <asp:Label ID="Label110" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                 </td>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; text-align: left">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; ">
                                                     <asp:DropDownList ID="DL_ShipmentType" runat="server">
                                                         <asp:ListItem Value="Transfer" Text="<%$ Resources:lang,DiaoBo%>" />
                                                     </asp:DropDownList>
@@ -222,7 +222,7 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft"  width="15%">
                                                     <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>£º </td>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; text-align: left">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; ">
                                                     <asp:TextBox ID="TB_Applicant" runat="server" Width="96%"></asp:TextBox>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft" style="width: 15%; ">

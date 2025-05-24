@@ -76,7 +76,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhangTaoMingCheng" runat="server" Text="<%$ Resources:lang,ZhangTaoMingCheng%>"></asp:Label></td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:Label ID="lbl_FinancialName" runat="server"></asp:Label>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignRight">
@@ -92,7 +92,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhangTaoMingCheng1" runat="server" Text="<%$ Resources:lang,ZhangTaoMingCheng%>"></asp:Label></td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:DropDownList ID="DL_FinancialID" runat="server" AutoPostBack="True" DataTextField="FinancialName" DataValueField="FinancialCode" OnSelectedIndexChanged="DL_FinancialID_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>

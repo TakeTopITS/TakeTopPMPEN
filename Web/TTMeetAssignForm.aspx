@@ -281,7 +281,7 @@
                                                 <div id="mess_box" style="width: 100%; height: 410px; overflow: auto;">
                                                     <table class="formBgStyle" style="width: 100%;" cellpadding="3" cellspacing="0">
                                                         <tr>
-                                                            <td class="formItemBgStyleForAlignLeft" style="width: 175px; padding: 5px 5px 5px 5px; text-align: center; vertical-align: top;">
+                                                            <td class="formItemBgStyleForAlignLeft" style="width: 175px; padding: 5px 5px 5px 5px;  vertical-align: top;">
                                                                 <table class="formBgStyle" width="100%" border="0" cellpadding="0" cellspacing="0"
                                                                     background="ImagesSkin/main_n_bj.jpg">
                                                                     <tr>

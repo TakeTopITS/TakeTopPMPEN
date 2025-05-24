@@ -588,7 +588,7 @@
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,JianChaJieGuo %>"></asp:Label>£º
                                                 </td>
-                                                <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 1px; text-align: left;">
+                                                <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 1px; ">
                                                     <asp:TextBox ID="TB_QCResult" runat="server" Height="80px" TextMode="MultiLine"
                                                         Width="99%"></asp:TextBox>
                                                 </td>

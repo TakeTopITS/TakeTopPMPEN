@@ -575,7 +575,7 @@
                                                       <td class="formItemBgStyleForAlignLeft" style="width: 100px; ">
                                                         <asp:Label ID="Label76" runat="server" Text="RegistrationCertificateNumber"></asp:Label>£º
                                                     </td>
-                                                    <td class="formItemBgStyleForAlignLeft"  style="text-align: left">
+                                                    <td class="formItemBgStyleForAlignLeft"  >
                                                         <asp:TextBox ID="TB_RegistrationNumber" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
 
@@ -606,7 +606,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignLeft" colspan="4" style="text-align: left; height: 1px;">
+                                                    <td class="formItemBgStyleForAlignLeft" colspan="4" style="height: 1px;">
                                                         <table width="99%">
                                                             <tr>
                                                                 <td align="right">

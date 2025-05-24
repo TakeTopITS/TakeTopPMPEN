@@ -88,14 +88,14 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td align="left" width="35%" class="formItemBgStyleForAlignLeft">
+                                                                                <td width="35%" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:DropDownList ID="DL_Type" runat="server" CssClass="DDList" DataTextField="Type" DataValueField="Type">
                                                                                     </asp:DropDownList>
                                                                                 </td>
 
                                                                             </tr>
                                                                             <tr>
-                                                                                <td align="right" width="10%" class="formItemBgStyleForAlignLeft">
+                                                                                <td width="10%" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingCheng %>"></asp:Label>£º</td>
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="TB_DefectName" runat="server" Width="95%"></asp:TextBox></td>

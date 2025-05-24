@@ -382,7 +382,7 @@
                                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                                         <asp:TextBox ID="TB_ProjectStatus" runat="server"></asp:TextBox>
                                                                                     </td>
-                                                                                    <td style="text-align: Right; display: none;" class="formItemBgStyleForAlignLeft">
+                                                                                    <td style="display: none;" class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,KongZhiDian%>"></asp:Label></td>
                                                                                     <td class="formItemBgStyleForAlignLeft" style="display: none;">
                                                                                         <asp:DropDownList ID="DL_ReviewControl" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ReviewControl_SelectedIndexChanged">

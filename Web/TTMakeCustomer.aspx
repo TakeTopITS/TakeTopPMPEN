@@ -357,7 +357,7 @@
                                                             </td>
 
 
-                                                            <td style="text-align: left;" width="35%" class="formItemBgStyleForAlignLeft">
+                                                            <td  width="35%" class="formItemBgStyleForAlignLeft">
 
 
                                                                 <asp:TextBox ID="TB_CustomerName" runat="server" Style="margin-left: 0px" Width="95%"></asp:TextBox>
@@ -398,7 +398,7 @@
                                                             </td>
 
 
-                                                            <td style="text-align: left;" width="35%" class="formItemBgStyleForAlignLeft">
+                                                            <td  width="35%" class="formItemBgStyleForAlignLeft">
 
 
                                                                 <asp:TextBox ID="TB_CustomerEnglishName" runat="server" Height="20px" Width="95%"></asp:TextBox>

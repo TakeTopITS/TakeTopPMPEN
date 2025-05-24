@@ -843,7 +843,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td colspan="4" style="width: 100%; text-align: left; padding-left: 10px" class="formItemBgStyleForAlignLeft">
+                                                                        <td colspan="4" style="width: 100%;  padding-left: 10px" class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="LB_TBNoticeProjectTeamMember" runat="server" Text="<%$ Resources:lang,NoticeProjectTeamMember%>" />:
                                                                         <asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,SendSMS%>" />
                                                                             <asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,SendEMail%>" />

@@ -658,7 +658,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td width="240px" class="formItemBgStyleForAlignLeft" valign="top" align="left">
+                                    <td width="240px" class="formItemBgStyleForAlignLeft" valign="top" >
                                         <div id="PlanTreeDivID" style="width: 230px; height: 300px; overflow: auto; vertical-align: top;">
                                             <asp:TreeView ID="TreeView2" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView2_SelectedNodeChanged"
                                                 ShowLines="True" Width="220px">

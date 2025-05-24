@@ -133,7 +133,7 @@
                                                                             DataValueField="TemName">
                                                                         </asp:DropDownList>
                                                                     </td>
-                                                                    <td colspan="3" style="font-size: 10pt; text-align: left; height: 27px;" class="formItemBgStyleForAlignLeft">
+                                                                    <td colspan="3" style="font-size: 10pt; height: 27px;" class="formItemBgStyleForAlignLeft">
                                                                         <strong>
                                                                             <asp:HyperLink ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx"
                                                                                 Target="_blank">

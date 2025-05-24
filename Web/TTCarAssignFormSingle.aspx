@@ -346,7 +346,7 @@
                                     <td style="height: 9px" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,SuiCheRen%>"></asp:Label>£º&nbsp;
                                     </td>
-                                    <td align="left" style="height: 9px" class="formItemBgStyleForAlignLeft" colspan="3">
+                                    <td style="height: 9px" class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:TextBox ID="TB_Attendant" runat="server" Width="90%"></asp:TextBox>
                                     </td>
                                 </tr>
@@ -546,7 +546,7 @@
                         <div class="modalPopup-text" style="width: 600px; height: 180px; overflow: auto;">
                             <table width="100%">
                                 <tr>
-                                    <td align="right" style="width: 20%" class="formItemBgStyleForAlignLeft">
+                                    <td style="width: 20%" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,ShiJiYongCheShiJian%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="2">

@@ -99,7 +99,7 @@
                                     <td valign="top" style="padding-top: 5px;">
                                         <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr style="font-size: 12pt">
-                                                <td align="left" style="width: 15%; padding: 5px 5px 5px 5px; font-size:12px;" class="formItemBgStyleForAlignLeft" valign="top">
+                                                <td style="width: 15%; padding: 5px 5px 5px 5px; font-size:12px;" class="formItemBgStyleForAlignLeft" valign="top">
 
                                                     <asp:TreeView ID="TV_Weeks" runat="server" OnSelectedNodeChanged="TV_Weeks_SelectedNodeChanged" ShowLines="True" NodeWrap="True">
                                                         <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
@@ -124,7 +124,7 @@
                                                                         <td style="width="19%" class="formItemBgStyleForAlignLeft">
                                                                             <asp:TextBox ID="TXT_WeekName" runat="server" Style="margin-left: 0px" Width="95%"></asp:TextBox>
                                                                         </td>
-                                                                        <td class="formItemBgStyleForAlignLeft" style="text-align: end;" valign="middle">&nbsp;&nbsp;
+                                                                        <td class="formItemBgStyleForAlignLeft"  valign="middle">&nbsp;&nbsp;
                                                                             <asp:Button ID="BT_Add" runat="server" CssClass="inpu" OnClick="BT_Add_Click"
                                                                                 Text="<%$ Resources:lang,XinZeng%>" />
                                                                             &nbsp;

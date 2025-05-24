@@ -202,7 +202,7 @@
                                                                     <asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label></td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="formItemBgStyleForAlignLeft" style="width: 100%; height: 25px; text-align: left;">
+                                                                <td class="formItemBgStyleForAlignLeft" style="width: 100%; height: 25px;">
                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:DropDownList ID="DL_DocType" runat="server" DataTextField="Type" DataValueField="ID"
                                                                     Width="166px">
                                                                 </asp:DropDownList>&#160; <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,QuanXian%>"></asp:Label>£º<asp:DropDownList ID="DL_Visible" runat="server" CssClass="DDList" Width="64px">

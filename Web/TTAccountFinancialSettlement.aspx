@@ -165,7 +165,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_KuaiJiZhangTao" runat="server" Text="<%$ Resources:lang,KuaiJiZhangTao%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:DropDownList ID="DL_FinancialID" runat="server" AutoPostBack="True" DataTextField="FinancialName" DataValueField="ID" OnSelectedIndexChanged="DL_FinancialID_SelectedIndexChanged" Visible="False">
                                                             </asp:DropDownList>
                                                             <asp:Label ID="lbl_FinancialID" runat="server" Visible="False"></asp:Label>

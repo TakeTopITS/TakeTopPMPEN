@@ -531,7 +531,7 @@
                                                     <asp:Label ID="LB_TBDescription" runat="server" Text="<%$ Resources:lang,Description%>" />
                                                     :
                                                 </td>
-                                                <td colspan="3" align="left" style="width: 100%;" class="formItemBgStyleForAlignLeft">
+                                                <td colspan="3" style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                     <CKEditor:CKEditorControl ID="HE_ProjectDetail" runat="server" Height="150px" Width="90%" Visible="false" />
                                                     <CKEditor:CKEditorControl runat="server" ID="HT_ProjectDetail" Width="90%" Height="150px" Visible="false" />
                                                 </td>
@@ -624,7 +624,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="4" style="width: 100%; text-align: left; padding-left: 10px" class="formItemBgStyleForAlignLeft">
+                                                <td colspan="4" style="width: 100%;  padding-left: 10px" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_TBNoticeProjectTeamMember" runat="server" Text="<%$ Resources:lang,NoticeProjectTeamMember%>" />:
                                                                     <asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,SendSMS%>" />
                                                     <asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,SendEMail%>" />

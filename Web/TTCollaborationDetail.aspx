@@ -69,7 +69,7 @@
                                                             <tr>
                                                                 <td width="85px"  class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º </td>
-                                                                <td style="text-align: left; overflow-y: auto;" class="formItemBgStyleForAlignLeft">
+                                                                <td style=" overflow-y: auto;" class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="LB_CollaborationName" runat="server"></asp:Label>
                                                                     <div id="mess_box" style="width: 100%; height: 100px; overflow: auto;">
                                                                         <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" Width="100%">

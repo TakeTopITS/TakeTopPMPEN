@@ -286,7 +286,7 @@
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,XiaoShouShiJian%>"></asp:Label>£º
                                                 </td>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 106px; text-align: left">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 106px;">
 
                                                     <asp:TextBox ID="DLC_SaleTime" ReadOnly="false" runat="server"></asp:TextBox>
                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_SaleTime">
@@ -921,7 +921,7 @@
 
                                                     <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,BeiZhu %>"></asp:Label>£º </td>
 
-                                                <td class="formItemBgStyleForAlignLeft" colspan="5" style="height: 1px; text-align: left;">
+                                                <td class="formItemBgStyleForAlignLeft" colspan="5" style="height: 1px; ">
 
                                                     <asp:TextBox ID="TB_SaleReason" runat="server" Height="42px" TextMode="MultiLine"
                                                         Width="99%"></asp:TextBox></td>

@@ -344,7 +344,7 @@
                                                                                             <td class="formItemBgStyleForAlignLeft" >
                                                                                                 <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,ShangJiJieDuan %>"></asp:Label>：
                                                                                             </td>
-                                                                                            <td class="formItemBgStyleForAlignLeft" align="left">
+                                                                                            <td class="formItemBgStyleForAlignLeft" >
                                                                                                 <asp:DropDownList ID="DL_Stage" runat="server" CssClass="DDList" AutoPostBack="True" DataTextField="Stage" DataValueField="Stage" OnSelectedIndexChanged="DL_Stage_SelectedIndexChanged">
                                                                                                 </asp:DropDownList>
                                                                                             </td>
@@ -357,7 +357,7 @@
                                                                                             </td>
                                                                                             <td class="formItemBgStyleForAlignLeft" >&nbsp;&nbsp; &nbsp;<asp:Label ID="Label35" runat="server" Text="客户商机阶段"></asp:Label>：
                                                                                             </td>
-                                                                                            <td class="formItemBgStyleForAlignLeft" align="left">
+                                                                                            <td class="formItemBgStyleForAlignLeft" >
                                                                                                 <asp:DropDownList ID="DL_CustomerStage" runat="server" CssClass="DDList" DataTextField="Stage" DataValueField="Stage">
                                                                                                 </asp:DropDownList>
                                                                                             </td>

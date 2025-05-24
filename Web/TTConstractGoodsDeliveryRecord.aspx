@@ -297,7 +297,7 @@
                                         <asp:TextBox ID="TB_DeliveryGoodsCode" runat="server" Height="20px" Enabled="false" Width="95%"></asp:TextBox></td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 30%; text-align: left">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 30%; ">
                                         <asp:TextBox ID="TB_DeliveryGoodsName" runat="server" Height="20px" Enabled="false" Width="99%"></asp:TextBox></td>
                                 </tr>
                                 <tr>

@@ -93,7 +93,7 @@
                                                                         £º 
                                                                          <asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                                                     </td>
-                                                                    <td class="formItemBgStyleForAlignLeft" style="text-align: right">
+                                                                    <td class="formItemBgStyleForAlignLeft" >
                                                                         <asp:Label ID="Label3" runat="server" Text="ÒÆ½»ÈÕÆÚ"></asp:Label>
                                                                         £º 
                                                                          <asp:Label ID="LB_TurnDate" runat="server"></asp:Label>

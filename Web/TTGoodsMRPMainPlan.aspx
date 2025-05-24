@@ -201,7 +201,7 @@
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft"  width="15%">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhiDingZhe%>"></asp:Label>£º </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 30%; text-align: left">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 30%; ">
                                         <asp:TextBox ID="TB_CreatorName" runat="server" Width="40%" Enabled="false"></asp:TextBox>
                                         <asp:Label ID="LB_CreatorCode" runat="server" Visible="false"></asp:Label>
                                     </td>

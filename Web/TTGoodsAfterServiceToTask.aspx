@@ -543,7 +543,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,GongZuoYaoQiu%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="3" align="left" class="formItemBgStyleForAlignLeft">
+                                    <td colspan="3" class="formItemBgStyleForAlignLeft">
                                         <CKEditor:CKEditorControl ID="HE_Operation" runat="server" Height="100px" Width="99%" Visible="False" />
                                         <CKEditor:CKEditorControl runat="server" ID="HT_Operation" Width="99%" Height="100px" Visible="False" />
 

@@ -63,7 +63,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhangTao" runat="server" Text="<%$ Resources:lang,ZhangTao%>"></asp:Label>£º</td>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" style="text-align: left">
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:DropDownList ID="DL_FinancialID" runat="server" DataTextField="FinancialName" DataValueField="FinancialCode">
                                                             </asp:DropDownList>
                                                         </td>

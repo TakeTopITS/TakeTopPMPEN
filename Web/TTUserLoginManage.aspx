@@ -180,7 +180,7 @@
                                                                     <td style="padding: 5px 5px 5px 5px;" align="left">
                                                                         <table width="100%" border="0" class="formBgStyle" cellpadding="2" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="right" width="10%" class="formItemBgStyleForAlignLeft">
+                                                                                <td  width="10%" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label>£º </td>
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_ID" runat="server"></asp:Label></td>

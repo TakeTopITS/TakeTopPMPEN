@@ -133,15 +133,15 @@
                                                                     <tr>
                                                                         <td class="formItemBgStyleForAlignLeft" rowspan="3">WCS</td>
                                                                         <td class="formItemBgStyleForAlignLeft">BTES</td>
-                                                                        <td class="formItemBgStyleForAlignLeft" style="text-align: right">Report Name:WelderNoReport</td>
+                                                                        <td class="formItemBgStyleForAlignLeft" >Report Name:WelderNoReport</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="formItemBgStyleForAlignLeft">ProjectNo£ºMDI TRAIN LOT:04</td>
-                                                                        <td class="formItemBgStyleForAlignLeft" style="text-align: right">Page 1 of 2</td>
+                                                                        <td class="formItemBgStyleForAlignLeft" >Page 1 of 2</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="formItemBgStyleForAlignLeft">ProjectName NITRIC ACID</td>
-                                                                        <td class="formItemBgStyleForAlignLeft" style="text-align: right">
+                                                                        <td class="formItemBgStyleForAlignLeft" >
                                                                             <asp:Literal ID="LT_Time" runat="server"></asp:Literal></td>
                                                                     </tr>
                                                                 </table>

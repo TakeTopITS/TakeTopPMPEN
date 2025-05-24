@@ -466,7 +466,7 @@
                                                     <asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label>
                                                     <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,BuXu %>"></asp:Label>
                                                 </td>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; text-align: left; height: 15px;">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 30%; height: 15px;">
                                                     <asp:Label ID="LBL_SortNumber" runat="server"></asp:Label>
 
                                                 </td>
@@ -722,7 +722,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,BuKeShiYu %>"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 4px; text-align: left">
+                                    <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 4px; ">
                                         <asp:Label ID="LBL_FieldList" runat="server"></asp:Label>
                                     </td>
                                 </tr>
@@ -744,7 +744,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,JueSe %>"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 200px; text-align: left;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 200px; ">
                                         <asp:Label ID="LBL_Actor" runat="server"></asp:Label>
                                     </td>
                                 </tr>

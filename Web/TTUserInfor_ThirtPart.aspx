@@ -306,10 +306,10 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_UserCode" Width="220px" runat="server"></asp:TextBox>
                                     </td>
-                                    <td style="text-align: left;" width="40px" class="formItemBgStyleForAlignLeft">
+                                    <td  width="40px" class="formItemBgStyleForAlignLeft">
                                         <span style="color: #ff0000">*</span>
                                     </td>
-                                    <td style="text-align: center;" width="220px" rowspan="6" class="formItemBgStyleForAlignLeft">
+                                    <td  width="220px" rowspan="6" class="formItemBgStyleForAlignLeft">
                                         <asp:Image ID="IM_MemberPhoto" runat="server" Height="200px" Width="200px" AlternateText="Member'sPhoto" />
                                     </td>
                                 </tr>

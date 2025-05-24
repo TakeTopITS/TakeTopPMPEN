@@ -521,7 +521,7 @@
                                                 <td style="height: 19px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LB_tbAccount" runat="server" Text="<%$ Resources:lang,Account%>"></asp:Label>£º
                                                 </td>
-                                                <td colspan="4" style="width: 35%; text-align: left; height: 19px;" class="formItemBgStyleForAlignLeft">
+                                                <td colspan="4" style="width: 35%; height: 19px;" class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="TB_Account" runat="server" Width="55%"></asp:TextBox>
                                                     <asp:DropDownList ID="DL_Account" runat="server" AutoPostBack="True" DataTextField="AccountName"
                                                         DataValueField="AccountName" Height="25px" OnSelectedIndexChanged="DL_Account_SelectedIndexChanged">

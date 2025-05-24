@@ -316,7 +316,7 @@
                         <div class="modalPopup-text" style="width: 600px; height: 250px; overflow: auto;">
                             <table width="100%">
                                 <tr>
-                                    <td align="right" style="width: 20%" class="formItemBgStyleForAlignLeft">
+                                    <td style="width: 20%" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,ShiJiYongCheShiJian%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="2">

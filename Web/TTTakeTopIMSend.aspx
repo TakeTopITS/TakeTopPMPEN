@@ -85,7 +85,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 100%; height: 25px; text-align: left;">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 100%; height: 25px; ">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:DropDownList ID="DL_DocType" runat="server" DataTextField="Type" DataValueField="ID"
                                                         Width="166px">
                                                     </asp:DropDownList>

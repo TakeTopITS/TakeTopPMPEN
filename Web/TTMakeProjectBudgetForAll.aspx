@@ -290,7 +290,7 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 10%;  height: 19px;">
                                         <asp:Label ID="Label26" runat="server" Text="SerialNumber"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%; text-align: left; height: 19px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%;  height: 19px;">
                                         <asp:TextBox ID="TB_XuHao" runat="server" Width="99%"></asp:TextBox>
                                     </td>
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
@@ -306,7 +306,7 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 10%;  height: 19px;">
                                         <asp:Label ID="LB_tbAccount" runat="server" Text="<%$ Resources:lang,XiangMuFenBu%>"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%; text-align: left; height: 19px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%; height: 19px;">
                                         <asp:TextBox ID="TB_XiangMuFenBu" runat="server" Width="99%"></asp:TextBox>
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 15%;  height: 19px;">

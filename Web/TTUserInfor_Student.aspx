@@ -251,11 +251,11 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: center" colspan="2" class="formItemBgStyleForAlignLeft">
+                                                        <td  colspan="2" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label></td>
-                                                        <td style="text-align: center" colspan="2" class="formItemBgStyleForAlignLeft">
+                                                        <td  colspan="2" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,GongZuoDanWei%>"></asp:Label></td>
-                                                        <td style="text-align: center" colspan="2" class="formItemBgStyleForAlignLeft">
+                                                        <td  colspan="2" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label></td>
                                                     </tr>
                                                     <tr>

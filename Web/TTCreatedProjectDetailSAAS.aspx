@@ -332,7 +332,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                                    <td colspan="3" style="text-align: Left; height: 1px;" class="formItemBgStyleForAlignLeft">
+                                                    <td colspan="3" style="height: 1px;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Repeater ID="Repeater1" runat="server">
                                                             <ItemTemplate>
 
@@ -345,7 +345,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                                    <td colspan="3" style="text-align: Left; height: 1px;" class="formItemBgStyleForAlignLeft">
+                                                    <td colspan="3" style="height: 1px;" class="formItemBgStyleForAlignLeft">
                                                         <div id="divProject2" runat="server">
 
                                                             <asp:Repeater ID="Repeater2" runat="server">
@@ -362,7 +362,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                                    <td colspan="3" style="text-align: Left; height: 1px;" class="formItemBgStyleForAlignLeft">
+                                                    <td colspan="3" style="height: 1px;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="LB_TBNoticeProjectTeamMember" runat="server" Text="<%$ Resources:lang,NoticeProjectTeamMember%>" />:
                                                                 <asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,SendSMS%>" />
                                                         <asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,SendEMail%>" />

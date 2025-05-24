@@ -299,7 +299,7 @@
                                                             <td  width="20%" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,MingCheng %>"></asp:Label>£º
                                                             </td>
-                                                            <td style="text-align: left;" width="35%" class="formItemBgStyleForAlignLeft">
+                                                            <td  width="35%" class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_CustomerName" runat="server" Style="margin-left: 0px" Width="95%"></asp:TextBox>
                                                                 <span style="color: #ff0000">*</span>
                                                             </td>

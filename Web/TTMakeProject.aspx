@@ -440,7 +440,7 @@
                                                         <tr>
                                                             <td  valign="top" class="formItemBgStyleForAlignLeft" style="vertical-align: middle;">
                                                                 <asp:Label ID="LB_TBDescription" runat="server" Text="<%$ Resources:lang,Description %>" />: </td>
-                                                            <td colspan="3" align="left" style="width: 100%;" class="formItemBgStyleForAlignLeft">
+                                                            <td colspan="3" style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                                 <CKEditor:CKEditorControl ID="HE_ProjectDetail" runat="server" Height="100px" Width="90%" Visible="False" Toolbar="Basic" /><CKEditor:CKEditorControl runat="server" ID="HT_ProjectDetail" Width="90%" Height="100px" Visible="False" />
                                                             </td>
                                                         </tr>
@@ -529,7 +529,7 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td colspan="4" style="width: 100%; text-align: left; padding-left: 10px" class="formItemBgStyleForAlignLeft">
+                                                            <td colspan="4" style="width: 100%; padding-left: 10px" class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="LB_TBNoticeProjectTeamMember" runat="server" Text="<%$ Resources:lang,NoticeProjectTeamMember %>" />:
                                                                 <asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,SendSMS %>" /><asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,SendEMail %>" /><asp:TextBox ID="TB_Message" runat="server" Width="300px"></asp:TextBox><asp:Button ID="BT_Send" runat="server" Enabled="False" CssClass="inpu" OnClick="BT_Send_Click" Text="<%$ Resources:lang,Send %>" /></td>
                                                         </tr>
