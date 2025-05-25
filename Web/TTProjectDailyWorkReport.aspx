@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDailyWorkReport.aspx.aspx.cs" Inherits="TTProjectDailyWorkReport_aspx" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDailyWorkReport.aspx.cs" Inherits="TTProjectDailyWorkReport" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
