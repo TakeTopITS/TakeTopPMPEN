@@ -167,7 +167,7 @@
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YuanGongPeiXun%>"></asp:Label>
                                                         </HeaderTemplate>
                                                         <ContentTemplate>
-                                                            <table class="formBgStyle" style="width: 98%; text-align: left;" cellpadding="3" cellspacing="0">
+                                                            <table  style="width: 98%; text-align: left;" cellpadding="3" cellspacing="0">
                                                                 <tr style="display: none">
                                                                     <td style="width: 100px;" class="formItemBgStyleAlignLeft">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XuHao %>"></asp:Label>£º
@@ -445,7 +445,7 @@
                                                             <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,TeZhongZuoYe%>"></asp:Label>
                                                         </HeaderTemplate>
                                                         <ContentTemplate>
-                                                            <table class="formBgStyle" style="width: 98%; text-align: left;" cellpadding="3" cellspacing="0">
+                                                            <table  style="width: 98%; text-align: left;" cellpadding="3" cellspacing="0">
                                                                 <tr style="display: none">
                                                                     <td style="width: 100px;" class="formItemBgStyleAlignLeft">
                                                                         <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£º
@@ -579,7 +579,7 @@
                                                             <table style="width: 98%; text-align: left;">
                                                                 <tr>
                                                                     <td>
-                                                                        <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
+                                                                        <table width="100%" cellpadding="3" cellspacing="0" >
                                                                             <tr style="display: none">
                                                                                 <td style="width: 100px;" class="formItemBgStyleAlignLeft">
                                                                                     <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£º
@@ -716,7 +716,7 @@
                                                             <table style="width: 98%; text-align: left;">
                                                                 <tr>
                                                                     <td>
-                                                                        <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
+                                                                        <table width="100%" cellpadding="3" cellspacing="0" >
                                                                             <tr style="display: none">
                                                                                 <td style="width: 100px;" class="formItemBgStyleAlignLeft">
                                                                                     <asp:Label ID="Label72" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£º
@@ -905,7 +905,7 @@
                                                             <table style="width: 98%; text-align: left;">
                                                                 <tr>
                                                                     <td>
-                                                                        <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
+                                                                        <table width="100%" cellpadding="3" cellspacing="0" >
                                                                             <tr style="display: none">
                                                                                 <td style="width: 100px;" class="formItemBgStyleAlignLeft">
                                                                                     <asp:Label ID="Label91" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£º

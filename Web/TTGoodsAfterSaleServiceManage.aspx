@@ -273,7 +273,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="12%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:HyperLinkColumn DataNavigateUrlField="SN" DataNavigateUrlFormatString="TTGoodsAfterServiceToTask.aspx?GoodsSN={0}" Text="ÊÛºó" Target="_blank">
+                                                        <asp:HyperLinkColumn DataNavigateUrlField="SN" DataNavigateUrlFormatString="TTGoodsAfterServiceToTask.aspx?GoodsSN={0}" Text="<%$ Resources:lang,AfterSale%>" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                         </asp:HyperLinkColumn>
 

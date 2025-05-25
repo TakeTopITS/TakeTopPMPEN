@@ -453,7 +453,10 @@
                                             <td class="10%" style="text-align: right">
                                                 <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º </td>
                                             <td style="width: 10%; text-align: left;"><%# DataBinder.Eval(Container.DataItem,"Type") %></td>
-                                            <td style="width: 10%; text-align: right">µ¥¼Û£º </td>
+                                            <td style="width: 10%; text-align: right">
+                                                
+                                                <asp:Label ID="Label5611" runat="server" Text="<%$ Resources:lang,DanJia%>"></asp:Label> £º
+                                            </td>
                                             <td style="width: 40%; text-align: left;"><%# DataBinder.Eval(Container.DataItem,"Price") %></td>
                                         </tr>
                                         <tr>

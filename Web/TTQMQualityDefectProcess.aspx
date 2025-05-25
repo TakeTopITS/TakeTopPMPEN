@@ -237,19 +237,21 @@
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
-                                <tr style="color: #000000">
-                                    <td align="right" class="auto-style2">
+                                <tr >
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChuangJianRen%>"></asp:Label>£º</td>
-                                    <td align="left" class="auto-style4">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_CreatePer" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                     </td>
-                                    <td align="right" class="auto-style6"></td>
+                                    <td class="formItemBgStyleForAlignLeft">
+
+                                    </td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px">&nbsp;</td>
                                 </tr>
-                                <tr style="color: #000000;">
-                                    <td align="right" class="auto-style2">
+                                <tr >
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChuLiFangAn%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px" colspan="3">
+                                    <td class="formItemBgStyleForAlignLeft"  colspan="3">
 
                                         <asp:TextBox ID="TB_DealRemark" runat="server" CssClass="shuru" Height="35px" TextMode="MultiLine" Width="90%"></asp:TextBox>
 
