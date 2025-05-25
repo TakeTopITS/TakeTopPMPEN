@@ -240,7 +240,7 @@
 
                             <table class="formBgStyle" style="width: 100%;" cellpadding="3" cellspacing="0">
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 15%">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%">
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,CheXing%>"></asp:Label>£º
                                     </td>
                                     <td colspan ="3"  class="formItemBgStyleForAlignLeft" >
@@ -250,7 +250,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YongCheBuMen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -261,7 +261,7 @@
                                             BackgroundCssClass="modalBackground" Y="150">
                                         </cc1:ModalPopupExtender>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -301,7 +301,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 10%;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%;">
                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,HuanCheShiJian%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3">
@@ -332,13 +332,13 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShangCheDiDian%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_BoardingSite" runat="server" Width="90%"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,MuDiDi%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -346,7 +346,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,SuiCheRen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3">
@@ -382,7 +382,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight"></td>
+                                    <td class="formItemBgStyleForAlignLeft"></td>
                                     <td class="formItemBgStyleForAlignLeft">
 
                                         <asp:Label ID="LB_Sql" runat="server" Visible="false"></asp:Label>

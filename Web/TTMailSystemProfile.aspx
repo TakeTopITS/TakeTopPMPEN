@@ -83,7 +83,7 @@
                         </tr>
 
                            <tr style="line-height: 2">
-                            <td class="formItemBgStyleForAlignRight">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,POP3DiZhi%>"></asp:Label>&nbsp;</td>
                             <td class="formItemBgStyleForAlignLeft">
                                 <asp:TextBox ID="TB_Pop3ServerIP" runat="server" CssClass="InputCss" Width="300px">pop.gmail.com</asp:TextBox>

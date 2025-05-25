@@ -108,7 +108,7 @@
                                         </td>
                                     </tr>
                                     <tr style="color: #000000;">
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZongTiPingJia%>"></asp:Label>£º</td>
                                         <td class="formItemBgStyleForAlignLeft" style="height: 30px" colspan="3">
 

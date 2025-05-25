@@ -251,7 +251,7 @@
                                         </asp:DropDownList><asp:Label ID="lbl_AccountCode" runat="server" Visible="False"></asp:Label></td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbPayBackTime" runat="server" Text="<%$ Resources:lang,PayBackTime%>"></asp:Label>:
                                     </td>
                                     <td  style="width: 200px" class="formItemBgStyleForAlignLeft">
@@ -305,7 +305,7 @@
 
                             <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 27px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 27px">
                                         <asp:Label ID="LB_tbWFTemplate" runat="server" Text="<%$ Resources:lang,WFTemplate%>"></asp:Label>
                                         : </td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 650px; height: 27px">
@@ -321,7 +321,7 @@
                                         <asp:Button ID="BT_Reflash" runat="server" CssClass="inpu" OnClick="BT_Reflash_Click" Text="<%$ Resources:lang,Refresh%>" />
                                     </td>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignRight" style="width: 100px; height: 27px"></td>
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 100px; height: 27px"></td>
                                         <td class="formItemBgStyleForAlignLeft" style="width: 650px; height: 27px"><span style="font-size: 10pt">ги 
                                         <asp:Label ID="LB_tbRequestFeedback" runat="server" Text="<%$ Resources:lang,RequestFeedback%>"></asp:Label>
                                             :</span><asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,SendSMS%>" />

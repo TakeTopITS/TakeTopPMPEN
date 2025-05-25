@@ -202,7 +202,7 @@
                                     <td  style="height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Addendumer" runat="server" CssClass="shuru"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BuYiRiQi%>"></asp:Label>£º<cc1:CalendarExtender ID="CalendarExtender3" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_AddendumDate">
                                         </cc1:CalendarExtender>
                                     </td>
@@ -211,7 +211,7 @@
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BuYiNeiRong%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 30px">
                                         <asp:TextBox ID="TB_AddendumContent" runat="server" Width="90%" CssClass="shuru" Height="40px" TextMode="MultiLine"></asp:TextBox>

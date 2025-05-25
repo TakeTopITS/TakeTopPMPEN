@@ -483,7 +483,7 @@
                                                         <asp:ListItem Value="GoodsSHORecord" Text="<%$ Resources:lang,ChuKuDanJiLu%>" />
                                                     </asp:DropDownList>
                                                     <asp:Label ID="LB_ID" runat="server" Visible="false"></asp:Label></td>
-                                                <td class="formItemBgStyleForAlignRight" width="15%">ID:
+                                                <td class="formItemBgStyleForAlignLeft" width="15%">ID:
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox ID="NB_RecordSourceID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="30px">0</NickLee:NumberBox>

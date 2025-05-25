@@ -203,32 +203,32 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YaoQingHanNeiRong%>"></asp:Label>：</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:Label ID="lbl_AnnInvitationContent" runat="server"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="height: 30px; width: 150px;">中标状态：</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px; width: 150px;">中标状态：</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                         <asp:TextBox ID="TB_BidStatus" runat="server" CssClass="shuru" Enabled="False"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 30px">承包商代码：</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px">承包商代码：</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                         <asp:Label ID="LB_SupplierCode" runat="server"></asp:Label>
                                         <asp:TextBox ID="TB_SupplierName" runat="server" CssClass="shuru" Enabled="False" Visible="false"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,TouBiaoNeiRong%>"></asp:Label>： </td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px" colspan="3">
                                         <asp:TextBox ID="TB_BiddingContent" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="90%" Enabled="False"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label6" runat="server" Text="评标意见"></asp:Label>：</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 30px">
                                         <asp:TextBox ID="TB_ExportResult" runat="server" Height="35px" TextMode="MultiLine" Width="90%" CssClass="shuru"></asp:TextBox>

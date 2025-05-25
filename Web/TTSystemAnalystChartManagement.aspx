@@ -134,7 +134,7 @@
                                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                                     <tr>
 
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,TuXingMingCheng%>"></asp:Label>£º
                                                         </td>
                                                         <td colspan="3"  class="formItemBgStyleForAlignLeft">
@@ -143,7 +143,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr style="color: #000000">
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DL_ChartType" Width="100px" runat="server">
@@ -172,7 +172,7 @@
                                                     </tr>
                                                     <tr style="color: #000000">
 
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LianJieHuaMianWWW%>"></asp:Label>£º</td>
 
                                                         <td class="formItemBgStyleForAlignLeft" colspan="3">
@@ -181,7 +181,7 @@
                                                     </tr>
 
                                                     <tr style="color: #000000">
-                                                        <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                                             <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,SQLYuJuSelectYuJu%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:TextBox ID="TB_SQLCode" runat="server" CssClass="shuru" Height="150px" TextMode="MultiLine" Width="95%"></asp:TextBox>
@@ -193,7 +193,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight" style="width: 150px;"></td>
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px;"></td>
                                                         <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:Button ID="BT_AddChart" runat="server" CssClass="inpu" OnClick="BT_AddChart_Click" Text="<%$ Resources:lang,XinZeng%>" />
                                                             &nbsp;&nbsp;<asp:Button ID="BT_UpdateChart" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_UpdateChart_Click" Text="<%$ Resources:lang,BaoCun%>" />

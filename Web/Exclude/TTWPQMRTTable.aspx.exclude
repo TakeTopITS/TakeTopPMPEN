@@ -60,13 +60,13 @@
                                             </asp:DropDownList>
                                             <asp:Label ID="lbl_ID" runat="server" Visible="False"></asp:Label>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HeGeJiBie%>"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_QualifiedLevel" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,WeiTuoRiQi%>"></asp:Label> </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="DLC_RTCommissionedDate" runat="server" CssClass="shuru" Width="120px" ReadOnly="false"></asp:TextBox>
@@ -75,24 +75,24 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WuShongJianCheLeiBie%>"></asp:Label> </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_NondestructTestCategory" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,TanShangBiLi%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_InspectionProportion" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShiJianShuLiang%>"></asp:Label> </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="NB_NumberSpecimens" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,PingDIngBiaoZhun%>"></asp:Label> </td>
                                         <td class="formItemBgStyleForAlignLeft" colspan="5">
                                             <asp:TextBox ID="TB_RTEvaluationCriteria" runat="server" CssClass="shuru" Width="95%"></asp:TextBox>

@@ -221,7 +221,7 @@
                                     <br />
                                     <table cellpadding="5" cellspacing="0" class="formBgStyle" width="95%">
                                         <tr>
-                                            <td class="formItemBgStyleForAlignRight" style="width: 5%; height: 24px">
+                                            <td class="formItemBgStyleForAlignLeft" style="width: 5%; height: 24px">
                                                 <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,NeiRong %>"></asp:Label>£º
                                             </td>
                                             <td class="formItemBgStyleForAlignLeft">
@@ -230,7 +230,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyleForAlignRight" style="height: 21px;"></td>
+                                            <td class="formItemBgStyleForAlignLeft" style="height: 21px;"></td>
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <table>
                                                     <tr>

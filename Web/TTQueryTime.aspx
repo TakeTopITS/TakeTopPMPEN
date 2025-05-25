@@ -58,7 +58,7 @@
                                 <td align="left" style="padding-top: 5px;" class="auto-style1">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="900px">
                                         <tr style="color: #000000">
-                                            <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                            <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SQLYuJuSelectYuJu%>"></asp:Label>£º</td>
                                             <td class="formItemBgStyleForAlignLeft" style="height: 30px" colspan="3">
                                                 <asp:TextBox ID="TB_SQLCode" runat="server" CssClass="shuru" Height="150px" TextMode="MultiLine" Width="95%"></asp:TextBox>
@@ -66,14 +66,14 @@
                                             </td>
                                         </tr>
                                         <tr style="color: #000000">
-                                            <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                            <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongShi%>"></asp:Label>£º</td>
                                             <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 30px">
                                                 <asp:Label ID="lbl_Time" runat="server"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyleForAlignRight" style="width: 150px;"></td>
+                                            <td class="formItemBgStyleForAlignLeft" style="width: 150px;"></td>
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Button ID="BT_Check" runat="server" CssClass="inpu" OnClick="BT_Check_Click" Text="<%$ Resources:lang,JianCe%>" />
                                             </td>

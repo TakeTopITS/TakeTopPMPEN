@@ -76,7 +76,7 @@
                                     </table>
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                         <tr>
-                                            <td class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
+                                            <td class="formItemBgStyleForAlignLeft" style="padding: 5px 5px 5px 5px;">
                                                 <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                             </td>
                                         </tr>
@@ -200,7 +200,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GeRenBiaoXian%>"></asp:Label>£º</td>
                                     <td align="left" class="auto-style1">
                                         <asp:DropDownList ID="DL_CooperateDegree" runat="server">
@@ -213,7 +213,7 @@
                                     <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 30px">
                                         <asp:TextBox ID="TB_Remark" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="95%"></asp:TextBox>

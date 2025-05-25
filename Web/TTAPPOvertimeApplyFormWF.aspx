@@ -196,7 +196,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 10%">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%">
                                         <asp:Label ID="Label2" runat="server" Text="本年度已加班天数"></asp:Label>
                                         ：
                                     </td>
@@ -211,7 +211,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SuoShuBuMen%>"></asp:Label>：
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -224,7 +224,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>：
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -315,7 +315,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 6px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 6px">
                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShenQingRiQi%>"></asp:Label>：</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 6px">
                                         <asp:TextBox ID="DLC_CreateTime" ReadOnly="false" runat="server" Width="90px"></asp:TextBox>

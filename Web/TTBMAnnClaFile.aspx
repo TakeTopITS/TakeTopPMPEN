@@ -218,38 +218,38 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAn%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_BidPlanID" runat="server" DataTextField="Name" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="DL_BidPlanID_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XinXiDengJiRen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_EnterPer" runat="server" CssClass="shuru"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChengBaoShang%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:ListBox ID="LB_SupplierCode" runat="server" Height="150px" DataTextField="Name" DataValueField="ID" SelectionMode="Multiple"></asp:ListBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="height: 30px; width: 150px;" rowspan="1">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px; width: 150px;" rowspan="1">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ChengQingRiQi%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px" rowspan="1">
                                         <asp:TextBox ID="DLC_SentDate" runat="server" ReadOnly="false" CssClass="shuru"></asp:TextBox>
                                         <cc1:CalendarExtender ID="CalendarExtender3" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_SentDate">
                                         </cc1:CalendarExtender>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 30px">&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px">&nbsp;</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px">&nbsp;</td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ChengJiNeiRong%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px" colspan="3">
                                         <asp:TextBox ID="TB_SendContent" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="90%"></asp:TextBox>

@@ -201,19 +201,19 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiangChengDanWei%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_PenUnit" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChuangJianRen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_CreatePer" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000;">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JiangChengNeiRong%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 30px">
                                         <asp:TextBox ID="TB_RewardsPunishment" runat="server" CssClass="shuru" Height="35px" TextMode="MultiLine" Width="90%"></asp:TextBox>

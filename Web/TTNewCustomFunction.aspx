@@ -149,7 +149,7 @@
                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:TextBox ID="TB_CustomerEnglishName" runat="server" Height="20px" Width="95%"></asp:TextBox>
                                                                             </td>
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HangYeLeiXing%>"></asp:Label>£º
                                                                             </td>
                                                                             <td class="formItemBgStyleForAlignLeft">
@@ -181,7 +181,7 @@
                                                                                 <asp:TextBox ID="TB_InvoiceAddress" TextMode="MultiLine" Height="60" runat="server"
                                                                                     Width="95%"></asp:TextBox>
                                                                             </td>
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ZhuYaoLianXiRen%>"></asp:Label>£º
                                                                             </td>
                                                                             <td class="formItemBgStyleForAlignLeft">
@@ -195,7 +195,7 @@
                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:TextBox ID="TB_Tel1" runat="server" Width="150px"></asp:TextBox>
                                                                             </td>
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,DianHuaEr%>"></asp:Label>£º
                                                                             </td>
                                                                             <td class="formItemBgStyleForAlignLeft">
@@ -288,7 +288,7 @@
                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:TextBox ID="TB_City" runat="server" Width="150px"></asp:TextBox>
                                                                             </td>
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JianLiShiJian%>"></asp:Label>£º
                                                                             </td>
                                                                             <td class="formItemBgStyleForAlignLeft">
@@ -303,7 +303,7 @@
                                                                                 <asp:TextBox ID="TB_AddressCN" Height="60px" TextMode="MultiLine" runat="server"
                                                                                     Width="95%"></asp:TextBox>
                                                                             </td>
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,YingWenDiZhi%>"></asp:Label>£º
                                                                             </td>
                                                                             <td class="formItemBgStyleForAlignLeft">

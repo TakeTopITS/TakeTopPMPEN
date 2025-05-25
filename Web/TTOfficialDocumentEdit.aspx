@@ -193,7 +193,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -226,7 +226,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td style="padding-left: 30px;">
@@ -264,7 +264,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight"></td>
+                                    <td class="formItemBgStyleForAlignLeft"></td>
                                     <td style="height: 29px" class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                             </table>

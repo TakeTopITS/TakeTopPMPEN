@@ -91,7 +91,7 @@
                                 <td valign="top" style="padding-top: 5px;">
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt">
-                                            <td class="formItemBgStyleForAlignRight" colspan="2">
+                                            <td class="formItemBgStyleForAlignLeft" colspan="2">
                                                 <input type="button" class="inpu" value="Add" onclick="window.location.href = 'TTCameraAdd.aspx'" />
                                             </td>
                                         </tr>

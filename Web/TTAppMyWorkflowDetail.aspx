@@ -218,7 +218,7 @@
                                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,MingCheng %>"></asp:Label>£º </td>
                                                                             <td style="width: 70%; height: 25px; padding-right: 1px; " class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_WLID" runat="server"></asp:Label>.<asp:Label ID="LB_WFName" runat="server"></asp:Label></td>
-                                                                            <td class="formItemBgStyleForAlignRight" width="80px">
+                                                                            <td class="formItemBgStyleForAlignLeft" width="80px">
                                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>£º </td>
                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_Status" runat="server"></asp:Label></td>

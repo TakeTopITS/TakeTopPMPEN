@@ -94,7 +94,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight" ><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>
+                                                        <td class="formItemBgStyleForAlignLeft" ><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_Message" runat="server" width="220px" Height="120px" TextMode="MultiLine" ></asp:TextBox>

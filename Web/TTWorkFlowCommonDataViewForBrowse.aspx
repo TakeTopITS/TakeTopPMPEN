@@ -3972,7 +3972,7 @@
                                                             </tr>
 
                                                             <tr>
-                                                                <td class="formItemBgStyleForAlignRight"></td>
+                                                                <td class="formItemBgStyleForAlignLeft"></td>
                                                                 <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                                     <a id="aDetailView" href='TTConstractPayableVisaDetailView.aspx?VisaID=<%#DataBinder.Eval(Container.DataItem, "DetailVisaID")%>&NoPop=YES'
                                                                         target="DetailArea">
@@ -4024,7 +4024,7 @@
                                                         <%# DataBinder.Eval(Container.DataItem,"Amount") %>
                                                                    
                                                     </td>
-                                                    <td class="formItemBgStyleForAlignRight">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BiBie%>"></asp:Label>
                                                         £º</td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -4038,7 +4038,7 @@
                                                     <td class="formItemBgStyleForAlignLeft">
                                                         <%# DataBinder.Eval(Container.DataItem,"ApplyTime") %>
                                                     </td>
-                                                    <td class="formItemBgStyleForAlignRight">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YaoQiuWanChengShiJian%>"></asp:Label>
                                                         £º </td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -4046,7 +4046,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>
                                                         £º </td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -4060,7 +4060,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight"></td>
+                                                    <td class="formItemBgStyleForAlignLeft"></td>
                                                     <td colspan="3" class="formItemBgStyleForAlignLeft" >
                                                         <a id="aDetailView" href='TTGoodsCheckOutNoticeOrderDetailView.aspx?COOID=<%#DataBinder.Eval(Container.DataItem, "DetailCOOID")%>&NoPop=YES'
                                                             target="DetailArea">
@@ -4340,7 +4340,7 @@
                                                             </tr>
 
                                                             <tr>
-                                                                <td class="formItemBgStyleForAlignRight"></td>
+                                                                <td class="formItemBgStyleForAlignLeft"></td>
                                                                 <td colspan="3" class="formItemBgStyleForAlignLeft" >
 
                                                                 </td>

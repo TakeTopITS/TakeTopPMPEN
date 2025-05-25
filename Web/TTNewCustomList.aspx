@@ -40,7 +40,7 @@
                             <td valign="top" style="padding-top: 5px;">
                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                     <tr style="font-size: 12pt;">
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <input type="button" class="inpuLong" value="新增客户模块" onclick="window.location.href = 'TTNewCustomAdd.aspx'" />
                                         </td>
                                     </tr>

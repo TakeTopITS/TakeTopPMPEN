@@ -62,7 +62,7 @@
                                                         OnSelectedIndexChanged="LLB_SignInfo_SelectedIndexChanged" Width="220px">
                                                     </asp:ListBox>
                                                 </td>
-                                                <td class="formItemBgStyleForAlignRight" width="50">
+                                                <td class="formItemBgStyleForAlignLeft" width="50">
                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º</td>
                                                 <td   class="formItemBgStyleForAlignLeft">
                                                   
@@ -72,7 +72,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyleForAlignRight" valign="top">
+                                                <td class="formItemBgStyleForAlignLeft" valign="top">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º 
                                                 </td>
                                                 <td   class="formItemBgStyleForAlignLeft">
@@ -91,7 +91,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyleForAlignRight" style="width: 50px; height: 29px">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 50px; height: 29px">
                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º</td>
                                                 <td style="height: 29px" class="formItemBgStyleForAlignLeft">
                                                     <asp:DropDownList ID="DL_Status" runat="server">
@@ -101,7 +101,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyleForAlignRight" style="width: 50px; height: 29px">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 50px; height: 29px">
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft" style="height: 29px">
                                                     <asp:Button ID="BT_New" runat="server" CssClass="inpu" OnClick="BT_New_Click" 

@@ -120,7 +120,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>£º
                                                         </td>
                                                         <td colspan="3"  class="formItemBgStyleForAlignLeft">
@@ -139,7 +139,7 @@
                                                             </ajaxToolkit:CalendarExtender>
 
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YaoQiuWanChengShiJian%>"></asp:Label>£º
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
@@ -150,7 +150,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                         </td>
                                                         <td colspan="3"  class="formItemBgStyleForAlignLeft">

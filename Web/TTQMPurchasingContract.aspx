@@ -224,13 +224,13 @@
                                 </tr>
 
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 15%;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%;">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChuangJianRen%>"></asp:Label>
                                         £º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 35%;">
                                         <asp:TextBox ID="TB_CreatePer" runat="server" CssClass="shuru" Width="99%"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 15%;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%;">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GongYingShang%>"></asp:Label>
                                         £º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 35%;">
@@ -238,19 +238,19 @@
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px;">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YunShuDanWei%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_TransportUnit" runat="server" Width="99%" CssClass="shuru"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" >
+                                    <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShouHuoDanWei%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_ReceivingUnit" runat="server" Width="99%" CssClass="shuru"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px;">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,HeTongNeiRong%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3" >
                                         <asp:TextBox ID="TB_Remark" runat="server" Height="40px" TextMode="MultiLine" Width="90%" CssClass="shuru"></asp:TextBox>

@@ -60,13 +60,13 @@
                                             </asp:DropDownList>
                                             <asp:Label ID="lbl_ID" runat="server" Visible="False"></asp:Label>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WeiTuoXiangMu%>"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_MachiningProject" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,WeiTuoRiQi%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="DLC_ProCommDate" runat="server" CssClass="shuru" Width="120px" ReadOnly="false"></asp:TextBox>
@@ -75,12 +75,12 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px; vertical-align: middle;">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px; vertical-align: middle;">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShiJianShuLiang%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle">
                                             <asp:TextBox ID="TB_MacComSpeNumber" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight" style="vertical-align: middle">
+                                        <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle">
                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JiaGongFuTu%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft" colspan="3">
                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
@@ -110,7 +110,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px;">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px;">
                                             <asp:Label ID="lbl_sql" runat="server" Visible="False"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft" colspan="5">

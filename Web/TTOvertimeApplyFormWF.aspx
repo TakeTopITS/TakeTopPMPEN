@@ -187,7 +187,7 @@
                                         <asp:RadioButtonList ID="RB_OvertimeType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="RB_OvertimeType_SelectedIndexChanged" RepeatColumns="5">
                                         </asp:RadioButtonList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 10%">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%">
                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BenNianDuYiJiaBanTianShu %>"></asp:Label>
                                         £º
                                     </td>
@@ -201,7 +201,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SuoShuBuMen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -212,7 +212,7 @@
                                         </cc1:ModalPopupExtender>
                                         <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ZhiWei%>"></asp:Label>£º<asp:TextBox ID="TB_Duty" runat="server"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -298,7 +298,7 @@
                                             <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao%>" />
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 6px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 6px">
                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShenQingRiQi%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 6px">
                                         <asp:TextBox ID="DLC_CreateTime" ReadOnly="false" runat="server" Width="90px"></asp:TextBox>

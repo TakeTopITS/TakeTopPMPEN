@@ -59,7 +59,7 @@
                                             <asp:DropDownList ID="DL_WeldProCode" runat="server" DataTextField="Code" DataValueField="Code">
                                             </asp:DropDownList>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FengMianRiQi%>"></asp:Label>£º
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
@@ -69,7 +69,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FengMianShuoMing%>"></asp:Label>£º</td>
                                         <td class="formItemBgStyleForAlignLeft" colspan="3">
                                             <asp:TextBox ID="TB_CoverRemark" runat="server" CssClass="shuru" Width="98%"></asp:TextBox>

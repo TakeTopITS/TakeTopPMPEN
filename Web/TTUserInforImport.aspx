@@ -303,7 +303,7 @@
                                             <td class="formItemBgStyleForAlignLeft" colspan="4" style="height: 12px; ">&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyleForAlignRight">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,DaoRuYuanGongXinXi%>"></asp:Label></td>
                                             <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                 <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">

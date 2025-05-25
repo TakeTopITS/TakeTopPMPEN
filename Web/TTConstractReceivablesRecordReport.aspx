@@ -67,7 +67,7 @@
                             </tr>
 
                             <tr>
-                                <td class="formItemBgStyleForAlignRight">
+                                <td class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiaFangDanWei%>"></asp:Label>£º
                                 </td>
                                 <td class="formItemBgStyleForAlignLeft">

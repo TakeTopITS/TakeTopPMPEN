@@ -67,7 +67,7 @@
                                                             <asp:DropDownList ID="DL_FinancialID" runat="server" DataTextField="FinancialName" DataValueField="FinancialCode">
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhuangTai" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DL_Status" runat="server">

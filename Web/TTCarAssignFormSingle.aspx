@@ -218,7 +218,7 @@
                                     <td  style="width: 40%" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 10%">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%">
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShenQingDanHao%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 40%">
@@ -226,7 +226,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 10%">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChePaiHaoMa%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3">
@@ -240,14 +240,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 10%">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 40%">
                                         <asp:Label ID="LB_ApplicantCode" runat="server"></asp:Label>
                                         &nbsp;<asp:Label ID="LB_ApplicantName" runat="server"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 10%">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YongCheBuMen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -325,7 +325,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,SiJi%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -333,7 +333,7 @@
                                             DataValueField="UserCode">
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,MenWei%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -351,13 +351,13 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 9px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 9px">
                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ShangCheDiDian%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 9px">
                                         <asp:TextBox ID="TB_BoardingSite" runat="server" Width="90%"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight" style="height: 9px">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 9px">
                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,MuDiDi%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 9px">
@@ -392,7 +392,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight"></td>
+                                    <td class="formItemBgStyleForAlignLeft"></td>
                                     <td class="formItemBgStyleForAlignLeft"></td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="2">
                                         <asp:Button ID="BT_CarAssignFormDetail" Enabled="false" runat="server" Text="<%$ Resources:lang,ShiJiShiJianHeFeiYong%>" />
@@ -611,7 +611,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" >
+                                    <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,ZongLiCheng%>"></asp:Label>£º
                                     </td>
                                     <td colspan="2"  class="formItemBgStyleForAlignLeft">
@@ -636,7 +636,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" >
+                                    <td class="formItemBgStyleForAlignLeft" >
                                         <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,JiaYou%>"></asp:Label>£º
                                     </td>
                                     <td colspan="2"  class="formItemBgStyleForAlignLeft">

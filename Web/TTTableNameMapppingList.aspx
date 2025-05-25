@@ -50,7 +50,7 @@
                         <td style="padding: 0px 5px 5px 5px;" valign="top">
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr style="font-size: 12pt;">
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <input type="button" class="inpuLong" value="New" onclick="window.location.href = 'TTAddTableNameMapping.aspx'" />
                                     </td>
                                 </tr>

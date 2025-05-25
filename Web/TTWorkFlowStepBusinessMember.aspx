@@ -131,7 +131,7 @@
                                                 <table cellpadding="5" cellspacing="0" class="formBgStyle" width="95%">
 
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight" style="width: 80px;">
+                                                        <td class="formItemBgStyleForAlignLeft" style="width: 80px;">
                                                             <asp:Label ID="Label7" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label>£º
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
@@ -139,7 +139,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight">&nbsp;
+                                                        <td class="formItemBgStyleForAlignLeft">&nbsp;
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
 

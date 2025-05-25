@@ -235,7 +235,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight" style="width: 10%; height: 24px">
+                                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%; height: 24px">
                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
                                                         £º </td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -244,7 +244,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight" style="height: 24px">
+                                                    <td class="formItemBgStyleForAlignLeft" style="height: 24px">
                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CanYuRenYuan%>"></asp:Label>
                                                         £º </td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -257,7 +257,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight" style="height: 24px">
+                                                    <td class="formItemBgStyleForAlignLeft" style="height: 24px">
                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>
                                                         £º </td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -265,7 +265,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight" style="height: 24px">
+                                                    <td class="formItemBgStyleForAlignLeft" style="height: 24px">
                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>
                                                         £º </td>
                                                     <td class="formItemBgStyleForAlignLeft" style="height: 21px;">
@@ -273,7 +273,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight" style="height: 21px;">
+                                                    <td class="formItemBgStyleForAlignLeft" style="height: 21px;">
                                                         <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                                     </td>
                                                     <td class="formItemBgStyleForAlignLeft">
@@ -289,7 +289,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignRight" colspan="2" style="height: 29px;">
+                                                    <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 29px;">
                                                         <asp:CheckBox ID="CB_MSM" runat="server" Text="<%$ Resources:lang,FaXinXi%>" />
                                                         <asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,FaYouJian%>" />
                                                         &nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,TongZhiXieZuoRenYuan%>"></asp:Label>

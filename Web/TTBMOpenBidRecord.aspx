@@ -60,7 +60,7 @@
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_ID" runat="server" CssClass="shuru" Width="55px" Enabled="False"></asp:TextBox>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight">
+                                        <td class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
@@ -74,26 +74,26 @@
                                             <asp:DropDownList ID="DL_BidPlanID" runat="server" DataTextField="Name" DataValueField="ID">
                                             </asp:DropDownList>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight" style="height: 30px">
+                                        <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,KaiBiaoRen%>"></asp:Label>£º</td>
                                         <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                             <asp:TextBox ID="TB_OpenBidder" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr style="color: #000000">
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KaiBiaoRiQi%>"></asp:Label>£º</td>
                                         <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                             <asp:TextBox ID="DLC_OpenBidDate" runat="server" ReadOnly="false" CssClass="shuru"></asp:TextBox>
                                             <cc1:CalendarExtender ID="CalendarExtender3" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_OpenBidDate">
                                             </cc1:CalendarExtender>
                                         </td>
-                                        <td class="formItemBgStyleForAlignRight" style="height: 30px">&nbsp;</td>
+                                        <td class="formItemBgStyleForAlignLeft" style="height: 30px">&nbsp;</td>
                                         <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                             &nbsp;</td>
                                     </tr>
                                     <tr style="color: #000000">
-                                        <td class="formItemBgStyleForAlignRight" style="width: 150px; height: 30px">
+                                        <td class="formItemBgStyleForAlignLeft" style="width: 150px; height: 30px">
                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,KaiBiaoNeiRong%>"></asp:Label>£º </td>
                                         <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 30px">
                                             <asp:TextBox ID="TB_OpenBidRemark" runat="server" Width="90%" CssClass="shuru" Height="40px" TextMode="MultiLine"></asp:TextBox>

@@ -206,7 +206,7 @@
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox ID="NB_TotalAmount" runat="server" Enabled="false" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="100px" Precision="3">0.000</NickLee:NumberBox>
                                                 </td>
-                                                <td class="formItemBgStyleForAlignRight">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BiBie%>"></asp:Label>
                                                     £º</td>
                                                 <td class="formItemBgStyleForAlignLeft">
@@ -223,7 +223,7 @@
                                                     <cc1:CalendarExtender ID="CalendarExtender1" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_ApplyTime">
                                                     </cc1:CalendarExtender>
                                                 </td>
-                                                <td class="formItemBgStyleForAlignRight">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YaoQiuWanChengShiJian%>"></asp:Label>
                                                     £º </td>
                                                 <td class="formItemBgStyleForAlignLeft">
@@ -260,7 +260,7 @@
                                                     </table>
                                                 </td>
 
-                                                <td class="formItemBgStyleForAlignRight">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>
                                                     £º </td>
                                                 <td class="formItemBgStyleForAlignLeft">
@@ -479,7 +479,7 @@
                                                     </asp:DropDownList>
                                                     <asp:Label ID="LB_DetailID" runat="server" Visible="false"></asp:Label>
                                                 </td>
-                                                <td class="formItemBgStyleForAlignRight">ID:</td>
+                                                <td class="formItemBgStyleForAlignLeft">ID:</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox ID="NB_RecordSourceID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="30px">0</NickLee:NumberBox>
                                                     <asp:Label ID="LB_SourceRelatedID" runat="server" Text="0" Visible="False"></asp:Label>

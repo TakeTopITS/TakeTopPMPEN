@@ -370,7 +370,7 @@
                                         <asp:DropDownList ID="ddl_AccountName" runat="server" DataTextField="AccountName" DataValueField="AccountCode" AutoPostBack="True" OnSelectedIndexChanged="ddl_AccountName_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YuSuanNianFen%>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px">
@@ -380,26 +380,26 @@
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="height: 30px; width: 150px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px; width: 150px;">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuSuanYueFen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_MonthNum" runat="server" ReadOnly="false" Enabled="false" OnTextChanged="DLC_MonthNum_TextChanged"></asp:TextBox>
                                         <cc1:CalendarExtender ID="DLC_MonthNum_CalendarExtender" runat="server" Format="MM" TargetControlID="DLC_MonthNum">
                                         </cc1:CalendarExtender>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShengYuYuSuan%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                         <asp:Label ID="lbl_MoneyNum" runat="server"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
-                                    <td class="formItemBgStyleForAlignRight" style="height: 30px; width: 150px;">
+                                    <td class="formItemBgStyleForAlignLeft" style="height: 30px; width: 150px;">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,FeiYong%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_MoneyNum" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="100px">0.00</NickLee:NumberBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShenQingRen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                         <asp:Label ID="lbl_Creater" runat="server"></asp:Label>

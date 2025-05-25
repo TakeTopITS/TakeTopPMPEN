@@ -79,7 +79,7 @@
                                                         <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:Label ID="lbl_FinancialName" runat="server"></asp:Label>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_QuJianMingCheng" runat="server" Text="<%$ Resources:lang,QuJianMingCheng%>"></asp:Label></td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="lbl_IntervalName" runat="server"></asp:Label>
@@ -96,7 +96,7 @@
                                                             <asp:DropDownList ID="DL_FinancialID" runat="server" AutoPostBack="True" DataTextField="FinancialName" DataValueField="FinancialCode" OnSelectedIndexChanged="DL_FinancialID_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_QuJianMingCheng1" runat="server" Text="<%$ Resources:lang,QuJianMingCheng%>"></asp:Label></td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DL_IntervalID" runat="server" DataTextField="IntervalName" DataValueField="IntervalCode">

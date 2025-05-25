@@ -250,7 +250,7 @@
                                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                 <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
@@ -263,13 +263,13 @@
                                                             <%#DataBinder .Eval (Container .DataItem,"CreatorCode") %>
                                                             <%#DataBinder .Eval (Container .DataItem,"CreatorName") %>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <%#DataBinder .Eval (Container .DataItem,"TemName") %>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
@@ -277,7 +277,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label></td>
                                                         <td class="formItemBgStyleForAlignLeft" colspan="7" >
                                                             <%#DataBinder .Eval (Container .DataItem,"Description") %>
@@ -515,7 +515,7 @@
                                             <td style="width: 70%; height: 25px; padding-right: 1px; " class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="LB_WLID" runat="server"></asp:Label>.<asp:Label ID="LB_WFName" runat="server"></asp:Label>
                                             </td>
-                                            <td class="formItemBgStyleForAlignRight" width="80px">
+                                            <td class="formItemBgStyleForAlignLeft" width="80px">
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º </td>
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="LB_Status" runat="server"></asp:Label>

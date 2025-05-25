@@ -50,7 +50,7 @@
                                                             <h2>
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HanJieJiLuBaoGao%>"></asp:Label></h2>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight" colspan="2">Report Name£ºcheck_daily_report
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2">Report Name£ºcheck_daily_report
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -94,27 +94,27 @@
                                                                 INSPECTION(WELDING)
                                                             </h2>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight" colspan="2">WORK No.£º
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2">WORK No.£º
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">MDI Train Lot 04
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="formItemBgStyleForAlignRight">ITEM No£º
-                                                        </td>
-                                                        <td class="formItemBgStyleForAlignRight">Above Ground Piping
+                                                        <td class="formItemBgStyleForAlignLeft">MDI Train Lot 04
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight">LOCATION£º
+                                                        <td class="formItemBgStyleForAlignLeft">ITEM No£º
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">&nbsp;
+                                                        <td class="formItemBgStyleForAlignLeft">Above Ground Piping
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight" colspan="2">WORK No.£º
+                                                        <td class="formItemBgStyleForAlignLeft">LOCATION£º
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">MDI Train Lot 04
+                                                        <td class="formItemBgStyleForAlignLeft">&nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2">WORK No.£º
+                                                        </td>
+                                                        <td class="formItemBgStyleForAlignLeft">MDI Train Lot 04
                                                         </td>
                                                     </tr>
                                                     <tr>

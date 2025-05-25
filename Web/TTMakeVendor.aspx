@@ -313,7 +313,7 @@
                                                                     Width="95%"></asp:TextBox>
                                                             </td>
 
-                                                            <td class="formItemBgStyleForAlignRight">
+                                                            <td class="formItemBgStyleForAlignLeft">
 
                                                                 <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HangYeLeiXing %>"></asp:Label>£º
                                                             </td>

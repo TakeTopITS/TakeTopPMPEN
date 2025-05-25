@@ -417,11 +417,11 @@
                                     <td class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YuanShiDanHao %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_ReceivablesBillCode" runat="server"></asp:TextBox></td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShouFeiKeMu %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_ReceiveAccount" runat="server" Width="135px"></asp:TextBox><asp:DropDownList ID="DL_ReceiveAccount" runat="server" AutoPostBack="True" DataTextField="AccountName"
@@ -430,7 +430,7 @@
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,YingShouJinE %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ReceivablesAccount" runat="server" OnBlur="" OnFocus=""
@@ -443,12 +443,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,YingShouRiQi %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_ReceivablesTime" runat="server"></asp:TextBox><cc2:CalendarExtender ID="CalendarExtender2" runat="server" Enabled="True" Format="yyyy-MM-dd" TargetControlID="DLC_ReceivablesTime"></cc2:CalendarExtender>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,TiQianTianShu %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_ReceivablesPreDays" runat="server" MaxAmount="1000000000000" MinAmount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="80px">0</NickLee:NumberBox></td>
@@ -461,7 +461,7 @@
                                         <asp:DropDownList ID="DL_Payer" runat="server" AutoPostBack="True" DataTextField="Payer" DataValueField="Payer" Height="25px" OnSelectedIndexChanged="DL_Payer_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,DengJiRenYuan %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_ReceivablesOperatorCode" runat="server" Enabled="False" Width="55px"></asp:TextBox><asp:Label ID="LB_ReceivablesOperatorName" runat="server"></asp:Label></td>
@@ -545,12 +545,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,YingFuRiQi %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_PayableTime" runat="server"></asp:TextBox><cc2:CalendarExtender ID="CalendarExtender3" runat="server" Enabled="True" Format="yyyy-MM-dd" TargetControlID="DLC_PayableTime"></cc2:CalendarExtender>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label54" runat="server" Text="<%$ Resources:lang,TiQianTianShu %>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_PayablePreDays" runat="server" MaxAmount="1000000000000" MinAmount="1" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="80px">0</NickLee:NumberBox></td>

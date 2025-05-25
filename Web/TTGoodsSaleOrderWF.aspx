@@ -800,7 +800,7 @@
                                                     </asp:DropDownList>
                                                     <asp:Label ID="LB_DetailID" runat="server" Visible="false"></asp:Label>
                                                 </td>
-                                                <td class="formItemBgStyleForAlignRight">ID:
+                                                <td class="formItemBgStyleForAlignLeft">ID:
                                                 </td>
                                                 <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox ID="NB_RecordSourceID" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="30px">0</NickLee:NumberBox>
@@ -2607,11 +2607,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label121" runat="server" Text="<%$ Resources:lang,FaPiaoHaoMa%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_InvoiceCode" runat="server" Width="99%"></asp:TextBox></td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label122" runat="server" Text="<%$ Resources:lang,JinE%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_InvoiceAmount" runat="server" OnBlur="" OnFocus=""
@@ -2619,7 +2619,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label123" runat="server" Text="<%$ Resources:lang,ShuiLv%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_InvoiceTaxRate" runat="server" OnBlur="" OnFocus=""

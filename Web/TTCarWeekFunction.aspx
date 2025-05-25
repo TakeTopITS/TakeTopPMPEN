@@ -146,7 +146,7 @@
                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:TextBox ID="TXT_Ext1" runat="server"></asp:TextBox>
                                                                             </td>
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuLiuZiDuanEr%>"></asp:Label>£º
                                                                             </td>
                                                                             <td class="formItemBgStyleForAlignLeft">
@@ -174,7 +174,7 @@
                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:TextBox ID="TXT_Ext5" runat="server"></asp:TextBox>
                                                                             </td>
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º
                                                                             </td>
                                                                             <td class="formItemBgStyleForAlignLeft">

@@ -123,7 +123,7 @@
                                                             </tr>
                                                         </table>
                                                     </td>
-                                                    <td class="formItemBgStyleForAlignRight">
+                                                    <td class="formItemBgStyleForAlignLeft">
                                                         <asp:Button ID="BT_CreateMain" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateMain_Click" />
 
                                                     </td>

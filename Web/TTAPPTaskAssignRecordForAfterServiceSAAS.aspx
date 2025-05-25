@@ -285,7 +285,7 @@
                         <td valign="top" align="left" style="padding: 5px 2px  0px 5px;">
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,fenpaiRen%>" />£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">

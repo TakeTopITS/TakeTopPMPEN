@@ -92,7 +92,7 @@
                                                                 0.00
                                                             </NickLee:NumberBox>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiZhong%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:DropDownList ID="DL_CurrencyType" runat="server" DataTextField="Type" DataValueField="Type">
@@ -378,7 +378,7 @@
                                                                     <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                                         <asp:TextBox ID="TB_ModelNumber" runat="server" Height="35px" Width="95%" TextMode="MultiLine"></asp:TextBox>
                                                                     </td>
-                                                                    <td class="formItemBgStyleForAlignRight">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>£º</td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_Spec" runat="server" Height="35px" TextMode="MultiLine" Width="90%"></asp:TextBox>

@@ -118,7 +118,7 @@
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZuZhiJiaGouWeiHu%>"></asp:Label>£º
                                                         <asp:Label ID="LB_DepartCode" runat="server" Visible="False"></asp:Label>
                                                         </td>
-                                                        <td  style="width: 30%; padding-right: 5px;" class="formItemBgStyleForAlignRight">
+                                                        <td  style="width: 30%; padding-right: 5px;" class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                         </td>
                                                     </tr>

@@ -543,9 +543,9 @@
                                                             <asp:Button ID="BT_UpdateAA" runat="server" OnClick="BT_UpdateClaim_Click" Text="<%$ Resources:lang,BaoCun %>" CssClass="inpu" />&nbsp;
                                                             <asp:Button ID="BT_DeleteAA" runat="server" OnClick="BT_DeleteClaim_Click" Text="<%$ Resources:lang,ShanChu %>" CssClass="inpu" />
                                                 </td>
-                                                <td class="formItemBgStyleForAlignRight">&nbsp;</td>
                                                 <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
-                                                <td class="formItemBgStyleForAlignRight">
+                                                <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
+                                                <td class="formItemBgStyleForAlignLeft">
                                                   
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">&nbsp;</td>

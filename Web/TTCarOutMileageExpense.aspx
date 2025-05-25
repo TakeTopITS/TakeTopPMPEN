@@ -169,7 +169,7 @@
                                                                     <td colspan="2"  class="formItemBgStyleForAlignLeft">
                                                                         <table>
                                                                             <tr>
-                                                                                <td class="formItemBgStyleForAlignRight" >
+                                                                                <td class="formItemBgStyleForAlignLeft" >
                                                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZongLiCheng%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td>

@@ -84,7 +84,7 @@
 
                                                                         <tr>
 
-                                                                            <td class="formItemBgStyleForAlignRight">
+                                                                            <td class="formItemBgStyleForAlignLeft">
 
                                                                                 <asp:Label ID="Label125" runat="server" Text="±¸°¸×´Ì¬"></asp:Label>:</td>
 

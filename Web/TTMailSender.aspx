@@ -214,7 +214,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">&nbsp;
+                                    <td class="formItemBgStyleForAlignLeft">&nbsp;
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="SenderBtn" runat="server" CssClass="inpu" OnClick="NewBtn_Click"

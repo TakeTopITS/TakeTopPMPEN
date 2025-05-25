@@ -55,7 +55,7 @@
                                 <td valign="top" style="padding-top: 5px;">
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt;">
-                                            <td class="formItemBgStyleForAlignRight">
+                                            <td class="formItemBgStyleForAlignLeft">
                                                 <span>
                                                     <input type="radio" value="Department" id="RD_Department" name="add" checked="checked" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZuZhiJiaGou%>"></asp:Label></span>
                                                 <span>

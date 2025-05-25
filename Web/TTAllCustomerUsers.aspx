@@ -365,7 +365,7 @@
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,DaoRuXinZengChengYuanXinXi%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyleForAlignLeft" colspan="3">
                                                             <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">

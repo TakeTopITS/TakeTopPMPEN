@@ -53,7 +53,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="formItemBgStyleForAlignRight">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShouJianRen%>" />
 
                             </td>
@@ -62,7 +62,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="formItemBgStyleForAlignRight">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChaoSong%>" />
 
                             </td>
@@ -71,7 +71,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="formItemBgStyleForAlignRight">
+                            <td class="formItemBgStyleForAlignLeft">
                                   <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuTi%>" />
                                 </td> 
                             <td class="formItemBgStyleForAlignLeft">
@@ -79,14 +79,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="formItemBgStyleForAlignRight">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YouJianGeShi%>" />
                             </td>
                             <td class="formItemBgStyleForAlignLeft">
                                 &nbsp;<input id="HtmlCB" type="checkbox"  runat ="server" />HTML</td>
                         </tr>
                         <tr>
-                            <td class="formItemBgStyleForAlignRight">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,NeiRong%>" />
                             </td>
                             <td class="formItemBgStyleForAlignLeft">

@@ -748,14 +748,14 @@
                                                             </table>
                                                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignRight">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="LB_ChildTemID" runat="server" Visible="False"></asp:Label><asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,LiuChengMoBanLeiXing %>"></asp:Label>£º </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_RelatedWFType" runat="server" AutoPostBack="True"
                                                                             DataTextField="HomeName" DataValueField="Type"
                                                                             OnSelectedIndexChanged="DL_RelatedWFType_SelectedIndexChanged">
                                                                         </asp:DropDownList></td>
-                                                                    <td class="formItemBgStyleForAlignRight">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,MoBan %>"></asp:Label>£º </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <table>
@@ -769,7 +769,7 @@
                                                                             </tr>
                                                                         </table>
                                                                     </td>
-                                                                    <td class="formItemBgStyleForAlignRight">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,ShiFouBiXu2 %>"></asp:Label>£º</td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_ChildTemRequisite" runat="server">
@@ -778,7 +778,7 @@
                                                                         </asp:DropDownList></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignRight">
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,JieShuGuiShuBuXu %>"></asp:Label>£º </td>
                                                                     <td class="formItemBgStyleForAlignLeft" colspan="5">
                                                                         <table>

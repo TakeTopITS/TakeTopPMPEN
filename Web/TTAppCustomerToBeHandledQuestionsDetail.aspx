@@ -305,7 +305,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="formItemBgStyleForAlignRight" style="width: 70px;">&nbsp;</td>
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 70px;">&nbsp;</td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Button ID="BT_Create" runat="server" CssClass="inpuYello" OnClick="BT_Create_Click" Text="<%$ Resources:lang,New%>" />
                                                     <asp:Button ID="BT_Add" runat="server" CssClass="inpu" OnClick="BT_Add_Click" Text="<%$ Resources:lang,XinJian%>" Visible="false" />

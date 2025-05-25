@@ -71,7 +71,7 @@
                     <table cellpadding="3" cellspacing="0" class="formBgStyle" style="width: 800px;">
 
                         <tr>
-                            <td class="formItemBgStyleForAlignRight">
+                            <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiaFangDanWei%>"></asp:Label>£º
                             </td>
                             <td class="formItemBgStyleForAlignLeft">

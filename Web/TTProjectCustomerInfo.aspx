@@ -220,7 +220,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_ContactName" runat="server" Width="99%"></asp:TextBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YeWuYuan %>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">

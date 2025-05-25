@@ -241,31 +241,31 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongChengLiang%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="1">
                                         <NickLee:NumberBox ID="NB_Quantities" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="6">0.000000</NickLee:NumberBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DanWei%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Unit" runat="server" CssClass="shuru"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DanJia%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="1">
                                         <NickLee:NumberBox ID="NB_Price" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000">0.00</NickLee:NumberBox>
                                     </td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZongJia%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox ID="NB_Total" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000">0.00</NickLee:NumberBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight" style="width: 150px">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 150px">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BeiZhuShuoMing%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:TextBox ID="TB_Remark" runat="server" CssClass="shuru" Width="90%"></asp:TextBox>

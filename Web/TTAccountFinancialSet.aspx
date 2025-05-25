@@ -66,7 +66,7 @@
                                                         <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:TextBox ID="TB_FinancialCode" runat="server" CssClass="shuru" ReadOnly="false" Width="120px"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ZhangTaoMingCheng" runat="server" Text="<%$ Resources:lang,ZhangTaoMingCheng%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_FinancialName" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
@@ -78,7 +78,7 @@
                                                         <td class="formItemBgStyleForAlignLeft" colspan="1" >
                                                             <asp:TextBox ID="TB_Industry" runat="server" CssClass="shuru" ReadOnly="false" Width="120px"></asp:TextBox>
                                                         </td>
-                                                        <td class="formItemBgStyleForAlignRight">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_BuMen" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="lbl_DepartCode" runat="server"></asp:Label>

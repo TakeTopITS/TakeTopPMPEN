@@ -93,7 +93,7 @@
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignRight" style="padding: 5px 5px 5px 5px;">
+                                                        <td class="formItemBgStyleForAlignLeft" style="padding: 5px 5px 5px 5px;">
                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
 
                                                                 <tr>
@@ -440,7 +440,7 @@
 
                             <table style="width: 98%; text-align: left;">
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="BT_CreateTarget" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateTarget_Click" />
                                     </td>
                                 </tr>
@@ -569,7 +569,7 @@
 
                             <table style="width: 98%; text-align: left;">
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Button ID="BT_CreateLeader" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateLeader_Click" />
                                     </td>
                                 </tr>
