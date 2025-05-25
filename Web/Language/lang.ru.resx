@@ -30971,4 +30971,10 @@
   <data name="ZiZhiWenJian" xml:space="preserve">
     <value>Документы о квалификации</value>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>Выбрать бюджет</value>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value>Связать визу</value>
+  </data>
 </root>

@@ -30969,4 +30969,10 @@
   <data name="ZiZhiWenJian" xml:space="preserve">
     <value>資格ファイル</value>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>予算を選択する</value>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value>ビザをリンクする</value>
+  </data>
 </root>

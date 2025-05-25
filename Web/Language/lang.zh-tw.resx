@@ -30975,4 +30975,10 @@
   <data name="ZiZhiWenJian" xml:space="preserve">
     <value>資質文件</value>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>예산 선택</value>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value>關聯簽證</value>
+  </data>
 </root>

@@ -30970,4 +30970,10 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZiZhiWenJian" xml:space="preserve">
     <value>Qualification Documents</value>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>Select Budget</value>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value>Link Visa</value>
+  </data>
 </root>

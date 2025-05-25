@@ -31075,4 +31075,12 @@
     <value>资质文件</value>
     <comment>资质文件</comment>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>选择预算</value>
+    <comment>选择预算</comment>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value>关联签证</value>
+    <comment>关联签证</comment>
+  </data>
 </root>
