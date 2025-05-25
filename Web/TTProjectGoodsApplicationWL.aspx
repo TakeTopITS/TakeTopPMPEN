@@ -405,7 +405,7 @@
                                                                                         </tr>
                                                                                         <tr>
                                                                                             <td class="formItemBgStyleForAlignLeft"></td>
-                                                                                            <td style="height: 1px; "  class="formItemBgStyleForAlignLeft"
+                                                                                            <td style="height: 1px; "  class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:Button ID="BT_New" runat="server" Enabled="False" OnClick="BT_New_Click" Text="<%$ Resources:lang,XinZeng%>"
                                                                                                     CssClass="inpu" />
                                                                                                 &#160;&#160;<asp:Button ID="BT_Update" runat="server" Enabled="False" OnClick="BT_Update_Click"

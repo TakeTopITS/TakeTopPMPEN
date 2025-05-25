@@ -703,7 +703,7 @@
                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" HorizontalAlign="Left" ForeColor="White" />
                                                         </asp:DataGrid>
                                                     </td>
-                                                    <td class="formItemBgStyleForAlignLeft" style="padding: 5px 5px 5px 5px;" valign="top"
+                                                    <td class="formItemBgStyleForAlignLeft" style="padding: 5px 5px 5px 5px;" valign="top">
                                                         align="left">
                                                         <asp:TreeView ID="TreeView2" runat="server" BorderColor="Transparent" NodeWrap="True"
                                                             OnSelectedNodeChanged="TreeView2_SelectedNodeChanged" ShowLines="True" Width="190px">

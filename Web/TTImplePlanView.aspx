@@ -83,7 +83,7 @@
                                                 <td width="20%"  class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                 </td>
-                                                <td style="width: 30%; "  class="formItemBgStyleForAlignLeft"
+                                                <td style="width: 30%; "  class="formItemBgStyleForAlignLeft">
                                                     <asp:DropDownList ID="DL_PlanType" runat="server" CssClass="DDList" >
                                                         <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua%>"/>
                                                         <asp:ListItem Value="Milestone" Text="<%$ Resources:lang,LiChengBei%>"/>

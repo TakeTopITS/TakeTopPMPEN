@@ -116,7 +116,7 @@
                                                 valign="top">
                                                 <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top"
+                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top">
                                                             align="left">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ChengYuanCengCiWeiHu%>"></asp:Label>£º<asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label><asp:Label
                                                                 ID="LB_ChildCount" runat="server" Visible="False"></asp:Label>

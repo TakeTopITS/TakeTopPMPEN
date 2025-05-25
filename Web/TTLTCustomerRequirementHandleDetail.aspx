@@ -260,7 +260,7 @@
                                                                                         <tr>
                                                                                             <td style="width: 7%; " class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label>£º</td>
-                                                                                            <td colspan="5" style="width: 90%; "  class="formItemBgStyleForAlignLeft"
+                                                                                            <td colspan="5" style="width: 90%; "  class="formItemBgStyleForAlignLeft">
                                                                                                 <asp:Label ID="LB_ID" runat="server"></asp:Label></td>
                                                                                         </tr>
                                                                                         <tr>

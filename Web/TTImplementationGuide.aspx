@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTImplementationGuide.aspx.cs" Inherits="TTImplementationGuide" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTImplementationGuide.aspx.cs" Inherits="TTImplementationGuide" %>
 
 
 <!DOCTYPE html>
@@ -90,17 +90,17 @@
                                 <td class="title" align="left" colspan="5">
                                     <br />
                                     <br />
-                                    <asp:Label ID="Label6" runat="server" Text="�ؼ�ģ����ѵ��Ƶ����"></asp:Label>
+                                    <asp:Label ID="Label6" runat="server" Text="????????????????"></asp:Label>
                                     <br />
                                     <br />
                                 </td>
                             </tr>
                             <tr>
-                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Workflow.zip">���̹���</a></td>
-                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Knowledget.zip">֪ʶ����</a></td>
-                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/CRM.zip">�ͻ�����</a></td>
-                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Contract.zip">��ͬ����</a></td>
-                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/ProjectPlan.zip">��Ŀ�ƻ�</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Workflow.zip">???????</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Knowledget.zip">??????</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/CRM.zip">???????</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/Contract.zip">???????</a></td>
+                                <td class="title"  align="left"><a href="https://www.taketopits.com/download/TrainVideo/KeyModule/ProjectPlan.zip">??????</a></td>
                             </tr>--%>
                         </table>
                     </div>

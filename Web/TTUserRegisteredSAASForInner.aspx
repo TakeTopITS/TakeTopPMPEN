@@ -250,7 +250,7 @@
                                         <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
                                     </asp:DropDownList></td>
                                 <td class="formItemBgStyleForAlignLeft"></td>
-                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"</td>
+                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr style="display: none;">
                                 <td class="formItemBgStyleForAlignLeft">
@@ -261,7 +261,7 @@
                                         OnFocus="" OnKeyPress="" PositiveColor="">
                                         0</NickLee:NumberBox></td>
                                 <td class="formItemBgStyleForAlignLeft"></td>
-                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"</td>
+                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr style="display: none;">
                                 <td class="formItemBgStyleForAlignLeft">
@@ -272,7 +272,7 @@
                                         DataValueField="DepartCode" CssClass="DDList">
                                     </asp:DropDownList></td>
                                 <td class="formItemBgStyleForAlignLeft"></td>
-                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"&nbsp;</td>
+                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"&nbsp;></td>
                             </tr>
                             <tr style="display: none;">
                                 <td class="formItemBgStyleForAlignLeft">
@@ -281,7 +281,7 @@
                                 <td class="formItemBgStyleForAlignLeft">
                                     <asp:TextBox ID="TB_ChildDepartment" runat="server"></asp:TextBox></td>
                                 <td class="formItemBgStyleForAlignLeft"></td>
-                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"</td>
+                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr style="display: none;">
                                 <td class="formItemBgStyleForAlignLeft">
@@ -299,7 +299,7 @@
                                 <td class="formItemBgStyleForAlignLeft">
                                     <asp:TextBox ID="TB_MobilePhone" runat="server"></asp:TextBox></td>
                                 <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"<span style="color: #ff0000">*</span></td>
-                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"</td>
+                                <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"></td>
                             </tr>
                             <tr style="display: none;">
                                 <td style="height: 23px;" class="formItemBgStyleForAlignLeft">
@@ -332,7 +332,7 @@
                                 <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                     <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JiaRuRiQi%>"></asp:Label>
                                     £º </td>
-                                <td colspan="2" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                <td colspan="2" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                     <asp:TextBox ID="DLC_JoinDate" ReadOnly="false" runat="server"></asp:TextBox>
                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"
                                         runat="server" TargetControlID="DLC_JoinDate">

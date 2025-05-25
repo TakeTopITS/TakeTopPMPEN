@@ -158,7 +158,7 @@
                                                 valign="top">
                                                 <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top"
+                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top">
                                                             align="left">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiTongYongHuWeiHu%>"></asp:Label>£º
                                                         </td>
@@ -212,7 +212,7 @@
 
                                                 <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top"
+                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top">
                                                             align="left">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,XiTongYongHuZongShu%>"></asp:Label>£º 
                                                         <asp:Label ID="LB_SystemUserNumber" runat="server"></asp:Label>
@@ -222,7 +222,7 @@
                                                 <br />
                                                 <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top"
+                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top">
                                                             align="left">
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XiTongYongHuChaXun%>"></asp:Label>£º
                                                          
@@ -273,7 +273,7 @@
                                                 <br />
                                                 <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top"
+                                                        <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top">
                                                             align="left">
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ChaXunDaoXiTongYongHuShu%>"></asp:Label>£º 
                                                         <asp:Label ID="LB_FindUserNumber" runat="server"></asp:Label>

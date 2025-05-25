@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTFestivalsDaySet.aspx.cs" Inherits="TTFestivalsDaySet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTFestivalsDaySet.aspx.cs" Inherits="TTFestivalsDaySet" %>
 
 <!DOCTYPE html>
 
@@ -88,7 +88,7 @@
                                                         <table class="formBgStyle" cellpadding="3" cellspacing="0" style="width: 100%;">
                                                             <tr>
                                                                 <td style="width: 80px;" class="formItemBgStyleForAlignLeft">
-                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYYEAR%>"></asp:Label>��
+                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYYEAR%>"></asp:Label>??
                                                                 </td>
                                                                 <td  class="formItemBgStyleForAlignLeft">
                                                                     <asp:DropDownList ID="ddl_year" runat="server" AutoPostBack="True" CssClass="DDList" OnSelectedIndexChanged="ddl_year_SelectedIndexChanged"></asp:DropDownList>
@@ -103,7 +103,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td class="formItemBgStyleForAlignLeft" >
-                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FESTIVALSDAY%>"></asp:Label>��
+                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FESTIVALSDAY%>"></asp:Label>??
                                                                 </td>
                                                                 <td class="formItemBgStyle festivals" style="text-align: left;" colspan="4">
                                                                     <asp:ListBox ID="lb_festivals" runat="server" DataTextField="Type" DataValueField="SortNumber" AutoPostBack="True" OnSelectedIndexChanged="lb_festivals_SelectedIndexChanged"></asp:ListBox>
@@ -117,7 +117,7 @@
                                                             <table class="formBgStyle" cellpadding="3" cellspacing="0" style="width: 100%;">
                                                                 <tr>
                                                                     <td style="width: 80px;" class="formItemBgStyleForAlignLeft">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYMONTH%>"></asp:Label>��
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYMONTH%>"></asp:Label>??
                                                                     </td>
                                                                     <td  class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="ddl_moths" runat="server" CssClass="DDList" AutoPostBack="True" OnSelectedIndexChanged="ddl_moths_SelectedIndexChanged">
@@ -138,14 +138,14 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyleForAlignLeft" >
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieRi%>"></asp:Label>��</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieRi%>"></asp:Label>??</td>
                                                                     <td class="formItemBgStyleForAlignLeft" >
                                                                         <asp:Calendar ID="cal_days" runat="server" ShowNextPrevMonth="False" ShowTitle="False" Height="300px" Width="100%" OnSelectionChanged="Calendar1_SelectionChanged" OnDayRender="Calendar1_DayRender"></asp:Calendar>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyleForAlignLeft" >
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TiaoXiu%>"></asp:Label>��</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TiaoXiu%>"></asp:Label>??</td>
                                                                     <td class="formItemBgStyleForAlignLeft" >
                                                                         <asp:Calendar ID="cal_exchange" runat="server" ShowNextPrevMonth="False" ShowTitle="False" Height="300px" Width="100%" OnSelectionChanged="cal_exchange_SelectionChanged" OnDayRender="cal_exchange_DayRender"></asp:Calendar>
                                                                     </td>

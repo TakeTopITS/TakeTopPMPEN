@@ -384,7 +384,7 @@
                                             <tr>
                                                 <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,JiaRuRiQi %>"></asp:Label></td>
-                                                <td colspan="2" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                <td colspan="2" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                     <asp:TextBox ID="DLC_CreateTime" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_CreateTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                                 </td>
                                             </tr>

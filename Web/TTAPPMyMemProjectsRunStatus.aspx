@@ -420,7 +420,7 @@
                                                                                                     </tr>
                                                                                                     <tr>
 
-                                                                                                        <td style="width: 70%; "  class="formItemBgStyleForAlignLeft"
+                                                                                                        <td style="width: 70%; "  class="formItemBgStyleForAlignLeft">
                                                                                                             <asp:TextBox ID="TB_ProjectName" runat="server" Width="95%"></asp:TextBox></td>
                                                                                                         <td class="formItemBgStyleForAlignLeft">
                                                                                                             <asp:Button ID="BT_HazyFind" runat="server" OnClick="BT_HazyFind_Click" Text="<%$ Resources:lang,FuzzySearch %>"
@@ -478,7 +478,7 @@
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>
-                                                                                                        <td colspan="2" style="vertical-align: middle; "  class="formItemBgStyleForAlignLeft"
+                                                                                                        <td colspan="2" style="vertical-align: middle; "  class="formItemBgStyleForAlignLeft">
                                                                                                             <asp:Button ID="BT_DateFind" runat="server" OnClick="BT_DateFind_Click" Text="<%$ Resources:lang,Find %>"
                                                                                                                 CssClass="inpu" />
                                                                                                         </td>

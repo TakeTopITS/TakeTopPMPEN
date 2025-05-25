@@ -349,7 +349,7 @@
                                                     <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                                     </td>
-                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                         <asp:TextBox ID="TB_ItemCode" runat="server" Width="120px"></asp:TextBox>
                                                         <span style="color: #ff0000">*</span>
                                                         <asp:HyperLink ID="HL_SetItemCode" runat="server" NavigateUrl="~/TTItemCodeSet.aspx" Text="<%$ Resources:lang,BianMa%>" Target="_blank"></asp:HyperLink>
@@ -371,7 +371,7 @@
                                                     <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                     </td>
-                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                         <asp:DropDownList ID="DL_ItemType" runat="server" CssClass="DDList"
                                                             Width="90%">
                                                             <asp:ListItem Value="PurchParts" Text="<%$ Resources:lang,CaiGouJian%>" />
@@ -495,7 +495,7 @@
                                                     <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,CaiGouTiQianQi%>"></asp:Label>£º
                                                     </td>
-                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                         <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_PULeadTime" runat="server" MinAmount="0" Width="79px">
                                                  0 0.00
                                                         </NickLee:NumberBox>
@@ -503,7 +503,7 @@
                                                     <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,ZhiZaoTiQianQi%>"></asp:Label>£º
                                                     </td>
-                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                         <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_MFLeadTime" runat="server" MinAmount="0" Width="79px">
                                                  0 0.00
                                                         </NickLee:NumberBox>
@@ -531,7 +531,7 @@
                                                     <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ZhiZaoChengBen%>"></asp:Label>£º
                                                     </td>
-                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                         <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_MFCost" runat="server" MinAmount="0" Width="79px" Precision="3">
                                                  0 0.00
                                                         0.000</NickLee:NumberBox>
@@ -539,7 +539,7 @@
                                                     <td style="width: 100px; " class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,AnQuanKuCun%>"></asp:Label>£º
                                                     </td>
-                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                    <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                         <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_SafetyStock" runat="server" MinAmount="0" Width="79px" Precision="3">
                                                  0 0.00
                                                         0.000</NickLee:NumberBox>

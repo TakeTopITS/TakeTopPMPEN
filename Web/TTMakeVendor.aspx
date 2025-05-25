@@ -281,7 +281,7 @@
                                                                 <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,DaiMa %>"></asp:Label>£º
                                                             </td>
 
-                                                            <td style="width: 30%; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="width: 30%; "  class="formItemBgStyleForAlignLeft">
 
                                                                 <asp:TextBox ID="TB_VendorCode" runat="server" Width="95%"></asp:TextBox><span style="color: #ff0000">*</span>
 
@@ -475,7 +475,7 @@
                                                                 <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,ZheKouLv %>"></asp:Label>£º
                                                             </td>
 
-                                                            <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
 
                                                                 <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Discount" runat="server" Height="23px" Width="80px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                             </td>

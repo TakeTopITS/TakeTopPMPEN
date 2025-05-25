@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractPayableVisaDetailView.aspx.cs" Inherits="TTConstractPayableVisaDetailView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractPayableVisaDetailView.aspx.cs" Inherits="TTConstractPayableVisaDetailView" %>
 
 <!DOCTYPE html>
 

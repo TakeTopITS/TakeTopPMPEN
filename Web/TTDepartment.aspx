@@ -222,7 +222,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="width: 30%; height: 26px;" class="formItemBgStyleForAlignLeft"></td>
-                                                        <td style="width: 70%; height: 26px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td style="width: 70%; height: 26px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="BT_Update" CssClass="inpu" runat="server" Enabled="False" OnClick="BT_Update_Click"
                                                                 Text="<%$ Resources:lang,BaoCun%>" />
                                                             &nbsp;<asp:Button ID="BT_Delete" CssClass="inpu" runat="server" Enabled="False" OnClick="BT_Delete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())"

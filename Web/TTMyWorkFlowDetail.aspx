@@ -584,7 +584,7 @@
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                             </td>
-                                            <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"</td>
+                                            <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"></td>
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,JianLiShiJian%>"></asp:Label>£º
                                             </td>

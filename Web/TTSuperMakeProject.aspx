@@ -365,7 +365,7 @@
                                                                                     <span style="font-size: 10pt">
                                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>£º</span>
                                                                                 </td>
-                                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_BeginDate">
                                                                                     </ajaxToolkit:CalendarExtender>
@@ -374,7 +374,7 @@
                                                                                     <span style="font-size: 10pt">
                                                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JieShuRiQi%>"></asp:Label>£º</span>
                                                                                 </td>
-                                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"
                                                                                         runat="server" TargetControlID="DLC_EndDate">
@@ -446,7 +446,7 @@
                                                             <br />
                                                             <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                 <tr>
-                                                                    <td colspan="4" style="width: 100%; "  class="formItemBgStyleForAlignLeft"
+                                                                    <td colspan="4" style="width: 100%; "  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,XiangXiShuoMing%>"></asp:Label>£º<asp:Label ID="LB_UserCode" runat="server" Font-Bold="False" Font-Size="9pt"
                                                                             Visible="False"></asp:Label>
                                                                         <asp:Label ID="LB_UserName" runat="server" Font-Bold="False" Font-Size="9pt"
@@ -460,7 +460,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="4" style="width: 100%; "  class="formItemBgStyleForAlignLeft"
+                                                                    <td colspan="4" style="width: 100%; "  class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YanShouBiaoZhun%>"></asp:Label>£º
                                                                     </td>
                                                                 </tr>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartChildViewList.aspx.cs" Inherits="TTWFChartChildViewList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartChildViewList.aspx.cs" Inherits="TTWFChartChildViewList" %>
 
 <!DOCTYPE html>
 

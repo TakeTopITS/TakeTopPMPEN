@@ -247,7 +247,7 @@
                                                                         <asp:TextBox ID="TB_MobilePhone" runat="server" Width="120px"></asp:TextBox>
                                                                         &nbsp;<span style="color: #ff0000">*</span>
                                                                     </td>
-                                                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"</td>
+                                                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyleForAlignLeft">E_Mail£º

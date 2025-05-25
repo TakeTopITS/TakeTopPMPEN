@@ -194,7 +194,7 @@
                                                                 <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JiaRuRiQi %>"></asp:Label>
                                                                 </td>
-                                                                <td colspan="3" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                                <td colspan="3" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="DLC_JoinDate" runat="server"></asp:Label>
                                                                 </td>
                                                             </tr>

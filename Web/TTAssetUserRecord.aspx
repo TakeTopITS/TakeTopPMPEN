@@ -212,7 +212,7 @@
                                     <td style="width: 170px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,KaiShiShiYongShiJian%>"></asp:Label>£º
                                     </td>
-                                    <td style="width: 200px; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 200px; "  class="formItemBgStyleForAlignLeft">
 
                                         <asp:TextBox ID="DLC_BeginUseTime" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_BeginUseTime">

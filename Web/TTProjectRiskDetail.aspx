@@ -101,7 +101,7 @@
                                                                                 <td style="width: 10%;  height: 24px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td colspan="3" style="height: 24px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td colspan="3" style="height: 24px; "  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                                                                 </td>
 
@@ -116,7 +116,7 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,JiBie%>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td style="font-size: 12pt; width: 20%; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="font-size: 12pt; width: 20%; "  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:DropDownList ID="DL_RiskLevel" runat="server">
                                                                                         <asp:ListItem Value="Medium" Text="<%$ Resources:lang,Zhong%>" />
                                                                                         <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao%>" />
@@ -137,7 +137,7 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YuJiFaShengShiJian%>"></asp:Label>£º&nbsp;
                                                                                 </td>
-                                                                                <td style="width: 200px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 200px; "  class="formItemBgStyleForAlignLeft">
 
                                                                                     <asp:TextBox ID="DLC_EffectDate" ReadOnly="false" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_EffectDate">
@@ -146,7 +146,7 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,FaXianShiJian%>"></asp:Label>£º&nbsp;
                                                                                 </td>
-                                                                                <td style="width: 200px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 200px; "  class="formItemBgStyleForAlignLeft">
 
 
                                                                                     <asp:TextBox ID="DLC_FindDate" ReadOnly="false" runat="server"></asp:TextBox>

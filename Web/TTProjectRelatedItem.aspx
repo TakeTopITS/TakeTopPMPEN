@@ -333,14 +333,14 @@
                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="LB_tbManufactureCost" runat="server" Text="<%$ Resources:lang,ManufactureCost%>"></asp:Label>:
                                                                 </td>
-                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"
+                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                                     <nicklee:numberbox maxamount="1000000000000" id="NB_MFCost" runat="server" minamount="0" width="79px">
                                                                         0 0.00
                                                                     </nicklee:numberbox>
                                                                 </td>
                                                                 <td style="width: 100px; " class="formItemBgStyleForAlignLeft">&nbsp;
                                                                 </td>
-                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft"&nbsp;
+                                                                <td style="width: 230px; "  class="formItemBgStyleForAlignLeft">
                                                                 </td>
                                                             </tr>
                                                             <tr>

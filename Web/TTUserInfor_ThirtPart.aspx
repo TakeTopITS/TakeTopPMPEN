@@ -391,7 +391,7 @@
                                         <asp:TextBox ID="TB_ChildDepartment" runat="server" Width="220px"></asp:TextBox>
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"</td>
+                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -410,10 +410,10 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_MobilePhone" runat="server" Width="220px"></asp:TextBox>
                                     </td>
-                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft">
                                         <span style="color: #ff0000">*</span>
                                     </td>
-                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"</td>
+                                    <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft">E_Mail£º
@@ -462,7 +462,7 @@
                                     <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JiaRuRiQi%>"></asp:Label>£º
                                     </td>
-                                    <td colspan="2" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                    <td colspan="2" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
 
                                         <asp:TextBox ID="DLC_JoinDate" ReadOnly="false" runat="server"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"

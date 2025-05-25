@@ -270,7 +270,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 80px; "  class="formItemBgStyleForAlignLeft"
+                                                                        <td style="width: 80px; "  class="formItemBgStyleForAlignLeft">
                                                                             <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -338,7 +338,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr style="display: none;">
-                                                                        <td style="height: 19px; "  class="formItemBgStyleForAlignLeft"
+                                                                        <td style="height: 19px; "  class="formItemBgStyleForAlignLeft">
 
 
                                                                             <asp:CheckBox ID="CB_SendMsg" runat="server" Font-Bold="False" Font-Size="10pt" Text="<%$ Resources:lang,FaXinXi%>" />

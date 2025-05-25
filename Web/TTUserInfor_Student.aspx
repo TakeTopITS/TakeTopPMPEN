@@ -303,19 +303,19 @@
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,GuoMingShi%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:CheckBox ID="CKB_IsAllergy" runat="server" />
                                                         </td>
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,XiaoChuanShi%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:CheckBox ID="CKB_IsAsthma" runat="server" />
                                                         </td>
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,YiChuaBing%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:CheckBox ID="CKB_IsInheritedillnesses" runat="server" />
                                                         </td>
                                                     </tr>
@@ -323,19 +323,19 @@
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,YaoWuGuoMingShi%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:CheckBox ID="CKB_IsMedicalAllergy" runat="server" />
                                                         </td>
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,JingJiBing%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:CheckBox ID="CKB_IsForbiddenillness" runat="server" />
                                                         </td>
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,ChengZuoShouShu%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:CheckBox ID="CKB_IsSurgery" runat="server" />
                                                         </td>
                                                     </tr>
@@ -343,7 +343,7 @@
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ChengHuanZhongDaJiBing%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:CheckBox ID="CKB_IsMajordiseases" runat="server" />
                                                         </td>
                                                         <td style="height: 12px; text-align: left;" class="formItemBgStyleForAlignLeft" colspan="4">&nbsp;</td>
@@ -352,7 +352,7 @@
                                                         <td style="height: 12px; " class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,QiTa%>"></asp:Label>
                                                         </td>
-                                                        <td colspan="5" style="height: 12px; "  class="formItemBgStyleForAlignLeft"
+                                                        <td colspan="5" style="height: 12px; "  class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TXT_OtherRemark" runat="server" TextMode="MultiLine" Height="90px" Width="778px"></asp:TextBox>
                                                         </td>
                                                     </tr>

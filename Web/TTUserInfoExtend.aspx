@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfoExtend.aspx.cs" Inherits="TTUserInfoExtend" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfoExtend.aspx.cs" Inherits="TTUserInfoExtend" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -48,7 +48,7 @@
                                                         <asp:Label ID="LB_SelectUserCode" runat="server"></asp:Label>
                                                         &nbsp;&nbsp; 
                                                         <asp:Label ID="LB_SelectUserName" runat="server"></asp:Label>&nbsp;
-                                                        <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuanGongDanAnSeZhi%>"></asp:Label>��2��
+                                                        <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuanGongDanAnSeZhi%>"></asp:Label>??2??
                                                     </td>
                                                     <td width="5">
                                                         <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -57,7 +57,7 @@
                                             </table>
                                         </td>
                                         <td style="text-align: center; padding-top: 5px;">
-                                            <asp:Button runat="server" ID="BT_Save" CssClass="inpuYello " Visible="true" Text="����" OnClick="BT_Save_Click" />
+                                            <asp:Button runat="server" ID="BT_Save" CssClass="inpuYello " Visible="true" Text="????" OnClick="BT_Save_Click" />
                                         </td>
                                     </tr>
                                 </table>
@@ -70,7 +70,7 @@
                                     cellpadding="3" cellspacing="0">
                                     <tr>
                                         <td style="width: 15%; "  class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label4" runat="server" Text="1������"></asp:Label></td>
+                                            <asp:Label ID="Label4" runat="server" Text="1??????"></asp:Label></td>
                                         <td style="width: 35%; "  class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_TopDepartCode" runat="server"></asp:TextBox>
                                             <asp:Label ID="LB_TopDepartName" runat="server"></asp:Label>
@@ -87,7 +87,7 @@
                                     </tr>
                                     <tr>
                                         <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label10" runat="server" Text="�칫�ص�"></asp:Label></td>
+                                            <asp:Label ID="Label10" runat="server" Text="?????"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:DropDownList ID="DL_OfficeAddress" runat="server">
                                                 <asp:ListItem Value="Group" Text="Group" />
@@ -96,7 +96,7 @@
                                                 <asp:ListItem Value="FieldWork" Text="FieldWork" />
                                             </asp:DropDownList>
                                         </td>
-                                        <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="height: 28px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label16" runat="server" Text="EmployeeType"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:DropDownList ID="DL_UserTypeExtend" runat="server">
@@ -119,7 +119,7 @@
                                                 <asp:ListItem Value="Formal" Text="Formal" />
                                             </asp:DropDownList>
                                         </td>
-                                        <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="height: 28px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label2" runat="server" Text="ProbationPeriod"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:DropDownList ID="DL_ProbationPeriod" runat="server">
@@ -141,7 +141,7 @@
                                             <asp:TextBox ID="DLC_TurnOfficialDate" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_TurnOfficialDate" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
-                                        <td style="height: 28px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="height: 28px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label6" runat="server" Text="HouseholdType"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:DropDownList ID="DL_HouseRegisterType" runat="server">
@@ -185,14 +185,14 @@
                                                 <asp:ListItem Value="NoContractorAgreement" Text="NoContractorAgreement" />
                                             </asp:DropDownList>
                                         </td>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label8" runat="server" Text="ContractCompany"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="TB_ContractCompany" Width="90%" runat="server"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label11" runat="server" Text="FirstContractStartDate"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="DLC_FirstContractStartTime" runat="server" Width="100px"></asp:TextBox>
@@ -207,7 +207,7 @@
 
                                     </tr>
                                     <tr>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label26" runat="server" Text="FirstContractDuration"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:DropDownList ID="DL_FirstContractYears" runat="server">
@@ -226,7 +226,7 @@
                                     </tr>
                                     <tr>
 
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label14" runat="server" Text="SecondContractEndDate"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="DLC_SecondContractEndTime" runat="server" Width="100px"></asp:TextBox>
@@ -245,7 +245,7 @@
 
                                     </tr>
                                     <tr>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label15" runat="server" Text="ThirdContractStartDate"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="DLC_ThirdContractStartTime" runat="server" Width="100px"></asp:TextBox>
@@ -277,7 +277,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
                                             <asp:Label ID="Label19" runat="server" Text="CurrentContractStartDate"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:TextBox ID="DLC_ContractStartTime" runat="server" Width="100px"></asp:TextBox>
@@ -295,8 +295,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
-                                            <asp:Label ID="Label21" runat="server" Text="���֤(������)"></asp:Label>
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
+                                            <asp:Label ID="Label21" runat="server" Text="????(??????)"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:UpdatePanel ID="UpdatePanel6" runat="server" UpdateMode="Conditional">
@@ -315,7 +315,7 @@
                                             </asp:UpdatePanel>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label22" runat="server" Text="���֤(������)"></asp:Label>
+                                            <asp:Label ID="Label22" runat="server" Text="????(??????)"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
@@ -335,8 +335,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
-                                            <asp:Label ID="Label23" runat="server" Text="ѧ��֤��"></asp:Label>
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
+                                            <asp:Label ID="Label23" runat="server" Text="??????"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
@@ -353,7 +353,7 @@
                                             </asp:UpdatePanel>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label24" runat="server" Text="ѧλ֤��"></asp:Label>
+                                            <asp:Label ID="Label24" runat="server" Text="?��???"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:UpdatePanel ID="UpdatePanel4" runat="server" UpdateMode="Conditional">
@@ -371,8 +371,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
-                                            <asp:Label ID="Label25" runat="server" Text="ǰ��˾��ְ֤��"></asp:Label>
+                                        <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
+                                            <asp:Label ID="Label25" runat="server" Text="??????????"></asp:Label>
                                         </td>
                                         <td colspan="3" class="formItemBgStyleForAlignLeft">
                                             <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">

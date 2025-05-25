@@ -332,7 +332,7 @@
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbEndTime" runat="server" Text="<%$ Resources:lang,EndTime %>"></asp:Label>: </td>
-                                    <td style="width: 220px; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 220px; "  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_EndDate" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"
                                             runat="server" TargetControlID="DLC_EndDate" Enabled="True">
                                         </ajaxToolkit:CalendarExtender>
@@ -407,7 +407,7 @@
                                     <td style="width: 10%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_tbAssignType" runat="server" Text="<%$ Resources:lang,Type %>"></asp:Label>
                                         :   </td>
-                                    <td style="width: 50%; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 50%; "  class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_RecordType" runat="server" DataTextField="Type" DataValueField="Type">
                                         </asp:DropDownList><asp:Label ID="LB_ID" runat="server"></asp:Label></td>
                                     <td style="width: 10%;" class="formItemBgStyleForAlignLeft">

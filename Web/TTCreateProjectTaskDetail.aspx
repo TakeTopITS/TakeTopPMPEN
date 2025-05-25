@@ -151,7 +151,7 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="width: 170px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 170px; "  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
                                                                                     <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1"
                                                                                         runat="server" TargetControlID="DLC_EndDate">
@@ -180,7 +180,7 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JianLiShiJian%>"></asp:Label>£º
                                                                                  </td>
-                                                                                <td style="width: 170px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td style="width: 170px; "  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="LB_MakeDate" runat="server" Font-Size="10pt" Width="188px"></asp:Label>
                                                                                 </td>
 
@@ -353,7 +353,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="5" style="height: 19px; "  class="formItemBgStyleForAlignLeft"
+                                                                                <td colspan="5" style="height: 19px; "  class="formItemBgStyleForAlignLeft">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                                                                         <asp:Label ID="LB_TaskName" runat="server" Visible="False"></asp:Label>

@@ -275,7 +275,7 @@
                                                                 <td style="width: 97px; height: 5px; " class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                                 </td>
-                                                                <td colspan="2" style="height: 5px; "  class="formItemBgStyleForAlignLeft"
+                                                                <td colspan="2" style="height: 5px; "  class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="LB_RelatedUserName" runat="server" Font-Size="10pt"></asp:Label>
                                                                 </td>
                                                                 <td style="width: 100px; height: 5px;" class="formItemBgStyleForAlignLeft"></td>
@@ -284,13 +284,13 @@
                                                                 <td style="width: 85px; " class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShiXin%>"></asp:Label>£º
                                                                 </td>
-                                                                <td style="width: 100px; "  class="formItemBgStyleForAlignLeft"
+                                                                <td style="width: 100px; "  class="formItemBgStyleForAlignLeft">
                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_UnitHourSalary" runat="server" Width="83px">0.00</NickLee:NumberBox>
                                                                 </td>
                                                                 <td style="width: 97px; " class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º
                                                                 </td>
-                                                                <td colspan="3" style="height: 5px; "  class="formItemBgStyleForAlignLeft"
+                                                                <td colspan="3" style="height: 5px; "  class="formItemBgStyleForAlignLeft">
                                                                     <asp:Label ID="LB_DepartCode" runat="server" Width="115px" Font-Size="10pt"></asp:Label>
                                                                     <asp:Label ID="LB_DepartName" runat="server" Font-Size="10pt" Height="16px" Width="124px"></asp:Label>
                                                                 </td>

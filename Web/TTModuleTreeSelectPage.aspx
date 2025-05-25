@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleTreeSelectPage.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleTreeSelectPage.aspx.cs"
     Inherits="TTModuleTreeSelectPage" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>

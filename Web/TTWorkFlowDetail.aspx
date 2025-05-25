@@ -838,7 +838,7 @@
                                                                             <td style="width: 80px; height: 15px; " class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,FaQiRen %>"></asp:Label>
                                                                             </td>
-                                                                            <td style="width: 20%; height: 15px; "  class="formItemBgStyleForAlignLeft"
+                                                                            <td style="width: 20%; height: 15px; "  class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_CreatorCode" runat="server"></asp:Label>
                                                                                 &#160;<asp:Label
                                                                                     ID="LB_CreatorName" runat="server"></asp:Label>

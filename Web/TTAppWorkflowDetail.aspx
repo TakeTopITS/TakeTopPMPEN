@@ -485,7 +485,7 @@
                                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FaQiRen%>"></asp:Label>
                                                                 £º
                                                             </td>
-                                                            <td style="width: 20%; height: 15px; "  class="formItemBgStyleForAlignLeft"
+                                                            <td style="width: 20%; height: 15px; "  class="formItemBgStyleForAlignLeft">
                                                                 <%#DataBinder .Eval (Container .DataItem,"CreatorCode") %>
                                                                 <%#DataBinder .Eval (Container .DataItem,"CreatorName") %>
                                                             </td>
@@ -820,7 +820,7 @@
 
 
                                                                             </td>
-                                                                            <td style="width: 20%; height: 15px; "  class="formItemBgStyleForAlignLeft"
+                                                                            <td style="width: 20%; height: 15px; "  class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_CreatorCode" runat="server"></asp:Label>
 
 

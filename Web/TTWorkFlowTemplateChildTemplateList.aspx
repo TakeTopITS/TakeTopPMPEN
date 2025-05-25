@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateChildTemplateList.aspx.cs" Inherits="TTWorkFlowTemplateChildTemplateList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateChildTemplateList.aspx.cs" Inherits="TTWorkFlowTemplateChildTemplateList" %>
 
 <!DOCTYPE html>
 
@@ -62,16 +62,16 @@
                         <Columns>
                           
                             <asp:HyperLinkColumn DataNavigateUrlField="identifystring" DataNavigateUrlFormatString="TTWorkFlowDesignerJS.aspx?identifystring={0}"
-                                DataTextField="RelatedWFTemName" HeaderText="ģ������" Target="_blank">
+                                DataTextField="RelatedWFTemName" HeaderText="???????" Target="_blank">
                                 <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
                             </asp:HyperLinkColumn>
-                            <asp:BoundColumn DataField="Requisite" HeaderText="�Ƿ����">
+                            <asp:BoundColumn DataField="Requisite" HeaderText="??????">
                                 <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                             </asp:BoundColumn>
-                            <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="�����������">
+                            <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="???????????">
                                 <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                             </asp:BoundColumn>
-                            <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="����Ҫ��ͨ��">
+                            <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="??????????">
                                 <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                             </asp:BoundColumn>
                         </Columns>

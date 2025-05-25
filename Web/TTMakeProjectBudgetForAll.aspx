@@ -295,7 +295,7 @@
                                     </td>
                                     <td style="width: 15%; " class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_TBStartTime" runat="server" Text="<%$ Resources:lang,shengxiaoshijian%>" />: </td>
-                                    <td style="width: 35%; height: 35px; "  class="formItemBgStyleForAlignLeft"
+                                    <td style="width: 35%; height: 35px; "  class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="DLC_CreateTime" ReadOnly="false" runat="server"></asp:TextBox><ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_CreateTime"></ajaxToolkit:CalendarExtender>
                                     </td>
                                     <td style="width: 15%;  height: 19px;" class="formItemBgStyleForAlignLeft">&nbsp;</td>
