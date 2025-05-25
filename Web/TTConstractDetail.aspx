@@ -1304,12 +1304,7 @@
                                                                                                 <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
                                                                                             </asp:BoundColumn>
 
-                                                                                            <asp:TemplateColumn HeaderText="Delete">
-                                                                                                <ItemTemplate>
-                                                                                                    <a href=""></a>
-                                                                                                </ItemTemplate>
-                                                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
-                                                                                            </asp:TemplateColumn>
+                                                                                          
 
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                                                                 DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
@@ -2173,11 +2168,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label90" runat="server" Text="<%$ Resources:lang,FaPiaoHaoMa%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_InvoiceCode" runat="server" Width="99%"></asp:TextBox></td>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label91" runat="server" Text="<%$ Resources:lang,JinE%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_InvoiceAmount" runat="server" OnBlur="" OnFocus=""
@@ -2185,7 +2180,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignRight">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label92" runat="server" Text="<%$ Resources:lang,ShuiLv%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_InvoiceTaxRate" runat="server" OnBlur="" OnFocus=""
