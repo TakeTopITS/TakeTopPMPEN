@@ -228,7 +228,7 @@
                                                         <td class="formItemBgStyleForAlignLeft" style="height: 26px;">£¨<asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,quanzhong%>"></asp:Label>£º<b>
                                                             <asp:Label ID="LB_Weight" runat="server" Text="0"></asp:Label></b>£©
                                                         </td>
-                                                        <td style="width: 30%; padding-bottom: 5px;" class="formItemBgStyleForAlignLeft">
+                                                        <td style="width: 30%; padding-bottom: 5px;" class="formItemBgStyleForAlignRight">
                                                             <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                         </td>
                                                     </tr>

@@ -143,7 +143,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft" colspan="4">&nbsp;&nbsp;
+                                                                    <td class="formItemBgStyleForAlignRight" colspan="4">&nbsp;&nbsp;
                                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YiJiaoDanLieBiaoJiLu%>"></asp:Label>&nbsp;<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_Record" runat="server" Text="*"></asp:Label><asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,XinJianYiJiaoDan%>" CssClass="inpuLong" OnClick="BT_Create_Click" />&nbsp;
                                                                     </td>

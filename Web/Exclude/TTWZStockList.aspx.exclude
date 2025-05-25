@@ -105,7 +105,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignRight">
                                                                         <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,XinJian%>" CssClass="inpu" OnClick="BT_Create_Click" />&nbsp;
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft" colspan="5">

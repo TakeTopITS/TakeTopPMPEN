@@ -93,7 +93,7 @@
                                                 <asp:Label ID="LB_ProjectBudget" runat="server" Text="<%$ Resources:lang,ProjectBudget%>"></asp:Label>:
                                                 <asp:Label ID="LB_ProBudget" runat="server" Font-Bold="False" Text="0"></asp:Label>
                                             </td>
-                                            <td width="30%" align="left">
+                                            <td width="30%" align="right">
                                                 <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                             </td>
                                         </tr>

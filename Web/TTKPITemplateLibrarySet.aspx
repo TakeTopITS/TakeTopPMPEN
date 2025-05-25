@@ -161,7 +161,7 @@
                                                     cellspacing="0">
                                                     <tr>
                                                         <td style="width: 10%;" class="formItemBgStyleForAlignLeft">&nbsp;</td>
-                                                        <td style="padding-bottom: 5px;" class="formItemBgStyleForAlignLeft">
+                                                        <td style="padding-bottom: 5px;" class="formItemBgStyleForAlignRight">
                                                             <asp:Button ID="BT_Create" runat="server" CssClass="inpuYello" OnClick="BT_Create_Click" Text="<%$ Resources:lang,New%>" />
                                                         </td>
                                                     </tr>

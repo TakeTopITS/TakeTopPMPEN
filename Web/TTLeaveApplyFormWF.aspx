@@ -65,7 +65,7 @@
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="padding: 5px 5px 5px 5px;">
                                     <table style="width: 100%;">
                                         <tr>
-                                            <td align="left" style="padding-left:10px;">
+                                            <td align="right" style="padding-left:10px;">
                                                 <asp:Button ID="BT_Create" runat="server" CssClass="inpuYello" OnClick="BT_Create_Click" Text="<%$ Resources:lang,New%>" />
                                             </td>
                                         </tr>

@@ -283,7 +283,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="4" align="right" class="formItemBgStyleAlignLeft" style="padding: 5px 5px 5px 5px;">
+                                                                    <td colspan="4" align="right" class="formItemBgStyleAlignRight" style="padding: 5px 5px 5px 5px;">
                                                                         <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                                     </td>
                                                                 </tr>

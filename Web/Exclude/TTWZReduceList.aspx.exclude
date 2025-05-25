@@ -199,7 +199,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignLeft" colspan="4">
+                                                        <td class="formItemBgStyleForAlignRight" colspan="4">
                                                             <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,XinJian%>" CssClass="inpu" OnClick="BT_Create_Click" />&nbsp;
                                                             <asp:Button ID="BT_ReduceEdit" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_ReduceEdit_Click" />&nbsp;
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" Visible="false" />&nbsp;

@@ -225,7 +225,7 @@
                             <table width="200%" cellpadding="0" cellspacing="0">
                                 <tr>
 
-                                    <td align="left" style="padding-bottom: 5px;">
+                                    <td align="right" style="padding-bottom: 5px;">
                                         <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                     </td>
                                 </tr>

@@ -250,7 +250,7 @@
                                                         <tr>
                                                             <td align="left" valign="top">
                                                                 <div style="width: 97vw; text-align: right;">
-                                                                    <asp:Button ID="BT_Create" runat="server" CssClass="inpu" OnClick="BT_Create_Click" Text="+ÐèÇó" />
+                                                                    <asp:Button ID="BT_Create" runat="server" CssClass="inpu" OnClick="BT_Create_Click" Text="<%$ Resources:lang,XiQiu%>" />
                                                                 </div>
                                                             </td>
                                                         </tr>

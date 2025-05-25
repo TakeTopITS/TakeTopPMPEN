@@ -189,7 +189,7 @@
                                                                         <asp:Button ID="BT_ClearAllMemberWXID" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,QCSYYGWXID %>" OnClick="BT_ClearAllMemberWXID_Click" />
                                                                     </td>
 
-                                                                    <td style="width: 20%; " class="formItemBgStyleForAlignLeft">
+                                                                    <td style="width: 20%; " class="formItemBgStyleForAlignRight">
                                                                         <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                                     </td>
                                                                 </tr>

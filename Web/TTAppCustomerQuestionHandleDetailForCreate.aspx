@@ -167,7 +167,7 @@
                                                             </table>
                                                         </td>
                                                     </tr>                                                     <tr>
-                                                        <td align="right" style="width: 70px; " class="formItemBgStyleForAlignLeft"> </td>
+                                                        <td align="right" style="width: 70px; " class="formItemBgStyleForAlignRight"> </td>
                                                         <td  class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                         </td>

@@ -133,7 +133,7 @@
                                                                             <td class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Button ID="Button1" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun %>" />
                                                                             </td>
-                                                                            <td style="width: 20%; " class="formItemBgStyleForAlignLeft">
+                                                                            <td style="width: 20%; " class="formItemBgStyleForAlign;right">
                                                                                 <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                                             </td>
                                                                         </tr>
