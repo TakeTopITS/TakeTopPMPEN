@@ -269,7 +269,7 @@
                                                     </asp:DropDownList><asp:Label ID="lbl_AccountCode" runat="server" Visible="False"></asp:Label></td>
                                             </tr>
                                             <tr style="color: #000000" class="formItemBgStyleForAlignLeft">
-                                                <td align="right">
+                                                <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,GuiHuanShiJian%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">

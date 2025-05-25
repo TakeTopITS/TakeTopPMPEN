@@ -277,7 +277,7 @@
                                 </tr>
                                 <tr>
                                     <td style="height: 30px" class="formItemBgStyleForAlignLeft">
-                                        <asp:Label ID="Label8" runat="server" Text="¼Ó°àÊÂÓÉ"></asp:Label>£º
+                                       <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JianBanLeiYou %>"></asp:Label>£º
                                     </td>
                                     <td  style="height: 30px" class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:TextBox ID="TB_ApplyBecause" runat="server" Height="40px" TextMode="MultiLine"
