@@ -30969,4 +30969,10 @@
   <data name="ZiZhiWenJian" xml:space="preserve">
     <value>자격 파일</value>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>예산 선택</value>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value>비자를 연결하다</value>
+  </data>
 </root>

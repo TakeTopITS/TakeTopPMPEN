@@ -31003,4 +31003,10 @@
   <data name="ZiZhiWenJian" xml:space="preserve">
     <value>资质文件</value>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>预算选择</value>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value>关联签证</value>
+  </data>
 </root>

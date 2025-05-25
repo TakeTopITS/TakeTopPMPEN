@@ -30969,4 +30969,10 @@
   <data name="ZiZhiWenJian" xml:space="preserve">
     <value>Documentos de Qualificação</value>
   </data>
+  <data name="XiuanZheYiShuan" xml:space="preserve">
+    <value>Selecionar Orçamento</value>
+  </data>
+  <data name="GuanLianQianZheng" xml:space="preserve">
+    <value />
+  </data>
 </root>

@@ -2109,7 +2109,7 @@
                                                     <asp:Label ID="LB_RelatedPJBudgetAccount" runat="server"></asp:Label>
                                                 </td>
                                                 <td>
-                                                    <asp:Button ID="BT_SelectPJBudget" runat="server" CssClass="inpu" Text="预算选择" OnClick="BT_SelectPJBudget_Click" />
+                                                    <asp:Button ID="BT_SelectPJBudget" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XiuanZheYiShuan %>" OnClick="BT_SelectPJBudget_Click" />
                                                 </td>
 
                                                 <td align="left">
@@ -2132,7 +2132,7 @@
                                                     </asp:Repeater>
                                                 </td>
                                                 <td>
-                                                    <asp:Button ID="BT_SelectPJConstractVisa" runat="server" CssClass="inpu" Text="关联签证" OnClick="BT_SelectPJConstractVisa_Click" />
+                                                    <asp:Button ID="BT_SelectPJConstractVisa" runat="server" CssClass="inpu" Text="<%$ Resources:lang,GuanLianQianZheng %>" OnClick="BT_SelectPJConstractVisa_Click" />
 
                                                 </td>
                                             </tr>
