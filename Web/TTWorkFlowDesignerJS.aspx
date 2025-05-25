@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowDesignerJS.aspx.cs" Inherits="TTWorkFlowDesignerJS" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowDesignerJS.aspx.cs" Inherits="TTWorkFlowDesignerJS" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,10 +26,10 @@
         }
 
         .divWaitingIcon {
-            position: fixed; /* Ê¹Í¼±ê¹Ì¶¨ÔÚÊÓ¿ÚÖĞ */
-            top: 200px; /* ¾àÀë¶¥²¿10ÏñËØ */
-            /*transform: translateX(-50%);*/ /* Ë®Æ½Î»ÖÃĞ£Õı */
-            z-index: 1000; /* È·±£Í¼±êÔÚ×î¶¥²ã */
+            position: fixed; /* ä½¿å›¾æ ‡å›ºå®šåœ¨è§†å£ä¸­ */
+            top: 200px; /* è·ç¦»é¡¶éƒ¨10åƒç´  */
+            /*transform: translateX(-50%);*/ /* æ°´å¹³ä½ç½®æ ¡æ­£ */
+            z-index: 1000; /* ç¡®ä¿å›¾æ ‡åœ¨æœ€é¡¶å±‚ */
            /* box-shadow: 0px 0px 10px 10px #888888;*/
             padding-left:150px;
             text-align:center;
@@ -45,8 +45,8 @@
             autoheight();
         });
 
-        function autoheight() {?//º¯Êı£º»ñÈ¡³ß´ç
-            //»ñÈ¡ä¯ÀÀÆ÷´°¿Ú¸ß¶È
+        function autoheight() {Â //å‡½æ•°ï¼šè·å–å°ºå¯¸
+            //è·å–æµè§ˆå™¨çª—å£é«˜åº¦
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;
@@ -60,7 +60,7 @@
             document.getElementById("_WFSetAreaFrame").style.height = (winHeight + 200) + "px";
         }
 
-        window.onresize = autoheight;?//ä¯ÀÀÆ÷´°¿Ú·¢Éú±ä»¯Ê±Í¬Ê±±ä»¯DIV¸ß¶È
+        window.onresize = autoheight;Â //æµè§ˆå™¨çª—å£å‘ç”Ÿå˜åŒ–æ—¶åŒæ—¶å˜åŒ–DIVé«˜åº¦
 
     </script>
 </head>
@@ -93,7 +93,7 @@
                         <asp:TextBox ID="TB_WFChartString2" runat="server" Style="visibility: hidden"></asp:TextBox>
                         <asp:TextBox ID="TB_WFChartString3" runat="server" Style="visibility: hidden"></asp:TextBox>
                         <asp:TextBox ID="TB_WFChartString4" runat="server" Style="visibility: hidden"></asp:TextBox>
-                        <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;±£´æ¹¤×÷Á÷Ä£°å¶¨Òå" OnClick="BT_SaveWFDefinition_Click" Style="visibility: hidden" />
+                        <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;ä¿å­˜å·¥ä½œæµæ¨¡æ¿å®šä¹‰" OnClick="BT_SaveWFDefinition_Click" Style="visibility: hidden" />
                     </td>
                 </tr>
             </table>
