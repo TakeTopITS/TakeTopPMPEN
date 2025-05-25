@@ -4,7 +4,6 @@
 body {
     font-size: 12px;
     margin: 0px;
-    background-color: white;
     /*background-repeat: no-repeat;
 	background-position: left top;
 	margin-right: 2px;
@@ -13,14 +12,19 @@ body {
 	margin-top:2px;*/
 }
 
-/*µ¼º½*/
-.nav {
-    /*  min-width: 1180px;
-    width: expression (document.body.clientWidth <= 1180? "1180px" : "auto" ));*/
+.cline {
+    height: 6px;
     width: 100%;
-    text-align: left;
-    background-color: #0e553b; /*Æ¤·ô*/
-    height: 43px;
+    background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#D53E54), color-stop(100%,#057BF9));
+    border-radius: 8px 8px 0px 0px;
+}
+
+/*.sabd{background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#D53E54), color-stop(100%,#057BF9));}
+*/
+.SpaceLine {
+    height: 20px;
+    background-color: #EFF2F7;
 }
 
 a:link {
@@ -28,7 +32,6 @@ a:link {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    /*font-family: 'Arial Unicode MS';*/
     font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Liberation Sans", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, SimSun, "WenQuanYi Zen Hei Sharp", sans-serif';
 }
 
@@ -38,43 +41,52 @@ a:hover {
 }
 
 
+.nav {
+    /*  min-width: 1180px;
+    width: expression (document.body.clientWidth <= 1180? "1180px" : "auto" ));*/
+    width: 100%;
+    text-align: left;
+    height: 43px;
+    background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#D53E54), color-stop(100%,#057BF9));
+}
+
+
 .page_topbj {
-    background-color: #77b584; 2
+    background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%);
+    2 background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#D53E54), color-stop(100%,#057BF9));
     cursor: move;
-    color: black;
+    color: white;
     border-radius: 12px 0px 0px 0px;
-    margin: 1px 1px 1px 1px;
 }
 
     .page_topbj a {
-        color: black; 2
-        text-decoration: none;
+        color: black;
+        2 text-decoration: none;
         cursor: pointer;
         font-size: 14px;
     }
 
         .page_topbj a:hover {
-            color: black; 2
-                        text-decoration: underline;
+            color: black;
+            2 text-decoration: underline;
         }
 
 .main_topbj {
-    background-color: #0e553b; /*Æ¤·ô*/
     color: white;
 }
 
-    .page_topbj a {
-        color: white;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 14px;
+.page_topbj a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    .page_topbj a:hover {
+        color: #018efb;
+        /*            text-decoration: underline;*/
     }
-
-        .page_topbj a:hover {
-            color: #018efb;
-            /*            text-decoration: underline;*/
-        }
-
 
 td {
     vertical-align: top;
@@ -136,12 +148,14 @@ button:visited, input[type="submit"]:visited {
 
 
 
-/*--------------------------------×ÔÊÊÓ¦¿í¶È---------------------------*/
+/*--------------------------------è‡ªé€‚åº”å®½åº¦---------------------------*/
 #AboveDiv {
     min-width: 1160px;
     width: expression (document.body.clientWidth <= 1160? "1160px": "auto"));
+    height: 45px;
+    margin: 1px 1px 1px 1px;
 }
-/*--------------------------------Ò³Ãæ×Ü±ß¿ò---------------------------*/
+/*--------------------------------é¡µé¢æ€»è¾¹æ¡†---------------------------*/
 .bian {
     border: 0px solid #8AB2E5;
 }
@@ -158,7 +172,7 @@ button:visited, input[type="submit"]:visited {
 }
 
 
-/*--------------------------------td±ß¿ò¼°¼ä¾à---------------------------*/
+/*--------------------------------tdè¾¹æ¡†åŠé—´è·---------------------------*/
 .tdMain {
     padding: 5px 5px 0px 5px;
     border-right: solid 1px #D8D8D8;
@@ -173,6 +187,19 @@ button:visited, input[type="submit"]:visited {
     text-align: left;
     font-weight: bold;
 }
+
+.titNforever {
+    background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%);
+    border-radius: 8px 8px 0 0;
+    padding-left: 40px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Liberation Sans", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, SimSun, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
 
 .titleziAPP {
     font-size: 14px;
@@ -234,13 +261,13 @@ button:visited, input[type="submit"]:visited {
 }
 
 
-/*-----------------------------¶Ì°´Å¥----------------------------*/
+/*-----------------------------çŸ­æŒ‰é’®----------------------------*/
 .inpu {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
     min-width: 71px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -249,7 +276,13 @@ button:visited, input[type="submit"]:visited {
     height: 25px;
     border-radius: 2px;
     color: #ffffff;
-    background: #19A14F; /*Æ¤·ô*/
+    background: #2e8ded; /*çš®è‚¤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpu:disabled {
@@ -275,13 +308,13 @@ button:visited, input[type="submit"]:visited {
         color: #cccccc;
     }
 
-
-/*-----------------------------TAB°´Å¥----------------------------*/
+/*-----------------------------TABæŒ‰é’®----------------------------*/
 .inpuTab {
     border-style: none;
     min-width: 71px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
+
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -290,7 +323,13 @@ button:visited, input[type="submit"]:visited {
     height: 25px;
     border-radius: 2px;
     color: #ffffff;
-    background: #19A14F; /*Æ¤·ô*/
+    background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%); /*çš®è‚¤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuTab:disabled {
@@ -316,13 +355,14 @@ button:visited, input[type="submit"]:visited {
         color: #cccccc;
     }
 
-/*------------------------------³¤°´Å¥---------------------------*/
+/*------------------------------é•¿æŒ‰é’®---------------------------*/
 .inpuLong {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
     min-width: 110px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
+
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -334,7 +374,13 @@ button:visited, input[type="submit"]:visited {
     cursor: pointer;
     border-radius: 5px;
     color: #ffffff;
-    background: #19A14F; /*Æ¤·ô*/
+    background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%); /*çš®è‚¤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLong:disabled {
@@ -361,13 +407,14 @@ button:visited, input[type="submit"]:visited {
     }
 
 
-/*-----------------------------------³¬³¤°´Å¥--------------------------------*/
+/*-----------------------------------è¶…é•¿æŒ‰é’®--------------------------------*/
 .inpuLongest {
     background-image: url(ImagesSkin/butbjLongest.jpg);
     height: 25px;
-    min-width: 260px;
+    min-width: 220px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
+
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -377,7 +424,13 @@ button:visited, input[type="submit"]:visited {
     margin: 2px 0;
     border-radius: 5px;
     color: #ffffff;
-    background: #19A14F; /*Æ¤·ô*/
+    background: linear-gradient(90deg, #D53E54 0%, #057BF9 100%); /*çš®è‚¤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLongest:disabled {
@@ -406,9 +459,11 @@ button:visited, input[type="submit"]:visited {
 .inpuYello {
     border-style: none;
     background: #f37c00;
+
     min-width: 71px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
+
     height: 25px;
     /*padding-bottom: 7px;*/
     margin: -2px 0;
@@ -442,13 +497,14 @@ button:visited, input[type="submit"]:visited {
         color: #cccccc;
     }
 
-/*------------------------------RepeatÓÃ°´Å¥---------------------------*/
+/*------------------------------Repeatç”¨æŒ‰é’®---------------------------*/
 .inpuRepeat {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
     min-width: 71px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
+
     text-align: center;
     font-size: 12px;
     font-family: "microsoft yahei";
@@ -457,7 +513,13 @@ button:visited, input[type="submit"]:visited {
     height: 25px;
     border-radius: 2px;
     color: #ffffff;
-    background: #19A14F; /*Æ¤·ô*/
+    background: #2e8ded; /*çš®è‚¤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuRepeat:disabled {
@@ -488,7 +550,8 @@ button:visited, input[type="submit"]:visited {
     height: 25px;
     min-width: 110px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
+
     text-align: center;
     border-top-style: none;
     border-right-style: none;
@@ -500,7 +563,13 @@ button:visited, input[type="submit"]:visited {
     border-radius: 5px;
     cursor: pointer;
     color: #ffffff;
-    background: #19A14F; /*Æ¤·ô*/
+    background: #2e8ded; /*çš®è‚¤*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
     .inpuLongRepeat:disabled {
@@ -527,35 +596,68 @@ button:visited, input[type="submit"]:visited {
     }
 
 
-/*----------------------------¸üÐÂ°´Å¥-------------------------------*/
+/*----------------------------æ›´æ–°æŒ‰é’®-------------------------------*/
 .inpuUpdate {
     border-style: none;
     background-image: url('ImagesSkin/Update.png');
     height: 22px;
     min-width: 22px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
     color: #000000;
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-/*----------------------------±£´æ°´Å¥-------------------------------*/
+/*----------------------------ä¿å­˜æŒ‰é’®-------------------------------*/
 .inpuSave {
     border-style: none;
     background-image: url('Images/Save.gif');
     height: 22px;
     min-width: 22px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
     color: #000000;
 }
 
-/*----------------------------¼¤»î°´Å¥-------------------------------*/
+
+    .inpuSave:disabled {
+        background: url('Images/Save.gif');
+        color: #cccccc;
+        cursor: default;
+    }
+
+    .inpuSave[disabled] {
+        background: url('Images/Save.gif');
+        color: #cccccc;
+        cursor: default;
+        height: 25px;
+    }
+
+    .inpuSave:disabled:hover {
+        background: url('Images/Save.gif');
+        color: #cccccc;
+    }
+
+    .inpuSave[disabled]:hover {
+        background: url('Images/Save.gif');
+        color: #cccccc;
+    }
+
+
+
+/*----------------------------æ¿€æ´»æŒ‰é’®-------------------------------*/
 .inpuActive {
     border-style: none;
     background-image: url('ImagesSkin/Active.jpg');
@@ -563,14 +665,21 @@ button:visited, input[type="submit"]:visited {
     height: 22px;
     min-width: 22px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-/*----------------------------¹Ø±Õ°´Å¥-------------------------------*/
+/*----------------------------å…³é—­æŒ‰é’®-------------------------------*/
 .inpuClose {
     border-style: none;
     background-image: url('ImagesSkin/Close.jpg');
@@ -578,14 +687,21 @@ button:visited, input[type="submit"]:visited {
     height: 22px;
     min-width: 22px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-/*----------------------------²éÑ¯°´Å¥-------------------------------*/
+/*----------------------------æŸ¥è¯¢æŒ‰é’®-------------------------------*/
 .inpuQuery {
     border-style: none;
     background-image: url('ImagesSkin/Query.gif');
@@ -593,14 +709,20 @@ button:visited, input[type="submit"]:visited {
     height: 24px;
     min-width: 24px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-/*----------------------------É¨Âë°´Å¥-------------------------------*/
+/*----------------------------æ‰«ç æŒ‰é’®-------------------------------*/
 .inpuQrCode {
     border-style: none;
     background-image: url('ImagesSkin/QrCode.gif');
@@ -608,14 +730,20 @@ button:visited, input[type="submit"]:visited {
     height: 24px;
     min-width: 24px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
     /*color: #000000;*/
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-/*----------------------------É¾³ý°´Å¥-------------------------------*/
+/*----------------------------åˆ é™¤æŒ‰é’®-------------------------------*/
 .inpuDelete {
     border-style: none;
     background-image: url('ImagesSkin/Delete.png');
@@ -623,7 +751,7 @@ button:visited, input[type="submit"]:visited {
     height: 22px;
     min-width: 22px;
     width: auto;
-    max-width: 100%; /* ¿ÉÑ¡£¬·ÀÖ¹Òç³öÈÝÆ÷ */
+    max-width: 100%; /* å¯é€‰ï¼Œé˜²æ­¢æº¢å‡ºå®¹å™¨ */
     text-align: center;
     margin: -2px 0;
     font-size: 12px;
@@ -631,7 +759,7 @@ button:visited, input[type="submit"]:visited {
 }
 
 
-/*---------------------------------Ç°²½°´Å¥------------------------------------*/
+/*---------------------------------å‰æ­¥æŒ‰é’®------------------------------------*/
 .inpuPiror {
     background: url(ImagesSkin/up.gif) no-repeat;
     margin: -2px 0;
@@ -644,10 +772,11 @@ button:visited, input[type="submit"]:visited {
     border-left-style: none;
     /*font-size: 12px;*/
     /*color: #29728D;*/
+
 }
 
 
-/*---------------------------------ÏÂ²½°´Å¥----------------------------*/
+/*---------------------------------ä¸‹æ­¥æŒ‰é’®----------------------------*/
 .inpuNext {
     background: url(ImagesSkin/down.gif) no-repeat;
     margin: -2px 0;
@@ -662,15 +791,14 @@ button:visited, input[type="submit"]:visited {
     /*color: #29728D;*/
 }
 
-/*--------------DropDownListÑùÊ½----------------*/
+/*--------------DropDownListæ ·å¼----------------*/
 select {
     height: 25px;
     background-color: white;
     color: black;
 }
 
-
-/*---------------------------------gridview±ß¿ò---------------------------------*/
+/*---------------------------------gridviewè¾¹æ¡†---------------------------------*/
 .itemBorder {
     border-width: 1px;
     border-style: dotted;
@@ -678,7 +806,7 @@ select {
     border-top: none;
     vertical-align: middle;
     line-height: 23px;
-    white-space: collapse; /* »»ÐÐ */
+    white-space: collapse; /* æ¢è¡Œ */
 
     text-align: left;
 }
@@ -690,7 +818,7 @@ select {
     border-top: none;
     vertical-align: middle;
     line-height: 23px;
-    white-space: collapse; /* »»ÐÐ */
+    white-space: collapse; /* æ¢è¡Œ */
 
     text-align: left;
 }
@@ -733,7 +861,7 @@ select {
         border-bottom: 1px solid #D6DAE2;
     }
 
-/*-----TreeViewÑùÊ½-----*/
+/*-----TreeViewæ ·å¼-----*/
 .rootNode {
     font-size: 14px;
     color: #000000;
@@ -742,7 +870,7 @@ select {
 .treeNode {
     color: #070707;
     font-size: 12px;
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family:"Microsoft YaHei"
 }
 
 .leafNode {
@@ -755,7 +883,7 @@ select {
     color: red;
 }
 
-/*--------------------------------Ìá½»±íµ¥ÑùÊ½---------------------------*/
+/*--------------------------------æäº¤è¡¨å•æ ·å¼---------------------------*/
 .formBgStyle {
     background-color: #D8D8D8;
     /*background-color:#ffffff;
@@ -776,7 +904,7 @@ select {
     border-bottom-color: #cccccc;
     vertical-align: top;
     line-height: 23px;
-    white-space: collapse; /* »»ÐÐ */
+    white-space: collapse; /* æ¢è¡Œ */
 
     text-align: left;
 }
@@ -793,12 +921,12 @@ select {
     border-bottom-color: #cccccc;
     vertical-align: top;
     line-height: 23px;
-    white-space: collapse; /* »»ÐÐ */
+    white-space: collapse; /* æ¢è¡Œ */
 
     text-align: right;
 }
 
-/*-----------------------------±à¼­Í¼Æ¬°´Å¥------------------------------*/
+/*-----------------------------ç¼–è¾‘å›¾ç‰‡æŒ‰é’®------------------------------*/
 .imgEdit {
     background-image: url(ImagesSkin/icon_edit.gif);
 }
@@ -806,7 +934,7 @@ select {
 .imgDel {
     / background:url(ImagesSkin/icon_del.gif);
 }
-/*----------------------------------datalistµ¥Ôª¸ñÑùÊ½------------------------------*/
+/*----------------------------------datalistå•å…ƒæ ¼æ ·å¼------------------------------*/
 .tdLeft {
     padding: 5px 5px 5px 5px;
     border-top: dotted 1px #D8D8D8;
@@ -868,7 +996,7 @@ select {
     border-top: solid 1px #8AB2E5;
 }
 
-/*----------------------------------Ò³ÂëÑùÊ½---------------------------------*/
+/*----------------------------------é¡µç æ ·å¼---------------------------------*/
 .notTab TD A:hover {
     WIDTH: 20px;
     COLOR: black;
@@ -896,7 +1024,7 @@ select {
     COLOR: blue;
 }
 
-/*--------------------------------ÈÕÀú¿Ø¼þ--------------------------*/
+/*--------------------------------æ—¥åŽ†æŽ§ä»¶--------------------------*/
 
 .calendar {
     BORDER-RIGHT: #000 2px solid;
@@ -1298,7 +1426,7 @@ select {
     text-indent: 32px;
     line-height: 30px;
     height: 30px;
-    width: 160px;
+    width: 150px;
 }
 
     .renyList li a {
@@ -1333,14 +1461,13 @@ html {
     overflow-y: auto;
 }
 
-
-/* CSSÑùÊ½ */
-.ajax_tab_menu .ajax__tab_header /*ÕûÌå°´Å¥µ×ÑùÊ½*/ {
-    font-family: ËÎÌå;
+/* CSSæ ·å¼ */
+.ajax_tab_menu .ajax__tab_header /*æ•´ä½“æŒ‰é’®åº•æ ·å¼*/ {
+    font-family: å®‹ä½“;
     height: 28px;
     font-size: 12px;
     background: url("ImagesSkin/Tab_Option_bg.gif") repeat-x bottom;
-    background-size: 100% 100%; /* ±£³Ö¿í¶È×Ô¶¯£¬¸ß¶ÈÌîÂú */
+    background-size: 100% 100%; /* ä¿æŒå®½åº¦è‡ªåŠ¨ï¼Œé«˜åº¦å¡«æ»¡ */
     display: block;
     width: 100%;
     white-space: nowrap;
@@ -1350,8 +1477,8 @@ html {
     padding-right: 5px;
 }
 
-.ajax_tab_menu .ajax__tab_body /*×ÊÁÏÇø*/ {
-    font-family: ËÎÌå;
+.ajax_tab_menu .ajax__tab_body /*èµ„æ–™åŒº*/ {
+    font-family: å®‹ä½“;
     font-size: 12px;
     border-top: 0;
     border-top: 1px solid #D6DAE2;
@@ -1364,9 +1491,9 @@ html {
     padding-right: 5px;
 }
 
-.ajax_tab_menu .ajax__tab_tab /*Ô¤ÉèÑùÊ½*/ {
+.ajax_tab_menu .ajax__tab_tab /*é¢„è®¾æ ·å¼*/ {
     background: url(ImagesSkin/Tab_Option_bg_OFF.gif) repeat-x;
-    background-size: 100% 100%; /* ±£³Ö¿í¶È×Ô¶¯£¬¸ß¶ÈÌîÂú */
+    background-size: 100% 100%; /* ä¿æŒå®½åº¦è‡ªåŠ¨ï¼Œé«˜åº¦å¡«æ»¡ */
     height: 29px;
     line-height: 28px;
     text-align: center;
@@ -1382,9 +1509,9 @@ html {
     padding-right: 5px;
 }
 
-.ajax_tab_menu .ajax__tab_hover .ajax__tab_tab /*Êó±ê¾­¹ýÑùÊ½*/ {
+.ajax_tab_menu .ajax__tab_hover .ajax__tab_tab /*é¼ æ ‡ç»è¿‡æ ·å¼*/ {
     background: #fff url(ImagesSkin/Tab_Option_bg_hover.gif) repeat-x;
-    background-size: 100% 100%; /* ±£³Ö¿í¶È×Ô¶¯£¬¸ß¶ÈÌîÂú */
+    background-size: 100% 100%; /* ä¿æŒå®½åº¦è‡ªåŠ¨ï¼Œé«˜åº¦å¡«æ»¡ */
     height: 28px;
     color: #333;
     line-height: 29px;
@@ -1398,9 +1525,9 @@ html {
     padding-right: 5px;
 }
 
-.ajax_tab_menu .ajax__tab_active .ajax__tab_tab /*µ±Ç°Ê¹ÓÃÖÐÑùÊ½*/ {
+.ajax_tab_menu .ajax__tab_active .ajax__tab_tab /*å½“å‰ä½¿ç”¨ä¸­æ ·å¼*/ {
     background: url(ImagesSkin/Tab_Option_bg_ON.gif) repeat-x;
-    background-size: 100% 100%; /* ±£³Ö¿í¶È×Ô¶¯£¬¸ß¶ÈÌîÂú */
+    background-size: 100% 100%; /* ä¿æŒå®½åº¦è‡ªåŠ¨ï¼Œé«˜åº¦å¡«æ»¡ */
     height: 28px;
     line-height: 28px;
     text-align: center;
@@ -1413,6 +1540,17 @@ html {
     padding-left: 5px;
     padding-right: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .dibian {
     word-break: break-all;
@@ -1465,7 +1603,7 @@ html {
 
 .green {
     /* border: 1px solid #c8f36e;*/
-
+    height: 25px;
     position: absolute;
     overflow: hidden;
     vertical-align: top;
@@ -1473,7 +1611,7 @@ html {
 
 .yellow {
     /*  border: 1px solid #f1f17d;*/
-
+    height: 25px;
     overflow: hidden;
     vertical-align: top;
     padding-top: -50px;
@@ -1485,7 +1623,6 @@ html {
     border: 1px solid #c8f36e;
     position: absolute;
     overflow-x: auto;
-    /*margin-top: 3px;*/
 }
 
 .itemBorder span {

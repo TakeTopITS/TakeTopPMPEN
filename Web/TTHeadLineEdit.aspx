@@ -134,41 +134,41 @@
                                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <EditItemStyle BackColor="#2461BF" />
                                                     <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                    <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
                                                         <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='DT??' /&gt;&lt;/div&gt;">
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
                                                                 <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm('?úè·?¨òaé?3y?e(Are you sure you want to delete it)￡?')" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='é?3y' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                         </asp:TemplateColumn>
                                                         <asp:BoundColumn DataField="ID" HeaderText="ID">
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="Title" HeaderText="?÷ìa">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="37%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="NewsType" HeaderText="·??§">
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="Type" HeaderText="ààDí">
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                         </asp:BoundColumn>
 
                                                         <asp:BoundColumn DataField="IsHead" HeaderText="í·ì?">
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                         </asp:BoundColumn>
 
                                                         <asp:BoundColumn DataField="RelatedDepartName" HeaderText="1éê?2???">
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                         </asp:BoundColumn>
 
                                                         <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="·￠2?ê±??">
-                                                            <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                         </asp:BoundColumn>
 
                                                         <asp:TemplateColumn HeaderText="×′ì?">
@@ -197,7 +197,7 @@
 
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formBgStyle">
                                 <tr>
-                                    <td width="8%"  class="formItemBgStyleForAlignLeft">
+                                    <td width="8%" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="LB_ID" Visible="false" runat="server"></asp:Label>
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>：
                                     </td>
@@ -272,36 +272,28 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                    <td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignRight">
+
                                         <table>
                                             <tr>
-                                                <td colspan="13" align="right">
+                                                <td style="padding-left: 30px;">
+                                                    <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>：
+                                                </td>
+                                                <td>
+                                                    <div onclick="popShowByURLForFixedSize('TTHeadLineUploadDocForParentWindow.aspx','Upload Doc', 600, 500)">
+                                                        <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 100px; text-align: center;">
+                                                    <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
+                                                        OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
+                                                </td>
 
-                                                    <table>
-                                                        <tr>
-                                                            <td style="padding-left: 30px;">
-                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>：
-                                                            </td>
-                                                            <td>
-                                                                <div onclick="popShowByURLForFixedSize('TTHeadLineUploadDocForParentWindow.aspx','Upload Doc', 600, 500)">
-                                                                    <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
-                                                                </div>
-                                                            </td>
-
-                                                            <td style="width: 100px; text-align: center;">
-                                                                <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
-                                                                    OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
-                                                            </td>
-
-                                                            <td style="padding-left: 10px;">
-                                                                <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
-                                                            </td>
-                                                            <td style="display: none;">
-                                                                <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
-                                                            </td>
-
-                                                        </tr>
-                                                    </table>
+                                                <td style="padding-left: 10px;">
+                                                    <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
+                                                </td>
+                                                <td style="display: none; width: 20px;">
+                                                    <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
                                                 </td>
                                             </tr>
                                         </table>
@@ -309,7 +301,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td  valign="top" class="formItemBgStyleForAlignLeft">
+                                    <td valign="top" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>：
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">

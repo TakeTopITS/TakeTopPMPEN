@@ -703,7 +703,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyleForAlignLeft" style="height: 13px;"></td>
-                                                            <td colspan="3" class="formItemBgStyleForAlignLeft" >
+                                                            <td colspan="3" class="formItemBgStyleForAlignRight" >
                                                                 <table>
                                                                     <tr>
                                                                         <td style="padding-left: 30px;">

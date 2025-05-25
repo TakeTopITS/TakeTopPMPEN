@@ -226,7 +226,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft"></td>
-                                    <td class="formItemBgStyleForAlignLeft">
+                                    <td class="formItemBgStyleForAlignRight">
                                         <table>
                                             <tr>
                                                 <td style="padding-left: 30px;">

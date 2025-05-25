@@ -827,7 +827,7 @@
 
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 15%;">
-                                        <asp:Label ID="Label10" runat="server" Text="客户商机阶段"></asp:Label>
+                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,KeHuShangJiJieDuan%>"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>

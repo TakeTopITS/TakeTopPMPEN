@@ -355,7 +355,7 @@
                                                                                                 <NickLee:NumberBox ID="NB_Possibility" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="50px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0</NickLee:NumberBox>
                                                                                                 %
                                                                                             </td>
-                                                                                            <td class="formItemBgStyleForAlignLeft" >&nbsp;&nbsp; &nbsp;<asp:Label ID="Label35" runat="server" Text="客户商机阶段"></asp:Label>：
+                                                                                            <td class="formItemBgStyleForAlignLeft" >&nbsp;&nbsp; &nbsp;<asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,KeHuShangJiJieDuan%>"></asp:Label>：
                                                                                             </td>
                                                                                             <td class="formItemBgStyleForAlignLeft" >
                                                                                                 <asp:DropDownList ID="DL_CustomerStage" runat="server" CssClass="DDList" DataTextField="Stage" DataValueField="Stage">

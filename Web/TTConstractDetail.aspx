@@ -1883,7 +1883,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 100px; ">
-                                        <asp:Label ID="Label373" runat="server" Text="ÊÕÖ§±ÈÀý"></asp:Label>£º
+                                        <asp:Label ID="Label373" runat="server" Text="<%$ Resources:lang,HeTongShouZiBiLei %>"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_ReceivablesIncomeRatio" DataValueField="Radio" DataTextField="Radio" runat="server">

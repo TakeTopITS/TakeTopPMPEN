@@ -393,7 +393,7 @@
 
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 15%;">
-                                        <asp:Label ID="Label35" runat="server" Text="客户商机阶段"></asp:Label>：
+                                        <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,KeHuShangJiJieDuan%>"></asp:Label>：
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" width="25%">
                                         <asp:DropDownList ID="DL_CustomerStage" runat="server" CssClass="DDList" DataTextField="Stage" DataValueField="Stage">
