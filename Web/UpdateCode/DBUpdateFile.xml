@@ -11034,4 +11034,479 @@ Update t_headline Set Type = 'ProjectMap' Where Type = '项目地图';</SQLText>
     <ID>3735</ID>
     <SQLText>Update T_ProjectMember Set CssDirectory = 'CssGrey';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3736</ID>
+    <SQLText>-- View: public.v_goodsmainplanbusinessobjectmaterialdata
+
+-- DROP VIEW public.v_goodsmainplanbusinessobjectmaterialdata;
+
+CREATE OR REPLACE VIEW public.v_goodsmainplanbusinessobjectmaterialdata
+ AS
+ SELECT t_itemmainplanrelateditempurchaseplan.planverid,
+    t_itemmainplanrelateditempurchaseplan.planmrpverid,
+    'SaleOrder'::text AS relatedtype,
+    ( SELECT t_goodssalerecord.soid
+           FROM t_goodssalerecord
+          WHERE t_goodssalerecord.id = t_itemmainplanrelateditempurchaseplan.sourcerecordid) AS relatedid,
+    t_itemmainplanrelateditempurchaseplan.itemcode,
+    t_itemmainplanrelateditempurchaseplan.itemname,
+    t_itemmainplanrelateditempurchaseplan.modelnumber,
+    t_itemmainplanrelateditempurchaseplan.specification,
+    t_itemmainplanrelateditempurchaseplan.brand,
+    t_itemmainplanrelateditempurchaseplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditempurchaseplan.unit
+   FROM t_itemmainplanrelateditempurchaseplan
+  WHERE t_itemmainplanrelateditempurchaseplan.sourcetype = 'GoodsSORecord'::bpchar
+UNION
+ SELECT t_itemmainplanrelateditemproductplan.planverid,
+    t_itemmainplanrelateditemproductplan.planmrpverid,
+    'SaleOrder'::text AS relatedtype,
+    ( SELECT t_goodssalerecord.soid
+           FROM t_goodssalerecord
+          WHERE t_goodssalerecord.id = t_itemmainplanrelateditemproductplan.sourcerecordid) AS relatedid,
+    t_itemmainplanrelateditemproductplan.itemcode,
+    t_itemmainplanrelateditemproductplan.itemname,
+    t_itemmainplanrelateditemproductplan.modelnumber,
+    t_itemmainplanrelateditemproductplan.specification,
+    t_itemmainplanrelateditemproductplan.brand,
+    t_itemmainplanrelateditemproductplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditemproductplan.unit
+   FROM t_itemmainplanrelateditemproductplan
+  WHERE t_itemmainplanrelateditemproductplan.sourcetype = 'GoodsSORecord'::bpchar
+UNION
+ SELECT t_itemmainplanrelateditempurchaseplan.planverid,
+    t_itemmainplanrelateditempurchaseplan.planmrpverid,
+    'Project'::text AS relatedtype,
+    ( SELECT t_projectrelateditem.projectid
+           FROM t_projectrelateditem
+          WHERE t_projectrelateditem.id = t_itemmainplanrelateditempurchaseplan.sourcerecordid) AS relatedid,
+    t_itemmainplanrelateditempurchaseplan.itemcode,
+    t_itemmainplanrelateditempurchaseplan.itemname,
+    t_itemmainplanrelateditempurchaseplan.modelnumber,
+    t_itemmainplanrelateditempurchaseplan.specification,
+    t_itemmainplanrelateditempurchaseplan.brand,
+    t_itemmainplanrelateditempurchaseplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditempurchaseplan.unit
+   FROM t_itemmainplanrelateditempurchaseplan
+  WHERE t_itemmainplanrelateditempurchaseplan.sourcetype = 'GoodsPJRecord'::bpchar
+UNION
+ SELECT t_itemmainplanrelateditemproductplan.planverid,
+    t_itemmainplanrelateditemproductplan.planmrpverid,
+    'Project'::text AS relatedtype,
+    ( SELECT t_projectrelateditem.projectid
+           FROM t_projectrelateditem
+          WHERE t_projectrelateditem.id = t_itemmainplanrelateditemproductplan.sourcerecordid) AS relatedid,
+    t_itemmainplanrelateditemproductplan.itemcode,
+    t_itemmainplanrelateditemproductplan.itemname,
+    t_itemmainplanrelateditemproductplan.modelnumber,
+    t_itemmainplanrelateditemproductplan.specification,
+    t_itemmainplanrelateditemproductplan.brand,
+    t_itemmainplanrelateditemproductplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditemproductplan.unit
+   FROM t_itemmainplanrelateditemproductplan
+  WHERE t_itemmainplanrelateditemproductplan.sourcetype = 'GoodsPJRecord'::bpchar
+UNION
+ SELECT t_itemmainplanrelateditempurchaseplan.planverid,
+    t_itemmainplanrelateditempurchaseplan.planmrpverid,
+    'Other'::text AS relatedtype,
+    0 AS relatedid,
+    t_itemmainplanrelateditempurchaseplan.itemcode,
+    t_itemmainplanrelateditempurchaseplan.itemname,
+    t_itemmainplanrelateditempurchaseplan.modelnumber,
+    t_itemmainplanrelateditempurchaseplan.specification,
+    t_itemmainplanrelateditempurchaseplan.brand,
+    t_itemmainplanrelateditempurchaseplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditempurchaseplan.unit
+   FROM t_itemmainplanrelateditempurchaseplan
+  WHERE t_itemmainplanrelateditempurchaseplan.sourcetype &lt;&gt; 'GoodsSORecord'::bpchar AND t_itemmainplanrelateditempurchaseplan.sourcetype &lt;&gt; 'Project'::bpchar
+UNION
+ SELECT t_itemmainplanrelateditemproductplan.planverid,
+    t_itemmainplanrelateditemproductplan.planmrpverid,
+    'Other'::text AS relatedtype,
+    0 AS relatedid,
+    t_itemmainplanrelateditemproductplan.itemcode,
+    t_itemmainplanrelateditemproductplan.itemname,
+    t_itemmainplanrelateditemproductplan.modelnumber,
+    t_itemmainplanrelateditemproductplan.specification,
+    t_itemmainplanrelateditemproductplan.brand,
+    t_itemmainplanrelateditemproductplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditemproductplan.unit
+   FROM t_itemmainplanrelateditemproductplan
+  WHERE t_itemmainplanrelateditemproductplan.sourcetype &lt;&gt; 'GoodsSORecord'::bpchar AND t_itemmainplanrelateditemproductplan.sourcetype &lt;&gt; 'Project'::bpchar
+UNION
+ SELECT 0 AS planverid,
+    0 AS planmrpverid,
+    b.relatedtype,
+    b.relatedid,
+    a.goodscode AS itemcode,
+    a.goodsname AS itemname,
+    a.modelnumber,
+    a.spec AS specification,
+    a.manufacturer AS brand,
+    0 AS requirenumber,
+    0 AS checkoutnumber,
+    a.number AS checkinnumber,
+    0 AS returnnumber,
+    a.unitname AS unit
+   FROM t_goodscheckinorderdetail a,
+    t_goodscheckinorder b
+  WHERE a.checkinid = b.checkinid
+UNION
+ SELECT 0 AS planverid,
+    0 AS planmrpverid,
+    b.relatedtype,
+    b.relatedid,
+    a.goodscode AS itemcode,
+    a.goodsname AS itemname,
+    a.modelnumber,
+    a.spec AS specification,
+    a.manufacturer AS brand,
+    0 AS requirenumber,
+    a.number AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    a.unitname AS unit
+   FROM t_goodsshipmentdetail a,
+    t_goodsshipmentorder b
+  WHERE a.shipmentno = b.shipmentno
+UNION
+ SELECT 0 AS planverid,
+    0 AS planmrpverid,
+    b.relatedtype,
+    b.relatedid,
+    a.goodscode AS itemcode,
+    a.goodsname AS itemname,
+    a.modelnumber,
+    a.spec AS specification,
+    a.manufacturer AS brand,
+    0 AS requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    a.number AS returnnumber,
+    a.unitname AS unit
+   FROM t_goodscheckinorderdetail a,
+    t_goodscheckinorder b,
+    t_goodsreturndetail c
+  WHERE a.checkinid = b.checkinid AND a.sourceid = c.id;
+
+ALTER TABLE public.v_goodsmainplanbusinessobjectmaterialdata
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodsmainplanbusinessobjectmaterialdata TO postgres;
+GRANT SELECT ON TABLE public.v_goodsmainplanbusinessobjectmaterialdata TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3737</ID>
+    <SQLText>-- View: public.v_goodsmainplanbusinessobjectmaterialdatareport
+
+-- DROP VIEW public.v_goodsmainplanbusinessobjectmaterialdatareport;
+
+CREATE OR REPLACE VIEW public.v_goodsmainplanbusinessobjectmaterialdatareport
+ AS
+ SELECT v_goodsmainplanbusinessobjectmaterialdata.planverid,
+    v_goodsmainplanbusinessobjectmaterialdata.planmrpverid,
+    v_goodsmainplanbusinessobjectmaterialdata.relatedtype,
+    v_goodsmainplanbusinessobjectmaterialdata.relatedid,
+    v_goodsmainplanbusinessobjectmaterialdata.itemcode,
+    v_goodsmainplanbusinessobjectmaterialdata.itemname,
+    v_goodsmainplanbusinessobjectmaterialdata.modelnumber,
+    v_goodsmainplanbusinessobjectmaterialdata.specification,
+    v_goodsmainplanbusinessobjectmaterialdata.brand,
+    v_goodsmainplanbusinessobjectmaterialdata.unit,
+    sum(v_goodsmainplanbusinessobjectmaterialdata.requirenumber) AS totalrequirenumber,
+    sum(v_goodsmainplanbusinessobjectmaterialdata.checkoutnumber) AS totalcheckoutnumber,
+    sum(v_goodsmainplanbusinessobjectmaterialdata.checkinnumber) AS totalcheckinnumber,
+    sum(v_goodsmainplanbusinessobjectmaterialdata.returnnumber) AS totalreturnnumber,
+    sum(v_goodsmainplanbusinessobjectmaterialdata.checkoutnumber) - sum(v_goodsmainplanbusinessobjectmaterialdata.requirenumber) AS morethancheckoutnumber,
+    sum(v_goodsmainplanbusinessobjectmaterialdata.requirenumber) - sum(v_goodsmainplanbusinessobjectmaterialdata.checkinnumber) AS lessthancheckinnumber
+   FROM v_goodsmainplanbusinessobjectmaterialdata
+  GROUP BY v_goodsmainplanbusinessobjectmaterialdata.planverid, v_goodsmainplanbusinessobjectmaterialdata.planmrpverid, v_goodsmainplanbusinessobjectmaterialdata.relatedtype, v_goodsmainplanbusinessobjectmaterialdata.relatedid, v_goodsmainplanbusinessobjectmaterialdata.itemcode, v_goodsmainplanbusinessobjectmaterialdata.itemname, v_goodsmainplanbusinessobjectmaterialdata.modelnumber, v_goodsmainplanbusinessobjectmaterialdata.specification, v_goodsmainplanbusinessobjectmaterialdata.brand, v_goodsmainplanbusinessobjectmaterialdata.unit;
+
+ALTER TABLE public.v_goodsmainplanbusinessobjectmaterialdatareport
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodsmainplanbusinessobjectmaterialdatareport TO postgres;
+GRANT SELECT ON TABLE public.v_goodsmainplanbusinessobjectmaterialdatareport TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3738</ID>
+    <SQLText>-- View: public.v_goodsmainplanbusinessobjectmaterialdatasummaryreport
+
+-- DROP VIEW public.v_goodsmainplanbusinessobjectmaterialdatasummaryreport;
+
+CREATE OR REPLACE VIEW public.v_goodsmainplanbusinessobjectmaterialdatasummaryreport
+ AS
+ SELECT v_goodsmainplanbusinessobjectmaterialdatareport.planverid,
+    v_goodsmainplanbusinessobjectmaterialdatareport.planmrpverid,
+    v_goodsmainplanbusinessobjectmaterialdatareport.relatedtype,
+    v_goodsmainplanbusinessobjectmaterialdatareport.relatedid,
+    v_goodsmainplanbusinessobjectmaterialdatareport.itemcode,
+    v_goodsmainplanbusinessobjectmaterialdatareport.itemname,
+    v_goodsmainplanbusinessobjectmaterialdatareport.modelnumber,
+    v_goodsmainplanbusinessobjectmaterialdatareport.specification,
+    v_goodsmainplanbusinessobjectmaterialdatareport.brand,
+    v_goodsmainplanbusinessobjectmaterialdatareport.unit,
+    v_goodsmainplanbusinessobjectmaterialdatareport.totalrequirenumber,
+    v_goodsmainplanbusinessobjectmaterialdatareport.totalcheckoutnumber,
+    COALESCE(
+        CASE
+            WHEN v_goodsmainplanbusinessobjectmaterialdatareport.morethancheckoutnumber &lt; 0::numeric THEN 0
+            ELSE NULL::integer
+        END, 0) AS morethancheckoutnumber,
+    v_goodsmainplanbusinessobjectmaterialdatareport.lessthancheckinnumber,
+    v_goodsmainplanbusinessobjectmaterialdatareport.totalreturnnumber,
+    v_goodsmainplanbusinessobjectmaterialdatareport.totalcheckinnumber
+   FROM v_goodsmainplanbusinessobjectmaterialdatareport;
+
+ALTER TABLE public.v_goodsmainplanbusinessobjectmaterialdatasummaryreport
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodsmainplanbusinessobjectmaterialdatasummaryreport TO postgres;
+GRANT SELECT ON TABLE public.v_goodsmainplanbusinessobjectmaterialdatasummaryreport TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3739</ID>
+    <SQLText>-- View: public.v_goodsinventorynumbersummary
+
+-- DROP VIEW public.v_goodsinventorynumbersummary;
+
+CREATE OR REPLACE VIEW public.v_goodsinventorynumbersummary
+ AS
+ SELECT t_goods.goodscode,
+    t_goods.goodsname,
+    t_goods.spec,
+    t_goods.unitname,
+    sum(t_goods.number) AS inventorynumber
+   FROM t_goods
+  GROUP BY t_goods.goodscode, t_goods.goodsname, t_goods.spec, t_goods.unitname;
+
+ALTER TABLE public.v_goodsinventorynumbersummary
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodsinventorynumbersummary TO postgres;
+GRANT SELECT ON TABLE public.v_goodsinventorynumbersummary TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3740</ID>
+    <SQLText>-- View: public.v_goodslistrelatedcustomeraftersale
+
+-- DROP VIEW public.v_goodslistrelatedcustomeraftersale;
+
+CREATE OR REPLACE VIEW public.v_goodslistrelatedcustomeraftersale
+ AS
+ SELECT DISTINCT a.sn AS goodssn,
+    b.shipmentno,
+    b.shiptime,
+    b.operatorcode,
+    b.operatorname,
+    b.applicant,
+    b.applicationreason,
+    (b.shiptime || a.warrantyperiod::character(1)::text) || 'day'::text AS warrantyendtime,
+    b.customercode,
+    b.customername,
+    COALESCE(e.customercode, ''::bpchar) AS finalcustomercode,
+    COALESCE(e.customername, ''::bpchar) AS finalcustomername,
+    b.relatedtype,
+    b.relatedid,
+    b.relatedcode,
+    a.id,
+    a.goodscode,
+    a.goodsname,
+    a.sn,
+    a.modelnumber,
+    a.spec,
+    a.number,
+    a.unitname,
+    a.manufacturer,
+    a.fromposition,
+    a.fromgoodsid,
+    a.toposition,
+    a.warrantyperiod,
+    a.comment,
+    a.sourcetype,
+    a.sourceid
+   FROM t_goodsshipmentdetail a
+     JOIN t_goodsshipmentorder b ON a.shipmentno = b.shipmentno
+     LEFT JOIN t_customerrelatedgoods c ON a.sn::text = c.goodssn::text
+     LEFT JOIN t_customer e ON c.customercode = e.customercode;
+
+ALTER TABLE public.v_goodslistrelatedcustomeraftersale
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodslistrelatedcustomeraftersale TO postgres;
+GRANT SELECT ON TABLE public.v_goodslistrelatedcustomeraftersale TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3741</ID>
+    <SQLText>-- View: public.v_goodsmainplanmaterialdata
+
+-- DROP VIEW public.v_goodsmainplanmaterialdata;
+
+CREATE OR REPLACE VIEW public.v_goodsmainplanmaterialdata
+ AS
+ SELECT t_itemmainplanrelateditempurchaseplan.planverid,
+    t_itemmainplanrelateditempurchaseplan.planmrpverid,
+    t_itemmainplanrelateditempurchaseplan.itemcode,
+    t_itemmainplanrelateditempurchaseplan.itemname,
+    t_itemmainplanrelateditempurchaseplan.modelnumber,
+    t_itemmainplanrelateditempurchaseplan.specification,
+    t_itemmainplanrelateditempurchaseplan.brand,
+    t_itemmainplanrelateditempurchaseplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditempurchaseplan.unit
+   FROM t_itemmainplanrelateditempurchaseplan
+UNION
+ SELECT t_itemmainplanrelateditemproductplan.planverid,
+    t_itemmainplanrelateditemproductplan.planmrpverid,
+    t_itemmainplanrelateditemproductplan.itemcode,
+    t_itemmainplanrelateditemproductplan.itemname,
+    t_itemmainplanrelateditemproductplan.modelnumber,
+    t_itemmainplanrelateditemproductplan.specification,
+    t_itemmainplanrelateditemproductplan.brand,
+    t_itemmainplanrelateditemproductplan.requirenumber,
+    0 AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    t_itemmainplanrelateditemproductplan.unit
+   FROM t_itemmainplanrelateditemproductplan
+UNION
+ SELECT b.relatedid AS planverid,
+    0 AS planmrpverid,
+    a.goodscode AS itemcode,
+    a.goodsname AS itemname,
+    a.modelnumber,
+    a.spec AS specification,
+    a.manufacturer AS brand,
+    0 AS requirenumber,
+    0 AS checkoutnumber,
+    a.number AS checkinnumber,
+    0 AS returnnumber,
+    a.unitname AS unit
+   FROM t_goodscheckinorderdetail a,
+    t_goodscheckinorder b
+  WHERE a.checkinid = b.checkinid AND b.relatedtype = 'MRPPlan'::bpchar
+UNION
+ SELECT b.relatedid AS planverid,
+    0 AS planmrpverid,
+    a.goodscode AS itemcode,
+    a.goodsname AS itemname,
+    a.modelnumber,
+    a.spec AS specification,
+    a.manufacturer AS brand,
+    0 AS requirenumber,
+    a.number AS checkoutnumber,
+    0 AS checkinnumber,
+    0 AS returnnumber,
+    a.unitname AS unit
+   FROM t_goodsshipmentdetail a,
+    t_goodsshipmentorder b
+  WHERE a.shipmentno = b.shipmentno AND b.relatedtype = 'MRPPlan'::bpchar
+UNION
+ SELECT b.relatedid AS planverid,
+    0 AS planmrpverid,
+    a.goodscode AS itemcode,
+    a.goodsname AS itemname,
+    a.modelnumber,
+    a.spec AS specification,
+    a.manufacturer AS brand,
+    0 AS requirenumber,
+    0 AS checkoutnumber,
+    a.number AS checkinnumber,
+    a.number AS returnnumber,
+    a.unitname AS unit
+   FROM t_goodscheckinorderdetail a,
+    t_goodscheckinorder b,
+    t_goodsreturndetail c
+  WHERE a.checkinid = b.checkinid AND a.sourceid = c.id AND b.relatedtype = 'MRPPlan'::bpchar;
+
+ALTER TABLE public.v_goodsmainplanmaterialdata
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodsmainplanmaterialdata TO postgres;
+GRANT SELECT ON TABLE public.v_goodsmainplanmaterialdata TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3742</ID>
+    <SQLText>-- View: public.v_goodsmainplanmaterialdatareport
+
+-- DROP VIEW public.v_goodsmainplanmaterialdatareport;
+
+CREATE OR REPLACE VIEW public.v_goodsmainplanmaterialdatareport
+ AS
+ SELECT v_goodsmainplanmaterialdata.planverid,
+    v_goodsmainplanmaterialdata.planmrpverid,
+    v_goodsmainplanmaterialdata.itemcode,
+    v_goodsmainplanmaterialdata.itemname,
+    v_goodsmainplanmaterialdata.modelnumber,
+    v_goodsmainplanmaterialdata.specification,
+    v_goodsmainplanmaterialdata.brand,
+    v_goodsmainplanmaterialdata.unit,
+    sum(v_goodsmainplanmaterialdata.requirenumber) AS totalrequirenumber,
+    sum(v_goodsmainplanmaterialdata.checkoutnumber) AS totalcheckoutnumber,
+    sum(v_goodsmainplanmaterialdata.checkinnumber) AS totalcheckinnumber,
+    sum(v_goodsmainplanmaterialdata.returnnumber) AS totalreturnnumber,
+    sum(v_goodsmainplanmaterialdata.checkoutnumber) - sum(v_goodsmainplanmaterialdata.requirenumber) AS morethancheckoutnumber,
+    sum(v_goodsmainplanmaterialdata.requirenumber) - sum(v_goodsmainplanmaterialdata.checkinnumber) AS lessthancheckinnumber
+   FROM v_goodsmainplanmaterialdata
+  GROUP BY v_goodsmainplanmaterialdata.planverid, v_goodsmainplanmaterialdata.planmrpverid, v_goodsmainplanmaterialdata.itemcode, v_goodsmainplanmaterialdata.itemname, v_goodsmainplanmaterialdata.modelnumber, v_goodsmainplanmaterialdata.specification, v_goodsmainplanmaterialdata.brand, v_goodsmainplanmaterialdata.unit;
+
+ALTER TABLE public.v_goodsmainplanmaterialdatareport
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodsmainplanmaterialdatareport TO postgres;
+GRANT SELECT ON TABLE public.v_goodsmainplanmaterialdatareport TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3743</ID>
+    <SQLText>-- View: public.v_goodsmainplanmaterialdatasummaryreport
+
+-- DROP VIEW public.v_goodsmainplanmaterialdatasummaryreport;
+
+CREATE OR REPLACE VIEW public.v_goodsmainplanmaterialdatasummaryreport
+ AS
+ SELECT v_goodsmainplanmaterialdatareport.planverid,
+    v_goodsmainplanmaterialdatareport.planmrpverid,
+    v_goodsmainplanmaterialdatareport.itemcode,
+    v_goodsmainplanmaterialdatareport.itemname,
+    v_goodsmainplanmaterialdatareport.modelnumber,
+    v_goodsmainplanmaterialdatareport.specification,
+    v_goodsmainplanmaterialdatareport.brand,
+    v_goodsmainplanmaterialdatareport.unit,
+    v_goodsmainplanmaterialdatareport.totalrequirenumber,
+    v_goodsmainplanmaterialdatareport.totalcheckoutnumber,
+        CASE
+            WHEN v_goodsmainplanmaterialdatareport.morethancheckoutnumber &lt; 0::numeric THEN 0
+            ELSE NULL::integer
+        END AS morethancheckoutnumber,
+    v_goodsmainplanmaterialdatareport.lessthancheckinnumber,
+    v_goodsmainplanmaterialdatareport.totalreturnnumber,
+    v_goodsmainplanmaterialdatareport.totalcheckinnumber
+   FROM v_goodsmainplanmaterialdatareport;
+
+ALTER TABLE public.v_goodsmainplanmaterialdatasummaryreport
+    OWNER TO postgres;
+
+GRANT ALL ON TABLE public.v_goodsmainplanmaterialdatasummaryreport TO postgres;
+GRANT SELECT ON TABLE public.v_goodsmainplanmaterialdatasummaryreport TO taketoppgdbreadonlyuser;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
