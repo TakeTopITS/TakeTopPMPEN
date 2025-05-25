@@ -58,7 +58,7 @@
                                     <table align="left" cellpadding="0" cellspacing="0" width="100%">
                                         <tr>
                                             <td align="left">
-                                                <table width="70%" cellpadding="3" cellspacing="0" class="formBgStyle">
+                                                <table width="70%" cellpadding="3" cellspacing="0">
                                                     <tr>
                                                         <td class="formItemBgStyleAlignLeft" >
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiBie%>"></asp:Label>£º</td>
