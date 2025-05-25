@@ -108,16 +108,16 @@
                                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenDang%>"></asp:Label></strong>
                                                                                 </td>
 
-                                                                                <td width="85px" align="left">
+                                                                                <td width="85px" align="center>
                                                                                     <strong>
                                                                                         <%--   <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JiHua%>"></asp:Label>--%>
                                                                                     </strong>
                                                                                 </td>
-                                                                                <td align="left">
+                                                                                <td align="center">
                                                                                     <%--<strong>
                                                                                         <asp:Label ID="LB_Status" runat="server" Text="<%$ Resources:lang,Status%>"></asp:Label></strong>--%>
                                                                                 </td>
-                                                                                <td align="left">
+                                                                                <td align="center">
                                                                                     <strong></strong>
                                                                                 </td>
 
