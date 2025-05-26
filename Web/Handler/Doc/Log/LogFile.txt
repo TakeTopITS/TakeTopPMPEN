@@ -154435,4 +154435,249 @@ Message Input string '80.55555555555556' is not a valid integer. Path '[0].perce
 An error occurred while executing the query.
 
 ------------------------------------
+
+Log Entry : 11:56:11 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:13 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:13 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:13 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:13 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:13 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:14 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:14 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:56:18 PM Monday, May 26, 2025 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 11:56:18 PM Monday, May 26, 2025 
+Error page: Unknown message code: 8
+   at Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   at Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnector.<ExecuteInternalCommand>d__256.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnector.<Rollback>d__205.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlTransaction.Rollback()
+   at ShareClass.GetDataSetFromSql(String strHQL, String strTableName) in E:\TakeTopDECMPWinSolutionENCore\ENSource\Web\App_Code\ShareClass.cs:line 16547
+   at EchartHandler.Get_Data01(HttpContext context) in E:\TakeTopDECMPWinSolutionENCore\ENSource\Web\Handler\EchartHandler.ashx:line 125
+
+------------------------------------
+
+Log Entry : 11:58:18 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:58:19 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:58:20 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:58:21 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 11:58:22 PM Monday, May 26, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:01:04 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:01:04 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:01:05 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:01:06 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:01:06 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:01:07 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:01:07 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:02:47 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:02:48 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:02:48 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:02:49 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:02:50 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:04:36 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:04:36 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:04:37 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:04:37 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:04:38 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:04:38 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:06:13 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:06:13 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:06:14 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:06:14 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:06:15 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:06:15 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:06:16 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:07:42 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:07:42 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:07:43 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:07:43 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 12:07:44 AM Tuesday, May 27, 2025 
+An error occurred while executing the query.
+
+------------------------------------
 

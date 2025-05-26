@@ -47,9 +47,8 @@
                 <ContentTemplate>
                     <table width="98%" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td valign="top" align="left" style="padding: 10px 1px 1px 1px; border: 0px solid rgba(193, 189, 189, 0.39)" onmouseenter="javascript:displayScroll();" onmousemove="javascript:displayScroll();" onmouseover="javascript:displayScroll();" onmouseout="javascript:hideScroll();">
+                            <td valign="top" align="left" style="padding: 0px 1px 1px 1px; border: 0px solid rgba(193, 189, 189, 0.39)" onmouseenter="javascript:displayScroll();" onmousemove="javascript:displayScroll();" onmouseover="javascript:displayScroll();" onmouseout="javascript:hideScroll();">
                                 <div id="divRenyList" class="renyList" style="width: 100%; height: 165px; overflow: hidden;">
-
                                     <asp:Repeater ID="RP_ChartList" runat="server">
                                         <ItemTemplate>
                                             <asp:Label ID="LB_ChartName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ChartName") %>' Visible="false"></asp:Label>
