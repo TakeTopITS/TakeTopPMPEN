@@ -11514,4 +11514,9 @@ GRANT SELECT ON TABLE public.v_goodsmainplanmaterialdatasummaryreport TO taketop
     <SQLText>UPdate T_SystemLanguage Set SortNumber = 1 Where LangCode = 'en';
 UPdate T_SystemLanguage Set SortNumber = 2 Where LangCode = 'zh-CN';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3745</ID>
+    <SQLText>Update T_WZProject Set PowerPurchase = 'NO' Where PowerPurchase = 'No';
+Update T_WZProject Set PowerPurchase = 'YES' Where PowerPurchase = 'Yes';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
