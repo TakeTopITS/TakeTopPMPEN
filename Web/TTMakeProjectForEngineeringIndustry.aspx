@@ -527,8 +527,8 @@
                                                                         <td class="formItemBgStyleForAlignLeft">
                                                                             <asp:DropDownList ID="DL_AuthorizedProcurement" runat="server">
                                                                                 <asp:ListItem />
-                                                                                <asp:ListItem Value="Yes" Text="<%$ Resources:lang,You%>" />
-                                                                                <asp:ListItem Value="No" Text="<%$ Resources:lang,Wu%>" />
+                                                                                <asp:ListItem Value="YES" Text="<%$ Resources:lang,You%>" />
+                                                                                <asp:ListItem Value="NO" Text="<%$ Resources:lang,Wu%>" />
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td class="formItemBgStyleForAlignLeft">
