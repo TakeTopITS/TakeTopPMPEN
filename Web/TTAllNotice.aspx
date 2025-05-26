@@ -96,30 +96,26 @@
                                             Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="32" Width="100%"
                                             ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="Number">
-                                                    <ItemTemplate>
-                                                        <asp:Button ID="BT_DocID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"DocID") %>'
-                                                            CssClass="inpu" />
-                                                    </ItemTemplate>
-                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
-                                                </asp:TemplateColumn>
 
+                                                <asp:BoundColumn DataField="DocID" HeaderText="Type">
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
+                                                </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="DocType" HeaderText="Type">
-                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
                                                     DataTextField="DocName" HeaderText="文件名" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                 </asp:HyperLinkColumn>
                                                 <asp:BoundColumn DataField="RelatedDepartName" HeaderText="归属部门">
-                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="UploadManCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
                                                     DataTextField="UploadManName" HeaderText="发布者" Target="_blank">
-                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                 </asp:HyperLinkColumn>
                                                 <asp:BoundColumn DataField="UploadTime" HeaderText="发布时间">
-                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>
                                             </Columns>
@@ -129,7 +125,7 @@
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                             <EditItemStyle BackColor="#2461BF" />
                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                         </asp:DataGrid>
                                     </td>
                                     <td align="left" style="padding-left：10px;">

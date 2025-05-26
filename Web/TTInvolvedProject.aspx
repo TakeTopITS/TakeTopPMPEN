@@ -95,20 +95,20 @@
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGJoinTime" runat="server" Text="<%$ Resources:lang,JoinTime%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="10%" align="left">
+                                                                                <td width="11%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGPM" runat="server" Text="<%$ Resources:lang,PM%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="100px" align="left">
+                                                                                <td width="90px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGProgress" runat="server" Text="<%$ Resources:lang,Progress%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="70px" align="left">
+                                                                                <td width="70px" align="center">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GongShi2%>"></asp:Label></strong>
                                                                                 </td>
                                                                           
-                                                                                <td width="8%" align="left">
+                                                                                <td width="9%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGStatus" runat="server" Text="<%$ Resources:lang,Status%>"></asp:Label></strong>
                                                                                 </td>

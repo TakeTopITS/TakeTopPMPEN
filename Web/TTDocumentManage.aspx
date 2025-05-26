@@ -147,21 +147,21 @@
                                                         <td style="background: #F0F0F0; width: 100%; text-align: left;">
                                                             <table style="width: 99%; height: 12px;">
                                                                 <tr>
-                                                                    <td width="70px" align="right">
+                                                                    <td  align="right">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenJianMing%>"></asp:Label>£º</td>
                                                                     <td width="130px" align="left">
                                                                         <asp:TextBox ID="TB_DocName" runat="server" Width="120px"></asp:TextBox>
                                                                     </td>
 
-                                                                    <td width="80px" align="right">
+                                                                    <td  align="right">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShangChuanZhe%>"></asp:Label>£º</td>
-                                                                    <td width="120px">
+                                                                    <td >
                                                                         <asp:TextBox ID="TB_UploadManName" runat="server" Width="120px"></asp:TextBox>
                                                                     </td>
                                                                     <td>
                                                                         <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>
                                                                     </td>
-                                                                    <td style="width: 120px;" align="left">
+                                                                    <td  align="left">
                                                                         <asp:TextBox ID="DLC_StartTime" ReadOnly="false" runat="server" Width="99%"></asp:TextBox>
                                                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_StartTime">
                                                                         </ajaxToolkit:CalendarExtender>
@@ -169,14 +169,14 @@
                                                                     <td align="left">
                                                                         <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>
                                                                     </td>
-                                                                    <td style="width: 120px;" align="left">
+                                                                    <td align="left">
                                                                         <asp:TextBox ID="DLC_EndTime" ReadOnly="false" runat="server" Width="99%"></asp:TextBox>
                                                                         <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_EndTime">
                                                                         </ajaxToolkit:CalendarExtender>
                                                                     </td>
-                                                                    <td style="text-align: right; width: 80px;">
+                                                                    <td style="text-align: right; ">
                                                                         <asp:Label ID="LB_TBParentProject" runat="server" Text="<%$ Resources:lang,Project %>" />: </td>
-                                                                    <td style="text-align: left; width: 350px;">
+                                                                    <td style="text-align: left; width: 250px;">
                                                                         <asp:TextBox ID="TB_ParentProject" Width="99%" runat="server"></asp:TextBox><cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server"
                                                                             Enabled="True" TargetControlID="TB_ParentProject" PopupControlID="Panel2"
                                                                             CancelControlID="IMBT_CloseTree" BackgroundCssClass="modalBackground" Y="150" DynamicServicePath="">
@@ -189,7 +189,7 @@
                                                                     <td>
                                                                         <asp:Button ID="BT_HazyFind" runat="server" OnClick="BT_HazyFind_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                                                     </td>
-                                                                    <td style="background: #F0F0F0; width: 20%; text-align: right;">---&gt;<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="TTUploadDoc.aspx" Target="_blank" Text="<%$ Resources:lang,ShangChuanWenDang%>"></asp:HyperLink>
+                                                                    <td style="background: #F0F0F0; text-align: right;">---&gt;<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="TTUploadDoc.aspx" Target="_blank" Text="<%$ Resources:lang,ShangChuanWenDang%>"></asp:HyperLink>
                                                                     </td>
                                                                 </tr>
                                                             </table>

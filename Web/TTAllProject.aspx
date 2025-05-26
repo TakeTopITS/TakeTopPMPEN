@@ -230,7 +230,7 @@
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGProjectID" runat="server" Text="<%$ Resources:lang,DGProjectID%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="8%" align="left">
+                                                                                <td width="9%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ProjectCode%>"></asp:Label>
                                                                                     </strong>
@@ -251,7 +251,7 @@
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGStartTime" runat="server" Text="<%$ Resources:lang,ShiJian%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="100px" align="left">
+                                                                                <td width="105px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGProgress" runat="server" Text="<%$ Resources:lang,Progress%>"></asp:Label></strong>
                                                                                 </td>

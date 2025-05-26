@@ -1,5 +1,9 @@
 /*html { overflow-x: hidden; overflow-y: auto; }*/
 
+html {
+    overflow-x: auto;
+    overflow-y: auto;
+}
 
 body {
     font-size: 12px;
@@ -79,6 +83,9 @@ a:hover {
 td {
     vertical-align: top;
     line-height: 23px;
+
+    word-break: break-all;
+    white-space: collapse; /* »»ÐÐ */
 }
 
     td a {
@@ -1399,14 +1406,6 @@ select {
         background-repeat: no-repeat;
         background-position: left center;
     }
-
-
-
-
-html {
-    overflow-x: auto;
-    overflow-y: auto;
-}
 
 
 /* CSSÑùÊ½ */

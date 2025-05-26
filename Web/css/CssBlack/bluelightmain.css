@@ -1,5 +1,9 @@
 /*html { overflow-x: hidden; overflow-y: auto; }*/
 
+html {
+    overflow-x: auto;
+    overflow-y: auto;
+}
 
 body {
     font-size: 12px;
@@ -80,6 +84,9 @@ a:hover {
 td {
     vertical-align: top;
     line-height: 23px;
+
+    word-break: break-all;
+    white-space: collapse; /* 换行 */
 }
 
     td a {
@@ -1283,11 +1290,6 @@ select {
 
 
 
-
-html {
-    overflow-x: auto;
-    overflow-y: auto;
-}
 
 /* CSS样式 */
 .ajax_tab_menu .ajax__tab_header /*整体按钮底样式*/ {

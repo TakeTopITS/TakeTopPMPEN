@@ -123,23 +123,23 @@
                                                                                         <asp:Label ID="LB_DGProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>"></asp:Label>
                                                                                     </strong>
                                                                                 </td>
-                                                                                <td width="100px" align="left">
+                                                                                <td width="110px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGProgress" runat="server" Text="<%$ Resources:lang,Progress%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="100px" align="left">
+                                                                                <td width="110px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,YuSuan%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="135px" align="left">
+                                                                                <td width="125px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="LB_DGStartTime" runat="server" Text="<%$ Resources:lang,ShiJian%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="55px" align="left">
+                                                                                <td width="50px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GongShi2%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="55px" align="left">
+                                                                                <td width="58px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FengXian%>"></asp:Label></strong>
                                                                                 </td>
