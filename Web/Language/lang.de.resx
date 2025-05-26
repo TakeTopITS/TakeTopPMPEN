@@ -30975,4 +30975,22 @@
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value>Visum verknüpfen</value>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>Hinweis: Bitte überprüfen Sie, ob das Tab-Label der Excel-Tabelle "Sheet1" ist.</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>Vorlage zur Importierung von Projektrelevanten Materialien</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>Enthält Unterabteilungen</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>Vorlage zur Importierung von sichtbaren Mitarbeitern für Kunden</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>Beim Import löschen Sie die ursprünglichen</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>Importieren von sichtbaren Mitarbeitern für Kunden</value>
+  </data>
 </root>

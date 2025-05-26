@@ -30977,4 +30977,22 @@
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value>Collegare il Visa</value>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>Nota: Si prega di verificare che l'etichetta della scheda del foglio Excel sia "Sheet1".</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>Modello per l'importazione di materiali correlati al progetto</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>Include Sottodepartamenti</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>Modello per l'importazione di personale visibile ai clienti</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>Elimina i file originali durante l'importazione</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>Importa personale visibile ai clienti</value>
+  </data>
 </root>

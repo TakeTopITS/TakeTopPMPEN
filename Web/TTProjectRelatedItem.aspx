@@ -816,7 +816,7 @@
                                                                                             <br />
                                                                                             <asp:Label ID="Label70" runat="server"></asp:Label>
                                                                                             <asp:Label ID="Label71" runat="server" Text="<%$ Resources:lang,SJDRMBGS%>"></asp:Label>
-                                                                                            ：<a href="Template/物料定义和项目或合同关联物料数据导入表.xls"><asp:Label ID="Label72" runat="server" Text="项目关联物资导入模板"></asp:Label>
+                                                                                            ：<a href="Template/物料定义和项目或合同关联物料数据导入表.xls"><asp:Label ID="Label72" runat="server" Text="<%$ Resources:lang,XMGLWZDRMB%>"></asp:Label>
                                                                                             </a>
                                                                                             <div id="ProgressBar">
                                                                                                 <upload:progressbar id="ProgressBar1" runat="server" height="100px" width="500px">
@@ -829,7 +829,7 @@
                                                                                     </Triggers>
                                                                                 </asp:UpdatePanel>
 
-                                                                                <asp:Label ID="Label46" runat="server" Text="注：请确保EXCEL表的标签是否为 Sheet1 " ForeColor="Red"></asp:Label>
+                                                                                <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,QQBBDBQWSHEET1%>" ForeColor="Red"></asp:Label>
                                                                                 <br />
                                                                                 <asp:Label ID="LB_ErrorText" runat="server" ForeColor="Red"></asp:Label>
                                                                             </td>
@@ -1055,7 +1055,7 @@
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
                                                 <td width="4%" align="left">
-                                                    <asp:CheckBox ID="CB_SelectAll" runat="server" Text="全选" AutoPostBack="true" OnCheckedChanged="CB_SelectAll_CheckedChanged" />
+                                                    <asp:CheckBox ID="CB_SelectAll" runat="server" Text="<%$ Resources:lang,QuanXuan%>" AutoPostBack="true" OnCheckedChanged="CB_SelectAll_CheckedChanged" />
                                                 </td>
                                                 <td width="4%" align="left">
                                                     <strong>

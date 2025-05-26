@@ -52,7 +52,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="客户可视人员导入"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,KHKSRYDR%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -77,7 +77,7 @@
                                                                                     </div>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:CheckBox ID="CB_IsClearAll" runat="server" Checked="false" Text="导入时删除原来的" />
+                                                                                    <asp:CheckBox ID="CB_IsClearAll" runat="server" Checked="false" Text="<%$ Resources:lang,DaoRuShiShanChuYuanLaiDe%>" />
                                                                                 </td>
                                                                                 <td style="padding-left: 10px;">
                                                                                     <asp:Button ID="btn_ExcelToDataTraining" runat="server" CssClass="inpu" OnClick="btn_ExcelToDataTraining_Click" OnClientClick="displayWaitingImage('block');" Text="<%$ Resources:lang,DaoRuShuJu%>" />
@@ -86,8 +86,8 @@
                                                                             </tr>
                                                                         </table>
 
-                                                                        <asp:Label ID="Label28" runat="server" Text="客户可视人员导入模板"></asp:Label>
-                                                                        ：<a href="Template/客户可视人员导入模板.xls"><asp:Label ID="Label29" runat="server" Text="客户可视人员导入模板"></asp:Label>
+                                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,KHKSRYDRMB%>"></asp:Label>
+                                                                        ：<a href="Template/客户可视人员导入模板.xls"><asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,KHKSRYDRMB%>"></asp:Label>
                                                                         </a>
                                                                         <div id="ProgressBar">
                                                                             <Upload:ProgressBar ID="ProgressBar1" runat="server" Height="100px" Width="500px">

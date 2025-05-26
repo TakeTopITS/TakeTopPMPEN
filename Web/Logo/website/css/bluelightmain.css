@@ -427,7 +427,7 @@ button:visited, input[type="submit"]:visited {
     border-bottom-color: #cccccc;
     vertical-align: top;
     line-height: 23px;
-    white-space: collapse; /* 换行 */
+    word-break: break-all;white-space: collapse; /* 换行 */
 
     text-align: left;
 }
@@ -444,7 +444,7 @@ button:visited, input[type="submit"]:visited {
     border-bottom-color: #cccccc;
     vertical-align: top;
     line-height: 23px;
-    white-space: collapse; /* 换行 */
+    word-break: break-all;white-space: collapse; /* 换行 */
 
     text-align: right;
 }

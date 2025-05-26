@@ -30975,4 +30975,22 @@
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value>비자를 연결하다</value>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>주의: 엑셀 시트의 탭 레이블이 "Sheet1"인지 확인하십시오.</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>프로젝트 관련 자산 가져오기 템플릿</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>자부서 포함</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>고객이 볼 수 있는 인력 가져오기 템플릿</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>가져올 때 원래 파일을 삭제합니다</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>고객이 볼 수 있는 인력 가져오기</value>
+  </data>
 </root>

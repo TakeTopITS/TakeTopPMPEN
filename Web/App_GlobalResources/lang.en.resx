@@ -30976,4 +30976,22 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value>Link Visa</value>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>Note: Please ensure that the tab label of the Excel sheet is "Sheet1".</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>Template for Importing Project-Related Materials</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>Includes Sub-departments</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>Template for Importing Customer-Visible Personnel</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>Delete the original when importing</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>Import Customer-Visible Personnel</value>
+  </data>
 </root>

@@ -31083,4 +31083,28 @@
     <value>关联签证</value>
     <comment>关联签证</comment>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>注：请确保EXCEL表的标签是否为 Sheet1</value>
+    <comment>注：请确保EXCEL表的标签是否为 Sheet1</comment>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>项目关联物资导入模板</value>
+    <comment>项目关联物资导入模板</comment>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>包含子部门</value>
+    <comment>包含子部门</comment>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>客户可视人员导入模板</value>
+    <comment>客户可视人员导入模板</comment>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>导入时删除原来的</value>
+    <comment>导入时删除原来的</comment>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>客户可视人员导入</value>
+    <comment>客户可视人员导入</comment>
+  </data>
 </root>

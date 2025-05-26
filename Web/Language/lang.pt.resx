@@ -30975,4 +30975,22 @@
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value />
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>Nota: Por favor, verifique se o rótulo da aba da planilha do Excel é "Sheet1".</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>Modelo para Importar Materiais Relacionados ao Projeto</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>Inclui Subdepartamentos</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>Modelo para Importar Pessoal Visível para Clientes</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>Exclua os originais ao importar</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>Importar Pessoal Visível para Clientes</value>
+  </data>
 </root>

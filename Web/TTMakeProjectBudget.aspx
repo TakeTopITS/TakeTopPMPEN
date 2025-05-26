@@ -410,7 +410,7 @@
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
                                                 <td width="8%" align="left">
-                                                    <asp:CheckBox ID="CB_SelectAll" runat="server" Text="ȫѡ" AutoPostBack="true" OnCheckedChanged="CB_SelectAll_CheckedChanged" />
+                                                    <asp:CheckBox ID="CB_SelectAll" runat="server" Text="<%$ Resources:lang,QuanXuan%>" AutoPostBack="true" OnCheckedChanged="CB_SelectAll_CheckedChanged" />
                                                 </td>
 
                                                 <td width="5%" align="left">

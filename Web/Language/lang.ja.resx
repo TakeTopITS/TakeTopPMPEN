@@ -30975,4 +30975,22 @@
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value>ビザをリンクする</value>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>注：Excelシートのタブラベルが「Sheet1」かどうかを確認してください（ちゅう：えくせるしーとたぶらべるが「シート1」かどうかもしをかくにんしてください）。</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>プロジェクト関連資材インポートテンプレート</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>子部門が含まれています</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>クライアントが見えるスタッフインポートテンプレート</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>インポート時に元のファイルを削除する</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>クライアントが見えるスタッフのインポート</value>
+  </data>
 </root>

@@ -53,6 +53,12 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
         strHQL = "Select TemName,WFDefinition From T_WorkFlowTemplate Where TemName = " + "'" + strTemName + "'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
+
+        if (ds.Tables[0].Rows.Count == 0 )
+        {
+            Response.Redirect("TTDisplayErrors.aspx");
+        }
+
         strWFDefinition = ds.Tables[0].Rows[0][1].ToString().Trim();
 
         this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + ": " + strTemName + LanguageHandle.GetWord("LiuChengTu").ToString().Trim();

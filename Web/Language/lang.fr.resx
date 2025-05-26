@@ -30975,4 +30975,22 @@
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value>Relier le Visa</value>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>Note : Veuillez vérifier que l'étiquette de l'onglet du tableau Excel est "Sheet1".</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>Modèle pour importer des matériaux liés au projet</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>Inclut des Sous-départements</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>Modèle pour importer des personnes visibles pour les clients</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>Supprimez les originaux lors de l'importation</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>Importer du personnel visible pour les clients</value>
+  </data>
 </root>

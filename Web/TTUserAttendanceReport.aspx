@@ -92,7 +92,7 @@
                                                     backgroundcssclass="modalBackground" y="150">
                                                 </cc1:modalpopupextender>
                                                 <asp:Label ID="LB_DepartName" runat="server"></asp:Label>
-                                                <asp:CheckBox ID="CB_IncludeChildDepartment" Text="包含子部门" runat="server" Checked="true" />
+                                                <asp:CheckBox ID="CB_IncludeChildDepartment" Text="<%$ Resources:lang,BaoHanZiBUMEN%>" runat="server" Checked="true" />
                                             </td>
                                             <td style="text-align: right;">
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuanGongMingChen%>"></asp:Label>

@@ -30975,4 +30975,22 @@
   <data name="GuanLianQianZheng" xml:space="preserve">
     <value>Vincular Visa</value>
   </data>
+  <data name="QQBBDBQWSHEET1" xml:space="preserve">
+    <value>Nota: Por favor, asegúrese de que la etiqueta de la hoja de Excel sea "Sheet1".</value>
+  </data>
+  <data name="XMGLWZDRMB" xml:space="preserve">
+    <value>Plantilla para Importar Materiales Relacionados con el Proyecto</value>
+  </data>
+  <data name="BaoHanZiBUMEN" xml:space="preserve">
+    <value>Incluye Subdepartamentos</value>
+  </data>
+  <data name="KHKSRYDRMB" xml:space="preserve">
+    <value>Plantilla para Importar Personal Visible para Clientes</value>
+  </data>
+  <data name="DaoRuShiShanChuYuanLaiDe" xml:space="preserve">
+    <value>Elimine los originales al importar</value>
+  </data>
+  <data name="KHKSRYDR" xml:space="preserve">
+    <value>Importar Personal Visible para Clientes</value>
+  </data>
 </root>
