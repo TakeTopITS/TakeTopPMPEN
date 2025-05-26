@@ -552,14 +552,14 @@
 
                                                                                 <tr>
 
-                                                                                    <td style="background-color: ButtonFace; width: 100%; text-align: left; height: 11px;" class="formItemBgStyleAlignLeft">
+                                                                                    <td style="background-color: ButtonFace; width: 100%; text-align: left; height: 11px;" class="formItemBgStyleForAlignLeft">
                                                                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,WenJianPingShenShenQing %>"></asp:Label>£º<asp:Label ID="LB_DocID" runat="server"></asp:Label>
                                                                                     </td>
                                                                                 </tr>
 
                                                                                 <tr>
 
-                                                                                    <td class="formItemBgStyleAlignLeft">
+                                                                                    <td class="formItemBgStyleForAlignLeft">
 
                                                                                         <table width="100%">
 

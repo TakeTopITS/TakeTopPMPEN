@@ -109,10 +109,10 @@
                                                 <div style="width: 100%;">
                                                     <table>
                                                         <tr>
-                                                            <td class="formItemBgStyleAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BanJi%>"></asp:Label>£º
                                                             </td>
-                                                            <td style="width: 120px; text-align: left;" class="formItemBgStyleAlignLeft">
+                                                            <td style="width: 120px; text-align: left;" class="formItemBgStyleForAlignLeft">
                                                                 <asp:DropDownList ID="DDL_StudentClass" DataTextField="ClassName" DataValueField="ID" runat="server">
                                                                 </asp:DropDownList>
                                                             </td>

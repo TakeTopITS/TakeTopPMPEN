@@ -621,14 +621,14 @@
                                                                     <table style="width: 98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                         <tr>
                                                                             <td style="background-color: ButtonFace; width: 100%; text-align: left; height: 11px;"
-                                                                                class="formItemBgStyleAlignLeft">
+                                                                                class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_tbDocReview" runat="server" Text="<%$ Resources:lang,DocReview %>"></asp:Label>
 
                                                                                 <asp:Label ID="LB_DocID" runat="server"></asp:Label>
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="text-align: left; width: 100%;" class="formItemBgStyleAlignLeft">
+                                                                            <td style="text-align: left; width: 100%;" class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_tbWFName" runat="server" Text="<%$ Resources:lang,Name %>"></asp:Label>
 
                                                                                 :<asp:TextBox ID="TB_WLName" runat="server" Width="309px"></asp:TextBox>
@@ -662,7 +662,7 @@
                                                                             </td>
                                                                         </tr>
                                                                         <tr style="font-size: 10pt">
-                                                                            <td style="text-align: left; width: 100%; height: 51px;" class="formItemBgStyleAlignLeft">
+                                                                            <td style="text-align: left; width: 100%; height: 51px;" class="formItemBgStyleForAlignLeft">
                                                                                 <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,Description %>"></asp:Label>
 
                                                                                 :<asp:TextBox ID="TB_Description" runat="server" TextMode="MultiLine" Width="441px"
@@ -670,7 +670,7 @@
                                                                             </td>
                                                                         </tr>
                                                                         <tr style="font-size: 10pt">
-                                                                            <td style="text-align: left; width: 100%;" class="formItemBgStyleAlignLeft">
+                                                                            <td style="text-align: left; width: 100%;" class="formItemBgStyleForAlignLeft">
                                                                                 <span style="font-size: 10pt">ги
                                                                                 <asp:Label ID="LB_tbRequestFeedback" runat="server" Text="<%$ Resources:lang,RequestFeedback %>"></asp:Label>
 

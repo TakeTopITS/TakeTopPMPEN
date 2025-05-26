@@ -148,34 +148,34 @@
                         <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
                             <table style="width: 90%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr style="display: none;">
-                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyleAlignLeft">
+                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>:
                                     </td>
-                                    <td style="text-align: left; height: 19px;" class="formItemBgStyleAlignLeft" colspan="2">
+                                    <td style="text-align: left; height: 19px;" class="formItemBgStyleForAlignLeft" colspan="2">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                         <asp:Label ID="LB_ProjectID" runat="server" Visible="False"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyleAlignLeft">
+                                    <td style="width: 15%;  height: 19px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZuoYeBianMa%>"></asp:Label>:
                                     </td>
-                                    <td style="text-align: left; height: 19px;" class="formItemBgStyleAlignLeft" colspan="2">
+                                    <td style="text-align: left; height: 19px;" class="formItemBgStyleForAlignLeft" colspan="2">
                                         <asp:TextBox ID="TB_TaskCode" runat="server" Width="99%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 15%;" class="formItemBgStyleAlignLeft">
+                                    <td style="width: 15%;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZuoYeMingCheng%>"></asp:Label>:
                                     </td>
-                                    <td colspan="2" style="text-align: left" class="formItemBgStyleAlignLeft">
+                                    <td colspan="2" style="text-align: left" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_TaskName" runat="server" Width="99%"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleAlignLeft" style="width: 15%; ">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 15%; ">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZuoYeYouXiaoQi%>"></asp:Label>:</td>
-                                    <td class="formItemBgStyleAlignLeft" colspan="2" style="text-align: left">
+                                    <td class="formItemBgStyleForAlignLeft" colspan="2" style="text-align: left">
                                         <asp:TextBox ID="DLC_BeginDate" runat="server" ReadOnly="false"></asp:TextBox>
                                         <ajaxtoolkit:calendarextender format="yyyy-MM-dd" id="CalendarExtender2" runat="server" targetcontrolid="DLC_BeginDate">
                                         </ajaxtoolkit:calendarextender>
