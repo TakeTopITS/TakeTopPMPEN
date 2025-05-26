@@ -3550,7 +3550,7 @@
     <value>F2</value>
   </data>
   <data name="FaBu" xml:space="preserve">
-    <value>Release</value>
+    <value>Public</value>
   </data>
   <data name="FaBuGongGao" xml:space="preserve">
     <value>Announcement</value>
@@ -30134,7 +30134,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Whether attending school</value>
   </data>
   <data name="ChengYuanLieBiao" xml:space="preserve">
-    <value>Row {0}, student name cannot be empty</value>
+    <value>Member List:</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>Prompt, this </value>
