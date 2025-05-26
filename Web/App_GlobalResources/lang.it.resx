@@ -28660,7 +28660,7 @@
     <value>Riga {0}: Il numero di prodotto non può essere vuoto</value>
   </data>
   <data name="ChanPinMingChen" xml:space="preserve">
-    <value>Riga {0}, il prezzo unitario IVA inclusa non può essere vuoto</value>
+    <value>Nome del Prodotto</value>
   </data>
   <data name="Di0HangChanPinMingChenBuNengWe" xml:space="preserve">
     <value>Riga {0}: Il nome del prodotto non può essere vuoto</value>

@@ -4051,7 +4051,7 @@
     <value>Only one attachment file, multiple files, after the package upload!</value>
   </data>
   <data name="Fou" xml:space="preserve">
-    <value>No</value>
+    <value>NO</value>
   </data>
   <data name="FPRWGXMCY" xml:space="preserve">
     <value>Assign tasks to project members</value>
@@ -30134,7 +30134,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Whether attending school</value>
   </data>
   <data name="ChengYuanLieBiao" xml:space="preserve">
-    <value>Row {0}, student name cannot be empty</value>
+    <value>Member List:</value>
   </data>
   <data name="ZZDiShiGaiLanguageHandleGetWor" xml:space="preserve">
     <value>Prompt, this </value>

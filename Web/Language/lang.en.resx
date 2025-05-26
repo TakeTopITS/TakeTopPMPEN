@@ -4051,7 +4051,7 @@
     <value>Only one attachment file, multiple files, after the package upload!</value>
   </data>
   <data name="Fou" xml:space="preserve">
-    <value>No</value>
+    <value>NO</value>
   </data>
   <data name="FPRWGXMCY" xml:space="preserve">
     <value>Assign tasks to project members</value>
