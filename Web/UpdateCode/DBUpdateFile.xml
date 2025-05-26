@@ -11509,4 +11509,9 @@ ALTER TABLE public.v_goodsmainplanmaterialdatasummaryreport
 GRANT ALL ON TABLE public.v_goodsmainplanmaterialdatasummaryreport TO postgres;
 GRANT SELECT ON TABLE public.v_goodsmainplanmaterialdatasummaryreport TO taketoppgdbreadonlyuser;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3744</ID>
+    <SQLText>UPdate T_SystemLanguage Set SortNumber = 1 Where LangCode = 'en';
+UPdate T_SystemLanguage Set SortNumber = 2 Where LangCode = 'zh-CN';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
