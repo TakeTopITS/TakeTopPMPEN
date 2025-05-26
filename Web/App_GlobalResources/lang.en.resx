@@ -8965,7 +8965,7 @@
     <value>N-off open question</value>
   </data>
   <data name="NO" xml:space="preserve">
-    <value>No</value>
+    <value>NO</value>
   </data>
   <data name="NoBianHao" xml:space="preserve">
     <value>No ID</value>
@@ -11461,13 +11461,7 @@
     <value>Setting items</value>
   </data>
   <data name="Shi" xml:space="preserve">
-    <value>It is</value>
-  </data>
-  <data name="Shi2" xml:space="preserve">
-    <value>It is</value>
-  </data>
-  <data name="Shi4" xml:space="preserve">
-    <value>It is</value>
+    <value>YES</value>
   </data>
   <data name="ShiBai" xml:space="preserve">
     <value>Failure</value>
@@ -15439,7 +15433,7 @@
     <value>Page</value>
   </data>
   <data name="YES" xml:space="preserve">
-    <value>It is</value>
+    <value>YES</value>
   </data>
   <data name="YeShu" xml:space="preserve">
     <value>Pages</value>
