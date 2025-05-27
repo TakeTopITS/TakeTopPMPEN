@@ -60,8 +60,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="right" style="padding: 5px 5px 0px 5px;">
-                                    <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+                                <td align="center" style="padding: 5px 5px 0px 5px;">
+                                    <table width="90%" border="0" align="left" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" style="padding-top: 4px;">
                                                 <table>

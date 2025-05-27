@@ -133,7 +133,7 @@
                     <!--startprint1-->
                     <table style="width: 1000px;">
                         <tr>
-                            <td colspan="5" align="left" style="height: 80px; font-size: xx-large;">
+                            <td colspan="5" align="center" style="height: 80px; font-size: xx-large;">
                                 <br />
                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YinHangBaoBiao%>"></asp:Label>
                                 <br />

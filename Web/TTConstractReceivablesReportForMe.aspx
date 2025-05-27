@@ -68,7 +68,7 @@
                 <ContentTemplate>
                     <%--  <div id="topNav">--%>
 
-                    <table cellpadding="3" cellspacing="0" class="formBgStyle" style="width: 1200px;">
+                    <table cellpadding="3" cellspacing="0" class="formBgStyle" style="width: 1100px;">
                         <tr>
                             <td class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiaFangDanWei%>"></asp:Label>£º
@@ -132,9 +132,9 @@
                     </table>
                     <br />
                     <!--startprint1-->
-                    <table width="1200px" cellpadding="0" cellspacing="0">
+                    <table width="100%" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td colspan="5" align="left" style="height: 80px; font-size: xx-large;">
+                            <td colspan="5" align="center" style="height: 80px; font-size: xx-large;">
                                 <br />
                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HeTongShouKuanQingKuangBaoBiao%>"></asp:Label>
                                 <br />

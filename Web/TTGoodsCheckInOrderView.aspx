@@ -62,7 +62,7 @@
                                 <tr>
                                     <td align="center">
 
-                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinSongHuoDan%>"></asp:Label>
+                                         <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,RuKuDan%>"></asp:Label>
                                         <br />
                                     </td>
                                 </tr>
