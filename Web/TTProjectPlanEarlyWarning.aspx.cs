@@ -200,8 +200,6 @@ public partial class TTProjectPlanEarlyWarning : System.Web.UI.Page
         strHQL += " and PlanID not In (Select Parent_ID From T_ImplePlan)";
         strHQL += " Order by ProjectID ASC,BeginTime ASC,EndTime ASC";
 
-        LogClass.WriteLogFile(strHQL);
-
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectPlanList");
         DataGrid1.DataSource = ds;
         DataGrid1.DataBind();
