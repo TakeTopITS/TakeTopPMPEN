@@ -622,26 +622,34 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyleForAlignLeft" style="height: 13px;"></td>
-                                                            <td colspan="3" class="formItemBgStyleForAlignRight">
-                                                                <table>
+                                                            <td colspan="3" class="formItemBgStyleForAlignLeft">
+                                                                <table width="100%">
                                                                     <tr>
-                                                                        <td style="padding-left: 30px;">
-                                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>：
-                                                                        </td>
-                                                                        <td>
-                                                                            <div onclick="popShowByURLForFixedSize('TTConstractUploadDocForParentWindow.aspx','Upload Doc', 600, 500)">
-                                                                                <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td style="width: 100px; text-align: center;">
-                                                                            <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
-                                                                                OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
-                                                                        </td>
-                                                                        <td style="padding-left: 10px;">
-                                                                            <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
-                                                                        </td>
-                                                                        <td style="display: none;">
-                                                                            <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
+                                                                        <td width="50%"></td>
+                                                                        <td align="right" style="padding-right:20px;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>：
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div onclick="popShowByURLForFixedSize('TTConstractUploadDocForParentWindow.aspx','Upload Doc', 600, 500)">
+                                                                                            <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td style="padding-left: 10px;">
+                                                                                        <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
+                                                                                    </td>
+                                                                                    <td style="display: none;">
+                                                                                        <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
+                                                                                            OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
+                                                                                    </td>
+
+                                                                                </tr>
+                                                                            </table>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -881,7 +889,7 @@
                                                                             <asp:Label ID="Label73" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label></strong></td>
                                                                         <td align="left"><strong>
                                                                             <asp:Label ID="Label74" runat="server" Text="<%$ Resources:lang,CaoZuoQuanXian%>"></asp:Label></strong></td>
-                                                                        <td align="left" ><strong></strong></td>
+                                                                        <td align="left"><strong></strong></td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
@@ -894,8 +902,8 @@
                                                         ShowHeader="False" Width="500px"
                                                         OnItemCommand="DataGrid12_ItemCommand">
                                                         <Columns>
-                                                             <asp:BoundColumn DataField="UserCode" HeaderText="Code">
-                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
+                                                            <asp:BoundColumn DataField="UserCode" HeaderText="Code">
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                                             </asp:BoundColumn>
                                                             <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
                                                                 DataTextField="UserName" HeaderText="Name" Target="_blank">
