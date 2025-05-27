@@ -489,7 +489,7 @@ public partial class TTWZSupplierMember : System.Web.UI.Page
                 projectMember.CreatorCode = strCreatorCode;
                 projectMember.Status = DL_Status.SelectedValue.Trim();
 
-                projectMember.WorkType = "ºÏÍ¬¹¤";
+                projectMember.WorkType = ¡°ContractWorker¡±;
                 projectMember.IDCard = TB_IDCard.Text.Trim();
 
                 projectMember.EnglishName = "";

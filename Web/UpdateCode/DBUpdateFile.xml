@@ -12412,4 +12412,11 @@ $BODY$;
 ALTER PROCEDURE public.pro_insertrcjprojectsetup(bigint, bigint, bigint, bigint, character varying, character varying, character varying, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, character varying, bigint, character varying, date, date, character varying, character varying)
     OWNER TO postgres;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3763</ID>
+    <SQLText>Update T_WorkType Set TypeName = 'ContractWorker' Where TypeName = '合同工';
+Update T_WorkType Set TypeName = 'TemporaryWorker' Where TypeName = '临时工';
+Update T_ProjectMember Set WorkType = 'ContractWorker' Where WorkType = '合同工';
+Update T_ProjectMember Set WorkType = 'TemporaryWorker' Where WorkType = '临时工';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
