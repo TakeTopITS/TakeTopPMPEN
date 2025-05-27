@@ -44,8 +44,8 @@
                      <div id="AboveDiv">
                     <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                         <tr>
-                            <td height="31" align="left" class="page_topbj" >
-                                <table width="70%" border="0"  cellpadding="0" cellspacing="0">
+                            <td height="31" align="center" class="page_topbj" >
+                                <table width="1400px" border="0"  cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuBie%>"></asp:Label>£º
@@ -144,7 +144,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="left">
+                            <td align="center">
                                 <!--startprint1-->
                                 <table cellpadding="0" cellspacing="0" width="100%">
                                     <tr>

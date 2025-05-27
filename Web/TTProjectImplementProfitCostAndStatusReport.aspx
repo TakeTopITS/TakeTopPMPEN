@@ -40,7 +40,7 @@
                     <div id="AboveDiv">
                         <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                             <tr>
-                                <td height="31" align="left" class="page_topbj">
+                                <td height="31" align="center" class="page_topbj">
                                     <table width="900px" border="0" cellpadding="0" cellspacing="0" style="padding: 5px 5px 5px 5px;">
                                         <tr>
                                             <td>
@@ -123,7 +123,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td align="center">
 
 
                                     <!--startprint1-->
@@ -139,7 +139,7 @@
                                             <td style="text-align: right; padding-right: 20px;">
                                                 <asp:Label ID="Label4" runat="server" Text="记录数"></asp:Label>
                                                 ：<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label6" runat="server" Text="条"></asp:Label>
+                                                <asp:Label ID="Label6" runat="server" Text="条"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>

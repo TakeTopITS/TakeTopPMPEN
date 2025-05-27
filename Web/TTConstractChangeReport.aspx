@@ -125,7 +125,7 @@
                     <!--startprint1-->
                     <table width="1200px" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td colspan="5" style="width: 1200px; height: 80px; font-size: xx-large;" align="left">
+                            <td colspan="5" style="width: 1200px; height: 80px; font-size: xx-large;" align="center">
                                 <br />
                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HeTongBianGengBaoBiao%>"></asp:Label>
                                 <br />
