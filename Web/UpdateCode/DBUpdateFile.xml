@@ -12240,4 +12240,176 @@ UNION
      LEFT JOIN t_project b ON a.relatedprojectid = b.projectid
      LEFT JOIN t_impleplan c ON a.relatedplanid = c.id AND b.projectid = c.projectid;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3761</ID>
+    <SQLText>-- PROCEDURE: public.pr_updateprojectname()
+
+-- DROP PROCEDURE IF EXISTS public.pr_updateprojectname();
+
+CREATE OR REPLACE PROCEDURE public.pr_updateprojectname(
+	)
+LANGUAGE 'plpgsql'
+AS $BODY$
+declare chrprojectname char(200);
+declare intprojectid bigint;
+declare chrplandetail varchar(200);
+
+begin
+	select 153 into intprojectid;
+	select '中国移动克拉玛依光纤设计与施工项目' into chrprojectname;
+	select '中国移动克拉玛依光纤设计与施工项目' into chrplandetail;
+
+	update t_project set projectname = chrprojectname where projectid = intprojectid;
+	update t_project set projectdetail = chrprojectname where projectid = intprojectid;
+	update t_project set acceptstandard = chrprojectname where projectid = intprojectid;
+	update t_dailywork set projectname = chrprojectname where projectid = intprojectid;
+	update t_impleplan set plandetail = chrprojectname where projectid = intprojectid and plandetail = chrplandetail;
+	update t_workflow set wlname = '项目：中国移动克拉玛依光纤设计与施工项目 进度评审' where relatedtype = 'Project' and relatedid = intprojectid;
+end
+$BODY$;
+
+ALTER PROCEDURE public.pr_updateprojectname()
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3762</ID>
+    <SQLText>-- PROCEDURE: public.pro_insertrcjprojectsetup(bigint, bigint, bigint, bigint, character varying, character varying, character varying, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, character varying, bigint, character varying, date, date, character varying, character varying)
+
+-- DROP PROCEDURE IF EXISTS public.pro_insertrcjprojectsetup(bigint, bigint, bigint, bigint, character varying, character varying, character varying, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, character varying, bigint, character varying, date, date, character varying, character varying);
+
+CREATE OR REPLACE PROCEDURE public.pro_insertrcjprojectsetup(
+	topertype bigint,
+	tmpid bigint,
+	titype bigint,
+	tino bigint,
+	titemname character varying,
+	titemcontent character varying,
+	titemunit character varying,
+	titemcount double precision,
+	tdeviceadjust double precision,
+	tmainadjust double precision,
+	twageadjust double precision,
+	tmaterialadjust double precision,
+	tmachineadjust double precision,
+	tdeviceadjustbudget double precision,
+	tmainadjustbudget double precision,
+	twageadjustbudget double precision,
+	tmaterialadjustbudget double precision,
+	tmachineadjustbudget double precision,
+	tpurchasefee double precision,
+	tpurchasefeebudget double precision,
+	tcomprehensivebudget double precision,
+	ttaxesbudget double precision,
+	ttotalbudget double precision,
+	tsupplierid character varying,
+	tsplit bigint,
+	tmemo character varying,
+	tbegintime date,
+	tendtime date,
+	tuserno character varying,
+	tsubitem character varying)
+LANGUAGE 'plpgsql'
+AS $BODY$
+declare tchangedate timestamp;
+begin
+	--如果是导入，则根据是否有记录来确定操作类型
+	if topertype=3 --import
+	then
+		if not exists (select 1 from t_rcjprojectcostperformancelist where projectid=tmpid and itemno=tino and itemtype=titype)
+		then
+			select 0 into topertype;
+		else
+			select 0 into topertype;
+		end if;
+	end if;
+
+	select now() into tchangedate;
+
+	if topertype=0 --add
+	then
+		--新增记录
+		insert into t_rcjprojectcostperformancelist
+			   (projectid
+			   ,itemno
+			   ,itemtype
+			   ,itemname
+			   ,itemcontent
+			   ,itemunit
+			   ,itempricedevice
+			   ,itempricemainmaterial
+			   ,itempricewage
+			   ,itempricematerial
+			   ,itempricemachine
+			   ,adjustid
+			   ,itempricechanged
+			   ,projectsupplierid
+			   ,ifsplit
+			   ,begintime
+			   ,endtime
+			   ,subitem
+			   )
+		 values
+			   (tmpid
+			   ,tino
+			   ,titype
+			   ,titemname
+			   ,titemcontent
+			   ,titemunit
+			   ,tdeviceadjust
+			   ,tmainadjust
+			   ,twageadjust
+			   ,tmaterialadjust
+			   ,tmachineadjust
+			   ,1
+				,0
+				,tsupplierid
+				,tsplit
+				,tbegintime
+				,tendtime
+				,tsubitem
+			);	
+
+			--插入调整记录
+			call pro_workadjustpriceoperation (1,0,tmpid,titype,tino,tdeviceadjust,tmainadjust,twageadjust,tmaterialadjust,tmachineadjust
+				,ttotalbudget,titemcount,tmemo,tuserno,tchangedate,'New price',tdeviceadjustbudget,tmainadjustbudget,twageadjustbudget,tmaterialadjustbudget 
+				,tmachineadjustbudget ,tpurchasefee,tpurchasefeebudget,tcomprehensivebudget,ttaxesbudget);
+	elseif topertype=1 --edit
+	then
+		update t_rcjprojectcostperformancelist set
+			itemname=titemname,
+			itemcontent=titemcontent,
+			itemunit=titemunit,
+			itempricedevice=tdeviceadjust,
+			itempricemainmaterial=tmainadjust,
+			itempricewage=twageadjust,
+			itempricematerial=tmaterialadjust,
+			itempricemachine=tmachineadjust,
+			projectsupplierid=tsupplierid,
+			ifsplit=tsplit,
+			begintime=tbegintime,
+			endtime=tendtime,
+			subitem=tsubitem
+		where projectid=tmpid and itemno=tino and itemtype=titype;
+
+		--修改调整记录
+		call pro_workadjustpriceoperation (1,1,tmpid,titype,tino,tdeviceadjust,tmainadjust,twageadjust,tmaterialadjust,tmachineadjust
+			,ttotalbudget,titemcount,tmemo,tuserno,tchangedate,'Modify old price',tdeviceadjustbudget,tmainadjustbudget,twageadjustbudget,tmaterialadjustbudget 
+			,tmachineadjustbudget ,tpurchasefee,tpurchasefeebudget,tcomprehensivebudget,ttaxesbudget);
+	elseif topertype=2 --del
+	then
+		delete from t_rcjprojectcostperformancelist where projectid=tmpid and itemno=tino and itemtype=titype;
+		delete from t_rcjprojectadjustpricelist where projectid=tmpid and itemno=tino and itemtype=titype;
+		delete from t_rcjprojectcostperformancebenchmar where projectid=tmpid and itemno=tino and itemtype=titype;
+		delete from t_rcjprojectworkdetails where projectid=tmpid and itemno=tino and itemtype=titype;
+		delete from t_rcjprojectworkconfirm where projectid=tmpid and itemno=tino and itemtype=titype;
+		delete from t_rcjprojectworkmoney where projectid=tmpid and itemno=tino and itemtype=titype;
+
+		call pro_sumtotalcostperformance(tmpid);
+	end if;
+end
+$BODY$;
+
+ALTER PROCEDURE public.pro_insertrcjprojectsetup(bigint, bigint, bigint, bigint, character varying, character varying, character varying, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, double precision, character varying, bigint, character varying, date, date, character varying, character varying)
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
