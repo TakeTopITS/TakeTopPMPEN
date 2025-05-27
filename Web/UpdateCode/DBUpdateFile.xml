@@ -11573,4 +11573,649 @@ ALTER TABLE public.v_projectplanlist
      LEFT JOIN t_taskassignrecord c ON b.taskid = c.taskid
   GROUP BY a.projectid, a.id, a.name, a.start_date, a.end_date, b.taskid;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3748</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_constractincomeexpensereport
+ AS
+ SELECT a.parta,
+    a.constractcode,
+    a.signdate,
+    to_char(a.signdate, 'yymmdd'::text) AS signdatestring,
+    COALESCE(g.receivablesamount, 0::numeric) AS receivablesamount,
+    COALESCE(h.payableamount, 0::numeric) AS payableamount,
+    a.currency,
+    a.status,
+    COALESCE(b.totalreceiveramount, 0::numeric) AS totalreceiveramount,
+    COALESCE(d.totalrecinvoiceamount, 0::numeric) AS totalrecinvoiceamount,
+    COALESCE(c.totaloutofpocketamount, 0::numeric) AS totaloutofpocketamount,
+    COALESCE(c.totaloutofpocketamounthome, 0::numeric) AS totaloutofpocketamounthome,
+    COALESCE(e.totalpayinvoiceamount, 0::numeric) AS totalpayinvoiceamount,
+    COALESCE(f.totaltax, 0::numeric) AS totaltax,
+    COALESCE(f.totaladdedvaluetax, 0::numeric) AS totaladdedvaluetax,
+    COALESCE(f.totalentrytax, 0::numeric) AS totalentrytax,
+    COALESCE(g.receivablesamount, 0::numeric) - COALESCE(h.payableamount, 0::numeric) - COALESCE(f.totaladdedvaluetax, 0::numeric) - COALESCE(f.totalentrytax, 0::numeric) AS profits
+   FROM t_constract a
+     FULL JOIN v_constractreceivablesaccountsummary g ON a.constractcode::text = g.constractcode::text AND a.status::bpchar &lt;&gt; 'Deleted'::bpchar
+     FULL JOIN v_constractpayableaccountsummary h ON a.constractcode::text = h.constractcode::text
+     FULL JOIN v_constractreceivablesrecord b ON a.constractcode::text = b.constractcode::text
+     FULL JOIN v_constractpayablerecord c ON a.constractcode::text = c.constractcode::text
+     FULL JOIN v_constractrelatedinvoice_open d ON a.constractcode::text = d.constractcode::text
+     FULL JOIN v_constractrelatedinvoice_receive e ON a.constractcode::text = e.constractcode::text
+     FULL JOIN v_constractrelatedentryorderforinner f ON a.constractcode::text = f.constractcode::text
+  WHERE char_length(rtrim(a.parta::text)) &gt; 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3749</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_documenttypefilter
+ AS
+ SELECT DISTINCT t_document.doctype,
+    t_document.doctypeid,
+    t_document.relatedtype,
+    t_document.relatedid
+   FROM t_document
+  WHERE t_document.status::bpchar &lt;&gt; 'Deleted'::bpchar;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3750</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_impleplanactive
+ AS
+ SELECT a.id,
+    a.projectid,
+    a.workid,
+    a.name,
+    a.start_date,
+    a.end_date,
+    a.resource,
+    a.budget,
+    a.makedate,
+    a.status,
+    a.parentid,
+    a.priorid,
+    a.type,
+    a.verid,
+    a.defaultschedule,
+    a.defaultcost,
+    a.backupid,
+    a.lockstatus,
+    a.updatemancode,
+    a.updatetime,
+    a.fromprojectid,
+    a.fromprojectplanverid,
+    a.creatorcode,
+    a.percent_done,
+    a.priority,
+    a.baseline_start_date,
+    a.baseline_end_date,
+    a.duration,
+    a.duration_unit,
+    a.other_field,
+    a.index,
+    a.pid,
+    a.parent_id,
+    a.fromplanid,
+    a.operatorcode,
+    a.operatorname,
+    a.sortnumber,
+    a.leader,
+    a.remark,
+    a.baseline_percent_done,
+    a.taskcolor,
+    a.leadercode,
+    a.workhour,
+    a.actualhour,
+    a.expense,
+    a.requirenumber,
+    a.finishednumber,
+    a.unitname,
+    a.price,
+    a.belongdepartcode,
+    a.belongdepartname,
+    b.beforetime
+   FROM t_impleplan a
+     LEFT JOIN ( SELECT a_1.id,
+            max(b_1.start_date) AS beforetime
+           FROM ( SELECT t_impleplan.id,
+                    t_impleplan.projectid,
+                    t_impleplan.workid,
+                    t_impleplan.name,
+                    t_impleplan.start_date,
+                    t_impleplan.end_date,
+                    t_impleplan.resource,
+                    t_impleplan.budget,
+                    t_impleplan.makedate,
+                    t_impleplan.status,
+                    t_impleplan.parentid,
+                    t_impleplan.priorid,
+                    t_impleplan.type,
+                    t_impleplan.verid,
+                    t_impleplan.defaultschedule,
+                    t_impleplan.defaultcost,
+                    t_impleplan.backupid,
+                    t_impleplan.lockstatus,
+                    t_impleplan.updatemancode,
+                    t_impleplan.updatetime,
+                    t_impleplan.fromprojectid,
+                    t_impleplan.fromprojectplanverid,
+                    t_impleplan.creatorcode,
+                    t_impleplan.percent_done,
+                    t_impleplan.priority,
+                    t_impleplan.baseline_start_date,
+                    t_impleplan.baseline_end_date,
+                    t_impleplan.duration,
+                    t_impleplan.duration_unit,
+                    t_impleplan.other_field,
+                    t_impleplan.index,
+                    t_impleplan.pid,
+                    t_impleplan.parent_id,
+                    t_impleplan.fromplanid,
+                    t_impleplan.operatorcode,
+                    t_impleplan.operatorname,
+                    t_impleplan.sortnumber,
+                    t_impleplan.leader,
+                    t_impleplan.remark,
+                    t_impleplan.baseline_percent_done,
+                    t_impleplan.taskcolor,
+                    t_impleplan.leadercode,
+                    t_impleplan.workhour,
+                    t_impleplan.actualhour,
+                    t_impleplan.expense,
+                    t_impleplan.requirenumber,
+                    t_impleplan.finishednumber,
+                    t_impleplan.unitname,
+                    t_impleplan.price,
+                    t_impleplan.belongdepartcode,
+                    t_impleplan.belongdepartname
+                   FROM t_impleplan
+                  WHERE (t_impleplan.verid IN ( SELECT t_projectplanversion.verid
+                           FROM t_projectplanversion
+                          WHERE t_projectplanversion.type::bpchar = '在用'::bpchar)) AND t_impleplan.start_date = t_impleplan.end_date) a_1
+             LEFT JOIN ( SELECT t_impleplan.id,
+                    t_impleplan.projectid,
+                    t_impleplan.workid,
+                    t_impleplan.name,
+                    t_impleplan.start_date,
+                    t_impleplan.end_date,
+                    t_impleplan.resource,
+                    t_impleplan.budget,
+                    t_impleplan.makedate,
+                    t_impleplan.status,
+                    t_impleplan.parentid,
+                    t_impleplan.priorid,
+                    t_impleplan.type,
+                    t_impleplan.verid,
+                    t_impleplan.defaultschedule,
+                    t_impleplan.defaultcost,
+                    t_impleplan.backupid,
+                    t_impleplan.lockstatus,
+                    t_impleplan.updatemancode,
+                    t_impleplan.updatetime,
+                    t_impleplan.fromprojectid,
+                    t_impleplan.fromprojectplanverid,
+                    t_impleplan.creatorcode,
+                    t_impleplan.percent_done,
+                    t_impleplan.priority,
+                    t_impleplan.baseline_start_date,
+                    t_impleplan.baseline_end_date,
+                    t_impleplan.duration,
+                    t_impleplan.duration_unit,
+                    t_impleplan.other_field,
+                    t_impleplan.index,
+                    t_impleplan.pid,
+                    t_impleplan.parent_id,
+                    t_impleplan.fromplanid,
+                    t_impleplan.operatorcode,
+                    t_impleplan.operatorname,
+                    t_impleplan.sortnumber,
+                    t_impleplan.leader,
+                    t_impleplan.remark,
+                    t_impleplan.baseline_percent_done,
+                    t_impleplan.taskcolor,
+                    t_impleplan.leadercode,
+                    t_impleplan.workhour,
+                    t_impleplan.actualhour,
+                    t_impleplan.expense,
+                    t_impleplan.requirenumber,
+                    t_impleplan.finishednumber,
+                    t_impleplan.unitname,
+                    t_impleplan.price,
+                    t_impleplan.belongdepartcode,
+                    t_impleplan.belongdepartname
+                   FROM t_impleplan
+                  WHERE (t_impleplan.verid IN ( SELECT t_projectplanversion.verid
+                           FROM t_projectplanversion
+                          WHERE t_projectplanversion.type::bpchar = 'InUse'::bpchar)) AND t_impleplan.start_date = t_impleplan.end_date) b_1 ON a_1.projectid = b_1.projectid AND a_1.start_date &gt; b_1.start_date
+          GROUP BY a_1.id) b ON a.id = b.id
+  WHERE (a.verid IN ( SELECT t_projectplanversion.verid
+           FROM t_projectplanversion
+          WHERE t_projectplanversion.type::bpchar = 'InUse'::bpchar)) AND a.start_date = a.end_date;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3751</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_mymember_workload
+ AS
+ SELECT DISTINCT a.type,
+    a.usercode,
+    a.username,
+    a.projectid,
+    a.projectname,
+    a.begindate,
+    a.enddate,
+    b.sortnumber,
+    a.status
+   FROM v_projectmember_workload a,
+    t_memberlevel b
+  WHERE a.usercode = b.usercode AND (a.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar, 'ToProject'::bpchar, 'ToTask'::bpchar]));</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3752</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectmember_workload
+ AS
+ SELECT '项目'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])
+UNION
+ SELECT '项目'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])))
+UNION
+ SELECT '计划'::text AS type,
+    a.usercode,
+    a.username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Plan:'::text) || b.id::character varying(30)::text AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type::bpchar = 'InUse'::bpchar
+UNION
+ SELECT '计划'::text AS type,
+    t_plan.usercode,
+    t_plan.username,
+    t_plan.planid::character varying(30) AS projectid,
+    t_plan.planname AS projectname,
+    t_plan.starttime AS begindate,
+    t_plan.endtime AS enddate,
+    t_plan.status
+   FROM t_plan
+UNION
+ SELECT '任务'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Task:'::text) || a.taskid::character varying(30)::text AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT '需求'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT '会议'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3753</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectmember_workloadbyprojecttask
+ AS
+ SELECT '项目'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.projectid AS pjid,
+    t_project.projectaddress AS taskid
+   FROM t_project
+  WHERE t_project.projectid = 0
+UNION
+ SELECT '任务'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Task:'::text) || a.taskid::character varying(30)::text AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.projectid AS pjid,
+    b.taskid::character varying(30) AS taskid
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid AND (b.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar, 'ToProject'::bpchar, 'ToTask'::bpchar]));</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3754</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectmember_workloadschedule
+ AS
+ SELECT 'Project'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])
+UNION
+ SELECT 'Project'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])))
+UNION
+ SELECT 'Plan'::text AS type,
+    a.usercode,
+    a.username,
+    b.id::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type::bpchar = '在用'::bpchar
+UNION
+ SELECT 'Plan'::text AS type,
+    t_plan.usercode,
+    t_plan.username,
+    t_plan.planid::character varying(30) AS projectid,
+    t_plan.planname AS projectname,
+    t_plan.starttime AS begindate,
+    t_plan.endtime AS enddate,
+    t_plan.status
+   FROM t_plan
+UNION
+ SELECT 'Task'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    a.taskid::character varying(30) AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT 'Requirement'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT 'Meeting'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3755</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectmember_workloadschedule
+ AS
+ SELECT 'Project'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])
+UNION
+ SELECT 'Project'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status::bpchar &lt;&gt; ALL (ARRAY['Closed'::bpchar, 'Completed'::bpchar, 'CaseClosed'::bpchar, 'Cancel'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar, 'Rejected'::bpchar, 'Suspended'::bpchar])))
+UNION
+ SELECT 'Plan'::text AS type,
+    a.usercode,
+    a.username,
+    b.id::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type::bpchar = '在用'::bpchar
+UNION
+ SELECT 'Plan'::text AS type,
+    t_plan.usercode,
+    t_plan.username,
+    t_plan.planid::character varying(30) AS projectid,
+    t_plan.planname AS projectname,
+    t_plan.starttime AS begindate,
+    t_plan.endtime AS enddate,
+    t_plan.status
+   FROM t_plan
+UNION
+ SELECT 'Task'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    a.taskid::character varying(30) AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT 'Requirement'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT 'Meeting'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3756</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectmembertaskdetailreport
+ AS
+ SELECT COALESCE(f.departcode, ''::bpchar) AS departcode,
+    COALESCE(f.departname, ''::character varying) AS departname,
+    COALESCE(e.usercode, ''::bpchar) AS usercode,
+    COALESCE(e.username, ''::bpchar) AS username,
+        CASE b.projectid
+            WHEN 1 THEN NULL::bigint
+            ELSE b.projectid
+        END AS projectid,
+    COALESCE(b.projectcode, ''::character varying) AS projectcode,
+    COALESCE(b.projectname, ''::bpchar) AS projectname,
+    COALESCE(c.id::text, ''::text) AS planid,
+    COALESCE(c.name, ''::character varying) AS planname,
+    a.taskid,
+    a.task AS taskname,
+    c.start_date AS planbegintime,
+    c.end_date AS planendtime,
+    a.begindate AS taskbegindate,
+    d.operationtime AS taskfirstoperatetime,
+    a.enddate AS taskenddate,
+    d.operationtime AS tasklastestoperatetime,
+    a.status,
+    f_getsumtasklog(a.taskid) AS tasklog,
+    a.manhour,
+    a.type AS tasktype
+   FROM t_projecttask a
+     LEFT JOIN t_project b ON a.projectid = b.projectid
+     LEFT JOIN t_impleplan c ON a.planid = c.id AND (c.verid IN ( SELECT t_projectplanversion.verid
+           FROM t_projectplanversion
+          WHERE t_projectplanversion.type::bpchar = 'InUse'::bpchar))
+     LEFT JOIN t_taskassignrecord d ON a.taskid = d.taskid AND (d.id IN ( SELECT min(t_taskassignrecord.id) AS min
+           FROM t_taskassignrecord
+          GROUP BY t_taskassignrecord.taskid))
+     LEFT JOIN t_projectmember e ON d.operatorcode = e.usercode
+     LEFT JOIN t_department f ON e.departcode = f.departcode
+     LEFT JOIN t_taskassignrecord g ON a.taskid = g.taskid AND (g.id IN ( SELECT min(t_taskassignrecord.id) AS min
+           FROM t_taskassignrecord
+          GROUP BY t_taskassignrecord.taskid))
+  WHERE (a.planid IN ( SELECT t_impleplan.id AS planid
+           FROM t_impleplan)) AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project));</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3757</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_prorelateduser
+ AS
+ SELECT a.id,
+    a.projectid,
+    b.projectcode,
+    b.projectname,
+    b.projecttype,
+    b.status,
+    b.begindate,
+    b.enddate,
+    b.parentid,
+    b.customername,
+    b.pingpai,
+    b.productname,
+    a.unithoursalary,
+    a.actor,
+    a.joindate,
+    a.usercode,
+    a.username,
+    b.pmcode,
+    b.pmname,
+    b.priority,
+    b.usercode AS makemancode,
+    b.username AS makemanname,
+    b.budget,
+    b.manhour,
+    b.mannumber,
+    b.finishpercent,
+    a.status AS mystatus,
+    b.status AS prostatus,
+    b.customerprojectcode,
+    b.confirmedbysupper,
+    b.makedate,
+    b.projectstartupneedsupperconfirm
+   FROM t_relateduser a
+     JOIN t_project b ON a.projectid = b.projectid
+  WHERE b.status::bpchar &lt;&gt; ALL (ARRAY['New'::bpchar, 'Review'::bpchar, 'Hide'::bpchar, 'Deleted'::bpchar, 'Archived'::bpchar]);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3758</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectbasedatasummaryreport
+ AS
+ SELECT t_project.projectid,
+    'Workload(Estimated)'::text AS title,
+    t_project.mannumber AS summarynumber
+   FROM t_project
+UNION
+ SELECT t_relateduser.projectid,
+    'Workload(Actual)'::text AS title,
+    count(t_relateduser.usercode) AS summarynumber
+   FROM t_relateduser
+  GROUP BY t_relateduser.projectid
+UNION
+ SELECT t_project.projectid,
+    'Cost(Estimated)'::text AS title,
+    t_project.budget AS summarynumber
+   FROM t_project
+UNION
+ SELECT t_proexpense.projectid,
+    'Cost(Actual)'::text AS title,
+    sum(t_proexpense.amount) AS summarynumber
+   FROM t_proexpense
+  GROUP BY t_proexpense.projectid
+UNION
+ SELECT t_project.projectid,
+    'Cycle(Estimated)'::text AS title,
+    t_project.manhour AS summarynumber
+   FROM t_project
+UNION
+ SELECT t_dailywork.projectid,
+    'Cycle(Actual)'::text AS title,
+    sum(t_dailywork.confirmmanhour) AS summarynumber
+   FROM t_dailywork
+  GROUP BY t_dailywork.projectid;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
