@@ -41,7 +41,7 @@
                     <div id="AboveDiv">
                         <table cellpadding="0" cellspacing="0" width="100%" class="bian">
                             <tr>
-                                <td height="31" align="left" class="page_topbj">
+                                <td height="31" align="center" class="page_topbj">
                                     <table width="900px" border="0" cellpadding="0" cellspacing="0" style="padding: 5px 5px 5px 5px;">
                                         <tr>
                                             <td>
@@ -121,9 +121,7 @@
                             </tr>
 
                             <tr>
-                                <td>
-
-
+                                <td align="center">
 
                                     <!--startprint1-->
                                     <table cellpadding="0" cellspacing="0" width="100%">

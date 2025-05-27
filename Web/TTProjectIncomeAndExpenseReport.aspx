@@ -101,7 +101,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td align="center">
                                                         <!--startprint1-->
                                                         <table style="width: 980px;">
                                                             <tr>

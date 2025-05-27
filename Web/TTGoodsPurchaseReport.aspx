@@ -47,7 +47,7 @@
                     <table cellpadding="0" cellspacing="0" width="1480px">
                         <tr>
 
-                            <td style="width: 100%;" align="left">
+                            <td style="width: 100%;" align="center">
                                 <table style="width: 980px;">
                                     <tr>
                                         <td style="text-align: right;" width="6%">
