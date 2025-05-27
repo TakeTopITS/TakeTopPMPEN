@@ -12218,4 +12218,26 @@ UNION
    FROM t_dailywork
   GROUP BY t_dailywork.projectid;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3759</ID>
+    <SQLText>DROP VIEW public.pro_projectimplementmilestonereceivepayreport;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3760</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.pro_projectimplementmilestonereceivepayreport
+ AS
+ SELECT b.projectid AS "ProjectID",
+    b.projectname AS "ProjectName",
+    COALESCE(c.id, 0::bigint) AS "PlanID",
+    COALESCE(c.name, ''::character varying) AS "PlanName",
+    a.account AS "Account",
+    a.receivablestime AS "ReceivablesTime",
+    a.receivablesaccount AS "ReceivablesAccount",
+    a.receiveraccount AS "ReceiverAccount",
+    a.receivertime AS "ReceiverTime",
+    a.receivablesaccount - a.receiveraccount AS "UNReceiverAccount"
+   FROM t_constractreceivables a
+     LEFT JOIN t_project b ON a.relatedprojectid = b.projectid
+     LEFT JOIN t_impleplan c ON a.relatedplanid = c.id AND b.projectid = c.projectid;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
