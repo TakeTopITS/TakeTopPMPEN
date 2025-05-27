@@ -169,7 +169,7 @@
 
                                         <tr>
                                             <td class="formItemBgStyleForAlignLeft">
-                                                <asp:Label ID="Label46" runat="server" Text="Ó¦½»¸½¼þ"></asp:Label>£º </td>
+                                                <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,YingJiaoFuJian%>"></asp:Label>£º </td>
                                             <td class="formItemBgStyleForAlignLeft" colspan="3" >
                                                 <%#DataBinder.Eval(Container.DataItem, "Attachment")%>
                                             </td>

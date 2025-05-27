@@ -98,7 +98,7 @@
                                                                         <table style="width: 90%;" cellpadding="2" cellspacing="0" class="formBgStyle">
 
                                                                             <tr>
-                                                                                <td style="width: 10%;  height: 24px;" class="formItemBgStyleForAlignLeft">
+                                                                                <td style="width: 14%;  height: 24px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td colspan="3" style="height: 24px; "  class="formItemBgStyleForAlignLeft">
@@ -113,10 +113,10 @@
                                                                                 <td class="formItemBgStyleForAlignLeft">
                                                                                     <asp:TextBox ID="TB_RiskName" runat="server" Width="98%"></asp:TextBox>
                                                                                 </td>
-                                                                                <td class="formItemBgStyleForAlignLeft">
+                                                                                <td style="width: 7%;  height: 24px;" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,JiBie%>"></asp:Label>£º
                                                                                 </td>
-                                                                                <td style="font-size: 12pt; width: 20%; "  class="formItemBgStyleForAlignLeft">
+                                                                                <td style="font-size: 12pt;"  class="formItemBgStyleForAlignLeft">
                                                                                     <asp:DropDownList ID="DL_RiskLevel" runat="server">
                                                                                         <asp:ListItem Value="Medium" Text="<%$ Resources:lang,Zhong%>" />
                                                                                         <asp:ListItem Value="High" Text="<%$ Resources:lang,Gao%>" />
