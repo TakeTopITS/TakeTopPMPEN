@@ -30,7 +30,8 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        $(function () { if (top.location != self.location) { } else { CloseWebPage(); }
+        $(function () {
+            if (top.location != self.location) { } else { CloseWebPage(); }
 
 
 
@@ -70,17 +71,21 @@
                         <td style="width: 100%; height: 80px; font-size: xx-large; text-align: center;">
                             <table width="100%">
                                 <tr>
-                                    <td width="200px">
+                                    <td align="center">
+
+                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinSongHuoDan%>"></asp:Label>
+                                        <br />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left">
                                         <%--<img src="Logo/FormLogo.png" />--%>
                                         <asp:Image ID="Img_BarCode" runat="server" />
+
                                     </td>
-                                    <td width="550px" style="font-size: xx-large; text-align: center;" class="auto-style1">
-                                        <br />
-                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinBaoJiaDan%>"></asp:Label>
-                                        <br />
-                                    </td>
-                                    <td>&nbsp;</td>
                                 </tr>
+
                             </table>
                         </td>
                     </tr>
@@ -149,7 +154,7 @@
                                                         <asp:Label ID="Label70" runat="server" Text="<%$ Resources:lang,GuiGe %>"></asp:Label>
                                                     </strong>
                                                 </td>
-                                                 <td align="left" width="9%">
+                                                <td align="left" width="9%">
                                                     <strong>
                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,PinPai %>"></asp:Label>
                                                     </strong>
@@ -186,13 +191,13 @@
                                 <Columns>
 
                                     <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="GoodsName" HeaderText="Name">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
@@ -201,16 +206,16 @@
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Number" HeaderText="Quantity">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Unit" HeaderText="Unit">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Amount" HeaderText="Amount">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
                                 </Columns>
 
@@ -220,7 +225,7 @@
 
                                 <ItemStyle CssClass="itemStyle" />
 
-                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                             </asp:DataGrid>
@@ -247,4 +252,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

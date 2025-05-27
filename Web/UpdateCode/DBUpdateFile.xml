@@ -12419,4 +12419,212 @@ Update T_WorkType Set TypeName = 'TemporaryWorker' Where TypeName = '临时工';
 Update T_ProjectMember Set WorkType = 'ContractWorker' Where WorkType = '合同工';
 Update T_ProjectMember Set WorkType = 'TemporaryWorker' Where WorkType = '临时工';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3764</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectincome
+ AS
+ SELECT v_projectdailywork.usercode,
+    v_projectdailywork.username,
+    v_projectdailywork.projectid,
+    v_projectdailywork.projectname,
+    sum(v_projectdailywork.confirmdailysalary) AS totalsalary
+   FROM v_projectdailywork
+  WHERE v_projectdailywork.salarymethod::text = 'LaborHours'::text
+  GROUP BY v_projectdailywork.usercode, v_projectdailywork.username, v_projectdailywork.projectid, v_projectdailywork.projectname
+UNION
+ SELECT a.usercode,
+    a.username,
+    a.projectid,
+    a.projectname,
+    b.projectamount * a.promissionscale AS totalsalary
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND a.salarymethod::text = 'Commission'::text;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3765</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectincomeunionexpense
+ AS
+ SELECT v_projectincome.usercode,
+    v_projectincome.username,
+    v_projectincome.projectid,
+    v_projectincome.projectname,
+    v_projectincome.totalsalary,
+    0 AS totalcharge
+   FROM v_projectincome
+UNION
+ SELECT v_projectcharge.usercode,
+    v_projectcharge.username,
+    v_projectcharge.projectid,
+    v_projectcharge.projectname,
+    0 AS totalsalary,
+    v_projectcharge.totalcharge
+   FROM v_projectcharge;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3766</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectincomeandexpense
+ AS
+ SELECT v_projectincomeunionexpense.usercode,
+    v_projectincomeunionexpense.username,
+    v_projectincomeunionexpense.projectid,
+    sum(v_projectincomeunionexpense.totalsalary) AS totalsalary,
+    sum(v_projectincomeunionexpense.totalcharge) AS totalexpense,
+    sum(v_projectincomeunionexpense.totalsalary) - sum(v_projectincomeunionexpense.totalcharge) AS totalincome
+   FROM v_projectincomeunionexpense
+  GROUP BY v_projectincomeunionexpense.usercode, v_projectincomeunionexpense.username, v_projectincomeunionexpense.projectid;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3767</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_asset_stocknumber
+ AS
+ SELECT v_item_asset.assetcode,
+    sum(v_item_asset.number) AS stocknumber
+   FROM v_item_asset
+  GROUP BY v_item_asset.assetcode;
+
+ALTER TABLE public.v_asset_stocknumber
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3768</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_constractpayablereport
+ AS
+ SELECT a.payableid,
+    a.billcode,
+    a.receiver,
+    b.departcode,
+    b.constractcode,
+    b.constractname,
+    b.parta,
+    b.partb,
+    b.partaoperator,
+    b.partboperator,
+    b.amount,
+    a.payableaccount,
+    a.payabletime,
+    a.outofpocketaccount,
+    a.outofpockettime,
+    a.unpayamount,
+    a.currencytype,
+    a.handlingcharge
+   FROM v_constractpayablerecordsummary a,
+    t_constract b
+  WHERE a.constractcode::text = b.constractcode::text;
+
+ALTER TABLE public.v_constractpayablereport
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3769</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_constractpayablereportsummary
+ AS
+ SELECT v_constractpayablereport.billcode,
+    v_constractpayablereport.departcode,
+    v_constractpayablereport.constractcode,
+    v_constractpayablereport.constractname,
+    v_constractpayablereport.receiver,
+    v_constractpayablereport.parta,
+    v_constractpayablereport.partaoperator,
+    v_constractpayablereport.payabletime,
+    to_char(v_constractpayablereport.payabletime, 'yymmdd'::text) AS payabletimestring,
+    v_constractpayablereport.currencytype,
+    sum(v_constractpayablereport.payableaccount) AS payableaccount,
+    sum(v_constractpayablereport.outofpocketaccount) AS outofpocketaccount,
+    sum(v_constractpayablereport.unpayamount) AS unpayamount,
+    COALESCE(sum(v_constractpayablereport.handlingcharge), 0::numeric) AS handlingcharge
+   FROM v_constractpayablereport
+  GROUP BY v_constractpayablereport.billcode, v_constractpayablereport.departcode, v_constractpayablereport.constractcode, v_constractpayablereport.constractname, v_constractpayablereport.receiver, v_constractpayablereport.parta, v_constractpayablereport.partaoperator, (to_char(v_constractpayablereport.payabletime, 'yymmdd'::text)), v_constractpayablereport.payabletime, v_constractpayablereport.currencytype;
+
+ALTER TABLE public.v_constractpayablereportsummary
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3770</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_constractreceivablesreportsummary
+ AS
+ SELECT v_constractreceivablesreport.billcode,
+    v_constractreceivablesreport.payer,
+    v_constractreceivablesreport.departcode,
+    v_constractreceivablesreport.constractcode,
+    v_constractreceivablesreport.constractname,
+    v_constractreceivablesreport.parta,
+    v_constractreceivablesreport.partaoperator,
+    v_constractreceivablesreport.currencytype,
+    v_constractreceivablesreport.receivablestime,
+    to_char(v_constractreceivablesreport.receivablestime, 'yymmdd'::text) AS receivablestimestring,
+    sum(v_constractreceivablesreport.receivablesaccount) AS receivablesaccount,
+    sum(v_constractreceivablesreport.receiveraccount) AS receiveraccount,
+    sum(v_constractreceivablesreport.unreceiveamount) AS unreceiveamount,
+    sum(v_constractreceivablesreport.invoiceaccount) AS invoiceaccount
+   FROM v_constractreceivablesreport
+  GROUP BY v_constractreceivablesreport.departcode, v_constractreceivablesreport.constractcode, v_constractreceivablesreport.constractname, v_constractreceivablesreport.billcode, v_constractreceivablesreport.payer, v_constractreceivablesreport.parta, v_constractreceivablesreport.partaoperator, v_constractreceivablesreport.currencytype, (to_char(v_constractreceivablesreport.receivablestime, 'yymmdd'::text)), v_constractreceivablesreport.receivablestime;
+
+ALTER TABLE public.v_constractreceivablesreportsummary
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3771</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_item_safetystockreport
+ AS
+ SELECT DISTINCT a.assetcode,
+    a.assetname,
+    a.type,
+    a.specification,
+    a.safetystock,
+    a.ownercode,
+    b.stocknumber,
+    b.stocknumber - a.safetystock AS banlance,
+    a.unitname
+   FROM v_item_asset a,
+    v_asset_stocknumber b
+  WHERE a.assetcode = b.assetcode AND a.safetystock &gt; b.stocknumber;
+
+ALTER TABLE public.v_item_safetystockreport
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3772</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectdailyworkbonussummary
+ AS
+ SELECT v_projectdailywork.usercode,
+    v_projectdailywork.username,
+    v_projectdailywork.projectid,
+    sum(v_projectdailywork.confirmbonus) AS bonus
+   FROM v_projectdailywork
+  GROUP BY v_projectdailywork.usercode, v_projectdailywork.username, v_projectdailywork.projectid;
+
+ALTER TABLE public.v_projectdailyworkbonussummary
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3773</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_workplanview
+ AS
+ SELECT v_workplanrelatedschedule.planid,
+    v_workplanrelatedschedule.projectid,
+    v_workplanrelatedschedule.workid,
+    v_workplanrelatedschedule.plandetail,
+    v_workplanrelatedschedule.leadercode,
+    v_workplanrelatedschedule.leader,
+    v_workplanrelatedschedule.begintime,
+    v_workplanrelatedschedule.endtime,
+    v_workplanrelatedschedule.resource,
+    v_workplanrelatedschedule.budget,
+    v_workplanrelatedschedule.makedate,
+    v_workplanrelatedschedule.status,
+    v_workplanrelatedschedule.parentid,
+    v_workplanrelatedschedule.priorid,
+    v_workplanrelatedschedule.type,
+    v_workplanrelatedschedule.verid,
+    v_workplanrelatedschedule.defaultschedule,
+    v_workplanrelatedschedule.defaultcost,
+    v_workplanrelatedschedule.parentidgantt,
+    max(v_workplanrelatedschedule.finishpercent) AS finishpercent
+   FROM v_workplanrelatedschedule
+  GROUP BY v_workplanrelatedschedule.planid, v_workplanrelatedschedule.projectid, v_workplanrelatedschedule.workid, v_workplanrelatedschedule.plandetail, v_workplanrelatedschedule.leadercode, v_workplanrelatedschedule.leader, v_workplanrelatedschedule.begintime, v_workplanrelatedschedule.endtime, v_workplanrelatedschedule.resource, v_workplanrelatedschedule.budget, v_workplanrelatedschedule.makedate, v_workplanrelatedschedule.status, v_workplanrelatedschedule.parentid, v_workplanrelatedschedule.priorid, v_workplanrelatedschedule.type, v_workplanrelatedschedule.verid, v_workplanrelatedschedule.defaultschedule, v_workplanrelatedschedule.defaultcost, v_workplanrelatedschedule.parentidgantt;
+
+ALTER TABLE public.v_workplanview
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

@@ -35,7 +35,7 @@
                             <td height="31">
                                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td width="95%" height="108" align="left" style="font-size: 20pt;">
+                                        <td width="95%" height="108" align="center" style="font-size: 20pt;">
                                             <br />
                                             <asp:Label ID="LB_ReportName" runat="server"></asp:Label>
                                             <br />

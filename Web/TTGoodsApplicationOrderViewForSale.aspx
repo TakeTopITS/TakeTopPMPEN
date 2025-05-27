@@ -20,7 +20,8 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        $(function () { if (top.location != self.location) { } else { CloseWebPage(); } if (top.location != self.location) { } else { CloseWebPage(); }
+        $(function () {
+            if (top.location != self.location) { } else { CloseWebPage(); } if (top.location != self.location) { } else { CloseWebPage(); }
 
 
 
@@ -46,7 +47,7 @@
     <center>
         <form id="form2" runat="server">
             <div style="position: relative; top: 50px;">
-                 <table width="100%">
+                <table width="100%">
                     <tr>
                         <td width="" align="right">
                             <a href="#" onclick="preview1()">
@@ -56,23 +57,27 @@
 
                     </tr>
                 </table>
-                  <!--startprint1-->
+                <!--startprint1-->
                 <table style="width: 980px;">
                     <tr>
                         <td style="width: 100%; height: 80px; font-size: xx-large; text-align: center;">
                             <table width="100%">
                                 <tr>
-                                   <td width="200px">
-                                        <%--<img src="Logo/FormLogo.png" />--%>
-                                         <asp:Image ID="Img_BarCode" runat="server" />
-                                    </td>
-                                    <td width="550px" style="font-size: xx-large; text-align: center;" class="auto-style1">
-                                        <br />
-                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,XiaoShouLingYongShenQing%>"></asp:Label>
+                                    <td align="center">
+
+                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinSongHuoDan%>"></asp:Label>
                                         <br />
                                     </td>
-                                    <td>&nbsp;</td>
                                 </tr>
+
+                                <tr>
+                                    <td align="left">
+                                        <%--<img src="Logo/FormLogo.png" />--%>
+                                        <asp:Image ID="Img_BarCode" runat="server" />
+
+                                    </td>
+                                </tr>
+
                             </table>
                         </td>
                     </tr>
@@ -125,7 +130,7 @@
                                                     <strong>
                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label></strong>
                                                 </td>
-                                                 <td width="8%" align="left">
+                                                <td width="8%" align="left">
                                                     <strong>
                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,PinPai%>"></asp:Label></strong>
                                                 </td>
@@ -153,33 +158,33 @@
                                 Height="30px" Width="100%" ID="DataGrid1">
                                 <Columns>
                                     <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="GoodsName" HeaderText="物料名">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Brand" HeaderText="Brand">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Number" HeaderText="Quantity">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Unit" HeaderText="Unit">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="CheckOutNumber" HeaderText="已出库">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
 
                                 </Columns>
                                 <ItemStyle CssClass="itemStyle"></ItemStyle>
-                                <PagerStyle Horizontalalign="center"></PagerStyle>
+                                <PagerStyle HorizontalAlign="center"></PagerStyle>
                             </asp:DataGrid>
 
                             <br />
@@ -199,9 +204,10 @@
                         </td>
                     </tr>
                 </table>
-                 <!--endprint1-->
+                <!--endprint1-->
             </div>
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

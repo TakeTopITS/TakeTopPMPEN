@@ -65,7 +65,7 @@
                                                     <SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                 </asp:TreeView>
                                             </td>
-                                            <td align="left">
+                                            <td align="center">
                                                 <table width="80%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">

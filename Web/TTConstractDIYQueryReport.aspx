@@ -50,26 +50,26 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div id="AboveDiv" style="padding: 5px 5px 5px 5px;">
-                        <div style="text-align: left;">
+                        <div style="text-align: center;">
                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td style="width: 10%;" class="formItemBgStyleForAlignLeft">
+                                    <td style="width: 80px;" class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label2" runat="server" Text="SQLCode"></asp:Label>£º
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 80%;">
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_SQLCode" runat="server" Width="99%" Height="600px" TextMode="MultiLine"></asp:TextBox>
                                     </td>
 
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%;">&nbsp;</td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 80%; text-align: left;">
+                                    <td class="formItemBgStyleForAlignLeft" >&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="text-align: left;">
                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,YGZYGDMCYAQKLBNSYDeleteUpdateDropInsertAlterYuJu%>"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 10%;">&nbsp;</td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 80%;">
+                                    <td class="formItemBgStyleForAlignLeft" >&nbsp;</td>
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td>
@@ -92,7 +92,7 @@
 
                         <table width="100%" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td colspan="2" style="width: 100%; height: 80px; font-size: xx-large;" align="left">
+                                <td colspan="2" style="width: 100%; height: 80px; font-size: xx-large;" align="center">
                                     <br />
                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HeTongChaXunBaobiao%>"></asp:Label>
                                     <br />

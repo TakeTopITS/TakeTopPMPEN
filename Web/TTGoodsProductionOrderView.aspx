@@ -56,17 +56,21 @@
                         <td style="width: 100%; height: 80px; font-size: xx-large; text-align: center;">
                             <table width="100%">
                                 <tr>
-                                     <td width="200px">
-                                        <%--<img src="Logo/FormLogo.png" />--%>
-                                         <asp:Image ID="Img_BarCode" runat="server" />
-                                    </td>
-                                    <td width="550px" style="font-size: xx-large; text-align: center;" class="auto-style1">
-                                        <br />
-                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShengChanZuoYeDan%>"></asp:Label>
+                                    <td align="center">
+
+                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinSongHuoDan%>"></asp:Label>
                                         <br />
                                     </td>
-                                    <td>&nbsp;</td>
                                 </tr>
+
+                                <tr>
+                                    <td align="left">
+                                        <%--<img src="Logo/FormLogo.png" />--%>
+                                        <asp:Image ID="Img_BarCode" runat="server" />
+
+                                    </td>
+                                </tr>
+
                             </table>
                         </td>
                     </tr>
@@ -168,15 +172,14 @@
                                                         <asp:Label ID="Label86" runat="server" Text="<%$ Resources:lang,JinE%>"></asp:Label>
                                                     </strong>
                                                 </td>
-                                                <td align="left" >
+                                                <td align="left">
                                                     <strong>
                                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,JiaoFuRiQi%>"></asp:Label></strong>
                                                 </td>
-                                               <%-- <td align="left" width="10%">
+                                                <%-- <td align="left" width="10%">
                                                     <strong>
                                                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BaoZhuangFangShi%>"></asp:Label></strong>
                                                 </td>--%>
-
                                             </tr>
                                         </table>
                                     </td>
@@ -207,31 +210,30 @@
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Number" HeaderText="Quantity">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Amount" HeaderText="Amount">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="DeliveryDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="交货日期">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left"  />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                     </asp:BoundColumn>
-                                   <%-- <asp:BoundColumn DataField="PackagingSystem" HeaderText="PackagingMethod">
+                                    <%-- <asp:BoundColumn DataField="PackagingSystem" HeaderText="PackagingMethod">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>--%>
-
                                 </Columns>
 
                                 <ItemStyle CssClass="itemStyle" />
                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                 <EditItemStyle BackColor="#2461BF" />
                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                             </asp:DataGrid>
                         </td>
                     </tr>
@@ -266,4 +268,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

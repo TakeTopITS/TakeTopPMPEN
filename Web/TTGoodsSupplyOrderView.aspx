@@ -20,7 +20,8 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        $(function () { if (top.location != self.location) { } else { CloseWebPage(); }
+        $(function () {
+            if (top.location != self.location) { } else { CloseWebPage(); }
 
 
 
@@ -63,17 +64,21 @@
                         <td style="width: 100%; height: 80px; font-size: xx-large; text-align: center;">
                             <table width="100%">
                                 <tr>
-                                     <td width="200px">
+                                    <td align="center">
+
+                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinSongHuoDan%>"></asp:Label>
+                                        <br />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left">
                                         <%--<img src="Logo/FormLogo.png" />--%>
                                         <asp:Image ID="Img_BarCode" runat="server" />
+
                                     </td>
-                                    <td width="550px" style="font-size: xx-large; text-align: center;" class="auto-style1">
-                                        <br />
-                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinGongHuoDan%>"></asp:Label>
-                                        <br />
-                                    </td>
-                                    <td>&nbsp;</td>
                                 </tr>
+
                             </table>
                         </td>
                     </tr>
@@ -179,23 +184,23 @@
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="ModelNumber" HeaderText="Model">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Spec" HeaderText="Specification">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                     </asp:BoundColumn>
-                                     <asp:BoundColumn DataField="Brand" HeaderText="Brand">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                    <asp:BoundColumn DataField="Brand" HeaderText="Brand">
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Number" HeaderText="Quantity">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Unit" HeaderText="Unit">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
 
                                     <asp:BoundColumn DataField="DefectiveNumber" HeaderText="²»Á¼Á¿">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                     </asp:BoundColumn>
                                 </Columns>
 
@@ -203,7 +208,7 @@
                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                 <EditItemStyle BackColor="#2461BF" />
                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                             </asp:DataGrid>
                             <br />
                             <table width="100%">
@@ -235,4 +240,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

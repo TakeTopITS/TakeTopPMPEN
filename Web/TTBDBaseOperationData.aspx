@@ -94,7 +94,7 @@
                                         <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
                                     </asp:TreeView>
                                 </td>
-                                <td align="left" style="padding: 5px 5px 5px 5px; width: 80%">
+                                <td align="center" style="padding: 5px 5px 5px 5px; width: 80%">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                         <tr>
                                             <td align="right" style="padding-right: 5px;" class="formItemBgStyleForAlignLeft">
@@ -113,7 +113,7 @@
                                 <td class="formItemBgStyleForAlignLeft">
                                     <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
                                         <tr>
-                                            <td>
+                                            <td align="center">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                     <tr>
 
@@ -192,7 +192,7 @@
                         <br />
                         <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                             <tr>
-                                <td align="left">
+                                <td align="center">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr>
                                             <td align="left">

@@ -15013,7 +15013,7 @@ public static class ShareClass
                 else if (strBarType == "BarCode")
                 {
                     //Ãı–Œ¬Î
-                    imgTemp = BarcodeHelper.GenerateBarCode(strQrCodeString, 10, 50);
+                    imgTemp = BarcodeHelper.GenerateBarCode(strQrCodeString, 260, 50);
                 }
                 else
                 {

@@ -21,7 +21,8 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        $(function () { if (top.location != self.location) { } else { CloseWebPage(); }
+        $(function () {
+            if (top.location != self.location) { } else { CloseWebPage(); }
 
 
 
@@ -61,22 +62,24 @@
                 <table style="width: 980px;">
                     <tr>
                         <td style="width: 100%; height: 80px; font-size: xx-large; text-align: center;">
-
                             <table width="100%">
                                 <tr>
-                                   <td width="200px">
+                                    <td align="center">
+
+                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,ShangPinSongHuoDan%>"></asp:Label>
+                                        <br />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left">
                                         <%--<img src="Logo/FormLogo.png" />--%>
                                         <asp:Image ID="Img_BarCode" runat="server" />
-                                    </td>
-                                    <td width="550px" style="font-size: xx-large; text-align: center;" class="auto-style1">
-                                        <br />
-                                        <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,DiaoBoDan%>"></asp:Label>
-                                        <br />
-                                    </td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
 
+                                    </td>
+                                </tr>
+
+                            </table>
                         </td>
                     </tr>
                     <tr>
@@ -193,7 +196,7 @@
                                 <Columns>
 
                                     <asp:BoundColumn DataField="GoodsCode" HeaderText="物料代码">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="GoodsName" HeaderText="MaterialName">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
@@ -205,7 +208,7 @@
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Number" HeaderText="Quantity">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                     </asp:BoundColumn>
                                     <%-- <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
@@ -214,7 +217,7 @@
                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                     </asp:BoundColumn>--%>
                                     <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <%-- <asp:BoundColumn DataField="WarrantyPeriod" HeaderText="保修期（天）">
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
@@ -223,10 +226,10 @@
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
                                                                     </asp:BoundColumn>--%>
                                     <asp:BoundColumn DataField="ToPosition" HeaderText="存放位置">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="Comment" HeaderText="Remark">
-                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                     </asp:BoundColumn>
                                 </Columns>
 
@@ -234,7 +237,7 @@
                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                 <EditItemStyle BackColor="#2461BF" />
                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                             </asp:DataGrid>
                             <br />
                             <table width="100%">
@@ -266,4 +269,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

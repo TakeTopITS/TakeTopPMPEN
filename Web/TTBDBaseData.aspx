@@ -95,7 +95,7 @@
                                 <td align="left" style="padding: 5px 5px 5px 5px; width: 80%">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%" style="padding-top: 5px;">
                                         <tr>
-                                            <td align="left">
+                                            <td align="center">
                                                 <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º<asp:TextBox ID="TB_DepartName" runat="server" Width="120px"></asp:TextBox>
                                                 <asp:Label ID="LB_DepartCode" runat="server"></asp:Label>
                                           
