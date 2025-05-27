@@ -139,7 +139,7 @@
                                                                                     <strong>
                                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GongShi2%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="58px" align="left">
+                                                                                <td width="65px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FengXian%>"></asp:Label></strong>
                                                                                 </td>
@@ -147,7 +147,7 @@
                                                                                     <strong>
                                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QueXian%>"></asp:Label></strong>
                                                                                 </td>
-                                                                                <td width="55px" align="left">
+                                                                                <td width="58px" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenDang%>"></asp:Label></strong>
                                                                                 </td>
