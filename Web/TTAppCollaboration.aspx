@@ -81,7 +81,7 @@
                                                 <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                             </a>
                                         </td>
-                                        <td align="right" style="padding-top: 5px;">
+                                        <td align="center" style="padding-top: 5px;">
                                             <asp:Button ID="BT_MakeCollaboration" CssClass="inpuLong" runat="server" Text="<%$ Resources:lang,MakeCollaboration%>" OnClick="BT_MakeCollaboration_Click" Visible="false"/>
 
                                         </td>

@@ -95,12 +95,12 @@
                                             <asp:Button ID="BT_Export" runat="server" CssClass="inpu" Font-Size="10pt" OnClick="BT_Export_Click"
                                                 Text="<%$ Resources:lang,DaoChu%>" />
                                         </td>
-                                        <td align="left" style="padding-top: 5px;">
+                                        <td align="center" style="padding-top: 5px;">
                                             <a href="#" onclick="preview1()">
                                                 <img src="ImagesSkin/print.gif" alt="打印" border="0" />
                                             </a>
                                         </td>
-                                        <td align="left" style="padding-top: 5px;">
+                                        <td align="center" style="padding-top: 5px;">
                                             <asp:Label ID="Label4" runat="server" Text="记录数"></asp:Label>
                                             ：<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
                                                         <asp:Label ID="Label6" runat="server" Text="条"></asp:Label>

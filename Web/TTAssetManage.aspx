@@ -111,7 +111,7 @@
                                 <td valign="top">
                                     <table style="width: 100%" cellpadding="0" cellspacing="0" align="left">
                                         <tr>
-                                            <td align="left" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                                 <table>
                                                     <tr>
                                                         <td>

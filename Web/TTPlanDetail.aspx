@@ -216,7 +216,7 @@
                                                     <td width="150px" align="left">
                                                         <asp:Button ID="BT_ImportSamePeriodSchedule" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,CTQRCZDR%>" OnClick="BT_ImportSamePeriodSchedule_Click" />
                                                     </td>
-                                                    <td align="left" style="padding-top: 5px;">
+                                                    <td align="center" style="padding-top: 5px;">
                                                         <asp:HyperLink ID="HL_RelatedDoc" runat="server" Enabled="False" NavigateUrl="~/TTPlanRelatedDoc.aspx" Target="_blank"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,XiangGuanWenDang%>"></asp:Label></asp:HyperLink>
                                                     </td>
                                                     <td>&nbsp;</td>

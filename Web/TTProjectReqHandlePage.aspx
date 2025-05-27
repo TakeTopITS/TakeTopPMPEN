@@ -131,7 +131,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td align="right" style="padding-top: 5px;">&nbsp;</td>
+                                            <td align="center" style="padding-top: 5px;">&nbsp;</td>
                                         </tr>
                                     </table>
                                 </td>

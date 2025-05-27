@@ -43,7 +43,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td align="right" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                                 <asp:HyperLink ID="HL_AllCollaborationBackup" runat="server" Text="<%$ Resources:lang,ChaKuanShuoYouXieZuoBeiFeng%>"></asp:HyperLink>
                                             </td>
                                         </tr>

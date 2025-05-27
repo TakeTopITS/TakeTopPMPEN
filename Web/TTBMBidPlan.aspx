@@ -95,7 +95,7 @@
                             </tr>
 
                             <tr>
-                                <td align="left" style="padding-top: 5px;">
+                                <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
                                             <td align="left">

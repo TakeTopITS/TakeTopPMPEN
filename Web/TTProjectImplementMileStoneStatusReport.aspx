@@ -92,12 +92,12 @@
                                                 Text="<%$ Resources:lang,ChaXun%>" />
 
                                         </td>
-                                        <td align="left" style="padding-top: 5px;">
+                                        <td align="center" style="padding-top: 5px;">
                                             <a href="#" onclick="preview1()">
                                                 <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                             </a>
                                         </td>
-                                        <td align="left" style="padding-top: 5px;"></td>
+                                        <td align="center" style="padding-top: 5px;"></td>
                                     </tr>
 
                                     <tr style="display: none;">

@@ -29,7 +29,7 @@
                      <div id="AboveDiv">
                     <table cellpadding="0" cellspacing="0" width="100%" align="left" class="bian">
                         <tr>
-                            <td align="left" style="padding-top: 5px;">
+                            <td align="center" style="padding-top: 5px;">
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                     <tr>
                                         <td class="formItemBgStyleForAlignLeft">

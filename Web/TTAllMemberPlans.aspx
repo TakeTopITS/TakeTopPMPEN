@@ -66,7 +66,7 @@
                                                 </asp:HyperLink>
                                             </td>
 
-                                            <td align="right" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                                 <asp:HyperLink ID="HyperLink1" NavigateUrl="~/TTAllMemberPlansBackup.aspx" Text="<%$ Resources:lang,ChaKanBeiEengJiHua%>" runat="server" Target="_blank">
                                                 </asp:HyperLink>
                                             </td>

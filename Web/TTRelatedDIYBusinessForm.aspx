@@ -440,10 +440,10 @@
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td width="30px;">&nbsp;</td>
-                                    <td align="left" style="padding-top: 5px;">
+                                    <td align="center" style="padding-top: 5px;">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeWuDan%>"></asp:Label>£º
                                     </td>
-                                    <td align="left" style="padding-top: 5px;">
+                                    <td align="center" style="padding-top: 5px;">
                                         <asp:DropDownList ID="DL_WorkflowTemplate" runat="server" DataTextField="TemName" DataValueField="XSNFile" AutoPostBack="true" OnSelectedIndexChanged="DL_WorkflowTemplate_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>

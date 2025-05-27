@@ -76,7 +76,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td align="right" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                             </td>
                                         </tr>
                                     </table>

@@ -56,7 +56,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td align="right" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                                 <asp:Button ID="BT_CreateTask" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChuangJianRenWu%>" OnClick="BT_CreateTask_Click" />
                                              <%--   &nbsp;&nbsp;
                                                 <asp:Button ID="BT_DragTask" runat="server" CssClass="inpu" Text="мов╖" OnClick="BT_DragTask_Click"  />--%>

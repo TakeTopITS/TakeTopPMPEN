@@ -104,7 +104,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="left" style="padding-top: 5px;">
+                                        <td align="center" style="padding-top: 5px;">
                                             <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tr>
                                                     <td width="5%" align="left">

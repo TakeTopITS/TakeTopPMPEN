@@ -80,7 +80,7 @@
 
                                 <table style="width: 100%;" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td align="left" style="padding-top: 5px;">
+                                        <td align="center" style="padding-top: 5px;">
                                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                                 <tr>
                                                     <td align="left">
@@ -111,7 +111,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="left" style="padding-top: 5px;">
+                                        <td align="center" style="padding-top: 5px;">
 
                                             <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tr>

@@ -136,7 +136,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="left" style="padding-top: 5px;">
+                                                                    <td align="center" style="padding-top: 5px;">
                                                                         <asp:DropDownList ID="DL_ConstractType" runat="server" DataTextField="Type" DataValueField="Type"
                                                                             Width="100px" Height="20px">
                                                                         </asp:DropDownList>

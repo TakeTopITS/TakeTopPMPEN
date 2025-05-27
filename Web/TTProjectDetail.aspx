@@ -83,7 +83,7 @@
                                                                 </tr>
                                                             </table>
                                                         </td>
-                                                        <td align="left" style="padding-top: 5px;">
+                                                        <td align="right" style="padding-top: 5px; padding-right:400px;">
                                                             <asp:HyperLink ID="HL_ProjectDetailView" runat="server" Text="<%$ Resources:lang,XiangMuXinXi%>"></asp:HyperLink>
                                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                                              <asp:HyperLink ID="HL_BusinessForm" runat="server" Text="<%$ Resources:lang,XiangGuanYeWuDan%>"></asp:HyperLink>

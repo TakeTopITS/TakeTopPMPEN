@@ -93,7 +93,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                 <td align="left" style="padding-top: 5px;">
+                                 <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
                                             <td align="left">
@@ -352,7 +352,7 @@
 
                                     </td>
 
-                                    <td align="left" style="padding-top: 5px;">
+                                    <td align="center" style="padding-top: 5px;">
                                         <table cellpadding="2" cellspacing="0" class="formBgStyle" width="98%">
                                             <tr>
                                                 <td align="left">&nbsp;&nbsp;&nbsp;<asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,GongYingShang%>"></asp:Label>£º<asp:TextBox ID="txt_SupplierInfo" runat="server" Width="120px"></asp:TextBox>

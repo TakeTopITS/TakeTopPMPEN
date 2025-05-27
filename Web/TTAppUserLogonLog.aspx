@@ -73,7 +73,7 @@
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                         </td>
 
-                                                        <td align="right" style="padding-top: 5px;">
+                                                        <td align="center" style="padding-top: 5px;">
                                                             <asp:Label ID="LB_QueryScope" runat="server"></asp:Label>
                                                         </td>
                                                     </tr>

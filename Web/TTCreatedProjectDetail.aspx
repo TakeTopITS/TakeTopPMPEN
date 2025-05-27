@@ -52,7 +52,7 @@
                                                         </table>
 
                                                     </td>
-                                                    <td align="left" style="padding-top: 5px;">
+                                                    <td align="center" style="padding-top: 5px;">
                                                         <asp:HyperLink ID="HL_BusinessForm" runat="server" Text="<%$ Resources:lang,XiangGuanYeWuDan%>"></asp:HyperLink>
 
                                                     </td>

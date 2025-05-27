@@ -89,7 +89,7 @@
                                                     </tr>
                                                 </table>
                                                 </td> --%>
-                                            <td align="left" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                                 <asp:Button ID="BT_AllStartup" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,TuiSongQuanBuZhuDong%>" OnClick="BT_AllStartup_Click" />
                                             </td>
 
@@ -99,7 +99,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="left" style="padding-top: 5px;">
+                                <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="0" cellspacing="0" width="100%" align="left" class="bian">
                                         <tr>
                                             <td align="left" style="padding-top: 5px; width: 350px;">

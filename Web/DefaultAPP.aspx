@@ -150,7 +150,7 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div id="AboveDiv">
-                        <table width="70%" border="0" align="left" cellpadding="0" cellspacing="0">
+                        <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td style="padding-left: 0px;">
                                     <img alt="" src="Logo/APPLoginLogo.png" width="100%" />
@@ -176,7 +176,7 @@
                                 <td style="text-align: left;">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td align="left">
+                                <td align="center">
 
                                     <asp:TextBox ID="TB_Password" runat="server" Text="******" TextMode="Password" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="100%"></asp:TextBox>
                                     <asp:Label ID="LB_ErrorMsg" runat="server" Visible="false" ForeColor="Red"></asp:Label>
@@ -201,7 +201,7 @@
                                 <td style="text-align: left;">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td colspan="2" align="left">
+                                <td colspan="2" align="center">
                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                     <asp:Button ID="BT_Login" runat="server" CssClass="inpuLogon" Text="<%$ Resources:lang,Login%>" OnClientClick="RemmberUserNameAndPassord()"
                                         OnClick="LB_Login_Click" />
@@ -216,28 +216,28 @@
                             </tr>
                         </table>
 
-                        <table width="60%" border="0" align="left" cellpadding="0" cellspacing="0">
+                        <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td align="left">
+                                <td align="center">
                                     <table width="100%">
                                         <tr>
                                             <td></td>
                                         </tr>
                                         <tr>
 
-                                            <td align="left">
+                                            <td align="center">
                                                 <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? TakeTop Software 2006-2026 "></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left">[
+                                            <td align="center">[
                                                   <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged" Style="height: 22px;">
                                                   </asp:DropDownList>
                                                 ]
                                             </td>
                                         </tr>
                                         <tr style="display: none;">
-                                            <td align="left">
+                                            <td align="center">
                                                 <br />
                                                 <em runat="server" id="emSAAS" visible="false" style="text-align: center; font-style: normal;">
 
@@ -253,7 +253,7 @@
                                 </td>
                             </tr>
                             <tr style="display: none;">
-                                <td align="left">
+                                <td align="center">
                                     <asp:Label ID="LB_User" Text="USER:" Font-Size="X-Small" runat="server"></asp:Label>
                                     <asp:HyperLink ID="HL_UserID" runat="server" Target="_blank" Font-Size="X-Small"></asp:HyperLink>
                                 </td>

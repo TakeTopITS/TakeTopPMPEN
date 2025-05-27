@@ -173,7 +173,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="left" style="padding-top: 5px;">
+                                                <td align="center" style="padding-top: 5px;">
                                                     <asp:Label ID="LB_DailyWork" runat="server" Font-Bold="False" Text="<%$ Resources:lang,XiangMuWanChengQingKuang%>" Visible="False"></asp:Label>
                                                 </td>
                                             </tr>

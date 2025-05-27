@@ -530,7 +530,7 @@
                                                                                 <asp:Button ID="BT_TransferProjectBom" runat="server" CssClass="inpuLong" OnClick="BT_TransferProjectBom_Click"
                                                                                     Text="<%$ Resources:lang,SolidifyToProject%>" />
                                                                             </td>
-                                                                            <td align="left" style="padding-top: 5px;">
+                                                                            <td align="center" style="padding-top: 5px;">
                                                                                 <asp:HyperLink ID="HL_ProjectRelatedItemReport" runat="server" NavigateUrl="TTProjectRelatedItemReport.aspx" Target="_blank" Text="<%$ Resources:lang,BaoBiao%>"> </asp:HyperLink>
                                                                             </td>
                                                                         </tr>

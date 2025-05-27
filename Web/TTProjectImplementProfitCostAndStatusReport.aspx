@@ -93,12 +93,12 @@
                                                 <asp:Button ID="BT_Export" runat="server" CssClass="inpu" Font-Size="10pt" OnClick="BT_Export_Click"
                                                     Text="<%$ Resources:lang,DaoChu%>" />
                                             </td>
-                                            <td align="left" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                                 <a href="#" onclick="preview1()">
                                                     <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                                 </a>
                                             </td>
-                                            <td align="left" style="padding-top: 5px;"></td>
+                                            <td align="center" style="padding-top: 5px;"></td>
                                         </tr>
 
                                         <tr style="display: none;">

@@ -201,17 +201,17 @@
                             <!-- <h3>taketop login</h3> -->
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_UserID" runat="server" Text="<%$ Resources:lang,UserAccount%>"></asp:Label></em>
+                                    <asp:Label ID="LB_UserID" runat="server" Text="<%$ Resources:lang,UserAccount%>"></asp:Label>:</em>
                                 <asp:TextBox ID="TB_UserCode" runat="server" class="text"></asp:TextBox>
                             </p>
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_Password" runat="server" Text="<%$ Resources:lang,PWD%>"></asp:Label></em>
+                                    <asp:Label ID="LB_Password" runat="server" Text="<%$ Resources:lang,PWD%>"></asp:Label>:</em>
                                 <asp:TextBox ID="TB_Password" runat="server" class="text" TextMode="Password"></asp:TextBox>
                             </p>
                             <p>
                                 <em class="emt">
-                                    <asp:Label ID="LB_Verification" runat="server" Text="<%$ Resources:lang,Verification%>"></asp:Label></em>
+                                    <asp:Label ID="LB_Verification" runat="server" Text="<%$ Resources:lang,Verification%>"></asp:Label>:</em>
                                 <em>
                                     <asp:TextBox ID="TB_CheckCode" runat="server" class="textcode" Width="75px"></asp:TextBox></em>
                                 <em><a href="#" class="codea">
@@ -238,7 +238,7 @@
                                     &nbsp;&nbsp;<asp:HyperLink ID="HL_UserManual" NavigateUrl="UserManual/TakeTopGLBGuide.zip" Text="<%$ Resources:lang,YongHuShouCe%>" runat="server"></asp:HyperLink>
                                 </em>
                                 <em class="copy">
-                                    <asp:Label ID="LB_Copyright" runat="server" Text="<a href=Outer/TTVersionRegister.aspx>Copyright? TakeTop Software</a> 2006-2026 <a href=https://www.taketopits.com>http://www.taketopits.com</a>"></asp:Label>
+                                    <asp:Label ID="LB_Copyright" runat="server" Text="<a href=TTVersionRegister.aspx>Copyright? TakeTop Software</a> 2006-2026 <a href=https://www.taketopits.com>http://www.taketopits.com</a>"></asp:Label>
                                 </em>
                             </center>
                         </div>

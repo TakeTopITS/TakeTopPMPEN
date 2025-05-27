@@ -106,7 +106,7 @@
                                             <td width="150px" style="text-align: left; padding-left: 5px;">
                                                 <asp:Button ID="BT_ReOrderUserModuleAuthorization" runat="server" CssClass="inpuLongest" Text="<%$ Resources:lang,CZSYYHDMZQXSJ%>" OnClick="BT_ReOrderUserModuleAuthorization_Click" />
                                             </td>
-                                            <td align="left" style="padding-top: 5px;">
+                                            <td align="center" style="padding-top: 5px;">
                                                 <asp:HyperLink ID="HL_DatabaseUpdate" NavigateUrl="Outer/TTDatabaseUpgrade.aspx" runat="server">
 
                                                     <asp:Label ID="LB_UserAuthorizationRecordNumber" runat="server"></asp:Label>
