@@ -92,7 +92,7 @@
                                                 <td style="text-align: left">
                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
                                                     £º<asp:CheckBox ID="CheckBox1" runat="server" />
-                                                    <asp:Label ID="Label16" runat="server" Text="×÷ÒµÍËÁÏ"></asp:Label>
+                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ZuoYeTuiLiao%>"></asp:Label>
                                                     <asp:CheckBox ID="CheckBox2" runat="server" />
                                                     <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,CaiGouTuiHuo%>"></asp:Label>
                                                     <asp:CheckBox ID="CheckBox3" runat="server" />

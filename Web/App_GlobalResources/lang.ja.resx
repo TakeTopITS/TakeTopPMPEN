@@ -30987,4 +30987,7 @@
   <data name="KHKSRYDR" xml:space="preserve">
     <value>クライアントが見えるスタッフのインポート</value>
   </data>
+  <data name="ZuoYeTuiLiao" xml:space="preserve">
+    <value>業務材料の返却</value>
+  </data>
 </root>

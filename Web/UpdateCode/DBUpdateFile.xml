@@ -12627,4 +12627,9 @@ ALTER TABLE public.v_projectdailyworkbonussummary
 ALTER TABLE public.v_workplanview
     OWNER TO postgres;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3774</ID>
+    <SQLText>Delete From T_ProModuleLevel Where ModuleName = 'DepartmentDocuments';
+Delete From T_ProModule Where ModuleName = 'DepartmentDocuments';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

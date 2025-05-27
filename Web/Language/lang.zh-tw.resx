@@ -30993,4 +30993,7 @@
   <data name="KHKSRYDR" xml:space="preserve">
     <value>客戶可視人員導入</value>
   </data>
+  <data name="ZuoYeTuiLiao" xml:space="preserve">
+    <value>作業退料</value>
+  </data>
 </root>

@@ -298,8 +298,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="height: 20px;" align="left">
-                                                            <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0"
-                                                                Width="100%">
+                                                            <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
                                                                 <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText=" 收款进度">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ShouKuanJiHua%>"></asp:Label>

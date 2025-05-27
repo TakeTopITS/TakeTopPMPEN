@@ -2734,7 +2734,7 @@
     <value>Log-day</value>
   </data>
   <data name="DanHao" xml:space="preserve">
-    <value>ID</value>
+    <value>Code</value>
   </data>
   <data name="DanJia" xml:space="preserve">
     <value>Unit price</value>
@@ -30987,5 +30987,8 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="KHKSRYDR" xml:space="preserve">
     <value>Import Customer-Visible Personnel</value>
+  </data>
+  <data name="ZuoYeTuiLiao" xml:space="preserve">
+    <value>Work Material Return</value>
   </data>
 </root>

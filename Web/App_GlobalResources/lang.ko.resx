@@ -30987,4 +30987,7 @@
   <data name="KHKSRYDR" xml:space="preserve">
     <value>고객이 볼 수 있는 인력 가져오기</value>
   </data>
+  <data name="ZuoYeTuiLiao" xml:space="preserve">
+    <value>작업물 반납</value>
+  </data>
 </root>

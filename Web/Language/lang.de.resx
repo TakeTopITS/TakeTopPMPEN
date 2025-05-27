@@ -30987,4 +30987,7 @@
   <data name="KHKSRYDR" xml:space="preserve">
     <value>Importieren von sichtbaren Mitarbeitern für Kunden</value>
   </data>
+  <data name="ZuoYeTuiLiao" xml:space="preserve">
+    <value>Rückgabe von Arbeitsmaterialien</value>
+  </data>
 </root>

@@ -60,15 +60,15 @@
                                                 <td>
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
-                                                            <td width="7%" align="left">
+                                                            <td width="9%" align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                             </td>
-                                                            <td width="27%" align="left">
+                                                            <td width="20%" align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label></strong>
                                                             </td>
-                                                            <td width="7%" align="left">
+                                                            <td width="8%" align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LiXiangRen%>"></asp:Label></strong>
                                                             </td>
@@ -84,7 +84,7 @@
                                                                 <strong>
                                                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongShiYuSuan%>"></asp:Label></strong>
                                                             </td>
-                                                            <td width="6%" align="left">
+                                                            <td width="8%" align="left">
                                                                 <strong>
                                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,RenLiYuSuan%>"></asp:Label></strong>
                                                             </td>
@@ -117,14 +117,14 @@
                                     <ItemTemplate>
                                         <table cellpadding="5" cellspacing="0" border="0" width="100%">
                                             <tr>
-                                                <td style="width: 7%; " class="tdLeft">
+                                                <td style="width: 9%; " class="tdLeft">
                                                     <%#DataBinder .Eval (Container .DataItem ,"ProjectID") %><br />
                                                     <%#DataBinder .Eval (Container .DataItem ,"ProjectCode") %>
                                                 </td>
-                                                <td style="width: 25%; padding-left: 5px; text-align: left;" class="tdLeft">
+                                                <td style="width: 20%; padding-left: 5px; text-align: left;" class="tdLeft">
                                                     <%#DataBinder .Eval (Container .DataItem,"ProjectName") %>
                                                 </td>
-                                                <td style="width: 7%; " class="tdLeft">
+                                                <td style="width: 8%; " class="tdLeft">
                                                     <%#DataBinder .Eval (Container .DataItem,"UserName") %>
                                                 </td>
                                                 <td style="width: 8%; " class="tdLeft">
@@ -133,7 +133,7 @@
                                                 <td style="width: 7%; " class="tdLeft">
                                                     <%#DataBinder .Eval (Container .DataItem,"Budget") %>
                                                 </td>
-                                                <td style="width: 7%; " class="tdLeft">
+                                                <td style="width: 8%; " class="tdLeft">
                                                     <%#DataBinder .Eval (Container .DataItem,"ManHour") %>
                                                 </td>
                                                 <td style="width: 6%; " class="tdLeft">

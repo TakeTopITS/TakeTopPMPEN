@@ -31101,4 +31101,8 @@
     <value>客户可视人员导入</value>
     <comment>客户可视人员导入</comment>
   </data>
+  <data name="ZuoYeTuiLiao" xml:space="preserve">
+    <value>作业退料</value>
+    <comment>作业退料</comment>
+  </data>
 </root>

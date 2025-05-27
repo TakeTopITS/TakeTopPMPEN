@@ -12,26 +12,10 @@
     <style type="text/css">
         #AboveDiv {
             min-width: 1900px;
-            width: expression (document.body.clientWidth <= 1900? "1900px" : "auto" ));
+            width: expression (document.body.clientWidth <= 1900? "1900px" : "auto" );
         }
 
-        /*.auto-style1 {
-            height: 35px;
-        }
-
-        .auto-style2 {
-            border-style: none;
-            background-image: url('ImagesSkin/butbj.jpg');
-            width: 71px;
-            text-align: center;
-            margin-left: 0px;
-            margin-right: 0px;
-            font-size: 12px;
-            color: #000000;
-            font-family: "microsoft yahei";
-            margin: 2px 0;
-            cursor: pointer;
-        }*/
+       
     </style>
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -39,10 +23,10 @@
     <script type="text/javascript" language="javascript">
         $(function () {
 
-            window.document.getElementById("TabContainer1").style.visibility = "visible";
-            window.document.getElementById("TabContainer1_TabPanel1").style.visibility = "visible";
-
             if (top.location != self.location) { } else { CloseWebPage(); }
+
+            //window.document.getElementById("TabContainer1").style.visibility = "visible";
+            //window.document.getElementById("TabContainer1_TabPanel1").style.visibility = "visible";
 
         });
     </script>
@@ -315,7 +299,7 @@
                                             <ContentTemplate>
                                                 <table width="100%" cellpadding="0" cellspacing="0" align="left">
                                                     <tr>
-                                                        <td colspan="6">
+                                                        <td>
                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>
                                                                     <td width="7">
@@ -404,7 +388,9 @@
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                                                 <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
-                                                            </asp:DataGrid></td>
+                                                            </asp:DataGrid>
+
+                                                        </td>
                                                     </tr>
                                                 </table>
 
@@ -874,7 +860,7 @@
 
                                         </cc1:TabPanel>
 
-                                        <cc1:TabPanel ID="TabPanel4" runat="server" TabIndex="4">
+                                        <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="工作流定义" TabIndex="4">
                                             <HeaderTemplate>
                                                 <asp:Label ID="Label88" runat="server" Text="<%$ Resources:lang,GongZuoLiuDingYi%>"></asp:Label>
 
@@ -1019,9 +1005,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 420px; padding: 5px 5px 5px 5px;" valign="top" align="left">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="BT_ActiveYes" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Shi%>" OnClick="BT_ActiveYes_Click" />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button
-                                            ID="BT_ActiveNo" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Fou%>" OnClick="BT_ActiveNo_Click" />
+                                    <td style="width: 420px; padding: 5px 5px 5px 5px;" valign="top" align="left">
+                                        <asp:Button ID="BT_ActiveYes" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Shi%>" OnClick="BT_ActiveYes_Click" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:Button ID="BT_ActiveNo" runat="server" CssClass="inpu" Text="<%$ Resources:lang,Fou%>" OnClick="BT_ActiveNo_Click" />
                                     </td>
                                 </tr>
                             </table>
@@ -1034,7 +1021,6 @@
                     <asp:Label ID="LB_Sql5" runat="server" Visible="False"></asp:Label>
                     <asp:Label ID="LB_GoodsOwner" runat="server" Visible="False"></asp:Label>
                     <asp:Label ID="LB_DepartString" runat="server" Visible="False"></asp:Label>
-
 
                 </ContentTemplate>
             </asp:UpdatePanel>

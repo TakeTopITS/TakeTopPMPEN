@@ -30989,4 +30989,7 @@
   <data name="KHKSRYDR" xml:space="preserve">
     <value>Импорт персонала, видимого для клиентов</value>
   </data>
+  <data name="ZuoYeTuiLiao" xml:space="preserve">
+    <value>Возврат рабочих материалов</value>
+  </data>
 </root>
