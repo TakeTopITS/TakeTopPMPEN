@@ -116,17 +116,17 @@
 
 
                                                                     <asp:Panel ID="Panel_ProGraphRegistration" runat="server">
-                                                                        <div style="width: 100%; text-align: right; padding-bottom: 5px;">
+                                                                        <div style="width: 100%; text-align: left; padding-bottom: 5px;">
                                                                             <table width="100%">
                                                                                 <tr>
-                                                                                    <td style="text-align: right; height: 2px;">
+                                                                                    <td style="text-align: left; height: 2px;">
                                                                                         <asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,JianSuoXinXi%>"></asp:Label>£º</td>
                                                                                     <td style="text-align: left; height: 2px;">
                                                                                         <asp:TextBox ID="TB_GraphInfo" runat="server" CssClass="shuru" Width="400px"></asp:TextBox>
                                                                                         <asp:Button ID="BT_Check" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Check_Click" />
                                                                                     </td>
                                                                                     <td>&nbsp;</td>
-                                                                                    <td style="text-align: right;">
+                                                                                    <td style="text-align: left;">
                                                                                         <asp:Button ID="BT_CreateGraphRegistration" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateGraphRegistration_Click" />
                                                                                     </td>
                                                                                 </tr>
@@ -264,7 +264,7 @@
 
 
                                                                     <asp:Panel ID="Panel_ProSendFigureRegistration" runat="server">
-                                                                        <div style="width: 100%; text-align: right; padding-bottom: 5px;">
+                                                                        <div style="width: 100%; text-align: left; padding-bottom: 5px;">
 
                                                                             <asp:Button ID="BT_CreateSendFigureRegistration" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateSendFigureRegistration_Click" />
                                                                         </div>
@@ -394,7 +394,7 @@
 
                                                                     <asp:Panel ID="Panel_ProReceiptRegistration" runat="server">
 
-                                                                        <div style="width: 100%; text-align: right; padding-bottom: 5px;">
+                                                                        <div style="width: 100%; text-align: left; padding-bottom: 5px;">
 
                                                                             <asp:Button ID="BT_CreateReceiptRegistration" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateReceiptRegistration_Click" />
                                                                         </div>
@@ -514,7 +514,7 @@
 
                                                                     <asp:Panel ID="Panel_ProIssueRegistration" runat="server">
 
-                                                                        <div style="width: 100%; text-align: right; padding-bottom: 5px;">
+                                                                        <div style="width: 100%; text-align: left; padding-bottom: 5px;">
 
                                                                             <asp:Button ID="BT_CreateIssueRegistration" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_CreateIssueRegistration_Click" />
                                                                         </div>
@@ -672,7 +672,7 @@
                                         <asp:DropDownList ID="ddl_DocType" runat="server">
                                         </asp:DropDownList>
                                     </td>
-                                    <td style="text-align: right;" class="auto-style1">
+                                    <td style="text-align: left;" class="auto-style1">
                                         <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,DangAnHao%>"></asp:Label>£º</td>
                                     <td style="text-align: left;" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_FileNo" runat="server" Width="120px" CssClass="shuru"></asp:TextBox>
@@ -689,7 +689,7 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 20%; text-align: left;">
                                         <asp:TextBox ID="TB_GraphNo" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                     </td>
-                                    <td class="auto-style1" style="text-align: right;">
+                                    <td class="auto-style1" style="text-align: left;">
                                         <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,BeiZhuShuoMing%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="text-align: left;" colspan="3">
                                         <asp:TextBox ID="TB_Remark" runat="server" CssClass="shuru" Width="95%"></asp:TextBox>
@@ -701,7 +701,7 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 20%; text-align: left;">
                                         <NickLee:NumberBox ID="TB_FileNum" runat="server" CssClass="shuru" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="67px">0</NickLee:NumberBox>
                                     </td>
-                                    <td class="auto-style1" style="text-align: right;">
+                                    <td class="auto-style1" style="text-align: left;">
                                         <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,BiaoShuFen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="text-align: left;">
                                         <NickLee:NumberBox ID="TB_TableNum" runat="server" CssClass="shuru" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="67px">0</NickLee:NumberBox>
@@ -781,7 +781,7 @@
                             <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                 <tr>
 
-                                    <td style="text-align: right;" class="auto-style1">
+                                    <td style="text-align: left;" class="auto-style1">
                                         <asp:Label ID="Label59" runat="server" Text="<%$ Resources:lang,DangAnMingCheng%>"></asp:Label>£º</td>
                                     <td style="text-align: left;" class="auto-style2">
                                         <asp:DropDownList ID="ddl_FileNo" runat="server" DataValueField="FileNo" DataTextField="FileName" AutoPostBack="True" OnSelectedIndexChanged="ddl_FileNo_SelectedIndexChanged"></asp:DropDownList>
@@ -796,13 +796,13 @@
 
                                 </tr>
                                 <tr>
-                                    <td class="auto-style2" style="text-align: right;">
+                                    <td class="auto-style2" style="text-align: left;">
                                         <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,FenShu1%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 20%; text-align: left;">
                                         <NickLee:NumberBox ID="NB_FileNum" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="67px" Precision="0" CssClass="shuru">0</NickLee:NumberBox>
                                         <asp:Label ID="lbl_FileOld" runat="server"></asp:Label>
                                     </td>
-                                    <td class="auto-style1" style="text-align: right;">
+                                    <td class="auto-style1" style="text-align: left;">
                                         <asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,BiaoShuFen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="text-align: left;">
                                         <NickLee:NumberBox ID="NB_TableNum" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="67px" Precision="0" CssClass="shuru">0</NickLee:NumberBox>
@@ -816,14 +816,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style2" style="text-align: right;">
+                                    <td class="auto-style2" style="text-align: left;">
                                         <asp:Label ID="Label64" runat="server" Text="<%$ Resources:lang,FaFangRiQi%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 20%; text-align: left;">
                                         <asp:TextBox ID="DLC_IssueDate" runat="server" CssClass="shuru" Width="100px"></asp:TextBox>
                                         <ajaxToolkit:CalendarExtender ID="CalendarExtender3" runat="server" Enabled="True" Format="yyyy-MM-dd" TargetControlID="DLC_IssueDate">
                                         </ajaxToolkit:CalendarExtender>
                                     </td>
-                                    <td class="auto-style1" style="text-align: right;">
+                                    <td class="auto-style1" style="text-align: left;">
                                         <asp:Label ID="Label65" runat="server" Text="<%$ Resources:lang,QianFaRen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="text-align: left;">
                                         <asp:TextBox ID="TB_Distribution" runat="server" CssClass="shuru"></asp:TextBox>
@@ -857,7 +857,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="text-align: right;" class="auto-style3">&nbsp;</td>
+                                    <td style="text-align: left;" class="auto-style3">&nbsp;</td>
                                     <td colspan="5" style="text-align: left; height: 2px;" class="formItemBgStyleForAlignLeft"></td>
                                 </tr>
                             </table>
@@ -888,7 +888,7 @@
                                         <asp:TextBox ID="LB_ReceiptRegistrationID" runat="server" Visible="false"></asp:TextBox>
 
                                     </td>
-                                    <td style="text-align: right;" class="auto-style1">
+                                    <td style="text-align: left;" class="auto-style1">
                                         <asp:Label ID="Label70" runat="server" Text="<%$ Resources:lang,WenJianBianHao%>"></asp:Label>£º</td>
                                     <td style="text-align: left;" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_DocumentNo" runat="server" Width="120px" CssClass="shuru"></asp:TextBox>
@@ -905,7 +905,7 @@
                                     <td class="formItemBgStyleForAlignLeft" style="width: 20%; text-align: left;">
                                         <asp:TextBox ID="TB_DispatchDepartment" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                     </td>
-                                    <td class="auto-style1" style="text-align: right;">
+                                    <td class="auto-style1" style="text-align: left;">
                                         <asp:Label ID="Label73" runat="server" Text="<%$ Resources:lang,FaWenQuXiang%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="text-align: left;">
                                         <asp:TextBox ID="TB_FileWay" runat="server" CssClass="shuru"></asp:TextBox>
@@ -982,7 +982,7 @@
                         <div id="popwindow_content" class="layui-layer-content" style="text-align: left; overflow: auto; padding: 0px 5px 0px 5px;">
                             <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                 <tr>
-                                    <td style="text-align: right;" class="auto-style1">
+                                    <td style="text-align: left;" class="auto-style1">
                                         <asp:Label ID="Label79" runat="server" Text="<%$ Resources:lang,WenJianMingCheng%>"></asp:Label>£º</td>
                                     <td style="text-align: left;" class="auto-style2">
                                         <asp:DropDownList ID="ddl_DocumentNo" runat="server" DataValueField="DocumentNo" DataTextField="FileName" AutoPostBack="True" OnSelectedIndexChanged="ddl_DocumentNo_SelectedIndexChanged"></asp:DropDownList>
@@ -996,12 +996,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style2" style="text-align: right;">
+                                    <td class="auto-style2" style="text-align: left;">
                                         <asp:Label ID="Label81" runat="server" Text="<%$ Resources:lang,FenShu1%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 20%; text-align: left;">
                                         <NickLee:NumberBox ID="NB_Attachments" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="67px" Precision="0" CssClass="shuru">0</NickLee:NumberBox>
                                     </td>
-                                    <td class="auto-style1" style="text-align: right;">
+                                    <td class="auto-style1" style="text-align: left;">
                                         <asp:Label ID="Label82" runat="server" Text="<%$ Resources:lang,LingQuBuMen%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyleForAlignLeft" style="text-align: left;">
                                         <asp:TextBox ID="TB_ReceivingDepartment" runat="server" CssClass="shuru" Width="90%"></asp:TextBox>

@@ -70,7 +70,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td valign="top" align="left">
+                            <td valign="top" align="center">
                                 <!--startprint1-->
                                 <table style="width: 800px;">
                                     <tr>
@@ -85,7 +85,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="left">
+                                        <td align="center">
                                               <iframe runat="server" id="IFrame_Chart1" src="TTTakeTopAnalystChartSet.aspx" style="width: 800px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
 
 

@@ -41,7 +41,7 @@
                 <ContentTemplate>
                    <div id="AboveDiv">
 
-                    <table border="0" align="left" cellpadding="0" cellspacing="0">
+                    <table border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
                             <td>
                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>£º
@@ -73,7 +73,7 @@
                         </tr>
                         <tr>
 
-                            <td colspan="7" align="left">
+                            <td colspan="7" align="center">
 
                                 <asp:Button ID="BT_Find" runat="server" CssClass="inpu" Font-Size="10pt" OnClick="BT_Find_Click"
                                     Text="<%$ Resources:lang,ChaXun%>" />

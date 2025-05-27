@@ -55,7 +55,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="center">
                             <!--startprint1-->
                             <table width="980px" cellpadding="0" cellspacing="0">
                                 <tr>

@@ -42,7 +42,7 @@
                      <div id="AboveDiv">
                     <table cellpadding="0" cellspacing="0" width="980" class="bian">
                         <tr>
-                            <td align="left">
+                            <td align="center">
                                 <br />
                                 <table>
                                     <tr>

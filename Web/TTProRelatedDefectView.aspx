@@ -48,7 +48,7 @@
             </tr>
             <tr>
                 <td>
-                    <table style="width: 98%;" align="left">
+                    <table style="width: 98%;" align="center">
                         <tr>
                             <td style="width: 800px; text-align: right;">
                                 <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
@@ -58,7 +58,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 100%">
+                            <td style="width: 100%" align="center">
                                 <asp:DataList ID="DataList1" runat="server" Width="100%" CellPadding="0" ForeColor="#333333">
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                     

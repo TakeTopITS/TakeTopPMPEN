@@ -85,7 +85,7 @@
 
                                 <table style="width: 100%;">
                                     <tr>
-                                        <td align="left">
+                                        <td align="center">
 
                                             <iframe runat="server" id="IFrame_Chart_PlanStatus" src="TTTakeTopAnalystChartSet.aspx" style="width: 300px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
                                             <iframe runat="server" id="IFrame_Chart_Expense" src="TTTakeTopAnalystChartSet.aspx" style="width: 300px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
@@ -105,7 +105,7 @@
 
                                 <table width="99%" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td align="left">
+                                        <td align="center">
                                             <asp:Label ID="LB_ExpenseAmount" runat="server" BackColor="#418CF0" ForeColor="white" Text="<%$ Resources:lang,FeiYongZongE%>"></asp:Label>£º<asp:Label ID="LB_ConfirmProExpense" runat="server" Font-Bold="False"
                                                 Text="0"></asp:Label>
 

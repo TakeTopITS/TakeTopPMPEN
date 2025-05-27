@@ -88,37 +88,13 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="height: 16px; padding: 5px 5px 5px 5px;" align="left">
+                                            <td style="height: 16px; padding: 5px 5px 5px 5px;" align="center">
                                                     <iframe runat="server" id="IFrame_Chart1" src="TTTakeTopAnalystChartSet.aspx" style="width: 800px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
 
-
-                                                <%--<asp:Chart ID="Chart1" Width="800px" runat="server">
-                                                    <Series>
-                                                        <asp:Series Name="Series1" ChartType="Pie" ChartArea="ChartArea1" Legend="Legend1"></asp:Series>
-                                                    </Series>
-                                                    <ChartAreas>
-                                                        <asp:ChartArea Name="ChartArea1" AlignmentOrientation="Horizontal"></asp:ChartArea>
-                                                    </ChartAreas>
-                                                    <Legends>
-                                                        <asp:Legend Name="Legend1">
-                                                            <CellColumns>
-                                                                <asp:LegendCellColumn Name="Column2">
-                                                                    <Margins Left="15" Right="15" />
-                                                                </asp:LegendCellColumn>
-                                                                <asp:LegendCellColumn ColumnType="SeriesSymbol" Name="Column3">
-                                                                    <Margins Left="15" Right="15" />
-                                                                </asp:LegendCellColumn>
-                                                            </CellColumns>
-                                                        </asp:Legend>
-                                                    </Legends>
-                                                    <Titles>
-                                                        <asp:Title Name="БъЬт" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
-                                                    </Titles>
-                                                </asp:Chart>--%>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="height: 16px; padding: 5px 5px 5px 5px;" align="left">
+                                            <td style="height: 16px; padding: 5px 5px 5px 5px;" align="center">
                                                 <table width="980px" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                     <tr>
                                                         <td width="7">

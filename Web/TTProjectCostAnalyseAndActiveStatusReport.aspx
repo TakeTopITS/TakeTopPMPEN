@@ -37,7 +37,7 @@
                         <div id="DIV_HidePrint">
                             <table>
                                 <tr>
-                                    <td width="190px" align="left" style="padding-top: 5px;">
+                                    <td width="190px" align="center" style="padding-top: 5px;">
                                         <DayPilot:MonthPicker ID="MonthPicker1" runat="server" YearEnd="2099" />
                                     </td>
                                     <td width="100px" style="padding-top: 5px;">
@@ -56,7 +56,7 @@
 
                             <table border="0" cellpadding="0" cellspacing="0" width="2000" style="border-collapse: collapse;">
                                 <tr>
-                                    <td colspan="19" align="left" style="font-size: xx-large; padding-top: 10px; border: unset; height: 20px;">
+                                    <td colspan="19" align="center" style="font-size: xx-large; padding-top: 10px; border: unset; height: 20px;">
                                         <br />
                                         项目成本分析及动态管理表
                                         <br />

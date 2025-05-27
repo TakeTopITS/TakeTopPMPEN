@@ -92,7 +92,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="left">
+                                                <td align="center">
                                                     <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                         <tr>
                                                             <td width="7">
@@ -182,7 +182,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="height: 16px; padding: 5px 5px 5px 5px;" align="left">
+                                                                        <td style="height: 16px; padding: 5px 5px 5px 5px;" align="center">
                                                                               <iframe runat="server" id="IFrame_Chart1" src="TTTakeTopAnalystChartSet.aspx" style="width: 800px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
 
 

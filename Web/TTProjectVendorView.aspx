@@ -51,7 +51,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="left" style="padding: 5px 5px 5px 5px;">
+                            <td align="center" style="padding: 5px 5px 5px 5px;">
                                 <table width="90%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                     <tr>
                                         <td class="formItemBgStyleForAlignLeft" rowspan="2">

@@ -54,7 +54,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="formItemBgStyleForAlignLeft" style="padding: 5px 5px 5px 5px;">
+                    <td align="center" style="padding: 5px 5px 5px 5px;">
 
                         <br />
 

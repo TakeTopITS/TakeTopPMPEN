@@ -72,11 +72,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td valign="top" align="left">
+                            <td valign="top" align="center">
                                 <table>
 
                                     <tr>
-                                        <td align="left">
+                                        <td align="right">
                                             <asp:CheckBox ID="CB_Scope" Checked="true" runat="server" Text="0% and 100%" />
                                             <DayPilot:MonthPicker ID="MonthPicker1" runat="server" YearEnd="2099" />
                                             <asp:Button ID="BT_Find" runat="server" Text="<%$ Resources:lang,chaxun%>" OnClick="BT_Find_Click" />
