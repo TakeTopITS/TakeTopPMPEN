@@ -626,7 +626,7 @@
                                                                 <table width="100%">
                                                                     <tr>
                                                                         <td width="50%"></td>
-                                                                        <td align="right" style="padding-right:20px;">
+                                                                        <td align="right" style="padding-right: 20px;">
                                                                             <table>
                                                                                 <tr>
                                                                                     <td>
@@ -637,17 +637,17 @@
                                                                                             <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
                                                                                         </div>
                                                                                     </td>
+                                                                                    <td>
+                                                                                        <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
+                                                                                            OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
+                                                                                    </td>
+
                                                                                     <td style="padding-left: 10px;">
                                                                                         <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
                                                                                     </td>
                                                                                     <td style="display: none;">
                                                                                         <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
                                                                                     </td>
-                                                                                    <td>
-                                                                                        <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
-                                                                                            OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
-                                                                                    </td>
-
                                                                                 </tr>
                                                                             </table>
                                                                         </td>
