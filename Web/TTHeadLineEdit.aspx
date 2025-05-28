@@ -273,27 +273,32 @@
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft"></td>
                                     <td class="formItemBgStyleForAlignRight">
-
-                                        <table>
+                                        <table width="100%">
                                             <tr>
-                                                <td style="padding-left: 30px;">
-                                                    <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>：
-                                                </td>
-                                                <td>
-                                                    <div onclick="popShowByURLForFixedSize('TTHeadLineUploadDocForParentWindow.aspx','Upload Doc', 600, 500)">
-                                                        <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
-                                                    </div>
-                                                </td>
-                                                <td style="width: 100px; text-align: center;">
-                                                    <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
-                                                        OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
-                                                </td>
+                                                <td align="right" style="padding-right:20px;">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="padding-left: 30px;">
+                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>：
+                                                            </td>
+                                                            <td>
+                                                                <div onclick="popShowByURLForFixedSize('TTHeadLineUploadDocForParentWindow.aspx','Upload Doc', 600, 500)">
+                                                                    <asp:Label ID="Label190" runat="server" Text="<%$ Resources:lang,ShangChuan%>"></asp:Label>
+                                                                </div>
+                                                            </td>
+                                                            <td style="text-align: center;">
+                                                                <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
+                                                                    OnClientClick="return confirm('提示，导入之后会覆盖原先的内容，确定要导入吗(Warning, importing will overwrite the original content. Are you sure you want to import)？')" />
+                                                            </td>
 
-                                                <td style="padding-left: 10px;">
-                                                    <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
-                                                </td>
-                                                <td style="display: none; width: 20px;">
-                                                    <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
+                                                            <td style="padding-left: 10px;">
+                                                                <asp:HyperLink ID="HL_ContentDocURL" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:HyperLink>
+                                                            </td>
+                                                            <td style="display: none; width: 20px;">
+                                                                <asp:TextBox ID="TB_ContentDocURL" runat="server"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                         </table>
