@@ -38,6 +38,7 @@ public partial class TTAppCustomerQuestionRecord : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(TB_Question);
+TB_Question.Language = Session["LangCode"].ToString();
 
       
         ShareClass.LoadSytemChart(strUserCode, "CustomerQuestionRecord", RP_ChartList);

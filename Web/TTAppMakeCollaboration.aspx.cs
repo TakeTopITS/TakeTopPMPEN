@@ -42,6 +42,7 @@ public partial class TTAppMakeCollaboration : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(CKEditor1);
+CKEditor1.Language = Session["LangCode"].ToString();
 
 
         strRelatedType = Request.QueryString["RelatedType"];

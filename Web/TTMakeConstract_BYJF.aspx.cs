@@ -33,7 +33,9 @@ public partial class TTMakeConstract_BYJF : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(CKE_MainContent);
+CKE_MainContent.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(TB_Exception);
+TB_Exception.Language = Session["LangCode"].ToString();
 
         //this.Title = "制定合同";
 

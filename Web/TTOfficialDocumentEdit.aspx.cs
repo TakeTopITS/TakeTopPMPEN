@@ -40,6 +40,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(CKE_MainContent);
+CKE_MainContent.Language = Session["LangCode"].ToString();
 
         strUserCode = Session["UserCode"].ToString();
         strIsMobileDevice = Session["IsMobileDevice"].ToString();

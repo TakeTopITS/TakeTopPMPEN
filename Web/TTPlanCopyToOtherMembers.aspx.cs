@@ -41,6 +41,7 @@ public partial class TTPlanCopyToOtherMembers : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_PlanDetail);
+HE_PlanDetail.Language = Session["LangCode"].ToString();
 
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);

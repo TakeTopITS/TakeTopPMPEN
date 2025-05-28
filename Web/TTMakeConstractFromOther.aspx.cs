@@ -49,7 +49,9 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(TB_MainContent);
+TB_MainContent.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(TB_Exception);
+TB_Exception.Language = Session["LangCode"].ToString();
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);

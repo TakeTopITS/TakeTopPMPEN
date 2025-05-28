@@ -34,7 +34,9 @@ public partial class TTMakeProject_BYJF : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_AcceptStandard);
+HE_AcceptStandard.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(HE_ProjectDetail);
+HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
 
         strProjectUserCode = Session["UserCode"].ToString().Trim();

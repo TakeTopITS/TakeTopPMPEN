@@ -30,6 +30,7 @@ public partial class TTAppProjectDetail : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_TodaySummary);
+HE_TodaySummary.Language = Session["LangCode"].ToString();
 
         strProjectID = Request.QueryString["ProjectID"];
         LB_ProjectID.Text = strProjectID;

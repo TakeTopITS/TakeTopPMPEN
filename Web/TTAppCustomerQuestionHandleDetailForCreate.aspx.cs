@@ -38,7 +38,9 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_CustomerComment);
+HE_CustomerComment.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(HE_HandleDetail);
+HE_HandleDetail.Language = Session["LangCode"].ToString();
 
         strUserCode = Session["UserCode"].ToString();
         strUserName = Session["UserName"].ToString();

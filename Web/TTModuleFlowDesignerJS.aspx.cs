@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -65,7 +65,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
                 strWFDefinition = getSystemModuleDefinition(strModuleName, strUserType, strModuleType);
                 UpdateUserModuleDefinition(strIdentifyString, strWFDefinition);
 
-                //æ›´æ–°ç‚¹å‡»æ¨¡ç»„æ˜¾ç¤ºå¯¼èˆªé¡µé¢å±æ€§
+                //¸üĞÂµã»÷Ä£×éÏÔÊ¾µ¼º½Ò³ÃæÊôĞÔ
                 strHQL = string.Format(@"Update T_ProModule Set DIYFlow='{0}' Where ID = {1}", strIsDIYFlow, strIdentifyString);
                 ShareClass.RunSqlCommand(strHQL);
             }
@@ -73,7 +73,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
             TB_WFIdentifyString.Text = strIdentifyString;
             if (strWFDefinition == "")
             {
-                strWFDefinition = "{states:{rect2:{type:'start',text:{text:'å¼€å§‹'}, attr:{ x:209, y:72, width:50, height:50}, props:{guid:{value:'4af6bc4b-7ed9-0b0b-e3a0-91c9d8fd92d1'},text:{value:'å¼€å§‹'}}}},paths:{},props:{props:{name:{value:'æ–°å»ºæµç¨‹'},key:{value:''},desc:{value:''}}}}";
+                strWFDefinition = "{states:{rect2:{type:'start',text:{text:'¿ªÊ¼'}, attr:{ x:209, y:72, width:50, height:50}, props:{guid:{value:'4af6bc4b-7ed9-0b0b-e3a0-91c9d8fd92d1'},text:{value:'¿ªÊ¼'}}}},paths:{},props:{props:{name:{value:'ĞÂ½¨Á÷³Ì'},key:{value:''},desc:{value:''}}}}";
             }
             TB_WFXML.Text = strWFDefinition;
             TB_WFName.Text = strModuleName;
@@ -119,12 +119,12 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ClientScript.RegisterStartupScript(this.GetType(), "1", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
 
-            //åˆ·æ–°å·¦è¾¹æ 
+            //Ë¢ĞÂ×ó±ßÀ¸
             ClientScript.RegisterStartupScript(this.GetType(), "2", "<script>ReloadLeftBar();</script>");
 
         }
@@ -136,7 +136,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
         }
     }
 
-    //BusinessFormï¼Œåˆ¤æ–­åç»­æ˜¯å¦å¯ä»¥æ”¹è¡¨å•å†…å®¹
+    //BusinessForm£¬ÅĞ¶ÏºóĞøÊÇ·ñ¿ÉÒÔ¸Ä±íµ¥ÄÚÈİ
     protected void DL_IsDIYFlow_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL;
@@ -145,13 +145,13 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
 
         if (strType == "SystemModule")
         {
-            //æ›´æ–°ç‚¹å‡»æ¨¡ç»„æ˜¾ç¤ºå¯¼èˆªé¡µé¢å±æ€§
+            //¸üĞÂµã»÷Ä£×éÏÔÊ¾µ¼º½Ò³ÃæÊôĞÔ
             strHQL = string.Format(@"Update T_ProModuleLevel Set DIYFlow='{0}' Where ID = {1}", strIsDIYFlow, strIdentifyString);
             ShareClass.RunSqlCommand(strHQL);
         }
         else
         {
-            //æ›´æ–°ç‚¹å‡»æ¨¡ç»„æ˜¾ç¤ºå¯¼èˆªé¡µé¢å±æ€§
+            //¸üĞÂµã»÷Ä£×éÏÔÊ¾µ¼º½Ò³ÃæÊôĞÔ
             strHQL = string.Format(@"Update T_ProModule Set DIYFlow='{0}' Where ID = {1}", strIsDIYFlow, strIdentifyString);
             ShareClass.RunSqlCommand(strHQL);
         }
@@ -159,7 +159,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
 
         ClientScript.RegisterStartupScript(this.GetType(), "2", "<script>this.document.getElementById(\"BT_SaveWFDefinition\").click();</script>");
 
-        //åˆ·æ–°å·¦è¾¹æ 
+        //Ë¢ĞÂ×ó±ßÀ¸
         ClientScript.RegisterStartupScript(this.GetType(), "2", "<script>ReloadLeftBar();</script>");
     }
 
@@ -176,7 +176,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
     }
 
 
-    //å–å¾—å½“å‰æ¨¡ç»„åç§°
+    //È¡µÃµ±Ç°Ä£×éÃû³Æ
     protected string getSystemModuleDefinition(string strModuleName, string strUserType, string strModuleType)
     {
         string strHQL;
@@ -193,10 +193,10 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
         }
     }
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
     protected void ChangePageCache()
     {
-        //æ›´æ–°é¡µé¢ç¼“å­˜ï¼Œåˆ·æ–°é¡µé¢
+        //¸üĞÂÒ³Ãæ»º´æ£¬Ë¢ĞÂÒ³Ãæ
         ShareClass.AddSpaceLineToFile("TTPersonalSpaceModuleFlowView.aspx", "");
         ShareClass.AddSpaceLineToFile("TTModuleFlowChartViewJS.aspx", "");
         ShareClass.AddSpaceLineToFile("WFDesigner/TTTakeTopMFChartViewJS.aspx", "");

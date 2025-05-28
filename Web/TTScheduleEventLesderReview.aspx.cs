@@ -34,6 +34,7 @@ public partial class TTScheduleEventLesderReview : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_LeaderReview);
+HE_LeaderReview.Language = Session["LangCode"].ToString();
 
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);

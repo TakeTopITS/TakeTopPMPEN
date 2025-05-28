@@ -1,20 +1,22 @@
+using com.sun.tools.@internal.xjc;
+
+using ProjectMgt.BLL;
+using ProjectMgt.DAL;
+using ProjectMgt.Model;
+
 using System;
-using System.Resources;
-using System.Drawing;
-using System.Data;
-using System.Configuration;
 using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Resources;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
-using System.Data.SqlClient;
-
-using ProjectMgt.Model;
-using ProjectMgt.DAL;
-using ProjectMgt.BLL;
 
 public partial class TTAllMemberPlansBackup : System.Web.UI.Page
 {
@@ -30,6 +32,9 @@ public partial class TTAllMemberPlansBackup : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_ReviewDetail);
+HE_ReviewDetail.Language = Session["LangCode"].ToString();
+
+        HE_ReviewDetail.Language = Session["LangCode"].ToString();
 
         strUserCode = Session["UserCode"].ToString();
         strUserName = Session["UserName"].ToString();

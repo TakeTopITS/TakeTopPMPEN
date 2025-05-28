@@ -41,7 +41,9 @@ public partial class TTGoodsAfterSaleTaskDetail : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_FinishContent);
+HE_FinishContent.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(HE_Operation);
+HE_Operation.Language = Session["LangCode"].ToString();
 
 
         strHQL = "from GoodsShipmentDetail as goodsShipmentDetail where goodsShipmentDetail.SN = " + "'" + strGoodsSN + "'";

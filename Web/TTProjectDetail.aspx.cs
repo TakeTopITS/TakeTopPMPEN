@@ -33,6 +33,7 @@ public partial class TTProjectDetail : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_TodaySummary);
+HE_TodaySummary.Language = Session["LangCode"].ToString();
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;

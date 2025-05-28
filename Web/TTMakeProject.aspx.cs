@@ -37,8 +37,9 @@ public partial class TTMakeProject : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_AcceptStandard);
+        HE_AcceptStandard.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(HE_ProjectDetail);
-
+        HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
         strProjectUserCode = Session["UserCode"].ToString().Trim();
         strUserCode = Session["UserCode"].ToString();
@@ -422,7 +423,7 @@ public partial class TTMakeProject : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
@@ -431,7 +432,7 @@ public partial class TTMakeProject : System.Web.UI.Page
                 LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
             }
 
-            
+
         }
     }
 

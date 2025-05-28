@@ -19,11 +19,13 @@ public partial class TTAllMemberPlans : System.Web.UI.Page
         //钟礼月作品（jack.erp@gmail.com)
         //泰顶软件2006－2012
 
-
         //CKEditor初始化
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_ReviewDetail);
+HE_ReviewDetail.Language = Session["LangCode"].ToString();
+
+        HE_ReviewDetail.Language = Session["LangCode"].ToString();
 
         strUserCode = Session["UserCode"].ToString();
         strUserName = Session["UserName"].ToString();

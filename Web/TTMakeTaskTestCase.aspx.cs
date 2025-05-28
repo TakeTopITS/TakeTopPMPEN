@@ -41,6 +41,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_Description);
+HE_Description.Language = Session["LangCode"].ToString();
       
 
         //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + GetProjectName(strProjectID) + "的任务：" + strTaskID + " " + GetTaskName(strTaskID) + " " + " 的测试用例！";

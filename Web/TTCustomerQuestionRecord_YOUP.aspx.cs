@@ -32,6 +32,7 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(TB_Question);
+TB_Question.Language = Session["LangCode"].ToString();
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;

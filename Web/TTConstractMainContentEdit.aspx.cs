@@ -30,7 +30,9 @@ public partial class TTConstractMainContentEdit : System.Web.UI.Page
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         //_FileBrowser.SetupCKEditor(TB_MainContent);
+TB_MainContent.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(TB_ConstractMainContent);
+TB_ConstractMainContent.Language = Session["LangCode"].ToString();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
