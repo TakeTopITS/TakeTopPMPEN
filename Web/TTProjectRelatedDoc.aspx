@@ -101,17 +101,17 @@
                         '</div>').appendTo($li).find('.progress-bar');
                 }
 
-                $li.find('p.state').text('上传中');
+                $li.find('p.state').text('Uploading');
 
                 $percent.css('width', percentage * 100 + '%');
             });
 
             uploader.on('uploadSuccess', function (file) {
-                $('#' + file.id).find('p.state').text('已上传');
+                $('#' + file.id).find('p.state').text('Uploaded');
             });
 
             uploader.on('uploadError', function (file) {
-                $('#' + file.id).find('p.state').text('上传出错');
+                $('#' + file.id).find('p.state').text('Upload Error');
             });
 
             uploader.on('uploadComplete', function (file) {
@@ -136,9 +136,9 @@
                 }
 
                 if (state === 'uploading') {
-                    $btn.text('暂停上传');
+                    $btn.text('Pause Upload');
                 } else {
-                    $btn.text('开始上传');
+                    $btn.text('Start Upload');
                 }
             });
 
@@ -570,7 +570,7 @@
                                                                                     <div id="thelist" class="uploader-list">
                                                                                         <%--  <asp:Label ID="Label20" Text="<%$ Resources:lang,DuWenJianShangZhuan%>" runat="server"></asp:Label>：--%>
 
-                                                                                        <asp:Label ID="Label20" Text="多文件上传" runat="server"></asp:Label>：
+                                                                                        <asp:Label ID="Label20" Text="<%$ Resources:lang,DuWenJianShangZhuan%>" runat="server"></asp:Label>：
                                                                                     </div>
                                                                                     <div id="btns" class="btns">
                                                                                         <table>
