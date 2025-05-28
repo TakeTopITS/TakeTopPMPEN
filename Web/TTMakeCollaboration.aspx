@@ -256,8 +256,8 @@
                                         align="left">
                                         <table width="95%" cellpadding="5" cellspacing="0" class="formBgStyle">
                                             <tr>
-                                                <td align="left" colspan="2" style="font-weight: bold; font-size: 15px; height: 22px;"
-                                                    class="formItemBgStyleForAlignLeft">
+                                                <td colspan="2" style="font-weight: bold; font-size: 15px; height: 22px;" class="formItemBgStyleForAlignLeft">
+                                                  
                                                     <br />
                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XieZuoWoJianLiDeXieZuo%>"></asp:Label>
                                                     <br />
