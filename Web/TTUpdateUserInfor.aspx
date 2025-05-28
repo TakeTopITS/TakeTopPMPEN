@@ -69,7 +69,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="padding-top: 5px; padding-bottom: 5px;" align="left">
+                                <td style="padding-top: 5px; padding-bottom: 5px;" align="center">
                                     <table style="width: 550px;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                         <tr>
                                             <td style="width: 130px; " class="formItemBgStyleForAlignLeft">
