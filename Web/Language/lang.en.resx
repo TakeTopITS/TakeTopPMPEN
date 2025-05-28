@@ -4093,7 +4093,7 @@
     <value>Load Visual</value>
   </data>
   <data name="FuHeZhong" xml:space="preserve">
-    <value>Review of</value>
+    <value>Reviewing</value>
   </data>
   <data name="FuJiaDuanXinTongZhiRen" xml:space="preserve">
     <value>Additional SMS notifier</value>
@@ -9346,7 +9346,7 @@
     <value>Review comments</value>
   </data>
   <data name="PingShenZhong" xml:space="preserve">
-    <value>Review of</value>
+    <value>Reviewing</value>
   </data>
   <data name="PingTaiXiangMu" xml:space="preserve">
     <value>Platform Project</value>
