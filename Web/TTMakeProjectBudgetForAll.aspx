@@ -247,7 +247,7 @@
                             <td align="left" style="padding: 5px 5px 5px 5px; vertical-align: top;">
                                 <table style="width: 100%;" cellpadding="0" cellspacing="0" class="formBgStyle">
                                     <tr>
-                                        <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi" colspan="4">
+                                        <td align="left"  colspan="4">
 
                                             <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
                                                 <ContentTemplate>
