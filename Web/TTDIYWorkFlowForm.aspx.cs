@@ -42,7 +42,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
     protected void DL_WorkFlowTemplate_SelectedIndexChanged(object sender, EventArgs e)
     {
         int intResult;
-      
+
         if (PublishUrl != null)
         {
             TakeTopInfoPathService.Remove(PublishUrl);
@@ -50,7 +50,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
         }
 
         strTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
-        if(strTemName == "")
+        if (strTemName == "")
         {
             LoadWorkFlow(strWLType, "0");
             return;
@@ -60,72 +60,79 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
 
         LoadWorkFlow(strWLType, strTemName);
 
+
         WFSubmitHandle wfSubmitHandle = new WFSubmitHandle();
-        intResult = wfSubmitHandle.RegisterWorkFlowTemplate(strTemName, this.Context, this.uri, PublishUrl, xdoc, LB_XSNFile);
-
-        if (intResult == 0)
+        try
         {
-            xdoc.Text = LanguageHandle.GetWord("CWXYMBWJBCZQJC").ToString().Trim();
-            return;
-        }
+            intResult = wfSubmitHandle.RegisterWorkFlowTemplate(strTemName, this.Context, this.uri, PublishUrl, xdoc, LB_XSNFile);
 
-        if (intResult == -1)
+            if (intResult == 0)
+            {
+                xdoc.Text = LanguageHandle.GetWord("CWXYMBWJBCZQJC").ToString().Trim();
+                return;
+            }
+
+            if (intResult == -1)
+            {
+                xdoc.Text = LanguageHandle.GetWord("CWBDMBZCSBQJC").ToString().Trim();
+                return;
+            }
+
+            PublishUrl = wfSubmitHandle.wfPublishUrl.ToString();
+            uri = wfSubmitHandle.wfUri.ToString();
+
+            OldPublishUrl = null;
+
+            LB_WLID.Text = "";
+            TB_WorkFlowName.Text = "";
+            TB_WLDescription.Text = "";
+
+            LB_PublishUrl.Text = PublishUrl;
+            LB_Uri.Text = uri;
+
+            HL_RelatedDoc.Enabled = false;
+            BT_SaveXMLFile.Enabled = false;
+
+            BT_Download.Enabled = true;
+            BT_Upload.Enabled = true;
+
+            TB_WorkFlowName.Text = strTemName;
+            TB_WLDescription.Text = strTemName;
+
+            string strDesignType = ShareClass.GetWLTemplateDesignType(strTemName);
+            if (strDesignType == "SL")
+            {
+                //strJS = "popShowByURL('TTWFChartViewSL.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName) + "','ChartView','99%','99%',window.location);";
+                //ClientScript.RegisterStartupScript(this.GetType(), "HH11H", "<script>setOnClick(" + HL_WFChartView + ",'" + strJS + "';</script>");
+
+                HL_WFChartView.NavigateUrl = "TTWFChartViewSL.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
+            }
+            if (strDesignType == "JS")
+            {
+                //strJS = "popShowByURL('TTWFChartViewJS.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName) + "','ChartView','99%','99%',window.location);";
+                //ClientScript.RegisterStartupScript(this.GetType(), "HH11H", "<script>setOnClick(" + HL_WFChartView + ",'" + strJS + "';</script>");
+
+                HL_WFChartView.NavigateUrl = "TTWFChartViewJS.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
+            }
+
+            //列出待处理的业务单据
+            LoadToBeHandledBusinessForm(strUserCode, strTemName);
+
+            //附加用户自定义的JSCode到页面
+            WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, "", "0", "");
+            ClientScript.RegisterStartupScript(this.GetType(), "HH77H", "<script>jqueryDocumentReady();</script>");
+
+            //附加工作流步骤用户自定义的JSCode到页面
+            WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
+            ClientScript.RegisterStartupScript(this.GetType(), "HH88H", "<script>setWorkflowForm();</script>");
+
+            //列表项增加提示
+            //PreREnderListBox();
+        }
+        catch (Exception ex)
         {
-            xdoc.Text = LanguageHandle.GetWord("CWBDMBZCSBQJC").ToString().Trim();
-            return;
+            Response.Write(ex.ToString());
         }
-
-        PublishUrl = wfSubmitHandle.wfPublishUrl.ToString();
-        uri = wfSubmitHandle.wfUri.ToString();
-
-        OldPublishUrl = null;
-
-        LB_WLID.Text = "";
-        TB_WorkFlowName.Text = "";
-        TB_WLDescription.Text = "";
-
-        LB_PublishUrl.Text = PublishUrl;
-        LB_Uri.Text = uri;
-
-        HL_RelatedDoc.Enabled = false;
-        BT_SaveXMLFile.Enabled = false;
-
-        BT_Download.Enabled = true;
-        BT_Upload.Enabled = true;
-
-        TB_WorkFlowName.Text = strTemName;
-        TB_WLDescription.Text = strTemName;
-
-        string strDesignType = ShareClass.GetWLTemplateDesignType(strTemName);
-        if (strDesignType == "SL")
-        {
-            //strJS = "popShowByURL('TTWFChartViewSL.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName) + "','ChartView','99%','99%',window.location);";
-            //ClientScript.RegisterStartupScript(this.GetType(), "HH11H", "<script>setOnClick(" + HL_WFChartView + ",'" + strJS + "';</script>");
-
-            HL_WFChartView.NavigateUrl = "TTWFChartViewSL.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
-        }
-        if (strDesignType == "JS")
-        {
-            //strJS = "popShowByURL('TTWFChartViewJS.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName) + "','ChartView','99%','99%',window.location);";
-            //ClientScript.RegisterStartupScript(this.GetType(), "HH11H", "<script>setOnClick(" + HL_WFChartView + ",'" + strJS + "';</script>");
-
-            HL_WFChartView.NavigateUrl = "TTWFChartViewJS.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
-        }
-
-        //列出待处理的业务单据
-        LoadToBeHandledBusinessForm(strUserCode, strTemName);
-
-        //附加用户自定义的JSCode到页面
-        WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, "", "0", "");
-        ClientScript.RegisterStartupScript(this.GetType(), "HH77H", "<script>jqueryDocumentReady();</script>");
-
-        //附加工作流步骤用户自定义的JSCode到页面
-        WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
-        ClientScript.RegisterStartupScript(this.GetType(), "HH88H", "<script>setWorkflowForm();</script>");
-
-        //列表项增加提示
-        //PreREnderListBox();
-
     }
 
     protected void DL_WorkFlow_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,7 +144,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
         strWLID = DL_WorkFlow.SelectedValue.Trim();
         LB_WLID.Text = strWLID;
 
-        if(strWLID == "")
+        if (strWLID == "")
         {
             return;
         }
@@ -199,7 +206,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
         //列表项增加提示
         //PreREnderListBox();
 
-       
+
         HL_RelatedDoc.Enabled = true;
         HL_RelatedDoc.NavigateUrl = HL_RelatedDoc.NavigateUrl;
     }
@@ -386,7 +393,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                 try
                 {
                     //保存表单数据到数据库，用于开发平台一般处理程序方式
-                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
                 {
@@ -527,7 +534,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                 try
                 {
                     //保存表单数据到数据库，用于开发平台一般处理程序方式
-                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID .ToString() + ");</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
                 {
@@ -547,7 +554,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                     LoadToBeHandledBusinessForm(strUserCode, strTemName);
 
                     //保存表单数据到数据库
-                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
                 {
@@ -624,7 +631,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                 TakeTopXML.FormConvertToTable(int.Parse(strWLID), intMainID);
 
                 //保存表单数据到数据库
-                ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
             }
             catch
             {
@@ -698,7 +705,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                 TakeTopXML.FormConvertToTable(int.Parse(strWLID), intMainID);
 
                 //保存表单数据到数据库
-                ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
             }
             catch
             {
