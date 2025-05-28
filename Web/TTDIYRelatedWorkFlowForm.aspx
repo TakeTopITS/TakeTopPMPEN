@@ -1154,12 +1154,12 @@
                     <table>
                         <tr>
                             <td class="tdLeft" align="right" width="50px">
-                                <asp:Label ID="LB_tbWFName" runat="server" Text="<%$ Resources:lang,Name%>"></asp:Label>：</td>
+                                <asp:Label ID="LB_tbWFName" runat="server" Text="<%$ Resources:lang,Name%>"></asp:Label></td>
                             <td colspan="2" class="tdRight" align="left" style="width: 300px;">
                                 <asp:TextBox Width="99%" ID="TB_WorkFlowName" runat="server"></asp:TextBox>
                             </td>
                             <td class="tdLeft" align="right" width="50px">
-                                <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,shuoming%>"></asp:Label>：</td>
+                                <asp:Label ID="LB_tbDescription" runat="server" Text="<%$ Resources:lang,shuoming%>"></asp:Label></td>
                             <td colspan="2" class="tdRight" align="left" style="width: 320px;">
                                 <asp:TextBox ID="TB_WLDescription" runat="server"
                                     Width="99%"></asp:TextBox>
