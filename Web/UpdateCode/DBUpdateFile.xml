@@ -12632,4 +12632,9 @@ ALTER TABLE public.v_workplanview
     <SQLText>Delete From T_ProModuleLevel Where ModuleName = 'DepartmentDocuments';
 Delete From T_ProModule Where ModuleName = 'DepartmentDocuments';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3775</ID>
+    <SQLText>Delete From T_ProModuleLevel Where ModuleName = 'ProjectInitiationGCP';
+Delete From T_ProModule Where ModuleName = 'ProjectInitiationGCP';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
