@@ -31105,4 +31105,12 @@
     <value>作业退料</value>
     <comment>作业退料</comment>
   </data>
+  <data name="QuanBuTianJia" xml:space="preserve">
+    <value>全部添加</value>
+    <comment>全部添加</comment>
+  </data>
+  <data name="QuanBuXiTongYongHu" xml:space="preserve">
+    <value>全部系统用户</value>
+    <comment>全部系统用户</comment>
+  </data>
 </root>

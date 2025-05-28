@@ -123,8 +123,8 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="left">
-                                                                        <asp:Button ID="BT_AddSystemUser" CssClass="inpu" runat="server" Text="全部添加" OnClick="BT_AddSystemUser_Click" />
+                                                                    <td align="right">
+                                                                        <asp:Button ID="BT_AddSystemUser" CssClass="inpu" runat="server" Text="<%$ Resources:lang,QuanBuTianJia%>" OnClick="BT_AddSystemUser_Click" />
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -140,8 +140,8 @@
                                                     <Columns>
                                                         <asp:TemplateColumn HeaderText="部门人员">
                                                             <ItemTemplate>
-                                                                <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Width="45%" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
-                                                                <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Width="45%" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
+                                                                <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
+                                                                <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                         </asp:TemplateColumn>
@@ -292,8 +292,8 @@
                                                         <td>
                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
-                                                                    <td align="left">
-                                                                        <asp:Button ID="BT_AllSystemUser" CssClass="inpuLong" runat="server" Text="全部系统用户" OnClick="BT_AllSystemUser_Click" />
+                                                                    <td align="right">
+                                                                        <asp:Button ID="BT_AllSystemUser" CssClass="inpuLong" runat="server" Text="<%$ Resources:lang,QuanBuXiTongYongHu%>" OnClick="BT_AllSystemUser_Click" />
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -310,7 +310,7 @@
                                                     <Columns>
                                                         <asp:TemplateColumn HeaderText="<%$ Resources:lang,DaiMa%>">
                                                             <ItemTemplate>
-                                                                <asp:Button ID="BT_SystemUserCode" runat="server" CssClass="inpu" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
+                                                                <asp:Button ID="BT_SystemUserCode" runat="server" CssClass="inpu"  Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
 
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
@@ -318,7 +318,7 @@
 
                                                         <asp:TemplateColumn HeaderText="<%$ Resources:lang,MingCheng%>">
                                                             <ItemTemplate>
-                                                                <asp:Button ID="BT_SystemUserName" runat="server" CssClass="inpu" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
+                                                                <asp:Button ID="BT_SystemUserName" runat="server" CssClass="inpu"  Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                                         </asp:TemplateColumn>

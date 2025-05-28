@@ -30990,4 +30990,10 @@
   <data name="ZuoYeTuiLiao" xml:space="preserve">
     <value>작업물 반납</value>
   </data>
+  <data name="QuanBuTianJia" xml:space="preserve">
+    <value>모두 추가</value>
+  </data>
+  <data name="QuanBuXiTongYongHu" xml:space="preserve">
+    <value>모든 시스템 사용자</value>
+  </data>
 </root>

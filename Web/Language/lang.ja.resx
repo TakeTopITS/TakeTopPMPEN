@@ -30990,4 +30990,10 @@
   <data name="ZuoYeTuiLiao" xml:space="preserve">
     <value>業務材料の返却</value>
   </data>
+  <data name="QuanBuTianJia" xml:space="preserve">
+    <value>全て追加する</value>
+  </data>
+  <data name="QuanBuXiTongYongHu" xml:space="preserve">
+    <value>全てのシステムユーザー</value>
+  </data>
 </root>

@@ -176,7 +176,7 @@
                                                                 <Columns>
                                                                     <asp:TemplateColumn HeaderText="Type">
                                                                         <ItemTemplate>
-                                                                            <asp:Button ID="BT_ProjectType" runat="server" CssClass="inpu" Width="150px" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' ToolTip='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
+                                                                            <asp:Button ID="BT_ProjectType" runat="server" CssClass="inpuLong" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' ToolTip='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
                                                                     </asp:TemplateColumn>
@@ -238,7 +238,7 @@
                                                                     <td>
                                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                             <tr>
-                                                                                <td align="left" width="15%"><strong>
+                                                                                <td align="left" width="10%"><strong>
                                                                                     <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>
                                                                                 </strong></td>
                                                                                 <td align="left" width="15%"><strong>
@@ -250,10 +250,10 @@
                                                                                 <td align="left" width="15%"><strong>
                                                                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>
                                                                                 </strong></td>
-                                                                                <td align="left" width="15%"><strong>
+                                                                                <td align="left" width="8%"><strong>
                                                                                     <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>
                                                                                 </strong></td>
-                                                                                <td align="left" width="10%"><strong>
+                                                                                <td align="left" width="15%"><strong>
                                                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,KongZhiDian%>"></asp:Label>
                                                                                 </strong></td>
                                                                                 <td align="left"><strong>
@@ -279,7 +279,7 @@
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_StatusID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                                     </asp:TemplateColumn>
                                                                      <asp:BoundColumn DataField="Status" HeaderText="Status">
                                                                           <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
@@ -298,10 +298,10 @@
                                                                         <ItemTemplate>
                                                                             <asp:TextBox ID="TB_SortNumber" runat="server" Width="50px" Text='<%# DataBinder.Eval(Container.DataItem,"SortNumber") %>'></asp:TextBox>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:BoundColumn DataField="ReviewControl" HeaderText="¿ØÖÆµã">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="MakeType" HeaderText="Type">
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
@@ -1178,7 +1178,7 @@
                                                                             <Columns>
                                                                                 <asp:TemplateColumn HeaderText="ÃüÁî">
                                                                                     <ItemTemplate>
-                                                                                        <asp:Button ID="BT_OrderName" runat="server" CssClass="inpu" Width="150px" Text='<%# DataBinder.Eval(Container.DataItem,"InforName") %>' />
+                                                                                        <asp:Button ID="BT_OrderName" runat="server" CssClass="inpuLong"  Text='<%# DataBinder.Eval(Container.DataItem,"InforName") %>' />
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="40%" />
                                                                                 </asp:TemplateColumn>

@@ -30990,4 +30990,10 @@
   <data name="ZuoYeTuiLiao" xml:space="preserve">
     <value>Devolución de Materiales de Trabajo</value>
   </data>
+  <data name="QuanBuTianJia" xml:space="preserve">
+    <value>Agregar Todo</value>
+  </data>
+  <data name="QuanBuXiTongYongHu" xml:space="preserve">
+    <value>Todos los Usuarios del Sistema</value>
+  </data>
 </root>

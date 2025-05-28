@@ -30992,4 +30992,10 @@
   <data name="ZuoYeTuiLiao" xml:space="preserve">
     <value>Restituzione di Materiali di Lavoro</value>
   </data>
+  <data name="QuanBuTianJia" xml:space="preserve">
+    <value>Aggiungi Tutto</value>
+  </data>
+  <data name="QuanBuXiTongYongHu" xml:space="preserve">
+    <value>Tutti gli Utenti del Sistema</value>
+  </data>
 </root>

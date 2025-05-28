@@ -94,7 +94,7 @@
                                                                 <asp:TemplateColumn HeaderText="Ä£°åÀàÐÍ">
                                                                     <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                                                     <ItemTemplate>
-                                                                        <asp:Button ID="BT_WFType" runat="server" Width="150px" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>' ToolTip='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
+                                                                        <asp:Button ID="BT_WFType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>' ToolTip='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
                                                             </Columns>

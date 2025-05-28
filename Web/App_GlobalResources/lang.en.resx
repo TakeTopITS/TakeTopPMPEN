@@ -30991,4 +30991,10 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZuoYeTuiLiao" xml:space="preserve">
     <value>Work Material Return</value>
   </data>
+  <data name="QuanBuTianJia" xml:space="preserve">
+    <value>Add All</value>
+  </data>
+  <data name="QuanBuXiTongYongHu" xml:space="preserve">
+    <value>All System Users</value>
+  </data>
 </root>
