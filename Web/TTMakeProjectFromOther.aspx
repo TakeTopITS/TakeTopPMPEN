@@ -146,7 +146,7 @@
                                                                             <asp:Label ID="LB_DGStatus" runat="server" Text="<%$ Resources:lang,Status%>" /></strong>
                                                                     </td>
 
-                                                                    <td colspan="2" width="10%" align="left">
+                                                                    <td colspan="2" width="10%" align="center">
                                                                         <strong>
                                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,Budget%>" />
                                                                         </strong>

@@ -245,7 +245,7 @@ button:visited, input[type="submit"]:visited {
 .inpu {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
-    min-width: 71px;
+    min-width: 51px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
@@ -292,7 +292,7 @@ button:visited, input[type="submit"]:visited {
 /*-----------------------------TAB按钮----------------------------*/
 .inpuTab {
     border-style: none;
-    min-width: 71px;
+    min-width: 51px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
@@ -390,7 +390,7 @@ button:visited, input[type="submit"]:visited {
 .inpuLongest {
     background-image: url(ImagesSkin/butbjLongest.jpg);
     height: 25px;
-    min-width: 71px;
+    /*min-width: 260px;*/
     width: auto;
     max-width: 260%; /* 可选，防止溢出容器 */
     text-align: center;
@@ -437,7 +437,7 @@ button:visited, input[type="submit"]:visited {
 .inpuYello {
     border-style: none;
     background: #f37c00;
-    min-width: 71px;
+    min-width: 51px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
     height: 25px;
@@ -477,7 +477,7 @@ button:visited, input[type="submit"]:visited {
 .inpuRepeat {
     border-style: none;
     background-image: url('ImagesSkin/butbj.jpg');
-    min-width: 71px;
+    /*min-width: 51px;*/
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
@@ -523,7 +523,7 @@ button:visited, input[type="submit"]:visited {
 .inpuLongRepeat {
     background-image: url(ImagesSkin/butbjlong.jpg);
     height: 25px;
-    min-width: 110px;
+   /* min-width: 110px;*/
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
     text-align: center;
