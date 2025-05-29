@@ -83,7 +83,7 @@
                                                 <img src="ImagesSkin/ZhuCeLogo.png">  </img>
                                             </td>
                                             <td style="vertical-align: middle; ">
-                                                <asp:Label ID="Label48" runat="server" Text="商会成员登记"></asp:Label></td>
+                                                <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,ShangHuiChengYuanDengJi%>"></asp:Label></td>
                                         </tr>
                                     </table>
                                 </td>

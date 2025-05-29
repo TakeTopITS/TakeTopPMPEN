@@ -1777,7 +1777,7 @@
                                                             </tr>
                                                         </table>
 
-                                                        <asp:Label ID="Label145" runat="server" Text="可视合同"></asp:Label><br />
+                                                        <asp:Label ID="Label145" runat="server" Text="<%$ Resources:lang,KeShiGeTong%>"></asp:Label><br />
                                                         <table align="left" cellpadding="0" cellspacing="0" width="200%">
 
                                                             <tr>

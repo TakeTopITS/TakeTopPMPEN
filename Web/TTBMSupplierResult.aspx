@@ -397,7 +397,7 @@
                                                                 <tr>
                                                                     <td align="left" style="font-size: x-large">
                                                                         <b><span class="auto-style1">
-                                                                            <asp:Label ID="Label34" runat="server" Text="澄清信息回函"></asp:Label></span></b></td>
+                                                                            <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,ChengQingXinXiHuiHan%>"></asp:Label></span></b></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="left">
@@ -463,7 +463,7 @@
                                                                 <tr>
                                                                     <td align="left" style="font-size: x-large">
                                                                         <b><span class="auto-style1">
-                                                                            <asp:Label ID="Label40" runat="server" Text="投标反馈信息"></asp:Label></span></b></td>
+                                                                            <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,TouBiaoFanKuiXinXi%>"></asp:Label></span></b></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="left">

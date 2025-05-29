@@ -71,7 +71,7 @@
                                                                     <asp:Label ID="TB_UserCode" Width="220px" runat="server" /></td>
                                                                 <td style="text-align: left;" width="40px" class="formItemBgStyleForAlignLeft"><span style="color: #ff0000">* </td>
                                                                 <td style="text-align: left;" width="220px" rowspan="8" class="formItemBgStyleForAlignLeft">
-                                                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="240px" Width="219px" AlternateText="Ô±¹¤ÕÕÆ¬" /></td>
+                                                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="240px" Width="219px" AlternateText="<%$ Resources:lang,YuanGongZhaoPian%>" /></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="formItemBgStyleForAlignLeft">

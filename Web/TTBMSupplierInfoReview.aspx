@@ -198,8 +198,8 @@
                                                         </asp:HyperLinkColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Link" CommandName="Link" runat="server" Text="联系人"></asp:LinkButton>&nbsp;&nbsp;
-                                                                <asp:LinkButton ID="LBT_Certification" CommandName="Certification" runat="server" Text="资质证书"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_Link" CommandName="Link" runat="server" Text="<%$ Resources:lang,LianJiRen%>"></asp:LinkButton>&nbsp;&nbsp;
+                                                                <asp:LinkButton ID="LBT_Certification" CommandName="Certification" runat="server" Text="<%$ Resources:lang,ZiZhiZhengShu%>"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                         </asp:TemplateColumn>
@@ -883,7 +883,7 @@
                                                 <asp:PostBackTrigger ControlID="BT_UploadCertification" />
                                             </Triggers>
                                         </asp:UpdatePanel>
-                                        <asp:HyperLink ID="HL_Certification" runat="server" Text="查看附件"></asp:HyperLink>
+                                        <asp:HyperLink ID="HL_Certification" runat="server" Text="<%$ Resources:lang,ChaKanFuJian%>"></asp:HyperLink>
                                         <asp:Button ID="BT_UploadCertification" runat="server" Text="<%$ Resources:lang,ShangChuan %>" CssClass="inpu" OnClick="BT_UploadCertification_Click" />
                                     </td>
                                 </tr>

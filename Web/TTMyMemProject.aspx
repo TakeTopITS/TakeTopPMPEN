@@ -168,7 +168,7 @@
                                                     <tr style="display: none;">
                                                         <td style="width: 170px; text-align: left; padding: 5px 0px 5px 0px;">
                                                             <asp:Button ID="BT_DisplayStatus" runat="server" CssClass="inpuLong" OnClick="BT_DisplayStatus_Click"
-                                                                Text="ÒþÈ¥ÏîÄ¿×´Ì¬" />
+                                                                Text="<%$ Resources:lang,YinQuXiangMuZhuangTai%>" />
                                                         </td>
                                                     </tr>
                                                     <tr>

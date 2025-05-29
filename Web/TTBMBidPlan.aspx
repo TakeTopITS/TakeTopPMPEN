@@ -155,7 +155,7 @@
                                                                     <td width="7%" align="left"><strong>
                                                                         <asp:Label ID="Label29" runat="server" Text="Document"></asp:Label></strong></td>
                                                                     <td align="left"><strong>
-                                                                        <asp:Label ID="Label48" runat="server" Text="投标文件模板"></asp:Label></strong></td>
+                                                                        <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,TouBiaoWenJianMoBan%>"></asp:Label></strong></td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -309,22 +309,22 @@
                                         <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                             <tr>
                                                 <td style="width: 150px" class="formItemBgStyleForAlignLeft">
-                                                    <asp:Label ID="Label47" runat="server" Text="承包商类型"></asp:Label>：</td>
+                                                    <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,ChengBaoShangLeiXing%>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                                     <asp:Label ID="LB_ID" runat="server"></asp:Label>
-                                                    <asp:CheckBox ID="CB_IsEnginerringSupplier" Text="工程" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsEnginerringSupplier" Text="<%$ Resources:lang,GongCheng%>" runat="server" />
                                                     &nbsp;
                                                     &nbsp;
-                                                    <asp:CheckBox ID="CB_IsInternationSupplier" Text="国际" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsInternationSupplier" Text="<%$ Resources:lang,GuoJi%>" runat="server" />
                                                     &nbsp;
                                                     &nbsp;
-                                                    <asp:CheckBox ID="CB_IsRetailSupplier" Text="零售" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsRetailSupplier" Text="<%$ Resources:lang,LingShou%>" runat="server" />
                                                     &nbsp;
                                                     &nbsp;
-                                                    <asp:CheckBox ID="CB_IsStoreSupplier" Enabled="false" Text="门店" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsStoreSupplier" Enabled="false" Text="<%$ Resources:lang,MenDian%>" runat="server" />
                                                 </td>
                                                 <td style="width: 150px" class="formItemBgStyleForAlignLeft">
-                                                    <asp:Label ID="Label2" runat="server" Text="招标限价"></asp:Label>：</td>
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QiaoBiaoXianJia%>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft" style="height: 30px">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_BidLimitedPrice" runat="server" Width="120px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                 </td>

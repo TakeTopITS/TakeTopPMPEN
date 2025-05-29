@@ -63,20 +63,20 @@
                                                 <table border="0" align="right" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="left" width="120">
-                                                            <asp:RadioButton ID="RB_ALL" runat="server" Text="全部显示" AutoPostBack="True" GroupName="TypeForQuery" Checked="true" />
+                                                            <asp:RadioButton ID="RB_ALL" runat="server" Text="<%$ Resources:lang,QuanBuXianShi%>" AutoPostBack="True" GroupName="TypeForQuery" Checked="true" />
                                                         </td>
                                                         <td align="left" width="120">
-                                                            <asp:RadioButton ID="RB_MainType" runat="server" Text="按大类" AutoPostBack="True" GroupName="TypeForQuery" />
+                                                            <asp:RadioButton ID="RB_MainType" runat="server" Text="<%$ Resources:lang,AnDaLei%>" AutoPostBack="True" GroupName="TypeForQuery" />
                                                         </td>
                                                         <td align="left" width="120">
-                                                            <asp:RadioButton ID="RB_SubType" runat="server" Text="按小类" AutoPostBack="True" GroupName="TypeForQuery" />
+                                                            <asp:RadioButton ID="RB_SubType" runat="server" Text="<%$ Resources:lang,AnXiaoLei%>" AutoPostBack="True" GroupName="TypeForQuery" />
                                                         </td>
                                                         <td align="left" width="120">
 
                                                             <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td align="right" width="200">
-                                                                        <asp:RadioButton ID="RB_Time" runat="server" Text="按时间查询" AutoPostBack="True" GroupName="TypeForQuery" />
+                                                                        <asp:RadioButton ID="RB_Time" runat="server" Text="<%$ Resources:lang,AnShiJianChaXun%>" AutoPostBack="True" GroupName="TypeForQuery" />
                                                                     </td>
                                                                     <td align="left" width="120">
                                                                         <asp:DropDownList ID="DDL_YearList" runat="server" AutoPostBack="True"></asp:DropDownList>
@@ -265,17 +265,17 @@
                                                                 <tr>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="新增数据" Width="146px" OnClick="btnAddNewItem_Click" />
+                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="<%$ Resources:lang,XinZengShuJu%>" Width="146px" OnClick="btnAddNewItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnEditItem" runat="server" Text="修改数据" Width="146px" OnClick="btnEditItem_Click" />
+                                                                            <asp:Button ID="btnEditItem" runat="server" Text="<%$ Resources:lang,XiuGaiShuJu%>" Width="146px" OnClick="btnEditItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td align="left">
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 2px">
-                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="删除数据" Width="146px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="btnDeleteItem_Click" />
+                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="<%$ Resources:lang,ShanChuShuJu%>" Width="146px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="btnDeleteItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td align="left">
@@ -317,10 +317,10 @@
                                                 <table width="280" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:RadioButton ID="RB_FeeType" runat="server" Text="按大类" Checked="True" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeType_CheckedChanged" />
+                                                            <asp:RadioButton ID="RB_FeeType" runat="server" Text="<%$ Resources:lang,AnDaLei%>" Checked="True" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeType_CheckedChanged" />
                                                         </td>
                                                         <td>
-                                                            <asp:RadioButton ID="RB_FeeSubType" runat="server" Text="按子类" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeSubType_CheckedChanged" />
+                                                            <asp:RadioButton ID="RB_FeeSubType" runat="server" Text="<%$ Resources:lang,AnZiLei%>" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeSubType_CheckedChanged" />
                                                         </td>
                                                     </tr>
                                                 </table>

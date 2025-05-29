@@ -520,7 +520,7 @@
                                                                 Enabled="False" OnClick="BT_UpdateUserAttendanceRule_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                             &nbsp;<asp:Button ID="BT_DeleteUserAttendanceRule" runat="server" CssClass="inpu"
                                                                 Enabled="False" OnClick="BT_DeleteUserAttendanceRule_Click" Text="<%$ Resources:lang,ShanChu%>" />
-                                                            &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_PaiBanRule_Click"  Text="ее╟Ю" />
+                                                            &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_PaiBanRule_Click"  Text="<%$ Resources:lang,PaiBan%>" />
                                                         </td>
                                                         <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
                                                         <td  width="130px" class="formItemBgStyleForAlignLeft"></td>

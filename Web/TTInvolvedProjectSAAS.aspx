@@ -55,12 +55,12 @@
                                                                         <table id="TBL_ProjectCode" runat="server">
                                                                             <tr>
                                                                                 <td style="padding-top: 1px;">
-                                                                                    <asp:Label ID="Label4" runat="server" Text="项目码"></asp:Label>：</td>
+                                                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuMa%>"></asp:Label>：</td>
                                                                                 <td style="padding-top: 1px;">
                                                                                     <asp:TextBox ID="TB_ProjectCode" runat="server" Width="180px"></asp:TextBox>
                                                                                 </td>
                                                                                 <td style="padding-top: 1px;">
-                                                                                    <asp:Button ID="BT_AddProject" CssClass="inpu" runat="server" Text="加入" OnClick="BT_AddProject_Click" />
+                                                                                    <asp:Button ID="BT_AddProject" CssClass="inpu" runat="server" Text="<%$ Resources:lang,JiaRu%>" OnClick="BT_AddProject_Click" />
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

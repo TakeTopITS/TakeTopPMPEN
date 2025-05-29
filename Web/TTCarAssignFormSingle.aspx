@@ -278,7 +278,7 @@
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,Shi2%>"></asp:Label>
+                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,Shi%>"></asp:Label>
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DLC_DepartBeginMinute" runat="server" CssClass="shuru">
@@ -311,7 +311,7 @@
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Shi2%>"></asp:Label>
+                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Shi%>"></asp:Label>
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DLC_BackBeginMinute" runat="server" CssClass="shuru">
@@ -564,7 +564,7 @@
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,Shi2%>"></asp:Label>
+                                                    <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,Shi%>"></asp:Label>
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DLC_RealDepartMinute" runat="server" CssClass="shuru">

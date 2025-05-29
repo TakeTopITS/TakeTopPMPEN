@@ -104,11 +104,11 @@
                                         <table id="TBL_ProjectCode" runat="server" width="100%">
                                             <tr>
                                                 <td width="80%" align="right">
-                                                    <asp:Label ID="Label9" runat="server" Text="项目码"></asp:Label>：
+                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XiangMuMa%>"></asp:Label>：
                                                         <asp:TextBox ID="TB_ProjectCode" runat="server" Width="70%"></asp:TextBox>
                                                 </td>
                                                 <td>
-                                                    <asp:Button ID="BT_AddProject" CssClass="inpu" runat="server" Text="加入" OnClick="BT_AddProject_Click" />
+                                                    <asp:Button ID="BT_AddProject" CssClass="inpu" runat="server" Text="<%$ Resources:lang,JiaRu%>" OnClick="BT_AddProject_Click" />
                                                 </td>
                                             </tr>
                                         </table>

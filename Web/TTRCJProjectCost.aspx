@@ -316,7 +316,7 @@
                                             </td>
                                             <td>
                                                 <table width="240" border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:Button ID="Button1" runat="server" Text="导出成本绩效数据" OnClick="Button1_Click" />
+                                                    <asp:Button ID="Button1" runat="server" Text="<%$ Resources:lang,DaoChuChengBenJiXiaoShuJu%>" OnClick="Button1_Click" />
                                                 </table>
                                             </td>
                                             <td>
@@ -453,10 +453,10 @@
                                                                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnPageIndexChanging="GridView1_PageIndexChanging" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AllowPaging="True" OnRowCommand="GridView1_RowCommand1" OnRowDataBound="GridView1_RowDataBound" PageSize="15">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:CommandField ShowSelectButton="True" SelectText="选择">
+                                                                                <asp:CommandField ShowSelectButton="True" SelectText="<%$ Resources:lang,ShuaZe%>">
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:CommandField>
-                                                                                <asp:ButtonField CommandName="AdjustPrice" Text="价格调整">
+                                                                                <asp:ButtonField CommandName="AdjustPrice" Text="<%$ Resources:lang,JiaGeDiaoZheng%>">
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:ButtonField>
                                                                                 <asp:BoundField DataField="ItemNo" HeaderText="序号" />
@@ -580,7 +580,7 @@
                                                                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" AllowPaging="True" OnRowCommand="GridView2_RowCommand" OnRowDataBound="GridView2_RowDataBound" PageSize="15">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:ButtonField CommandName="ActualWorks" Text="实际工作">
+                                                                                <asp:ButtonField CommandName="ActualWorks" Text="<%$ Resources:lang,ShiJiGongZuo%>">
                                                                                     <ItemStyle Wrap="False" />
                                                                                 </asp:ButtonField>
                                                                                 <asp:BoundField DataField="AdjustID" HeaderText="调整编号" />

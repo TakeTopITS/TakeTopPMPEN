@@ -965,7 +965,7 @@
                                         <table width="100%">
                                             <tr>
                                                 <td align="left" style="width: 550px; height: 27px"><span style="font-size: 10pt">£¨<asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoXingXi%>"></asp:Label>
-                                                    £º</span><asp:CheckBox ID="CB_SMS" runat="server" Text="¶ÌÐÅ" />
+                                                    £º</span><asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,DuanXin%>" />
                                                     <asp:CheckBox ID="CB_Mail" runat="server" Text="<%$ Resources:lang,YouJian%>" />
                                                     <span style="font-size: 10pt">) </span>
                                                     <asp:Button ID="BT_SubmitApply" runat="server" CssClass="inpu" Enabled="False" Text="<%$ Resources:lang,TiJiaoShenQing%>" />

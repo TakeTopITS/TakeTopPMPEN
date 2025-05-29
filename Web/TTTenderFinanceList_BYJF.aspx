@@ -321,8 +321,8 @@
                                                 <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,NiWaiSuoXing%>"></asp:Label>：</td>
                                             <td align="left" colspan="2">
                                                 <asp:DropDownList ID="DL_InternalandExternal" runat="server">
-                                                    <asp:ListItem Value="INNER" Text="内"></asp:ListItem>
-                                                    <asp:ListItem Value="OUTER" Text="外"></asp:ListItem>
+                                                    <asp:ListItem Value="INNER" Text="<%$ Resources:lang,Nei%>"></asp:ListItem>
+                                                    <asp:ListItem Value="OUTER" Text="<%$ Resources:lang,Wai%>"></asp:ListItem>
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -481,7 +481,7 @@
                                     <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
                                         <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="Expense" TabIndex="0">
                                             <HeaderTemplate>
-                                                <asp:Label ID="Label45" runat="server" Text="投标费用明细"></asp:Label>
+                                                <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,TouBiaoFeiYongMingXi%>"></asp:Label>
                                             </HeaderTemplate>
                                             <ContentTemplate>
                                                 <table width="100%" align="left" cellpadding="0" cellspacing="0">

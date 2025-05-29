@@ -39,7 +39,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="招标澄清信息回函"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,QiaoBiaoChengQingXinXiHuiHan%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%--<img src="ImagesSkin/main_top_r.jpg" width="5" height="31" alt="" />--%>

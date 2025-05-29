@@ -44,13 +44,13 @@
                                     <asp:TextBox ID="txtPrompt" runat="server" Width="500px" Height="60px" TextMode="MultiLine"></asp:TextBox>
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="btnGenerateText" ImageUrl="ImagesSkin/AIGenerate.png" runat="server" Text="Éú³É" OnClick="btnGenerateText_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
+                                    <asp:ImageButton ID="btnGenerateText" ImageUrl="ImagesSkin/AIGenerate.png" runat="server" Text="<%$ Resources:lang,ShengCheng%>" OnClick="btnGenerateText_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
                                 </td>
                                 <td>
                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="btnStopSeek" ImageUrl="ImagesSkin/AIStop.png" runat="server" Text="Í£Ö¹" OnClick="btnStopAI_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'none';" />
+                                    <asp:ImageButton ID="btnStopSeek" ImageUrl="ImagesSkin/AIStop.png" runat="server" Text="<%$ Resources:lang,TingZhi%>" OnClick="btnStopAI_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'none';" />
                                 </td>
                             </tr>
                         </table>

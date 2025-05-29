@@ -62,10 +62,10 @@
                                                 <table width="640" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="left" width="120">
-                                                            <asp:CheckBox ID="CB_CheckType" runat="server" Text="按种类" AutoPostBack="True" />
+                                                            <asp:CheckBox ID="CB_CheckType" runat="server" Text="<%$ Resources:lang,AnZhongLei%>" AutoPostBack="True" />
                                                         </td>
                                                         <td align="left" width="120">
-                                                            <asp:CheckBox ID="CB_CheckMonth" runat="server" Text="按月份" AutoPostBack="True" />
+                                                            <asp:CheckBox ID="CB_CheckMonth" runat="server" Text="<%$ Resources:lang,AnYueFen%>" AutoPostBack="True" />
                                                         </td>
                                                         <td>
                                                             <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -235,17 +235,17 @@
                                                                 <tr>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="新增数据" Width="146px" OnClick="btnAddNewItem_Click" />
+                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="<%$ Resources:lang,XinZengShuJu%>" Width="146px" OnClick="btnAddNewItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnEditItem" runat="server" Text="修改数据" Width="146px" OnClick="btnEditItem_Click" />
+                                                                            <asp:Button ID="btnEditItem" runat="server" Text="<%$ Resources:lang,XiuGaiShuJu%>" Width="146px" OnClick="btnEditItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td align="left">
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 2px">
-                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="删除数据" Width="146px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="btnDeleteItem_Click" />
+                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="<%$ Resources:lang,ShanChuShuJu%>" Width="146px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="btnDeleteItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                 </tr>

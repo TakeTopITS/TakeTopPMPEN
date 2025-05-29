@@ -26,7 +26,7 @@
                                 <tr>
                                     <td align="left">
                                         <strong>
-                                            <asp:Label ID="LB_FindByStatus" runat="server" Text="报表列表"></asp:Label></strong>
+                                            <asp:Label ID="LB_FindByStatus" runat="server" Text="<%$ Resources:lang,BaoBiaoLieBiao%>"></asp:Label></strong>
                                     </td>
                                 </tr>
                             </table>

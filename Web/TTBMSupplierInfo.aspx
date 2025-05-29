@@ -148,7 +148,7 @@
                                                                     </td>
                                                                     <%--    <td width="10%" align="left">
                                                                         <strong>
-                                                                            <asp:Label ID="Label55" runat="server" Text="模板"></asp:Label></strong>
+                                                                            <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,MoBan%>"></asp:Label></strong>
                                                                     </td>--%>
                                                                 </tr>
                                                             </table>
@@ -258,15 +258,15 @@
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">
-                                                    <asp:Label ID="Label54" runat="server" Text="承包类型"></asp:Label>：</td>
+                                                    <asp:Label ID="Label54" runat="server" Text="<%$ Resources:lang,ChengBaoLeiXing%>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft" style="height: 30px">
-                                                    <asp:CheckBox ID="CB_IsEnginerringSupplier" Text="工程" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsEnginerringSupplier" Text="<%$ Resources:lang,GongCheng%>" runat="server" />
                                                     &nbsp; &nbsp;
-                                                    <asp:CheckBox ID="CB_IsInternationSupplier" Text="国际" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsInternationSupplier" Text="<%$ Resources:lang,GuoJi%>" runat="server" />
                                                     &nbsp; &nbsp;
-                                                    <asp:CheckBox ID="CB_IsRetailSupplier" Text="零售" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsRetailSupplier" Text="<%$ Resources:lang,LingShou%>" runat="server" />
                                                     &nbsp; &nbsp;
-                                                    <asp:CheckBox ID="CB_IsStoreSupplier" Text="门店" runat="server" />
+                                                    <asp:CheckBox ID="CB_IsStoreSupplier" Text="<%$ Resources:lang,MenDian%>" runat="server" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -505,7 +505,7 @@
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <asp:HyperLink ID="HL_Accessories" runat="server" Text="查看附件"></asp:HyperLink>
+                                                                <asp:HyperLink ID="HL_Accessories" runat="server" Text="<%$ Resources:lang,ChaKanFuJian%>"></asp:HyperLink>
                                                             </td>
                                                             <td style="padding-left: 50px;">
                                                                 <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
@@ -1632,7 +1632,7 @@
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <asp:HyperLink ID="HL_DetailFile" runat="server" Text="查看附件"></asp:HyperLink>
+                                                    <asp:HyperLink ID="HL_DetailFile" runat="server" Text="<%$ Resources:lang,ChaKanFuJian%>"></asp:HyperLink>
                                                 </td>
                                                 <td style="padding-left: 50px;">
                                                     <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">

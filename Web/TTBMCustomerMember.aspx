@@ -118,7 +118,7 @@
                                                                         &nbsp;<span style="color: #ff0000">*</span>
                                                                     </td>
                                                                     <td  width="200px" rowspan="6" class="formItemBgStyleForAlignLeft">
-                                                                        <asp:Image ID="IM_MemberPhoto" runat="server" Height="240px" Width="199px" AlternateText="Ô±¹¤ÕÕÆ¬" />
+                                                                        <asp:Image ID="IM_MemberPhoto" runat="server" Height="240px" Width="199px" AlternateText="<%$ Resources:lang,YuanGongZhaoPian%>" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>

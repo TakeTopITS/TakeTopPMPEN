@@ -116,7 +116,7 @@
                                                 </table>
                                             </td>
                                             <td align="left" style="padding-top: 4px; display: none;">
-                                                <asp:Button ID="BT_NewReport" CssClass="inpu" runat="server" Text="ÐÂ°æ" OnClick="BT_NewReport_Click" />
+                                                <asp:Button ID="BT_NewReport" CssClass="inpu" runat="server" Text="<%$ Resources:lang,XinBan%>" OnClick="BT_NewReport_Click" />
                                             </td>
                                         </tr>
                                     </table>

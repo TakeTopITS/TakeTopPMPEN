@@ -120,7 +120,7 @@
                                     </td>
                                  <td rowspan="4" valign="top" style="text-align: left; border-right: solid 1px #D8D8D8;padding-top:5px;"
                                         width="360px">
-                                     <asp:Button ID="BT_TransferPlan" runat="server" CssClass="inpu" Text="转计划" OnClick="BT_TransferPlan_Click" OnClientClick="displayWaitingImg('img_processing');return confirm('操作会覆盖原来的计划结构，您确定要覆盖吗(transfer operation will cover old plan data,Are you sure you want to cover it)？');"/>
+                                     <asp:Button ID="BT_TransferPlan" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ZhuaiJiHua%>" OnClick="BT_TransferPlan_Click" OnClientClick="displayWaitingImg('img_processing');return confirm('操作会覆盖原来的计划结构，您确定要覆盖吗(transfer operation will cover old plan data,Are you sure you want to cover it)？');"/>
                                      <img id="img_processing" src="img/Processing.gif" alt="Loading,please wait..." style="display: none;" />
                                  </td>
                                 </tr>

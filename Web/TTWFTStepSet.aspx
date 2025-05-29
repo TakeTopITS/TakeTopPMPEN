@@ -314,14 +314,14 @@
                                                                                 </td>
 
                                                                                 <td>
-                                                                                    <asp:Label ID="Label82" runat="server" Text="超"></asp:Label>
+                                                                                    <asp:Label ID="Label82" runat="server" Text="<%$ Resources:lang,Chao%>"></asp:Label>
                                                                                 </td>
                                                                                 <td>
                                                                                     <NickLee:NumberBox ID="NB_OverTimeHourNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="40px" Precision="0" Amount="24" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">24</NickLee:NumberBox>
                                                                                 </td>
 
                                                                                 <td>
-                                                                                    <asp:Label ID="Label83" runat="server" Text="小时自动批准"></asp:Label>
+                                                                                    <asp:Label ID="Label83" runat="server" Text="<%$ Resources:lang,XiaoShiZiDongPiZhun%>"></asp:Label>
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_OverTimeAutoAgree" runat="server">

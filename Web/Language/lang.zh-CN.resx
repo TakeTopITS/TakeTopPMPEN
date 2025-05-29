@@ -31030,4 +31030,10 @@
   <data name="QuanBuXiTongYongHu" xml:space="preserve">
     <value>全部系统用户</value>
   </data>
+  <data name="BaiFangFangShi" xml:space="preserve">
+    <value>拜访方式</value>
+  </data>
+  <data name="AnShiJianChaXun" xml:space="preserve">
+    <value>按时间查询</value>
+  </data>
 </root>

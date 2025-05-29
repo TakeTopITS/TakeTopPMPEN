@@ -466,7 +466,7 @@
                                                                                             </div>
                                                                                             <div class="mline">
                                                                                                 <h4>
-                                                                                                    <asp:Label ID="Label41" runat="server" Text="已完成量" /></h4>
+                                                                                                    <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,YiWanChengLiang%>" /></h4>
                                                                                                 <NickLee:NumberBox ID="NB_FinishedNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="80%" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                                                             </div>
                                                                                             <div class="mline">

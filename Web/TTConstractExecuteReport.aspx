@@ -172,11 +172,11 @@
                                                     </td>
                                                     <td width="7%" align="left">
                                                         <strong>
-                                                            <asp:Label ID="Label16" runat="server" Text="所属项目"></asp:Label></strong>
+                                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,SuoShuXiangMu%>"></asp:Label></strong>
                                                     </td>
                                                       <td width="7%" align="left">
                                                         <strong>
-                                                            <asp:Label ID="Label7" runat="server" Text="所属部门"></asp:Label></strong>
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SuoShuBuMen%>"></asp:Label></strong>
                                                     </td>
                                                     <td width="7%" align="left">
                                                         <strong>
@@ -188,7 +188,7 @@
                                                     </td>
                                                     <td width="7%" align="left">
                                                         <strong>
-                                                            <asp:Label ID="Label2" runat="server" Text="签订时间"></asp:Label></strong>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QianDingShiJian%>"></asp:Label></strong>
                                                     </td>
                                                     <td width="9%" align="left">
                                                         <strong>
@@ -201,11 +201,11 @@
                                                     </td>
                                                     <td width="7%" align="left">
                                                         <strong>
-                                                            <asp:Label ID="Label3" runat="server" Text="乙方单位"></asp:Label></strong>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YiFangChanWei%>"></asp:Label></strong>
                                                     </td>
                                                     <td width="7%" align="left">
                                                         <strong>
-                                                            <asp:Label ID="Label6" runat="server" Text="异常描述"></asp:Label></strong>
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YiChangMiaoShu%>"></asp:Label></strong>
                                                     </td>
                                                 </tr>
                                             </table>

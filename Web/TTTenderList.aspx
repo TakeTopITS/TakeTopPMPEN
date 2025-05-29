@@ -264,7 +264,7 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label7" runat="server" Text="招标人"></asp:Label>：</td>
+                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,QiaoBiaoRen%>"></asp:Label>：</td>
                                             <td align="left" colspan="3">
                                                 <asp:TextBox ID="TB_UserCode" runat="server"></asp:TextBox>
                                             </td>
@@ -336,8 +336,8 @@
                                                 <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,NiWaiSuoXing%>"></asp:Label>：</td>
                                             <td align="left" colspan="2">
                                                 <asp:DropDownList ID="DL_InternalandExternal" runat="server">
-                                                    <asp:ListItem Value="INNER" Text="内"></asp:ListItem>
-                                                    <asp:ListItem Value="OUTER" Text="外"></asp:ListItem>
+                                                    <asp:ListItem Value="INNER" Text="<%$ Resources:lang,Nei%>"></asp:ListItem>
+                                                    <asp:ListItem Value="OUTER" Text="<%$ Resources:lang,Wai%>"></asp:ListItem>
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -874,7 +874,7 @@
                                 <td class="formItemBgStyleForAlignLeft" colspan="2" style="height: 10px; ">
 
                                     <strong>
-                                        <asp:Label ID="Label36" runat="server" Text="投标流程申请"></asp:Label>：</strong>
+                                        <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,TouBiaoLiuChengShenQing%>"></asp:Label>：</strong>
                                 </td>
                             </tr>
 

@@ -177,7 +177,7 @@
                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" width="10%" />
                                                     </asp:TemplateColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectBudgetChangeLog.aspx?BudgetID={0}"
-                                                        Text="变更记录" HeaderText="日志" Target="_blank">
+                                                        Text="<%$ Resources:lang,BianGengJiLu%>" HeaderText="日志" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" width="10%"/>
                                                     </asp:HyperLinkColumn>
                                                 </Columns>
@@ -488,7 +488,7 @@
                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                     </asp:TemplateColumn>--%>
                                     <%--   <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectBudgetChangeLog.aspx?BudgetID={0}"
-                                        Text="变更记录" HeaderText="日志" Target="_blank">
+                                        Text="<%$ Resources:lang,BianGengJiLu%>" HeaderText="日志" Target="_blank">
                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
                                     </asp:HyperLinkColumn>--%>
                                 </Columns>

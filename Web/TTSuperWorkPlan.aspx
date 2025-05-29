@@ -370,8 +370,8 @@
                                                         <div style="width: 95%; text-align: right;">
                                                             <asp:HyperLink ID="HL_DocumentForProjectPlanTemplate" runat="server" Text="-->必传文档模板" Target="_blank" Visible="false"></asp:HyperLink>
                                                             &nbsp;
-                                                            --><asp:HyperLink ID="HL_WorkSchedule" runat="server" Text="交付进度"></asp:HyperLink>&nbsp;
-                                                            --><asp:HyperLink ID="HL_MemberWorkload" Text="工作负荷" runat="server" Target="_blank"></asp:HyperLink>
+                                                            --><asp:HyperLink ID="HL_WorkSchedule" runat="server" Text="<%$ Resources:lang,JiaoFuJinDu%>"></asp:HyperLink>&nbsp;
+                                                            --><asp:HyperLink ID="HL_MemberWorkload" Text="<%$ Resources:lang,GongZuoFuHe%>" runat="server" Target="_blank"></asp:HyperLink>
                                                         </div>
                                                     </td>
                                                 </tr>

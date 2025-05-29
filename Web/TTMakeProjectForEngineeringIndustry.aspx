@@ -695,7 +695,7 @@
                                                                             <%--<asp:DropDownList ID="DDL_Leader" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                             Width="120px" >
                                                                         </asp:DropDownList>
-                                                                        <asp:Button ID="BT_Leader" runat="server" Text="直属部门" />
+                                                                        <asp:Button ID="BT_Leader" runat="server" Text="<%$ Resources:lang,ZhiShuBuMen%>" />
                                                                         <cc1:ModalPopupExtender ID="BT_ModalPopupLeader" runat="server"
                                                                             Enabled="True" TargetControlID="BT_Leader" PopupControlID="PanelLeader"
                                                                             CancelControlID="IMBT_Leader_Close" BackgroundCssClass="modalBackground" Y="150">
@@ -710,7 +710,7 @@
                                                                             <%--<asp:DropDownList ID="DDL_FeeManage" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                             Width="120px" >
                                                                         </asp:DropDownList>
-                                                                        <asp:Button ID="BT_FeeManage" runat="server" Text="直属部门" />
+                                                                        <asp:Button ID="BT_FeeManage" runat="server" Text="<%$ Resources:lang,ZhiShuBuMen%>" />
                                                                         <cc1:ModalPopupExtender ID="BT_ModalPopupExtenderFeeManage" runat="server"
                                                                             Enabled="True" TargetControlID="BT_DirectDepartment" PopupControlID="PanelFeeManage"
                                                                             CancelControlID="IMBT_FeeManage_Close" BackgroundCssClass="modalBackground" Y="150">
@@ -727,7 +727,7 @@
                                                                             <%--<asp:DropDownList ID="DDL_MaterialPerson" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                             Width="120px" >
                                                                         </asp:DropDownList>
-                                                                        <asp:Button ID="BT_MaterialPerson" runat="server" Text="直属部门" />
+                                                                        <asp:Button ID="BT_MaterialPerson" runat="server" Text="<%$ Resources:lang,ZhiShuBuMen%>" />
                                                                         <cc1:ModalPopupExtender ID="BT_ModalPopupExtenderMaterialPerson" runat="server"
                                                                             Enabled="True" TargetControlID="BT_MaterialPerson" PopupControlID="PanelMaterialPerson"
                                                                             CancelControlID="IMBT_MaterialPerson_Close" BackgroundCssClass="modalBackground" Y="150">

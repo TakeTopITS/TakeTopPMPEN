@@ -162,7 +162,7 @@
                                                                                     <td width="14%" align="left"><strong>
                                                                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,HeTongMingCheng %>"></asp:Label></strong></td>
                                                                                     <td width="5%" align="left"><strong>
-                                                                                        <asp:Label ID="Label105" runat="server" Text="内容"></asp:Label></strong></td>
+                                                                                        <asp:Label ID="Label105" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label></strong></td>
                                                                                     <td width="5%" align="left"><strong>
                                                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,DaLei %>"></asp:Label></strong></td>
                                                                                     <td width="5%" align="left"><strong>
@@ -585,7 +585,7 @@
 
                                                         <tr style="display: none;">
                                                             <td class="formItemBgStyleForAlignLeft" style="height: 13px;">
-                                                                <asp:Label ID="Label101" runat="server" Text="暂列金"></asp:Label>：
+                                                                <asp:Label ID="Label101" runat="server" Text="<%$ Resources:lang,ZanLieJin%>"></asp:Label>：
                                                             </td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <NickLee:NumberBox ID="NB_ProvisionalAmount" runat="server" Width="150px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3">
@@ -593,7 +593,7 @@
                                                                 </NickLee:NumberBox>
                                                             </td>
                                                             <td class="formItemBgStyleForAlignLeft" style="height: 13px;">
-                                                                <asp:Label ID="Label102" runat="server" Text="安全文明施工费"></asp:Label>：
+                                                                <asp:Label ID="Label102" runat="server" Text="<%$ Resources:lang,AnQuanWenMingSiGongFei%>"></asp:Label>：
                                                             </td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <NickLee:NumberBox ID="NB_SafeCivilizedFee" runat="server" Width="150px" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="3">
@@ -714,7 +714,7 @@
                                                                             </asp:DropDownList>
                                                                         </td>
                                                                         <td style="text-align: right;">
-                                                                            <asp:Label ID="Label104" Text="联系方法" runat="server"></asp:Label>：
+                                                                            <asp:Label ID="Label104" Text="<%$ Resources:lang,LianJiFangFa%>" runat="server"></asp:Label>：
                                                                         </td>
                                                                         <td align="left">
                                                                             <asp:TextBox ID="TB_PartBConnectWay" runat="server"></asp:TextBox>
@@ -1893,7 +1893,7 @@
                                                                 <table width="100%">
                                                                     <tr>
                                                                         <td style="width: 15%;">
-                                                                            <asp:Label ID="LB_NewConstractCode" runat="server" Text="新合同号"></asp:Label>
+                                                                            <asp:Label ID="LB_NewConstractCode" runat="server" Text="<%$ Resources:lang,XinGeTongHao%>"></asp:Label>
                                                                         </td>
                                                                         <td style="width: 30%;">
                                                                             <asp:TextBox ID="TB_NewConstractCode" runat="server" Width="99%"></asp:TextBox>

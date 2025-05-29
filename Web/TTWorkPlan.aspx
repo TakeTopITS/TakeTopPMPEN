@@ -234,7 +234,7 @@
                                                     <td>
                                                         <table>
                                                             <tr>
-                                                                <td>
+                                                                <td width="50px">
                                                                     <asp:Label ID="LB_SelectVersion" runat="server" Text="<%$ Resources:lang,BanBen%>" />
                                                                 </td>
                                                                 <td>
@@ -243,7 +243,7 @@
                                                                         AutoPostBack="True">
                                                                     </asp:DropDownList>
                                                                 </td>
-                                                                <td>
+                                                              <td width="50px">
                                                                     <asp:Label ID="LB_tbType" runat="server" Text="<%$ Resources:lang,Type%>" />:</td>
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_ChangeVersionType" runat="server" OnSelectedIndexChanged="DL_ChangeVersionType_SelectedIndexChanged"
@@ -254,7 +254,7 @@
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>
-                                                                    <asp:DropDownList ID="DL_ExpandType" runat="server" Height="21px" AutoPostBack="True"
+                                                                    <asp:DropDownList ID="DL_ExpandType" runat="server" Height="21px" AutoPostBack="True"  Width="50px"
                                                                         OnSelectedIndexChanged="DL_ExpandType_SelectedIndexChanged">
                                                                         <asp:ListItem Value="ExpandAll" Text="<%$ Resources:lang,ZhanKaiSuoYou%>" />
                                                                         <asp:ListItem Value="ExpandJoin" Text="<%$ Resources:lang,ZhanKaiCanYu%>" />

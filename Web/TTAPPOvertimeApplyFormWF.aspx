@@ -118,7 +118,7 @@
                                                                     </strong></td>
 
                                                                     <td align="left" width="30%"><strong>
-                                                                        <asp:Label ID="Label19" runat="server" Text="加班理由"></asp:Label>
+                                                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JiaBanLiYou%>"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="left"><strong>
                                                                         <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
@@ -187,7 +187,7 @@
                             <table class="formBgStyle" style="width: 750px;" cellpadding="3" cellspacing="0">
                                 <tr>
                                     <td  style="width: 10%" class="formItemBgStyleForAlignLeft">
-                                        <asp:Label ID="Label3" runat="server" Text="加班类型"></asp:Label>
+                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JiaBanLeiXing%>"></asp:Label>
                                         ：
                                     </td>
                                     <td  style="width: 40%" class="formItemBgStyleForAlignLeft">
@@ -197,7 +197,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 10%">
-                                        <asp:Label ID="Label2" runat="server" Text="本年度已加班天数"></asp:Label>
+                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BenNianDuYiJiaBanTianShu%>"></asp:Label>
                                         ：
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" style="width: 40%">
@@ -292,7 +292,7 @@
                                 </tr>
                                 <tr>
                                     <td style="height: 30px" class="formItemBgStyleForAlignLeft">
-                                        <asp:Label ID="Label8" runat="server" Text="加班事由"></asp:Label>：
+                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JiaBanShiYou%>"></asp:Label>：
                                     </td>
                                     <td  style="height: 30px" class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_ApplyBecause" runat="server" Height="40px" TextMode="MultiLine"

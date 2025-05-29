@@ -30996,4 +30996,10 @@
   <data name="QuanBuXiTongYongHu" xml:space="preserve">
     <value>全てのシステムユーザー</value>
   </data>
+  <data name="BaiFangFangShi" xml:space="preserve">
+    <value>訪問の方法</value>
+  </data>
+  <data name="AnShiJianChaXun" xml:space="preserve">
+    <value>時間で検索する</value>
+  </data>
 </root>

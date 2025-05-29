@@ -40,7 +40,7 @@
 
                                             <br />
                                             <br />
-                                            <asp:Label ID="Label1" runat="server" Text="预算变更记录"></asp:Label>
+                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YuSuanBianGengJiLu%>"></asp:Label>
                                         </td>
                                         <td align="left" valign="bottom">
                                             <a href="javascript:window.print()">
@@ -68,28 +68,28 @@
                                                                 </td>
                                                                 <td width="15%" align="left">
                                                                     <strong>
-                                                                        <asp:Label ID="LB_dgAccount" runat="server" Text="原科目"></asp:Label></strong>
+                                                                        <asp:Label ID="LB_dgAccount" runat="server" Text="<%$ Resources:lang,YuanKeMu%>"></asp:Label></strong>
                                                                 </td>
                                                                 <td width="15%" align="left">
                                                                     <strong>
-                                                                        <asp:Label ID="LB_dgAmount" runat="server" Text="原金额"></asp:Label></strong>
+                                                                        <asp:Label ID="LB_dgAmount" runat="server" Text="<%$ Resources:lang,YuanJinE%>"></asp:Label></strong>
                                                                 </td>
                                                                 <td width="20%" align="left">
                                                                     <strong>
-                                                                        <asp:Label ID="Label2" runat="server" Text="原描述"></asp:Label></strong>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuanMiaoShu%>"></asp:Label></strong>
                                                                 </td>
                                                                 <td width="15%" align="left">
                                                                     <strong>
-                                                                        <asp:Label ID="Label3" runat="server" Text="登记人"></asp:Label></strong>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DengJiRen%>"></asp:Label></strong>
                                                                 </td>
                                                                
                                                                 <td width="15%" align="left">
                                                                     <strong>
-                                                                        <asp:Label ID="Label8" runat="server" Text="变更人"></asp:Label></strong>
+                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BianGengRen%>"></asp:Label></strong>
                                                                 </td>
                                                                 <td align="left">
                                                                     <strong>
-                                                                        <asp:Label ID="Label6" runat="server" Text="变更时间"></asp:Label></strong>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BianGengShiJian%>"></asp:Label></strong>
                                                                 </td>
                                                             </tr>
                                                         </table>

@@ -875,7 +875,7 @@
                                                                                                             &nbsp;<asp:Button ID="btn_ExcelToDataTraining" runat="server" CssClass="inpu" OnClientClick="javascript:displayWaitingImg();" OnClick="btn_ExcelToDataTraining_Click" Text="<%$ Resources:lang,DaoRuShuJu%>" />
                                                                                                             <img id="img_processing" src="Images/Processing.gif" alt="Loading,please wait..." style="display: none;" />
 
-                                                                                                            <asp:Label ID="Label284" runat="server" Text="<%$ Resources:lang,SJDRMBGS%>"></asp:Label>：<a href="Template/物料定义和项目或合同关联物料数据导入表.xls"><asp:Label ID="Label297" runat="server" Text="合同物料清单导入模板"></asp:Label></a><div id="ProgressBar">
+                                                                                                            <asp:Label ID="Label284" runat="server" Text="<%$ Resources:lang,SJDRMBGS%>"></asp:Label>：<a href="Template/物料定义和项目或合同关联物料数据导入表.xls"><asp:Label ID="Label297" runat="server" Text="<%$ Resources:lang,GeTongWuLiaoQingChanDaoRuMoBan%>"></asp:Label></a><div id="ProgressBar">
                                                                                                                 <Upload:ProgressBar ID="ProgressBar3" runat="server" Height="100px" Width="500px"></Upload:ProgressBar>
                                                                                                             </div>
                                                                                                         </div>
@@ -886,7 +886,7 @@
                                                                                                 </asp:UpdatePanel>
                                                                                                 <asp:Label ID="LB_ErrorText" runat="server" ForeColor="Red"></asp:Label></td>
                                                                                             <td align="left">
-                                                                                                <asp:Button ID="BT_DeleteAllProjectItem" runat="server" CssClass="inpuLong" OnClick="BT_DeleteAllProjectItem_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="删除全部" /></td>
+                                                                                                <asp:Button ID="BT_DeleteAllProjectItem" runat="server" CssClass="inpuLong" OnClick="BT_DeleteAllProjectItem_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChuQuanBu%>" /></td>
                                                                                         </tr>
                                                                                     </table>
                                                                                 </td>
@@ -3605,11 +3605,11 @@
                                                 </td>
                                                 <td align="left" width="10%">
                                                     <strong>
-                                                        <asp:Label ID="Label319" runat="server" Text="签证人"></asp:Label></strong>
+                                                        <asp:Label ID="Label319" runat="server" Text="<%$ Resources:lang,QianZhengRen%>"></asp:Label></strong>
                                                 </td>
                                                 <td align="left" width="20%">
                                                     <strong>
-                                                        <asp:Label ID="Label320" runat="server" Text="签证说明"></asp:Label></strong>
+                                                        <asp:Label ID="Label320" runat="server" Text="<%$ Resources:lang,QianZhengShuiMing%>"></asp:Label></strong>
                                                 </td>
 
                                                 <td align="left" width="10%">
@@ -3630,7 +3630,7 @@
                                 ShowHeader="false"
                                 Width="100%">
                                 <Columns>
-                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="关联">
+                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="<%$ Resources:lang,GuanLian%>">
                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                     </asp:ButtonColumn>
 

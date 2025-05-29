@@ -1245,7 +1245,7 @@
                                                                                                     <asp:BoundColumn DataField="LimitedTime" HeaderText="时间(小时)">
                                                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="12%" />
                                                                                                     </asp:BoundColumn>
-                                                                                                    <asp:HyperLinkColumn DataNavigateUrlField="StepID" DataNavigateUrlFormatString="TTWorkFlowStepConditionView.aspx?StepID={0}" Target="_blank" Text="条件">
+                                                                                                    <asp:HyperLinkColumn DataNavigateUrlField="StepID" DataNavigateUrlFormatString="TTWorkFlowStepConditionView.aspx?StepID={0}" Target="_blank" Text="<%$ Resources:lang,TiaoJian%>">
                                                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
                                                                                                     </asp:HyperLinkColumn>
                                                                                                     <asp:BoundColumn DataField="DepartRelated" HeaderText="部门相关">
@@ -1355,7 +1355,7 @@
                                 <td class="formItemBgStyleForAlignLeft" style="width: 20%; text-align: left">&nbsp;
                                 </td>
                                 <td class="formItemBgStyleForAlignLeft" style="width: 40%; text-align: left;">
-                                    <asp:Button ID="BT_CloseCurrentPate" runat="server" Text="关闭当前页" OnClick="BT_CloseCurrentPate_Click" />
+                                    <asp:Button ID="BT_CloseCurrentPate" runat="server" Text="<%$ Resources:lang,GuanBiDangQianXie%>" OnClick="BT_CloseCurrentPate_Click" />
                                 </td>
                             </tr>
                         </table>

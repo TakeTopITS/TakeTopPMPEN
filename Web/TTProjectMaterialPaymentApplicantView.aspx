@@ -140,7 +140,7 @@
 
                                                  <%#DataBinder.Eval(Container.DataItem, "AleadyTotalInvoice")%>
                                                 &nbsp;&nbsp;
-                                                <asp:Label ID="Label10" runat="server" Text="累计应交发票"></asp:Label>：
+                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LeiJiYingJiaoFaPiao%>"></asp:Label>：
                                                    <%#DataBinder.Eval(Container.DataItem, "ShouldTotalInvoice")%>
 
                                                                                                &nbsp;&nbsp;

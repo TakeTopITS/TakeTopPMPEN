@@ -305,7 +305,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyleForAlignLeft">
-                                                                <asp:Label ID="LB_TBPM" runat="server" Text="项目负责人" />: </td>
+                                                                <asp:Label ID="LB_TBPM" runat="server" Text="<%$ Resources:lang,XiangMuFuZeRen%>" />: </td>
                                                             <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                                 <asp:DropDownList ID="DL_PM" runat="server" DataTextField="UserName" DataValueField="UserCode"></asp:DropDownList>
                                                                 <asp:Button ID="BT_DirectDepartment" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ZhiShuBuMen %>" />
@@ -354,7 +354,7 @@
                                                                 </table>
                                                             </td>
                                                             <td class="formItemBgStyleForAlignLeft">
-                                                                <asp:Label ID="Label31" runat="server" Text="项目单位"></asp:Label>:</td>
+                                                                <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,XiangMuChanWei%>"></asp:Label>:</td>
                                                             <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                                 <table>
                                                                     <tr>
@@ -393,7 +393,7 @@
                                                                 <asp:Label ID="LB_TBBudget" runat="server" Text="<%$ Resources:lang,Budget %>" />: </td>
                                                             <td colspan="3" class="formItemBgStyleForAlignLeft">
                                                                 <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Budget" runat="server" Width="100px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
-                                                                <asp:Label ID="Label12" runat="server" Text="批复金额" />:
+                                                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,PiFuJinE%>" />:
                                                                  <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ApprovedAmount" runat="server" Width="100px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
 
 

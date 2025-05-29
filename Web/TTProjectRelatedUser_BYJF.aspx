@@ -136,7 +136,7 @@
                                                                     </td>
                                                                     <td width="8%" align="left">
                                                                         <strong>
-                                                                            <asp:Label ID="LB_DGUserCode" runat="server" Text="员工号" /></strong>
+                                                                            <asp:Label ID="LB_DGUserCode" runat="server" Text="<%$ Resources:lang,YuanGongHao%>" /></strong>
                                                                     </td>
                                                                     <td width="12%" align="left">
                                                                         <strong>
@@ -152,7 +152,7 @@
                                                                     </td>
                                                                     <td align="left">
                                                                         <strong>
-                                                                            <asp:Label ID="Label3" runat="server" Text="工作职责" /></strong>
+                                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongZuoZhiZe%>" /></strong>
                                                                     </td>
 
                                                                 </tr>
@@ -402,7 +402,7 @@
 
                                                             <td style="width: 15%; height: 5px; " class="formItemBgStyleForAlignLeft">
 
-                                                                <asp:Label ID="LB_tbUserCode" runat="server" Text="员工号" />:
+                                                                <asp:Label ID="LB_tbUserCode" runat="server" Text="<%$ Resources:lang,YuanGongHao%>" />:
                                                             </td>
 
                                                             <td class="formItemBgStyleForAlignLeft">
@@ -532,7 +532,7 @@
 
                                                             <td class="formItemBgStyleForAlignLeft">
 
-                                                                <asp:Label ID="LB_tbWorkDetail" runat="server" Text="工作职责" />:
+                                                                <asp:Label ID="LB_tbWorkDetail" runat="server" Text="<%$ Resources:lang,GongZuoZhiZe%>" />:
                                                             </td>
 
                                                             <td colspan="5" style="text-align: left;" class="formItemBgStyleForAlignLeft">

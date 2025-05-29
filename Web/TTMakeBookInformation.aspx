@@ -349,7 +349,7 @@
                                         <asp:TextBox ID="TextBox1" runat="server" Width="90px"></asp:TextBox>
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" rowspan="5">
-                                        <asp:Image ID="IM_ItemPhoto" runat="server" Height="200px" Width="220px" AlternateText="Í¼ÊéÕÕÆ¬" />
+                                        <asp:Image ID="IM_ItemPhoto" runat="server" Height="200px" Width="220px" AlternateText="<%$ Resources:lang,TuShuZhaoPian%>" />
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">

@@ -74,7 +74,7 @@
                                                     <tr>
                                                         <td style="padding: 5px 0px 0px 5px" class="formItemBgStyleForAlignLeft" valign="top" >
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BeiFenShuJuKu%>"></asp:Label>
-                                                            ，<asp:Label ID="Label36" runat="server" Text="前次备份时间"></asp:Label>：<asp:Label ID="LB_LastestBackupDBTime" runat="server"></asp:Label>：
+                                                            ，<asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,QianCiBeiFenShiJian%>"></asp:Label>：<asp:Label ID="LB_LastestBackupDBTime" runat="server"></asp:Label>：
                                                             （<asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,XTYHZMZESLDWSLDZZDBF%>"></asp:Label>）                                                        
                                                         </td>
                                                     </tr>

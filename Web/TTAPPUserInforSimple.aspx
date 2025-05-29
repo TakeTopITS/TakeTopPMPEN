@@ -72,7 +72,7 @@
                                     <asp:TextBox ID="TB_UserCode" runat="server" Enabled="False"></asp:TextBox>
                                 </td>
                                 <td style="text-align: left;" class="auto-style1" rowspan="6">
-                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="Ô±¹¤ÕÕÆ¬"
+                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="<%$ Resources:lang,YuanGongZhaoPian%>"
                                         ImageAlign="Left" />
                                 </td>
                             </tr>

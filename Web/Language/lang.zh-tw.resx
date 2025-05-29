@@ -30765,12 +30765,6 @@
   <data name="DaoRuYiNianShuJi" xml:space="preserve">
     <value>導入語言資料</value>
   </data>
-  <data name="ZZHHCG1" xml:space="preserve">
-    <value>返回成功！</value>
-  </data>
-  <data name="ZZHHCG2" xml:space="preserve">
-    <value>返回成功！</value>
-  </data>
   <data name="LianXian" xml:space="preserve">
     <value>連線</value>
   </data>
@@ -31001,5 +30995,11 @@
   </data>
   <data name="QuanBuXiTongYongHu" xml:space="preserve">
     <value>全部系统用户</value>
+  </data>
+  <data name="BaiFangFangShi" xml:space="preserve">
+    <value>拜訪方式</value>
+  </data>
+  <data name="AnShiJianChaXun" xml:space="preserve">
+    <value>按時間查詢</value>
   </data>
 </root>

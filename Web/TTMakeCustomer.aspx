@@ -144,7 +144,7 @@
                                                             <asp:Button ID="BT_Find" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Find_Click" />）
                                                         </td>
                                                         <td>
-                                                            <asp:Button ID="BT_ExportCustomerRelatedUser" runat="server" CssClass="inpuLong" Text="导出可视用户" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block'" OnClick="BT_ExportCustomerRelatedUser_Click" />）
+                                                            <asp:Button ID="BT_ExportCustomerRelatedUser" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,DaoChuKeShiYongHu%>" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block'" OnClick="BT_ExportCustomerRelatedUser_Click" />）
                                                             <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." onmouseover="avascript:document.getElementById('IMG_Waiting').style.display = 'none'" style="text-align: center; display: none;" />
 
                                                         </td>

@@ -351,7 +351,7 @@
                                                                                                 <asp:Label ID="LB_LeaderCode" runat="server"></asp:Label><asp:Label ID="LB_LeaderName"
                                                                                                     runat="server"></asp:Label>
 
-                                                                                                <asp:Button ID="BT_SelectLeader" runat="server" CssClass="inpuLong" OnClick="BT_SelectLeader_Click" Text="选择领导" />
+                                                                                                <asp:Button ID="BT_SelectLeader" runat="server" CssClass="inpuLong" OnClick="BT_SelectLeader_Click" Text="<%$ Resources:lang,ShuaZeLingDao%>" />
 
                                                                                             </td>
                                                                                         </tr>
@@ -425,9 +425,9 @@
                                                 <br />
                                                 <br />
                                                 <br />
-                                                <asp:Button ID="BT_SelectMember" runat="server" CssClass="inpuLong" OnClick="BT_SelectMember_Click" Text="选择成员" />
+                                                <asp:Button ID="BT_SelectMember" runat="server" CssClass="inpuLong" OnClick="BT_SelectMember_Click" Text="<%$ Resources:lang,ShuaZeChengYuan%>" />
                                                 &nbsp;&nbsp;
-                                                <asp:Button ID="BT_SelectActorMember" runat="server" CssClass="inpuLong" OnClick="BT_SelectActorGroup_Click" Text="选择角色组" />
+                                                <asp:Button ID="BT_SelectActorMember" runat="server" CssClass="inpuLong" OnClick="BT_SelectActorGroup_Click" Text="<%$ Resources:lang,ShuaZeJiaoSeZu%>" />
                                                 <br />
                                                 <br />
                                                 <br />

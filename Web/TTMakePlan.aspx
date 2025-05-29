@@ -226,13 +226,13 @@
 
                                                                     <asp:TemplateColumn HeaderText="Target">
                                                                         <ItemTemplate>
-                                                                            <asp:LinkButton ID="LBT_Target" CommandName="Target" runat="server" Text="关键目标"></asp:LinkButton>
+                                                                            <asp:LinkButton ID="LBT_Target" CommandName="Target" runat="server" Text="<%$ Resources:lang,GuanJianMuBiao%>"></asp:LinkButton>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:TemplateColumn HeaderText="Leader">
                                                                         <ItemTemplate>
-                                                                            <asp:LinkButton ID="LBT_Leader" CommandName="Leader" runat="server" Text="相关领导"></asp:LinkButton>
+                                                                            <asp:LinkButton ID="LBT_Leader" CommandName="Leader" runat="server" Text="<%$ Resources:lang,XiangGuanLingDao%>"></asp:LinkButton>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
                                                                     </asp:TemplateColumn>

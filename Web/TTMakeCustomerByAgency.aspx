@@ -217,7 +217,7 @@
                                                         </asp:TemplateColumn>
                                                         <asp:TemplateColumn HeaderText="SubmitReview">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_SubmitReview" CommandName="SubmitReview" runat="server" Text="提交备案"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_SubmitReview" CommandName="SubmitReview" runat="server" Text="<%$ Resources:lang,DiJiaoBeiAn%>"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                                         </asp:TemplateColumn>
@@ -282,7 +282,7 @@
                                                     <table style="width: 96%; text-align: center;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                         <%--  <tr>
                                                             <td colspan="4"  class="formItemBgStyleForAlignLeft">
-                                                                <asp:Button ID="BT_SubmitReview" runat="server" CssClass="inpu" Enabled="False" Text="提交备案" OnClick="BT_SubmitReview_Click" />
+                                                                <asp:Button ID="BT_SubmitReview" runat="server" CssClass="inpu" Enabled="False" Text="<%$ Resources:lang,DiJiaoBeiAn%>" OnClick="BT_SubmitReview_Click" />
                                                             </td>
                                                         </tr>--%>
                                                         <tr>

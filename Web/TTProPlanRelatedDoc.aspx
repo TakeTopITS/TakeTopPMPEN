@@ -410,11 +410,11 @@
                                                                         <td style="width: 100%; height: 21px; text-align: left;">
                                                                             <span><strong>
                                                                                 <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,WenJianShangChuan %>"></asp:Label>：</strong>
-                                                                                （<asp:Label ID="Label51" runat="server" Text="必传文档"></asp:Label>：
+                                                                                （<asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,BiChuanWenDang%>"></asp:Label>：
                                                                                 <asp:DropDownList ID="DL_ProPlanRelatedDocForTemplate" runat="server" DataValueField="DocName" DataTextField="DocName">
                                                                                 </asp:DropDownList>
                                                                                 &nbsp;&nbsp; 
-                                                                                <asp:HyperLink ID="HL_DocumentForProjectPlanTemplate" runat="server" Text="模板参照" Target="_blank"></asp:HyperLink>
+                                                                                <asp:HyperLink ID="HL_DocumentForProjectPlanTemplate" runat="server" Text="<%$ Resources:lang,MoBanCanZhao%>" Target="_blank"></asp:HyperLink>
                                                                                 ）
                                                                             </span>
                                                                         </td>

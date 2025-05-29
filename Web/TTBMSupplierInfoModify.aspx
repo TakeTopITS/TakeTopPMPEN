@@ -149,17 +149,17 @@
 
                                                         </td>
                                                         <td align="left" class="auto-style2">
-                                                            <asp:Label ID="Label66" runat="server" Text="承包类型"></asp:Label>：</td>
+                                                            <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,ChengBaoLeiXing%>"></asp:Label>：</td>
                                                         <td align="left" class="auto-style2">
-                                                            <asp:CheckBox ID="CB_IsEnginerringSupplier" Text="工程" Enabled="false" runat="server" />
+                                                            <asp:CheckBox ID="CB_IsEnginerringSupplier" Text="<%$ Resources:lang,GongCheng%>" Enabled="false" runat="server" />
                                                             &nbsp; &nbsp;
-                                                            <asp:CheckBox ID="CB_IsInternationSupplier" Enabled="false" Text="国际" runat="server" />
+                                                            <asp:CheckBox ID="CB_IsInternationSupplier" Enabled="false" Text="<%$ Resources:lang,GuoJi%>" runat="server" />
                                                             &nbsp;
                                                             &nbsp;
-                                                            <asp:CheckBox ID="CB_IsRetailSupplier" Enabled="false" Text="零售" runat="server" />
+                                                            <asp:CheckBox ID="CB_IsRetailSupplier" Enabled="false" Text="<%$ Resources:lang,LingShou%>" runat="server" />
                                                             &nbsp;
                                                             &nbsp;
-                                                            <asp:CheckBox ID="CB_IsStoreSupplier" Enabled="false" Text="门店" runat="server" />
+                                                            <asp:CheckBox ID="CB_IsStoreSupplier" Enabled="false" Text="<%$ Resources:lang,MenDian%>" runat="server" />
                                                         </td>
 
                                                     </tr>

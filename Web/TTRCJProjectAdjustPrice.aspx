@@ -379,17 +379,17 @@
                                         <tr>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="btnSavePriceAdjust" runat="server" OnClick="btnSavePriceAdjust_Click" Text="新增价格调整数据" Width="146px" />
+                                                    <asp:Button ID="btnSavePriceAdjust" runat="server" OnClick="btnSavePriceAdjust_Click" Text="<%$ Resources:lang,XinZengJiaGeDiaoZhengShuJu%>" Width="146px" />
                                                 </table>
                                             </td>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="btnEditPriceAdjust" runat="server" OnClick="btnEditPriceAdjust_Click" OnClientClick="return confirm('修改该记录导致所有相关绩效重新计算，确认修改该记录吗?')" Text="修改价格调整数据" Width="146px" />
+                                                    <asp:Button ID="btnEditPriceAdjust" runat="server" OnClick="btnEditPriceAdjust_Click" OnClientClick="return confirm('修改该记录导致所有相关绩效重新计算，确认修改该记录吗?')" Text="<%$ Resources:lang,XiuGaiJiaGeDiaoZhengShuJu%>" Width="146px" />
                                                 </table>
                                             </td>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="btnDelPriceAdjust" runat="server" OnClick="btnDelPriceAdjust_Click" OnClientClick="return confirm('您确认删除该调整记录吗?')" Text="删除调整数据入库" Width="146px" />
+                                                    <asp:Button ID="btnDelPriceAdjust" runat="server" OnClick="btnDelPriceAdjust_Click" OnClientClick="return confirm('您确认删除该调整记录吗?')" Text="<%$ Resources:lang,ShanChuDiaoZhengShuJuRuKu%>" Width="146px" />
                                                 </table>
                                             </td>
                                         </tr>

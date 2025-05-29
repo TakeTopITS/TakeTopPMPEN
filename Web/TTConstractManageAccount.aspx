@@ -34,7 +34,7 @@
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
                                                     <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                        <asp:Label ID="Label1" runat="server" Text="合同台帐"></asp:Label>
+                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,GeTongTaiZhang%>"></asp:Label>
                                                     </td>
                                                     <td width="5">
                                                         <%--<img src="ImagesSkin/main_top_r.jpg" width="5" height="31" alt="" />--%>
@@ -71,7 +71,7 @@
                                                           <asp:DropDownList ID="DDL_Constractype" runat="server" DataTextField="type" DataValueField="type" Width="175px" AutoPostBack="true"></asp:DropDownList>
                                                     </td>
                                                     <td>
-                                                         <asp:Button ID="BTN_Query" runat="server" Text="查询" OnClick="BTN_Query_Click" />
+                                                         <asp:Button ID="BTN_Query" runat="server" Text="<%$ Resources:lang,ChaXun%>" OnClick="BTN_Query_Click" />
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -113,7 +113,7 @@
                 </div>
 
                 <div>
-                    <asp:GridView ID="gvContractData" runat="server" AutoGenerateColumns="False" EmptyDataText="暂时没有查询到相关信息" AllowPaging="True" PageSize="15" CellPadding="2">
+                    <asp:GridView ID="gvContractData" runat="server" AutoGenerateColumns="False" EmptyDataText="<%$ Resources:lang,ZanShiMeiYouChaXunDaoXiangGuanXinXi%>" AllowPaging="True" PageSize="15" CellPadding="2">
                         <Columns>
                             <asp:BoundField DataField="constractid" HeaderText="序号" />
                             <asp:BoundField DataField="status" HeaderText="合同状态" />

@@ -39,7 +39,7 @@
 										<td height="220"></td>
 									</tr>
 									<tr>
-										<td vAlign="middle" align="left" height="80"><asp:button id="BackBtn" runat="server" Width="100" CssClass="ButtonCss" Text="·µ»Ø" OnClick="BackBtn_Click"></asp:button></td>
+										<td vAlign="middle" align="left" height="80"><asp:button id="BackBtn" runat="server" Width="100" CssClass="ButtonCss" Text="<%$ Resources:lang,FanHui%>" OnClick="BackBtn_Click"></asp:button></td>
 									</tr>
 									<tr>
 										<td colspan="2" width="100%">

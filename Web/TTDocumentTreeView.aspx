@@ -185,7 +185,7 @@
                                                             </cc1:TabPanel>
                                                             <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="" Visible="false">
                                                                 <HeaderTemplate>
-                                                                    <asp:Label ID="Label10" runat="server" Text="要传没传"></asp:Label>
+                                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YaoChuanMeiChuan%>"></asp:Label>
                                                                 </HeaderTemplate>
                                                                 <ContentTemplate>
                                                                     <br />

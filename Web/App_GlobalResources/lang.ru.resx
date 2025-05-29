@@ -30998,4 +30998,10 @@
   <data name="QuanBuXiTongYongHu" xml:space="preserve">
     <value>Все пользователи системы</value>
   </data>
+  <data name="BaiFangFangShi" xml:space="preserve">
+    <value>Способ визита</value>
+  </data>
+  <data name="AnShiJianChaXun" xml:space="preserve">
+    <value>Поиск по времени</value>
+  </data>
 </root>

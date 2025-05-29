@@ -66,7 +66,7 @@
                                             <cc2:TabContainer ID="TabContainer2" runat="server" ActiveTabIndex="0" CssClass="ajax_tab_menu" Width="100%">
                                                 <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="需求信息" TabIndex="0">
                                                     <HeaderTemplate>
-                                                        <asp:Label ID="Label8" runat="server" Text="需求信息"></asp:Label>
+                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XuQiuXinXi%>"></asp:Label>
                                                     </HeaderTemplate>
                                                     <ContentTemplate>
                                                         <asp:DataList ID="DataList2" runat="server" CellPadding="0" ForeColor="#333333" Height="1px" Width="100%">
@@ -158,7 +158,7 @@
                                                 </cc2:TabPanel>
                                                 <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="商机信息" TabIndex="0">
                                                     <HeaderTemplate>
-                                                        <asp:Label ID="Label35" runat="server" Text="商机信息"></asp:Label>
+                                                        <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,ShangJiXinXi%>"></asp:Label>
                                                     </HeaderTemplate>
                                                     <ContentTemplate>
                                                         <asp:DataList ID="DataList1" runat="server" CellPadding="0" ForeColor="#333333" Height="1px" Width="100%">

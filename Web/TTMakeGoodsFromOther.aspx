@@ -511,7 +511,7 @@
                                                     </table>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft"  rowspan="6">
-                                                    <asp:Image ID="IM_ItemPhoto" runat="server" Height="200px" Width="220px" AlternateText="ÎïÁÏÕÕÆ¬" />
+                                                    <asp:Image ID="IM_ItemPhoto" runat="server" Height="200px" Width="220px" AlternateText="<%$ Resources:lang,WuLiaoZhaoPian%>" />
                                                     <br />
                                                     <asp:Button ID="BT_TakePhoto" runat="server" CssClass="inpu" Visible="false" Enabled="False" OnClick="BT_TakePhoto_Click" Text="<%$ Resources:lang,PaiZhao%>" />
 

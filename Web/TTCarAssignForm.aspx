@@ -334,7 +334,7 @@
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,Shi2%>"></asp:Label>
+                                                    <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,Shi%>"></asp:Label>
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DLC_RealDepartMinute" runat="server" CssClass="shuru">
@@ -369,7 +369,7 @@
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,Shi2%>"></asp:Label>
+                                                    <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,Shi%>"></asp:Label>
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DLC_RealBackMinute" runat="server" CssClass="shuru">
@@ -518,7 +518,7 @@
                                                                 </asp:DropDownList>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,Shi2%>"></asp:Label>
+                                                                <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,Shi%>"></asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:DropDownList ID="DLC_DepartBeginMinute" runat="server" CssClass="shuru">
@@ -549,7 +549,7 @@
                                                                 </asp:DropDownList>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,Shi2%>"></asp:Label>
+                                                                <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,Shi%>"></asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:DropDownList ID="DLC_BackBeginMinute" runat="server" CssClass="shuru">

@@ -676,7 +676,7 @@
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Price" runat="server" Width="79px" Precision="3">0.000</NickLee:NumberBox>
-                                                    <asp:CheckBox ID="CB_IsTaxPrice" runat="server" Checked="true" Text="º¬Ë°" />
+                                                    <asp:CheckBox ID="CB_IsTaxPrice" runat="server" Checked="true" Text="<%$ Resources:lang,HanShui%>" />
                                                 </td>
                                             </tr>
                                             <tr>

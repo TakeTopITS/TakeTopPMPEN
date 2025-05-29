@@ -422,7 +422,7 @@
                                                             <tr>
                                                                 <td class="formItemBgStyleForAlignLeft" colspan="4">
 
-                                                                    <asp:Image ID="IM_ItemPhoto" runat="server" Height="180px" Width="200px" AlternateText="元素照片" />
+                                                                    <asp:Image ID="IM_ItemPhoto" runat="server" Height="180px" Width="200px" AlternateText="<%$ Resources:lang,YuanSuZhaoPian%>" />
                                                                     <asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>
                                                                 </td>
                                                             </tr>
@@ -677,11 +677,11 @@
                                                                                             </td>
                                                                                             <%--  <td width="4%" align="left">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label15" runat="server" Text="销售单价"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiaoShouChanJia%>"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="left">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label14" runat="server" Text="销售总额"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,XiaoShouZongE%>"></asp:Label></strong>
                                                                                             </td>--%>
 
 
@@ -835,7 +835,7 @@
                                                                             </td>
                                                                             <td align="left">
 
-                                                                                <asp:Button ID="BT_DeleteAllProjectItem" runat="server" CssClass="inpuLong" OnClick="BT_DeleteAllProjectItem_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="删除全部" />
+                                                                                <asp:Button ID="BT_DeleteAllProjectItem" runat="server" CssClass="inpuLong" OnClick="BT_DeleteAllProjectItem_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChuQuanBu%>" />
                                                                             </td>
                                                                         </tr>
                                                                     </table>
@@ -1113,15 +1113,15 @@
                                                 </td>
                                                 <td width="7%" align="left">
                                                     <strong>
-                                                        <asp:Label ID="Label42" runat="server" Text="采购总额"></asp:Label></strong>
+                                                        <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,CaiGouZongE%>"></asp:Label></strong>
                                                 </td>
                                                 <td width="6%" align="left">
                                                     <strong>
-                                                        <asp:Label ID="Label43" runat="server" Text="销售单价"></asp:Label></strong>
+                                                        <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,XiaoShouChanJia%>"></asp:Label></strong>
                                                 </td>
                                                 <td align="left">
                                                     <strong>
-                                                        <asp:Label ID="Label44" runat="server" Text="销售总额"></asp:Label></strong>
+                                                        <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,XiaoShouZongE%>"></asp:Label></strong>
                                                 </td>
                                             </tr>
                                         </table>

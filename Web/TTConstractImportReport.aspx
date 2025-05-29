@@ -139,7 +139,7 @@
                         <table width="1200px" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td style="width: 1000px; text-align: left; padding-left: 5px;">
-                                    <asp:Label ID="Label19" runat="server" Text="进口总额"></asp:Label>：<asp:Label ID="LB_TotalAmount" runat="server"></asp:Label>
+                                    <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JinKouZongE%>"></asp:Label>：<asp:Label ID="LB_TotalAmount" runat="server"></asp:Label>
                                     &nbsp;
                                     <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,GuanShuiZongE%>"></asp:Label>：<asp:Label ID="LB_TotalEntryTaxAmount" runat="server"></asp:Label>
 
@@ -151,7 +151,7 @@
                                     <asp:Label ID="LB_CurrencyType" runat="server"></asp:Label>）
 
                                     &nbsp;
-                                    <asp:Label ID="Label22" runat="server" Text="合同数量"></asp:Label>：
+                                    <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,GeTongShuLiang%>"></asp:Label>：
                                     <asp:Label ID="LB_ConstractNumber" runat="server" Text="0"></asp:Label>
 
                                 </td>

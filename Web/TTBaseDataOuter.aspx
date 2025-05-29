@@ -894,11 +894,11 @@
                     </tr>
                     <tr>
                         <td style="height: 19px;"><strong>
-                            <asp:Label ID="Label21" runat="server" Text="加班类型"></asp:Label>
+                            <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JiaBanLeiXing%>"></asp:Label>
                         </strong></td>
                         <td>&nbsp;</td>
                         <td align="left"><strong>
-                            <asp:Label ID="Label492291" runat="server" Text="节日类型"></asp:Label>
+                            <asp:Label ID="Label492291" runat="server" Text="<%$ Resources:lang,JieRiLeiXing%>"></asp:Label>
                         </strong></td>
                         <td>&nbsp;</td>
                         <td align="left" colspan="4">&nbsp;</td>
@@ -1381,7 +1381,7 @@
                         </b></td>
                         <td style="height: 7px;">
                             <strong>
-                                <asp:Label ID="Label492273" runat="server" Text="缺陷类型"></asp:Label>
+                                <asp:Label ID="Label492273" runat="server" Text="<%$ Resources:lang,QueXianLeiXing%>"></asp:Label>
                             </strong>&nbsp;</td>
                     </tr>
                     <tr>
@@ -3324,16 +3324,16 @@
                                         </strong></td>
                                         <td style="height: 7px;">
                                             <strong>
-                                                <asp:Label ID="Label62" runat="server" Text="承包商大类"></asp:Label>
+                                                <asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,ChengBaoShangDaLei%>"></asp:Label>
                                             </strong></td>
                                         <td style="height: 7px;">
                                             <strong>
-                                                <asp:Label ID="Label492272" runat="server" Text="承包商小类"></asp:Label>
+                                                <asp:Label ID="Label492272" runat="server" Text="<%$ Resources:lang,ChengBaoShangXiaoLei%>"></asp:Label>
                                             </strong>
                                         </td>
                                         <td style="height: 7px;" colspan="2">
                                             <strong>
-                                                <asp:Label ID="Label81" runat="server" Text="承包类型"></asp:Label>
+                                                <asp:Label ID="Label81" runat="server" Text="<%$ Resources:lang,ChengBaoLeiXing%>"></asp:Label>
                                             </strong></td>
                                     </tr>
                                     <tr>

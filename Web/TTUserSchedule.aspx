@@ -58,14 +58,14 @@
 
                                                     <td width="30%" align="left">
                                                         <strong>
-                                                            <asp:Label ID="Label3" runat="server" Text="班次名称"></asp:Label></strong>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BanCiMingChen%>"></asp:Label></strong>
                                                     </td>
 
                                                     <td align="left" width="20%"><strong>
-                                                        <asp:Label ID="Label268" runat="server" Text="上班开始时间"></asp:Label>
+                                                        <asp:Label ID="Label268" runat="server" Text="<%$ Resources:lang,ShangBanKaiShiShiJian%>"></asp:Label>
                                                     </strong></td>
                                                     <td align="left" width="20%"><strong>
-                                                        <asp:Label ID="Label269" runat="server" Text="下班结束时间"></asp:Label>
+                                                        <asp:Label ID="Label269" runat="server" Text="<%$ Resources:lang,XiaBanJieShuShiJian%>"></asp:Label>
                                                     </strong></td>
 
                                                     <td align="left" width="20%"><strong>
@@ -121,11 +121,11 @@
                         <tr>
                             <td  colspan="3" class="formItemBgStyleForAlignLeft">
                                 <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>：<asp:Label ID="LB_ID" runat="server"></asp:Label>
-                                &nbsp;<asp:Label ID="Label1" runat="server" Text="班次名称"></asp:Label>
+                                &nbsp;<asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BanCiMingChen%>"></asp:Label>
                                 <asp:TextBox ID="tb_Name" runat="server" Width="50px"></asp:TextBox>
-                                &nbsp;<asp:Label ID="Label285" runat="server" Text="上班开始时间"></asp:Label>
+                                &nbsp;<asp:Label ID="Label285" runat="server" Text="<%$ Resources:lang,ShangBanKaiShiShiJian%>"></asp:Label>
                                 <asp:TextBox ID="TB_CheckInStart" runat="server" Width="50px"></asp:TextBox>
-                                &nbsp;<asp:Label ID="Label286" runat="server" Text="下班结束时间"></asp:Label>
+                                &nbsp;<asp:Label ID="Label286" runat="server" Text="<%$ Resources:lang,XiaBanJieShuShiJian%>"></asp:Label>
                                 <asp:TextBox ID="TB_CheckInEnd" runat="server" Width="50px"></asp:TextBox>
                                 &nbsp;<asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Longitude%>"></asp:Label>
                                 <asp:TextBox ID="TB_Longitude" runat="server" Width="100px"></asp:TextBox>

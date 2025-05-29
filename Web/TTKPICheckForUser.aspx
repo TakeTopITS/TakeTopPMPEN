@@ -286,7 +286,7 @@
                                                                                 </td>
                                                                                 <td width="5%" align="left">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label27" runat="server" Text="×ÜÆÀ·Ö"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ZongPingFen%>"></asp:Label></strong>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

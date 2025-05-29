@@ -189,7 +189,7 @@
         jQuery(function () {
 
 
-            //如果不是单独窗口，那么把返回功能不可视
+            //如果不是单独窗口，那么把返回功能不可�?
             if (top.location !== self.location) {
 
                 document.getElementById("Table_Back").style.display = 'none';
@@ -279,7 +279,7 @@
             var aHref = document.getElementById("HL_WFChartView").href;
             if (aHref == "") {
 
-                alert("请先选择工作流模板或工作流(Please select workflow template or workflow)!")
+                alert("请先选择工作流模板或工作�?Please select workflow template or workflow)!")
                 return;
             }
 
@@ -369,7 +369,7 @@
                                                 <td colspan="2" class="tdRight" align="left">
 
                                                     <span style="font-size: 10pt;">
-                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShenPiJinDuFanKui%>"></asp:Label>：</span><asp:CheckBox
+                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShenPiJinDuFanKui%>"></asp:Label>�?/span><asp:CheckBox
                                                             ID="CB_SMS" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,DuanXin%>" Checked="true" /><asp:CheckBox ID="CB_Mail"
                                                                 runat="server" Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" Checked="true" />
                                                 </td>
@@ -441,7 +441,7 @@
                                 <tr>
                                     <td width="30px;">&nbsp;</td>
                                     <td align="center" style="padding-top: 5px;">
-                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeWuDan%>"></asp:Label>：
+                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeWuDan%>"></asp:Label>�?
                                     </td>
                                     <td align="center" style="padding-top: 5px;">
                                         <asp:DropDownList ID="DL_WorkflowTemplate" runat="server" DataTextField="TemName" DataValueField="XSNFile" AutoPostBack="true" OnSelectedIndexChanged="DL_WorkflowTemplate_SelectedIndexChanged">
@@ -486,7 +486,7 @@
             </div>
             <div style="overflow: hidden; width: 1px; height: 1px;">
                 <asp:Label ID="Label1" runat="server"></asp:Label>
-                <asp:Image ID="IMG_LRArrow" ImageUrl="Images/UpDnArrow.png" Width="18" Height="24" border="0" alt="隐藏右边栏" runat="server" />
+                <asp:Image ID="IMG_LRArrow" ImageUrl="Images/UpDnArrow.png" Width="18" Height="24" border="0" alt="隐藏右边�? runat="server" />
                                 <asp:Label ID="Label48" runat="server" Style="display: none;"></asp:Label>
                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ChuLiZhuangTai%>"></asp:Label>:
                     <asp:Label ID="LB_WorkflowStatus" runat="server"></asp:Label>

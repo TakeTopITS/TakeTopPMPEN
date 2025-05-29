@@ -80,7 +80,7 @@
 
                                                 <td width="6%" align="left">
                                                     <strong>
-                                                        <asp:Label ID="Label9" runat="server" Text="¿â´æ"></asp:Label></strong>
+                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,KuCun%>"></asp:Label></strong>
                                                 </td>
 
                                                 <%-- <td width="8%" align="left">

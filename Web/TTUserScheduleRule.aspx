@@ -150,13 +150,13 @@
 
                                                                                 <td width="40%" align="left">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label3" runat="server" Text="日期"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,RiJi%>"></asp:Label></strong>
                                                                                 </td>
 
 
                                                                                 <td width="40%" align="left">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label20" runat="server" Text="班次"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,BanCi%>"></asp:Label></strong>
                                                                                 </td>
 
 
@@ -234,7 +234,7 @@
                                                                     Enabled="False" OnClick="BT_UpdateUserAttendanceRule_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                                 &nbsp;<asp:Button ID="BT_DeleteUserAttendanceRule" runat="server" CssClass="inpu"
                                                                     Enabled="False" OnClick="BT_DeleteUserAttendanceRule_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />
-                                                                &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" OnClick="BT_PaiBanRule_Click" Text="设置班次" />
+                                                                &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" OnClick="BT_PaiBanRule_Click" Text="<%$ Resources:lang,SheZhiBanCi%>" />
                                                             </td>
                                                             <td  width="130px" class="formItemBgStyleForAlignLeft"></td>
                                                             <td  width="130px" class="formItemBgStyleForAlignLeft"></td>

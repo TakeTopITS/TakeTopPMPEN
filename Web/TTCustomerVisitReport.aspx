@@ -54,7 +54,7 @@
                         <table style="width: 980px;">
                             <tr>
                                 <td width="12%" style="text-align: right;">
-                                    <asp:Label ID="Label17" runat="server" Text="经销商"></asp:Label>：</td>
+                                    <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,JingXiaoShang%>"></asp:Label>：</td>
                                 <td align="left" width="25%">
                                     <asp:TextBox ID="TB_AgencyName" runat="server" Width="190px"></asp:TextBox>
                                 </td>
@@ -66,18 +66,18 @@
                             </tr>
                             <tr>
                                 <td style="text-align: right;" width="12%">
-                                    <asp:Label ID="Label19" runat="server" Text="联系人"></asp:Label>：</td>
+                                    <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,LianJiRen%>"></asp:Label>：</td>
                                 <td align="left" width="25%">
                                     <asp:TextBox ID="TB_ContactName" runat="server" Width="190px"></asp:TextBox>
                                 </td>
                                 <td style="text-align: right;" width="12%">
-                                    <asp:Label ID="Label1" runat="server" Text="联系方式"></asp:Label>：</td>
+                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,LianJiFangShi%>"></asp:Label>：</td>
                                 <td align="left" width="25%">
                                     <asp:TextBox ID="TB_ContactType" runat="server" Width="190px"></asp:TextBox>
                                 </td>
 
                                 <td style="text-align: right;" width="12%">
-                                    <asp:Label ID="Label14" runat="server" Text="拜访方式"></asp:Label>：</td>
+                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BaiFangFangShi%>"></asp:Label>：</td>
                                 <td align="left" width="25%">
                                     <asp:DropDownList ID="DL_CustomerQuestionType" runat="server" CssClass="DDList" DataTextField="Type" DataValueField="Type">
                                     </asp:DropDownList>
@@ -87,14 +87,14 @@
                             </tr>
                             <tr>
                                 <td style="text-align: right;" width="12%">
-                                    <asp:Label ID="Label21" runat="server" Text="拜访时间从"></asp:Label>： </td>
+                                    <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BaiFangShiJianCong%>"></asp:Label>： </td>
                                 <td align="left" width="25%">
                                     <asp:TextBox ID="DLC_VisitStartTime" runat="server" ReadOnly="false" Height="23px"></asp:TextBox>
                                     <ajaxToolkit:CalendarExtender ID="CalendarExtender3" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_VisitStartTime">
                                     </ajaxToolkit:CalendarExtender>
                                 </td>
                                 <td style="text-align: right;" width="12%">
-                                    <asp:Label ID="Label13" runat="server" Text="到"></asp:Label>： </td>
+                                    <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>： </td>
                                 <td align="left" width="25%">
                                     <asp:TextBox ID="DLC_VisitEndTime" runat="server" ReadOnly="false" Height="23px"></asp:TextBox>
                                     <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" Format="yyyy-MM-dd" TargetControlID="DLC_VisitEndTime">
@@ -106,20 +106,20 @@
                             <tr>
 
                                 <td style="text-align: right;" width="12%">
-                                    <asp:Label ID="Label4" runat="server" Text="产品类型"></asp:Label>：</td>
+                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChanPinLeiXing%>"></asp:Label>：</td>
                                 <td align="left" width="25%">
                                     <asp:DropDownList ID="DL_IndustryType" runat="server" Width="120px" 
                                         DataTextField="Type" DataValueField="Type" >
                                     </asp:DropDownList>
                                 </td>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label23" runat="server" Text="受理人"></asp:Label>：
+                                    <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label>：
                                 </td>
                                 <td align="left">
                                     <asp:TextBox ID="TB_OperatorName" runat="server" Width="127px"></asp:TextBox>
                                 </td>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label8" runat="server" Text="是否商机"></asp:Label>：
+                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShiFouShangJi%>"></asp:Label>：
                                 </td>
                                 <td align="left">
                                     <asp:DropDownList ID="DL_IsImportant" runat="server">
@@ -148,7 +148,7 @@
                             <tr>
                                 <td style="width: 100%; height: 80px; font-size: xx-large; text-align: center;">
                                     <br />
-                                    <asp:Label ID="LB_ReportName" runat="server" Text="客户拜访统计表"></asp:Label>
+                                    <asp:Label ID="LB_ReportName" runat="server" Text="<%$ Resources:lang,KeHuBaiFangTongJiBiao%>"></asp:Label>
                                     <br />
                                 </td>
                             </tr>
@@ -174,7 +174,7 @@
                                                         </td>
                                                         <td width="13%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label3" runat="server" Text="经销商"></asp:Label></strong>
+                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JingXiaoShang%>"></asp:Label></strong>
                                                         </td>
 
                                                         <td width="13%" align="left">
@@ -183,32 +183,32 @@
                                                         </td>
                                                         <td width="9%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label5" runat="server" Text="联系人"></asp:Label></strong>
+                                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LianJiRen%>"></asp:Label></strong>
                                                         </td>
                                                         <td width="6%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label6" runat="server" Text="联系方式"></asp:Label></strong>
+                                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LianJiFangShi%>"></asp:Label></strong>
                                                         </td>
                                                         <td width="9%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label7" runat="server" Text="拜访时间"></asp:Label></strong>
+                                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BaiFangShiJian%>"></asp:Label></strong>
                                                         </td>
 
                                                         <td width="8%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label9" runat="server" Text="拜访方式"></asp:Label></strong>
+                                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BaiFangFangShi%>"></asp:Label></strong>
                                                         </td>
                                                         <td width="7%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label10" runat="server" Text="产品类型"></asp:Label></strong>
+                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ChanPinLeiXing%>"></asp:Label></strong>
                                                         </td>
                                                         <td width="9%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label11" runat="server" Text="受理人"></asp:Label></strong>
+                                                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label></strong>
                                                         </td>
                                                         <td width="5%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label12" runat="server" Text="是否商机"></asp:Label></strong>
+                                                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShiFouShangJi%>"></asp:Label></strong>
                                                         </td>
 
                                                     </tr>

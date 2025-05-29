@@ -187,7 +187,7 @@
                 <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
                         <td align="center" style="padding-right: 15px;">
-                            <asp:Label ID="Label1" runat="server" Text="»¶Ó­Ê¹ÓÃ"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HanYingShiYong%>"></asp:Label>
                             <br />
                             <br />
                             <br />

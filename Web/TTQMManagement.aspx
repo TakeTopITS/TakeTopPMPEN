@@ -87,7 +87,7 @@
                                                                 <tr>
                                                                     <td align="left" style="font-size: x-large">
                                                                         <b><span class="auto-style1">
-                                                                            <asp:Label ID="Label2" runat="server" Text="项目合同验收单"></asp:Label></span></b></td>
+                                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuGeTongYanShouChan%>"></asp:Label></span></b></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="left">

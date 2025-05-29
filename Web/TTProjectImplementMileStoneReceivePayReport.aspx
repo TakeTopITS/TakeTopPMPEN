@@ -147,19 +147,19 @@
                                             <td style="text-align: right; padding-right: 20px;">
                                                 <asp:Label ID="Labe7" runat="server" Text="TotalAmountReceived"></asp:Label>
                                                 ：<asp:Label ID="LB_ReceivableAmount" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label9" runat="server" Text="元"></asp:Label>
+                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,Yuan%>"></asp:Label>
                                                 &nbsp;&nbsp;
                                 <asp:Label ID="Label10" runat="server" Text="TotalAmountReceivable"></asp:Label>
                                                 ：<asp:Label ID="LB_ReceiverAmount" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label12" runat="server" Text="元"></asp:Label>
+                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Yuan%>"></asp:Label>
                                                 &nbsp;&nbsp;
-                                   <asp:Label ID="Label7" runat="server" Text="未收总额"></asp:Label>
+                                   <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WeiShouZongE%>"></asp:Label>
                                                 ：<asp:Label ID="LB_UnReceiverAmount" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label11" runat="server" Text="元"></asp:Label>
+                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,Yuan%>"></asp:Label>
                                                 &nbsp;&nbsp;
-                                   <asp:Label ID="Label4" runat="server" Text="记录数"></asp:Label>
+                                   <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiLuShu%>"></asp:Label>
                                                 ：<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label6" runat="server" Text="条"></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>

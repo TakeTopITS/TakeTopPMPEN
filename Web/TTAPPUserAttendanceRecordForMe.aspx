@@ -288,7 +288,7 @@
                                         <tr>
                                             <td class="formItemBgStyleForAlignLeft">
                                                
-                                                <asp:Label ID="Label2120" runat="server" Text="ÎÒµÄ¿¼ÇÚ¼ÇÂ¼"></asp:Label>
+                                                <asp:Label ID="Label2120" runat="server" Text="<%$ Resources:lang,WoDeKaoQinJiLu%>"></asp:Label>
                                                 <asp:DropDownList ID="DL_DisplayType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_DisplayType_SelectedIndexChanged">
                                                     <asp:ListItem Value="DisplayAbnormal" Text="<%$ Resources:lang,XianShiYiChang%>" />
                                                     <asp:ListItem Value="DisplayAll" Text="<%$ Resources:lang,XianShiQuanBu%>" />

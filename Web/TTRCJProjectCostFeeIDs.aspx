@@ -164,17 +164,17 @@
                                                                 <tr>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="新增数据" Width="146px" OnClick="btnAddNewItem_Click" />
+                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="<%$ Resources:lang,XinZengShuJu%>" Width="146px" OnClick="btnAddNewItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnEditItem" runat="server" Text="修改数据" Width="146px" OnClick="btnEditItem_Click" />
+                                                                            <asp:Button ID="btnEditItem" runat="server" Text="<%$ Resources:lang,XiuGaiShuJu%>" Width="146px" OnClick="btnEditItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td align="left">
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 2px">
-                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="删除数据" Width="146px" OnClick="btnDeleteItem_Click" OnClientClick="return confirm('您确认删除该记录吗?')" />
+                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="<%$ Resources:lang,ShanChuShuJu%>" Width="146px" OnClick="btnDeleteItem_Click" OnClientClick="return confirm('您确认删除该记录吗?')" />
                                                                         </table>
                                                                     </td>
                                                                 </tr>
@@ -325,17 +325,17 @@
                                                                 <tr>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="BT_AddNewSubFee" runat="server" Text="新增数据" Width="146px" OnClick="BT_AddNewSubFee_Click" />
+                                                                            <asp:Button ID="BT_AddNewSubFee" runat="server" Text="<%$ Resources:lang,XinZengShuJu%>" Width="146px" OnClick="BT_AddNewSubFee_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="BT_EditSubFee" runat="server" Text="修改数据" Width="146px" OnClick="BT_EditSubFee_Click" />
+                                                                            <asp:Button ID="BT_EditSubFee" runat="server" Text="<%$ Resources:lang,XiuGaiShuJu%>" Width="146px" OnClick="BT_EditSubFee_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td align="left">
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 2px">
-                                                                            <asp:Button ID="BT_DelSubFee" runat="server" Text="删除数据" Width="146px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelSubFee_Click" />
+                                                                            <asp:Button ID="BT_DelSubFee" runat="server" Text="<%$ Resources:lang,ShanChuShuJu%>" Width="146px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelSubFee_Click" />
                                                                         </table>
                                                                     </td>
                                                                 </tr>

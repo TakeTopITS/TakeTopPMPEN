@@ -44,7 +44,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></td>
                                                         <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="我的考勤"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,WoDeKaoQin%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
@@ -79,7 +79,7 @@
                                                 <table style="width: 100%; text-align: left;">
                                                     <tr>
                                                         <td align="left">
-                                                            <asp:Label ID="Label29" runat="server" Text="考勤规则"></asp:Label>
+                                                            <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,KaoQinGuiZe%>"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -308,7 +308,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyleForAlignLeft">
 
-                                                            <asp:Label ID="Label2120" runat="server" Text="我的考勤记录"></asp:Label>
+                                                            <asp:Label ID="Label2120" runat="server" Text="<%$ Resources:lang,WoDeKaoQinJiLu%>"></asp:Label>
                                                             <asp:DropDownList ID="DL_DisplayType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_DisplayType_SelectedIndexChanged">
                                                                 <asp:ListItem Value="DisplayAbnormal" Text="<%$ Resources:lang,XianShiYiChang%>" />
                                                                 <asp:ListItem Value="DisplayAll" Text="<%$ Resources:lang,XianShiQuanBu%>" />

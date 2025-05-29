@@ -85,7 +85,7 @@
                                                                         <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="left" width="15%"><strong>
-                                                                        <asp:Label ID="Label32228" runat="server" Text="×Ê½ðËã·¨"></asp:Label>
+                                                                        <asp:Label ID="Label32228" runat="server" Text="<%$ Resources:lang,ZiJinSuanFa%>"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="left" width="20%"><strong>
                                                                         <asp:Label ID="Label381" runat="server" Text="<%$ Resources:lang,FuChuangKu%>"></asp:Label>
@@ -159,7 +159,7 @@
                                                             <asp:TextBox ID="TB_WHName" runat="server" Width="150"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label383335" runat="server" Text="¿â´æ×Ê½ðËã·¨"></asp:Label>
+                                                            <asp:Label ID="Label383335" runat="server" Text="<%$ Resources:lang,KuCunZiJinSuanFa%>"></asp:Label>
                                                         </td>
                                                         <td>
                                                             <asp:DropDownList ID="DL_CapitalMethod" runat="server">
@@ -216,7 +216,7 @@
                                                                                     <asp:Label ID="Label234233" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
                                                                                 </strong></td>
                                                                                 <td align="left" width="20%"><strong>
-                                                                                    <asp:Label ID="Label234234" runat="server" Text="¹éÊô²Ö¿â"></asp:Label>
+                                                                                    <asp:Label ID="Label234234" runat="server" Text="<%$ Resources:lang,GuiShuCangKu%>"></asp:Label>
                                                                                 </strong></td>
 
                                                                                 <td align="left"><strong>
@@ -273,7 +273,7 @@
                                                                         <asp:TextBox ID="TB_WHPositionName" runat="server" Width="250"></asp:TextBox>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label234238" runat="server" Text="¹éÊô²Ö¿â"></asp:Label>£º
+                                                                        <asp:Label ID="Label234238" runat="server" Text="<%$ Resources:lang,GuiShuCangKu%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:Label ID="LB_BelongWHName" runat="server"></asp:Label>

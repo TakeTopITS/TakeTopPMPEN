@@ -185,7 +185,7 @@
                                             <asp:TextBox ID="TB_Duty" runat="server" ReadOnly="True" Enabled="False"></asp:TextBox>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="Ô±¹¤ÕÕÆ¬" Height="140px" ImageAlign="Left" Width="154px" />
+                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="<%$ Resources:lang,YuanGongZhaoPian%>" Height="140px" ImageAlign="Left" Width="154px" />
                                         </td>
                                     </tr>
                                     <tr>

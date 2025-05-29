@@ -325,7 +325,7 @@
                                             </td>
                                             <td align="right" class="titlezi" colspan="2">
                                                 <table border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:CheckBox ID="CB_IfEveryMonth" runat="server" Text="自动计算月计划额" Width="263px" AutoPostBack="True" OnCheckedChanged="CB_IfEveryMonth_CheckedChanged" />
+                                                    <asp:CheckBox ID="CB_IfEveryMonth" runat="server" Text="<%$ Resources:lang,ZiDongJiSuanYueJiHuaE%>" Width="263px" AutoPostBack="True" OnCheckedChanged="CB_IfEveryMonth_CheckedChanged" />
                                                 </table>
                                             </td>
                                         </tr>
@@ -485,17 +485,17 @@
                                         <tr>
                                             <td align="left">
                                                 <table width="240" border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:Button ID="btnSaveBenchmarData" runat="server" Text="新增绩效基准数据" Width="146px" OnClick="btnSaveBenchmarData_Click" />
+                                                    <asp:Button ID="btnSaveBenchmarData" runat="server" Text="<%$ Resources:lang,XinZengJiXiaoJiZhunShuJu%>" Width="146px" OnClick="btnSaveBenchmarData_Click" />
                                                 </table>
                                             </td>
                                             <td>
                                                 <table width="240" border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:Button ID="BT_EditBenchmarData" runat="server" Text="修改绩效基准数据" Width="127px" OnClick="BT_EditBenchmarData_Click" />
+                                                    <asp:Button ID="BT_EditBenchmarData" runat="server" Text="<%$ Resources:lang,XiuGaiJiXiaoJiZhunShuJu%>" Width="127px" OnClick="BT_EditBenchmarData_Click" />
                                                 </table>
                                             </td>
                                             <td>
                                                 <table width="240" border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:Button ID="btnDelBenchmarData" runat="server" OnClick="btnDelBenchmarData_Click" OnClientClick="return confirm('您确认删除该记录吗?')" Text="删除绩效基准数据" Width="127px" />
+                                                    <asp:Button ID="btnDelBenchmarData" runat="server" OnClick="btnDelBenchmarData_Click" OnClientClick="return confirm('您确认删除该记录吗?')" Text="<%$ Resources:lang,ShanChuJiXiaoJiZhunShuJu%>" Width="127px" />
                                                 </table>
                                             </td>
                                         </tr>
@@ -535,7 +535,7 @@
                                                     <ContentTemplate>
                                                         <div>
                                                             <upload:inputfile id="FileUpload_Training" runat="server" width="400px" />
-                                                            &nbsp;<asp:Button ID="btn_ExcelToDataTraining" runat="server" CssClass="inpu" OnClick="btn_ExcelToDataTraining_Click" Text="导入数据" />
+                                                            &nbsp;<asp:Button ID="btn_ExcelToDataTraining" runat="server" CssClass="inpu" OnClick="btn_ExcelToDataTraining_Click" Text="<%$ Resources:lang,DaoRuShuJu%>" />
                                                             <br />
 
 

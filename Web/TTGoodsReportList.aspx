@@ -46,7 +46,7 @@
                         </td>
                         <td style="height: 30px;">
                             <a href="TTGoodsReturnReportForSale.aspx" class="link" target="Right">
-                                <asp:Label ID="Label13" runat="server" Text="销售退货报表"></asp:Label></a>
+                                <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,XiaoShouTuiHuoBaoBiao%>"></asp:Label></a>
                         </td>
                     </tr>
                     <tr>
@@ -64,7 +64,7 @@
                         </td>
                         <td style="height: 30px;">
                             <a href="TTGoodsReturnReportForPurchase.aspx" class="link" target="Right">
-                                <asp:Label ID="Label14" runat="server" Text="采购退货报表"></asp:Label></a>
+                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,CaiGouTuiHuoBaoBiao%>"></asp:Label></a>
                         </td>
                     </tr>
                     <tr>

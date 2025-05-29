@@ -407,7 +407,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td valign="top" class="formItemBgStyleForAlignLeft" style="vertical-align: middle;">
-                                                                <asp:Label ID="LB_TBDescription" runat="server" Text="合同主要内容" />: </td>
+                                                                <asp:Label ID="LB_TBDescription" runat="server" Text="<%$ Resources:lang,GeTongZhuYaoNeiRong%>" />: </td>
                                                             <td colspan="3" style="width: 100%;" class="formItemBgStyleForAlignLeft">
                                                                 <CKEditor:CKEditorControl ID="HE_ProjectDetail" runat="server" Height="100px" Width="90%" Visible="False" Toolbar="Basic" /><CKEditor:CKEditorControl runat="server" ID="HT_ProjectDetail" Width="90%" Height="100px" Visible="False" />
                                                             </td>

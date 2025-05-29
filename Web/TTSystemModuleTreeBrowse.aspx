@@ -83,7 +83,7 @@
                                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></a>
                                                         </td>
                                                         <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="系统模组浏览"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,JiTongMoZuLiuLan%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -119,7 +119,7 @@
                                         <tr>
                                             <td align="left">
                                                 <span style="font-size: 24px;">
-                                                    <asp:Label ID="Label3" runat="server" Text="泰顶综合管理平台完整模块树"></asp:Label>
+                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu%>"></asp:Label>
 
                                                 </span>
                                                 <br />

@@ -1032,7 +1032,7 @@
                                                                     </strong>
                                                                     </td>
                                                                     <td align="left" width="20%"><strong>
-                                                                        <asp:Label ID="Label61" runat="server" Text="±¾±Ò"></asp:Label>
+                                                                        <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,BenBi%>"></asp:Label>
                                                                     </strong>
                                                                     </td>
                                                                 </tr>
@@ -1069,7 +1069,7 @@
                                                 </asp:DataGrid>
                                                 <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
                                                 <asp:TextBox ID="TB_CurrencyType" runat="server" Width="110px"></asp:TextBox>
-                                                <asp:Label ID="Label60" runat="server" Text="±¾±Ò"></asp:Label>
+                                                <asp:Label ID="Label60" runat="server" Text="<%$ Resources:lang,BenBi%>"></asp:Label>
                                                 £º 
                                             <asp:DropDownList ID="DL_IsHomeCurrency" runat="server">
                                                 <asp:ListItem Value="NO">NO</asp:ListItem>

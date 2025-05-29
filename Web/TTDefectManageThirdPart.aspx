@@ -74,7 +74,7 @@
                                                                     </td>
                                                                     <td style="padding-right: 5px; text-align: right; width: 30%; height: 25px;" colspan="2">
                                                                         <asp:Button ID="BT_MakeDefectThirdPart" runat="server" CssClass="inpuLong" Font-Size="10pt"
-                                                                            Text="½¨Á¢È±ÏÝ" OnClick="BT_MakeDefectThirdPart_Click" />
+                                                                            Text="<%$ Resources:lang,JianLiQueXian%>" OnClick="BT_MakeDefectThirdPart_Click" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

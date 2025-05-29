@@ -161,7 +161,7 @@
                                                                                     <td width="14%" align="left"><strong>
                                                                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,HeTongMingCheng %>"></asp:Label></strong></td>
                                                                                     <td width="5%" align="left"><strong>
-                                                                                        <asp:Label ID="Label105" runat="server" Text="内容"></asp:Label></strong></td>
+                                                                                        <asp:Label ID="Label105" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label></strong></td>
                                                                                     <td width="5%" align="left"><strong>
                                                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,DaLei %>"></asp:Label></strong></td>
                                                                                     <td width="5%" align="left"><strong>
@@ -2200,7 +2200,7 @@
                                                                 <table width="100%">
                                                                     <tr>
                                                                         <td style="width: 15%;">
-                                                                            <asp:Label ID="LB_NewConstractCode" runat="server" Text="新合同号"></asp:Label>
+                                                                            <asp:Label ID="LB_NewConstractCode" runat="server" Text="<%$ Resources:lang,XinGeTongHao%>"></asp:Label>
                                                                         </td>
                                                                         <td style="width: 30%;">
                                                                             <asp:TextBox ID="TB_NewConstractCode" runat="server" Width="99%"></asp:TextBox>

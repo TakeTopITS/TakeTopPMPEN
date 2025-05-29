@@ -185,11 +185,11 @@
                                                             </td>
                                                             <%-- <td width="5%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label15" runat="server" Text="销售单价"></asp:Label></strong>
+                                                                <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiaoShouChanJia%>"></asp:Label></strong>
                                                         </td>
                                                         <td align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label14" runat="server" Text="销售总额"></asp:Label></strong>
+                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,XiaoShouZongE%>"></asp:Label></strong>
                                                         </td>--%>
                                                         </tr>
                                                     </table>
@@ -381,11 +381,11 @@
                                                             </td>
                                                             <%-- <td width="5%" align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label15" runat="server" Text="销售单价"></asp:Label></strong>
+                                                                <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiaoShouChanJia%>"></asp:Label></strong>
                                                         </td>
                                                         <td align="left">
                                                             <strong>
-                                                                <asp:Label ID="Label14" runat="server" Text="销售总额"></asp:Label></strong>
+                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,XiaoShouZongE%>"></asp:Label></strong>
                                                         </td>--%>
                                                         </tr>
                                                     </table>

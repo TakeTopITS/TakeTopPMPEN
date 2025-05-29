@@ -107,7 +107,7 @@
                                             </td>
                                             <td align="left" width="100px">
                                                 <asp:HyperLink ID="HyperLink3" NavigateUrl="TTBMAnnClaFileSupplier.aspx"
-                                                    Text="澄清信息回函" runat="server"></asp:HyperLink>
+                                                    Text="<%$ Resources:lang,ChengQingXinXiHuiHan%>" runat="server"></asp:HyperLink>
                                             </td>
                                             <td align="left" width="100px">
                                                 <asp:HyperLink ID="HyperLink4" NavigateUrl="TTBMSupplierResult.aspx"
@@ -149,7 +149,7 @@
                                         </tr>
                                         <tr>
                                             <td align="right" class="auto-style1">
-                                                <asp:Label ID="Label22" runat="server" Text="投标模板文件"></asp:Label>：</td>
+                                                <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,TouBiaoMoBanWenJian%>"></asp:Label>：</td>
                                             <td align="left" class="auto-style5" colspan="3">
                                                 <asp:Repeater ID="RP_BMBidTemplateFile" runat="server">
                                                     <ItemTemplate>

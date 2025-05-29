@@ -250,7 +250,7 @@
                                                         <tr>
                                                             <td align="left" valign="top">
                                                                 <div style="width: 97vw; text-align: right;">
-                                                                    <asp:Button ID="BT_Create" runat="server" CssClass="inpu" OnClick="BT_Create_Click" Text="<%$ Resources:lang,XiQiu%>" />
+                                                                    <asp:Button ID="BT_Create" runat="server" CssClass="inpu" OnClick="BT_Create_Click" Text="<%$ Resources:lang,XuQiu%>" />
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -374,7 +374,7 @@
                                                                                     </td>
 
                                                                                     <%-- <td style="padding-left: 5px;">
-                                                                                        <asp:HyperLink ID="HL_CustomerCollector" runat="server" NavigateUrl="TTRelatedDIYWorkflowForm.aspx?RelatedType=CustomerService&RelatedID=2" Text="信息收集" Target="_blank"></asp:HyperLink>
+                                                                                        <asp:HyperLink ID="HL_CustomerCollector" runat="server" NavigateUrl="TTRelatedDIYWorkflowForm.aspx?RelatedType=CustomerService&RelatedID=2" Text="<%$ Resources:lang,XinXiShouJi%>" Target="_blank"></asp:HyperLink>
                                                                                     </td>--%>
 
                                                                                     <td style="padding-left: 5px;">

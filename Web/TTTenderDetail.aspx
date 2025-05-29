@@ -199,8 +199,8 @@
                                                         <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,NiWaiSuoXing%>"></asp:Label>£º</td>
                                                     <td align="left" colspan="2">
                                                         <asp:DropDownList ID="DL_InternalandExternal" runat="server">
-                                                            <asp:ListItem Value="INNER" Text="ÄÚ"></asp:ListItem>
-                                                            <asp:ListItem Value="OUTER" Text="Íâ"></asp:ListItem>
+                                                            <asp:ListItem Value="INNER" Text="<%$ Resources:lang,Nei%>"></asp:ListItem>
+                                                            <asp:ListItem Value="OUTER" Text="<%$ Resources:lang,Wai%>"></asp:ListItem>
                                                         </asp:DropDownList>
                                                     </td>
                                                 </tr>

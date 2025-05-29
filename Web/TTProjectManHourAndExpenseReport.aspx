@@ -59,7 +59,7 @@
                                         </td>
 
                                         <td>
-                                            <asp:Label ID="Label37" runat="server" Text="项目负责人"></asp:Label>：
+                                            <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,XiangMuFuZeRen%>"></asp:Label>：
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="TB_PMName" runat="server"></asp:TextBox>
@@ -68,7 +68,7 @@
 
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="进场日期"></asp:Label>：
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JinChangRiJi%>"></asp:Label>：
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -76,7 +76,7 @@
                                             </ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label2" runat="server" Text="出场日期"></asp:Label>：
+                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ChuChangRiJi%>"></asp:Label>：
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -101,9 +101,9 @@
                                             </a>
                                         </td>
                                         <td align="center" style="padding-top: 5px;">
-                                            <asp:Label ID="Label4" runat="server" Text="记录数"></asp:Label>
+                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiLuShu%>"></asp:Label>
                                             ：<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
-                                                        <asp:Label ID="Label6" runat="server" Text="条"></asp:Label>
+                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                         </td>
                                     </tr>
 

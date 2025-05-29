@@ -148,17 +148,17 @@
                                         <tr>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_SaveWorkDetails" runat="server" Text="新增工作记录" Width="146px" OnClick="BT_SaveWorkDetails_Click" />
+                                                    <asp:Button ID="BT_SaveWorkDetails" runat="server" Text="<%$ Resources:lang,XinZengGongZuoJiLu%>" Width="146px" OnClick="BT_SaveWorkDetails_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_EditWorkDetails" runat="server" Text="修改工作记录" Width="127px" OnClick="BT_EditWorkDetails_Click" />
+                                                    <asp:Button ID="BT_EditWorkDetails" runat="server" Text="<%$ Resources:lang,XiuGaiGongZuoJiLu%>" Width="127px" OnClick="BT_EditWorkDetails_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_DelWorkDetails" runat="server" Text="删除工作记录" Width="127px" OnClientClick="return confirm('删除该记录则对应的工作确认记录和收款记录一起被删除，您确认删除该记录吗?')" OnClick="BT_DelWorkDetails_Click" />
+                                                    <asp:Button ID="BT_DelWorkDetails" runat="server" Text="<%$ Resources:lang,ShanChuGongZuoJiLu%>" Width="127px" OnClientClick="return confirm('删除该记录则对应的工作确认记录和收款记录一起被删除，您确认删除该记录吗?')" OnClick="BT_DelWorkDetails_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
@@ -312,17 +312,17 @@
                                         <tr>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_SaveWorkConfirm" runat="server" Text="新增工作确认" Width="146px" OnClick="BT_SaveWorkConfirm_Click" />
+                                                    <asp:Button ID="BT_SaveWorkConfirm" runat="server" Text="<%$ Resources:lang,XinZengGongZuoQueRen%>" Width="146px" OnClick="BT_SaveWorkConfirm_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_EditWorkConfirm" runat="server" Text="修改工作确认" Width="127px" OnClick="BT_EditWorkConfirm_Click" />
+                                                    <asp:Button ID="BT_EditWorkConfirm" runat="server" Text="<%$ Resources:lang,XiuGaiGongZuoQueRen%>" Width="127px" OnClick="BT_EditWorkConfirm_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_DelWorkConfirm" runat="server" Text="删除工作确认" Width="127px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelWorkConfirm_Click" />
+                                                    <asp:Button ID="BT_DelWorkConfirm" runat="server" Text="<%$ Resources:lang,ShanChuGongZuoQueRen%>" Width="127px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelWorkConfirm_Click" />
                                                 </table>
                                             </td>
                                         </tr>
@@ -465,17 +465,17 @@
                                         <tr>
                                             <td>
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_SaveWorkMoney" runat="server" Text="新增收款记录" Width="146px" OnClick="BT_SaveWorkMoney_Click" />
+                                                    <asp:Button ID="BT_SaveWorkMoney" runat="server" Text="<%$ Resources:lang,XinZengShouKuanJiLu%>" Width="146px" OnClick="BT_SaveWorkMoney_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_EditWorkMoney" runat="server" Text="修改收款记录" Width="127px" OnClick="BT_EditWorkMoney_Click" />
+                                                    <asp:Button ID="BT_EditWorkMoney" runat="server" Text="<%$ Resources:lang,XiuGaiShouKuanJiLu%>" Width="127px" OnClick="BT_EditWorkMoney_Click" />
                                                 </table>
                                             </td>
                                             <td align="left">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                    <asp:Button ID="BT_DelWorkMoney" runat="server" Text="删除收款记录" Width="127px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelWorkMoney_Click" />
+                                                    <asp:Button ID="BT_DelWorkMoney" runat="server" Text="<%$ Resources:lang,ShanChuShouKuanJiLu%>" Width="127px" OnClientClick="return confirm('您确认删除该记录吗?')" OnClick="BT_DelWorkMoney_Click" />
                                                 </table>
                                             </td>
                                         </tr>

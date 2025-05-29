@@ -714,7 +714,7 @@
                                                                                         <td width="8%" align="left"><strong>
                                                                                             <asp:Label ID="Label90" runat="server" Text="<%$ Resources:lang,JinE %>"></asp:Label></strong></td>
                                                                                         <td width="8%" align="left"><strong>
-                                                                                            <asp:Label ID="Label91" runat="server" Text="Î´ÉêÇë"></asp:Label></strong></td>
+                                                                                            <asp:Label ID="Label91" runat="server" Text="<%$ Resources:lang,WeiShenQing%>"></asp:Label></strong></td>
                                                                                         <td width="8%" align="left"><strong>
                                                                                             <asp:Label ID="Label172" runat="server" Text="<%$ Resources:lang,DanWei %>"></asp:Label></strong></td>
                                                                                         <td width="8%" align="left"><strong>

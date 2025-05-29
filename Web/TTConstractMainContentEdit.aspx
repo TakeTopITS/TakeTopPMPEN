@@ -92,7 +92,7 @@
                                                 <asp:Button ID="BT_Save" Text="<%$ Resources:lang,BaoCun %>" CssClass="inpu" runat="server" OnClick="BT_Save_Click" />
                                             </td>
                                             <td class="formItemBgStyleForAlignLeft">
-                                                <asp:Label ID="LB_Watermark" Text="Ë®Ó¡×Ö·û" runat="server"></asp:Label>
+                                                <asp:Label ID="LB_Watermark" Text="<%$ Resources:lang,ShuiYinZiFu%>" runat="server"></asp:Label>
                                             </td>
                                             <td class="formItemBgStyleForAlignLeft" width="100px">
                                                 <asp:TextBox ID="TB_Watermark" runat="server" Width="99%"></asp:TextBox>

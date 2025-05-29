@@ -164,7 +164,7 @@
 
                                                                                 <td align="left" width="7%">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label14" runat="server" Text="±¾±Ò½ð¶î"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BenBiJinE%>"></asp:Label></strong>
                                                                                 </td>
 
                                                                                 <td align="left" width="8%">

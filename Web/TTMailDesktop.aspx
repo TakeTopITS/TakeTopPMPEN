@@ -127,7 +127,7 @@
                                                     <asp:HyperLink ID="EditBtn" Text="<%$ Resources:lang,ChongMingMing%>" Target="Desktop" runat="server" Visible='<%# (bool)DataBinder.Eval(Container.DataItem,"Flag") %>'
                                                         NavigateUrl='<%# "TTMailRenameFolder.aspx?FolderID=" + DataBinder.Eval(Container.DataItem,"FolderID")%>'></asp:HyperLink>&nbsp;&nbsp;&nbsp;
                                             <asp:ImageButton ID="DeleteBtn" runat="server" CommandName="delete" Visible='<%# (bool)DataBinder.Eval(Container.DataItem,"Flag") && ((int)DataBinder.Eval(Container.DataItem,"Total") > 0 ? false : true) %>'
-                                                ImageUrl="~/Images/delete.gif" AlternateText="É¾³ýÎÄ¼þ¼Ð" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"FolderID") %>' />&nbsp;&nbsp;&nbsp;
+                                                ImageUrl="~/Images/delete.gif" AlternateText="<%$ Resources:lang,ShanChuWenJianGa%>" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"FolderID") %>' />&nbsp;&nbsp;&nbsp;
                                                 </ItemTemplate>
                                                 <ItemStyle Horizontalalign="left" CssClass="itemBorder" Width="20%" />
                                             </asp:TemplateField>

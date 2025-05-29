@@ -539,7 +539,7 @@
                                                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                                                     <ContentTemplate>
                                                                         <asp:FileUpload ID="FUP_File" runat="server" Width="50px" />
-                                                                        <asp:Button ID="BT_UploadPhoto" runat="server" CssClass="inpu" OnClick="BT_UploadPhoto_Click" Text="ÉÏ´«" />
+                                                                        <asp:Button ID="BT_UploadPhoto" runat="server" CssClass="inpu" OnClick="BT_UploadPhoto_Click" Text="<%$ Resources:lang,ShangChuan%>" />
                                                                         <br />
                                                                         £¨<asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,TuPianKuan220Gao200%>"></asp:Label>
                                                                         £©

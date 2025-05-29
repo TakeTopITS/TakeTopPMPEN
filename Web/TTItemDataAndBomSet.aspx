@@ -355,7 +355,7 @@
                                                         <asp:HyperLink ID="HL_SetItemCode" runat="server" NavigateUrl="~/TTItemCodeSet.aspx" Text="<%$ Resources:lang,BianMa%>" Target="_blank"></asp:HyperLink>
                                                     </td>
                                                     <td  class="formItemBgStyleForAlignLeft" colspan="2" rowspan="5">
-                                                        <asp:Image ID="IM_ItemPhoto" runat="server" AlternateText="ÔªËØÕÕÆ¬" Height="200px" Width="220px" />
+                                                        <asp:Image ID="IM_ItemPhoto" runat="server" AlternateText="<%$ Resources:lang,YuanSuZhaoPian%>" Height="200px" Width="220px" />
                                                         <asp:HyperLink ID="HL_ItemPhoto" runat="server"></asp:HyperLink>
                                                     </td>
                                                 </tr>

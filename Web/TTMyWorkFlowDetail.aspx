@@ -402,7 +402,7 @@
                                                             </asp:TreeView>
                                                         </td>
                                                         <td valign="top" align="left">
-                                                            <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,GuanLianXiangMu%>"></asp:Label>£º<asp:TextBox ID="TB_ProjectID" runat="server" Width="48px"></asp:TextBox><asp:Button ID="BT_AddProjectID" runat="server" Text="¹ØÁª" CssClass="inpu"
+                                                            <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,GuanLianXiangMu%>"></asp:Label>£º<asp:TextBox ID="TB_ProjectID" runat="server" Width="48px"></asp:TextBox><asp:Button ID="BT_AddProjectID" runat="server" Text="<%$ Resources:lang,GuanLian%>" CssClass="inpu"
                                                                 OnClick="BT_AddProjectID_Click" /><br />
                                                             <table width="99%" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>

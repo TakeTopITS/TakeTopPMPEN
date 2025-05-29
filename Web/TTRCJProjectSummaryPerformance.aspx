@@ -83,7 +83,7 @@
                                                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand">
                                                                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                 <Columns>
-                                                                    <asp:ButtonField CommandName="RefreshButton" Text="刷新" />
+                                                                    <asp:ButtonField CommandName="RefreshButton" Text="<%$ Resources:lang,ShuaXin%>" />
                                                                     <asp:BoundField DataField="ProjectID" HeaderText="项目号" />
                                                                     <asp:BoundField DataField="ProjectYear" HeaderText="年份" />
                                                                     <asp:BoundField DataField="ProjectMonth" HeaderText="月份" />
@@ -186,7 +186,7 @@ mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">挣值
                                                                     </asp:Legend>
                                                                 </Legends>
                                                                 <Titles>
-                                                                    <asp:Title Name="Title1" Text="挣值分析图">
+                                                                    <asp:Title Name="Title1" Text="<%$ Resources:lang,ZhengZhiFenXiTu%>">
                                                                     </asp:Title>
                                                                 </Titles>
                                                             </asp:Chart>--%>

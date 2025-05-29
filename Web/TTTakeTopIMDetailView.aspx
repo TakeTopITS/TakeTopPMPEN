@@ -155,7 +155,7 @@
                                 <table width="100%">
                                     <tr>
                                         <td align="left">
-                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="Ô±¹¤ÕÕÆ¬" Height="110px"
+                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="<%$ Resources:lang,YuanGongZhaoPian%>" Height="110px"
                                                 Width="100px" ImageUrl="~/Images/DefaultUserPhoto.png" />
                                             <br />
                                             <asp:Label ID="LB_ChatterCode" Visible="false" runat="server"></asp:Label>

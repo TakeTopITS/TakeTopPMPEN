@@ -214,7 +214,7 @@
 
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label10" runat="server" Text="工号"></asp:Label></strong>
+                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,GongHao%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
@@ -226,15 +226,15 @@
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label19" runat="server" Text="出勤天数"></asp:Label></strong>
+                                                            <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ChuQinTianShu%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label20" runat="server" Text="应出勤天数"></asp:Label></strong>
+                                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YingChuQinTianShu%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label21" runat="server" Text="迟到次数"></asp:Label></strong>
+                                                            <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,ChiDaoCiShu%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
@@ -242,11 +242,11 @@
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label28" runat="server" Text="旷工迟到次数"></asp:Label></strong>
+                                                            <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,KuangGongChiDaoCiShu%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label29" runat="server" Text="早退次数"></asp:Label></strong>
+                                                            <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ZaoTuiCiShu%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
@@ -254,11 +254,11 @@
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label31" runat="server" Text="旷工天数"></asp:Label></strong>
+                                                            <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,KuangGongTianShu%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label32" runat="server" Text="夜班天数"></asp:Label></strong>
+                                                            <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,YeBanTianShu%>"></asp:Label></strong>
                                                     </td>
                                                     <td align="left" runat="server" id="overtimeTd">
                                                         <strong>

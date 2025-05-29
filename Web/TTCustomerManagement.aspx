@@ -317,7 +317,7 @@
                                                         </asp:HyperLinkColumn>
 
                                                         <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerQuestionRecord.aspx?CustomerCode={0}"
-                                                            Text="服务需求" HeaderText="问题" Target="_blank">
+                                                            Text="<%$ Resources:lang,FuWuXuQiu%>" HeaderText="问题" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"

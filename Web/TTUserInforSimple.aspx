@@ -78,7 +78,7 @@
                                     <asp:Label ID="TB_UserCode" runat="server" Enabled="False" />
                                 </td>
                                 <td  class="formItemBgStyleForAlignLeft" rowspan="6">
-                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="Ô±¹¤ÕÕÆ¬"
+                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="<%$ Resources:lang,YuanGongZhaoPian%>"
                                         ImageAlign="Left" />
                                 </td>
                             </tr>

@@ -642,7 +642,7 @@
                                                                                         <td width="10%" align="left"><strong>
                                                                                             <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,BianHao %>"></asp:Label></strong></td>
                                                                                         <td width="10%" align="left"><strong>
-                                                                                            <asp:Label ID="Label4" runat="server" Text="ÇåÕË"></asp:Label></strong></td>
+                                                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QingZhang%>"></asp:Label></strong></td>
 
                                                                                         <td width="8%" align="left"><strong>
                                                                                             <asp:Label ID="Label71" runat="server" Text="<%$ Resources:lang,DaiMa %>"></asp:Label></strong></td>

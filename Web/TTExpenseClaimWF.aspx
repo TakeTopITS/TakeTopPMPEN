@@ -376,7 +376,7 @@
                                                                     </asp:DropDownList><asp:HyperLink ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx"
                                                                         Target="_blank">
                                                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,MuBanWuiHu%>"></asp:Label>
-                                                                    </asp:HyperLink><asp:Button ID="BT_Reflash" runat="server" OnClick="BT_Reflash_Click" Text="Ë¢ÐÂ"
+                                                                    </asp:HyperLink><asp:Button ID="BT_Reflash" runat="server" OnClick="BT_Reflash_Click" Text="<%$ Resources:lang,ShuaXin%>"
                                                                         CssClass="inpu" /></td>
                                             </tr>
                                         </table>

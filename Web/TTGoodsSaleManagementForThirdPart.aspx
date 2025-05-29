@@ -85,7 +85,7 @@
                                             </td>
                                             <td style="padding-top: 4px; padding-right: 5px; text-align: right; width: 30%; height: 25px;" colspan="2">
                                                 <asp:Button ID="BT_MakeGoodsSaleOrderThirdPart" runat="server" CssClass="inpuLong" Font-Size="10pt"
-                                                    Text="ÏÂµ¥" OnClick="BT_MakeGoodsSaleOrderThirdPart_Click" />
+                                                    Text="<%$ Resources:lang,XiaChan%>" OnClick="BT_MakeGoodsSaleOrderThirdPart_Click" />
                                             </td>
                                         </tr>
                                     </table>

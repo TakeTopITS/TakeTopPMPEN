@@ -143,15 +143,15 @@
                                                                                 </td>
                                                                                 <td width="10%" align="left">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label17" runat="server" Text="分包商"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,FenBaoShang%>"></asp:Label></strong>
                                                                                 </td>
                                                                                 <td width="15%" align="left">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label18" runat="server" Text="分包内容"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,FenBaoNeiRong%>"></asp:Label></strong>
                                                                                 </td>
                                                                                 <td width="10%" align="left">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label3" runat="server" Text="预计工程额"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YuJiGongChengE%>"></asp:Label></strong>
                                                                                 </td>
                                                                                 <td width="10%" align="left">
                                                                                     <strong>
@@ -160,7 +160,7 @@
 
                                                                                 <td width="10%" align="left">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label6" runat="server" Text="相关流程"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XiangGuanLiuCheng%>"></asp:Label></strong>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

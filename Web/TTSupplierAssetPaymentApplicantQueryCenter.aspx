@@ -47,7 +47,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label2" runat="server" Text="资产采购付款查询"></asp:Label>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZiChanCaiGouFuKuanChaXun%>"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>

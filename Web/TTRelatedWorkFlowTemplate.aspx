@@ -220,7 +220,7 @@
                                                                                                 </asp:DropDownList>
                                                                                             </td>
                                                                                             <td>
-                                                                                                <asp:Button ID="BT_ChangeType" runat="server" CssClass="inpu" Enabled="false" Text="变更" OnClick="BT_ChangeType_Click" />
+                                                                                                <asp:Button ID="BT_ChangeType" runat="server" CssClass="inpu" Enabled="false" Text="<%$ Resources:lang,BianGeng%>" OnClick="BT_ChangeType_Click" />
                                                                                             </td>
                                                                                         </tr>
 
@@ -370,7 +370,7 @@
                                                                                     <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="StepID" DataNavigateUrlFormatString="TTWorkFlowStepConditionView.aspx?StepID={0}"
-                                                                                    Target="_blank" Text="条件">
+                                                                                    Target="_blank" Text="<%$ Resources:lang,TiaoJian%>">
                                                                                     <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
                                                                                 </asp:HyperLinkColumn>
                                                                                 <asp:BoundColumn DataField="SelfReview" HeaderText="自审">

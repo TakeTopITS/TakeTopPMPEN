@@ -223,7 +223,7 @@
                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
                                                     </asp:TemplateColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectBudgetChangeLog.aspx?BudgetID={0}"
-                                                        Text="变更日志" HeaderText="日志" Target="_blank">
+                                                        Text="<%$ Resources:lang,BianGengRiZhi%>" HeaderText="日志" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" width="10%"/>
                                                     </asp:HyperLinkColumn>
 
@@ -257,7 +257,7 @@
                                                         <br />
                                                         <asp:Label ID="Label27" runat="server"></asp:Label>
                                                         <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,SJDRMBGS%>"></asp:Label>
-                                                        ：<a href="Template/项目综合预算导入模板.xls"><asp:Label ID="Label30" runat="server" Text="项目综合预算导入表"></asp:Label>
+                                                        ：<a href="Template/项目综合预算导入模板.xls"><asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,XiangMuZengGeYuSuanDaoRuBiao%>"></asp:Label>
                                                         </a>
                                                         <div id="ProgressBar">
                                                             <Upload:ProgressBar ID="ProgressBar1" runat="server" Height="100px" Width="500px">

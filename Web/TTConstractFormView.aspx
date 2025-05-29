@@ -98,24 +98,24 @@
 
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label6" runat="server" Text="供方"></asp:Label>：
+                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongFang%>"></asp:Label>：
                                                 <%#DataBinder.Eval(Container.DataItem, "PartA")%>
                                             </td>
 
                                             <td style="text-align: left" colspan="2">
-                                                <asp:Label ID="Label9" runat="server" Text="签订地点"></asp:Label>：
+                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,QianDingDeDian%>"></asp:Label>：
                                                   <%#DataBinder.Eval(Container.DataItem, "Exception")%>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label10" runat="server" Text="需方"></asp:Label>：
+                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XuFang%>"></asp:Label>：
                                                 <%#DataBinder.Eval(Container.DataItem, "PartB")%>
                                             </td>
 
                                             <td style="text-align: left" colspan="2">
-                                                <asp:Label ID="Label11" runat="server" Text="签订时间"></asp:Label>：
+                                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,QianDingShiJian%>"></asp:Label>：
                                                <%#DataBinder.Eval(Container.DataItem, "SignDate", "{0:yyyy/MM/dd}")%>
                                             </td>
                                         </tr>

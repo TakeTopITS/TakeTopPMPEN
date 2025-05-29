@@ -1512,7 +1512,7 @@
                                                             Visible="False" Width="57px"></asp:Label><asp:Label ID="Label70" runat="server" Font-Bold="False" Font-Size="9pt"
                                                                 Visible="False" Width="57px"></asp:Label>
 
-                                                        <asp:Label ID="Label145" runat="server" Text="可视合同"></asp:Label><br />
+                                                        <asp:Label ID="Label145" runat="server" Text="<%$ Resources:lang,KeShiGeTong%>"></asp:Label><br />
 
                                                         <table width="200%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                             <tr>

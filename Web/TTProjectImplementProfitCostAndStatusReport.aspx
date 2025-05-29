@@ -137,9 +137,9 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: right; padding-right: 20px;">
-                                                <asp:Label ID="Label4" runat="server" Text="¼ÇÂ¼Êý"></asp:Label>
+                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiLuShu%>"></asp:Label>
                                                 £º<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
-                                                <asp:Label ID="Label6" runat="server" Text="Ìõ"></asp:Label>
+                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>

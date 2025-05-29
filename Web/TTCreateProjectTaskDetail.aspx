@@ -457,7 +457,7 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:ButtonColumn ButtonType="PushButton" CommandName="Select" Text="Ñ¡Ôñ">
+                                                                                <asp:ButtonColumn ButtonType="PushButton" CommandName="Select" Text="<%$ Resources:lang,ShuaZe%>">
                                                                                     <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
                                                                                 </asp:ButtonColumn>
                                                                             </Columns>

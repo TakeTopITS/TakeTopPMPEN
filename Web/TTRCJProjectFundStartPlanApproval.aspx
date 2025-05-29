@@ -62,10 +62,10 @@
                                                 <table width="640" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="left" width="120">
-                                                            <asp:CheckBox ID="CB_CheckType" runat="server" Text="按种类" AutoPostBack="True" />
+                                                            <asp:CheckBox ID="CB_CheckType" runat="server" Text="<%$ Resources:lang,AnZhongLei%>" AutoPostBack="True" />
                                                         </td>
                                                         <td align="left" width="120">
-                                                            <asp:CheckBox ID="CB_CheckMonth" runat="server" Text="按月份" AutoPostBack="True" />
+                                                            <asp:CheckBox ID="CB_CheckMonth" runat="server" Text="<%$ Resources:lang,AnYueFen%>" AutoPostBack="True" />
                                                         </td>
                                                         <td>
                                                             <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -288,7 +288,7 @@
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:Button ID="Button1" runat="server" Text="审核" OnClick="BT_AmountReview_Click" Width="146px" />
+                                                                                    <asp:Button ID="Button1" runat="server" Text="<%$ Resources:lang,ShenHe%>" OnClick="BT_AmountReview_Click" Width="146px" />
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

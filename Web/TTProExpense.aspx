@@ -259,7 +259,7 @@
                                                             <br />
                                                             <asp:Label ID="Label70" runat="server"></asp:Label>
                                                             <asp:Label ID="Label71" runat="server" Text="<%$ Resources:lang,SJDRMBGS%>"></asp:Label>
-                                                            ：<a href="Template/项目费用导入模板.xls"><asp:Label ID="Label72" runat="server" Text="项目费用导入模板"></asp:Label>
+                                                            ：<a href="Template/项目费用导入模板.xls"><asp:Label ID="Label72" runat="server" Text="<%$ Resources:lang,XiangMuFeiYongDaoRuMoBan%>"></asp:Label>
                                                             </a>
                                                             <div id="ProgressBar">
                                                                 <Upload:ProgressBar ID="ProgressBar3" runat="server" Height="100px" Width="500px">
