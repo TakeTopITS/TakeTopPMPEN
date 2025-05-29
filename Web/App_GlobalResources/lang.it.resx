@@ -16525,7 +16525,7 @@
     <value>Utenti online</value>
   </data>
   <data name="ZaiYong" xml:space="preserve">
-    <value>Con</value>
+    <value>InUso</value>
   </data>
   <data name="ZaiYongHeTong" xml:space="preserve">
     <value>Con contratto</value>
@@ -16678,13 +16678,13 @@
     <value>Spiegare</value>
   </data>
   <data name="ZhanKaiCanYu" xml:space="preserve">
-    <value>Expand Partecipazione</value>
+    <value>ExpandPartecipazione</value>
   </data>
   <data name="ZhanKaiJiSuan" xml:space="preserve">
     <value>Calcolo</value>
   </data>
   <data name="ZhanKaiSuoYou" xml:space="preserve">
-    <value>Espandi tutto</value>
+    <value>EspandiTutto</value>
   </data>
   <data name="ZhanXiangMuZhengTiJingDuYuGu" xml:space="preserve">
     <value>Contabilità per le stime dei tempi del progetto complessivo</value>

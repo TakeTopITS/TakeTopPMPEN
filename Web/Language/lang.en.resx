@@ -16525,7 +16525,7 @@
     <value>Online users</value>
   </data>
   <data name="ZaiYong" xml:space="preserve">
-    <value>With</value>
+    <value>InUse</value>
   </data>
   <data name="ZaiYongHeTong" xml:space="preserve">
     <value>With contract</value>
@@ -16678,13 +16678,13 @@
     <value>Expansion</value>
   </data>
   <data name="ZhanKaiCanYu" xml:space="preserve">
-    <value>Expand Participation</value>
+    <value>ExpandParticipation</value>
   </data>
   <data name="ZhanKaiJiSuan" xml:space="preserve">
     <value>Computation</value>
   </data>
   <data name="ZhanKaiSuoYou" xml:space="preserve">
-    <value>Expand All</value>
+    <value>ExpandAll</value>
   </data>
   <data name="ZhanXiangMuZhengTiJingDuYuGu" xml:space="preserve">
     <value>Estimated total project overall progress</value>
@@ -26914,7 +26914,7 @@
     <value>Does the project start with superuser confirmation</value>
   </data>
   <data name="YiQiDong" xml:space="preserve">
-    <value>Has started</value>
+    <value>Started</value>
   </data>
   <data name="ZZQDCG" xml:space="preserve">
     <value>starting success</value>

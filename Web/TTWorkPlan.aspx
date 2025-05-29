@@ -247,21 +247,21 @@
                                                                     <asp:Label ID="LB_tbType" runat="server" Text="<%$ Resources:lang,Type%>" />:</td>
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_ChangeVersionType" runat="server" OnSelectedIndexChanged="DL_ChangeVersionType_SelectedIndexChanged"
-                                                                        Width="50px" Height="21px" AutoPostBack="True">
+                                                                        Width="60px" Height="21px" AutoPostBack="True">
                                                                         <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>"> </asp:ListItem>
                                                                         <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>"> </asp:ListItem>
                                                                         <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,jiZhun%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>
-                                                                    <asp:DropDownList ID="DL_ExpandType" runat="server" Height="21px" AutoPostBack="True"  Width="50px"
+                                                                    <asp:DropDownList ID="DL_ExpandType" runat="server" Height="21px" AutoPostBack="True"  Width="70px"
                                                                         OnSelectedIndexChanged="DL_ExpandType_SelectedIndexChanged">
                                                                         <asp:ListItem Value="ExpandAll" Text="<%$ Resources:lang,ZhanKaiSuoYou%>" />
                                                                         <asp:ListItem Value="ExpandJoin" Text="<%$ Resources:lang,ZhanKaiCanYu%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>
-                                                                    <asp:Button ID="BT_StartUp" runat="server" CssClass="inpu" Text="<%$ Resources:lang,QiDong%>" OnClick="BT_StartUp_Click" />
+                                                                    <asp:Button ID="BT_StartUp" runat="server" CssClass="inpu" width="60px" Text="<%$ Resources:lang,QiDong%>" OnClick="BT_StartUp_Click" />
                                                                 </td>
                                                             </tr>
                                                         </table>
