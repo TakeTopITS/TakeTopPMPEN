@@ -215,7 +215,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="StepID" DataNavigateUrlFormatString="TTWLTStepCondition.aspx?StepID={0}"
-                                                            Target="_blank" Text="Ìõ¼þ">
+                                                            Target="_blank" Text="<%$ Resources:lang,Tiaojian%>">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:BoundColumn DataField="SelfReview" HeaderText="×ÔÉó">

@@ -346,7 +346,7 @@ public partial class TTBaseDataInner : System.Web.UI.Page
 
             strHQL = "Insert Into T_FunInforDialBox(InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName,LangCode)";
             strHQL += " Select InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName," + "'" + strLangCode + "'" + " From T_FunInforDialBox";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(InforName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(InforName)) || ltrim(rtrim(LangCode))  From T_FunInforDialBox Where LangCode = " + "'" + strLangCode + "'" + ")"; ShareClass.RunSqlCommand(strHQL);
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(InforName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(InforName)) || ltrim(rtrim(LangCode))  From T_FunInforDialBox Where LangCode = " + "'" + strLangCode + "'" + ")";
             ShareClass.RunSqlCommand(strHQL);
 
             LoadWLType(strLangCode);
