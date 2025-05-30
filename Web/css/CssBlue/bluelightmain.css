@@ -467,7 +467,7 @@ button:visited, input[type="submit"]:visited {
     border-style: none;
     background: #f37c00;
 
-    min-width: 51px;
+    min-width: 71px;
     width: auto;
     max-width: 100%; /* 可选，防止溢出容器 */
 
