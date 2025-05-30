@@ -402,15 +402,15 @@
                                             <tr style="display: none;">
                                                 <td colspan="3" class="tdRight" style="text-align: center; padding: 2px 0px 2px 5px; border-bottom: solid 1px  #D8D8D8; width: 370px;">
                                                     <asp:HyperLink ID="HL_WFXSNFile" runat="server"
-                                                        Target="_blank" Font-Names="瀹嬩綋" Font-Size="10pt">
+                                                        Target="_blank"  Font-Size="10pt">
                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XGGZLBGMBXZ%>"></asp:Label>
                                                     </asp:HyperLink>
                                                     &nbsp;<input id="btPrintPreview" type="button" class="inpuPrint" name="print" onclick="preview()" />
 
                                                     <asp:HyperLink ID="HL_OldWFXMLFile" runat="server"
-                                                        Target="_blank" Font-Names="瀹嬩綋" Font-Size="10pt" Text="<%$ Resources:lang,ShuJuWenJian%>"></asp:HyperLink>
+                                                        Target="_blank"  Font-Size="10pt" Text="<%$ Resources:lang,ShuJuWenJian%>"></asp:HyperLink>
                                                     <asp:HyperLink ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx"
-                                                        Target="_blank" Font-Names="瀹嬩綋" Font-Size="10pt">
+                                                        Target="_blank"  Font-Size="10pt">
                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MuBanWeiHu%>"></asp:Label>
                                                     </asp:HyperLink>
                                                     <asp:HyperLink ID="HL_RedirectToMyWFDetail" runat="server" Target="_blank" Text="<%$ Resources:lang,ZhiXingJinDu%>" Visible="false"></asp:HyperLink>

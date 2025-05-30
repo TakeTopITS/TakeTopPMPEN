@@ -244,7 +244,7 @@
                                                                     </asp:DropDownList>
                                                                 </td>
                                                               <td width="50px">
-                                                                    <asp:Label ID="LB_tbType" runat="server" Text="<%$ Resources:lang,Type%>" />:</td>
+                                                                    <asp:Label ID="LB_tbType" runat="server" Text="<%$ Resources:lang,Type%>" /></td>
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_ChangeVersionType" runat="server" OnSelectedIndexChanged="DL_ChangeVersionType_SelectedIndexChanged"
                                                                         Width="60px" Height="21px" AutoPostBack="True">
