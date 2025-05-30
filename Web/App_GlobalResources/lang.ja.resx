@@ -3546,9 +3546,6 @@
   <data name="E_Mail" xml:space="preserve">
     <value>Eメール</value>
   </data>
-  <data name="F1" xml:space="preserve">
-    <value>F2</value>
-  </data>
   <data name="FaBu" xml:space="preserve">
     <value>解放</value>
   </data>
@@ -6065,9 +6062,6 @@
   </data>
   <data name="HuaXueChengFengS" xml:space="preserve">
     <value>化学組成のS：</value>
-  </data>
-  <data name="HuaXueChengFengSi" xml:space="preserve">
-    <value>Siの化学組成：</value>
   </data>
   <data name="HuaXueChengFengti" xml:space="preserve">
     <value>チタンの化学組成：</value>
@@ -12372,9 +12366,6 @@
   <data name="String10" xml:space="preserve">
     <value>ビッド</value>
   </data>
-  <data name="String11" xml:space="preserve">
-    <value>私</value>
-  </data>
   <data name="String4ChengDao" xml:space="preserve">
     <value>レイヤ - 言いました：</value>
   </data>
@@ -18164,9 +18155,6 @@
   </data>
   <data name="FenPaiShiJian" xml:space="preserve">
     <value>送出時間</value>
-  </data>
-  <data name="ZZARRREUTRNVALUE1" xml:space="preserve">
-    <value> + ArrReutrnValue [1] +</value>
   </data>
   <data name="ZZAYHZGTZDZYDYGAJJLDWFSC" xml:space="preserve">
     <value>セキュリティは、整流通知がセキュリティ記録シートを削除することはできません呼び出しされているリスク！</value>
@@ -27744,9 +27732,6 @@
   <data name="NiHaoNi" xml:space="preserve">
     <value>）レンタルサイト：</value>
   </data>
-  <data name="De" xml:space="preserve">
-    <value>こんにちは、あなたの</value>
-  </data>
   <data name="YiChuangJianZhanDianDeZhiShi" xml:space="preserve">
     <value>の：</value>
   </data>
@@ -28136,9 +28121,6 @@
   </data>
   <data name="JiaBanShenQing" xml:space="preserve">
     <value>警告、年や月を跨ぐ残業は申請できません。確認してください！</value>
-  </data>
-  <data name="DeJiaBanShenQing" xml:space="preserve">
-    <value>-1 残業タイプなし</value>
   </data>
   <data name="ShouLiLeNiJianLiDeXiangMu" xml:space="preserve">
     <value>残業</value>
@@ -29704,7 +29686,7 @@
     <value>エラーメッセージ：Excelファイルのみ選択できます！</value>
   </data>
   <data name="CongExcelWenJianDaoRuChengBenJ" xml:space="preserve">
-    <value>Excelファイルからコストパフォーマンス基準データをインポートしました。合計{0:D }件、成功{1:D }件, 専門分類：{2:s }\n</value>
+    <value>Excelファイルからコストパフォーマンスベースラインデータをインポートする</value>
   </data>
   <data name="ZiXiangXuHaoShuRuYouWuYingQuan" xml:space="preserve">
     <value>【子項番号】入力が誤っています。数字のみ入力してください！\n</value>
@@ -30080,9 +30062,6 @@
   </data>
   <data name="ZZJingGaoKaiShiJieShuRiJiZhiNe" xml:space="preserve">
     <value>溶接資格_</value>
-  </data>
-  <data name="TongJiShiJian0Zhi1" xml:space="preserve">
-    <value>警告、まず部門を選択してから検索してください！</value>
   </data>
   <data name="SongTi" xml:space="preserve">
     <value>宋体</value>
@@ -30996,11 +30975,434 @@
   <data name="QuanBuXiTongYongHu" xml:space="preserve">
     <value>全てのシステムユーザー</value>
   </data>
+  <data name="ShengCheng" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="SYCYKPI" xml:space="preserve">
+    <value>すべてのメンバーのKPI</value>
+  </data>
+  <data name="MeiYouGengGaiMiMaDeYongHu" xml:space="preserve">
+    <value>パスワードを変更していないユーザー</value>
+  </data>
+  <data name="XinXiShouJi" xml:space="preserve">
+    <value>情報収集</value>
+  </data>
+  <data name="KeShiGeTong" xml:space="preserve">
+    <value>可視契約</value>
+  </data>
+  <data name="ShangHuiChengYuanDengJi" xml:space="preserve">
+    <value>商工会議所メンバー登録</value>
+  </data>
+  <data name="JiaBanLiYou" xml:space="preserve">
+    <value>残業理由</value>
+  </data>
+  <data name="XiangMuMa" xml:space="preserve">
+    <value>プロジェクトコード</value>
+  </data>
+  <data name="YiWanChengLiang" xml:space="preserve">
+    <value>完了量</value>
+  </data>
+  <data name="GuanBiDangQianXie" xml:space="preserve">
+    <value>現在のページを閉じる</value>
+  </data>
+  <data name="JieRiLeiXing" xml:space="preserve">
+    <value>祝日タイプ</value>
+  </data>
+  <data name="QueXianLeiXing" xml:space="preserve">
+    <value>欠陥タイプ</value>
+  </data>
+  <data name="ChengBaoShangDaLei" xml:space="preserve">
+    <value>契約業者大カテゴリ</value>
+  </data>
+  <data name="ChengBaoShangXiaoLei" xml:space="preserve">
+    <value>契約業者小カテゴリ</value>
+  </data>
+  <data name="ChengBaoLeiXing" xml:space="preserve">
+    <value>契約タイプ</value>
+  </data>
+  <data name="QiaoBiaoChengQingXinXiHuiHan" xml:space="preserve">
+    <value>入札澄明情報回答</value>
+  </data>
+  <data name="ChengQingXinXiHuiHan" xml:space="preserve">
+    <value>澄明情報回答</value>
+  </data>
+  <data name="TouBiaoMoBanWenJian" xml:space="preserve">
+    <value>入札テンプレートファイル</value>
+  </data>
+  <data name="YuZhongBiaoTongZhiShuWenJian" xml:space="preserve">
+    <value>予定落札通知書ファイル</value>
+  </data>
+  <data name="TouBiaoWenJianMoBan" xml:space="preserve">
+    <value>入札ファイルテンプレート</value>
+  </data>
+  <data name="GongCheng" xml:space="preserve">
+    <value>工事</value>
+  </data>
+  <data name="LingShou" xml:space="preserve">
+    <value>小売</value>
+  </data>
+  <data name="MenDian" xml:space="preserve">
+    <value>店舗</value>
+  </data>
+  <data name="QiaoBiaoXianJia" xml:space="preserve">
+    <value>入札価格上限</value>
+  </data>
+  <data name="QiaoBiaoMoBanWenJian" xml:space="preserve">
+    <value>入札テンプレートファイル</value>
+  </data>
+  <data name="XiangGuanLiuCheng" xml:space="preserve">
+    <value>関連プロセス</value>
+  </data>
+  <data name="ChengBaoShangDaiMa" xml:space="preserve">
+    <value>契約業者コード</value>
+  </data>
+  <data name="ChaKanFuJian" xml:space="preserve">
+    <value>添付ファイルを表示</value>
+  </data>
+  <data name="TouBiaoFanKuiXinXi" xml:space="preserve">
+    <value>入札フィードバック情報</value>
+  </data>
+  <data name="GongZuoLiuGuanLianXieMianSheZhi" xml:space="preserve">
+    <value>ワークフロー関連ページ設定</value>
+  </data>
+  <data name="QianDingShiJian" xml:space="preserve">
+    <value>署名時間</value>
+  </data>
+  <data name="YiFangChanWei" xml:space="preserve">
+    <value>乙方単位</value>
+  </data>
+  <data name="GeTongWuLiaoQingChanDaoRuMoBan" xml:space="preserve">
+    <value>契約物資リストインポートテンプレート</value>
+  </data>
+  <data name="QianZhengRen" xml:space="preserve">
+    <value>査証者</value>
+  </data>
+  <data name="QianZhengShuiMing" xml:space="preserve">
+    <value>査証説明</value>
+  </data>
+  <data name="QianDingDeDian" xml:space="preserve">
+    <value>署名場所</value>
+  </data>
+  <data name="JinKouZongE" xml:space="preserve">
+    <value>輸入総額</value>
+  </data>
+  <data name="GeTongShuLiang" xml:space="preserve">
+    <value>契約数</value>
+  </data>
+  <data name="ShuiYinZiFu" xml:space="preserve">
+    <value>ウォーターマーク文字</value>
+  </data>
+  <data name="GeTongTaiZhang" xml:space="preserve">
+    <value>契約台帳</value>
+  </data>
+  <data name="ZanShiMeiYouChaXunDaoXiangGuanXinXi" xml:space="preserve">
+    <value>関連する情報が見つかりませんでした</value>
+  </data>
+  <data name="ShuaZe" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="XuQiuXinXi" xml:space="preserve">
+    <value>ニーズ情報</value>
+  </data>
+  <data name="JingXiaoShang" xml:space="preserve">
+    <value>ディーラー</value>
+  </data>
+  <data name="LianJiFangShi" xml:space="preserve">
+    <value>連絡先</value>
+  </data>
   <data name="BaiFangFangShi" xml:space="preserve">
     <value>訪問の方法</value>
   </data>
+  <data name="BaiFangShiJianCong" xml:space="preserve">
+    <value>訪問時間から</value>
+  </data>
+  <data name="ShiFouShangJi" xml:space="preserve">
+    <value>ビジネスチャンスですか？</value>
+  </data>
+  <data name="BaiFangShiJian" xml:space="preserve">
+    <value>訪問時間</value>
+  </data>
+  <data name="JianLiQueXian" xml:space="preserve">
+    <value>欠陥を設定する</value>
+  </data>
+  <data name="YaoChuanMeiChuan" xml:space="preserve">
+    <value>送信する必要があります</value>
+  </data>
+  <data name="KuCun" xml:space="preserve">
+    <value>在庫</value>
+  </data>
+  <data name="XiaChan" xml:space="preserve">
+    <value>注文する</value>
+  </data>
+  <data name="YuanSuZhaoPian" xml:space="preserve">
+    <value>要素の写真</value>
+  </data>
+  <data name="ShanChuWenJianGa" xml:space="preserve">
+    <value>フォルダを削除</value>
+  </data>
+  <data name="TuShuZhaoPian" xml:space="preserve">
+    <value>本の写真</value>
+  </data>
+  <data name="ZanLieJin" xml:space="preserve">
+    <value>仮設金</value>
+  </data>
+  <data name="LianJiFangFa" xml:space="preserve">
+    <value>連絡方法</value>
+  </data>
+  <data name="XinGeTongHao" xml:space="preserve">
+    <value>新しい契約番号</value>
+  </data>
+  <data name="DaoChuKeShiYongHu" xml:space="preserve">
+    <value>可視ユーザーをエクスポート</value>
+  </data>
+  <data name="DiJiaoBeiAn" xml:space="preserve">
+    <value>届け出を提出</value>
+  </data>
+  <data name="WuLiaoZhaoPian" xml:space="preserve">
+    <value>物資の写真</value>
+  </data>
+  <data name="BianGengJiLu" xml:space="preserve">
+    <value>変更記録</value>
+  </data>
+  <data name="BianGengRiZhi" xml:space="preserve">
+    <value>変更ログ</value>
+  </data>
+  <data name="XiangMuZengGeYuSuanDaoRuBiao" xml:space="preserve">
+    <value>プロジェクト包括予算インポート表</value>
+  </data>
+  <data name="GeTongZhuYaoNeiRong" xml:space="preserve">
+    <value>契約の主な内容</value>
+  </data>
+  <data name="XiangMuFuZeRen" xml:space="preserve">
+    <value>プロジェクト責任者</value>
+  </data>
+  <data name="XiangMuChanWei" xml:space="preserve">
+    <value>プロジェクト単位</value>
+  </data>
+  <data name="PiFuJinE" xml:space="preserve">
+    <value>承認額</value>
+  </data>
+  <data name="ShuaZeLingDao" xml:space="preserve">
+    <value>リーダーを選択</value>
+  </data>
+  <data name="ShuaZeChengYuan" xml:space="preserve">
+    <value>メンバーを選択</value>
+  </data>
+  <data name="ShuaZeJiaoSeZu" xml:space="preserve">
+    <value>ロールグループを選択</value>
+  </data>
+  <data name="XiangMuFeiYongDaoRuMoBan" xml:space="preserve">
+    <value>プロジェクトコストインポートテンプレート</value>
+  </data>
+  <data name="YuSuanBianGengJiLu" xml:space="preserve">
+    <value>予算変更記録</value>
+  </data>
+  <data name="YuanKeMu" xml:space="preserve">
+    <value>元の科目</value>
+  </data>
+  <data name="YuanJinE" xml:space="preserve">
+    <value>元の金額</value>
+  </data>
+  <data name="YuanMiaoShu" xml:space="preserve">
+    <value>元の説明</value>
+  </data>
+  <data name="XiangMuZongE" xml:space="preserve">
+    <value>プロジェクト総額</value>
+  </data>
+  <data name="JinChangRiJi" xml:space="preserve">
+    <value>入場日</value>
+  </data>
+  <data name="ChuChangRiJi" xml:space="preserve">
+    <value>退出日</value>
+  </data>
+  <data name="QingZhang" xml:space="preserve">
+    <value>精算</value>
+  </data>
+  <data name="WeiShenQing" xml:space="preserve">
+    <value>未申請</value>
+  </data>
+  <data name="ZhuaiJiHua" xml:space="preserve">
+    <value>計画を転送する</value>
+  </data>
+  <data name="JiHuaPinJie" xml:space="preserve">
+    <value>計画の連結</value>
+  </data>
+  <data name="QingShuaZeYaoPinJieDeJieDian" xml:space="preserve">
+    <value>連結するノードを選択してください</value>
+  </data>
+  <data name="XiaoShouChanJia" xml:space="preserve">
+    <value>販売単価</value>
+  </data>
+  <data name="XiaoShouZongE" xml:space="preserve">
+    <value>販売総額</value>
+  </data>
+  <data name="CaiGouZongE" xml:space="preserve">
+    <value>調達総額</value>
+  </data>
+  <data name="YuanGongHao" xml:space="preserve">
+    <value>従業員番号</value>
+  </data>
+  <data name="GongZuoZhiZe" xml:space="preserve">
+    <value>仕事の責任</value>
+  </data>
+  <data name="BaoBiaoLieBiao" xml:space="preserve">
+    <value>レポートリスト</value>
+  </data>
+  <data name="XiangMuQiDongGuanLi" xml:space="preserve">
+    <value>プロジェクト立ち上げ管理</value>
+  </data>
+  <data name="BiChuanWenDang" xml:space="preserve">
+    <value>必須文書</value>
+  </data>
+  <data name="MoBanCanZhao" xml:space="preserve">
+    <value>テンプレートを参照</value>
+  </data>
+  <data name="XiangMuGeTongYanShouChan" xml:space="preserve">
+    <value>プロジェクト契約検収書</value>
+  </data>
+  <data name="XiangMuYanShou" xml:space="preserve">
+    <value>プロジェクト検収</value>
+  </data>
+  <data name="XinZengJiaGeDiaoZhengShuJu" xml:space="preserve">
+    <value>新しい価格調整データ</value>
+  </data>
+  <data name="XiuGaiJiaGeDiaoZhengShuJu" xml:space="preserve">
+    <value>価格調整データを変更する</value>
+  </data>
+  <data name="ShanChuDiaoZhengShuJuRuKu" xml:space="preserve">
+    <value>調整データをデータベースから削除</value>
+  </data>
+  <data name="DaoChuChengBenJiXiaoShuJu" xml:space="preserve">
+    <value>コストパフォーマンスデータをエクスポート</value>
+  </data>
+  <data name="JiaGeDiaoZheng" xml:space="preserve">
+    <value>価格調整</value>
+  </data>
+  <data name="ShiJiGongZuo" xml:space="preserve">
+    <value>実際の仕事</value>
+  </data>
+  <data name="ZiDongJiSuanYueJiHuaE" xml:space="preserve">
+    <value>月間計画額を自動計算する</value>
+  </data>
+  <data name="XinZengJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>新しいパフォーマンス基準データ</value>
+  </data>
+  <data name="XiuGaiJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>パフォーマンス基準データを変更する</value>
+  </data>
+  <data name="ShanChuJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>パフォーマンス基準データを削除</value>
+  </data>
+  <data name="ZhengZhiFenXiTu" xml:space="preserve">
+    <value>稼働分析図</value>
+  </data>
+  <data name="QuanBuXianShi" xml:space="preserve">
+    <value>すべて表示</value>
+  </data>
   <data name="AnShiJianChaXun" xml:space="preserve">
     <value>時間で検索する</value>
+  </data>
+  <data name="XiuGaiGongZuoJiLu" xml:space="preserve">
+    <value>作業レコードを変更する</value>
+  </data>
+  <data name="ShanChuGongZuoJiLu" xml:space="preserve">
+    <value>作業レコードを削除</value>
+  </data>
+  <data name="XinZengGongZuoQueRen" xml:space="preserve">
+    <value>新しい作業確認</value>
+  </data>
+  <data name="XiuGaiGongZuoQueRen" xml:space="preserve">
+    <value>作業確認を変更する</value>
+  </data>
+  <data name="ShanChuGongZuoQueRen" xml:space="preserve">
+    <value>作業確認を削除</value>
+  </data>
+  <data name="XinZengShouKuanJiLu" xml:space="preserve">
+    <value>新しい受領レコード</value>
+  </data>
+  <data name="XiuGaiShouKuanJiLu" xml:space="preserve">
+    <value>受領レコードを変更する</value>
+  </data>
+  <data name="ShanChuShouKuanJiLu" xml:space="preserve">
+    <value>受領レコードを削除</value>
+  </data>
+  <data name="JianLiXuQiu" xml:space="preserve">
+    <value>ニーズを設定する</value>
+  </data>
+  <data name="YinCangSuoYouBuKeShiMoZu" xml:space="preserve">
+    <value>すべての非表示モジュールを隠す</value>
+  </data>
+  <data name="ShiShiChuShiShuJuQingChu" xml:space="preserve">
+    <value>初期データをクリアする</value>
+  </data>
+  <data name="JiaoFuJinDu" xml:space="preserve">
+    <value>納品スケジュール</value>
+  </data>
+  <data name="GongZuoFuHe" xml:space="preserve">
+    <value>作業負荷</value>
+  </data>
+  <data name="ZiChanCaiGouFuKuanChaXun" xml:space="preserve">
+    <value>資産調達支払い照会</value>
+  </data>
+  <data name="QianCiBeiFenShiJian" xml:space="preserve">
+    <value>前回のバックアップ時間</value>
+  </data>
+  <data name="JiTongMoZuLiuLan" xml:space="preserve">
+    <value>システムモジュールを参照</value>
+  </data>
+  <data name="TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu" xml:space="preserve">
+    <value>タオル総合管理プラットフォームの完全なモジュールツリー</value>
+  </data>
+  <data name="TuoYe" xml:space="preserve">
+    <value>ドラッグアンドドロップ</value>
+  </data>
+  <data name="Nei" xml:space="preserve">
+    <value>内</value>
+  </data>
+  <data name="Wai" xml:space="preserve">
+    <value>外部</value>
+  </data>
+  <data name="TouBiaoFeiYongMingXi" xml:space="preserve">
+    <value>入札コストの詳細</value>
+  </data>
+  <data name="QiaoBiaoRen" xml:space="preserve">
+    <value>入札者</value>
+  </data>
+  <data name="TouBiaoLiuChengShenQing" xml:space="preserve">
+    <value>入札プロセス申請</value>
+  </data>
+  <data name="PaiBan" xml:space="preserve">
+    <value>スケジュール</value>
+  </data>
+  <data name="BanCiMingChen" xml:space="preserve">
+    <value>シフト名</value>
+  </data>
+  <data name="ShangBanKaiShiShiJian" xml:space="preserve">
+    <value>出勤開始時間</value>
+  </data>
+  <data name="XiaBanJieShuShiJian" xml:space="preserve">
+    <value>退勤終了時間</value>
+  </data>
+  <data name="SheZhiBanCi" xml:space="preserve">
+    <value>シフトを設定</value>
+  </data>
+  <data name="ZiJinSuanFa" xml:space="preserve">
+    <value>資金アルゴリズム</value>
+  </data>
+  <data name="KuCunZiJinSuanFa" xml:space="preserve">
+    <value>在庫資金アルゴリズム</value>
+  </data>
+  <data name="GuiShuCangKu" xml:space="preserve">
+    <value>所管倉庫</value>
+  </data>
+  <data name="Chao" xml:space="preserve">
+    <value>超過</value>
+  </data>
+  <data name="XiaoShiZiDongPiZhun" xml:space="preserve">
+    <value>時間自動承認</value>
+  </data>
+  <data name="JiHuaBianGengJiLu" xml:space="preserve">
+    <value>計画変更記録</value>
   </data>
   <data name="AnChongLei" xml:space="preserve">
     <value>種類別</value>
@@ -31014,434 +31416,8 @@
   <data name="BaiFangFangShi1" xml:space="preserve">
     <value>訪問方法</value>
   </data>
-  <data name="BaiFangShiJian" xml:space="preserve">
-    <value>訪問時間</value>
-  </data>
-  <data name="BaiFangShiJianCong" xml:space="preserve">
-    <value>訪問時間から</value>
-  </data>
-  <data name="BanCiMingChen" xml:space="preserve">
-    <value>シフト名</value>
-  </data>
-  <data name="BaoBiaoLieBiao" xml:space="preserve">
-    <value>レポートリスト</value>
-  </data>
-  <data name="BianGengJiLu" xml:space="preserve">
-    <value>変更記録</value>
-  </data>
-  <data name="BianGengRiZhi" xml:space="preserve">
-    <value>変更ログ</value>
-  </data>
-  <data name="BiChuanWenDang" xml:space="preserve">
-    <value>必須文書</value>
-  </data>
-  <data name="CaiGouZongE" xml:space="preserve">
-    <value>調達総額</value>
-  </data>
-  <data name="ChaKanFuJian" xml:space="preserve">
-    <value>添付ファイルを表示</value>
-  </data>
-  <data name="Chao" xml:space="preserve">
-    <value>超過</value>
-  </data>
-  <data name="ChengBaoLeiXing" xml:space="preserve">
-    <value>契約タイプ</value>
-  </data>
-  <data name="ChengBaoShangDaiMa" xml:space="preserve">
-    <value>契約業者コード</value>
-  </data>
-  <data name="ChengBaoShangDaLei" xml:space="preserve">
-    <value>契約業者大カテゴリ</value>
-  </data>
-  <data name="ChengBaoShangXiaoLei" xml:space="preserve">
-    <value>契約業者小カテゴリ</value>
-  </data>
-  <data name="ChengQingXinXiHuiHan" xml:space="preserve">
-    <value>澄明情報回答</value>
-  </data>
-  <data name="ChuChangRiJi" xml:space="preserve">
-    <value>退出日</value>
-  </data>
-  <data name="DaoChuChengBenJiXiaoShuJu" xml:space="preserve">
-    <value>コストパフォーマンスデータをエクスポート</value>
-  </data>
-  <data name="DaoChuKeShiYongHu" xml:space="preserve">
-    <value>可視ユーザーをエクスポート</value>
-  </data>
-  <data name="DiJiaoBeiAn" xml:space="preserve">
-    <value>届け出を提出</value>
-  </data>
-  <data name="GeTongShuLiang" xml:space="preserve">
-    <value>契約数</value>
-  </data>
-  <data name="GeTongTaiZhang" xml:space="preserve">
-    <value>契約台帳</value>
-  </data>
-  <data name="GeTongWuLiaoQingChanDaoRuMoBan" xml:space="preserve">
-    <value>契約物資リストインポートテンプレート</value>
-  </data>
-  <data name="GeTongZhuYaoNeiRong" xml:space="preserve">
-    <value>契約の主な内容</value>
-  </data>
-  <data name="GongCheng" xml:space="preserve">
-    <value>工事</value>
-  </data>
-  <data name="GongZuoFuHe" xml:space="preserve">
-    <value>作業負荷</value>
-  </data>
-  <data name="GongZuoLiuGuanLianXieMianSheZhi" xml:space="preserve">
-    <value>ワークフロー関連ページ設定</value>
-  </data>
-  <data name="GongZuoZhiZe" xml:space="preserve">
-    <value>仕事の責任</value>
-  </data>
-  <data name="GuanBiDangQianXie" xml:space="preserve">
-    <value>現在のページを閉じる</value>
-  </data>
-  <data name="GuiShuCangKu" xml:space="preserve">
-    <value>所管倉庫</value>
-  </data>
-  <data name="JiaBanLiYou" xml:space="preserve">
-    <value>残業理由</value>
-  </data>
-  <data name="JiaGeDiaoZheng" xml:space="preserve">
-    <value>価格調整</value>
-  </data>
-  <data name="JianLiQueXian" xml:space="preserve">
-    <value>欠陥を設定する</value>
-  </data>
-  <data name="JianLiXuQiu" xml:space="preserve">
-    <value>ニーズを設定する</value>
-  </data>
-  <data name="JiaoFuJinDu" xml:space="preserve">
-    <value>納品スケジュール</value>
-  </data>
-  <data name="JieRiLeiXing" xml:space="preserve">
-    <value>祝日タイプ</value>
-  </data>
-  <data name="JiHuaBianGengJiLu" xml:space="preserve">
-    <value>計画変更記録</value>
-  </data>
-  <data name="JiHuaPinJie" xml:space="preserve">
-    <value>計画の連結</value>
-  </data>
-  <data name="JinChangRiJi" xml:space="preserve">
-    <value>入場日</value>
-  </data>
-  <data name="JingXiaoShang" xml:space="preserve">
-    <value>ディーラー</value>
-  </data>
-  <data name="JinKouZongE" xml:space="preserve">
-    <value>輸入総額</value>
-  </data>
-  <data name="JiTongMoZuLiuLan" xml:space="preserve">
-    <value>システムモジュールを参照</value>
-  </data>
-  <data name="KeShiGeTong" xml:space="preserve">
-    <value>可視契約</value>
-  </data>
-  <data name="KuCun" xml:space="preserve">
-    <value>在庫</value>
-  </data>
-  <data name="KuCunZiJinSuanFa" xml:space="preserve">
-    <value>在庫資金アルゴリズム</value>
-  </data>
-  <data name="LianJiFangFa" xml:space="preserve">
-    <value>連絡方法</value>
-  </data>
-  <data name="LianJiFangShi" xml:space="preserve">
-    <value>連絡先</value>
-  </data>
-  <data name="LingShou" xml:space="preserve">
-    <value>小売</value>
-  </data>
-  <data name="MeiYouGengGaiMiMaDeYongHu" xml:space="preserve">
-    <value>パスワードを変更していないユーザー</value>
-  </data>
-  <data name="MenDian" xml:space="preserve">
-    <value>店舗</value>
-  </data>
-  <data name="MoBanCanZhao" xml:space="preserve">
-    <value>テンプレートを参照</value>
-  </data>
-  <data name="Nei" xml:space="preserve">
-    <value>内</value>
-  </data>
-  <data name="PaiBan" xml:space="preserve">
-    <value>スケジュール</value>
-  </data>
-  <data name="PiFuJinE" xml:space="preserve">
-    <value>承認額</value>
-  </data>
-  <data name="QianCiBeiFenShiJian" xml:space="preserve">
-    <value>前回のバックアップ時間</value>
-  </data>
-  <data name="QianDingDeDian" xml:space="preserve">
-    <value>署名場所</value>
-  </data>
-  <data name="QianDingShiJian" xml:space="preserve">
-    <value>署名時間</value>
-  </data>
-  <data name="QianZhengRen" xml:space="preserve">
-    <value>査証者</value>
-  </data>
-  <data name="QianZhengShuiMing" xml:space="preserve">
-    <value>査証説明</value>
-  </data>
-  <data name="QiaoBiaoChengQingXinXiHuiHan" xml:space="preserve">
-    <value>入札澄明情報回答</value>
-  </data>
-  <data name="QiaoBiaoMoBanWenJian" xml:space="preserve">
-    <value>入札テンプレートファイル</value>
-  </data>
-  <data name="QiaoBiaoRen" xml:space="preserve">
-    <value>入札者</value>
-  </data>
-  <data name="QiaoBiaoXianJia" xml:space="preserve">
-    <value>入札価格上限</value>
-  </data>
-  <data name="QingShuaZeYaoPinJieDeJieDian" xml:space="preserve">
-    <value>連結するノードを選択してください</value>
-  </data>
-  <data name="QingZhang" xml:space="preserve">
-    <value>精算</value>
-  </data>
-  <data name="QuanBuXianShi" xml:space="preserve">
-    <value>すべて表示</value>
-  </data>
-  <data name="QueXianLeiXing" xml:space="preserve">
-    <value>欠陥タイプ</value>
-  </data>
-  <data name="ShanChuDiaoZhengShuJuRuKu" xml:space="preserve">
-    <value>調整データをデータベースから削除</value>
-  </data>
-  <data name="ShanChuGongZuoJiLu" xml:space="preserve">
-    <value>作業レコードを削除</value>
-  </data>
-  <data name="ShanChuGongZuoQueRen" xml:space="preserve">
-    <value>作業確認を削除</value>
-  </data>
-  <data name="ShanChuJiXiaoJiZhunShuJu" xml:space="preserve">
-    <value>パフォーマンス基準データを削除</value>
-  </data>
-  <data name="ShanChuShouKuanJiLu" xml:space="preserve">
-    <value>受領レコードを削除</value>
-  </data>
-  <data name="ShanChuWenJianGa" xml:space="preserve">
-    <value>フォルダを削除</value>
-  </data>
-  <data name="ShangBanKaiShiShiJian" xml:space="preserve">
-    <value>出勤開始時間</value>
-  </data>
-  <data name="ShangHuiChengYuanDengJi" xml:space="preserve">
-    <value>商工会議所メンバー登録</value>
-  </data>
-  <data name="ShengCheng" xml:space="preserve">
-    <value>生成</value>
-  </data>
-  <data name="SheZhiBanCi" xml:space="preserve">
-    <value>シフトを設定</value>
-  </data>
-  <data name="ShiFouShangJi" xml:space="preserve">
-    <value>ビジネスチャンスですか？</value>
-  </data>
-  <data name="ShiJiGongZuo" xml:space="preserve">
-    <value>実際の仕事</value>
-  </data>
-  <data name="ShiShiChuShiShuJuQingChu" xml:space="preserve">
-    <value>初期データをクリアする</value>
-  </data>
-  <data name="ShuaZe" xml:space="preserve">
-    <value>選択</value>
-  </data>
-  <data name="ShuaZeChengYuan" xml:space="preserve">
-    <value>メンバーを選択</value>
-  </data>
-  <data name="ShuaZeJiaoSeZu" xml:space="preserve">
-    <value>ロールグループを選択</value>
-  </data>
-  <data name="ShuaZeLingDao" xml:space="preserve">
-    <value>リーダーを選択</value>
-  </data>
-  <data name="ShuiYinZiFu" xml:space="preserve">
-    <value>ウォーターマーク文字</value>
-  </data>
-  <data name="SYCYKPI" xml:space="preserve">
-    <value>すべてのメンバーのKPI</value>
-  </data>
-  <data name="TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu" xml:space="preserve">
-    <value>タオル総合管理プラットフォームの完全なモジュールツリー</value>
-  </data>
-  <data name="TouBiaoFanKuiXinXi" xml:space="preserve">
-    <value>入札フィードバック情報</value>
-  </data>
-  <data name="TouBiaoFeiYongMingXi" xml:space="preserve">
-    <value>入札コストの詳細</value>
-  </data>
-  <data name="TouBiaoLiuChengShenQing" xml:space="preserve">
-    <value>入札プロセス申請</value>
-  </data>
-  <data name="TouBiaoMoBanWenJian" xml:space="preserve">
-    <value>入札テンプレートファイル</value>
-  </data>
-  <data name="TouBiaoWenJianMoBan" xml:space="preserve">
-    <value>入札ファイルテンプレート</value>
-  </data>
-  <data name="TuoYe" xml:space="preserve">
-    <value>ドラッグアンドドロップ</value>
-  </data>
-  <data name="TuShuZhaoPian" xml:space="preserve">
-    <value>本の写真</value>
-  </data>
-  <data name="Wai" xml:space="preserve">
-    <value>外部</value>
-  </data>
-  <data name="WeiShenQing" xml:space="preserve">
-    <value>未申請</value>
-  </data>
-  <data name="WuLiaoZhaoPian" xml:space="preserve">
-    <value>物資の写真</value>
-  </data>
-  <data name="XiaBanJieShuShiJian" xml:space="preserve">
-    <value>退勤終了時間</value>
-  </data>
-  <data name="XiaChan" xml:space="preserve">
-    <value>注文する</value>
-  </data>
-  <data name="XiangGuanLiuCheng" xml:space="preserve">
-    <value>関連プロセス</value>
-  </data>
-  <data name="XiangMuChanWei" xml:space="preserve">
-    <value>プロジェクト単位</value>
-  </data>
-  <data name="XiangMuFeiYongDaoRuMoBan" xml:space="preserve">
-    <value>プロジェクトコストインポートテンプレート</value>
-  </data>
-  <data name="XiangMuFuZeRen" xml:space="preserve">
-    <value>プロジェクト責任者</value>
-  </data>
-  <data name="XiangMuGeTongYanShouChan" xml:space="preserve">
-    <value>プロジェクト契約検収書</value>
-  </data>
-  <data name="XiangMuMa" xml:space="preserve">
-    <value>プロジェクトコード</value>
-  </data>
-  <data name="XiangMuQiDongGuanLi" xml:space="preserve">
-    <value>プロジェクト立ち上げ管理</value>
-  </data>
-  <data name="XiangMuYanShou" xml:space="preserve">
-    <value>プロジェクト検収</value>
-  </data>
-  <data name="XiangMuZengGeYuSuanDaoRuBiao" xml:space="preserve">
-    <value>プロジェクト包括予算インポート表</value>
-  </data>
-  <data name="XiangMuZongE" xml:space="preserve">
-    <value>プロジェクト総額</value>
-  </data>
-  <data name="XiaoShiZiDongPiZhun" xml:space="preserve">
-    <value>時間自動承認</value>
-  </data>
-  <data name="XiaoShouChanJia" xml:space="preserve">
-    <value>販売単価</value>
-  </data>
-  <data name="XiaoShouZongE" xml:space="preserve">
-    <value>販売総額</value>
-  </data>
-  <data name="XinGeTongHao" xml:space="preserve">
-    <value>新しい契約番号</value>
-  </data>
-  <data name="XinXiShouJi" xml:space="preserve">
-    <value>情報収集</value>
-  </data>
-  <data name="XinZengGongZuoQueRen" xml:space="preserve">
-    <value>新しい作業確認</value>
-  </data>
-  <data name="XinZengJiaGeDiaoZhengShuJu" xml:space="preserve">
-    <value>新しい価格調整データ</value>
-  </data>
-  <data name="XinZengJiXiaoJiZhunShuJu" xml:space="preserve">
-    <value>新しいパフォーマンス基準データ</value>
-  </data>
-  <data name="XinZengShouKuanJiLu" xml:space="preserve">
-    <value>新しい受領レコード</value>
-  </data>
-  <data name="XiuGaiGongZuoJiLu" xml:space="preserve">
-    <value>作業レコードを変更する</value>
-  </data>
-  <data name="XiuGaiGongZuoQueRen" xml:space="preserve">
-    <value>作業確認を変更する</value>
-  </data>
-  <data name="XiuGaiJiaGeDiaoZhengShuJu" xml:space="preserve">
-    <value>価格調整データを変更する</value>
-  </data>
-  <data name="XiuGaiJiXiaoJiZhunShuJu" xml:space="preserve">
-    <value>パフォーマンス基準データを変更する</value>
-  </data>
-  <data name="XiuGaiShouKuanJiLu" xml:space="preserve">
-    <value>受領レコードを変更する</value>
-  </data>
-  <data name="XuQiuXinXi" xml:space="preserve">
-    <value>ニーズ情報</value>
-  </data>
-  <data name="YaoChuanMeiChuan" xml:space="preserve">
-    <value>送信する必要があります</value>
-  </data>
-  <data name="YiFangChanWei" xml:space="preserve">
-    <value>乙方単位</value>
-  </data>
-  <data name="YinCangSuoYouBuKeShiMoZu" xml:space="preserve">
-    <value>すべての非表示モジュールを隠す</value>
-  </data>
-  <data name="YiWanChengLiang" xml:space="preserve">
-    <value>完了量</value>
-  </data>
-  <data name="YuanGongHao" xml:space="preserve">
-    <value>従業員番号</value>
-  </data>
-  <data name="YuanJinE" xml:space="preserve">
-    <value>元の金額</value>
-  </data>
-  <data name="YuanKeMu" xml:space="preserve">
-    <value>元の科目</value>
-  </data>
-  <data name="YuanMiaoShu" xml:space="preserve">
-    <value>元の説明</value>
-  </data>
-  <data name="YuanSuZhaoPian" xml:space="preserve">
-    <value>要素の写真</value>
-  </data>
-  <data name="YuSuanBianGengJiLu" xml:space="preserve">
-    <value>予算変更記録</value>
-  </data>
-  <data name="YuZhongBiaoTongZhiShuWenJian" xml:space="preserve">
-    <value>予定落札通知書ファイル</value>
-  </data>
-  <data name="ZanLieJin" xml:space="preserve">
-    <value>仮設金</value>
-  </data>
-  <data name="ZanShiMeiYouChaXunDaoXiangGuanXinXi" xml:space="preserve">
-    <value>関連する情報が見つかりませんでした</value>
-  </data>
-  <data name="ZhengZhiFenXiTu" xml:space="preserve">
-    <value>稼働分析図</value>
-  </data>
-  <data name="ZhuaiJiHua" xml:space="preserve">
-    <value>計画を転送する</value>
-  </data>
-  <data name="ZiChanCaiGouFuKuanChaXun" xml:space="preserve">
-    <value>資産調達支払い照会</value>
-  </data>
-  <data name="ZiDongJiSuanYueJiHuaE" xml:space="preserve">
-    <value>月間計画額を自動計算する</value>
-  </data>
-  <data name="ZiJinSuanFa" xml:space="preserve">
-    <value>資金アルゴリズム</value>
-  </data>
   <data name="BanGongDeZhi" xml:space="preserve">
     <value>オフィス住所</value>
-  </data>
-  <data name="BaoHanZiBuMen1" xml:space="preserve">
-    <value>サブ部門を含む</value>
   </data>
   <data name="BenCiQingKuanJinE" xml:space="preserve">
     <value>今回の請求金額</value>
@@ -31460,9 +31436,6 @@
   </data>
   <data name="BiaoChanShangChuan" xml:space="preserve">
     <value>フォームのアップロード</value>
-  </data>
-  <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
-    <value>フォームスタイルのダウンロード</value>
   </data>
   <data name="CaiGouQingChan" xml:space="preserve">
     <value>調達リスト</value>
@@ -31844,5 +31817,8 @@
   </data>
   <data name="ZongBaoJia" xml:space="preserve">
     <value>総見積もり</value>
+  </data>
+  <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
+    <value>フォームスタイルのダウンロード</value>
   </data>
 </root>
