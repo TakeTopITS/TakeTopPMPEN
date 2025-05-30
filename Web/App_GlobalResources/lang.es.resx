@@ -31821,4 +31821,7 @@
   <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
     <value>Nombre del formulario  </value>
   </data>
+  <data name="HuaXueChengFengSi" xml:space="preserve">
+    <value>La composición química es</value>
+  </data>
 </root>

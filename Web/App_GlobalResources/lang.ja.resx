@@ -31821,4 +31821,7 @@
   <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
     <value>フォームスタイルのダウンロード</value>
   </data>
+  <data name="HuaXueChengFengSi" xml:space="preserve">
+    <value>化学成分は</value>
+  </data>
 </root>

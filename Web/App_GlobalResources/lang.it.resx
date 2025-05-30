@@ -31823,4 +31823,7 @@
   <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
     <value>Nome del modulo  </value>
   </data>
+  <data name="HuaXueChengFengSi" xml:space="preserve">
+    <value>La composizione chimica è</value>
+  </data>
 </root>

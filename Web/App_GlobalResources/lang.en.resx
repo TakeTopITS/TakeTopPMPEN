@@ -31822,4 +31822,7 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
     <value>Form Template Download</value>
   </data>
+  <data name="HuaXueChengFengSi" xml:space="preserve">
+    <value>The chemical composition is</value>
+  </data>
 </root>

@@ -31823,4 +31823,7 @@
   <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
     <value>Скачать шаблон формы</value>
   </data>
+  <data name="HuaXueChengFengSi" xml:space="preserve">
+    <value>Химический состав является</value>
+  </data>
 </root>

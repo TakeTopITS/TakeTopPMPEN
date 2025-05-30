@@ -31821,4 +31821,7 @@
   <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
     <value>Herunterladen des Formularstils</value>
   </data>
+  <data name="HuaXueChengFengSi" xml:space="preserve">
+    <value>Die chemische Zusammensetzung ist</value>
+  </data>
 </root>

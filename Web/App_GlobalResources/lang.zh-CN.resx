@@ -31855,4 +31855,7 @@
   <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
     <value>表单样式下载</value>
   </data>
+  <data name="HuaXueChengFengSi" xml:space="preserve">
+    <value>化学成分是</value>
+  </data>
 </root>
