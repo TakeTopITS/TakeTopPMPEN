@@ -31551,4 +31551,820 @@
   <data name="BaiFangFangShi1" xml:space="preserve">
     <value>拜访方式</value>
   </data>
+  <data name="BanGongDeZhi" xml:space="preserve">
+    <value>办公地址</value>
+  </data>
+  <data name="BaoHanZiBuMen1" xml:space="preserve">
+    <value>包含子部门</value>
+  </data>
+  <data name="BenCiQingKuanJinE" xml:space="preserve">
+    <value>本次请款金额</value>
+  </data>
+  <data name="BenNianDuCiLeiXingYiJiaBanZongTianShu" xml:space="preserve">
+    <value>本年度此类型已加班总天数</value>
+  </data>
+  <data name="BiaoChanHao" xml:space="preserve">
+    <value>表单号</value>
+  </data>
+  <data name="BiaoChanLeiXing" xml:space="preserve">
+    <value>表单类型</value>
+  </data>
+  <data name="BiaoChanMing" xml:space="preserve">
+    <value>表单名</value>
+  </data>
+  <data name="BiaoChanShangChuan" xml:space="preserve">
+    <value>表单上传</value>
+  </data>
+  <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
+    <value>表单样式下载</value>
+  </data>
+  <data name="CaiGouQingChan" xml:space="preserve">
+    <value>采购清单</value>
+  </data>
+  <data name="CaiGouQingChanJiLu" xml:space="preserve">
+    <value>采购清单记录</value>
+  </data>
+  <data name="CangWei" xml:space="preserve">
+    <value>仓位</value>
+  </data>
+  <data name="ChanPinMing" xml:space="preserve">
+    <value>产品名</value>
+  </data>
+  <data name="ChanWeiDeZhi" xml:space="preserve">
+    <value>单位地址</value>
+  </data>
+  <data name="ChengJiaoTongZhiShu" xml:space="preserve">
+    <value>成交通知书</value>
+  </data>
+  <data name="ChuangJianZhanDian" xml:space="preserve">
+    <value>创建站点</value>
+  </data>
+  <data name="ChuKuCangWei" xml:space="preserve">
+    <value>出库仓位</value>
+  </data>
+  <data name="ChuLiJieLun" xml:space="preserve">
+    <value>处理结论</value>
+  </data>
+  <data name="ChuLiShouLiaoChan" xml:space="preserve">
+    <value>处理收料单</value>
+  </data>
+  <data name="CunFangCangWei" xml:space="preserve">
+    <value>存放仓位</value>
+  </data>
+  <data name="DaYuGouMaiRongLiangZhanDian" xml:space="preserve">
+    <value>大于购买容量站点</value>
+  </data>
+  <data name="DengLuZhangHao" xml:space="preserve">
+    <value>登录帐号</value>
+  </data>
+  <data name="DiYaoFangGeTongHao" xml:space="preserve">
+    <value>缔约方合同号</value>
+  </data>
+  <data name="DuoWenJianShangChuan" xml:space="preserve">
+    <value>多文件上传</value>
+  </data>
+  <data name="FaLiaoChanBaoGuanYuan" xml:space="preserve">
+    <value>发料单保管员</value>
+  </data>
+  <data name="FaLiaoChanCaiJian" xml:space="preserve">
+    <value>发料单材检</value>
+  </data>
+  <data name="FaLiaoChanCaiLiao" xml:space="preserve">
+    <value>发料单材料</value>
+  </data>
+  <data name="FaLiaoChanCaiLiaoMingXi" xml:space="preserve">
+    <value>发料单材料明细</value>
+  </data>
+  <data name="FanChan" xml:space="preserve">
+    <value>返单</value>
+  </data>
+  <data name="FaPiaoLeiXing" xml:space="preserve">
+    <value>发票类型</value>
+  </data>
+  <data name="FaSongBeiFen" xml:space="preserve">
+    <value>发送备份</value>
+  </data>
+  <data name="GeTongBianHao" xml:space="preserve">
+    <value>合同编号</value>
+  </data>
+  <data name="GeTongE" xml:space="preserve">
+    <value>合同额</value>
+  </data>
+  <data name="GeTongFuKuanTiaoJianHeYiJuMiaoShu" xml:space="preserve">
+    <value>合同付款条件和依据描述</value>
+  </data>
+  <data name="GeTongJinE" xml:space="preserve">
+    <value>合同金额</value>
+  </data>
+  <data name="GeTongLeiXing" xml:space="preserve">
+    <value>合同类型</value>
+  </data>
+  <data name="GeTongLiXiangYiJu" xml:space="preserve">
+    <value>合同立项依据</value>
+  </data>
+  <data name="GeTongNeiRong" xml:space="preserve">
+    <value>合同内容</value>
+  </data>
+  <data name="GeTongQianYaoFang" xml:space="preserve">
+    <value>合同签约方</value>
+  </data>
+  <data name="GeTongYaoDingJieSuanZhiFuBiLi" xml:space="preserve">
+    <value>合同约定结算支付比例</value>
+  </data>
+  <data name="GeTongYaoDingJunGongZhiFuBiLi" xml:space="preserve">
+    <value>合同约定竣工支付比例</value>
+  </data>
+  <data name="GeTongYaoDingYueJinDuZhiFuBiLi" xml:space="preserve">
+    <value>合同约定月进度支付比例</value>
+  </data>
+  <data name="GeTongYaoDingYuFuKuanBiLi" xml:space="preserve">
+    <value>合同约定预付款比例</value>
+  </data>
+  <data name="GuanJianMoZuPeiXunShiPinXiaZai" xml:space="preserve">
+    <value>关键模组培训视频下载</value>
+  </data>
+  <data name="GuanLianGeTong" xml:space="preserve">
+    <value>关联合同</value>
+  </data>
+  <data name="GuanLianGeTongYingFuJiHua" xml:space="preserve">
+    <value>关联合同应付计划</value>
+  </data>
+  <data name="GuanLianMoKuai" xml:space="preserve">
+    <value>关联模块</value>
+  </data>
+  <data name="HuanSuanChanWei" xml:space="preserve">
+    <value>换算单位</value>
+  </data>
+  <data name="HuiFuZhanDian" xml:space="preserve">
+    <value>恢复站点</value>
+  </data>
+  <data name="HuiYiJiYao" xml:space="preserve">
+    <value>会议纪要</value>
+  </data>
+  <data name="JiaFangChanWei" xml:space="preserve">
+    <value>甲方单位</value>
+  </data>
+  <data name="JianZhan" xml:space="preserve">
+    <value>建站</value>
+  </data>
+  <data name="JianZhanYingYong" xml:space="preserve">
+    <value>建站应用</value>
+  </data>
+  <data name="JiaoFuRiJi" xml:space="preserve">
+    <value>交付日期</value>
+  </data>
+  <data name="JieShuRiJi" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="JieSuanBiaoJi" xml:space="preserve">
+    <value>结算标记</value>
+  </data>
+  <data name="JiHuaShuaZe" xml:space="preserve">
+    <value>计划选择</value>
+  </data>
+  <data name="JiHuaYuan" xml:space="preserve">
+    <value>计划员</value>
+  </data>
+  <data name="JingLi" xml:space="preserve">
+    <value>经理</value>
+  </data>
+  <data name="JiTa" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="KaoQinJieGuo" xml:space="preserve">
+    <value>考勤结果</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRu" xml:space="preserve">
+    <value>客户可视人员导入</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRuMoBan" xml:space="preserve">
+    <value>客户可视人员导入模板</value>
+  </data>
+  <data name="LeiJiYiJiaoFaPiao" xml:space="preserve">
+    <value>累计已交发票</value>
+  </data>
+  <data name="LiaoChanHao" xml:space="preserve">
+    <value>料单号</value>
+  </data>
+  <data name="LingLiaoRen" xml:space="preserve">
+    <value>领料人</value>
+  </data>
+  <data name="Mo" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="MoWanLiang" xml:space="preserve">
+    <value>末完量</value>
+  </data>
+  <data name="NeiWaiShuXing" xml:space="preserve">
+    <value>内外属性</value>
+  </data>
+  <data name="NianDuGongShiZhuangTai" xml:space="preserve">
+    <value>年度工时状态</value>
+  </data>
+  <data name="NianDuHuiKuanZhuangTai" xml:space="preserve">
+    <value>年度回款状态</value>
+  </data>
+  <data name="NianDuRenWuZhuangTai" xml:space="preserve">
+    <value>年度任务状态</value>
+  </data>
+  <data name="QianShouRiJi" xml:space="preserve">
+    <value>签收日期</value>
+  </data>
+  <data name="QiCaiPingZhengYiJiaoChan" xml:space="preserve">
+    <value>器材凭证移交单</value>
+  </data>
+  <data name="QingShiHuoPiShi" xml:space="preserve">
+    <value>请示或批示</value>
+  </data>
+  <data name="QuanBuJiTongYongHu" xml:space="preserve">
+    <value>全部系统用户</value>
+  </data>
+  <data name="QuanShua" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="QuXiaoYiJiao" xml:space="preserve">
+    <value>取消移交</value>
+  </data>
+  <data name="RongLiang" xml:space="preserve">
+    <value>容量</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu" xml:space="preserve">
+    <value>软件租用建站参数</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu" xml:space="preserve">
+    <value>软件租用建站维护</value>
+  </data>
+  <data name="ShangChuanRen" xml:space="preserve">
+    <value>上传人</value>
+  </data>
+  <data name="ShangJiXinXi1" xml:space="preserve">
+    <value>商机信息</value>
+  </data>
+  <data name="ShanZhan" xml:space="preserve">
+    <value>删站</value>
+  </data>
+  <data name="SheBeiMingChen" xml:space="preserve">
+    <value>设备名称</value>
+  </data>
+  <data name="ShengChanZuoYeChan" xml:space="preserve">
+    <value>生产作业单</value>
+  </data>
+  <data name="SheWeiZaiYong" xml:space="preserve">
+    <value>设为在用</value>
+  </data>
+  <data name="ShiFouZiDongJianZhan" xml:space="preserve">
+    <value>是否自动建站</value>
+  </data>
+  <data name="ShiGongChanWei" xml:space="preserve">
+    <value>施工单位</value>
+  </data>
+  <data name="ShouHou" xml:space="preserve">
+    <value>售后</value>
+  </data>
+  <data name="ShouHuoDeZhi" xml:space="preserve">
+    <value>收货地址</value>
+  </data>
+  <data name="ShouLiao" xml:space="preserve">
+    <value>收料</value>
+  </data>
+  <data name="ShouLiaoChanCaiJian" xml:space="preserve">
+    <value>收料单材检</value>
+  </data>
+  <data name="ShouLiaoChanJiLu" xml:space="preserve">
+    <value>收料单记录</value>
+  </data>
+  <data name="ShouZhiBiLi" xml:space="preserve">
+    <value>收支比例</value>
+  </data>
+  <data name="ShuJuKuAnZhuangMuLu" xml:space="preserve">
+    <value>数据库安装目录</value>
+  </data>
+  <data name="ShuJuKuDengLuZhangHao" xml:space="preserve">
+    <value>数据库登录帐号</value>
+  </data>
+  <data name="ShuJuKuHuiFuWenJianLuJing" xml:space="preserve">
+    <value>数据库恢复文件路径</value>
+  </data>
+  <data name="SuoShuZhuanYe" xml:space="preserve">
+    <value>所属专业</value>
+  </data>
+  <data name="WanGongRiJi" xml:space="preserve">
+    <value>完工日期</value>
+  </data>
+  <data name="XiangMuFuJian" xml:space="preserve">
+    <value>项目附件</value>
+  </data>
+  <data name="XiangMuGuanLianWuZiDaoRuMoBan" xml:space="preserve">
+    <value>项目关联物资导入模板</value>
+  </data>
+  <data name="XiangMuJingBanRen" xml:space="preserve">
+    <value>项目经办人</value>
+  </data>
+  <data name="XiangMuSuoShuZhuanYe" xml:space="preserve">
+    <value>项目所属专业</value>
+  </data>
+  <data name="XiangMuWuZiFeiYongFuKuanShenQing" xml:space="preserve">
+    <value>项目物资费用付款申请</value>
+  </data>
+  <data name="XiangMuYanShouChan" xml:space="preserve">
+    <value>项目验收单</value>
+  </data>
+  <data name="XiangMuYuSuanKeMu" xml:space="preserve">
+    <value>项目预算科目</value>
+  </data>
+  <data name="XianYouRongLiang" xml:space="preserve">
+    <value>现有容量</value>
+  </data>
+  <data name="YanWuXiangMuZhuangTai" xml:space="preserve">
+    <value>延误项目状态</value>
+  </data>
+  <data name="YaoDingKaiGongRiJi" xml:space="preserve">
+    <value>约定开工日期</value>
+  </data>
+  <data name="YaoDingWanGongRiJi" xml:space="preserve">
+    <value>约定完工日期</value>
+  </data>
+  <data name="YiFenPa" xml:space="preserve">
+    <value>已分派</value>
+  </data>
+  <data name="YiJiaoChanBianHao" xml:space="preserve">
+    <value>移交单编号</value>
+  </data>
+  <data name="YiJiaoRiJi" xml:space="preserve">
+    <value>移交日期</value>
+  </data>
+  <data name="YingLv" xml:space="preserve">
+    <value>赢率</value>
+  </data>
+  <data name="YingYongMing" xml:space="preserve">
+    <value>应用名</value>
+  </data>
+  <data name="YingYongZhanDian" xml:space="preserve">
+    <value>应用站点</value>
+  </data>
+  <data name="YuanGongJiXiaoDaoChuChuLi" xml:space="preserve">
+    <value>员工绩效导出处理</value>
+  </data>
+  <data name="YuanMa" xml:space="preserve">
+    <value>源码</value>
+  </data>
+  <data name="YuSuanKeMu" xml:space="preserve">
+    <value>预算科目</value>
+  </data>
+  <data name="YuSuanShuaZe" xml:space="preserve">
+    <value>预算选择</value>
+  </data>
+  <data name="ZaiZhiHangXiangMuZhuangTai" xml:space="preserve">
+    <value>在执行项目状态</value>
+  </data>
+  <data name="ZhanDianMoBanMuLu" xml:space="preserve">
+    <value>站点模板目录</value>
+  </data>
+  <data name="ZhanDianMuLu" xml:space="preserve">
+    <value>站点目录</value>
+  </data>
+  <data name="ZhanDianXuNiLuJing" xml:space="preserve">
+    <value>站点虚拟路径</value>
+  </data>
+  <data name="ZhiBaoJi" xml:space="preserve">
+    <value>质保期</value>
+  </data>
+  <data name="ZhiBiaoShiJian" xml:space="preserve">
+    <value>制表时间</value>
+  </data>
+  <data name="ZhiZheng" xml:space="preserve">
+    <value>质证</value>
+  </data>
+  <data name="ZhongBiaoRiJi" xml:space="preserve">
+    <value>中标日期</value>
+  </data>
+  <data name="ZhongDanYouDiErJianSheGongSiQiCaiPingZhengYiJiaoChan" xml:space="preserve">
+    <value>中石油第二建设公司器材凭证移交单</value>
+  </data>
+  <data name="ZhuaiChengXiangMuJiHua" xml:space="preserve">
+    <value>转成项目计划</value>
+  </data>
+  <data name="ZhuanGuYiJian" xml:space="preserve">
+    <value>专家意见</value>
+  </data>
+  <data name="ZhuZhanDuanKou" xml:space="preserve">
+    <value>主站端口</value>
+  </data>
+  <data name="ZiDongJianZhan" xml:space="preserve">
+    <value>自动建站</value>
+  </data>
+  <data name="ZiJinLaiYuan" xml:space="preserve">
+    <value>资金来源</value>
+  </data>
+  <data name="ZongBaoJia" xml:space="preserve">
+    <value>总报价</value>
+  </data>
+  <data name="BanGongDeZhi1" xml:space="preserve">
+    <value>办公地址</value>
+  </data>
+  <data name="BaoHanZiBuMen2" xml:space="preserve">
+    <value>包含子部门</value>
+  </data>
+  <data name="BenCiQingKuanJinE1" xml:space="preserve">
+    <value>本次请款金额</value>
+  </data>
+  <data name="BenNianDuCiLeiXingYiJiaBanZongTianShu1" xml:space="preserve">
+    <value>本年度此类型已加班总天数</value>
+  </data>
+  <data name="BiaoChanHao1" xml:space="preserve">
+    <value>表单号</value>
+  </data>
+  <data name="BiaoChanLeiXing1" xml:space="preserve">
+    <value>表单类型</value>
+  </data>
+  <data name="BiaoChanMing1" xml:space="preserve">
+    <value>表单名</value>
+  </data>
+  <data name="BiaoChanShangChuan1" xml:space="preserve">
+    <value>表单上传</value>
+  </data>
+  <data name="BiaoChanYangShiXiaZai1" xml:space="preserve">
+    <value>表单样式下载</value>
+  </data>
+  <data name="CaiGouQingChan1" xml:space="preserve">
+    <value>采购清单</value>
+  </data>
+  <data name="CaiGouQingChanJiLu1" xml:space="preserve">
+    <value>采购清单记录</value>
+  </data>
+  <data name="CangWei1" xml:space="preserve">
+    <value>仓位</value>
+  </data>
+  <data name="ChanPinMing1" xml:space="preserve">
+    <value>产品名</value>
+  </data>
+  <data name="ChanWeiDeZhi1" xml:space="preserve">
+    <value>单位地址</value>
+  </data>
+  <data name="ChengJiaoTongZhiShu1" xml:space="preserve">
+    <value>成交通知书</value>
+  </data>
+  <data name="ChuangJianZhanDian1" xml:space="preserve">
+    <value>创建站点</value>
+  </data>
+  <data name="ChuKuCangWei1" xml:space="preserve">
+    <value>出库仓位</value>
+  </data>
+  <data name="ChuLiJieLun1" xml:space="preserve">
+    <value>处理结论</value>
+  </data>
+  <data name="ChuLiShouLiaoChan1" xml:space="preserve">
+    <value>处理收料单</value>
+  </data>
+  <data name="CunFangCangWei1" xml:space="preserve">
+    <value>存放仓位</value>
+  </data>
+  <data name="DaYuGouMaiRongLiangZhanDian1" xml:space="preserve">
+    <value>大于购买容量站点</value>
+  </data>
+  <data name="DengLuZhangHao1" xml:space="preserve">
+    <value>登录帐号</value>
+  </data>
+  <data name="DiYaoFangGeTongHao1" xml:space="preserve">
+    <value>缔约方合同号</value>
+  </data>
+  <data name="DuoWenJianShangChuan1" xml:space="preserve">
+    <value>多文件上传</value>
+  </data>
+  <data name="FaLiaoChanBaoGuanYuan1" xml:space="preserve">
+    <value>发料单保管员</value>
+  </data>
+  <data name="FaLiaoChanCaiJian1" xml:space="preserve">
+    <value>发料单材检</value>
+  </data>
+  <data name="FaLiaoChanCaiLiao1" xml:space="preserve">
+    <value>发料单材料</value>
+  </data>
+  <data name="FaLiaoChanCaiLiaoMingXi1" xml:space="preserve">
+    <value>发料单材料明细</value>
+  </data>
+  <data name="FanChan1" xml:space="preserve">
+    <value>返单</value>
+  </data>
+  <data name="FaPiaoLeiXing1" xml:space="preserve">
+    <value>发票类型</value>
+  </data>
+  <data name="FaSongBeiFen1" xml:space="preserve">
+    <value>发送备份</value>
+  </data>
+  <data name="GeTongBianHao1" xml:space="preserve">
+    <value>合同编号</value>
+  </data>
+  <data name="GeTongE1" xml:space="preserve">
+    <value>合同额</value>
+  </data>
+  <data name="GeTongFuKuanTiaoJianHeYiJuMiaoShu1" xml:space="preserve">
+    <value>合同付款条件和依据描述</value>
+  </data>
+  <data name="GeTongJinE1" xml:space="preserve">
+    <value>合同金额</value>
+  </data>
+  <data name="GeTongLeiXing1" xml:space="preserve">
+    <value>合同类型</value>
+  </data>
+  <data name="GeTongLiXiangYiJu1" xml:space="preserve">
+    <value>合同立项依据</value>
+  </data>
+  <data name="GeTongNeiRong1" xml:space="preserve">
+    <value>合同内容</value>
+  </data>
+  <data name="GeTongQianYaoFang1" xml:space="preserve">
+    <value>合同签约方</value>
+  </data>
+  <data name="GeTongYaoDingJieSuanZhiFuBiLi1" xml:space="preserve">
+    <value>合同约定结算支付比例</value>
+  </data>
+  <data name="GeTongYaoDingJunGongZhiFuBiLi1" xml:space="preserve">
+    <value>合同约定竣工支付比例</value>
+  </data>
+  <data name="GeTongYaoDingYueJinDuZhiFuBiLi1" xml:space="preserve">
+    <value>合同约定月进度支付比例</value>
+  </data>
+  <data name="GeTongYaoDingYuFuKuanBiLi1" xml:space="preserve">
+    <value>合同约定预付款比例</value>
+  </data>
+  <data name="GuanJianMoZuPeiXunShiPinXiaZai1" xml:space="preserve">
+    <value>关键模组培训视频下载</value>
+  </data>
+  <data name="GuanLianGeTong1" xml:space="preserve">
+    <value>关联合同</value>
+  </data>
+  <data name="GuanLianGeTongYingFuJiHua1" xml:space="preserve">
+    <value>关联合同应付计划</value>
+  </data>
+  <data name="GuanLianMoKuai1" xml:space="preserve">
+    <value>关联模块</value>
+  </data>
+  <data name="HuanSuanChanWei1" xml:space="preserve">
+    <value>换算单位</value>
+  </data>
+  <data name="HuiFuZhanDian1" xml:space="preserve">
+    <value>恢复站点</value>
+  </data>
+  <data name="HuiYiJiYao1" xml:space="preserve">
+    <value>会议纪要</value>
+  </data>
+  <data name="JiaFangChanWei1" xml:space="preserve">
+    <value>甲方单位</value>
+  </data>
+  <data name="JianZhan1" xml:space="preserve">
+    <value>建站</value>
+  </data>
+  <data name="JianZhanYingYong1" xml:space="preserve">
+    <value>建站应用</value>
+  </data>
+  <data name="JiaoFuRiJi1" xml:space="preserve">
+    <value>交付日期</value>
+  </data>
+  <data name="JieShuRiJi1" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="JieSuanBiaoJi1" xml:space="preserve">
+    <value>结算标记</value>
+  </data>
+  <data name="JiHuaShuaZe1" xml:space="preserve">
+    <value>计划选择</value>
+  </data>
+  <data name="JiHuaYuan1" xml:space="preserve">
+    <value>计划员</value>
+  </data>
+  <data name="JingLi1" xml:space="preserve">
+    <value>经理</value>
+  </data>
+  <data name="JiTa1" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="KaoQinJieGuo1" xml:space="preserve">
+    <value>考勤结果</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRu1" xml:space="preserve">
+    <value>客户可视人员导入</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRuMoBan1" xml:space="preserve">
+    <value>客户可视人员导入模板</value>
+  </data>
+  <data name="LeiJiYiJiaoFaPiao1" xml:space="preserve">
+    <value>累计已交发票</value>
+  </data>
+  <data name="LiaoChanHao1" xml:space="preserve">
+    <value>料单号</value>
+  </data>
+  <data name="LingLiaoRen1" xml:space="preserve">
+    <value>领料人</value>
+  </data>
+  <data name="Mo1" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="MoWanLiang1" xml:space="preserve">
+    <value>末完量</value>
+  </data>
+  <data name="NeiWaiShuXing1" xml:space="preserve">
+    <value>内外属性</value>
+  </data>
+  <data name="NianDuGongShiZhuangTai1" xml:space="preserve">
+    <value>年度工时状态</value>
+  </data>
+  <data name="NianDuHuiKuanZhuangTai1" xml:space="preserve">
+    <value>年度回款状态</value>
+  </data>
+  <data name="NianDuRenWuZhuangTai1" xml:space="preserve">
+    <value>年度任务状态</value>
+  </data>
+  <data name="QianShouRiJi1" xml:space="preserve">
+    <value>签收日期</value>
+  </data>
+  <data name="QiCaiPingZhengYiJiaoChan1" xml:space="preserve">
+    <value>器材凭证移交单</value>
+  </data>
+  <data name="QingShiHuoPiShi1" xml:space="preserve">
+    <value>请示或批示</value>
+  </data>
+  <data name="QuanBuJiTongYongHu1" xml:space="preserve">
+    <value>全部系统用户</value>
+  </data>
+  <data name="QuanShua1" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="QuXiaoYiJiao1" xml:space="preserve">
+    <value>取消移交</value>
+  </data>
+  <data name="RongLiang1" xml:space="preserve">
+    <value>容量</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
+    <value>软件租用建站参数</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
+    <value>软件租用建站维护</value>
+  </data>
+  <data name="ShangChuanRen1" xml:space="preserve">
+    <value>上传人</value>
+  </data>
+  <data name="ShangJiXinXi2" xml:space="preserve">
+    <value>商机信息</value>
+  </data>
+  <data name="ShanZhan1" xml:space="preserve">
+    <value>删站</value>
+  </data>
+  <data name="SheBeiMingChen1" xml:space="preserve">
+    <value>设备名称</value>
+  </data>
+  <data name="ShengChanZuoYeChan1" xml:space="preserve">
+    <value>生产作业单</value>
+  </data>
+  <data name="SheWeiZaiYong1" xml:space="preserve">
+    <value>设为在用</value>
+  </data>
+  <data name="ShiFouZiDongJianZhan1" xml:space="preserve">
+    <value>是否自动建站</value>
+  </data>
+  <data name="ShiGongChanWei1" xml:space="preserve">
+    <value>施工单位</value>
+  </data>
+  <data name="ShouHou1" xml:space="preserve">
+    <value>售后</value>
+  </data>
+  <data name="ShouHuoDeZhi1" xml:space="preserve">
+    <value>收货地址</value>
+  </data>
+  <data name="ShouLiao1" xml:space="preserve">
+    <value>收料</value>
+  </data>
+  <data name="ShouLiaoChanCaiJian1" xml:space="preserve">
+    <value>收料单材检</value>
+  </data>
+  <data name="ShouLiaoChanJiLu1" xml:space="preserve">
+    <value>收料单记录</value>
+  </data>
+  <data name="ShouZhiBiLi1" xml:space="preserve">
+    <value>收支比例</value>
+  </data>
+  <data name="ShuJuKuAnZhuangMuLu1" xml:space="preserve">
+    <value>数据库安装目录</value>
+  </data>
+  <data name="ShuJuKuDengLuZhangHao1" xml:space="preserve">
+    <value>数据库登录帐号</value>
+  </data>
+  <data name="ShuJuKuHuiFuWenJianLuJing1" xml:space="preserve">
+    <value>数据库恢复文件路径</value>
+  </data>
+  <data name="SuoShuZhuanYe1" xml:space="preserve">
+    <value>所属专业</value>
+  </data>
+  <data name="WanGongRiJi1" xml:space="preserve">
+    <value>完工日期</value>
+  </data>
+  <data name="XiangMuFuJian1" xml:space="preserve">
+    <value>项目附件</value>
+  </data>
+  <data name="XiangMuGuanLianWuZiDaoRuMoBan1" xml:space="preserve">
+    <value>项目关联物资导入模板</value>
+  </data>
+  <data name="XiangMuJingBanRen1" xml:space="preserve">
+    <value>项目经办人</value>
+  </data>
+  <data name="XiangMuSuoShuZhuanYe1" xml:space="preserve">
+    <value>项目所属专业</value>
+  </data>
+  <data name="XiangMuWuZiFeiYongFuKuanShenQing1" xml:space="preserve">
+    <value>项目物资费用付款申请</value>
+  </data>
+  <data name="XiangMuYanShouChan1" xml:space="preserve">
+    <value>项目验收单</value>
+  </data>
+  <data name="XiangMuYuSuanKeMu1" xml:space="preserve">
+    <value>项目预算科目</value>
+  </data>
+  <data name="XianYouRongLiang1" xml:space="preserve">
+    <value>现有容量</value>
+  </data>
+  <data name="YanWuXiangMuZhuangTai1" xml:space="preserve">
+    <value>延误项目状态</value>
+  </data>
+  <data name="YaoDingKaiGongRiJi1" xml:space="preserve">
+    <value>约定开工日期</value>
+  </data>
+  <data name="YaoDingWanGongRiJi1" xml:space="preserve">
+    <value>约定完工日期</value>
+  </data>
+  <data name="YiFenPa1" xml:space="preserve">
+    <value>已分派</value>
+  </data>
+  <data name="YiJiaoChanBianHao1" xml:space="preserve">
+    <value>移交单编号</value>
+  </data>
+  <data name="YiJiaoRiJi1" xml:space="preserve">
+    <value>移交日期</value>
+  </data>
+  <data name="YingLv1" xml:space="preserve">
+    <value>赢率</value>
+  </data>
+  <data name="YingYongMing1" xml:space="preserve">
+    <value>应用名</value>
+  </data>
+  <data name="YingYongZhanDian1" xml:space="preserve">
+    <value>应用站点</value>
+  </data>
+  <data name="YuanGongJiXiaoDaoChuChuLi1" xml:space="preserve">
+    <value>员工绩效导出处理</value>
+  </data>
+  <data name="YuanMa1" xml:space="preserve">
+    <value>源码</value>
+  </data>
+  <data name="YuSuanKeMu1" xml:space="preserve">
+    <value>预算科目</value>
+  </data>
+  <data name="YuSuanShuaZe1" xml:space="preserve">
+    <value>预算选择</value>
+  </data>
+  <data name="ZaiZhiHangXiangMuZhuangTai1" xml:space="preserve">
+    <value>在执行项目状态</value>
+  </data>
+  <data name="ZhanDianMoBanMuLu1" xml:space="preserve">
+    <value>站点模板目录</value>
+  </data>
+  <data name="ZhanDianMuLu1" xml:space="preserve">
+    <value>站点目录</value>
+  </data>
+  <data name="ZhanDianXuNiLuJing1" xml:space="preserve">
+    <value>站点虚拟路径</value>
+  </data>
+  <data name="ZhiBaoJi1" xml:space="preserve">
+    <value>质保期</value>
+  </data>
+  <data name="ZhiBiaoShiJian1" xml:space="preserve">
+    <value>制表时间</value>
+  </data>
+  <data name="ZhiZheng1" xml:space="preserve">
+    <value>质证</value>
+  </data>
+  <data name="ZhongBiaoRiJi1" xml:space="preserve">
+    <value>中标日期</value>
+  </data>
+  <data name="ZhongDanYouDiErJianSheGongSiQiCaiPingZhengYiJiaoChan1" xml:space="preserve">
+    <value>中石油第二建设公司器材凭证移交单</value>
+  </data>
+  <data name="ZhuaiChengXiangMuJiHua1" xml:space="preserve">
+    <value>转成项目计划</value>
+  </data>
+  <data name="ZhuanGuYiJian1" xml:space="preserve">
+    <value>专家意见</value>
+  </data>
+  <data name="ZhuZhanDuanKou1" xml:space="preserve">
+    <value>主站端口</value>
+  </data>
+  <data name="ZiDongJianZhan1" xml:space="preserve">
+    <value>自动建站</value>
+  </data>
+  <data name="ZiJinLaiYuan1" xml:space="preserve">
+    <value>资金来源</value>
+  </data>
+  <data name="ZongBaoJia1" xml:space="preserve">
+    <value>总报价</value>
+  </data>
 </root>

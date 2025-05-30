@@ -31439,4 +31439,412 @@
   <data name="ZiJinSuanFa" xml:space="preserve">
     <value>Алгоритм финансирования</value>
   </data>
+  <data name="BanGongDeZhi" xml:space="preserve">
+    <value>Адрес офиса</value>
+  </data>
+  <data name="BaoHanZiBuMen1" xml:space="preserve">
+    <value>Включить подразделения</value>
+  </data>
+  <data name="BenCiQingKuanJinE" xml:space="preserve">
+    <value>Сумма этой платежной заявки</value>
+  </data>
+  <data name="BenNianDuCiLeiXingYiJiaBanZongTianShu" xml:space="preserve">
+    <value>Общее количество сверхурочных часов для этого типа в этом году</value>
+  </data>
+  <data name="BiaoChanHao" xml:space="preserve">
+    <value>Номер формы</value>
+  </data>
+  <data name="BiaoChanLeiXing" xml:space="preserve">
+    <value>Тип формы</value>
+  </data>
+  <data name="BiaoChanMing" xml:space="preserve">
+    <value>Название формы</value>
+  </data>
+  <data name="BiaoChanShangChuan" xml:space="preserve">
+    <value>Загрузка формы</value>
+  </data>
+  <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
+    <value>Скачать шаблон формы</value>
+  </data>
+  <data name="CaiGouQingChan" xml:space="preserve">
+    <value>Список закупок</value>
+  </data>
+  <data name="CaiGouQingChanJiLu" xml:space="preserve">
+    <value>Журнал списка закупок</value>
+  </data>
+  <data name="CangWei" xml:space="preserve">
+    <value>Местоположение склада</value>
+  </data>
+  <data name="ChanPinMing" xml:space="preserve">
+    <value>Название продукта</value>
+  </data>
+  <data name="ChanWeiDeZhi" xml:space="preserve">
+    <value>Адрес подразделения</value>
+  </data>
+  <data name="ChengJiaoTongZhiShu" xml:space="preserve">
+    <value>Уведомление о заключении сделки</value>
+  </data>
+  <data name="ChuangJianZhanDian" xml:space="preserve">
+    <value>Создание сайта</value>
+  </data>
+  <data name="ChuKuCangWei" xml:space="preserve">
+    <value>Местоположение склада для отгрузки</value>
+  </data>
+  <data name="ChuLiJieLun" xml:space="preserve">
+    <value>Результат обработки</value>
+  </data>
+  <data name="ChuLiShouLiaoChan" xml:space="preserve">
+    <value>Обработка накладных на материалы</value>
+  </data>
+  <data name="CunFangCangWei" xml:space="preserve">
+    <value>Место хранения</value>
+  </data>
+  <data name="DaYuGouMaiRongLiangZhanDian" xml:space="preserve">
+    <value>Сайты с превышением покупательской емкости</value>
+  </data>
+  <data name="DengLuZhangHao" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="DiYaoFangGeTongHao" xml:space="preserve">
+    <value>Номер договора контрагента</value>
+  </data>
+  <data name="DuoWenJianShangChuan" xml:space="preserve">
+    <value>Загрузка нескольких файлов</value>
+  </data>
+  <data name="FaLiaoChanBaoGuanYuan" xml:space="preserve">
+    <value>Хранитель накладной на отгрузку</value>
+  </data>
+  <data name="FaLiaoChanCaiJian" xml:space="preserve">
+    <value>Проверка материалов для накладной на отгрузку</value>
+  </data>
+  <data name="FaLiaoChanCaiLiao" xml:space="preserve">
+    <value>Материалы для накладной на отгрузку</value>
+  </data>
+  <data name="FaLiaoChanCaiLiaoMingXi" xml:space="preserve">
+    <value>Детали материалов для накладной на отгрузку</value>
+  </data>
+  <data name="FanChan" xml:space="preserve">
+    <value>Заказ на возврат</value>
+  </data>
+  <data name="FaPiaoLeiXing" xml:space="preserve">
+    <value>Тип счета</value>
+  </data>
+  <data name="FaSongBeiFen" xml:space="preserve">
+    <value>Отправить резервную копию</value>
+  </data>
+  <data name="GeTongBianHao" xml:space="preserve">
+    <value>Номер договора</value>
+  </data>
+  <data name="GeTongE" xml:space="preserve">
+    <value>Сумма договора</value>
+  </data>
+  <data name="GeTongFuKuanTiaoJianHeYiJuMiaoShu" xml:space="preserve">
+    <value>Описание условий и оснований оплаты по договору</value>
+  </data>
+  <data name="GeTongJinE" xml:space="preserve">
+    <value>Сумма договора</value>
+  </data>
+  <data name="GeTongLeiXing" xml:space="preserve">
+    <value>Тип договора</value>
+  </data>
+  <data name="GeTongLiXiangYiJu" xml:space="preserve">
+    <value>Основание для заключения договора</value>
+  </data>
+  <data name="GeTongNeiRong" xml:space="preserve">
+    <value>Содержание договора</value>
+  </data>
+  <data name="GeTongQianYaoFang" xml:space="preserve">
+    <value>Стороны договора</value>
+  </data>
+  <data name="GeTongYaoDingJieSuanZhiFuBiLi" xml:space="preserve">
+    <value>Процент оплаты за liquidation согласованный в договоре</value>
+  </data>
+  <data name="GeTongYaoDingJunGongZhiFuBiLi" xml:space="preserve">
+    <value>Процент оплаты за завершение согласованный в договоре</value>
+  </data>
+  <data name="GeTongYaoDingYueJinDuZhiFuBiLi" xml:space="preserve">
+    <value>Процент ежемесячной оплаты прогресса согласованный в договоре</value>
+  </data>
+  <data name="GeTongYaoDingYuFuKuanBiLi" xml:space="preserve">
+    <value>Процент авансовой оплаты согласованный в договоре</value>
+  </data>
+  <data name="GuanJianMoZuPeiXunShiPinXiaZai" xml:space="preserve">
+    <value>Скачать обучающие видео ключевых модулей</value>
+  </data>
+  <data name="GuanLianGeTong" xml:space="preserve">
+    <value>Связанный договор</value>
+  </data>
+  <data name="GuanLianGeTongYingFuJiHua" xml:space="preserve">
+    <value>План платежей по связанному договору</value>
+  </data>
+  <data name="GuanLianMoKuai" xml:space="preserve">
+    <value>Связанный модуль</value>
+  </data>
+  <data name="HuanSuanChanWei" xml:space="preserve">
+    <value>Единица измерения</value>
+  </data>
+  <data name="HuiFuZhanDian" xml:space="preserve">
+    <value>Восстановить сайт</value>
+  </data>
+  <data name="HuiYiJiYao" xml:space="preserve">
+    <value>Протокол собрания</value>
+  </data>
+  <data name="JiaFangChanWei" xml:space="preserve">
+    <value>Заказчик</value>
+  </data>
+  <data name="JianZhan" xml:space="preserve">
+    <value>Создание сайта</value>
+  </data>
+  <data name="JianZhanYingYong" xml:space="preserve">
+    <value>Применение сайта</value>
+  </data>
+  <data name="JiaoFuRiJi" xml:space="preserve">
+    <value>Дата доставки</value>
+  </data>
+  <data name="JieShuRiJi" xml:space="preserve">
+    <value>Дата окончания</value>
+  </data>
+  <data name="JieSuanBiaoJi" xml:space="preserve">
+    <value>Метка расчета</value>
+  </data>
+  <data name="JiHuaShuaZe" xml:space="preserve">
+    <value>Выбор плана</value>
+  </data>
+  <data name="JiHuaYuan" xml:space="preserve">
+    <value>Планировщик</value>
+  </data>
+  <data name="JingLi" xml:space="preserve">
+    <value>Менеджер</value>
+  </data>
+  <data name="JiTa" xml:space="preserve">
+    <value>Другое</value>
+  </data>
+  <data name="KaoQinJieGuo" xml:space="preserve">
+    <value>Результаты посещаемости</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRu" xml:space="preserve">
+    <value>Импорт видимого персонала для клиентов</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRuMoBan" xml:space="preserve">
+    <value>Шаблон импорта видимого персонала</value>
+  </data>
+  <data name="LeiJiYiJiaoFaPiao" xml:space="preserve">
+    <value>Накопленные выставленные счета</value>
+  </data>
+  <data name="LiaoChanHao" xml:space="preserve">
+    <value>Номер заказа материалов</value>
+  </data>
+  <data name="LingLiaoRen" xml:space="preserve">
+    <value>Лицо, получающее материалы</value>
+  </data>
+  <data name="Mo" xml:space="preserve">
+    <value>Отсутствие</value>
+  </data>
+  <data name="MoWanLiang" xml:space="preserve">
+    <value>Незавершенное количество</value>
+  </data>
+  <data name="NeiWaiShuXing" xml:space="preserve">
+    <value>Внутренние и внешние атрибуты</value>
+  </data>
+  <data name="NianDuGongShiZhuangTai" xml:space="preserve">
+    <value>Годовое состояние рабочего времени</value>
+  </data>
+  <data name="NianDuHuiKuanZhuangTai" xml:space="preserve">
+    <value>Годовое состояние оплаты</value>
+  </data>
+  <data name="NianDuRenWuZhuangTai" xml:space="preserve">
+    <value>Годовое состояние задач</value>
+  </data>
+  <data name="QianShouRiJi" xml:space="preserve">
+    <value>Дата получения</value>
+  </data>
+  <data name="QiCaiPingZhengYiJiaoChan" xml:space="preserve">
+    <value>Передача талонов оборудования</value>
+  </data>
+  <data name="QingShiHuoPiShi" xml:space="preserve">
+    <value>Запрос или инструкция</value>
+  </data>
+  <data name="QuanBuJiTongYongHu" xml:space="preserve">
+    <value>Все пользователи системы</value>
+  </data>
+  <data name="QuanShua" xml:space="preserve">
+    <value>Выбрать все</value>
+  </data>
+  <data name="QuXiaoYiJiao" xml:space="preserve">
+    <value>Отменить передачу</value>
+  </data>
+  <data name="RongLiang" xml:space="preserve">
+    <value>Емкость</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu" xml:space="preserve">
+    <value>Параметры аренды программного обеспечения для создания сайта</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu" xml:space="preserve">
+    <value>Обслуживание сайтов аренды программного обеспечения</value>
+  </data>
+  <data name="ShangChuanRen" xml:space="preserve">
+    <value>Загрузчик</value>
+  </data>
+  <data name="ShangJiXinXi1" xml:space="preserve">
+    <value>Коммерческая информация</value>
+  </data>
+  <data name="ShanZhan" xml:space="preserve">
+    <value>Удалить сайт</value>
+  </data>
+  <data name="SheBeiMingChen" xml:space="preserve">
+    <value>Название оборудования</value>
+  </data>
+  <data name="ShengChanZuoYeChan" xml:space="preserve">
+    <value>Производственный заказ</value>
+  </data>
+  <data name="SheWeiZaiYong" xml:space="preserve">
+    <value>Установить как активный</value>
+  </data>
+  <data name="ShiFouZiDongJianZhan" xml:space="preserve">
+    <value>Включен автоматический сайт?</value>
+  </data>
+  <data name="ShiGongChanWei" xml:space="preserve">
+    <value>Строительная компания</value>
+  </data>
+  <data name="ShouHou" xml:space="preserve">
+    <value>Послепродажное обслуживание</value>
+  </data>
+  <data name="ShouHuoDeZhi" xml:space="preserve">
+    <value>Адрес доставки</value>
+  </data>
+  <data name="ShouLiao" xml:space="preserve">
+    <value>Получение материалов</value>
+  </data>
+  <data name="ShouLiaoChanCaiJian" xml:space="preserve">
+    <value>Проверка материалов для получения</value>
+  </data>
+  <data name="ShouLiaoChanJiLu" xml:space="preserve">
+    <value>Журнал получения материалов</value>
+  </data>
+  <data name="ShouZhiBiLi" xml:space="preserve">
+    <value>Соотношение доходов и расходов</value>
+  </data>
+  <data name="ShuJuKuAnZhuangMuLu" xml:space="preserve">
+    <value>Директория установки базы данных</value>
+  </data>
+  <data name="ShuJuKuDengLuZhangHao" xml:space="preserve">
+    <value>Имя пользователя базы данных</value>
+  </data>
+  <data name="ShuJuKuHuiFuWenJianLuJing" xml:space="preserve">
+    <value>Путь восстановления файла базы данных</value>
+  </data>
+  <data name="SuoShuZhuanYe" xml:space="preserve">
+    <value>Специализация</value>
+  </data>
+  <data name="WanGongRiJi" xml:space="preserve">
+    <value>Дата завершения</value>
+  </data>
+  <data name="XiangMuFuJian" xml:space="preserve">
+    <value>Вложения проекта</value>
+  </data>
+  <data name="XiangMuGuanLianWuZiDaoRuMoBan" xml:space="preserve">
+    <value>Шаблон импорта материалов, связанных с проектом</value>
+  </data>
+  <data name="XiangMuJingBanRen" xml:space="preserve">
+    <value>Ответственный за проект</value>
+  </data>
+  <data name="XiangMuSuoShuZhuanYe" xml:space="preserve">
+    <value>Специализация проекта</value>
+  </data>
+  <data name="XiangMuWuZiFeiYongFuKuanShenQing" xml:space="preserve">
+    <value>Заявка на оплату расходов на материалы проекта</value>
+  </data>
+  <data name="XiangMuYanShouChan" xml:space="preserve">
+    <value>Акт приемки проекта</value>
+  </data>
+  <data name="XiangMuYuSuanKeMu" xml:space="preserve">
+    <value>Статья бюджета проекта</value>
+  </data>
+  <data name="XianYouRongLiang" xml:space="preserve">
+    <value>Доступная емкость</value>
+  </data>
+  <data name="YanWuXiangMuZhuangTai" xml:space="preserve">
+    <value>Состояние проекта с задержкой</value>
+  </data>
+  <data name="YaoDingKaiGongRiJi" xml:space="preserve">
+    <value>Оговоренная дата начала</value>
+  </data>
+  <data name="YaoDingWanGongRiJi" xml:space="preserve">
+    <value>Оговоренная дата завершения</value>
+  </data>
+  <data name="YiFenPa" xml:space="preserve">
+    <value>Назначено</value>
+  </data>
+  <data name="YiJiaoChanBianHao" xml:space="preserve">
+    <value>Номер трансфера</value>
+  </data>
+  <data name="YiJiaoRiJi" xml:space="preserve">
+    <value>Дата трансфера</value>
+  </data>
+  <data name="YingLv" xml:space="preserve">
+    <value>Вероятность выигрыша</value>
+  </data>
+  <data name="YingYongMing" xml:space="preserve">
+    <value>Название приложения</value>
+  </data>
+  <data name="YingYongZhanDian" xml:space="preserve">
+    <value>Сайт приложения</value>
+  </data>
+  <data name="YuanGongJiXiaoDaoChuChuLi" xml:space="preserve">
+    <value>Экспорт производительности сотрудников</value>
+  </data>
+  <data name="YuanMa" xml:space="preserve">
+    <value>Исходный код</value>
+  </data>
+  <data name="YuSuanKeMu" xml:space="preserve">
+    <value>Статья бюджета</value>
+  </data>
+  <data name="YuSuanShuaZe" xml:space="preserve">
+    <value>Выбор бюджета</value>
+  </data>
+  <data name="ZaiZhiHangXiangMuZhuangTai" xml:space="preserve">
+    <value>Состояние проекта в выполнении</value>
+  </data>
+  <data name="ZhanDianMoBanMuLu" xml:space="preserve">
+    <value>Директория шаблонов сайта</value>
+  </data>
+  <data name="ZhanDianMuLu" xml:space="preserve">
+    <value>Директория сайта</value>
+  </data>
+  <data name="ZhanDianXuNiLuJing" xml:space="preserve">
+    <value>Виртуальный путь сайта</value>
+  </data>
+  <data name="ZhiBaoJi" xml:space="preserve">
+    <value>Гарантийный срок</value>
+  </data>
+  <data name="ZhiBiaoShiJian" xml:space="preserve">
+    <value>Время подготовки таблицы</value>
+  </data>
+  <data name="ZhiZheng" xml:space="preserve">
+    <value>Конфронтация</value>
+  </data>
+  <data name="ZhongBiaoRiJi" xml:space="preserve">
+    <value>Дата тендера</value>
+  </data>
+  <data name="ZhongDanYouDiErJianSheGongSiQiCaiPingZhengYiJiaoChan" xml:space="preserve">
+    <value>PetroChina Second Construction Company Талоны оборудования</value>
+  </data>
+  <data name="ZhuaiChengXiangMuJiHua" xml:space="preserve">
+    <value>Конвертировать в план проекта</value>
+  </data>
+  <data name="ZhuanGuYiJian" xml:space="preserve">
+    <value>Экспертное мнение</value>
+  </data>
+  <data name="ZhuZhanDuanKou" xml:space="preserve">
+    <value>Основной порт сайта</value>
+  </data>
+  <data name="ZiDongJianZhan" xml:space="preserve">
+    <value>Автоматическое создание сайта</value>
+  </data>
+  <data name="ZiJinLaiYuan" xml:space="preserve">
+    <value>Источник финансирования</value>
+  </data>
+  <data name="ZongBaoJia" xml:space="preserve">
+    <value>Общая оценка</value>
+  </data>
 </root>

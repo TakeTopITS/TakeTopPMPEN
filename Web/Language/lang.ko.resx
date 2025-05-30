@@ -31437,4 +31437,412 @@
   <data name="ZiJinSuanFa" xml:space="preserve">
     <value>자금 알고리즘</value>
   </data>
+  <data name="BanGongDeZhi" xml:space="preserve">
+    <value>회사 주소</value>
+  </data>
+  <data name="BaoHanZiBuMen1" xml:space="preserve">
+    <value>하위 부서 포함</value>
+  </data>
+  <data name="BenCiQingKuanJinE" xml:space="preserve">
+    <value>이번 청구 금액</value>
+  </data>
+  <data name="BenNianDuCiLeiXingYiJiaBanZongTianShu" xml:space="preserve">
+    <value>올해 이 유형의 총 연장 근무 일수</value>
+  </data>
+  <data name="BiaoChanHao" xml:space="preserve">
+    <value>양식 번호</value>
+  </data>
+  <data name="BiaoChanLeiXing" xml:space="preserve">
+    <value>양식 유형</value>
+  </data>
+  <data name="BiaoChanMing" xml:space="preserve">
+    <value>양식 이름</value>
+  </data>
+  <data name="BiaoChanShangChuan" xml:space="preserve">
+    <value>양식 업로드</value>
+  </data>
+  <data name="BiaoChanYangShiXiaZai" xml:space="preserve">
+    <value>양식 스타일 다운로드</value>
+  </data>
+  <data name="CaiGouQingChan" xml:space="preserve">
+    <value>구매 목록</value>
+  </data>
+  <data name="CaiGouQingChanJiLu" xml:space="preserve">
+    <value>구매 목록 기록</value>
+  </data>
+  <data name="CangWei" xml:space="preserve">
+    <value>창고 위치</value>
+  </data>
+  <data name="ChanPinMing" xml:space="preserve">
+    <value>제품명</value>
+  </data>
+  <data name="ChanWeiDeZhi" xml:space="preserve">
+    <value>회사 주소</value>
+  </data>
+  <data name="ChengJiaoTongZhiShu" xml:space="preserve">
+    <value>수주 통지서</value>
+  </data>
+  <data name="ChuangJianZhanDian" xml:space="preserve">
+    <value>사이트 생성</value>
+  </data>
+  <data name="ChuKuCangWei" xml:space="preserve">
+    <value>출고 창고 위치</value>
+  </data>
+  <data name="ChuLiJieLun" xml:space="preserve">
+    <value>처리 결과</value>
+  </data>
+  <data name="ChuLiShouLiaoChan" xml:space="preserve">
+    <value>자재 수령 처리</value>
+  </data>
+  <data name="CunFangCangWei" xml:space="preserve">
+    <value>보관 창고 위치</value>
+  </data>
+  <data name="DaYuGouMaiRongLiangZhanDian" xml:space="preserve">
+    <value>구매 용량을 초과하는 사이트</value>
+  </data>
+  <data name="DengLuZhangHao" xml:space="preserve">
+    <value>로그인 계정</value>
+  </data>
+  <data name="DiYaoFangGeTongHao" xml:space="preserve">
+    <value>계약자 계약 번호</value>
+  </data>
+  <data name="DuoWenJianShangChuan" xml:space="preserve">
+    <value>다중 파일 업로드</value>
+  </data>
+  <data name="FaLiaoChanBaoGuanYuan" xml:space="preserve">
+    <value>발료 전표 보관원</value>
+  </data>
+  <data name="FaLiaoChanCaiJian" xml:space="preserve">
+    <value>발료 전표 재료 검사</value>
+  </data>
+  <data name="FaLiaoChanCaiLiao" xml:space="preserve">
+    <value>발료 전표 재료</value>
+  </data>
+  <data name="FaLiaoChanCaiLiaoMingXi" xml:space="preserve">
+    <value>발료 전표 재료 상세</value>
+  </data>
+  <data name="FanChan" xml:space="preserve">
+    <value>반품 전표</value>
+  </data>
+  <data name="FaPiaoLeiXing" xml:space="preserve">
+    <value>세금계산서 유형</value>
+  </data>
+  <data name="FaSongBeiFen" xml:space="preserve">
+    <value>백업 보내기</value>
+  </data>
+  <data name="GeTongBianHao" xml:space="preserve">
+    <value>계약 번호</value>
+  </data>
+  <data name="GeTongE" xml:space="preserve">
+    <value>계약 금액</value>
+  </data>
+  <data name="GeTongFuKuanTiaoJianHeYiJuMiaoShu" xml:space="preserve">
+    <value>계약 지불 조건 및 근거 설명</value>
+  </data>
+  <data name="GeTongJinE" xml:space="preserve">
+    <value>계약 금액</value>
+  </data>
+  <data name="GeTongLeiXing" xml:space="preserve">
+    <value>계약 유형</value>
+  </data>
+  <data name="GeTongLiXiangYiJu" xml:space="preserve">
+    <value>계약 기획 근거</value>
+  </data>
+  <data name="GeTongNeiRong" xml:space="preserve">
+    <value>계약 내용</value>
+  </data>
+  <data name="GeTongQianYaoFang" xml:space="preserve">
+    <value>계약 체결자</value>
+  </data>
+  <data name="GeTongYaoDingJieSuanZhiFuBiLi" xml:space="preserve">
+    <value>계약에서 정한 정산 지불 비율</value>
+  </data>
+  <data name="GeTongYaoDingJunGongZhiFuBiLi" xml:space="preserve">
+    <value>계약에서 정한 완공 지불 비율</value>
+  </data>
+  <data name="GeTongYaoDingYueJinDuZhiFuBiLi" xml:space="preserve">
+    <value>계약에서 정한 월별 진행 지불 비율</value>
+  </data>
+  <data name="GeTongYaoDingYuFuKuanBiLi" xml:space="preserve">
+    <value>계약에서 정한 선 지불 비율</value>
+  </data>
+  <data name="GuanJianMoZuPeiXunShiPinXiaZai" xml:space="preserve">
+    <value>주요 모듈 교육 비디오 다운로드</value>
+  </data>
+  <data name="GuanLianGeTong" xml:space="preserve">
+    <value>관련 계약</value>
+  </data>
+  <data name="GuanLianGeTongYingFuJiHua" xml:space="preserve">
+    <value>관련 계약 지불 계획</value>
+  </data>
+  <data name="GuanLianMoKuai" xml:space="preserve">
+    <value>관련 모듈</value>
+  </data>
+  <data name="HuanSuanChanWei" xml:space="preserve">
+    <value>환산 단위</value>
+  </data>
+  <data name="HuiFuZhanDian" xml:space="preserve">
+    <value>사이트 복원</value>
+  </data>
+  <data name="HuiYiJiYao" xml:space="preserve">
+    <value>회의록</value>
+  </data>
+  <data name="JiaFangChanWei" xml:space="preserve">
+    <value>발주처</value>
+  </data>
+  <data name="JianZhan" xml:space="preserve">
+    <value>사이트 생성</value>
+  </data>
+  <data name="JianZhanYingYong" xml:space="preserve">
+    <value>사이트 애플리케이션</value>
+  </data>
+  <data name="JiaoFuRiJi" xml:space="preserve">
+    <value>납품일</value>
+  </data>
+  <data name="JieShuRiJi" xml:space="preserve">
+    <value>종료일</value>
+  </data>
+  <data name="JieSuanBiaoJi" xml:space="preserve">
+    <value>정산 마크</value>
+  </data>
+  <data name="JiHuaShuaZe" xml:space="preserve">
+    <value>계획 선택</value>
+  </data>
+  <data name="JiHuaYuan" xml:space="preserve">
+    <value>계획 담당자</value>
+  </data>
+  <data name="JingLi" xml:space="preserve">
+    <value>매니저</value>
+  </data>
+  <data name="JiTa" xml:space="preserve">
+    <value>기타</value>
+  </data>
+  <data name="KaoQinJieGuo" xml:space="preserve">
+    <value>출석 결과</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRu" xml:space="preserve">
+    <value>고객이 볼 수 있는 인력 가져오기</value>
+  </data>
+  <data name="KeHuKeShiRenYuanDaoRuMoBan" xml:space="preserve">
+    <value>고객이 볼 수 있는 인력 가져오기 템플릿</value>
+  </data>
+  <data name="LeiJiYiJiaoFaPiao" xml:space="preserve">
+    <value>발행된 세금계산서 누계</value>
+  </data>
+  <data name="LiaoChanHao" xml:space="preserve">
+    <value>자재 전표 번호</value>
+  </data>
+  <data name="LingLiaoRen" xml:space="preserve">
+    <value>자재 수령자</value>
+  </data>
+  <data name="Mo" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="MoWanLiang" xml:space="preserve">
+    <value>미완료 수량</value>
+  </data>
+  <data name="NeiWaiShuXing" xml:space="preserve">
+    <value>내외부 속성</value>
+  </data>
+  <data name="NianDuGongShiZhuangTai" xml:space="preserve">
+    <value>연간 근로 시간 상태</value>
+  </data>
+  <data name="NianDuHuiKuanZhuangTai" xml:space="preserve">
+    <value>연간 회수 상태</value>
+  </data>
+  <data name="NianDuRenWuZhuangTai" xml:space="preserve">
+    <value>연간 업무 상태</value>
+  </data>
+  <data name="QianShouRiJi" xml:space="preserve">
+    <value>수령일</value>
+  </data>
+  <data name="QiCaiPingZhengYiJiaoChan" xml:space="preserve">
+    <value>장비 증빙 이전 전표</value>
+  </data>
+  <data name="QingShiHuoPiShi" xml:space="preserve">
+    <value>지시나 지시</value>
+  </data>
+  <data name="QuanBuJiTongYongHu" xml:space="preserve">
+    <value>시스템 전체 사용자</value>
+  </data>
+  <data name="QuanShua" xml:space="preserve">
+    <value>전체 선택</value>
+  </data>
+  <data name="QuXiaoYiJiao" xml:space="preserve">
+    <value>이전 취소</value>
+  </data>
+  <data name="RongLiang" xml:space="preserve">
+    <value>용량</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu" xml:space="preserve">
+    <value>소프트웨어 렌털 사이트 파라미터</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu" xml:space="preserve">
+    <value>소프트웨어 렌털 사이트 유지 관리</value>
+  </data>
+  <data name="ShangChuanRen" xml:space="preserve">
+    <value>업로더</value>
+  </data>
+  <data name="ShangJiXinXi1" xml:space="preserve">
+    <value>비즈니스 기회 정보</value>
+  </data>
+  <data name="ShanZhan" xml:space="preserve">
+    <value>사이트 삭제</value>
+  </data>
+  <data name="SheBeiMingChen" xml:space="preserve">
+    <value>장비명</value>
+  </data>
+  <data name="ShengChanZuoYeChan" xml:space="preserve">
+    <value>생산 작업지시서</value>
+  </data>
+  <data name="SheWeiZaiYong" xml:space="preserve">
+    <value>사용 설정</value>
+  </data>
+  <data name="ShiFouZiDongJianZhan" xml:space="preserve">
+    <value>자동 사이트 생성이 활성화되어 있나요?</value>
+  </data>
+  <data name="ShiGongChanWei" xml:space="preserve">
+    <value>시공 업체</value>
+  </data>
+  <data name="ShouHou" xml:space="preserve">
+    <value>사후 서비스</value>
+  </data>
+  <data name="ShouHuoDeZhi" xml:space="preserve">
+    <value>배송 주소</value>
+  </data>
+  <data name="ShouLiao" xml:space="preserve">
+    <value>자재 수령</value>
+  </data>
+  <data name="ShouLiaoChanCaiJian" xml:space="preserve">
+    <value>자재 수령 재료 검사</value>
+  </data>
+  <data name="ShouLiaoChanJiLu" xml:space="preserve">
+    <value>자재 수령 전표 기록</value>
+  </data>
+  <data name="ShouZhiBiLi" xml:space="preserve">
+    <value>수입과 지출 비율</value>
+  </data>
+  <data name="ShuJuKuAnZhuangMuLu" xml:space="preserve">
+    <value>데이터베이스 설치 디렉토리</value>
+  </data>
+  <data name="ShuJuKuDengLuZhangHao" xml:space="preserve">
+    <value>데이터베이스 로그인 계정</value>
+  </data>
+  <data name="ShuJuKuHuiFuWenJianLuJing" xml:space="preserve">
+    <value>데이터베이스 복구 파일 경로</value>
+  </data>
+  <data name="SuoShuZhuanYe" xml:space="preserve">
+    <value>소속 전문 분야</value>
+  </data>
+  <data name="WanGongRiJi" xml:space="preserve">
+    <value>완료일</value>
+  </data>
+  <data name="XiangMuFuJian" xml:space="preserve">
+    <value>프로젝트 첨부 파일</value>
+  </data>
+  <data name="XiangMuGuanLianWuZiDaoRuMoBan" xml:space="preserve">
+    <value>프로젝트 관련 자재 가져오기 템플릿</value>
+  </data>
+  <data name="XiangMuJingBanRen" xml:space="preserve">
+    <value>프로젝트 담당자</value>
+  </data>
+  <data name="XiangMuSuoShuZhuanYe" xml:space="preserve">
+    <value>프로젝트 소속 전문 분야</value>
+  </data>
+  <data name="XiangMuWuZiFeiYongFuKuanShenQing" xml:space="preserve">
+    <value>프로젝트 자재 비용 지불 신청</value>
+  </data>
+  <data name="XiangMuYanShouChan" xml:space="preserve">
+    <value>프로젝트 검수 전표</value>
+  </data>
+  <data name="XiangMuYuSuanKeMu" xml:space="preserve">
+    <value>프로젝트 예산 항목</value>
+  </data>
+  <data name="XianYouRongLiang" xml:space="preserve">
+    <value>현재 용량</value>
+  </data>
+  <data name="YanWuXiangMuZhuangTai" xml:space="preserve">
+    <value>지연된 프로젝트 상태</value>
+  </data>
+  <data name="YaoDingKaiGongRiJi" xml:space="preserve">
+    <value>약속된 시작일</value>
+  </data>
+  <data name="YaoDingWanGongRiJi" xml:space="preserve">
+    <value>약속된 완료일</value>
+  </data>
+  <data name="YiFenPa" xml:space="preserve">
+    <value>할당됨</value>
+  </data>
+  <data name="YiJiaoChanBianHao" xml:space="preserve">
+    <value>이전 전표 번호</value>
+  </data>
+  <data name="YiJiaoRiJi" xml:space="preserve">
+    <value>이전일</value>
+  </data>
+  <data name="YingLv" xml:space="preserve">
+    <value>승률</value>
+  </data>
+  <data name="YingYongMing" xml:space="preserve">
+    <value>어플리케이션명</value>
+  </data>
+  <data name="YingYongZhanDian" xml:space="preserve">
+    <value>어플리케이션 사이트</value>
+  </data>
+  <data name="YuanGongJiXiaoDaoChuChuLi" xml:space="preserve">
+    <value>직원 성과 내보내기 처리</value>
+  </data>
+  <data name="YuanMa" xml:space="preserve">
+    <value>소스 코드</value>
+  </data>
+  <data name="YuSuanKeMu" xml:space="preserve">
+    <value>예산 항목</value>
+  </data>
+  <data name="YuSuanShuaZe" xml:space="preserve">
+    <value>예산 선택</value>
+  </data>
+  <data name="ZaiZhiHangXiangMuZhuangTai" xml:space="preserve">
+    <value>진행 중인 프로젝트 상태</value>
+  </data>
+  <data name="ZhanDianMoBanMuLu" xml:space="preserve">
+    <value>사이트 템플릿 디렉토리</value>
+  </data>
+  <data name="ZhanDianMuLu" xml:space="preserve">
+    <value>사이트 디렉토리</value>
+  </data>
+  <data name="ZhanDianXuNiLuJing" xml:space="preserve">
+    <value>사이트 가상 경로</value>
+  </data>
+  <data name="ZhiBaoJi" xml:space="preserve">
+    <value>보증 기간</value>
+  </data>
+  <data name="ZhiBiaoShiJian" xml:space="preserve">
+    <value>표 작성 시간</value>
+  </data>
+  <data name="ZhiZheng" xml:space="preserve">
+    <value>증빙</value>
+  </data>
+  <data name="ZhongBiaoRiJi" xml:space="preserve">
+    <value>입찰일</value>
+  </data>
+  <data name="ZhongDanYouDiErJianSheGongSiQiCaiPingZhengYiJiaoChan" xml:space="preserve">
+    <value>중석유 제2건설회사 장비 증빙 이전 전표</value>
+  </data>
+  <data name="ZhuaiChengXiangMuJiHua" xml:space="preserve">
+    <value>프로젝트 계획으로 전환</value>
+  </data>
+  <data name="ZhuanGuYiJian" xml:space="preserve">
+    <value>전문가 의견</value>
+  </data>
+  <data name="ZhuZhanDuanKou" xml:space="preserve">
+    <value>메인 사이트 포트</value>
+  </data>
+  <data name="ZiDongJianZhan" xml:space="preserve">
+    <value>자동 사이트 생성</value>
+  </data>
+  <data name="ZiJinLaiYuan" xml:space="preserve">
+    <value>자금 출처</value>
+  </data>
+  <data name="ZongBaoJia" xml:space="preserve">
+    <value>총 견적</value>
+  </data>
 </root>
