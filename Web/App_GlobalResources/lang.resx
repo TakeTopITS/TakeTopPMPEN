@@ -31539,4 +31539,16 @@
   <data name="JiHuaBianGengJiLu" xml:space="preserve">
     <value>计划变更记录</value>
   </data>
+  <data name="AnChongLei" xml:space="preserve">
+    <value>按种类</value>
+  </data>
+  <data name="AnQuanWenMingShiGongFei" xml:space="preserve">
+    <value>安全文明施工费</value>
+  </data>
+  <data name="AnShiJianChaXun1" xml:space="preserve">
+    <value>按时间查询</value>
+  </data>
+  <data name="BaiFangFangShi1" xml:space="preserve">
+    <value>拜访方式</value>
+  </data>
 </root>

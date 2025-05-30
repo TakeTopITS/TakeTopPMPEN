@@ -31003,4 +31003,439 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="AnShiJianChaXun" xml:space="preserve">
     <value>Search by Time</value>
   </data>
+  <data name="AnChongLei" xml:space="preserve">
+    <value>By Type</value>
+  </data>
+  <data name="AnQuanWenMingShiGongFei" xml:space="preserve">
+    <value>Safety and Civilization Construction Fee</value>
+  </data>
+  <data name="AnShiJianChaXun1" xml:space="preserve">
+    <value>Query by Time</value>
+  </data>
+  <data name="BaiFangFangShi1" xml:space="preserve">
+    <value>Visit Method</value>
+  </data>
+  <data name="BaiFangShiJian" xml:space="preserve">
+    <value>Visit Time</value>
+  </data>
+  <data name="BaiFangShiJianCong" xml:space="preserve">
+    <value>Visit Time From</value>
+  </data>
+  <data name="BanCiMingChen" xml:space="preserve">
+    <value>Shift Name</value>
+  </data>
+  <data name="BaoBiaoLieBiao" xml:space="preserve">
+    <value>Report List</value>
+  </data>
+  <data name="BianGengJiLu" xml:space="preserve">
+    <value>Change Record</value>
+  </data>
+  <data name="BianGengRiZhi" xml:space="preserve">
+    <value>Change Log</value>
+  </data>
+  <data name="BiChuanWenDang" xml:space="preserve">
+    <value>Required Documents</value>
+  </data>
+  <data name="CaiGouZongE" xml:space="preserve">
+    <value>Total Procurement Amount</value>
+  </data>
+  <data name="ChaKanFuJian" xml:space="preserve">
+    <value>View Attachment</value>
+  </data>
+  <data name="Chao" xml:space="preserve">
+    <value>Exceed</value>
+  </data>
+  <data name="ChengBaoLeiXing" xml:space="preserve">
+    <value>Contract Type</value>
+  </data>
+  <data name="ChengBaoShangDaiMa" xml:space="preserve">
+    <value>Contractor Code</value>
+  </data>
+  <data name="ChengBaoShangDaLei" xml:space="preserve">
+    <value>Contractor Category</value>
+  </data>
+  <data name="ChengBaoShangXiaoLei" xml:space="preserve">
+    <value>Subcategory of Contractor</value>
+  </data>
+  <data name="ChengQingXinXiHuiHan" xml:space="preserve">
+    <value>Clarification Information Reply</value>
+  </data>
+  <data name="ChuChangRiJi" xml:space="preserve">
+    <value>Exit Date</value>
+  </data>
+  <data name="DaoChuChengBenJiXiaoShuJu" xml:space="preserve">
+    <value>Export Cost Performance Data</value>
+  </data>
+  <data name="DaoChuKeShiYongHu" xml:space="preserve">
+    <value>Export Visible Users</value>
+  </data>
+  <data name="DiJiaoBeiAn" xml:space="preserve">
+    <value>Submit for Record</value>
+  </data>
+  <data name="GeTongShuLiang" xml:space="preserve">
+    <value>Number of Contracts</value>
+  </data>
+  <data name="GeTongTaiZhang" xml:space="preserve">
+    <value>Contract Register</value>
+  </data>
+  <data name="GeTongWuLiaoQingChanDaoRuMoBan" xml:space="preserve">
+    <value>Contract Material List Import Template</value>
+  </data>
+  <data name="GeTongZhuYaoNeiRong" xml:space="preserve">
+    <value>Main Content of Contract</value>
+  </data>
+  <data name="GongCheng" xml:space="preserve">
+    <value>Engineering</value>
+  </data>
+  <data name="GongZuoFuHe" xml:space="preserve">
+    <value>Workload</value>
+  </data>
+  <data name="GongZuoLiuGuanLianXieMianSheZhi" xml:space="preserve">
+    <value>Workflow Page Settings</value>
+  </data>
+  <data name="GongZuoZhiZe" xml:space="preserve">
+    <value>Job Responsibilities</value>
+  </data>
+  <data name="GuanBiDangQianXie" xml:space="preserve">
+    <value>Close Current Page</value>
+  </data>
+  <data name="GuiShuCangKu" xml:space="preserve">
+    <value>Assigned Warehouse</value>
+  </data>
+  <data name="JiaBanLiYou" xml:space="preserve">
+    <value>Overtime Reason</value>
+  </data>
+  <data name="JiaGeDiaoZheng" xml:space="preserve">
+    <value>Price Adjustment</value>
+  </data>
+  <data name="JianLiQueXian" xml:space="preserve">
+    <value>Create Defect</value>
+  </data>
+  <data name="JianLiXuQiu" xml:space="preserve">
+    <value>Create Requirement</value>
+  </data>
+  <data name="JiaoFuJinDu" xml:space="preserve">
+    <value>Delivery Schedule</value>
+  </data>
+  <data name="JieRiLeiXing" xml:space="preserve">
+    <value>Holiday Type</value>
+  </data>
+  <data name="JiHuaBianGengJiLu" xml:space="preserve">
+    <value>Plan Change Record</value>
+  </data>
+  <data name="JiHuaPinJie" xml:space="preserve">
+    <value>Plan Concatenation</value>
+  </data>
+  <data name="JinChangRiJi" xml:space="preserve">
+    <value>Entry Date</value>
+  </data>
+  <data name="JingXiaoShang" xml:space="preserve">
+    <value>Dealer</value>
+  </data>
+  <data name="JinKouZongE" xml:space="preserve">
+    <value>Total Import Amount</value>
+  </data>
+  <data name="JiTongMoZuLiuLan" xml:space="preserve">
+    <value>System Module Browsing</value>
+  </data>
+  <data name="KeShiGeTong" xml:space="preserve">
+    <value>Visible Contract</value>
+  </data>
+  <data name="KuCun" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="KuCunZiJinSuanFa" xml:space="preserve">
+    <value>Inventory Capital Algorithm</value>
+  </data>
+  <data name="LianJiFangFa" xml:space="preserve">
+    <value>Contact Method</value>
+  </data>
+  <data name="LianJiFangShi" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+  <data name="LingShou" xml:space="preserve">
+    <value>Retail</value>
+  </data>
+  <data name="MeiYouGengGaiMiMaDeYongHu" xml:space="preserve">
+    <value>Users Who Have Not Changed Password</value>
+  </data>
+  <data name="MenDian" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="MoBanCanZhao" xml:space="preserve">
+    <value>Template Reference</value>
+  </data>
+  <data name="Nei" xml:space="preserve">
+    <value>Internal</value>
+  </data>
+  <data name="PaiBan" xml:space="preserve">
+    <value>Scheduling</value>
+  </data>
+  <data name="PiFuJinE" xml:space="preserve">
+    <value>Approval Amount</value>
+  </data>
+  <data name="QianCiBeiFenShiJian" xml:space="preserve">
+    <value>Last Backup Time</value>
+  </data>
+  <data name="QianDingDeDian" xml:space="preserve">
+    <value>Signing Location</value>
+  </data>
+  <data name="QianDingShiJian" xml:space="preserve">
+    <value>Signing Time</value>
+  </data>
+  <data name="QianZhengRen" xml:space="preserve">
+    <value>Visa Person</value>
+  </data>
+  <data name="QianZhengShuiMing" xml:space="preserve">
+    <value>Visa Explanation</value>
+  </data>
+  <data name="QiaoBiaoChengQingXinXiHuiHan" xml:space="preserve">
+    <value>Tender Clarification Information Reply</value>
+  </data>
+  <data name="QiaoBiaoMoBanWenJian" xml:space="preserve">
+    <value>Tender Template File</value>
+  </data>
+  <data name="QiaoBiaoRen" xml:space="preserve">
+    <value>Tenderer</value>
+  </data>
+  <data name="QiaoBiaoXianJia" xml:space="preserve">
+    <value>Tender Limit Price</value>
+  </data>
+  <data name="QingShuaZeYaoPinJieDeJieDian" xml:space="preserve">
+    <value>Please Select Nodes to Concatenate</value>
+  </data>
+  <data name="QingZhang" xml:space="preserve">
+    <value>Clear Accounts</value>
+  </data>
+  <data name="QuanBuXianShi" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="QueXianLeiXing" xml:space="preserve">
+    <value>Defect Type</value>
+  </data>
+  <data name="ShanChuDiaoZhengShuJuRuKu" xml:space="preserve">
+    <value>Delete Adjustment Data Entry</value>
+  </data>
+  <data name="ShanChuGongZuoJiLu" xml:space="preserve">
+    <value>Delete Work Record</value>
+  </data>
+  <data name="ShanChuGongZuoQueRen" xml:space="preserve">
+    <value>Delete Work Confirmation</value>
+  </data>
+  <data name="ShanChuJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>Delete Performance Baseline Data</value>
+  </data>
+  <data name="ShanChuShouKuanJiLu" xml:space="preserve">
+    <value>Delete Receipt Record</value>
+  </data>
+  <data name="ShanChuWenJianGa" xml:space="preserve">
+    <value>Delete Folder</value>
+  </data>
+  <data name="ShangBanKaiShiShiJian" xml:space="preserve">
+    <value>Start Time of Work</value>
+  </data>
+  <data name="ShangHuiChengYuanDengJi" xml:space="preserve">
+    <value>Chamber of Commerce Member Registration</value>
+  </data>
+  <data name="ShengCheng" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="SheZhiBanCi" xml:space="preserve">
+    <value>Set Shifts</value>
+  </data>
+  <data name="ShiFouShangJi" xml:space="preserve">
+    <value>Is It a Business Opportunity</value>
+  </data>
+  <data name="ShiJiGongZuo" xml:space="preserve">
+    <value>Actual Work</value>
+  </data>
+  <data name="ShiShiChuShiShuJuQingChu" xml:space="preserve">
+    <value>Initial Data Clearing</value>
+  </data>
+  <data name="ShuaZe" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="ShuaZeChengYuan" xml:space="preserve">
+    <value>Select Members</value>
+  </data>
+  <data name="ShuaZeJiaoSeZu" xml:space="preserve">
+    <value>Select Role Group</value>
+  </data>
+  <data name="ShuaZeLingDao" xml:space="preserve">
+    <value>Select Leader</value>
+  </data>
+  <data name="ShuiYinZiFu" xml:space="preserve">
+    <value>Watermark Characters</value>
+  </data>
+  <data name="SYCYKPI" xml:space="preserve">
+    <value>KPI of All Members</value>
+  </data>
+  <data name="TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu" xml:space="preserve">
+    <value>Taiding Integrated Management Platform Complete Module Tree</value>
+  </data>
+  <data name="TouBiaoFanKuiXinXi" xml:space="preserve">
+    <value>Bid Feedback Information</value>
+  </data>
+  <data name="TouBiaoFeiYongMingXi" xml:space="preserve">
+    <value>Bid Expense Details</value>
+  </data>
+  <data name="TouBiaoLiuChengShenQing" xml:space="preserve">
+    <value>Bid Process Application</value>
+  </data>
+  <data name="TouBiaoMoBanWenJian" xml:space="preserve">
+    <value>Bid Template File</value>
+  </data>
+  <data name="TouBiaoWenJianMoBan" xml:space="preserve">
+    <value>Bid File Template</value>
+  </data>
+  <data name="TuoYe" xml:space="preserve">
+    <value>Drag and Drop</value>
+  </data>
+  <data name="TuShuZhaoPian" xml:space="preserve">
+    <value>Book Photos</value>
+  </data>
+  <data name="Wai" xml:space="preserve">
+    <value>External</value>
+  </data>
+  <data name="WeiShenQing" xml:space="preserve">
+    <value>Unapplied</value>
+  </data>
+  <data name="WuLiaoZhaoPian" xml:space="preserve">
+    <value>Material Photos</value>
+  </data>
+  <data name="XiaBanJieShuShiJian" xml:space="preserve">
+    <value>End Time of Work</value>
+  </data>
+  <data name="XiaChan" xml:space="preserve">
+    <value>Place Order</value>
+  </data>
+  <data name="XiangGuanLiuCheng" xml:space="preserve">
+    <value>Related Processes</value>
+  </data>
+  <data name="XiangMuChanWei" xml:space="preserve">
+    <value>Project Unit</value>
+  </data>
+  <data name="XiangMuFeiYongDaoRuMoBan" xml:space="preserve">
+    <value>Project Cost Import Template</value>
+  </data>
+  <data name="XiangMuFuZeRen" xml:space="preserve">
+    <value>Project Leader</value>
+  </data>
+  <data name="XiangMuGeTongYanShouChan" xml:space="preserve">
+    <value>Project Contract Acceptance Form</value>
+  </data>
+  <data name="XiangMuMa" xml:space="preserve">
+    <value>Project Code</value>
+  </data>
+  <data name="XiangMuQiDongGuanLi" xml:space="preserve">
+    <value>Project Initiation Management</value>
+  </data>
+  <data name="XiangMuYanShou" xml:space="preserve">
+    <value>Project Acceptance</value>
+  </data>
+  <data name="XiangMuZengGeYuSuanDaoRuBiao" xml:space="preserve">
+    <value>Project Comprehensive Budget Import Table</value>
+  </data>
+  <data name="XiangMuZongE" xml:space="preserve">
+    <value>Project Total Amount</value>
+  </data>
+  <data name="XiaoShiZiDongPiZhun" xml:space="preserve">
+    <value>Hourly Automatic Approval</value>
+  </data>
+  <data name="XiaoShouChanJia" xml:space="preserve">
+    <value>Sales Unit Price</value>
+  </data>
+  <data name="XiaoShouZongE" xml:space="preserve">
+    <value>Total Sales Amount</value>
+  </data>
+  <data name="XinGeTongHao" xml:space="preserve">
+    <value>New Contract Number</value>
+  </data>
+  <data name="XinXiShouJi" xml:space="preserve">
+    <value>Information Collection</value>
+  </data>
+  <data name="XinZengGongZuoQueRen" xml:space="preserve">
+    <value>Add Work Confirmation</value>
+  </data>
+  <data name="XinZengJiaGeDiaoZhengShuJu" xml:space="preserve">
+    <value>Add Price Adjustment Data</value>
+  </data>
+  <data name="XinZengJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>Add Performance Baseline Data</value>
+  </data>
+  <data name="XinZengShouKuanJiLu" xml:space="preserve">
+    <value>Add Receipt Record</value>
+  </data>
+  <data name="XiuGaiGongZuoJiLu" xml:space="preserve">
+    <value>Modify Work Record</value>
+  </data>
+  <data name="XiuGaiGongZuoQueRen" xml:space="preserve">
+    <value>Modify Work Confirmation</value>
+  </data>
+  <data name="XiuGaiJiaGeDiaoZhengShuJu" xml:space="preserve">
+    <value>Modify Price Adjustment Data</value>
+  </data>
+  <data name="XiuGaiJiXiaoJiZhunShuJu" xml:space="preserve">
+    <value>Modify Performance Baseline Data</value>
+  </data>
+  <data name="XiuGaiShouKuanJiLu" xml:space="preserve">
+    <value>Modify Receipt Record</value>
+  </data>
+  <data name="XuQiuXinXi" xml:space="preserve">
+    <value>Requirement Information</value>
+  </data>
+  <data name="YaoChuanMeiChuan" xml:space="preserve">
+    <value>To Be Uploaded</value>
+  </data>
+  <data name="YiFangChanWei" xml:space="preserve">
+    <value>Party B Unit</value>
+  </data>
+  <data name="YinCangSuoYouBuKeShiMoZu" xml:space="preserve">
+    <value>Hide All Invisible Modules</value>
+  </data>
+  <data name="YiWanChengLiang" xml:space="preserve">
+    <value>Completed Quantity</value>
+  </data>
+  <data name="YuanGongHao" xml:space="preserve">
+    <value>Employee Number</value>
+  </data>
+  <data name="YuanJinE" xml:space="preserve">
+    <value>Original Amount</value>
+  </data>
+  <data name="YuanKeMu" xml:space="preserve">
+    <value>Original Subject</value>
+  </data>
+  <data name="YuanMiaoShu" xml:space="preserve">
+    <value>Original Description</value>
+  </data>
+  <data name="YuanSuZhaoPian" xml:space="preserve">
+    <value>Element Photos</value>
+  </data>
+  <data name="YuSuanBianGengJiLu" xml:space="preserve">
+    <value>Budget Change Record</value>
+  </data>
+  <data name="YuZhongBiaoTongZhiShuWenJian" xml:space="preserve">
+    <value>Pre-Award Notice File</value>
+  </data>
+  <data name="ZanLieJin" xml:space="preserve">
+    <value>Provisional Sum</value>
+  </data>
+  <data name="ZanShiMeiYouChaXunDaoXiangGuanXinXi" xml:space="preserve">
+    <value>No Relevant Information Found</value>
+  </data>
+  <data name="ZhengZhiFenXiTu" xml:space="preserve">
+    <value>Earned Value Analysis Chart</value>
+  </data>
+  <data name="ZhuaiJiHua" xml:space="preserve">
+    <value>Transfer Plan</value>
+  </data>
+  <data name="ZiChanCaiGouFuKuanChaXun" xml:space="preserve">
+    <value>Asset Procurement Payment Inquiry</value>
+  </data>
+  <data name="ZiDongJiSuanYueJiHuaE" xml:space="preserve">
+    <value>Automatic Monthly Plan Calculation</value>
+  </data>
+  <data name="ZiJinSuanFa" xml:space="preserve">
+    <value>Funding Algorithm</value>
+  </data>
 </root>
