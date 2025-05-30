@@ -852,6 +852,24 @@ select {
 	padding:0px 0px 0px 0px;*/
 }
 
+.formItemBgStyleForAlignCenter {
+    /*border-bottom:dotted  1px #C6CFD4;
+        height: 19px;
+        line-height: 18px;*/
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #cccccc;
+    vertical-align: top;
+    line-height: 23px;
+    word-break: break-all;
+    white-space: collapse; /* »»ÐÐ */
+
+    text-align: center;
+}
+
 .formItemBgStyleForAlignLeft {
     /*border-bottom:dotted  1px #C6CFD4;
         height: 19px;
