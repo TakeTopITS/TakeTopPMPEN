@@ -72,7 +72,9 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div id="#AboveDiv" style="position: relative; top: 30px; text-align:center;">
-                          <img src="Images/khfw.gif" alt="" style="width: 80%;" />
+                       <img src="Images/OnlineTest.jpg" alt="" style="width: 80%; height:300px;" />
+                        <br />
+                        <br />
                         <table style="width: 100%">
                             <tr>
                                 <td style="height: 40px; padding-top: 20px; text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp;
