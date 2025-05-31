@@ -104,7 +104,7 @@
                                         <asp:TemplateColumn HeaderText="NewsTitle">
                                             <ItemTemplate>
                                                 <a onclick="javascript:popShowByURL('TakeTopSiteNewsView.aspx?ID=<%# Eval("ID").ToString() %>','<%# Eval("Title").ToString() %>',800, 600,window.location);" target="_blank">
-                                                  <%#this.DataGrid1.CurrentPageIndex * this.DataGrid1.PageSize + Container.ItemIndex +1%> �� <%# Eval("Title").ToString() %>
+                                                  <%#this.DataGrid1.CurrentPageIndex * this.DataGrid1.PageSize + Container.ItemIndex +1%>.<%# Eval("Title").ToString() %>
                                                 </a>
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="80%" />
