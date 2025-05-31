@@ -71,49 +71,49 @@
             </asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <div id="#AboveDiv" style="position: relative; top: 30px;">
-
+                    <div id="#AboveDiv" style="position: relative; top: 30px; text-align:center;">
+                          <img src="Images/khfw.gif" alt="" style="width: 80%;" />
                         <table style="width: 100%">
                             <tr>
-                                <td style="height: 40px; padding-top :20px; text-align: center;" >&nbsp; &nbsp; &nbsp; &nbsp;
+                                <td style="height: 40px; padding-top: 20px; text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp;
                                     <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,QXTXYXXXD%>"></asp:Label><font color="#FF0000">*</font>
                                     <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,HMWBTXRHDJZCANXTJZJDNDSYYM%>"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td align="left" style="padding-top :15px;" >
-                                  <table border="0" cellpadding="0" cellspacing="3" class="zi" style="width: 100%; text-align: left;">
-                                        <tr>
-                                            <td class="formItemBgStyleForAlignLeft" style="width: 27%;">
-                                                <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ChanPing%>"></asp:Label>：
-                                            </td>
-                                            <td class="formItemBgStyleForAlignLeft">
-                                                <asp:Label ID="LB_Product" runat="server"></asp:Label>
-                                                <br />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="formItemBgStyleForAlignLeft">
-                                                <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,DanWei%>"></asp:Label>：</td>
-                                            <td class="formItemBgStyleForAlignLeft" w>
-                                                <asp:TextBox ID="TB_Company" runat="server" Style="width: 90%; height: 25px;font-size: 16px;"></asp:TextBox>
-                                                <font color="#FF0000">&nbsp;*</font>
-
-                                            </td>
-
+                                <td align="center" style="padding-top: 15px;">
+                                        <table border="0" cellpadding="0" cellspacing="3" class="zi" style="text-align: left;">
+                                            <tr>
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 20%;">
+                                                    <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ChanPing%>"></asp:Label>：
+                                                </td>
+                                                <td class="formItemBgStyleForAlignLeft">
+                                                    <asp:Label ID="LB_Product" runat="server"></asp:Label>
+                                                    <br />
+                                                </td>
+                                            </tr>
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft">
-                                                    <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label>：</td>
-                                                <td class="formItemBgStyleForAlignLeft">
-                                                    <asp:TextBox ID="TB_ContactPerson" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
-                                                    &nbsp;<font color="#FF0000">*</font> </td>
+                                                    <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,DanWei%>"></asp:Label>：</td>
+                                                <td class="formItemBgStyleForAlignLeft" w>
+                                                    <asp:TextBox ID="TB_Company" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
+                                                    <font color="#FF0000">&nbsp;*</font>
 
-                                            </tr>
+                                                </td>
+
+                                                <tr>
+                                                    <td class="formItemBgStyleForAlignLeft">
+                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label>：</td>
+                                                    <td class="formItemBgStyleForAlignLeft">
+                                                        <asp:TextBox ID="TB_ContactPerson" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
+                                                        &nbsp;<font color="#FF0000">*</font> </td>
+
+                                                </tr>
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>：</td>
                                                 <td class="formItemBgStyleForAlignLeft">
-                                                    <asp:TextBox ID="TB_PhoneNumber" runat="server" Style="width: 90%; height: 25px;font-size: 16px;"></asp:TextBox>
+                                                    <asp:TextBox ID="TB_PhoneNumber" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
                                                     <font color="#FF0000">&nbsp;*</font>
                                                 </td>
                                             </tr>
@@ -135,7 +135,7 @@
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <asp:TextBox ID="TB_CheckCode" runat="server" Style="width: 100px; height: 35px;font-size: 16px;"></asp:TextBox>
+                                                                <asp:TextBox ID="TB_CheckCode" runat="server" Style="width: 100px; height: 35px; font-size: 16px;"></asp:TextBox>
                                                             </td>
                                                             <td>
                                                                 <asp:Image ID="IM_CheckCode" runat="server" src="TTCheckCode.aspx" Width="100px" Height="35px" />
@@ -147,7 +147,7 @@
                                             <tr>
                                                 <td class="formItemBgStyleForAlignLeft"></td>
                                                 <td class="formItemBgStyleForAlignLeft">
-                                                    <asp:Button ID="BT_Summit" runat="server" Width="100px" Height="35px" OnClick="BT_Summit_Click"  Text="<%$ Resources:lang,TiJiao%>" />
+                                                    <asp:Button ID="BT_Summit" runat="server" Width="100px" Height="35px" OnClick="BT_Summit_Click" Text="<%$ Resources:lang,TiJiao%>" />
                                                     <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
                                                 </td>
                                             </tr>
@@ -177,11 +177,13 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2"  class="formItemBgStyleForAlignLeft">
-                                                    <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes" ><img align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a class="call" href="tel:02151085119" >021-51085119</a>
+                                                <td colspan="2" align="center" class="formItemBgStyleForAlignCenter">
+                                                    <br />
+                                                    <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
+                                                        <img align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a class="call" href="tel:02151085119">021-51085119</a>
                                                 </td>
                                             </tr>
-                                    </table>
+                                        </table>
                                 </td>
                             </tr>
                         </table>
@@ -193,7 +195,7 @@
             <div style="position: absolute; left: 50%; top: 50%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                     <img id="IMG_Waiting" src="Images/Logining.gif" alt="Logining,please wait..." style="text-align: center; " />
+                        <img id="IMG_Waiting" src="Images/Logining.gif" alt="Logining,please wait..." style="text-align: center;" />
 
                     </ProgressTemplate>
                 </asp:UpdateProgress>
