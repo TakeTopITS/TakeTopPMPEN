@@ -76,7 +76,7 @@
                                 <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
-                                            <td align="left" >
+                                            <td align="center">
                                                 <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,QiYeXinXi%>"></asp:Label>£º<asp:TextBox ID="txt_SupplierInfo" runat="server" Width="100px"></asp:TextBox>
                                                 &nbsp;
                                                 <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YouXiaoQi%>"></asp:Label>£º<asp:TextBox ID="TextBox2" runat="server" ReadOnly="false" Width="80px"></asp:TextBox>

@@ -86,7 +86,7 @@
                                 <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
-                                            <td align="left">
+                                           <td align="center">
                                                 <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ZhaoBiaoXinXi%>"></asp:Label>
 
                                                 <asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>

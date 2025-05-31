@@ -83,7 +83,7 @@
                                         <td align="center" style="padding-top: 5px;">
                                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                                 <tr>
-                                                    <td align="left">
+                                                    <td align="center">
 
                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhaoBiaoBianHao%>"></asp:Label>£º
                                                                     <asp:TextBox ID="TXT_TenderCode" runat="server" Width="100px"></asp:TextBox>

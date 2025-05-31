@@ -65,7 +65,7 @@
                                             <td align="left" style="padding-top: 4px;">
                                                <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                                     <tr>
-                                                          <td align="left">
+                                                         <td align="center">
                                                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>
                                                      
                                                             <asp:TextBox ID="TB_ProjectName" Width="120px" runat="server"></asp:TextBox>

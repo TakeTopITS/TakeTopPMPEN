@@ -83,7 +83,7 @@
                                         <td class="formItemBgStyleForAlignLeft" style="padding-left: 10px;">
                                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                                 <tr>
-                                                    <td align="left">
+                                                  <td align="center">
                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuJingLeiXing%>"></asp:Label>
                                                         <asp:DropDownList ID="DL_WarningType" runat="server">
                                                             <asp:ListItem />

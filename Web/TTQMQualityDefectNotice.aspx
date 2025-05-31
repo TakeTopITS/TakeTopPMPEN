@@ -56,7 +56,7 @@
 
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
-                                            <td align="left">
+                                             <td align="center">
                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,TongZhiXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
 
                                                 <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YanShouXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox2" runat="server" Width="120px"></asp:TextBox>
@@ -244,7 +244,7 @@
                                 <tr>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,QueXianMiaoShu%>"></asp:Label>£º</td>
-                                    <td class="formItemBgStyleForAlignLeft">
+                                    <td colspan="3" class="formItemBgStyleForAlignLeft">
 
                                         <asp:TextBox ID="TB_DefectDescription" runat="server" CssClass="shuru" Height="35px" TextMode="MultiLine" Width="90%"></asp:TextBox>
 

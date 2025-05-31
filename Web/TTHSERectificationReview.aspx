@@ -55,7 +55,7 @@
                                 <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
-                                             <td align="left">
+                                            <td align="center">
                                                 <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ZhengGaiXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server" Width="150px"></asp:TextBox>
                                         
                                                 <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,TongZhiXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox2" runat="server" Width="150px"></asp:TextBox>

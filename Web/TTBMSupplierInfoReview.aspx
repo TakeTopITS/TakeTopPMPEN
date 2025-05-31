@@ -99,7 +99,7 @@
                                <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
-                                            <td align="left">
+                                           <td align="center">>
                                                 <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,QiYeXinXi%>"></asp:Label>£º<asp:TextBox ID="txt_SupplierInfo" runat="server" Width="100px"></asp:TextBox>
                                                 <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º&nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
                                                     <asp:ListItem Value="0" Text="<%$ Resources:lang,QingXuanZe%>" />

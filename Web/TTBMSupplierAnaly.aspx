@@ -62,7 +62,7 @@
                                 <td align="center" style="padding-top: 5px;">
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
-                                            <td align="left">
+                                            <td align="center">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,PingJiaXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
 
                                                 <asp:Button ID="BT_Query" runat="server" CssClass="inpu" OnClick="BT_Query_Click" Text="<%$ Resources:lang,ChaXun%>" />

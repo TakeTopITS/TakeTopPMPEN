@@ -81,7 +81,7 @@
                                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                                     <tr>
                                                         <tr>
-                                                            <td align="left">
+                                                             <td align="center">
                                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZiZhiXinXi%>"></asp:Label>£º<asp:TextBox ID="txt_SupplierInfo" runat="server" Width="100px"></asp:TextBox>
                                                                 &nbsp; &nbsp;&nbsp;<asp:Button ID="BT_Query" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Query_Click" />
                                                             </td>
