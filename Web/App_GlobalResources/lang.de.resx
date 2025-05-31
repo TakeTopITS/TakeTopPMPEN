@@ -31035,6 +31035,9 @@
   <data name="TouBiaoWenJianMoBan" xml:space="preserve">
     <value>Gebot Dateivorlage</value>
   </data>
+  <data name="ChengBaoShangLeiXing" xml:space="preserve">
+    <value>Auftragnehmer-Typ</value>
+  </data>
   <data name="GongCheng" xml:space="preserve">
     <value>Bauwerk</value>
   </data>

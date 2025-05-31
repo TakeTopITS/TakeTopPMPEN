@@ -31035,6 +31035,9 @@
   <data name="TouBiaoWenJianMoBan" xml:space="preserve">
     <value>入札ファイルテンプレート</value>
   </data>
+  <data name="ChengBaoShangLeiXing" xml:space="preserve">
+    <value>受注者タイプ</value>
+  </data>
   <data name="GongCheng" xml:space="preserve">
     <value>工事</value>
   </data>
