@@ -31069,6 +31069,9 @@
   <data name="TouBiaoWenJianMoBan" xml:space="preserve">
     <value>投标文件模板</value>
   </data>
+  <data name="ChengBaoShangLeiXing" xml:space="preserve">
+    <value>承包商类型</value>
+  </data>
   <data name="GongCheng" xml:space="preserve">
     <value>工程</value>
   </data>
