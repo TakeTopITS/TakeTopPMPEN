@@ -31942,4 +31942,8 @@
     <value>化学成分是</value>
     <comment>化学成分是</comment>
   </data>
+  <data name="WenKongLeiXun" xml:space="preserve">
+    <value>文控类型</value>
+    <comment>文控类型</comment>
+  </data>
 </root>

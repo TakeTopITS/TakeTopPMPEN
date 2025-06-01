@@ -31828,4 +31828,7 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="HuaXueChengFengSi" xml:space="preserve">
     <value>The chemical composition is</value>
   </data>
+  <data name="WenKongLeiXun" xml:space="preserve">
+    <value>Document Control Type</value>
+  </data>
 </root>

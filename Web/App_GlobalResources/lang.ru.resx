@@ -31829,4 +31829,7 @@
   <data name="HuaXueChengFengSi" xml:space="preserve">
     <value>Химический состав является</value>
   </data>
+  <data name="WenKongLeiXun" xml:space="preserve">
+    <value>Тип контроля документов</value>
+  </data>
 </root>

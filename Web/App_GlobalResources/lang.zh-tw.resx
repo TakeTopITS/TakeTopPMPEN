@@ -31827,4 +31827,7 @@
   <data name="HuaXueChengFengSi" xml:space="preserve">
     <value>化學成分是</value>
   </data>
+  <data name="WenKongLeiXun" xml:space="preserve">
+    <value>文控類型</value>
+  </data>
 </root>

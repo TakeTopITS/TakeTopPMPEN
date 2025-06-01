@@ -68,6 +68,11 @@
                                         <td align="left" style="padding: 10px 5px 5px 5px;">
                                             <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="98%">
                                                 <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="ÎÄ¿ØÀàÐÍ">
+
+                                                    <HeaderTemplate>
+                                                         <asp:Label ID="Label80" runat="server" Text="<%$ Resources:lang,WenKongLeiXun%>"></asp:Label>
+                                                    </HeaderTemplate>
+
                                                     <ContentTemplate>
                                                         <table width="98%" style="margin-top: 5px">
                                                             <tr>
