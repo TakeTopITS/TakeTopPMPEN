@@ -2,75 +2,62 @@
 /*author:用友集团信息技术部*/
 
 /*面包屑（含）以上内容*/
-@media screen and (max-device-width: 970px) {
-    #header {
-        font-size: 2em;
-    }
-
-    #nav {
-        width: 860px;
-        height: 40px;
-        overflow-y: hidden;
-    }
-
-    #header #nav {
-        top: 70px;
-        margin-left: 20px;
-    }
-
-        #header #nav #navlist li {
-            margin: 1px 10px;
-        }
-
-    #header .jiantou {
-        left: 900px;
-        display: block;
-    }
-
-    #navlist {
-        width: 1700px;
-    }
-
-    .warp #headerbg {
-        background: url(../images/headerbg-xiao.jpg) repeat-x top;
-    }
-
-    #header #scrollDiv {
-        height: 48px;
-        display: none;
-    }
-    /*	#header #scrollDiv ul li{
+@media screen and (max-device-width: 970px){
+	#header{
+		font-size:2em;
+	}
+    #nav{
+		width:860px;
+		height:40px;
+		overflow-y:hidden;
+	}
+    #header #nav{
+		top:70px;
+		margin-left:20px;
+	}
+	#header #nav #navlist li{
+		margin:1px 10px;
+	}
+	#header .jiantou{
+		left:900px;
+		display:block;
+	}
+	#navlist{
+		width:1700px;
+	}
+	.warp #headerbg{
+		background:url(../images/headerbg-xiao.jpg) repeat-x top;
+	}
+	#header #scrollDiv{
+		height:48px;
+		display:none;
+	}
+/*	#header #scrollDiv ul li{
 		font-size:0.8em;
 	}*/
-    #header #logo .pc {
-        display: none;
-        /*		height:51px;
+	#header #logo .pc{
+		display:none;
+/*		height:51px;
 		width:179px;*/
-    }
-
-    #header #logo {
-        top: -18px;
-        left: 100px;
-    }
-
-    #header #nav #navlist a:link, #navlist a:visited {
-        font-size: 1.5em;
-    }
-
-    #header #lianjie1 {
-        left: 460px;
-        top: 5px;
-    }
-
-        #header #lianjie1 a {
-            margin-right: 10px;
-        }
-
-    #header #lianjie2 {
-        top: 5px;
-        left: 650px;
-    }
-
+	}
+	#header #logo{
+		top:-18px;
+		left:100px;
+	}
+	#header #nav #navlist a:link, #navlist a:visited{
+		font-size:1.5em;
+	}
+	#header #lianjie1{
+		left:460px;
+		top:5px;
+	}
+	#header #lianjie1 a{
+		margin-right:10px;
+	}
+	#header #lianjie2{
+		top:5px;
+		left:650px;
+	}
         #header #lianjie1 #Label4, #header #lianjie1 #Label1, #header #lianjie1 #Label5, #header #lianjie2 #Label2 {
             font-size: 1.2em;
         }
@@ -78,7 +65,7 @@
 
 #headerbg {
     height: 120px;
-    background: url(../images/headerbg.jpg) repeat-x top;
+    background:url(../images/headerbg.jpg) repeat-x top;
     position: relative;
     z-index: 10;
 }
@@ -98,26 +85,25 @@
     position: absolute;
     top: 35px;
     left: -60px;
-    background: url(../images/SiteLogo.png) no-repeat;
-    width: 210px;
-    height: 84px;
+	background:url(../images/SiteLogo.png) no-repeat;
+	width:210px;
+	height:84px;
+
+}
+#logo img{
+	width:210px;
+	/*height:82px;*/
 }
 
-    #logo img {
-        width: 210px;
-        /*height:82px;*/
-    }
-
-.jiantou {
-    float: right;
-    clear: both;
-    top: 65px;
-    left: 970px;
-    position: absolute;
-    font-weight: bold;
-    display: none;
+.jiantou{
+	float:right;
+	clear:both;
+	top:65px;
+	left:970px;
+	position:absolute;
+	font-weight:bold;
+	display:none;
 }
-
 #search {
     position: absolute;
     top: 40px;
@@ -182,7 +168,7 @@ a.a2:link, a.a2:visited {
 
 #lianjie2 {
     position: absolute;
-    /* top: 5px;*/
+   /* top: 5px;*/
     left: 700px;
 }
 
@@ -567,8 +553,8 @@ a.a2:link, a.a2:visited {
 #nav {
     position: absolute;
     top: 57px;
-    margin-left: 150px;
-    /*   left: 140px;*/
+	margin-left:150px;
+ /*   left: 140px;*/
 }
 
 #navlist li {
@@ -576,23 +562,22 @@ a.a2:link, a.a2:visited {
     display: inline;
     margin: 1px 5px;
 }
-
-    #navlist li a:hover {
-        color: #5084ff;
-    }
-
+#navlist li a:hover{
+	color:#5084ff;
+}
 #navlist a:link, #navlist a:visited {
     display: block;
-    /*    padding: 0 20px;*/
+/*    padding: 0 20px;*/
     font: 16px/33px "微软雅黑", "黑体";
     color: #000;
 }
 
 #navlist a.current:link, #nav a.current:visited {
     color: #fff;
-    /*	height:57px;*/
+/*	height:57px;*/
     background: #017afb;
-    padding: 3px;
+	padding:3px;
+	
 }
 
 #nav2 {
@@ -603,9 +588,8 @@ a.a2:link, a.a2:visited {
     height: 215px;
     background: url(../images/bgjiejuefangan2.png) no-repeat 0 0;
 }
-
-#Label4, #Label1, #Label5 {
-    font-size: 14px;
+#Label4,#Label1,#Label5{
+	font-size:14px;
 }
 
 

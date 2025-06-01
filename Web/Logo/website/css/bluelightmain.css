@@ -163,13 +163,6 @@ button:visited, input[type="submit"]:visited {
     margin: 2px 0;
     cursor: pointer;
     height: 21px;
-
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
     .inpu:disabled {
@@ -209,13 +202,6 @@ button:visited, input[type="submit"]:visited {
     font-family: "microsoft yahei";
     margin: 2px 0;
     cursor: pointer;
-
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
     .inpuLong:disabled {
@@ -253,13 +239,6 @@ button:visited, input[type="submit"]:visited {
     font-size: 12px;
     margin: 2px 0;
     color: #000000;
-
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
     .inpuLongest :disabled {
@@ -294,14 +273,6 @@ button:visited, input[type="submit"]:visited {
     margin-right: 0px;
     font-size: 12px;
     color: #000000;
-
-
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 
@@ -318,9 +289,6 @@ button:visited, input[type="submit"]:visited {
     border-left-style: none;
     /*font-size: 12px;*/
     /*color: #29728D;*/
-
-
-
 }
 
 
@@ -414,9 +382,7 @@ button:visited, input[type="submit"]:visited {
 	padding:0px 0px 0px 0px;*/
 }
 
-
-.formItemBgStyleForAlignLeft {
-    /*border-bottom:dotted  1px #C6CFD4;
+.formItemBgStyle { /*border-bottom:dotted  1px #C6CFD4;
         height: 19px;
         line-height: 18px;*/
     background-color: #fff;
@@ -425,28 +391,6 @@ button:visited, input[type="submit"]:visited {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #cccccc;
-    vertical-align: top;
-    line-height: 23px;
-    word-break: break-all;white-space: collapse; /* »»ÐÐ */
-
-    text-align: left;
-}
-
-.formItemBgStyleForAlignRight {
-    /*border-bottom:dotted  1px #C6CFD4;
-        height: 19px;
-        line-height: 18px;*/
-    background-color: #fff;
-    background-repeat: no-repeat;
-    padding-top: 10px;
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
-    border-bottom-color: #cccccc;
-    vertical-align: top;
-    line-height: 23px;
-    word-break: break-all;white-space: collapse; /* »»ÐÐ */
-
-    text-align: right;
 }
 
 /*--------------------------------±à¼­Í¼Æ¬°´Å¥---------------------------*/

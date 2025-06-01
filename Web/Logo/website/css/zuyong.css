@@ -383,7 +383,7 @@ button:visited, input[type="submit"]:visited {
 	padding:0px 0px 0px 0px;*/
 }
 
-.formItemBgStyleForAlignLeft { /*border-bottom:dotted  1px #C6CFD4;
+.formItemBgStyle { /*border-bottom:dotted  1px #C6CFD4;
         height: 19px;
         line-height: 18px;*/
     background-color: #fff;
