@@ -70,7 +70,7 @@
                                             <td>
                                                 <table style="width: 100%; margin-top: 5px" cellpadding="2" cellspacing="0">
                                                     <tr style="font-size: 12pt">
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <span style="font-size: 11pt">
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QingShuRuGongZuoLiuMuBanMing%>"></asp:Label></span>：<asp:TextBox ID="TB_WFTemName" runat="server"
                                                                     Font-Size="10pt" Width="250px"></asp:TextBox>
@@ -84,7 +84,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr style="font-weight: bold; font-size: 11pt">
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
                                                                 <ItemTemplate>
                                                                     <asp:Button ID="BT_WorkFlowName" runat="server" CssClass="inpuLongRepeat" Text='<%# DataBinder.Eval(Container.DataItem,"TemName") %>' />
@@ -234,7 +234,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="formItemBgStyleForAlignLeft" >
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <br />
                                                             <table width="100%">
                                                                 <tr>
@@ -355,63 +355,63 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_StepID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"StepID") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="步序">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="4%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="StepName" HeaderText="Name">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="limitedOperator" HeaderText="最少人数">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="LimitedTime" HeaderText="时间(小时)">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="StepID" DataNavigateUrlFormatString="TTWorkFlowStepConditionView.aspx?StepID={0}"
                                                                                     Target="_blank" Text="<%$ Resources:lang,TiaoJian%>">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:HyperLinkColumn>
                                                                                 <asp:BoundColumn DataField="SelfReview" HeaderText="自审">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="DepartRelated" HeaderText="部门相关">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="PartTimeReview" HeaderText="允许兼职审批">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ProjectRelated" HeaderText="项目相关">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="OperatorSelect" HeaderText="自选审批者">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="AllowSelfPass" HeaderText="申请人自批">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="AllowPriorOperatorPass" HeaderText="已批者自批">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="NextStepMust" HeaderText="为下一步必须通过">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="NextSortNumber" HeaderText="下一步">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="6%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn>
                                                                                     <ItemTemplate>
                                                                                         <%# DataBinder.Eval(Container.DataItem,"FinishPercent") %> %
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                                 </asp:TemplateColumn>
 
                                                                             </Columns>
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                         </asp:DataGrid>
@@ -462,7 +462,7 @@
                                     <ContentTemplate>
                                         <table cellpadding="2" cellspacing="0" class="formBgStyle" style="width: 100%;">
                                             <tr>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 20%; ">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 20%;">
                                                     <asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label>
                                                     <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,BuXu %>"></asp:Label>
                                                 </td>
@@ -470,7 +470,7 @@
                                                     <asp:Label ID="LBL_SortNumber" runat="server"></asp:Label>
 
                                                 </td>
-                                                <td class="formItemBgStyleForAlignLeft" style="width: 20%;  height: 15px;">
+                                                <td class="formItemBgStyleForAlignLeft" style="width: 20%; height: 15px;">
                                                     <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,MingChen %>"></asp:Label>
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft" style="height: 15px;">
@@ -483,7 +483,11 @@
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="LBL_LimitedOperator" runat="server"></asp:Label>
-                                                    <span class="color: #FF0066;">（<span class="font-size: small;">小于或等于参与此步骤角色组成员数目之和</span>）</span> </td>
+                                                    <span class="color: #FF0066;">（<span class="font-size: small;">
+
+                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XYHDYCYCBZDRSZH %>"></asp:Label>
+                                                    </span>）</span>
+                                                </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,ZuiChiShiJian %>"></asp:Label>
                                                 </td>
@@ -640,33 +644,33 @@
                                                     <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="False" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid1_ItemCommand" ShowHeader="False" Width="100%">
                                                         <Columns>
                                                             <asp:HyperLinkColumn DataNavigateUrlField="IdentifyString" DataNavigateUrlFormatString="TTActorGroupDetail.aspx?IdentifyString={0}" DataTextField="ActorGroup" HeaderText="参与角色组" Target="_blank">
-                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                             </asp:HyperLinkColumn>
                                                             <asp:BoundColumn DataField="WorkDetail" HeaderText="工作">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Actor" HeaderText="承担角色">
-                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Requisite" HeaderText="必需">
-                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="LimitedTime" HeaderText="时间(小时)">
-                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
                                                                 <ItemTemplate>
                                                                     <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                 </ItemTemplate>
-                                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                             </asp:TemplateColumn>
                                                         </Columns>
                                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                         <EditItemStyle BackColor="#2461BF" />
                                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                        <PagerStyle CssClass="notTab" Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" />
+                                                        <PagerStyle CssClass="notTab" HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                         <ItemStyle CssClass="itemStyle" />
-                                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Horizontalalign="left" />
+                                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="left" />
                                                     </asp:DataGrid>
                                                     <asp:Label ID="LB_DetailID" runat="server" Visible="False"></asp:Label>
                                                 </td>
@@ -697,13 +701,13 @@
                             <br />
                             <table align="left" cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                 <tr>
-                                    <td class="formItemBgStyleForAlignLeft"  width="20%">
+                                    <td class="formItemBgStyleForAlignLeft" width="20%">
                                         <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,CanYuJueSeZhu %>"></asp:Label>
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft" width="30%">
                                         <asp:Label ID="LBL_ActorGroup" runat="server"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 20%; ">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 20%;">
                                         <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,BiXu %>"></asp:Label>
                                     </td>
                                     <td class="formItemBgStyleForAlignLeft">
@@ -714,7 +718,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,ZhuYaoGongZuoNeiRong %>"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" colspan="3" >
+                                    <td class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:Label ID="LBL_WorkDetail" runat="server"></asp:Label>
                                     </td>
                                 </tr>
@@ -722,7 +726,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,BuKeShiYu %>"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 4px; ">
+                                    <td class="formItemBgStyleForAlignLeft" colspan="3" style="height: 4px;">
                                         <asp:Label ID="LBL_FieldList" runat="server"></asp:Label>
                                     </td>
                                 </tr>
@@ -730,7 +734,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,KeBianJiYu %>"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" colspan="3" >
+                                    <td class="formItemBgStyleForAlignLeft" colspan="3">
                                         <asp:Label ID="LBL_EditFieldList" runat="server"></asp:Label>
                                     </td>
                                 </tr>
@@ -744,7 +748,7 @@
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,JueSe %>"></asp:Label>
                                     </td>
-                                    <td class="formItemBgStyleForAlignLeft" style="width: 200px; ">
+                                    <td class="formItemBgStyleForAlignLeft" style="width: 200px;">
                                         <asp:Label ID="LBL_Actor" runat="server"></asp:Label>
                                     </td>
                                 </tr>

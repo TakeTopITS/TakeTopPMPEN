@@ -493,7 +493,10 @@
                                                 </td>
                                                 <td class="formItemBgStyleForAlignLeft" style="text-align: left">
                                                     <asp:Label ID="LBL_LimitedOperator" runat="server"></asp:Label>
-                                                    <span class="color: #FF0066;">（<span class="font-size: small;">小于或等于参与此步骤角色组成员数目之和</span>）</span> </td>
+                                                    <span class="color: #FF0066;">（<span class="font-size: small;">
+                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XYHDYCYCBZDRSZH %>"></asp:Label>
+
+                                                                                   </span>）</span> </td>
                                                 <td class="formItemBgStyleForAlignLeft">
                                                     <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ZuiChiShiJian %>"></asp:Label>
                                                 </td>
