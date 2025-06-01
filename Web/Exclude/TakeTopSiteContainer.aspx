@@ -48,7 +48,7 @@
         };
         $(function () {
 
-            aHandlerForParentWindow();
+            aHandlerForCurentWindow();
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 

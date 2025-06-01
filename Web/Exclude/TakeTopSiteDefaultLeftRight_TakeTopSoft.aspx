@@ -83,7 +83,9 @@
             else {
 
                 this.document.getElementById("TakeTopSiteTop").src = "TakeTopSiteTop.aspx";
-                this.document.getElementById("SiteRightContainerFrameID").src = "Logo/WebSite/indexHomePage.html?ModuleName=主页&HomeModuleName=主页";
+                this.document.getElementById("SiteLeftFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteLeft.aspx?ModuleName=主页&HomeModuleName=主页";
+                this.document.getElementById("SiteRightContainerFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteContainer.aspx?ModuleName=主页&HomeModuleName=主页";
+
             }
         }
 

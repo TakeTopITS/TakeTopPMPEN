@@ -20,7 +20,10 @@
     <script type="text/javascript" src="./js/public.js"></script>
     <script src="./js/wk_inc.js" language="javascript"></script>
     <script type="text/javascript" src="./js/forever.js"></script>
-    <script type="text/javascript" src="js/allAHandler.js"></script>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/allAHandler.js" type="text/javascript"></script>
 
     <style type="text/css">
         .TextColor {
@@ -31,6 +34,13 @@
     </style>
 
     <script type="text/javascript">
+
+        $(function () {
+
+            aHandlerForSiteBottomWindow();
+        });
+
+
         document.ontouchmove = function (e) {
             e.preventDefault();
         };
@@ -87,13 +97,17 @@
         <div class="warp">
             <div class="footer">
                 <p>
-                    <span><a onmousedown="OnMouseDownEvent(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=意见反馈&amp;HomeModuleName=意见反馈', 'TakeTopSiteLeft.aspx?ModuleName=意见反馈&amp;HomeModuleName=意见反馈');" class="current">
-                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YiJianFanKui%>"></asp:Label>
-                    </a>
-                    </span>|<span>  <a onmousedown="OnMouseDownEvent(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=法律声明&amp;HomeModuleName=法律声明', 'TakeTopSiteLeft.aspx?ModuleName=法律声明&amp;HomeModuleName=法律声明');" class="current">
+                    <span>
+
+                        <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=意见反馈&amp;HomeModuleName=意见反馈" class="current">
+                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YiJianFanKui%>"></asp:Label>
+                        </a>
+                      
+                    </span>|<span> 
+                        <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=法律声明&amp;HomeModuleName=法律声明" class="current">
                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FaLuShengMing%>"></asp:Label>
                     </a>
-                    </span>|<span> <a onmousedown="OnMouseDownEvent(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=关于我们&amp;HomeModuleName=关于我们', 'TakeTopSiteLeft.aspx?ModuleName=关于我们&amp;HomeModuleName=关于我们');" class="current">
+                    </span>|<span> <a onmousedown="OnMouseDownEvent(this)"  href="TakeTopSiteContainer.aspx?ModuleName=关于我们&amp;HomeModuleName=关于我们" class="current">
                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuanYuWoMen%>"></asp:Label>
                     </a>
                     </span>

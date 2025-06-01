@@ -1,0 +1,1 @@
+index.html文件放入网站根结点，如IIS的wwwroot目录下！
