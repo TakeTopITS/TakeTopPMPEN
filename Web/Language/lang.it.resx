@@ -31829,4 +31829,7 @@
   <data name="HuaXueChengFengSi" xml:space="preserve">
     <value>La composizione chimica è</value>
   </data>
+  <data name="WenKongLeiXun" xml:space="preserve">
+    <value>Tipo di Controllo Documenti</value>
+  </data>
 </root>

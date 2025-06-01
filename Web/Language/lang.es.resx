@@ -31827,4 +31827,7 @@
   <data name="HuaXueChengFengSi" xml:space="preserve">
     <value>La composición química es</value>
   </data>
+  <data name="WenKongLeiXun" xml:space="preserve">
+    <value>Tipo de Control de Documentos</value>
+  </data>
 </root>
