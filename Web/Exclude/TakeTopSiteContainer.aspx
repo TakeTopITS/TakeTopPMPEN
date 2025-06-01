@@ -16,32 +16,30 @@
     <script type="text/javascript" src="./js/wk_inc.js" language="javascript"></script>
     <script type="text/javascript" src="./js/forever.js"></script>
 
-    <style type="text/css">
-        html {
-            width: 100%;
-            overflow-x: auto;
-        }
-
-        .ToolBarLeftRight {
-            position: fixed !important;
-            top: 320px;
-            left: 0px;
-            margin: 0 auto;
-            position: absolute;
-            top: expression(offsetParent.scrollTop+0);
-            /*border: 1px solid #dddddd;*/
-            background-color: white;
-            width: 25px;
-            height: 169px;
-            z-index: 99999;
-        }
-
-        .TextColor {
-            color: red;
-            background: #017afb;
-            padding: 3px;
-        }
-    </style>
+   <style type="text/css">
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    #form1 {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* 视口高度 */
+    }
+    
+    #divBody {
+        flex: 1; /* 自动填充剩余空间 */
+    }
+    
+    #SiteBottomFrameID {
+        width: 100%;
+        height: 80px;
+        flex-shrink: 0; /* 防止 iframe 被压缩 */
+    }
+</style>
 
     <script type="text/javascript" language="javascript">
         document.ontouchmove = function (e) {
