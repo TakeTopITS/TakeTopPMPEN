@@ -50,7 +50,7 @@
         };
         $(function () {
 
-            aHandler();
+            aHandlerForParentWindow();
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 

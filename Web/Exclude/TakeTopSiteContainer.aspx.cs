@@ -52,7 +52,7 @@ public partial class TakeTopSiteContainer : System.Web.UI.Page
             IM_RightToLeft.Visible = false;
         }
 
-        ClientScript.RegisterStartupScript(this.GetType(), "C1", "<script> if (window.parent.document.getElementById('TakeTopSiteMDI').cols == '181,*') { top.frames[2].document.all('IM_RightToLeft').style.display = 'none';}</script>");
+        ClientScript.RegisterStartupScript(this.GetType(), "C2", "<script> if (window.parent.document.getElementById('TakeTopSiteMDI').cols == '181,*') { top.frames[2].document.all('IM_RightToLeft').style.display = 'none';}</script>");
         if (Page.IsPostBack != true)
         {
             if (strModuleName != null)
