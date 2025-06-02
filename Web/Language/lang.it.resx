@@ -12853,7 +12853,7 @@
     <value>N. canale</value>
   </data>
   <data name="TongGuo" xml:space="preserve">
-    <value>Attraverso</value>
+    <value>Passare attraverso</value>
   </data>
   <data name="TongGuoTiaoJian" xml:space="preserve">
     <value>In condizioni</value>
@@ -15985,7 +15985,7 @@
     <value>I membri dispongono di questa autorizzazione</value>
   </data>
   <data name="You" xml:space="preserve">
-    <value>Dal</value>
+    <value>avere</value>
   </data>
   <data name="YouBian" xml:space="preserve">
     <value>CAP</value>
@@ -28852,7 +28852,7 @@
     <value>o definizione:</value>
   </data>
   <data name="WeiKong" xml:space="preserve">
-    <value>vuoto,</value>
+    <value>è vuoto,</value>
   </data>
   <data name="BuCunZai" xml:space="preserve">
     <value>non esiste,</value>

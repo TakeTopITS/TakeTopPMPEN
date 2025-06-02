@@ -12853,7 +12853,7 @@
     <value>チャンネル番号</value>
   </data>
   <data name="TongGuo" xml:space="preserve">
-    <value>、</value>
+    <value>通過する</value>
   </data>
   <data name="TongGuoTiaoJian" xml:space="preserve">
     <value>条件により、</value>
@@ -15985,7 +15985,7 @@
     <value>メンバーは、この権限を持っています</value>
   </data>
   <data name="You" xml:space="preserve">
-    <value>によって</value>
+    <value>あります</value>
   </data>
   <data name="YouBian" xml:space="preserve">
     <value>郵便番号</value>
@@ -28852,7 +28852,7 @@
     <value>材料生産注文書</value>
   </data>
   <data name="WeiKong" xml:space="preserve">
-    <value>生産加工費用</value>
+    <value>が空です</value>
   </data>
   <data name="BuCunZai" xml:space="preserve">
     <value>購入注文レポート.xls</value>

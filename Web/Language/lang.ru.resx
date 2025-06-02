@@ -12853,7 +12853,7 @@
     <value>№ канала</value>
   </data>
   <data name="TongGuo" xml:space="preserve">
-    <value>Через</value>
+    <value>Проходить через</value>
   </data>
   <data name="TongGuoTiaoJian" xml:space="preserve">
     <value>По условию</value>
@@ -28854,7 +28854,7 @@
     <value>Отчет о заказах на закупку.xls</value>
   </data>
   <data name="WeiKong" xml:space="preserve">
-    <value>Отчет о возврате закупок.xls</value>
+    <value>пуст,</value>
   </data>
   <data name="BuCunZai" xml:space="preserve">
     <value>Отчет о возврате продаж.xls</value>

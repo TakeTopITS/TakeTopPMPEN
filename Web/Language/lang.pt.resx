@@ -12853,7 +12853,7 @@
     <value>Canal No.</value>
   </data>
   <data name="TongGuo" xml:space="preserve">
-    <value>Através</value>
+    <value>Passar por</value>
   </data>
   <data name="TongGuoTiaoJian" xml:space="preserve">
     <value>Por condição</value>
@@ -15985,7 +15985,7 @@
     <value>Os membros têm essa permissão</value>
   </data>
   <data name="You" xml:space="preserve">
-    <value>Pelo</value>
+    <value>ter</value>
   </data>
   <data name="YouBian" xml:space="preserve">
     <value>Código de endereçamento postal</value>
@@ -28852,7 +28852,7 @@
     <value>Relatório de pedidos de compra.xls</value>
   </data>
   <data name="WeiKong" xml:space="preserve">
-    <value>Relatório de devolução de compras.xls</value>
+    <value>está vazio,</value>
   </data>
   <data name="BuCunZai" xml:space="preserve">
     <value>Relatório de devolução de vendas.xls</value>

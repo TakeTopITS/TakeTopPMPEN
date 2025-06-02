@@ -411,7 +411,7 @@
                                                                         <td>
                                                                             <asp:DropDownList ID="DL_CurrencyType" runat="server" DataTextField="Type" DataValueField="Type"></asp:DropDownList>
                                                                         </td>
-                                                                        <td style="width: 30px; text-align: right;">
+                                                                        <td style="text-align: right;">
                                                                             <asp:Label ID="LB_TBStatus" runat="server" Text="<%$ Resources:lang,Status %>" />:
                                                                         </td>
                                                                         <td>

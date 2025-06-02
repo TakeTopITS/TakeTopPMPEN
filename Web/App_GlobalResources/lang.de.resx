@@ -12853,7 +12853,7 @@
     <value>Kanalnummer</value>
   </data>
   <data name="TongGuo" xml:space="preserve">
-    <value>Durch</value>
+    <value>Durchgehen</value>
   </data>
   <data name="TongGuoTiaoJian" xml:space="preserve">
     <value>Nach Bedingung</value>
@@ -15985,7 +15985,7 @@
     <value>Die Mitglieder haben diese Berechtigung</value>
   </data>
   <data name="You" xml:space="preserve">
-    <value>Durch die</value>
+    <value>haben</value>
   </data>
   <data name="YouBian" xml:space="preserve">
     <value>PLZ</value>
@@ -28852,7 +28852,7 @@
     <value>Materialproduktionsauftrag</value>
   </data>
   <data name="WeiKong" xml:space="preserve">
-    <value>Produktions- und Verarbeitungskosten</value>
+    <value>ist leer,</value>
   </data>
   <data name="BuCunZai" xml:space="preserve">
     <value>Bestellbericht.xls</value>

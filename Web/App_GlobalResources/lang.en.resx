@@ -12853,7 +12853,7 @@
     <value>Channel number</value>
   </data>
   <data name="TongGuo" xml:space="preserve">
-    <value>By</value>
+    <value>Passed</value>
   </data>
   <data name="TongGuoTiaoJian" xml:space="preserve">
     <value>By condition</value>
@@ -15985,7 +15985,7 @@
     <value>Members have this permission</value>
   </data>
   <data name="You" xml:space="preserve">
-    <value>By the</value>
+    <value>have</value>
   </data>
   <data name="YouBian" xml:space="preserve">
     <value>Zip Code</value>
@@ -28853,7 +28853,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>By job type</value>
   </data>
   <data name="WeiKong" xml:space="preserve">
-    <value>Project human resources table by job type_</value>
+    <value>is empty,</value>
   </data>
   <data name="BuCunZai" xml:space="preserve">
     <value>Project human resources table by subgroup_</value>

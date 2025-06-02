@@ -12853,7 +12853,7 @@
     <value>채널 번호</value>
   </data>
   <data name="TongGuo" xml:space="preserve">
-    <value>통해</value>
+    <value>통과하다</value>
   </data>
   <data name="TongGuoTiaoJian" xml:space="preserve">
     <value>조건에 의해</value>
@@ -15985,7 +15985,7 @@
     <value>회원은이 권한이</value>
   </data>
   <data name="You" xml:space="preserve">
-    <value>으로</value>
+    <value>있습니다</value>
   </data>
   <data name="YouBian" xml:space="preserve">
     <value>우편 번호</value>
@@ -28852,7 +28852,7 @@
     <value>또는 정의:</value>
   </data>
   <data name="WeiKong" xml:space="preserve">
-    <value>비어 있음,</value>
+    <value>비어 있습니다,</value>
   </data>
   <data name="BuCunZai" xml:space="preserve">
     <value>존재하지 않음,</value>
