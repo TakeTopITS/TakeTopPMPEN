@@ -242,7 +242,7 @@
                                                                     <td>
                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                             <tr>
-                                                                                <td width="8%" align="left">
+                                                                                <td width="4%" align="left">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label></strong>
                                                                                 </td>
@@ -312,7 +312,7 @@
                                                                 PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
                                                                     <asp:TemplateColumn HeaderText="Number">
-                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="4%" />
                                                                         <ItemTemplate>
                                                                             <input value='<%#Eval("ID") %>' id='<%#Eval("ID") %>' type="checkbox" name="dlCode" />
                                                                             <asp:Label ID="Label2221" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'></asp:Label>
