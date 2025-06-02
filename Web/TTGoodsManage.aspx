@@ -120,11 +120,74 @@
                                 <td valign="top" style="padding: 5px 5px 5px 5px;">
                                     <table style="width: 100%" cellpadding="0" cellspacing="0" align="left">
                                         <tr>
+                                            <td id="td_Owner" style="display: none;" runat="server">
+
+                                                <table style="width: 100%; vertical-align: top;">
+                                                    <tr>
+                                                        <td style="width: 220px; border-left: solid 1px #D8D8D8; padding: 5px 0px 0px 5px"
+                                                            valign="top" align="left">
+                                                            <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
+                                                                ShowLines="True" Width="220px">
+                                                                <RootNodeStyle CssClass="rootNode" />
+                                                                <NodeStyle CssClass="treeNode" />
+                                                                <LeafNodeStyle CssClass="leafNode" />
+                                                                <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
+                                                            </asp:TreeView>
+                                                        </td>
+                                                        <td valign="top" width="160" style="padding: 5px 2px  0px 5px; border-left: solid 1px #D8D8D8; text-align: center;">
+
+                                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
+                                                                <tr>
+                                                                    <td width="7">
+                                                                        <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" />
+                                                                    </td>
+                                                                    <td>
+                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                            <tr>
+                                                                                <td align="left">
+                                                                                    <strong>
+                                                                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,BuMenRenYuan%>"></asp:Label></strong>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td width="6" align="right">
+                                                                        <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" OnItemCommand="DataGrid3_ItemCommand"
+                                                                ShowHeader="false" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                                <EditItemStyle BackColor="#2461BF" />
+                                                                <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="left" />
+
+                                                                <ItemStyle CssClass="itemStyle" />
+                                                                <Columns>
+                                                                    <asp:TemplateColumn HeaderText="部门人员：">
+                                                                        <ItemTemplate>
+                                                                            <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
+                                                                            <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
+                                                                        </ItemTemplate>
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
+                                                                    </asp:TemplateColumn>
+                                                                </Columns>
+                                                            </asp:DataGrid>
+
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+
+                                            </td>
                                             <td valign="top">
                                                 <table style="font-size: 10pt; width: 100%" cellpadding="0" cellspacing="0">
                                                     <tr>
+                                                        <td onmousemove="javascript:displayOwnerColumn();" style="vertical-align: middle;">......
+                                                        </td>
                                                         <td valign="top" align="left" style="padding: 5px 2px  0px 5px;">
-                                                            <table  cellpadding="0" cellspacing="0" class="formBgStyle">
+                                                            <table cellpadding="0" cellspacing="0" class="formBgStyle">
                                                                 <tr>
                                                                     <td align="right">
                                                                         <asp:Label ID="Label1222" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：
@@ -160,7 +223,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="width: 98%; text-align: left;" valign="top">
+                                                        <td colspan="2" style="width: 98%; text-align: left;" valign="top">
                                                             <asp:Label ID="LB_GoodsOwner" runat="server"></asp:Label>
                                                             <asp:Label ID="LB_UserCode" runat="server" Font-Bold="False" Font-Size="9pt"
                                                                 Visible="False" Width="57px"></asp:Label>
@@ -170,7 +233,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: center;" valign="top">
+                                                        <td colspan="2" style="text-align: center;" valign="top">
                                                             <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>
                                                                     <td width="7">
@@ -233,7 +296,7 @@
                                                                                         <asp:Label ID="Label2214" runat="server" Text="<%$ Resources:lang,ChengFangChuangWei%>"></asp:Label></strong>
                                                                                 </td>
 
-                                                                                <td align="left" onmousemove="javascript:displayOwnerColumn();" >
+                                                                                <td align="left" onmousemove="javascript:displayOwnerColumn();">
                                                                                     <strong></strong>
                                                                                 </td>
                                                                             </tr>
@@ -249,14 +312,14 @@
                                                                 PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
                                                                     <asp:TemplateColumn HeaderText="Number">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                         <ItemTemplate>
                                                                             <input value='<%#Eval("ID") %>' id='<%#Eval("ID") %>' type="checkbox" name="dlCode" />
                                                                             <asp:Label ID="Label2221" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'></asp:Label>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
                                                                     <asp:BoundColumn DataField="GoodsCode" HeaderText="Code">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTGoodsInforView.aspx?GoodsID={0}"
                                                                         DataTextField="GoodsName" HeaderText="Name" Target="_blank">
@@ -272,16 +335,16 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="11%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="Number" HeaderText="Quantity">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="UnitName" HeaderText="Unit">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="Price" HeaderText="UnitPrice">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="7%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="IsTaxPrice" HeaderText="含税">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="Position" HeaderText="地址">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
@@ -306,13 +369,12 @@
                                                                                         </a>
                                                                                     </td>
 
-                                                                                      <td onmousemove="javascript:displayOwnerColumn();" style="vertical-align:middle;">......
-  </td>
+
 
                                                                                 </tr>
                                                                             </table>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                     </asp:TemplateColumn>
 
 
@@ -322,75 +384,13 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                             </asp:DataGrid>
                                                             <asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>
                                                             <asp:Label ID="LB_DepartString" runat="server" Visible="false"></asp:Label>
                                                         </td>
                                                     </tr>
                                                 </table>
-                                            </td>
-                                          
-
-                                            <td id="td_Owner" style="display: none;" runat="server">
-
-                                                <table style="width: 100%; vertical-align: top;">
-                                                    <tr>
-                                                        <td valign="top" width="160" style="padding: 5px 2px  0px 5px; border-left: solid 1px #D8D8D8; text-align: center;">
-
-                                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
-                                                                <tr>
-                                                                    <td width="7">
-                                                                        <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" />
-                                                                    </td>
-                                                                    <td>
-                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                            <tr>
-                                                                                <td align="left">
-                                                                                    <strong>
-                                                                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,BuMenRenYuan%>"></asp:Label></strong>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
-                                                                    <td width="6" align="right">
-                                                                        <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                            <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" OnItemCommand="DataGrid3_ItemCommand"
-                                                                ShowHeader="false" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
-                                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                                <EditItemStyle BackColor="#2461BF" />
-                                                                <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
-
-                                                                <ItemStyle CssClass="itemStyle" />
-                                                                <Columns>
-                                                                    <asp:TemplateColumn HeaderText="部门人员：">
-                                                                        <ItemTemplate>
-                                                                            <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
-                                                                            <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
-                                                                        </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
-                                                                    </asp:TemplateColumn>
-                                                                </Columns>
-                                                            </asp:DataGrid>
-
-                                                        </td>
-                                                        <td style="width: 220px; border-left: solid 1px #D8D8D8; padding: 5px 0px 0px 5px"
-                                                            valign="top" align="left">
-                                                            <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
-                                                                ShowLines="True" Width="220px">
-                                                                <RootNodeStyle CssClass="rootNode" />
-                                                                <NodeStyle CssClass="treeNode" />
-                                                                <LeafNodeStyle CssClass="leafNode" />
-                                                                <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
-                                                            </asp:TreeView>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-
                                             </td>
                                         </tr>
                                     </table>

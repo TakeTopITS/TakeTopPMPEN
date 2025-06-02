@@ -156,7 +156,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyleForAlignLeft" colspan="2">
+                                                            <td class="formItemBgStyleForAlignCenter" colspan="2">
                                                                 <asp:Button ID="BT_Save" runat="server" CssClass="inpu" OnClick="BT_Save_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                             </td>
                                                         </tr>

@@ -122,22 +122,22 @@
                                         OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="false" Width="100%">
                                         <Columns>
                                             <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
-                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                             </asp:ButtonColumn>
                                             <asp:TemplateColumn HeaderText="Delete">
                                                 <ItemTemplate>
                                                     <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                 </ItemTemplate>
-                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                             </asp:TemplateColumn>
                                             <asp:BoundColumn DataField="ID" HeaderText="ID">
-                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="5%" />
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="5%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="Message" HeaderText="信息内容">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="55%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="SendTime" HeaderText="发送时间">
-                                                <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="20%" />
+                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                             </asp:BoundColumn>
                                             <asp:TemplateColumn HeaderText="Status">
                                                 <ItemTemplate>
@@ -151,7 +151,7 @@
                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                         <EditItemStyle BackColor="#2461BF" />
                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                        <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                        <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                     </asp:DataGrid>
                                 </td>
                             </tr>
@@ -167,6 +167,59 @@
 
                             <table style="width: 100%" cellpadding="0" cellspacing="0">
                                 <tr>
+                                    <td align="left" style="width: 190px; padding: 0px 5px 0px 5px" valign="top">
+                                        <asp:TreeView ID="TreeView1" runat="server" BorderColor="Transparent" NodeWrap="True"
+                                            OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Width="190px">
+                                            <RootNodeStyle CssClass="rootNode" />
+                                            <NodeStyle CssClass="treeNode" />
+                                            <LeafNodeStyle CssClass="leafNode" />
+                                            <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
+                                        </asp:TreeView>
+                                    </td>
+                                    <td style="width: 170px; padding: 5px 5px 5px 5px; text-align: center; vertical-align: top; border-right: solid 1px #D8D8D8">
+                                        <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0"
+                                            width="100%">
+                                            <tr>
+                                                <td width="7">
+                                                    <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" />
+                                                </td>
+                                                <td>
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td align="left" width="100%">
+                                                                <strong>
+                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,BuMenRenYuan%>"></asp:Label>
+                                                                </strong>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td align="right" width="6">
+                                                    <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4"
+                                            Font-Bold="True" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid1_ItemCommand"
+                                            ShowHeader="false" Width="100%">
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <EditItemStyle BackColor="#2461BF" />
+                                            <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="left" />
+
+                                            <ItemStyle CssClass="itemStyle" />
+                                            <Columns>
+                                                <asp:TemplateColumn HeaderText="">
+                                                    <ItemTemplate>
+                                                        <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
+                                                        <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
+                                                    </ItemTemplate>
+                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
+                                                </asp:TemplateColumn>
+                                            </Columns>
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
+                                        </asp:DataGrid>
+                                    </td>
                                     <td align="left" style="padding: 5px 5px 5px 5px; vertical-align: top; border-right: solid 1px #D8D8D8">
                                         <table cellpadding="5" cellspacing="0" class="formBgStyle" width="95%">
                                             <tr>
@@ -226,59 +279,9 @@
                                                 </tr>
                                         </table>
                                     </td>
-                                    <td style="width: 170px; padding: 5px 5px 5px 5px; text-align: center; vertical-align: top; border-right: solid 1px #D8D8D8">
-                                        <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0"
-                                            width="100%">
-                                            <tr>
-                                                <td width="7">
-                                                    <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" />
-                                                </td>
-                                                <td>
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td align="left" width="100%">
-                                                                <strong>
-                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,BuMenRenYuan%>"></asp:Label>
-                                                                </strong>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td align="right" width="6">
-                                                    <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4"
-                                            Font-Bold="True" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid1_ItemCommand"
-                                            ShowHeader="false" Width="100%">
-                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <EditItemStyle BackColor="#2461BF" />
-                                            <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
 
-                                            <ItemStyle CssClass="itemStyle" />
-                                            <Columns>
-                                                <asp:TemplateColumn HeaderText="">
-                                                    <ItemTemplate>
-                                                        <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
-                                                        <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />
-                                                    </ItemTemplate>
-                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
-                                                </asp:TemplateColumn>
-                                            </Columns>
-                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
-                                        </asp:DataGrid>
-                                    </td>
-                                    <td align="left" style="width: 190px; padding: 0px 5px 0px 5px" valign="top">
-                                        <asp:TreeView ID="TreeView1" runat="server" BorderColor="Transparent" NodeWrap="True"
-                                            OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Width="190px">
-                                            <RootNodeStyle CssClass="rootNode" />
-                                            <NodeStyle CssClass="treeNode" />
-                                            <LeafNodeStyle CssClass="leafNode" />
-                                            <SelectedNodeStyle CssClass="selectNode" ForeColor="Red" />
-                                        </asp:TreeView>
-                                    </td>
+
+
                                 </tr>
                             </table>
 

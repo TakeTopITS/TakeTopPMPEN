@@ -167,7 +167,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="width: 100%;" align="left">
+                                                                    <td style="width: 100%;padding-right :230px;" align="right">
                                                                         <br />
                                                                         <asp:Button ID="BT_ModuleSave" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BaoCun%>" Enabled="false" OnClick="BT_ModuleSave_Click" />
                                                                     </td>
