@@ -228,6 +228,7 @@ function popShowByURL(url, title, width, height, parentWindow) {
         fixed: true,
         resize: true,
         scrollbar: true,
+        offset: 't', // 关键配置 - 顶部对齐
         moveOut: true,
         shade: false,
         shadeClose: false,
