@@ -212,7 +212,7 @@
                                         <td style="width: 500px; text-align: left;" rowspan="2">
                                             <table width="100%">
                                                 <tr>
-                                                    <td style="width: 15%;">
+                                                    <td style="width: 28%;">
                                                         <asp:Label ID="Label77" runat="server" Text="<%$ Resources:lang,ShenPiYiJian %>"></asp:Label>:
                                                     </td>
                                                     <td style="text-align: left;">
@@ -254,7 +254,7 @@
                                                  <img src="ImagesSkin/ExpenseMgt.png" width= "24" height ="24" class="noBorder" />
                                             </asp:HyperLink>
                                         </td>
-                                        <td style="width: 60px; text-align: center;">
+                                        <td style="width: 100px; text-align: center;">
 
                                             <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,HaoFeiGongShi %>"></asp:Label>:
                                         </td>
@@ -275,7 +275,7 @@
                                         <td style="width: 60px; text-align: center;">
                                             <asp:ImageButton ID="BT_GetRelatedData" runat="server" ImageUrl="Images/Query.gif" OnClick="BT_GetRelatedData_Click" ToolTip="<%$ Resources:lang,ChaKanXiangGanShuJi %>" />
                                         </td>
-                                        <td style="width: 80px; text-align: right;">
+                                        <td style="width: 100px; text-align: right;">
                                             <asp:Label ID="Label78" runat="server" Text="<%$ Resources:lang,QianMingRiQi %>"></asp:Label>
                                         </td>
                                         <td style="width: 100px; text-align: left;">

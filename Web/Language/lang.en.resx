@@ -7252,7 +7252,7 @@
     <value>Conduct inspection</value>
   </data>
   <data name="JinXingZhong" xml:space="preserve">
-    <value>in progress</value>
+    <value>InProgress</value>
   </data>
   <data name="JinYong" xml:space="preserve">
     <value>Disabled</value>
@@ -10642,7 +10642,7 @@
     <value>I participated in the implementation of the project</value>
   </data>
   <data name="Running" xml:space="preserve">
-    <value>in progress</value>
+    <value>InProgress</value>
   </data>
   <data name="RunProject" xml:space="preserve">
     <value>Run Project</value>
