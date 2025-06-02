@@ -65,47 +65,33 @@
                                             <table width="100%" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td style="width: 105px;" class="formItemBgStyleForAlignLeft"></td>
-                                                    <td colspan="3" align="right" style="padding-right: 12px;" class="formItemBgStyleForAlignLeft">
-                                                        <table cellpadding="0" cellspacing="0">
-                                                            <tr>
-                                                                <td style="text-align: right;"></td>
-                                                                <td colspan="3" style="text-align: Left; height: 1px;">
-                                                                    <asp:Button ID="BT_Upate" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu"
-                                                                        OnClick="BT_Update_Click" Enabled="False" />&nbsp;&nbsp;
+                                                    <td colspan="3" align="right" style="padding-right: 12px;" class="formItemBgStyleForAlignRight">
+                                                        <asp:Button ID="BT_Upate" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu"
+                                                            OnClick="BT_Update_Click" Enabled="False" />&nbsp;&nbsp;
                                                                     <asp:Button ID="BT_Delete" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_Delete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())"
                                                                         Text="<%$ Resources:lang,Delete%>" />
-                                                                </td>
-                                                                <td>&nbsp;</td>
-                                                                <td>
-                                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JueSe%>"></asp:Label>£º
-                                                                </td>
-                                                                <td>
+
+                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JueSe%>"></asp:Label>£º
+                                                            
                                                                     <asp:DropDownList
                                                                         ID="DL_Aactor" runat="server">
                                                                         <asp:ListItem Value="ProjectManager" Text="<%$ Resources:lang,XiangMuJingLi%>" />
                                                                         <asp:ListItem Value="ProjectCreator" Text="<%$ Resources:lang,LiXiangZhe%>" />
-                                                                    </asp:DropDownList></td>
-                                                                <td>
-                                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhuanGei%>"></asp:Label>:</td>
-                                                                <td>
+                                                                    </asp:DropDownList>
+                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhuanGei%>"></asp:Label>:
                                                                     <asp:DropDownList
                                                                         ID="DL_NewPMName" runat="server" DataTextField="UserName" DataValueField="UserCode"
                                                                         Width="95px">
-                                                                    </asp:DropDownList></td>
-                                                                <td>
-                                                                    <asp:Button ID="BT_DirectDepartment" CssClass="inpu" runat="server" Text="<%$ Resources:lang,ZhiShuBuMen%>" />
-                                                                    <cc1:ModalPopupExtender ID="BT_DirectDepartment_ModalPopupExtender" runat="server"
-                                                                        Enabled="True" TargetControlID="BT_DirectDepartment" PopupControlID="Panel1"
-                                                                        CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150">
-                                                                    </cc1:ModalPopupExtender>
-                                                                </td>
-                                                                <td>&nbsp;</td>
-                                                                <td>
-                                                                    <asp:Button ID="BT_TransferProject" runat="server" CssClass="inpu" Text="<%$ Resources:lang,TransferPM%>"
-                                                                        OnClick="BT_TransferProject_Click" Enabled="False" />
-                                                                </td>
-                                                            </tr>
-                                                        </table>
+                                                                    </asp:DropDownList>
+                                                        <asp:Button ID="BT_DirectDepartment" CssClass="inpu" runat="server" Text="<%$ Resources:lang,ZhiShuBuMen%>" />
+                                                        <cc1:ModalPopupExtender ID="BT_DirectDepartment_ModalPopupExtender" runat="server"
+                                                            Enabled="True" TargetControlID="BT_DirectDepartment" PopupControlID="Panel1"
+                                                            CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150">
+                                                        </cc1:ModalPopupExtender>
+
+                                                        <asp:Button ID="BT_TransferProject" runat="server" CssClass="inpu" Text="<%$ Resources:lang,TransferPM%>"
+                                                            OnClick="BT_TransferProject_Click" Enabled="False" />
+
                                                     </td>
                                                 </tr>
                                                 <tr>
