@@ -15,6 +15,29 @@
             min-width: 1380px;
             width: expression (document.body.clientWidth <= 1380? "1380px" : "auto" ));
         }
+
+
+        .moduleGreen li {
+            float: left; /* 往左浮动 */
+            background: url('ImagesSkin/JianTouTuGreen.png');
+            height: 44px;
+            width: 151px;
+            vertical-align: middle;
+            list-style: none; /* 将默认的列表符号去掉 */
+            padding: 0; /* 将默认的内边距去掉 */
+            margin: 0; /* 将默认的外边距去掉 */
+        }
+
+        .moduleGrey li {
+            float: left; /* 往左浮动 */
+            background: url('ImagesSkin/JianTouTuGrey.png');
+            height: 44px;
+            width: 151px;
+            vertical-align: middle;
+            list-style: none; /* 将默认的列表符号去掉 */
+            padding: 0; /* 将默认的内边距去掉 */
+            margin: 0; /* 将默认的外边距去掉 */
+        }
     </style>
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -68,142 +91,7 @@
                             <tr>
                                 <td align="left" style="padding: 5px 5px 5px 5px;">
                                     <table cellpadding="0" cellspacing="0" width="100%" align="left">
-                                        <tr id="trProjectView" style="display: none;">
-                                            <td style="text-align: left;" width="100%">
-                                                <asp:DataList ID="DataList1" runat="server" Height="1px" CellPadding="0" ForeColor="#333333"
-                                                    Width="100%">
-                                                    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <HeaderTemplate>
-                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
-                                                            <tr>
-                                                                <td width="7">
-                                                                    <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" />
-                                                                </td>
-                                                                <td>
-                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                        <tr>
-                                                                            <td width="5%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLProjectID" runat="server" Text="<%$ Resources:lang,ProjectID%>" /></strong>
-                                                                            </td>
-                                                                            <td width="18%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>" /></strong>
-                                                                            </td>
-                                                                            <td width="6%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLProjectType" runat="server" Text="<%$ Resources:lang,ProjectType%>" /></strong>
-                                                                            </td>
-                                                                            <td width="6%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLProjectCreator" runat="server" Text="<%$ Resources:lang,ProjectCreator%>" /></strong>
-                                                                            </td>
-                                                                            <td width="6%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_CustomerPM" runat="server" Text="<%$ Resources:lang,CustomerPM%>" /></strong>
-                                                                            </td>
-                                                                            <td width="6%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLBudget" runat="server" Text="<%$ Resources:lang,Budget%>" /></strong>
-                                                                            </td>
-                                                                            <td width="5%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLManHour" runat="server" Text="<%$ Resources:lang,ManHour%>" /></strong>
-                                                                            </td>
-                                                                            <td width="5%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLManPower" runat="server" Text="<%$ Resources:lang,ManPower%>" /></strong>
-                                                                            </td>
-                                                                            <td width="6%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLStartTime" runat="server" Text="<%$ Resources:lang,StartTime%>" /></strong>
-                                                                            </td>
-                                                                            <td width="6%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLEndTime" runat="server" Text="<%$ Resources:lang,EndTime%>" /></strong>
-                                                                            </td>
-                                                                            <td width="6%" align="left">
-                                                                                <strong>
-                                                                                    <asp:Label ID="LB_DLCreateTime" runat="server" Text="<%$ Resources:lang,CreateTime%>" /></strong>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                                <td width="6" align="right">
-                                                                    <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </HeaderTemplate>
-                                                    <ItemTemplate>
-                                                        <table cellpadding="4" cellspacing="0" width="100%">
-                                                            <tr>
-                                                                <td style="width: 5%; text-align: center;" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>
-                                                                </td>
-                                                                <td style="width: 18%; text-align: left; padding-left: 5px" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"ProjectName") %>
-                                                                </td>
-                                                                <td style="width: 6%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"ProjectType") %>
-                                                                </td>
-                                                                <td style="width: 6%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"UserName") %>
-                                                                </td>
-                                                                <td style="width: 6%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"CustomerPMName") %>
-                                                                </td>
-                                                                <td style="width: 6%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"Budget") %>
-                                                                </td>
-                                                                <td style="width: 5%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"ManHour") %>
-                                                                </td>
-                                                                <td style="width: 5%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"ManNumber") %>
-                                                                </td>
-                                                                <td style="width: 6%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem, "BeginDate","{0:yyyy/MM/dd}") %>
-                                                                </td>
-                                                                <td style="width: 6%; text-align: center" class="tdLeft">
-                                                                    <%#DataBinder.Eval(Container.DataItem, "EndDate", "{0:yyyy/MM/dd}")%>
-                                                                </td>
-                                                                <td style="width: 6%; text-align: center" class="tdRight">
-                                                                    <%#DataBinder.Eval(Container.DataItem, "MakeDate", "{0:yyyy/MM/dd}")%>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="width: 5%; text-align: center; font-size: 10pt" class="tdLeft">
-                                                                    <asp:Label ID="LB_DLDescription" runat="server" Text="<%$ Resources:lang,Description%>" />
-                                                                </td>
-                                                                <td colspan="10" style="text-align: left; padding-left: 5px" class="tdRight">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"ProjectDetail") %>
-                                                                </td>
-                                                            </tr>
 
-                                                            <tr>
-                                                                <td style="width: 5%; text-align: center; font-size: 10pt" class="tdLeft">
-                                                                    <asp:Label ID="LB_DLStatus" runat="server" Text="<%$ Resources:lang,Status%>" />
-                                                                </td>
-                                                                <td style="text-align: left; padding-left: 5px" class="tdLeft">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"Status") %>&nbsp;&nbsp;
-                                                                </td>
-                                                                <td style="width: 5%; text-align: center; font-size: 10pt" class="tdLeft">
-                                                                    <asp:Label ID="LB_StatusValue" runat="server" Text="<%$ Resources:lang,StatusValue%>" />:
-                                                                </td>
-                                                                <td colspan="8" style="text-align: left; padding-left: 5px" class="tdRight">
-                                                                    <%#DataBinder .Eval (Container .DataItem,"StatusValue") %>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </ItemTemplate>
-                                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-
-                                                    <ItemStyle CssClass="itemStyle" />
-                                                </asp:DataList>
-
-                                            </td>
-                                        </tr>
                                         <tr>
                                             <td align="left">
                                                 <table cellpadding="0" cellspacing="0" width="100%" align="left">
@@ -232,42 +120,51 @@
 
                                                             <table width="95%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                 <tr>
-                                                                    <td style="padding-top: 10px; width: 280px" class="formItemBgStyleForAlignLeft">
-
-                                                                        <asp:Button ID="BT_Receive" runat="server" Text="<%$ Resources:lang,ProjectAgree%>"
-                                                                            CssClass="inpu" OnClick="BT_Receive_Click" />&nbsp;
-                                                                                <asp:Button ID="BT_Refuse" runat="server" Text="<%$ Resources:lang,Refuse%>" OnClick="BT_Refuse_Click"
-                                                                                    CssClass="inpu" />&nbsp;
-                                                                                <asp:Button ID="BT_Activity" runat="server" Text="<%$ Resources:lang,Running%>" CssClass="inpu"
-                                                                                    OnClick="BT_Activity_Click" />
-                                                                    </td>
-                                                                    <td class="formItemBgStyleForAlignLeft">
-
-                                                                        <asp:Repeater ID="Repeater1" runat="server">
-                                                                            <ItemTemplate>
-                                                                                <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe">
-                                                                                    <b><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %> &nbsp; </b>
-                                                                                </a>
-                                                                            </ItemTemplate>
-                                                                        </asp:Repeater>
-
-                                                                        <%-- <asp:HyperLink ID="HL_ImplePlan" runat="server" Font-Bold="True" Target="_blank" Text="<%$ Resources:lang,hlImplementPlan%>"></asp:HyperLink>
-
-                                                                        &nbsp;<asp:HyperLink ID="HL_WorkSchedule" runat="server" Font-Bold="True" Target="_blank" Text="<%$ Resources:lang,GongZuoRiChengJT%>"></asp:HyperLink>
-
-                                                                        &nbsp;
-                                                                                    <asp:HyperLink ID="HL_RelatedDoc" runat="server" Font-Bold="True" NavigateUrl="TTProRelatedDoc.aspx"
-                                                                                        Target="_blank" Text="<%$ Resources:lang,ProjectDocumentJT%>"></asp:HyperLink>
-                                                                        &nbsp;
-                                                                                    <asp:HyperLink ID="HL_RelatedUser" runat="server" NavigateUrl="TTProRelatedUser.aspx" Font-Bold="True" Target="_blank" Text="<%$ Resources:lang,ProjectMemberJT%>"></asp:HyperLink>
-
-
-                                                                        &nbsp;<asp:HyperLink ID="HL_DailyWorkReport" runat="server" Target="_blank" Font-Bold="True" Text="<%$ Resources:lang,hlDailyWorkReportJT%>"></asp:HyperLink>--%>
+                                                                    <td colspan="2" class="formItemBgStyleForAlignLeft">
+                                                                        <div style="width: 2000px; overflow: auto;">
+                                                                            <ul class="moduleGreen">
+                                                                                <asp:Repeater ID="Repeater1" runat="server">
+                                                                                    <ItemTemplate>
+                                                                                        <li>
+                                                                                            <div style="padding-top: 10px; text-align: center; width: 100%;">
+                                                                                                <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                                                    <b style="color: white;"><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %></b>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ItemTemplate>
+                                                                                </asp:Repeater>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <ul class="moduleGreen">
+                                                                            <asp:Repeater ID="Repeater2" runat="server">
+                                                                                <ItemTemplate>
+                                                                                    <li>
+                                                                                        <div style="padding-top: 10px; text-align: center; width: 100%;">
+                                                                                            <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe" style="display: block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                                                <b style="color: white;"><%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %></b>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ItemTemplate>
+                                                                            </asp:Repeater>
+                                                                        </ul>
 
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
+                                                                    <td colspan="2" style="padding-top: 10px; width: 280px" class="formItemBgStyleForAlignLeft">
+
+                                                                        <asp:Button ID="BT_Receive" runat="server" Text="<%$ Resources:lang,ProjectAgree%>"
+                                                                            CssClass="inpu" OnClick="BT_Receive_Click" />&nbsp;
+                                                                        <asp:Button ID="BT_Refuse" runat="server" Text="<%$ Resources:lang,Refuse%>" OnClick="BT_Refuse_Click"
+                                                                            CssClass="inpu" />&nbsp;
+                                                                        <asp:Button ID="BT_Activity" runat="server" Text="<%$ Resources:lang,Running%>" CssClass="inpu"
+                                                                            OnClick="BT_Activity_Click" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2" class="formItemBgStyleForAlignLeft">
                                                                         <asp:CheckBox ID="CB_ReturnMsg" runat="server" Font-Bold="False" Text="<%$ Resources:lang,SendSMS%>" /><asp:CheckBox
                                                                             ID="CB_ReturnMail" runat="server" Font-Bold="False" Text="<%$ Resources:lang,SendEMail%>" />
                                                                         <asp:Label ID="LB_NoticeProjectCreator" runat="server" Text="<%$ Resources:lang,NoticeProjectCreator%>" />
@@ -276,17 +173,16 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
+                                                                    <td colspan="2" class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="LB_TodaySummary" runat="server" Text="<%$ Resources:lang,TodaySummary%>" />
                                                                         <asp:Label ID="LB_WorkID" runat="server" Text="-1" Visible="False"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
+                                                                    <td colspan="2" class="formItemBgStyleForAlignLeft">
                                                                         <table>
                                                                             <tr>
 
-                                                                                <td></td>
                                                                                 <td>
                                                                                     <asp:Label ID="LB_Progress" runat="server" Text="<%$ Resources:lang,Progress%>" />:<NickLee:NumberBox
                                                                                         ID="NB_FinishPercent" runat="server" Width="60px" MaxAmount="100" MinAmount="0">0.00</NickLee:NumberBox>
@@ -303,14 +199,7 @@
                                                                                 <td>
                                                                                     <asp:TextBox ID="TB_WorkAddress" runat="server" Width="250px"></asp:TextBox></td>
                                                                                 <td>
-                                                                                    &nbsp;
-                                                                                    <asp:Repeater ID="Repeater2" runat="server">
-                                                                                        <ItemTemplate>
-                                                                                            <a href='<%# DataBinder.Eval(Container.DataItem,"ModulePage") %>' target="iframe">
-                                                                                               <%# DataBinder.Eval(Container.DataItem,"HomeModuleName") %> &nbsp; 
-                                                                                            </a>
-                                                                                        </ItemTemplate>
-                                                                                    </asp:Repeater>
+
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" ID="TB_Charge" runat="server" Width="67px" Visible="False">0.00</NickLee:NumberBox>
 
                                                                                 </td>
@@ -319,10 +208,10 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="2"  class="formItemBgStyleForAlignLeft">
+                                                                    <td colspan="2" class="formItemBgStyleForAlignLeft">
                                                                         <table width="80%">
                                                                             <tr>
-                                                                                <td width="40px">
+                                                                                <td width="90px">
                                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,RiZhi%>"></asp:Label>：</td>
                                                                                 <td>
                                                                                     <CKEditor:CKEditorControl ID="HE_TodaySummary" runat="server" Width="100%" Height="150" Visible="false" />
@@ -336,12 +225,19 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td width="40px">
+                                                                                <td>
                                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChengGuo%>"></asp:Label>：</td>
                                                                                 <td align="left" style="padding-left: 2px;">
                                                                                     <asp:TextBox ID="TB_Achievement" runat="server" Height="50px" TextMode="MultiLine" Width="95%"></asp:TextBox>
                                                                                 </td>
                                                                                 <td>&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr style="height: 15px" class="formItemBgStyleForAlignLeft">
+                                                                                <td colspan="3" style="text-align: left; padding-left: 100px;">
+                                                                                   
+                                                                                    <asp:Button ID="BT_Summit" runat="server" Text="<%$ Resources:lang,Submit%>" CssClass="inpu"
+                                                                                        OnClick="BT_Summit_Click" Height="21px" />
+                                                                                </td>
                                                                             </tr>
                                                                         </table>
                                                                     </td>
@@ -353,16 +249,9 @@
                                                 <br />
                                             </td>
                                         </tr>
-                                        <tr style="height: 15px" class="formItemBgStyleForAlignLeft">
-                                            <td style="text-align: left; padding-left: 30px;">
-                                                <asp:Button ID="BT_Summit" runat="server" Text="<%$ Resources:lang,Submit%>" CssClass="inpu"
-                                                    OnClick="BT_Summit_Click" Height="21px" />
-                                            </td>
-                                        </tr>
                                     </table>
                                     <br />
                                     <table width="100%" cellpadding="4" cellspacing="0">
-
 
                                         <tr style="height: 15px; display: none;">
                                             <td style="text-align: left; height: 5px; padding-left: 40px;">
@@ -421,6 +310,142 @@
 
                                 </td>
                             </tr>
+                            <tr id="trProjectView" style="display: none;">
+                                <td style="text-align: left;" width="100%">
+                                    <asp:DataList ID="DataList1" runat="server" Height="1px" CellPadding="0" ForeColor="#333333"
+                                        Width="100%">
+                                        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        <HeaderTemplate>
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
+                                                <tr>
+                                                    <td width="7">
+                                                        <img src="ImagesSkin/main_n_l.jpg" width="7" height="26" />
+                                                    </td>
+                                                    <td>
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td width="5%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLProjectID" runat="server" Text="<%$ Resources:lang,ProjectID%>" /></strong>
+                                                                </td>
+                                                                <td width="18%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLProjectName" runat="server" Text="<%$ Resources:lang,ProjectName%>" /></strong>
+                                                                </td>
+                                                                <td width="6%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLProjectType" runat="server" Text="<%$ Resources:lang,ProjectType%>" /></strong>
+                                                                </td>
+                                                                <td width="6%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLProjectCreator" runat="server" Text="<%$ Resources:lang,ProjectCreator%>" /></strong>
+                                                                </td>
+                                                                <td width="6%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_CustomerPM" runat="server" Text="<%$ Resources:lang,CustomerPM%>" /></strong>
+                                                                </td>
+                                                                <td width="6%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLBudget" runat="server" Text="<%$ Resources:lang,Budget%>" /></strong>
+                                                                </td>
+                                                                <td width="5%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLManHour" runat="server" Text="<%$ Resources:lang,ManHour%>" /></strong>
+                                                                </td>
+                                                                <td width="5%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLManPower" runat="server" Text="<%$ Resources:lang,ManPower%>" /></strong>
+                                                                </td>
+                                                                <td width="6%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLStartTime" runat="server" Text="<%$ Resources:lang,StartTime%>" /></strong>
+                                                                </td>
+                                                                <td width="6%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLEndTime" runat="server" Text="<%$ Resources:lang,EndTime%>" /></strong>
+                                                                </td>
+                                                                <td width="6%" align="left">
+                                                                    <strong>
+                                                                        <asp:Label ID="LB_DLCreateTime" runat="server" Text="<%$ Resources:lang,CreateTime%>" /></strong>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="6" align="right">
+                                                        <img src="ImagesSkin/main_n_r.jpg" width="6" alt="" height="26" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </HeaderTemplate>
+                                        <ItemTemplate>
+                                            <table cellpadding="4" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td style="width: 5%; text-align: center;" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem ,"ProjectID") %>
+                                                    </td>
+                                                    <td style="width: 18%; text-align: left; padding-left: 5px" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"ProjectName") %>
+                                                    </td>
+                                                    <td style="width: 6%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"ProjectType") %>
+                                                    </td>
+                                                    <td style="width: 6%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"UserName") %>
+                                                    </td>
+                                                    <td style="width: 6%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"CustomerPMName") %>
+                                                    </td>
+                                                    <td style="width: 6%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"Budget") %>
+                                                    </td>
+                                                    <td style="width: 5%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"ManHour") %>
+                                                    </td>
+                                                    <td style="width: 5%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"ManNumber") %>
+                                                    </td>
+                                                    <td style="width: 6%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem, "BeginDate","{0:yyyy/MM/dd}") %>
+                                                    </td>
+                                                    <td style="width: 6%; text-align: center" class="tdLeft">
+                                                        <%#DataBinder.Eval(Container.DataItem, "EndDate", "{0:yyyy/MM/dd}")%>
+                                                    </td>
+                                                    <td style="width: 6%; text-align: center" class="tdRight">
+                                                        <%#DataBinder.Eval(Container.DataItem, "MakeDate", "{0:yyyy/MM/dd}")%>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 5%; text-align: center; font-size: 10pt" class="tdLeft">
+                                                        <asp:Label ID="LB_DLDescription" runat="server" Text="<%$ Resources:lang,Description%>" />
+                                                    </td>
+                                                    <td colspan="10" style="text-align: left; padding-left: 5px" class="tdRight">
+                                                        <%#DataBinder .Eval (Container .DataItem,"ProjectDetail") %>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="width: 5%; text-align: center; font-size: 10pt" class="tdLeft">
+                                                        <asp:Label ID="LB_DLStatus" runat="server" Text="<%$ Resources:lang,Status%>" />
+                                                    </td>
+                                                    <td style="text-align: left; padding-left: 5px" class="tdLeft">
+                                                        <%#DataBinder .Eval (Container .DataItem,"Status") %>&nbsp;&nbsp;
+                                                    </td>
+                                                    <td style="width: 5%; text-align: center; font-size: 10pt" class="tdLeft">
+                                                        <asp:Label ID="LB_StatusValue" runat="server" Text="<%$ Resources:lang,StatusValue%>" />:
+                                                    </td>
+                                                    <td colspan="8" style="text-align: left; padding-left: 5px" class="tdRight">
+                                                        <%#DataBinder .Eval (Container .DataItem,"StatusValue") %>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </ItemTemplate>
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+
+                                        <ItemStyle CssClass="itemStyle" />
+                                    </asp:DataList>
+
+                                </td>
+                            </tr>
                         </table>
 
                     </div>
@@ -436,4 +461,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

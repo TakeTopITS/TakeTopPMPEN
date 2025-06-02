@@ -83,7 +83,7 @@
                                                                 </tr>
                                                             </table>
                                                         </td>
-                                                        <td align="right" style="padding-top: 5px; padding-right:400px;">
+                                                        <td align="right" style="padding-top: 5px; padding-right: 400px;">
                                                             <asp:HyperLink ID="HL_ProjectDetailView" runat="server" Text="<%$ Resources:lang,XiangMuXinXi%>"></asp:HyperLink>
                                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                                              <asp:HyperLink ID="HL_BusinessForm" runat="server" Text="<%$ Resources:lang,XiangGuanYeWuDan%>"></asp:HyperLink>
@@ -384,7 +384,7 @@
                                                                                 <td align="left">
                                                                                     <table width="80%">
                                                                                         <tr>
-                                                                                            <td width="40px">
+                                                                                            <td width="90px">
                                                                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,RiZhi%>"></asp:Label>£º</td>
                                                                                             <td>
                                                                                                 <CKEditor:CKEditorControl ID="HE_TodaySummary" runat="server" Width="100%" Height="150" Visible="false" />
@@ -398,12 +398,18 @@
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr>
-                                                                                            <td width="40px">
+                                                                                            <td>
                                                                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChengGuo%>"></asp:Label>£º</td>
                                                                                             <td align="left" style="padding-left: 2px;">
                                                                                                 <asp:TextBox ID="TB_Achievement" runat="server" Height="40px" TextMode="MultiLine" Width="95%"></asp:TextBox>
                                                                                             </td>
                                                                                             <td>&nbsp;</td>
+                                                                                        </tr>
+                                                                                        <tr style="height: 15px">
+                                                                                            <td colspan="3" style="text-align: left; padding-left: 100px">
+                                                                                              
+                                                                                                <asp:Button ID="BT_Summit" runat="server" CssClass="inpu" OnClick="BT_Summit_Click" Text="<%$ Resources:lang,Submit%>" />
+                                                                                            </td>
                                                                                         </tr>
                                                                                     </table>
                                                                                 </td>
@@ -420,11 +426,7 @@
                                     </table>
                                 </td>
                             </tr>
-                            <tr style="height: 15px">
-                                <td style="text-align: left; padding-left: 30px">
-                                    <asp:Button ID="BT_Summit" runat="server" CssClass="inpu" OnClick="BT_Summit_Click" Text="<%$ Resources:lang,Submit%>" />
-                                </td>
-                            </tr>
+
                             <tr style="height: 15px">
                                 <td style="height: 13px; text-align: left"></td>
                             </tr>
