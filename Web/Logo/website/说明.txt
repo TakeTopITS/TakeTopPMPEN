@@ -1,1 +1,2 @@
 index.html文件放入网站根结点，如IIS的wwwroot目录下！
+整个website目录放入平台Logo目录下
