@@ -436,7 +436,7 @@
             <div id="divToolBar" name="divTooBar" class="ToolBar" style="width: 100%;">
                 <table width="100%">
                     <tr>
-                        <td align="left">
+                        <td align="center">
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td width="30px;">&nbsp;</td>
