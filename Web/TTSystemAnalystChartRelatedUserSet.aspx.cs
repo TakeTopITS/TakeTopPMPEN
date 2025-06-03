@@ -103,7 +103,8 @@ public partial class TTSystemAnalystChartRelatedUserSet : System.Web.UI.Page
         {
             for (j = 0; j < DataGrid4.Items.Count; j++)
             {
-                strID = DataGrid4.Items[j].Cells[0].Text;
+                
+                strID = ((TextBox)(DataGrid4.Items[j].FindControl("LB_ModuleID"))).Text.Trim();
 
                 intSortNumber = int.Parse(((TextBox)(DataGrid4.Items[j].FindControl("TB_SortNumber"))).Text.Trim());
 
@@ -120,7 +121,7 @@ public partial class TTSystemAnalystChartRelatedUserSet : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZBaoCunLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCWBCSBJC").ToString().Trim()+"')", true); 
         }
     }
 

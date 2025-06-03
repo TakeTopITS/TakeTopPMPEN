@@ -124,7 +124,7 @@
                                                                    
                                                                     <asp:TemplateColumn HeaderText="<%$ Resources:lang,BianHao%>">
                                                                         <ItemTemplate>
-                                                                            <%# DataBinder.Eval(Container.DataItem,"ID") %>
+                                                                          <asp:Label ID="LB_ModuleID" runat="server"  Text='<%# DataBinder.Eval(Container.DataItem,"ID") %> '></asp:Label>
                                                                         </ItemTemplate>
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="10%" />
                                                                         <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="left" />
@@ -133,7 +133,7 @@
 
                                                                     <asp:TemplateColumn HeaderText="<%$ Resources:lang,MingChengZhongWen%>">
                                                                         <ItemTemplate>
-                                                                            <%# DataBinder.Eval(Container.DataItem,"ChartName") %>
+                                                                           <asp:Label ID="LB_ModuleName" runat="server"  Text='<%# DataBinder.Eval(Container.DataItem,"ChartName") %>'></asp:Label>
                                                                         </ItemTemplate>
                                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="45%" />
                                                                         <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="left" />
