@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemAnalystChartRelatedUserSet.aspx.cs" Inherits="TTSystemAnalystChartRelatedUserSet" %>
 
-<%@ register assembly="NickLee.Web.UI" namespace="NickLee.Web.UI" tagprefix="NickLee" %>
-<%@ register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+<%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -87,7 +87,7 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
+                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="left" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
@@ -113,61 +113,78 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <td class="tdMain" align="left" valign="top" style="border-right: solid 1px #D8D8D8; padding-top: 35px;">
+                                            </td>
+                                            <td class="tdMain" align="left" valign="top" style="border-right: solid 1px #D8D8D8; padding-top: 35px;">
 
-                                                    <table width="50%" border="0" class="formBgStyle" cellpadding="2" cellspacing="0">
-                                                        <tr>
-                                                            <td class="formItemBgStyleForAlignLeft" style="padding-top: 0px;">
-                                                                <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand" Width="90%">
-                                                                    <Columns>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="Number">
-                                                                            <ItemStyle Width="15%" BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
-                                                                            <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="5%" />
-                                                                        </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="ChartName" HeaderText="Ä£¿éÃû³Æ">
-                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
-                                                                            <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="45%" />
-                                                                        </asp:BoundColumn>
+                                                <table width="100%" border="0" class="formBgStyle" cellpadding="2" cellspacing="0">
+                                                    <tr>
+                                                        <td class="formItemBgStyleForAlignLeft" style="padding-top: 0px;">
+                                                            <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand" Width="90%">
+                                                                <Columns>
+                                                                   
+                                                                    <asp:TemplateColumn HeaderText="<%$ Resources:lang,BianHao%>">
+                                                                        <ItemTemplate>
+                                                                            <%# DataBinder.Eval(Container.DataItem,"ID") %>
+                                                                        </ItemTemplate>
+                                                                        <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="10%" />
+                                                                        <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="left" />
+                                                                    </asp:TemplateColumn>
 
-                                                                        <asp:TemplateColumn HeaderText="Ë³Ðò">
-                                                                            <ItemTemplate>
-                                                                                <asp:TextBox ID="TB_SortNumber" runat="server" Text="0" Width="40px"></asp:TextBox>
-                                                                            </ItemTemplate>
-                                                                            <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="5%" />
-                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
-                                                                        </asp:TemplateColumn>
 
-                                                                        <asp:TemplateColumn HeaderText="">
-                                                                            <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Horizontalalign="left" />
-                                                                            <ItemTemplate>
-                                                                                <asp:Button ID="BT_DeleteChart" runat="server" CommandName="DELETE" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" />
-                                                                            </ItemTemplate>
-                                                                               <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"  />
-                                                                        </asp:TemplateColumn>
-                                                                    </Columns>
-                                                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                                    <EditItemStyle BackColor="#2461BF" />
-                                                                    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                    <PagerStyle BackColor="#2461BF" ForeColor="White" Horizontalalign="left" />
+                                                                    <asp:TemplateColumn HeaderText="<%$ Resources:lang,MingChengZhongWen%>">
+                                                                        <ItemTemplate>
+                                                                            <%# DataBinder.Eval(Container.DataItem,"ChartName") %>
+                                                                        </ItemTemplate>
+                                                                        <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="45%" />
+                                                                        <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="left" />
+                                                                    </asp:TemplateColumn>
 
-                                                                    <ItemStyle BackColor="#EFF3FB" CssClass="dg_item" />
-                                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Horizontalalign="left" />
-                                                                </asp:DataGrid>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="formItemBgStyleForAlignRight" colspan="2" style="padding-right:260px;">
-                                                                <asp:Button ID="BT_Save" runat="server" CssClass="inpu" OnClick="BT_Save_Click" Text="<%$ Resources:lang,BaoCun%>" />
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
+                                                                    <asp:TemplateColumn HeaderText="<%$ Resources:lang,ShongXuHao%>">
+                                                                        <ItemTemplate>
+                                                                            <asp:TextBox ID="TB_SortNumber" runat="server" Text="0" Width="40px"></asp:TextBox>
+                                                                        </ItemTemplate>
+                                                                        <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="15%" />
+                                                                        <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="left" />
+                                                                    </asp:TemplateColumn>
+
+                                                                    <asp:TemplateColumn HeaderText="">
+                                                                        <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="left" />
+                                                                        <ItemTemplate>
+                                                                            <asp:Button ID="BT_DeleteChart" runat="server" CommandName="DELETE" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" />
+                                                                        </ItemTemplate>
+                                                                        <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" />
+                                                                    </asp:TemplateColumn>
+                                                                </Columns>
+                                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                                <EditItemStyle BackColor="#2461BF" />
+                                                                <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="left" />
+
+                                                                <ItemStyle BackColor="#EFF3FB" CssClass="dg_item" />
+                                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="left" />
+                                                            </asp:DataGrid>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="formItemBgStyleForAlignLeft" colspan="2">
+
+                                                            <table width="58%" border="0" class="formBgStyle" cellpadding="2" cellspacing="0">
+                                                                <tr>
+                                                                    <td class="formItemBgStyleForAlignRight">
+                                                                        <asp:Button ID="BT_Save" runat="server" CssClass="inpu" OnClick="BT_Save_Click" Text="<%$ Resources:lang,BaoCun%>" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
                         </table>
+
                     </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
