@@ -1,11 +1,13 @@
 using ProjectMgt.BLL;
 using ProjectMgt.Model;
+
 using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
 {
@@ -36,6 +38,10 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
             LoadRentSiteBaseData();
 
             LoadHomeSiteURL();
+
+            LoadRentProductType();
+
+            LoadRentProductVerType();
         }
     }
 
@@ -62,7 +68,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
                 LB_ID.Text = ds.Tables[0].Rows[0]["ID"].ToString().Trim();
                 try
                 {
-                    DL_RentProductName.SelectedValue = ds.Tables[0].Rows[0]["RentProductName"].ToString().Trim();
+                    DL_RentProductType.SelectedValue = ds.Tables[0].Rows[0]["RentProductName"].ToString().Trim();
                 }
                 catch
                 {
@@ -135,7 +141,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
     {
         string strHQL;
 
-        string strRentProductName = DL_RentProductName.SelectedValue.Trim();
+        string strRentProductName = DL_RentProductType.SelectedValue.Trim();
         string strRentProductVersion = DL_ProductVerType.SelectedValue.Trim();
         string strRentProductType = DL_RentProductType.SelectedValue.Trim();
 
@@ -203,7 +209,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
         string strHQL;
 
         string strID = LB_ID.Text.Trim();
-        string strRentProductName = DL_RentProductName.SelectedValue.Trim();
+        string strRentProductName = DL_RentProductType.SelectedValue.Trim();
         string strRentProductVersion = DL_ProductVerType.SelectedValue.Trim();
         string strRentProductType = DL_RentProductType.SelectedValue.Trim();
 
@@ -412,4 +418,31 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
 
         DL_HomeSiteURL.Items.Insert(0, new ListItem("--Select--", ""));
     }
+
+    protected void LoadRentProductType()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductType Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+
+        DL_RentProductType.DataSource = ds;
+        DL_RentProductType.DataBind();
+
+        DL_RentProductENType.DataSource = ds;
+        DL_RentProductENType.DataBind();
+    }
+
+
+    protected void LoadRentProductVerType()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductVerType Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+
+        DL_ProductVerType.DataSource = ds;
+        DL_ProductVerType.DataBind();
+    }
+
 }

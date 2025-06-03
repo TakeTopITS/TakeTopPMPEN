@@ -309,55 +309,22 @@
                                                         <asp:Label ID="Label23" runat="server"  Text="<%$ Resources:lang,ChanPin%>"></asp:Label>：
                                                     </td>
                                                     <td style="width: 20%; " class="formItemBgStyleForAlignLeft">
-                                                        <asp:DropDownList ID="DL_RentProductName" runat="server">
-                                                            <asp:ListItem>项目管理平台</asp:ListItem>
-                                                            <asp:ListItem>研发项目管理平台</asp:ListItem>
-                                                            <asp:ListItem>政务项目管理平台</asp:ListItem>
-                                                            <asp:ListItem>工程项目管理平台</asp:ListItem>
-                                                            <asp:ListItem>系统集成项目管理平台</asp:ListItem>
-                                                            <asp:ListItem>软件实施项目管理平台</asp:ListItem>
-                                                            <asp:ListItem>项目型ERP平台</asp:ListItem>
-                                                            <asp:ListItem>综合平台</asp:ListItem>
-                                                            <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>协同OA平台</asp:ListItem>
-                                                            <asp:ListItem>客户关系管理平台</asp:ListItem>
-                                                            <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>项目宝</asp:ListItem>
-                                                            <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>演示测试平台</asp:ListItem>
+                                                        <asp:DropDownList ID="DL_RentProductType" DataValueField="Type" DataTextField="Type" runat="server">
                                                         </asp:DropDownList>
                                                     </td>
                                                     <td style=" width: 10%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label24" runat="server"  Text="<%$ Resources:lang,BanBen%>"></asp:Label>:
                                                     </td>
                                                     <td style=" width: 10%;" class="formItemBgStyleForAlignLeft">
-                                                        <asp:DropDownList ID="DL_ProductVerType" runat="server">
-                                                            <asp:ListItem>标准版</asp:ListItem>
-                                                            <asp:ListItem>企业版</asp:ListItem>
-                                                            <asp:ListItem>集团版</asp:ListItem>
+                                                        <asp:DropDownList ID="DL_ProductVerType" DataValueField="Type" DataTextField="Type" runat="server">
+                                                           
                                                         </asp:DropDownList>
                                                     </td>
                                                     <td style=" width: 10%;" class="formItemBgStyleForAlignLeft">
                                                         <asp:Label ID="Label8" runat="server"  Text="<%$ Resources:lang,LeiXing%>"></asp:Label>:
                                                     </td>
                                                     <td  class="formItemBgStyleForAlignLeft">
-                                                        <asp:DropDownList ID="DL_RentProductType" runat="server">
-                                                            <asp:ListItem>GEPMP</asp:ListItem>
-                                                            <asp:ListItem>RDPMP</asp:ListItem>
-                                                            <asp:ListItem>GAPMP</asp:ListItem>
-                                                            <asp:ListItem>EDPMP</asp:ListItem>
-                                                            <asp:ListItem>SIMP</asp:ListItem>
-                                                            <asp:ListItem>SOMP</asp:ListItem>
-                                                            <asp:ListItem>ERP</asp:ListItem>
-                                                            <asp:ListItem>ECMP</asp:ListItem>
-                                                            <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>CRM</asp:ListItem>
-                                                            <asp:ListItem>OA</asp:ListItem>
-                                                            <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>SAAS</asp:ListItem>
-                                                            <asp:ListItem>LOCALSAAS</asp:ListItem>
-                                                            <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>DEMO</asp:ListItem>
+                                                        <asp:DropDownList ID="DL_RentProductENType" DataValueField="ENType" DataTextField="ENType" runat="server">
                                                         </asp:DropDownList>
                                                     </td>
                                                 </tr>

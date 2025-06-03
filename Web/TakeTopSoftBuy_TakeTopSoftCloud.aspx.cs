@@ -1,27 +1,25 @@
+using Microsoft.Web.Administration;
+using Microsoft.Web.Management;
+
+using ProjectMgt.BLL;
+using ProjectMgt.DAL;
+using ProjectMgt.Model;
+
 using System;
-using System.Resources;
-using System.Data;
-using System.Configuration.Internal;
 using System.Collections;
+using System.Configuration.Internal;
+using System.Data;
+using System.Data.SqlClient;
+using System.Resources;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
-using System.Configuration;
-using Microsoft.Web.Administration;
-using System.DirectoryServices;
-using System.Xml;
-using System.Data.SqlClient;
-using System.IO;
-using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
-using ProjectMgt.Model;
-using ProjectMgt.DAL;
-using ProjectMgt.BLL;
-
-public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
+public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
 {
     string strWebSite;
     protected void Page_Load(object sender, EventArgs e)
@@ -34,6 +32,9 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
 
         if (Page.IsPostBack == false)
         {
+            LoadRentProductType();
+
+            LoadRentProductVerType();
         }
     }
 
@@ -41,7 +42,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
     {
         string strServerType = DL_ServerType.SelectedValue.Trim();
 
-        if (strServerType == "租用")
+        if (strServerType == "购买")
         {
             TB_StorageCapacity.Enabled = true;
         }
@@ -53,7 +54,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
 
     protected void BT_Summit_Click(object sender, EventArgs e)
     {
-        string strRentUserCompanyName, strUserIP,strSiteID, strUserPosition, strServerType, strRentUserName, strRentUserPhoneNumber, strRentUserEMail, strAddress, strPostCode, strRentProductName, strRentProductVersion, strRentUserNumber, strQuestion;
+        string strRentUserCompanyName, strUserIP, strSiteID, strUserPosition, strServerType, strRentUserName, strRentUserPhoneNumber, strRentUserEMail, strAddress, strPostCode, strRentProductName, strRentProductVersion, strRentUserNumber, strQuestion;
         string strSQL;
         DateTime dtAnswerTime;
 
@@ -69,7 +70,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
         strRentProductName = DL_Type.SelectedValue.Trim();
         strRentProductVersion = DL_Version.SelectedValue.Trim();
         strRentUserNumber = TB_UserNumber.Text.Trim();
-        strQuestion = "租用 版本：" + strRentProductVersion + "，用户数：" + strRentUserNumber + "人";
+        strQuestion = "购买 版本：" + strRentProductVersion + "，用户数：" + strRentUserNumber + "人";
 
         string strSiteCreatorName = strRentUserName;
 
@@ -96,7 +97,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = "提示：公司: " + strRentUserCompanyName + " 的员工: " + strRentUserName + "( " + strRentUserPhoneNumber + " )" + " 提交了：" + strRentProductName + "，" + strQuestion + " 的 租用 申请，请及时处理！！！";
+                string strNofiInfo = "提示：公司: " + strRentUserCompanyName + " 的员工: " + strRentUserName + "( " + strRentUserPhoneNumber + " )" + " 提交了：" + strRentProductName + "，" + strQuestion + " 的 购买 申请，请及时处理！！！";
                 Action action = new Action(delegate ()
                 {
                     Msg msg = new Msg();
@@ -113,7 +114,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
                         string strUserEMail = GetUserEMail(strCSOperatorCode);
                         if (strUserEMail != "")
                         {
-                            msg.SendMailByEmail(strUserEMail, "软件租用申请通知", strNofiInfo, "ADMIN");
+                            msg.SendMailByEmail(strUserEMail, "软件购买申请通知", strNofiInfo, "ADMIN");
                         }
                     }
                     catch (Exception ex)
@@ -203,7 +204,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
                                ,'{25}'
                                 )", strRentUserPhoneNumber, strRentUserEMail, strRentUserName, strRentUserCompanyName, strRentProductName, strRentProductVersion, strRentUserNumber, "", "", "",
                        "", "", "", "", "", "", "", "",
-                      "", "", "", "", "", "", strQuestionID, "租用");
+                      "", "", "", "", "", "", strQuestionID, "购买");
 
                 try
                 {
@@ -218,7 +219,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
 
                 if (strIsAutoBuildSite == "YES" & strTargetHomeSiteURL != "")
                 {
-                    IFrame_BuildSite.Src = "TakeTopSoftRent_BuildSite.aspx?RentUserCompanyName=" + strRentUserCompanyName + "&RentUserName=" + strRentUserName + "&RentUserPhoneNumber=" + strRentUserPhoneNumber + "&RentUserEMail=" + strRentUserEMail + "&RentProductName=" + strRentProductName + "&RentProductVersion=" + strRentProductVersion + "&RentUserNumber=" + strRentUserNumber + "&SiteID=" + strSiteID + "&ServerType=租用";
+                    IFrame_BuildSite.Src = "TakeTopSoftRent_BuildSite.aspx?RentUserCompanyName=" + strRentUserCompanyName + "&RentUserName=" + strRentUserName + "&RentUserPhoneNumber=" + strRentUserPhoneNumber + "&RentUserEMail=" + strRentUserEMail + "&RentProductName=" + strRentProductName + "&RentProductVersion=" + strRentProductVersion + "&RentUserNumber=" + strRentUserNumber + "&SiteID=" + strSiteID + "&ServerType=购买";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 }
                 else
@@ -319,5 +320,27 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
         {
             return "";
         }
+    }
+
+    protected void LoadRentProductType()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductType Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+
+        DL_Type.DataSource = ds;
+        DL_Type.DataBind();
+    }
+
+    protected void LoadRentProductVerType()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductVerType Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+
+        DL_Version.DataSource = ds;
+        DL_Version.DataBind();
     }
 }

@@ -3817,7 +3817,7 @@
 
                                                 <br />
                                                 <asp:Label ID="Label128" runat="server" Text="DemoURL"></asp:Label>
-                                                <asp:TextBox ID="TB_RentProductDemoURL" runat="server" Width="110px"></asp:TextBox>
+                                                <asp:TextBox ID="TB_RentProductDemoURL" runat="server" Width="370px"></asp:TextBox>
                                                 <br />
                                                 <asp:Label ID="Label130" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>
                                                 <asp:TextBox ID="TB_RentProductTypeSort" runat="server" Width="110px"></asp:TextBox>

@@ -112,7 +112,7 @@
                     </a>
                     </span>
                 </p>
-                <p>CopyRight：拓鼎信息(TakeTopITS Group)? 2006-2026 TakeTop ITS. <a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备18022438号-1 </a>taketopits.com</p>
+                <p>CopyRight：拓鼎信息(TakeTopITS Group) 2006-2026 TakeTop ITS. <a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备18022438号-1 </a>taketopits.com</p>
             </div>
 
         </div>

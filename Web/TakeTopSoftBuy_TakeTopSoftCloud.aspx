@@ -291,18 +291,7 @@
                                                                     <td class="formItemBgStyleForAlignLeft" width="100px">产品
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
-                                                                        <asp:DropDownList ID="DL_Type" runat="server" Style="height: 50px;">
-                                                                            <asp:ListItem>项目宝</asp:ListItem>
-                                                                            <asp:ListItem>系统集成项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>研发项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>工程项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>政务项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>软件实施项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>项目型ERP平台</asp:ListItem>
-                                                                            <asp:ListItem>项目综合管理平台</asp:ListItem>
-                                                                            <asp:ListItem>--------------</asp:ListItem>
-                                                                            <asp:ListItem>协同OA平台</asp:ListItem>
-                                                                            <asp:ListItem>客户关系管理平台</asp:ListItem>
+                                                                        <asp:DropDownList ID="DL_Type" DataValueField="Type" DataTextField="Type" runat="server" Style="height: 50px;">
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
@@ -313,10 +302,8 @@
                                                                         <table>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:DropDownList ID="DL_Version" runat="server" Style="height: 50px;">
-                                                                                        <asp:ListItem>标准版</asp:ListItem>
-                                                                                        <asp:ListItem>企业版</asp:ListItem>
-                                                                                        <asp:ListItem>集团版</asp:ListItem>
+                                                                                    <asp:DropDownList ID="DL_Version" DataValueField="Type" DataTextField="Type" runat="server" Style="height: 50px;">
+                                                                                       
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td>&nbsp;

@@ -12786,4 +12786,8 @@ insert into t_RentProductVertype(type,SortNumber) values('标准版',1);
 insert into t_RentProductVertype(type,SortNumber) values('企业版',2);
 insert into t_RentProductVertype(type,SortNumber) values('集团版',3);</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3788</ID>
+    <SQLText>Update public.t_sitemodulecontent Set content = replace(content,'TTCustomerRegisterFromWebSite_TakeTopSoft.aspx', 'TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx')</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
