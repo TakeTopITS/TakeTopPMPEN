@@ -441,7 +441,7 @@
                                 <tr>
                                     <td width="30px;">&nbsp;</td>
                                     <td align="center" style="padding-top: 5px;">
-                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeWuDan%>"></asp:Label>锛?
+                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YeWuDan%>"></asp:Label>
                                     </td>
                                     <td align="center" style="padding-top: 5px;">
                                         <asp:DropDownList ID="DL_WorkflowTemplate" runat="server" DataTextField="TemName" DataValueField="XSNFile" AutoPostBack="true" OnSelectedIndexChanged="DL_WorkflowTemplate_SelectedIndexChanged">
