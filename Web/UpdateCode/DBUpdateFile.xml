@@ -12637,4 +12637,153 @@ Delete From T_ProModule Where ModuleName = 'DepartmentDocuments';</SQLText>
     <SQLText>Delete From T_ProModuleLevel Where ModuleName = 'ProjectInitiationGCP';
 Delete From T_ProModule Where ModuleName = 'ProjectInitiationGCP';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3776</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_RentProducttype
+(
+    type character(100) COLLATE pg_catalog."default" NOT NULL,
+    sortnumber bigint,
+    CONSTRAINT t_RentProducttype_pkey PRIMARY KEY (type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.t_RentProducttype
+    OWNER to postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3777</ID>
+    <SQLText>Drop table public.t_RentProducttype;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3778</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_RentProducttype
+(
+    type character(100) COLLATE pg_catalog."default" NOT NULL,
+    entype character(100),
+    sortnumber bigint,
+    CONSTRAINT t_RentProducttype_pkey PRIMARY KEY (type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.t_RentProducttype
+    OWNER to postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3779</ID>
+    <SQLText>Insert Into t_RentProducttype(Type,ENType,SortNumber) values('项目宝','XMB',1);	
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('研发项目管理平台','RDPMP',2);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('工程项目管理平台','ENPMP',3);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('系统集成项目管理平台','SIMP',4);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('软件实施项目管理平台','SOMP',5);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('项目型ERP平台','ERP',6);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('政务项目管理平台','GAPMP',7);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('综合平台','ECMP',7);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('1-------','1---',8);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('协同OA平台','OA',9);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('客户关系管理平台','CRM',10);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('2-------','2---',11);
+Insert Into t_RentProducttype(Type,ENType,SortNumber) values('演示测试平台','DEMO',12);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3780</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_RentProductVertype
+(
+    type character(100) COLLATE pg_catalog."default" NOT NULL,
+    sortnumber bigint,
+    CONSTRAINT t_RentProductVertype_pkey PRIMARY KEY (type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.t_RentProductVertype
+    OWNER to postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3781</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_TryProductResontype
+(
+    type character(100) COLLATE pg_catalog."default" NOT NULL,
+    sortnumber bigint,
+    CONSTRAINT t_TryProductResontype_pkey PRIMARY KEY (type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.t_TryProductResontype
+    OWNER to postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3782</ID>
+    <SQLText>Drop table public.t_RentProducttype;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3783</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_RentProducttype 
+( 
+	type character(100) COLLATE pg_catalog."default" NOT NULL, 
+	entype character(100), 
+	demourl character(100), 
+	sortnumber bigint,
+	CONSTRAINT t_RentProducttype_pkey PRIMARY KEY (type) 
+) 
+	
+	TABLESPACE pg_default;
+	ALTER TABLE IF EXISTS public.t_RentProducttype OWNER to postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3784</ID>
+    <SQLText>Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('项目宝','XMB',1,'https://www.taketopits.com/XMB/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('研发项目管理平台','RDPMP',2,'https://www.taketopits.com/taketopPMPRD/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('工程项目管理平台','ENPMP',3,'https://www.taketopits.com/taketopPMPED/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('系统集成项目管理平台','SIMP',4,'https://www.taketopits.com/taketopSIMP/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('软件实施项目管理平台','SOMP',5,'https://www.taketopits.com/taketopSOMP/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('项目型ERP平台','ERP',6,'https://www.taketopits.com/taketopERP/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('政务项目管理平台','GAPMP',7,'https://www.taketopits.com/taketopPMPGA/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('综合平台','ECMP',7,'https://www.taketopits.com/taketopECMP/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('1-------','1---',8,'https://www.taketopits.com');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('协同OA平台','OA',9,'https://www.taketopits.com/taketopCMP/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('客户关系管理平台','CRM',10,'https://www.taketopits.com/taketopCRM/DefaultDemo.aspx');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('2-------','2---',11,'https://www.taketopits.com');
+	Insert Into t_RentProducttype(Type,ENType,SortNumber,DemoURL) values('演示测试平台','DEMO',12,'https://www.taketopits.com/taketopDEMO/DefaultDemo.aspx');</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3785</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_TryProductResontype
+(
+    type character(100) COLLATE pg_catalog."default" NOT NULL,
+    sortnumber bigint,
+    CONSTRAINT t_TryProductResontype_pkey PRIMARY KEY (type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.t_TryProductResontype
+    OWNER to postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3786</ID>
+    <SQLText>CREATE TABLE IF NOT EXISTS public.t_RentProductVertype
+(
+    type character(100) COLLATE pg_catalog."default" NOT NULL,
+    sortnumber bigint,
+    CONSTRAINT t_RentProductVertype_pkey PRIMARY KEY (type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.t_RentProductVertype
+    OWNER to postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3787</ID>
+    <SQLText>insert into t_TryProductResontype(type,SortNumber) values('企业需求',1);
+insert into t_TryProductResontype(type,SortNumber) values('个人学习',2);
+insert into t_TryProductResontype(type,SortNumber) values('其它原因',3);
+
+insert into t_RentProductVertype(type,SortNumber) values('标准版',1);
+insert into t_RentProductVertype(type,SortNumber) values('企业版',2);
+insert into t_RentProductVertype(type,SortNumber) values('集团版',3);</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

@@ -127,6 +127,11 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
 
             LoadFundingSource();
 
+
+            LoadRentProductType();
+            LoadRentProductVertype();
+            LoadTryProductResontype();
+
             NB_ScheduleLimitedDays.Amount = GetScheduleLimitedDays();
 
             NB_WeekendFirstDay.Amount = decimal.Parse(ShareClass.GetWeekendFirstDay());
@@ -295,13 +300,7 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
         TB_SaleType.Text = strType;
         TB_SaleTypeSort.Text = strSortNumber;
     }
-
-    protected void DataGrid21_ItemCommand(object sender, DataGridCommandEventArgs e)
-    {
-        string strRadio = ((Button)e.Item.FindControl("BT_ConstractRadio")).Text;
-
-        TB_ConstractRadio.Text = strRadio;
-    }
+  
 
     protected void DataGrid11_ItemCommand(object sender, DataGridCommandEventArgs e)
     {
@@ -439,6 +438,19 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
         TB_Latitude.Text = attendanceRule.OfficeLatitude.Trim();
 
         TB_Address.Text = attendanceRule.Address;
+    }
+
+    protected void DataGrid25_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+        string strType = ((Button)e.Item.FindControl("BT_RentProductType")).Text;
+        string strENType = e.Item.Cells[1].Text.Trim();
+        string strDemoURL = e.Item.Cells[2].Text.Trim();
+        string strSortNumber = e.Item.Cells[3].Text.Trim();
+
+        TB_RentProductType.Text = strType;
+        TB_RentProductENType.Text = strENType;
+        TB_RentProductDemoURL.Text = strDemoURL;
+        TB_RentProductTypeSort.Text = strSortNumber;
     }
 
     protected void DataGrid26_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -1390,6 +1402,9 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
         }
     }
 
+
+  
+
     protected void BT_AddCustomerQuestionStage_Click(object sender, EventArgs e)
     {
         string strStage, strPossibility;
@@ -1439,6 +1454,7 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
 
         }
     }
+
 
     protected void BT_AddCustomerQuestionCustomerStage_Click(object sender, EventArgs e)
     {
@@ -3845,5 +3861,173 @@ public partial class TTBaseDataOuter : System.Web.UI.Page
         DataGrid20.DataSource = ds;
         DataGrid20.DataBind();
     }
+
+
+
+    protected void DataGrid21_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+        string strType = ((Button)e.Item.FindControl("BT_ConstractRadio")).Text;
+      
+        TB_ConstractRadio.Text = strType;
+    }
+
+
+    protected void DataGrid31_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+        string strType = ((Button)e.Item.FindControl("BT_VersionType")).Text;
+        string strSortNumber = e.Item.Cells[1].Text.Trim();
+
+        TB_RentProductVersionType.Text = strType;
+        TB_RentProductVersionSort.Text = strSortNumber;
+    }
+
+
+    protected void DataGrid36_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+        string strType = ((Button)e.Item.FindControl("BT_TryResonType")).Text;
+        string strSortNumber = e.Item.Cells[1].Text.Trim();
+
+        TB_TryProductResonType.Text = strType;
+        TB_TryProductResonSort.Text = strSortNumber;
+    }
+
+    protected void BT_RentProductTypeNew_Click(object sender, EventArgs e)
+    {
+        string strType = TB_RentProductType.Text.Trim();
+        string strENType = TB_RentProductENType.Text.Trim();
+        string strDemoURL = TB_RentProductDemoURL.Text.Trim();
+        string strSortNo = TB_RentProductTypeSort.Text.Trim();
+
+        string strHQL = "Insert Into T_RentProductType(Type,ENType,DemoURL,SortNumber) VAlues (" + "'" + strType + "'" + "," + "'" + strENType + "'" + "," + "'" + strDemoURL + "'" + "," + "'" + strSortNo + "'" + ")";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductType();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_RentProductTypeDelete_Click(object sender, EventArgs e)
+    {
+        string strType = TB_RentProductType.Text.Trim();
+        string strSortNo = TB_RentProductTypeSort.Text.Trim();
+
+        string strHQL = "Delete From T_RentProductType Where Type =  '" + strType + "'";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductType();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_RentProductVersionTypeNew_Click(object sender, EventArgs e)
+    {
+        string strType = TB_RentProductVersionType.Text.Trim();
+        string strSortNo = TB_RentProductVersionSort.Text.Trim();
+
+        string strHQL = "Insert Into t_RentProductVertype(Type,SortNumber) VAlues (" + "'" + strType + "'" + "," + "'" + strSortNo + "'" + ")";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductVertype();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_RentProductVersionTypeDelete_Click(object sender, EventArgs e)
+    {
+        string strType = TB_RentProductVersionType.Text.Trim();
+        string strSortNo = TB_RentProductVersionSort.Text.Trim();
+
+        string strHQL = "Delete From t_RentProductVertype Where Type =  '" + strType + "'";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductVertype();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_TryProductResonTypeNew_Click(object sender, EventArgs e)
+    {
+        string strType = TB_TryProductResonType.Text.Trim();
+        string strSortNo = TB_TryProductResonSort.Text.Trim();
+
+        string strHQL = "Insert Into t_TryProductResontype(Type,SortNumber) VAlues (" + "'" + strType + "'" + "," + "'" + strSortNo + "'" + ")";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadTryProductResontype();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_TryProductResonTypeDelete_Click(object sender, EventArgs e)
+    {
+        string strType = TB_TryProductResonType.Text.Trim();
+        string strSortNo = TB_TryProductResonSort.Text.Trim();
+
+        string strHQL = "Delete From t_TryProductResontype Where Type =  '" + strType + "'";
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadTryProductResontype();
+        }
+        catch
+        {
+        }
+    }
+
+    protected void LoadRentProductType()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductType Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+
+        DataGrid25.DataSource = ds;
+        DataGrid25.DataBind();
+    }
+
+    protected void LoadRentProductVertype()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductVertype Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "RentProductVertype");
+
+        DataGrid31.DataSource = ds;
+        DataGrid31.DataBind();
+    }
+
+
+    protected void LoadTryProductResontype()
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_TryProductResontype Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "TryProductResontype");
+
+        DataGrid36.DataSource = ds;
+        DataGrid36.DataBind();
+    }
+
 
 }

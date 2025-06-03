@@ -31895,4 +31895,20 @@
     <value>文控类型</value>
     <comment>文控类型</comment>
   </data>
+  <data name="ZhuYongChanPingLeiXing" xml:space="preserve">
+    <value>租用产品类型</value>
+    <comment>租用产品类型</comment>
+  </data>
+  <data name="zhuYongChanPingBanBeng" xml:space="preserve">
+    <value>租用产品版本</value>
+    <comment>租用产品版本</comment>
+  </data>
+  <data name="ShiYongChanPingYuanYing" xml:space="preserve">
+    <value>试用产品原因</value>
+    <comment>试用产品原因</comment>
+  </data>
+  <data name="YuanYing" xml:space="preserve">
+    <value>原因</value>
+    <comment>原因</comment>
+  </data>
 </root>

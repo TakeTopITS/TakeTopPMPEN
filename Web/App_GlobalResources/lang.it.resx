@@ -31781,4 +31781,16 @@
   <data name="WenKongLeiXun" xml:space="preserve">
     <value>Tipo di Controllo Documenti</value>
   </data>
+  <data name="ZhuYongChanPingLeiXing" xml:space="preserve">
+    <value>Tipo di Prodotto di Noleggio</value>
+  </data>
+  <data name="zhuYongChanPingBanBeng" xml:space="preserve">
+    <value>Versione del Prodotto di Noleggio</value>
+  </data>
+  <data name="ShiYongChanPingYuanYing" xml:space="preserve">
+    <value>Motivo della Prova del Prodotto</value>
+  </data>
+  <data name="YuanYing" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
 </root>

@@ -31781,4 +31781,16 @@
   <data name="WenKongLeiXun" xml:space="preserve">
     <value>Тип контроля документов</value>
   </data>
+  <data name="ZhuYongChanPingLeiXing" xml:space="preserve">
+    <value>Тип арендованного продукта</value>
+  </data>
+  <data name="zhuYongChanPingBanBeng" xml:space="preserve">
+    <value>Версия арендованного продукта</value>
+  </data>
+  <data name="ShiYongChanPingYuanYing" xml:space="preserve">
+    <value>Причина для пробного использования продукта</value>
+  </data>
+  <data name="YuanYing" xml:space="preserve">
+    <value>Причина</value>
+  </data>
 </root>

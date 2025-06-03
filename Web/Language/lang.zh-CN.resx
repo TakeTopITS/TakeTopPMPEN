@@ -31813,4 +31813,16 @@
   <data name="WenKongLeiXun" xml:space="preserve">
     <value>文控类型</value>
   </data>
+  <data name="ZhuYongChanPingLeiXing" xml:space="preserve">
+    <value>租用产品类型</value>
+  </data>
+  <data name="zhuYongChanPingBanBeng" xml:space="preserve">
+    <value>租用产品版本</value>
+  </data>
+  <data name="ShiYongChanPingYuanYing" xml:space="preserve">
+    <value>试用产品原因</value>
+  </data>
+  <data name="YuanYing" xml:space="preserve">
+    <value>原因</value>
+  </data>
 </root>

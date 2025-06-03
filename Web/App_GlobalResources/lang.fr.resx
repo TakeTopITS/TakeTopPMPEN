@@ -31779,4 +31779,16 @@
   <data name="WenKongLeiXun" xml:space="preserve">
     <value>Type de Contrôle de Documents</value>
   </data>
+  <data name="ZhuYongChanPingLeiXing" xml:space="preserve">
+    <value>Type de Produit de Location</value>
+  </data>
+  <data name="zhuYongChanPingBanBeng" xml:space="preserve">
+    <value>Version du Produit de Location</value>
+  </data>
+  <data name="ShiYongChanPingYuanYing" xml:space="preserve">
+    <value>Raison de l'Essai du Produit</value>
+  </data>
+  <data name="YuanYing" xml:space="preserve">
+    <value>Raison</value>
+  </data>
 </root>

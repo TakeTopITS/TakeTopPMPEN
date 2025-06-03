@@ -61,7 +61,7 @@
                         <td align="left" valign="top">
                             <table width="100%" cellpadding="5" cellspacing="0">
                                 <tr>
-                                    <td style="font-weight: bold; color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
+                                    <td align="center" style="font-weight: bold; color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
                                         <table>
                                             <tr>
                                                 <td>

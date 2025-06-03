@@ -66,7 +66,7 @@
                                                                 </tr>
                                                             </table>
                                                         </td>
-                                                        <td width="60px;"</td>
+                                                        <td width="60px;"></td>
                                                         <td>
                                                             <table>
                                                                 <tr>
@@ -94,7 +94,7 @@
                                                                         <asp:TextBox ID="TB_AIModel" runat="server" Width="150px"></asp:TextBox>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Button ID="BT_AISave" runat="server" CssClass="inpu"  Text="<%$ Resources:lang,BaoCun%>" OnClick="BT_AISave_Click" />
+                                                                        <asp:Button ID="BT_AISave" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BaoCun%>" OnClick="BT_AISave_Click" />
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -170,7 +170,7 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
@@ -178,10 +178,10 @@
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_ProjectType" runat="server" CssClass="inpuLong" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' ToolTip='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:BoundColumn DataField="KeyWord" HeaderText="¹Ø¼ü´Ê">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                     <%-- <asp:TemplateColumn HeaderText="Status">
     <ItemTemplate>
@@ -200,7 +200,7 @@
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="14%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn>
                                                                         <ItemTemplate>
@@ -215,7 +215,7 @@
                                                                                 </tr>
                                                                             </table>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                     </asp:TemplateColumn>
                                                                 </Columns>
                                                             </asp:DataGrid>
@@ -271,7 +271,7 @@
                                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                 <EditItemStyle BackColor="#2461BF" />
                                                                 <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
@@ -279,32 +279,32 @@
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_StatusID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                     </asp:TemplateColumn>
-                                                                     <asp:BoundColumn DataField="Status" HeaderText="Status">
-                                                                          <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                    <asp:BoundColumn DataField="Status" HeaderText="Status">
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                         <ItemTemplate>
                                                                             <asp:TextBox ID="TB_HomeName" runat="server" Width="100px" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>'></asp:TextBox>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="25%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                         <HeaderStyle Font-Bold="True" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="Ë³Ðò">
                                                                         <ItemTemplate>
                                                                             <asp:TextBox ID="TB_SortNumber" runat="server" Width="50px" Text='<%# DataBinder.Eval(Container.DataItem,"SortNumber") %>'></asp:TextBox>
                                                                         </ItemTemplate>
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="8%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:BoundColumn DataField="ReviewControl" HeaderText="¿ØÖÆµã">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                        <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
                                                             </asp:DataGrid>
@@ -379,7 +379,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="8"  class="formItemBgStyleForAlignLeft">
+                                                                                <td colspan="8" class="formItemBgStyleForAlignLeft">
                                                                                     <asp:Button ID="BT_ProjectTypeNew" runat="server" CssClass="inpu" OnClick="BT_ProejctTypeNew_Click"
                                                                                         Text="<%$ Resources:lang,XinZeng%>" />
                                                                                     &nbsp;
@@ -636,7 +636,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -644,28 +644,28 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
 
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Width="100px" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>'></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
 
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -688,7 +688,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -696,27 +696,27 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
 
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Width="100px" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>'></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -739,7 +739,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -747,27 +747,27 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
 
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Width="100px" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>'></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -790,7 +790,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -798,27 +798,27 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
 
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Width="100px" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>'></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -840,7 +840,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -848,26 +848,26 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>' Width="100px"></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -943,7 +943,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -951,26 +951,26 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_GroupName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"GroupName") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>' Width="100px"></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -1013,7 +1013,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -1021,26 +1021,26 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Type" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>' Width="100px"></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -1092,7 +1092,7 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
@@ -1100,26 +1100,26 @@
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_Status" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>' Width="100px"></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="25%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="15%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="MakeType" HeaderText="Type">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -1172,32 +1172,32 @@
                                                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                             <EditItemStyle BackColor="#2461BF" />
                                                                             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                                            <PagerStyle Horizontalalign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
+                                                                            <PagerStyle HorizontalAlign="center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
                                                                                 <asp:TemplateColumn HeaderText="ÃüÁî">
                                                                                     <ItemTemplate>
-                                                                                        <asp:Button ID="BT_OrderName" runat="server" CssClass="inpuLong"  Text='<%# DataBinder.Eval(Container.DataItem,"InforName") %>' />
+                                                                                        <asp:Button ID="BT_OrderName" runat="server" CssClass="inpuLong" Text='<%# DataBinder.Eval(Container.DataItem,"InforName") %>' />
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="40%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="40%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_HomeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>' Width="99%"></asp:TextBox>
                                                                                     </ItemTemplate>
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="30%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                     <HeaderStyle Font-Bold="True" Width="20%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="10%" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
 
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID" Visible="false">
-                                                                                    <ItemStyle CssClass="itemBorder" Horizontalalign="left" />
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
                                                                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
