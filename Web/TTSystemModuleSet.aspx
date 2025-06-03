@@ -169,10 +169,10 @@
                                                                                 </td>
                                                                                 <td class="tdLeft3" style="text-align: left;">
                                                                                     <asp:TextBox ID="TB_ParentModuleName" runat="server" Width="200px" ReadOnly="true"></asp:TextBox>
-                                                                                    <cc2:ModalPopupExtender ID="TB_ParentModuleName_ModalPopupExtender" runat="server"
-                                                                                        Enabled="True" TargetControlID="TB_ParentModuleName" PopupControlID="Panel1"
-                                                                                        CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150">
-                                                                                    </cc2:ModalPopupExtender>
+                                                                                    <cc2:modalpopupextender id="TB_ParentModuleName_ModalPopupExtender" runat="server"
+                                                                                        enabled="True" targetcontrolid="TB_ParentModuleName" popupcontrolid="Panel1"
+                                                                                        cancelcontrolid="IMBT_Close" backgroundcssclass="modalBackground" y="150">
+                                                                                    </cc2:modalpopupextender>
                                                                                     <asp:Label ID="LB_ID" runat="server" Visible="false"></asp:Label>
                                                                                     <br />
                                                                                     <asp:Label ID="LB_HomeParentName" runat="server"></asp:Label>
@@ -189,7 +189,7 @@
                                                                                         <asp:ListItem Value="DIYAPP" Text="<%$ Resources:lang,ZiDingYiAPPMoZu%>" />
                                                                                         <asp:ListItem Value="SYSTEM" Text="<%$ Resources:lang,XiTongMoZu%>" />
                                                                                         <asp:ListItem Value="APP" Text="<%$ Resources:lang,APPMoZu%>" />
-                                                                                        <%--    <asp:ListItem Value="SITE" Text="<%$ Resources:lang,WangZhanMoZu%>" />--%>
+                                                                                        <asp:ListItem Value="SITE" Text="<%$ Resources:lang,WangZhanMoZu%>" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td style="text-align: right;" class="tdLeft3" colspan="2">
@@ -294,7 +294,7 @@
                                                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td style="text-align: left;" class="tdRight3">
-                                                                                    <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_SortNumber" runat="server" Precision="0" Width="40px">0</NickLee:NumberBox>
+                                                                                    <nicklee:numberbox maxamount="1000000000000" minamount="0" id="NB_SortNumber" runat="server" precision="0" width="40px">0</nicklee:numberbox>
                                                                                 </td>
                                                                                 <td colspan="4" style="text-align: left;">
                                                                                     <table>
@@ -396,8 +396,8 @@
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GuanLianTaoHuangYeMian%>"></asp:Label></strong>
                                                                                             </td>
-                                                                                            
-                                                                                            <td width="25%" colspan="2" align="center"  class="itemStyle">
+
+                                                                                            <td width="25%" colspan="2" align="center" class="itemStyle">
                                                                                                 <strong>
                                                                                                     <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,YongHu%>"></asp:Label></strong>
                                                                                             </td>
@@ -488,7 +488,7 @@
                                                                                             <tr>
                                                                                                 <td style="padding-top: 5px;">
                                                                                                     <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,KeShi%>"></asp:Label>
-                                                                                              <br />
+                                                                                                    <br />
                                                                                                     <asp:DropDownList ID="DL_SetVisible" runat="server">
                                                                                                         <asp:ListItem Value="NO">NO</asp:ListItem>
                                                                                                         <asp:ListItem Value="YES">YES</asp:ListItem>
