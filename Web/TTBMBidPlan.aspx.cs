@@ -946,7 +946,7 @@ public partial class TTBMBidPlan : System.Web.UI.Page
                 //BT_Delete.Visible = true;
                 //BT_Delete.Enabled = true;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQiaoBiaoFangAnShengChengLang").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQiaoBiaoFangAnShengChengLang").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             }
 
             LoadBMBidPlanList();
@@ -964,7 +964,7 @@ public partial class TTBMBidPlan : System.Web.UI.Page
             //BT_Delete.Visible = true;
             //BT_Delete.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQiaoBiaoFangAnShengChengLang").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQiaoBiaoFangAnShengChengLang").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
         }
 
 

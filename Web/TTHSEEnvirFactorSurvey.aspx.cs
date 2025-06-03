@@ -652,7 +652,7 @@ public partial class TTHSEEnvirFactorSurvey : System.Web.UI.Page
     {
         if (DL_FactorCode.SelectedValue.Trim() == "" || string.IsNullOrEmpty(DL_FactorCode.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuWeiBiShu").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuWeiBiShu").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             DL_FactorCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
@@ -661,7 +661,7 @@ public partial class TTHSEEnvirFactorSurvey : System.Web.UI.Page
         }
         if (IsHSEEnvirFactorSurDetail(string.Empty, DL_FactorCode.SelectedValue.Trim(), LB_Code.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuYiCunZai").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuYiCunZai").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             DL_FactorCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
@@ -670,7 +670,7 @@ public partial class TTHSEEnvirFactorSurvey : System.Web.UI.Page
         }
         if (GetHSEEnvironmentalFactorStatus(DL_FactorCode.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoCiHuanJingYinSuGuoJiH").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoCiHuanJingYinSuGuoJiH").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             DL_FactorCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
@@ -720,7 +720,7 @@ public partial class TTHSEEnvirFactorSurvey : System.Web.UI.Page
     {
         if (DL_FactorCode.SelectedValue.Trim() == "" || string.IsNullOrEmpty(DL_FactorCode.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuWeiBiShu").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuWeiBiShu").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             DL_FactorCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
@@ -729,7 +729,7 @@ public partial class TTHSEEnvirFactorSurvey : System.Web.UI.Page
         }
         if (IsHSEEnvirFactorSurDetail(string.Empty, DL_FactorCode.SelectedValue.Trim(), LB_Code.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuYiCunZai").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoHuanJingYinSuYiCunZai").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             DL_FactorCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);

@@ -641,7 +641,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
                 BT_SubmitApply.Visible = true;
                 BT_SubmitApply.Enabled = true;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             }
             LoadBMPurchaseApplicationList(LB_ProjectID.Text.Trim());
         }
@@ -654,7 +654,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
             //BT_Delete.Enabled = true;
             BT_SubmitApply.Visible = true;
             BT_SubmitApply.Enabled = true;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
         }
 
         return strWLID;

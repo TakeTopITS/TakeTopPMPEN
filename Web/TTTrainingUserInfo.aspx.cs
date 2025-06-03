@@ -1226,11 +1226,11 @@ public partial class TTTrainingUserInfo : System.Web.UI.Page
                     BT_HolderDelete.Visible = true;
                     BT_HolderDelete.Enabled = true;
                 }
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChiZhengXiangMuLanguageHandl").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChiZhengXiangMuLanguageHandl").ToString().Trim() + LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true); 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChiZhengXiangMuLanguageHandl").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChiZhengXiangMuLanguageHandl").ToString().Trim() + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true); 
             }
         }
     }
@@ -2099,11 +2099,11 @@ public partial class TTTrainingUserInfo : System.Web.UI.Page
                 //btn_TrainingUpdate.Visible = false;
                 //btn_TrainingDelete.Visible = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZPeiXunXiangMuLanguageHandleG").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZPeiXunXiangMuLanguageHandleG").ToString().Trim() + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true); 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZPeiXunXiangMuLanguageHandleG").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZPeiXunXiangMuLanguageHandleG").ToString().Trim() + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true); 
             }
         }
     }

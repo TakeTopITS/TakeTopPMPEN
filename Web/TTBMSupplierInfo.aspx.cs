@@ -1706,11 +1706,11 @@ public partial class TTBMSupplierInfo : System.Web.UI.Page
 
                 BT_DeleteAccessories.Visible = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZFuJianLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZFuJianLanguageHandleGetWordZ").ToString().Trim() + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true); 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZFuJianLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZFuJianLanguageHandleGetWordZ").ToString().Trim() + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true); 
             }
         }
 

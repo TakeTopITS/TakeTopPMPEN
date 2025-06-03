@@ -186,11 +186,11 @@ public partial class TTArchiveConstract : System.Web.UI.Page
                 {
                     constractBLL.UpdateConstract(constract, int.Parse(strConstractID));
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCheXiaoLanguageHandleGetWord").ToString().Trim()+"')", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCheXiaoLanguageHandleGetWord").ToString().Trim()+ LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true); 
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCheXiaoLanguageHandleGetWord").ToString().Trim()+"')", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCheXiaoLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZGDCG").ToString().Trim()+"')", true); 
                 }
             }
 

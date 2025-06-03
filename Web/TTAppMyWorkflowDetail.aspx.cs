@@ -335,7 +335,7 @@ public partial class TTAppMyWorkflowDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChongXinLanguageHandleGetWor").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChongXinLanguageHandleGetWor").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
         }
     }
 

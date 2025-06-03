@@ -682,7 +682,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXinXiFaSongLanguageHandleGet").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXinXiFaSongLanguageHandleGet").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
         }
     }
 
@@ -1102,7 +1102,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhuaiXiangLanguageHandleGetW").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhuaiXiangLanguageHandleGetW").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
             }
         }
         else

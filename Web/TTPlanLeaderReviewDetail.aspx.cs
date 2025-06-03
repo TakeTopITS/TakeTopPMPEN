@@ -128,11 +128,11 @@ HE_ReviewDetail.Language = Session["LangCode"].ToString();
 
             LoadPlan(strPlanID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuXiaoLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuXiaoLanguageHandleGetWordZ").ToString().Trim() + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "')", true); 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuXiaoLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuXiaoLanguageHandleGetWordZ").ToString().Trim() + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "')", true); 
         }
     }
 

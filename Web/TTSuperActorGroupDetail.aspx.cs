@@ -408,7 +408,7 @@ public partial class TTSuperActorGroupDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXiuGaiLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXiuGaiLanguageHandleGetWordZ").ToString().Trim() + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true); 
         }
     }
     

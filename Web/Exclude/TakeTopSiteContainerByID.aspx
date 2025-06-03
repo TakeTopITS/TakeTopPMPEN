@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" autoeventwireup="true" inherits="TakeTopSiteContainerByID, App_Web_g5acnt0o" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteContainerByID.aspx.cs" Inherits="TakeTopSiteContainerByID" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

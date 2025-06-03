@@ -447,7 +447,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
         }
     }
 
@@ -1087,7 +1087,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
         }
     }
 
@@ -1579,7 +1579,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BT_UpdateDocType.Enabled = true;
             BT_DeleteDocType.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true); 
         }
         catch (Exception err)
         {
@@ -1642,7 +1642,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BT_UpdateDocType.Enabled = true;
             BT_DeleteDocType.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true); 
         }
         catch
         {

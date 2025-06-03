@@ -37,7 +37,7 @@ public partial class TTModuleFlowTemplateView : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZBaoCunShiBaiNiBuShiCiLiuChen").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZBaoCunShiBaiNiBuShiCiLiuChen").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
         }
     }
 

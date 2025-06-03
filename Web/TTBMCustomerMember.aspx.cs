@@ -934,7 +934,7 @@ public partial class TTBMCustomerMember : System.Web.UI.Page
             {
                 if (GetUserCount(strUserCode) == 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhangHaoLanguageHandleGetWor").ToString().Trim()+"')", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhangHaoLanguageHandleGetWor").ToString().Trim() + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + "')", true); 
                     return;
                 }
 

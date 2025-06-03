@@ -29811,14 +29811,8 @@
   <data name="XiaoXiDiShiQingShuaZeYiHangHou" xml:space="preserve">
     <value>Registro correspondente encontrado!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiXiangMuZiJinS" xml:space="preserve">
-    <value>Nenhum registro correspondente encontrado!</value>
-  </data>
   <data name="XiaoXiDiShiShanChuXiangMuZiJin" xml:space="preserve">
     <value>Por favor, selecione uma linha antes de modificar!</value>
-  </data>
-  <data name="XiaoXiDiShiZhiHangJinEShuRuYou" xml:space="preserve">
-    <value>Registro de implementação de fundos do projeto modificado com sucesso!</value>
   </data>
   <data name="XiaoXiDiShiBeiZhuShuRuYouWuShu" xml:space="preserve">
     <value>Registro de implementação de fundos do projeto excluído com sucesso!</value>
@@ -30124,124 +30118,79 @@
     <value>Lista de membros:</value>
   </data>
   <data name="ZZTuiChuLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Aviso: O " + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+    <value>Aviso: O </value>
   </data>
   <data name="ZZChongXinLanguageHandleGetWor" xml:space="preserve">
-    <value>Em lote "+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
+    <value>Em lote </value>
   </data>
   <data name="ZZCheXiaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Excluir " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
+    <value>Excluir</value>
   </data>
   <data name="ZZQiaoBiaoFangAnShengChengLang" xml:space="preserve">
-    <value>Modificar " + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
+    <value>Modificar"</value>
   </data>
   <data name="ZZZhangHaoLanguageHandleGetWor" xml:space="preserve">
-    <value>Sair " + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "</value>
+    <value>Sair </value>
   </data>
   <data name="ZZShenQingJiHuaShengChengLangu" xml:space="preserve">
-    <value>Re " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Re </value>
   </data>
   <data name="ZZShenQingShengChengLanguageHa" xml:space="preserve">
-    <value>Cancelar " + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "</value>
+    <value>Cancelar </value>
   </data>
   <data name="ZZFuJianLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Geração de plano de licitação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Geração de plano de licitação</value>
   </data>
   <data name="ZZChiZhengXiangMuLanguageHandl" xml:space="preserve">
-    <value>Conta " + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + "</value>
+    <value>Conta </value>
   </data>
   <data name="ZZPeiXunXiangMuLanguageHandleG" xml:space="preserve">
-    <value>Geração de plano de solicitação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGongSiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Geração de solicitação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Geração de plano de solicitação </value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuWeiBiShu" xml:space="preserve">
-    <value>Anexo " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+    <value>Anexo</value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuYiCunZai" xml:space="preserve">
-    <value>Projeto certificado "+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZJingGaoCiHuanJingYinSuGuoJiH" xml:space="preserve">
-    <value>Projeto de treinamento "+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZShangChuanLanguageHandleGetW" xml:space="preserve">
-    <value>Empresa "+LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim()+"</value>
+    <value>Projeto certificado </value>
   </data>
   <data name="ZZBaoCunShiBaiNiBuShiCiLiuChen" xml:space="preserve">
-    <value>Aviso: Fatores ambientais são obrigatórios, operação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Aviso: Fatores ambientais são obrigatórios, operação </value>
   </data>
   <data name="ZZQuXiaoLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Aviso: Fatores ambientais já existem, operação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Aviso: Fatores ambientais já existem, operação</value>
   </data>
   <data name="ZZGuiDangLanguageHandleGetWord" xml:space="preserve">
-    <value>Aviso: Este fator ambiental está expirado ou anormal, operação " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Aviso: Este fator ambiental está expirado ou anormal, operação </value>
   </data>
   <data name="ZZJieDianLanguageHandleGetWord" xml:space="preserve">
-    <value>Upload "+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"</value>
+    <value>Upload </value>
   </data>
   <data name="ZZXinXiFaSongLanguageHandleGet" xml:space="preserve">
     <value>Falha ao salvar: Você não é o criador deste modelo de processo e não pode salvar estas imagens de processo!</value>
   </data>
   <data name="ZZZhuaiXiangLanguageHandleGetW" xml:space="preserve">
-    <value>Cancelar " + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZBaoCunLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Arquivar " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoBeiFenMuLuChuangJianL" xml:space="preserve">
-    <value>Nó " + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "</value>
+    <value>Cancelar</value>
   </data>
   <data name="ZZJingGaoLiuChengTuZhongYouCiB" xml:space="preserve">
-    <value>Envio de informações " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Envio de informações</value>
   </data>
   <data name="ZZShanChuChengGong" xml:space="preserve">
-    <value>Conversão de item " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Conversão de item</value>
   </data>
   <data name="ZZShanChuShiBaiQingJianCha" xml:space="preserve">
-    <value>Salvar " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Salvar </value>
   </data>
   <data name="ZZJingGaoCiLiuChengBuShiNiChua" xml:space="preserve">
-    <value>Aviso: Criação do diretório de backup "+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZBiaoZhuPiLiangLanguageHandle" xml:space="preserve">
-    <value>Aviso: Este nó de etapa existe no fluxograma e não pode ser excluído. Por favor, verifique!</value>
-  </data>
-  <data name="ZZJianHaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Exclusão bem-sucedida!</value>
-  </data>
-  <data name="ZZGeTongLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Falha na exclusão. Por favor, verifique!</value>
-  </data>
-  <data name="ZZGeTongCaiJianLanguageHandleG" xml:space="preserve">
-    <value>Aviso: Este processo não foi criado por você, e você não é um superadministrador, portanto, não tem permissão para excluir. Por favor, verifique!</value>
-  </data>
-  <data name="ZZDuiZhaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Marcação em lote " + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="QiaoBiaoWenJianMuLutd" xml:space="preserve">
-    <value>Número de inspeção " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
-  <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
-    <value>Contrato " + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "</value>
+    <value>Aviso: Criação do diretório de backup </value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
     <value>Diretório de Documentos de Avaliação</value>
-  </data>
-  <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>Comparação "+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+"</value>
   </data>
   <data name="GongFang" xml:space="preserve">
     <value>Fornecedor</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
     <value>Diretório de documentos de licitação&lt;/td&gt;</value>
-  </data>
-  <data name="PingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&lt;td&gt;Documentos de licitação&lt;/td&gt; &gt;Diretório de documentos de avaliação&lt;/td&gt; &lt;td &gt;Métodos e padrões de avaliação&lt;/td&gt; &gt;Fornecedor&lt; &gt;Documentos de licitação&lt;/td&gt; &gt;Métodos e padrões de avaliação&lt;/td&gt; - Geração de fornecedor " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + " **Saldo diário de caixa** **Situação anormal** **Número de pré-registro** **Total pago em moeda local** **Código de material especial** **Nome do material** **Quantidade usada** **Publicação** **Dias de atraso** **Código do responsável** **Código do gerente de projeto** **Nome do gerente de projeto** **Novo processo** **Nome do computador** **Hora da última operação** **Relação de contato** **Empresa do contrato** **Data de início do primeiro contrato** **Tempo previsto de início do plano** **Tempo previsto de término do plano** **Tempo previsto de início da tarefa** **Hora de aceitação da tarefa** **Tempo previsto de término da tarefa** **Hora da última operação da tarefa** **Exportação bem-sucedida** **Retornar ao passo** **Tipo de material ou ativo** **Categoria geral** **Código do registrador** **Nome do registrador** **Grupo de funções** **A expansão da operação substituirá os dados da operação anterior. Você tem certeza que deseja continuar?** **Por favor, selecione o cliente** **Tem certeza que deseja excluir este registro?** **Tem certeza que deseja excluir os planos de outros membros copiados deste plano?** **Data de presença** **Hora de início da manhã** **Hora de término da manhã** **Hora de início da tarde** **Hora de término da tarde** **Hora de início da meia-noite** **Hora de término da meia-noite** **Distância máxima permitida** **Duração das horas extras (horas)** **Resumo mensal** **Data da estatística** **Hora de geração do relatório** **Departamento de nível 1** **Tempo de serviço na empresa** **Tipo de funcionário** **Status do funcionário** **Período de experiência** **Data real de efetivação** **Tipo de registro de residência** **Afiliação política** **Data de término do primeiro contrato** **Duração do primeiro contrato** **Data de início do segundo contrato** **Data de término do segundo contrato** **Duração do segundo contrato** **Data de início do terceiro contrato** **Data de término do terceiro contrato** **Duração do terceiro contrato** **Número de vezes assinado** **Data de início do contrato atual** **Duração do contrato atual** **Tipo de autorização** **Nome do site** **Número de usuários autorizados** **Módulos desativados** **Banco** **Nome do registrador** **Taxa de câmbio** **Quantidade recebida** **Hora de recebimento** **Distribuição de materiais** **Aceitação** **Valor não recebido** **Nome da avaliação** - Nenhum registro de visita correspondente encontrado **Nome do responsável** - Tem certeza que deseja excluir os itens de dados selecionados? **Plano de projeto atrasado** - Aviso: Por favor, selecione o tipo de arquivo **Licença (horas)** - Por favor, selecione um modelo de processo! - O código não pode estar vazio! - Tem certeza que deseja excluir os itens de dados selecionados? **Visualizar** - O número do projeto está vazio. Por favor, verifique! - Você não tem permissão para alterar o plano. Por favor, verifique! - Existe um arquivo de imagem idêntico! - Os dados da imagem estão vazios. Por favor, verifique!</value>
-  </data>
-  <data name="ZZGongYingShangShengChengLangu" xml:space="preserve">
-    <value>Geração de fornecedor " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
     <value>Saldo diário de caixa</value>
