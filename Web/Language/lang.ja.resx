@@ -28006,7 +28006,7 @@
     <value>ファイルアップローダー含む：</value>
   </data>
   <data name="DeDiSanFangCaoZuoJiLu" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に全てのプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に全てのプロジェクトを閲覧</value>
   </data>
   <data name="DeChengYuan" xml:space="preserve">
     <value>第三者操作記録リスト：</value>
@@ -28048,7 +28048,7 @@
     <value>カスタマーサービス需要リスト</value>
   </data>
   <data name="WenKongZhuanYuan" xml:space="preserve">
-    <value>&lt;B&gt;カスタマーサービス需要リスト&lt;/B&gt;</value>
+    <value>カスタマーサービス需要リスト</value>
   </data>
   <data name="ShouLiNiDeXiangMu" xml:space="preserve">
     <value>エラー、対応するテンプレートまたはテンプレートファイルが存在しません。確認してください！</value>
@@ -28183,7 +28183,7 @@
     <value>警告、工事単位と設備単位が空です。確認してください！</value>
   </data>
   <data name="XinJianChengGongQingJiShiZaiQi" xml:space="preserve">
-    <value>&lt;B&gt;全てのプロジェクト&lt;/B&gt;</value>
+    <value>全てのプロジェクト</value>
   </data>
   <data name="ZZJingGaoDaiHaoDeBuNengWeiKong" xml:space="preserve">
     <value>下請け支払い申請</value>
@@ -28513,7 +28513,7 @@
     <value>欠点：</value>
   </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
-    <value>&lt;b&gt;私の意見：&lt;/b&gt;</value>
+    <value>私の意見：</value>
   </data>
   <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
     <value>あなたの欠点を処理しています</value>
@@ -28540,7 +28540,7 @@
     <value>不具合割り当て通知</value>
   </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
-    <value>&lt;B&gt;総プロジェクト&lt;/B&gt;</value>
+    <value>総プロジェクト</value>
   </data>
   <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
     <value>不具合転換通知</value>
@@ -28567,7 +28567,7 @@
     <value>ファイル閲覧通知</value>
   </data>
   <data name="CaiWuFeiYong" xml:space="preserve">
-    <value>ドキュメントリスト&lt;/B&gt;</value>
+    <value>ドキュメントリスト</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
     <value>{0}行目、日付は空にできません</value>
@@ -28753,19 +28753,19 @@
     <value>売上返品レポート.xls</value>
   </data>
   <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
-    <value>&gt;&lt;p&gt;原料記録なし&lt;/p&gt; &lt;/td&gt;</value>
+    <value>&gt;&lt;p&gt;原料記録なし&lt;/p&gt; </value>
   </data>
   <data name="WuLiaoXiaoShouChan" xml:space="preserve">
-    <value>*&gt;総数量&lt;/td&gt;&lt;td class=*</value>
+    <value>*&gt;総数量</value>
   </data>
   <data name="WuLiaoBaoJiaChan" xml:space="preserve">
-    <value>*&gt;本色コスト&lt;/td&gt;&lt;td class=*</value>
+    <value>*&gt;本色コスト</value>
   </data>
   <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
     <value>物料販売報告書.xls</value>
   </data>
   <data name="DeWuLiaoLieBiao" xml:space="preserve">
-    <value>*&gt;配合価格&lt;/td&gt;&lt;td class=*</value>
+    <value>*&gt;配合価格</value>
   </data>
   <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
     <value>原料製品アーカイブ</value>
@@ -28906,7 +28906,7 @@
     <value>(リーダー)</value>
   </data>
   <data name="CaiGouDingChan" xml:space="preserve">
-    <value>。&lt;/br&gt;検査内容および発見：</value>
+    <value>。&gt;検査内容および発見：</value>
   </data>
   <data name="ZhongDanYouDiErJianSheGongSi" xml:space="preserve">
     <value>検査内容および発見：</value>
@@ -29140,22 +29140,22 @@
     <value>直接メンバー休暇情報リスト：</value>
   </data>
   <data name="BuKeYuJianFeiJiGeXiangJiangLi" xml:space="preserve">
-    <value>&lt;B&gt;全ての部門直接メンバー組織階層図&lt;/B&gt;</value>
+    <value>全ての部門直接メンバー組織階層図</value>
   </data>
   <data name="YiCiBiaoJiaFenLiBiao" xml:space="preserve">
-    <value>直接メンバー組織階層図&lt;/B&gt;</value>
+    <value>直接メンバー組織階層図</value>
   </data>
   <data name="ErCiBiaoJiaFenLiMuBiaoChengBen" xml:space="preserve">
     <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(保存失敗、あなたはこのプロセステンプレートの作成者ではありません。このプロセス画像を保存できません！</value>
   </data>
   <data name="ZZJingGaoChengBenLeiXingBuNeng" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私が作成したプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私が作成したプロジェクトを閲覧</value>
   </data>
   <data name="XiangMuGongZuoRiZhi" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私が参加したプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私が参加したプロジェクトを閲覧</value>
   </data>
   <data name="ShouLiLeNiDeXuQiu" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私のメンバーのプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私のメンバーのプロジェクトを閲覧</value>
   </data>
   <data name="JuJueLeNiDeXuQiu" xml:space="preserve">
     <value>私の直接メンバーパフォーマンス総合評価比較図</value>
@@ -29164,7 +29164,7 @@
     <value>ヒント、まずプロジェクトを選択してください！</value>
   </data>
   <data name="WanChengLeNiDeXuQiu" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私のプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私のプロジェクトを閲覧</value>
   </data>
   <data name="GuaQiLeNiDeXuQiu" xml:space="preserve">
     <value>警告、このメンバーは既に存在します。重複して追加できません。確認してください！</value>
@@ -29811,14 +29811,8 @@
   <data name="XiaoXiDiShiQingShuaZeYiHangHou" xml:space="preserve">
     <value>メッセージ：1行を選択してから変更操作を行ってください！</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiXiangMuZiJinS" xml:space="preserve">
-    <value>メッセージ：プロジェクト資金実施記録の変更に成功しました！</value>
-  </data>
   <data name="XiaoXiDiShiShanChuXiangMuZiJin" xml:space="preserve">
     <value>メッセージ：プロジェクト資金実施記録の削除に成功しました！</value>
-  </data>
-  <data name="XiaoXiDiShiZhiHangJinEShuRuYou" xml:space="preserve">
-    <value>メッセージ：【実行金額】入力が誤っています。数字を入力してください！</value>
   </data>
   <data name="XiaoXiDiShiBeiZhuShuRuYouWuShu" xml:space="preserve">
     <value>メッセージ：【備考】入力が誤っています。512漢字または1024英字以内で入力してください！</value>
@@ -29953,10 +29947,10 @@
     <value>審査プロセス</value>
   </data>
   <data name="FengXianNeiRong" xml:space="preserve">
-    <value>&lt;B&gt;ロールグループ&lt;/B&gt;</value>
+    <value>ロールグループ</value>
   </data>
   <data name="ChuangJianRTXFuWuShiBaiQingJia" xml:space="preserve">
-    <value>&lt;B&gt;全て&lt;/B&gt;</value>
+    <value>全て</value>
   </data>
   <data name="FaSongChengGong" xml:space="preserve">
     <value>この需要は存在しません。削除された可能性があります。確認してください！</value>
@@ -29974,13 +29968,13 @@
     <value>ユーザー権限情報の取得に失敗しました！</value>
   </data>
   <data name="XueShengShu" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;モジュール名データなし&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>&lt;tr&gt;モジュール名データなし&lt;/tr&gt;</value>
   </data>
   <data name="SuoYouXiangMuLieBiao" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;タイプデータなし&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>&lt;tr&gt;タイプデータなし&lt;/tr&gt;</value>
   </data>
   <data name="MoBanXiangMu" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;データなし&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>&lt;tr&gt;データなし&lt;/tr&gt;</value>
   </data>
   <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
     <value>内容が完全に削除されました。ご注意ください。ここに通知します！</value>
@@ -30013,7 +30007,7 @@
     <value>エラーが発生しました</value>
   </data>
   <data name="ZiChanCaiGouFeiYong" xml:space="preserve">
-    <value>&lt;B&gt;一部&lt;/B&gt;</value>
+    <value>一部</value>
   </data>
   <data name="ZZFenPaChengGong" xml:space="preserve">
     <value>プロジェクトを変更しました：</value>
@@ -30034,7 +30028,7 @@
     <value>RTX内線番号</value>
   </data>
   <data name="ZZCuoWuTouBiaoBaoJiaHeKongZhiJ" xml:space="preserve">
-    <value>&lt;b&gt;ページモジュール&lt;b&gt;</value>
+    <value>ページモジュール</value>
   </data>
   <data name="ZZShiBaiCiTouBiaoYiWanChengBuN" xml:space="preserve">
     <value>警告、工本費と代理費は数字タイプでなければなりません。確認してください！</value>
@@ -30127,136 +30121,91 @@
     <value>メンバーリスト：</value>
   </data>
   <data name="ZZChongXinLanguageHandleGetWor" xml:space="preserve">
-    <value>ヒント、この" + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "</value>
+    <value>ヒント、この</value>
   </data>
   <data name="ZZCheXiaoLanguageHandleGetWord" xml:space="preserve">
-    <value>一括"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"</value>
+    <value>一括</value>
   </data>
   <data name="ZZQiaoBiaoFangAnShengChengLang" xml:space="preserve">
-    <value>削除" + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
+    <value>削除</value>
   </data>
   <data name="ZZZhangHaoLanguageHandleGetWor" xml:space="preserve">
-    <value>変更" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
+    <value>変更</value>
   </data>
   <data name="ZZShenQingJiHuaShengChengLangu" xml:space="preserve">
-    <value>終了" + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "</value>
+    <value>終了</value>
   </data>
   <data name="ZZShenQingShengChengLanguageHa" xml:space="preserve">
-    <value>再" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>再</value>
   </data>
   <data name="ZZFuJianLanguageHandleGetWordZ" xml:space="preserve">
-    <value>取消" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "</value>
+    <value>取消</value>
   </data>
   <data name="ZZChiZhengXiangMuLanguageHandl" xml:space="preserve">
-    <value>入札案生成" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>入札案生成</value>
   </data>
   <data name="ZZPeiXunXiangMuLanguageHandleG" xml:space="preserve">
-    <value>アカウント" + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGongSiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>申請計画生成" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>アカウント</value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuWeiBiShu" xml:space="preserve">
-    <value>申請生成" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>申請生成</value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuYiCunZai" xml:space="preserve">
-    <value>添付ファイル" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoCiHuanJingYinSuGuoJiH" xml:space="preserve">
-    <value>資格項目"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZShangChuanLanguageHandleGetW" xml:space="preserve">
-    <value>トレーニング項目"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"</value>
+    <value>添付ファイル</value>
   </data>
   <data name="ZZBaoCunShiBaiNiBuShiCiLiuChen" xml:space="preserve">
-    <value>会社"+LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim()+"</value>
+    <value>会社</value>
   </data>
   <data name="ZZQuXiaoLanguageHandleGetWordZ" xml:space="preserve">
-    <value>警告、環境要因は必須項目です。操作" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>警告、環境要因は必須項目です。操作"</value>
   </data>
   <data name="ZZGuiDangLanguageHandleGetWord" xml:space="preserve">
-    <value>警告、環境要因は既に存在します。操作" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>警告、環境要因は既に存在します。操作</value>
   </data>
   <data name="ZZJieDianLanguageHandleGetWord" xml:space="preserve">
-    <value>警告、この環境要因は期限切れまたは異常です。操作" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>警告、この環境要因は期限切れまたは異常です。操作</value>
   </data>
   <data name="ZZXinXiFaSongLanguageHandleGet" xml:space="preserve">
-    <value>アップロード"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"</value>
+    <value>アップロード"</value>
   </data>
   <data name="ZZZhuaiXiangLanguageHandleGetW" xml:space="preserve">
     <value>保存失敗、あなたはこのプロセステンプレートの作成者ではありません。このプロセス画像を保存できません！</value>
   </data>
-  <data name="ZZBaoCunLanguageHandleGetWordZ" xml:space="preserve">
-    <value>取消" + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoBeiFenMuLuChuangJianL" xml:space="preserve">
-    <value>アーカイブ" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
   <data name="ZZJingGaoLiuChengTuZhongYouCiB" xml:space="preserve">
-    <value>ノード" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "</value>
+    <value>ノード</value>
   </data>
   <data name="ZZShanChuChengGong" xml:space="preserve">
-    <value>情報送信" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>情報送信</value>
   </data>
   <data name="ZZShanChuShiBaiQingJianCha" xml:space="preserve">
-    <value>転換" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>転換"</value>
   </data>
   <data name="ZZJingGaoCiLiuChengBuShiNiChua" xml:space="preserve">
-    <value>保存" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZBiaoZhuPiLiangLanguageHandle" xml:space="preserve">
-    <value>警告、バックアップディレクトリの作成"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZJianHaoLanguageHandleGetWord" xml:space="preserve">
-    <value>警告、フローチャートにこのステップノードがあります。削除できません。確認してください！</value>
-  </data>
-  <data name="ZZGeTongLanguageHandleGetWordZ" xml:space="preserve">
-    <value>削除成功！</value>
-  </data>
-  <data name="ZZGeTongCaiJianLanguageHandleG" xml:space="preserve">
-    <value>削除失敗、確認してください！</value>
-  </data>
-  <data name="ZZDuiZhaoLanguageHandleGetWord" xml:space="preserve">
-    <value>警告、このプロセスはあなたが作成したものではなく、あなたもスーパー管理者ではありません。削除権限がありません。確認してください！</value>
-  </data>
-  <data name="QiaoBiaoWenJianMuLutd" xml:space="preserve">
-    <value>一括" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
-    <value>検査番号" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
+    <value>保存</value>
   </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
     <value>入札評価書類の目録</value>
   </data>
-  <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>契約材検査" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
   <data name="GongFang" xml:space="preserve">
-    <value>対照"+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+"</value>
+    <value>供給者</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
-    <value>&gt;入札ファイルディレクトリ&lt;/td&gt;</value>
-  </data>
-  <data name="PingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&lt;td&gt;入札ファイル&lt;/td&gt;</value>
-  </data>
-  <data name="ZZGongYingShangShengChengLangu" xml:space="preserve">
-    <value>&gt;評価ファイルディレクトリ&lt;/td&gt;</value>
+    <value>&gt;入札ファイルディレクトリ</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
-    <value>&lt;td &gt;評価方法及び基準&lt;/td&gt;</value>
+    <value>評価方法及び基準</value>
   </data>
   <data name="YiChangQingKuang" xml:space="preserve">
     <value>&gt;供給者&lt;</value>
   </data>
   <data name="YuLuDanHao" xml:space="preserve">
-    <value>&gt;入札ファイル&lt;/td&gt;</value>
+    <value>&gt;入札ファイル</value>
   </data>
   <data name="ShiFuZongEBenBi" xml:space="preserve">
-    <value>&gt;評価方法及び基準&lt;/td&gt;</value>
+    <value>&gt;評価方法及び基準</value>
   </data>
   <data name="TeLiaoDaiMa" xml:space="preserve">
-    <value>供給者生成" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>特殊材料コード</value>
   </data>
   <data name="WuLiaoMingCheng" xml:space="preserve">
     <value>毎日の現金残高</value>

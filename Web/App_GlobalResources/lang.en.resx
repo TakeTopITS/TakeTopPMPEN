@@ -5785,94 +5785,94 @@
     <value>Environmental factors Record List</value>
   </data>
   <data name="hlActivateThisWF" xml:space="preserve">
-    <value>-&gt; Activate this process</value>
+    <value>- Activate this process</value>
   </data>
   <data name="hlApplyFunding" xml:space="preserve">
-    <value>-&gt; Grant application</value>
+    <value>- Grant application</value>
   </data>
   <data name="hlArrangeMeeting" xml:space="preserve">
-    <value>-&gt; Meeting schedule</value>
+    <value>- Meeting schedule</value>
   </data>
   <data name="hlAssignTask" xml:space="preserve">
-    <value>-&gt; Task Assignments</value>
+    <value>- Task Assignments</value>
   </data>
   <data name="hlBomToPlan" xml:space="preserve">
-    <value>-&gt; Structure Plan transfer plan</value>
+    <value>- Structure Plan transfer plan</value>
   </data>
   <data name="hlBuildTeam" xml:space="preserve">
-    <value>-&gt; Set up the team</value>
+    <value>- Set up the team</value>
   </data>
   <data name="hlConfirmExpense" xml:space="preserve">
-    <value>-&gt; Confirm fee</value>
+    <value>- Confirm fee</value>
   </data>
   <data name="hlConfirmManhour" xml:space="preserve">
-    <value>-&gt; Work confirm</value>
+    <value>- Work confirm</value>
   </data>
   <data name="hlCopyBomFromTemplateProject" xml:space="preserve">
-    <value>-&gt; Copy from the template project structure plan</value>
+    <value>- Copy from the template project structure plan</value>
   </data>
   <data name="hlCopyFromTemplate" xml:space="preserve">
-    <value>-&gt; Copy from Template</value>
+    <value>- Copy from Template</value>
   </data>
   <data name="hlCopyProjectPlan" xml:space="preserve">
-    <value>-&gt; Copy Project Plan</value>
+    <value>- Copy Project Plan</value>
   </data>
   <data name="hlDailyWorkReport" xml:space="preserve">
     <value>Logbook Report</value>
   </data>
   <data name="hlGanttChart" xml:space="preserve">
-    <value>-&gt; Gantt</value>
+    <value>- Gantt</value>
   </data>
   <data name="hlImplementPlan" xml:space="preserve">
-    <value>-&gt; Implementation Plan</value>
+    <value>- Implementation Plan</value>
   </data>
   <data name="hlIncomeAndExpense" xml:space="preserve">
-    <value>-&gt; Revenue Settlement</value>
+    <value>- Revenue Settlement</value>
   </data>
   <data name="hlMakeCollaboration" xml:space="preserve">
-    <value>-&gt; Initiate cooperation</value>
+    <value>- Initiate cooperation</value>
   </data>
   <data name="hlMakePlan" xml:space="preserve">
-    <value>-&gt; Plan</value>
+    <value>- Plan</value>
   </data>
   <data name="hlRelatedDoc" xml:space="preserve">
-    <value>-&gt; Related Documents</value>
+    <value>- Related Documents</value>
   </data>
   <data name="hlRelatedItemAndBom" xml:space="preserve">
-    <value>-&gt; Element defines the structure set up</value>
+    <value>- Element defines the structure set up</value>
   </data>
   <data name="hlReqReview" xml:space="preserve">
-    <value>-&gt; Needs assessment</value>
+    <value>- Needs assessment</value>
   </data>
   <data name="hlReviewProject" xml:space="preserve">
-    <value>-&gt; Project Review</value>
+    <value>- Project Review</value>
   </data>
   <data name="hlReviewProjectPlan" xml:space="preserve">
-    <value>-&gt; Project Plan Review</value>
+    <value>- Project Plan Review</value>
   </data>
   <data name="hlReviewTask" xml:space="preserve">
-    <value>-&gt; Task Review</value>
+    <value>- Task Review</value>
   </data>
   <data name="hlRiskReview" xml:space="preserve">
-    <value>-&gt; Risk Assessment</value>
+    <value>- Risk Assessment</value>
   </data>
   <data name="hlRunProjectByWF" xml:space="preserve">
-    <value>-&gt; Assign Workflow</value>
+    <value>- Assign Workflow</value>
   </data>
   <data name="hlRunProjectPlanByWF" xml:space="preserve">
-    <value>-&gt; Assign Workflow</value>
+    <value>- Assign Workflow</value>
   </data>
   <data name="hlRunReqByWF" xml:space="preserve">
-    <value>-&gt; Assign Workflow</value>
+    <value>- Assign Workflow</value>
   </data>
   <data name="hlRunRiskByWF" xml:space="preserve">
-    <value>-&gt; Assign Workflow</value>
+    <value>- Assign Workflow</value>
   </data>
   <data name="hlRunTaskByWF" xml:space="preserve">
-    <value>-&gt; Assign Workflow</value>
+    <value>- Assign Workflow</value>
   </data>
   <data name="hlToTask" xml:space="preserve">
-    <value>-&gt; Turn to the task</value>
+    <value>- Turn to the task</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
     <value>Then click "submit" button, and the system will automatically log in to the trial platform</value>
@@ -8509,7 +8509,7 @@
     <value>Establish collaborative</value>
   </data>
   <data name="MakeReq" xml:space="preserve">
-    <value>-&gt; Make demands</value>
+    <value>- Make demands</value>
   </data>
   <data name="MakeTask" xml:space="preserve">
     <value>Create a task</value>
@@ -9568,7 +9568,7 @@
     <value>Project Status</value>
   </data>
   <data name="ProjectStatusReview" xml:space="preserve">
-    <value>-&gt; Project Status Review</value>
+    <value>- Project Status Review</value>
   </data>
   <data name="ProjectTreeBrowse" xml:space="preserve">
     <value>Browse the project tree</value>
@@ -12979,7 +12979,7 @@
     <value>Income Summary</value>
   </data>
   <data name="ToTask" xml:space="preserve">
-    <value>-&gt; Turn the task</value>
+    <value>- Turn the task</value>
   </data>
   <data name="TouBiaoFeiYong" xml:space="preserve">
     <value>Bid costs</value>
@@ -13489,7 +13489,7 @@
     <value>End time night shift work</value>
   </data>
   <data name="WBSJieGouDaiMaYuanShuDingYi" xml:space="preserve">
-    <value>-&gt; WBS (structure) Code (element) is defined</value>
+    <value>- WBS (structure) Code (element) is defined</value>
   </data>
   <data name="WBSJieGouGuiHuaZhuanJiHua" xml:space="preserve">
     <value>WBS (Structure Plan) transfer plan</value>
@@ -19477,10 +19477,10 @@
     <value>The plan details the procurement list already exists, you can not do to add!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW0DWSC" xml:space="preserve">
-    <value>Under this plan has made the requisition &lt;settlement tag&gt; 0 is not deleted!</value>
+    <value>Under this plan has made the requisition &lt;settlement tag 0 is not deleted!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW1DWTD" xml:space="preserve">
-    <value>Under this plan has made the requisition &lt;settlement marked&gt; -1 is not chargeback!</value>
+    <value>Under this plan has made the requisition &lt;settlement marked -1 is not chargeback!</value>
   </data>
   <data name="ZZGJKBMZSJBZYCZJC" xml:space="preserve">
     <value>The interface encoded in the data already in the table, check!</value>
@@ -23152,7 +23152,7 @@
     <value>User name and password can not be empty, please check!</value>
   </data>
   <data name="ZZYHTJDBSSXHCJXCL" xml:space="preserve">
-    <value>Contract &lt;progress&gt; is not in force or material inspection, please deal with!</value>
+    <value>Contract &lt;progress is not in force or material inspection, please deal with!</value>
   </data>
   <data name="ZZYJCZBYZFZ" xml:space="preserve">
     <value>Already exists, do not repeat choice!</value>
@@ -23185,7 +23185,7 @@
     <value>Current supplier has been selected, do not repeat the click!</value>
   </data>
   <data name="ZZYKDJDBSBXXCL" xml:space="preserve">
-    <value>Have requested a single paragraph &lt;progress&gt; is not reimbursed, please deal with!</value>
+    <value>Have requested a single paragraph &lt;progress is not reimbursed, please deal with!</value>
   </data>
   <data name="ZZYKRZB" xml:space="preserve">
     <value>Log table has been cleared!</value>
@@ -24694,7 +24694,7 @@
     <value>Relevant data</value>
   </data>
   <data name="hlMakeMeeting" xml:space="preserve">
-    <value>-&gt; Meeting schedule</value>
+    <value>- Meeting schedule</value>
   </data>
   <data name="TongZhiShenQingRen" xml:space="preserve">
     <value>Notify the applicant</value>
@@ -25486,7 +25486,7 @@
     <value>Child Workflow List</value>
   </data>
   <data name="FaYaoQing" xml:space="preserve">
-    <value>-&gt; Invitation</value>
+    <value>- Invitation</value>
   </data>
   <data name="ZZXXYTSGSMSXRYDEMAILHSJQJSTXTM" xml:space="preserve">
     <value>The information has been pushed to the EMail or mobile phone of the above selected person, please remind them promptly!</value>
@@ -25537,7 +25537,7 @@
     <value>Additional</value>
   </data>
   <data name="BaoChunMoBanDingYi" xml:space="preserve">
-    <value>--&gt;Save Template Definition</value>
+    <value>--Save Template Definition</value>
   </data>
   <data name="ZZGeiBianCG" xml:space="preserve">
     <value>Change Sucessfully!</value>
@@ -26167,28 +26167,28 @@
     <value>Associate Child Workflow</value>
   </data>
   <data name="GongZuoJiHuaJT" xml:space="preserve">
-    <value>--&gt;工作计划</value>
+    <value>--工作计划</value>
   </data>
   <data name="GongZuoRiChengJT" xml:space="preserve">
-    <value>--&gt;工作日程</value>
+    <value>--工作日程</value>
   </data>
   <data name="ShouFuKuanJiHuaJT" xml:space="preserve">
-    <value>--&gt;收付款计划</value>
+    <value>--收付款计划</value>
   </data>
   <data name="CHENGYUANSHOURUFENPEIJT" xml:space="preserve">
-    <value>-&gt; member income distribution</value>
+    <value>- member income distribution</value>
   </data>
   <data name="GONGZUOLIANGFENPEIJT" xml:space="preserve">
-    <value>-&gt; workload distribution</value>
+    <value>- workload distribution</value>
   </data>
   <data name="hlDailyWorkReportJT" xml:space="preserve">
-    <value>-&gt; Working Log Report</value>
+    <value>- Working Log Report</value>
   </data>
   <data name="ProjectDocumentJT" xml:space="preserve">
-    <value>-&gt; project documentation</value>
+    <value>- project documentation</value>
   </data>
   <data name="ProjectMemberJT" xml:space="preserve">
-    <value>-&gt; Project members</value>
+    <value>- Project members</value>
   </data>
   <data name="KeYongWeb" xml:space="preserve">
     <value>CanWEB</value>
@@ -26395,7 +26395,7 @@
     <value>Fee application enquiry</value>
   </data>
   <data name="QiBaoxiao" xml:space="preserve">
-    <value>--&gt;Claim</value>
+    <value>--Claim</value>
   </data>
   <data name="QingXianXuanZheYaoBaoXiaoDeFeiYong" xml:space="preserve">
     <value>Please select the expense to be reimbursed first!</value>
@@ -26959,7 +26959,7 @@
     <value>Warnings, names, specifications, models cannot contain single quotes, double quotes, percent signs, please check!</value>
   </data>
   <data name="ZZCCYYSMYXYDSJKLJC" xml:space="preserve">
-    <value>An error occurred because there is no corresponding database connection string. Please add the corresponding connection string under the node: &lt;connectionStrings&gt; in the web.config file, the string name is: ReadOnlySQLCONNECTIONSTRING, user id is: ReadOnlyUser, the password is set, other parameters and SQLCONNECTIONSTRING same!</value>
+    <value>An error occurred because there is no corresponding database connection string. Please add the corresponding connection string under the node: &lt;connectionStrings in the web.config file, the string name is: ReadOnlySQLCONNECTIONSTRING, user id is: ReadOnlyUser, the password is set, other parameters and SQLCONNECTIONSTRING same!</value>
   </data>
   <data name="ZZSJKZDYHYYDSJBIFSHBBSJ" xml:space="preserve">
     <value>Database read-only users are used for big data BI analysis and report design, and only have the authority to query data!</value>
@@ -27998,7 +27998,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>File uploader includes:</value>
   </data>
   <data name="BAnLeiXingLiuLanSuoYouXiangMuB" xml:space="preserve">
-    <value>&lt;B&gt;Browse all projects by type&lt;/B&gt;</value>
+    <value>&lt;BBrowse all projects by type&lt;/B</value>
   </data>
   <data name="DiSanFangCaoZuoJiLuLieBiao" xml:space="preserve">
     <value>Third-party operation record list:</value>
@@ -28040,7 +28040,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Customer service demand list</value>
   </data>
   <data name="BKeHuFuWuXuQiuLieBiaoB" xml:space="preserve">
-    <value>&lt;B&gt;Customer service demand list&lt;/B&gt;</value>
+    <value>&lt;BCustomer service demand list&lt;/B</value>
   </data>
   <data name="CuoWuXiangYingMoBanHuoMoBanWen" xml:space="preserve">
     <value>Error, the corresponding template or template file does not exist, please check!</value>
@@ -28175,7 +28175,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Warning, engineering unit and equipment unit cannot be empty, please check!</value>
   </data>
   <data name="BSuoYouXiangMuB" xml:space="preserve">
-    <value>&lt;B&gt;All projects&lt;/B&gt;</value>
+    <value>&lt;BAll projects&lt;/B</value>
   </data>
   <data name="FenBaoFuKuanShenQing" xml:space="preserve">
     <value>Subcontractor payment application</value>
@@ -28532,7 +28532,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Employee name</value>
   </data>
   <data name="BZongXiangMuB" xml:space="preserve">
-    <value>&lt;b&gt;My opinion:&lt;/b&gt;</value>
+    <value>&lt;bMy opinion:&lt;/b</value>
   </data>
   <data name="QueXianZhuaiXiangTongZhi" xml:space="preserve">
     <value>Special operation certificate number</value>
@@ -28553,7 +28553,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>, please check promptly!</value>
   </data>
   <data name="WenDangLieBiaoB" xml:space="preserve">
-    <value>Document List&lt;/B&gt;</value>
+    <value>Document List&lt;/B</value>
   </data>
   <data name="RiJi" xml:space="preserve">
     <value>Special equipment welding operator certificate code</value>
@@ -28844,7 +28844,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>(Team leader)</value>
   </data>
   <data name="GongNengHuoBeiZhu" xml:space="preserve">
-    <value>.&lt;/br&gt;Check content and findings:</value>
+    <value>.Check content and findings:</value>
   </data>
   <data name="HuoKPILeiXing" xml:space="preserve">
     <value>Check content and findings:</value>
@@ -29030,7 +29030,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>System notification, new report:</value>
   </data>
   <data name="BSuoYouBuMenZhiJieChengYuanZuZ" xml:space="preserve">
-    <value>&lt;B&gt;Organization hierarchy chart of all department direct members&lt;/B&gt;</value>
+    <value>&lt;BOrganization hierarchy chart of all department direct members&lt;/B</value>
   </data>
   <data name="ZhiJieChengYuanZuZhiCengCiTuB" xml:space="preserve">
     <value>Report reading notification</value>
@@ -29042,7 +29042,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Meeting name cannot be empty!</value>
   </data>
   <data name="BAnLeiXingLiuLanWoCanYuDeXiang" xml:space="preserve">
-    <value>&lt;B&gt;Browse projects I participate in by type&lt;/B&gt;</value>
+    <value>&lt;BBrowse projects I participate in by type&lt;/B</value>
   </data>
   <data name="BAnLeiXingLiuLanWoChengYuanDeX" xml:space="preserve">
     <value>Time setting is incorrect!</value>
@@ -29054,7 +29054,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Meeting does not exist!</value>
   </data>
   <data name="BAnLeiXingLiuLanWoDeXiangMuB" xml:space="preserve">
-    <value>&lt;B&gt;Browse my projects by type&lt;/B&gt;</value>
+    <value>&lt;BBrowse my projects by type&lt;/B</value>
   </data>
   <data name="ZZJingGaoCiChengYuanYiCunZaiBu" xml:space="preserve">
     <value>Regular user password format error!</value>
@@ -29081,19 +29081,19 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Sales tracking</value>
   </data>
   <data name="GongSiGongGaoWenJianLieBiao" xml:space="preserve">
-    <value>Direct member organization hierarchy chart&lt;/B&gt;</value>
+    <value>Direct member organization hierarchy chart&lt;/B</value>
   </data>
   <data name="WenJianMingBaoHan" xml:space="preserve">
     <value>File name contains:</value>
   </data>
   <data name="ZiFuChuanDeWenDangLieBiao" xml:space="preserve">
-    <value>&lt;B&gt;Browse projects I created by type&lt;/B&gt;</value>
+    <value>&lt;BBrowse projects I created by type&lt;/B</value>
   </data>
   <data name="GongWen" xml:space="preserve">
     <value>Official document</value>
   </data>
   <data name="DaJiHua" xml:space="preserve">
-    <value>&lt;B&gt;Browse projects I am a member of by type&lt;/B&gt;</value>
+    <value>&lt;BBrowse projects I am a member of by type&lt;/B</value>
   </data>
   <data name="FenPaJiLu" xml:space="preserve">
     <value>Assignment record:</value>
@@ -29249,7 +29249,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Material data</value>
   </data>
   <data name="StrongShuLiang" xml:space="preserve">
-    <value>&lt;/Strong&gt; (Quantity:</value>
+    <value>&lt;/Strong (Quantity:</value>
   </data>
   <data name="XiangMuGongShiHeFeiYongHuiZong" xml:space="preserve">
     <value>Project hours and expenses summary table</value>
@@ -29939,7 +29939,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Please select the corresponding confirmed workload and try again.</value>
   </data>
   <data name="BJiaoSeZuB" xml:space="preserve">
-    <value>&lt;B&gt;Role Group&lt;/B&gt;</value>
+    <value>&lt;BRole Group&lt;/B</value>
   </data>
   <data name="BSuoYouB" xml:space="preserve">
     <value>Group</value>
@@ -29954,7 +29954,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Failed to create RTX service, please check!</value>
   </data>
   <data name="FaSongChengGong" xml:space="preserve">
-    <value>&lt;B&gt;All&lt;/B&gt;</value>
+    <value>&lt;BAll&lt;/B</value>
   </data>
   <data name="FaSongShiBai" xml:space="preserve">
     <value>Sending failed!</value>
@@ -29975,7 +29975,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>All project list</value>
   </data>
   <data name="MoBanXiangMu" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;No type data&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>&lt;trNo type data&lt;/tr</value>
   </data>
   <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
     <value>Content, this is a permanent deletion, please pay attention, this is a notice!</value>
@@ -29996,7 +29996,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Project list of:</value>
   </data>
   <data name="BBuFenB" xml:space="preserve">
-    <value>&lt;B&gt;Partial&lt;/B&gt;</value>
+    <value>&lt;BPartial&lt;/B</value>
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>Hidden successfully!</value>
@@ -30020,7 +30020,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Project plan change notification</value>
   </data>
   <data name="bXieMianMoZub" xml:space="preserve">
-    <value>&lt;b&gt;Page Module&lt;b&gt;</value>
+    <value>&lt;bPage Module&lt;b</value>
   </data>
   <data name="ZZJingGaoGongBenFeiHeDaiLiFeiB" xml:space="preserve">
     <value>Assignment successful!</value>
@@ -30191,7 +30191,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Supplier</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
-    <value>&gt;Bidding documents&lt;/td&gt;</value>
+    <value>Bidding documents</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
     <value>Daily cash balance</value>

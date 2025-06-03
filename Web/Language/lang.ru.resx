@@ -5785,94 +5785,94 @@
     <value>Экологические факторы Запись Список</value>
   </data>
   <data name="hlActivateThisWF" xml:space="preserve">
-    <value>-&gt; Активировать этот процесс</value>
+    <value>- Активировать этот процесс</value>
   </data>
   <data name="hlApplyFunding" xml:space="preserve">
-    <value>-&gt; Приложения Грант</value>
+    <value>- Приложения Грант</value>
   </data>
   <data name="hlArrangeMeeting" xml:space="preserve">
-    <value>-&gt; Расписание Встреча</value>
+    <value>- Расписание Встреча</value>
   </data>
   <data name="hlAssignTask" xml:space="preserve">
-    <value>-&gt; Задания</value>
+    <value>- Задания</value>
   </data>
   <data name="hlBomToPlan" xml:space="preserve">
-    <value>-&gt; План Структура передачи план</value>
+    <value>- План Структура передачи план</value>
   </data>
   <data name="hlBuildTeam" xml:space="preserve">
-    <value>-&gt; Настройка команду</value>
+    <value>- Настройка команду</value>
   </data>
   <data name="hlConfirmExpense" xml:space="preserve">
-    <value>-&gt; Подтвердите плата</value>
+    <value>- Подтвердите плата</value>
   </data>
   <data name="hlConfirmManhour" xml:space="preserve">
-    <value>-&gt; Работа подтверждения</value>
+    <value>- Работа подтверждения</value>
   </data>
   <data name="hlCopyBomFromTemplateProject" xml:space="preserve">
-    <value>-&gt; Копировать из плана структуры проекта шаблон</value>
+    <value>- Копировать из плана структуры проекта шаблон</value>
   </data>
   <data name="hlCopyFromTemplate" xml:space="preserve">
-    <value>-&gt; Копировать из шаблона</value>
+    <value>- Копировать из шаблона</value>
   </data>
   <data name="hlCopyProjectPlan" xml:space="preserve">
-    <value>-&gt; План проекта Копировать</value>
+    <value>- План проекта Копировать</value>
   </data>
   <data name="hlDailyWorkReport" xml:space="preserve">
     <value>Журнал Сообщить</value>
   </data>
   <data name="hlGanttChart" xml:space="preserve">
-    <value>-&gt; Ганта</value>
+    <value>- Ганта</value>
   </data>
   <data name="hlImplementPlan" xml:space="preserve">
-    <value>-&gt; План осуществления</value>
+    <value>- План осуществления</value>
   </data>
   <data name="hlIncomeAndExpense" xml:space="preserve">
-    <value>-&gt; Доходы расчетов</value>
+    <value>- Доходы расчетов</value>
   </data>
   <data name="hlMakeCollaboration" xml:space="preserve">
-    <value>-&gt; Начать сотрудничество</value>
+    <value>- Начать сотрудничество</value>
   </data>
   <data name="hlMakePlan" xml:space="preserve">
-    <value>-&gt; План</value>
+    <value>- План</value>
   </data>
   <data name="hlRelatedDoc" xml:space="preserve">
-    <value>-&gt; Документы по теме</value>
+    <value>- Документы по теме</value>
   </data>
   <data name="hlRelatedItemAndBom" xml:space="preserve">
-    <value>-&gt; Элемент определяет структуру настроить</value>
+    <value>- Элемент определяет структуру настроить</value>
   </data>
   <data name="hlReqReview" xml:space="preserve">
-    <value>-&gt; Оценка потребностей</value>
+    <value>- Оценка потребностей</value>
   </data>
   <data name="hlReviewProject" xml:space="preserve">
-    <value>-&gt; Обзор проекта</value>
+    <value>- Обзор проекта</value>
   </data>
   <data name="hlReviewProjectPlan" xml:space="preserve">
-    <value>-&gt; Проект отзыв план</value>
+    <value>- Проект отзыв план</value>
   </data>
   <data name="hlReviewTask" xml:space="preserve">
-    <value>-&gt; Обзор заданий</value>
+    <value>- Обзор заданий</value>
   </data>
   <data name="hlRiskReview" xml:space="preserve">
-    <value>-&gt; Оценка риска</value>
+    <value>- Оценка риска</value>
   </data>
   <data name="hlRunProjectByWF" xml:space="preserve">
-    <value>-&gt; Реализация проекта (модели процесса)</value>
+    <value>- Реализация проекта (модели процесса)</value>
   </data>
   <data name="hlRunProjectPlanByWF" xml:space="preserve">
-    <value>-&gt; Реализация Программы (модели процесса)</value>
+    <value>- Реализация Программы (модели процесса)</value>
   </data>
   <data name="hlRunReqByWF" xml:space="preserve">
-    <value>-&gt; Требования Обработка (режим потока)</value>
+    <value>- Требования Обработка (режим потока)</value>
   </data>
   <data name="hlRunRiskByWF" xml:space="preserve">
-    <value>-&gt; Управление рисками (режим течения)</value>
+    <value>- Управление рисками (режим течения)</value>
   </data>
   <data name="hlRunTaskByWF" xml:space="preserve">
-    <value>-&gt; Реализация задач (модели процесса)</value>
+    <value>- Реализация задач (модели процесса)</value>
   </data>
   <data name="hlToTask" xml:space="preserve">
-    <value>-&gt; Включить в задачу</value>
+    <value>- Включить в задачу</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
     <value>Записей не требуется), а затем нажмите на кнопку "Регистрация", система будет принимать непосредственное вам пробной страницы</value>
@@ -8509,7 +8509,7 @@
     <value>Создание совместных</value>
   </data>
   <data name="MakeReq" xml:space="preserve">
-    <value>-&gt; Выдвинул требования</value>
+    <value>- Выдвинул требования</value>
   </data>
   <data name="MakeTask" xml:space="preserve">
     <value>Создать задачу</value>
@@ -9568,7 +9568,7 @@
     <value>Статус проекта</value>
   </data>
   <data name="ProjectStatusReview" xml:space="preserve">
-    <value>-&gt; Проект отзыв Статус</value>
+    <value>- Проект отзыв Статус</value>
   </data>
   <data name="ProjectTreeBrowse" xml:space="preserve">
     <value>Просмотрите дерево проекта</value>
@@ -12979,7 +12979,7 @@
     <value>Счет 'Итоговая Прибыль'</value>
   </data>
   <data name="ToTask" xml:space="preserve">
-    <value>-&gt; Включите задача</value>
+    <value>- Включите задача</value>
   </data>
   <data name="TouBiaoFeiYong" xml:space="preserve">
     <value>Расходы Ставка</value>
@@ -13489,7 +13489,7 @@
     <value>Время окончания ночной смены работы</value>
   </data>
   <data name="WBSJieGouDaiMaYuanShuDingYi" xml:space="preserve">
-    <value>-&gt; СПП (структура) Код (элемент) определяется</value>
+    <value>- СПП (структура) Код (элемент) определяется</value>
   </data>
   <data name="WBSJieGouGuiHuaZhuanJiHua" xml:space="preserve">
     <value>WBS (структура плана) План передачи</value>
@@ -19477,10 +19477,10 @@
     <value>План детализирует список закупок уже существует, вы не можете сделать добавить!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW0DWSC" xml:space="preserve">
-    <value>Согласно этому плану составила заявку &lt;поселение тег&gt; 0 не удален!</value>
+    <value>Согласно этому плану составила заявку &lt;поселение тег 0 не удален!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW1DWTD" xml:space="preserve">
-    <value>Согласно этому плану составила заявку &lt;расчетов тег&gt; -1 не платежа!</value>
+    <value>Согласно этому плану составила заявку &lt;расчетов тег -1 не платежа!</value>
   </data>
   <data name="ZZGJKBMZSJBZYCZJC" xml:space="preserve">
     <value>Интерфейс кодируется в таблице данных уже существует, пожалуйста, проверьте!</value>
@@ -23152,7 +23152,7 @@
     <value>Имя пользователя и пароль не пустые, пожалуйста, проверьте!</value>
   </data>
   <data name="ZZYHTJDBSSXHCJXCL" xml:space="preserve">
-    <value>Договор &lt;прогресс&gt; не находится в сила или изъятых материалов, пожалуйста, дело!</value>
+    <value>Договор &lt;прогресс не находится в сила или изъятых материалов, пожалуйста, дело!</value>
   </data>
   <data name="ZZYJCZBYZFZ" xml:space="preserve">
     <value>Уже существует, не повторить выбор!</value>
@@ -23185,7 +23185,7 @@
     <value>Текущая поставщиком была выбрана, не повторить клик!</value>
   </data>
   <data name="ZZYKDJDBSBXXCL" xml:space="preserve">
-    <value>Запросили один абзац &lt;прогресс&gt; не возмещаются, пожалуйста, дело!</value>
+    <value>Запросили один абзац &lt;прогресс не возмещаются, пожалуйста, дело!</value>
   </data>
   <data name="ZZYKRZB" xml:space="preserve">
     <value>Таблица Войти был очищен!</value>
@@ -24694,7 +24694,7 @@
     <value>Соответствующие данные,</value>
   </data>
   <data name="hlMakeMeeting" xml:space="preserve">
-    <value>-&gt; Расписание Встреча</value>
+    <value>- Расписание Встреча</value>
   </data>
   <data name="TongZhiShenQingRen" xml:space="preserve">
     <value>Сообщите заявителя</value>
@@ -25486,7 +25486,7 @@
     <value>Список рабочих процессов по уходу за детьми</value>
   </data>
   <data name="FaYaoQing" xml:space="preserve">
-    <value>-&gt; Приглашения</value>
+    <value>- Приглашения</value>
   </data>
   <data name="ZZXXYTSGSMSXRYDEMAILHSJQJSTXTM" xml:space="preserve">
     <value>Информация была отодвинута на вершину выбранных лиц по электронной почте или телефону, пожалуйста, напомните им!</value>
@@ -25537,7 +25537,7 @@
     <value>дополнительный</value>
   </data>
   <data name="BaoChunMoBanDingYi" xml:space="preserve">
-    <value>-&gt; Определение Сохранить шаблон</value>
+    <value>- Определение Сохранить шаблон</value>
   </data>
   <data name="ZZGeiBianCG" xml:space="preserve">
     <value>Изменён!</value>
@@ -26167,28 +26167,28 @@
     <value>Связанные подпроцессы</value>
   </data>
   <data name="GongZuoJiHuaJT" xml:space="preserve">
-    <value>-&gt; План работы</value>
+    <value>- План работы</value>
   </data>
   <data name="GongZuoRiChengJT" xml:space="preserve">
-    <value>-&gt; График работы</value>
+    <value>- График работы</value>
   </data>
   <data name="ShouFuKuanJiHuaJT" xml:space="preserve">
-    <value>-&gt; План платежей и платежей</value>
+    <value>- План платежей и платежей</value>
   </data>
   <data name="CHENGYUANSHOURUFENPEIJT" xml:space="preserve">
-    <value>-&gt; Распределение доходов участников</value>
+    <value>- Распределение доходов участников</value>
   </data>
   <data name="GONGZUOLIANGFENPEIJT" xml:space="preserve">
-    <value>-&gt; Распределение рабочей нагрузки</value>
+    <value>- Распределение рабочей нагрузки</value>
   </data>
   <data name="hlDailyWorkReportJT" xml:space="preserve">
-    <value>-&gt; Отчет о рабочем журнале</value>
+    <value>- Отчет о рабочем журнале</value>
   </data>
   <data name="ProjectDocumentJT" xml:space="preserve">
-    <value>-&gt; Документация по проекту</value>
+    <value>- Документация по проекту</value>
   </data>
   <data name="ProjectMemberJT" xml:space="preserve">
-    <value>-&gt; Участники проекта</value>
+    <value>- Участники проекта</value>
   </data>
   <data name="KeYongWeb" xml:space="preserve">
     <value>Доступный WEB</value>
@@ -26395,7 +26395,7 @@
     <value>Запрос на подачу заявления</value>
   </data>
   <data name="QiBaoxiao" xml:space="preserve">
-    <value>-&gt; возмещение</value>
+    <value>- возмещение</value>
   </data>
   <data name="QingXianXuanZheYaoBaoXiaoDeFeiYong" xml:space="preserve">
     <value>Пожалуйста, сначала выберите стоимость возмещения!</value>
@@ -28006,7 +28006,7 @@
     <value>Загрузивший файл:</value>
   </data>
   <data name="DeDiSanFangCaoZuoJiLu" xml:space="preserve">
-    <value>&lt;B&gt;Просмотр всех проектов по типу&lt;/B&gt;</value>
+    <value>&lt;BПросмотр всех проектов по типу&lt;/B</value>
   </data>
   <data name="DeChengYuan" xml:space="preserve">
     <value>Список записей сторонних операций:</value>
@@ -28048,7 +28048,7 @@
     <value>Список запросов клиентов</value>
   </data>
   <data name="WenKongZhuanYuan" xml:space="preserve">
-    <value>&lt;B&gt;Список запросов клиентов&lt;/B&gt;</value>
+    <value>&lt;BСписок запросов клиентов&lt;/B</value>
   </data>
   <data name="ShouLiNiDeXiangMu" xml:space="preserve">
     <value>Ошибка: соответствующий шаблон или файл шаблона не существует, проверьте!</value>
@@ -28183,7 +28183,7 @@
     <value>Предупреждение: единицы измерения работ и оборудования не могут быть пустыми, проверьте!</value>
   </data>
   <data name="XinJianChengGongQingJiShiZaiQi" xml:space="preserve">
-    <value>&lt;B&gt;Все проекты&lt;/B&gt;</value>
+    <value>&lt;BВсе проекты&lt;/B</value>
   </data>
   <data name="ZZJingGaoDaiHaoDeBuNengWeiKong" xml:space="preserve">
     <value>Заявка на оплату субподряда</value>
@@ -28513,7 +28513,7 @@
     <value>Дефекты:</value>
   </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
-    <value>&lt;b&gt;Мое мнение:&lt;/b&gt;</value>
+    <value>&lt;bМое мнение:&lt;/b</value>
   </data>
   <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
     <value>Обработка ваших недостатков:</value>
@@ -28540,7 +28540,7 @@
     <value>Уведомление о распределении дефекта</value>
   </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
-    <value>&lt;B&gt;Общий проект&lt;/B&gt;</value>
+    <value>&lt;BОбщий проект&lt;/B</value>
   </data>
   <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
     <value>Уведомление о преобразовании дефекта в проект</value>
@@ -28567,7 +28567,7 @@
     <value>Уведомление о просмотре файла</value>
   </data>
   <data name="CaiWuFeiYong" xml:space="preserve">
-    <value>Список документов&lt;/B&gt;</value>
+    <value>Список документов&lt;/B</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
     <value>Строка {0}: Материалы компенсации могут быть только десятичными
@@ -28746,19 +28746,19 @@
     <value>Заказ на производство материалов</value>
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
-    <value>Нет записей о продукте&lt;/td&gt;</value>
+    <value>Нет записей о продукте</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>Сохранить&lt;/a&gt;</value>
+    <value>Сохранить&lt;/a</value>
   </data>
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>Общее количество&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>Общее количество&lt;/tr</value>
   </data>
   <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
     <value>Отчёт о страховом запасе.xls</value>
   </data>
   <data name="WuLiaoXiaoShouChan" xml:space="preserve">
-    <value>&lt;p&gt;Нет записей о сырье&lt;/p&gt;&amp;nbsp;&lt;/td&gt; Общее количество&lt;/td&gt;&lt;td class=\ Себестоимость&lt;/td&gt;&lt;td class=\ Себестоимость цветного материала&lt;/td&gt;&lt;td class=\ Цена рецептуры&lt;/td&gt;&lt;td class=\</value>
+    <value>&lt;pНет записей о сырье&lt;/p&amp;nbsp; Общее количество&lt;td class=\ Себестоимость&lt;td class=\ Себестоимость цветного материала&lt;td class=\ Цена рецептуры&lt;td class=\</value>
   </data>
   <data name="WuLiaoBaoJiaChan" xml:space="preserve">
     <value>Котировка материалов</value>
@@ -28902,7 +28902,7 @@
     <value>(Руководитель группы)</value>
   </data>
   <data name="BiaoZhunYuTuShuXinXi" xml:space="preserve">
-    <value>.&lt;/br&gt;Содержание проверки и обнаруженное:</value>
+    <value>.Содержание проверки и обнаруженное:</value>
   </data>
   <data name="ShuJiJieYueQingKuang" xml:space="preserve">
     <value>Содержание проверки и обнаруженное:</value>
@@ -29133,22 +29133,22 @@
     <value>Список информации об отпусках прямых членов:</value>
   </data>
   <data name="FaTuDengJiLieBiao" xml:space="preserve">
-    <value>&lt;B&gt;Организационная диаграмма всех отделов прямых членов&lt;/B&gt;</value>
+    <value>&lt;BОрганизационная диаграмма всех отделов прямых членов&lt;/B</value>
   </data>
   <data name="ShouWenDengJiLieBiao" xml:space="preserve">
-    <value>Организационная диаграмма прямых членов&lt;/B&gt;</value>
+    <value>Организационная диаграмма прямых членов&lt;/B</value>
   </data>
   <data name="FaWenDengJiLieBiao" xml:space="preserve">
     <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(Сохранение не удалось, вы не создатель этого шаблона процесса, нельзя сохранить изображение процесса!</value>
   </data>
   <data name="BuKeYuJianFeiJiGeXiangJiangLi" xml:space="preserve">
-    <value>&lt;B&gt;Просмотр моих проектов по типу&lt;/B&gt;</value>
+    <value>&lt;BПросмотр моих проектов по типу&lt;/B</value>
   </data>
   <data name="YiCiBiaoJiaFenLiBiao" xml:space="preserve">
-    <value>&lt;B&gt;Просмотр проектов, в которых я участвую, по типу&lt;/B&gt;</value>
+    <value>&lt;BПросмотр проектов, в которых я участвую, по типу&lt;/B</value>
   </data>
   <data name="ErCiBiaoJiaFenLiMuBiaoChengBen" xml:space="preserve">
-    <value>&lt;B&gt;Просмотр проектов моих членов по типу&lt;/B&gt;</value>
+    <value>&lt;BПросмотр проектов моих членов по типу&lt;/B</value>
   </data>
   <data name="ZZJingGaoChengBenLeiXingBuNeng" xml:space="preserve">
     <value>Моя диаграмма общей оценки эффективности прямых членов</value>
@@ -29157,7 +29157,7 @@
     <value>Подсказка: сначала выберите проект!</value>
   </data>
   <data name="ShouLiLeNiDeXuQiu" xml:space="preserve">
-    <value>&lt;B&gt;Просмотр моих проектов по типу&lt;/B&gt;</value>
+    <value>&lt;BПросмотр моих проектов по типу&lt;/B</value>
   </data>
   <data name="JuJueLeNiDeXuQiu" xml:space="preserve">
     <value>Предупреждение: этот член уже существует, нельзя добавить повторно, проверьте!</value>
@@ -29250,7 +29250,7 @@
     <value>Таблица разделения цен на первый этап</value>
   </data>
   <data name="StrongShuLiang" xml:space="preserve">
-    <value>&lt;/Strong&gt; (Количество:</value>
+    <value>&lt;/Strong (Количество:</value>
   </data>
   <data name="XiangMuGongShiHeFeiYongHuiZong" xml:space="preserve">
     <value>Сводная таблица трудозатрат и расходов по проекту</value>
@@ -29813,14 +29813,8 @@
   <data name="XiaoXiDiShiQingShuaZeYiHangHou" xml:space="preserve">
     <value>Сообщение: Выберите строку перед изменением!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiXiangMuZiJinS" xml:space="preserve">
-    <value>Сообщение: Запись о реализации финансирования проекта успешно изменена!</value>
-  </data>
   <data name="XiaoXiDiShiShanChuXiangMuZiJin" xml:space="preserve">
     <value>Сообщение: Запись о реализации финансирования проекта успешно удалена!</value>
-  </data>
-  <data name="XiaoXiDiShiZhiHangJinEShuRuYou" xml:space="preserve">
-    <value>Сообщение: [Сумма исполнения] введена неверно, введите число и попробуйте снова!</value>
   </data>
   <data name="XiaoXiDiShiBeiZhuShuRuYouWuShu" xml:space="preserve">
     <value>Сообщение: [Примечание] введено неверно, длина ограничена 512 символами на китайском или 1024 символами на английском, введите число и попробуйте снова!</value>
@@ -29946,10 +29940,10 @@
     <value>Процесс проверки</value>
   </data>
   <data name="BJiaoSeZuB" xml:space="preserve">
-    <value>&lt;B&gt;Группа ролей&lt;/B&gt;</value>
+    <value>&lt;BГруппа ролей&lt;/B</value>
   </data>
   <data name="BSuoYouB" xml:space="preserve">
-    <value>&lt;B&gt;Все&lt;/B&gt;</value>
+    <value>&lt;BВсе&lt;/B</value>
   </data>
   <data name="CiXuQiuBuCunZaiKeNengYiBeiShan" xml:space="preserve">
     <value>Этот запрос не существует, возможно, был удален, проверьте!</value>
@@ -30003,7 +29997,7 @@
     <value>Произошла ошибка</value>
   </data>
   <data name="BBuFenB" xml:space="preserve">
-    <value>&lt;B&gt;Часть&lt;/B&gt;</value>
+    <value>&lt;BЧасть&lt;/B</value>
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>Изменен проект:</value>
@@ -30027,7 +30021,7 @@
     <value>Номер внутреннего телефона RTX</value>
   </data>
   <data name="bXieMianMoZub" xml:space="preserve">
-    <value>&lt;b&gt;Модуль страницы&lt;b&gt;</value>
+    <value>&lt;bМодуль страницы&lt;b</value>
   </data>
   <data name="ZZJingGaoGongBenFeiHeDaiLiFeiB" xml:space="preserve">
     <value>Предупреждение: Стоимость изготовления и комиссия должны быть числовыми, проверьте!</value>
@@ -30123,82 +30117,67 @@
     <value>Список участников:</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Пакетная " + LanguageHandle.GetWord("ZZCZCG").ToString().Trim() + "</value>
+    <value>Пакетная </value>
   </data>
   <data name="ZZTuiChuLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Удалить " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
+    <value>Удалить</value>
   </data>
   <data name="ZZChongXinLanguageHandleGetWor" xml:space="preserve">
-    <value>Изменить " + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
+    <value>Изменить</value>
   </data>
   <data name="ZZCheXiaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Выйти " + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "</value>
+    <value>Выйти</value>
   </data>
   <data name="ZZQiaoBiaoFangAnShengChengLang" xml:space="preserve">
-    <value>Повторно " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Повторно</value>
   </data>
   <data name="ZZZhangHaoLanguageHandleGetWor" xml:space="preserve">
-    <value>Отменить " + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "</value>
+    <value>Отменить </value>
   </data>
   <data name="ZZShenQingJiHuaShengChengLangu" xml:space="preserve">
-    <value>Создание тендерного плана " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Создание тендерного плана </value>
   </data>
   <data name="ZZShenQingShengChengLanguageHa" xml:space="preserve">
-    <value>Аккаунт " + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + "</value>
+    <value>Аккаунт</value>
   </data>
   <data name="ZZFuJianLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Создание плана заявки " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Создание плана заявки </value>
   </data>
   <data name="ZZChiZhengXiangMuLanguageHandl" xml:space="preserve">
-    <value>Создание заявки " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Создание заявки </value>
   </data>
   <data name="ZZPeiXunXiangMuLanguageHandleG" xml:space="preserve">
-    <value>Вложение " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGongSiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Сертифицированный проект " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+    <value>Вложение </value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuWeiBiShu" xml:space="preserve">
-    <value>Проект обучения " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+    <value>Проект обучения </value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuYiCunZai" xml:space="preserve">
-    <value>Компания " + LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoCiHuanJingYinSuGuoJiH" xml:space="preserve">
-    <value>Предупреждение: Факторы окружающей среды обязательны, операция " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZShangChuanLanguageHandleGetW" xml:space="preserve">
-    <value>Предупреждение: Факторы окружающей среды уже существуют, операция " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Компания </value>
   </data>
   <data name="ZZBaoCunShiBaiNiBuShiCiLiuChen" xml:space="preserve">
-    <value>Предупреждение: Этот фактор окружающей среды истек или недействителен, операция " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Предупреждение: Этот фактор окружающей среды истек или недействителен, операция </value>
   </data>
   <data name="ZZQuXiaoLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Загрузить " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Загрузить</value>
   </data>
   <data name="ZZGuiDangLanguageHandleGetWord" xml:space="preserve">
     <value>Сохранение не удалось, вы не создатель этого шаблона процесса, нельзя сохранить изображения процесса!</value>
   </data>
   <data name="ZZJieDianLanguageHandleGetWord" xml:space="preserve">
-    <value>Отменить " + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "</value>
+    <value>Отменить</value>
   </data>
   <data name="ZZXinXiFaSongLanguageHandleGet" xml:space="preserve">
-    <value>Архивировать " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Архивировать </value>
   </data>
   <data name="ZZZhuaiXiangLanguageHandleGetW" xml:space="preserve">
-    <value>Узел " + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZBaoCunLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Отправка информации " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoBeiFenMuLuChuangJianL" xml:space="preserve">
-    <value>Преобразовать в проект " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Узел </value>
   </data>
   <data name="ZZJingGaoLiuChengTuZhongYouCiB" xml:space="preserve">
-    <value>Сохранить " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Сохранить </value>
   </data>
   <data name="ZZShanChuChengGong" xml:space="preserve">
-    <value>Предупреждение: Создание резервной директории " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Предупреждение: Создание резервной директории </value>
   </data>
   <data name="ZZShanChuShiBaiQingJianCha" xml:space="preserve">
     <value>Предупреждение: Этот шаг есть в диаграмме процесса, нельзя удалить, проверьте!</value>
@@ -30206,50 +30185,20 @@
   <data name="ZZJingGaoCiLiuChengBuShiNiChua" xml:space="preserve">
     <value>Удаление успешно!</value>
   </data>
-  <data name="ZZBiaoZhuPiLiangLanguageHandle" xml:space="preserve">
-    <value>Удаление не удалось, проверьте!</value>
-  </data>
-  <data name="ZZJianHaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Предупреждение: Этот процесс создан не вами, и вы не суперадминистратор, нет прав на удаление, проверьте!</value>
-  </data>
-  <data name="ZZGeTongLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Пометка пакетной " + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGeTongCaiJianLanguageHandleG" xml:space="preserve">
-    <value>Номер проверки " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZDuiZhaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Контракт " + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="QiaoBiaoWenJianMuLutd" xml:space="preserve">
-    <value>Проверка материалов контракта " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
-  <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
-    <value>Сравнение " + LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim() + "</value>
-  </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
     <value>Список документов для оценки</value>
   </data>
-  <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&lt;td&gt;Тендерные документы&lt;/td&gt;</value>
-  </data>
   <data name="GongFang" xml:space="preserve">
-    <value>&gt;Каталог оценочных документов&lt;/td&gt;</value>
+    <value>Поставщик</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
-    <value>&lt;td &gt;Метод и стандарты оценки&lt;/td&gt;</value>
-  </data>
-  <data name="PingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&gt;Поставщик&lt;</value>
-  </data>
-  <data name="ZZGongYingShangShengChengLangu" xml:space="preserve">
-    <value>&gt;Тендерные документы&lt;/td&gt;</value>
+    <value>&lt;td Метод и стандарты оценки</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
-    <value>&gt;Метод и стандарты оценки&lt;/td&gt;</value>
+    <value>Метод и стандарты оценки</value>
   </data>
   <data name="YiChangQingKuang" xml:space="preserve">
-    <value>Создание поставщика " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Создание поставщика </value>
   </data>
   <data name="YuLuDanHao" xml:space="preserve">
     <value>Ежедневный остаток наличных</value>

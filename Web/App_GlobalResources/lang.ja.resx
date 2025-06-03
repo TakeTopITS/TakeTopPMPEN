@@ -28006,7 +28006,7 @@
     <value>ファイルアップローダー含む：</value>
   </data>
   <data name="DeDiSanFangCaoZuoJiLu" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に全てのプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に全てのプロジェクトを閲覧</value>
   </data>
   <data name="DeChengYuan" xml:space="preserve">
     <value>第三者操作記録リスト：</value>
@@ -28048,7 +28048,7 @@
     <value>カスタマーサービス需要リスト</value>
   </data>
   <data name="WenKongZhuanYuan" xml:space="preserve">
-    <value>&lt;B&gt;カスタマーサービス需要リスト&lt;/B&gt;</value>
+    <value>カスタマーサービス需要リスト</value>
   </data>
   <data name="ShouLiNiDeXiangMu" xml:space="preserve">
     <value>エラー、対応するテンプレートまたはテンプレートファイルが存在しません。確認してください！</value>
@@ -28183,7 +28183,7 @@
     <value>警告、工事単位と設備単位が空です。確認してください！</value>
   </data>
   <data name="XinJianChengGongQingJiShiZaiQi" xml:space="preserve">
-    <value>&lt;B&gt;全てのプロジェクト&lt;/B&gt;</value>
+    <value>全てのプロジェクト</value>
   </data>
   <data name="ZZJingGaoDaiHaoDeBuNengWeiKong" xml:space="preserve">
     <value>下請け支払い申請</value>
@@ -28513,7 +28513,7 @@
     <value>欠点：</value>
   </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
-    <value>&lt;b&gt;私の意見：&lt;/b&gt;</value>
+    <value>私の意見：</value>
   </data>
   <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
     <value>あなたの欠点を処理しています</value>
@@ -28540,7 +28540,7 @@
     <value>不具合割り当て通知</value>
   </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
-    <value>&lt;B&gt;総プロジェクト&lt;/B&gt;</value>
+    <value>総プロジェクト</value>
   </data>
   <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
     <value>不具合転換通知</value>
@@ -28567,7 +28567,7 @@
     <value>ファイル閲覧通知</value>
   </data>
   <data name="CaiWuFeiYong" xml:space="preserve">
-    <value>ドキュメントリスト&lt;/B&gt;</value>
+    <value>ドキュメントリスト</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
     <value>{0}行目、日付は空にできません</value>
@@ -28753,19 +28753,19 @@
     <value>売上返品レポート.xls</value>
   </data>
   <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
-    <value>&gt;&lt;p&gt;原料記録なし&lt;/p&gt; &lt;/td&gt;</value>
+    <value>&gt;&lt;p&gt;原料記録なし&lt;/p&gt; </value>
   </data>
   <data name="WuLiaoXiaoShouChan" xml:space="preserve">
-    <value>*&gt;総数量&lt;/td&gt;&lt;td class=*</value>
+    <value>*&gt;総数量</value>
   </data>
   <data name="WuLiaoBaoJiaChan" xml:space="preserve">
-    <value>*&gt;本色コスト&lt;/td&gt;&lt;td class=*</value>
+    <value>*&gt;本色コスト</value>
   </data>
   <data name="WuLiaoXiaoShouBaoBiaoxls" xml:space="preserve">
     <value>物料販売報告書.xls</value>
   </data>
   <data name="DeWuLiaoLieBiao" xml:space="preserve">
-    <value>*&gt;配合価格&lt;/td&gt;&lt;td class=*</value>
+    <value>*&gt;配合価格</value>
   </data>
   <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
     <value>原料製品アーカイブ</value>
@@ -28906,7 +28906,7 @@
     <value>(リーダー)</value>
   </data>
   <data name="CaiGouDingChan" xml:space="preserve">
-    <value>。&lt;/br&gt;検査内容および発見：</value>
+    <value>。&gt;検査内容および発見：</value>
   </data>
   <data name="ZhongDanYouDiErJianSheGongSi" xml:space="preserve">
     <value>検査内容および発見：</value>
@@ -29140,22 +29140,22 @@
     <value>直接メンバー休暇情報リスト：</value>
   </data>
   <data name="BuKeYuJianFeiJiGeXiangJiangLi" xml:space="preserve">
-    <value>&lt;B&gt;全ての部門直接メンバー組織階層図&lt;/B&gt;</value>
+    <value>全ての部門直接メンバー組織階層図</value>
   </data>
   <data name="YiCiBiaoJiaFenLiBiao" xml:space="preserve">
-    <value>直接メンバー組織階層図&lt;/B&gt;</value>
+    <value>直接メンバー組織階層図</value>
   </data>
   <data name="ErCiBiaoJiaFenLiMuBiaoChengBen" xml:space="preserve">
     <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(保存失敗、あなたはこのプロセステンプレートの作成者ではありません。このプロセス画像を保存できません！</value>
   </data>
   <data name="ZZJingGaoChengBenLeiXingBuNeng" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私が作成したプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私が作成したプロジェクトを閲覧</value>
   </data>
   <data name="XiangMuGongZuoRiZhi" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私が参加したプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私が参加したプロジェクトを閲覧</value>
   </data>
   <data name="ShouLiLeNiDeXuQiu" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私のメンバーのプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私のメンバーのプロジェクトを閲覧</value>
   </data>
   <data name="JuJueLeNiDeXuQiu" xml:space="preserve">
     <value>私の直接メンバーパフォーマンス総合評価比較図</value>
@@ -29164,7 +29164,7 @@
     <value>ヒント、まずプロジェクトを選択してください！</value>
   </data>
   <data name="WanChengLeNiDeXuQiu" xml:space="preserve">
-    <value>&lt;B&gt;タイプ別に私のプロジェクトを閲覧&lt;/B&gt;</value>
+    <value>タイプ別に私のプロジェクトを閲覧</value>
   </data>
   <data name="GuaQiLeNiDeXuQiu" xml:space="preserve">
     <value>警告、このメンバーは既に存在します。重複して追加できません。確認してください！</value>
@@ -29947,10 +29947,10 @@
     <value>審査プロセス</value>
   </data>
   <data name="FengXianNeiRong" xml:space="preserve">
-    <value>&lt;B&gt;ロールグループ&lt;/B&gt;</value>
+    <value>ロールグループ</value>
   </data>
   <data name="ChuangJianRTXFuWuShiBaiQingJia" xml:space="preserve">
-    <value>&lt;B&gt;全て&lt;/B&gt;</value>
+    <value>全て</value>
   </data>
   <data name="FaSongChengGong" xml:space="preserve">
     <value>この需要は存在しません。削除された可能性があります。確認してください！</value>
@@ -29968,13 +29968,13 @@
     <value>ユーザー権限情報の取得に失敗しました！</value>
   </data>
   <data name="XueShengShu" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;モジュール名データなし&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>&lt;tr&gt;モジュール名データなし&lt;/tr&gt;</value>
   </data>
   <data name="SuoYouXiangMuLieBiao" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;タイプデータなし&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>&lt;tr&gt;タイプデータなし&lt;/tr&gt;</value>
   </data>
   <data name="MoBanXiangMu" xml:space="preserve">
-    <value>&lt;tr&gt;&lt;td&gt;データなし&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>&lt;tr&gt;データなし&lt;/tr&gt;</value>
   </data>
   <data name="DeNeiRongCiWeiZhenShanChuQingG" xml:space="preserve">
     <value>内容が完全に削除されました。ご注意ください。ここに通知します！</value>
@@ -30007,7 +30007,7 @@
     <value>エラーが発生しました</value>
   </data>
   <data name="ZiChanCaiGouFeiYong" xml:space="preserve">
-    <value>&lt;B&gt;一部&lt;/B&gt;</value>
+    <value>一部</value>
   </data>
   <data name="ZZFenPaChengGong" xml:space="preserve">
     <value>プロジェクトを変更しました：</value>
@@ -30028,7 +30028,7 @@
     <value>RTX内線番号</value>
   </data>
   <data name="ZZCuoWuTouBiaoBaoJiaHeKongZhiJ" xml:space="preserve">
-    <value>&lt;b&gt;ページモジュール&lt;b&gt;</value>
+    <value>ページモジュール</value>
   </data>
   <data name="ZZShiBaiCiTouBiaoYiWanChengBuN" xml:space="preserve">
     <value>警告、工本費と代理費は数字タイプでなければなりません。確認してください！</value>
@@ -30190,19 +30190,19 @@
     <value>供給者</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
-    <value>&gt;入札ファイルディレクトリ&lt;/td&gt;</value>
+    <value>&gt;入札ファイルディレクトリ</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
-    <value>&lt;td &gt;評価方法及び基準&lt;/td&gt;</value>
+    <value>評価方法及び基準</value>
   </data>
   <data name="YiChangQingKuang" xml:space="preserve">
     <value>&gt;供給者&lt;</value>
   </data>
   <data name="YuLuDanHao" xml:space="preserve">
-    <value>&gt;入札ファイル&lt;/td&gt;</value>
+    <value>&gt;入札ファイル</value>
   </data>
   <data name="ShiFuZongEBenBi" xml:space="preserve">
-    <value>&gt;評価方法及び基準&lt;/td&gt;</value>
+    <value>&gt;評価方法及び基準</value>
   </data>
   <data name="TeLiaoDaiMa" xml:space="preserve">
     <value>特殊材料コード</value>

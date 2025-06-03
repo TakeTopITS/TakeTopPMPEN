@@ -964,7 +964,7 @@
     <value>Strukturplan Übertragungsplan</value>
   </data>
   <data name="BOMWBSPlanning" xml:space="preserve">
-    <value>-&gt; Structure (WBS) planen</value>
+    <value>- Structure (WBS) planen</value>
   </data>
   <data name="BQSYTDRJ" xml:space="preserve">
     <value>Copyright © 2006-2026 Thai Top Software</value>
@@ -5785,94 +5785,94 @@
     <value>Umweltfaktoren Aufnahmeliste</value>
   </data>
   <data name="hlActivateThisWF" xml:space="preserve">
-    <value>-&gt; Aktivieren Sie diesen Vorgang</value>
+    <value>- Aktivieren Sie diesen Vorgang</value>
   </data>
   <data name="hlApplyFunding" xml:space="preserve">
-    <value>-&gt; Zuschussantrag</value>
+    <value>- Zuschussantrag</value>
   </data>
   <data name="hlArrangeMeeting" xml:space="preserve">
-    <value>-&gt; Besprechung planen</value>
+    <value>- Besprechung planen</value>
   </data>
   <data name="hlAssignTask" xml:space="preserve">
-    <value>-&gt; Zuordnungen</value>
+    <value>- Zuordnungen</value>
   </data>
   <data name="hlBomToPlan" xml:space="preserve">
-    <value>-&gt; Strukturplan Übertragungsplan</value>
+    <value>- Strukturplan Übertragungsplan</value>
   </data>
   <data name="hlBuildTeam" xml:space="preserve">
-    <value>-&gt; Das Team Set</value>
+    <value>- Das Team Set</value>
   </data>
   <data name="hlConfirmExpense" xml:space="preserve">
-    <value>-&gt; Gebühr bestätigen</value>
+    <value>- Gebühr bestätigen</value>
   </data>
   <data name="hlConfirmManhour" xml:space="preserve">
-    <value>-&gt; Arbeits bestätigen</value>
+    <value>- Arbeits bestätigen</value>
   </data>
   <data name="hlCopyBomFromTemplateProject" xml:space="preserve">
-    <value>-&gt; Kopieren aus der Vorlage Projektstrukturplan</value>
+    <value>- Kopieren aus der Vorlage Projektstrukturplan</value>
   </data>
   <data name="hlCopyFromTemplate" xml:space="preserve">
-    <value>-&gt; Kopieren von Vorlage</value>
+    <value>- Kopieren von Vorlage</value>
   </data>
   <data name="hlCopyProjectPlan" xml:space="preserve">
-    <value>-&gt; Kopieren Projektplan</value>
+    <value>- Kopieren Projektplan</value>
   </data>
   <data name="hlDailyWorkReport" xml:space="preserve">
     <value>Logbuch Bericht</value>
   </data>
   <data name="hlGanttChart" xml:space="preserve">
-    <value>-&gt; Gantt</value>
+    <value>- Gantt</value>
   </data>
   <data name="hlImplementPlan" xml:space="preserve">
-    <value>-&gt; Durchführungsplan</value>
+    <value>- Durchführungsplan</value>
   </data>
   <data name="hlIncomeAndExpense" xml:space="preserve">
-    <value>-&gt; Der Umsatz Settlement</value>
+    <value>- Der Umsatz Settlement</value>
   </data>
   <data name="hlMakeCollaboration" xml:space="preserve">
-    <value>-&gt; Starten Sie die Zusammenarbeit</value>
+    <value>- Starten Sie die Zusammenarbeit</value>
   </data>
   <data name="hlMakePlan" xml:space="preserve">
-    <value>-&gt; Planen</value>
+    <value>- Planen</value>
   </data>
   <data name="hlRelatedDoc" xml:space="preserve">
-    <value>-&gt; Beiträge zu diesem Thema</value>
+    <value>- Beiträge zu diesem Thema</value>
   </data>
   <data name="hlRelatedItemAndBom" xml:space="preserve">
-    <value>-&gt; Element definiert die Struktur einzurichten</value>
+    <value>- Element definiert die Struktur einzurichten</value>
   </data>
   <data name="hlReqReview" xml:space="preserve">
-    <value>-&gt; Bedarfsanalyse</value>
+    <value>- Bedarfsanalyse</value>
   </data>
   <data name="hlReviewProject" xml:space="preserve">
-    <value>-&gt; Project Review</value>
+    <value>- Project Review</value>
   </data>
   <data name="hlReviewProjectPlan" xml:space="preserve">
-    <value>-&gt; Projekt-Plan schreiben</value>
+    <value>- Projekt-Plan schreiben</value>
   </data>
   <data name="hlReviewTask" xml:space="preserve">
-    <value>-&gt; Task Bewertung</value>
+    <value>- Task Bewertung</value>
   </data>
   <data name="hlRiskReview" xml:space="preserve">
-    <value>-&gt; Risikobewertung</value>
+    <value>- Risikobewertung</value>
   </data>
   <data name="hlRunProjectByWF" xml:space="preserve">
-    <value>-&gt; Projektdurchführung (Prozessmodelle)</value>
+    <value>- Projektdurchführung (Prozessmodelle)</value>
   </data>
   <data name="hlRunProjectPlanByWF" xml:space="preserve">
-    <value>-&gt; Programmdurchführung (Prozessmodelle)</value>
+    <value>- Programmdurchführung (Prozessmodelle)</value>
   </data>
   <data name="hlRunReqByWF" xml:space="preserve">
-    <value>-&gt; Anforderungen Processing (Flow-Modus)</value>
+    <value>- Anforderungen Processing (Flow-Modus)</value>
   </data>
   <data name="hlRunRiskByWF" xml:space="preserve">
-    <value>-&gt; Risikomanagement (Flow-Modus)</value>
+    <value>- Risikomanagement (Flow-Modus)</value>
   </data>
   <data name="hlRunTaskByWF" xml:space="preserve">
-    <value>-&gt; Task-Implementierung (Prozessmodelle)</value>
+    <value>- Task-Implementierung (Prozessmodelle)</value>
   </data>
   <data name="hlToTask" xml:space="preserve">
-    <value>-&gt; Biegen Sie in einer Aufgabe</value>
+    <value>- Biegen Sie in einer Aufgabe</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
     <value>Keine Einträge sind erforderlich), dann klicken Sie auf die Schaltfläche "Registrieren", wird das System direkt bringen Sie zu den Testseite</value>
@@ -8509,7 +8509,7 @@
     <value>Stellen Sie kollaborative</value>
   </data>
   <data name="MakeReq" xml:space="preserve">
-    <value>-&gt; Vorgebrachten Forderungen</value>
+    <value>- Vorgebrachten Forderungen</value>
   </data>
   <data name="MakeTask" xml:space="preserve">
     <value>Erstellen einer Aufgabe</value>
@@ -9568,7 +9568,7 @@
     <value>Projektstatus</value>
   </data>
   <data name="ProjectStatusReview" xml:space="preserve">
-    <value>-&gt; Projektstatus schreiben</value>
+    <value>- Projektstatus schreiben</value>
   </data>
   <data name="ProjectTreeBrowse" xml:space="preserve">
     <value>Durchsuchen Sie die Projektnavigation</value>
@@ -12979,7 +12979,7 @@
     <value>Einkommen Zusammenfassung</value>
   </data>
   <data name="ToTask" xml:space="preserve">
-    <value>-&gt; Schalten Aufgabe</value>
+    <value>- Schalten Aufgabe</value>
   </data>
   <data name="TouBiaoFeiYong" xml:space="preserve">
     <value>Bid Kosten</value>
@@ -13489,7 +13489,7 @@
     <value>Endzeit Nachtschichtarbeit</value>
   </data>
   <data name="WBSJieGouDaiMaYuanShuDingYi" xml:space="preserve">
-    <value>-&gt; PSP (Struktur)-Code (Element) definiert</value>
+    <value>- PSP (Struktur)-Code (Element) definiert</value>
   </data>
   <data name="WBSJieGouGuiHuaZhuanJiHua" xml:space="preserve">
     <value>PSP (Strukturplan) Verlegungsplan</value>
@@ -19477,10 +19477,10 @@
     <value>Der Plan Details der Beschaffungsliste bereits vorhanden ist, können Sie nicht schreiben!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW0DWSC" xml:space="preserve">
-    <value>Im Rahmen dieses Plans hat Anforderung &lt;Siedlung tag&gt; 0 wird nicht gelöscht gemacht!</value>
+    <value>Im Rahmen dieses Plans hat Anforderung &lt;Siedlung tag 0 wird nicht gelöscht gemacht!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW1DWTD" xml:space="preserve">
-    <value>Im Rahmen dieses Plans hat Anforderung &lt;Siedlung tag&gt; gemacht -1 nicht Chargeback!</value>
+    <value>Im Rahmen dieses Plans hat Anforderung &lt;Siedlung tag gemacht -1 nicht Chargeback!</value>
   </data>
   <data name="ZZGJKBMZSJBZYCZJC" xml:space="preserve">
     <value>Die in der Datentabelle codiert Schnittstelle vorhanden ist, überprüfen Sie bitte!</value>
@@ -23152,7 +23152,7 @@
     <value>Benutzername und Passwort sind nicht leer ist, überprüfen Sie bitte!</value>
   </data>
   <data name="ZZYHTJDBSSXHCJXCL" xml:space="preserve">
-    <value>Contract &lt;Fortschritt&gt; ist nicht in Kraft oder Material beschlagnahmt, bitte sich mit!</value>
+    <value>Contract &lt;Fortschritt ist nicht in Kraft oder Material beschlagnahmt, bitte sich mit!</value>
   </data>
   <data name="ZZYJCZBYZFZ" xml:space="preserve">
     <value>Bereits vorhanden ist, keine Wahl zu wiederholen!</value>
@@ -23185,7 +23185,7 @@
     <value>Aktuelle Lieferant ausgewählt wurde, nicht das zu wiederholen, klicken Sie!</value>
   </data>
   <data name="ZZYKDJDBSBXXCL" xml:space="preserve">
-    <value>Einen einzigen Absatz &lt;Fortschritt&gt; wird nicht erstattet gebeten, bitte sich mit!</value>
+    <value>Einen einzigen Absatz &lt;Fortschritt wird nicht erstattet gebeten, bitte sich mit!</value>
   </data>
   <data name="ZZYKRZB" xml:space="preserve">
     <value>Log-Tabelle gelöscht wurde!</value>
@@ -24694,7 +24694,7 @@
     <value>Relevanten Daten</value>
   </data>
   <data name="hlMakeMeeting" xml:space="preserve">
-    <value>-&gt; Besprechung planen</value>
+    <value>- Besprechung planen</value>
   </data>
   <data name="TongZhiShenQingRen" xml:space="preserve">
     <value>Dem Antragsteller mitteilen,</value>
@@ -25486,7 +25486,7 @@
     <value>Kinder Workflow-Liste</value>
   </data>
   <data name="FaYaoQing" xml:space="preserve">
-    <value>-&gt; Einladungen</value>
+    <value>- Einladungen</value>
   </data>
   <data name="ZZXXYTSGSMSXRYDEMAILHSJQJSTXTM" xml:space="preserve">
     <value>Informationen, an die Spitze der ausgewählten Personen EMail oder Telefon gedrückt worden ist, bitte erinnern Sie sie!</value>
@@ -25537,7 +25537,7 @@
     <value>zusätzlich</value>
   </data>
   <data name="BaoChunMoBanDingYi" xml:space="preserve">
-    <value>-&gt; Vorlage speichern Definitionen</value>
+    <value>- Vorlage speichern Definitionen</value>
   </data>
   <data name="ZZGeiBianCG" xml:space="preserve">
     <value>Erfolgreich geändert!</value>
@@ -26167,28 +26167,28 @@
     <value>Associated subprocesses</value>
   </data>
   <data name="GongZuoJiHuaJT" xml:space="preserve">
-    <value>--&gt;Work plan</value>
+    <value>--Work plan</value>
   </data>
   <data name="GongZuoRiChengJT" xml:space="preserve">
-    <value>--&gt;Work Schedule</value>
+    <value>--Work Schedule</value>
   </data>
   <data name="ShouFuKuanJiHuaJT" xml:space="preserve">
-    <value>--&gt;Payment and payment plan</value>
+    <value>--Payment and payment plan</value>
   </data>
   <data name="CHENGYUANSHOURUFENPEIJT" xml:space="preserve">
-    <value>--&gt;Members' Income Distribution</value>
+    <value>--Members' Income Distribution</value>
   </data>
   <data name="GONGZUOLIANGFENPEIJT" xml:space="preserve">
-    <value>--&gt;Workload distribution</value>
+    <value>--Workload distribution</value>
   </data>
   <data name="hlDailyWorkReportJT" xml:space="preserve">
-    <value>--&gt;Work log report</value>
+    <value>--Work log report</value>
   </data>
   <data name="ProjectDocumentJT" xml:space="preserve">
-    <value>--&gt;Project Documentation</value>
+    <value>--Project Documentation</value>
   </data>
   <data name="ProjectMemberJT" xml:space="preserve">
-    <value>--&gt;Project Members</value>
+    <value>--Project Members</value>
   </data>
   <data name="KeYongWeb" xml:space="preserve">
     <value>Available WEB</value>
@@ -26395,7 +26395,7 @@
     <value>Antrag auf Gebührenanfrage</value>
   </data>
   <data name="QiBaoxiao" xml:space="preserve">
-    <value>-&gt; Erstattung</value>
+    <value>- Erstattung</value>
   </data>
   <data name="QingXianXuanZheYaoBaoXiaoDeFeiYong" xml:space="preserve">
     <value>Bitte wählen Sie zuerst die Kosten für die Erstattung!</value>
@@ -28006,7 +28006,7 @@
     <value>Datei-Uploader enthält:</value>
   </data>
   <data name="DeDiSanFangCaoZuoJiLu" xml:space="preserve">
-    <value>&lt;B&gt;Alle Projekte nach Typ durchsuchen&lt;/B&gt;</value>
+    <value>Alle Projekte nach Typ durchsuchen&lt;</value>
   </data>
   <data name="DeChengYuan" xml:space="preserve">
     <value>Liste der Drittanbieter-Aktivitäten:</value>
@@ -28048,7 +28048,7 @@
     <value>Liste der Kundendienstanfragen</value>
   </data>
   <data name="WenKongZhuanYuan" xml:space="preserve">
-    <value>&lt;B&gt;Liste der Kundendienstanfragen&lt;/B&gt;</value>
+    <value>Liste der Kundendienstanfragen&lt;</value>
   </data>
   <data name="ShouLiNiDeXiangMu" xml:space="preserve">
     <value>Fehler, das entsprechende Template oder Template-Datei existiert nicht, bitte überprüfen!</value>
@@ -28183,7 +28183,7 @@
     <value>Warnung, die Einheiten für Bau und Geräte dürfen nicht leer sein, bitte überprüfen!</value>
   </data>
   <data name="XinJianChengGongQingJiShiZaiQi" xml:space="preserve">
-    <value>&lt;B&gt;Alle Projekte&lt;/B&gt;</value>
+    <value>Alle Projekte&lt;</value>
   </data>
   <data name="ZZJingGaoDaiHaoDeBuNengWeiKong" xml:space="preserve">
     <value>Zahlungsantrag für Unterauftragnehmer</value>
@@ -28513,7 +28513,7 @@
     <value>Die Mängel:</value>
   </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
-    <value>&lt;b&gt;Meine Meinung:&lt;/b&gt;</value>
+    <value>Meine Meinung:&lt;</value>
   </data>
   <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
     <value>Bearbeite deine Mängel:</value>
@@ -28540,7 +28540,7 @@
     <value>Benachrichtigung über Fehlerzuweisung</value>
   </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
-    <value>&lt;B&gt;Gesamtprojekt&lt;/B&gt;</value>
+    <value>Gesamtprojekt&lt;</value>
   </data>
   <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
     <value>Benachrichtigung über Fehlerumwandlung</value>
@@ -28567,7 +28567,7 @@
     <value>Benachrichtigung über Dateieinsicht</value>
   </data>
   <data name="CaiWuFeiYong" xml:space="preserve">
-    <value>Dokumentenliste&lt;/B&gt;</value>
+    <value>Dokumentenliste&lt;</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
     <value>Zeile {0}: Das Datum darf nicht leer sein</value>
@@ -28744,10 +28744,10 @@
     <value>Materialproduktionsauftrag</value>
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
-    <value>&gt;Keine Produktaufzeichnungen&lt;/td&gt;</value>
+    <value>Keine Produktaufzeichnungen</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>&gt;Speichern&lt;/a&gt;</value>
+    <value>Speichern&lt;/a</value>
   </data>
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
     <value>Umsatzrenditebericht.xls</value>
@@ -28765,7 +28765,7 @@
     <value>Material-Verkaufsbericht.xls</value>
   </data>
   <data name="DeWuLiaoLieBiao" xml:space="preserve">
-    <value>*&gt;Rezepturpreis&lt;/td&gt;&lt;td class=*</value>
+    <value>*Rezepturpreis</value>
   </data>
   <data name="WuLiaoBaoFeiBaoBiaoxls" xml:space="preserve">
     <value>Rohstoffproduktarchiv</value>
@@ -28906,7 +28906,7 @@
     <value>(Gruppenleiter)</value>
   </data>
   <data name="CaiGouDingChan" xml:space="preserve">
-    <value>.&lt;/br&gt;Prüfungsinhalt und -ergebnisse:</value>
+    <value>.Prüfungsinhalt und -ergebnisse:</value>
   </data>
   <data name="ZhongDanYouDiErJianSheGongSi" xml:space="preserve">
     <value>Prüfungsinhalt und -ergebnisse:</value>
@@ -29029,22 +29029,22 @@
     <value>Liste der Urlaubsanträge direkter Mitglieder:</value>
   </data>
   <data name="BSuoYouBuMenZhiJieChengYuanZuZ" xml:space="preserve">
-    <value>&lt;B&gt;Organisationshierarchiediagramm aller direkten Mitglieder der Abteilung&lt;/B&gt;</value>
+    <value>Organisationshierarchiediagramm aller direkten Mitglieder der Abteilung&lt;</value>
   </data>
   <data name="ZhiJieChengYuanZuZhiCengCiTuB" xml:space="preserve">
-    <value>Organisationshierarchiediagramm direkter Mitglieder&lt;/B&gt;</value>
+    <value>Organisationshierarchiediagramm direkter Mitglieder&lt;</value>
   </data>
   <data name="ZZScriptManagerRegisterStartup" xml:space="preserve">
     <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(Speichern fehlgeschlagen, Sie sind nicht der Ersteller dieser Prozessvorlage, Sie können dieses Prozessbild nicht speichern!</value>
   </data>
   <data name="BAnLeiXingLiuLanWoJianLiDeXian" xml:space="preserve">
-    <value>&lt;B&gt;Projekte nach Typ durchsuchen, die ich erstellt habe&lt;/B&gt;</value>
+    <value>Projekte nach Typ durchsuchen, die ich erstellt habe&lt;</value>
   </data>
   <data name="BAnLeiXingLiuLanWoCanYuDeXiang" xml:space="preserve">
-    <value>&lt;B&gt;Projekte nach Typ durchsuchen, an denen ich teilnehme&lt;/B&gt;</value>
+    <value>Projekte nach Typ durchsuchen, an denen ich teilnehme&lt;</value>
   </data>
   <data name="BAnLeiXingLiuLanWoChengYuanDeX" xml:space="preserve">
-    <value>&lt;B&gt;Projekte nach Typ durchsuchen, an denen meine Mitglieder teilnehmen&lt;/B&gt;</value>
+    <value>Projekte nach Typ durchsuchen, an denen meine Mitglieder teilnehmen&lt;</value>
   </data>
   <data name="WoDeZhiJieChengYuanJiXiaoZongP" xml:space="preserve">
     <value>Vergleichsdiagramm der Gesamtleistungsbewertungen meiner direkten Mitglieder</value>
@@ -29053,7 +29053,7 @@
     <value>Hinweis, bitte wählen Sie zuerst ein Projekt aus!</value>
   </data>
   <data name="BAnLeiXingLiuLanWoDeXiangMuB" xml:space="preserve">
-    <value>&lt;B&gt;Projekte nach Typ durchsuchen, die mir gehören&lt;/B&gt;</value>
+    <value>Projekte nach Typ durchsuchen, die mir gehören&lt;</value>
   </data>
   <data name="ZZJingGaoCiChengYuanYiCunZaiBu" xml:space="preserve">
     <value>Warnung, dieses Mitglied existiert bereits, doppelte Hinzufügung nicht möglich, bitte überprüfen!</value>
@@ -29248,7 +29248,7 @@
     <value>Materialdaten</value>
   </data>
   <data name="StrongShuLiang" xml:space="preserve">
-    <value>&lt;/Strong&gt; (Menge:</value>
+    <value>&lt;/Strong (Menge:</value>
   </data>
   <data name="XiangMuGongShiHeFeiYongHuiZong" xml:space="preserve">
     <value>Zusammenfassungstabelle der Projektarbeitsstunden und -kosten</value>
@@ -29811,14 +29811,8 @@
   <data name="XiaoXiDiShiQingShuaZeYiHangHou" xml:space="preserve">
     <value>Hinweis: Bitte wählen Sie eine Zeile aus, bevor Sie den Änderungsvorgang durchführen!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiXiangMuZiJinS" xml:space="preserve">
-    <value>Hinweis: Die Änderung der Projektmittelausführungsaufzeichnung war erfolgreich!</value>
-  </data>
   <data name="XiaoXiDiShiShanChuXiangMuZiJin" xml:space="preserve">
     <value>Hinweis: Die Löschung der Projektmittelausführungsaufzeichnung war erfolgreich!</value>
-  </data>
-  <data name="XiaoXiDiShiZhiHangJinEShuRuYou" xml:space="preserve">
-    <value>Hinweis: [Ausführungsbetrag] ist falsch eingegeben. Bitte geben Sie eine Zahl ein und versuchen Sie es erneut!</value>
   </data>
   <data name="XiaoXiDiShiBeiZhuShuRuYouWuShu" xml:space="preserve">
     <value>Hinweis: [Bemerkungen] ist falsch eingegeben. Die Eingabelänge ist auf 512 chinesische Zeichen oder 1024 englische Zeichen begrenzt. Bitte geben Sie eine Zahl ein und versuchen Sie es erneut!</value>
@@ -29944,10 +29938,10 @@
     <value>Bewertungsprozess</value>
   </data>
   <data name="BJiaoSeZuB" xml:space="preserve">
-    <value>&lt;B&gt;Rollen Gruppe&lt;/B&gt;</value>
+    <value>Rollen Gruppe&lt;</value>
   </data>
   <data name="BSuoYouB" xml:space="preserve">
-    <value>&lt;B&gt;Alle&lt;/B&gt;</value>
+    <value>Alle&lt;</value>
   </data>
   <data name="CiXuQiuBuCunZaiKeNengYiBeiShan" xml:space="preserve">
     <value>Diese Anforderung existiert nicht, möglicherweise wurde sie gelöscht, bitte überprüfen!</value>
@@ -30001,7 +29995,7 @@
     <value>Ein Fehler ist aufgetreten</value>
   </data>
   <data name="BBuFenB" xml:space="preserve">
-    <value>&lt;B&gt;Teilweise&lt;/B&gt;</value>
+    <value>Teilweise&lt;</value>
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>Projekt geändert:</value>
@@ -30121,82 +30115,67 @@
     <value>Mitgliederliste:</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Stapelverarbeitung " + LanguageHandle.GetWord("ZZCZCG").ToString().Trim() + "</value>
+    <value>Stapelverarbeitung </value>
   </data>
   <data name="ZZTuiChuLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Löschen " + LanguageHandle.GetWord("ZZCCJC").ToString().Trim() + "</value>
+    <value>Löschen </value>
   </data>
   <data name="ZZChongXinLanguageHandleGetWor" xml:space="preserve">
-    <value>Ändern " + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
+    <value>Ändern </value>
   </data>
   <data name="ZZCheXiaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Beenden " + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "</value>
+    <value>Beenden</value>
   </data>
   <data name="ZZQiaoBiaoFangAnShengChengLang" xml:space="preserve">
-    <value>Erneut " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Erneut </value>
   </data>
   <data name="ZZZhangHaoLanguageHandleGetWor" xml:space="preserve">
-    <value>Rückgängig machen " + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "</value>
+    <value>Rückgängig machen </value>
   </data>
   <data name="ZZShenQingJiHuaShengChengLangu" xml:space="preserve">
-    <value>Generierung des Ausschreibungsplans " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Generierung des Ausschreibungsplans </value>
   </data>
   <data name="ZZShenQingShengChengLanguageHa" xml:space="preserve">
-    <value>Konto " + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + "</value>
+    <value>Konto </value>
   </data>
   <data name="ZZFuJianLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Generierung des Antragsplans " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Generierung des Antragsplans</value>
   </data>
   <data name="ZZChiZhengXiangMuLanguageHandl" xml:space="preserve">
-    <value>Antragsgenerierung " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Antragsgenerierung</value>
   </data>
   <data name="ZZPeiXunXiangMuLanguageHandleG" xml:space="preserve">
-    <value>Anhang " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGongSiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Zertifizierungsprojekt " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+    <value>Anhang </value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuWeiBiShu" xml:space="preserve">
-    <value>Schulungsprojekt " + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+    <value>Schulungsprojekt</value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuYiCunZai" xml:space="preserve">
-    <value>Unternehmen " + LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoCiHuanJingYinSuGuoJiH" xml:space="preserve">
-    <value>Warnung, Umweltfaktoren sind obligatorisch, Operation " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZShangChuanLanguageHandleGetW" xml:space="preserve">
-    <value>Warnung, Umweltfaktoren existieren bereits, Operation " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Unternehmen </value>
   </data>
   <data name="ZZBaoCunShiBaiNiBuShiCiLiuChen" xml:space="preserve">
-    <value>Warnung, dieser Umweltfaktor ist abgelaufen oder abnormal, Operation " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Warnung, dieser Umweltfaktor ist abgelaufen oder abnormal, Operation</value>
   </data>
   <data name="ZZQuXiaoLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Hochladen " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Hochladen </value>
   </data>
   <data name="ZZGuiDangLanguageHandleGetWord" xml:space="preserve">
     <value>Speichern fehlgeschlagen, Sie sind nicht der Ersteller dieser Prozessvorlage und können diese Prozessbilder nicht speichern!</value>
   </data>
   <data name="ZZJieDianLanguageHandleGetWord" xml:space="preserve">
-    <value>Abbrechen " + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "</value>
+    <value>Abbrechen</value>
   </data>
   <data name="ZZXinXiFaSongLanguageHandleGet" xml:space="preserve">
-    <value>Archivieren " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Archivieren</value>
   </data>
   <data name="ZZZhuaiXiangLanguageHandleGetW" xml:space="preserve">
-    <value>Knoten " + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZBaoCunLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Nachricht senden " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoBeiFenMuLuChuangJianL" xml:space="preserve">
-    <value>Umwandeln " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Knoten </value>
   </data>
   <data name="ZZJingGaoLiuChengTuZhongYouCiB" xml:space="preserve">
-    <value>Speichern " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Speichern </value>
   </data>
   <data name="ZZShanChuChengGong" xml:space="preserve">
-    <value>Warnung, Backup-Verzeichnis erstellen " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Warnung, Backup-Verzeichnis erstellen </value>
   </data>
   <data name="ZZShanChuShiBaiQingJianCha" xml:space="preserve">
     <value>Warnung, dieser Schrittknoten existiert im Prozessdiagramm und kann nicht gelöscht werden, bitte überprüfen!</value>
@@ -30204,50 +30183,20 @@
   <data name="ZZJingGaoCiLiuChengBuShiNiChua" xml:space="preserve">
     <value>Erfolgreich gelöscht!</value>
   </data>
-  <data name="ZZBiaoZhuPiLiangLanguageHandle" xml:space="preserve">
-    <value>Löschen fehlgeschlagen, bitte überprüfen!</value>
-  </data>
-  <data name="ZZJianHaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Warnung, dieser Prozess wurde nicht von Ihnen erstellt, und Sie sind kein Superadministrator, Sie haben keine Berechtigung zum Löschen, bitte überprüfen!</value>
-  </data>
-  <data name="ZZGeTongLanguageHandleGetWordZ" xml:space="preserve">
-    <value>Stapelmarkierung " + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGeTongCaiJianLanguageHandleG" xml:space="preserve">
-    <value>Prüfnummer " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZDuiZhaoLanguageHandleGetWord" xml:space="preserve">
-    <value>Vertrag " + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="QiaoBiaoWenJianMuLutd" xml:space="preserve">
-    <value>Vertragsmaterialprüfung " + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
-  <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
-    <value>Vergleich " + LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim() + "</value>
-  </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
     <value>Verzeichnis der Bewertungsunterlagen</value>
   </data>
-  <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&lt;td&gt;Ausschreibungsdokument&lt;/td&gt;</value>
-  </data>
   <data name="GongFang" xml:space="preserve">
-    <value>&gt;Bewertungsdokumentenverzeichnis&lt;/td&gt;</value>
+    <value>Lieferant</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
-    <value>&lt;td &gt;Bewertungsmethode und -standard&lt;/td&gt;</value>
-  </data>
-  <data name="PingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&gt;Lieferant&lt;</value>
-  </data>
-  <data name="ZZGongYingShangShengChengLangu" xml:space="preserve">
-    <value>&gt;Ausschreibungsdokument&lt;/td&gt;</value>
+    <value>&lt;td Bewertungsmethode und -standard</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
-    <value>&gt;Bewertungsmethode und -standard&lt;/td&gt;</value>
+    <value>Bewertungsmethode und -standard</value>
   </data>
   <data name="YiChangQingKuang" xml:space="preserve">
-    <value>Lieferantengenerierung " + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>Lieferantengenerierung</value>
   </data>
   <data name="YuLuDanHao" xml:space="preserve">
     <value>Täglicher Kassenbestand</value>

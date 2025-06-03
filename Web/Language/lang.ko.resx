@@ -5785,94 +5785,94 @@
     <value>환경적인 요인 레코드 목록</value>
   </data>
   <data name="hlActivateThisWF" xml:space="preserve">
-    <value>-&gt;이 과정을 활성화</value>
+    <value>-이 과정을 활성화</value>
   </data>
   <data name="hlApplyFunding" xml:space="preserve">
-    <value>-&gt; 교부 신청</value>
+    <value>- 교부 신청</value>
   </data>
   <data name="hlArrangeMeeting" xml:space="preserve">
-    <value>-&gt; 회의 일정</value>
+    <value>- 회의 일정</value>
   </data>
   <data name="hlAssignTask" xml:space="preserve">
-    <value>-&gt; 할당</value>
+    <value>- 할당</value>
   </data>
   <data name="hlBomToPlan" xml:space="preserve">
-    <value>-&gt; 구조 계획 전송 계획</value>
+    <value>- 구조 계획 전송 계획</value>
   </data>
   <data name="hlBuildTeam" xml:space="preserve">
-    <value>-&gt; 팀을 설정</value>
+    <value>- 팀을 설정</value>
   </data>
   <data name="hlConfirmExpense" xml:space="preserve">
-    <value>-&gt; 확인 수수료</value>
+    <value>- 확인 수수료</value>
   </data>
   <data name="hlConfirmManhour" xml:space="preserve">
-    <value>-&gt; 작업 확인</value>
+    <value>- 작업 확인</value>
   </data>
   <data name="hlCopyBomFromTemplateProject" xml:space="preserve">
-    <value>-&gt; 템플릿 프로젝트 구조 계획에서 복사</value>
+    <value>- 템플릿 프로젝트 구조 계획에서 복사</value>
   </data>
   <data name="hlCopyFromTemplate" xml:space="preserve">
-    <value>-&gt; 템플릿에서 복사</value>
+    <value>- 템플릿에서 복사</value>
   </data>
   <data name="hlCopyProjectPlan" xml:space="preserve">
-    <value>-&gt; 복사 프로젝트 계획</value>
+    <value>- 복사 프로젝트 계획</value>
   </data>
   <data name="hlDailyWorkReport" xml:space="preserve">
     <value>로그 북 보고서</value>
   </data>
   <data name="hlGanttChart" xml:space="preserve">
-    <value>-&gt; 간트</value>
+    <value>- 간트</value>
   </data>
   <data name="hlImplementPlan" xml:space="preserve">
-    <value>-&gt; 구현 계획</value>
+    <value>- 구현 계획</value>
   </data>
   <data name="hlIncomeAndExpense" xml:space="preserve">
-    <value>-&gt; 수익 ​​정산</value>
+    <value>- 수익 ​​정산</value>
   </data>
   <data name="hlMakeCollaboration" xml:space="preserve">
-    <value>-&gt; 공동 작업을 시작합니다</value>
+    <value>- 공동 작업을 시작합니다</value>
   </data>
   <data name="hlMakePlan" xml:space="preserve">
-    <value>-&gt; 계획</value>
+    <value>- 계획</value>
   </data>
   <data name="hlRelatedDoc" xml:space="preserve">
-    <value>-&gt; 관련 문서</value>
+    <value>- 관련 문서</value>
   </data>
   <data name="hlRelatedItemAndBom" xml:space="preserve">
-    <value>-&gt; 요소는 구조가 설정 정의</value>
+    <value>- 요소는 구조가 설정 정의</value>
   </data>
   <data name="hlReqReview" xml:space="preserve">
-    <value>-&gt; 평가 필요</value>
+    <value>- 평가 필요</value>
   </data>
   <data name="hlReviewProject" xml:space="preserve">
-    <value>-&gt; 프로젝트 검토</value>
+    <value>- 프로젝트 검토</value>
   </data>
   <data name="hlReviewProjectPlan" xml:space="preserve">
-    <value>-&gt; 프로젝트 계획 검토</value>
+    <value>- 프로젝트 계획 검토</value>
   </data>
   <data name="hlReviewTask" xml:space="preserve">
-    <value>-&gt; 작업 검토</value>
+    <value>- 작업 검토</value>
   </data>
   <data name="hlRiskReview" xml:space="preserve">
-    <value>-&gt; 위험 평가</value>
+    <value>- 위험 평가</value>
   </data>
   <data name="hlRunProjectByWF" xml:space="preserve">
-    <value>-&gt; 프로젝트 구현 (프로세스 모델)</value>
+    <value>- 프로젝트 구현 (프로세스 모델)</value>
   </data>
   <data name="hlRunProjectPlanByWF" xml:space="preserve">
-    <value>-&gt; 프로그램의 구현 (프로세스 모델)</value>
+    <value>- 프로그램의 구현 (프로세스 모델)</value>
   </data>
   <data name="hlRunReqByWF" xml:space="preserve">
-    <value>-&gt; 요구 사항 처리 (흐름 모드)</value>
+    <value>- 요구 사항 처리 (흐름 모드)</value>
   </data>
   <data name="hlRunRiskByWF" xml:space="preserve">
-    <value>-&gt; 위험 관리 (흐름 모드)</value>
+    <value>- 위험 관리 (흐름 모드)</value>
   </data>
   <data name="hlRunTaskByWF" xml:space="preserve">
-    <value>-&gt; 작업 구현 (프로세스 모델)</value>
+    <value>- 작업 구현 (프로세스 모델)</value>
   </data>
   <data name="hlToTask" xml:space="preserve">
-    <value>-&gt; 작업으로 전환</value>
+    <value>- 작업으로 전환</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
     <value>어떤 항목이 후 "등록"버튼을 클릭) 필요하지 않습니다, 시스​​템은 직접 시험 페이지로 이동합니다</value>
@@ -8671,94 +8671,94 @@
     <value>환경적인 요인 레코드 목록</value>
   </data>
   <data name="MingZhu" xml:space="preserve">
-    <value>-&gt;이 과정을 활성화</value>
+    <value>-이 과정을 활성화</value>
   </data>
   <data name="Minute" xml:space="preserve">
-    <value>-&gt; 교부 신청</value>
+    <value>- 교부 신청</value>
   </data>
   <data name="MinZu" xml:space="preserve">
-    <value>-&gt; 회의 일정</value>
+    <value>- 회의 일정</value>
   </data>
   <data name="MiYue" xml:space="preserve">
-    <value>-&gt; 할당</value>
+    <value>- 할당</value>
   </data>
   <data name="MoBan" xml:space="preserve">
-    <value>-&gt; 구조 계획 전송 계획</value>
+    <value>- 구조 계획 전송 계획</value>
   </data>
   <data name="MoBanBuZhouCanKao" xml:space="preserve">
-    <value>-&gt; 팀을 설정</value>
+    <value>- 팀을 설정</value>
   </data>
   <data name="MoBanMingChen" xml:space="preserve">
-    <value>-&gt; 확인 수수료</value>
+    <value>- 확인 수수료</value>
   </data>
   <data name="MoBanWeiHu" xml:space="preserve">
-    <value>-&gt; 작업 확인</value>
+    <value>- 작업 확인</value>
   </data>
   <data name="MoCiChuKu" xml:space="preserve">
-    <value>-&gt; 템플릿 프로젝트 구조 계획에서 복사</value>
+    <value>- 템플릿 프로젝트 구조 계획에서 복사</value>
   </data>
   <data name="MoCiRuKu" xml:space="preserve">
-    <value>-&gt; 템플릿에서 복사</value>
+    <value>- 템플릿에서 복사</value>
   </data>
   <data name="ModuleName" xml:space="preserve">
-    <value>-&gt; 복사 프로젝트 계획</value>
+    <value>- 복사 프로젝트 계획</value>
   </data>
   <data name="MoHuChaXun" xml:space="preserve">
     <value>로그 북 보고서</value>
   </data>
   <data name="MoKuai" xml:space="preserve">
-    <value>-&gt; 간트</value>
+    <value>- 간트</value>
   </data>
   <data name="MoKuaiLeiXing" xml:space="preserve">
-    <value>-&gt; 구현 계획</value>
+    <value>- 구현 계획</value>
   </data>
   <data name="MoKuaiMingCheng" xml:space="preserve">
-    <value>-&gt; 수익 ​​정산</value>
+    <value>- 수익 ​​정산</value>
   </data>
   <data name="MoKuaiXinXi" xml:space="preserve">
-    <value>-&gt; 공동 작업을 시작합니다</value>
+    <value>- 공동 작업을 시작합니다</value>
   </data>
   <data name="MonthSchedule" xml:space="preserve">
-    <value>-&gt; 계획</value>
+    <value>- 계획</value>
   </data>
   <data name="MoQingJinE" xml:space="preserve">
-    <value>-&gt; 관련 문서</value>
+    <value>- 관련 문서</value>
   </data>
   <data name="MoZuLeiXing" xml:space="preserve">
-    <value>-&gt; 요소는 구조가 설정 정의</value>
+    <value>- 요소는 구조가 설정 정의</value>
   </data>
   <data name="MRPBanBen" xml:space="preserve">
-    <value>-&gt; 평가 필요</value>
+    <value>- 평가 필요</value>
   </data>
   <data name="MRPZhanKai" xml:space="preserve">
-    <value>-&gt; 프로젝트 검토</value>
+    <value>- 프로젝트 검토</value>
   </data>
   <data name="MRPZhanKaiYunSuan" xml:space="preserve">
-    <value>-&gt; 프로젝트 계획 검토</value>
+    <value>- 프로젝트 계획 검토</value>
   </data>
   <data name="MRPZhuJiHua" xml:space="preserve">
-    <value>-&gt; 작업 검토</value>
+    <value>- 작업 검토</value>
   </data>
   <data name="MRPZhuJiHuaPaiChan" xml:space="preserve">
-    <value>-&gt; 위험 평가</value>
+    <value>- 위험 평가</value>
   </data>
   <data name="MTBaoGaoBianHao" xml:space="preserve">
-    <value>-&gt; 프로젝트 구현 (프로세스 모델)</value>
+    <value>- 프로젝트 구현 (프로세스 모델)</value>
   </data>
   <data name="MTHeGeJiBie" xml:space="preserve">
-    <value>-&gt; 프로그램의 구현 (프로세스 모델)</value>
+    <value>- 프로그램의 구현 (프로세스 모델)</value>
   </data>
   <data name="MTJianCheBiLi" xml:space="preserve">
-    <value>-&gt; 요구 사항 처리 (흐름 모드)</value>
+    <value>- 요구 사항 처리 (흐름 모드)</value>
   </data>
   <data name="MTJianYanJieGuo" xml:space="preserve">
-    <value>-&gt; 위험 관리 (흐름 모드)</value>
+    <value>- 위험 관리 (흐름 모드)</value>
   </data>
   <data name="MTPingDingBiaoZhun" xml:space="preserve">
-    <value>-&gt; 작업 구현 (프로세스 모델)</value>
+    <value>- 작업 구현 (프로세스 모델)</value>
   </data>
   <data name="MTRiQi" xml:space="preserve">
-    <value>-&gt; 작업으로 전환</value>
+    <value>- 작업으로 전환</value>
   </data>
   <data name="MuBan" xml:space="preserve">
     <value>어떤 항목이 후 "등록"버튼을 클릭) 필요하지 않습니다, 시스​​템은 직접 시험 페이지로 이동합니다</value>
@@ -9568,7 +9568,7 @@
     <value>프로젝트 상태</value>
   </data>
   <data name="ProjectStatusReview" xml:space="preserve">
-    <value>-&gt; 프로젝트 상태 검토</value>
+    <value>- 프로젝트 상태 검토</value>
   </data>
   <data name="ProjectTreeBrowse" xml:space="preserve">
     <value>프로젝트 트리 검색</value>
@@ -12979,7 +12979,7 @@
     <value>소득 요약</value>
   </data>
   <data name="ToTask" xml:space="preserve">
-    <value>-&gt; 전원을 켜고 작업</value>
+    <value>- 전원을 켜고 작업</value>
   </data>
   <data name="TouBiaoFeiYong" xml:space="preserve">
     <value>입찰 비용</value>
@@ -13489,7 +13489,7 @@
     <value>종료 시간 야간 교대 근무</value>
   </data>
   <data name="WBSJieGouDaiMaYuanShuDingYi" xml:space="preserve">
-    <value>-&gt; WBS (구조) 코드 (요소) 정의</value>
+    <value>- WBS (구조) 코드 (요소) 정의</value>
   </data>
   <data name="WBSJieGouGuiHuaZhuanJiHua" xml:space="preserve">
     <value>WBS (구조 계획) 이전 계획</value>
@@ -19477,10 +19477,10 @@
     <value>계획은 조달 목록이 이미 존재하는 세부 사항, 당신은 추가 할 수 없습니다!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW0DWSC" xml:space="preserve">
-    <value>이 계획에 따라 요청 0 &lt;정착 태그&gt; 삭제되지 않습니다했다!</value>
+    <value>이 계획에 따라 요청 0 &lt;정착 태그 삭제되지 않습니다했다!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW1DWTD" xml:space="preserve">
-    <value>이 계획에 따라 요청 &lt;정착 태그&gt;을 만들었다 -1 거절 할되지 않습니다!</value>
+    <value>이 계획에 따라 요청 &lt;정착 태그을 만들었다 -1 거절 할되지 않습니다!</value>
   </data>
   <data name="ZZGJKBMZSJBZYCZJC" xml:space="preserve">
     <value>데이터 테이블에서 인코딩 된 인터페이스에 이미 존재 확인하세요!</value>
@@ -23152,7 +23152,7 @@
     <value>사용자 이름과 암호는 빈 아니다, 확인하시기 바랍니다!</value>
   </data>
   <data name="ZZYHTJDBSSXHCJXCL" xml:space="preserve">
-    <value>계약 &lt;진행&gt; 힘이나 물질 탈취, 처리하시기 바랍니다 아닙니다!</value>
+    <value>계약 &lt;진행 힘이나 물질 탈취, 처리하시기 바랍니다 아닙니다!</value>
   </data>
   <data name="ZZYJCZBYZFZ" xml:space="preserve">
     <value>이미 선택을 반복하지 않는, 존재!</value>
@@ -23185,7 +23185,7 @@
     <value>현재 공급 업체가 선택, 클릭을 반복하지 않는다!</value>
   </data>
   <data name="ZZYKDJDBSBXXCL" xml:space="preserve">
-    <value>하나의 단락 &lt;진행&gt; 상환되지 않습니다 요구 한 처리하십시오!</value>
+    <value>하나의 단락 &lt;진행 상환되지 않습니다 요구 한 처리하십시오!</value>
   </data>
   <data name="ZZYKRZB" xml:space="preserve">
     <value>로그 테이블이 삭제되었습니다!</value>
@@ -24694,7 +24694,7 @@
     <value>관련 데이터</value>
   </data>
   <data name="hlMakeMeeting" xml:space="preserve">
-    <value>-&gt; 회의 일정</value>
+    <value>- 회의 일정</value>
   </data>
   <data name="TongZhiShenQingRen" xml:space="preserve">
     <value>신청자 통보</value>
@@ -25486,7 +25486,7 @@
     <value>아이 워크 플로우 목록</value>
   </data>
   <data name="FaYaoQing" xml:space="preserve">
-    <value>-&gt; 초대</value>
+    <value>- 초대</value>
   </data>
   <data name="ZZXXYTSGSMSXRYDEMAILHSJQJSTXTM" xml:space="preserve">
     <value>정보 선택한 사람의 이메일이나 전화의 상단에 밀려 한, 그들을 생각 나게하십시오!</value>
@@ -25537,7 +25537,7 @@
     <value>부가적인</value>
   </data>
   <data name="BaoChunMoBanDingYi" xml:space="preserve">
-    <value>-&gt; 저장 템플릿 정의</value>
+    <value>- 저장 템플릿 정의</value>
   </data>
   <data name="ZZGeiBianCG" xml:space="preserve">
     <value>성공적으로 변경!</value>
@@ -26167,28 +26167,28 @@
     <value>연관된 하위 프로세스</value>
   </data>
   <data name="GongZuoJiHuaJT" xml:space="preserve">
-    <value>-&gt; 작업 계획</value>
+    <value>- 작업 계획</value>
   </data>
   <data name="GongZuoRiChengJT" xml:space="preserve">
-    <value>-&gt; 근무 일정</value>
+    <value>- 근무 일정</value>
   </data>
   <data name="ShouFuKuanJiHuaJT" xml:space="preserve">
-    <value>-&gt; 지불 및 지불 계획</value>
+    <value>- 지불 및 지불 계획</value>
   </data>
   <data name="CHENGYUANSHOURUFENPEIJT" xml:space="preserve">
-    <value>-&gt; 회원 소득 분배</value>
+    <value>- 회원 소득 분배</value>
   </data>
   <data name="GONGZUOLIANGFENPEIJT" xml:space="preserve">
-    <value>-&gt; 워크로드 분산</value>
+    <value>- 워크로드 분산</value>
   </data>
   <data name="hlDailyWorkReportJT" xml:space="preserve">
-    <value>-&gt; 작업 로그 보고서</value>
+    <value>- 작업 로그 보고서</value>
   </data>
   <data name="ProjectDocumentJT" xml:space="preserve">
-    <value>-&gt; 프로젝트 문서</value>
+    <value>- 프로젝트 문서</value>
   </data>
   <data name="ProjectMemberJT" xml:space="preserve">
-    <value>-&gt; 프로젝트 회원</value>
+    <value>- 프로젝트 회원</value>
   </data>
   <data name="KeYongWeb" xml:space="preserve">
     <value>사용 가능한 웹</value>
@@ -26395,7 +26395,7 @@
     <value>수수료 신청 문의</value>
   </data>
   <data name="QiBaoxiao" xml:space="preserve">
-    <value>-&gt; 상환</value>
+    <value>- 상환</value>
   </data>
   <data name="QingXianXuanZheYaoBaoXiaoDeFeiYong" xml:space="preserve">
     <value>먼저 갚을 비용을 선택하십시오!</value>
@@ -26959,7 +26959,7 @@
     <value>경고, 이름, 사양, 모델 번호에는 작은따옴표, 큰따옴표, 백분율 기호가 포함될 수 없습니다.</value>
   </data>
   <data name="ZZCCYYSMYXYDSJKLJC" xml:space="preserve">
-    <value>오류, 그 이유는 해당 데이터베이스 연결 문자열이 없기 때문에 노드 아래에 해당 연결 문자열을 추가하십시오 : web.config 파일에서 문자열 이름은 ReadOnlySQLCONNECTIONSTRING이고&lt;connectionStrings&gt; 사용자 ID는 ReadOnlyUser이며 암호가 설정되고 다른 매개 변수는 SQLCONNECTIONSTRING과 동일합니다!</value>
+    <value>오류, 그 이유는 해당 데이터베이스 연결 문자열이 없기 때문에 노드 아래에 해당 연결 문자열을 추가하십시오 : web.config 파일에서 문자열 이름은 ReadOnlySQLCONNECTIONSTRING이고&lt;connectionStrings 사용자 ID는 ReadOnlyUser이며 암호가 설정되고 다른 매개 변수는 SQLCONNECTIONSTRING과 동일합니다!</value>
   </data>
   <data name="ZZSJKZDYHYYDSJBIFSHBBSJ" xml:space="preserve">
     <value>데이터베이스 읽기 전용 사용자는 빅데이터 BI 분석 및 보고서 디자인에 사용되며, 데이터를 조회할 수 있는 권한만 갖습니다!</value>
@@ -28039,7 +28039,7 @@
     <value>고객 서비스 요청 목록</value>
   </data>
   <data name="BKeHuFuWuXuQiuLieBiaoB" xml:space="preserve">
-    <value>&lt;B&gt;고객 서비스 요청 목록&lt;/B&gt;</value>
+    <value>&lt;B고객 서비스 요청 목록&lt;/B</value>
   </data>
   <data name="CuoWuXiangYingMoBanHuoMoBanWen" xml:space="preserve">
     <value>에러: 해당 템플릿 또는 템플릿 파일이 존재하지 않습니다. 확인해 주십시오!</value>
@@ -28174,7 +28174,7 @@
     <value>경고: 공사 단위와 장비 단위는 비워둘 수 없습니다. 확인해 주십시오!</value>
   </data>
   <data name="BSuoYouXiangMuB" xml:space="preserve">
-    <value>&lt;B&gt;모든 프로젝트&lt;/B&gt;</value>
+    <value>&lt;B모든 프로젝트&lt;/B</value>
   </data>
   <data name="FenBaoFuKuanShenQing" xml:space="preserve">
     <value>하도급 지불 신청</value>
@@ -28225,7 +28225,7 @@
     <value>문제 개선 통지서</value>
   </data>
   <data name="WenTiZhengGaiTongZhiChan" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;내용:</value>
+    <value>&lt;br/&lt;br/내용:</value>
   </data>
   <data name="CiXieZuoBuCunZaiKeNengYiBeiSha" xml:space="preserve">
     <value>이 협업이 존재하지 않거나 삭제되었을 수 있습니다. 확인해 주세요!</value>
@@ -28531,7 +28531,7 @@
     <value>결함 할당 통지</value>
   </data>
   <data name="BZongXiangMuB" xml:space="preserve">
-    <value>&lt;B&gt;총 프로젝트&lt;/B&gt;</value>
+    <value>&lt;B총 프로젝트&lt;/B</value>
   </data>
   <data name="QueXianZhuaiXiangTongZhi" xml:space="preserve">
     <value>결함 전환 통지</value>
@@ -28540,7 +28540,7 @@
     <value>프로젝트로 전환하여 당신에게 전달되었습니다. 신속히 처리해 주십시오!</value>
   </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;검수 기준:</value>
+    <value>&lt;br/&lt;br/검수 기준:</value>
   </data>
   <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
     <value>이 결함은 존재하지 않거나 이미 삭제되었을 수 있습니다. 확인해 주십시오!</value>
@@ -28612,7 +28612,7 @@
     <value>{0}행, 재무 비용은 소수점일 수 있습니다</value>
   </data>
   <data name="brWeiDaoRuShuJuGongYou0TiaoShu" xml:space="preserve">
-    <value>&lt;br/&gt;데이터를 가져오지 못했습니다. 총 {0}건의 데이터가 검증에 실패했습니다</value>
+    <value>&lt;br/데이터를 가져오지 못했습니다. 총 {0}건의 데이터가 검증에 실패했습니다</value>
   </data>
   <data name="Di0HangKeHuMingChenBuNengWeiKo" xml:space="preserve">
     <value>{0}행, 고객 이름이 비워둘 수 없습니다</value>
@@ -28666,7 +28666,7 @@
     <value>색료 비용</value>
   </data>
   <data name="PeiFangJiatdtdclass" xml:space="preserve">
-    <value>&gt;조합 가격</value>
+    <value>조합 가격</value>
   </data>
   <data name="YuanLiaoChanPinCunDang" xml:space="preserve">
     <value>원료 제품 보관</value>
@@ -28795,7 +28795,7 @@
     <value>(조장)</value>
   </data>
   <data name="brJianChaNeiRongJiJiFaXian" xml:space="preserve">
-    <value>。&lt;/br&gt;검사 내용 및 발견 사항:</value>
+    <value>。검사 내용 및 발견 사항:</value>
   </data>
   <data name="JianChaNeiRongJiJiFaXian" xml:space="preserve">
     <value>검사 내용 및 발견 사항:</value>
@@ -29026,22 +29026,22 @@
     <value>직접 구성원 휴가 정보 목록:</value>
   </data>
   <data name="ZhiJieChengYuanQingJiaXinXiLie" xml:space="preserve">
-    <value>&lt;B&gt;모든 부서 직접 구성원 조직 계층도&lt;/B&gt;</value>
+    <value>&lt;B모든 부서 직접 구성원 조직 계층도&lt;/B</value>
   </data>
   <data name="BSuoYouBuMenZhiJieChengYuanZuZ" xml:space="preserve">
-    <value>직접 구성원 조직 계층도&lt;/B&gt;</value>
+    <value>직접 구성원 조직 계층도&lt;/B</value>
   </data>
   <data name="ZhiJieChengYuanZuZhiCengCiTuB" xml:space="preserve">
     <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(저장 실패, 당신은 이 프로세스 템플릿의 작성자가 아니므로 프로세스 이미지를 저장할 수 없습니다!</value>
   </data>
   <data name="ZZScriptManagerRegisterStartup" xml:space="preserve">
-    <value>&lt;B&gt;유형별로 내가 만든 프로젝트 보기&lt;/B&gt;</value>
+    <value>&lt;B유형별로 내가 만든 프로젝트 보기&lt;/B</value>
   </data>
   <data name="BAnLeiXingLiuLanWoJianLiDeXian" xml:space="preserve">
-    <value>&lt;B&gt;유형별로 내가 참여한 프로젝트 보기&lt;/B&gt;</value>
+    <value>&lt;B유형별로 내가 참여한 프로젝트 보기&lt;/B</value>
   </data>
   <data name="BAnLeiXingLiuLanWoCanYuDeXiang" xml:space="preserve">
-    <value>&lt;B&gt;유형별로 내 구성원의 프로젝트 보기&lt;/B&gt;</value>
+    <value>&lt;B유형별로 내 구성원의 프로젝트 보기&lt;/B</value>
   </data>
   <data name="BAnLeiXingLiuLanWoChengYuanDeX" xml:space="preserve">
     <value>내 직접 구성원 성과 총점 비교도</value>
@@ -29050,7 +29050,7 @@
     <value>알림, 먼저 프로젝트를 선택하세요!</value>
   </data>
   <data name="ZZDiShiQingXianShuaZeXiangMu" xml:space="preserve">
-    <value>&lt;B&gt;유형별로 내 프로젝트 보기&lt;/B&gt;</value>
+    <value>&lt;B유형별로 내 프로젝트 보기&lt;/B</value>
   </data>
   <data name="BAnLeiXingLiuLanWoDeXiangMuB" xml:space="preserve">
     <value>경고, 이 구성원은 이미 존재하며 중복 추가할 수 없습니다. 확인하세요!</value>
@@ -29245,7 +29245,7 @@
     <value>자재 자료</value>
   </data>
   <data name="WuLiaoZiLiao" xml:space="preserve">
-    <value>&lt;/Strong&gt; (수량:</value>
+    <value>&lt;/Strong (수량:</value>
   </data>
   <data name="StrongShuLiang" xml:space="preserve">
     <value>프로젝트 작업 시간 및 비용 요약표</value>
@@ -29811,14 +29811,8 @@
   <data name="XiaoXiDiShiQingShuaZeYiHangHou" xml:space="preserve">
     <value>메시지: 수정할 행을 선택하세요!</value>
   </data>
-  <data name="XiaoXiDiShiXiuGaiXiangMuZiJinS" xml:space="preserve">
-    <value>메시지: 프로젝트 자금 실행 기록 수정 성공!</value>
-  </data>
   <data name="XiaoXiDiShiShanChuXiangMuZiJin" xml:space="preserve">
     <value>메시지: 프로젝트 자금 실행 기록 삭제 성공!</value>
-  </data>
-  <data name="XiaoXiDiShiZhiHangJinEShuRuYou" xml:space="preserve">
-    <value>메시지: 【실행 금액】 입력 오류, 숫자를 입력하세요!</value>
   </data>
   <data name="XiaoXiDiShiBeiZhuShuRuYouWuShu" xml:space="preserve">
     <value>메시지: 【비고】 입력 오류, 입력 내용 길이는 512자 한자 또는 1024자 영문자로 제한됩니다. 숫자를 입력하세요!</value>
@@ -29944,10 +29938,10 @@
     <value>심사 프로세스</value>
   </data>
   <data name="BJiaoSeZuB" xml:space="preserve">
-    <value>&lt;B&gt;역할 그룹&lt;/B&gt;</value>
+    <value>&lt;B역할 그룹&lt;/B</value>
   </data>
   <data name="BSuoYouB" xml:space="preserve">
-    <value>&lt;B&gt;모두&lt;/B&gt;</value>
+    <value>&lt;B모두&lt;/B</value>
   </data>
   <data name="CiXuQiuBuCunZaiKeNengYiBeiShan" xml:space="preserve">
     <value>이 요청은 존재하지 않거나 삭제되었을 수 있습니다. 확인하세요!</value>
@@ -30001,7 +29995,7 @@
     <value>오류 발생</value>
   </data>
   <data name="BBuFenB" xml:space="preserve">
-    <value>&lt;B&gt;일부&lt;/B&gt;</value>
+    <value>&lt;B일부&lt;/B</value>
   </data>
   <data name="GaiBianLeXiangMu" xml:space="preserve">
     <value>프로젝트 변경:</value>
@@ -30025,7 +30019,7 @@
     <value>RTX 내선 번호</value>
   </data>
   <data name="bXieMianMoZub" xml:space="preserve">
-    <value>&lt;b&gt;페이지 모듈&lt;b&gt;</value>
+    <value>&lt;b페이지 모듈&lt;b</value>
   </data>
   <data name="ZZJingGaoGongBenFeiHeDaiLiFeiB" xml:space="preserve">
     <value>경고, 제작비와 대리비는 숫자 유형이어야 합니다. 확인하세요!</value>
@@ -30121,76 +30115,61 @@
     <value>일괄</value>
   </data>
   <data name="ZZXiuGaiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>수정" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "</value>
+    <value>수정</value>
   </data>
   <data name="ZZTuiChuLanguageHandleGetWordZ" xml:space="preserve">
-    <value>종료" + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "</value>
+    <value>종료</value>
   </data>
   <data name="ZZChongXinLanguageHandleGetWor" xml:space="preserve">
-    <value>재시도" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>재시도</value>
   </data>
   <data name="ZZCheXiaoLanguageHandleGetWord" xml:space="preserve">
-    <value>취소" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "</value>
+    <value>취소</value>
   </data>
   <data name="ZZQiaoBiaoFangAnShengChengLang" xml:space="preserve">
-    <value>입찰 계획 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>입찰 계획 생성</value>
   </data>
   <data name="ZZZhangHaoLanguageHandleGetWor" xml:space="preserve">
-    <value>계정" + LanguageHandle.GetWord("ZZJHSBCYHBCZJC").ToString().Trim() + "</value>
+    <value>계정</value>
   </data>
   <data name="ZZShenQingJiHuaShengChengLangu" xml:space="preserve">
-    <value>신청 계획 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>신청 계획 생성</value>
   </data>
   <data name="ZZShenQingShengChengLanguageHa" xml:space="preserve">
-    <value>신청 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>신청 생성</value>
   </data>
   <data name="ZZFuJianLanguageHandleGetWordZ" xml:space="preserve">
-    <value>첨부 파일" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "</value>
+    <value>첨부 파일</value>
   </data>
   <data name="ZZChiZhengXiangMuLanguageHandl" xml:space="preserve">
-    <value>자격증 프로젝트"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"</value>
+    <value>자격증 프로젝트</value>
   </data>
   <data name="ZZPeiXunXiangMuLanguageHandleG" xml:space="preserve">
-    <value>교육 프로젝트"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"</value>
-  </data>
-  <data name="ZZGongSiLanguageHandleGetWordZ" xml:space="preserve">
-    <value>회사"+LanguageHandle.GetWord("ZZMCBNWFFZF").ToString().Trim()+"</value>
+    <value>교육 프로젝트</value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuWeiBiShu" xml:space="preserve">
-    <value>경고, 환경 요소는 필수 항목입니다. 작업" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>경고, 환경 요소는 필수 항목입니다. 작업</value>
   </data>
   <data name="ZZJingGaoHuanJingYinSuYiCunZai" xml:space="preserve">
-    <value>경고, 환경 요소가 이미 존재합니다. 작업" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoCiHuanJingYinSuGuoJiH" xml:space="preserve">
-    <value>경고, 이 환경 요소는 만료되었거나 비정상입니다. 작업" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZShangChuanLanguageHandleGetW" xml:space="preserve">
-    <value>업로드"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"</value>
+    <value>경고, 환경 요소가 이미 존재합니다. 작업</value>
   </data>
   <data name="ZZBaoCunShiBaiNiBuShiCiLiuChen" xml:space="preserve">
     <value>저장 실패, 당신은 이 프로세스 템플릿의 작성자가 아니므로 프로세스 이미지를 저장할 수 없습니다!</value>
   </data>
   <data name="ZZQuXiaoLanguageHandleGetWordZ" xml:space="preserve">
-    <value>취소" + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "</value>
+    <value>취소</value>
   </data>
   <data name="ZZGuiDangLanguageHandleGetWord" xml:space="preserve">
-    <value>보관" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>보관</value>
   </data>
   <data name="ZZJieDianLanguageHandleGetWord" xml:space="preserve">
-    <value>노드" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "</value>
+    <value>노드 </value>
   </data>
   <data name="ZZXinXiFaSongLanguageHandleGet" xml:space="preserve">
-    <value>정보 전송" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>정보 전송</value>
   </data>
   <data name="ZZZhuaiXiangLanguageHandleGetW" xml:space="preserve">
-    <value>전환" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZBaoCunLanguageHandleGetWordZ" xml:space="preserve">
-    <value>저장" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJingGaoBeiFenMuLuChuangJianL" xml:space="preserve">
-    <value>경고, 백업 디렉토리 생성"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"</value>
+    <value>전환</value>
   </data>
   <data name="ZZJingGaoLiuChengTuZhongYouCiB" xml:space="preserve">
     <value>경고, 플로우 차트에 이 단계 노드가 있습니다. 삭제할 수 없습니다. 확인하세요!</value>
@@ -30204,44 +30183,14 @@
   <data name="ZZJingGaoCiLiuChengBuShiNiChua" xml:space="preserve">
     <value>경고, 이 프로세스는 당신이 생성한 것이 아니며, 당신은 슈퍼 관리자도 아닙니다. 삭제 권한이 없습니다. 확인하세요!</value>
   </data>
-  <data name="ZZBiaoZhuPiLiangLanguageHandle" xml:space="preserve">
-    <value>일괄 표시" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZJianHaoLanguageHandleGetWord" xml:space="preserve">
-    <value>검사 번호" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGeTongLanguageHandleGetWordZ" xml:space="preserve">
-    <value>계약" + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZGeTongCaiJianLanguageHandleG" xml:space="preserve">
-    <value>계약 재료 검사" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "</value>
-  </data>
-  <data name="ZZDuiZhaoLanguageHandleGetWord" xml:space="preserve">
-    <value>비교"+LanguageHandle.GetWord("ZZBZBNWKBC").ToString().Trim()+"</value>
-  </data>
-  <data name="QiaoBiaoWenJianMuLutd" xml:space="preserve">
-    <value>&gt;입찰 문서 목록&lt;/td&gt;</value>
-  </data>
-  <data name="tdQiaoBiaoWenJiantd" xml:space="preserve">
-    <value>&lt;td&gt;입찰 문서&lt;/td&gt;</value>
-  </data>
   <data name="PingBiaoWenJianMuLutd" xml:space="preserve">
     <value>평가서류목록</value>
   </data>
-  <data name="tdPingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&lt;td &gt;평가 방법 및 기준&lt;/td&gt;</value>
-  </data>
   <data name="GongFang" xml:space="preserve">
-    <value>&gt;공급자&lt;</value>
+    <value>공급자</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
-    <value>&gt;입찰 문서&lt;/td&gt;</value>
-  </data>
-  <data name="PingBiaoFangFaJiBiaoZhuntd" xml:space="preserve">
-    <value>&gt;평가 방법 및 기준&lt;/td&gt;</value>
-  </data>
-  <data name="ZZGongYingShangShengChengLangu" xml:space="preserve">
-    <value>공급자 생성" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "</value>
+    <value>입찰 문서</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
     <value>매일 현금 잔액</value>

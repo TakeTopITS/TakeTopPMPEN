@@ -5785,94 +5785,94 @@
     <value>Fatores ambientais lista de registros</value>
   </data>
   <data name="hlActivateThisWF" xml:space="preserve">
-    <value>-&gt; Ativar este processo</value>
+    <value>- Ativar este processo</value>
   </data>
   <data name="hlApplyFunding" xml:space="preserve">
-    <value>-&gt; Aplicação Grant</value>
+    <value>- Aplicação Grant</value>
   </data>
   <data name="hlArrangeMeeting" xml:space="preserve">
-    <value>-&gt; Calendário de reuniões</value>
+    <value>- Calendário de reuniões</value>
   </data>
   <data name="hlAssignTask" xml:space="preserve">
-    <value>- Atribuições&gt;</value>
+    <value>- Atribuições</value>
   </data>
   <data name="hlBomToPlan" xml:space="preserve">
-    <value>-&gt; Plano de transferência Plano de Estrutura</value>
+    <value>- Plano de transferência Plano de Estrutura</value>
   </data>
   <data name="hlBuildTeam" xml:space="preserve">
-    <value>-&gt; Constituição da equipa</value>
+    <value>- Constituição da equipa</value>
   </data>
   <data name="hlConfirmExpense" xml:space="preserve">
-    <value>-&gt; Taxa Confirmar</value>
+    <value>- Taxa Confirmar</value>
   </data>
   <data name="hlConfirmManhour" xml:space="preserve">
-    <value>-&gt; Horas para confirmar</value>
+    <value>- Horas para confirmar</value>
   </data>
   <data name="hlCopyBomFromTemplateProject" xml:space="preserve">
-    <value>-&gt; Copiar a partir do plano de estrutura de projeto de modelo</value>
+    <value>- Copiar a partir do plano de estrutura de projeto de modelo</value>
   </data>
   <data name="hlCopyFromTemplate" xml:space="preserve">
-    <value>-&gt; Copiar a partir do Modelo</value>
+    <value>- Copiar a partir do Modelo</value>
   </data>
   <data name="hlCopyProjectPlan" xml:space="preserve">
-    <value>-&gt; Plano de Copy Project</value>
+    <value>- Plano de Copy Project</value>
   </data>
   <data name="hlDailyWorkReport" xml:space="preserve">
     <value>Relatório Diário de bordo</value>
   </data>
   <data name="hlGanttChart" xml:space="preserve">
-    <value>-&gt; Gantt</value>
+    <value>- Gantt</value>
   </data>
   <data name="hlImplementPlan" xml:space="preserve">
-    <value>-&gt; Plano de Implementação</value>
+    <value>- Plano de Implementação</value>
   </data>
   <data name="hlIncomeAndExpense" xml:space="preserve">
-    <value>-&gt; Liquidação Receita</value>
+    <value>- Liquidação Receita</value>
   </data>
   <data name="hlMakeCollaboration" xml:space="preserve">
-    <value>-&gt; Iniciado colaboração</value>
+    <value>- Iniciado colaboração</value>
   </data>
   <data name="hlMakePlan" xml:space="preserve">
-    <value>-&gt; Plano</value>
+    <value>- Plano</value>
   </data>
   <data name="hlRelatedDoc" xml:space="preserve">
-    <value>-&gt; Documentos relacionados</value>
+    <value>- Documentos relacionados</value>
   </data>
   <data name="hlRelatedItemAndBom" xml:space="preserve">
-    <value>-&gt; Define a estrutura criada</value>
+    <value>- Define a estrutura criada</value>
   </data>
   <data name="hlReqReview" xml:space="preserve">
-    <value>-&gt; A avaliação das necessidades</value>
+    <value>- A avaliação das necessidades</value>
   </data>
   <data name="hlReviewProject" xml:space="preserve">
-    <value>-&gt; Análise de Projetos</value>
+    <value>- Análise de Projetos</value>
   </data>
   <data name="hlReviewProjectPlan" xml:space="preserve">
-    <value>-&gt; Project Plano de Revisão</value>
+    <value>- Project Plano de Revisão</value>
   </data>
   <data name="hlReviewTask" xml:space="preserve">
-    <value>-&gt; Análise de Tarefas</value>
+    <value>- Análise de Tarefas</value>
   </data>
   <data name="hlRiskReview" xml:space="preserve">
-    <value>-&gt; Avaliação de Riscos</value>
+    <value>- Avaliação de Riscos</value>
   </data>
   <data name="hlRunProjectByWF" xml:space="preserve">
-    <value>-&gt; A implementação do projeto (modelos de processo)</value>
+    <value>- A implementação do projeto (modelos de processo)</value>
   </data>
   <data name="hlRunProjectPlanByWF" xml:space="preserve">
-    <value>-&gt; A implementação do Programa (modelos de processos)</value>
+    <value>- A implementação do Programa (modelos de processos)</value>
   </data>
   <data name="hlRunReqByWF" xml:space="preserve">
-    <value>-&gt; Requisitos de processamento (modo de fluxo)</value>
+    <value>- Requisitos de processamento (modo de fluxo)</value>
   </data>
   <data name="hlRunRiskByWF" xml:space="preserve">
-    <value>-&gt; A gestão de riscos (modo de fluxo)</value>
+    <value>- A gestão de riscos (modo de fluxo)</value>
   </data>
   <data name="hlRunTaskByWF" xml:space="preserve">
-    <value>-&gt; Execução de tarefas (modelos de processo)</value>
+    <value>- Execução de tarefas (modelos de processo)</value>
   </data>
   <data name="hlToTask" xml:space="preserve">
-    <value>-&gt; Se transformar em uma tarefa</value>
+    <value>- Se transformar em uma tarefa</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
     <value>Não são necessárias entradas), em seguida, clique no botão "Register", o sistema irá levá-lo diretamente para a página de julgamento</value>
@@ -8509,7 +8509,7 @@
     <value>Estabelecer colaboração</value>
   </data>
   <data name="MakeReq" xml:space="preserve">
-    <value>-&gt; Put forward demandas</value>
+    <value>- Put forward demandas</value>
   </data>
   <data name="MakeTask" xml:space="preserve">
     <value>Criar uma tarefa</value>
@@ -9568,7 +9568,7 @@
     <value>Status do Projeto</value>
   </data>
   <data name="ProjectStatusReview" xml:space="preserve">
-    <value>-&gt; Project Estado de Revisão</value>
+    <value>- Project Estado de Revisão</value>
   </data>
   <data name="ProjectTreeBrowse" xml:space="preserve">
     <value>Navegar na árvore do projeto</value>
@@ -12979,7 +12979,7 @@
     <value>Resumo de Renda</value>
   </data>
   <data name="ToTask" xml:space="preserve">
-    <value>-&gt; Tarefa Ligue</value>
+    <value>- Tarefa Ligue</value>
   </data>
   <data name="TouBiaoFeiYong" xml:space="preserve">
     <value>Custos de lance</value>
@@ -13489,7 +13489,7 @@
     <value>Fim tempo de trabalho turno da noite</value>
   </data>
   <data name="WBSJieGouDaiMaYuanShuDingYi" xml:space="preserve">
-    <value>-&gt; WBS (estrutura) de código (elemento) é definida</value>
+    <value>- WBS (estrutura) de código (elemento) é definida</value>
   </data>
   <data name="WBSJieGouGuiHuaZhuanJiHua" xml:space="preserve">
     <value>WBS (Plano de Estrutura) plano de transferência</value>
@@ -19477,10 +19477,10 @@
     <value>O plano detalha a lista de aquisições já existe, você não pode fazer adicionar!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW0DWSC" xml:space="preserve">
-    <value>No âmbito deste plano tem feito requisição &lt;liquidação tag&gt; para 0 não é eliminado!</value>
+    <value>No âmbito deste plano tem feito requisição &lt;liquidação tag para 0 não é eliminado!</value>
   </data>
   <data name="ZZGJHXYFLDJSBJW1DWTD" xml:space="preserve">
-    <value>No âmbito deste plano tem feito requisição &lt;tag liquidação&gt; -1 não é estorno!</value>
+    <value>No âmbito deste plano tem feito requisição &lt;tag liquidação -1 não é estorno!</value>
   </data>
   <data name="ZZGJKBMZSJBZYCZJC" xml:space="preserve">
     <value>A interface codificado na tabela de dados já existe, verifique por favor!</value>
@@ -23152,7 +23152,7 @@
     <value>Nome de usuário e senha não estão em branco, verifique por favor!</value>
   </data>
   <data name="ZZYHTJDBSSXHCJXCL" xml:space="preserve">
-    <value>Contrato &lt;progress&gt; não está em vigor ou material apreendido, por favor, lidar com!</value>
+    <value>Contrato &lt;progress não está em vigor ou material apreendido, por favor, lidar com!</value>
   </data>
   <data name="ZZYJCZBYZFZ" xml:space="preserve">
     <value>Já existe, não repita escolha!</value>
@@ -23185,7 +23185,7 @@
     <value>Fornecedor atual foi selecionada, não repita o clique!</value>
   </data>
   <data name="ZZYKDJDBSBXXCL" xml:space="preserve">
-    <value>Solicitaram um único parágrafo &lt;progress&gt; não é reembolsado, por favor, lidar com!</value>
+    <value>Solicitaram um único parágrafo &lt;progress não é reembolsado, por favor, lidar com!</value>
   </data>
   <data name="ZZYKRZB" xml:space="preserve">
     <value>Tabela de log foi limpo!</value>
@@ -24694,7 +24694,7 @@
     <value>Dados relevantes</value>
   </data>
   <data name="hlMakeMeeting" xml:space="preserve">
-    <value>-&gt; Calendário de reuniões</value>
+    <value>- Calendário de reuniões</value>
   </data>
   <data name="TongZhiShenQingRen" xml:space="preserve">
     <value>Notificar o requerente</value>
@@ -25486,7 +25486,7 @@
     <value>Lista de fluxo de trabalho infantil</value>
   </data>
   <data name="FaYaoQing" xml:space="preserve">
-    <value>-&gt; Convites</value>
+    <value>- Convites</value>
   </data>
   <data name="ZZXXYTSGSMSXRYDEMAILHSJQJSTXTM" xml:space="preserve">
     <value>Informação foi empurrada para o topo da pessoas e-mail ou telefone selecionado, por favor, lembre-os!</value>
@@ -25537,7 +25537,7 @@
     <value>adicional</value>
   </data>
   <data name="BaoChunMoBanDingYi" xml:space="preserve">
-    <value>-&gt; definições Salvar modelo</value>
+    <value>- definições Salvar modelo</value>
   </data>
   <data name="ZZGeiBianCG" xml:space="preserve">
     <value>Alterado com sucesso!</value>
@@ -26167,28 +26167,28 @@
     <value>Subprocessos Associados</value>
   </data>
   <data name="GongZuoJiHuaJT" xml:space="preserve">
-    <value>-&gt; Plano de trabalho</value>
+    <value>- Plano de trabalho</value>
   </data>
   <data name="GongZuoRiChengJT" xml:space="preserve">
-    <value>-&gt; Horário de Trabalho</value>
+    <value>- Horário de Trabalho</value>
   </data>
   <data name="ShouFuKuanJiHuaJT" xml:space="preserve">
-    <value>-&gt; Plano de pagamento e pagamento</value>
+    <value>- Plano de pagamento e pagamento</value>
   </data>
   <data name="CHENGYUANSHOURUFENPEIJT" xml:space="preserve">
-    <value>-&gt; Distribuição de Renda dos Associados</value>
+    <value>- Distribuição de Renda dos Associados</value>
   </data>
   <data name="GONGZUOLIANGFENPEIJT" xml:space="preserve">
-    <value>-&gt; Distribuição de carga de trabalho</value>
+    <value>- Distribuição de carga de trabalho</value>
   </data>
   <data name="hlDailyWorkReportJT" xml:space="preserve">
-    <value>-&gt; Relatório de log de trabalho</value>
+    <value>- Relatório de log de trabalho</value>
   </data>
   <data name="ProjectDocumentJT" xml:space="preserve">
-    <value>-&gt; Documentação do Projeto</value>
+    <value>- Documentação do Projeto</value>
   </data>
   <data name="ProjectMemberJT" xml:space="preserve">
-    <value>-&gt; Membros do projeto</value>
+    <value>- Membros do projeto</value>
   </data>
   <data name="KeYongWeb" xml:space="preserve">
     <value>WEB disponível</value>
@@ -26395,7 +26395,7 @@
     <value>Pedido de aplicação de taxa</value>
   </data>
   <data name="QiBaoxiao" xml:space="preserve">
-    <value>-&gt; Reembolso</value>
+    <value>- Reembolso</value>
   </data>
   <data name="QingXianXuanZheYaoBaoXiaoDeFeiYong" xml:space="preserve">
     <value>Por favor, escolha o custo para reembolsar primeiro!</value>
@@ -28012,7 +28012,7 @@
     <value>Uploader do arquivo inclui:</value>
   </data>
   <data name="YuanGongKPIKaoHeBiao" xml:space="preserve">
-    <value>&lt;B&gt;Navegar por todos os projetos por tipo&lt;/B&gt;</value>
+    <value>&lt;BNavegar por todos os projetos por tipo&lt;/B</value>
   </data>
   <data name="YongHuChengYuanXinXi" xml:space="preserve">
     <value>Lista de registros de operações de terceiros:</value>
@@ -28054,7 +28054,7 @@
     <value>Lista de demandas de serviço ao cliente</value>
   </data>
   <data name="JuJueNiDeXiangMu" xml:space="preserve">
-    <value>&lt;B&gt;Lista de demandas de serviço ao cliente&lt;/B&gt;</value>
+    <value>&lt;BLista de demandas de serviço ao cliente&lt;/B</value>
   </data>
   <data name="KaiShiChuLiNiDeXiangMu" xml:space="preserve">
     <value>Erro, o modelo correspondente ou arquivo de modelo não existe, por favor, verifique!</value>
@@ -28189,7 +28189,7 @@
     <value>Aviso, a unidade de engenharia e a unidade de equipamento não podem estar vazias, por favor, verifique!</value>
   </data>
   <data name="GeRenZhangHao" xml:space="preserve">
-    <value>&lt;B&gt;Todos os projetos&lt;/B&gt;</value>
+    <value>&lt;BTodos os projetos&lt;/B</value>
   </data>
   <data name="ZhuanGu" xml:space="preserve">
     <value>Solicitação de pagamento de subcontratação</value>
@@ -28513,7 +28513,7 @@
     <value>Os defeitos:</value>
   </data>
   <data name="ZhuaiChengLeXiangMuGeiNiQingJi" xml:space="preserve">
-    <value>&lt;b&gt;Minha opinião:&lt;/b&gt;</value>
+    <value>&lt;bMinha opinião:&lt;/b</value>
   </data>
   <data name="ZhengZaiChuLiNiDeQueXian" xml:space="preserve">
     <value>Processando seus defeitos:</value>
@@ -28540,7 +28540,7 @@
     <value>Notificação de atribuição de defeitos</value>
   </data>
   <data name="brbrYanShouBiaoZhun" xml:space="preserve">
-    <value>&lt;B&gt;Total de projetos&lt;/B&gt;</value>
+    <value>&lt;BTotal de projetos&lt;/B</value>
   </data>
   <data name="CiQueXianBuCunZaiKeNengYiBeiSh" xml:space="preserve">
     <value>Notificação de conversão de defeitos</value>
@@ -28567,7 +28567,7 @@
     <value>Notificação de visualização de arquivo</value>
   </data>
   <data name="CaiWuFeiYong" xml:space="preserve">
-    <value>Lista de documentos&lt;/B&gt;</value>
+    <value>Lista de documentos&lt;/B</value>
   </data>
   <data name="Di0HangRiJiBuNengWeiKongbr" xml:space="preserve">
     <value>Linha {0}: Os materiais de compensação podem ser apenas números decimais</value>
@@ -28744,19 +28744,19 @@
     <value>Ordem de Produção de Materiais</value>
   </data>
   <data name="ShengChanJiaGongFeiYong" xml:space="preserve">
-    <value>Nenhum registro de produto&lt;/td&gt;</value>
+    <value>Nenhum registro de produto</value>
   </data>
   <data name="CaiGouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>Salvar&lt;/a&gt;</value>
+    <value>Salvar&lt;/a</value>
   </data>
   <data name="XiaoShouTuiHuoBaoBiaoxls" xml:space="preserve">
-    <value>Quantidade total&lt;/td&gt;&lt;/tr&gt;</value>
+    <value>Quantidade total&lt;/tr</value>
   </data>
   <data name="WuLiaoAnQuanKuCunBaoBiaoxls" xml:space="preserve">
     <value>Relatório de estoque de segurança.xls</value>
   </data>
   <data name="WuLiaoXiaoShouChan" xml:space="preserve">
-    <value>&lt;p&gt;Nenhum registro de matéria-prima&lt;/p&gt;&amp;nbsp;&lt;/td&gt; Quantidade total&lt;/td&gt;&lt;td class=\ Custo natural&lt;/td&gt;&lt;td class=\ Custo de material colorido&lt;/td&gt;&lt;td class=\ Preço da fórmula&lt;/td&gt;&lt;td class=\</value>
+    <value>&lt;pNenhum registro de matéria-prima&lt;/p&amp;nbsp; Quantidade total&lt;td class=\ Custo natural&lt;td class=\ Custo de material colorido&lt;td class=\ Preço da fórmula&lt;td class=\</value>
   </data>
   <data name="WuLiaoBaoJiaChan" xml:space="preserve">
     <value>Orçamento de materiais</value>
@@ -28900,7 +28900,7 @@
     <value>(Líder)</value>
   </data>
   <data name="BiaoZhunYuTuShuXinXi" xml:space="preserve">
-    <value>.&lt;/br&gt;Conteúdo da inspeção e descobertas:</value>
+    <value>.Conteúdo da inspeção e descobertas:</value>
   </data>
   <data name="ShuJiJieYueQingKuang" xml:space="preserve">
     <value>Conteúdo da inspeção e descobertas:</value>
@@ -29131,22 +29131,22 @@
     <value>Lista de informações de licença dos membros diretos:</value>
   </data>
   <data name="FaTuDengJiLieBiao" xml:space="preserve">
-    <value>&lt;B&gt;Diagrama hierárquico de organização de todos os membros diretos do departamento&lt;/B&gt;</value>
+    <value>&lt;BDiagrama hierárquico de organização de todos os membros diretos do departamento&lt;/B</value>
   </data>
   <data name="ShouWenDengJiLieBiao" xml:space="preserve">
-    <value>Diagrama hierárquico de organização dos membros diretos&lt;/B&gt;</value>
+    <value>Diagrama hierárquico de organização dos membros diretos&lt;/B</value>
   </data>
   <data name="FaWenDengJiLieBiao" xml:space="preserve">
     <value>ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(Falha ao salvar, você não é o criador deste modelo de processo, não pode salvar esta imagem de processo!</value>
   </data>
   <data name="BuKeYuJianFeiJiGeXiangJiangLi" xml:space="preserve">
-    <value>&lt;B&gt;Navegar por tipo de projetos que criei&lt;/B&gt;</value>
+    <value>&lt;BNavegar por tipo de projetos que criei&lt;/B</value>
   </data>
   <data name="YiCiBiaoJiaFenLiBiao" xml:space="preserve">
-    <value>&lt;B&gt;Navegar por tipo de projetos que participei&lt;/B&gt;</value>
+    <value>&lt;BNavegar por tipo de projetos que participei&lt;/B</value>
   </data>
   <data name="ErCiBiaoJiaFenLiMuBiaoChengBen" xml:space="preserve">
-    <value>&lt;B&gt;Navegar por tipo de projetos dos meus membros&lt;/B&gt;</value>
+    <value>&lt;BNavegar por tipo de projetos dos meus membros&lt;/B</value>
   </data>
   <data name="ZZJingGaoChengBenLeiXingBuNeng" xml:space="preserve">
     <value>Gráfico de comparação de pontuação total de desempenho dos meus membros diretos</value>
@@ -29155,7 +29155,7 @@
     <value>Aviso, por favor, selecione um projeto primeiro!</value>
   </data>
   <data name="ShouLiLeNiDeXuQiu" xml:space="preserve">
-    <value>&lt;B&gt;Navegar por tipo de meus projetos&lt;/B&gt;</value>
+    <value>&lt;BNavegar por tipo de meus projetos&lt;/B</value>
   </data>
   <data name="JuJueLeNiDeXuQiu" xml:space="preserve">
     <value>Aviso, este membro já existe, não pode ser adicionado novamente, por favor, verifique!</value>
@@ -29944,10 +29944,10 @@
     <value>Processo de revisão</value>
   </data>
   <data name="CiXuQiuBuCunZaiKeNengYiBeiShan" xml:space="preserve">
-    <value>&lt;B&gt;Grupo de funções&lt;/B&gt;</value>
+    <value>&lt;BGrupo de funções&lt;/B</value>
   </data>
   <data name="FengXianNeiRong" xml:space="preserve">
-    <value>&lt;B&gt;Todos&lt;/B&gt;</value>
+    <value>&lt;BTodos&lt;/B</value>
   </data>
   <data name="ChuangJianRTXFuWuShiBaiQingJia" xml:space="preserve">
     <value>Esta demanda não existe, pode ter sido excluída. Por favor, verifique!</value>
@@ -30004,7 +30004,7 @@
     <value>Erro: Falha ao importar os dados de referência de desempenho para o arquivo Excel!</value>
   </data>
   <data name="XiangMuJiHuaBianGengTongZhi" xml:space="preserve">
-    <value>&lt;B&gt;Parcial&lt;/B&gt;</value>
+    <value>&lt;BParcial&lt;/B</value>
   </data>
   <data name="ZiChanCaiGouFeiYong" xml:space="preserve">
     <value>O projeto foi alterado:</value>
@@ -30025,7 +30025,7 @@
     <value>Número de extensão RTX</value>
   </data>
   <data name="TouBiao" xml:space="preserve">
-    <value>&lt;b&gt;Módulo de página&lt;b&gt;</value>
+    <value>&lt;bMódulo de página&lt;b</value>
   </data>
   <data name="ZZCuoWuTouBiaoBaoJiaHeKongZhiJ" xml:space="preserve">
     <value>Aviso: Custos de produção e taxas de agência devem ser do tipo numérico. Por favor, verifique!</value>
@@ -30190,7 +30190,7 @@
     <value>Fornecedor</value>
   </data>
   <data name="QiaoBiaoWenJiantd" xml:space="preserve">
-    <value>Diretório de documentos de licitação&lt;/td&gt;</value>
+    <value>Diretório de documentos de licitação</value>
   </data>
   <data name="MeiRiXianJinYuE" xml:space="preserve">
     <value>Saldo diário de caixa</value>
