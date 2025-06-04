@@ -78,6 +78,31 @@ CKEditor1.Language = Session["LangCode"].ToString();
         }
     }
 
+    protected void BT_CopyForHomeLanguage_Click(object sender, EventArgs e)
+    {
+        string strHQL;
+
+        string strFromLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
+        strLangCode = ddlLangSwitcher.SelectedValue.Trim();
+        try
+        {
+            strHQL = string.Format(@"INSERT INTO t_sitemodulecontent(modulename, content, publishercode, publishername, publishtime, langcode, title)
+                        SELECT modulename, content, publishercode, publishername, publishtime, '{0}', title 
+                        FROM t_sitemodulecontent
+                        WHERE LangCode = '{1}' 
+                        AND trim(ModuleName) || '{0}' NOT IN (SELECT DISTINCT Trim(ModuleName) || LangCode FROM t_sitemodulecontent Where LangCode = '{0}')", strLangCode, strFromLangCode);
+            ShareClass.RunSqlCommand(strHQL);
+
+          
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZCG + "')", true);
+        }
+        catch
+        {
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZSBJC + "')", true);
+        }
+    }
+
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)
     {
         string strHQL;

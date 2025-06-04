@@ -50,12 +50,13 @@
                                             </td>
                                             <td style="text-align: right; width: 100px;">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>£º</td>
-                                            <td align="left" style="width: 80px; padding-top: 5px;">
+                                            <td align="left" style="width: 80px;padding-top:2px;">
                                                 <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                             </td>
 
-                                            <td align="left" style="padding-top: 5px;">&nbsp;
+                                            <td style="padding-top: 3px;">
+                                                <asp:Button ID="BT_CopyForHomeLanguage" runat="server" CssClass="inpuLong" OnClick="BT_CopyForHomeLanguage_Click" Text="<%$ Resources:lang,CopyFromHomeLanguage%>" />
                                             </td>
                                         </tr>
                                     </table>
@@ -122,35 +123,35 @@
                                             <td>
                                                 <table width="100%" class="formBgStyle">
                                                     <tr>
-                                                        <td  width="80px" class="formItemBgStyleForAlignLeft">
+                                                        <td width="80px" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                         </td>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="LB_ContentID" runat="server"></asp:Label>
 
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º
                                                         </td>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <asp:TextBox ID="TB_Title" runat="server" Width="95%"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td  valign="top" class="formItemBgStyleForAlignLeft">
+                                                        <td valign="top" class="formItemBgStyleForAlignLeft">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                                         </td>
-                                                        <td  class="formItemBgStyleForAlignLeft">
+                                                        <td class="formItemBgStyleForAlignLeft">
                                                             <CKEditor:CKEditorControl ID="CKEditor1" Width="98%" Height="550px" runat="server" Visible="False">
                                                             </CKEditor:CKEditorControl>
                                                             <CKEditor:CKEditorControl runat="server" ID="HTEditor1" Width="98%" Height="550px" Visible="False" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td  style="width: 50px; height: 29px" class="formItemBgStyleForAlignLeft"></td>
-                                                        <td  style="height: 29px" class="formItemBgStyleForAlignLeft">
+                                                        <td style="width: 50px; height: 29px" class="formItemBgStyleForAlignLeft"></td>
+                                                        <td style="height: 29px" class="formItemBgStyleForAlignLeft">
                                                             <asp:Button ID="BT_Add" runat="server" Text="<%$ Resources:lang,XinZeng%>" CssClass="inpu" OnClick="BT_Add_Click" />
                                                             &nbsp;<asp:Button ID="BT_Update" runat="server" Enabled="false" CssClass="inpu" OnClick="BT_Update_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                             &nbsp;<asp:Button ID="BT_Delete" runat="server" Enabled="false" CssClass="inpu" OnClick="BT_Delete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />

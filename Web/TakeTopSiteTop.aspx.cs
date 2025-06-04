@@ -1,3 +1,5 @@
+using Stimulsoft.Svg;
+
 using System;
 using System.Data;
 using System.Web;
@@ -10,33 +12,60 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-       if (Page.IsPostBack != true)
+        if (!IsPostBack)
         {
             try
             {
-                LoadLanguageForDropListForWebSite(ddlLangSwitcher);
                 InitializeCulture();
 
-                strLangCode = Request.Cookies["LangCode"].Value;
+                LoadLanguageForDropListForWebSite(ddlLangSwitcher);
+
+                // 确保下拉框显示当前语言（优先从Cookie读取）
+                strLangCode = Session["LangCode"].ToString();
+
                 ddlLangSwitcher.SelectedValue = strLangCode;
+
+                BindHeadLineData();
+                BindModuleData();
             }
-            catch
+            catch (Exception ex)
             {
+                LogClass.WriteLogFile(ex.ToString());
                 Response.Redirect("TTDisplayErrors.aspx");
             }
-
-            BindHeadLineData();
-            BindModuleData();
-
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>popShowByURL('https://www.taketopits.com','ToWork','99%','99%',window.location);</script>");
         }
+
+    }
+
+    protected override void InitializeCulture()
+    {
+        // 确定语言代码的优先级：Cookie > Session > 默认配置
+        strLangCode = Request.Cookies["LangCode"]?.Value ??
+                     Session["LangCode"]?.ToString() ??
+                     System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
+        // 确保Session和Cookie同步
+        Session["LangCode"] = strLangCode;
+        Response.SetCookie(new HttpCookie("LangCode", strLangCode)
+        {
+            Expires = DateTime.Now.AddYears(1)
+        });
+
+        // 设置当前线程的文化
+        System.Threading.Thread.CurrentThread.CurrentCulture =
+            System.Globalization.CultureInfo.CreateSpecificCulture(strLangCode);
+        System.Threading.Thread.CurrentThread.CurrentUICulture =
+            new System.Globalization.CultureInfo(strLangCode);
+
+        Page.Culture = strLangCode;
+        Page.UICulture = strLangCode;
+
+        base.InitializeCulture();
     }
 
     public void LoadLanguageForDropListForWebSite(DropDownList DL_Language)
     {
-        string strHQL;
-
-        strHQL = "Select * From T_SystemLanguage Where LangCode = 'zh-CN' Order By SortNumber ASC";
+        string strHQL = "Select trim(LangCode) as LangCode,trim(Language) as Language From T_SystemLanguage Where LangCode in('zh-CN','en') Order By SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_SystemLanguage");
         DL_Language.DataSource = ds;
         DL_Language.DataBind();
@@ -44,58 +73,37 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
 
     protected void ddlLangSwitcher_SelectedIndexChanged(object sender, EventArgs e)
     {
-        Session["LangCode"] = ddlLangSwitcher.SelectedValue.Trim();
+        string selectedLang = ddlLangSwitcher.SelectedValue.Trim();
 
-        Response.SetCookie(new HttpCookie("LangCode", ddlLangSwitcher.SelectedValue));
-        Response.Write("<script>window.open('DefaultSiteLeftRight.aspx','_parent')</script>");
-    }
-
-    protected override void InitializeCulture()
-    {
-        string strLangCode;
+        // 更新Session和Cookie
+        Session["LangCode"] = selectedLang;
 
 
-        if (Session["LangCode"] == null)
+        Response.SetCookie(new HttpCookie("LangCode", selectedLang)
         {
-            strLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
-            Session["LangCode"] = strLangCode;
-        }
-        else
-        {
-            strLangCode = Session["LangCode"].ToString();
-        }
+            Expires = DateTime.Now.AddYears(1)
+        });
 
-        try
-        {
-            Response.SetCookie(new HttpCookie("LangCode", strLangCode));
-        }
-        catch
-        {
-        }
+        // 重新加载整个框架集
+        string script = @"
+            <script type='text/javascript'>
+                if(top != self) {  // 如果当前页面是在框架中
+                    top.location.href = top.location.href;  // 刷新整个框架集
+                } else {
+                    window.location.href = window.location.href;  // 普通页面刷新
+                }
+            </script>";
 
-        if (Request.Cookies["LangCode"] != null)
-        {
-            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(Request.Cookies["LangCode"].Value.ToString());
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Request.Cookies["LangCode"].Value.ToString());
-
-            Page.Culture = Request.Cookies["LangCode"].Value;
-            Page.UICulture = Request.Cookies["LangCode"].Value;
-
-            base.InitializeCulture();
-        }
+        ClientScript.RegisterStartupScript(this.GetType(), "RefreshParent", script);
     }
 
     protected void BindModuleData()
     {
-        string strHtml = string.Empty;
-        string strHQL;
-
-        strHQL = "Select Distinct * From T_ProModuleLevel A Where ParentModule = '' ";
-        strHQL += " and A.Visible = 'YES' and A.IsDeleted = 'NO' and A.ModuleType = 'SITE' ";
-        strHQL += " and A.LangCode = " + "'" + strLangCode + "'";
-        strHQL += " Order By A.SortNumber ASC";
+        string strHQL = "Select Distinct * From T_ProModuleLevel A Where ParentModule = '' " +
+                       "and A.Visible = 'YES' and A.IsDeleted = 'NO' and A.ModuleType = 'SITE' " +
+                       "and A.LangCode = '" + strLangCode + "' " +
+                       "Order By A.SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_ProModuleLevel");
-
         RP_ModuleList.DataSource = ds;
         RP_ModuleList.DataBind();
     }
@@ -103,11 +111,10 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
     protected void BindHeadLineData()
     {
         string strHtml = string.Empty;
-        string strHQL;
+        string strHQL = "Select * from T_HeadLine where LangCode = '" + strLangCode + "' " +
+                       "and Type = '外部' and Status = '发布' and IsHead = 'YES' " +
+                       "Order by ID DESC";
 
-        strHQL = "Select * from T_HeadLine where LangCode = " + "'" + strLangCode + "'";
-        strHQL += " and Type = '外部'and Status = '发布' and IsHead = 'YES'";
-        strHQL += " Order by ID DESC";
         DataTable dtHeadLine = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "HeadLine").Tables[0];
         DataView dvHeadLine = new DataView(dtHeadLine);
 
@@ -116,7 +123,8 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
         {
             string strID = ShareClass.ObjectToString(row["ID"]);
             string strHeadLineName = ShareClass.ObjectToString(row["Title"]);
-            strHtml += "<li>  <a onmousedown='OnMouseDownEventForWholePage(this)' href =TakeTopSiteNewsView.aspx?ID=" + strID + " target=SiteRightContainerFrame > " + strHeadLineName + "</a></li>";            
+            strHtml += "<li><a onmousedown='OnMouseDownEventForWholePage(this)' href='TakeTopSiteNewsView.aspx?ID=" +
+                      strID + "' target='SiteRightContainerFrame'>" + strHeadLineName + "</a></li>";
         }
         strHtml += "</ul>";
 

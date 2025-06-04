@@ -40,6 +40,21 @@
             color: #000000;
             text-decoration: none;
         }
+
+        .tupian {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* 确保它在内容后面 */
+        }
+
+            .tupian img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* 保持图片比例并覆盖整个区域 */
+            }
     </style>
 
     <script type="text/javascript" language="javascript">
@@ -104,7 +119,7 @@
                                         <asp:TemplateColumn HeaderText="NewsTitle">
                                             <ItemTemplate>
                                                 <a onclick="javascript:popShowByURL('TakeTopSiteNewsView.aspx?ID=<%# Eval("ID").ToString() %>','<%# Eval("Title").ToString() %>',800, 600,window.location);" target="_blank">
-                                                  <%#this.DataGrid1.CurrentPageIndex * this.DataGrid1.PageSize + Container.ItemIndex +1%>.<%# Eval("Title").ToString() %>
+                                                    <%#this.DataGrid1.CurrentPageIndex * this.DataGrid1.PageSize + Container.ItemIndex +1%>.<%# Eval("Title").ToString() %>
                                                 </a>
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="80%" />
