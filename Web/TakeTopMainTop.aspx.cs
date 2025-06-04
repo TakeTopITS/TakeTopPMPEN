@@ -48,10 +48,10 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             {
                 Response.Redirect("TakeTopMainTopSAAS.aspx");
             }
-
+        
             strUserName = ShareClass.GetUserName(strUserCode);
             LB_UserName.Text = strUserName;
-            LB_SystemMsg.Text = LanguageHandle.GetWord("NiHao").ToString().Trim() + "，" + LanguageHandle.GetWord("HuanYingNiShiYong").ToString().Trim() + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+            LB_SystemMsg.Text = Resources.lang.NiHao + "，" + Resources.lang.HuanYingNiShiYong + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];       
 
             //清空页面缓存，用于改变皮肤
             SetPageNoCache();
@@ -60,7 +60,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
             //设置待处理事项
             LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
-            LB_UnHandledCase.Text = GetUNHandledWorkCount(strUserCode, strLangCode).ToString() + " " + LanguageHandle.GetWord("ToDoList").ToString().Trim();
+            LB_UnHandledCase.Text = GetUNHandledWorkCount(strUserCode, strLangCode).ToString() + " " + Resources.lang.ToDoList;
 
             AsyncWork();
         }
@@ -121,14 +121,14 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
             Session["LeftBarExtend"] = strLeftBarExtend;
 
-            ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "");
-            ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "");
+            ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "<%--***--%>");
+            ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "<%--***--%>");
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click55", "changeLeftBarExtend('" + strLeftBarExtend + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + Resources.lang.ZZGGSBJC + "')", true);
         }
     }
 
@@ -315,10 +315,10 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         strVerType = LB_VerType.Text.Trim();
 
         #region 追加信息提示框信息  By LiuJianping 2014-02-12
-        if (lbl_FunInfoDialBoxNum.Text.Trim() != LanguageHandle.GetWord("MoZhuiJiaDeXinXiDiShiKuang").ToString().Trim())
+        if (lbl_FunInfoDialBoxNum.Text.Trim() != "无追加的信息提示框")
         {
             string[] tempOldNumList = lbl_FunInfoDialBoxNum.Text.Trim().Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-            StringBuilder NewNumList = new StringBuilder();//"+LanguageHandle.GetWord("ShuLiang")+"
+            StringBuilder NewNumList = new StringBuilder();//数量
             StringBuilder NewInforNameList = new StringBuilder();//提示预警名称
             StringBuilder NewIsSendMsgList = new StringBuilder();//是否短信通知
             StringBuilder NewIsSendEmailList = new StringBuilder();//是否邮件通知
@@ -339,11 +339,11 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                         strHQL = strHQL.Replace("[TAKETOPUSERCODE]", strUserCode);
                         strHQL = strHQL.Replace("[TAKETOPSUPERDEPARTSTRING]", LB_SuperDepartString.Text.Trim());
 
-                        //
+                        //LogClass.WriteLogFile(strHQL);
 
                         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "FunInforDialBoxList");
 
-                        NewInforNameList.AppendFormat("{0}@", funInforDialBox.HomeName.ToString());
+                        NewInforNameList.AppendFormat("{0}@", funInforDialBox.InforName.ToString());
                         NewNumList.AppendFormat("{0},", ds.Tables[0].Rows.Count.ToString());
                         NewIsSendMsgList.AppendFormat("{0},", funInforDialBox.IsSendMsg.ToString().Trim());
                         NewIsSendEmailList.AppendFormat("{0},", funInforDialBox.IsSendEmail.ToString().Trim());
@@ -363,7 +363,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                                 }
 
                                 strMessageType = random.Next(1, 100).ToString();
-                                strMessage = LanguageHandle.GetWord("JiangZhiTongZhi").ToString().Trim() + funInforDialBox.HomeName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+                                strMessage = "强制通知：" + funInforDialBox.InforName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
 
                                 strURL = funInforDialBox.LinkAddress.Trim() + "&URLType=POP";
                                 strJavaScriptFuntion = "opAdvert('" + strMessageType + "'," + "'TTDisplayPOPMessage.aspx?URL=" + strURL + "&Msg=" + strMessage + "');";
@@ -401,20 +401,20 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
                         if (int.Parse(tempNewNumList[m]) > int.Parse(tempOldNumList[m]))
                         {
-                            strMessage += tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + LanguageHandle.GetWord("TiaoYaoChuLi").ToString().Trim();
+                            strMessage += tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " 条要处理！";
 
                             strMessageType = tempNewInforNameList[m] + random.Next(1, 100).ToString();
 
                             if (tempNewIsSendMsgList[m].ToString().Trim() == "YES")
                             {
                                 Msg msg = new Msg();
-                                msg.SendMSM("Message", strUserCode, tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + LanguageHandle.GetWord("TiaoYaoChuLi").ToString().Trim(), strUserCode);
+                                msg.SendMSM("Message", strUserCode, tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " 条要处理！", strUserCode);
                             }
 
                             if (tempNewIsSendEmailList[m].ToString().Trim() == "YES")
                             {
                                 Msg msg = new Msg();
-                                msg.SendMail(strUserCode, tempNewInforNameList[m], tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + LanguageHandle.GetWord("TiaoYaoChuLi").ToString().Trim(), strUserCode);
+                                msg.SendMail(strUserCode, tempNewInforNameList[m], tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " 条要处理！", strUserCode);
                             }
 
                             ////Updated 20160123
@@ -459,7 +459,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         StringBuilder OldNumList = new StringBuilder();
         FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
-        string strHQL_Fun = "From FunInforDialBox as funInforDialBoxBySystem Where funInforDialBoxBySystem.Status='Enabled'";
+        string strHQL_Fun = "From FunInforDialBox as funInforDialBoxBySystem Where funInforDialBoxBySystem.Status='启用'";
         strHQL_Fun += " and funInforDialBoxBySystem.LangCode = " + "'" + strLangCode + "'";
         strHQL_Fun += "Order By funInforDialBoxBySystem.ID Desc ";
 
@@ -502,12 +502,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             }
             else
             {
-                lbl_FunInfoDialBoxNum.Text = LanguageHandle.GetWord("MeiYouXinDeXinXi").ToString().Trim();
+                lbl_FunInfoDialBoxNum.Text = "没有新的信息";
             }
         }
         else
         {
-            lbl_FunInfoDialBoxNum.Text = LanguageHandle.GetWord("MeiYouXinDeXinXi").ToString().Trim();
+            lbl_FunInfoDialBoxNum.Text = "没有新的信息";
         }
 
         return i;
@@ -529,12 +529,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         strHQL = "Select CoID,UserCode,UserName From T_CollaborationLog Where CoID in (";
-        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
+        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('新建','关闭') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
         strHQL += " UNION ";
-        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
+        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('新建','关闭') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -585,12 +585,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         strHQL = "Select CoID,UserCode,UserName From T_CollaborationLog Where CoID in (";
-        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
+        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('新建','关闭') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
         strHQL += " UNION ";
-        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
+        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('新建','关闭') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -636,7 +636,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         strHQL = string.Format(@"Select MsgId, Message From T_DepartmentMsgPush Where Position('{0}' in DepartString)> 0
                  And MsgID not in (Select MsgID From T_DepartmentMsgRelatedUser Where UserCode = '{1}')
-                 And Status = 'Enabled'
+                 And Status = '启用'
                  Order By MsgID DESC", strDepartCode, strUserCode);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_DepartmentMsgPush");
@@ -671,12 +671,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        strHQL = "select * from T_Collaboration ABySystem where rtrim(ltrim(ABySystem.status)) not in ('New','Closed') and ABySystem.CoID in ( ";
+        strHQL = "select * from T_Collaboration ABySystem where rtrim(ltrim(ABySystem.status)) not in ('新建','关闭') and ABySystem.CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
         strHQL += " UNION ";
-        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
+        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) not in ('新建','关闭') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -700,15 +700,15 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
                     TB_OldToBeHandledNumber.Text = intNewCount.ToString();
 
-                    BT_OpenIMByPC.ToolTip = ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXiaoXi").ToString().Trim();
-                    BT_OpenIMByMobile.ToolTip = ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXiaoXi").ToString().Trim();
+                    BT_OpenIMByPC.ToolTip = ds.Tables[0].Rows.Count + " 条消息";
+                    BT_OpenIMByMobile.ToolTip = ds.Tables[0].Rows.Count + " 条消息";
 
                     BT_OpenIMByPC.Visible = true;
 
                     BT_CloseIMByPC.Visible = false;
                     BT_OpenIMByMobile.Visible = false;
 
-                    strMsg = LanguageHandle.GetWord("You").ToString().Trim() + ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXieZuoYaoChuLi").ToString().Trim();
+                    strMsg = "有" + ds.Tables[0].Rows.Count + "条协作要处理！";
 
                     try
                     {
@@ -723,7 +723,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                 else
                 {
                     BT_CloseIMByPC.Visible = true;
-                    BT_CloseIMByPC.ToolTip = ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXiaoXi").ToString().Trim();
+                    BT_CloseIMByPC.ToolTip = ds.Tables[0].Rows.Count + " 条消息";
 
                     BT_OpenIMByPC.Visible = false;
                     BT_OpenIMByMobile.Visible = false;

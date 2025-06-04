@@ -230,7 +230,7 @@
                     <div id="divBody" style="text-align: Left;">
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td height="35" font-size="Small" align="left" class="main_topbj" style="padding-right: 10px; padding-top: 8px;">
+                                <td height="35" font-size="Small" align="center" class="main_topbj" style="padding-right: 10px; padding-top: 8px;">
                                     <div id="divGuide">
                                         <table border="0" align="right" width="100%" cellpadding="0" cellspacing="0">
                                             <tr>
@@ -250,11 +250,11 @@
                                                 <td align="right">
                                                     <table>
                                                         <tr>
-                                                            <td width="20px" align="left" style="padding-top: 4px; padding-right: 10px; display:none;">
+                                                            <td width="20px" align="center" style="padding-top: 4px; padding-right: 10px; display: none;">
                                                                 <asp:Button ID="BT_PopMsg" runat="server" CssClass="inpu" OnClick="BT_PopMsg_Click" Text="M" Width="23px" Height="20px" />
                                                             </td>
                                                             <td style="width: 10px;"></td>
-                                                            <td align="left" style="padding-top: 0px; padding-bottom: 0px;">
+                                                            <td align="center" style="padding-top: 0px; padding-bottom: 0px;">
                                                                 <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTUpdateUserInfor.aspx', 'UserInformation', 800, 600, window.location);">
                                                                     <div class="container">
                                                                         <div id="div_username">
@@ -271,7 +271,7 @@
                                                                 <asp:HyperLink ID="HL_AIURL" runat="server" NavigateUrl="https://www.deepseek.com" Target="_blank" Visible="false">
                                                                       <img src="ImagesSkin/AI.png" width="22" height="22" alt="">
                                                                 </asp:HyperLink>
-                                                                <a id="a_AIURL" runat="server"  class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAIHandlerByDeepSeek.aspx', '', 800, 600,window.location);" visible="false">
+                                                                <a id="a_AIURL" runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAIHandlerByDeepSeek.aspx', '', 800, 600,window.location);" visible="false">
                                                                     <img src="ImagesSkin/AI.png" width="22" height="22" alt="">
                                                                 </a>
                                                             </td>
@@ -289,7 +289,7 @@
                                                                 <asp:Button ID="BT_OpenIMByMobile" CssClass="inpuIMOpen" Visible="false" runat="server" />
                                                             </td>
                                                             <td width="10px">&nbsp;</td>
-                                                            <td width="40px" align="left" style="padding-top: 0px; padding-bottom: 5px;">
+                                                            <td width="40px" align="center" style="padding-top: 0px; padding-bottom: 5px;">
                                                                 <asp:ImageButton ID="IM_ExitSystem" ImageUrl="ImagesSkin/exit.png" Width="25" Height="23" OnClientClick="javascript:if (confirm(getExitMsgByLangCode())){top.location.href = 'Default.aspx';}" runat="server" />
                                                             </td>
                                                         </tr>
