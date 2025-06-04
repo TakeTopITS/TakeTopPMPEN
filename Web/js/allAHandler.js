@@ -48,7 +48,7 @@ function aHandler() {
 }
 
 //在当前窗口弹出窗口
-function aHandlerForParentWindow() {
+function aHandlerForCurentWindow() {
 
     $("a").not(".notTab").each(function () {
 
@@ -82,6 +82,135 @@ function aHandlerForParentWindow() {
                     if (url.indexOf("TakeTopAPPMain") == -1 && url.indexOf("TTAppTask") == -1 && url.indexOf("tencent:") == -1 && url.indexOf("tel:") == -1 && url.indexOf("#") == -1) {
 
                         popShowByURL(url, title, 800, 600, window.location, window.location);
+                        return false;
+                    }
+
+                    //top.frames[0].frames[2].parent.frames["rightTabFrame"].popShowByURL(url, title, 800, 600,window.location);
+                }
+            });
+        }
+
+    });
+}
+
+//在网站顶部弹出窗口到内容层
+function aHandlerForSiteTopWindow() {
+
+    $("a").not(".notTab").each(function () {
+
+        var title = $(this).html().replace('---&gt;', '').replace('--&gt;', '');
+
+        var url = $(this).attr("href");
+        var click = $(this).attr("onclick");
+
+
+        //判断是否是tree，或者分页
+        if (click != "" && click != null && click != undefined) {
+            if (click.toLowerCase().indexOf("treeview") == -1 && url.toLowerCase().indexOf("lbt_delete") == -1) {
+                $(this).click(function () {
+
+                    if (url.indexOf("TakeTopAPPMain") == -1 && url.indexOf("TTAppTask") == -1 && url.indexOf("tencent:") == -1 && url.indexOf("tel:") == -1 && url.indexOf("#") == -1 && url.toLowerCase().indexOf(".doc") == -1 && url.toLowerCase().indexOf(".xls") == -1 && url.toLowerCase().indexOf(".mpp") == -1 && url.toLowerCase().indexOf(".zip") == -1 && url.toLowerCase().indexOf(".rar") == -1) {
+
+                        try {
+                            var rightFrame = parent.frames['SiteRightContainerFrame'] ||
+                                parent.frames.SiteRightContainerFrame;
+                            if (rightFrame && typeof rightFrame.popShowByURL === 'function') {
+                                rightFrame.popShowByURL(url, title, 800, 600, window.location, window.location);
+                            } else {
+                                console.error('Target frame or method not found');
+                            }
+                        } catch (e) {
+                            console.error('Error calling popShowByURL:', e);
+                        }
+
+                        return false;
+                    }
+
+                    //top.frames[0].frames[2].parent.frames["rightTabFrame"].popShowByURL(url, title, 800, 600,window.location);
+
+
+                });
+            }
+        }
+        else if (title != ">" && title != "<" && (title.toLowerCase().indexOf("img") == -1 || url.toLowerCase().indexOf("treeview") == -1 || url.indexOf("TTDocumentTreeView") != -1 || url.indexOf("TakeTopAPPMain") == -1 || url.toLowerCase().indexOf("lbt_delete") == -1) && title != null && title != "" && title != "&gt;" && title != "&lt;") {
+            $(this).click(function () {
+                if (title.toLowerCase().indexOf("icon_del") == -1 && url.toLowerCase().indexOf("javascript") == -1 && url.toLowerCase().indexOf(".doc") == -1 && url.toLowerCase().indexOf(".xls") == -1 && url.toLowerCase().indexOf(".mpp") == -1 && url.toLowerCase().indexOf(".zip") == -1 && url.toLowerCase().indexOf(".rar") == -1) {
+
+                    if (url.indexOf("TakeTopAPPMain") == -1 && url.indexOf("TTAppTask") == -1 && url.indexOf("tencent:") == -1 && url.indexOf("tel:") == -1 && url.indexOf("#") == -1) {
+
+                        try {
+                            var rightFrame = parent.frames['SiteRightContainerFrame'] ||
+                                parent.frames.SiteRightContainerFrame;
+                            if (rightFrame && typeof rightFrame.popShowByURL === 'function') {
+                                rightFrame.popShowByURL(url, title, 800, 600, window.location, window.location);
+                            } else {
+                                console.error('Target frame or method not found');
+                            }
+                        } catch (e) {
+                            console.error('Error calling popShowByURL:', e);
+                        }
+
+                        return false;
+                    }
+
+                    //top.frames[0].frames[2].parent.frames["rightTabFrame"].popShowByURL(url, title, 800, 600,window.location);
+                }
+            });
+        }
+
+    });
+}
+
+//在网站底部弹出窗口到内容层
+function aHandlerForSiteBottomWindow() {
+
+    $("a").not(".notTab").each(function () {
+
+        var title = $(this).html().replace('---&gt;', '').replace('--&gt;', '');
+
+        var url = $(this).attr("href");
+        var click = $(this).attr("onclick");
+
+
+        //判断是否是tree，或者分页
+        if (click != "" && click != null && click != undefined) {
+            if (click.toLowerCase().indexOf("treeview") == -1 && url.toLowerCase().indexOf("lbt_delete") == -1) {
+                $(this).click(function () {
+
+                    if (url.indexOf("TakeTopAPPMain") == -1 && url.indexOf("TTAppTask") == -1 && url.indexOf("tencent:") == -1 && url.indexOf("tel:") == -1 && url.indexOf("#") == -1 && url.toLowerCase().indexOf(".doc") == -1 && url.toLowerCase().indexOf(".xls") == -1 && url.toLowerCase().indexOf(".mpp") == -1 && url.toLowerCase().indexOf(".zip") == -1 && url.toLowerCase().indexOf(".rar") == -1) {
+
+                        if (parent.popShowByURL) {
+
+                            parent.popShowByURL(url, title, 800, 600, window.location, window.location);
+                        }
+                        else {
+                            parent.parent.popShowByURL(url, title, 800, 600, window.location, window.location);
+                        }
+
+
+                        return false;
+                    }
+
+                    //top.frames[0].frames[2].parent.frames["rightTabFrame"].popShowByURL(url, title, 800, 600,window.location);
+
+
+                });
+            }
+        }
+        else if (title != ">" && title != "<" && (title.toLowerCase().indexOf("img") == -1 || url.toLowerCase().indexOf("treeview") == -1 || url.indexOf("TTDocumentTreeView") != -1 || url.indexOf("TakeTopAPPMain") == -1 || url.toLowerCase().indexOf("lbt_delete") == -1) && title != null && title != "" && title != "&gt;" && title != "&lt;") {
+            $(this).click(function () {
+                if (title.toLowerCase().indexOf("icon_del") == -1 && url.toLowerCase().indexOf("javascript") == -1 && url.toLowerCase().indexOf(".doc") == -1 && url.toLowerCase().indexOf(".xls") == -1 && url.toLowerCase().indexOf(".mpp") == -1 && url.toLowerCase().indexOf(".zip") == -1 && url.toLowerCase().indexOf(".rar") == -1) {
+
+                    if (url.indexOf("TakeTopAPPMain") == -1 && url.indexOf("TTAppTask") == -1 && url.indexOf("tencent:") == -1 && url.indexOf("tel:") == -1 && url.indexOf("#") == -1) {
+
+                        if (parent.popShowByURL) {
+
+                           parent.popShowByURL(url, title, 800, 600, window.location, window.location);
+                        }
+                        else {
+                            parent.parent.popShowByURL(url, title, 800, 600, window.location, window.location);
+                        }
+
                         return false;
                     }
 
@@ -470,9 +599,8 @@ function CloseAllTabAndAddNewTab(msgText) {
 
 //隐藏和显示当前弹出层‘关闭’按钮
 function HideAndDisplayCurrentlayerCloseButton(varVisible) {
-  
-    try
-    {
+
+    try {
         var varCloseButtons = top.frames[0].frames[2].parent.frames["rightTabFrameID"].contentWindow.document.getElementsByClassName("layui-layer-ico layui-layer-close layui-layer-close1");
         top.frames[0].frames[2].parent.frames["rightTabFrameID"].contentWindow.document.getElementsByClassName("layui-layer-ico layui-layer-close layui-layer-close1")[varCloseButtons.length - 1].style.display = varVisible;
     }

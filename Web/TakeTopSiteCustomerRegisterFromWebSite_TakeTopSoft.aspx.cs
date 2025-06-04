@@ -23,65 +23,9 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-
             LoadTryProductResonType();
 
             LB_Product.Text = GetProductTypeNameByENType(strSystemType);
-
-            //if (strSystemType == "XMB")
-            //{
-            //    LB_Product.Text = "泰顶项目宝";
-            //}
-
-            //if (strSystemType == "ECMP")
-            //{
-            //    LB_Product.Text = "项目综合管理平台";
-            //}
-
-            //if (strSystemType == "GEPMP")
-            //{
-            //    LB_Product.Text = "项目管理平台";
-            //}
-
-            //if (strSystemType == "RDPMP")
-            //{
-            //    LB_Product.Text = "研发项目管理平台";
-            //}
-
-            //if (strSystemType == "GAPMP")
-            //{
-            //    LB_Product.Text = "政务项目管理平台";
-            //}
-
-            //if (strSystemType == "ENPMP")
-            //{
-            //    LB_Product.Text = "工程项目管理平台";
-            //}
-
-            //if (strSystemType == "SIMP")
-            //{
-            //    LB_Product.Text = "系统集成项目管理平台";
-            //}
-
-            //if (strSystemType == "SOMP")
-            //{
-            //    LB_Product.Text = "软件实施项目管理平台";
-            //}
-
-            //if (strSystemType == "ERP")
-            //{
-            //    LB_Product.Text = "项目型ERP平台";
-            //}
-
-            //if (strSystemType == "CRM")
-            //{
-            //    LB_Product.Text = "CRM平台";
-            //}
-
-            //if (strSystemType == "CMP")
-            //{
-            //    LB_Product.Text = "协同OA平台";
-            //}
         }
     }
 
@@ -151,77 +95,8 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
 
                 strTargetPage = GetProductTypeDemoURLByENType(strSystemType);
 
-
-                //if (strSystemType == "XMB")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/XMB/DefaultDemo.aspx";
-                //}
-
-                //if (strSystemType == "ECMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopECMP/DefaultDemo.aspx";
-                //}
-
-
-                //if (strSystemType == "ENPMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopPMPED/DefaultDemo.aspx";
-
-                //}
-
-                //if (strSystemType == "GEPMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopPMPGE/DefaultDemo.aspx";
-
-                //}
-
-                //if (strSystemType == "RDPMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopPMPRD/DefaultDemo.aspx";
-
-                //}
-
-                //if (strSystemType == "GAPMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopPMPGA/DefaultDemo.aspx";
-
-                //}
-
-                //if (strSystemType == "SIMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopSIMP/DefaultDemo.aspx";
-
-                //}
-
-                //if (strSystemType == "SOMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopSOMP/DefaultDemo.aspx";
-
-                //}
-
-                //if (strSystemType == "ERP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopERP/DefaultDemo.aspx";
-
-                //}
-
-
-                //if (strSystemType == "CMP")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopCMP/DefaultDemo.aspx";
-
-                //}
-
-                //if (strSystemType == "CRM")
-                //{
-                //    strTargetPage = "https://www.taketopits.com/taketopCRM/DefaultDemo.aspx";
-
-                //}
-
-
                 string strScript = "openMDIFrom('" + strTargetPage + "');";
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", strScript, true);
-
             }
             catch
             {

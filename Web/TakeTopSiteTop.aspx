@@ -50,9 +50,19 @@
     <script type="text/javascript" src="./js/public.js"></script>
     <script type="text/javascript" src="./js/wk_inc.js" language="javascript"></script>
     <script type="text/javascript" src="./js/forever.js"></script>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
 
     <script type="text/javascript">
+
+        $(function () {
+
+            aHandlerForSiteTopWindow();
+
+        });
+
 
         //取得链接传入参数的值
         function getUrlParam(name) {
@@ -79,15 +89,13 @@
             }
         }
 
-
-
         function OnMouseDownEvent(obj) {
 
             jQuery(obj).parent().parent().find("a").removeClass("current");
             jQuery(obj).parents().find("span").removeClass("TextColor");
             jQuery(obj).addClass("current");
 
-            window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";
+            //    window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";
         }
 
         function OnMouseDownEventForWholePage(obj) {
@@ -96,9 +104,8 @@
             jQuery(obj).parents().find("span").removeClass("TextColor");
             jQuery(obj).parent().find("span").addClass("TextColor");
 
-            window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";
+            /* window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";*/
         }
-
     </script>
 
     <script type="text/javascript">
@@ -122,6 +129,7 @@
             if (top.location != self.location) {
             }
             else {
+
                 redirectHomePage();
             }
 
@@ -140,17 +148,14 @@
                 window.location.href = "http://www.ourpm.net/error.html";
 
             }
-            else {
-
-               /* window.location.href = 'https://www.taketopits.com/TDSite/TakeTopSiteDefaultLeftRight_TakeTopSoft.aspx';*/
-            }
-
         }
 
         //设置模组栏模组样式
         function setModuleCSS() {
 
             var TargetProduct = getUrlParam("TargetProduct");
+
+            var clickNumber = 0;
 
             var list = document.getElementById("navlist");
             var lis = list.getElementsByTagName("a");
@@ -160,11 +165,16 @@
                 if (lis[i].href.indexOf(TargetProduct) > 0) {
 
                     lis[i].className = "current";
+                    lis[i].click();
                     lis[0].className = "";
 
+                    clickNumber = 1;
                 }
             }
 
+            if (clickNumber == 0) {
+                lis[0].click();
+            }
         }
     </script>
 
@@ -194,16 +204,21 @@
                     <div id="lianjie1">
                         <table width="100%">
                             <tr>
+
                                 <td style="width: 35px; text-align: center;">
-                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=线下购买&HomeModuleName=线下购买', 'TakeTopSiteLeft.aspx?ModuleName=线下购买&HomeModuleName=线下购买')">
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GouMai%>"></asp:Label>
+
+                                    <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=线下购买&HomeModuleName=线下购买" class="current">
+                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GouMai%>"></asp:Label>
                                     </a>
+
                                 </td>
                                 <td style="width: 2px;"></td>
                                 <td style="width: 35px; text-align: left;">
-                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=在线租用&HomeModuleName=在线租用', 'TakeTopSiteLeft.aspx?ModuleName=在线租用&HomeModuleName=在线租用')">
-                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuYong%>"></asp:Label>
+
+                                    <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=在线租用&HomeModuleName=在线租用" class="current">
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZuYong%>"></asp:Label>
                                     </a>
+
                                 </td>
                                 <td style="width: 2px;"></td>
                                 <%--<td style="width: 35px; text-align: left;">
@@ -224,34 +239,14 @@
                     <div id="lianjie2">
                         <table width="100%">
                             <tr>
-                                <td></td>
+
                                 <td>
-                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=渠道合作&HomeModuleName=渠道合作', 'TakeTopSiteLeft.aspx?ModuleName=渠道合作&HomeModuleName=渠道合作')">
-                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QuDaoHeZuo%>"></asp:Label></a>
+                                    <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=渠道合作&HomeModuleName=渠道合作" class="current">
+                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,QuDaoHeZuo%>"></asp:Label>
+                                    </a>
                                 </td>
 
                                 <td>&nbsp;</td>
-                                <%--<td>
-
-                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=623077337&site=qq&menu=yes">
-                                        <img border="0" src="Images/qq.png" height="20" width="20" alt="点击这里和我交谈" title="点击这里和我交谈" />
-                                    </a>
-                                </td>--%>
-
-                                <td></td>
-
-                                <%--  <td>
-                                    <a href="http://weibo.com/TakeTopSoftware" target="_blank">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <img src="Images/weibo.png" height="20" width="20" />
-                                                </td>
-                                                <td>官方微博</td>
-                                            </tr>
-                                        </table>
-                                    </a>
-                                </td>--%>
 
                                 <td>
                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>

@@ -288,7 +288,8 @@
                                                         <div id="id5">
                                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft" width="100px">产品
+                                                                    <td class="formItemBgStyleForAlignLeft" width="100px">
+                                                                          <asp:Label ID="Label1" runat="server"  Text="<%$ Resources:lang,ChanPin%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_Type" DataValueField="Type" DataTextField="Type" runat="server" Style="height: 50px;">
@@ -296,7 +297,9 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">版本
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        
+                                                                        <asp:Label ID="Label2" runat="server"  Text="<%$ Resources:lang,BanBen%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <table>
@@ -309,14 +312,18 @@
                                                                                 <td>&nbsp;
                                                                                 </td>
                                                                                 <td style="vertical-align: middle;">
-                                                                                    <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">模块与价格</a>
+                                                                                    <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">
+                                                                                        
+                                                                                          <asp:Label ID="Label3" runat="server"  Text="<%$ Resources:lang,MoKuaiYuJiaGe%>"></asp:Label>
+                                                                                    </a>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">公司
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label4" runat="server"  Text="<%$ Resources:lang,GongSi%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_Company" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
@@ -324,7 +331,8 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">联系人
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label5" runat="server"  Text="<%$ Resources:lang,LianJiRen%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_ContactPerson" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
@@ -332,13 +340,18 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft" style="padding-bottom: 25px;">手机
+                                                                    <td class="formItemBgStyleForAlignLeft" style="padding-bottom: 25px;">
+                                                                        
+                                                                        <asp:Label ID="Label6" runat="server"  Text="<%$ Resources:lang,ShouJi%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_PhoneNumber" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font>
                                                                         <br />
-                                                                        <span style="font-size: xx-small;">注：要接收重要信息，请正确填写！</span>
+                                                                        <span style="font-size: xx-small;">
+                                                                            
+                                                                            <asp:Label ID="Label7" runat="server"  Text="<%$ Resources:lang,ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie%>"></asp:Label>
+                                                                        </span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -348,11 +361,15 @@
                                                                         <asp:TextBox ID="TB_EMail" runat="server" Style="width: 350px; height: 30px;" onclick="checkEmailFormat('TB_EMail')"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font>
                                                                         <br />
-                                                                        <span style="font-size: xx-small;">注：要接收重要信息，请正确填写！</span>
+                                                                        <span style="font-size: xx-small;">
+                                                                            
+                                                                             <asp:Label ID="Label8" runat="server"  Text="<%$ Resources:lang,ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie%>"></asp:Label>
+                                                                        </span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">用户数
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                         <asp:Label ID="Label9" runat="server"  Text="<%$ Resources:lang,YongHuShu%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000" Style="width: 150px; height: 30px;"></asp:TextBox>
@@ -361,6 +378,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td  class="formItemBgStyleForAlignLeft">验证码
+                                                                        <asp:Label ID="Label10" runat="server"  Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
                                                                     </td>
                                                                     <td  class="formItemBgStyleForAlignLeft">
                                                                         <table>
@@ -379,8 +397,7 @@
                                                                     <td class="formItemBgStyleForAlignLeft">&nbsp;
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
-                                                                        <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click" Style="width: 130px; height: 30px;"
-                                                                            Text="提 交" />
+                                                                        <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click" Style="width: 130px; height: 30px;"   Text="<%$ Resources:lang,DiJiao%>" />
                                                                         <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
                                                                         <br />
                                                                     </td>
@@ -406,9 +423,11 @@
                                                                 </tr>
                                                             </table>
                                                             <br />
-                                                            <li>提交成功后，客服将会立刻联系你，你也可以直接联系主管：<br />
+                                                            <li>
+                                                                <asp:Label ID="Label11" runat="server"  Text="<%$ Resources:lang,DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan%>"></asp:Label>
+                                                                <br />
                                                                 &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img
-                                                                    align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a href="tel:02151085119"
+                                                                    align="absmiddle" src="images/qq.png" />QQ</a>，Tel：<a href="tel:02151085119"
                                                                         class="call">021-51085119</a></li>
                                                         </div>
                                                     </td>

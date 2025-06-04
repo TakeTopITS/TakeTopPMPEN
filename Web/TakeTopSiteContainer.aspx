@@ -16,30 +16,34 @@
     <script type="text/javascript" src="./js/wk_inc.js" language="javascript"></script>
     <script type="text/javascript" src="./js/forever.js"></script>
 
-   <style type="text/css">
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    
-    #form1 {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* 视口高度 */
-    }
-    
-    #divBody {
-        flex: 1; /* 自动填充剩余空间 */
-    }
-    
-    #SiteBottomFrameID {
-        width: 100%;
-        height: 80px;
-        flex-shrink: 0; /* 防止 iframe 被压缩 */
-    }
-</style>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/allAHandler.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #form1 {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 视口高度 */
+        }
+
+        #divBody {
+            flex: 1; /* 自动填充剩余空间 */
+        }
+
+        #SiteBottomFrameID {
+            width: 100%;
+            height: 80px;
+            flex-shrink: 0; /* 防止 iframe 被压缩 */
+        }
+    </style>
 
     <script type="text/javascript" language="javascript">
         document.ontouchmove = function (e) {
@@ -47,8 +51,6 @@
             e.stopPropagation();
         };
         $(function () {
-
-            aHandlerForCurentWindow();
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 
@@ -242,4 +244,5 @@
 
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

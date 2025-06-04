@@ -31911,4 +31911,37 @@
     <value>原因</value>
     <comment>原因</comment>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>提交成功後，客服會立刻與你聯絡並為你開通平台。</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>提交成功後，客服會立刻與你聯絡，你也可以直接聯絡客服。</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>提交成功後，客服會立刻與你聯絡，你也可以直接聯絡主管。</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>附加說明</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>招商银行股份有限公司上海浦东大道支行</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>模組與價格</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>你也可以直接聯絡客服。</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>平台開通後，客服會為你提供試用培訓，試用期不超過一周。</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>如有意願，請在下面填寫你的聯絡資訊。</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>注：為接收重要資訊，請正確填寫。</value>
+  </data>
 </root>

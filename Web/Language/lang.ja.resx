@@ -31791,4 +31791,37 @@
   <data name="YuanYing" xml:space="preserve">
     <value>理由</value>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>送信に成功すると、カスタマーサービスがすぐに連絡を取り、プラットフォームをすぐに有効化します。</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>送信に成功すると、カスタマーサービスがすぐに連絡を取ります。また、直接カスタマーサービスに連絡することもできます。</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>送信に成功すると、カスタマーサービスがすぐに連絡を取ります。また、直接上司に連絡することもできます。</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>追加説明</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>招商银行上海浦东大道支行</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>モジュールと価格</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>また、直接カスタマーサービスに連絡することもできます。</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>プラットフォームが有効化されると、カスタマーサービスは試用期間（最大1週間）のトレーニングを提供します。</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>興味があれば、以下のフォームに連絡先情報を入力してください。</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>注：重要な情報を受け取るには、正しい情報を入力してください。</value>
+  </data>
 </root>

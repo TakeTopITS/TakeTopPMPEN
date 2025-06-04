@@ -31791,4 +31791,37 @@
   <data name="YuanYing" xml:space="preserve">
     <value>이유</value>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>제출</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>제출이 성공하면 고객 서비스가 즉시 연락하여 플랫폼을 활성화합니다.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>제출이 성공하면 고객 서비스가 즉시 연락합니다. 또한 고객 서비스에 직접 연락할 수도 있습니다.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>제출이 성공하면 고객 서비스가 즉시 연락합니다. 또한 담당자에게 직접 연락할 수도 있습니다.</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>추가설명</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>상하이 푸둥대도 지점, 중국 통신은행 주식회사</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>모듈과 가격</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>또한 고객 서비스에 직접 연락할 수도 있습니다.</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>플랫폼이 활성화되면 고객 서비스는 시험 기간(최대 1주)의 트레이닝을 제공합니다.</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>관심이 있다면 아래에 연락처 정보를 입력해 주십시오.</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>주: 중요한 정보를 받으려면 올바른 정보를 입력하십시오.</value>
+  </data>
 </root>

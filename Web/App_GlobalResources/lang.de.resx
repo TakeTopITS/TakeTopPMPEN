@@ -31791,4 +31791,37 @@
   <data name="YuanYing" xml:space="preserve">
     <value>Grund</value>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>Nach erfolgreichem Absenden wird der Kundenservice sofort kontaktieren, um die Plattform für Sie zu aktivieren.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>Nach erfolgreichem Absenden wird der Kundenservice Sie sofort kontaktieren, Sie können aber auch direkt den Kundenservice kontaktieren.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>Nach erfolgreichem Absenden wird der Kundenservice Sie sofort kontaktieren, Sie können aber auch direkt den Vorgesetzten kontaktieren.</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>Zusätzliche Erläuterungen</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>Bank of Communications Co., Ltd., Shanghai Pudong Avenue Branch</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>Module und Preise</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>Sie können auch direkt den Kundenservice kontaktieren.</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>Nach Aktivierung der Plattform wird der Kundenservice Ihnen eine Testnutzung anbieten, die nicht länger als eine Woche dauert.</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>Wenn Sie Interesse haben, füllen Sie bitte Ihre Kontaktdaten unten ein.</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>Hinweis: Um wichtige Informationen zu erhalten, geben Sie bitte die Daten korrekt ein.</value>
+  </data>
 </root>

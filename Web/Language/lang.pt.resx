@@ -31791,4 +31791,37 @@
   <data name="YuanYing" xml:space="preserve">
     <value>Motivo</value>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>Após o envio bem-sucedido, o serviço ao cliente entrará em contato imediatamente para ativar a plataforma para você.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>Após o envio bem-sucedido, o serviço ao cliente entrará em contato imediatamente. Você também pode entrar em contato diretamente com o serviço ao cliente.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>Após o envio bem-sucedido, o serviço ao cliente entrará em contato imediatamente. Você também pode entrar em contato diretamente com o supervisor.</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>Informações adicionais</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>Banco de Comunicações Co., Ltd., Sucursal de Pudong Avenue, Xangai</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>Módulos e preços</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>Você também pode entrar em contato diretamente com o serviço ao cliente.</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>Após a ativação da plataforma, o serviço ao cliente fornecerá um treinamento de teste, que não excederá uma semana.</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>Se interessado, por favor, preencha suas informações de contato abaixo.</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>Nota: Para receber informações importantes, por favor, preencha os dados corretamente.</value>
+  </data>
 </root>

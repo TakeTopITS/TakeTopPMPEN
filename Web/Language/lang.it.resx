@@ -31793,4 +31793,37 @@
   <data name="YuanYing" xml:space="preserve">
     <value>Motivo</value>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>Invia</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>Dopo l'invio corretto, il servizio clienti ti contatterà immediatamente per attivare la piattaforma per te.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>Dopo l'invio corretto, il servizio clienti ti contatterà immediatamente, puoi anche contattare direttamente il servizio clienti.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>Dopo l'invio corretto, il servizio clienti ti contatterà immediatamente, puoi anche contattare direttamente il responsabile.</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>Note aggiuntive</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>Banca delle Comunicazioni Co., Ltd., filiale di Pudong Avenue, Shanghai</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>Moduli e prezzi</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>Puoi anche contattare direttamente il servizio clienti.</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>Una volta attivata la piattaforma, il servizio clienti ti fornirà una sessione di formazione di prova, che non supererà una settimana.</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>Se sei interessato, per favore inserisci le tue informazioni di contatto qui sotto.</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>Nota: Per ricevere informazioni importanti, per favore inserisci i dati correttamente.</value>
+  </data>
 </root>

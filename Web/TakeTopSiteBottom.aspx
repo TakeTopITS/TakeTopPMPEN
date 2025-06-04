@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteBottom.aspx.cs" Inherits="TakeTopSiteBottom" %>
 
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -44,6 +43,7 @@
         document.ontouchmove = function (e) {
             e.preventDefault();
         };
+
         function AddFavorite(sURL, sTitle) {
             try {
                 window.external.addFavorite(sURL, sTitle);
@@ -63,24 +63,13 @@
             jQuery(obj).parents().find("a").removeClass("current");
             jQuery(obj).parents().find("span").removeClass("TextColor");
             jQuery(obj).parent().find("span").addClass("TextColor");
-
-            //window.parent.frames["msg1"].document.getElementById("按钮的ID")
-
-            //window.parent.frames['SiteTopFrame'].document.all("a").removeClass("current");
-            //window.parent.frames['SiteTopFrame'].document.all("span").removeClass("TextColor");
-
         }
-
 
         function adClick(site1, site2) {
             window.open(site1, "SiteRightContainerFrame");
             window.open(site2, "leftFrame");
-            /*   window.open("TakeTopSiteBottom.aspx", "SiteTopFrame");*/
         }
-
-    </script>
-
-    <script>
+ 
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");

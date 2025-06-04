@@ -31793,4 +31793,37 @@
   <data name="YuanYing" xml:space="preserve">
     <value>Причина</value>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>После успешной отправки, служба поддержки клиентов свяжется с вами незамедлительно для активации платформы для вас.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>После успешной отправки, служба поддержки клиентов свяжется с вами незамедлительно. Вы также можете связаться напрямую со службой поддержки клиентов.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>После успешной отправки, служба поддержки клиентов свяжется с вами незамедлительно. Вы также можете связаться напрямую с руководителем.</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>Дополнительные сведения</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>Банк Коммуникаций, ООО, филиал на проспекте Пудонг, Шанхай</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>Модули и цены</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>Вы также можете связаться напрямую со службой поддержки клиентов.</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>После активации платформы, служба поддержки клиентов предоставит вам пробное обучение, которое не превысит неделю.</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>Если заинтересованы, пожалуйста, заполните свои контактные данные ниже.</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>Примечание: Для получения важной информации, пожалуйста, введите данные правильно.</value>
+  </data>
 </root>

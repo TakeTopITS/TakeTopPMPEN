@@ -31792,4 +31792,37 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="YuanYing" xml:space="preserve">
     <value>Reason</value>
   </data>
+  <data name="DiJiao" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
+    <value>After successful submission, customer service will contact you immediately to activate the platform for you.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>After successful submission, customer service will contact you immediately, and you can also contact customer service directly.</value>
+  </data>
+  <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
+    <value>After successful submission, customer service will contact you immediately, and you can also contact the supervisor directly.</value>
+  </data>
+  <data name="FuJiaShuiMing" xml:space="preserve">
+    <value>Additional Notes</value>
+  </data>
+  <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
+    <value>Bank of Communications Co., Ltd., Shanghai Pudong Avenue Branch</value>
+  </data>
+  <data name="MoKuaiYuJiaGe" xml:space="preserve">
+    <value>Modules and Pricing</value>
+  </data>
+  <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
+    <value>You can also contact customer service directly.</value>
+  </data>
+  <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
+    <value>After the platform is activated, customer service will provide you with a trial training session, which will not exceed one week.</value>
+  </data>
+  <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
+    <value>If interested, please fill in your contact information below.</value>
+  </data>
+  <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
+    <value>Note: To receive important information, please fill in the details correctly.</value>
+  </data>
 </root>

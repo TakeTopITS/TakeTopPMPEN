@@ -57,8 +57,8 @@
 
                                                 <div class="qudaohezuo">
                                                     <div class="wenzi">
-                                                         <p class="zuyong">
-                                                              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;如果您所在的地区或者您公司目前所拥有的客户资源非常适合推广泰顶拓鼎软件，您可以申请成为我们的合作伙伴，共赢是我们的精神，在合作期您将获得我们全力的支持，包括全面的培训，技术支持，甚至我们会提供您所在地区的销售机会，以支持您的业务持续的发展！
+                                                        <p class="zuyong">
+                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;如果您所在的地区或者您公司目前所拥有的客户资源非常适合推广泰顶拓鼎软件，您可以申请成为我们的合作伙伴，共赢是我们的精神，在合作期您将获得我们全力的支持，包括全面的培训，技术支持，甚至我们会提供您所在地区的销售机会，以支持您的业务持续的发展！
                                                         </p>
 
                                                         <%-- <p style="text-indent: 20px;"><strong>渠道分成政策：</strong></p>
@@ -77,23 +77,32 @@
 
 
                                                         <div id="id5" style="padding-left: 20px;">
-                                                            <h3>&nbsp;&nbsp;&nbsp;如有意向，请在下面填写你的联系信息</h3>
+                                                            <h3>&nbsp;&nbsp;&nbsp;
+                                                                
+                                                                  <asp:Label ID="Label1" runat="server"  Text="<%$ Resources:lang,RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi%>"></asp:Label>
+                                                            </h3>
                                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">公司</td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label2" runat="server"  Text="<%$ Resources:lang,GongSi%>"></asp:Label>
+                                                                    </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_Company" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font> </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">联系人</td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label3" runat="server"  Text="<%$ Resources:lang,LianJiRen%>"></asp:Label>
+                                                                    </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_ContactPerson" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font> &nbsp;&nbsp;</td>
                                                                 </tr>
 
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">电话</td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label4" runat="server"  Text="<%$ Resources:lang,DianHua%>"></asp:Label>
+                                                                    </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_PhoneNumber" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font> </td>
@@ -102,8 +111,10 @@
 
 
                                                                 <tr>
-                                                                    <td  class="formItemBgStyleForAlignLeft">验证码</td>
-                                                                    <td  class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label5" runat="server"  Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
+                                                                    </td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
                                                                         <table>
                                                                             <tr>
                                                                                 <td>
@@ -119,7 +130,7 @@
                                                                 <tr>
                                                                     <td class="formItemBgStyleForAlignLeft">&nbsp;</td>
                                                                     <td class="formItemBgStyleForAlignLeft">
-                                                                        <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click" Style="width: 130px; height: 30px;" Text="提 交" />
+                                                                        <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click" Style="width: 130px; height: 30px;"  Text="<%$ Resources:lang,DiJiao%>" />
                                                                         <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
                                                                         <br />
                                                                     </td>
@@ -177,9 +188,10 @@
 
                                                             <br />
 
-                                                            <li>提交成功后，客服将会立刻联系你，你也可以直接联系客服：
+                                                            <li>
+                                                                <asp:Label ID="Label6" runat="server"  Text="<%$ Resources:lang,DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu%>"></asp:Label>：
                                                               <br />
-                                                                &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a href="tel:02151085119" class="call">021-51085119</a><br />
+                                                                &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" />QQ</a>，Tel：<a href="tel:02151085119" class="call">021-51085119</a><br />
                                                             </li>
 
                                                         </div>
