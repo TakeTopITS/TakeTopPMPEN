@@ -12790,4 +12790,67 @@ insert into t_RentProductVertype(type,SortNumber) values('集团版',3);</SQLTex
     <ID>3788</ID>
     <SQLText>Update public.t_sitemodulecontent Set content = replace(content,'TTCustomerRegisterFromWebSite_TakeTopSoft.aspx', 'TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx')</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3789</ID>
+    <SQLText>Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','网站编辑','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','zh-CN','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','網站編輯','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','zh-tw','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','en','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','de','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','fr','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','it','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','ru','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','pt','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','ko','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','es','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+
+Insert Into T_ProModuleLevel(ModuleName,HomeModuleName,ParentModule,PageName,ModuleType,UserType,LangCode,IconURL,ModuleDefinition,DiyFlow,UpdateMark,SortNumber,IsDeleted,Visible)
+values('WebSiteEditor','WebSiteEditor','','TakeTopSiteContentEdit.aspx','SYSTEM','INNER','ja','ImagesSkin/SiteEdit.png','','YES',0,33,'NO','YES');
+ 
+
+Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition,DiyFlow,Visible)
+values('ADMIN','WebSiteEditor','SYSTEM','INNER','','YES','YES');
+Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition,DiyFlow,Visible)
+values('ADMIN','WebSiteEditor','SYSTEM','OUTER','','YES','YES');
+
+Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition,DiyFlow,Visible)
+values('SAMPLE','WebSiteEditor','SYSTEM','INNER','','YES','YES');
+Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition,DiyFlow,Visible)
+values('SAMPLE','WebSiteEditor','SYSTEM','OUTER','','YES','YES');</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3790</ID>
+    <SQLText>Update T_ProModuleLevel Set DIYFlow = 'NO' Where ModuleName = 'WebSiteEditor';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3791</ID>
+    <SQLText>Update T_ProModuleLevel Set PageName = 'TakeTopSiteContentEdit.aspx' Where ModuleName = 'WebSiteEditor';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3792</ID>
+    <SQLText>Delete From T_ProModuleLevel Where ModuleName = '网站编辑';
+Delete From T_ProModule Where ModuleName = '网站编辑';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3793</ID>
+    <SQLText>Update T_ProModule Set DiyFlow = 'NO' Where ModuleName = 'WebSiteEditor';</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

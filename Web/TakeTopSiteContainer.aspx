@@ -54,6 +54,8 @@
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 
+            aHandlerForCurentWindow();
+
             var browser = {
                 versions: function () {
                     var u = navigator.userAgent, app = navigator.appVersion;
