@@ -111,9 +111,9 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
     protected void BindHeadLineData()
     {
         string strHtml = string.Empty;
-        string strHQL = "Select * from T_HeadLine where LangCode = '" + strLangCode + "' " +
-                       LanguageHandle.GetWord("WaiBuFaBu") +
-                       "Order by ID DESC";
+        string strHQL = string.Format(@"Select * from T_HeadLine where LangCode = '{0}' 
+                       and Type =  '{1}' and Status = '{2}' and IsHead = 'YES' 
+                       Order by ID DESC", strLangCode,LanguageHandle.GetWord("WaiBu"),LanguageHandle.GetWord("FaBu"));
 
         DataTable dtHeadLine = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "HeadLine").Tables[0];
         DataView dvHeadLine = new DataView(dtHeadLine);

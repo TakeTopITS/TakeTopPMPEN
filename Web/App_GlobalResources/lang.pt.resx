@@ -31827,4 +31827,769 @@
   <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
     <value />
   </data>
+  <data name="BaoCunChengGong" xml:space="preserve">
+    <value>Guardado com sucesso</value>
+  </data>
+  <data name="BaoCunShiBaiQingJianCha1" xml:space="preserve">
+    <value>Erro ao guardar Verifique</value>
+  </data>
+  <data name="BaZhanDian" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="BeiFenWenJianXiaZaiTongZhi1" xml:space="preserve">
+    <value>Notificação de descarregamento de backup</value>
+  </data>
+  <data name="BiaoZhunBan" xml:space="preserve">
+    <value>Versão standard</value>
+  </data>
+  <data name="BiaoZhunBan1" xml:space="preserve">
+    <value>Versão standard</value>
+  </data>
+  <data name="Bing" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="BingShiXianYingLiDeHuoBan" xml:space="preserve">
+    <value>E realizar parceiros rentáveis</value>
+  </data>
+  <data name="Bu" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="ChaKan" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="ChangGuiXingYeGongChengXingYe" xml:space="preserve">
+    <value>Indústrias convencionais Indústria de engenharia Indústria petroquímica</value>
+  </data>
+  <data name="ChanPin1" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="ChanPin2" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="ChanPinDuoYuanHuaFuWuGeXingHua" xml:space="preserve">
+    <value>Diversificação de produto Serviços personalizados Software de gestão para empresas de todos os tamanhos e setores criando novas cadeias de valor</value>
+  </data>
+  <data name="ChanPinJingXiaoHuoBan" xml:space="preserve">
+    <value>Parceiros distribuidores de produtos</value>
+  </data>
+  <data name="ChanPinYuJiShuYanFaGuanLi" xml:space="preserve">
+    <value>Gestão de desenvolvimento de produto e tecnologia</value>
+  </data>
+  <data name="ChengWeiHeZuoHuoBan" xml:space="preserve">
+    <value>Tornar-se parceiro</value>
+  </data>
+  <data name="ChuangJianShiBaiCunZaiXiangTon1" xml:space="preserve">
+    <value>Erro ao criar Já existe website com mesmo nome Verifique</value>
+  </data>
+  <data name="ChuangJianShiBaiMeiYouNiXuanQu" xml:space="preserve">
+    <value>Erro ao criar Não há parâmetros base para versão selecionada Verifique</value>
+  </data>
+  <data name="CunChuKongJian" xml:space="preserve">
+    <value>Espaço de armazenamento</value>
+  </data>
+  <data name="CunChuRongLiang" xml:space="preserve">
+    <value>Capacidade de armazenamento</value>
+  </data>
+  <data name="CunChuRongLiang1" xml:space="preserve">
+    <value>Capacidade de armazenamento</value>
+  </data>
+  <data name="DaiLiXieYiTongGuoDiQuShouQuan" xml:space="preserve">
+    <value>Contrato de agência através de vendas regionais autorizadas da nossa série</value>
+  </data>
+  <data name="DanWeiHuoZheGe" xml:space="preserve">
+    <value>Empresa ou indivíduo</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>Pedido de compra Processe prontamente</value>
+  </data>
+  <data name="DeHuoBanGaiXingYe" xml:space="preserve">
+    <value>Parceiros do setor</value>
+  </data>
+  <data name="DengLuZhangHaoMiMa" xml:space="preserve">
+    <value>Conta e palavra-passe</value>
+  </data>
+  <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
+    <value>Conta e palavra-passe Use com confiança Para questões contacte o serviço ao cliente Obrigado Este email é enviado pelo Taiding Tuoding Group</value>
+  </data>
+  <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>Pedido Processe prontamente</value>
+  </data>
+  <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
+    <value>Informação de teste Preste atenção</value>
+  </data>
+  <data name="DeShuJuBeiFenWenJianXiaZaiDiZh" xml:space="preserve">
+    <value>O URL para descarregar o ficheiro de backup é</value>
+  </data>
+  <data name="DeShuJuFuZhiDao" xml:space="preserve">
+    <value>Dados copiados para</value>
+  </data>
+  <data name="DeTaiDingTuoDing" xml:space="preserve">
+    <value>Taiding Tuoding</value>
+  </data>
+  <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
+    <value>Comentários sobre problemas Preste atenção</value>
+  </data>
+  <data name="DeYuanGong1" xml:space="preserve">
+    <value>Colaboradores</value>
+  </data>
+  <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>Pedido de aluguer Processe prontamente</value>
+  </data>
+  <data name="DianHua3" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="DianHua5" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="DiQuZengZhiFenXiaoXieYiBing" xml:space="preserve">
+    <value>Acordo de distribuição de valor acrescentado regional e venda da nossa série através de canais de distribuição próprios</value>
+  </data>
+  <data name="DuoYuanHuaFuWuGeXingHuaDeDa" xml:space="preserve">
+    <value>Serviços diversificados Software de gestão personalizado para empresas de todos os tamanhos e setores criando novos sistemas de canais de valor</value>
+  </data>
+  <data name="FaZhanDeDaiLiMeiChengYiDanAnCi" xml:space="preserve">
+    <value>Agente de desenvolvimento Por cada transação concluída, o agente recebe uma percentagem das taxas de software e licenças de utilizador de acordo com o volume de compra connosco</value>
+  </data>
+  <data name="FuWu" xml:space="preserve">
+    <value>Serviço</value>
+  </data>
+  <data name="GeBanBenJiaGeCanJian" xml:space="preserve">
+    <value>Preços das versões ver</value>
+  </data>
+  <data name="GengXinShiBaiQingJianCha1" xml:space="preserve">
+    <value>Erro na atualização Verifique</value>
+  </data>
+  <data name="GongCheng1" xml:space="preserve">
+    <value>Engenharia</value>
+  </data>
+  <data name="GongChengSheJiShiGongXiangMu" xml:space="preserve">
+    <value>Gestão de projetos de conceção e construção de engenharia</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de engenharia</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de engenharia</value>
+  </data>
+  <data name="GongNengMoKuaiYuJiaGe" xml:space="preserve">
+    <value>Módulos funcionais e preços</value>
+  </data>
+  <data name="GongSi1" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="Gou" xml:space="preserve">
+    <value>Compra</value>
+  </data>
+  <data name="GouMai1" xml:space="preserve">
+    <value>Comprar</value>
+  </data>
+  <data name="GouMai2" xml:space="preserve">
+    <value>Compra</value>
+  </data>
+  <data name="GouMaiBanBen1" xml:space="preserve">
+    <value>Versão de compra</value>
+  </data>
+  <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
+    <value>Compre o software de gestão Taiding Tuoding</value>
+  </data>
+  <data name="HuBeiHao" xml:space="preserve">
+    <value>Número Hu Bei</value>
+  </data>
+  <data name="HuiFuShiBaiCunZaiXiangTongMing1" xml:space="preserve">
+    <value>Erro ao restaurar Já existe website com mesmo nome Verifique</value>
+  </data>
+  <data name="HuiFuShiBaiMeiYouNiXuanQuDeCha" xml:space="preserve">
+    <value>Erro ao restaurar Não há parâmetros base disponíveis para versão selecionada Verifique</value>
+  </data>
+  <data name="HuiFuShuJuKuShiBai1" xml:space="preserve">
+    <value>Erro ao restaurar base de dados</value>
+  </data>
+  <data name="JiaGe1" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="JiaGeBiao" xml:space="preserve">
+    <value>Lista de preços</value>
+  </data>
+  <data name="JianZhanXinXi1" xml:space="preserve">
+    <value>Informação para criar website</value>
+  </data>
+  <data name="JieShaoPengYouQuFaZhanDeDiYi" xml:space="preserve">
+    <value>Indique amigos para se tornarem agentes de primeiro nível Por cada negócio fechado, receba uma percentagem das taxas de software e licenças</value>
+  </data>
+  <data name="JiLuShu1" xml:space="preserve">
+    <value>Número de registos</value>
+  </data>
+  <data name="JiMuHuaJieGouKeAnXuXuanPeiZi" xml:space="preserve">
+    <value>Estrutura modular Pode ser selecionada e combinada conforme necessidade</value>
+  </data>
+  <data name="JingGaoZhanDianMingChenZhiNeng1" xml:space="preserve">
+    <value>Aviso Nome só pode conter letras Sem caracteres chineses números símbolos ou espaços Verifique</value>
+  </data>
+  <data name="JingXiaoHuoBan" xml:space="preserve">
+    <value>Parceiros distribuidores</value>
+  </data>
+  <data name="JiTuanBan" xml:space="preserve">
+    <value>Versão grupo</value>
+  </data>
+  <data name="JiTuanBan1" xml:space="preserve">
+    <value>Versão grupo</value>
+  </data>
+  <data name="JiTuanBan2" xml:space="preserve">
+    <value>Versão grupo</value>
+  </data>
+  <data name="JiTuanGuanKong" xml:space="preserve">
+    <value>Controlo de grupo</value>
+  </data>
+  <data name="KeFu1" xml:space="preserve">
+    <value>Serviço ao cliente</value>
+  </data>
+  <data name="KeHuGuanXiGuanLiPingTai" xml:space="preserve">
+    <value>Plataforma de gestão de relações com clientes</value>
+  </data>
+  <data name="KeHuShouQianShouHouFuWuJinXiao" xml:space="preserve">
+    <value>Serviço ao cliente pré e pós-venda Gestão de inventário etc.</value>
+  </data>
+  <data name="KeYongZhiFuBaoHuoYinXingZhuan" xml:space="preserve">
+    <value>Pagamento via Alipay ou transferência bancária Conveniente e rápido</value>
+  </data>
+  <data name="Lian" xml:space="preserve">
+    <value>Módulo</value>
+  </data>
+  <data name="LianJie" xml:space="preserve">
+    <value>Ligação</value>
+  </data>
+  <data name="LianXiDiZhi1" xml:space="preserve">
+    <value>Endereço de contacto</value>
+  </data>
+  <data name="LianXiDiZhi2" xml:space="preserve">
+    <value>Endereço de contacto</value>
+  </data>
+  <data name="LianXiRen1" xml:space="preserve">
+    <value>Pessoa de contacto</value>
+  </data>
+  <data name="LiuChengZiChanZhiShiCheLiang" xml:space="preserve">
+    <value>Ativos de processos Conhecimento Veículos etc.</value>
+  </data>
+  <data name="MoKuai1" xml:space="preserve">
+    <value>Versão empresarial</value>
+  </data>
+  <data name="NengShiYongXiTongDanKeYiXiaZai" xml:space="preserve">
+    <value>Pode usar o sistema mas pode descarregar e guardar dados relevantes para continuar a utilizar É necessário renovar o pagamento</value>
+  </data>
+  <data name="NiHaoNi1" xml:space="preserve">
+    <value>Olá você</value>
+  </data>
+  <data name="PeiXunRenZheng" xml:space="preserve">
+    <value>Certificação de formação</value>
+  </data>
+  <data name="PingTai" xml:space="preserve">
+    <value>Plataforma</value>
+  </data>
+  <data name="PingTaiMingChen" xml:space="preserve">
+    <value>Nome da plataforma</value>
+  </data>
+  <data name="QingBuYaoGuanBiCiYeMian" xml:space="preserve">
+    <value>Não feche esta página</value>
+  </data>
+  <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
+    <value>Descarregue prontamente Para questões contacte o serviço ao cliente Obrigado Este email é do Taiding Tuoding Group</value>
+  </data>
+  <data name="QingZaiXiaMianTianXieNiDeLian" xml:space="preserve">
+    <value>Preencha os seus dados de contacto abaixo O link de descarregamento aparecerá automaticamente após envio</value>
+  </data>
+  <data name="QiYeBan" xml:space="preserve">
+    <value>Pessoas</value>
+  </data>
+  <data name="QiYeBan1" xml:space="preserve">
+    <value>Versão empresarial</value>
+  </data>
+  <data name="QiYeJiKuanKeKuoZhanRuanJian" xml:space="preserve">
+    <value>Versão empresarial Software escalável</value>
+  </data>
+  <data name="QiYeZongHeGuanLiPingTai" xml:space="preserve">
+    <value>Plataforma de gestão empresarial integrada</value>
+  </data>
+  <data name="QuanBuGengXinChengGong" xml:space="preserve">
+    <value>Todas as atualizações bem-sucedidas</value>
+  </data>
+  <data name="QuDaoFenChengZhengCe" xml:space="preserve">
+    <value>Política de partilha de canais</value>
+  </data>
+  <data name="Ren1" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de implementação de software</value>
+  </data>
+  <data name="Ren2" xml:space="preserve">
+    <value>Pessoas</value>
+  </data>
+  <data name="Ren3" xml:space="preserve">
+    <value>Pessoas</value>
+  </data>
+  <data name="RenZhiYaoDengLuShiYongXiTongDe" xml:space="preserve">
+    <value>Pessoas refere-se aos utilizadores que acedem ao sistema Não ao total de colaboradores da empresa</value>
+  </data>
+  <data name="RuanJianGouMaiShenQingTongZhi1" xml:space="preserve">
+    <value>Notificação de pedido de compra de software</value>
+  </data>
+  <data name="RuanJianShiShi" xml:space="preserve">
+    <value>Implementação de software</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de implementação de software</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi1" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de implementação de software</value>
+  </data>
+  <data name="RuanJianXiTongShiShiXiangMu" xml:space="preserve">
+    <value>Acordo de cooperação de oportunidades de negócio Utilização de recursos próprios de clientes para fornecer</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
+    <value>Parâmetros para aluguer e criação de website</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
+    <value>Manutenção de website alugado</value>
+  </data>
+  <data name="RuanJianZuYongShenQingTongZhi1" xml:space="preserve">
+    <value>Notificação de pedido de aluguer de software</value>
+  </data>
+  <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
+    <value>Se a sua região ou recursos de clientes da sua empresa são adequados para promover Taiding</value>
+  </data>
+  <data name="RuYouWenTiQingZhiJieLianXiKeFu" xml:space="preserve">
+    <value>Para questões contacte diretamente o serviço ao cliente</value>
+  </data>
+  <data name="ShanChuShiBaiQingJianCha1" xml:space="preserve">
+    <value>Erro ao eliminar Verifique</value>
+  </data>
+  <data name="ShangHuiXinXi1" xml:space="preserve">
+    <value>Informação da câmara de comércio</value>
+  </data>
+  <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
+    <value>Parceiros de oportunidades de negócio</value>
+  </data>
+  <data name="ShangJiHeZuoXieYiPingJieZiShen" xml:space="preserve">
+    <value>Após teste satisfatório é necessário pagar para continuar a usar Se interrupção de pagamento o sistema entra em</value>
+  </data>
+  <data name="ShenQing1" xml:space="preserve">
+    <value>Pedido</value>
+  </data>
+  <data name="ShenQing2" xml:space="preserve">
+    <value>Pedido</value>
+  </data>
+  <data name="SheZhiShiFouZiDongJianZhan" xml:space="preserve">
+    <value>Configurar se criação automática de website</value>
+  </data>
+  <data name="ShiBaiCunZaiXiangTongMingChenD1" xml:space="preserve">
+    <value>Falhou Já existe website com mesmo nome Verifique</value>
+  </data>
+  <data name="ShiBaiYaoFuZhiDeZhanDianBuNeng" xml:space="preserve">
+    <value>Falhou Website a copiar não pode estar vazio Verifique</value>
+  </data>
+  <data name="ShiBaiYaoShanChuDeZhanDianBuNe" xml:space="preserve">
+    <value>Falhou Website a eliminar não pode estar vazio Verifique</value>
+  </data>
+  <data name="ShiXianYingLiDeHuoBan" xml:space="preserve">
+    <value>Parceiros que realizam lucros</value>
+  </data>
+  <data name="ShiYongManYiHouBiXuFuFeiCai" xml:space="preserve">
+    <value>Refere-se a parceiros que desenvolvem módulos setoriais complementares através de plataformas integradas</value>
+  </data>
+  <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
+    <value>Tempo de utilização ilimitado O software é instalado em servidores fornecidos pelo utilizador Preencha o formulário de compra abaixo</value>
+  </data>
+  <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
+    <value>Refere-se à certificação de qualificação para sistemas de serviços de implementação e forte capacidade para implementar serviços de software de gestão</value>
+  </data>
+  <data name="ShiZhiNengGouTongGuoPingTaiHuo" xml:space="preserve">
+    <value>Refere-se a assinar um</value>
+  </data>
+  <data name="ShiZhiNengJieHeXiLie" xml:space="preserve">
+    <value>Refere-se a combinar uma série</value>
+  </data>
+  <data name="ShiZhiNengJieHeXiLieChanPinZai" xml:space="preserve">
+    <value>Refere-se a cooperar com produtos na área de formação e partilhar lucros de acordo com contrato</value>
+  </data>
+  <data name="ShiZhiYuQianShu" xml:space="preserve">
+    <value>Refere-se a assinar acordo de cooperação de oportunidades de negócio utilizando recursos próprios para fornecer oportunidades de venda</value>
+  </data>
+  <data name="ShiZhiYuQianShuChanPinDaiLiXie" xml:space="preserve">
+    <value>Refere-se a assinar contrato de agência e vendas regionais autorizadas da nossa série para gerar lucros</value>
+  </data>
+  <data name="ShiZhiYuQianShuDiQuZengZhiFen" xml:space="preserve">
+    <value>Refere-se a assinar acordo de distribuição de valor acrescentado regional e vender a nossa série através de canais próprios</value>
+  </data>
+  <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
+    <value>Taiding Cloud reduz custos Ativação imediata baseada na Alibaba Cloud Seguro e fiável</value>
+  </data>
+  <data name="ShouJiHao1" xml:space="preserve">
+    <value>Número de telemóvel</value>
+  </data>
+  <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
+    <value>Parceiros de serviço autorizados</value>
+  </data>
+  <data name="ShouQuanPeiXunHuoBan" xml:space="preserve">
+    <value>Parceiros de formação autorizados</value>
+  </data>
+  <data name="TaiDingYunJiangDiChengBenJiShi" xml:space="preserve">
+    <value>Oferece planeamento de projetos progresso tarefas custos gestão de documentos Fácil de usar Minutos para aprender</value>
+  </data>
+  <data name="TiGongMianFeiKongJianKuoRong" xml:space="preserve">
+    <value>Oferece expansão de armazenamento gratuita Taxa yuans por mês</value>
+  </data>
+  <data name="TiGongShangJiJiWoMenBingXieZhu" xml:space="preserve">
+    <value>Forneça-nos oportunidades de negócio e ajude-nos nas vendas Nós concluímos e você recebe uma percentagem das taxas de software e licenças</value>
+  </data>
+  <data name="TiGongXiangMuJiHuaJinDuRenWu" xml:space="preserve">
+    <value>Tesouro de projetos</value>
+  </data>
+  <data name="TiJiaoChengGong" xml:space="preserve">
+    <value>Envio bem-sucedido</value>
+  </data>
+  <data name="TiJiaoChengGongTaiDingTuoDingK" xml:space="preserve">
+    <value>Envio bem-sucedido Serviço ao cliente Taiding Tuoding contactá-lo-á em minutos Aguarde Obrigado</value>
+  </data>
+  <data name="TiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
+    <value>Envio bem-sucedido Link de descarregamento abaixo Clique para descarregar</value>
+  </data>
+  <data name="TiJiaoLe" xml:space="preserve">
+    <value>Enviado</value>
+  </data>
+  <data name="TiJiaoShiBaiDaiHaoXiangBuNengW" xml:space="preserve">
+    <value>Erro no envio Campos marcados * não podem estar vazios Verifique</value>
+  </data>
+  <data name="TiJiaoShiBaiQingDianHuaLianXiT" xml:space="preserve">
+    <value>Erro no envio Contacte serviço ao cliente Taiding Tuoding por telefone Obrigado</value>
+  </data>
+  <data name="TiJiaoShiBaiQingJianCha" xml:space="preserve">
+    <value>Erro no envio Verifique</value>
+  </data>
+  <data name="TiJiaoShiBaiYanZhengMaCuoWuQin" xml:space="preserve">
+    <value>Erro no envio Código de verificação incorreto Verifique</value>
+  </data>
+  <data name="TiShiCiZhanDianBuCunZaiQingJia" xml:space="preserve">
+    <value>Nota Este website não existe Verifique</value>
+  </data>
+  <data name="TiShiCiZhanDianDeShuJuYiYingYo" xml:space="preserve">
+    <value>Nota Dados deste website já aplicados Não podem ser apagados Verifique</value>
+  </data>
+  <data name="TiShiCiZhanDianHaiCunZaiJiLuBu" xml:space="preserve">
+    <value>Nota Este website ainda tem registos Não pode ser apagado Verifique</value>
+  </data>
+  <data name="TiShiDaiHaoDeDuBuNengKongQingJ" xml:space="preserve">
+    <value>Nota Campos marcados * não podem estar vazios Verifique</value>
+  </data>
+  <data name="TiShiFaSongShiBaiQingJianCha" xml:space="preserve">
+    <value>Nota Erro no envio Verifique</value>
+  </data>
+  <data name="TiShiGongSi" xml:space="preserve">
+    <value>Nota Empresa</value>
+  </data>
+  <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
+    <value>Compatriota Bem-vindo à câmara de comércio Obrigado</value>
+  </data>
+  <data name="TuoDingXinXi" xml:space="preserve">
+    <value>Informação Tuoding</value>
+  </data>
+  <data name="WaiBuFaBu" xml:space="preserve">
+    <value>Publicação externa</value>
+  </data>
+  <data name="WeiXin" xml:space="preserve">
+    <value>WeChat</value>
+  </data>
+  <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
+    <value>Os nossos seis sistemas de canais</value>
+  </data>
+  <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
+    <value>Todos os nossos produtos de software de gestão Versão empresarial oferece teste gratuito online Se problemas durante o teste</value>
+  </data>
+  <data name="Xian" xml:space="preserve">
+    <value>Atual</value>
+  </data>
+  <data name="XiangMuBao1" xml:space="preserve">
+    <value>Tesouro de projetos</value>
+  </data>
+  <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>Plataforma de gestão de projetos</value>
+  </data>
+  <data name="XiangMuGuanLiZiXun" xml:space="preserve">
+    <value>Consultoria em gestão de projetos</value>
+  </data>
+  <data name="XiangMuGuanLiZiXunPeiXunRen" xml:space="preserve">
+    <value>Consultoria em gestão de projetos Certificação de formação</value>
+  </data>
+  <data name="XiangMuXingPingTai" xml:space="preserve">
+    <value>Plataforma orientada para projetos</value>
+  </data>
+  <data name="XiangMuXingPingTai1" xml:space="preserve">
+    <value>Plataforma orientada para projetos</value>
+  </data>
+  <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
+    <value>Gestão de manufatura orientada para projetos</value>
+  </data>
+  <data name="XiaoShouFenChengZhengCe" xml:space="preserve">
+    <value>Política de partilha de vendas</value>
+  </data>
+  <data name="XiaoShouShangJiHuoZheBangZhuWo" xml:space="preserve">
+    <value>Oportunidades de venda ou ajuda nos processos de marketing relacional</value>
+  </data>
+  <data name="XiaZai1" xml:space="preserve">
+    <value>Descarregar</value>
+  </data>
+  <data name="XiaZaiLianJie" xml:space="preserve">
+    <value>Link de descarregamento</value>
+  </data>
+  <data name="XieTongPingTai" xml:space="preserve">
+    <value>Plataforma colaborativa</value>
+  </data>
+  <data name="XingYeJuXianWeiCuJinYeJieXiang" xml:space="preserve">
+    <value>Contribuição setorial Para promover software de gestão de projetos e melhorar a gestão nas empresas</value>
+  </data>
+  <data name="XingYeKaiFaHuoBan" xml:space="preserve">
+    <value>Parceiros de desenvolvimento setorial</value>
+  </data>
+  <data name="XinJian1" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="XiTongJiCheng" xml:space="preserve">
+    <value>Integração de sistemas</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de integração de sistemas</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing1" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de integração de sistemas</value>
+  </data>
+  <data name="XuNiMuLuDeJueDuiLuJingBaoCunCh1" xml:space="preserve">
+    <value>Caminhos absolutos de diretórios virtuais guardados com sucesso</value>
+  </data>
+  <data name="YanFa" xml:space="preserve">
+    <value>I&amp;D</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de I&amp;D</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>Plataforma de gestão de projetos de I&amp;D</value>
+  </data>
+  <data name="YanZhengMa1" xml:space="preserve">
+    <value>Código de verificação</value>
+  </data>
+  <data name="YanZhengMa2" xml:space="preserve">
+    <value>Código de verificação</value>
+  </data>
+  <data name="YanZhengMaCuoWuQingJianCha1" xml:space="preserve">
+    <value>Código de verificação incorreto Verifique</value>
+  </data>
+  <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
+    <value>Para assistência contacte o serviço ao cliente Taiding no</value>
+  </data>
+  <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
+    <value>Foi eliminado Para questões contacte o serviço ao cliente Obrigado Este email é do Taiding Tuoding Group</value>
+  </data>
+  <data name="YiBeiShengJiDaoZuiXinBanShengJ1" xml:space="preserve">
+    <value>Foi atualizado para a versão mais recente Primeiro acesso será mais lento Cerca de minutos até aparecer página de login Para questões contacte o serviço ao cliente Obrigado Este email é do Taiding Tuoding Group</value>
+  </data>
+  <data name="YiChuangJian1" xml:space="preserve">
+    <value>Já criado</value>
+  </data>
+  <data name="YiChuangJianZhanDianDiZhiShi" xml:space="preserve">
+    <value>Endereço do website já criado</value>
+  </data>
+  <data name="YiGengXinXianYouRongLiang" xml:space="preserve">
+    <value>Capacidade atual atualizada</value>
+  </data>
+  <data name="YiHuiFu1" xml:space="preserve">
+    <value>Já restaurado</value>
+  </data>
+  <data name="YiHuiFuZhanDianDiZhiShi" xml:space="preserve">
+    <value>Endereço do website já restaurado</value>
+  </data>
+  <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
+    <value>A copiar ficheiros e inicializar dados Levará minutos até completar e aparecer a página de login</value>
+  </data>
+  <data name="YiYueDingDeHeZuoMoShiZaiWoMen" xml:space="preserve">
+    <value>Venda no nosso canal de acordo com modelos acordados e partilha de lucros</value>
+  </data>
+  <data name="YongHuShu1" xml:space="preserve">
+    <value>Número de utilizadores</value>
+  </data>
+  <data name="YongHuShu2" xml:space="preserve">
+    <value>Número de utilizadores</value>
+  </data>
+  <data name="YongHuShu3" xml:space="preserve">
+    <value>Número de utilizadores</value>
+  </data>
+  <data name="YuanChengFuWu" xml:space="preserve">
+    <value>Serviço remoto</value>
+  </data>
+  <data name="YuanMa1" xml:space="preserve">
+    <value>Código fonte</value>
+  </data>
+  <data name="YuanMaXiaZai1" xml:space="preserve">
+    <value>Descarregar código fonte</value>
+  </data>
+  <data name="YuanQi" xml:space="preserve">
+    <value>A partir de yuans</value>
+  </data>
+  <data name="YuanRenYue" xml:space="preserve">
+    <value>Yuans por pessoa por mês</value>
+  </data>
+  <data name="YuanYongHu1" xml:space="preserve">
+    <value>Yuans por utilizador</value>
+  </data>
+  <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
+    <value>Organizações que cooperam em formação e partilham lucros de acordo com contrato</value>
+  </data>
+  <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
+    <value>Alugue o software Taiding Tuoding na Taiding Cloud Pagamento por pessoa por mês Preencha o</value>
+  </data>
+  <data name="ZaiXianShiYong" xml:space="preserve">
+    <value>Teste online</value>
+  </data>
+  <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
+    <value>Parceiros distribuidores de valor acrescentado</value>
+  </data>
+  <data name="ZhanDian1" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="ZhanDian2" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="ZhanDianBeiFenWenJianFaSongChe1" xml:space="preserve">
+    <value>Ficheiro de backup do website enviado com sucesso</value>
+  </data>
+  <data name="ZhanDianChuangJianChengGongNiK" xml:space="preserve">
+    <value>Website criado com sucesso Clique no link abaixo para abrir e guardar Primeiro acesso será mais lento devido à inicialização Depois não mais que segundos</value>
+  </data>
+  <data name="ZhanDianChuangJianTongZhi1" xml:space="preserve">
+    <value>Notificação de criação de website</value>
+  </data>
+  <data name="ZhanDianHuiFuChengGongNiKeYiDa" xml:space="preserve">
+    <value>Website restaurado com sucesso Pode abrir e guardar este website</value>
+  </data>
+  <data name="ZhanDianHuiFuTongZhi1" xml:space="preserve">
+    <value>Notificação de restauro de website</value>
+  </data>
+  <data name="ZhanDianMingChen" xml:space="preserve">
+    <value>Nome do website</value>
+  </data>
+  <data name="ZhanDianShanChuChengGong1" xml:space="preserve">
+    <value>Website eliminado com sucesso</value>
+  </data>
+  <data name="ZhanDianShanChuTongZhi1" xml:space="preserve">
+    <value>Notificação de eliminação de website</value>
+  </data>
+  <data name="ZhanDianShengJiChengGong1" xml:space="preserve">
+    <value>Atualização de website bem-sucedida</value>
+  </data>
+  <data name="ZhanDianShengJiShiBaiQingJianC1" xml:space="preserve">
+    <value>Erro na atualização do website Verifique</value>
+  </data>
+  <data name="ZhanDianShengJiTongZhi1" xml:space="preserve">
+    <value>Notificação de atualização de website</value>
+  </data>
+  <data name="ZhanDianXinXi" xml:space="preserve">
+    <value>Informação do website</value>
+  </data>
+  <data name="ZhengWu" xml:space="preserve">
+    <value>Governamental</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLi" xml:space="preserve">
+    <value>Gestão de projetos governamentais</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>Plataforma de gestão de projetos governamentais</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>Plataforma de gestão de projetos governamentais</value>
+  </data>
+  <data name="ZhengZaiBaoCunYingYongZhanDian1" xml:space="preserve">
+    <value>A guardar caminhos absolutos de diretórios virtuais Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiBaoCunZheGeZhanDianDeX1" xml:space="preserve">
+    <value>A guardar caminhos absolutos de diretórios virtuais Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiBeiFenNiDeZhanDianWenJ1" xml:space="preserve">
+    <value>A fazer backup dos ficheiros do seu website Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiChuangJianNiDeYingYong" xml:space="preserve">
+    <value>A criar o seu website Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiChuangJianZhanDianDa" xml:space="preserve">
+    <value>A criar o website Levará alguns minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiFaSongZheGeZhanDianBei1" xml:space="preserve">
+    <value>A enviar ficheiro de backup Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiHuiFuNiDeYingYongZhan" xml:space="preserve">
+    <value>A restaurar o seu website Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiShanChuNiDeYingYongZha1" xml:space="preserve">
+    <value>A eliminar o seu website Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiShanChuZheGeZhanDianDa1" xml:space="preserve">
+    <value>A eliminar este website Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiShengJiNiDeYingYongZha1" xml:space="preserve">
+    <value>A atualizar o seu website Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhengZaiShengJiZheGeZhanDianDa1" xml:space="preserve">
+    <value>A atualizar este website Levará minutos Por favor aguarde</value>
+  </data>
+  <data name="ZhiChi" xml:space="preserve">
+    <value>Suporte</value>
+  </data>
+  <data name="ZhiJieXiaoShouWoMenXieZhuFen" xml:space="preserve">
+    <value>Venda direta Nós ajudamos na partilha de acordo com contrato de agência</value>
+  </data>
+  <data name="ZhongYaoQingZhenShiTianXie" xml:space="preserve">
+    <value>Importante Preencha com informação verdadeira</value>
+  </data>
+  <data name="ZhuCeChengGongHuanYingNiJiaRuS" xml:space="preserve">
+    <value>Registo bem-sucedido Bem-vindo à câmara de comércio Obrigado</value>
+  </data>
+  <data name="ZhuCeShiBaiQingLianXiShangHuiG" xml:space="preserve">
+    <value>Erro no registo Contacte administrador da câmara de comércio WeChat</value>
+  </data>
+  <data name="ZhuXiangMuGuanLiPingTaiZhiNeng" xml:space="preserve">
+    <value>Nota Plataforma de gestão só pode conter letras ou caracteres chineses</value>
+  </data>
+  <data name="ZhuZhiNengYouZiMuZuCheng" xml:space="preserve">
+    <value>Nota Só pode conter letras</value>
+  </data>
+  <data name="ZiBei" xml:space="preserve">
+    <value>Auto-preparado</value>
+  </data>
+  <data name="ZiJian" xml:space="preserve">
+    <value>Auto-criado</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai" xml:space="preserve">
+    <value>Plataforma de gestão integrada</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai1" xml:space="preserve">
+    <value>Plataforma de gestão integrada</value>
+  </data>
+  <data name="ZongHePingTai" xml:space="preserve">
+    <value>Plataforma integrada</value>
+  </data>
+  <data name="ZunJingDe1" xml:space="preserve">
+    <value>Caro</value>
+  </data>
+  <data name="ZuYong1" xml:space="preserve">
+    <value>Alugar</value>
+  </data>
+  <data name="ZuYongBanBen1" xml:space="preserve">
+    <value>Versão de aluguer</value>
+  </data>
+  <data name="ZuYongShenQing" xml:space="preserve">
+    <value>Pedido de aluguer</value>
+  </data>
+  <data name="ZuYongZhanDian1" xml:space="preserve">
+    <value>Alugar website</value>
+  </data>
+  <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
+    <value>Manutenção de website alugado</value>
+  </data>
 </root>

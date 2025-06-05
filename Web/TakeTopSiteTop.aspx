@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteTop.aspx.cs" Inherits="TakeTopSiteTop" %>
+Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteTop.aspx.cs" Inherits="TakeTopSiteTop" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -9,10 +9,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <meta charset="UTF-8" />
-    <meta name="keywords" content="Ã©∂•,Õÿ∂¶£¨Ã©∂•»Ìº˛,Ã©∂•œµÕ≥,Ã©∂•π‹¿Ì»Ìº˛,Ã©∂•œÓƒø,Ã©∂•–≠Õ¨,Ã©∂•OA,Ã©∂•PMP,Ã©∂•ERP,Ã©∂•CMP,Ã©∂•CRM,Õÿ∂¶ERP,Õÿ∂¶EMP,Õÿ∂¶FSP,Õÿ∂¶SIMP,Õÿ∂¶HMP,Õÿ∂¶‘∆∑˛ŒÒ,Ã©∂•‘∆∞Ïπ´" />
-    <meta name="description" content="Ã©∂•°¢Õÿ∂¶°¢œÓƒø»Ìº˛°¢œÓƒøœµÕ≥°¢–≠Õ¨OA°¢ERP,–≠Õ¨∆ΩÃ®°¢ΩÃ”˝π‹¿Ì°¢Ω»⁄∑˛ŒÒ°¢øÕªßπ‹¿Ì°¢øÕªßπÿœµ°¢øÕªß∆ΩÃ®°¢œµÕ≥ µ ©°¢¡‘Õ∑°¢¡‘∆∏°¢‘∆∞Ïπ´°¢Ã©∂•◊Ó–¬≤˙∆∑°¢ºº ı°¢Ω‚æˆ∑Ω∞∏º€÷µº∞≥…π¶∞∏¿˝" />
+    <meta name="keywords" content="Ê≥∞È°∂,ÊãìÈºéÔºåÊ≥∞È°∂ËΩØ‰ª∂,Ê≥∞È°∂Á≥ªÁªü,Ê≥∞È°∂ÁÆ°ÁêÜËΩØ‰ª∂,Ê≥∞È°∂È°πÁõÆ,Ê≥∞È°∂ÂçèÂêå,Ê≥∞È°∂OA,Ê≥∞È°∂PMP,Ê≥∞È°∂ERP,Ê≥∞È°∂CMP,Ê≥∞È°∂CRM,ÊãìÈºéERP,ÊãìÈºéEMP,ÊãìÈºéFSP,ÊãìÈºéSIMP,ÊãìÈºéHMP,ÊãìÈºé‰∫ëÊúçÂä°,Ê≥∞È°∂‰∫ëÂäûÂÖ¨" />
+    <meta name="description" content="Ê≥∞È°∂„ÄÅÊãìÈºé„ÄÅÈ°πÁõÆËΩØ‰ª∂„ÄÅÈ°πÁõÆÁ≥ªÁªü„ÄÅÂçèÂêåOA„ÄÅERP,ÂçèÂêåÂπ≥Âè∞„ÄÅÊïôËÇ≤ÁÆ°ÁêÜ„ÄÅÈáëËûçÊúçÂä°„ÄÅÂÆ¢Êà∑ÁÆ°ÁêÜ„ÄÅÂÆ¢Êà∑ÂÖ≥Á≥ª„ÄÅÂÆ¢Êà∑Âπ≥Âè∞„ÄÅÁ≥ªÁªüÂÆûÊñΩ„ÄÅÁåéÂ§¥„ÄÅÁåéËÅò„ÄÅ‰∫ëÂäûÂÖ¨„ÄÅÊ≥∞È°∂ÊúÄÊñ∞‰∫ßÂìÅ„ÄÅÊäÄÊúØ„ÄÅËß£ÂÜ≥ÊñπÊ°à‰ª∑ÂÄºÂèäÊàêÂäüÊ°à‰æã" />
 
-    <title>∆Û“µπ‹¿Ì»Ìº˛Ã·π©…Ã-Ã©∂•Õÿ∂¶ ◊“≥</title>
+    <title>‰ºÅ‰∏öÁÆ°ÁêÜËΩØ‰ª∂Êèê‰æõÂïÜ-Ê≥∞È°∂ÊãìÈºéÈ¶ñÈ°µ</title>
     <link href="Logo/website/css/shouye.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/public.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/header.css" rel="stylesheet" type="text/css" />
@@ -50,21 +50,11 @@
     <script type="text/javascript" src="./js/public.js"></script>
     <script type="text/javascript" src="./js/wk_inc.js" language="javascript"></script>
     <script type="text/javascript" src="./js/forever.js"></script>
-
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
 
     <script type="text/javascript">
 
-        $(function () {
-
-            aHandlerForSiteTopWindow();
-
-        });
-
-
-        //»°µ√¡¥Ω”¥´»Î≤Œ ˝µƒ÷µ
+        //ÂèñÂæóÈìæÊé•‰º†ÂÖ•ÂèÇÊï∞ÁöÑÂÄº
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
@@ -84,10 +74,12 @@
                     window.sidebar.addPanel(sTitle, sURL, "");
                 }
                 catch (e) {
-                    alert("º”»Î ’≤ÿ ß∞‹£¨«Î π”√Ctrl+DΩ¯––ÃÌº”");
+                    alert("Âä†ÂÖ•Êî∂ËóèÂ§±Ë¥•ÔºåËØ∑‰ΩøÁî®Ctrl+DËøõË°åÊ∑ªÂä†");
                 }
             }
         }
+
+
 
         function OnMouseDownEvent(obj) {
 
@@ -95,7 +87,7 @@
             jQuery(obj).parents().find("span").removeClass("TextColor");
             jQuery(obj).addClass("current");
 
-            //    window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";
+            window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";
         }
 
         function OnMouseDownEventForWholePage(obj) {
@@ -104,8 +96,9 @@
             jQuery(obj).parents().find("span").removeClass("TextColor");
             jQuery(obj).parent().find("span").addClass("TextColor");
 
-            /* window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";*/
+            window.parent.frames['SiteBottomFrame'].location = "TakeTopSiteTop.aspx";
         }
+
     </script>
 
     <script type="text/javascript">
@@ -115,7 +108,7 @@
         }
     </script>
 
-    <!--…œœ¬Œƒ◊÷πˆ∂Ø–ßπ˚-->
+    <!--‰∏ä‰∏ãÊñáÂ≠óÊªöÂä®ÊïàÊûú-->
     <script type="text/javascript">
         function AutoScroll(obj) {
             $(obj).find("ul:first").animate({
@@ -129,13 +122,12 @@
             if (top.location != self.location) {
             }
             else {
-
                 redirectHomePage();
             }
 
             setInterval('AutoScroll("#s1")', 3000);
 
-            //…Ë÷√ƒ£◊È¿∏ƒ£◊È—˘ Ω
+            //ËÆæÁΩÆÊ®°ÁªÑÊ†èÊ®°ÁªÑÊ†∑Âºè
             setModuleCSS();
         });
 
@@ -148,14 +140,17 @@
                 window.location.href = "http://www.ourpm.net/error.html";
 
             }
+            else {
+
+                window.location.href = 'https://www.taketopits.com/TDSite/TakeTopSiteDefaultLeftRight_TakeTopSoft.aspx';
+            }
+
         }
 
-        //…Ë÷√ƒ£◊È¿∏ƒ£◊È—˘ Ω
+        //ËÆæÁΩÆÊ®°ÁªÑÊ†èÊ®°ÁªÑÊ†∑Âºè
         function setModuleCSS() {
 
             var TargetProduct = getUrlParam("TargetProduct");
-
-            var clickNumber = 0;
 
             var list = document.getElementById("navlist");
             var lis = list.getElementsByTagName("a");
@@ -165,16 +160,11 @@
                 if (lis[i].href.indexOf(TargetProduct) > 0) {
 
                     lis[i].className = "current";
-                    lis[i].click();
                     lis[0].className = "";
 
-                    clickNumber = 1;
                 }
             }
 
-            if (clickNumber == 0) {
-                lis[0].click();
-            }
         }
     </script>
 
@@ -204,26 +194,21 @@
                     <div id="lianjie1">
                         <table width="100%">
                             <tr>
-
                                 <td style="width: 35px; text-align: center;">
-
-                                    <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=œﬂœ¬π∫¬Ú&HomeModuleName=œﬂœ¬π∫¬Ú" class="current">
-                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GouMai%>"></asp:Label>
+                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=Á∫ø‰∏ãË¥≠‰π∞&HomeModuleName=Á∫ø‰∏ãË¥≠‰π∞', 'TakeTopSiteLeft.aspx?ModuleName=Á∫ø‰∏ãË¥≠‰π∞&HomeModuleName=Á∫ø‰∏ãË¥≠‰π∞')">
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GouMai%>"></asp:Label>
                                     </a>
-
                                 </td>
                                 <td style="width: 2px;"></td>
                                 <td style="width: 35px; text-align: left;">
-
-                                    <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=‘⁄œﬂ◊‚”√&HomeModuleName=‘⁄œﬂ◊‚”√" class="current">
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZuYong%>"></asp:Label>
+                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=Âú®Á∫øÁßüÁî®&HomeModuleName=Âú®Á∫øÁßüÁî®', 'TakeTopSiteLeft.aspx?ModuleName=Âú®Á∫øÁßüÁî®&HomeModuleName=Âú®Á∫øÁßüÁî®')">
+                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuYong%>"></asp:Label>
                                     </a>
-
                                 </td>
-                                <td style="width: 2px;"></td>
-                                <%--<td style="width: 35px; text-align: left;">
-                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=œ¬‘ÿ&HomeModuleName=œ¬‘ÿ', 'TakeTopSiteLeft.aspx?ModuleName=œ¬‘ÿ&HomeModuleName=œ¬‘ÿ')">
-                                        <asp:Label ID="Label5" runat="server"  Text="<%$ Resources:lang,YuanMa%>"></asp:Label>
+                                <%--<td style="width: 2px;"></td>
+                                <td style="width: 35px; text-align: left;">
+                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=‰∏ãËΩΩ&HomeModuleName=‰∏ãËΩΩ', 'TakeTopSiteLeft.aspx?ModuleName=‰∏ãËΩΩ&HomeModuleName=‰∏ãËΩΩ')">
+                                        <asp:Label ID="Label5" runat="server" Text="Ê∫êÁ†Å"></asp:Label>
                                     </a>
                                 </td>--%>
                             </tr>
@@ -231,22 +216,42 @@
                     </div>
 
                     <div class="f_head_news" id="scrollDiv">
-                        <!--  ’Àı’πø™–ßπ˚start -->
+                        <!-- Êî∂Áº©Â±ïÂºÄÊïàÊûústart -->
                         <asp:Literal ID="LT_Result" runat="server"></asp:Literal>
-                        <!--  ’Àı’πø™–ßπ˚end -->
+                        <!-- Êî∂Áº©Â±ïÂºÄÊïàÊûúend -->
                     </div>
 
                     <div id="lianjie2">
                         <table width="100%">
                             <tr>
-
+                                <td></td>
                                 <td>
-                                    <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=«˛µ¿∫œ◊˜&HomeModuleName=«˛µ¿∫œ◊˜" class="current">
-                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,QuDaoHeZuo%>"></asp:Label>
-                                    </a>
+                                    <a onmousedown="OnMouseDownEventForWholePage(this)" href="javascript:adClick('TakeTopSiteContainer.aspx?ModuleName=Ê∏†ÈÅìÂêà‰Ωú&HomeModuleName=Ê∏†ÈÅìÂêà‰Ωú', 'TakeTopSiteLeft.aspx?ModuleName=Ê∏†ÈÅìÂêà‰Ωú&HomeModuleName=Ê∏†ÈÅìÂêà‰Ωú')">
+                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QuDaoHeZuo%>"></asp:Label></a>
                                 </td>
 
                                 <td>&nbsp;</td>
+                                <%--<td>
+
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=623077337&site=qq&menu=yes">
+                                        <img border="0" src="Images/qq.png" height="20" width="20" alt="ÁÇπÂáªËøôÈáåÂíåÊàë‰∫§Ë∞à" title="ÁÇπÂáªËøôÈáåÂíåÊàë‰∫§Ë∞à" />
+                                    </a>
+                                </td>--%>
+
+                                <td></td>
+
+                                <%--  <td>
+                                    <a href="http://weibo.com/TakeTopSoftware" target="_blank">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <img src="Images/weibo.png" height="20" width="20" />
+                                                </td>
+                                                <td>ÂÆòÊñπÂæÆÂçö</td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </td>--%>
 
                                 <td>
                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>
@@ -274,7 +279,7 @@
 
                         <div class="navcon" style="display: none;"></div>
                     </div>
-                    <div class="jiantou">£º&nbsp;&nbsp;£æ</div>
+                    <div class="jiantou">Ôºú&nbsp;&nbsp;Ôºû</div>
                 </div>
             </div>
         </div>
