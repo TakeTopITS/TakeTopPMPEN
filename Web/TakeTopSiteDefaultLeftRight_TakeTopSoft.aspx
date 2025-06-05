@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÏîÄ¿¹ÜÀíÈí¼şÓë×ÉÑ¯·şÎñÌá¹©ÉÌ-Ì©¶¥ÍØ¶¦</title>
+    <title>é¡¹ç›®ç®¡ç†è½¯ä»¶ä¸å’¨è¯¢æœåŠ¡æä¾›å•†-æ³°é¡¶æ‹“é¼</title>
 
-    <script src="js/jquery.min.js" type="text/javascript"></script>
+     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="js/allAHandler.js" type="text/javascript"></script>
+       <script src="js/allAHandler.js" type="text/javascript"></script>
 
     <script>
         var _hmt = _hmt || [];
@@ -19,7 +19,8 @@
             s.parentNode.insertBefore(hm, s);
         })();
 
-        //È¡µÃÁ´½Ó´«Èë²ÎÊıµÄÖµ
+
+        //å–å¾—é“¾æ¥ä¼ å…¥å‚æ•°çš„å€¼
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
@@ -38,38 +39,49 @@
                 window.location.href = "http://www.ourpm.net/error.html";
 
             }
+            //else {
+
+            //    window.location.href = 'https://www.taketopits.com';
+            //}
+
         }
 
 
-        //ÉèÖÃÖ÷Ò³µÄSRC
+        //è®¾ç½®ä¸»é¡µçš„SRC
         function setHomePageSrc() {
 
             var pageUrl = window.location.href;
 
-            //²»ÊÇÔÚÍøÕ¾Ó¦ÓÃÆô¶¯µÄÍøÕ¾£¬Ìø×ªµ½ÍøÕ¾Ò³Ãæ
+            //ä¸æ˜¯åœ¨ç½‘ç«™åº”ç”¨å¯åŠ¨çš„ç½‘ç«™ï¼Œè·³è½¬åˆ°ç½‘ç«™é¡µé¢
             if (pageUrl.indexOf("TDSite") < 0 && (pageUrl.toLowerCase().indexOf("taketopits.com") >= 0 || pageUrl.toLowerCase().indexOf("taketopsoft.com") >= 0)) {
 
                 redirectHomePage();
             }
 
-            this.document.getElementById("SiteTopFrameID").src = "TakeTopSiteTop.aspx";
+            var TargetProduct = getUrlParam("TargetProduct");
+            if (TargetProduct) {
+                this.document.getElementById("TakeTopSiteTop").src = "TakeTopSiteTop.aspx?TargetProduct=" + TargetProduct;
+            }
+            else {
+                this.document.getElementById("TakeTopSiteTop").src = "TakeTopSiteTop.aspx";
+            }
         }
 
     </script>
 
 </head>
 <frameset rows="118,*" onload="setHomePageSrc()">
-    <frame id="SiteTopFrameID" name="SiteTopFrame" frameborder="no" scrolling="no" marginwidth="0" marginheight="0" marginbottom="0" />
+    <frame id="TakeTopSiteTop"  id="SiteTopFrameID" name="SiteTopFrame" frameborder="no" scrolling="no" marginwidth="0" marginheight="0" marginbottom="0" />
     <frameset id="TakeTopSiteMDI" name="TakeTopSiteMDI" cols="0,*" rows="*" frameborder="no" border="0" framespacing="0">
         <frame id="SiteLeftFrameID" name="leftFrame" src="TakeTopSiteLeft.aspx" width="100%" height="100%" scrolling="yes" />
         <div style="overflow: scroll !important; -webkit-overflow-scrolling: touch !important;">
-            <frame id="SiteRightContainerFrameID" name="SiteRightContainerFrame" width="100%" height="100%" scrolling="yes" />
+            <frame id="SiteRightContainerFrameID" name="SiteRightContainerFrame"  width="100%" height="100%" scrolling="yes" />
         </div>
     </frameset>
 </frameset>
 
 <noframes>
-    <body>ÄãµÄä¯ÀÀÆ÷²»Ö§³Ö¿ò¼Ü£¡</body>
+    <body>ä½ çš„æµè§ˆå™¨ä¸æ”¯æŒæ¡†æ¶ï¼</body>
 </noframes>
 <script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

@@ -140,15 +140,12 @@
                 window.location.href = "http://www.ourpm.net/error.html";
 
             }
-            //else {
-
-            //    window.location.href = 'https://www.taketopits.com/TDSite/TakeTopSiteDefaultLeftRight_TakeTopSoft.aspx';
-            //}
-
         }
 
         //设置模组栏模组样式
         function setModuleCSS() {
+
+            var clickNumber = 0;
 
             var TargetProduct = getUrlParam("TargetProduct");
 
@@ -162,9 +159,16 @@
                     lis[i].className = "current";
                     lis[0].className = "";
 
+                    lis[i].click();
+
+                    clickNumber = 1;
                 }
             }
 
+            if (clickNumber == 0) {
+
+                lis[0].click();
+            }
         }
     </script>
 
