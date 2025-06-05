@@ -182,8 +182,9 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
                 {
                     ShareClass.RunSqlCommand(strHQL);
                 }
-                catch
+                catch (Exception err)
                 {
+                    LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
                 }
 
                 //推送信息给客服主管

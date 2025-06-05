@@ -127,8 +127,9 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
 
                 //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('---提交成功')", true);
             }
-            catch
+            catch (Exception err)
             {
+                LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
 
                 LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha");
 

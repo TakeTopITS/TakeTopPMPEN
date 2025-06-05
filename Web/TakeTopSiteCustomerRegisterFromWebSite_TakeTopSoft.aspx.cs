@@ -98,8 +98,9 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
                 string strScript = "openMDIFrom('" + strTargetPage + "');";
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", strScript, true);
             }
-            catch
+            catch (Exception err)
             {
+                LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
                 LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha");
             }
         }

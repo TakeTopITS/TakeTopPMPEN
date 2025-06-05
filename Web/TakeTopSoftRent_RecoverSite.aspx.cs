@@ -157,8 +157,9 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 {
                     ShareClass.RunSqlCommand(strHQL);
                 }
-                catch
+                catch (Exception err)
                 {
+                    LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
                 }
 
 

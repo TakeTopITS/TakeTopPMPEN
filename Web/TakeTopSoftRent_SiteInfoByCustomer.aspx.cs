@@ -111,7 +111,8 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        string strPopURL = LanguageHandle.GetWord("JianZhanXinXi");
+        string strPopURL = "popShowByURLForFixedSize('TakeTopSoftRent_TakeTopSoftCloudForInner.aspx', '" + LanguageHandle.GetWord("JianZhanXinXi") + "', 590, 650)";
+
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", strPopURL, true);
     }
 

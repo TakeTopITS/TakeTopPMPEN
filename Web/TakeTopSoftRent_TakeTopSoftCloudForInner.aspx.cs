@@ -231,6 +231,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloudForInner : System.Web.UI.Pa
             }
             catch (Exception err)
             {
+                LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
                 LB_Message.Text = err.Message.ToString();
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha"), true);
             }

@@ -113,10 +113,9 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
 
                 LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJCGTDKFHZYTZNBNJJWTXX") + "";
             }
-            catch
+            catch (Exception err)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJSBJC")+"')", true);
-
+                LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
                 LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC") + "";
             }
         }
