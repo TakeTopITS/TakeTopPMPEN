@@ -114,7 +114,9 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             //string strScript = "<script>openMDIFrom('" + strSiteAppURL + "');</script>";
             //ClientScript.RegisterStartupScript(GetType(), "", strScript);
 
-            LB_Message.Text = LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK") + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoMiMa");
+
+            LB_Message.Text = "\"" + LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK") + "<br/><br/> <a href='\"" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>" + Resources.lang.DengLuZhangHaoMiMa;
+
             LB_CloseMessage.Visible = false;
         }
         catch (Exception err)
