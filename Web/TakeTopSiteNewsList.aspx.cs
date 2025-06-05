@@ -90,11 +90,9 @@ public partial class TakeTopSiteNewsList : System.Web.UI.Page
     protected void LoadHeadLine()
     {
         string strHQL;
-    
-        strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime From T_HeadLine ";
-        strHQL += LanguageHandle.GetWord("WaiBuFaBu");
-        strHQL += " and LangCode = " + "'" + strLangCode + "'";
-        strHQL += " Order By ID DESC";
+
+        strHQL = string.Format(@"Select * from T_HeadLine where LangCode = '{0}' and Type = 'External' and Status = 'Publish' and IsHead = 'YES' 
+                          Order by ID DESC", strLangCode);
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
         DataGrid1.DataSource = ds;

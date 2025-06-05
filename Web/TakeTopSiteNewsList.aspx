@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsList.aspx.cs" Inherits="TakeTopSiteNewsList" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsList.aspx.cs" Inherits="TakeTopSiteNewsList" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -47,13 +47,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* È·±£ËüÔÚÄÚÈÝºóÃæ */
+            z-index: -1; /* È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýºï¿½ï¿½ï¿½ */
         }
 
             .tupian img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover; /* ±£³ÖÍ¼Æ¬±ÈÀý²¢¸²¸ÇÕû¸öÇøÓò */
+                object-fit: cover; /* ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
             }
     </style>
 
