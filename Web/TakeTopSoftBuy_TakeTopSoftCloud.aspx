@@ -56,17 +56,13 @@
                     <p>
                         &nbsp;
                     </p>
-                    <div class="title">
-                        企业级8款可扩展软件
-                    </div>
-                    <div class="title1">
-                        积木化结构，可按需选配，自由组合
-                    </div>
+                    <div class="title"><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,QiYeJiKuanKeKuoZhanRuanJian%>"></asp:Label></div>
+                    <div class="title1"><asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JiMuHuaJieGouKeAnXuXuanPeiZi%>"></asp:Label></div>
                     <div class="main">
                         <p style="text-align: center; padding-bottom: 30px; font-size: 28px;">
                             <br />
                             <span style="text-align: center; font-size: small;"><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html"
-                                target="_blank">功能模块与价格</a> </span>
+                                target="_blank"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,GongNengMoKuaiYuJiaGe%>"></asp:Label></a> </span>
                         </p>
                     </div>
                     <div class="box">
@@ -78,17 +74,15 @@
                                             <img src="Logo/website/Images/201312231521547781.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">项目宝</a></h3>
+                                        <a href="#"><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiangMuBao%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        3000元，50用户
-                                    </h3>
+                                        <br /><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YuanYongHu%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">提供项目计划、进度、任务、费用、文档管理功能，简单易用，10分钟学会</a>
+                                            <a href="#"><asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,TiGongXiangMuJiHuaJinDuRenWu%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -98,17 +92,15 @@
                                             <img src="Logo/website/Images/201411328407512.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">系统集成项目管理平台</a></h3>
+                                        <a href="#"><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,XiTongJiChengXiangMuGuanLiPing%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        10000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">系统集成项目管理平台</a>
+                                            <a href="#"><asp:Label ID="Label13341233128" runat="server" Text="<%$ Resources:lang,XiTongJiChengXiangMuGuanLiPing%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -118,17 +110,15 @@
                                             <img src="Logo/website/Images/2013122395112630.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">研发项目管理平台</a></h3>
+                                        <a href="#"><asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YanFaXiangMuGuanLiPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        10000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label1914124" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">产品与技术研发管理</a>
+                                            <a href="#"><asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ChanPinYuJiShuYanFaGuanLi%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -138,17 +128,15 @@
                                             <img src="Logo/website/Images/201312181423536202.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">工程项目管理平台</a></h3>
+                                        <a href="#"><asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,GongChengXiangMuGuanLiPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        10000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label1346546549" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">工程设计&施工项目管理</a>
+                                            <a href="#"><asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,GongChengSheJiShiGongXiangMu%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -159,17 +147,15 @@
                                     </div>
 
                                     <h3>
-                                        <a href="#">软件实施项目管理平台</a></h3>
+                                        <a href="#"><asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,RuanJianShiShiXiangMuGuanLi%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        10000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label6767519" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">软件系统实施项目管理</a>
+                                            <a href="#"><asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,RuanJianXiTongShiShiXiangMu%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -179,17 +165,15 @@
                                             <img src="Logo/website/Images/201312231521462477.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">项目型ERP平台</a></h3>
+                                        <a href="#"><asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,XiangMuXingPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        10000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label67876819" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">项目型制造管理</a>
+                                            <a href="#"><asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,XiangMuXingZhiZaoGuanLi%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -200,17 +184,15 @@
                                     </div>
 
                                     <h3>
-                                        <a href="#">政务项目管理平台</a></h3>
+                                        <a href="#"><asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ZhengWuXiangMuGuanLiPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        10000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label19976976" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">政务项目管理</a>
+                                            <a href="#"><asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,ZhengWuXiangMuGuanLi%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -222,17 +204,15 @@
 
 
                                     <h3>
-                                        <a href="#">项目管理咨询</a></h3>
+                                        <a href="#"><asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,XiangMuGuanLiZiXun%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br />
-                                        30000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">项目管理咨询、培训、认证</a>
+                                            <a href="#"><asp:Label ID="Label3789796" runat="server" Text="<%$ Resources:lang,XiangMuGuanLiZiXun%>"></asp:Label><asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,PeiXunRenZheng%>"></asp:Label></a>
                                         </p>
                                     </div>
                                 </li>
@@ -242,15 +222,13 @@
                                     <h3><a href="#">CRM、OA</a></h3>
 
                                     <h3>
-                                        <br />
-                                        15000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
 
                                     <p>&nbsp;</p>
 
                                     <div class="pointer">
-                                        <p class="pointer_one"><a href="#">CRM:客户&middot;售前售后服务&middot;进销存等</a></p>
-                                        <p class="pointer_one"><a href="#">OA:流程&middot;资产&middot;知识&middot;车辆等</a></p>
+                                        <p class="pointer_one"><a href="#"><asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,KeHuShouQianShouHouFuWuJinXiao%>"></asp:Label></a></p>
+                                        <p class="pointer_one"><a href="#"><asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,LiuChengZiChanZhiShiCheLiang%>"></asp:Label></a></p>
                                     </div>
                                 </li>
                                
@@ -258,17 +236,15 @@
                                  <li class="bigbox">
                                     <div class="img"><a href="#"><img src="Logo/website/Images/20131218142463453.png" /></a></div>
 
-                                    <h3><a href="#">综合管理平台</a></h3>
+                                    <h3><a href="#"><asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,ZongHeGuanLiPingTai%>"></asp:Label></a></h3>
 
                                     <h3>
-                                        <br />
-                                        100000元起
-                                    </h3>
+                                        <br /><asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
 
                                     <p>&nbsp;</p>
 
                                     <div class="pointer">
-                                        <p class="pointer_one"><a href="#">常规行业&middot;工程行业&middot;石化行业</a></p>
+                                        <p class="pointer_one"><a href="#"><asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,ChangGuiXingYeGongChengXingYe%>"></asp:Label></a></p>
                                     </div>
                                 </li>--%>
                             </ul>
@@ -283,8 +259,7 @@
                                                 <tr>
                                                     <td width="50%">
                                                         <p class="zuyong">
-                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<strong>购买泰顶拓鼎管理软件</strong>（使用时间不限，软件安装在用户自备的服务器上）请在下面填写购买申请，我们将会提供现场实施指导和定制开发服务！
-                                                        </p>
+                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<strong><asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,GouMaiTaiDingTuoDingGuanLiRuan%>"></asp:Label></strong><asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,ShiYongShiJianBuXianRuanJianAn%>"></asp:Label></p>
                                                         <div id="id5">
                                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                                 <tr>
@@ -373,12 +348,11 @@
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000" Style="width: 150px; height: 30px;"></asp:TextBox>
-                                                                        <strong>人</strong> <font color="#FF0000">*</font>
+                                                                        <strong><asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label></strong> <font color="#FF0000">*</font>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td  class="formItemBgStyleForAlignLeft">验证码
-                                                                        <asp:Label ID="Label10" runat="server"  Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
+                                                                    <td  class="formItemBgStyleForAlignLeft"><asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label><asp:Label ID="Label10" runat="server"  Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
                                                                     </td>
                                                                     <td  class="formItemBgStyleForAlignLeft">
                                                                         <table>
@@ -403,19 +377,17 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyleForAlignLeft">联系地址
-                                                                    </td>
+                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_Address" runat="server" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font>
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyleForAlignLeft">存储容量
-                                                                    </td>
+                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,CunChuRongLiang%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_ServerType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ServerType_SelectedIndexChanged">
-                                                                            <asp:ListItem>购买</asp:ListItem>
+                                                                            <asp:ListItem Value="Buy" Text="<%$ Resources:lang,GouMai%>"></asp:ListItem>
                                                                         </asp:DropDownList>
                                                                         <asp:TextBox ID="TB_StorageCapacity" runat="server" Style="width: 50px;" Text="10"></asp:TextBox><strong
                                                                             style="font-size: medium;">GB</strong> <font color="#FF0000">*</font>

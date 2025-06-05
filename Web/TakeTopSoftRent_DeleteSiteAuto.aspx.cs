@@ -31,7 +31,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = "正在删除你的应用站点，大概需要5分钟，请耐心等候......";
+        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiShanChuNiDeYingYongZha").ToString().Trim();
 
         if (Page.IsPostBack == false)
         {
@@ -41,16 +41,16 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
                 {
                     //删除站点
                     DeleteSite();
-                    LB_Message.Text = "站点删除成功！";
+                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianShanChuChengGong").ToString().Trim();
                 }
                 catch (Exception err)
                 {
-                    LB_Message.Text = "删除失败，请检查！";
+                    LB_Message.Text = LanguageHandle.GetWord("ShanChuShiBaiQingJianCha").ToString().Trim();
                 }
             }
             else
             {
-                LB_Message.Text = "提示，此站点不存在，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim();
             }
 
             IMB_Process.Visible = false;

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsList.aspx.cs" Inherits="TakeTopSiteNewsList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsList.aspx.cs" Inherits="TakeTopSiteNewsList" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -47,13 +47,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* ç¡®ä¿å®ƒåœ¨å†…å®¹åé¢ */
+            z-index: -1; /* È·±£ËüÔÚÄÚÈİºóÃæ */
         }
 
             .tupian img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover; /* ä¿æŒå›¾ç‰‡æ¯”ä¾‹å¹¶è¦†ç›–æ•´ä¸ªåŒºåŸŸ */
+                object-fit: cover; /* ±£³ÖÍ¼Æ¬±ÈÀı²¢¸²¸ÇÕû¸öÇøÓò */
             }
     </style>
 
@@ -99,7 +99,7 @@
                         <tr>
                             <td width="100px" align="left">
                                 <a href="javascript:ChangeMenu(1)">
-                                    <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" runat="server" /></a>
+                                    <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="?????????" runat="server" /></a>
 
                             </td>
                         </tr>
@@ -124,7 +124,7 @@
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="80%" />
                                         </asp:TemplateColumn>
-                                        <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½">
+                                        <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="???????">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
                                     </Columns>

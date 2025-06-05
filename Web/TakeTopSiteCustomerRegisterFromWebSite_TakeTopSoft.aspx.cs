@@ -50,7 +50,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            LB_Message.Text = "提交失败，带*号项不能为空，请检查！";
+            LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiDaiHaoXiangBuNengW").ToString().Trim();
         }
         else
         {
@@ -58,7 +58,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             {
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = "提交失败，验证码错误，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiYanZhengMaCuoWuQin").ToString().Trim();
                 return;
             }
 
@@ -66,7 +66,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = "提示：公司: " + strCompany + " 的员工: " + strContactPerson + "( " + strPhoneNumber + " )" + " 提交了：" + strType + " 的试用信息，请关注！！！";
+                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi").ToString().Trim() + strCompany + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe").ToString().Trim() + strType + LanguageHandle.GetWord("DeShiYongXinXiQingGuanZhu").ToString().Trim();
                 Action action = new Action(delegate ()
                 {
                     try
@@ -87,7 +87,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+'1 day'::interval," + "'新建'" + ",'','','',''," + "'" + strWebSite + "'" + ")";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+'1 day'::interval," + LanguageHandle.GetWord("XinJian").ToString().Trim() + ",'','','',''," + "'" + strWebSite + "'" + ")";
 
             try
             {
@@ -100,7 +100,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             }
             catch
             {
-                LB_Message.Text = "提交失败，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha").ToString().Trim();
             }
         }
     }

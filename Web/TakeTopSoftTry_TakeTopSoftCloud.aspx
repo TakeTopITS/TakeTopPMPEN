@@ -34,22 +34,21 @@
 <body>
     <form id="form1" runat="server">
         <div class="fw_list">
-            <p class="fw_zlxz">
-                我们拓鼎所有管理软件平台产品【企业版】提供免费在线试用，试用中如遇到问题，请即时联系客服， <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
-                    <img align="absmiddle" src="images/qq.png" />客服QQ</a>。
+            <p class="fw_zlxz"><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,WoMenTuoDingSuoYouGuanLiRuan%>"></asp:Label><a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
+                    <img align="absmiddle" src="images/qq.png" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>��
             </p>
 
             <div class="wenzi">
                 <ul class="clearfix">
 
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank">在线试用</a>系统集成项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=RDPMP" target="_blank">在线试用</a>研发项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank">在线试用</a>软件实施项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ENPMP" target="_blank">在线试用</a>工程项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopMIS/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ERP" target="_blank">在线试用</a>项目型ERP平台</li>
-                    <%--  <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CRM" target="_blank">在线试用</a>CRM平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CMP" target="_blank">在线试用</a>协同OA平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ECMP" target="_blank">在线试用</a>企业综合管理平台</li>--%>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiTongJiChengXiangMuGuanLiPing%>"></asp:Label></li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=RDPMP" target="_blank"><asp:Label ID="Label3243" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YanFaXiangMuGuanLiPingTai%>"></asp:Label></li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank"><asp:Label ID="Label243" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,RuanJianShiShiXiangMuGuanLi%>"></asp:Label></li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ENPMP" target="_blank"><asp:Label ID="Label363456" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,GongChengXiangMuGuanLiPingTai%>"></asp:Label></li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopMIS/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ERP" target="_blank"><asp:Label ID="Label3433" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,XiangMuXingPingTai%>"></asp:Label></li>
+                    <%--  <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CRM" target="_blank"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,PingTai%>"></asp:Label></li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CMP" target="_blank"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,XieTongPingTai%>"></asp:Label></li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/akeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ECMP" target="_blank"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZaiXianShiYong%>"></asp:Label></a><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,QiYeZongHeGuanLiPingTai%>"></asp:Label></li>--%>
                 </ul>
             </div>
         </div>

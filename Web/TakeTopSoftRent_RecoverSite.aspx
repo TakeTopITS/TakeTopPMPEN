@@ -67,9 +67,7 @@
                                         <div id="DIV_Message"  style="text-align:center;padding-top:100px;display:none;">
                                              <table>
                                                  <tr>
-                                                    <td style="color:red;">正在恢复你的应用站点，大概需要5分钟，请耐心等候......
-
-                                                         <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+                                                    <td style="color:red;"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhengZaiHuiFuNiDeYingYongZhan%>"></asp:Label><asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                                                     </td>
                                                  </tr>
                                                    <tr>
@@ -78,32 +76,30 @@
                                                      </td>
                                                  </tr>
                                                  <tr>
-                                                     <td style="text-align:center;font-size:small;">（请不要关闭此页面）</td>
+                                                     <td style="text-align:center;font-size:small;"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QingBuYaoGuanBiCiYeMian%>"></asp:Label></td>
                                                  </tr>
                                              </table>
                                         </div> 
                                             
                                         <div id="DIV_Top">
-                                            <h3>3&nbsp;站点信息</h3>
+                                            <h3><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhanDianXinXi%>"></asp:Label></h3>
                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                 <tr>
-                                                    <td class="formItemBgStyleForAlignLeft"  >
-                                                        平台名称  &nbsp;<font color="#FF0000">*</font>
+                                                    <td class="formItemBgStyleForAlignLeft"  ><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,PingTaiMingChen%>"></asp:Label><font color="#FF0000">*</font>
                                                         <br />
                                                         <asp:TextBox ID="TB_SiteAppSystemName" runat="server" ForeColor="#000000"  Style="width: 350px; height: 30px;" ></asp:TextBox>
                                                       
                                                         <br />
-                                                        <span style="font-size :xx-small;">注：***项目管理平台，只能由字母或汉字组成！</span> 
+                                                        <span style="font-size :xx-small;"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuXiangMuGuanLiPingTaiZhiNeng%>"></asp:Label></span> 
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                       <td class="formItemBgStyleForAlignLeft"  >
-                                                           站点名称&nbsp;<font color="#FF0000">*</font>
+                                                       <td class="formItemBgStyleForAlignLeft"  ><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhanDianMingChen%>"></asp:Label><font color="#FF0000">*</font>
                                                            <br />
                                                         <asp:TextBox ID="TB_SiteAppName" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;" ></asp:TextBox>
                                                         
                                                         <br />
-                                                        <span style="font-size :xx-small;">注：***PMP ,只能由字母组成！</span> 
+                                                        <span style="font-size :xx-small;"><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhuZhiNengYouZiMuZuCheng%>"></asp:Label></span> 
                                                     </td>
                                                 </tr>
                                                 <tr >
@@ -119,9 +115,9 @@
 
                                              <br/>
 
-                                            <li>因为要复制站点文件和初始化数据，预计要10分钟才能完成并出现登录界面，请耐心等候！</li>
-                                            <li>如有问题，请直接联系客服：<br />
-                                                <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a href="tel:02151085119" class="call">021-51085119</a><br />
+                                            <li><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YinWeiYaoFuZhiZhanDianWenJian%>"></asp:Label></li>
+                                            <li><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,RuYouWenTiQingZhiJieLianXiKeFu%>"></asp:Label><br />
+                                                <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" /><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label><a href="tel:02151085119" class="call">021-51085119</a><br />
                                             </li>
 
                                         </div>

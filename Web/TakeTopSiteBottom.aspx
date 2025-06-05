@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteBottom.aspx.cs" Inherits="TakeTopSiteBottom" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteBottom.aspx.cs" Inherits="TakeTopSiteBottom" %>
 
 <!DOCTYPE html>
 
@@ -7,10 +7,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <meta charset="UTF-8" />
-    <meta name="keywords" content="æ³°é¡¶,æ‹“é¼,é¡¹ç›®ç®¡ç†,é¡¹ç›®ç®¡ç†è½¯ä»¶,é¡¹ç›®ç®¡ç†ç³»ç»Ÿ,é¡¹ç›®ç®¡ç†å¹³å°,é¡¹ç›®å‹ERP" />
-    <meta name="description" content="æ³°é¡¶ã€æ‹“é¼ã€é¡¹ç›®ç®¡ç†ã€é¡¹ç›®è½¯ä»¶ã€é¡¹ç›®ç³»ç»Ÿã€ERPã€CRMã€OAã€ååŒå¹³å°ã€äº‘åŠå…¬ã€æ³°é¡¶æœ€æ–°äº§å“ã€æŠ€æœ¯ã€è§£å†³æ–¹æ¡ˆä»·å€¼åŠæˆåŠŸæ¡ˆä¾‹" />
+    <meta name="keywords" content="Ì©¶¥,ÍØ¶¦,ÏîÄ¿¹ÜÀí,ÏîÄ¿¹ÜÀíÈí¼ş,ÏîÄ¿¹ÜÀíÏµÍ³,ÏîÄ¿¹ÜÀíÆ½Ì¨,ÏîÄ¿ĞÍERP" />
+    <meta name="description" content="Ì©¶¥¡¢ÍØ¶¦¡¢ÏîÄ¿¹ÜÀí¡¢ÏîÄ¿Èí¼ş¡¢ÏîÄ¿ÏµÍ³¡¢ERP¡¢CRM¡¢OA¡¢Ğ­Í¬Æ½Ì¨¡¢ÔÆ°ì¹«¡¢Ì©¶¥×îĞÂ²úÆ·¡¢¼¼Êõ¡¢½â¾ö·½°¸¼ÛÖµ¼°³É¹¦°¸Àı" />
 
-    <title>é¡¹ç›®å‹ä¼ä¸šç®¡ç†è½¯ä»¶æä¾›å•†-æ³°é¡¶æ‹“é¼é¦–é¡µ</title>
+    <title>ÏîÄ¿ĞÍÆóÒµ¹ÜÀíÈí¼şÌá¹©ÉÌ-Ì©¶¥ÍØ¶¦Ê×Ò³</title>
     <link href="Logo/website/css/shouye.css" rel="stylesheet" type="text/css" />
     <link href="./css/public.css" rel="stylesheet" type="text/css" />
     <link href="./css/header.css" rel="stylesheet" type="text/css" />
@@ -53,7 +53,7 @@
                     window.sidebar.addPanel(sTitle, sURL, "");
                 }
                 catch (e) {
-                    alert("åŠ å…¥æ”¶è—å¤±è´¥ï¼Œè¯·ä½¿ç”¨Ctrl+Dè¿›è¡Œæ·»åŠ ");
+                    alert("¼ÓÈëÊÕ²ØÊ§°Ü£¬ÇëÊ¹ÓÃCtrl+D½øĞĞÌí¼Ó");
                 }
             }
         }
@@ -88,20 +88,20 @@
                 <p>
                     <span>
 
-                        <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=æ„è§åé¦ˆ&amp;HomeModuleName=æ„è§åé¦ˆ" class="current">
+                        <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=Òâ¼û·´À¡&amp;HomeModuleName=Òâ¼û·´À¡" class="current">
                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YiJianFanKui%>"></asp:Label>
                         </a>
                       
                     </span>|<span> 
-                        <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=æ³•å¾‹å£°æ˜&amp;HomeModuleName=æ³•å¾‹å£°æ˜" class="current">
+                        <a onmousedown="OnMouseDownEvent(this)" href="TakeTopSiteContainer.aspx?ModuleName=·¨ÂÉÉùÃ÷&amp;HomeModuleName=·¨ÂÉÉùÃ÷" class="current">
                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FaLuShengMing%>"></asp:Label>
                     </a>
-                    </span>|<span> <a onmousedown="OnMouseDownEvent(this)"  href="TakeTopSiteContainer.aspx?ModuleName=å…³äºæˆ‘ä»¬&amp;HomeModuleName=å…³äºæˆ‘ä»¬" class="current">
+                    </span>|<span> <a onmousedown="OnMouseDownEvent(this)"  href="TakeTopSiteContainer.aspx?ModuleName=¹ØÓÚÎÒÃÇ&amp;HomeModuleName=¹ØÓÚÎÒÃÇ" class="current">
                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuanYuWoMen%>"></asp:Label>
                     </a>
                     </span>
                 </p>
-                <p>CopyRightï¼šæ‹“é¼ä¿¡æ¯(TakeTopITS Group) 2006-2026 TakeTop ITS. <a href="http://www.miitbeian.gov.cn" target="_blank">æ²ªICPå¤‡18022438å·-1 </a>taketopits.com</p>
+                <p><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TuoDingXinXi%>"></asp:Label><a href="http://www.miitbeian.gov.cn" target="_blank"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HuBeiHao%>"></asp:Label></a>taketopits.com</p>
             </div>
 
         </div>

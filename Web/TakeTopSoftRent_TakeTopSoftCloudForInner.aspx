@@ -51,10 +51,9 @@
             text-decoration: none;
         }
 
-        #CB_IsOEM
-        {
-            height:15px;
-            width:15px;
+        #CB_IsOEM {
+            height: 15px;
+            width: 15px;
         }
     </style>
 
@@ -66,137 +65,111 @@
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <center>
-                 
-                    <div style="top: 29px; text-align:left; width: 100%;">
+
+                    <div style="top: 29px; text-align: left; width: 100%;">
                         <div id="id5">
-                            <h3>1&nbsp;&nbsp;建站信息</h3>
+                            <h3><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,JianZhanXinXi%>"></asp:Label></h3>
                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                 <tr>
-                                    <td class="formItemBgStyleForAlignLeft" width="100px">
-                                        产品</td>
+                                    <td class="formItemBgStyleForAlignLeft" width="100px"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label></td>
                                     <td class="formItemBgStyleForAlignLeft">
-                                        <asp:DropDownList ID="DL_Type" runat="server" Style="height: 50px;">
-                                            <asp:ListItem>项目宝</asp:ListItem>
-                                            <asp:ListItem>系统集成项目管理平台</asp:ListItem>
-                                            <asp:ListItem>研发项目管理平台</asp:ListItem>
-                                            <asp:ListItem>工程项目管理平台</asp:ListItem>
-                                            <asp:ListItem>政务项目管理平台</asp:ListItem>
-                                            <asp:ListItem>软件实施项目管理平台</asp:ListItem>
-                                            <asp:ListItem>项目型ERP平台</asp:ListItem>
-                                            <asp:ListItem>综合平台</asp:ListItem>
-                                            <asp:ListItem>------</asp:ListItem>
-                                            <asp:ListItem>项目管理平台</asp:ListItem>
-                                            <asp:ListItem>协同OA平台</asp:ListItem>
-                                            <asp:ListItem>客户关系管理平台</asp:ListItem>
-                                            <asp:ListItem>------</asp:ListItem>
-                                            <asp:ListItem>演示测试平台</asp:ListItem>
+                                        <asp:DropDownList ID="DL_Type" DataValueField="Type" DataTextField="Type" runat="server" Style="height: 50px;">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
-                                    <tr>
+                                <tr>
+                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BanBen%>"></asp:Label></td>
                                     <td class="formItemBgStyleForAlignLeft">
-                                        版本</td>
-                                    <td class="formItemBgStyleForAlignLeft">
-                                            <table>
+                                        <table>
                                             <tr>
                                                 <td>
-                                                    <asp:DropDownList ID="DL_Version" runat="server" Style="height: 50px;">
-                                                        <asp:ListItem>标准版</asp:ListItem>
-                                                        <asp:ListItem>企业版</asp:ListItem>
-                                                        <asp:ListItem>集团版</asp:ListItem>
+                                                    <asp:DropDownList ID="DL_Version" DataValueField="Type" DataTextField="Type" runat="server" Style="height: 50px;">
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>&nbsp;</td>
-                                                <td style ="vertical-align:middle;">
-                                                    <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target ="_blank">模块与价格</a>
+                                                <td style="vertical-align: middle;">
+                                                    <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MoKuaiYuJiaGe%>"></asp:Label></a>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignLeft" >
-                                        单位</td>
-                                    <td class="formItemBgStyleForAlignLeft" >
-                                        <asp:TextBox ID="TB_Company" runat="server" ForeColor="#000000"  Style="width: 350px; height: 30px;" ></asp:TextBox>
+                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DanWei%>"></asp:Label></td>
+                                    <td class="formItemBgStyleForAlignLeft">
+                                        <asp:TextBox ID="TB_Company" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                         &nbsp;<font color="#FF0000">*</font> </td>
                                 </tr>
                                 <tr>
+                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label></td>
                                     <td class="formItemBgStyleForAlignLeft">
-                                        联系人</td>
-                                    <td class="formItemBgStyleForAlignLeft" >
-                                        <asp:TextBox ID="TB_ContactPerson" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;" ></asp:TextBox>
+                                        <asp:TextBox ID="TB_ContactPerson" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                         &nbsp;<font color="#FF0000">*</font> &nbsp;&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignLeft"  style="padding-bottom:25px;" >
-                                        手机</td>
+                                    <td class="formItemBgStyleForAlignLeft" style="padding-bottom: 25px;"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShouJi%>"></asp:Label></td>
                                     <td class="formItemBgStyleForAlignLeft">
-                                        <asp:TextBox ID="TB_PhoneNumber" runat="server" ForeColor="#000000"  Style="width: 350px; height: 30px;" ></asp:TextBox>
-                                        &nbsp;<font color="#FF0000">*</font> 
+                                        <asp:TextBox ID="TB_PhoneNumber" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
+                                        &nbsp;<font color="#FF0000">*</font>
                                         <br />
-                                        <span style="font-size :xx-small;">注：要接收重要信息，请正确填写！</span> 
+                                        <span style="font-size: xx-small;"><asp:Label ID="Label8345" runat="server" Text="<%$ Resources:lang,ZhuYaoJieShouZhongYaoXinXiQing%>"></asp:Label></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="formItemBgStyleForAlignLeft"  style="padding-bottom:25px;" >
-                                        Email </td>
+                                    <td class="formItemBgStyleForAlignLeft" style="padding-bottom: 25px;">Email </td>
                                     <td class="formItemBgStyleForAlignLeft">
-                                        <asp:TextBox ID="TB_EMail" runat="server" Style="width: 350px; height: 30px;" onclick ="checkEmailFormat('TB_EMail')" ></asp:TextBox>
-                                        &nbsp;<font color="#FF0000">*</font> 
+                                        <asp:TextBox ID="TB_EMail" runat="server" Style="width: 350px; height: 30px;" onclick="checkEmailFormat('TB_EMail')"></asp:TextBox>
+                                        &nbsp;<font color="#FF0000">*</font>
                                         <br />
-                                        <span style="font-size :xx-small;">注：要接收重要信息，请正确填写！</span> 
-                                        </td>
+                                        <span style="font-size: xx-small;"><asp:Label ID="Label82345" runat="server" Text="<%$ Resources:lang,ZhuYaoJieShouZhongYaoXinXiQing%>"></asp:Label></span>
+                                    </td>
                                 </tr>
                                 <tr>
+                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YongHuShu%>"></asp:Label></td>
                                     <td class="formItemBgStyleForAlignLeft">
-                                        用户数</td>
-                                    <td class="formItemBgStyleForAlignLeft">
-                                        <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000"  Style="width: 150px; height: 30px;" ></asp:TextBox>
-                                        <strong>人</strong> <font color="#FF0000">*</font> </td>
+                                        <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000" Style="width: 150px; height: 30px;"></asp:TextBox>
+                                        <strong><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label></strong> <font color="#FF0000">*</font> </td>
                                 </tr>
-                               
-                              
-                               
-                                <tr >
-                                    <td class="formItemBgStyleForAlignLeft">
-                                       </td>
+
+
+
+                                <tr>
+                                    <td class="formItemBgStyleForAlignLeft"></td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <br />
-                                        <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click"  Style="width:130px; height: 30px;" Text="提 交" />
+                                        <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click" Style="width: 130px; height: 30px;" Text="提 交" />
                                         <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
                                         <br />
                                     </td>
                                 </tr>
                                 <tr style="display: none;">
-                                    <td class="formItemBgStyleForAlignLeft">联系地址</td>
+                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label></td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:TextBox ID="TB_Address" runat="server" Style="width: 350px; height: 30px;"></asp:TextBox>
                                         &nbsp;<font color="#FF0000">*</font>
                                     </td>
                                 </tr>
                                 <tr style="display: none;">
-                                    <td class="formItemBgStyleForAlignLeft">存储容量</td>
+                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,CunChuRongLiang%>"></asp:Label></td>
                                     <td class="formItemBgStyleForAlignLeft">
                                         <asp:DropDownList ID="DL_ServerType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ServerType_SelectedIndexChanged">
-                                            <asp:ListItem>租用</asp:ListItem>
-                                            <asp:ListItem>自备</asp:ListItem>
+                                            <asp:ListItem Value="Rent" Text="<%$ Resources:lang,ZuYong%>"></asp:ListItem>
+                                            <asp:ListItem Value="Self" Text="<%$ Resources:lang,ZiBei%>"></asp:ListItem>
                                         </asp:DropDownList>
                                         <asp:TextBox ID="TB_StorageCapacity" runat="server" Style="width: 50px;" Text="10"></asp:TextBox><strong style="font-size: medium;">GB</strong>
-                                        <font color="#FF0000">*</font> 
+                                        <font color="#FF0000">*</font>
                                     </td>
                                 </tr>
-                                 <tr style="display: none;">
-                                    <td  class="formItemBgStyleForAlignLeft">
-                                        验证码</td>
-                                    <td  class="formItemBgStyleForAlignLeft">
+                                <tr style="display: none;">
+                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label></td>
+                                    <td class="formItemBgStyleForAlignLeft">
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <asp:TextBox ID="TB_CheckCode" runat="server" ForeColor="#000000"  Style="width: 150px; height: 40px;" ></asp:TextBox>
+                                                    <asp:TextBox ID="TB_CheckCode" runat="server" ForeColor="#000000" Style="width: 150px; height: 40px;"></asp:TextBox>
                                                 </td>
                                                 <td>
-                                                    <asp:Image ID="IM_CheckCode" runat="server" src="TTCheckCode.aspx" Style="width: 150px;height:40px;" />
+                                                    <asp:Image ID="IM_CheckCode" runat="server" src="TTCheckCode.aspx" Style="width: 150px; height: 40px;" />
                                                 </td>
                                             </tr>
                                         </table>
@@ -206,23 +179,24 @@
                         </div>
                     </div>
 
-                    <div class="layui-layer layui-layer-iframe" id="popwindow"  name="fixedDiv"
+                    <div class="layui-layer layui-layer-iframe" id="popwindow" name="fixedDiv"
                         style="z-index: 9999; width: 680px; height: 530px; position: absolute; overflow: hidden; display: none; border-radius: 10px;">
                         <div class="layui-layer-title" style="background: #e7e7e8;" id="popwindow_title">
                             <asp:Label ID="Label205" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label>
                         </div>
                         <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
 
-                             <iframe id="IFrame_BuildSite" src="TakeTopSoftRent_BuildSite.aspx" style="width:520px;height :540px; border :none;" runat="server"></iframe>
+                            <iframe id="IFrame_BuildSite" src="TakeTopSoftRent_BuildSite.aspx" style="width: 520px; height: 540px; border: none;" runat="server"></iframe>
 
                         </div>
                         <div id="popwindow_footer" class="layui-layer-btn" style="border-top: 1px solid #ccc;">
-                           <a class="layui-layer-btn notTab" onclick="return popClose();"><asp:Label ID="Label206" runat="server" Text="<%$ Resources:lang,GuanBi%>" /></a>
+                            <a class="layui-layer-btn notTab" onclick="return popClose();">
+                                <asp:Label ID="Label206" runat="server" Text="<%$ Resources:lang,GuanBi%>" /></a>
                         </div>
                         <span class="layui-layer-setwin"><a onclick="return popClose();" class="layui-layer-ico layui-layer-close layui-layer-close1 notTab" href="javascript:;"></a></span>
                     </div>
 
-                     <div class="layui-layer-shade" id="popwindow_shade" style="z-index: 9998; background-color: #000; opacity: 0.3; filter: alpha(opacity=30); display: none;"></div>
+                    <div class="layui-layer-shade" id="popwindow_shade" style="z-index: 9998; background-color: #000; opacity: 0.3; filter: alpha(opacity=30); display: none;"></div>
 
                 </center>
             </ContentTemplate>

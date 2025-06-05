@@ -77,29 +77,13 @@
                                                                     </td>
                                                                     <td>产品：</td>
                                                                     <td>
-                                                                        <asp:DropDownList ID="DL_Product" runat="server">
-                                                                            <asp:ListItem Value="">-Select-</asp:ListItem>
-                                                                            <asp:ListItem Value="项目宝">项目宝</asp:ListItem>
-                                                                            <asp:ListItem Value="项目管理平台">项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem Value="研发项目管理平台">研发项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem Value="政务项目管理平台">政务项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem Value="系统集成项目管理平台">系统集成项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem Value="软件实施项目管理平台">软件实施项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem Value="项目型ERP平台">项目型ERP平台</asp:ListItem>
-                                                                            <asp:ListItem Value="工程项目管理平台">工程项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem Value="协同OA平台">协同OA平台</asp:ListItem>
-                                                                            <asp:ListItem Value="客户关系管理平台">客户关系管理平台</asp:ListItem>
-                                                                            <asp:ListItem Value="综合平台">综合平台</asp:ListItem>
+                                                                        <asp:DropDownList ID="DL_Product" DataValueField="Type" DataTextField ="Type" runat="server">
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td>版本：
                                                                     </td>
                                                                     <td>
-                                                                        <asp:DropDownList ID="DL_VersionType" runat="server">
-                                                                            <asp:ListItem Value="">-Select-</asp:ListItem>
-                                                                            <asp:ListItem Value="标准版">标准版</asp:ListItem>
-                                                                            <asp:ListItem Value="企业版">企业版</asp:ListItem>
-                                                                            <asp:ListItem Value="集团版">集团版</asp:ListItem>
+                                                                        <asp:DropDownList ID="DL_VersionType" DataValueField="Type" DataTextField ="Type"  runat="server">
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td>

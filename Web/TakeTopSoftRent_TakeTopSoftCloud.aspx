@@ -69,76 +69,71 @@
                                         <tr>
                                             <td width="50%">
                                                 <p class="zuyong" style="text-align: center;">
-                                                    <strong>泰鼎云 — 降低成本、即时开通、基于阿里云、安全可靠</strong>
+                                                    <strong><asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,TaiDingYunJiangDiChengBenJiShi%>"></asp:Label></strong>
                                                 </p>
-                                                <p class="zuyong">
-                                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;在泰鼎云上租用泰顶拓鼎项目管理软件（SAAS模式，按人按月付费），请在下面填写申请，整个系统的开通和维护都由专业人员负责，我们将会提供远程实施指导服务！
-                                                </p>
+                                                <p class="zuyong"><asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,ZaiTaiDingYunShangZuYongTai%>"></asp:Label></p>
                                                 <div id="id4">
-                                                    <h3>1&nbsp;&nbsp;价格表  
-                                                        <h3>
+                                                    <h3><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JiaGeBiao%>"></asp:Label><h3>
                                                             <div class="main">
                                                                 <p style="text-align: center; padding-bottom: 30px; font-size: 28px;">
                                                                     <br />
                                                                     <span style="text-align: center; font-size: small;">
-                                                                        <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">功能模块与价格</a>
+                                                                        <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank"><asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,GongNengMoKuaiYuJiaGe%>"></asp:Label></a>
                                                                     </span>
                                                                 </p>
                                                             </div>
-                                                            <p>
-                                                                &nbsp;各版本价格参见 
-                                                            </p>
+                                                            <p><asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,GeBanBenJiaGeCanJian%>"></asp:Label></p>
                                                             <table border="1" class="ziti" style="text-align: center; width: 95%; border-collapse: collapse; border: 1px dotted #C0C0C0;">
                                                                 <tr>
                                                                     <td width="25%">&nbsp;</td>
-                                                                    <td><strong>标准版</strong><br />
+                                                                    <td><strong><asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,BiaoZhunBan%>"></asp:Label></strong><br />
                                                                     </td>
-                                                                    <td><strong>企业版</strong><br />
+                                                                    <td><strong><asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,QiYeBan%>"></asp:Label></strong><br />
                                                                     </td>
-                                                                    <td><strong>集团版</strong></td>
+                                                                    <td><strong><asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,JiTuanBan%>"></asp:Label></strong></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>价格</td>
-                                                                    <td>10元/人/月</td>
-                                                                    <td>15元/人/月</td>
-                                                                    <td>20元/人/月</td>
+                                                                    <td><asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,JiaGe%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,YuanRenYue%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuanRenYue%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,YuanRenYue%>"></asp:Label></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>模块</td>
-                                                                    <td><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">查看</a></td>
-                                                                    <td><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">查看</a></td>
-                                                                    <td><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">查看</a></td>
+                                                                    <td><asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,MoKuai%>"></asp:Label></td>
+                                                                    <td><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank"><asp:Label ID="Label336578678" runat="server" Text="<%$ Resources:lang,ChaKan%>"></asp:Label></a></td>
+                                                                    <td><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank"><asp:Label ID="Label33575" runat="server" Text="<%$ Resources:lang,ChaKan%>"></asp:Label></a></td>
+                                                                    <td><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank"><asp:Label ID="Label339789" runat="server" Text="<%$ Resources:lang,ChaKan%>"></asp:Label></a></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>记录数</td>
-                                                                    <td>不限</td>
-                                                                    <td>不限</td>
-                                                                    <td>不限</td>
+                                                                    <td><asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,JiLuShu%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label3456457" runat="server" Text="<%$ Resources:lang,BuXian%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label334567" runat="server" Text="<%$ Resources:lang,BuXian%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label3734563" runat="server" Text="<%$ Resources:lang,BuXian%>"></asp:Label></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>微信/APP</td>
-                                                                    <td>支持</td>
-                                                                    <td>支持</td>
-                                                                    <td>支持</td>
+                                                                    <td><asp:Label ID="Label434564560" runat="server" Text="<%$ Resources:lang,WeiXin%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label4685681" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label4175467" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label446461" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>集团管控</td>
-                                                                    <td>不支持</td>
-                                                                    <td>不支持</td>
-                                                                    <td>支持</td>
+                                                                    <td><asp:Label ID="Label44567657" runat="server" Text="<%$ Resources:lang,JiTuanGuanKong%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label3446465" runat="server" Text="<%$ Resources:lang,Bu%>"></asp:Label><asp:Label ID="Label3456341" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label348678" runat="server" Text="<%$ Resources:lang,Bu%>"></asp:Label><asp:Label ID="Label42345251" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label4456751" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>远程服务</td>
-                                                                    <td>支持</td>
-                                                                    <td>支持</td>
-                                                                    <td>支持</td>
+                                                                    <td><asp:Label ID="Label4889789" runat="server" Text="<%$ Resources:lang,YuanChengFuWu%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label418678" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label41346345" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
+                                                                    <td><asp:Label ID="Label414643" runat="server" Text="<%$ Resources:lang,ZhiChi%>"></asp:Label></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>存储空间 </td>
-                                                                    <td colspan="3" style="text-align: center;">提供10G免费空间，扩容费5元/G/月 </td>
+                                                                    <td><asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,CunChuKongJian%>"></asp:Label></td>
+                                                                    <td colspan="3" style="text-align: center;"><asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,TiGongMianFeiKongJianKuoRong%>"></asp:Label></td>
                                                                 </tr>
                                                             </table>
-                                                            <span style="font-size: small; color: grey;">&nbsp;&nbsp;*“人”指要登录使用系统的人，非企业员工总数</span>
+                                                            <span style="font-size: small; color: grey;"><asp:Label ID="Label54" runat="server" Text="<%$ Resources:lang,RenZhiYaoDengLuShiYongXiTongDe%>"></asp:Label></span>
                                                             <h3></h3>
                                                             <h3></h3>
                                                             <h3></h3>
@@ -147,7 +142,7 @@
                                                         </h3>
                                                 </div>
                                                 <div id="id5">
-                                                    <h3>2&nbsp;&nbsp;租用申请</h3>
+                                                    <h3><asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,ZuYongShenQing%>"></asp:Label></h3>
                                                     <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                         <tr>
                                                             <td class="formItemBgStyleForAlignLeft" width="100px">
@@ -235,7 +230,7 @@
                                                             </td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000" Style="width: 150px; height: 30px;"></asp:TextBox>
-                                                                <strong>人</strong> <font color="#FF0000">*</font> </td>
+                                                                <strong><asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label></strong> <font color="#FF0000">*</font> </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="formItemBgStyleForAlignLeft">
@@ -266,7 +261,7 @@
 
                                                         <tr style="display: none;">
 
-                                                            <td class="formItemBgStyleForAlignLeft">联系地址</td>
+                                                            <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label></td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:TextBox ID="TB_Address" runat="server" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                 &nbsp;<font color="#FF0000">*</font>
@@ -274,11 +269,11 @@
                                                         </tr>
                                                         <tr style="display: none;">
 
-                                                            <td class="formItemBgStyleForAlignLeft">存储容量</td>
+                                                            <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label58" runat="server" Text="<%$ Resources:lang,CunChuRongLiang%>"></asp:Label></td>
                                                             <td class="formItemBgStyleForAlignLeft">
                                                                 <asp:DropDownList ID="DL_ServerType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ServerType_SelectedIndexChanged">
-                                                                    <asp:ListItem>租用</asp:ListItem>
-                                                                    <asp:ListItem>自备</asp:ListItem>
+                                                                    <asp:ListItem Value="Rent" Text="<%$ Resources:lang,ZuYong%>"></asp:ListItem>
+                                                                    <asp:ListItem Value="Self" Text="<%$ Resources:lang,ZiBei%>"></asp:ListItem>
                                                                 </asp:DropDownList>
                                                                 <asp:TextBox ID="TB_StorageCapacity" runat="server" Style="width: 50px;" Text="10"></asp:TextBox><strong style="font-size: medium;">GB</strong>
                                                                 <font color="#FF0000">*</font> </td>
@@ -308,14 +303,8 @@
 
                                                             <asp:Label ID="Label14" runat="server"  Text="<%$ Resources:lang,PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou%>"></asp:Label>
                                                         </li>
-                                                        <li>
-
-                                                            <asp:Label ID="Label15" runat="server" Text="试用满意后，必须付费才能继续使用，如付费期间中断续费，系统会进入为期30天的封存保留期。封存期不能使用系统，但可以下载备份相关系统数据，继续使用需要续费。"></asp:Label>
-                                                        </li>
-                                                        <li>
-
-                                                            <asp:Label ID="Label16" runat="server" Text="可用支付宝( saas@taketopsoft.com )或银行转账方式缴费，方便快捷。"></asp:Label>
-                                                        </li>
+                                                        <li><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ShiYongManYiHouBiXuFuFeiCai%>"></asp:Label><asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,NengShiYongXiTongDanKeYiXiaZai%>"></asp:Label></li>
+                                                        <li><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,KeYongZhiFuBaoHuoYinXingZhuan%>"></asp:Label></li>
                                                     </ul>
 
                                                     <table style="font-size: large;">

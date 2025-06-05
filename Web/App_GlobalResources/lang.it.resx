@@ -29295,9 +29295,6 @@
   <data name="WanChengShu" xml:space="preserve">
     <value>Numero di Completamento</value>
   </data>
-  <data name="0Nian1Yue" xml:space="preserve">
-    <value>{0} anno {1} mese</value>
-  </data>
   <data name="Di0Zhou" xml:space="preserve">
     <value>Settimana {0}</value>
   </data>
@@ -31825,5 +31822,11 @@
   </data>
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>Nota: Per ricevere informazioni importanti, per favore inserisci i dati correttamente.</value>
+  </data>
+  <data name="JianZhanXinXi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
+    <value />
   </data>
 </root>

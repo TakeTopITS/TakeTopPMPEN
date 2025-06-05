@@ -140,7 +140,7 @@
                 <tr>
                     <td width="100px" align="left">
                         <a href="javascript:ChangeMenu(1)">
-                            <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="隐藏左边栏" runat="server" /></a>
+                            <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="���������" runat="server" /></a>
 
                     </td>
                 </tr>

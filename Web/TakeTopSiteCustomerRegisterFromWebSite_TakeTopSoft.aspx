@@ -181,7 +181,7 @@
                                             <td colspan="2" align="center" class="formItemBgStyleForAlignCenter">
                                                 <br />
                                                 <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
-                                                    <img align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a class="call" href="tel:02151085119">021-51085119</a>
+                                                    <img align="absmiddle" src="images/qq.png" /><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label><a class="call" href="tel:02151085119">021-51085119</a>
                                             </td>
                                         </tr>
                                     </table>

@@ -112,7 +112,7 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
     {
         string strHtml = string.Empty;
         string strHQL = "Select * from T_HeadLine where LangCode = '" + strLangCode + "' " +
-                       "and Type = '外部' and Status = '发布' and IsHead = 'YES' " +
+                       LanguageHandle.GetWord("WaiBuFaBu").ToString().Trim() +
                        "Order by ID DESC";
 
         DataTable dtHeadLine = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "HeadLine").Tables[0];

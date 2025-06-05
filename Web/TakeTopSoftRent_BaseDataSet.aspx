@@ -74,8 +74,7 @@
                                                                     <td align="right" width="100%" style="padding-right: 5px;">
                                                                         <table>
                                                                             <tr>
-                                                                                <td>站点：
-                                                                                </td>
+                                                                                <td><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ZhanDian%>"></asp:Label></td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_HomeSiteURL" runat="server" AutoPostBack="true" DataTextField="SiteURL" DataValueField="SiteURL" OnSelectedIndexChanged="DL_HomeSiteURL_SelectedIndexChanged">
                                                                                     </asp:DropDownList>
@@ -87,11 +86,11 @@
                                                                                 <td>
                                                                                     <asp:Button ID="BT_Delete" CssClass="inpu" runat="server"  Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_Delete_Click" />
                                                                                 </td>
-                                                                                <td>把站点</td>
+                                                                                <td><asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,BaZhanDian%>"></asp:Label></td>
                                                                                 <td>
                                                                                     <asp:Label ID="LB_FromHomeSiteURL" runat="server"></asp:Label>
                                                                                 </td>
-                                                                                <td>的数据复制到</td>
+                                                                                <td><asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,DeShuJuFuZhiDao%>"></asp:Label></td>
                                                                                 <td>
                                                                                     <asp:TextBox ID="TB_HomeSiteURL" runat="server"></asp:TextBox>
                                                                                 </td>
@@ -102,8 +101,7 @@
                                                                                 <td align="right">
                                                                                     <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                                                 </td>
-                                                                                <td>设置是否自动建站：
-                                                                                </td>
+                                                                                <td><asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,SheZhiShiFouZiDongJianZhan%>"></asp:Label></td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_IsAutoBuildSite" AutoPostBack="true" runat="server" OnSelectedIndexChanged="DL_IsAutoBuildSite_SelectedIndexChanged">
                                                                                         <asp:ListItem>NO</asp:ListItem>

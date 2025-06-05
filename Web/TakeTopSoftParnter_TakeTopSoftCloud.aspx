@@ -57,22 +57,19 @@
 
                                                 <div class="qudaohezuo">
                                                     <div class="wenzi">
-                                                        <p class="zuyong">
-                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;如果您所在的地区或者您公司目前所拥有的客户资源非常适合推广泰顶拓鼎软件，您可以申请成为我们的合作伙伴，共赢是我们的精神，在合作期您将获得我们全力的支持，包括全面的培训，技术支持，甚至我们会提供您所在地区的销售机会，以支持您的业务持续的发展！
-                                                        </p>
+                                                        <p class="zuyong"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,RuGuoNinSuoZaiDeDiQuHuoZheNin%>"></asp:Label></p>
 
-                                                        <%-- <p style="text-indent: 20px;"><strong>渠道分成政策：</strong></p>
+                                                        <%-- <p style="text-indent: 20px;"><strong><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,QuDaoFenChengZhengCe%>"></asp:Label></strong></p>
 
-                                                        <p style="text-indent: 20px;">1、发展的代理每成一单，按此单软件和用户授权费代理商向我方采购额的10%提成，授权费一般占合同额的70%左右！</p>
+                                                        <p style="text-indent: 20px;"><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,FaZhanDeDaiLiMeiChengYiDanAnCi%>"></asp:Label></p>
 
-                                                        <p style="text-indent: 20px;">2、介绍朋友去发展的第一层代理每成一单，可以按此单软件和用户授权费代理商向我方采购额的5%提成！</p>
+                                                        <p style="text-indent: 20px;"><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JieShaoPengYouQuFaZhanDeDiYi%>"></asp:Label></p>
 
-                                                        <p style="text-indent: 20px;"><strong>销售分成政策：</strong></p>
+                                                        <p style="text-indent: 20px;"><strong><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,XiaoShouFenChengZhengCe%>"></asp:Label></strong></p>
 
-                                                        <p style="text-indent: 20px;">1、提供商机给我们，并协助我们销售（我们主导）成单，可以按此单软件和用户授权费的20%提成！</p>
+                                                        <p style="text-indent: 20px;"><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,TiGongShangJiJiWoMenBingXieZhu%>"></asp:Label></p>
 
-                                                        <p style="text-indent: 20px;">
-                                                            2、直接销售（我们协助）分成按【销售代理分成协议】执行！<br />                                                          
+                                                        <p style="text-indent: 20px;"><asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhiJieXiaoShouWoMenXieZhuFen%>"></asp:Label><br />                                                          
                                                         </p>--%>
 
 
@@ -137,7 +134,7 @@
                                                                 </tr>
 
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyleForAlignLeft" width="100px">产品</td>
+                                                                    <td class="formItemBgStyleForAlignLeft" width="100px"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_Type" runat="server" Style="height: 50px;">
                                                                             <asp:ListItem>---</asp:ListItem>
@@ -145,7 +142,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="auto-style1">版本</td>
+                                                                    <td class="auto-style1"><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,BanBen%>"></asp:Label></td>
                                                                     <td class="auto-style1">
                                                                         <asp:DropDownList ID="DL_Version" runat="server" Style="height: 50px;">
                                                                             <asp:ListItem>--------------</asp:ListItem>
@@ -153,10 +150,10 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyleForAlignLeft">用户数</td>
+                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YongHuShu%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000" Style="width: 150px; height: 30px;" Text="0"></asp:TextBox>
-                                                                        <strong>人</strong> <font color="#FF0000">*</font> </td>
+                                                                        <strong><asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label></strong> <font color="#FF0000">*</font> </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
 
@@ -167,7 +164,7 @@
                                                                 </tr>
                                                                 <tr style="display: none;">
 
-                                                                    <td class="formItemBgStyleForAlignLeft">联系地址</td>
+                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_Address" runat="server" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font>
@@ -175,10 +172,10 @@
                                                                 </tr>
                                                                 <tr style="display: none;">
 
-                                                                    <td class="formItemBgStyleForAlignLeft">存储容量</td>
+                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,CunChuRongLiang%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_ServerType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ServerType_SelectedIndexChanged">
-                                                                            <asp:ListItem>申请</asp:ListItem>
+                                                                            <asp:ListItem Value="Apply" Text="<%$ Resources:lang,ShenQing%>"> </asp:ListItem>
 
                                                                         </asp:DropDownList>
                                                                         <asp:TextBox ID="TB_StorageCapacity" runat="server" Style="width: 50px;" Text="10"></asp:TextBox><strong style="font-size: medium;">GB</strong>
@@ -198,48 +195,48 @@
 
                                                         <p>&nbsp</p>
 
-                                                        <p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); text-transform: none; text-indent: 20px; letter-spacing: normal; word-spacing: 0px; white-space: normal; font-size-adjust: none; font-stretch: normal; -webkit-text-stroke-width: 0px;"><strong>我们渠道六大体系</strong></p>
+                                                        <p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); text-transform: none; text-indent: 20px; letter-spacing: normal; word-spacing: 0px; white-space: normal; font-size-adjust: none; font-stretch: normal; -webkit-text-stroke-width: 0px;"><strong><asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,WoMenQuDaoLiuDaTiXi%>"></asp:Label></strong></p>
 
                                                         <div class="news-title" style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; white-space: normal; font-size-adjust: none; font-stretch: normal; -webkit-text-stroke-width: 0px;">&nbsp;&nbsp;</div>
 
                                                         <div class="news-title" style="color: rgb(0, 0, 0); text-transform: none; text-indent: 20px; letter-spacing: normal; word-spacing: 0px; white-space: normal; font-size-adjust: none; font-stretch: normal; -webkit-text-stroke-width: 0px;">
-                                                            <p style="margin: 0px; padding: 0px;">产品多元化、服务个性化的大中小型不限行业管理软件催生新型价值渠道体系,我们渠道六大伙伴体系构建独特的信息化渠道生态链：&nbsp;</p>
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label1sfs4" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,DuoYuanHuaFuWuGeXingHuaDeDa%>"></asp:Label></p>
 
                                                             <p style="margin: 0px; padding: 0px;">&nbsp;</p>
 
-                                                            <p style="margin: 0px; padding: 0px;"><strong>&nbsp;&nbsp;产品经销伙伴</strong></p>
+                                                            <p style="margin: 0px; padding: 0px;"><strong>&nbsp;&nbsp;<asp:Label ID="Label1235434" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,JingXiaoHuoBan%>"></asp:Label></strong></p>
 
-                                                            <p style="margin: 0px; padding: 0px;">是指与签署产品代理协议，通过地区授权销售我们系列产品实现盈利的伙伴。</p>
-
-                                                            <p style="margin: 0px; padding: 0px;">&nbsp;</p>
-
-                                                            <p style="margin: 0px; padding: 0px;"><strong>&nbsp;&nbsp;增值分销伙伴</strong></p>
-
-                                                            <p style="margin: 0px; padding: 0px;">是指与签署地区增值分销协议并通过自有分销渠道销售我们我们系列产品并实现盈利的伙伴。</p>
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label324523424" runat="server" Text="<%$ Resources:lang,ShiZhiYuQianShu%>"></asp:Label><asp:Label ID="Label1sdfs4" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,DaiLiXieYiTongGuoDiQuShouQuan%>"></asp:Label><asp:Label ID="Label345325414" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,ShiXianYingLiDeHuoBan%>"></asp:Label></p>
 
                                                             <p style="margin: 0px; padding: 0px;">&nbsp;</p>
 
-                                                            <p style="margin: 0px; padding: 0px;"><strong>&nbsp;&nbsp;商机合作伙伴</strong></p>
+                                                            <p style="margin: 0px; padding: 0px;"><strong><asp:Label ID="Label25644565" runat="server" Text="<%$ Resources:lang,ZengZhiFenXiaoHuoBan%>"></asp:Label></strong></p>
 
-                                                            <p style="margin: 0px; padding: 0px;">是指与签署商机合作协议，凭借自身客户资源优势，为提供产品销售商机或者帮助我们完成关系营销过程的法人单位或者个人。</p>
-
-                                                            <p style="margin: 0px; padding: 0px;">&nbsp;</p>
-
-                                                            <p style="margin: 0px; padding: 0px;"><strong>&nbsp;&nbsp;授权服务伙伴</strong></p>
-
-                                                            <p style="margin: 0px; padding: 0px;">是指获得实施/服务体系的资格认证，并具备较强的管理软件服务实施、服务能力的伙伴。</p>
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label2354234524" runat="server" Text="<%$ Resources:lang,ShiZhiYuQianShu%>"></asp:Label><asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,DiQuZengZhiFenXiaoXieYiBing%>"></asp:Label><asp:Label ID="Label1235423454" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,Bing%>"></asp:Label><asp:Label ID="Label22345348" runat="server" Text="<%$ Resources:lang,ShiXianYingLiDeHuoBan%>"></asp:Label></p>
 
                                                             <p style="margin: 0px; padding: 0px;">&nbsp;</p>
 
-                                                            <p style="margin: 0px; padding: 0px;"><strong>&nbsp;&nbsp;授权培训伙伴</strong></p>
+                                                            <p style="margin: 0px; padding: 0px;"><strong><asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ShangJiHeZuoHuoBan%>"></asp:Label></strong></p>
 
-                                                            <p style="margin: 0px; padding: 0px;">是指能结合系列产品在培训领域进行合作并按照约定比例进行利润分配的组织和机构。</p>
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label223454" runat="server" Text="<%$ Resources:lang,ShiZhiYuQianShu%>"></asp:Label><asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,ShangJiHeZuoXieYiPingJieZiShen%>"></asp:Label><asp:Label ID="Label1235423544" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,XiaoShouShangJiHuoZheBangZhuWo%>"></asp:Label><asp:Label ID="Label132542357" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label><asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,DanWeiHuoZheGe%>"></asp:Label><asp:Label ID="Label123523457" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label>。</p>
 
                                                             <p style="margin: 0px; padding: 0px;">&nbsp;</p>
 
-                                                            <p style="margin: 0px; padding: 0px;"><strong>&nbsp;&nbsp;行业开发伙伴</strong></p>
+                                                            <p style="margin: 0px; padding: 0px;"><strong><asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShouQuanFuWuHuoBan%>"></asp:Label></strong></p>
 
-                                                            <p style="margin: 0px; padding: 0px;">是指能够通过平台或可集成平台开发，形成与互补的行业模块产品的伙伴。该行业产品以约定的合作模式在我们渠道销售，并按比例获取利润。</p>
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label32345230" runat="server" Text="<%$ Resources:lang,ShiZhiHuoDeShiShiFuWuTiXiDeZi%>"></asp:Label></p>
+
+                                                            <p style="margin: 0px; padding: 0px;">&nbsp;</p>
+
+                                                            <p style="margin: 0px; padding: 0px;"><strong><asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ShouQuanPeiXunHuoBan%>"></asp:Label></strong></p>
+
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label32358" runat="server" Text="<%$ Resources:lang,ShiZhiNengJieHeXiLie%>"></asp:Label><asp:Label ID="Label12345243264" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ZaiPeiXunLingYuJinXingHeZuo%>"></asp:Label></p>
+
+                                                            <p style="margin: 0px; padding: 0px;">&nbsp;</p>
+
+                                                            <p style="margin: 0px; padding: 0px;"><strong><asp:Label ID="Label323543" runat="server" Text="<%$ Resources:lang,XingYeKaiFaHuoBan%>"></asp:Label></strong></p>
+
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label423452350" runat="server" Text="<%$ Resources:lang,ShiZhiNengGouTongGuoPingTaiHuo%>"></asp:Label><asp:Label ID="Label145634564" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,DeHuoBanGaiXingYe%>"></asp:Label><asp:Label ID="Label1234523454" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,YiYueDingDeHeZuoMoShiZaiWoMen%>"></asp:Label></p>
                                                         </div>
                                                     </div>
                                                 </div>

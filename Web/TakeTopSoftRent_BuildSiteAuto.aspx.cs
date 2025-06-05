@@ -90,7 +90,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             string strIsOEM = Request.QueryString["IsOEM"];
 
             string strRentProductVersionType;
-            if (strRentProductVersion == "集团版")
+            if (strRentProductVersion == LanguageHandle.GetWord("JiTuanBan").ToString().Trim())
             {
                 strRentProductVersionType = "YES";
             }
@@ -102,7 +102,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
 
             if (VerifyWebSiteAppIsExist(strSiteName, strSiteAppName))
             {
-                LB_Message.Text = "创建失败，存在相同名称的站点，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiCunZaiXiangTon").ToString().Trim();
                 return;
             }
 
@@ -114,7 +114,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             //string strScript = "<script>openMDIFrom('" + strSiteAppURL + "');</script>";
             //ClientScript.RegisterStartupScript(GetType(), "", strScript);
 
-            LB_Message.Text = "站点创建成功，你可以点击下面链接打开和收藏此站点，注意第一次打开登录页面时因要初始化系统，耗时会较长，此后不会超过5秒钟， <br/><br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>登录帐号：ADMIN    密码： 12345678";
+            LB_Message.Text = LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK").ToString().Trim() + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoMiMa").ToString().Trim();
             LB_CloseMessage.Visible = false;
         }
         catch (Exception err)
@@ -156,7 +156,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
         //从模板数据库恢复数据库
         if (!ShareClass.RestoreDatabaseFromTemplateDB(strSiteDBName, strDBRestoreFile))
         {
-            LogClass.WriteLogFile("恢复数据库失败！");
+            LogClass.WriteLogFile(LanguageHandle.GetWord("HuiFuShuJuKuShiBai").ToString().Trim());
         }
 
         //授予用户数据库权限，只针对这个数据库

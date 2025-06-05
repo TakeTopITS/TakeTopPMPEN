@@ -29295,9 +29295,6 @@
   <data name="WanChengShu" xml:space="preserve">
     <value>完成數</value>
   </data>
-  <data name="0Nian1Yue" xml:space="preserve">
-    <value>{0}年{1}月</value>
-  </data>
   <data name="Di0Zhou" xml:space="preserve">
     <value>第{0}周</value>
   </data>
@@ -31823,5 +31820,779 @@
   </data>
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>注：為接收重要資訊，請正確填寫。</value>
+  </data>
+  <data name="BiaoZhunBan" xml:space="preserve">
+    <value>標準版</value>
+  </data>
+  <data name="Bing" xml:space="preserve">
+    <value>並</value>
+  </data>
+  <data name="BingShiXianYingLiDeHuoBan" xml:space="preserve">
+    <value>並實現盈利的夥伴</value>
+  </data>
+  <data name="Bu" xml:space="preserve">
+    <value>不</value>
+  </data>
+  <data name="ChaKan" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="ChangGuiXingYeGongChengXingYe" xml:space="preserve">
+    <value>常規行業工程行業石化行業</value>
+  </data>
+  <data name="ChanPin1" xml:space="preserve">
+    <value>產品</value>
+  </data>
+  <data name="ChanPinDuoYuanHuaFuWuGeXingHua" xml:space="preserve">
+    <value>產品多元化服務個性化的大中小型不限行業管理軟體催生新型價值渠</value>
+  </data>
+  <data name="ChanPinJingXiaoHuoBan" xml:space="preserve">
+    <value>產品經銷夥伴</value>
+  </data>
+  <data name="ChanPinYuJiShuYanFaGuanLi" xml:space="preserve">
+    <value>產品與技術研發管理</value>
+  </data>
+  <data name="CunChuKongJian" xml:space="preserve">
+    <value>存儲空間</value>
+  </data>
+  <data name="CunChuRongLiang" xml:space="preserve">
+    <value>存儲容量</value>
+  </data>
+  <data name="DaiLiXieYiTongGuoDiQuShouQuan" xml:space="preserve">
+    <value>代理協定通過地區授權銷售我們系列</value>
+  </data>
+  <data name="DanWeiHuoZheGe" xml:space="preserve">
+    <value>單位或者個</value>
+  </data>
+  <data name="DeHuoBanGaiXingYe" xml:space="preserve">
+    <value>的夥伴該行業</value>
+  </data>
+  <data name="DiQuZengZhiFenXiaoXieYiBing" xml:space="preserve">
+    <value>地區增值分銷協定並通過自有分銷管道銷售我們我們系列</value>
+  </data>
+  <data name="DuoYuanHuaFuWuGeXingHuaDeDa" xml:space="preserve">
+    <value>多元化服務個性化的大中小型不限行業管理軟體催生新型價值管道體</value>
+  </data>
+  <data name="FaZhanDeDaiLiMeiChengYiDanAnCi" xml:space="preserve">
+    <value>發展的代理每成一單按此單軟體和使用者授權費代理商向我方採購額的</value>
+  </data>
+  <data name="GeBanBenJiaGeCanJian" xml:space="preserve">
+    <value>各版本價格參見</value>
+  </data>
+  <data name="GongChengSheJiShiGongXiangMu" xml:space="preserve">
+    <value>工程設計施工專案管理</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>工程項目管理平臺</value>
+  </data>
+  <data name="GongNengMoKuaiYuJiaGe" xml:space="preserve">
+    <value>功能模組與價格</value>
+  </data>
+  <data name="GouMai1" xml:space="preserve">
+    <value>購買</value>
+  </data>
+  <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
+    <value>購買泰頂拓鼎管理軟體</value>
+  </data>
+  <data name="JiaGe1" xml:space="preserve">
+    <value>價格</value>
+  </data>
+  <data name="JiaGeBiao" xml:space="preserve">
+    <value>價格表</value>
+  </data>
+  <data name="JieShaoPengYouQuFaZhanDeDiYi" xml:space="preserve">
+    <value>介紹朋友去發展的第一層代理每成一單可以按此單軟體和使用者授權費</value>
+  </data>
+  <data name="JiLuShu1" xml:space="preserve">
+    <value>記錄數</value>
+  </data>
+  <data name="JiMuHuaJieGouKeAnXuXuanPeiZi" xml:space="preserve">
+    <value>積木化結構可按需選配自由組合</value>
+  </data>
+  <data name="JingXiaoHuoBan" xml:space="preserve">
+    <value>經銷夥伴</value>
+  </data>
+  <data name="JiTuanBan" xml:space="preserve">
+    <value>集團版</value>
+  </data>
+  <data name="JiTuanGuanKong" xml:space="preserve">
+    <value>集團管控</value>
+  </data>
+  <data name="KeHuShouQianShouHouFuWuJinXiao" xml:space="preserve">
+    <value>客戶售前售後服務進銷存等</value>
+  </data>
+  <data name="KeYongZhiFuBaoHuoYinXingZhuan" xml:space="preserve">
+    <value>可用支付寶或銀行轉帳方式繳費方便快捷</value>
+  </data>
+  <data name="Lian" xml:space="preserve">
+    <value>鰱</value>
+  </data>
+  <data name="LianXiDiZhi1" xml:space="preserve">
+    <value>聯繫地址</value>
+  </data>
+  <data name="LiuChengZiChanZhiShiCheLiang" xml:space="preserve">
+    <value>流程資產知識車輛等</value>
+  </data>
+  <data name="MoKuai1" xml:space="preserve">
+    <value>模組</value>
+  </data>
+  <data name="NengShiYongXiTongDanKeYiXiaZai" xml:space="preserve">
+    <value>能使用系統但可以下載備份相關系統資料繼續使用需要續費</value>
+  </data>
+  <data name="PeiXunRenZheng" xml:space="preserve">
+    <value>培訓認證</value>
+  </data>
+  <data name="QiYeBan" xml:space="preserve">
+    <value>企業版</value>
+  </data>
+  <data name="QiYeJiKuanKeKuoZhanRuanJian" xml:space="preserve">
+    <value>企業級款可擴展軟體</value>
+  </data>
+  <data name="QuDaoFenChengZhengCe" xml:space="preserve">
+    <value>管道分成政策</value>
+  </data>
+  <data name="Ren1" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="RenZhiYaoDengLuShiYongXiTongDe" xml:space="preserve">
+    <value>人指要登錄使用系統的人非企業員工總數</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi" xml:space="preserve">
+    <value>軟體實施專案管理平臺</value>
+  </data>
+  <data name="RuanJianXiTongShiShiXiangMu" xml:space="preserve">
+    <value>軟體系統實施專案管理</value>
+  </data>
+  <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
+    <value>如果您所在的地區或者您公司目前所擁有的客戶資源非常適合推廣泰</value>
+  </data>
+  <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
+    <value>商機合作夥伴</value>
+  </data>
+  <data name="ShangJiHeZuoXieYiPingJieZiShen" xml:space="preserve">
+    <value>商機合作協定憑藉自身客戶資源優勢為提供</value>
+  </data>
+  <data name="ShenQing1" xml:space="preserve">
+    <value>申請</value>
+  </data>
+  <data name="ShiXianYingLiDeHuoBan" xml:space="preserve">
+    <value>實現盈利的夥伴</value>
+  </data>
+  <data name="ShiYongManYiHouBiXuFuFeiCai" xml:space="preserve">
+    <value>試用滿意後必須付費才能繼續使用如付費期間中斷續費系統會進入為</value>
+  </data>
+  <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
+    <value>使用時間不限軟體安裝在使用者自備的伺服器上請在下面填寫購買申請</value>
+  </data>
+  <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
+    <value>是指獲得實施服務體系的資格認證並具備較強的管理軟體服務實施服</value>
+  </data>
+  <data name="ShiZhiNengGouTongGuoPingTaiHuo" xml:space="preserve">
+    <value>是指能夠通過平臺或可集成平臺開發形成與互補的行業模組產品的夥</value>
+  </data>
+  <data name="ShiZhiNengJieHeXiLie" xml:space="preserve">
+    <value>是指能結合系列</value>
+  </data>
+  <data name="ShiZhiNengJieHeXiLieChanPinZai" xml:space="preserve">
+    <value>是指能結合系列產品在培訓領域進行合作並按照約定比例進行利潤分</value>
+  </data>
+  <data name="ShiZhiYuQianShu" xml:space="preserve">
+    <value>是指與簽署</value>
+  </data>
+  <data name="ShiZhiYuQianShuChanPinDaiLiXie" xml:space="preserve">
+    <value>是指與簽署產品代理協定通過地區授權銷售我們系列產品實現盈利的</value>
+  </data>
+  <data name="ShiZhiYuQianShuDiQuZengZhiFen" xml:space="preserve">
+    <value>是指與簽署地區增值分銷協定並通過自有分銷管道銷售我們我們系列</value>
+  </data>
+  <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
+    <value>是指與簽署商機合作協定憑藉自身客戶資源優勢為提供產品銷售商機</value>
+  </data>
+  <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
+    <value>授權服務夥伴</value>
+  </data>
+  <data name="ShouQuanPeiXunHuoBan" xml:space="preserve">
+    <value>授權培訓夥伴</value>
+  </data>
+  <data name="TaiDingYunJiangDiChengBenJiShi" xml:space="preserve">
+    <value>泰鼎雲降低成本即時開通基於阿裡雲安全可靠</value>
+  </data>
+  <data name="TiGongMianFeiKongJianKuoRong" xml:space="preserve">
+    <value>提供免費空間擴容費元月</value>
+  </data>
+  <data name="TiGongShangJiJiWoMenBingXieZhu" xml:space="preserve">
+    <value>提供商機給我們並協助我們銷售我們主導成單可以按此單軟體和使用者</value>
+  </data>
+  <data name="TiGongXiangMuJiHuaJinDuRenWu" xml:space="preserve">
+    <value>提供專案計畫進度任務費用文檔管理功能簡單易用分鐘學會</value>
+  </data>
+  <data name="WeiXin" xml:space="preserve">
+    <value>微信</value>
+  </data>
+  <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
+    <value>我們管道六大體系</value>
+  </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>項目寶</value>
+  </data>
+  <data name="XiangMuGuanLiZiXun" xml:space="preserve">
+    <value>專案管理諮詢</value>
+  </data>
+  <data name="XiangMuGuanLiZiXunPeiXunRen" xml:space="preserve">
+    <value>專案管理諮詢培訓認證</value>
+  </data>
+  <data name="XiangMuXingPingTai" xml:space="preserve">
+    <value>專案型平臺</value>
+  </data>
+  <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
+    <value>專案型製造管理</value>
+  </data>
+  <data name="XiaoShouFenChengZhengCe" xml:space="preserve">
+    <value>銷售分成政策</value>
+  </data>
+  <data name="XiaoShouShangJiHuoZheBangZhuWo" xml:space="preserve">
+    <value>銷售商機或者幫助我們完成關係行銷過程的法</value>
+  </data>
+  <data name="XingYeKaiFaHuoBan" xml:space="preserve">
+    <value>行業開發夥伴</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
+    <value>系統集成專案管理平臺</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>研發專案管理平臺</value>
+  </data>
+  <data name="YanZhengMa1" xml:space="preserve">
+    <value>驗證碼</value>
+  </data>
+  <data name="YiYueDingDeHeZuoMoShiZaiWoMen" xml:space="preserve">
+    <value>以約定的合作模式在我們管道銷售並按比例獲取利潤</value>
+  </data>
+  <data name="YongHuShu1" xml:space="preserve">
+    <value>用戶數</value>
+  </data>
+  <data name="YuanChengFuWu" xml:space="preserve">
+    <value>遠端服務</value>
+  </data>
+  <data name="YuanQi" xml:space="preserve">
+    <value>元起</value>
+  </data>
+  <data name="YuanRenYue" xml:space="preserve">
+    <value>元人月</value>
+  </data>
+  <data name="YuanYongHu1" xml:space="preserve">
+    <value>元用戶</value>
+  </data>
+  <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
+    <value>在培訓領域進行合作並按照約定比例進行利潤分配的組織和機構</value>
+  </data>
+  <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
+    <value>在泰鼎雲上租用泰頂拓鼎專案管理軟體模式按人按月付費請在下面填</value>
+  </data>
+  <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
+    <value>增值分銷夥伴</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLi" xml:space="preserve">
+    <value>政務專案管理</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>政務專案管理平臺</value>
+  </data>
+  <data name="ZhiChi" xml:space="preserve">
+    <value>支持</value>
+  </data>
+  <data name="ZhiJieXiaoShouWoMenXieZhuFen" xml:space="preserve">
+    <value>直接銷售我們協助分成按銷售代理分成協定執行</value>
+  </data>
+  <data name="ZiBei" xml:space="preserve">
+    <value>自備</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai" xml:space="preserve">
+    <value>綜合管理平臺</value>
+  </data>
+  <data name="ZuYongShenQing" xml:space="preserve">
+    <value>租用申請</value>
+  </data>
+  <data name="JianZhanXinXi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BaZhanDian" xml:space="preserve">
+    <value>把網站</value>
+  </data>
+  <data name="BiaoZhunBan1" xml:space="preserve">
+    <value>標準版</value>
+  </data>
+  <data name="ChanPin2" xml:space="preserve">
+    <value>產品</value>
+  </data>
+  <data name="CunChuRongLiang1" xml:space="preserve">
+    <value>存儲容量</value>
+  </data>
+  <data name="DeShuJuFuZhiDao" xml:space="preserve">
+    <value>的資料複製到</value>
+  </data>
+  <data name="DianHua3" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="FuWu" xml:space="preserve">
+    <value>服務</value>
+  </data>
+  <data name="GongCheng1" xml:space="preserve">
+    <value>工程</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>工程項目管理平臺</value>
+  </data>
+  <data name="GongSi1" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="Gou" xml:space="preserve">
+    <value>購</value>
+  </data>
+  <data name="HuBeiHao" xml:space="preserve">
+    <value>滬備號</value>
+  </data>
+  <data name="JiTuanBan1" xml:space="preserve">
+    <value>集團版</value>
+  </data>
+  <data name="KeFu1" xml:space="preserve">
+    <value>客服</value>
+  </data>
+  <data name="KeHuGuanXiGuanLiPingTai" xml:space="preserve">
+    <value>客戶關係管理平臺</value>
+  </data>
+  <data name="LianJie" xml:space="preserve">
+    <value>連結</value>
+  </data>
+  <data name="LianXiDiZhi2" xml:space="preserve">
+    <value>聯繫地址</value>
+  </data>
+  <data name="LianXiRen1" xml:space="preserve">
+    <value>連絡人</value>
+  </data>
+  <data name="PingTai" xml:space="preserve">
+    <value>平臺</value>
+  </data>
+  <data name="PingTaiMingChen" xml:space="preserve">
+    <value>平臺名稱</value>
+  </data>
+  <data name="QingBuYaoGuanBiCiYeMian" xml:space="preserve">
+    <value>請不要關閉此頁面</value>
+  </data>
+  <data name="QingZaiXiaMianTianXieNiDeLian" xml:space="preserve">
+    <value>請在下面填寫你的聯繫資訊提交成功後下載連結會自動顯示</value>
+  </data>
+  <data name="QiYeBan1" xml:space="preserve">
+    <value>企業版</value>
+  </data>
+  <data name="QiYeZongHeGuanLiPingTai" xml:space="preserve">
+    <value>企業綜合管理平臺</value>
+  </data>
+  <data name="Ren2" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="RuanJianShiShi" xml:space="preserve">
+    <value>軟體實施</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi1" xml:space="preserve">
+    <value>軟體實施專案管理平臺</value>
+  </data>
+  <data name="RuYouWenTiQingZhiJieLianXiKeFu" xml:space="preserve">
+    <value>如有問題請直接聯繫客服</value>
+  </data>
+  <data name="ShenQing2" xml:space="preserve">
+    <value>申請</value>
+  </data>
+  <data name="SheZhiShiFouZiDongJianZhan" xml:space="preserve">
+    <value>設置是否自動建站</value>
+  </data>
+  <data name="ShouJiHao1" xml:space="preserve">
+    <value>手機號</value>
+  </data>
+  <data name="TuoDingXinXi" xml:space="preserve">
+    <value>拓鼎信息</value>
+  </data>
+  <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
+    <value>我們拓鼎所有管理軟體平臺產品企業版提供免費線上試用試用中如遇</value>
+  </data>
+  <data name="Xian" xml:space="preserve">
+    <value>現</value>
+  </data>
+  <data name="XiangMuBao1" xml:space="preserve">
+    <value>項目寶</value>
+  </data>
+  <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>專案管理平臺</value>
+  </data>
+  <data name="XiangMuXingPingTai1" xml:space="preserve">
+    <value>專案型平臺</value>
+  </data>
+  <data name="XiaZai1" xml:space="preserve">
+    <value>下載</value>
+  </data>
+  <data name="XiaZaiLianJie" xml:space="preserve">
+    <value>下載連結</value>
+  </data>
+  <data name="XieTongPingTai" xml:space="preserve">
+    <value>協同平臺</value>
+  </data>
+  <data name="XingYeJuXianWeiCuJinYeJieXiang" xml:space="preserve">
+    <value>行業矩獻為促進業界專案管理軟體的發展和提升企業項目管理水準泰</value>
+  </data>
+  <data name="XiTongJiCheng" xml:space="preserve">
+    <value>系統集成</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing1" xml:space="preserve">
+    <value>系統集成專案管理平臺</value>
+  </data>
+  <data name="YanFa" xml:space="preserve">
+    <value>研發</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>研發專案管理平臺</value>
+  </data>
+  <data name="YanZhengMa2" xml:space="preserve">
+    <value>驗證碼</value>
+  </data>
+  <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
+    <value>要協助請聯繫泰頂客服電話</value>
+  </data>
+  <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
+    <value>因為要複製網站檔和初始化資料預計要分鐘才能完成並出現登錄界</value>
+  </data>
+  <data name="YongHuShu2" xml:space="preserve">
+    <value>用戶數</value>
+  </data>
+  <data name="YuanMa1" xml:space="preserve">
+    <value>源碼</value>
+  </data>
+  <data name="ZaiXianShiYong" xml:space="preserve">
+    <value>線上試用</value>
+  </data>
+  <data name="ZhanDian1" xml:space="preserve">
+    <value>網站</value>
+  </data>
+  <data name="ZhanDianMingChen" xml:space="preserve">
+    <value>網站名稱</value>
+  </data>
+  <data name="ZhanDianXinXi" xml:space="preserve">
+    <value>網站信息</value>
+  </data>
+  <data name="ZhengWu" xml:space="preserve">
+    <value>政務</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>政務專案管理平臺</value>
+  </data>
+  <data name="ZhengZaiChuangJianNiDeYingYong" xml:space="preserve">
+    <value>正在創建你的應用網站大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiChuangJianZhanDianDa" xml:space="preserve">
+    <value>正在創建網站大概需要幾分鐘請稍候</value>
+  </data>
+  <data name="ZhengZaiHuiFuNiDeYingYongZhan" xml:space="preserve">
+    <value>正在恢復你的應用網站大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhongYaoQingZhenShiTianXie" xml:space="preserve">
+    <value>重要請真實填寫</value>
+  </data>
+  <data name="ZhuXiangMuGuanLiPingTaiZhiNeng" xml:space="preserve">
+    <value>注專案管理平臺只能由字母或漢字組成</value>
+  </data>
+  <data name="ZhuZhiNengYouZiMuZuCheng" xml:space="preserve">
+    <value>注只能由字母組成</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai1" xml:space="preserve">
+    <value>綜合管理平臺</value>
+  </data>
+  <data name="ZongHePingTai" xml:space="preserve">
+    <value>綜合平臺</value>
+  </data>
+  <data name="BaoCunChengGong" xml:space="preserve">
+    <value>保存成功</value>
+  </data>
+  <data name="BaoCunShiBaiQingJianCha1" xml:space="preserve">
+    <value>保存失敗請檢查</value>
+  </data>
+  <data name="BeiFenWenJianXiaZaiTongZhi1" xml:space="preserve">
+    <value>備份檔案下載通知</value>
+  </data>
+  <data name="ChengWeiHeZuoHuoBan" xml:space="preserve">
+    <value>成為合作夥伴</value>
+  </data>
+  <data name="ChuangJianShiBaiCunZaiXiangTon1" xml:space="preserve">
+    <value>創建失敗存在相同名稱的網站請檢查</value>
+  </data>
+  <data name="ChuangJianShiBaiMeiYouNiXuanQu" xml:space="preserve">
+    <value>創建失敗沒有你選取的產品版本的可用網站基礎參數請檢查</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>的</value>
+  </data>
+  <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>的購買申請請及時處理</value>
+  </data>
+  <data name="DengLuZhangHaoMiMa" xml:space="preserve">
+    <value>登錄帳號密碼</value>
+  </data>
+  <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
+    <value>登錄帳號密碼請放心使用有問題請隨時聯繫客服謝謝此郵件發自泰頂拓鼎集團</value>
+  </data>
+  <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>的申請請及時處理</value>
+  </data>
+  <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
+    <value>的試用資訊請關注</value>
+  </data>
+  <data name="DeShuJuBeiFenWenJianXiaZaiDiZh" xml:space="preserve">
+    <value>的資料備份文件下載地址是</value>
+  </data>
+  <data name="DeTaiDingTuoDing" xml:space="preserve">
+    <value>的泰頂拓鼎</value>
+  </data>
+  <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
+    <value>的問題回饋請關注</value>
+  </data>
+  <data name="DeYuanGong1" xml:space="preserve">
+    <value>的員工</value>
+  </data>
+  <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>的租用申請請及時處理</value>
+  </data>
+  <data name="DianHua5" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="GengXinShiBaiQingJianCha1" xml:space="preserve">
+    <value>更新失敗請檢查</value>
+  </data>
+  <data name="GouMai2" xml:space="preserve">
+    <value>購買</value>
+  </data>
+  <data name="GouMaiBanBen1" xml:space="preserve">
+    <value>購買版本</value>
+  </data>
+  <data name="HuiFuShiBaiCunZaiXiangTongMing1" xml:space="preserve">
+    <value>恢復失敗存在相同名稱的網站請檢查</value>
+  </data>
+  <data name="HuiFuShiBaiMeiYouNiXuanQuDeCha" xml:space="preserve">
+    <value>恢復失敗沒有你選取的產品版本的可用網站基礎參數請檢查</value>
+  </data>
+  <data name="HuiFuShuJuKuShiBai1" xml:space="preserve">
+    <value>恢復資料庫失敗</value>
+  </data>
+  <data name="JianZhanXinXi1" xml:space="preserve">
+    <value>建站信息</value>
+  </data>
+  <data name="JingGaoZhanDianMingChenZhiNeng1" xml:space="preserve">
+    <value>警告網站名稱只能由字母組成不能有漢字數位標點符號也不能有空格請檢查</value>
+  </data>
+  <data name="JiTuanBan2" xml:space="preserve">
+    <value>集團版</value>
+  </data>
+  <data name="NiHaoNi1" xml:space="preserve">
+    <value>你好你</value>
+  </data>
+  <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
+    <value>請及時下載如有問題請聯繫客服謝謝此郵件來自泰頂拓鼎集團</value>
+  </data>
+  <data name="QuanBuGengXinChengGong" xml:space="preserve">
+    <value>全部更新成功</value>
+  </data>
+  <data name="Ren3" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="RuanJianGouMaiShenQingTongZhi1" xml:space="preserve">
+    <value>軟體購買申請通知</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
+    <value>軟體租用建站參數</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
+    <value>軟體租用建站維護</value>
+  </data>
+  <data name="RuanJianZuYongShenQingTongZhi1" xml:space="preserve">
+    <value>軟體租用申請通知</value>
+  </data>
+  <data name="ShanChuShiBaiQingJianCha1" xml:space="preserve">
+    <value>刪除失敗請檢查</value>
+  </data>
+  <data name="ShangHuiXinXi1" xml:space="preserve">
+    <value>商會資訊</value>
+  </data>
+  <data name="ShiBaiCunZaiXiangTongMingChenD1" xml:space="preserve">
+    <value>失敗存在相同名稱的網站請檢查</value>
+  </data>
+  <data name="ShiBaiYaoFuZhiDeZhanDianBuNeng" xml:space="preserve">
+    <value>失敗要複製的網站不能為空請檢查</value>
+  </data>
+  <data name="ShiBaiYaoShanChuDeZhanDianBuNe" xml:space="preserve">
+    <value>失敗要刪除的網站不能為空請檢查</value>
+  </data>
+  <data name="TiJiaoChengGong" xml:space="preserve">
+    <value>提交成功</value>
+  </data>
+  <data name="TiJiaoChengGongTaiDingTuoDingK" xml:space="preserve">
+    <value>提交成功泰頂拓鼎客服會在分鐘之內聯繫你請稍候謝謝</value>
+  </data>
+  <data name="TiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
+    <value>提交成功下載連結在下麵點擊可下載</value>
+  </data>
+  <data name="TiJiaoLe" xml:space="preserve">
+    <value>提交了</value>
+  </data>
+  <data name="TiJiaoShiBaiDaiHaoXiangBuNengW" xml:space="preserve">
+    <value>提交失敗帶號項不能為空請檢查</value>
+  </data>
+  <data name="TiJiaoShiBaiQingDianHuaLianXiT" xml:space="preserve">
+    <value>提交失敗請電話聯繫泰頂拓鼎客服謝謝</value>
+  </data>
+  <data name="TiJiaoShiBaiQingJianCha" xml:space="preserve">
+    <value>提交失敗請檢查</value>
+  </data>
+  <data name="TiJiaoShiBaiYanZhengMaCuoWuQin" xml:space="preserve">
+    <value>提交失敗驗證碼錯誤請檢查</value>
+  </data>
+  <data name="TiShiCiZhanDianBuCunZaiQingJia" xml:space="preserve">
+    <value>提示此網站不存在請檢查</value>
+  </data>
+  <data name="TiShiCiZhanDianDeShuJuYiYingYo" xml:space="preserve">
+    <value>提示此網站的資料已應用不能刪除請檢查</value>
+  </data>
+  <data name="TiShiCiZhanDianHaiCunZaiJiLuBu" xml:space="preserve">
+    <value>提示此網站還存在記錄不能刪除請檢查</value>
+  </data>
+  <data name="TiShiDaiHaoDeDuBuNengKongQingJ" xml:space="preserve">
+    <value>提示帶號的都不能空請檢查</value>
+  </data>
+  <data name="TiShiFaSongShiBaiQingJianCha" xml:space="preserve">
+    <value>提示發送失敗請檢查</value>
+  </data>
+  <data name="TiShiGongSi" xml:space="preserve">
+    <value>提示公司</value>
+  </data>
+  <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
+    <value>同鄉歡迎你加入商會謝謝</value>
+  </data>
+  <data name="WaiBuFaBu" xml:space="preserve">
+    <value>外部發佈</value>
+  </data>
+  <data name="XinJian1" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="XuNiMuLuDeJueDuiLuJingBaoCunCh1" xml:space="preserve">
+    <value>虛擬目錄的絕對路徑保存成功</value>
+  </data>
+  <data name="YanZhengMaCuoWuQingJianCha1" xml:space="preserve">
+    <value>驗證碼錯誤請檢查</value>
+  </data>
+  <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
+    <value>已被刪除如有問題請聯繫客服謝謝此郵件來自泰頂拓鼎集團</value>
+  </data>
+  <data name="YiBeiShengJiDaoZuiXinBanShengJ1" xml:space="preserve">
+    <value>已被升級到最新版升級後第一次打開會較慢大約要到分鐘才會出現登錄頁面如有問題請聯繫泰頂拓鼎客服謝謝此郵件來自泰頂拓鼎集團</value>
+  </data>
+  <data name="YiChuangJian1" xml:space="preserve">
+    <value>已創建</value>
+  </data>
+  <data name="YiChuangJianZhanDianDiZhiShi" xml:space="preserve">
+    <value>已創建網站地址是</value>
+  </data>
+  <data name="YiGengXinXianYouRongLiang" xml:space="preserve">
+    <value>已更新現有容量</value>
+  </data>
+  <data name="YiHuiFu1" xml:space="preserve">
+    <value>已恢復</value>
+  </data>
+  <data name="YiHuiFuZhanDianDiZhiShi" xml:space="preserve">
+    <value>已恢復網站地址是</value>
+  </data>
+  <data name="YongHuShu3" xml:space="preserve">
+    <value>用戶數</value>
+  </data>
+  <data name="YuanMaXiaZai1" xml:space="preserve">
+    <value>源碼下載</value>
+  </data>
+  <data name="ZhanDian2" xml:space="preserve">
+    <value>網站</value>
+  </data>
+  <data name="ZhanDianBeiFenWenJianFaSongChe1" xml:space="preserve">
+    <value>網站備份檔案發送成功</value>
+  </data>
+  <data name="ZhanDianChuangJianChengGongNiK" xml:space="preserve">
+    <value>網站創建成功你可以點擊下面連結打開和收藏此網站注意第一次打開登錄頁面時因要初始化系統耗時會較長此後不會超過秒鐘</value>
+  </data>
+  <data name="ZhanDianChuangJianTongZhi1" xml:space="preserve">
+    <value>網站創建通知</value>
+  </data>
+  <data name="ZhanDianHuiFuChengGongNiKeYiDa" xml:space="preserve">
+    <value>網站恢復成功你可以打開和收藏此網站</value>
+  </data>
+  <data name="ZhanDianHuiFuTongZhi1" xml:space="preserve">
+    <value>網站恢復通知</value>
+  </data>
+  <data name="ZhanDianShanChuChengGong1" xml:space="preserve">
+    <value>網站刪除成功</value>
+  </data>
+  <data name="ZhanDianShanChuTongZhi1" xml:space="preserve">
+    <value>網站刪除通知</value>
+  </data>
+  <data name="ZhanDianShengJiChengGong1" xml:space="preserve">
+    <value>網站升級成功</value>
+  </data>
+  <data name="ZhanDianShengJiShiBaiQingJianC1" xml:space="preserve">
+    <value>網站升級失敗請檢查</value>
+  </data>
+  <data name="ZhanDianShengJiTongZhi1" xml:space="preserve">
+    <value>網站升級通知</value>
+  </data>
+  <data name="ZhengZaiBaoCunYingYongZhanDian1" xml:space="preserve">
+    <value>正在保存應用網站的虛擬目錄的絕對路徑大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiBaoCunZheGeZhanDianDeX1" xml:space="preserve">
+    <value>正在保存這個網站的虛擬目錄的絕對路徑大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiBeiFenNiDeZhanDianWenJ1" xml:space="preserve">
+    <value>正在備份你的網站檔大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiFaSongZheGeZhanDianBei1" xml:space="preserve">
+    <value>正在發送這個網站備份檔案大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiShanChuNiDeYingYongZha1" xml:space="preserve">
+    <value>正在刪除你的應用網站大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiShanChuZheGeZhanDianDa1" xml:space="preserve">
+    <value>正在刪除這個網站大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiShengJiNiDeYingYongZha1" xml:space="preserve">
+    <value>正在升級你的應用網站大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhengZaiShengJiZheGeZhanDianDa1" xml:space="preserve">
+    <value>正在升級這個網站大概需要分鐘請耐心等候</value>
+  </data>
+  <data name="ZhuCeChengGongHuanYingNiJiaRuS" xml:space="preserve">
+    <value>註冊成功歡迎你加入商會謝謝</value>
+  </data>
+  <data name="ZhuCeShiBaiQingLianXiShangHuiG" xml:space="preserve">
+    <value>註冊失敗請聯繫商會管理員微信</value>
+  </data>
+  <data name="ZiJian" xml:space="preserve">
+    <value>自建</value>
+  </data>
+  <data name="ZunJingDe1" xml:space="preserve">
+    <value>尊敬的</value>
+  </data>
+  <data name="ZuYong1" xml:space="preserve">
+    <value>租用</value>
+  </data>
+  <data name="ZuYongBanBen1" xml:space="preserve">
+    <value>租用版本</value>
+  </data>
+  <data name="ZuYongZhanDian1" xml:space="preserve">
+    <value>租用網站</value>
+  </data>
+  <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
+    <value>租用網站維護</value>
   </data>
 </root>

@@ -30,7 +30,7 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = "正在保存应用站点的虚拟目录的绝对路径，大概需要1分钟，请耐心等候......";
+        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiBaoCunYingYongZhanDian").ToString().Trim();
 
         if (Page.IsPostBack == false)
         {
@@ -38,11 +38,11 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
             {
                 //更新站点虚拟目录
                 UpdateVirtualDirectoryPhysicalPath();
-                LB_Message.Text = "虚拟目录的绝对路径保存成功！";
+                LB_Message.Text = LanguageHandle.GetWord("XuNiMuLuDeJueDuiLuJingBaoCunCh").ToString().Trim();
             }
             catch
             {
-                LB_Message.Text = "保存失败，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("BaoCunShiBaiQingJianCha").ToString().Trim();
             }
 
             IMB_Process.Visible = false;
@@ -81,12 +81,12 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
             }
             else
             {
-                LB_Message.Text = "提示，此站点不存在，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim();
             }
         }
         catch (Exception ex)
         {
-            LB_Message.Text = "更新失败，请检查！";
+            LB_Message.Text = LanguageHandle.GetWord("GengXinShiBaiQingJianCha").ToString().Trim();
         }
     }
 

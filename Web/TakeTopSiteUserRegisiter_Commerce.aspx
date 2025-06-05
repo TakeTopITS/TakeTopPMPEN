@@ -87,7 +87,7 @@
                     <asp:TextBox ID="TB_UserCode" runat="server"  Height="25px"   Width="90%"></asp:TextBox>
                     <span style="color: #ff0000">*</span>
                     <br />
-                    <asp:Label ID="Label49" runat="server" Font-Size="X-Small" Text="重要，请真实填写"></asp:Label>
+                    <asp:Label ID="Label49" runat="server" Font-Size="X-Small"  Text="<%$ Resources:lang,ZhongYaoQingZhenShiTianXie%>"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -147,7 +147,7 @@
                     <asp:TextBox ID="TB_EMail" runat="server"  Height="25px"   Width="90%"></asp:TextBox>
                     <span style="color: #ff0000">*</span>
                     <br />
-                   <span style="font-size:x-small;">重要，请真实填写</span>
+                   <span style="font-size:x-small;"><asp:Label ID="Label1345" runat="server" Text="<%$ Resources:lang,ZhongYaoQingZhenShiTianXie%>"></asp:Label></span>
                 </td>
             </tr>
            

@@ -41,7 +41,7 @@ public partial class TakeTopSoftParnter_TakeTopSoftCloud : System.Web.UI.Page
     {
         string strServerType = DL_ServerType.SelectedValue.Trim();
 
-        if (strServerType == "租用")
+        if (strServerType == "Rent")
         {
             TB_StorageCapacity.Enabled = true;
         }
@@ -67,24 +67,24 @@ public partial class TakeTopSoftParnter_TakeTopSoftCloud : System.Web.UI.Page
         strAddress = TB_Address.Text.Trim();
         strPostCode = "";
         strType = DL_Type.SelectedValue.Trim();
-        strQuestion = "成为合作伙伴";
+        strQuestion = LanguageHandle.GetWord("ChengWeiHeZuoHuoBan").ToString().Trim();
         dtAnswerTime = DateTime.Now.AddHours(24);
 
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDHXBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC").ToString().Trim() + "')", true);
 
-            LB_Message.Text = "提交失败，请检查！";
+            LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha").ToString().Trim();
         }
         else
         {
             if (String.Compare(Request.Cookies["CheckCode"].Value, TB_CheckCode.Text, true) != 0)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYZMCWSRZDYZM + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM").ToString().Trim() + "')", true);
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = "验证码错误，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("YanZhengMaCuoWuQingJianCha").ToString().Trim();
                 return;
             }
 
@@ -92,7 +92,7 @@ public partial class TakeTopSoftParnter_TakeTopSoftCloud : System.Web.UI.Page
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = "提示：公司: " + strCompany + " 的员工: " + strContactPerson + "( " + strPhoneNumber + " )" + " 提交了："  + strQuestion + " 的申请，请及时处理！！！";
+                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi").ToString().Trim() + strCompany + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe").ToString().Trim()  + strQuestion + LanguageHandle.GetWord("DeShenQingQingJiShiChuLi").ToString().Trim();
                 Action action = new Action(delegate ()
                 {
                     try
@@ -114,22 +114,22 @@ public partial class TakeTopSoftParnter_TakeTopSoftCloud : System.Web.UI.Page
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'新建'" + ",'','','','','" + strWebSite + "')";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + LanguageHandle.GetWord("XinJian").ToString().Trim() + ",'','','','','" + strWebSite + "')";
 
             try
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
 
-                LB_Message.Text = "提交成功！";
+                LB_Message.Text = LanguageHandle.GetWord("TiJiaoChengGong").ToString().Trim();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('-----提交成功，泰顶拓鼎客服会在5分钟之内联系你，请稍候，谢谢！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiJiaoChengGongTaiDingTuoDingK").ToString().Trim(), true);
             }
             catch
             {
 
-                LB_Message.Text = "提交失败，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha").ToString().Trim();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('-----提交失败，请电话联系泰顶拓鼎客服（钟生：18620229388），谢谢！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiJiaoShiBaiQingDianHuaLianXiT").ToString().Trim(), true);
 
             }
         }

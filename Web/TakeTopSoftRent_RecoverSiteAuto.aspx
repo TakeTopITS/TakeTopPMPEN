@@ -61,11 +61,11 @@
                                        <div id="DIV_Top"  style="text-align:center;padding-top:100px;">
                                              <table>
                                                  <tr>
-                                                     <td><img src="Images/Processing.gif" alt="Loading,please wait..." /></td><td style="color:red;">正在创建你的应用站点，大概需要5分钟，请耐心等候.......</td>
+                                                     <td><img src="Images/Processing.gif" alt="Loading,please wait..." /></td><td style="color:red;"><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhengZaiChuangJianNiDeYingYong%>"></asp:Label></td>
                                                  </tr>
                                                   
                                                  <tr>
-                                                     <td colspan ="2" style="text-align:center;font-size:small;">（请不要关闭此页面）</td>
+                                                     <td colspan ="2" style="text-align:center;font-size:small;"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QingBuYaoGuanBiCiYeMian%>"></asp:Label></td>
                                                  </tr>
                                              </table>
                                         </div> 
