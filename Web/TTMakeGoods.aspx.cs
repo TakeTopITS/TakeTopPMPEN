@@ -233,13 +233,13 @@ public partial class TTMakeGoods : System.Web.UI.Page
             {
                 if (ts.Days > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuShiBaiZhiNengShanChuD").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuShiBaiZhiNengShanChuD")+"')", true);
                     return;
                 }
 
                 if (DataGrid1.Items.Count > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZMXJLSCSBQJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZMXJLSCSBQJC") + "')", true);
                     return;
                 }
 
@@ -354,13 +354,13 @@ public partial class TTMakeGoods : System.Web.UI.Page
             LoadGoodsCheckInOrder(strCreatorCode);
             LoadGoodsCheckInOrderDetail(strCIOID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -422,11 +422,11 @@ public partial class TTMakeGoods : System.Web.UI.Page
 
             LoadGoodsCheckInOrder(strCreatorCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -1332,7 +1332,7 @@ public partial class TTMakeGoods : System.Web.UI.Page
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuShiBaiZhiNengShanChuD").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuShiBaiZhiNengShanChuD")+"')", true);
                     return;
                 }
 
@@ -1385,11 +1385,11 @@ public partial class TTMakeGoods : System.Web.UI.Page
                         ShareClass.CountGoodsStockByMWAM(strGoodsID, 0 - deNumber, dePrice, 0, 0);
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1853,11 +1853,11 @@ public partial class TTMakeGoods : System.Web.UI.Page
             HL_ItemPhoto.NavigateUrl = "";
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
@@ -1954,21 +1954,21 @@ public partial class TTMakeGoods : System.Web.UI.Page
         //            IM_ItemPhoto.ImageUrl = strFileName3;
         //            HL_ItemPhoto.NavigateUrl = strFileName3;
 
-        //            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+        //            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         //        }
         //        catch
         //        {
-        //            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+        //            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         //        }
         //    }
         //    else
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "')", true);
         //    }
         //}
         //else
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "')", true);
         //}
 
 
@@ -2123,13 +2123,13 @@ public partial class TTMakeGoods : System.Web.UI.Page
         {
             if (!ShareClass.checkRequireNumberIsMoreHaveNumberForProjectRelatedItemNumber(strSourceID, "AleadyCheckIn", deNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2333", "alert('" +LanguageHandle.GetWord("ZZDiShiRuKuLiangChaoChuXuQiuLi").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2333", "alert('" +LanguageHandle.GetWord("ZZDiShiRuKuLiangChaoChuXuQiuLi")+"')", true);
             }
         }
 
         if (strOwnerCode == "" | strType == "" | strGoodsCode == "" | strSpec == "" | strPosition == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click3432424234", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click3432424234", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
         }
         else
@@ -2160,7 +2160,7 @@ public partial class TTMakeGoods : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC") + "')", true);
                 return;
             }
             goodsCheckInOrderDetail.Type = strType;
@@ -2332,13 +2332,13 @@ public partial class TTMakeGoods : System.Web.UI.Page
         {
             if (!ShareClass.checkRequireNumberIsMoreHaveNumberForProjectRelatedItemNumber(strSourceID, "AleadyCheckIn", deNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2333", "alert('" +LanguageHandle.GetWord("ZZDiShiRuKuLiangChaoChuXuQiuLi").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2333", "alert('" +LanguageHandle.GetWord("ZZDiShiRuKuLiangChaoChuXuQiuLi")+"')", true);
             }
         }
 
         if (strOwnerCode == "" | strType == "" | strGoodsCode == "" | strSpec == "" | strPosition == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickDFFASDDFASF", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickDFFASDDFASF", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
         }
@@ -2372,7 +2372,7 @@ public partial class TTMakeGoods : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC") + "')", true);
                 return;
             }
 
@@ -2535,7 +2535,7 @@ public partial class TTMakeGoods : System.Web.UI.Page
     //    }
     //    catch
     //    {
-    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC").ToString().Trim() + "')", true);
+    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC") + "')", true);
     //        return;
     //    }
     //    goodsCheckInOrderDetail.Type = strType;

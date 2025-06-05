@@ -147,7 +147,7 @@ public partial class TTGoodsSummaryReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoHuiZongBaoBiaoxls").ToString().Trim());
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoHuiZongBaoBiaoxls"));
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);   
     }

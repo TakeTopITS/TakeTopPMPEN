@@ -62,10 +62,10 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             //加载项目所属专业
             LoadTenderContent();
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView3, strUserCode);
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView4, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView2, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView3, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView4, strUserCode);
         }
     }
 
@@ -111,7 +111,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             string strTenderCode = TB_TenderCode.Text.Trim();
             if (string.IsNullOrEmpty(strTenderCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBBHDBNWKJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBBHDBNWKJC") + "')", true);
                 return;
             }
 
@@ -121,7 +121,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             IList lst = tender_HYYQBLL.GetAllTender_HYYQs(strHQL);
             if (lst != null && lst.Count > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBBHYJCZBNZF").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBBHYJCZBNZF") + "')", true);
                 return;
             }
 
@@ -174,7 +174,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuTouBiaoBaoJiaHeKongZhiJ").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuTouBiaoBaoJiaHeKongZhiJ")+"')", true);
                 return;
             }
 
@@ -259,7 +259,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             //重新加载列表
             LoadTenderInfo("");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception ex)
         {
@@ -288,7 +288,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
         string strID = HF_ID.Value.Trim();
         if (string.IsNullOrEmpty(strID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDTBLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDTBLB") + "')", true);
             return;
         }
 
@@ -298,7 +298,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
         string strTenderCode = TB_TenderCode.Text.Trim();
         if (string.IsNullOrEmpty(strTenderCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBBHDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBBHDBNWKJC") + "')", true);
             return;
         }
 
@@ -389,7 +389,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuTouBiaoBaoJiaHeKongZhiJ").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuTouBiaoBaoJiaHeKongZhiJ")+"')", true);
                 return;
             }
 
@@ -455,11 +455,11 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             //重新加载列表
             LoadTenderInfo("");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBJLBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBJLBCZJC") + "')", true);
             return;
         }
     }
@@ -475,7 +475,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             strID = e.Item.Cells[4].Text.Trim();
             string strCommandArgument = e.CommandArgument.ToString().Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("BidManagement", LanguageHandle.GetWord("TouBiao").ToString().Trim(), strID);
+            int intWLNumber = GetRelatedWorkFlowNumber("BidManagement", LanguageHandle.GetWord("TouBiao"), strID);
             if (intWLNumber > 0)
             {
                 BT_SubmitApply.Enabled = false;
@@ -579,7 +579,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
 
                 if (e.CommandName == "Assign")
                 {
-                    intWLNumber = GetRelatedWorkFlowNumber("BidManagement", LanguageHandle.GetWord("TouBiao").ToString().Trim(), strID);
+                    intWLNumber = GetRelatedWorkFlowNumber("BidManagement", LanguageHandle.GetWord("TouBiao"), strID);
                     if (intWLNumber != 0)
                     {
                         BT_SubmitApply.Enabled = false;
@@ -588,9 +588,9 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
                     {
                         BT_SubmitApply.Enabled = true;
                     }
-                    LoadRelatedWL("BidManagement", LanguageHandle.GetWord("TouBiao").ToString().Trim(), int.Parse(strID));
+                    LoadRelatedWL("BidManagement", LanguageHandle.GetWord("TouBiao"), int.Parse(strID));
 
-                    TB_WLName.Text = tender_HYYQ.ProjectName.Trim() + LanguageHandle.GetWord("TouBiao").ToString().Trim() + LanguageHandle.GetWord("ShenQing").ToString().Trim();
+                    TB_WLName.Text = tender_HYYQ.ProjectName.Trim() + LanguageHandle.GetWord("TouBiao") + LanguageHandle.GetWord("ShenQing");
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
                 }
@@ -600,7 +600,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             {
                 if (string.IsNullOrEmpty(strID))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDTBLB").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDTBLB") + "')", true);
                     return;
                 }
 
@@ -623,16 +623,16 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
 
                         HF_ID.Value = "";
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiCiTouBiaoYiWanChengBuN").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiCiTouBiaoYiWanChengBuN")+"')", true);
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBJLBCZJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBJLBCZJC") + "')", true);
                     return;
                 }
             }
@@ -705,7 +705,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZTBCNZJCY").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZTBCNZJCY") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -806,7 +806,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZKHCNZJCY").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZKHCNZJCY") + "')", true);
             }
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -930,7 +930,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
 
         if (strRelatedType == null)
         {
-            strRelatedType = LanguageHandle.GetWord("TouBiao").ToString().Trim();
+            strRelatedType = LanguageHandle.GetWord("TouBiao");
             strRelatedID = strTrenderID;
 
         }
@@ -948,7 +948,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC") + "');</script>");
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -1004,7 +1004,7 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, LanguageHandle.GetWord("TouBiao").ToString().Trim(), int.Parse(strTrenderID));
+            LoadRelatedWL(strWLType, LanguageHandle.GetWord("TouBiao"), int.Parse(strTrenderID));
 
             //UpdateGoodsPurchaseStatus(strPDID, "InProgress");
             //DL_PDStatus.SelectedValue = "InProgress";
@@ -1018,11 +1018,11 @@ public partial class TTTenderList_BYJF : System.Web.UI.Page
             //Workflow,添加模组关联流程记录
             ShareClass.AddModuleToRelatedWorkflow(strWLID, "0", "0", "BidManagement", strTrenderID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTouBiaoShenQingShengChengChe").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTouBiaoShenQingShengChengChe")+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoTouBiaoShenQingShengC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoTouBiaoShenQingShengC")+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 

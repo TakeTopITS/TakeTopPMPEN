@@ -51,7 +51,7 @@ public partial class WeiXinIndex : System.Web.UI.Page
             else
             {
                 WriteContent("failed:" + signature + "," + CheckSignature.GetSignature(timestamp, nonce, strToken) + "¡£" +
-                            LanguageHandle.GetWord("RuGuoNiZaiLiuLanQiZhongKanDaoZ").ToString().Trim());
+                            LanguageHandle.GetWord("RuGuoNiZaiLiuLanQiZhongKanDaoZ"));
             }
             Response.End();
         }

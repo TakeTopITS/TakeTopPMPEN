@@ -48,7 +48,7 @@ public partial class TTLTMyMemberCustomerRequirement : System.Web.UI.Page
             DataGrid1.DataBind();
             LB_Sql1.Text = strHQL;
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("SuoYouKeHuFuWuXuQiu").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("SuoYouKeHuFuWuXuQiu");
         }
     }
 

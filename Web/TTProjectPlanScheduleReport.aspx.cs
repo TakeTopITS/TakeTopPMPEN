@@ -36,7 +36,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
             strVerID = ShareClass.GetProjectPlanVersionIDByType(strProjectID, "InUse").ToString();
             if(strVerID == "0")
             {
-                Response.Write(LanguageHandle.GetWord("CuoWuCiXiangMuMeiYouZaiYongDeJ").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("CuoWuCiXiangMuMeiYouZaiYongDeJ"));
                 return;
             }
         }
@@ -209,19 +209,19 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         Report_Table rt = new Report_Table();
         rt.monthNum = nMonth;
         //标题
-        rt.Report_Title = LanguageHandle.GetWord("XiangMuJianSheJinDuBiao").ToString().Trim();
+        rt.Report_Title = LanguageHandle.GetWord("XiangMuJianSheJinDuBiao");
         //画表头
         Report_Frame_Header HeaderLevel = new Report_Frame_Header();
 
-        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("XuHao").ToString().Trim(), 1, 2, 0));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("ShiGongLeiXing").ToString().Trim(), 1, 2, 500));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("GeTongShu").ToString().Trim(), 1, 2, 0));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("WanChengShu").ToString().Trim(), 1, 2, 0));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("ChanWei").ToString().Trim(), 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("XuHao"), 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("ShiGongLeiXing"), 1, 2, 500));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("GeTongShu"), 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("WanChengShu"), 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell(LanguageHandle.GetWord("ChanWei"), 1, 2, 0));
 
         for (DateTime dt = dtBegin; dt < dtEnd; dt = dt.AddMonths(1))
         {
-            HeaderLevel.headrow.Add(new Report_Frame_Cell(string.Format(LanguageHandle.GetWord("0Nian1Yue").ToString().Trim(), dt.Year, dt.Month), 4, 1, 0));
+            HeaderLevel.headrow.Add(new Report_Frame_Cell(string.Format(LanguageHandle.GetWord("0Nian1Yue"), dt.Year, dt.Month), 4, 1, 0));
         }
 
         rt.headers.Add(HeaderLevel);
@@ -231,7 +231,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         {
             for (int j = 1; j <= 4; j++)
             {
-                HeaderLevel2.headrow.Add(new Report_Frame_Cell(string.Format(LanguageHandle.GetWord("Di0Zhou").ToString().Trim(), j), 1, 1, 0));
+                HeaderLevel2.headrow.Add(new Report_Frame_Cell(string.Format(LanguageHandle.GetWord("Di0Zhou"), j), 1, 1, 0));
             }
         }
         rt.headers.Add(HeaderLevel2);

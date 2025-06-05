@@ -44,7 +44,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
             ShareClass.InitialUserDocTypeTree(TreeView3, strUserCode);
 
             ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ProjectType", "0", strRelatedName);
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
             LoadProjectTypeRelatedDoc(strRelatedType, strRelatedName);
 
@@ -86,7 +86,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
             strDocType = docType.Type.Trim();
 
             strHQL = " from Document as document where document.RelatedType = 'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX") + strDocType;
 
             //设置缺省的文件类型
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -94,14 +94,14 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
         else
         {
             strHQL = " from Document as document where document.RelatedType =  'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
         }
 
         lst2 = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst2;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
@@ -145,7 +145,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ") + "');</script>");
                 }
             }
 
@@ -162,7 +162,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID + strDocName;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen") + LanguageHandle.GetWord("WenJian") + strDocID + strDocName;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -190,7 +190,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC") + "');</script>");
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -217,7 +217,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC") + "');</script>");
             }
             else
             {
@@ -251,13 +251,13 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "');</script>");
                 }
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "');</script>");
         }
     }
 
@@ -364,11 +364,11 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
             //自动附加要评审的工作流文件
             AddWLDocument(strDocID, int.Parse(strWFID));
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS") + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSB") + "');</script>");
         }
     }
 
@@ -462,7 +462,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);

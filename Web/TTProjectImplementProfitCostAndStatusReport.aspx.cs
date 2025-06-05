@@ -27,7 +27,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuLiRunChengBenZhuangTaiB").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuLiRunChengBenZhuangTaiB");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -35,7 +35,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -64,7 +64,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strChartTitle = LanguageHandle.GetWord("LiRunChengBenFenBuTu").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("LiRunChengBenFenBuTu");
         strHQL = @"Select Account as XName,SUM(Amount) as YNumber From V_ProjectProfitAndCostChart 
                       Where ";
 
@@ -82,7 +82,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         IFrame_Chart_ProfitCost.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
 
-        strChartTitle = LanguageHandle.GetWord("XiangMuZhuangTaiFenBuTu").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("XiangMuZhuangTaiFenBuTu");
         strHQL = @"Select Status as XName,COUNT(*) as YNumber From V_ProjectStatusNumberChart
                       Where ";
 
@@ -203,7 +203,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuLiRunChengBenTongJiBiao").ToString().Trim());
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuLiRunChengBenTongJiBiao"));
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 

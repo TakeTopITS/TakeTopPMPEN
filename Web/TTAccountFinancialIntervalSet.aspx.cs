@@ -52,7 +52,7 @@ public partial class TTAccountFinancialIntervalSet : System.Web.UI.Page
             lbl_FinancialName.Text = accountFinancialSet.FinancialName.Trim();
         }
         else
-            lbl_FinancialName.Text = LanguageHandle.GetWord("WeiShuaDing").ToString().Trim();
+            lbl_FinancialName.Text = LanguageHandle.GetWord("WeiShuaDing");
 
         strHQL = "From AccountingIntervalSet as accountingIntervalSet Where accountingIntervalSet.Status='OPEN' Order By accountingIntervalSet.ID ASC ";
         AccountingIntervalSetBLL accountingIntervalSetBLL = new AccountingIntervalSetBLL();
@@ -63,7 +63,7 @@ public partial class TTAccountFinancialIntervalSet : System.Web.UI.Page
             lbl_IntervalName.Text = accountingIntervalSet.IntervalName.Trim();
         }
         else
-            lbl_IntervalName.Text = LanguageHandle.GetWord("WeiShuaDing").ToString().Trim();
+            lbl_IntervalName.Text = LanguageHandle.GetWord("WeiShuaDing");
     }
 
     protected void DL_FinancialID_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,13 +89,13 @@ public partial class TTAccountFinancialIntervalSet : System.Web.UI.Page
     {
         if (DL_FinancialID.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSZTMCWBXJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSZTMCWBXJC")+"')", true);
             DL_FinancialID.Focus();
             return;
         }
         if (DL_IntervalID.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJMCWBXJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJMCWBXJC")+"')", true);
             DL_IntervalID.Focus();
             return;
         }
@@ -150,6 +150,6 @@ public partial class TTAccountFinancialIntervalSet : System.Web.UI.Page
         lbl_FinancialName.Text = DL_FinancialID.SelectedItem.Text;
         lbl_IntervalName.Text = DL_IntervalID.SelectedItem.Text;
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZTJDCG").ToString().Trim()+"')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZTJDCG")+"')", true);
     }
 }

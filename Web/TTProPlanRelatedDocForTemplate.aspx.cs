@@ -42,7 +42,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
 
         //if (ShareClass.CheckUserCanControlProjectPlan(strPlanID, strUserCode) == false)
         //{
-        //    Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC").ToString().Trim() + "'");
+        //    Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC") + "'");
         //}
 
         strHQL = "from WorkPlan as workPlan where workPlan.ID = " + strPlanID;
@@ -72,14 +72,14 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Plan", strPlanID, strPlanName);
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
             LoadRelatedDoc(strPlanID, strProjectID);
 
             ShareClass.InitialUserDocTypeTree(TreeView3, strUserCode);
             ShareClass.LoadProjectActorGroupForDropDownList(DL_Visible, strProjectID);
 
-            string strTopTreeDocTypeName = "Plan" + "：" + strPlanID + " " + strPlanName + " " + LanguageHandle.GetWord("WenDangLieBiao").ToString().Trim();
+            string strTopTreeDocTypeName = "Plan" + "：" + strPlanID + " " + strPlanName + " " + LanguageHandle.GetWord("WenDangLieBiao");
             strHQL = "Select TemName From T_WorkFlowTemplate Where TemName In ((Select TemName from T_WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'DocumentReview'";
             strHQL += " and ((workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from T_RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'Project' and relatedWorkFlowTemplate.RelatedID = " + strProjectID + "))";
             strHQL += " or ( workFlowTemplate.Authority = 'All' ))";
@@ -148,7 +148,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
             TB_DocType.Text = docType.Type.Trim();
 
             strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'Plan' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and  documentForProjectPlanTemplate.DocType = " + "'" + strDocType + "'" + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX") + strDocType;
 
             //设置缺省的文件类型
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -161,14 +161,14 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
             TB_DocType.Text = "";
 
             strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'Plan' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
         }
 
         lst2 = documentForProjectPlanTemplateBLL.GetAllDocumentForProjectPlanTemplates(strHQL);
         DataGrid1.DataSource = lst2;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
     }
 
 
@@ -245,7 +245,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ") + "')", true);
                 }
             }
 
@@ -262,7 +262,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID + strDocName;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen") + LanguageHandle.GetWord("WenJian") + strDocID + strDocName;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -290,7 +290,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC") + "')", true);
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -322,14 +322,14 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
             {
                 if (this.AttachFile.ContentLength > 1024)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBNSCDYSZDWJ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBNSCDYSZDWJ") + "')", true);
                     return;
                 }
             }
 
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC") + "')", true);
             }
             else
             {
@@ -365,13 +365,13 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "')", true);
         }
     }
 
@@ -383,7 +383,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
         string strDocTypeID = LB_DocTypeID.Text.Trim();
         if (strDocTypeID == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC") + "')", true);
             return;
         }
         string strDocType = GetDocTypeName(strDocTypeID);
@@ -395,7 +395,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
         
         if (strFileName2=="")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC") + "')", true);
         }
         else
         {
@@ -430,7 +430,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
             catch (Exception err)
             {
                 LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
             }
         }
 
@@ -545,16 +545,16 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
             //工作流模板是否是自动激活状态
             if (ShareClass.GetWorkflowTemplateIsAutoActiveStatus(strTemName) == "NO")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLFQCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLFQCG") + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSB") + "')", true);
         }
     }
 
@@ -562,7 +562,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
     {
         string strHQL;
 
-        string strTopTreeDocTypeName = "Plan" + "：" + strPlanID + " " + strPlanName + " " + LanguageHandle.GetWord("WenDangLieBiao").ToString().Trim();
+        string strTopTreeDocTypeName = "Plan" + "：" + strPlanID + " " + strPlanName + " " + LanguageHandle.GetWord("WenDangLieBiao");
         strHQL = "Select TemName From T_WorkFlowTemplate Where TemName In ((Select TemName from T_WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'DocumentReview'";
         strHQL += " and ((workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from T_RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'Project' and relatedWorkFlowTemplate.RelatedID = " + strProjectID + "))";
         strHQL += " or ( workFlowTemplate.Authority = 'All' ))";
@@ -687,7 +687,7 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
     }
 
 
@@ -716,19 +716,19 @@ public partial class TTProPlanRelatedDocForTemplate : System.Web.UI.Page
             strDocType = docType.Type.Trim();
 
             strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strProjectType + "'" + " and  documentForProjectPlanTemplate.DocType = " + "'" + strDocType + "'" + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX") + strDocType;
         }
         else
         {
             strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType =  'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strProjectType + "'" + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
         }
 
         lst2 = documentForProjectPlanTemplateBLL.GetAllDocumentForProjectPlanTemplates(strHQL);
         DataGrid3.DataSource = lst2;
         DataGrid3.DataBind();
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
     }
 
     protected void LoadProjectTypeRelatedDoc(string strRelatedType, string strRelatedName)

@@ -49,7 +49,7 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
             string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB");
 
             strHQL = "from ProjectMember as projectMember ";
             strHQL += " Where projectMember.DepartCode in " + strDepartString;
@@ -60,7 +60,7 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString();
             LB_Sql.Text = strHQL;
 
             strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'Male'";
@@ -86,7 +86,7 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB");
 
         string strDepartString = LB_DepartString.Text.Trim();
 
@@ -107,7 +107,7 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString();
+        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString();
         LB_Sql.Text = strHQL;
 
 
@@ -137,12 +137,12 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("YongHuChengYuanXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("YongHuChengYuanXinXi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }

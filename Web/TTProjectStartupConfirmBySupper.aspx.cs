@@ -42,7 +42,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             LoadAllProject(strDepartString);
@@ -51,9 +51,9 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             RealChargeVisible();
             FinChargePercentByStep();
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll");
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
 
             ShareClass.LoadProjectStatusForDataGrid(strLangCode, DataGrid2);
         }
@@ -71,7 +71,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
@@ -90,7 +90,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             FinChargePercentByStep();
 
             BT_StatusVisible.Visible = true;
-            BT_StatusVisible.Text = LanguageHandle.GetWord("ShowStatus").ToString().Trim();
+            BT_StatusVisible.Text = LanguageHandle.GetWord("ShowStatus");
 
             DataGrid2.Visible = false;
 
@@ -115,7 +115,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
 
         LB_DepartCode.Text = "";
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll") + strOperatorCode + strOperatorName;
 
         SetProRecordColor();
         ShareClass.FinishPercentPicture(DataGrid3, 0);
@@ -137,7 +137,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
         {
             strHQL = "Select * from T_Project where Status = " + "'" + strStatus + "'" ;
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + LanguageHandle.GetWord("ZZXMZT").ToString().Trim() + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll") + LanguageHandle.GetWord("ZZXMZT") + strStatus;
         }
         else
         {
@@ -145,14 +145,14 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             {
                 strOperatorName = ShareClass.GetUserName(strOperatorCode);
                 strHQL = "Select * from T_Project where PMCode = " + "'" + strOperatorCode + "'" + " and " + "Status = " + "'" + strStatus + "'";
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strOperatorCode + strOperatorName + LanguageHandle.GetWord("ZZXMZT").ToString().Trim() + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll") + strOperatorCode + strOperatorName + LanguageHandle.GetWord("ZZXMZT") + strStatus;
             }
             else
             {
                 strDepartCode = LB_DepartCode.Text.Trim();
                 strDepartName = LB_DepartName.Text.Trim();
                 strHQL = "Select * from T_Project where PMCode in (select UserCode from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + ") and " + " Status = " + "'" + strStatus + "'" ;
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName + LanguageHandle.GetWord("ZZXMZT").ToString().Trim() + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName + LanguageHandle.GetWord("ZZXMZT") + strStatus;
             }
         }
 
@@ -189,11 +189,11 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 try
                 {
                     ShareClass.RunSqlCommand(strHQL);
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQDCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQDCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQDSBQJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQDSBQJC") + "')", true);
                 }
             }
             else
@@ -202,11 +202,11 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 try
                 {
                     ShareClass.RunSqlCommand(strHQL);
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTZQDCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTZQDCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTZQDSBQJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTZQDSBQJC") + "')", true);
                 }
             }
 
@@ -227,7 +227,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             LB_DepartCode.Text = strDepartCode;
             LB_DepartName.Text = strDepartName;
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName;
 
             string strHQL = "from ProjectMember as projectMember where projectMember.DepartCode= " + "'" + strDepartCode + "'";
             ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
@@ -251,7 +251,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             FinChargePercentByStep();
 
             BT_StatusVisible.Visible = true;
-            BT_StatusVisible.Text = LanguageHandle.GetWord("ShowStatus").ToString().Trim();
+            BT_StatusVisible.Text = LanguageHandle.GetWord("ShowStatus");
 
             DataGrid2.Visible = false;
             LB_Sql.Text = strHQL;
@@ -262,7 +262,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
     {
         string strHQL;
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll");
 
         DataGrid1.Visible = false;
 
@@ -310,15 +310,15 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
     {
         string strBTText = BT_StatusVisible.Text.Trim();
 
-        if (strBTText == LanguageHandle.GetWord("ShowStatus").ToString().Trim())
+        if (strBTText == LanguageHandle.GetWord("ShowStatus"))
         {
             DataGrid2.Visible = true;
-            BT_StatusVisible.Text = LanguageHandle.GetWord("HideStatus").ToString().Trim();
+            BT_StatusVisible.Text = LanguageHandle.GetWord("HideStatus");
         }
         else
         {
             DataGrid2.Visible = false;
-            BT_StatusVisible.Text = LanguageHandle.GetWord("ShowStatus").ToString().Trim();
+            BT_StatusVisible.Text = LanguageHandle.GetWord("ShowStatus");
         }
     }
 
@@ -495,7 +495,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             if (deBudgetHeight > 150)
                 deBudgetHeight = 150;
 
-            string strConstractAmontToolTip = LanguageHandle.GetWord("GeTongZongE").ToString().Trim() + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + LanguageHandle.GetWord("GeTongYingShouZongE").ToString().Trim() + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + LanguageHandle.GetWord("GeTongShiShouZongE").ToString().Trim() + GetProjectRelatedConstractTotalReceiverAmount(strProjectID);
+            string strConstractAmontToolTip = LanguageHandle.GetWord("GeTongZongE") + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + LanguageHandle.GetWord("GeTongYingShouZongE") + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + LanguageHandle.GetWord("GeTongShiShouZongE") + GetProjectRelatedConstractTotalReceiverAmount(strProjectID);
 
             if (i == 0)
             {
@@ -516,8 +516,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg1.Text = strBudgetProjectID;
                 LB_ProBdg1.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost1.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg1.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost1.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg1.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 1)
@@ -539,8 +539,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg2.Text = strBudgetProjectID;
                 LB_ProBdg2.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost2.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg2.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost2.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg2.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 2)
@@ -562,8 +562,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg3.Text = strBudgetProjectID;
                 LB_ProBdg3.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost3.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg3.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost3.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg3.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 3)
@@ -586,8 +586,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg4.Text = strBudgetProjectID;
                 LB_ProBdg4.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost4.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg4.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost4.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg4.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 4)
@@ -609,8 +609,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg5.Text = strBudgetProjectID;
                 LB_ProBdg5.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost5.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg5.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost5.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg5.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 5)
@@ -632,8 +632,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg6.Text = strBudgetProjectID;
                 LB_ProBdg6.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost6.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg6.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost6.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg6.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 6)
@@ -655,8 +655,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg7.Text = strBudgetProjectID;
                 LB_ProBdg7.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost7.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg7.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost7.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg7.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 7)
@@ -678,8 +678,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg8.Text = strBudgetProjectID;
                 LB_ProBdg8.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProBdg8.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg8.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg8.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg8.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 8)
@@ -701,8 +701,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg9.Text = strBudgetProjectID;
                 LB_ProBdg9.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost9.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg9.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost9.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg9.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 9)
@@ -724,8 +724,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg10.Text = strBudgetProjectID;
                 LB_ProBdg10.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost10.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong").ToString().Trim() + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg10.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan").ToString().Trim() + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan").ToString().Trim() + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost10.ToolTip = LanguageHandle.GetWord("YiFaShengFeiYong") + deRealCharge.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg10.ToolTip = LanguageHandle.GetWord("DangQianRiJiYuSuan") + deDefaultBudget.ToString() + LanguageHandle.GetWord("ZongYuSuan") + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
         }
     }
@@ -808,7 +808,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
         RealChargeVisible();
         FinChargePercentByStep();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMMBHZH").ToString().Trim() + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMMBHZH") + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll");
 
         LB_Sql.Text = strHQL;
     }
@@ -847,7 +847,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
         RealChargeVisible();
         FinChargePercentByStep();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("Project").ToString().Trim() + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("Project") + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll");
         LB_Sql.Text = strHQL;
     }
 
@@ -878,7 +878,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
         RealChargeVisible();
         FinChargePercentByStep();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZLiXiangRen").ToString().Trim() + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZLiXiangRen") + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll");
         LB_Sql.Text = strHQL;
     }
 

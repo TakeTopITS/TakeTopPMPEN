@@ -54,14 +54,14 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
 
         if (strSiteAppSystemName == "" | strSiteAppName == "")
         {
-            LB_Message.Text = LanguageHandle.GetWord("TiShiDaiHaoDeDuBuNengKongQingJ").ToString().Trim();
+            LB_Message.Text = LanguageHandle.GetWord("TiShiDaiHaoDeDuBuNengKongQingJ");
         }
         else
         {
 
             if(!isAlphabeticNoSpace(strSiteAppName))
             {
-                LB_Message.Text = LanguageHandle.GetWord("JingGaoZhanDianMingChenZhiNeng").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("JingGaoZhanDianMingChenZhiNeng");
                 return;
             }
 
@@ -92,7 +92,7 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
                 DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
                 if (ds.Tables[0].Rows.Count == 0)
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiMeiYouNiXuanQu").ToString().Trim();
+                    LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiMeiYouNiXuanQu");
                     return;
                 }
 
@@ -133,7 +133,7 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
 
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiCunZaiXiangTon").ToString().Trim();
+                    LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiCunZaiXiangTon");
                     return;
                 }
 
@@ -190,7 +190,7 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
                 try
                 {
                     string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                    string strMSMMsg = strRentUserName + LanguageHandle.GetWord("DianHua").ToString().Trim() + strRentUserPhoneNumber + LanguageHandle.GetWord("YiChuangJian").ToString().Trim() + strRentProductName + "(" + strRentProductVersion + LanguageHandle.GetWord("ZuYongZhanDian").ToString().Trim() + strSiteAppURL;
+                    string strMSMMsg = strRentUserName + LanguageHandle.GetWord("DianHua") + strRentUserPhoneNumber + LanguageHandle.GetWord("YiChuangJian") + strRentProductName + "(" + strRentProductVersion + LanguageHandle.GetWord("ZuYongZhanDian") + strSiteAppURL;
                     Action action = new Action(delegate ()
                     {
                         Msg msg = new Msg();
@@ -203,11 +203,11 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
                         {
                         }
 
-                        string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("YiChuangJianZhanDianDiZhiShi").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoMiMaQingFangXinS").ToString().Trim();
+                        string strEMailMsg = LanguageHandle.GetWord("NiHaoNi") + strServerType + LanguageHandle.GetWord("De") + strSiteAppSystemName + LanguageHandle.GetWord("YiChuangJianZhanDianDiZhiShi") + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoMiMaQingFangXinS");
 
                         try
                         {
-                            msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianChuangJianTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
+                            msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianChuangJianTongZhi"), strEMailMsg, "ADMIN");
                         }
                         catch
                         {

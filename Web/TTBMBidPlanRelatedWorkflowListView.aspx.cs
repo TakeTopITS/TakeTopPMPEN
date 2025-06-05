@@ -53,7 +53,7 @@ public partial class TTBMBidPlanRelatedWorkflowListView : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY");
         }
     }
 

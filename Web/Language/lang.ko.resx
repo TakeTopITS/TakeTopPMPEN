@@ -29295,9 +29295,6 @@
   <data name="WanChengShu" xml:space="preserve">
     <value>완료 수</value>
   </data>
-  <data name="0Nian1Yue" xml:space="preserve">
-    <value>{0}년{1}월</value>
-  </data>
   <data name="Di0Zhou" xml:space="preserve">
     <value>{0}주차</value>
   </data>
@@ -31823,5 +31820,11 @@
   </data>
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>주: 중요한 정보를 받으려면 올바른 정보를 입력하십시오.</value>
+  </data>
+  <data name="JianZhanXinXi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
+    <value />
   </data>
 </root>

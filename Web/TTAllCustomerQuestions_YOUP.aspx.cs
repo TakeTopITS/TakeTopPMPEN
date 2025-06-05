@@ -240,7 +240,7 @@ public partial class TTAllCustomerQuestions_YOUP : System.Web.UI.Page
             dt2 = DateTime.Parse(TextBox2.Text.Trim());
             if (dt1 > dt2)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSZSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSZSJYWJC") + "')", true);
                 return;
             }
         }

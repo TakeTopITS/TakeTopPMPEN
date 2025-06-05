@@ -48,7 +48,7 @@ public partial class TTGoodsScrape : System.Web.UI.Page
         {
             DLC_ScrapeTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             TB_OperatorCode.Text = strUserCode;
@@ -72,7 +72,7 @@ public partial class TTGoodsScrape : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-            LB_GoodsOwner.Text = strDepartName + LanguageHandle.GetWord("DLPLB").ToString().Trim();
+            LB_GoodsOwner.Text = strDepartName + LanguageHandle.GetWord("DLPLB");
             LB_GoodsOwner.Visible = true;
 
             strHQL = "from Goods as goods where goods.OwnerCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") and goods.Number > 0 Order by goods.Number DESC,goods.ID DESC";
@@ -146,7 +146,7 @@ public partial class TTGoodsScrape : System.Web.UI.Page
         TB_OldUserCode.Text = strUserCode;
         LB_OldUserName.Text = strUserName;
 
-        LB_GoodsOwner.Text = strUserName + LanguageHandle.GetWord("DLPLB").ToString().Trim();
+        LB_GoodsOwner.Text = strUserName + LanguageHandle.GetWord("DLPLB");
 
         string strHQL = "from Goods as goods where goods.OwnerCode = " + "'" + strUserCode + "'" + " and goods.Number > 0 Order by goods.Number DESC,goods.ID DESC";
         GoodsBLL goodsBLL = new GoodsBLL();
@@ -230,12 +230,12 @@ public partial class TTGoodsScrape : System.Web.UI.Page
 
         if (deScrapeNumber > deNumber)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBFSLBNDYLPKCSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBFSLBNDYLPKCSLJC") + "')", true);
             return;
         }
         if (deScrapeNumber <= 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBFSLYDY0JC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBFSLYDY0JC") + "')", true);
             return;
         }
 
@@ -247,7 +247,7 @@ public partial class TTGoodsScrape : System.Web.UI.Page
 
         if (strOldUserCode == "" | strType == "" | strGoodsCode == "" | strOperatorCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYYHDMLXDMJJBRDMZRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYYHDMLXDMJJBRDMZRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -280,11 +280,11 @@ public partial class TTGoodsScrape : System.Web.UI.Page
 
                 NB_Number.Amount = deNumber - deScrapeNumber;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBFCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBFCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBFCCJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBFCCJC") + "')", true);
             }
         }
     }
@@ -304,12 +304,12 @@ public partial class TTGoodsScrape : System.Web.UI.Page
 
         if (deScrapeNumber > deNumber)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBHYSJBNDYBFSJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBHYSJBNDYBFSJJC") + "')", true);
             return;
         }
         if (deScrapeNumber <= 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBHYSLYDY0JC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBHYSLYDY0JC") + "')", true);
             return;
         }
 
@@ -333,11 +333,11 @@ public partial class TTGoodsScrape : System.Web.UI.Page
 
             NB_Number.Amount = deNumber - deScrapeNumber;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPHYCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPHYCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPHYSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPHYSBJC") + "')", true);
         }
     }
 
@@ -472,7 +472,7 @@ public partial class TTGoodsScrape : System.Web.UI.Page
 
         if (strDepartCode != "")
         {
-            LB_GoodsOwner.Text = GetDepartName(strDepartCode) + LanguageHandle.GetWord("DLPLB").ToString().Trim();
+            LB_GoodsOwner.Text = GetDepartName(strDepartCode) + LanguageHandle.GetWord("DLPLB");
             LB_GoodsOwner.Visible = true;
 
             strHQL = "from Goods as goods where goods.OwnerCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") and goods.Number > 0 Order by goods.Number DESC,goods.ID DESC";
@@ -485,7 +485,7 @@ public partial class TTGoodsScrape : System.Web.UI.Page
         }
         else
         {
-            LB_GoodsOwner.Text = GetUserName(strOwnerCode) + LanguageHandle.GetWord("DeWuLiaoLieBiao").ToString().Trim();
+            LB_GoodsOwner.Text = GetUserName(strOwnerCode) + LanguageHandle.GetWord("DeWuLiaoLieBiao");
             LB_GoodsOwner.Visible = true;
 
             strHQL = "from Goods as goods where goods.OwnerCode = " + "'" + strOwnerCode + "'" + " and goods.Number > 0 Order by goods.Number DESC,goods.ID DESC";

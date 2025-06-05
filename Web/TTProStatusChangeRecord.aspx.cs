@@ -26,7 +26,7 @@ public partial class TTProStatusChangeRecord : System.Web.UI.Page
 
         string strProjectName = GetProjectName(strProjectID);
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + "  " + strProjectName + "状态的变更记录！";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + "  " + strProjectName + "状态的变更记录！";
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>aHandler();</script>");
         if (Page.IsPostBack == false)
         {

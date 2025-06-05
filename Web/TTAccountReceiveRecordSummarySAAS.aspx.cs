@@ -141,12 +141,12 @@ public partial class TTAccountReceiveRecordSummarySAAS : System.Web.UI.Page
 
         string strChartTitle;
 
-        strChartTitle = LanguageHandle.GetWord("SSKMJEFBT").ToString().Trim() + "(" + ShareClass.GetHomeCurrencyType() + ")";
+        strChartTitle = LanguageHandle.GetWord("SSKMJEFBT") + "(" + ShareClass.GetHomeCurrencyType() + ")";
         IFrame_Chart_Pie.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
         LB_Sql2.Text = strHQL;
 
-        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT").ToString().Trim() + "(" + ShareClass.GetHomeCurrencyType() + ")";
+        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT") + "(" + ShareClass.GetHomeCurrencyType() + ")";
 
 
         strHQL = @"Select  COALESCE(A.ReceiverTime,B.OutOfPocketTime) as XName,
@@ -216,12 +216,12 @@ public partial class TTAccountReceiveRecordSummarySAAS : System.Web.UI.Page
 
         string strChartTitle;
 
-        strChartTitle = LanguageHandle.GetWord("SSKMJEFBT").ToString().Trim() + "(" + ShareClass.GetHomeCurrencyType() + ")";
+        strChartTitle = LanguageHandle.GetWord("SSKMJEFBT") + "(" + ShareClass.GetHomeCurrencyType() + ")";
         IFrame_Chart_Pie.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
         LB_Sql2.Text = strHQL;
 
-        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT").ToString().Trim() + "(" + ShareClass.GetHomeCurrencyType() + ")";
+        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT") + "(" + ShareClass.GetHomeCurrencyType() + ")";
 
         strHQL = @"Select  COALESCE(A.ReceiverTime,OutOfPocketTime) as XName,
                  COALESCE(PayMoney,0) AS YNumber,COALESCE(ReceiverMoney,0) AS ZNumber,
@@ -255,12 +255,12 @@ public partial class TTAccountReceiveRecordSummarySAAS : System.Web.UI.Page
 
         string strChartTitle = "ReportView";
 
-        strChartTitle = LanguageHandle.GetWord("SSKMJEFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("SSKMJEFBT");
         strHQL = LB_Sql2.Text.Trim();
         IFrame_Chart_Pie.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
 
-        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT");
         strHQL = LB_Sql3.Text.Trim();
         IFrame_Chart_PayAndReceive.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 

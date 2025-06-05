@@ -32,7 +32,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
         licenseKey = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
         Session["LicenseKey"] = licenseKey;
 
-        //if (licenseKey != LanguageHandle.GetWord("TaiDingTaDingZhongLiYue").ToString().Trim())
+        //if (licenseKey != LanguageHandle.GetWord("TaiDingTaDingZhongLiYue"))
         //{
         //    HttpContext.Current.Response.Redirect("TTDisplayErrors.aspx");
         //}
@@ -88,7 +88,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>" + LanguageHandle.GetWord("XiTongMoZu").ToString().Trim() + "<b>";
+        node1.Text = "<b>" + LanguageHandle.GetWord("XiTongMoZu") + "<b>";
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);

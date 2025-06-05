@@ -69,16 +69,16 @@ public partial class TTSelectorProductModuleNew : System.Web.UI.Page
                         strShowHtml += "<tr><td>" + strModuleNameHtml + "</td></tr>";
                     }
                     else {
-                        strShowHtml += LanguageHandle.GetWord("trtdMoMoKuaiMingChenShuJutdtr").ToString().Trim();
+                        strShowHtml += LanguageHandle.GetWord("trtdMoMoKuaiMingChenShuJutdtr");
                     }
                 }
             }
             else {
-                strShowHtml = LanguageHandle.GetWord("trtdMoLeiXingShuJutdtr").ToString().Trim();
+                strShowHtml = LanguageHandle.GetWord("trtdMoLeiXingShuJutdtr");
             }
         }
         else {
-            strShowHtml = LanguageHandle.GetWord("trtdMoShuJutdtr").ToString().Trim();
+            strShowHtml = LanguageHandle.GetWord("trtdMoShuJutdtr");
         }
 
         LT_ShowHtml.Text = strShowHtml;

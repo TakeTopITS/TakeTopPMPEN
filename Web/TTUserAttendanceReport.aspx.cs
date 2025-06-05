@@ -44,7 +44,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
             DLC_StartTime.Text = ShareClass.getCurrentMonthStartDay().ToString("yyyy-MM-dd");
             DLC_EndTime.Text = ShareClass.getCurrentMonthEndDay().ToString("yyyy-MM-dd");
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
         }
     }
 
@@ -78,7 +78,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if(strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa")+"')", true);
             return;
         }
 
@@ -153,7 +153,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa")+"')", true);
             return;
         }
 
@@ -211,7 +211,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_UserAttendanceRecord");
 
         Random a = new Random();
-        string fileName = LanguageHandle.GetWord("YuanGongKaoQinBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+        string fileName = LanguageHandle.GetWord("YuanGongKaoQinBaoBiao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
         string strTableTitle = string.Format(@"<table cellspacing='0' cellpadding='4' id='DataGrid3' style='color:#333333;width:100%;border-collapse:collapse;'>
           <tr class='itemStyle'>

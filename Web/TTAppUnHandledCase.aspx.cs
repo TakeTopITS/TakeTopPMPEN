@@ -44,7 +44,7 @@ public partial class TTAppUnHandledCase : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             strUserName = ShareClass.GetUserName(strUserCode);
-            strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + strUserCode + "  " + strUserName;
+            strUserInfo = LanguageHandle.GetWord("YongHu") + strUserCode + "  " + strUserName;
             //LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
             LoadFunInforDialBoxList();

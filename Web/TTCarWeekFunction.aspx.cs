@@ -32,7 +32,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
         IList listCheckWeek = checkWeekBLL.GetAllCarCheckWeeks(strCheckWeekHQL);
         TV_Weeks.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = LanguageHandle.GetWord("QuanBu").ToString().Trim();
+        Node.Text = LanguageHandle.GetWord("QuanBu");
         Node.Value = "all|all";
         if (listCheckWeek != null && listCheckWeek.Count > 0)
         {
@@ -46,7 +46,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 NodeChild.Value = "checkWeekName|" + strWeekCode;
                 //周检计划表
                 TreeNode NodeWeekPlan = new TreeNode();
-                NodeWeekPlan.Text = LanguageHandle.GetWord("ZhouJianJiHuaBiao").ToString().Trim();
+                NodeWeekPlan.Text = LanguageHandle.GetWord("ZhouJianJiHuaBiao");
                 NodeWeekPlan.Value = "checkWeekPlan|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL1 = new CustomModuleBLL();
@@ -71,7 +71,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekPlan);
                 //周检问题表
                 TreeNode NodeWeekProblem = new TreeNode();
-                NodeWeekProblem.Text = LanguageHandle.GetWord("ZhouJianWenTiBiao").ToString().Trim();
+                NodeWeekProblem.Text = LanguageHandle.GetWord("ZhouJianWenTiBiao");
                 NodeWeekProblem.Value = "checkWeekProblem|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL2 = new CustomModuleBLL();
@@ -96,7 +96,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekProblem);
                 //会议讲评记录
                 TreeNode NodeWeekRecord = new TreeNode();
-                NodeWeekRecord.Text = LanguageHandle.GetWord("HuiYiJiangPingJiLu").ToString().Trim();
+                NodeWeekRecord.Text = LanguageHandle.GetWord("HuiYiJiangPingJiLu");
                 NodeWeekRecord.Value = "checkWeekRecord|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL3 = new CustomModuleBLL();
@@ -121,7 +121,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekRecord);
                 //问题整改通知单
                 TreeNode NodeWeekNotice = new TreeNode();
-                NodeWeekNotice.Text = LanguageHandle.GetWord("WenTiZhengGaiTongZhiChan").ToString().Trim();
+                NodeWeekNotice.Text = LanguageHandle.GetWord("WenTiZhengGaiTongZhiChan");
                 NodeWeekNotice.Value = "checkWeekNotice|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL4 = new CustomModuleBLL();
@@ -146,7 +146,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekNotice);
                 //问题汇总
                 TreeNode NodeWeekTotal = new TreeNode();
-                NodeWeekTotal.Text = LanguageHandle.GetWord("WenTiHuiZong").ToString().Trim();
+                NodeWeekTotal.Text = LanguageHandle.GetWord("WenTiHuiZong");
                 NodeWeekTotal.Value = "checkWeekTotal|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL5 = new CustomModuleBLL();
@@ -262,16 +262,16 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXinZengChuCuoQingJi").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXinZengChuCuoQingJi"));
                 }
             }
             else {
-                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXinZengChuCuoZhouJi").ToString().Trim());
+                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXinZengChuCuoZhouJi"));
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertKeHuDaiMaHeMingChen").ToString().Trim());
+            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertKeHuDaiMaHeMingChen"));
         }
     }
 
@@ -315,21 +315,21 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                     checkWeekBLL.UpdateCarCheckWeek(checkWeek, strWeekCode);
 
                     LoadWeekTree();
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBaoCunChengGongShow").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBaoCunChengGongShow"));
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXiuGaiChuCuoQingJia").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXiuGaiChuCuoQingJia"));
                 }
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBuNengXiuGaiKeHuDai").ToString().Trim());
+                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBuNengXiuGaiKeHuDai"));
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertGongYingShangDaiMaH").ToString().Trim());
+            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertGongYingShangDaiMaH"));
         }
     }
 
@@ -382,7 +382,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "checkWeekProblem")
@@ -411,7 +411,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "checkWeekRecord")
@@ -440,7 +440,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "checkWeekNotice")
@@ -469,7 +469,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "checkWeekTotal")
@@ -498,7 +498,7 @@ public partial class TTCarWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "child")

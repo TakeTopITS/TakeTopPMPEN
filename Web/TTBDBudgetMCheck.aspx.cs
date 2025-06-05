@@ -30,7 +30,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
 
             if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   
             {
@@ -267,7 +267,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
     {
         if (DropDownList1.SelectedValue.Trim() == "" || string.IsNullOrEmpty(DropDownList1.SelectedValue))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCSJYSLXBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCSJYSLXBJC") + "')", true);
             return;
         }
         if (Page.IsValid)
@@ -278,18 +278,18 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
                 string fileName;
                 if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   
                 {
-                    fileName = LanguageHandle.GetWord("YuSuanBiaoZhun").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("YuSuanBiaoZhun") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                     CreateExcel(getExportBookList(), fileName);
                 }
                 else
                 {
-                    fileName = LanguageHandle.GetWord("YuSuanJiLu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("YuSuanJiLu") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                     CreateExcel(getExportBookList1(), fileName);
                 }
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }

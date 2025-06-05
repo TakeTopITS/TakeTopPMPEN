@@ -106,7 +106,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["MCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZaoBanShangBanShiJian").ToString().Trim(), "MorningWorkStartTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZaoBanShangBanShiJian"), "MorningWorkStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -119,7 +119,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["MCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZaoBanXiaBanShiJian").ToString().Trim(), "MorningWorkEndTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZaoBanXiaBanShiJian"), "MorningWorkEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -133,7 +133,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["ACheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZhongBanShangBanShiJian").ToString().Trim(), "AfternoonWorkStartTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZhongBanShangBanShiJian"), "AfternoonWorkStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -146,7 +146,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["ACheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZhongBanXiaBanShiJian").ToString().Trim(), "AfternoonWorkEndTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZhongBanXiaBanShiJian"), "AfternoonWorkEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -159,7 +159,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["NCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("WanBanShangBanShiJian").ToString().Trim(), "NightShiftStartTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("WanBanShangBanShiJian"), "NightShiftStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -172,7 +172,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["NCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("WanBanXiaBanShiJian").ToString().Trim(), "NightShiftEndTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("WanBanXiaBanShiJian"), "NightShiftEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -185,7 +185,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["OCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("JiaBanShangBanShiJian").ToString().Trim(), "MidnightWorkStartTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("JiaBanShangBanShiJian"), "MidnightWorkStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -198,7 +198,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["OCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("JiaBanXiaBanShiJian").ToString().Trim(), "MidnightWorkEndTime"));
+                    RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("JiaBanXiaBanShiJian"), "MidnightWorkEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -350,7 +350,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "333", "<script>alert('" + LanguageHandle.GetWord("ZZQXZBCLX").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "333", "<script>alert('" + LanguageHandle.GetWord("ZZQXZBCLX") + "');</script>");
                 return;
             }
         }
@@ -569,7 +569,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
         catch (Exception err)
         {
             //LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCHENGSBQJC").ToString().Trim() + "');</script>");
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCHENGSBQJC") + "');</script>");
         }
     }
 
@@ -693,12 +693,12 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
             UpdateLateMinute(strID);
             UpdateEarlyMinute(strID);
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
         }
         catch
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXGSBJC").ToString().Trim() + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXGSBJC") + "')", true);
         }
     }
 

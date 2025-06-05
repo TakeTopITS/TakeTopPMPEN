@@ -112,7 +112,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
 
             strProjectName = GetProjectName(strProjectID);
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("Project") + strProjectName;
         }
         else
         {
@@ -167,7 +167,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
 
             SetDefectRecordColor(DataGrid3);
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll");
         }
     }
 
@@ -269,7 +269,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
+            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng"))
             {
                 if (dtFinishedDate < dtNowDate)
                 {

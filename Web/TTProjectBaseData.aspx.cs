@@ -47,7 +47,7 @@ public partial class TTProjectBaseData : System.Web.UI.Page
 
         if (IsProjectDataLink(strCode, string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGJKBMZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGJKBMZSJBZYCZJC") + "')", true);
             TB_Code.Focus();
             return;
         }
@@ -83,7 +83,7 @@ public partial class TTProjectBaseData : System.Web.UI.Page
 
         if (IsProjectDataLink(strCode, CodeGold))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGJKBMZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGJKBMZSJBZYCZJC") + "')", true);
             TB_Code.Focus();
             return;
         }
@@ -103,11 +103,11 @@ public partial class TTProjectBaseData : System.Web.UI.Page
 
             LoadProjectDataLink();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
         }
     }
@@ -192,31 +192,31 @@ public partial class TTProjectBaseData : System.Web.UI.Page
         string SortNo = string.IsNullOrEmpty(TB_SortNo.Text.Trim()) || TB_SortNo.Text.Trim() == "" ? "1" : TB_SortNo.Text.Trim();
         if (IsCurrencyType(TB_Type.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBZZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBZZSJBZYCZJC") + "')", true);
             TB_Type.Focus();
             return;
         }
         if (!IsNumeric(ExchangeRate))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC") + "')", true);
             TB_ExchangeRate.Focus();
             return;
         }
         if (ExchangeRate.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC") + "')", true);
             TB_ExchangeRate.Focus();
             return;
         }
         if (!IsNumeric(SortNo))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC") + "')", true);
             TB_SortNo.Focus();
             return;
         }
         if (SortNo.Contains(".") || SortNo.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC") + "')", true);
             TB_SortNo.Focus();
             return;
         }
@@ -245,31 +245,31 @@ public partial class TTProjectBaseData : System.Web.UI.Page
         string SortNo = string.IsNullOrEmpty(TB_SortNo.Text.Trim()) || TB_SortNo.Text.Trim() == "" ? "1" : TB_SortNo.Text.Trim();
         if (IsCurrencyType(TB_Type.Text.Trim(), lbl_TypeOld.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBZZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBZZSJBZYCZJC") + "')", true);
             TB_Type.Focus();
             return;
         }
         if (!IsNumeric(ExchangeRate))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC") + "')", true);
             TB_ExchangeRate.Focus();
             return;
         }
         if (ExchangeRate.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDHLYDY0DSZJC") + "')", true);
             TB_ExchangeRate.Focus();
             return;
         }
         if (!IsNumeric(SortNo))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC") + "')", true);
             TB_SortNo.Focus();
             return;
         }
         if (SortNo.Contains(".") || SortNo.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDPXYDY0DZSJC") + "')", true);
             TB_SortNo.Focus();
             return;
         }
@@ -287,11 +287,11 @@ public partial class TTProjectBaseData : System.Web.UI.Page
 
             LoadCurrencyType();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
         }
     }

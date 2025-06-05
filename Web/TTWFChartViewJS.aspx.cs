@@ -61,7 +61,7 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
         strWFDefinition = ds.Tables[0].Rows[0][1].ToString().Trim();
 
-        this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + ": " + strTemName + LanguageHandle.GetWord("LiuChengTu").ToString().Trim();
+        this.Title = LanguageHandle.GetWord("GongZuoLiu") + ": " + strTemName + LanguageHandle.GetWord("LiuChengTu");
 
         if (Page.IsPostBack == false)
         {

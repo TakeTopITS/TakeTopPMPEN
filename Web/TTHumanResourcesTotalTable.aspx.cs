@@ -44,7 +44,7 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
     protected void LoadProjectMemberScheduleList(string strProjectID, string strType)
     {
         string strHQL;
-        if (strType.Trim() == LanguageHandle.GetWord("AnGongChong").ToString().Trim())
+        if (strType.Trim() == LanguageHandle.GetWord("AnGongChong"))
         {
             if (strProjectID.Trim() == "0")
             {
@@ -109,19 +109,19 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
             {
                 Random a = new Random();
                 string fileName = string.Empty;
-                if (DropDownList1.SelectedValue.Trim().Equals(LanguageHandle.GetWord("AnGongChong").ToString().Trim()))
+                if (DropDownList1.SelectedValue.Trim().Equals(LanguageHandle.GetWord("AnGongChong")))
                 {
-                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanBiaoAnGongCh").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanBiaoAnGongCh") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanBiaoAnZiZu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanBiaoAnZiZu") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }
@@ -151,7 +151,7 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
     protected DataTable getExportBookList()
     {
         string strHQL;
-        if (DropDownList1.SelectedValue.Trim() == LanguageHandle.GetWord("AnGongChong").ToString().Trim())
+        if (DropDownList1.SelectedValue.Trim() == LanguageHandle.GetWord("AnGongChong"))
         {
             if (ddl_ProjectID.SelectedValue.Trim() == "0")
             {

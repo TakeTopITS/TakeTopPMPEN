@@ -26,7 +26,7 @@ public partial class TakeTopLRExInnerMDI : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            //Response.Write(LanguageHandle.GetWord("ZZTSFWQFMQCXDL").ToString().Trim());
+            //Response.Write(LanguageHandle.GetWord("ZZTSFWQFMQCXDL"));
         }
     }
 

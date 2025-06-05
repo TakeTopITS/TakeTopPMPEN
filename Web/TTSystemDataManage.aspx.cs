@@ -55,11 +55,11 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         try
         {
             ShareClass.RunSqlCommand("Exec Pr_CreateRTXAccountData");
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJCCG") + "')", true);
         }
         catch
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSJCSBKNYGRSTDYSCSZSJKLZJZXPR").ToString().Trim()+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSJCSBKNYGRSTDYSCSZSJKLZJZXPR")+"')", true);
         }
     }
 
@@ -82,11 +82,11 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             HL_RTXAccountDataFile.NavigateUrl = strDocURL;
             HL_RTXAccountDataFile.Target = "_blank";
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCWJCG").ToString().Trim()+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCWJCG")+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCWJSBKNYHSTDYSCSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCWJSBKNYHSTDYSCSJC") + "')", true);
         }
     }
 
@@ -97,13 +97,13 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("YongHuDengLuRiZhi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("YongHuDengLuRiZhi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }
@@ -135,11 +135,11 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         try
         {
             ShareClass.RunSqlCommand(strHQL);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYKRZB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYKRZB") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 
@@ -152,11 +152,11 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         try
         {
             ShareClass.RunSqlCommand(strHQL);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYKXXFSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYKXXFSB") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 
@@ -172,11 +172,11 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             ////完成更新之后，此存储过程将报告已为所有的表更新了统计信息
             //ShareClass.RunSqlCommand("exec sp_updatestats");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuWanCheng").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuWanCheng") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuShiBaiQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuShiBaiQJC") + "')", true);
         }
 
     }
@@ -190,11 +190,11 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             ////完成更新之后，此存储过程将报告已为所有的表更新了统计信息
             //ShareClass.RunSqlCommand("exec sp_updatestats");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuWanCheng").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuWanCheng") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuShiBaiQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQingChuShiBaiQJC") + "')", true);
         }
     }
 
@@ -209,7 +209,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         StreamWriter sw = new StreamWriter(strPath, true, System.Text.Encoding.GetEncoding("GB2312"));
 
 
-        sw.Write(LanguageHandle.GetWord("YongHuMing").ToString().Trim() + "\t" + LanguageHandle.GetWord("XingMing").ToString().Trim() + "\t" + LanguageHandle.GetWord("BuMenMingChen").ToString().Trim() + "\t" + LanguageHandle.GetWord("RTXFenJiHao").ToString().Trim() + "\t" + LanguageHandle.GetWord("DianZiYouXiang").ToString().Trim() + "\t" + LanguageHandle.GetWord("ShouJiHao").ToString().Trim() + "\r\n");
+        sw.Write(LanguageHandle.GetWord("YongHuMing") + "\t" + LanguageHandle.GetWord("XingMing") + "\t" + LanguageHandle.GetWord("BuMenMingChen") + "\t" + LanguageHandle.GetWord("RTXFenJiHao") + "\t" + LanguageHandle.GetWord("DianZiYouXiang") + "\t" + LanguageHandle.GetWord("ShouJiHao") + "\r\n");
 
         DataSet ds = ShareClass.GetDataSetFromSql(strSql, "T_RTXAccountData");
         DataTable dt = ds.Tables[0];
@@ -261,7 +261,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
 
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong") + "')", true);
             }
             catch (Exception ex)
             {
@@ -270,7 +270,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSGYZQDSJQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSGYZQDSJQJC") + "')", true);
         }
     }
 
@@ -318,7 +318,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
                 strHQL += " Where ID In (Select ID From T_Plan_WorkLogBackup)";
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong") + "')", true);
             }
             catch (Exception ex)
             {
@@ -327,7 +327,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSGYZQDSJQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSGYZQDSJQJC") + "')", true);
         }
     }
 
@@ -374,17 +374,17 @@ public partial class TTSystemDataManage : System.Web.UI.Page
                 strHQL += " Where MemID in (Select MemID From T_CollaborationMemberBackup)";
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong") + "')", true);
             }
             catch (Exception ex)
             {
-                //LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (lineNumber + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strObjectCode + " : " + err.Message.ToString());
+                //LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (lineNumber + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strObjectCode + " : " + err.Message.ToString());
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + ex.Message.ToString() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSGYZQDSJQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSGYZQDSJQJC") + "')", true);
         }
     }
 
@@ -498,17 +498,17 @@ public partial class TTSystemDataManage : System.Web.UI.Page
                     Label1.Text = strHQL;
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZShuJiZhuanYuChenGong") + "')", true);
             }
             catch (Exception ex)
             {
-                //LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (lineNumber + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strObjectCode + " : " + err.Message.ToString());
+                //LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (lineNumber + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strObjectCode + " : " + err.Message.ToString());
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + ex.Message.ToString() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSEGYZQDSJQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZNZYSEGYZQDSJQJC") + "')", true);
         }
     }
 
@@ -564,7 +564,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRWC").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRWC") + "')", true);
     }
 
     protected void BT_CopyData_Click(object sender, EventArgs e)
@@ -579,13 +579,13 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXWSZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXWSZJC") + "')", true);
             return;
         }
 
         if (strBackupPeriodDay == "0" | int.Parse(strBackupPeriodDay) < 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click222", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXDYLWZSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click222", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXDYLWZSJC") + "')", true);
             return;
         }
 
@@ -603,13 +603,13 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             intResult = ShareClass.CreateDirectory(strBackupDirectorySavePath);
             if (intResult == 2)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBeiFenMuLuChuangJianL").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBeiFenMuLuChuangJianL")+"')", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + LanguageHandle.GetWord("ZZJGBFMLBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + LanguageHandle.GetWord("ZZJGBFMLBNWKJC") + "')", true);
             return;
         }
 
@@ -638,18 +638,18 @@ public partial class TTSystemDataManage : System.Web.UI.Page
                 //备份数据库
                 ShareClass.BackupCurrentSiteDB(ShareClass.GetSystemDBName(), ShareClass.GetSystemDBBackupSaveDir(), strUserName,"SELF");
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZSJKBFWC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZSJKBFWC") + "')", true);
             }
             catch (Exception err)
             {
                 //写日志
                 LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click555", "alert('" + LanguageHandle.GetWord("ZZSJKBFSBKNSJKMCYCJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click555", "alert('" + LanguageHandle.GetWord("ZZSJKBFSBKNSJKMCYCJC") + "')", true);
             }
         }
         else
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("BFSBCZTMWJJC").ToString().Trim() + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("BFSBCZTMWJJC") + "')", true);
         }
     }
 
@@ -663,7 +663,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         {
             if (ShareClass.GetBackupDBLastestTimeDifferMonth() > 1)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click099", "alert('" + LanguageHandle.GetWord("CGLYWBFQBSCBFSJDSYZQDSJZYCZTBF").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click099", "alert('" + LanguageHandle.GetWord("CGLYWBFQBSCBFSJDSYZQDSJZYCZTBF") + "')", true);
             }
         }
         catch (Exception err)
@@ -677,13 +677,13 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click011", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXWSZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click011", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXWSZJC") + "')", true);
             return;
         }
 
         if (strBackupPeriodDay == "0" | int.Parse(strBackupPeriodDay) < 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click022", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXDYLWZSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click022", "alert('" + LanguageHandle.GetWord("ZZJGBFJGTSBXDYLWZSJC") + "')", true);
             return;
         }
 
@@ -710,13 +710,13 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             }
 
             ShareClass.BackupCurrentSiteDoc(strUserName);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click044", "alert('" + LanguageHandle.GetWord("WenDang").ToString().Trim() + LanguageHandle.GetWord("ZZBeiFenChengGong").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click044", "alert('" + LanguageHandle.GetWord("WenDang") + LanguageHandle.GetWord("ZZBeiFenChengGong") + "')", true);
         }
         catch (Exception err)
         {
             //写日志
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("WenDang").ToString().Trim() + LanguageHandle.GetWord("ZZBeiFenShiBaiQingJianCha").ToString().Trim() + ": " + err.Message.ToString() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("WenDang") + LanguageHandle.GetWord("ZZBeiFenShiBaiQingJianCha") + ": " + err.Message.ToString() + "')", true);
         }
     }
 
@@ -742,7 +742,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             ShareClass.RunSqlCommand(strIsertBackDBHQL);
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
     }
 
     protected void BT_SaveDocPath_Click(object sender, EventArgs e)
@@ -766,7 +766,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             ShareClass.RunSqlCommand(strIsertBackDocHQL);
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
     }
 
     protected void BT_SaveDBUserIDPassword_Click(object sender, EventArgs e)
@@ -784,11 +784,11 @@ public partial class TTSystemDataManage : System.Web.UI.Page
             strHQL = string.Format("Insert Into T_DBReadOnlyUserInfor(DBUserID,Password) values('{0}','{1}')", strDBUserID, strPassword);
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZMMBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZMMBNWKJC") + "')", true);
         }
     }
 
@@ -801,7 +801,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         try
         {
             ShareClass.RunSqlCommand(strHQL);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
 
             BindBackDBReadOnlyUserInformation();
         }
@@ -809,7 +809,7 @@ public partial class TTSystemDataManage : System.Web.UI.Page
         {
             //写日志
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
 
     }

@@ -18,7 +18,7 @@ public partial class TTWorkPlanOneStepTransferCurrentMonthPlanToTask : System.We
 
         if (ShareClass.CheckUserCanControlProjectPlan(strPlanID, strCurrentUserCode) == false)
         {
-            Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC").ToString().Trim() + "'");
+            Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC") + "'");
         }
 
         strProjectID = ShareClass.getProjectIDByPlanID(strPlanID);
@@ -30,16 +30,16 @@ public partial class TTWorkPlanOneStepTransferCurrentMonthPlanToTask : System.We
 
             if (iLeader > 0)
             {
-                LB_Message.Text = LanguageHandle.GetWord("ZZDYZJHZRWBFCGDHYJHMZDFZRQJC").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("ZZDYZJHZRWBFCGDHYJHMZDFZRQJC");
             }
             else
             {
-                LB_Message.Text = LanguageHandle.GetWord("ZZDYZJHZRWCGWC").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("ZZDYZJHZRWCGWC");
             }
         }
         catch
         {
-            LB_Message.Text = LanguageHandle.GetWord("ZZDYZJHZRWSBQJC").ToString().Trim();
+            LB_Message.Text = LanguageHandle.GetWord("ZZDYZJHZRWSBQJC");
         }
     }
 

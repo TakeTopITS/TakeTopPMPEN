@@ -47,7 +47,7 @@ public partial class TTMeetingView : System.Web.UI.Page
             }
             else
             {
-                Response.Write(LanguageHandle.GetWord("CiHuiYiZiLiaoBuCunZaiKeNengYiB").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("CiHuiYiZiLiaoBuCunZaiKeNengYiB"));
             }
         }
     }  

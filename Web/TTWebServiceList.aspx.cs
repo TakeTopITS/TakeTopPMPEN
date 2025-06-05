@@ -52,7 +52,7 @@ public partial class TTWebServiceList : System.Web.UI.Page
             {
                 WebService webService = (WebService)listWebService[0];
                 webServiceBLL.DeleteWebService(webService);
-                Response.Write(LanguageHandle.GetWord("scriptalertShanChuChengGongscr").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("scriptalertShanChuChengGongscr"));
                 //重新加载列表
                 BindWebServicesData();
             }

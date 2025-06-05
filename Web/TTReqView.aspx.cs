@@ -43,7 +43,7 @@ public partial class TTReqView : System.Web.UI.Page
             }
             else
             {
-                Response.Write(LanguageHandle.GetWord("CiXuQiuBuCunZaiKeNengYiBeiShan").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("CiXuQiuBuCunZaiKeNengYiBeiShan"));
             }
         }
     }

@@ -67,7 +67,7 @@ public partial class TTMeetingDocView : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZJGNBNSCBRSCDWJ").ToString().Trim()+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZJGNBNSCBRSCDWJ")+"');</script>");
             }
         }
     }

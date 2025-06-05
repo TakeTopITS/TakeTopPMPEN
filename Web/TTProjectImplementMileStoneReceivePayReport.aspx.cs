@@ -30,7 +30,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuYingShouShiShouTongJiBa").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuYingShouShiShouTongJiBa");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -38,7 +38,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -153,7 +153,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuYingShouYingFuTongJiBao").ToString().Trim());
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuYingShouYingFuTongJiBao"));
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
@@ -202,7 +202,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = LanguageHandle.GetWord("YingShouShiShouTongJiTu").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("YingShouShiShouTongJiTu");
         strHQL = string.Format(@"Select (SUBSTRING (to_char({0},'yyyymmdd'),0,7) +   
                    {1}) as XName,SUM({2}) as YNumber,SUM({3}) as ZNumber From V_ProjectImplementMileStoneReceivePayReport Where ",
                    LanguageHandle.GetWord("YingShouShiJian"),

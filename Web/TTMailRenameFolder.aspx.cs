@@ -53,7 +53,7 @@ public partial class MailRenameFolder : System.Web.UI.Page
 			IFolder folder = new Folder();
 			///执行数据库操作
 			folder.RenameFolder(nFolderID,Name.Text.Trim());
-			Response.Write("<script>alert('" + LanguageHandle.GetWord("XiuGaiShuJuChengGongQingTuoSha").ToString().Trim() + "');</script>");
+			Response.Write("<script>alert('" + LanguageHandle.GetWord("XiuGaiShuJuChengGongQingTuoSha") + "');</script>");
 		}
 		catch(Exception ex)
 		{   ///跳转到异常错误处理页面

@@ -48,7 +48,7 @@ public partial class TTAllDefect : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "from Defectment as defectment ";
@@ -62,7 +62,7 @@ public partial class TTAllDefect : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXQSQZSY").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXQSQZSY");
 
 
             strHQL = "from DefectStatus as defectStatus";
@@ -90,7 +90,7 @@ public partial class TTAllDefect : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
@@ -111,7 +111,7 @@ public partial class TTAllDefect : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXQSQZSY").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXQSQZSY");
 
         DataGrid1.Visible = false;
 
@@ -142,7 +142,7 @@ public partial class TTAllDefect : System.Web.UI.Page
 
         LB_DepartCode.Text = "";
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("Applicant").ToString().Trim() + ":" + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("Applicant") + ":" + strOperatorCode + strOperatorName;
 
         DefectmentBLL defectmentBLL = new DefectmentBLL();
         IList lst = defectmentBLL.GetAllDefectments(strHQL);
@@ -168,7 +168,7 @@ public partial class TTAllDefect : System.Web.UI.Page
             strHQL += " and defectment.ApplicantCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " order by defectment.DefectID DESC";
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll") + " " + LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
         }
 
 
@@ -180,7 +180,7 @@ public partial class TTAllDefect : System.Web.UI.Page
                 strHQL = "from Defectment as defectment where defectment.ApplicantCode = " + "'" + strOperatorCode + "'" + " and " + "defectment.Status = " + "'" + strStatus + "'";
                 strHQL += " and defectment.ApplicantCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
                 strHQL += " order by defectment.DefectID DESC";
-                LB_QueryScope.Text = LanguageHandle.GetWord("Applicant").ToString().Trim() + ":" + strOperatorCode + strOperatorName + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("Applicant") + ":" + strOperatorCode + strOperatorName + " " + LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
             }
             else
             {
@@ -189,7 +189,7 @@ public partial class TTAllDefect : System.Web.UI.Page
                 strHQL = "from Defectment as defectment where defectment.ApplicantCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") and " + "defectment.Status = " + "'" + strStatus + "'";
                 strHQL += " and defectment.ApplicantCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
                 strHQL += " order by defectment.DefectID DESC";
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName + LanguageHandle.GetWord("nbspnbspXuQiuZhuangTai").ToString().Trim() + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName + LanguageHandle.GetWord("nbspnbspXuQiuZhuangTai") + strStatus;
 
             }
         }

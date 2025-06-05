@@ -59,7 +59,7 @@ HE_ReviewDetail.Language = Session["LangCode"].ToString();
                 HE_ReviewDetail.Visible = true;
             }
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
         }
     }
 
@@ -113,7 +113,7 @@ HE_ReviewDetail.Language = Session["LangCode"].ToString();
         if (treeNode.Target == "0")
         {
             strPlanID = treeNode.Target.Trim();
-            strPlanName = LanguageHandle.GetWord("WoDeJiHua").ToString().Trim();
+            strPlanName = LanguageHandle.GetWord("WoDeJiHua");
         }
         else
         {
@@ -150,7 +150,7 @@ HE_ReviewDetail.Language = Session["LangCode"].ToString();
         dtEndTime = DateTime.Parse(ds.Tables[0].Rows[0]["EndTime"].ToString());
         strPlanType = ds.Tables[0].Rows[0]["PlanType"].ToString();
 
-        strChartTitle = ds.Tables[0].Rows[0]["PlanName"].ToString() + " " + strDepartName + LanguageHandle.GetWord("BuMenChengYuanJiHuaPingFenDuiB").ToString().Trim();
+        strChartTitle = ds.Tables[0].Rows[0]["PlanName"].ToString() + " " + strDepartName + LanguageHandle.GetWord("BuMenChengYuanJiHuaPingFenDuiB");
 
         strHQL = "Select (CreatorCode||CreatorName) as XName,ScoringByLeader as YNumber From T_PlanBackup ";
         strHQL += " Where CreatorCode in (Select UserCode From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'" + ")";
@@ -285,7 +285,7 @@ HE_ReviewDetail.Language = Session["LangCode"].ToString();
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + strUserName + " " + LanguageHandle.GetWord("Plan").ToString().Trim() + "</B>";
+        node1.Text = "<B>" + strUserName + " " + LanguageHandle.GetWord("Plan") + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);

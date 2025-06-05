@@ -182,13 +182,13 @@ public partial class TTBMBidNoticeContent : System.Web.UI.Page
     {
         if (DL_BidPlanID.SelectedValue.Trim().Equals("0"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFABJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFABJC") + "')", true);
             DL_BidPlanID.Focus();
             return;
         }
         if (IsBMBidNoticeContentBidPlanID(DL_BidPlanID.SelectedValue.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFAYFBZBWZBTZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFAYFBZBWZBTZJC") + "')", true);
             DL_BidPlanID.Focus();
             return;
         }
@@ -223,11 +223,11 @@ public partial class TTBMBidNoticeContent : System.Web.UI.Page
             //BT_Delete.Enabled = true;
 
             LoadBMBidNoticeContentList();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
         }
@@ -292,7 +292,7 @@ public partial class TTBMBidNoticeContent : System.Web.UI.Page
                         BMSupplierInfo bMSupplierInfo = (BMSupplierInfo)lst[0];
                         if ((bMSupplierBid.BidStatus.Trim().Equals("Y") || bMSupplierBid.BidStatus.Trim().Equals("N")) && !string.IsNullOrEmpty(bMSupplierBid.NoticeContent) && bMSupplierBid.NoticeContent.Trim() != "")
                         {
-                            msg.SendMail(bMSupplierInfo.Code.Trim(), LanguageHandle.GetWord("ZhongBiaoYuFouQingKuangTongZhi").ToString().Trim(), bMSupplierBid.NoticeContent.Trim(), strUserCode);
+                            msg.SendMail(bMSupplierInfo.Code.Trim(), LanguageHandle.GetWord("ZhongBiaoYuFouQingKuangTongZhi"), bMSupplierBid.NoticeContent.Trim(), strUserCode);
                         }
                         continue;
                     }
@@ -342,13 +342,13 @@ public partial class TTBMBidNoticeContent : System.Web.UI.Page
     {
         if (DL_BidPlanID.SelectedValue.Trim().Equals("0"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFABJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFABJC") + "')", true);
             DL_BidPlanID.Focus();
             return;
         }
         if (IsBMBidNoticeContentBidPlanID(DL_BidPlanID.SelectedValue.Trim(), LB_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFAYFBZBWZBTZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBFAYFBZBWZBTZJC") + "')", true);
             DL_BidPlanID.Focus();
             return;
         }
@@ -383,11 +383,11 @@ public partial class TTBMBidNoticeContent : System.Web.UI.Page
 
             LoadBMBidNoticeContentList();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
         }
@@ -414,11 +414,11 @@ public partial class TTBMBidNoticeContent : System.Web.UI.Page
 
             LoadBMBidNoticeContentList();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 

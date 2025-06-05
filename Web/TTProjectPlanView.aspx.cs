@@ -36,11 +36,11 @@ public partial class TTProjectPlanView : System.Web.UI.Page
         if (lst.Count > 0)
         {
             WorkPlan workPlan = (WorkPlan)lst[0];
-            //this.Title = LanguageHandle.GetWord("JiHua").ToString().Trim() + ": " + strPlanID + " " + workPlan.Name.Trim() + " ÏêÏ¸ÄÚÈÝ!";
+            //this.Title = LanguageHandle.GetWord("JiHua") + ": " + strPlanID + " " + workPlan.Name.Trim() + " ÏêÏ¸ÄÚÈÝ!";
         }
         else
         {
-            Response.Write(LanguageHandle.GetWord("CiJiHuaBuCunZaiKeNengYiBeiShan").ToString().Trim());
+            Response.Write(LanguageHandle.GetWord("CiJiHuaBuCunZaiKeNengYiBeiShan"));
         }
     }
 }

@@ -71,7 +71,7 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(ddl_Code.SelectedValue) || ddl_Code.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSDEXMWBXJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSDEXMWBXJC") + "')", true);
             ddl_Code.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -79,7 +79,7 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
         }
         if (IsProjectCostManageExits(string.Empty, ddl_Code.SelectedValue.Trim(), ddl_Code.SelectedItem.Text.Trim(), strProjectID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSGEDXMYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSGEDXMYCZJC") + "')", true);
             ddl_Code.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -110,11 +110,11 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
 
             LoadProjectCostManageList(projectCostManage.ProjectID.ToString());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
     }
@@ -123,13 +123,13 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(ddl_Code.SelectedValue) || ddl_Code.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoChengBenLeiXingBuNeng").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoChengBenLeiXingBuNeng")+"')", true);
             ddl_Code.Focus();
             return;
         }
         if (IsProjectCostManageExits(LB_ID.Text.Trim(), ddl_Code.SelectedValue.Trim(), ddl_Code.SelectedItem.Text.Trim(), strProjectID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSGDEXMYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSGDEXMYCZJC") + "')", true);
             ddl_Code.Focus();
             return;
         }
@@ -156,11 +156,11 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
 
             LoadProjectCostManageList(projectCostManage.ProjectID.ToString());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
         }
     }
 
@@ -383,11 +383,11 @@ public partial class TTProjectCostOperationEdit : System.Web.UI.Page
 
                     LoadProjectCostManageList(strProjectID);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSB").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSB") + "')", true);
                 }
             }
         }

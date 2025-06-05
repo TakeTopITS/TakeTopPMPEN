@@ -178,7 +178,7 @@ public partial class TTProExpense : System.Web.UI.Page
             LoadExpenseClaimSheed(strProjectID, strUserCode);
             if (strProjectID != "1")
             {
-                TB_ExpenseName.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + LanguageHandle.GetWord("FeiYongBaoXiaoShenQing").ToString().Trim();
+                TB_ExpenseName.Text = LanguageHandle.GetWord("Project") + strProjectID + " " + strProjectName + LanguageHandle.GetWord("FeiYongBaoXiaoShenQing");
             }
         }
     }
@@ -277,7 +277,7 @@ public partial class TTProExpense : System.Web.UI.Page
 
                     if (e.CommandName == "Claim")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCXMYJAHGHXBNBXFYL").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCXMYJAHGHXBNBXFYL") + "')", true);
                     }
                 }
                 else
@@ -333,7 +333,7 @@ public partial class TTProExpense : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
 
@@ -344,7 +344,7 @@ public partial class TTProExpense : System.Web.UI.Page
 
                 if (strECID == "")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXZBXDCNBCJLTJDBXDZ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXZBXDCNBCJLTJDBXDZ") + "')", true);
 
                     //把已在报销清单的记录表现为蓝色
                     ColorClaimedExpenseRecord(e.Item.ItemIndex);
@@ -366,7 +366,7 @@ public partial class TTProExpense : System.Web.UI.Page
                 intWLNumber = GetRelatedWorkFlowNumber("ExpenseReimbursement", "Other", strECID);
                 if (intWLNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCBXDYZSPZBNZXZXDBXFYJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCBXDYZSPZBNZXZXDBXFYJC") + "')", true);
 
                     //把已在报销清单的记录表现为蓝色
                     ColorClaimedExpenseRecord(e.Item.ItemIndex);
@@ -416,7 +416,7 @@ public partial class TTProExpense : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCBXDYZSPZBNZXZXDBXFYJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCBXDYZSPZBNZXZXDBXFYJC") + "')", true);
                 }
             }
         }
@@ -500,7 +500,7 @@ public partial class TTProExpense : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -510,7 +510,7 @@ public partial class TTProExpense : System.Web.UI.Page
             //检查相应科目项目预算有没有超支 //检查相应科目项目预算有没有超支
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, strAccount, deAmount) == false)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -531,7 +531,7 @@ public partial class TTProExpense : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -574,7 +574,7 @@ public partial class TTProExpense : System.Web.UI.Page
             try
             {
                 proExpenseBLL.UpdateProExpense(proExpense, int.Parse(strID));
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXCG") + "')", true);
 
                 LoadAndUpdateProExpense(LB_Sql.Text.Trim());
 
@@ -583,7 +583,7 @@ public partial class TTProExpense : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXSBJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -593,7 +593,7 @@ public partial class TTProExpense : System.Web.UI.Page
             //检查相应科目项目预算有没有超支 //检查相应科目项目预算有没有超支
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, strAccount, deAmount) == false)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -603,7 +603,7 @@ public partial class TTProExpense : System.Web.UI.Page
             try
             {
                 proExpenseBLL.UpdateProExpense(proExpense, int.Parse(strID));
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
                 LoadAndUpdateProExpense(LB_Sql.Text.Trim());
 
@@ -612,7 +612,7 @@ public partial class TTProExpense : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -716,11 +716,11 @@ public partial class TTProExpense : System.Web.UI.Page
 
                     LB_ECID.Text = "";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }
@@ -739,7 +739,7 @@ public partial class TTProExpense : System.Web.UI.Page
 
         if (j == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("QingXianXuanZheYaoBaoXiaoDeFeiYong").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("QingXianXuanZheYaoBaoXiaoDeFeiYong") + "')", true);
             return;
         }
 
@@ -907,13 +907,13 @@ public partial class TTProExpense : System.Web.UI.Page
 
             LoadExpenseClaimSheed(strProjectID, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -948,11 +948,11 @@ public partial class TTProExpense : System.Web.UI.Page
             expenseClaimBLL.UpdateExpenseClaim(expenseClaim, int.Parse(strECID));
             LoadExpenseClaimSheed(strProjectID, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception err)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -1043,19 +1043,19 @@ public partial class TTProExpense : System.Web.UI.Page
                 //BT_UpdateClaim.Enabled = false;
                 //BT_DeleteClaim.Enabled = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFYBXGZLSCCGDGZLGLYMC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFYBXGZLSCCGDGZLGLYMC") + "')", true);
             }
             catch
             {
                 strWLID = "0";
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFYBXGZLSCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFYBXGZLSCSB") + "')", true);
             }
 
         }
         catch
         {
             strWLID = "0";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
 
         return strWLID;
@@ -1091,7 +1091,7 @@ public partial class TTProExpense : System.Web.UI.Page
 
             if (intWLNumber > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCBXDYZSPZBNSCFYTMJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCBXDYZSPZBNSCFYTMJC") + "')", true);
                 return;
             }
 
@@ -1130,20 +1130,20 @@ public partial class TTProExpense : System.Web.UI.Page
 
         if (ExelToDBTestForItem() == -1)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim() ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC") ;
             return;
         }
         else
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ") ;
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ") ;
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -1152,7 +1152,7 @@ public partial class TTProExpense : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB") ;
             }
             else
             {
@@ -1169,13 +1169,13 @@ public partial class TTProExpense : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ") ;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strAccountCode = dr[i][LanguageHandle.GetWord("KeMuDaiMa").ToString().Trim()].ToString().Trim();
+                        strAccountCode = dr[i][LanguageHandle.GetWord("KeMuDaiMa")].ToString().Trim();
 
                         if (strAccountCode != "")
                         {
@@ -1186,16 +1186,16 @@ public partial class TTProExpense : System.Web.UI.Page
                             {
                                 proExpense.ProjectID = int.Parse(strProjectID);
                                 proExpense.AccountCode = strAccountCode;
-                                proExpense.Account = dr[i][LanguageHandle.GetWord("KeMuMingChen").ToString().Trim()].ToString().Trim();
-                                proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu").ToString().Trim()].ToString().Trim();
-                                proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
-                                proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
+                                proExpense.Account = dr[i][LanguageHandle.GetWord("KeMuMingChen")].ToString().Trim();
+                                proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu")].ToString().Trim();
+                                proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE")].ToString().Trim());
+                                proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE")].ToString().Trim());
                                 proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   
-                                proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi").ToString().Trim()].ToString().Trim());
+                                proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi")].ToString().Trim());
                                 proExpense.RegisterDate = DateTime.Now;
 
-                                proExpense.UserCode = dr[i][LanguageHandle.GetWord("DangShiRenDaiMa").ToString().Trim()].ToString().Trim();
-                                proExpense.UserName = dr[i][LanguageHandle.GetWord("DangShiRenXingMing").ToString().Trim()].ToString().Trim();
+                                proExpense.UserCode = dr[i][LanguageHandle.GetWord("DangShiRenDaiMa")].ToString().Trim();
+                                proExpense.UserName = dr[i][LanguageHandle.GetWord("DangShiRenXingMing")].ToString().Trim();
 
                                 proExpense.FinancialStaffCode = "";
                                 proExpense.FinancialStaffName = "";
@@ -1224,7 +1224,7 @@ public partial class TTProExpense : System.Web.UI.Page
 
                     LoadProExpense(LB_Sql.Text.Trim());
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG") + "')", true);
                 }
             }
         }
@@ -1242,13 +1242,13 @@ public partial class TTProExpense : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ") ;
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -1257,7 +1257,7 @@ public partial class TTProExpense : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB") ;
                 j = -1;
             }
             else
@@ -1275,14 +1275,14 @@ public partial class TTProExpense : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ") ;
                     j = -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strAccountCode = dr[i][LanguageHandle.GetWord("KeMuDaiMa").ToString().Trim()].ToString().Trim();
+                        strAccountCode = dr[i][LanguageHandle.GetWord("KeMuDaiMa")].ToString().Trim();
 
                         if (strAccountCode != "")
                         {
@@ -1291,23 +1291,23 @@ public partial class TTProExpense : System.Web.UI.Page
 
                             try
                             {
-                                proExpense.UserCode = dr[i][LanguageHandle.GetWord("DangShiRenDaiMa").ToString().Trim()].ToString().Trim();
-                                proExpense.UserName = dr[i][LanguageHandle.GetWord("DangShiRenXingMing").ToString().Trim()].ToString().Trim();
+                                proExpense.UserCode = dr[i][LanguageHandle.GetWord("DangShiRenDaiMa")].ToString().Trim();
+                                proExpense.UserName = dr[i][LanguageHandle.GetWord("DangShiRenXingMing")].ToString().Trim();
 
                                 if (proExpense.UserCode != strUserCode)
                                 {
-                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuNiBuNengDaoRuBieRenDeFe").ToString().Trim()+"')", true);
+                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuNiBuNengDaoRuBieRenDeFe")+"')", true);
                                     return -1;
                                 }
 
                                 proExpense.ProjectID = int.Parse(strProjectID);
                                 proExpense.AccountCode = strAccountCode;
-                                proExpense.Account = dr[i][LanguageHandle.GetWord("KeMuMingChen").ToString().Trim()].ToString().Trim();
-                                proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu").ToString().Trim()].ToString().Trim();
-                                proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
-                                proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
+                                proExpense.Account = dr[i][LanguageHandle.GetWord("KeMuMingChen")].ToString().Trim();
+                                proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu")].ToString().Trim();
+                                proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE")].ToString().Trim());
+                                proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE")].ToString().Trim());
                                 proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   
-                                proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi").ToString().Trim()].ToString().Trim());
+                                proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi")].ToString().Trim());
                                 proExpense.RegisterDate = DateTime.Now;
 
                                 proExpense.FinancialStaffCode = "";
@@ -1328,7 +1328,7 @@ public partial class TTProExpense : System.Web.UI.Page
 
                                 j = -1;
 
-                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDRSBSLBLSLYWSZ").ToString().Trim() + "')", true);
+                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDRSBSLBLSLYWSZ") + "')", true);
                                 continue;
                             }
                         }
@@ -1504,7 +1504,7 @@ public partial class TTProExpense : System.Web.UI.Page
             //dailyWork.WorkDate = DateTime.Now;
             //dailyWork.ProjectID = int.Parse(strProjectID);
             //dailyWork.ProjectName = ShareClass.GetProjectName(strProjectID);
-            //dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong").ToString().Trim();
+            //dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong");
             //dailyWork.Charge = DeCurrentDayAmount;
             //dailyWork.ConfirmCharge = DeCurrentDayConfirmAmount;
             //dailyWork.ManHour = 0;
@@ -1526,7 +1526,7 @@ public partial class TTProExpense : System.Web.UI.Page
             dailyWork.Address = "";
             dailyWork.ProjectID = int.Parse(strProjectID);
             dailyWork.ProjectName = ShareClass.GetProjectName(strProjectID);
-            dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong").ToString().Trim();
+            dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong");
             dailyWork.Achievement = "";
             dailyWork.Charge = DeCurrentDayAmount;
             dailyWork.ConfirmCharge = DeCurrentDayConfirmAmount;

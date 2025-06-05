@@ -42,7 +42,7 @@ public partial class TTProjectRelatedConstract : System.Web.UI.Page
 
         if (lst.Count > 0)
         {
-            //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的相关合同";
+            //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + strProjectName + "的相关合同";
         }
 
         LB_UserCode.Text = strUserCode;

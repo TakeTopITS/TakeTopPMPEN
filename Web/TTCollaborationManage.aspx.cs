@@ -43,7 +43,7 @@ public partial class TTCollaborationManage : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll");
 
             CollaborationBLL collaborationBLL = new CollaborationBLL();
 

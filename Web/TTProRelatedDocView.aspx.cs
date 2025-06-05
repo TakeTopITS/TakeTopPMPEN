@@ -40,7 +40,7 @@ public partial class TTProRelatedDocView : System.Web.UI.Page
 
             Project project = (Project)lst[0];
 
-            //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedID + project.ProjectName + " 文档列表";
+            //this.Title = LanguageHandle.GetWord("Project") + strRelatedID + project.ProjectName + " 文档列表";
 
             strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";

@@ -55,11 +55,11 @@ public partial class TTProjectReviewWL : System.Web.UI.Page
         }
 
         strProject = GetProjectName(strProjectID); 
-        //this.Title =LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProject + "评审工作流";
+        //this.Title =LanguageHandle.GetWord("Project") + strProjectID + " " + strProject + "评审工作流";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
-            TB_WLName.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID  + strProject  + strReviewType + LanguageHandle.GetWord("PingShen").ToString().Trim();
+            TB_WLName.Text = LanguageHandle.GetWord("Project") + strProjectID  + strProject  + strReviewType + LanguageHandle.GetWord("PingShen");
 
             strHQL = "from Project as project where project.ProjectID = " + strProjectID;
             ProjectBLL projectBLL = new ProjectBLL();
@@ -114,7 +114,7 @@ public partial class TTProjectReviewWL : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBGZLMBBNWKJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBGZLMBBNWKJC")+"')", true);
             return "0";
         }
 
@@ -171,12 +171,12 @@ public partial class TTProjectReviewWL : System.Web.UI.Page
                 InsertStatusRelatedWL(strProjectID, strProjectStatus);
             }
 
-           ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMPSSGZLSCCG").ToString().Trim()+"')", true);
+           ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMPSSGZLSCCG")+"')", true);
         }
         catch
         {
             strWLID = "0";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMPSSGZLSB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMPSSGZLSB")+"')", true);
         }
 
         return strWLID;

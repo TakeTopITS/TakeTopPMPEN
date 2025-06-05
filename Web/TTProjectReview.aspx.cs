@@ -35,7 +35,7 @@ public partial class TTProjectReview : System.Web.UI.Page
 
             strProjectName = GetProjectName(strProjectID);
 
-            //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID　+" " + strProjectName + "实施计划！";
+            //this.Title = LanguageHandle.GetWord("Project") + strProjectID　+" " + strProjectName + "实施计划！";
 
             strHQL = "from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID;
 

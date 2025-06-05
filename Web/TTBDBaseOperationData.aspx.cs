@@ -34,7 +34,7 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
             DLC_MonthNum.Text = DateTime.Now.ToString("MM");
             lbl_Creater.Text = ShareClass.GetUserName(strUserCode.Trim());
 
-            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
 
             ShareClass.LoadAccountForDDL(ddl_AccountName);
         }
@@ -84,14 +84,14 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(lbl_DCode.Text) || lbl_DCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBMBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBMBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
         }
         if (string.IsNullOrEmpty(DLC_YearNum.Text.Trim()) || DLC_YearNum.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYSNFBTJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYSNFBTJC") + "')", true);
             DLC_YearNum.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -99,7 +99,7 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
         }
         //if (IsBMBaseDataExits(string.Empty, lbl_DCode.Text.Trim(), ddl_AccountName.SelectedValue.Trim(), int.Parse(DLC_YearNum.Text.Trim()), int.Parse(string.IsNullOrEmpty(DLC_MonthNum.Text) || DLC_MonthNum.Text.Trim() == "" ? "0" : DLC_MonthNum.Text.Trim()), strUserCode.Trim()))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSYCZJC").ToString().Trim() + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSYCZJC") + "')", true);
         //    ddl_AccountName.Focus();
         //    DLC_YearNum.Focus();
         //    DLC_MonthNum.Focus();
@@ -111,7 +111,7 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
         lbl_MoneyNum.Text = GetBMBaseDataMoneyNum(lbl_DCode.Text.Trim(), ddl_AccountName.SelectedValue.Trim(), int.Parse(DLC_YearNum.Text.Trim()), int.Parse(DLC_MonthNum.Text.Trim()), "Base");
         if (NB_MoneyNum.Amount > decimal.Parse(lbl_MoneyNum.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSFYBZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSFYBZJC") + "')", true);
             NB_MoneyNum.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -144,11 +144,11 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
 
             lbl_MoneyNum.Text = GetBMBaseDataMoneyNum(lbl_DCode.Text.Trim(), ddl_AccountName.SelectedValue.Trim(), int.Parse(DLC_YearNum.Text.Trim()), int.Parse(string.IsNullOrEmpty(DLC_MonthNum.Text) || DLC_MonthNum.Text.Trim() == "" ? "0" : DLC_MonthNum.Text.Trim()), "Base");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -158,14 +158,14 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(lbl_DCode.Text) || lbl_DCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBMBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBMBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
         }
         if (string.IsNullOrEmpty(DLC_YearNum.Text.Trim()) || DLC_YearNum.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYSNFBTJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYSNFBTJC") + "')", true);
             DLC_YearNum.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -173,7 +173,7 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
         }
         //if (IsBMBaseDataExits(String.Empty, lbl_DCode.Text.Trim(), ddl_AccountName.SelectedValue.Trim(), int.Parse(DLC_YearNum.Text.Trim()), int.Parse(DLC_MonthNum.Text.Trim()), strUserCode.Trim()))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSYCZJC").ToString().Trim() + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSYCZJC") + "')", true);
         //    ddl_AccountName.Focus();
         //    DLC_YearNum.Focus();
         //    DLC_MonthNum.Focus();
@@ -192,7 +192,7 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
         decimal strMoneyOld = bdBaseDataRecord.MoneyNum;
         if (NB_MoneyNum.Amount > decimal.Parse(lbl_MoneyNum.Text.Trim()) + strMoneyOld)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSFYBZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGNFBMYSFYBZJC") + "')", true);
             NB_MoneyNum.Focus();
             return;
         }
@@ -218,11 +218,11 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
 
             lbl_MoneyNum.Text = GetBMBaseDataMoneyNum(lbl_DCode.Text.Trim(), ddl_AccountName.SelectedValue.Trim(), int.Parse(DLC_YearNum.Text.Trim()), int.Parse(string.IsNullOrEmpty(DLC_MonthNum.Text) || DLC_MonthNum.Text.Trim() == "" ? "0" : DLC_MonthNum.Text.Trim()), "Base");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -281,11 +281,11 @@ public partial class TTBDBaseOperationData : System.Web.UI.Page
 
                     lbl_MoneyNum.Text = GetBMBaseDataMoneyNum(lbl_DCode.Text.Trim(), ddl_AccountName.SelectedValue.Trim(), int.Parse(DLC_YearNum.Text.Trim()), int.Parse(DLC_MonthNum.Text.Trim()), "Base");
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
                 }
             }
         }

@@ -23,7 +23,7 @@ public partial class TTReqAssignRecord : System.Web.UI.Page
         strReqID = requirement.ReqID.ToString();
         strReqName = requirement.ReqName.Trim();
 
-        //this.Title = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strReqID + "  " + strReqName + LanguageHandle.GetWord("DeSuoYouFenPaJiLu").ToString().Trim();
+        //this.Title = LanguageHandle.GetWord("XuQiu") + strReqID + "  " + strReqName + LanguageHandle.GetWord("DeSuoYouFenPaJiLu");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
@@ -34,7 +34,7 @@ public partial class TTReqAssignRecord : System.Web.UI.Page
             DataList2.DataSource = lst;
             DataList2.DataBind();
 
-            LB_Title.Text = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strReqID + "  " + strReqName + LanguageHandle.GetWord("DeSuoYouFenPaJiLu").ToString().Trim();
+            LB_Title.Text = LanguageHandle.GetWord("XuQiu") + strReqID + "  " + strReqName + LanguageHandle.GetWord("DeSuoYouFenPaJiLu");
 
             HL_BusinessForm.NavigateUrl = "TTRelatedDIYBusinessForm.aspx?RelatedType=Req&RelatedID=" + strReqID + "&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(ShareClass.getBusinessFormTemName("Req", strReqID));
 

@@ -62,7 +62,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
                 Mails mails = (Mails)lst[0];
 
                 To.Text = mails.FromAddress.Trim();
-                Title.Text = LanguageHandle.GetWord("HuiFu").ToString().Trim() + mails.Title;
+                Title.Text = LanguageHandle.GetWord("HuiFu") + mails.Title;
 
                 strBody = "<BR/><BR/><BR/><BR/>" + strSignInfo + "<BR/>" + "-------On " + mails.SenderDate.ToString() + ",the mail from " + mails.FromAddress + " as belows:" + "</n>" + mails.Body.Trim();
                 //strBody += "<BR/>" + mails.ToAddress;
@@ -132,7 +132,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC") + "');</script>");
             }
             else
             {
@@ -151,13 +151,13 @@ CKEditor1.Language = Session["LangCode"].ToString();
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "');</script>");
                 }
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "');</script>");
         }
     }
 

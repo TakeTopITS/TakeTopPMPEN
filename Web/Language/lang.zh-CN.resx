@@ -29309,9 +29309,6 @@
   <data name="WanChengShu" xml:space="preserve">
     <value>完成数</value>
   </data>
-  <data name="0Nian1Yue" xml:space="preserve">
-    <value>{0}年{1}月</value>
-  </data>
   <data name="Di0Zhou" xml:space="preserve">
     <value>第{0}周</value>
   </data>
@@ -31857,5 +31854,779 @@
   </data>
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>注：為接收重要資訊，請正確填寫。</value>
+  </data>
+  <data name="BiaoZhunBan" xml:space="preserve">
+    <value>标准版</value>
+  </data>
+  <data name="Bing" xml:space="preserve">
+    <value>并</value>
+  </data>
+  <data name="BingShiXianYingLiDeHuoBan" xml:space="preserve">
+    <value>并实现盈利的伙伴</value>
+  </data>
+  <data name="Bu" xml:space="preserve">
+    <value>不</value>
+  </data>
+  <data name="ChaKan" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="ChangGuiXingYeGongChengXingYe" xml:space="preserve">
+    <value>常规行业工程行业石化行业</value>
+  </data>
+  <data name="ChanPin1" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="ChanPinDuoYuanHuaFuWuGeXingHua" xml:space="preserve">
+    <value>产品多元化服务个性化的大中小型不限行业管理软件催生新型价值渠</value>
+  </data>
+  <data name="ChanPinJingXiaoHuoBan" xml:space="preserve">
+    <value>产品经销伙伴</value>
+  </data>
+  <data name="ChanPinYuJiShuYanFaGuanLi" xml:space="preserve">
+    <value>产品与技术研发管理</value>
+  </data>
+  <data name="CunChuKongJian" xml:space="preserve">
+    <value>存储空间</value>
+  </data>
+  <data name="CunChuRongLiang" xml:space="preserve">
+    <value>存储容量</value>
+  </data>
+  <data name="DaiLiXieYiTongGuoDiQuShouQuan" xml:space="preserve">
+    <value>代理协议通过地区授权销售我们系列</value>
+  </data>
+  <data name="DanWeiHuoZheGe" xml:space="preserve">
+    <value>单位或者个</value>
+  </data>
+  <data name="DeHuoBanGaiXingYe" xml:space="preserve">
+    <value>的伙伴该行业</value>
+  </data>
+  <data name="DiQuZengZhiFenXiaoXieYiBing" xml:space="preserve">
+    <value>地区增值分销协议并通过自有分销渠道销售我们我们系列</value>
+  </data>
+  <data name="DuoYuanHuaFuWuGeXingHuaDeDa" xml:space="preserve">
+    <value>多元化服务个性化的大中小型不限行业管理软件催生新型价值渠道体</value>
+  </data>
+  <data name="FaZhanDeDaiLiMeiChengYiDanAnCi" xml:space="preserve">
+    <value>发展的代理每成一单按此单软件和用户授权费代理商向我方采购额的</value>
+  </data>
+  <data name="GeBanBenJiaGeCanJian" xml:space="preserve">
+    <value>各版本价格参见</value>
+  </data>
+  <data name="GongChengSheJiShiGongXiangMu" xml:space="preserve">
+    <value>工程设计施工项目管理</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>工程项目管理平台</value>
+  </data>
+  <data name="GongNengMoKuaiYuJiaGe" xml:space="preserve">
+    <value>功能模块与价格</value>
+  </data>
+  <data name="GouMai1" xml:space="preserve">
+    <value>购买</value>
+  </data>
+  <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
+    <value>购买泰顶拓鼎管理软件</value>
+  </data>
+  <data name="JiaGe1" xml:space="preserve">
+    <value>价格</value>
+  </data>
+  <data name="JiaGeBiao" xml:space="preserve">
+    <value>价格表</value>
+  </data>
+  <data name="JieShaoPengYouQuFaZhanDeDiYi" xml:space="preserve">
+    <value>介绍朋友去发展的第一层代理每成一单可以按此单软件和用户授权费</value>
+  </data>
+  <data name="JiLuShu1" xml:space="preserve">
+    <value>记录数</value>
+  </data>
+  <data name="JiMuHuaJieGouKeAnXuXuanPeiZi" xml:space="preserve">
+    <value>积木化结构可按需选配自由组合</value>
+  </data>
+  <data name="JingXiaoHuoBan" xml:space="preserve">
+    <value>经销伙伴</value>
+  </data>
+  <data name="JiTuanBan" xml:space="preserve">
+    <value>集团版</value>
+  </data>
+  <data name="JiTuanGuanKong" xml:space="preserve">
+    <value>集团管控</value>
+  </data>
+  <data name="KeHuShouQianShouHouFuWuJinXiao" xml:space="preserve">
+    <value>客户售前售后服务进销存等</value>
+  </data>
+  <data name="KeYongZhiFuBaoHuoYinXingZhuan" xml:space="preserve">
+    <value>可用支付宝或银行转账方式缴费方便快捷</value>
+  </data>
+  <data name="Lian" xml:space="preserve">
+    <value>鲢</value>
+  </data>
+  <data name="LianXiDiZhi1" xml:space="preserve">
+    <value>联系地址</value>
+  </data>
+  <data name="LiuChengZiChanZhiShiCheLiang" xml:space="preserve">
+    <value>流程资产知识车辆等</value>
+  </data>
+  <data name="MoKuai1" xml:space="preserve">
+    <value>模块</value>
+  </data>
+  <data name="NengShiYongXiTongDanKeYiXiaZai" xml:space="preserve">
+    <value>能使用系统但可以下载备份相关系统数据继续使用需要续费</value>
+  </data>
+  <data name="PeiXunRenZheng" xml:space="preserve">
+    <value>培训认证</value>
+  </data>
+  <data name="QiYeBan" xml:space="preserve">
+    <value>企业版</value>
+  </data>
+  <data name="QiYeJiKuanKeKuoZhanRuanJian" xml:space="preserve">
+    <value>企业级款可扩展软件</value>
+  </data>
+  <data name="QuDaoFenChengZhengCe" xml:space="preserve">
+    <value>渠道分成政策</value>
+  </data>
+  <data name="Ren1" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="RenZhiYaoDengLuShiYongXiTongDe" xml:space="preserve">
+    <value>人指要登录使用系统的人非企业员工总数</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi" xml:space="preserve">
+    <value>软件实施项目管理平台</value>
+  </data>
+  <data name="RuanJianXiTongShiShiXiangMu" xml:space="preserve">
+    <value>软件系统实施项目管理</value>
+  </data>
+  <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
+    <value>如果您所在的地区或者您公司目前所拥有的客户资源非常适合推广泰</value>
+  </data>
+  <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
+    <value>商机合作伙伴</value>
+  </data>
+  <data name="ShangJiHeZuoXieYiPingJieZiShen" xml:space="preserve">
+    <value>商机合作协议凭借自身客户资源优势为提供</value>
+  </data>
+  <data name="ShenQing1" xml:space="preserve">
+    <value>申请</value>
+  </data>
+  <data name="ShiXianYingLiDeHuoBan" xml:space="preserve">
+    <value>实现盈利的伙伴</value>
+  </data>
+  <data name="ShiYongManYiHouBiXuFuFeiCai" xml:space="preserve">
+    <value>试用满意后必须付费才能继续使用如付费期间中断续费系统会进入为</value>
+  </data>
+  <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
+    <value>使用时间不限软件安装在用户自备的服务器上请在下面填写购买申请</value>
+  </data>
+  <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
+    <value>是指获得实施服务体系的资格认证并具备较强的管理软件服务实施服</value>
+  </data>
+  <data name="ShiZhiNengGouTongGuoPingTaiHuo" xml:space="preserve">
+    <value>是指能够通过平台或可集成平台开发形成与互补的行业模块产品的伙</value>
+  </data>
+  <data name="ShiZhiNengJieHeXiLie" xml:space="preserve">
+    <value>是指能结合系列</value>
+  </data>
+  <data name="ShiZhiNengJieHeXiLieChanPinZai" xml:space="preserve">
+    <value>是指能结合系列产品在培训领域进行合作并按照约定比例进行利润分</value>
+  </data>
+  <data name="ShiZhiYuQianShu" xml:space="preserve">
+    <value>是指与签署</value>
+  </data>
+  <data name="ShiZhiYuQianShuChanPinDaiLiXie" xml:space="preserve">
+    <value>是指与签署产品代理协议通过地区授权销售我们系列产品实现盈利的</value>
+  </data>
+  <data name="ShiZhiYuQianShuDiQuZengZhiFen" xml:space="preserve">
+    <value>是指与签署地区增值分销协议并通过自有分销渠道销售我们我们系列</value>
+  </data>
+  <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
+    <value>是指与签署商机合作协议凭借自身客户资源优势为提供产品销售商机</value>
+  </data>
+  <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
+    <value>授权服务伙伴</value>
+  </data>
+  <data name="ShouQuanPeiXunHuoBan" xml:space="preserve">
+    <value>授权培训伙伴</value>
+  </data>
+  <data name="TaiDingYunJiangDiChengBenJiShi" xml:space="preserve">
+    <value>泰鼎云降低成本即时开通基于阿里云安全可靠</value>
+  </data>
+  <data name="TiGongMianFeiKongJianKuoRong" xml:space="preserve">
+    <value>提供免费空间扩容费元月</value>
+  </data>
+  <data name="TiGongShangJiJiWoMenBingXieZhu" xml:space="preserve">
+    <value>提供商机给我们并协助我们销售我们主导成单可以按此单软件和用户</value>
+  </data>
+  <data name="TiGongXiangMuJiHuaJinDuRenWu" xml:space="preserve">
+    <value>提供项目计划进度任务费用文档管理功能简单易用分钟学会</value>
+  </data>
+  <data name="WeiXin" xml:space="preserve">
+    <value>微信</value>
+  </data>
+  <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
+    <value>我们渠道六大体系</value>
+  </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>项目宝</value>
+  </data>
+  <data name="XiangMuGuanLiZiXun" xml:space="preserve">
+    <value>项目管理咨询</value>
+  </data>
+  <data name="XiangMuGuanLiZiXunPeiXunRen" xml:space="preserve">
+    <value>项目管理咨询培训认证</value>
+  </data>
+  <data name="XiangMuXingPingTai" xml:space="preserve">
+    <value>项目型平台</value>
+  </data>
+  <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
+    <value>项目型制造管理</value>
+  </data>
+  <data name="XiaoShouFenChengZhengCe" xml:space="preserve">
+    <value>销售分成政策</value>
+  </data>
+  <data name="XiaoShouShangJiHuoZheBangZhuWo" xml:space="preserve">
+    <value>销售商机或者帮助我们完成关系营销过程的法</value>
+  </data>
+  <data name="XingYeKaiFaHuoBan" xml:space="preserve">
+    <value>行业开发伙伴</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
+    <value>系统集成项目管理平台</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>研发项目管理平台</value>
+  </data>
+  <data name="YanZhengMa1" xml:space="preserve">
+    <value>验证码</value>
+  </data>
+  <data name="YiYueDingDeHeZuoMoShiZaiWoMen" xml:space="preserve">
+    <value>以约定的合作模式在我们渠道销售并按比例获取利润</value>
+  </data>
+  <data name="YongHuShu1" xml:space="preserve">
+    <value>用户数</value>
+  </data>
+  <data name="YuanChengFuWu" xml:space="preserve">
+    <value>远程服务</value>
+  </data>
+  <data name="YuanQi" xml:space="preserve">
+    <value>元起</value>
+  </data>
+  <data name="YuanRenYue" xml:space="preserve">
+    <value>元人月</value>
+  </data>
+  <data name="YuanYongHu1" xml:space="preserve">
+    <value>元用户</value>
+  </data>
+  <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
+    <value>在培训领域进行合作并按照约定比例进行利润分配的组织和机构</value>
+  </data>
+  <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
+    <value>在泰鼎云上租用泰顶拓鼎项目管理软件模式按人按月付费请在下面填</value>
+  </data>
+  <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
+    <value>增值分销伙伴</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLi" xml:space="preserve">
+    <value>政务项目管理</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>政务项目管理平台</value>
+  </data>
+  <data name="ZhiChi" xml:space="preserve">
+    <value>支持</value>
+  </data>
+  <data name="ZhiJieXiaoShouWoMenXieZhuFen" xml:space="preserve">
+    <value>直接销售我们协助分成按销售代理分成协议执行</value>
+  </data>
+  <data name="ZiBei" xml:space="preserve">
+    <value>自备</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai" xml:space="preserve">
+    <value>综合管理平台</value>
+  </data>
+  <data name="ZuYongShenQing" xml:space="preserve">
+    <value>租用申请</value>
+  </data>
+  <data name="JianZhanXinXi" xml:space="preserve">
+    <value>建站信息</value>
+  </data>
+  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
+    <value>注要接收重要信息请正确填写</value>
+  </data>
+  <data name="BaZhanDian" xml:space="preserve">
+    <value>把网站</value>
+  </data>
+  <data name="BiaoZhunBan1" xml:space="preserve">
+    <value>标准版</value>
+  </data>
+  <data name="ChanPin2" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="CunChuRongLiang1" xml:space="preserve">
+    <value>存储容量</value>
+  </data>
+  <data name="DeShuJuFuZhiDao" xml:space="preserve">
+    <value>的数据复制到</value>
+  </data>
+  <data name="DianHua3" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="FuWu" xml:space="preserve">
+    <value>服务</value>
+  </data>
+  <data name="GongCheng1" xml:space="preserve">
+    <value>工程</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>工程项目管理平台</value>
+  </data>
+  <data name="GongSi1" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="Gou" xml:space="preserve">
+    <value>购</value>
+  </data>
+  <data name="HuBeiHao" xml:space="preserve">
+    <value>沪备号</value>
+  </data>
+  <data name="JiTuanBan1" xml:space="preserve">
+    <value>集团版</value>
+  </data>
+  <data name="KeFu1" xml:space="preserve">
+    <value>客服</value>
+  </data>
+  <data name="KeHuGuanXiGuanLiPingTai" xml:space="preserve">
+    <value>客户关系管理平台</value>
+  </data>
+  <data name="LianJie" xml:space="preserve">
+    <value>连结</value>
+  </data>
+  <data name="LianXiDiZhi2" xml:space="preserve">
+    <value>联系地址</value>
+  </data>
+  <data name="LianXiRen1" xml:space="preserve">
+    <value>联系人</value>
+  </data>
+  <data name="PingTai" xml:space="preserve">
+    <value>平台</value>
+  </data>
+  <data name="PingTaiMingChen" xml:space="preserve">
+    <value>平台名称</value>
+  </data>
+  <data name="QingBuYaoGuanBiCiYeMian" xml:space="preserve">
+    <value>请不要关闭此页面</value>
+  </data>
+  <data name="QingZaiXiaMianTianXieNiDeLian" xml:space="preserve">
+    <value>请在下面填写你的联系信息提交成功后下载链接会自动显示</value>
+  </data>
+  <data name="QiYeBan1" xml:space="preserve">
+    <value>企业版</value>
+  </data>
+  <data name="QiYeZongHeGuanLiPingTai" xml:space="preserve">
+    <value>企业综合管理平台</value>
+  </data>
+  <data name="Ren2" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="RuanJianShiShi" xml:space="preserve">
+    <value>软件实施</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi1" xml:space="preserve">
+    <value>软件实施项目管理平台</value>
+  </data>
+  <data name="RuYouWenTiQingZhiJieLianXiKeFu" xml:space="preserve">
+    <value>如有问题请直接联系客服</value>
+  </data>
+  <data name="ShenQing2" xml:space="preserve">
+    <value>申请</value>
+  </data>
+  <data name="SheZhiShiFouZiDongJianZhan" xml:space="preserve">
+    <value>设置是否自动建站</value>
+  </data>
+  <data name="ShouJiHao1" xml:space="preserve">
+    <value>手机号</value>
+  </data>
+  <data name="TuoDingXinXi" xml:space="preserve">
+    <value>拓鼎信息</value>
+  </data>
+  <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
+    <value>我们拓鼎所有管理软件平台产品企业版提供免费在线试用试用中如遇</value>
+  </data>
+  <data name="Xian" xml:space="preserve">
+    <value>现</value>
+  </data>
+  <data name="XiangMuBao1" xml:space="preserve">
+    <value>项目宝</value>
+  </data>
+  <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>项目管理平台</value>
+  </data>
+  <data name="XiangMuXingPingTai1" xml:space="preserve">
+    <value>专案型平台</value>
+  </data>
+  <data name="XiaZai1" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="XiaZaiLianJie" xml:space="preserve">
+    <value>下载连结</value>
+  </data>
+  <data name="XieTongPingTai" xml:space="preserve">
+    <value>协同平台</value>
+  </data>
+  <data name="XingYeJuXianWeiCuJinYeJieXiang" xml:space="preserve">
+    <value>行业矩献为促进业界项目管理软件的发展和提升企业项目管理水平泰</value>
+  </data>
+  <data name="XiTongJiCheng" xml:space="preserve">
+    <value>系统集成</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing1" xml:space="preserve">
+    <value>系统集成项目管理平台</value>
+  </data>
+  <data name="YanFa" xml:space="preserve">
+    <value>研发</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>研发项目管理平台</value>
+  </data>
+  <data name="YanZhengMa2" xml:space="preserve">
+    <value>验证码</value>
+  </data>
+  <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
+    <value>要协助请联系泰顶客服电话</value>
+  </data>
+  <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
+    <value>因为要复制网站文件和初始化数据预计要分钟才能完成并出现登录界</value>
+  </data>
+  <data name="YongHuShu2" xml:space="preserve">
+    <value>用户数</value>
+  </data>
+  <data name="YuanMa1" xml:space="preserve">
+    <value>源码</value>
+  </data>
+  <data name="ZaiXianShiYong" xml:space="preserve">
+    <value>在线试用</value>
+  </data>
+  <data name="ZhanDian1" xml:space="preserve">
+    <value>网站</value>
+  </data>
+  <data name="ZhanDianMingChen" xml:space="preserve">
+    <value>网站名称</value>
+  </data>
+  <data name="ZhanDianXinXi" xml:space="preserve">
+    <value>网站信息</value>
+  </data>
+  <data name="ZhengWu" xml:space="preserve">
+    <value>政务</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>政务项目管理平台</value>
+  </data>
+  <data name="ZhengZaiChuangJianNiDeYingYong" xml:space="preserve">
+    <value>正在创建你的应用网站大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiChuangJianZhanDianDa" xml:space="preserve">
+    <value>正在创建网站大概需要几分钟请稍候</value>
+  </data>
+  <data name="ZhengZaiHuiFuNiDeYingYongZhan" xml:space="preserve">
+    <value>正在恢复你的应用网站大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhongYaoQingZhenShiTianXie" xml:space="preserve">
+    <value>重要请真实填写</value>
+  </data>
+  <data name="ZhuXiangMuGuanLiPingTaiZhiNeng" xml:space="preserve">
+    <value>注项目管理平台只能由字母或汉字组成</value>
+  </data>
+  <data name="ZhuZhiNengYouZiMuZuCheng" xml:space="preserve">
+    <value>注只能由字母组成</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai1" xml:space="preserve">
+    <value>综合管理平台</value>
+  </data>
+  <data name="ZongHePingTai" xml:space="preserve">
+    <value>综合平台</value>
+  </data>
+  <data name="BaoCunChengGong" xml:space="preserve">
+    <value>保存成功</value>
+  </data>
+  <data name="BaoCunShiBaiQingJianCha1" xml:space="preserve">
+    <value>保存失败请检查</value>
+  </data>
+  <data name="BeiFenWenJianXiaZaiTongZhi1" xml:space="preserve">
+    <value>备份文件下载通知</value>
+  </data>
+  <data name="ChengWeiHeZuoHuoBan" xml:space="preserve">
+    <value>成为合作伙伴</value>
+  </data>
+  <data name="ChuangJianShiBaiCunZaiXiangTon1" xml:space="preserve">
+    <value>创建失败存在相同名称的网站请检查</value>
+  </data>
+  <data name="ChuangJianShiBaiMeiYouNiXuanQu" xml:space="preserve">
+    <value>创建失败没有你选取的产品版本的可用网站基础参数请检查</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>的</value>
+  </data>
+  <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>的购买申请请及时处理</value>
+  </data>
+  <data name="DengLuZhangHaoMiMa" xml:space="preserve">
+    <value>登录账号密码</value>
+  </data>
+  <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
+    <value>登录账号密码请放心使用有问题请随时联系客服谢谢此邮件发自泰顶拓鼎集团</value>
+  </data>
+  <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>的申请请及时处理</value>
+  </data>
+  <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
+    <value>的试用信息请关注</value>
+  </data>
+  <data name="DeShuJuBeiFenWenJianXiaZaiDiZh" xml:space="preserve">
+    <value>的数据备份文件下载地址是</value>
+  </data>
+  <data name="DeTaiDingTuoDing" xml:space="preserve">
+    <value>的泰顶拓鼎</value>
+  </data>
+  <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
+    <value>的问题回馈请关注</value>
+  </data>
+  <data name="DeYuanGong1" xml:space="preserve">
+    <value>的员工</value>
+  </data>
+  <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>的租用申请请及时处理</value>
+  </data>
+  <data name="DianHua5" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="GengXinShiBaiQingJianCha1" xml:space="preserve">
+    <value>更新失败请检查</value>
+  </data>
+  <data name="GouMai2" xml:space="preserve">
+    <value>购买</value>
+  </data>
+  <data name="GouMaiBanBen1" xml:space="preserve">
+    <value>购买版本</value>
+  </data>
+  <data name="HuiFuShiBaiCunZaiXiangTongMing1" xml:space="preserve">
+    <value>恢复失败存在相同名称的网站请检查</value>
+  </data>
+  <data name="HuiFuShiBaiMeiYouNiXuanQuDeCha" xml:space="preserve">
+    <value>恢复失败没有你选取的产品版本的可用网站基础参数请检查</value>
+  </data>
+  <data name="HuiFuShuJuKuShiBai1" xml:space="preserve">
+    <value>恢复数据库失败</value>
+  </data>
+  <data name="JianZhanXinXi1" xml:space="preserve">
+    <value>建站信息</value>
+  </data>
+  <data name="JingGaoZhanDianMingChenZhiNeng1" xml:space="preserve">
+    <value>警告网站名称只能由字母组成不能有汉字数字标点符号也不能有空格请检查</value>
+  </data>
+  <data name="JiTuanBan2" xml:space="preserve">
+    <value>集团版</value>
+  </data>
+  <data name="NiHaoNi1" xml:space="preserve">
+    <value>你好你</value>
+  </data>
+  <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
+    <value>请及时下载如有问题请联系客服谢谢此邮件来自泰顶拓鼎集团</value>
+  </data>
+  <data name="QuanBuGengXinChengGong" xml:space="preserve">
+    <value>全部更新成功</value>
+  </data>
+  <data name="Ren3" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="RuanJianGouMaiShenQingTongZhi1" xml:space="preserve">
+    <value>软件购买申请通知</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
+    <value>软件租用建站参数</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
+    <value>软件租用建站维护</value>
+  </data>
+  <data name="RuanJianZuYongShenQingTongZhi1" xml:space="preserve">
+    <value>软件租用申请通知</value>
+  </data>
+  <data name="ShanChuShiBaiQingJianCha1" xml:space="preserve">
+    <value>删除失败请检查</value>
+  </data>
+  <data name="ShangHuiXinXi1" xml:space="preserve">
+    <value>商会信息</value>
+  </data>
+  <data name="ShiBaiCunZaiXiangTongMingChenD1" xml:space="preserve">
+    <value>失败存在相同名称的网站请检查</value>
+  </data>
+  <data name="ShiBaiYaoFuZhiDeZhanDianBuNeng" xml:space="preserve">
+    <value>失败要复制的网站不能为空请检查</value>
+  </data>
+  <data name="ShiBaiYaoShanChuDeZhanDianBuNe" xml:space="preserve">
+    <value>失败要删除的网站不能为空请检查</value>
+  </data>
+  <data name="TiJiaoChengGong" xml:space="preserve">
+    <value>提交成功</value>
+  </data>
+  <data name="TiJiaoChengGongTaiDingTuoDingK" xml:space="preserve">
+    <value>提交成功泰顶拓鼎客服会在分钟之内联系你请稍候谢谢</value>
+  </data>
+  <data name="TiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
+    <value>提交成功下载连结在下面点击可下载</value>
+  </data>
+  <data name="TiJiaoLe" xml:space="preserve">
+    <value>提交了</value>
+  </data>
+  <data name="TiJiaoShiBaiDaiHaoXiangBuNengW" xml:space="preserve">
+    <value>提交失败带号项不能为空请检查</value>
+  </data>
+  <data name="TiJiaoShiBaiQingDianHuaLianXiT" xml:space="preserve">
+    <value>提交失败请电话联系泰顶拓鼎客服谢谢</value>
+  </data>
+  <data name="TiJiaoShiBaiQingJianCha" xml:space="preserve">
+    <value>提交失败请检查</value>
+  </data>
+  <data name="TiJiaoShiBaiYanZhengMaCuoWuQin" xml:space="preserve">
+    <value>提交失败验证码错误请检查</value>
+  </data>
+  <data name="TiShiCiZhanDianBuCunZaiQingJia" xml:space="preserve">
+    <value>提示此网站不存在请检查</value>
+  </data>
+  <data name="TiShiCiZhanDianDeShuJuYiYingYo" xml:space="preserve">
+    <value>提示此网站的数据已应用不能删除请检查</value>
+  </data>
+  <data name="TiShiCiZhanDianHaiCunZaiJiLuBu" xml:space="preserve">
+    <value>提示此网站还存在记录不能删除请检查</value>
+  </data>
+  <data name="TiShiDaiHaoDeDuBuNengKongQingJ" xml:space="preserve">
+    <value>提示带号的都不能空请检查</value>
+  </data>
+  <data name="TiShiFaSongShiBaiQingJianCha" xml:space="preserve">
+    <value>提示发送失败请检查</value>
+  </data>
+  <data name="TiShiGongSi" xml:space="preserve">
+    <value>提示公司</value>
+  </data>
+  <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
+    <value>同乡欢迎你加入商会谢谢</value>
+  </data>
+  <data name="WaiBuFaBu" xml:space="preserve">
+    <value>外部发布</value>
+  </data>
+  <data name="XinJian1" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="XuNiMuLuDeJueDuiLuJingBaoCunCh1" xml:space="preserve">
+    <value>虚拟目录的绝对路径保存成功</value>
+  </data>
+  <data name="YanZhengMaCuoWuQingJianCha1" xml:space="preserve">
+    <value>验证码错误请检查</value>
+  </data>
+  <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
+    <value>已被删除如有问题请联系客服谢谢此邮件来自泰顶拓鼎集团</value>
+  </data>
+  <data name="YiBeiShengJiDaoZuiXinBanShengJ1" xml:space="preserve">
+    <value>已被升级到最新版升级后第一次打开会较慢大约要到分钟才会出现登录页面如有问题请联系泰顶拓鼎客服谢谢此邮件来自泰顶拓鼎集团</value>
+  </data>
+  <data name="YiChuangJian1" xml:space="preserve">
+    <value>已创建</value>
+  </data>
+  <data name="YiChuangJianZhanDianDiZhiShi" xml:space="preserve">
+    <value>已创建网站地址是</value>
+  </data>
+  <data name="YiGengXinXianYouRongLiang" xml:space="preserve">
+    <value>已更新现有容量</value>
+  </data>
+  <data name="YiHuiFu1" xml:space="preserve">
+    <value>已恢复</value>
+  </data>
+  <data name="YiHuiFuZhanDianDiZhiShi" xml:space="preserve">
+    <value>已恢复网站地址是</value>
+  </data>
+  <data name="YongHuShu3" xml:space="preserve">
+    <value>用户数</value>
+  </data>
+  <data name="YuanMaXiaZai1" xml:space="preserve">
+    <value>源码下载</value>
+  </data>
+  <data name="ZhanDian2" xml:space="preserve">
+    <value>网站</value>
+  </data>
+  <data name="ZhanDianBeiFenWenJianFaSongChe1" xml:space="preserve">
+    <value>网站备份文件发送成功</value>
+  </data>
+  <data name="ZhanDianChuangJianChengGongNiK" xml:space="preserve">
+    <value>网站创建成功你可以点击下面连结打开和收藏此网站注意第一次打开登录页面时因要初始化系统耗时会较长此后不会超过秒钟</value>
+  </data>
+  <data name="ZhanDianChuangJianTongZhi1" xml:space="preserve">
+    <value>网站创建通知</value>
+  </data>
+  <data name="ZhanDianHuiFuChengGongNiKeYiDa" xml:space="preserve">
+    <value>网站恢复成功你可以打开和收藏此网站</value>
+  </data>
+  <data name="ZhanDianHuiFuTongZhi1" xml:space="preserve">
+    <value>网站恢复通知</value>
+  </data>
+  <data name="ZhanDianShanChuChengGong1" xml:space="preserve">
+    <value>网站删除成功</value>
+  </data>
+  <data name="ZhanDianShanChuTongZhi1" xml:space="preserve">
+    <value>网站删除通知</value>
+  </data>
+  <data name="ZhanDianShengJiChengGong1" xml:space="preserve">
+    <value>网站升级成功</value>
+  </data>
+  <data name="ZhanDianShengJiShiBaiQingJianC1" xml:space="preserve">
+    <value>网站升级失败请检查</value>
+  </data>
+  <data name="ZhanDianShengJiTongZhi1" xml:space="preserve">
+    <value>网站升级通知</value>
+  </data>
+  <data name="ZhengZaiBaoCunYingYongZhanDian1" xml:space="preserve">
+    <value>正在保存应用网站的虚拟目录的绝对路径大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiBaoCunZheGeZhanDianDeX1" xml:space="preserve">
+    <value>正在保存这个网站的虚拟目录的绝对路径大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiBeiFenNiDeZhanDianWenJ1" xml:space="preserve">
+    <value>正在备份你的网站档大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiFaSongZheGeZhanDianBei1" xml:space="preserve">
+    <value>正在发送这个网站备份文件大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiShanChuNiDeYingYongZha1" xml:space="preserve">
+    <value>正在删除你的应用网站大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiShanChuZheGeZhanDianDa1" xml:space="preserve">
+    <value>正在删除这个网站大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiShengJiNiDeYingYongZha1" xml:space="preserve">
+    <value>正在升级你的应用网站大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhengZaiShengJiZheGeZhanDianDa1" xml:space="preserve">
+    <value>正在升级这个网站大概需要分钟请耐心等候</value>
+  </data>
+  <data name="ZhuCeChengGongHuanYingNiJiaRuS" xml:space="preserve">
+    <value>注册成功欢迎你加入商会谢谢</value>
+  </data>
+  <data name="ZhuCeShiBaiQingLianXiShangHuiG" xml:space="preserve">
+    <value>注册失败请联系商会管理员微信</value>
+  </data>
+  <data name="ZiJian" xml:space="preserve">
+    <value>自建</value>
+  </data>
+  <data name="ZunJingDe1" xml:space="preserve">
+    <value>尊敬的</value>
+  </data>
+  <data name="ZuYong1" xml:space="preserve">
+    <value>租用</value>
+  </data>
+  <data name="ZuYongBanBen1" xml:space="preserve">
+    <value>租用版本</value>
+  </data>
+  <data name="ZuYongZhanDian1" xml:space="preserve">
+    <value>租用网站</value>
+  </data>
+  <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
+    <value>租用网站维护</value>
   </data>
 </root>

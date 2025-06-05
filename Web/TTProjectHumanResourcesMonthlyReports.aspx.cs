@@ -49,7 +49,7 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC")+"')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
@@ -80,7 +80,7 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC")+"')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
@@ -120,17 +120,17 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (ddl_ProjectID.SelectedValue.Trim() == "0")
                 {
-                    fileName = LanguageHandle.GetWord("QuanTiXiangMuHuiZongYueDuiZhao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("QuanTiXiangMuHuiZongYueDuiZhao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanYueBao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanYueBao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC")+"')", true);
             }
         }
     }
@@ -176,8 +176,8 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         else
         {
             strHQL = "select WorkType 'Occupation', sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=1 then NumberUsed else 0 end) 'FirstWeek' ," +   
-                " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm").ToString().Trim() +
-                " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm").ToString().Trim() +
+                " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm") +
+                " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm") +
                 " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=4 then NumberUsed else 0 end) 'FourthWeek' from " +   
                 "T_ProjectMemberSchedule where ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by WorkType";
         }

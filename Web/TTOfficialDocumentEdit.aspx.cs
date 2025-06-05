@@ -68,7 +68,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
             ShareClass.LoadWFTemplate(strUserCode, "OfficialDocumentApproval", DL_TemName);
 
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityNewsNotice(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityNewsNotice(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
 
             strHQL = "from OfficialDocument as officialDocument where officialDocument.PublisherCode = " + "'" + strUserCode + "'";
             strHQL += " Order by officialDocument.ID DESC";
@@ -110,7 +110,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
         {
             strID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = GetRelatedWorkFlowNumber("OfficialDocumentApproval", LanguageHandle.GetWord("GongWen").ToString().Trim(), strID);
+            intWLNumber = GetRelatedWorkFlowNumber("OfficialDocumentApproval", LanguageHandle.GetWord("GongWen"), strID);
             if (intWLNumber > 0)
             {
                 BT_New.Enabled = false;
@@ -157,9 +157,9 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
                 BT_Archive.Enabled = true;
 
-                TB_WLName.Text = LanguageHandle.GetWord("GongWenShenPi").ToString().Trim() + TB_Title.Text.Trim();
+                TB_WLName.Text = LanguageHandle.GetWord("GongWenShenPi") + TB_Title.Text.Trim();
 
-                LoadRelatedWL("OfficialDocumentApproval", LanguageHandle.GetWord("GongWen").ToString().Trim(), int.Parse(strID));
+                LoadRelatedWL("OfficialDocumentApproval", LanguageHandle.GetWord("GongWen"), int.Parse(strID));
             }
 
             if (e.CommandName == "Update")
@@ -185,11 +185,11 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
                     LoadOfficialDocument();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }
@@ -217,17 +217,17 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
                 CKE_MainContent.Text = MSWordHandler.ImportToStringFromFile(strHTMLFile);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRCG") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRSBJC") + "')", true);
             }
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -283,7 +283,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGSBMBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGSBMBNWKCZSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -323,11 +323,11 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
             LoadOfficialDocument();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
         }
     }
 
@@ -355,7 +355,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGSBMBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGSBMBNWKCZSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -388,11 +388,11 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
             LoadOfficialDocument();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
         }
     }
 
@@ -433,7 +433,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGSBMBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGSBMBNWKCZSBJC") + "')", true);
             return;
         }
 
@@ -465,11 +465,11 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
             DL_Status.SelectedValue = "Archived";
             LoadOfficialDocument();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -497,7 +497,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC") + "');</script>");
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -518,7 +518,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = LanguageHandle.GetWord("GongWen").ToString().Trim();
+        workFlow.RelatedType = LanguageHandle.GetWord("GongWen");
         workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strID);
         workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
@@ -547,7 +547,7 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, LanguageHandle.GetWord("GongWen").ToString().Trim(), int.Parse(strID));
+            LoadRelatedWL(strWLType, LanguageHandle.GetWord("GongWen"), int.Parse(strID));
 
             //UpdateGoodsPurchaseStatus(strPOID, "InProgress");
             DL_Status.SelectedValue = "InProgress";
@@ -556,11 +556,11 @@ CKE_MainContent.Language = Session["LangCode"].ToString();
             strXMLFile2 = Server.MapPath(strXMLFile2);
             xmlProcess.DbToXML(strCmdText, "T_OfficialDocument", strXMLFile2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJGZLSCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJGZLSCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBQJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 

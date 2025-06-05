@@ -46,13 +46,13 @@ public partial class TTMessage : System.Web.UI.Page
         strHQL += " Order by collaboration.CoID DESC";
         CollaborationBLL collaborationBLL = new CollaborationBLL();
         lst = collaborationBLL.GetAllCollaborations(strHQL);
-        HL_Collaboration.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_Collaboration.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
         HL_Collaboration.NavigateUrl = "TTCollaborationManage.aspx";
 
         strHQL = "from HeadLine as headLine";
         HeadLineBLL headLineBLL = new HeadLineBLL();
         lst = headLineBLL.GetAllHeadLines(strHQL);
-        HL_HeadLine.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_HeadLine.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
         HL_HeadLine.NavigateUrl = "TTHeadLine.aspx";
 
         strHQL = "from WorkFlowStepDetail as workFlowStepDetail where workFlowStepDetail.Status in ('InProgress','Reviewing','Signing','ReReview') ";
@@ -61,25 +61,25 @@ public partial class TTMessage : System.Web.UI.Page
         strHQL += " Order by workFlowStepDetail.StepID DESC";
         WorkFlowStepDetailBLL workFlowStepDetailBLL = new WorkFlowStepDetailBLL();
         lst = workFlowStepDetailBLL.GetAllWorkFlowStepDetails(strHQL);
-        HL_UnCheckWL.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_UnCheckWL.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
         HL_UnCheckWL.NavigateUrl = "TTWLManage.aspx";
 
 
         strHQL = "FROM Mails as mails where mails.ReaderFlag = 0 and mails.UserCode = " + "'" + strUserCode + "'";
         MailsBLL mailsBLL = new MailsBLL();
         lst = mailsBLL.GetAllMailss(strHQL);
-        HL_UNReadEMail.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_UNReadEMail.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
         HL_UNReadEMail.NavigateUrl = "TTMailIndex.aspx";
 
         strHQL = "from Meeting as meeting where meeting.ID in ( select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + ") and meeting.EndTime > now() order by meeting.ID DESC ";
         MeetingBLL meetingBLL = new MeetingBLL();
         lst = meetingBLL.GetAllMeetings(strHQL);
-        HL_UNAttendMeeting.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_UNAttendMeeting.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
 
         strHQL = "from ProjectRisk as projectRisk where projectRisk.Status not in ('Resolved','Occurred') and projectRisk.ProjectID in (select project.ProjectID from Project as project where PMCode = " + "'" + strUserCode + "'" + ")";
         ProjectRiskBLL projectRiskBLL = new ProjectRiskBLL();
         lst = projectRiskBLL.GetAllProjectRisks(strHQL);
-        HL_UNHandledRisk.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_UNHandledRisk.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
 
         if (lst.Count > 0)
             i = 1;
@@ -91,7 +91,7 @@ public partial class TTMessage : System.Web.UI.Page
         strHQL += " Order by taskAssignRecord.ID DESC";
         TaskAssignRecordBLL taskAssignRecordBLL = new TaskAssignRecordBLL();
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
-        HL_UNHnadledTask.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_UNHnadledTask.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
 
         if (lst.Count > 0)
             i = 1;
@@ -102,7 +102,7 @@ public partial class TTMessage : System.Web.UI.Page
         strHQL += " Order by reqAssignRecord.ID DESC";
         ReqAssignRecordBLL reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
-        HL_UNHandledReq.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_UNHandledReq.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
 
         if (lst.Count > 0)
             i = 1;
@@ -110,7 +110,7 @@ public partial class TTMessage : System.Web.UI.Page
         strHQL = " from Project as project where project.Status = 'Plan' and project.PMCode = " + "'" + strUserCode + "'" + " Order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
-        HL_UNHandledPro.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        HL_UNHandledPro.Text = lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
 
         if (lst.Count > 0)
             i = 1;

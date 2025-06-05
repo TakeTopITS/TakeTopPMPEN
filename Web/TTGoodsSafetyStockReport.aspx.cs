@@ -109,7 +109,7 @@ public partial class TTGoodsSafetyStockReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoAnQuanKuCunBaoBiaoxls").ToString().Trim());
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoAnQuanKuCunBaoBiaoxls"));
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);   
     }

@@ -37,7 +37,7 @@ public partial class TTProjectRelatedDefect : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + project.ProjectName + "的相关缺陷";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + project.ProjectName + "的相关缺陷";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -101,7 +101,7 @@ public partial class TTProjectRelatedDefect : System.Web.UI.Page
         {
             if (strStatus == "CaseClosed" || strStatus == "Suspended" || strStatus == "Cancel")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCXMYBJAGHX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCXMYBJAGHX") + "')", true);
             }
             else
             {

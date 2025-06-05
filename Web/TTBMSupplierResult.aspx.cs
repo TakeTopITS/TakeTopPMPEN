@@ -24,7 +24,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
 
     protected void GetBMSupplierInfo(string strSupplierCode)
     {
-        lbl_CodePerson.Text = LanguageHandle.GetWord("GeRenZhangHao").ToString().Trim() + strSupplierCode.Trim();
+        lbl_CodePerson.Text = LanguageHandle.GetWord("GeRenZhangHao") + strSupplierCode.Trim();
         if (strSupplierCode.Trim().Contains("-"))
         {
             strSupplierCode = strSupplierCode.Trim().Substring(0, strSupplierCode.Trim().IndexOf("-"));

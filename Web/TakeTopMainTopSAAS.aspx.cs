@@ -26,7 +26,7 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
             {
                 strUserName = ShareClass.GetUserName(strUserCode);
                 LB_UserName.Text = strUserName;
-                LB_SystemMsg.Text = LanguageHandle.GetWord("NiHao").ToString().Trim() + "£¬" + LanguageHandle.GetWord("HuanYingNiShiYong").ToString().Trim() + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+                LB_SystemMsg.Text = LanguageHandle.GetWord("NiHao") + "£¬" + LanguageHandle.GetWord("HuanYingNiShiYong") + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
                 intRunNumber = 0;
 
@@ -69,7 +69,7 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + LanguageHandle.GetWord("ZZGGSBJC") + "')", true);
         }
     }
 

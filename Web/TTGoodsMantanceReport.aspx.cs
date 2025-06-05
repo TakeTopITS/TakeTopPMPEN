@@ -151,7 +151,7 @@ public partial class TTGoodsMantanceReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoWeiHuBaoBiaoxls").ToString().Trim());
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoWeiHuBaoBiaoxls"));
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);   
     }

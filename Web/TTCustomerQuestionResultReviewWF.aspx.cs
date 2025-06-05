@@ -34,7 +34,7 @@ public partial class TTCustomerQuestionResultReviewWF : System.Web.UI.Page
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        //this.Title = "客户问题：" + strQuestionID + " " + customerQuestion.Question.Trim() + LanguageHandle.GetWord("PingShen").ToString().Trim();
+        //this.Title = "客户问题：" + strQuestionID + " " + customerQuestion.Question.Trim() + LanguageHandle.GetWord("PingShen");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
@@ -43,9 +43,9 @@ public partial class TTCustomerQuestionResultReviewWF : System.Web.UI.Page
 
             ShareClass.LoadWFTemplate(strUserCode, "CustomerServiceReview", DL_TemName);
 
-            LoadRelatedWL("CustomerServiceReview", LanguageHandle.GetWord("KeFu").ToString().Trim(), int.Parse(strQuestionID));
+            LoadRelatedWL("CustomerServiceReview", LanguageHandle.GetWord("KeFu"), int.Parse(strQuestionID));
 
-            TB_WLName.Text = LanguageHandle.GetWord("KEHUFUWU").ToString().Trim()  + strQuestionID  + customerQuestion.ID.ToString() + LanguageHandle.GetWord("PingShen").ToString().Trim();
+            TB_WLName.Text = LanguageHandle.GetWord("KEHUFUWU")  + strQuestionID  + customerQuestion.ID.ToString() + LanguageHandle.GetWord("PingShen");
 
             HL_RelatedWorkFlowTemplate.Enabled = true;
             HL_RelatedWorkFlowTemplate.NavigateUrl = "TTAttachWorkFlowTemplate.aspx?RelatedType=CustomerService&RelatedID=" + strQuestionID;
@@ -84,7 +84,7 @@ public partial class TTCustomerQuestionResultReviewWF : System.Web.UI.Page
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = dtCreateTime;
         workFlow.Status = "New";
-        workFlow.RelatedType = LanguageHandle.GetWord("KeFu").ToString().Trim();
+        workFlow.RelatedType = LanguageHandle.GetWord("KeFu");
         workFlow.RelatedID = int.Parse(strQuestionID);
         workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
@@ -115,13 +115,13 @@ public partial class TTCustomerQuestionResultReviewWF : System.Web.UI.Page
 
             xmlProcess.DbToXML(strCmdText, "T_CustomerQuestion", strXMLFile2);
 
-            LoadRelatedWL("CustomerServiceReview", LanguageHandle.GetWord("KeFu").ToString().Trim(), int.Parse(strQuestionID));
+            LoadRelatedWL("CustomerServiceReview", LanguageHandle.GetWord("KeFu"), int.Parse(strQuestionID));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKFPSSGZLSCDGZLGLYMJHCGZLS").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKFPSSGZLSCDGZLGLYMJHCGZLS")+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKFPSSGZLSB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKFPSSGZLSB")+"')", true);
         }
     }
 

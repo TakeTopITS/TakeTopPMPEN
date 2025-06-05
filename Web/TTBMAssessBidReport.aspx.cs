@@ -136,13 +136,13 @@ public partial class TTBMAssessBidReport : System.Web.UI.Page
     {
         if (DL_AssessBidRecordID.SelectedValue.Trim().Equals("0"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLBJC")+"')", true);
             DL_AssessBidRecordID.Focus();
             return;
         }
         if (IsBMAssessBidReportAssessBidRecordID(DL_AssessBidRecordID.SelectedValue.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLYJXPBBGJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLYJXPBBGJC")+"')", true);
             DL_AssessBidRecordID.Focus();
             return;
         }
@@ -163,13 +163,13 @@ public partial class TTBMAssessBidReport : System.Web.UI.Page
             bMAssessBidReportBLL.AddBMAssessBidReport(bMAssessBidReport);
             TB_ID.Text = GetMaxBMAssessBidReportID(bMAssessBidReport).ToString();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG")+"')", true);
 
             LoadBMAssessBidReportList();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC")+"')", true);
         }
     }
 
@@ -214,13 +214,13 @@ public partial class TTBMAssessBidReport : System.Web.UI.Page
     {
         if (DL_AssessBidRecordID.SelectedValue.Trim().Equals("0"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLBJC")+"')", true);
             DL_AssessBidRecordID.Focus();
             return;
         }
         if (IsBMAssessBidReportAssessBidRecordID(DL_AssessBidRecordID.SelectedValue.Trim(), TB_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLYJXPBBGJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGPBJLYJXPBBGJC")+"')", true);
             DL_AssessBidRecordID.Focus();
             return;
         }
@@ -242,13 +242,13 @@ public partial class TTBMAssessBidReport : System.Web.UI.Page
         {
             bMAssessBidReportBLL.UpdateBMAssessBidReport(bMAssessBidReport, bMAssessBidReport.ID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG")+"')", true);
 
             LoadBMAssessBidReportList();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC")+"')", true);
         }
     }
 
@@ -263,13 +263,13 @@ public partial class TTBMAssessBidReport : System.Web.UI.Page
         {
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG")+"')", true);
 
             LoadBMAssessBidReportList();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBJC")+"')", true);
         }
     }
 

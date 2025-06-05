@@ -35,7 +35,7 @@ public partial class TTProjectPlanTaskAssignRecord : System.Web.UI.Page
             DataList2.DataBind();
 
             strPlan = ShareClass.GetProjectPlanDetail(strPlanID);
-            LB_Title.Text = LanguageHandle.GetWord("JiHua").ToString().Trim() + strPlanID + strPlan + LanguageHandle.GetWord("RenWuDeSuoYouFenPaJiLu").ToString().Trim();
+            LB_Title.Text = LanguageHandle.GetWord("JiHua") + strPlanID + strPlan + LanguageHandle.GetWord("RenWuDeSuoYouFenPaJiLu");
         }
     }
 

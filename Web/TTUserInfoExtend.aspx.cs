@@ -56,7 +56,7 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
                 LoadUserData(HF_UserCode.Value);
             }
 
-            TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView3);
+            TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT"), TreeView3);
         }
     }
 
@@ -292,13 +292,13 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
         try
         {
             ShareClass.RunSqlCommand(sql);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJCDMZFHMXWK").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJCDMZFHMXWK") + "')", true);
         }
     }
 
@@ -381,13 +381,13 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
         try
         {
             ShareClass.RunSqlCommand(sql);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJCDMZFHMXWK").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJCDMZFHMXWK") + "')", true);
         }
     }
 
@@ -407,7 +407,7 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
             endDate = DateTime.Now;
             //日期相差月份数
             int month = ((endDate.Year - startDate.Year) * 12) + endDate.Month - startDate.Month;
-            yearMonth = string.Format(LanguageHandle.GetWord("0Nian1Yue").ToString().Trim(), month / 12, month % 12);
+            yearMonth = string.Format(LanguageHandle.GetWord("0Nian1Yue"), month / 12, month % 12);
         }
 
         return yearMonth;

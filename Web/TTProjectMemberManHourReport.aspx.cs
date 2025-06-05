@@ -28,7 +28,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuChengYuanGongShiHuiZong").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuChengYuanGongShiHuiZong");
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -37,7 +37,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
             DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -125,7 +125,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
 
         DataTable dtProject = ShareClass.GetDataSetFromSql(strHQL, "project").Tables[0];
 
-        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanGongShiHuiZong").ToString().Trim());
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanGongShiHuiZong"));
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);   
     }

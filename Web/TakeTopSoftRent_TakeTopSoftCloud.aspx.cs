@@ -72,7 +72,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
         strRentProductName = DL_Type.SelectedValue.Trim();
         strRentProductVersion = DL_Version.SelectedValue.Trim();
         strRentUserNumber = TB_UserNumber.Text.Trim();
-        strQuestion = LanguageHandle.GetWord("ZuYongBanBen").ToString().Trim() + strRentProductVersion + LanguageHandle.GetWord("YongHuShu").ToString().Trim() + strRentUserNumber + LanguageHandle.GetWord("Ren").ToString().Trim();
+        strQuestion = LanguageHandle.GetWord("ZuYongBanBen") + strRentProductVersion + LanguageHandle.GetWord("YongHuShu") + strRentUserNumber + LanguageHandle.GetWord("Ren");
 
         string strSiteCreatorName = strRentUserName;
 
@@ -80,18 +80,18 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
 
         if (strRentUserCompanyName == "" | strRentUserName == "" | strRentUserPhoneNumber == "" | strRentUserEMail == "" | strQuestion == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC") + "')", true);
 
-            LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha").ToString().Trim();
+            LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha");
         }
         else
         {
             if (String.Compare(Request.Cookies["CheckCode"].Value, TB_CheckCode.Text, true) != 0)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM").ToString().Trim() + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM") + "')", true);
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = LanguageHandle.GetWord("YanZhengMaCuoWuQingJianCha").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("YanZhengMaCuoWuQingJianCha");
                 return;
             }
 
@@ -99,7 +99,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi").ToString().Trim() + strRentUserCompanyName + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strRentUserName + "( " + strRentUserPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe").ToString().Trim() + strRentProductName + "£¬" + strQuestion + LanguageHandle.GetWord("DeZuYongShenQingQingJiShiChuLi").ToString().Trim();
+                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi") + strRentUserCompanyName + LanguageHandle.GetWord("DeYuanGong") + strRentUserName + "( " + strRentUserPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe") + strRentProductName + "£¬" + strQuestion + LanguageHandle.GetWord("DeZuYongShenQingQingJiShiChuLi");
                 Action action = new Action(delegate ()
                 {
                     Msg msg = new Msg();
@@ -116,7 +116,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
                         string strUserEMail = GetUserEMail(strCSOperatorCode);
                         if (strUserEMail != "")
                         {
-                            msg.SendMailByEmail(strUserEMail, LanguageHandle.GetWord("RuanJianZuYongShenQingTongZhi").ToString().Trim(), strNofiInfo, "ADMIN");
+                            msg.SendMailByEmail(strUserEMail, LanguageHandle.GetWord("RuanJianZuYongShenQingTongZhi"), strNofiInfo, "ADMIN");
                         }
                     }
                     catch (Exception ex)
@@ -130,13 +130,13 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strRentUserCompanyName + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strRentUserName + "'" + "," + "'" + strRentUserPhoneNumber + "'" + "," + "'" + strRentUserEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strRentProductName + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + LanguageHandle.GetWord("XinJian").ToString().Trim() + ",'','','','','" + strWebSite + "')";
+            strSQL += " Values(" + "'" + strRentUserCompanyName + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strRentUserName + "'" + "," + "'" + strRentUserPhoneNumber + "'" + "," + "'" + strRentUserEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strRentProductName + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'"+ LanguageHandle.GetWord("XinJian") +"'" + ",'','','','','" + strWebSite + "')";
 
             try
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
                 string strQuestionID = GetMyCreatedMaxCustomerQuestionID();
-                LB_Message.Text = LanguageHandle.GetWord("TiJiaoChengGong").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("TiJiaoChengGong");
 
                 string strIsAutoBuildSite, strTargetHomeSiteURL;
                 strIsAutoBuildSite = getIsAutoBuildSite(strRentProductName, strRentProductVersion);
@@ -206,7 +206,7 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
                                ,'{25}'
                                 )", strRentUserPhoneNumber, strRentUserEMail, strRentUserName, strRentUserCompanyName, strRentProductName, strRentProductVersion, strRentUserNumber, "", "", "",
                        "", "", "", "", "", "", "", "",
-                      "", "", "", "", "", "", strQuestionID, LanguageHandle.GetWord("ZuYong").ToString().Trim());
+                      "", "", "", "", "", "", strQuestionID, LanguageHandle.GetWord("ZuYong"));
 
                 try
                 {
@@ -226,13 +226,13 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiJiaoChengGongTaiDingTuoDingK").ToString().Trim(), true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiJiaoChengGongTaiDingTuoDingK"), true);
                 }
             }
             catch (Exception err)
             {
                 LB_Message.Text = err.Message.ToString();
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiJiaoShiBaiQingDianHuaLianXiT").ToString().Trim(), true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiJiaoShiBaiQingDianHuaLianXiT"), true);
             }
         }
     }

@@ -30,7 +30,7 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiBaoCunYingYongZhanDian").ToString().Trim();
+        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiBaoCunYingYongZhanDian");
 
         if (Page.IsPostBack == false)
         {
@@ -38,11 +38,11 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
             {
                 //更新站点虚拟目录
                 UpdateVirtualDirectoryPhysicalPath();
-                LB_Message.Text = LanguageHandle.GetWord("XuNiMuLuDeJueDuiLuJingBaoCunCh").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("XuNiMuLuDeJueDuiLuJingBaoCunCh");
             }
             catch
             {
-                LB_Message.Text = LanguageHandle.GetWord("BaoCunShiBaiQingJianCha").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("BaoCunShiBaiQingJianCha");
             }
 
             IMB_Process.Visible = false;
@@ -81,12 +81,12 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
             }
             else
             {
-                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia");
             }
         }
         catch (Exception ex)
         {
-            LB_Message.Text = LanguageHandle.GetWord("GengXinShiBaiQingJianCha").ToString().Trim();
+            LB_Message.Text = LanguageHandle.GetWord("GengXinShiBaiQingJianCha");
         }
     }
 

@@ -76,7 +76,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
         strHQL = "Update T_ProjectMember Set WeChatOpenID ='',WeChatUserID='',WeChatDeviceID='' Where UserCode = '" + strUserCode + "'";
         ShareClass.RunSqlCommand(strHQL);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNDZHHWXHYJJCSD").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNDZHHWXHYJJCSD") + "')", true);
     }
 
     protected void BindModuleData(string strUserCode, string strUserType, string strForbitModule, string strLangCode)
@@ -115,7 +115,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
                 strHomeModuleName = strHomeModuleName.Substring(0, 12);
             }
 
-            if (strModuleName == LanguageHandle.GetWord("XinWen").ToString().Trim())
+            if (strModuleName == LanguageHandle.GetWord("XinWen"))
             {
                 try
                 {
@@ -126,7 +126,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
                 }
             }
 
-            if (strModuleName == LanguageHandle.GetWord("DaiBanShiXiang").ToString().Trim())
+            if (strModuleName == LanguageHandle.GetWord("DaiBanShiXiang"))
             {
                 try
                 {

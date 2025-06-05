@@ -61,7 +61,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             DLC_StartTime.Text = ShareClass.getCurrentMonthStartDay().ToString("yyyy-MM-dd");
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
 
             var dtLeave = GetLeaveTypeAll();
             if (dtLeave != null)
@@ -117,7 +117,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
         catch(Exception ex)
         {
             LogClass.WriteLogFile(ex.Message.ToString());
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuBuMenHeZiBuMenYuanGongR").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuBuMenHeZiBuMenYuanGongR")+"')", true);
         }
     }
 
@@ -130,7 +130,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa")+"')", true);
             return null;
         }
 
@@ -152,12 +152,12 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         strStartTime = startTime.ToString("yyyy-MM-dd");
         strEndTime = endTime.ToString("yyyy-MM-dd");
-        Label4.Text = string.Format(LanguageHandle.GetWord("TongJiShiJian0Zhi1").ToString().Trim(), strStartTime, strEndTime);
+        Label4.Text = string.Format(LanguageHandle.GetWord("TongJiShiJian0Zhi1"), strStartTime, strEndTime);
 
         if (strStartTime.Substring(0, 8) != strEndTime.Substring(0, 8))
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click",
-                "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiJieShuRiJiZhiNe").ToString().Trim()+"')", true);
+                "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiJieShuRiJiZhiNe")+"')", true);
             return null;
         }
 
@@ -309,7 +309,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         var dt = ds.Tables[0];
         Random a = new Random();
-        string fileName = LanguageHandle.GetWord("YuanGongKaoQinBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+        string fileName = LanguageHandle.GetWord("YuanGongKaoQinBaoBiao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
         try
         {
@@ -317,8 +317,8 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             ISheet sheet = workbook.CreateSheet("Sheet1");
             //删除多余列UserCode、工号1、工号2
             dt.Columns.Remove("UserCode");
-            dt.Columns.Remove(LanguageHandle.GetWord("GongHao1").ToString().Trim());
-            dt.Columns.Remove(LanguageHandle.GetWord("GongHao2").ToString().Trim());
+            dt.Columns.Remove(LanguageHandle.GetWord("GongHao1"));
+            dt.Columns.Remove(LanguageHandle.GetWord("GongHao2"));
             var colNum = dt.Columns.Count;
 
             var startTime = DateTime.Parse(DLC_StartTime.Text);
@@ -337,7 +337,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             var style = workbook.CreateCellStyle() as HSSFCellStyle;
             var font = workbook.CreateFont() as HSSFFont;
             font.IsBold = true;//加粗
-            font.FontName = LanguageHandle.GetWord("SongTi").ToString().Trim();
+            font.FontName = LanguageHandle.GetWord("SongTi");
             font.FontHeightInPoints = 24;
             style.SetFont(font);
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
@@ -353,7 +353,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             cell.SetCellValue( LanguageHandle.GetWord("BaoBiaoShengChengShiJian") +": " + DateTime.Now.ToString("yyyy-MM-dd HH:mm"));   
             style = workbook.CreateCellStyle() as HSSFCellStyle;
             font = workbook.CreateFont() as HSSFFont;
-            font.FontName = LanguageHandle.GetWord("SongTi").ToString().Trim();
+            font.FontName = LanguageHandle.GetWord("SongTi");
             font.FontHeightInPoints = 14;
             style.SetFont(font);
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
@@ -364,7 +364,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             style = workbook.CreateCellStyle() as HSSFCellStyle;
             font = workbook.CreateFont() as HSSFFont;
-            font.FontName = LanguageHandle.GetWord("SongTi").ToString().Trim();
+            font.FontName = LanguageHandle.GetWord("SongTi");
             font.FontHeightInPoints = 12;
             style.SetFont(font);
             SetCellBorder(style);
@@ -372,7 +372,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             var row1 = sheet.CreateRow(rowIndex);
             var row2 = sheet.CreateRow(rowIndex + 1);
-            string[] cols = new string[] { LanguageHandle.GetWord("XingMing").ToString().Trim(), LanguageHandle.GetWord("BuMen").ToString().Trim(), LanguageHandle.GetWord("GongHao").ToString().Trim(), LanguageHandle.GetWord("ZhiWei").ToString().Trim() };
+            string[] cols = new string[] { LanguageHandle.GetWord("XingMing"), LanguageHandle.GetWord("BuMen"), LanguageHandle.GetWord("GongHao"), LanguageHandle.GetWord("ZhiWei") };
             var colIndex = 0;
             for (; colIndex < cols.Length; colIndex++)
             {
@@ -408,8 +408,8 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             cols = new string[]
             {
-                LanguageHandle.GetWord("ChuQinTianShu").ToString().Trim(), LanguageHandle.GetWord("YingChuQinTianShu").ToString().Trim(), LanguageHandle.GetWord("ChiDaoCiShu").ToString().Trim(), LanguageHandle.GetWord("ChiDaoShiChangFenZhong").ToString().Trim(), LanguageHandle.GetWord("KuangGongChiDaoCiShu").ToString().Trim(),
-                LanguageHandle.GetWord("ZaoTuiCiShu").ToString().Trim(), LanguageHandle.GetWord("ZaoTuiShiChangFenZhong").ToString().Trim(), LanguageHandle.GetWord("KuangGongTianShu").ToString().Trim(), LanguageHandle.GetWord("YeBanTianShu").ToString().Trim()
+                LanguageHandle.GetWord("ChuQinTianShu"), LanguageHandle.GetWord("YingChuQinTianShu"), LanguageHandle.GetWord("ChiDaoCiShu"), LanguageHandle.GetWord("ChiDaoShiChangFenZhong"), LanguageHandle.GetWord("KuangGongChiDaoCiShu"),
+                LanguageHandle.GetWord("ZaoTuiCiShu"), LanguageHandle.GetWord("ZaoTuiShiChangFenZhong"), LanguageHandle.GetWord("KuangGongTianShu"), LanguageHandle.GetWord("YeBanTianShu")
             };
 
             for (var i = 0; i < cols.Length; i++)
@@ -564,7 +564,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
     //    if (strDepartCode == "")
     //    {
-    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
+    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa")+"')", true);
     //        return null;
     //    }
 
@@ -586,12 +586,12 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
     //    strStartTime = startTime.ToString("yyyy-MM-dd");
     //    strEndTime = endTime.ToString("yyyy-MM-dd");
-    //    Label4.Text = string.Format(LanguageHandle.GetWord("TongJiShiJian0Zhi1").ToString().Trim(), strStartTime, strEndTime);
+    //    Label4.Text = string.Format(LanguageHandle.GetWord("TongJiShiJian0Zhi1"), strStartTime, strEndTime);
 
     //    if (strStartTime.Substring(0, 8) != strEndTime.Substring(0, 8))
     //    {
     //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click",
-    //            "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiJieShuRiJiZhiNe").ToString().Trim()+"')", true);
+    //            "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiJieShuRiJiZhiNe")+"')", true);
     //        return null;
     //    }
 

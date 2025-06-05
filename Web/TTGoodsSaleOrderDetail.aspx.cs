@@ -127,7 +127,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
             NB_Number.Amount = goodsSaleRecord.Number;
 
 
-            int intWLNumber = GetRelatedWorkFlowNumber("MaterialSales", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strSOID);
+            int intWLNumber = GetRelatedWorkFlowNumber("MaterialSales", LanguageHandle.GetWord("WuLiao"), strSOID);
 
             if (intWLNumber == 0)
             {
@@ -179,7 +179,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
         BT_Update.Enabled = false;
         BT_Delete.Enabled = false;
 
-        intWLNumber = GetRelatedWorkFlowNumber("MaterialSales", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strSOID);
+        intWLNumber = GetRelatedWorkFlowNumber("MaterialSales", LanguageHandle.GetWord("WuLiao"), strSOID);
 
         if (intWLNumber == 0)
         {
@@ -198,9 +198,9 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
         }
 
 
-        TB_WLName.Text = LanguageHandle.GetWord("XiaoShou").ToString().Trim() + goodsSaleOrder.SOName.Trim() + LanguageHandle.GetWord("ShenQing").ToString().Trim();
+        TB_WLName.Text = LanguageHandle.GetWord("XiaoShou") + goodsSaleOrder.SOName.Trim() + LanguageHandle.GetWord("ShenQing");
 
-        LoadRelatedWL("MaterialSales", LanguageHandle.GetWord("WuLiao").ToString().Trim(), goodsSaleOrder.SOID);
+        LoadRelatedWL("MaterialSales", LanguageHandle.GetWord("WuLiao"), goodsSaleOrder.SOID);
 
         BT_SubmitApply.Enabled = true;
     }
@@ -261,7 +261,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXSRDMBZCWCRJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXSRDMBZCWCRJC") + "')", true);
             return;
         }
 
@@ -289,11 +289,11 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
             goodsSaleOrderBLL.UpdateGoodsSaleOrder(goodsSaleOrder, int.Parse(strSOID));
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -326,7 +326,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "" | strSpec == "" )
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -363,11 +363,11 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
                 NB_Amount.Amount = SumGoodsSaleOrderAmount(strSOID);
                 UpdateGoodsSaleOrderAmount(strSOID, NB_Amount.Amount);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCJC") + "')", true);
             }
         }
     }
@@ -410,7 +410,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "" | strSpec == "" )
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -439,12 +439,12 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
                 NB_Amount.Amount = SumGoodsSaleOrderAmount(strSOID);
                 UpdateGoodsSaleOrderAmount(strSOID, NB_Amount.Amount);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             }
         }
     }
@@ -474,11 +474,11 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
             BT_Update.Enabled = false;
             BT_Delete.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -505,7 +505,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC") + "');</script>");
             return "0";
         }
 
@@ -523,7 +523,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = LanguageHandle.GetWord("WuLiao").ToString().Trim();
+        workFlow.RelatedType = LanguageHandle.GetWord("WuLiao");
         workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strSOID);
         workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
@@ -552,7 +552,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strSOID));
+            LoadRelatedWL(strWLType, LanguageHandle.GetWord("WuLiao"), int.Parse(strSOID));
 
             UpdateGoodsGoodsSaleStatus(strSOID, "InProgress");
             DL_SOStatus.SelectedValue = "InProgress";
@@ -561,13 +561,13 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
             strXMLFile2 = Server.MapPath(strXMLFile2);
             xmlProcess.DbToXML(strCmdText, "T_GoodsSaleOrder", strXMLFile2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPXSSSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPXSSSCCG") + "')", true);
         }
         catch
         {
             strWLID = "0";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPXSSSBKNGZLMCGCZD25GHZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPXSSSBKNGZLMCGCZD25GHZJC") + "')", true);
         }
 
         return strWLID;
@@ -691,7 +691,7 @@ public partial class TTGoodsSaleOrderDetail : System.Web.UI.Page
 
     protected void LoadGoodsSaleOrderDetail(string strSOID)
     {
-        LB_GoodsOwner.Text = LanguageHandle.GetWord("XiaoShouDan").ToString().Trim() + ": " + strSOID + LanguageHandle.GetWord("MingXi").ToString().Trim();
+        LB_GoodsOwner.Text = LanguageHandle.GetWord("XiaoShouDan") + ": " + strSOID + LanguageHandle.GetWord("MingXi");
 
         string strHQL = "Select * from T_GoodsSaleRecord where SOID = " + strSOID + " Order by ID DESC";
         SqlConnection myConnection = new SqlConnection(

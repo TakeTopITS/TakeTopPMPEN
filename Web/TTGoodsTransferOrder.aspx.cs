@@ -328,7 +328,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCKNCZMXJLJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCKNCZMXJLJC") + "')", true);
                 }
             }
         }
@@ -459,7 +459,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
             LoadGoodsShipmentOrder(strUserCode);
             LoadGoodsShipmentDetail(strShipmentNO);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception err)
         {
@@ -532,7 +532,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
             LoadGoodsShipmentOrder(strUserCode);
             LoadGoodsShipmentDetail(strShipmentNO);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch (Exception err)
         {
@@ -953,7 +953,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
 
                 BT_NewDetail.Visible = false;
 
-                int intCount = GetRelatedWL(LanguageHandle.GetWord("WuLiaoChuHuo").ToString().Trim(), LanguageHandle.GetWord("WuLiao").ToString().Trim(), goodsShipmentDetail.ShipmentNO);
+                int intCount = GetRelatedWL(LanguageHandle.GetWord("WuLiaoChuHuo"), LanguageHandle.GetWord("WuLiao"), goodsShipmentDetail.ShipmentNO);
                 if (intCount > 0)
                 {
                     //BT_New.Enabled = false;
@@ -1011,11 +1011,11 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
 
                     LB_ID.Text = "0";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1096,13 +1096,13 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
 
         if (strFromGoodsID == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWZYCKDZCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWZYCKDZCJC") + "')", true);
             return;
         }
 
         if (CheckShipNumber(strFromGoodsID, deNumber) == false)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCKSLBNDYCLPKCSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCKSLBNDYCLPKCSLJC") + "')", true);
             return;
         }
 
@@ -1113,7 +1113,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
 
         if (strFromGoodsID == "" | strGoodsCode == "" | strGoodsName == "" | strSpec == "" | strFromPosition == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -1215,7 +1215,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
                 LoadGoodsShipmentDetail(strShipmentNO);
                 LoadGoods(strGoodsCode, strWareHouse);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -1265,7 +1265,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
 
         if (strFromGoodsID == "" | strGoodsCode == "" | strGoodsName == "" | strSpec == "" | strFromPosition == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -1371,13 +1371,13 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
                 LoadGoodsShipmentDetail(strShipmentNO);
                 LoadGoods(strGoodsCode, strWareHouse);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
             }
@@ -1632,7 +1632,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
 
     protected void LoadGoodsProductionOrderDetail(string strPDID)
     {
-        LB_GoodsOwner.Text = LanguageHandle.GetWord("ShengChanDan").ToString().Trim() + ": " + strPDID + LanguageHandle.GetWord("MingXi").ToString().Trim();
+        LB_GoodsOwner.Text = LanguageHandle.GetWord("ShengChanDan") + ": " + strPDID + LanguageHandle.GetWord("MingXi");
 
         string strHQL = "Select * from T_GoodsProductionOrderDetail where PDID = " + strPDID + " Order by ID DESC";
 

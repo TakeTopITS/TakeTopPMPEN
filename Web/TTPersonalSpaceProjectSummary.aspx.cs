@@ -95,7 +95,7 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
         if (ds.Tables[0].Rows.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXMDMBCZQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXMDMBCZQJC") + "')", true);
             return;
         }
         strProjectID = ds.Tables[0].Rows[0][0].ToString();
@@ -106,7 +106,7 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
         DataSet ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_ContactInfor");
         if (ds1.Tables[0].Rows.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNBZCXMYYCYZZQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNBZCXMYYCYZZQJC") + "')", true);
             return;
         }
 
@@ -138,7 +138,7 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
             relatedUser.Status = "Plan";
             relatedUser.WorkDetail = "";
             relatedUser.SMSCount = 0;
-            relatedUser.SalaryMethod = LanguageHandle.GetWord("GongShi").ToString().Trim();
+            relatedUser.SalaryMethod = LanguageHandle.GetWord("GongShi");
             relatedUser.PromissionScale = 0;
             relatedUser.UnitHourSalary = 0;
             relatedUser.CanUpdatePlan = "NO";

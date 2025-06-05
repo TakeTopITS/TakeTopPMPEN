@@ -32,7 +32,7 @@ public partial class TTProjectIncomeAndExpenseReportForFIN : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = GetUserName(strUserCode);
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectName + " 成员收入和支出列表！";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectName + " 成员收入和支出列表！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);
         if (Page.IsPostBack == false)
@@ -64,7 +64,7 @@ public partial class TTProjectIncomeAndExpenseReportForFIN : System.Web.UI.Page
             LB_TotalSalary.Text = deTotalSalary.ToString();
             LB_TotalIncome.Text = deTotalIncome.ToString();
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY");
             LB_Sql.Text = strHQL;
         }
     }
@@ -121,7 +121,7 @@ public partial class TTProjectIncomeAndExpenseReportForFIN : System.Web.UI.Page
                 LB_TotalSalary.Text = deTotalSalary.ToString();
                 LB_TotalIncome.Text = deTotalIncome.ToString();
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCY").ToString().Trim() + ":" + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCY") + ":" + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
             }
         }
@@ -155,7 +155,7 @@ public partial class TTProjectIncomeAndExpenseReportForFIN : System.Web.UI.Page
         LB_TotalSalary.Text = deTotalSalary.ToString();
         LB_TotalIncome.Text = deTotalIncome.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY");
         LB_Sql.Text = strHQL;
     }
     

@@ -100,11 +100,11 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
             if (strIsMobileDevice == "YES")
             {
-                HT_Operation.Text = LanguageHandle.GetWord("QueXianNeiRong").ToString().Trim() + defectment.DefectDetail.Trim() + LanguageHandle.GetWord("brbrYanShouBiaoZhun").ToString().Trim() + defectment.AcceptStandard.Trim();
+                HT_Operation.Text = LanguageHandle.GetWord("QueXianNeiRong") + defectment.DefectDetail.Trim() + LanguageHandle.GetWord("brbrYanShouBiaoZhun") + defectment.AcceptStandard.Trim();
             }
             else
             {
-                HE_Operation.Text = LanguageHandle.GetWord("QueXianNeiRong").ToString().Trim() + defectment.DefectDetail.Trim() + LanguageHandle.GetWord("brbrYanShouBiaoZhun").ToString().Trim() + defectment.AcceptStandard.Trim();
+                HE_Operation.Text = LanguageHandle.GetWord("QueXianNeiRong") + defectment.DefectDetail.Trim() + LanguageHandle.GetWord("brbrYanShouBiaoZhun") + defectment.AcceptStandard.Trim();
             }
 
             LoadProjectTask();
@@ -193,7 +193,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
                 LB_Status.Text = strTaskStatus;
 
                 LB_TaskName.Visible = true;
-                LB_TaskName.Text = LanguageHandle.GetWord("RenWu").ToString().Trim() + projectTask.TaskID.ToString().Trim() + "  " + projectTask.Task.Trim() + LanguageHandle.GetWord("DeFenPaJiLu").ToString().Trim();
+                LB_TaskName.Text = LanguageHandle.GetWord("RenWu") + projectTask.TaskID.ToString().Trim() + "  " + projectTask.Task.Trim() + LanguageHandle.GetWord("DeFenPaJiLu");
 
                 HL_TaskRelatedDoc.Enabled = true;
                 HL_TaskRelatedDoc.NavigateUrl = "TTProTaskRelatedDoc.aspx?TaskID=" + strTaskID;
@@ -312,7 +312,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC") + "')", true);
 
                 }
             }
@@ -397,11 +397,11 @@ HE_Operation.Language = Session["LangCode"].ToString();
             strHQL += " and RelatedID in (Select ID From T_TaskAssignRecord Where TaskID =  " + strTaskID + ")";
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -458,7 +458,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
         if (strTask == "" | strBeginDate == "" | strEndDate == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWKSRJSRZXRBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWKSRJSRZXRBNWKJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -498,7 +498,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
                 LB_TaskNO.Text = strTaskID;
 
                 LB_TaskName.Visible = true;
-                LB_TaskName.Text = LanguageHandle.GetWord("RenWu").ToString().Trim() + strTaskID + "  " + strTask + LanguageHandle.GetWord("DeFenPaJiLu").ToString().Trim();
+                LB_TaskName.Text = LanguageHandle.GetWord("RenWu") + strTaskID + "  " + strTask + LanguageHandle.GetWord("DeFenPaJiLu");
 
                 //自动分派任务给创建者
                 string strHQL3 = "Insert Into T_TaskAssignRecord(TaskID,Task,Type,OperatorCode,OperatorName,OperatorContent,OperationTime,BeginDate,EndDate,AssignManCode,AssignManName,Content,Operation,PriorID,RouteNumber,MakeDate,Status,FinishedNumber,UnitName,MoveTime)";
@@ -608,18 +608,18 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
                 LoadProjectTask();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXJHBNXG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXJHBNXG") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -652,11 +652,11 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
             LB_Status.Text = "Closed";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBRWSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBRWSBJC") + "')", true);
         }
     }
 
@@ -676,7 +676,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
         {
             projectTaskBLL.UpdateProjectTask(projectTask, int.Parse(strTaskID));
             LoadProjectTask();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHCG") + "')", true);
 
             BT_Assign.Enabled = true;
             //BT_Update.Enabled = true;
@@ -686,7 +686,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHRWSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHRWSBJC") + "')", true);
         }
     }
 
@@ -736,11 +736,11 @@ HE_Operation.Language = Session["LangCode"].ToString();
         {
             taskAssignRecordBLL.UpdateTaskAssignRecord(taskAssignRecord, int.Parse(strID));
             LoadAssignRecord(LB_TaskNO.Text.Trim());
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
@@ -773,7 +773,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
@@ -802,7 +802,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZTSCCYZCSJDYQTRWJX").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZTSCCYZCSJDYQTRWJX") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -830,7 +830,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZTSCCYZCSJDYQTRWJX").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZTSCCYZCSJDYQTRWJX") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -873,7 +873,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
         if (strOperation == "" | strOperatorCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBGZYHSLRBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBGZYHSLRBNWKJC") + "')", true);
             return;
         }
 
@@ -920,16 +920,16 @@ HE_Operation.Language = Session["LangCode"].ToString();
             LoadAssignRecord(LB_TaskNO.Text.Trim());
             UpdateTaskStatus(intTaskID.ToString(), "InProgress");
 
-            ShareClass.SendInstantMessage(LanguageHandle.GetWord("RenWuFenPaiTongZhi").ToString().Trim(), ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("GeiNiFenPaiLeRenWu").ToString().Trim() + " :" + intTaskID.ToString() + "  " + strTask + "，" + LanguageHandle.GetWord("QingJiShiChuLi").ToString().Trim(), strUserCode, strOperatorCode);
+            ShareClass.SendInstantMessage(LanguageHandle.GetWord("RenWuFenPaiTongZhi"), ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("GeiNiFenPaiLeRenWu") + " :" + intTaskID.ToString() + "  " + strTask + "，" + LanguageHandle.GetWord("QingJiShiChuLi"), strUserCode, strOperatorCode);
 
-            TB_Message.Text = ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("GeiNiFenPaiLeRenWu").ToString().Trim() + " :" + intTaskID.ToString() + "  " + "，" + LanguageHandle.GetWord("QingJiShiChuLi").ToString().Trim();
+            TB_Message.Text = ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("GeiNiFenPaiLeRenWu") + " :" + intTaskID.ToString() + "  " + "，" + LanguageHandle.GetWord("QingJiShiChuLi");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPCG") + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
@@ -975,7 +975,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
             strTaskID = "0";
         }
 
-        //strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=Task&RelatedID=" + strTaskID + "&IdentifyString=" + strIdentifyString + "','" + LanguageHandle.GetWord("XiangGuanYeWuDan").ToString().Trim() + "', 800, 600,window.location);";
+        //strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=Task&RelatedID=" + strTaskID + "&IdentifyString=" + strIdentifyString + "','" + LanguageHandle.GetWord("XiangGuanYeWuDan") + "', 800, 600,window.location);";
         //ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop12", strURL, true);
 
         strURL = "TTRelatedDIYBusinessForm.aspx?RelatedType=Task&RelatedID=" + strTaskID + "&IdentifyString=" + strIdentifyString;
@@ -1001,11 +1001,11 @@ HE_Operation.Language = Session["LangCode"].ToString();
         {
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1025,7 +1025,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
 
         if (CB_SendMsg.Checked == true | CB_SendMail.Checked == true)
         {
-            strSubject = LanguageHandle.GetWord("RenWuFenPaiTongZhi").ToString().Trim();
+            strSubject = LanguageHandle.GetWord("RenWuFenPaiTongZhi");
 
             strMsg = TB_Message.Text.Trim();
 
@@ -1040,7 +1040,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB") + "')", true);
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -1122,7 +1122,7 @@ HE_Operation.Language = Session["LangCode"].ToString();
             dtNowDate = DateTime.Now;
             strStatus = DataGrid2.Items[i].Cells[10].Text.Trim();
 
-            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
+            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng"))
             {
                 if (dtFinishedDate < dtNowDate)
                 {

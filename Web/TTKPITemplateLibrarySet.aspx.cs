@@ -110,7 +110,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
         if (strSqlCode.ToLower().Contains("create") || strSqlCode.ToLower().Contains("execute") || strSqlCode.ToLower().Contains("delete") || strSqlCode.ToLower().Contains("update") || strSqlCode.ToLower().Contains("drop")
              || strSqlCode.ToLower().Contains("insert") || strSqlCode.ToLower().Contains("alter"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
             return;
         }
@@ -157,17 +157,17 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                 TB_Source.Text = TB_SourceNew.Text;
 
                 NB_SortNubmer.Amount = NB_SortNubmerNew.Amount;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }
     }
@@ -189,7 +189,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
         if (strSqlCode.ToLower().Contains("create") || strSqlCode.ToLower().Contains("execute") || strSqlCode.ToLower().Contains("delete") || strSqlCode.ToLower().Contains("update") || strSqlCode.ToLower().Contains("drop")
             || strSqlCode.ToLower().Contains("insert") || strSqlCode.ToLower().Contains("alter"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC") + "')", true);
             return;
         }
 
@@ -217,16 +217,16 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
 
                 ShareClass.InitialKPITree(TreeView1);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC") + "')", true);
         }
     }
 
@@ -247,11 +247,11 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
             BT_Update.Enabled = false;
             BT_Delete.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -264,20 +264,20 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
 
         if (ExcelToDBTest() == -1)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim() ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC") ;
             return;
         }
         else
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ") ;
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ") ;
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -286,7 +286,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB") ;
             }
             else
             {
@@ -303,7 +303,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ") ;
                 }
                 else
                 {
@@ -320,21 +320,21 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                             {
                                 kpiLibrary.KPIType = dr[i]["KPItype"].ToString().Trim();   
                                 kpiLibrary.KPI = dr[i]["KPI"].ToString().Trim();
-                                kpiLibrary.Definition = dr[i][LanguageHandle.GetWord("DingYi").ToString().Trim()].ToString().Trim();
-                                kpiLibrary.Formula = dr[i][LanguageHandle.GetWord("GongShi").ToString().Trim()].ToString().Trim();
+                                kpiLibrary.Definition = dr[i][LanguageHandle.GetWord("DingYi")].ToString().Trim();
+                                kpiLibrary.Formula = dr[i][LanguageHandle.GetWord("GongShi")].ToString().Trim();
                                 kpiLibrary.SqlCode = dr[i]["SQLCode"].ToString().Trim();   
                                 kpiLibrary.UnitSqlPoint = decimal.Parse(dr[i]["UnitScore"].ToString().Trim());   
-                                kpiLibrary.Source = dr[i][LanguageHandle.GetWord("LaiYuan").ToString().Trim()].ToString().Trim();
-                                kpiLibrary.KPIFunction = dr[i][LanguageHandle.GetWord("GongNengHuoBeiZhu").ToString().Trim()].ToString().Trim();
-                                kpiLibrary.SortNumber = int.Parse(dr[i][LanguageHandle.GetWord("ShunXuHao").ToString().Trim()].ToString().Trim());
+                                kpiLibrary.Source = dr[i][LanguageHandle.GetWord("LaiYuan")].ToString().Trim();
+                                kpiLibrary.KPIFunction = dr[i][LanguageHandle.GetWord("GongNengHuoBeiZhu")].ToString().Trim();
+                                kpiLibrary.SortNumber = int.Parse(dr[i][LanguageHandle.GetWord("ShunXuHao")].ToString().Trim());
 
                                 kpiLibraryBLL.AddKPILibrary(kpiLibrary);
                             }
                             catch (Exception err)
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("MingCheng").ToString().Trim() + ": " + strKPI + " : " + err.Message.ToString() + "<br/>"; ;
+                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("MingCheng") + ": " + strKPI + " : " + err.Message.ToString() + "<br/>"; ;
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("MingCheng").ToString().Trim() + ": " + strKPI + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("MingCheng") + ": " + strKPI + " : " + err.Message.ToString());
                             }
                         }
                     }
@@ -342,7 +342,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                     LoadKPIType();
                     ShareClass.InitialKPITree(TreeView1);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG") + "')", true);
                 }
             }
         }
@@ -359,13 +359,13 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ") ;
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ") ;
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -374,7 +374,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB") ;
                 j = -1;
             }
             else
@@ -392,7 +392,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ") ;
                     j = -1;
                 }
                 else
@@ -404,13 +404,13 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                     {
                         strKPIType = dr[i]["KPIType"].ToString().Trim();   
                         strKPI = dr[i]["KPI"].ToString().Trim();
-                        strDefinition = dr[i][LanguageHandle.GetWord("DingYi").ToString().Trim()].ToString().Trim();
+                        strDefinition = dr[i][LanguageHandle.GetWord("DingYi")].ToString().Trim();
 
                         if (strKPI == "" | strKPIType == "" | strDefinition == "")
                         {
                             j = -1;
 
-                            LB_ErrorText.Text += "KPI:" + strKPI + LanguageHandle.GetWord("HuoKPILeiXing").ToString().Trim() + strKPIType + LanguageHandle.GetWord("HuoDingYi").ToString().Trim() + strDefinition + LanguageHandle.GetWord("WeiKong").ToString().Trim();
+                            LB_ErrorText.Text += "KPI:" + strKPI + LanguageHandle.GetWord("HuoKPILeiXing") + strKPIType + LanguageHandle.GetWord("HuoDingYi") + strDefinition + LanguageHandle.GetWord("WeiKong");
 
                             continue;
                         }
@@ -419,7 +419,7 @@ public partial class TTKPITemplateLibrarySet : System.Web.UI.Page
                         {
                             j = -1;
 
-                            LB_ErrorText.Text += LanguageHandle.GetWord("KPILeiXing").ToString().Trim() + strKPIType + LanguageHandle.GetWord("BuCunZai").ToString().Trim();
+                            LB_ErrorText.Text += LanguageHandle.GetWord("KPILeiXing") + strKPIType + LanguageHandle.GetWord("BuCunZai");
 
                             continue;
                         }

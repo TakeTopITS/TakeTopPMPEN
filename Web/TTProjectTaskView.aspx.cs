@@ -45,7 +45,7 @@ public partial class TTProjectTaskView : System.Web.UI.Page
             }
             else
             {
-                Response.Write(LanguageHandle.GetWord("CiXiangMuRenWuBuCunZaiKeNengYi").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("CiXiangMuRenWuBuCunZaiKeNengYi"));
             }
         }
     }  

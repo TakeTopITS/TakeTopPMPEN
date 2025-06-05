@@ -46,9 +46,9 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
 
             LoadKPIType();
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
 
-            TakeTopCore.CoreShareClass.InitialDepartmentPositionTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView3, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentPositionTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"), TreeView3, strUserCode);
             ShareClass.InitialKPITree(TreeView4);
         }
     }
@@ -63,11 +63,11 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
         {
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBSBJC") + "')", true);
         }
     }
 
@@ -89,7 +89,7 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
             //生成本部门的职称树
             TreeView3.Nodes.Clear();
             TreeNode treeNode3 = new TreeNode();
-            treeNode3.Text = "<B>" + LanguageHandle.GetWord("ZZJGT").ToString().Trim() + "</B>";
+            treeNode3.Text = "<B>" + LanguageHandle.GetWord("ZZJGT") + "</B>";
             treeNode3.Target = "0";
             treeNode3.Expanded = true;
             TreeView3.Nodes.Add(treeNode3);
@@ -273,7 +273,7 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZYGMYSZZCQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZYGMYSZZCQJC") + "')", true);
         }
     }
 
@@ -336,11 +336,11 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
                     LoadKPI(strKPICheckID);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }
@@ -354,7 +354,7 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
 
         strKPIID = LB_KPIID.Text.Trim();
 
-        strIMTitle = "KPI：" + strKPIID + LanguageHandle.GetWord("PingHeRen").ToString().Trim();
+        strIMTitle = "KPI：" + strKPIID + LanguageHandle.GetWord("PingHeRen");
 
         
         strMessage = "TTKPIThirdPartReviewUser.aspx?UserKPIID=" + strKPIID;
@@ -471,11 +471,11 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
                 BT_CopyFromPriorKPI.Enabled = false;
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popKPICheckWindow','true') ", true);
         }
@@ -526,11 +526,11 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
 
             ShareClass.InitialKPICheckTreeByDepartPosition(TreeView2, strDepartCode, strPosition);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -563,11 +563,11 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
 
             LoadKPI("0");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -588,7 +588,7 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
         lst = userKPICheckDetailBLL.GetAllUserKPICheckDetails(strHQL);
         if (lst.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBCKHYCZKHZBBNFZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBCKHYCZKHZBBNFZJC") + "')", true);
             return;
         }
 
@@ -616,16 +616,16 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
 
                 LoadKPI(strKPICheckID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCYGBCZCJXKHWFFZJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCYGBCZCJXKHWFFZJC") + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWFZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWFZSBJC") + "')", true);
         }
     }
 
@@ -678,13 +678,13 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
         deWeight = NB_Weight.Amount;
         if (deWeight > 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBNDY1JC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBNDY1JC") + "')", true);
             return;
         }
 
         if (strSqlCode.ToUpper().IndexOf("DELETE") > -1 | strSqlCode.ToUpper().IndexOf("UPDATE") > -1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEHUPDATEYJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEHUPDATEYJJC") + "')", true);
             return;
         }
 
@@ -736,16 +736,16 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
                 LoadKPI(strKPICheckID);
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC") + "')", true);
         }
     }
 
@@ -777,13 +777,13 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
         deWeight = NB_Weight.Amount;
         if (deWeight > 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBNDY1JC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZBNDY1JC") + "')", true);
             return;
         }
 
         if (strSqlCode.ToUpper().IndexOf("DELETE") > -1 | strSqlCode.ToUpper().IndexOf("UPDATE") > -1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEHUPDATEYJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEHUPDATEYJJC") + "')", true);
             return;
         }
 
@@ -815,16 +815,16 @@ public partial class TTKPICheckForUser : System.Web.UI.Page
 
                 LoadKPI(strKPICheckID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXBNWKJC") + "')", true);
         }
     }
 

@@ -130,12 +130,12 @@ public partial class TTAccountAssetSchedule : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("ZiChanMingXiBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("ZiChanMingXiBiao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getAccountGeneralLedgerList(DL_Financial.SelectedValue.Trim(), DL_Interval.SelectedValue.Trim()), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC")+"')", true);
             }
         }
     }

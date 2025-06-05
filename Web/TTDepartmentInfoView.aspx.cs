@@ -33,7 +33,7 @@ public partial class TTDepartmentInfoView : System.Web.UI.Page
 
         strDepartName = department.DepartName.Trim();
 
-        //this.Title = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartCode + " " + strDepartName + "资料！";
+        //this.Title = LanguageHandle.GetWord("ZZZBuMen") + strDepartCode + " " + strDepartName + "资料！";
 
 
         string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)

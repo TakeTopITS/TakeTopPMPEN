@@ -29,14 +29,14 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuGongShiHeFeiYongHuiZong").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuGongShiHeFeiYongHuiZong");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
             DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             //LoadProjectManHourAndExpenseReportForJHKC();
@@ -91,11 +91,11 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = LanguageHandle.GetWord("XiangMuMingChenLike").ToString().Trim() + strProjectName + "%'";
+            dv.RowFilter = LanguageHandle.GetWord("XiangMuMingChenLike") + strProjectName + "%'";
         }
 
-        dv.RowFilter += LanguageHandle.GetWord("AndXiangMuFuZeRenLike").ToString().Trim() + strPMName + "%'";
-        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian").ToString().Trim() + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian").ToString().Trim() + strEndTime + "'";
+        dv.RowFilter += LanguageHandle.GetWord("AndXiangMuFuZeRenLike") + strPMName + "%'";
+        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian") + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian") + strEndTime + "'";
         dv.Sort += " ProjectID DESC";
 
         GridView1.DataSource = dv;
@@ -133,9 +133,9 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = LanguageHandle.GetWord("XiangMuMingChenLike").ToString().Trim() + strProjectName + "%'";
+            dv.RowFilter = LanguageHandle.GetWord("XiangMuMingChenLike") + strProjectName + "%'";
         }
-        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian").ToString().Trim() + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian").ToString().Trim() + strEndTime + "'";
+        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian") + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian") + strEndTime + "'";
         dv.Sort += " ProjectID DESC";
 
         GridView1.DataSource = dv;
@@ -143,7 +143,7 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
 
         DataTable dtProject = dv.ToTable();
 
-        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuGongShiHeFeiYongHuiZong").ToString().Trim());
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuGongShiHeFeiYongHuiZong"));
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 

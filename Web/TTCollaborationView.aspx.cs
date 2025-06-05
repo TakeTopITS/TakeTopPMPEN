@@ -41,7 +41,7 @@ public partial class TTCollaborationView : System.Web.UI.Page
         }
         else
         {
-            Response.Write(LanguageHandle.GetWord("CiXieZuoBuCunZaiKeNengYiBeiSha").ToString().Trim());
+            Response.Write(LanguageHandle.GetWord("CiXieZuoBuCunZaiKeNengYiBeiSha"));
         }
     }
 }

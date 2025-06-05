@@ -232,7 +232,7 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_GoodsSaleRecord");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("XiaoShouTuiHuoBaoBiaoxls").ToString().Trim());
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("XiaoShouTuiHuoBaoBiaoxls"));
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);   
     }

@@ -143,7 +143,7 @@ public partial class TTVisitRegistration_StudentList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("MoYouCaoDaoBaiFangJiLu").ToString().Trim() +"');", true);   
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("MoYouCaoDaoBaiFangJiLu") +"');", true);   
             return;
         }
     }

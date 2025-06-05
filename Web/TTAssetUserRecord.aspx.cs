@@ -31,7 +31,7 @@ public partial class TTAssetUserRecord : System.Web.UI.Page
         {
             DLC_BeginUseTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndUseTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
 
             string strDepartCode = ShareClass.GetDepartCodeFromUserCode (strUserCode);
             strHQL = "from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'";
@@ -136,13 +136,13 @@ public partial class TTAssetUserRecord : System.Web.UI.Page
 
         if (deNumber1 > deNumber2 | deNumber2 == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCCCJLSLWLHSLBNDYCZCKCSLJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCCCJLSLWLHSLBNDYCZCKCSLJC")+"')", true);
             return;
         }
               
         if (strAssetCode == "" )
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYHBNWKJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYHBNWKJC")+"')", true);
         }
         else
         {
@@ -192,11 +192,11 @@ public partial class TTAssetUserRecord : System.Web.UI.Page
 
                 LoadAssetUserRecord();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDPCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDPCG")+"')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDPCCJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDPCCJC")+"')", true);
             }
         }
     }

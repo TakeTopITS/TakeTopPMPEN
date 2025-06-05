@@ -31,6 +31,6 @@ public partial class TTWorkFlowViewMain : System.Web.UI.Page
         WorkFlow workFlow = (WorkFlow)lst[0];
         strWLName = workFlow.WLName.Trim();
 
-        this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strWLID + " " + strWLName;
+        this.Title = LanguageHandle.GetWord("GongZuoLiu") + strWLID + " " + strWLName;
     }
 }

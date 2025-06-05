@@ -27,7 +27,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch
         {
-            Response.Write(LanguageHandle.GetWord("ChuangJianRTXFuWuShiBaiQingJia").ToString().Trim());
+            Response.Write(LanguageHandle.GetWord("ChuangJianRTXFuWuShiBaiQingJia"));
         }
 
     }
@@ -37,11 +37,11 @@ public partial class TTRTXTest : System.Web.UI.Page
         {
             RootObj.SendNotify(txtReceivers.Text, txtMsgTitle.Text, Convert.ToInt32(txtTime.Text), txtMsgContent.Text); //获取版本信息
 
-            txtResult.Text = LanguageHandle.GetWord("FaSongChengGong").ToString().Trim();
+            txtResult.Text = LanguageHandle.GetWord("FaSongChengGong");
         }
         catch
         {
-            txtResult.Text = LanguageHandle.GetWord("FaSongShiBai").ToString().Trim();
+            txtResult.Text = LanguageHandle.GetWord("FaSongShiBai");
         }
     }
 
@@ -54,7 +54,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch 
         {
-            txtResult.Text = LanguageHandle.GetWord("HuoQuYongHuZhuangTaiShiBai").ToString().Trim();
+            txtResult.Text = LanguageHandle.GetWord("HuoQuYongHuZhuangTaiShiBai");
         }
     }
    
@@ -67,7 +67,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch 
         {
-            txtResult.Text = LanguageHandle.GetWord("HuoQuBanBenXinXiShiBai").ToString().Trim();
+            txtResult.Text = LanguageHandle.GetWord("HuoQuBanBenXinXiShiBai");
         }
     }
     protected void Button5_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch 
         {
-            txtResult.Text = LanguageHandle.GetWord("HuoQuYongHuQuanXianXinXiShiBai").ToString().Trim();
+            txtResult.Text = LanguageHandle.GetWord("HuoQuYongHuQuanXianXinXiShiBai");
         }
     }
 }

@@ -44,7 +44,7 @@ public partial class TTProPlanRelatedDocView : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + project.ProjectName.Trim() + "的计划：" + strPlanID + " " + workPlan.Name.Trim() + " 的相关文档";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + project.ProjectName.Trim() + "的计划：" + strPlanID + " " + workPlan.Name.Trim() + " 的相关文档";
 
         LB_PlanID.Text = strPlanID;
         LB_ProjectID.Text = strProjectID;
@@ -84,7 +84,7 @@ public partial class TTProPlanRelatedDocView : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim()+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ")+"');</script>");
             }
         }
     }

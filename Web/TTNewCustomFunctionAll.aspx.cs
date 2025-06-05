@@ -36,7 +36,7 @@ public partial class TTNewCustomFunctionAll : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
 
             if (string.IsNullOrEmpty(strDepartString) || strDepartString == "('')")
             {
@@ -56,7 +56,7 @@ public partial class TTNewCustomFunctionAll : System.Web.UI.Page
             DataGrid3.DataBind();
 
             LB_Sql.Text = strHQL;
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZKHSY").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZKHSY");
         }
     }
 
@@ -85,7 +85,7 @@ public partial class TTNewCustomFunctionAll : System.Web.UI.Page
 
         LB_DepartCode.Text = "";
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("KeHu").ToString().Trim() + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("KeHu") + strOperatorCode + strOperatorName;
 
         CustomerBLL customerBLL = new CustomerBLL();
         IList lst = customerBLL.GetAllCustomers(strHQL);

@@ -21,7 +21,7 @@ public partial class TTProjectReviewWLView : System.Web.UI.Page
        string strRelatedID = Request.QueryString["ProjectID"];
        string strProject = GetProjectName(strRelatedID);
 
-       //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedID + " " + strProject + "评审工作流列表";
+       //this.Title = LanguageHandle.GetWord("Project") + strRelatedID + " " + strProject + "评审工作流列表";
 
        string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)
        {

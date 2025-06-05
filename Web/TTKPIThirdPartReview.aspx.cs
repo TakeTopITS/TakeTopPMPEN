@@ -101,7 +101,7 @@ HE_UserSummary.Language = Session["LangCode"].ToString();
         dtStartTime = userKPICheck.StartTime;
         dtEndTime = userKPICheck.EndTime;
 
-        strChartTitle = userKPICheck.KPICheckName + LanguageHandle.GetWord("BuMen").ToString().Trim() + strDepartName + LanguageHandle.GetWord("ZhiChen").ToString().Trim() + strJobTitle + LanguageHandle.GetWord("ChengYuanJiXiaoZongPingFenDuiB").ToString().Trim();
+        strChartTitle = userKPICheck.KPICheckName + LanguageHandle.GetWord("BuMen") + strDepartName + LanguageHandle.GetWord("ZhiChen") + strJobTitle + LanguageHandle.GetWord("ChengYuanJiXiaoZongPingFenDuiB");
 
         strHQL = "Select UserName as XName,TotalPoint as YNumber From T_UserKPICheck ";
         strHQL += " Where UserCode in (Select UserCode From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'" + " and JobTitle = " + "'" + strJobTitle + "'" + ")";
@@ -205,7 +205,7 @@ HE_UserSummary.Language = Session["LangCode"].ToString();
         deUserPoint = NB_Point.Amount;
         if (deUserPoint > 100)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFSBNDY100JC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFSBNDY100JC") + "')", true);
             return;
         }
 
@@ -220,7 +220,7 @@ HE_UserSummary.Language = Session["LangCode"].ToString();
 
         if (strUserComment == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGPHYJBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGPHYJBNWKJC") + "')", true);
             return;
         }
 
@@ -244,11 +244,11 @@ HE_UserSummary.Language = Session["LangCode"].ToString();
             {
                 kpiThirdPartReviewBLL.AddKPIThirdPartReview(kpiThirdPartReview);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             }
         }
         else
@@ -268,11 +268,11 @@ HE_UserSummary.Language = Session["LangCode"].ToString();
             {
                 kpiThirdPartReviewBLL.UpdateKPIThirdPartReview(kpiThirdPartReview, int.Parse(strKPIThirdPartReviewID));
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             }
 
         }

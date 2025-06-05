@@ -43,7 +43,7 @@ public partial class TTUnHandledCaseList : System.Web.UI.Page
         {
             strUserName = ShareClass.GetUserName(strUserCode);
             strUserType = ShareClass.GetUserType(strUserCode);
-            strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + ":" + strUserCode + "  " + strUserName;
+            strUserInfo = LanguageHandle.GetWord("YongHu") + ":" + strUserCode + "  " + strUserName;
 
             LoadFunInforDialBoxList(strUserType, strLangCode);
         }

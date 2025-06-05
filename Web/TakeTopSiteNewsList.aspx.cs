@@ -92,7 +92,7 @@ public partial class TakeTopSiteNewsList : System.Web.UI.Page
         string strHQL;
     
         strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime From T_HeadLine ";
-        strHQL += LanguageHandle.GetWord("WaiBuFaBu").ToString().Trim();
+        strHQL += LanguageHandle.GetWord("WaiBuFaBu");
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");

@@ -28,7 +28,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuYuSuanYuFeiYongBaoBiao").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuYuSuanYuFeiYongBaoBiao");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -36,7 +36,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -77,7 +77,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu") + LanguageHandle.GetWord("YSYFYBB");
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
 
         if (strProjectID != "")
@@ -173,7 +173,7 @@ GROUP BY KK.A{0}",
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu") + LanguageHandle.GetWord("YSYFYBB");
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
 
         if (strProjectID != "")
@@ -249,7 +249,7 @@ GROUP BY KK.A{0}",
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuYuSuanYuFeiYongTongJiBa").ToString().Trim());
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuYuSuanYuFeiYongTongJiBa"));
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
@@ -295,9 +295,9 @@ GROUP BY KK.A{0}",
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu") + LanguageHandle.GetWord("YSYFYBB");
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = LanguageHandle.GetWord("YuSuanFeiYongFenBuTu").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("YuSuanFeiYongFenBuTu");
 
         if (strProjectID != "")
         {
@@ -429,9 +429,9 @@ GROUP BY KK.A{0}",
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu") + LanguageHandle.GetWord("YSYFYBB");
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = LanguageHandle.GetWord("XMFYYSFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("XMFYYSFBT");
 
 
         strHQL = @"Select COALESCE(SUM(B.Amount),0) - COALESCE(SUM(A.ConfirmAmount),0)

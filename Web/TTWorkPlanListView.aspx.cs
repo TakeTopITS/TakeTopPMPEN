@@ -62,7 +62,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
 
                 if (DateTime.Parse(strEndTime) < dtNowTime)
                 {
-                    if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
+                    if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng"))
                     {
                         DataGrid1.Items[i].ForeColor = Color.Red;
                     }
@@ -80,7 +80,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
             DataGrid2.DataBind();
 
             LB_Plan.Visible = true;
-            LB_Plan.Text = LanguageHandle.GetWord("WoCanYuDeJiHua").ToString().Trim() + strWorkID + " " + strPlanName + LanguageHandle.GetWord("DeXiangXiNeiRong").ToString().Trim();
+            LB_Plan.Text = LanguageHandle.GetWord("WoCanYuDeJiHua") + strWorkID + " " + strPlanName + LanguageHandle.GetWord("DeXiangXiNeiRong");
         }
     }
 
@@ -123,7 +123,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
 
             if (DateTime.Parse(strEndTime) < dtNowTime)
             {
-                if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
+                if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng"))
                 {
                     DataGrid1.Items[i].ForeColor = Color.Red;
                 }

@@ -206,7 +206,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + LanguageHandle.GetWord("WoDeHeTong").ToString().Trim() + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WoDeHeTong") + "</B>";
         node1.Target = "";
         node1.Expanded = true;
         ConstractTreeView.Nodes.Add(node1);
@@ -309,7 +309,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
 
 public class EmptyGridview
 {
-    private static string emptyText = LanguageHandle.GetWord("MeiYouChaXunDaoXiangYingXinXi").ToString().Trim();
+    private static string emptyText = LanguageHandle.GetWord("MeiYouChaXunDaoXiangYingXinXi");
 
     public EmptyGridview()
     {

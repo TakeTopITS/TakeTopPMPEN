@@ -34,7 +34,7 @@ public partial class TTLeadReviewSummary : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + project.ProjectName + " 上级评核汇总";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + project.ProjectName + " 上级评核汇总";
       
      
         LB_UserCode.Text = strUserCode;

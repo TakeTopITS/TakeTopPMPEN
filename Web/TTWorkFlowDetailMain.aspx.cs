@@ -54,7 +54,7 @@ public partial class TTWorkFlowDetailMain : System.Web.UI.Page
 
         strWLName = workFlow.WLName.Trim();
 
-        this.Title = LanguageHandle.GetWord("Workflow").ToString().Trim() + ": " + strWLID + " " + strWLName + LanguageHandle.GetWord("ShenPi").ToString().Trim();
+        this.Title = LanguageHandle.GetWord("Workflow") + ": " + strWLID + " " + strWLName + LanguageHandle.GetWord("ShenPi");
 
         //string strTemName;
         //string strCreatorCode;

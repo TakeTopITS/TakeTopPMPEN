@@ -36,14 +36,14 @@ public partial class TTUserLoginManage : System.Web.UI.Page
         {
             if (strOperatorCode == "ADMIN")
             {
-                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1);
+                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT"),TreeView1);
                 DL_IsAllMember.Enabled = true;
 
                 BT_AddMDIStyle.Enabled = true;
             }
             else
             {
-                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strOperatorCode);
+                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"),TreeView1, strOperatorCode);
                 DL_IsAllMember.Enabled = false;
 
                 BT_AddMDIStyle.Enabled = false;
@@ -167,11 +167,11 @@ public partial class TTUserLoginManage : System.Web.UI.Page
             BT_Update.Enabled = true;
             BT_Delete.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG")+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC")+"')", true);
         }
     }
 
@@ -210,11 +210,11 @@ public partial class TTUserLoginManage : System.Web.UI.Page
 
             LoadLoginUserList(strOperatorCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGGCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGGCG")+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGGSBJC")+"')", true);
         }
     }
 
@@ -237,7 +237,7 @@ public partial class TTUserLoginManage : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCSBJC")+"')", true);
         }
     }
 
@@ -336,7 +336,7 @@ public partial class TTUserLoginManage : System.Web.UI.Page
         BT_UpdateMDIStyle.Enabled = true;
         BT_DeleteMDIStyle.Enabled = true;
 
-        if (strMDIStyle == LanguageHandle.GetWord("ZuoYouXiaZhan").ToString().Trim())
+        if (strMDIStyle == LanguageHandle.GetWord("ZuoYouXiaZhan"))
         {
             BT_DeleteMDIStyle.Enabled = false;
         }
@@ -421,12 +421,12 @@ public partial class TTUserLoginManage : System.Web.UI.Page
 
             LoadSystemMDIStyle();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
 
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSB") + "')", true);
         }
     }
 
@@ -465,11 +465,11 @@ public partial class TTUserLoginManage : System.Web.UI.Page
             strHQL = "Update T_ProjectMember Set MDIStyle = " + "'" + strMDIStyle + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGSYYHDYCYCZJMYS").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGSYYHDYCYCZJMYS")+"')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBJC")+"')", true);
         }
     }
 

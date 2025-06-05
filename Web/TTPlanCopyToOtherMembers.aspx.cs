@@ -96,7 +96,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             //加上关联RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(曹健)
             ShareClass.InitialPlanTreeByUserCode(TreeView1, strUserCode, strRelatedType, strRelatedID, strRelatedCode);
             ShareClass.InitialPlanTreeByUserCode(TreeView2, strUserCode, strRelatedType, strRelatedID, strRelatedCode);
-            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView3, strUserCode);
+            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView3, strUserCode);
 
             LoadPlanType();
 
@@ -105,7 +105,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
             LoadKPI(strDepartCode, strPosition);
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView4, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView4, strUserCode);
             strHQL = "from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'";
          
             lst = projectMemberBLL.GetAllProjectMembers(strHQL);
@@ -272,7 +272,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
         if (treeNode.Target == "0")
         {
             strPlanID = treeNode.Target.Trim();
-            strPlanName = strUserName + LanguageHandle.GetWord("DeJiHua").ToString().Trim();
+            strPlanName = strUserName + LanguageHandle.GetWord("DeJiHua");
 
             LB_SelectedPlanID.Text = strPlanID;
         }
@@ -334,13 +334,13 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
         intCount = GetSameNamePlanCount(strUserCode, strPlanName);
         if (intCount > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZTMDJHBNXZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZTMDJHBNXZJC") + "')", true);
             return;
         }
 
         if (strParentID == "" | strPlanType == "" | strPlanName == "" | strPlanDetail == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBFJHJHLXJHMCHJHNRDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBFJHJHLXJHMCHJHNRDBNWKJC") + "')", true);
             return;
         }
 
@@ -399,11 +399,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
             BT_SubmitApprove.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -437,20 +437,20 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
         if (strParentID == strPlanID)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZJBNZWZJDFJHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZJBNZWZJDFJHJC") + "')", true);
             return;
         }
 
         intCount = GetSameNamePlanCount(strUserCode, strPlanName, strPlanID);
         if (intCount > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZTMDJHBNXGJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZTMDJHBNXGJC") + "')", true);
             return;
         }
 
         if (strParentID == "" | strPlanType == "" | strPlanName == "" | strPlanDetail == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBFJHJHLXJHMCHJHNRDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBFJHJHLXJHMCHJHNRDBNWKJC") + "')", true);
             return;
         }
 
@@ -498,11 +498,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
                 ShareClass.InitialPlanTreeByUserCode(TreeView1, strUserCode, strRelatedType, strRelatedID, strRelatedCode);
                 ShareClass.InitialPlanTreeByUserCode(TreeView2, strUserCode, strRelatedType, strRelatedID, strRelatedCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             }
         }
     }
@@ -519,7 +519,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Plan");
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZZJHBNSCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZZJHBNSCJC") + "')", true);
             return;
         }
 
@@ -527,7 +527,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
         Plan plan = GetPlan(strPlanID);
         if (plan.CreatorCode.Trim() != strUserCode)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFZGLDJHBNSCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFZGLDJHBNSCJC") + "')", true);
             return;
         }
 
@@ -562,11 +562,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
             BT_SubmitApprove.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -601,7 +601,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
         if (strParentID == "" | strPlanType == "" | strPlanName == "" | strPlanDetail == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBFJHJHLXJHMCHJHNRDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBFJHJHLXJHMCHJHNRDBNWKJC") + "')", true);
             return;
         }
 
@@ -611,7 +611,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
         if (lst.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCJHMYSZXGLDTJSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCJHMYSZXGLDTJSBJC") + "')", true);
             return;
         }
 
@@ -656,11 +656,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
                 ShareClass.InitialPlanTreeByUserCode(TreeView1, strUserCode, strRelatedType, strRelatedID, strRelatedCode);
                 ShareClass.InitialPlanTreeByUserCode(TreeView2, strUserCode, strRelatedType, strRelatedID, strRelatedCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSHCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSHCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSHSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSHSBJC") + "')", true);
             }
         }
     }
@@ -739,11 +739,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             BT_UpdateTarget.Enabled = true;
             BT_DeleteTarget.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -775,11 +775,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
                 LoadPlanTarget(strPlanID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             }
         }
     }
@@ -814,11 +814,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
                 BT_UpdateTarget.Enabled = false;
                 BT_DeleteTarget.Enabled = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
             }
         }
     }
@@ -896,11 +896,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
             LoadPlanLeader(strPlanID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -942,11 +942,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
             LoadPlanLeader(strPlanID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -974,11 +974,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             planRelatedLeaderBLL.DeletePlanRelatedLeader(planRelatedLeader);
             LoadPlanLeader(strPlanID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -1076,7 +1076,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCCYDXGJHYWCHYYRZBNSCJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCCYDXGJHYWCHYYRZBNSCJC") + "')", true);
             }
         }
     }
@@ -1126,11 +1126,11 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
 
             if (j > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + strDuplicatePlanUser + " " + LanguageHandle.GetWord("ZZCZCFJH").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + strDuplicatePlanUser + " " + LanguageHandle.GetWord("ZZCZCFJH") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCZCFJH").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCZCFJH") + "')", true);
             }
         }
     }
@@ -1225,7 +1225,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZWC").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZWC") + "')", true);
     }
 
     protected void BT_DeletePlanToAllSystemUser_Click(object sender, EventArgs e)
@@ -1245,13 +1245,13 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             strHQL2 = "Delete From T_PlanCopyRelatedUser Where PlanID = " + strPlanID;
             ShareClass.RunSqlCommand(strHQL2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
 
             LoadPlanCopyRelatedUser("0");
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -1268,7 +1268,7 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_PlanCopyRelatedUser");
             if (ds.Tables[0].Rows.Count > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFZJ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFZJ") + "')", true);
             }
             else
             {
@@ -1485,12 +1485,12 @@ HE_PlanDetail.Language = Session["LangCode"].ToString();
             }
             else
             {
-                return strUserName + LanguageHandle.GetWord("DeJiHua").ToString().Trim();
+                return strUserName + LanguageHandle.GetWord("DeJiHua");
             }
         }
         else
         {
-            return strUserName + LanguageHandle.GetWord("DeJiHua").ToString().Trim();
+            return strUserName + LanguageHandle.GetWord("DeJiHua");
         }
     }
 

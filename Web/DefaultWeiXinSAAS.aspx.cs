@@ -113,7 +113,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         if (strSimpleName != "" && strSiteURL == "")
         {
             TB_CompanyName.Focus();
-            LB_Copyright.Text = LanguageHandle.GetWord("ZZGSMCBCZQJC").ToString().Trim();
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZGSMCBCZQJC");
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
@@ -121,14 +121,14 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         if (strSiteURL == "" | strUserCode == "" | strPassword == "")
         {
             TB_UserCode.Focus();
-            LB_Copyright.Text = LanguageHandle.GetWord("ZZYSGXDBNWKQJC").ToString().Trim();
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZYSGXDBNWKQJC");
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
 
         if (ShareClass.SqlFilter(strUserCode) | ShareClass.SqlFilter(strPassword) | ShareClass.SqlFilter(strSiteURL))
         {
-            LB_Copyright.Text = LanguageHandle.GetWord("ZZZHHYFFZHDLSB").ToString().Trim();
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZZHHYFFZHDLSB");
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
@@ -138,7 +138,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         if (strUserInforIsRight.ToLower() == "false")
         {
             TB_UserCode.Focus();
-            LB_Copyright.Text = LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY").ToString().Trim();
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY");
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
@@ -183,16 +183,16 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
             {
                 InsertOrUpdateSMSCode(strUserCode, strSMSCode);
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS") + "');</script>");
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ") + "');</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC") + "');</script>");
         }
     }
 

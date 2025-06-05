@@ -38,10 +38,10 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode.Trim());
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode.Trim());
             LB_DepartString.Text = strDepartString;
             
-            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("DiSanFangCaoZuoJiLuLieBiao").ToString().Trim();
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("DiSanFangCaoZuoJiLuLieBiao");
 
             strHQL = "from CustomerOperationRecord as customerOperationRecord where customerOperationRecord.UserCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " Order By customerOperationRecord.ID ";
@@ -50,7 +50,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("TiaoJiLu").ToString().Trim();
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString() + LanguageHandle.GetWord("TiaoJiLu");
 
             LB_Sql.Text = strHQL;
         }
@@ -71,8 +71,8 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
 
             intCount = LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
-            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("DeDiSanFangCaoZuoJiLu").ToString().Trim();
-            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + intCount.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("DeDiSanFangCaoZuoJiLu");
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + intCount.ToString() + LanguageHandle.GetWord("Tiao");
 
             LB_DepartCode.Text = strDepartCode;
         }
@@ -98,7 +98,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("DiSanFangCaoZuoJiLuLieBiao").ToString().Trim();
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("DiSanFangCaoZuoJiLuLieBiao");
 
         string strDepartString = LB_DepartString.Text.Trim();
 
@@ -125,7 +125,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
 
         LB_Sql.Text = strHQL;
 
@@ -152,12 +152,12 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("DiSanFangCaoZuoJiLu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("DiSanFangCaoZuoJiLu") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC")+"')", true);
             }
         }
     }

@@ -91,7 +91,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
 
             string strYearNumber = LB_YearMonth.Text.Substring(0, 4);
             string strMonthNumber = LB_YearMonth.Text.Substring(4, 2);
-            LB_ReportYearMonth.Text = strYearNumber + LanguageHandle.GetWord("Nian").ToString().Trim() + strMonthNumber + LanguageHandle.GetWord("Yue").ToString().Trim();
+            LB_ReportYearMonth.Text = strYearNumber + LanguageHandle.GetWord("Nian") + strMonthNumber + LanguageHandle.GetWord("Yue");
         }
     }
 
@@ -105,58 +105,58 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         try
         {
             //"不可预见费表单及各项奖励"表单中“各项奖励”“合计”“税前金额”
-            LB_RGSYGeXiangJiangLi.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sq", "my:riqi", strYearMonth);
+            LB_RGSYGeXiangJiangLi.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sq", "my:riqi", strYearMonth);
 
             //"不可预见费表单及各项奖励"表单中“各项奖励”“合计”“税率”
-            LB_gexiangjiangli_slv.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
+            LB_gexiangjiangli_slv.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
 
             //"不可预见费表单及各项奖励"表单中“各项奖励”“合计”“税金”
-            LB_gexiangjiangli_sj.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
+            LB_gexiangjiangli_sj.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
 
             //"不可预见费表单及各项奖励"表单中“各项奖励”“合计”“税后金额”
-            LB_gexiangjiangli_sh.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
+            LB_gexiangjiangli_sh.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
 
 
 
             ////“不可预见费表单及各项奖励”中“不可预见费”“金额（不含税）”单元格的数据读取
-            //LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:bukeyujianfei-sq", "my:riqi", strYearMonth);
+            //LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:bukeyujianfei-sq", "my:riqi", strYearMonth);
 
             ////“不可预见费表单及各项奖励”中“不可预见费”“税率”单元格的数据读取
-            //LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:bukeyujianfei-slv", "my:riqi", strYearMonth);
+            //LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:bukeyujianfei-slv", "my:riqi", strYearMonth);
 
             ////“不可预见费表单及各项奖励”中“不可预见费”“税金”单元格的数据读取
-            //LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:bukeyujianfei-sj", "my:riqi", strYearMonth);
+            //LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:bukeyujianfei-sj", "my:riqi", strYearMonth);
 
             ////“不可预见费表单及各项奖励”中“不可预见费”“税后金额”单元格的数据读取
-            //LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:bukeyujianfei-sh", "my:riqi", strYearMonth);
+            //LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:bukeyujianfei-sh", "my:riqi", strYearMonth);
 
 
 
             //“项目一次标价分离表”中“不可预见费”“金额（不含税）”单元格的数据读取
-            LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:B8", "my:riqi", strYearMonth);
+            LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:B8", "my:riqi", strYearMonth);
 
             //“项目一次标价分离表”中“不可预见费”“税率”单元格的数据读取
-            LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field37", "my:riqi", strYearMonth);
+            LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field37", "my:riqi", strYearMonth);
 
             //“项目一次标价分离表”中“不可预见费”“税金”单元格的数据读取
-            LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field38", "my:riqi", strYearMonth);
+            LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field38", "my:riqi", strYearMonth);
 
             //“项目一次标价分离表”中“不可预见费”“税后金额”单元格的数据读取
-            LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field39", "my:riqi", strYearMonth);
+            LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field39", "my:riqi", strYearMonth);
 
 
 
             //默认从表单：“项目一次标价分离表”中“预计审减额”单元格的数据，当表单读不到数据，从“项目立项”模块读取
-            LB_FirstYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:C", "my:riqi", strYearMonth);
+            LB_FirstYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:C", "my:riqi", strYearMonth);
 
             //默认从表单：“项目一次标价分离表”中“预计审减额”-“税率”单元格的数据
-            LB_FirstYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field45", "my:riqi", strYearMonth);
+            LB_FirstYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field45", "my:riqi", strYearMonth);
 
             //默认从表单：“项目一次标价分离表”中“预计审减额”-“税金”单元格的数据
-            LB_FirstYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field46", "my:riqi", strYearMonth);
+            LB_FirstYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field46", "my:riqi", strYearMonth);
 
             //默认从表单：“项目一次标价分离表”中“预计审减额”-“税后金额”单元格的数据
-            LB_FirstYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field47", "my:riqi", strYearMonth);
+            LB_FirstYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field47", "my:riqi", strYearMonth);
 
 
 
@@ -195,132 +195,132 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_YiJiHeTongYiShuanJiaAfterTaxZongShouRuHeJi.Text = deYiJiHeTongYiShuanJiaAfterTaxZongShouRuHeJi.ToString("f6");
 
             //表单：“项目一次标价分离表”中“金额（不含税）”人工费
-            LB_XiangMuFirstCiFengLiBiaoRenGongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D1", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoRenGongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D1", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”人工费税率
-            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field52", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field52", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”人工费税金
-            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field53", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field53", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”人工费税后金额
-            LB_XiangMuFirstCiFengLiBiaoRenGongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field54", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoRenGongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field54", "my:riqi", strYearMonth);
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”设备费
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D2", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D2", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”设备费税率
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field56", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field56", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”设备费税金
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field57", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field57", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”设备费税后金额
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field58", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field58", "my:riqi", strYearMonth);
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”材料费
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D3", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D3", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”材料费税率
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field60", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field60", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”材料费税金
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field61", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field61", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”材料费税后金额
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field62", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field62", "my:riqi", strYearMonth);
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”机械使用费
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D4", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D4", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”机械使用费税率
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field64", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field64", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”机械使用费税金
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field65", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field65", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”机械使用费税后金额
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field66", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field66", "my:riqi", strYearMonth);
 
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”分包成本
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBen.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D5D51D52", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBen.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D5D51D52", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”分包成本税率
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field68", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field68", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”分包成本税金
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field69", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field69", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”分包成本税后金额
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field70", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field70", "my:riqi", strYearMonth);
 
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”建筑工程费
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D51", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D51", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”建筑工程费税率
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field72", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field72", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”建筑工程费税金
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field73", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field73", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”建筑工程费税后金额
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field74", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field74", "my:riqi", strYearMonth);
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”安装工程费
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D52", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D52", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”安装工程费税率
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field76", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field76", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”安装工程费税金
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field77", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field77", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”安装工程费税后金额
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field78", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field78", "my:riqi", strYearMonth);
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”其它费用
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYong.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D6", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYong.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D6", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”其它费用税率
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field80", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field80", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”其它费用税金
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field81", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field81", "my:riqi", strYearMonth);
 
             //表单：“项目一次标价分离表”中“金额（不含税）”其它费用税后金额
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field82", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field82", "my:riqi", strYearMonth);
 
 
             //表单：“项目一次标价分离表”中“金额（不含税）”增值税附加
-            LB_XiangMuFirstCiFengLiBiaoZengChiShuiFuJia.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:D7F12", "my:riqi", strYearMonth);
+            LB_XiangMuFirstCiFengLiBiaoZengChiShuiFuJia.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:D7F12", "my:riqi", strYearMonth);
 
 
             //"不可预见费表单及各项奖励"表单中“各项奖励”“合计”“金额（税前）”
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sq", "my:riqi", strYearMonth); 
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID ,LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sq", "my:riqi", strYearMonth); 
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID ,LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
 
             //最近的“项目二次标价分离表”中“不可预见费”“金额（不含税）”单元格的数据读取
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field159", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field166", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field193", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field173", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field159", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field166", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field193", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field173", "my:riqi", strYearMonth);
 
             //默认从表单：“项目二次标价分离表”中“预计审减额”单元格的数据，当表单读不到数据，从“项目立项”模块读取。
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field160", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field167", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field194", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field174", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field160", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field167", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field194", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field174", "my:riqi", strYearMonth);
             try
             {
                 LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianLu.Text = (decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianE.Text) / decimal.Parse(LB_InitialSecondConstractAmount.Text)).ToString("f6");
@@ -358,236 +358,236 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiAfterTaxAmount.Text = deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiAfterTaxAmount.ToString();
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与直接人工费的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:rengongfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field2", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:rengongfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field3", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:rengongfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field2", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:rengongfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field3", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与工资及各项保险单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:gongzibaoxian", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field6", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field197", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field7", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:gongzibaoxian", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field6", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field197", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field7", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与奖金单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:jiangjin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field10", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field198", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field11", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:jiangjin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field10", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field198", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field11", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与其它补助单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:qitabuzhujintie", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field14", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field199", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field15", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:qitabuzhujintie", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field14", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field199", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field15", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与其它补助单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:waichubuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field18", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field200", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field19", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:waichubuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field18", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field200", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field19", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分包工程费单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:fenbaogognchengfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field22", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:fenbaofeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field23", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:fenbaogognchengfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field22", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:fenbaofeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field23", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分包单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:laowufenbao", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field26", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field202", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field27", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:laowufenbao", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field26", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field202", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field27", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分包1单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:laowufenbao1", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field30", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field203", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field31", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:laowufenbao1", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field30", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field203", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field31", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分包2单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:laowufenbao2", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field34", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field204", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field35", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:laowufenbao2", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field34", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field204", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field35", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与专业分包单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:zhuanyefenbao", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field38", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field205", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field39", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:zhuanyefenbao", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field38", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field205", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field39", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司自完单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:fengongsiziwan", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field42", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field206", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field43", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:fengongsiziwan", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field42", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field206", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field43", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司电仪单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:dianyi", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field139", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field207", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field140", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:dianyi", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field139", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field207", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field140", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司调装单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:diaozhuang", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field143", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field208", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field144", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:diaozhuang", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field143", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field208", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field144", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司直接料费单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:zhijiecailiaofei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:cailiaofeishuilv", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:cailiaofeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field47", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:zhijiecailiaofei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:cailiaofeishuilv", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:cailiaofeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field47", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司主材单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:zhucai", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field50", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field210", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field51", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:zhucai", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field50", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field210", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field51", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司辅材单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:fucai", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field54", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field211", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field55", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:fucai", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field54", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field211", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field55", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司平库单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field306", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field307", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field308", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field309", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field306", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field307", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field308", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field309", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司底漆单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field310", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field311", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field312", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field313", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field310", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field311", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field312", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field313", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司机械费单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:jixiefei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field58", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:jixiefeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field59", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:jixiefei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field58", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:jixiefeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field59", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与分公司机械使用费单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:jixieshiyonfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field62", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field213", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field63", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:jixieshiyonfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field62", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field213", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field63", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【分公司自完费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:feigongsiziwan", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field66", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field214", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field67", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:feigongsiziwan", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field66", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field214", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field67", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【其他】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:qita", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field70", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field215", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field71", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:qita", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field70", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field215", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field71", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【临时设施费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:linshisheshifei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field74", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:linshefeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field75", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:linshisheshifei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field74", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:linshefeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field75", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【安全措施费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:anquancuoshifei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field78", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:anquanfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field79", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:anquancuoshifei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field78", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:anquanfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field79", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【水电费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:shuidianfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field126", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:shuidianfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field127", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:shuidianfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field126", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:shuidianfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field127", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【其它工程费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:qitagongchengfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field130", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:qitagongchengfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field131", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:qitagongchengfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field130", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:qitagongchengfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field131", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【其它费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:qitafei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field86", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:qitafeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field87", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:qitafei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field86", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:qitafeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field87", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【检测费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:jiancefei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field90", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field221", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field91", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:jiancefei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field90", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field221", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field91", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【外协加工费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:waixiejiagongfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field94", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field222", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field95", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:waixiejiagongfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field94", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field222", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field95", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【租赁费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:zulinfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field98", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field223", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field99", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:zulinfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field98", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field223", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field99", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【劳动保护费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:laodongbaohufei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field102", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field224", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field103", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:laodongbaohufei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field102", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field224", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field103", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【修理费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:xiulifei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field106", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field225", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field107", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:xiulifei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field106", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field225", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field107", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【不可预见成本】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:bukeyujian", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field134", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field226", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field135", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:bukeyujian", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field134", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field226", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field135", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【罚款】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:fakuan", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field147", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field227", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field148", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:fakuan", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field147", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field227", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field148", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【办公用品】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:bangongyongping", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field151", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field228", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field152", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:bangongyongping", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field151", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field228", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field152", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【其它2】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:qitafeiqita", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field110", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field229", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field111", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:qitafeiqita", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field110", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field229", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field111", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【动迁费】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:dongqianfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field114", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:dongqianfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field115", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:dongqianfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field114", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:dongqianfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field115", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【其它让利项】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field302", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field303", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field304", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field305", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field302", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field303", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field304", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field305", "my:riqi", strYearMonth);
 
             //表单：“二次标价分离目标成本组成表”逐月各表中最晚月（离当前日期最近）表的“金额（不含税）”列的与【总成本】单元格的数据,即最新有效数据
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field176", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:jinxiangshuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field176", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:jinxiangshuijin", "my:riqi", strYearMonth);
 
             try
             {
@@ -649,22 +649,22 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
 
 
             //本月的H9“各项奖励”“合计”“金额（税前）”-上月的H9“各项奖励”“合计”“金额（税前）”
-            LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sq")) - decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi").ToString().Trim(), "my:gexiangjiangli-sq"))).ToString();
+            LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sq")) - decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", LanguageHandle.GetWord("BuKeYuJianFeiJiGeXiangJiangLi"), "my:gexiangjiangli-sq"))).ToString();
             LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiTaxRate.Text = LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxRate.Text;
             LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiTaxRate.Text)).ToString();
 
             //值=本月的“不可预见费”-上月的“不可预见费”即 本月 H10-上月 H10
-            LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field159", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field159", "my:riqi", strYearMonth))).ToString();
+            LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field159", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field159", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiTaxRate.Text = LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxRate.Text;
             LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiTaxRate.Text)).ToString();
 
             //值=本月的“预计审减额”-上月的“预计审减额”
-            LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianEAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field160", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:field160", "my:riqi", strYearMonth))).ToString();
+            LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianEAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field160", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:field160", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianETaxRate.Text = LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxRate.Text;
             LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianETaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianEAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianETaxRate.Text)).ToString();
 
             //值=本月的“预计总收入合计”-上月的“预计总收入合计”
-            LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:zongshouru", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen").ToString().Trim(), "my:zongshouru", "my:riqi", strYearMonth))).ToString();
+            LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:zongshouru", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("ErCiBiaoJiaFenLiMuBiaoChengBen"), "my:zongshouru", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxRate.Text = LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxRate.Text;
             LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxRate.Text)).ToString();
 
@@ -1121,11 +1121,11 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_XiangMuCurrentMonthShiJiFaShengProfitFuJiaTaxAmount.Text = ((decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitJingXiangTaxAmount.Text) * 12) / 100).ToString();
 
             //表单：“项目一次标价分离表”中“金额（不含税）”对应本行同名行单元格的数据
-            LB_XiangMuYiCiFenLiBiaoMaoLiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:EAD", "my:riqi", strYearMonth);
+            LB_XiangMuYiCiFenLiBiaoMaoLiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:EAD", "my:riqi", strYearMonth);
 
-            LB_XiangMuYiCiFenLiBiaoShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:field91", "my:riqi", strYearMonth);
-            LB_XiangMuYiCiFenLiBiaoChengBenJiaShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:GDF", "my:riqi", strYearMonth);
-            LB_XiangMuYiCiFenLiBiaoYiJiProfitAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao").ToString().Trim(), "my:HAG", "my:riqi", strYearMonth);
+            LB_XiangMuYiCiFenLiBiaoShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:field91", "my:riqi", strYearMonth);
+            LB_XiangMuYiCiFenLiBiaoChengBenJiaShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:GDF", "my:riqi", strYearMonth);
+            LB_XiangMuYiCiFenLiBiaoYiJiProfitAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, LanguageHandle.GetWord("YiCiBiaoJiaFenLiBiao"), "my:HAG", "my:riqi", strYearMonth);
 
             //“项目管理”模块“项目立项”界面”“项目总预算：
             LB_XiangMuTotalBudget.Text = ShareClass.GetProject(strProjectID).Budget.ToString();

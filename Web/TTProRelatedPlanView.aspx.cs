@@ -41,8 +41,8 @@ public partial class TTProRelatedPlanView : System.Web.UI.Page
         if (Page.IsPostBack != true)
         {
             MonthPicker1.StartDate = DateTime.Now;
-            LB_ProjectName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + strProjectName;
-            LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian").ToString().Trim() + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang").ToString().Trim();
+            LB_ProjectName.Text = LanguageHandle.GetWord("XiangMu") + ": " + strProjectID + " " + strProjectName;
+            LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian") + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang");
             string strCmdText = "select cast(Percent_Done as CHAR(10)) as XName,count(*) as YNumber from T_ImplePlan ";
             strCmdText += " where ProjectID = " + strProjectID;
             strCmdText += " and extract(month from End_Date) = extract(month from now()) and extract(year from End_Date) = extract(year from now())";
@@ -66,7 +66,7 @@ public partial class TTProRelatedPlanView : System.Web.UI.Page
 
     protected void BT_Find_Click(object sender, EventArgs e)
     {
-        LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian").ToString().Trim() + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang").ToString().Trim();
+        LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian") + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang");
 
         string strCmdText = "select Percent_Done  as XName,count(*) as YNumber from T_ImplePlan ";
         strCmdText += " where ProjectID = " + strProjectID;

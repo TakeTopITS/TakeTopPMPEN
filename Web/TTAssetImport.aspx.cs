@@ -97,22 +97,22 @@ public partial class TTAssetImport : System.Web.UI.Page
 
         if (ExcelToDBTest() == -1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC") + "')", true);
 
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC");
             return;
         }
         else
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -121,7 +121,7 @@ public partial class TTAssetImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
             }
             else
             {
@@ -138,7 +138,7 @@ public partial class TTAssetImport : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                 }
                 else
                 {
@@ -147,22 +147,22 @@ public partial class TTAssetImport : System.Web.UI.Page
 
                     for (i = 0; i < dr.Length; i++)
                     {
-                        strAssetCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strAssetCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strAssetCode != "")
                         {
                             try
                             {
-                                asset.AssetCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                asset.AssetCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
                                 asset.AssetName = dr[i]["Name"].ToString().Trim();   
-                                asset.Type = dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
+                                asset.Type = dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim();
                                 asset.Spec = dr[i]["Specification"].ToString().Trim();   
                                 asset.ModelNumber = dr[i]["Model"].ToString().Trim();   
                                 asset.Number = decimal.Parse(dr[i]["Quantity"].ToString().Trim());   
                                 asset.Price = decimal.Parse(dr[i]["UnitPrice"].ToString().Trim());   
-                                asset.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim();
-                                asset.UnitName = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
-                                asset.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim();
+                                asset.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie")].ToString().Trim();
+                                asset.UnitName = dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
+                                asset.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim();
                                 asset.Manufacturer = dr[i]["Supplier"].ToString().Trim();
                                 asset.OwnerCode = strUserCode;
                                 asset.OwnerName = ShareClass.GetUserName(strUserCode);
@@ -175,9 +175,9 @@ public partial class TTAssetImport : System.Web.UI.Page
                             }
                             catch (Exception err)
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strAssetCode + " : " + err.Message.ToString() + "<br/>"; ;
+                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strAssetCode + " : " + err.Message.ToString() + "<br/>"; ;
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strAssetCode + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strAssetCode + " : " + err.Message.ToString());
                             }
 
                         }
@@ -186,7 +186,7 @@ public partial class TTAssetImport : System.Web.UI.Page
                     //2013-07-18 Liujp 
                     BindAssetData(DL_Type.SelectedValue.Trim(), TB_WHName.Text.Trim());
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG") + "')", true);
                 }
             }
         }
@@ -214,13 +214,13 @@ public partial class TTAssetImport : System.Web.UI.Page
 
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -229,7 +229,7 @@ public partial class TTAssetImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
 
                 j = -1;
             }
@@ -248,7 +248,7 @@ public partial class TTAssetImport : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                     j = -1;
                 }
                 else
@@ -258,17 +258,17 @@ public partial class TTAssetImport : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strAssetCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strAssetCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strAssetCode.Length > 20)
                         {
-                            LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strAssetCode + " " + LanguageHandle.GetWord("ZZCDDY20WDRSB").ToString().Trim();
+                            LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strAssetCode + " " + LanguageHandle.GetWord("ZZCDDY20WDRSB");
                             j = -1;
 
                             continue;
                         }
 
-                        if (dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim() != "")
+                        if (dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim() != "")
                         {
                             strHQL = "From Asset as asset Where asset.AssetCode = " + "'" + strAssetCode + "'";
                             lst = assetBLL.GetAllAssets(strHQL);
@@ -278,16 +278,16 @@ public partial class TTAssetImport : System.Web.UI.Page
                             }
                             else//新增
                             {
-                                asset.AssetCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                asset.AssetCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
                                 asset.AssetName = dr[i]["Name"].ToString().Trim();   
 
-                                if (CheckAssetType(dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim()) > 0)
+                                if (CheckAssetType(dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim()) > 0)
                                 {
-                                    asset.Type = dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
+                                    asset.Type = dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCLPLXDRILXTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCLPLXDRILXTOSTRINGTRIMJC") + " " + dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim();
                                     j = -1;
                                 }
                                 asset.Spec = dr[i]["Specification"].ToString().Trim();   
@@ -300,38 +300,38 @@ public partial class TTAssetImport : System.Web.UI.Page
                                 }
                                 catch
                                 {
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGSLHDJBSSZJC").ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGSLHDJBSSZJC");
                                     j = -1;
                                 }
 
-                                if (CheckUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim()) > 0)
+                                if (CheckUnit(dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim()) > 0)
                                 {
-                                    asset.UnitName = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
+                                    asset.UnitName = dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCDWDRIDWTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCDWDRIDWTOSTRINGTRIMJC") + " " + dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
                                     j = -1;
                                 }
 
-                                if (CheckCurrency(dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim()) > 0)
+                                if (CheckCurrency(dr[i][LanguageHandle.GetWord("BiBie")].ToString().Trim()) > 0)
                                 {
-                                    asset.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim();
+                                    asset.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie")].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCBBDRIBBTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCBBDRIBBTOSTRINGTRIMJC") + " " + dr[i][LanguageHandle.GetWord("BiBie")].ToString().Trim();
                                     j = -1;
                                 }
 
-                                if (CheckWareHouse(dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim()) > 0)
+                                if (CheckWareHouse(dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim()) > 0)
                                 {
 
-                                    asset.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim();
+                                    asset.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCCKDRICFCKTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCCKDRICFCKTOSTRINGTRIMJC") + " " + dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim();
                                     j = -1;
                                 }
 

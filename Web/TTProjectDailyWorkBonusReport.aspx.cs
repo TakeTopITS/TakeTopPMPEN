@@ -31,7 +31,7 @@ public partial class TTProjectDailyWorkBonusReport : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
         string strProjectID = Request.QueryString["ProjectID"];
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + GetProjectName(strProjectID) + " 工作奖金报表";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + GetProjectName(strProjectID) + " 工作奖金报表";
         LB_Project.Text = strProjectID + " " + GetProjectName(strProjectID);
 
         LB_UserCode.Text = strUserCode;

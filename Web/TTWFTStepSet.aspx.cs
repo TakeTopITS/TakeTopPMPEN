@@ -136,7 +136,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node0.Text = "<B>" + LanguageHandle.GetWord("ActorGroup").ToString().Trim() + "</B>";
+        node0.Text = "<B>" + LanguageHandle.GetWord("ActorGroup") + "</B>";
         node0.Target = "0";
         node0.Expanded = true;
         TreeView.Nodes.Add(node0);
@@ -162,7 +162,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         }
 
         node2 = new TreeNode();
-        node2.Text = "<B>" + LanguageHandle.GetWord("BuFen").ToString().Trim() + "</B>";
+        node2.Text = "<B>" + LanguageHandle.GetWord("BuFen") + "</B>";
         node2.Target = "1";
         node2.Expanded = false;
         node0.ChildNodes.Add(node2);
@@ -225,7 +225,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
 
             strActorGroupMakeUserCode = actorGroup.MakeUserCode.Trim();
 
-            if (strUserCode != strActorGroupMakeUserCode | strActorGroupName == LanguageHandle.GetWord("GeRen").ToString().Trim() | strActorGroupName == LanguageHandle.GetWord("QuanTi").ToString().Trim() | strActorGroupName == LanguageHandle.GetWord("GongSi").ToString().Trim() | strActorGroupName == LanguageHandle.GetWord("JiTuan").ToString().Trim())
+            if (strUserCode != strActorGroupMakeUserCode | strActorGroupName == LanguageHandle.GetWord("GeRen") | strActorGroupName == LanguageHandle.GetWord("QuanTi") | strActorGroupName == LanguageHandle.GetWord("GongSi") | strActorGroupName == LanguageHandle.GetWord("JiTuan"))
             {
                 BT_WLDelete.Enabled = false;
             }
@@ -564,11 +564,11 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             LoadWFTStepRelatedTem(strStepID);
             LoadWorkFlowTStepOperator(strStepID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCCJC") + "')", true);
         }
     }
 
@@ -591,7 +591,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         {
             if (intBelongSortNumber < intStepSortNumber)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJSGSBXBNXYBBXJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJSGSBXBNXYBBXJC") + "')", true);
                 return;
             }
         }
@@ -618,11 +618,11 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             BT_UpdateChileTem.Enabled = true;
             BT_DeleteChileTem.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -648,7 +648,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         {
             if (intBelongSortNumber < intStepSortNumber)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJSGSBXBNXYBBXJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJSGSBXBNXYBBXJC") + "')", true);
                 return;
             }
         }
@@ -671,11 +671,11 @@ public partial class TTWFTStepSet : System.Web.UI.Page
 
             LoadWFTStepRelatedTem(strStepID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -696,11 +696,11 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             BT_UpdateChileTem.Enabled = false;
             BT_DeleteChileTem.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -814,7 +814,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         else
         {
             workFlowTStep.SortNumber = 1;
-            workFlowTStep.StepName = LanguageHandle.GetWord("BuZhouMingChen").ToString().Trim();
+            workFlowTStep.StepName = LanguageHandle.GetWord("BuZhouMingChen");
             workFlowTStep.NextSortNumber = 0;
 
             workFlowTStep.NextStepMust = "NO";
@@ -859,7 +859,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
                     LB_StepID.Text = strStepID;
                     LB_ID.Text = strStepID;
                     LB_SortNumber.Text = "1";
-                    LB_StepName.Text = LanguageHandle.GetWord("BuZhou").ToString().Trim();
+                    LB_StepName.Text = LanguageHandle.GetWord("BuZhou");
 
                     BT_Update.Enabled = true;
 
@@ -909,7 +909,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC") + "')", true);
         }
     }
 
@@ -967,16 +967,16 @@ public partial class TTWFTStepSet : System.Web.UI.Page
 
                 LoadWorkFlowTStepOperator(strStepID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCYZHGZNRBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCYZHGZNRBNWKJC") + "')", true);
         }
     }
 
@@ -1026,11 +1026,11 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             workFlowTStepOperatorBLL.UpdateWorkFlowTStepOperator(workFlowTStepOperator, int.Parse(strID));
             LoadWorkFlowTStepOperator(strStepID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCYZHGZNRBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCYZHGZNRBNWKJC") + "')", true);
         }
     }
 
@@ -1056,11 +1056,11 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             BT_DeleteStepDetail.Enabled = false;
 
             LoadWorkFlowTStepOperator(strStepID);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -1088,7 +1088,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
             if (lst.Count > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMDJSZQJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMDJSZQJC") + "')", true);
                 return;
             }
 
@@ -1113,12 +1113,12 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSZZMBNWK").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSZZMBNWK") + "')", true);
         }
     }
 
@@ -1149,12 +1149,12 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBNSCYYGZLSYCJSZ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBNSCYYGZLSYCJSZ") + "')", true);
         }
     }
 
@@ -1188,12 +1188,12 @@ public partial class TTWFTStepSet : System.Web.UI.Page
 
             if (strMark == "0")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLMBDYBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLMBDYBCCG") + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWBCSBJC") + "')", true);
         }
     }
 
@@ -1489,11 +1489,11 @@ public partial class TTWFTStepSet : System.Web.UI.Page
 
                     ShareClass.RunSqlCommand(strHQL);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
                 }
 
             }
@@ -1610,7 +1610,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>" + LanguageHandle.GetWord("XiTongMoZu").ToString().Trim() + "<b>";
+        node1.Text = "<b>" + LanguageHandle.GetWord("XiTongMoZu") + "<b>";
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);

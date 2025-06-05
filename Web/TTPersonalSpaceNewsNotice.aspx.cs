@@ -75,7 +75,7 @@ public partial class TTPersonalSpaceNewsNotice : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
 
         strUserName = Session["UserName"].ToString();
-        strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + ": " + strUserCode + "  " + strUserName;
+        strUserInfo = LanguageHandle.GetWord("YongHu") + ": " + strUserCode + "  " + strUserName;
         //LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
         try

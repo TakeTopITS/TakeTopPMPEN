@@ -32,7 +32,7 @@ public partial class TTAccountReceiverPayDetailSummaryReport : System.Web.UI.Pag
             LoadAccountFinancialSet();
 
             ShareClass.LoadAccountForDDL(ddl_Account);
-            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1);
+            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT"),TreeView1);
 
             LoadAccountGeneralLedgerList(DL_Financial.SelectedValue.Trim(), DL_Interval.SelectedValue.Trim(), ddl_Account.SelectedValue.Trim(), ddl_Type.SelectedValue.Trim(), LB_DepartString.Text);
         }
@@ -270,21 +270,21 @@ public partial class TTAccountReceiverPayDetailSummaryReport : System.Web.UI.Pag
                 string fileName = "";
                 if (ddl_Type.SelectedValue.Trim() == "0")
                 {
-                    fileName = LanguageHandle.GetWord("ShouZhiMingXiHuiZongBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("ShouZhiMingXiHuiZongBiao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_Type.SelectedValue.Trim() == "1")
                 {
-                    fileName = LanguageHandle.GetWord("ShouKuanMingXiHuiZongBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("ShouKuanMingXiHuiZongBiao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_Type.SelectedValue.Trim() == "")
                 {
-                    fileName = LanguageHandle.GetWord("FuKuanMingXiHuiZongBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("FuKuanMingXiHuiZongBiao") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getAccountGeneralLedgerList(DL_Financial.SelectedValue.Trim(), DL_Interval.SelectedValue.Trim(), ddl_Account.SelectedValue.Trim(), ddl_Type.SelectedValue.Trim(), LB_DepartString.Text), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }

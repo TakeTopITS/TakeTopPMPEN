@@ -62,17 +62,17 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
     {
         if (!GetBMSupplierInfoStatus(strUserCode.Trim()).Trim().Equals("Qualified"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC") + "')", true);
             return;
         }
         if (!string.IsNullOrEmpty(lbl_BMSupplierBidID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTBXXYCZZNXGHSCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTBXXYCZZNXGHSCJC") + "')", true);
             return;
         }
         if (DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd")) < DateTime.Parse(lbl_StartTime.Text.Trim()) || DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd")) > DateTime.Parse(lbl_EndTime.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDRBZZBYXNJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDRBZZBYXNJC") + "')", true);
             return;
         }
 
@@ -108,11 +108,11 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
 
             LoadBMSupplierBidRecordList(GetBMSupplierInfoID(strUserCode.Trim()), bMSupplierBid.AnnInvitationID.ToString());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -140,12 +140,12 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
     {
         if (!GetBMSupplierInfoStatus(strUserCode.Trim()).Trim().Equals("Qualified"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC") + "')", true);
             return;
         }
         if (DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd")) < DateTime.Parse(lbl_StartTime.Text.Trim()) || DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd")) > DateTime.Parse(lbl_EndTime.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDRBZZBYXNJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDRBZZBYXNJC") + "')", true);
             return;
         }
 
@@ -157,7 +157,7 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
         BMSupplierBid bMSupplierBid = (BMSupplierBid)lst[0];
         if (!bMSupplierBid.BidStatus.Trim().Equals("W"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTBXXYKBWFXGTBXXJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTBXXYKBWFXGTBXXJC") + "')", true);
             return;
         }
         bMSupplierBid.AnnInvitationName = TB_Name.Text.Trim();
@@ -175,14 +175,14 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
             bMSupplierBidRecord.OperationDate = DateTime.Parse(DateTime.Now.ToString());
             bMSupplierBidRecordBLL.AddBMSupplierBidRecord(bMSupplierBidRecord);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
             LoadBMAnnInvitationList(bMSupplierBid.SupplierCode.ToString());
             LoadBMSupplierBidRecordList(GetBMSupplierInfoID(strUserCode.Trim()), bMSupplierBid.AnnInvitationID.ToString());
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -190,12 +190,12 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
     {
         if (!GetBMSupplierInfoStatus(strUserCode.Trim()).Trim().Equals("Qualified"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC") + "')", true);
             return;
         }
         if (DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd")) < DateTime.Parse(lbl_StartTime.Text.Trim()) || DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd")) > DateTime.Parse(lbl_EndTime.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDRBZZBYXNJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDRBZZBYXNJC") + "')", true);
             return;
         }
 
@@ -207,7 +207,7 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
         BMSupplierBid bMSupplierBid = (BMSupplierBid)lst[0];
         if (!bMSupplierBid.BidStatus.Trim().Equals("W"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTBXXYKBWFSCTBXXJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTBXXYKBWFSCTBXXJC") + "')", true);
             return;
         }
 
@@ -225,14 +225,14 @@ public partial class TTBMAnnInvitationSupplier : System.Web.UI.Page
 
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
 
             LoadBMAnnInvitationList(bMSupplierBid.SupplierCode.ToString());
             LoadBMSupplierBidRecordList(GetBMSupplierInfoID(strUserCode.Trim()), bMSupplierBid.AnnInvitationID.ToString());
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 

@@ -100,7 +100,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
                     LoadItemMainPlanRelatedItemProductPlan(strPlanVerID, strPlanMRPVerID);
                     LoadItemMainPlanRelatedItemOutSourcingPlan(strPlanVerID, strPlanMRPVerID);
 
-                    TB_WLName.Text = LanguageHandle.GetWord("JiHua").ToString().Trim() + LB_PlanVerName.Text.Trim() + LanguageHandle.GetWord("BanBen").ToString().Trim() + strPlanMRPVerID + LanguageHandle.GetWord("ShenQing").ToString().Trim();
+                    TB_WLName.Text = LanguageHandle.GetWord("JiHua") + LB_PlanVerName.Text.Trim() + LanguageHandle.GetWord("BanBen") + strPlanMRPVerID + LanguageHandle.GetWord("ShenQing");
                     ShareClass.LoadRelatedWL("PlanApproval", "Plan", int.Parse(strPlanMRPVerID), DataGrid8);
                     BT_SubmitApply.Enabled = true;
 
@@ -271,7 +271,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
             }
         }
 
-        TB_WLName.Text = LanguageHandle.GetWord("JiHua").ToString().Trim() + LB_PlanVerName.Text.Trim() + LanguageHandle.GetWord("BanBen").ToString().Trim() + strPlanMRPVerID + LanguageHandle.GetWord("ShenQing").ToString().Trim();
+        TB_WLName.Text = LanguageHandle.GetWord("JiHua") + LB_PlanVerName.Text.Trim() + LanguageHandle.GetWord("BanBen") + strPlanMRPVerID + LanguageHandle.GetWord("ShenQing");
         ShareClass.LoadRelatedWL("PlanApproval", "Plan", int.Parse(strPlanMRPVerID), DataGrid8);
         BT_SubmitApply.Enabled = true;
     }
@@ -288,7 +288,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ItemMainPlanMRPVersion");
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBNCFZJJHQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBNCFZJJHQJC") + "')", true);
             return;
         }
 
@@ -304,7 +304,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
 
         DL_PlanMRPVersionID.SelectedValue = GetPlanMRPVersionValueID(strPlanVerID, strPlanMRPVerID);
 
-        TB_WLName.Text = LanguageHandle.GetWord("JiHua").ToString().Trim() + LB_PlanVerName.Text.Trim() + LanguageHandle.GetWord("BanBen").ToString().Trim() + strPlanMRPVerID + LanguageHandle.GetWord("ShenQing").ToString().Trim();
+        TB_WLName.Text = LanguageHandle.GetWord("JiHua") + LB_PlanVerName.Text.Trim() + LanguageHandle.GetWord("BanBen") + strPlanMRPVerID + LanguageHandle.GetWord("ShenQing");
         ShareClass.LoadRelatedWL("PlanApproval", "Plan", int.Parse(strPlanMRPVerID), DataGrid8);
         BT_SubmitApply.Enabled = true;
     }
@@ -368,7 +368,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
 
             HL_MainPlanMateriaDetailReport.NavigateUrl = "TTGoodsMainPlanMaterialDetailDataReport.aspx?PlanVerID=" + strPlanVerID + "&MRPVerID=" + strPlanMRPVerID;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBBLXGGCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBBLXGGCG") + "')", true);
         }
         catch
         {
@@ -392,7 +392,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
 
             HL_MainPlanMateriaDetailReport.NavigateUrl = "TTGoodsMainPlanMaterialDetailDataReport.aspx?PlanVerID=" + strPlanVerID + "&MRPVerID=" + strPlanMRPVerID;
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZKLXGGCG").ToString().Trim() + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZKLXGGCG") + "')", true);
         }
         catch
         {
@@ -438,7 +438,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
 
         if (strPlanMRPVerID == null | strPlanMRPVerID == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPJHBBBNWKQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPJHBBBNWKQJC") + "')", true);
             return;
         }
 
@@ -466,7 +466,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
         TabContainer1.ActiveTabIndex = 1;
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "hideWaitingIcon", "document.getElementById('IMG_Waiting').style.display = 'none';", true);
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPZKYSWC").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPZKYSWC") + "')", true);
     }
 
     protected void BT_Find_Click(object sender, EventArgs e)
@@ -662,7 +662,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX") + "')", true);
                 return;
             }
 
@@ -671,7 +671,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
                 strHQL = "Update T_ItemMainPlanRelatedItemPurchasePlan Set RequireNumber = " + deRequireNumber.ToString() + ", OrderTime = '" + dtOrdertime.ToString("yyyy-MM-dd") + "' ,RequireTime = '" + dtRequireTime.ToString("yyyy-MM-dd") + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
@@ -706,7 +706,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX") + "')", true);
                 return;
             }
 
@@ -715,7 +715,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
                 strHQL = "Update T_ItemMainPlanRelatedItemProductPlan Set RequireNumber = " + deRequireNumber.ToString() + ", OrderTime = '" + dtOrdertime.ToString("yyyy-MM-dd") + "' ,RequireTime = '" + dtRequireTime.ToString("yyyy-MM-dd") + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
@@ -750,7 +750,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX") + "')", true);
                 return;
             }
 
@@ -760,7 +760,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
                 strHQL = "Update T_ItemMainPlanRelatedItemProductPlan Set RequireNumber = " + deRequireNumber.ToString() + ", OrderTime = '" + dtOrdertime.ToString("yyyy-MM-dd") + "' ,RequireTime = '" + dtRequireTime.ToString("yyyy-MM-dd") + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
@@ -792,7 +792,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC") + "');</script>");
             return "0";
         }
 
@@ -845,11 +845,11 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
             strXMLFile2 = Server.MapPath(strXMLFile2);
             xmlProcess.DbToXML(strCmdText, "T_ItemMainPlan", strXMLFile2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPJHSPSSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPJHSPSSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPJHSPSSBKNGZLMCGCZD25GHZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMRPJHSPSSBKNGZLMCGCZD25GHZJC") + "')", true);
             return "0";
         }
 

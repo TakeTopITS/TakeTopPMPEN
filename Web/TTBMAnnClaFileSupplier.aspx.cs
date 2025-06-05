@@ -132,7 +132,7 @@ public partial class TTBMAnnClaFileSupplier : System.Web.UI.Page
     {
         if (!GetBMSupplierInfoStatus(strUserCode.Trim()).Trim().Equals("Qualified"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGYSXXWSHHZSHBTGBNJXTBCZJC") + "')", true);
             return;
         }
 
@@ -148,13 +148,13 @@ public partial class TTBMAnnClaFileSupplier : System.Web.UI.Page
         {
             bMSupplierReplyBLL.UpdateBMSupplierReply(bMSupplierReply, bMSupplierReply.ID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
             LoadBMSupplierReplyList(GetBMSupplierInfoID(strUserCode.Trim()));
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }

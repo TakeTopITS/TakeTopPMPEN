@@ -49,11 +49,11 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
 
         if (strDocName == "")
         {
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWQSYSCDWD").ToString().Trim() ;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWQSYSCDWD") ;
         }
         else
         {
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJMBH").ToString().Trim() + ": " + "'" + strDocName + "'" + LanguageHandle.GetWord("DSCWD").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJMBH") + ": " + "'" + strDocName + "'" + LanguageHandle.GetWord("DSCWD");
         }
 
         strDocName = "%" + strDocName + "%";
@@ -68,7 +68,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
     }
 
     protected void BT_UploaderFind_Click(object sender, EventArgs e)
@@ -82,11 +82,11 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
 
         if (strUploadManName == "")
         {
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWQSYSCDWD").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWQSYSCDWD");
         }
         else
         {
-            LB_FindCondition.Text = LanguageHandle.GetWord("SCZXMBH").ToString().Trim() + ": "   + "'" + strUploadManName + "'" + LanguageHandle.GetWord("DSCWD").ToString().Trim() ;
+            LB_FindCondition.Text = LanguageHandle.GetWord("SCZXMBH") + ": "   + "'" + strUploadManName + "'" + LanguageHandle.GetWord("DSCWD") ;
         }
 
         strUploadManName = "%" + strUploadManName + "%";
@@ -101,7 +101,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
     }
 
     protected void DataGrid1_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -177,7 +177,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
         LB_Sql.Text = strHQL;
     }

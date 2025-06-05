@@ -195,7 +195,7 @@ public partial class TTGoodsApplicationReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_GoodsApplicationReport");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoLingYongBaoBiaoxls").ToString().Trim());
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoLingYongBaoBiaoxls"));
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);   
     }

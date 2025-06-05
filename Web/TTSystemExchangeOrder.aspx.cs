@@ -62,7 +62,7 @@ public partial class TTSystemExchangeOrder : System.Web.UI.Page
         if (strSqlCode.ToLower().Contains("create") || strSqlCode.ToLower().Contains("execute") || strSqlCode.ToLower().Contains("delete") || strSqlCode.ToLower().Contains("update") || strSqlCode.ToLower().Contains("drop")
           || strSqlCode.ToLower().Contains("insert") || strSqlCode.ToLower().Contains("alter"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC") + "')", true);
             return;
         }
 
@@ -83,11 +83,11 @@ public partial class TTSystemExchangeOrder : System.Web.UI.Page
             BT_Upate.Enabled = true;
             BT_Delete.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 
@@ -106,7 +106,7 @@ public partial class TTSystemExchangeOrder : System.Web.UI.Page
         if (strSqlCode.ToLower().Contains("create") || strSqlCode.ToLower().Contains("execute") || strSqlCode.ToLower().Contains("delete") || strSqlCode.ToLower().Contains("update") || strSqlCode.ToLower().Contains("drop")
           || strSqlCode.ToLower().Contains("insert") || strSqlCode.ToLower().Contains("alter"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLDMBNHDELETEUPDATEDROPINSERTALTERYJJC") + "')", true);
             return;
         }
 
@@ -121,11 +121,11 @@ public partial class TTSystemExchangeOrder : System.Web.UI.Page
 
             LoadSystemExchangeOrder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXiuGaiLanguageHandleGetWordZ").ToString().Trim() + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXiuGaiLanguageHandleGetWordZ") + LanguageHandle.GetWord("ZZBCSB") + "')", true); 
         }
     }
 
@@ -145,11 +145,11 @@ public partial class TTSystemExchangeOrder : System.Web.UI.Page
 
             LoadSystemExchangeOrder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord")+"')", true); 
         }
     }
 

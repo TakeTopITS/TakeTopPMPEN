@@ -63,7 +63,7 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY");
 
             strHQL = "from WLType as wlType ";
             strHQL += " Where wlType.LangCode = " + "'" + strLangCode + "'";
@@ -82,8 +82,8 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             DataGrid2.DataSource = lst;
             DataGrid2.DataBind();
 
-            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
-            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + LanguageHandle.GetWord("GongZuoLiuBaoBiao").ToString().Trim();
+            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZGZLSQZSY");
+            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu") + ": " + strProjectID + " " + LanguageHandle.GetWord("GongZuoLiuBaoBiao");
             strHQL = "select Status as XName, Count(*) as YNumber from T_WorkFlow where ";
             strHQL += " ((RelatedType = 'Project' and RelatedID = " + strProjectID + ")";
             strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
@@ -108,8 +108,8 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
         IList lst;
 
         string strUserCode = LB_UserCode.Text.Trim();
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSYCY").ToString().Trim();
-        LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSYCY");
+        LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZGZLSQZSY");
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";
@@ -161,8 +161,8 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
         LB_OperatorCode.Text = strOperatorCode;
         LB_OperatorName.Text = strOperatorName;
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName;
-        LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + strOperatorName;
+        LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + strOperatorName;
 
         DataGrid3.CurrentPageIndex = 0;
 
@@ -223,8 +223,8 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
-            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll") + " " + LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
+            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicantAll") + " " + LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
         }
         else
         {
@@ -239,8 +239,8 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName + LanguageHandle.GetWord("ZhuagTai").ToString().Trim() + " £º" + strStatus;
-            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName + " £º" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + strOperatorName + LanguageHandle.GetWord("ZhuagTai") + " £º" + strStatus;
+            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + strOperatorName + " £º" + strStatus;
         }
 
 
@@ -296,8 +296,8 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
-            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll") + " " + LanguageHandle.GetWord("LeiXin") + ":" + strWLType;
+            LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicantAll") + " " + LanguageHandle.GetWord("LeiXin") + ":" + strWLType;
         }
         else
         {
@@ -312,9 +312,9 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
                 strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
                 strHQL += " Order by workFlow.WLID DESC";
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin") + ":" + strWLType;
 
-                LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
+                LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin") + ":" + strWLType;
             }
 
             else
@@ -328,9 +328,9 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
                 strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
                 strHQL += " Order by workFlow.WLID DESC";
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin") + ":" + strWLType + LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
 
-                LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
+                LB_QueryScopeResult.Text = LanguageHandle.GetWord("ZZApplicant") + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin") + ":" + strWLType + LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
             }
         }
 
@@ -353,7 +353,7 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
 
         strWFID = NB_WFID.Amount.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("BianHao").ToString().Trim() + ":" + strWFID;
+        LB_QueryScope.Text = LanguageHandle.GetWord("BianHao") + ":" + strWFID;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";
@@ -393,7 +393,7 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
 
         strWFName = TB_WFName.Text.Trim();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("MingCheng").ToString().Trim() + ":" + strWFName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("MingCheng") + ":" + strWFName;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";

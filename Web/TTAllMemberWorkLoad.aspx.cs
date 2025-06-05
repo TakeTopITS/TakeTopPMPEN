@@ -105,10 +105,10 @@ public partial class TTAllMemberWorkLoad : System.Web.UI.Page
             MonthPicker1.StartDate = DateTime.Now;
 
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView2, strUserCode);
 
             year = new ArrayList();
             for (i = DateTime.Now.Year - 10; i <= DateTime.Now.Year + 10; i++)
@@ -297,7 +297,7 @@ public partial class TTAllMemberWorkLoad : System.Web.UI.Page
 
         DataTable dtProject = ShareClass.GetDataSetFromSql(strHQL, "project").Tables[0];
 
-        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanRenWuxls").ToString().Trim());
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanRenWuxls"));
 
         //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);
     }
@@ -345,7 +345,7 @@ public partial class TTAllMemberWorkLoad : System.Web.UI.Page
 
     protected void BT_FindPlanRate_Click(object sender, EventArgs e)
     {
-        LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian").ToString().Trim() + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang").ToString().Trim();
+        LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian") + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang");
 
         string strProjectID = LB_ProjectID.Text;
         string strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "InUse").ToString();
@@ -595,8 +595,8 @@ public partial class TTAllMemberWorkLoad : System.Web.UI.Page
             string strPlanVerID;
             strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "InUse").ToString();
 
-            LB_ProjectName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
-            LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian").ToString().Trim() + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang").ToString().Trim();
+            LB_ProjectName.Text = LanguageHandle.GetWord("XiangMu") + ": " + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
+            LB_ReportName.Text = MonthPicker1.Year + LanguageHandle.GetWord("Nian") + MonthPicker1.Month + LanguageHandle.GetWord("YueJiHuaWanChengQingKuang");
             string strCmdText = "select cast(Percent_Done as CHAR(10)) as XName,count(*) as YNumber from T_ImplePlan ";
             strCmdText += " where ProjectID = " + strProjectID;
             strCmdText += " and extract(month from End_Date) = extract(month from now()) and extract(year from End_Date) = extract(year from now())";

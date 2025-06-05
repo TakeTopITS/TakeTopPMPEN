@@ -161,14 +161,14 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
         {
             bMAssessBidReportBLL.UpdateBMAssessBidReport(bMAssessBidReport, bMAssessBidReport.ID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHCG")+"')", true);
 
             LoadBMAssessBidReportList();
             LoadBMSupplierBidList(bMAssessBidReport.AssessBidRecordID.ToString().Trim());
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHSBJC")+"')", true);
         }
     }
 
@@ -227,7 +227,7 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
         string strId, strHQL;
         IList lst;
 
-        if (e.CommandName == LanguageHandle.GetWord("ZhongBiao").ToString().Trim())
+        if (e.CommandName == LanguageHandle.GetWord("ZhongBiao"))
         {
             strId = e.Item.Cells[1].Text.Trim();
 
@@ -412,7 +412,7 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return LanguageHandle.GetWord("ZhongBiao").ToString().Trim();
+            return LanguageHandle.GetWord("ZhongBiao");
         }
         else if (strBidStatus.Trim().Equals("N"))
         {

@@ -32,7 +32,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
 
         strProjectName = GetProjectName(strProjectID);
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的风险列表";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + strProjectName + "的风险列表";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -42,7 +42,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
             DLC_EffectDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_FindDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            InitialTemplatePrjectRiskTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            InitialTemplatePrjectRiskTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
 
             LoadProjectRiskList(strProjectID);
         }
@@ -309,7 +309,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }
@@ -404,7 +404,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -443,12 +443,12 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
 
             LoadProjectRiskList(strProjectID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
     }

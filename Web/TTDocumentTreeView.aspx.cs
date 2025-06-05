@@ -48,7 +48,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
             if (ShareClass.CheckUserCanViewProjectPlan(strRelatedID, strUserCode) == false)
             {
-                Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC").ToString().Trim() + "'");
+                Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC") + "'");
             }
         }
 
@@ -271,9 +271,9 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
             InitialProjectDocTypeTree();
         }
@@ -336,7 +336,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + strRelatedType + "：" + strRelatedID + " " + strRelatedName + LanguageHandle.GetWord("WenDangLieBiaoB").ToString().Trim();
+        node1.Text = "<B>" + strRelatedType + "：" + strRelatedID + " " + strRelatedName + LanguageHandle.GetWord("WenDangLieBiaoB");
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -434,9 +434,9 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 DataGrid1.DataSource = lst2;
                 DataGrid1.DataBind();
 
-                LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+                LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX") + strDocType;
 
-                LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+                LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
 
                 ////设置缺省的文件类型
                 //ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -452,9 +452,9 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
             DataGrid1.DataSource = lst2;
             DataGrid1.DataBind();
 
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
-            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
         }
     }
 

@@ -70,7 +70,7 @@ HE_LeaderReview.Language = Session["LangCode"].ToString();
 
             if (lst.Count > 0)
             {
-                BT_Summit.Text = LanguageHandle.GetWord("XiuGai").ToString().Trim();
+                BT_Summit.Text = LanguageHandle.GetWord("XiuGai");
                 ScheduleEventLeaderReview scheduleEventLeaderReview = (ScheduleEventLeaderReview)lst[0];
 
                 if (strIsMobileDevice == "YES")
@@ -188,7 +188,7 @@ HE_LeaderReview.Language = Session["LangCode"].ToString();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJSBJC")+"')", true);
         }
     }
 

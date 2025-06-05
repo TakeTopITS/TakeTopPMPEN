@@ -130,7 +130,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
             for (int i = 0; i < lst.Count; i++)
             {
                 BMSupBidByExp bMSupBidByExp = (BMSupBidByExp)lst[i];
-                result += LanguageHandle.GetWord("ZhuanGu").ToString().Trim() + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "£º" + bMSupBidByExp.ExportResult.Trim() + "£»";
+                result += LanguageHandle.GetWord("ZhuanGu") + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "£º" + bMSupBidByExp.ExportResult.Trim() + "£»";
             }
         }
         return result;

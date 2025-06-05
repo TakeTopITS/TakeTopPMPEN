@@ -46,10 +46,10 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             DLC_StartTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB");
 
             strHQL = "from ProjectMember as projectMember ";
             strHQL += " Where projectMember.DepartCode in " + strDepartString;
@@ -59,7 +59,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString();
             LB_Sql.Text = strHQL;
         }
     }
@@ -109,7 +109,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             DataGrid1.DataSource = ds;
             DataGrid1.DataBind();
 
-            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + ds.Tables[0].Rows.Count ;
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD") + ds.Tables[0].Rows.Count ;
             LB_Sql.Text = strHQL;
 
             LB_DepartCode.Text = strDepartCode;
@@ -120,7 +120,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
     {
         string strHQL;
        
-        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB");
 
         string strDepartString = LB_DepartString.Text.Trim();
         string strPlanOperator = DL_PlanOperator.SelectedValue.Trim();
@@ -159,7 +159,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         DataGrid1.DataSource = ds;
         DataGrid1.DataBind();
 
-        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + ds.Tables [0].Rows.Count  ;
+        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD") + ds.Tables [0].Rows.Count  ;
         LB_Sql.Text = strHQL;
 
         LB_DepartCode.Text = "";
@@ -185,12 +185,12 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("YongHuChengYuanXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("YongHuChengYuanXinXi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC")+"')", true);
             }
         }
     }
@@ -236,7 +236,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             {
                 strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   
                "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   
-               LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
+               LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard") +
                "From T_ProjectMember Where DepartCode in " + strDepartString + " ";
 
                 if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -257,7 +257,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             {
                 strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   
                "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   
-               LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
+               LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa") +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode in " + strDepartString + " ";
 
                 if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -283,7 +283,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             {
                 strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   
                 "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   
-                LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
+                LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard") +
                 "From T_ProjectMember Where DepartCode = '" + strDepartCode + "'";
                 strHQL += " and UserCode in (Select UserCode From T_SystemActiveUser )";
                 strHQL += " and UserCode not in ";
@@ -295,7 +295,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             {
                 strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   
                "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   
-               LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
+               LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa") +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode  = '" + strDepartCode + "'";
 
                 if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))

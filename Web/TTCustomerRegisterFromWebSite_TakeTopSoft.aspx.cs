@@ -20,57 +20,57 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
         {
             if (strSystemType == "XMB")
             {
-                LB_Product.Text = LanguageHandle.GetWord("TaiDingXiangMuBao").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("TaiDingXiangMuBao");
             }
 
             if (strSystemType == "ECMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("XiangMuZengGeGuanLiPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("XiangMuZengGeGuanLiPingTai");
             }
 
             if (strSystemType == "GEPMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("XiangMuGuanLiPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("XiangMuGuanLiPingTai");
             }
 
             if (strSystemType == "RDPMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("YanFaXiangMuGuanLiPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("YanFaXiangMuGuanLiPingTai");
             }
 
             if (strSystemType == "GAPMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("ZhengWuXiangMuGuanLiPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("ZhengWuXiangMuGuanLiPingTai");
             }
 
             if (strSystemType == "ENPMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("GongChengXiangMuGuanLiPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("GongChengXiangMuGuanLiPingTai");
             }
 
             if (strSystemType == "SIMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("JiTongJiChengXiangMuGuanLiPing").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("JiTongJiChengXiangMuGuanLiPing");
             }
 
             if (strSystemType == "SOMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("RuanJianShiShiXiangMuGuanLiPin").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("RuanJianShiShiXiangMuGuanLiPin");
             }
 
             if (strSystemType == "ERP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("XiangMuXingERPPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("XiangMuXingERPPingTai");
             }
 
             if (strSystemType == "CRM")
             {
-                LB_Product.Text = LanguageHandle.GetWord("CRMPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("CRMPingTai");
             }
 
             if (strSystemType == "CMP")
             {
-                LB_Product.Text = LanguageHandle.GetWord("XieTongOAPingTai").ToString().Trim();
+                LB_Product.Text = LanguageHandle.GetWord("XieTongOAPingTai");
             }
         }
     }
@@ -96,7 +96,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiDaiHaoXiangBuNengW").ToString().Trim();
+            LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiDaiHaoXiangBuNengW");
         }
         else
         {
@@ -104,7 +104,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             {
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiYanZhengMaCuoWuQin").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiYanZhengMaCuoWuQin");
                 return;
             }
 
@@ -112,7 +112,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = LanguageHandle.GetWord("DiShiGongSi").ToString().Trim() + strCompany + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("DiJiaoLe").ToString().Trim() + strType + LanguageHandle.GetWord("DeShiYongXinXiQingGuanZhu").ToString().Trim();
+                string strNofiInfo = LanguageHandle.GetWord("DiShiGongSi") + strCompany + LanguageHandle.GetWord("DeYuanGong") + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("DiJiaoLe") + strType + LanguageHandle.GetWord("DeShiYongXinXiQingGuanZhu");
                 Action action = new Action(delegate ()
                 {
                     try
@@ -212,7 +212,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             }
             catch
             {
-                LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiQingJianCha").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiQingJianCha");
             }
         }
     }

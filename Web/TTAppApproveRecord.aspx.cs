@@ -22,13 +22,13 @@ public partial class TTAppApproveRecord : System.Web.UI.Page
 
         if (strType == "WorkFlow")
         {
-            //this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + "ÉóºË¼ÇÂ¼£¡";
-            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("ShenHeJiLu").ToString().Trim();
+            //this.Title = LanguageHandle.GetWord("GongZuoLiu") + strRelatedID + " " + strWLName + "ÉóºË¼ÇÂ¼£¡";
+            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu") + strRelatedID + " " + strWLName + LanguageHandle.GetWord("ShenHeJiLu");
         }
         else
         {
-            //this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou").ToString().Trim() + strStepID + "ÉóºË¼ÇÂ¼£¡";
-            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou").ToString().Trim() + strStepID + LanguageHandle.GetWord("ShenHeJiLu").ToString().Trim();
+            //this.Title = LanguageHandle.GetWord("GongZuoLiu") + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou") + strStepID + "ÉóºË¼ÇÂ¼£¡";
+            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu") + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou") + strStepID + LanguageHandle.GetWord("ShenHeJiLu");
         }
 
         if (Page.IsPostBack != true)

@@ -41,7 +41,7 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
 
             InitialCalendar();
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView2, strUserCode);
 
             string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid2);
@@ -165,12 +165,12 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWKJLBNZJCY").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWKJLBNZJCY") + "')", true);
         }
     }
 
@@ -284,20 +284,20 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
 
                 BT_Send.Enabled = true;
 
-                TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi").ToString().Trim() + strMeetingID + " " + meetingAssign.Name.Trim() + "£¨" + meetingAssign.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen").ToString().Trim() + meetingAssign.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen").ToString().Trim() + meetingAssign.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
+                TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi") + strMeetingID + " " + meetingAssign.Name.Trim() + "£¨" + meetingAssign.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen") + meetingAssign.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen") + meetingAssign.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia");
 
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSTRRESULT").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSTRRESULT") + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -353,14 +353,14 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
 
             LoadMeetingAssignForm(strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG") + "')", true);
 
-            TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi").ToString().Trim() + strID + " " + meetingAssign.Name.Trim() + "£¨" + meetingAssign.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen").ToString().Trim() + meetingAssign.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen").ToString().Trim() + meetingAssign.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
+            TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi") + strID + " " + meetingAssign.Name.Trim() + "£¨" + meetingAssign.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen") + meetingAssign.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen") + meetingAssign.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia");
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJC") + "')", true);
         }
     }
 
@@ -389,7 +389,7 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -449,7 +449,7 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
 
             HL_RelatedDoc.NavigateUrl = "TTMeetingDoc.aspx?RelatedID=" + strApplyFormID;
 
-            TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi").ToString().Trim() + strID + " " + meetingAssign.Name.Trim() + "," + meetingAssign.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen").ToString().Trim() + meetingAssign.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen").ToString().Trim() + meetingAssign.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
+            TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi") + strID + " " + meetingAssign.Name.Trim() + "," + meetingAssign.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen") + meetingAssign.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen") + meetingAssign.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia");
 
             BT_Update.Enabled = true;
             BT_Delete.Enabled = true;
@@ -521,7 +521,7 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
 
                 if (CB_MSM.Checked == true | CB_Mail.Checked == true)
                 {
-                    strSubject = LanguageHandle.GetWord("HuiYiTongZhi").ToString().Trim();
+                    strSubject = LanguageHandle.GetWord("HuiYiTongZhi");
 
                     if (CB_MSM.Checked == true)
                     {
@@ -536,7 +536,7 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHYTZFSWB").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHYTZFSWB") + "')", true);
     }
 
     protected void LoadMeetingAssignForm(string strUserCode)
@@ -828,35 +828,35 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
                     //–¥¥ÌŒÛ»’÷æ
                     if (dataJson.status == 4002)
                     {
-                        strResult = LanguageHandle.GetWord("ChuangJianYongHuDeYongHuMingHu").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("ChuangJianYongHuDeYongHuMingHu");
                     }
                     else if (dataJson.status == 4003)
                     {
-                        strResult = LanguageHandle.GetWord("HuiYiMingChenBuYunHuWeiKong").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("HuiYiMingChenBuYunHuWeiKong");
                     }
                     else if (dataJson.status == 4004)
                     {
-                        strResult = LanguageHandle.GetWord("ShiJianGeShiCuoWu").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("ShiJianGeShiCuoWu");
                     }
                     else if (dataJson.status == 4005)
                     {
-                        strResult = LanguageHandle.GetWord("ShiJianSheZhiYouWu").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("ShiJianSheZhiYouWu");
                     }
                     else if (dataJson.status == 4006)
                     {
-                        strResult = LanguageHandle.GetWord("ZhuXiMiMaGeShiCuoWu").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("ZhuXiMiMaGeShiCuoWu");
                     }
                     else if (dataJson.status == 4007)
                     {
-                        strResult = LanguageHandle.GetWord("HuiYiBuCunZai").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("HuiYiBuCunZai");
                     }
                     else if (dataJson.status == 4008)
                     {
-                        strResult = LanguageHandle.GetWord("HuiYiMiMaCuoWu").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("HuiYiMiMaCuoWu");
                     }
                     else if (dataJson.status == 4009)
                     {
-                        strResult = LanguageHandle.GetWord("PuTongYongHuMiMaGeShiCuoWu").ToString().Trim();
+                        strResult = LanguageHandle.GetWord("PuTongYongHuMiMaGeShiCuoWu");
                     }
                     else
                     {
@@ -875,7 +875,7 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            strResult = LanguageHandle.GetWord("DiaoYongChuCuoQingJianCha").ToString().Trim();
+            strResult = LanguageHandle.GetWord("DiaoYongChuCuoQingJianCha");
         }
         return strResult;
     }
@@ -886,7 +886,7 @@ public partial class TTMeetAssignForm : System.Web.UI.Page
         DateTime dtEndTime = DateTime.Parse(DateTime.Parse(DLC_EndTime.Text).ToString("yyyy/MM/dd ") + DL_EndHour.SelectedValue + ":" + DL_EndMinute.SelectedValue);
 
         int count = CheckCurrentTimeMeetingNumber(dtBeginTime, dtEndTime);
-        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD").ToString().Trim()+"')", true);
+        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDTBEGINTIMEDDTENDTIMEYYCOUNTGD")+"')", true);
     }
 
 

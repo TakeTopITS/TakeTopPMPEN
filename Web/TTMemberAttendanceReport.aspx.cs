@@ -41,7 +41,7 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
             LoadLeaveType();
             ShareClass.LoadMemberByUserCodeForDataGrid(strUserCode, "Position", DataGrid2);
 
-            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("ZhiJieChengYuanQingJiaXinXiLie").ToString().Trim();
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("ZhiJieChengYuanQingJiaXinXiLie");
             
             strHQL = "from LeaveApplyForm as leaveApplyForm ";
             strHQL += " Where leaveApplyForm.Creator In (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.UserCode = '" + strUserCode + "')";
@@ -63,8 +63,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
                 }
             }
 
-            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
-            lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
+            lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia") + strHourNum + LanguageHandle.GetWord("XiaoShi");
 
             LB_Sql.Text = strHQL;
         }
@@ -98,8 +98,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
 
         LB_OperatorCode.Text = strOperatorCode;
 
-        LB_ProjectMemberOwner.Text = strOperatorCode + " " + strOperatorName  + LanguageHandle.GetWord("DeQingJiaXinXi").ToString().Trim();
-        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        LB_ProjectMemberOwner.Text = strOperatorCode + " " + strOperatorName  + LanguageHandle.GetWord("DeQingJiaXinXi");
+        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
 
         LB_Sql.Text = strHQL;
     }
@@ -109,7 +109,7 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao").ToString().Trim();
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao");
 
         string strStatus = "%" + DL_Status.SelectedValue + "%";
         string strCreatorCode = "%" + TB_UserCode.Text.Trim() + "%";
@@ -151,8 +151,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
             }
         }
 
-        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
-        lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
+        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
+        lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia") + strHourNum + LanguageHandle.GetWord("XiaoShi");
 
         LB_Sql.Text = strHQL;
 
@@ -179,12 +179,12 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("QingJiaXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("QingJiaXinXi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }

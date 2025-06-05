@@ -65,7 +65,7 @@ public partial class TTBMPurchaseApplicationPaymentApplicantQueryCenter : System
                     }
                     e.Item.ForeColor = Color.Red;
 
-                    LoadRelatedWL(LanguageHandle.GetWord("FenBaoFuKuanShenQing").ToString().Trim(), "Project", int.Parse(strID));
+                    LoadRelatedWL(LanguageHandle.GetWord("FenBaoFuKuanShenQing"), "Project", int.Parse(strID));
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 }

@@ -145,13 +145,13 @@ public partial class DefaultDemo : System.Web.UI.Page
         strPassword = TB_Password.Text.Trim();
         if (strUserCode == "" | strPassword == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYHMHMMDBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYHMHMMDBNWKJC") + "');</script>");
             return;
         }
 
         if (ShareClass.SqlFilter(strUserCode) | ShareClass.SqlFilter(strPassword))
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB") + "');</script>");
             return;
         }
 
@@ -163,14 +163,14 @@ public partial class DefaultDemo : System.Web.UI.Page
             {
                 if (Request.Cookies["CheckCode"] == null)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZNDLSZYBJYCOOKIESNBXSZLYXSYCOOKIESXHCNSYBXT").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZNDLSZYBJYCOOKIESNBXSZLYXSYCOOKIESXHCNSYBXT") + "');</script>");
                     TB_CheckCode.Text = "";
                     return;
                 }
 
                 if (String.Compare(Request.Cookies["CheckCode"].Value, TB_CheckCode.Text, true) != 0)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM") + "');</script>");
                     TB_CheckCode.Text = "";
                     return;
                 }
@@ -184,14 +184,14 @@ public partial class DefaultDemo : System.Web.UI.Page
 
             //    if (strSMSCode == "")
             //    {
-            //        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYSJDXMYZXDDXM").ToString().Trim() + "');</script>");
+            //        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYSJDXMYZXDDXM") + "');</script>");
             //        return;
             //    }
             //    else
             //    {
             //        if (strSMSCode != strCheckCode)
             //        {
-            //            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMCWJC").ToString().Trim() + "');</script>");
+            //            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMCWJC") + "');</script>");
             //            return;
             //        }
             //    }
@@ -409,7 +409,7 @@ public partial class DefaultDemo : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY") + "');</script>");
             }
         }
         catch (Exception err)
@@ -448,16 +448,16 @@ public partial class DefaultDemo : System.Web.UI.Page
             {
                 InsertOrUpdateSMSCode(strUserCode, strSMSCode);
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS") + "');</script>");
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ") + "');</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC") + "');</script>");
         }
     }
 

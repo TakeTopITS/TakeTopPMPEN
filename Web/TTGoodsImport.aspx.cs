@@ -89,20 +89,20 @@ public partial class TTGoodsImport : System.Web.UI.Page
 
         if (ExcelToDBTest() == -1)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC");
             return;
         }
         else
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ") ;
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -111,7 +111,7 @@ public partial class TTGoodsImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB") ;
             }
             else
             {
@@ -128,7 +128,7 @@ public partial class TTGoodsImport : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ") ;
                 }
                 else
                 {
@@ -137,24 +137,24 @@ public partial class TTGoodsImport : System.Web.UI.Page
 
                     for (i = 0; i < dr.Length; i++)
                     {
-                        strGoodsCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strGoodsCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strGoodsCode != "")
                         {
                             try
                             {
-                                goods.GoodsCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
-                                goods.GoodsName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
-                                goods.Type = dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
-                                goods.Spec = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
-                                goods.Manufacturer = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
-                                goods.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
-                                goods.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
-                                goods.Price = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
-                                goods.IsTaxPrice = dr[i][LanguageHandle.GetWord("HanShui").ToString().Trim()].ToString().Trim();
-                                goods.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim();
-                                goods.UnitName = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
-                                goods.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim();
+                                goods.GoodsCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
+                                goods.GoodsName = dr[i][LanguageHandle.GetWord("MingChen")].ToString().Trim();
+                                goods.Type = dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim();
+                                goods.Spec = dr[i][LanguageHandle.GetWord("GuiGe")].ToString().Trim();
+                                goods.Manufacturer = dr[i][LanguageHandle.GetWord("PinPai")].ToString().Trim();
+                                goods.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao")].ToString().Trim();
+                                goods.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang")].ToString().Trim());
+                                goods.Price = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia")].ToString().Trim());
+                                goods.IsTaxPrice = dr[i][LanguageHandle.GetWord("HanShui")].ToString().Trim();
+                                goods.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie")].ToString().Trim();
+                                goods.UnitName = dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
+                                goods.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim();
                                 goods.Manufacturer = dr[i]["Supplier"].ToString().Trim();
                                 goods.OwnerCode = strUserCode;
                                 goods.OwnerName = ShareClass.GetUserName(strUserCode);
@@ -163,18 +163,18 @@ public partial class TTGoodsImport : System.Web.UI.Page
                                 goods.PhotoURL = "";
                                 goods.Status = "InUse";
 
-                                goods.BatchNumber = dr[i][LanguageHandle.GetWord("PiHao").ToString().Trim()].ToString().Trim();
-                                goods.ProductDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("ShengChanRiJi").ToString().Trim()].ToString());
-                                goods.ExpiryDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("ShiXiaoRiJi").ToString().Trim()].ToString()); ;
-                                goods.ProductionEquipmentNumber = dr[i][LanguageHandle.GetWord("ShengChanSheBeiHao").ToString().Trim()].ToString().Trim();
-                                goods.MaterialFormNumber = dr[i][LanguageHandle.GetWord("CaiZhiChanHao").ToString().Trim()].ToString().Trim();
-                                goods.SN = dr[i][LanguageHandle.GetWord("XuLieHao").ToString().Trim()].ToString().Trim();
+                                goods.BatchNumber = dr[i][LanguageHandle.GetWord("PiHao")].ToString().Trim();
+                                goods.ProductDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("ShengChanRiJi")].ToString());
+                                goods.ExpiryDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("ShiXiaoRiJi")].ToString()); ;
+                                goods.ProductionEquipmentNumber = dr[i][LanguageHandle.GetWord("ShengChanSheBeiHao")].ToString().Trim();
+                                goods.MaterialFormNumber = dr[i][LanguageHandle.GetWord("CaiZhiChanHao")].ToString().Trim();
+                                goods.SN = dr[i][LanguageHandle.GetWord("XuLieHao")].ToString().Trim();
 
                                 goodsBLL.AddGoods(goods);
                             }
                             catch (Exception err)
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " : " + err.Message.ToString() + "<br/>"; ;
+                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " : " + err.Message.ToString() + "<br/>"; ;
                             }
                         }
                     }
@@ -182,7 +182,7 @@ public partial class TTGoodsImport : System.Web.UI.Page
                     //2013-07-18 Liujp 
                     BindGoodsData(DL_Type.SelectedValue.Trim(), TB_WHName.Text.Trim());
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG") + "')", true);
                 }
             }
         }
@@ -206,13 +206,13 @@ public partial class TTGoodsImport : System.Web.UI.Page
             if (FileUpload_Training.HasFile == false)
             {
                 LB_ErrorText.Text +=
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -221,7 +221,7 @@ public partial class TTGoodsImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
                 j = -1;
             }
             else
@@ -239,7 +239,7 @@ public partial class TTGoodsImport : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                     j = -1;
                 }
                 else
@@ -249,99 +249,99 @@ public partial class TTGoodsImport : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strGoodsCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strGoodsCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strGoodsCode.Length > 20)
                         {
-                            LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZCDDY20WDRSB").ToString().Trim();
+                            LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZCDDY20WDRSB");
                             j = -1;
 
                             continue;
                         }
 
-                        if (dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim() != "")
+                        if (dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim() != "")
                         {
-                            goods.GoodsCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
-                            goods.GoodsName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
+                            goods.GoodsCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
+                            goods.GoodsName = dr[i][LanguageHandle.GetWord("MingChen")].ToString().Trim();
 
-                            if (CheckGoodsType(dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim()) > 0)
+                            if (CheckGoodsType(dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim()) > 0)
                             {
-                                goods.Type = dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
+                                goods.Type = dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim();
                             }
                             else
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCLPLXDRILXTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCLPLXDRILXTOSTRINGTRIMJC") + " " + dr[i][LanguageHandle.GetWord("LeiXing")].ToString().Trim();
                                 j = -1;
                             }
-                            goods.Spec = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
-                            goods.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
-                            goods.Manufacturer = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
+                            goods.Spec = dr[i][LanguageHandle.GetWord("GuiGe")].ToString().Trim();
+                            goods.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao")].ToString().Trim();
+                            goods.Manufacturer = dr[i][LanguageHandle.GetWord("PinPai")].ToString().Trim();
 
                             try
                             {
-                                goods.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
-                                goods.Price = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
+                                goods.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang")].ToString().Trim());
+                                goods.Price = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia")].ToString().Trim());
                             }
                             catch
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGSLHDJBSSZJC").ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGSLHDJBSSZJC");
                                 j = -1;
                             }
 
-                            strIsTaxPrice = dr[i][LanguageHandle.GetWord("HanShui").ToString().Trim()].ToString().Trim();
+                            strIsTaxPrice = dr[i][LanguageHandle.GetWord("HanShui")].ToString().Trim();
                             if (strIsTaxPrice != "YES" & strIsTaxPrice != "NO")
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZDJHSXBXSYESHNO").ToString().Trim() + " ')";
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZDJHSXBXSYESHNO") + " ')";
                                 j = -1;
                             }
 
-                            if (CheckUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim()) > 0)
+                            if (CheckUnit(dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim()) > 0)
                             {
-                                goods.UnitName = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
+                                goods.UnitName = dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
                             }
                             else
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCDWDRIDWTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCDWDRIDWTOSTRINGTRIMJC") + " " + dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
                                 j = -1;
                             }
 
-                            if (CheckCurrency(dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim()) > 0)
+                            if (CheckCurrency(dr[i][LanguageHandle.GetWord("BiBie")].ToString().Trim()) > 0)
                             {
-                                goods.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim();
+                                goods.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie")].ToString().Trim();
                             }
                             else
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCBBDRIBBTOSTRINGTRIMJC").ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCBBDRIBBTOSTRINGTRIMJC");
                                 j = -1;
                             }
 
-                            if (CheckWareHouse(dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim()) > 0)
+                            if (CheckWareHouse(dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim()) > 0)
                             {
-                                goods.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim();
+                                goods.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim();
                             }
                             else
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCCKDRICFCKTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + " " + LanguageHandle.GetWord("ZZJGJCSJLBCZCCKDRICFCKTOSTRINGTRIMJC") + " " + dr[i][LanguageHandle.GetWord("CunFangCangKu")].ToString().Trim();
                                 j = -1;
                             }
 
                             try
                             {
-                                DateTime.Parse(dr[i][LanguageHandle.GetWord("ShengChanRiJi").ToString().Trim()].ToString().Trim());
+                                DateTime.Parse(dr[i][LanguageHandle.GetWord("ShengChanRiJi")].ToString().Trim());
                             }
                             catch
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + LanguageHandle.GetWord("ShengChanRiJiRiJiGeShiBuDuiHuo").ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + LanguageHandle.GetWord("ShengChanRiJiRiJiGeShiBuDuiHuo");
                                 j = -1;
                             }
 
                             try
                             {
-                                DateTime.Parse(dr[i][LanguageHandle.GetWord("ShiXiaoRiJi").ToString().Trim()].ToString().Trim());
+                                DateTime.Parse(dr[i][LanguageHandle.GetWord("ShiXiaoRiJi")].ToString().Trim());
                             }
                             catch
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strGoodsCode + LanguageHandle.GetWord("ShiXiaoRiJiRiJiGeShiBuDuiHuoWe").ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaiMa") + ": " + strGoodsCode + LanguageHandle.GetWord("ShiXiaoRiJiRiJiGeShiBuDuiHuoWe");
                                 j = -1;
                             }
 

@@ -37,7 +37,7 @@ public partial class TTProjectWorkflowTemplateCopy : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            TakeTopPlan.InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strTemProjectID, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            TakeTopPlan.InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strTemProjectID, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
 
             LoadRelatedWorkFlowTemplate(strNewProjectID);
         }
@@ -86,7 +86,7 @@ public partial class TTProjectWorkflowTemplateCopy : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC") + "')", true);
         }
     }
 

@@ -125,20 +125,20 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_Name.Text.Trim()) || TB_Name.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCBNWKCZSBJC") + "')", true);
             TB_Name.Focus();
             return;
         }
         if (IsBMPurchaseApplicationName(TB_Name.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCYCZCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCYCZCZSBJC") + "')", true);
             TB_Name.Focus();
             return;
         }
 
         if (DL_EngineeringUnit.SelectedValue == "" || DL_DeviceUnit.SelectedValue == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoGongChengChanWeiHeShe").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoGongChengChanWeiHeShe")+"')", true);
         }
 
         BMPurchaseApplicationBLL bMPurchaseApplicationBLL = new BMPurchaseApplicationBLL();
@@ -204,11 +204,11 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
 
             LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Project", int.Parse(TB_ID.Text.Trim()));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }
@@ -290,13 +290,13 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_Name.Text.Trim()) || TB_Name.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCBNWKCZSBJC") + "')", true);
             TB_Name.Focus();
             return;
         }
         if (IsBMPurchaseApplicationName(TB_Name.Text.Trim(), TB_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCYCZCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCYCZCZSBJC") + "')", true);
             TB_Name.Focus();
             return;
         }
@@ -342,11 +342,11 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
 
             LoadBMPurchaseApplicationList(LB_ProjectID.Text.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }
@@ -358,7 +358,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
         string strCode = TB_ID.Text.Trim();
         if (IsBMPurchaseApplication(strCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCSDYBZBFADYWFSCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCSDYBZBFADYWFSCJC") + "')", true);
             return;
         }
         strHQL = "Delete From T_BMPurchaseApplication Where ID = '" + strCode + "' ";
@@ -374,11 +374,11 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
 
             LoadBMPurchaseApplicationList(LB_ProjectID.Text.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 
@@ -561,7 +561,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBBNWKJC") + "')", true);
             return strWLID;
         }
 
@@ -629,7 +629,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
 
                 BT_SubmitApply.Visible = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHSCCG") + "')", true);
             }
             catch
             {
@@ -641,7 +641,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
                 BT_SubmitApply.Visible = true;
                 BT_SubmitApply.Enabled = true;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu") + LanguageHandle.GetWord("ZZSBJC") + "')", true); 
             }
             LoadBMPurchaseApplicationList(LB_ProjectID.Text.Trim());
         }
@@ -654,7 +654,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
             //BT_Delete.Enabled = true;
             BT_SubmitApply.Visible = true;
             BT_SubmitApply.Enabled = true;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShenQingJiHuaShengChengLangu") + LanguageHandle.GetWord("ZZSBJC") + "')", true); 
         }
 
         return strWLID;
@@ -730,7 +730,7 @@ public partial class TTBMPurchaseApplication : System.Web.UI.Page
         TreeNode nd1 = new TreeNode();
         TreeNode nd2 = new TreeNode();
 
-        nd1.Text = LanguageHandle.GetWord("BSuoYouXiangMuB").ToString().Trim();
+        nd1.Text = LanguageHandle.GetWord("BSuoYouXiangMuB");
         nd1.Target = "0";
         nd1.Expanded = true;
         tv.Nodes.Add(nd1);

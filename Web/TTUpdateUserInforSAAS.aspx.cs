@@ -136,13 +136,13 @@ public partial class TTUpdateUserInforSAAS : System.Web.UI.Page
 
         if (strOldPassword == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click11", "alert('" + LanguageHandle.GetWord("ZZYuanMiMaChuWuHouWeiKong").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click11", "alert('" + LanguageHandle.GetWord("ZZYuanMiMaChuWuHouWeiKong") + "')", true);
             return;
         }
 
         if (EncryptPassword(strOldPassword, "MD5") != projectMember.Password.Trim())
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click22", "alert('" + LanguageHandle.GetWord("ZZYuanMiMaChuWuHouWeiKong").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click22", "alert('" + LanguageHandle.GetWord("ZZYuanMiMaChuWuHouWeiKong") + "')", true);
             return;
         }
 
@@ -150,14 +150,14 @@ public partial class TTUpdateUserInforSAAS : System.Web.UI.Page
         {
             if (ShareClass.SqlFilter(strPassword))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click33", "alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click33", "alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB") + "')", true);
                 return;
             }
 
             #region 判断输入的密码是否是字母与数字的结合，且长度要大于或等于8位 2013-09-03 By LiuJianping
             if (!IsPassword(strPassword))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBMMCDBXDYHDY8WBXBHSZJZMJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBMMCDBXDYHDY8WBXBHSZJZMJC") + "')", true);
                 TB_Password.Focus();
                 return;
             }
@@ -184,11 +184,11 @@ public partial class TTUpdateUserInforSAAS : System.Web.UI.Page
             //设置缓存更改标志
             ChangePageCache();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click44", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click44", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click55", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click55", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
         }
     }
 
@@ -215,7 +215,7 @@ public partial class TTUpdateUserInforSAAS : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + LanguageHandle.GetWord("ZZGGSBJC") + "')", true);
         }
     }
 

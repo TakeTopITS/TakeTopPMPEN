@@ -57,7 +57,7 @@ public partial class TTRiskReviewWF : System.Web.UI.Page
 
             LoadRelatedWL("RiskAssessment", "Risk", int.Parse(strRiskID));
 
-            TB_WLName.Text = LanguageHandle.GetWord("FengXian").ToString().Trim()  + strRiskID  + projectRisk.Risk.Trim() + LanguageHandle.GetWord("PingShen").ToString().Trim();
+            TB_WLName.Text = LanguageHandle.GetWord("FengXian")  + strRiskID  + projectRisk.Risk.Trim() + LanguageHandle.GetWord("PingShen");
         }
     }
 
@@ -132,12 +132,12 @@ public partial class TTRiskReviewWF : System.Web.UI.Page
 
             LoadRelatedWL("RiskAssessment", "Risk", int.Parse(strRiskID));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSCCG")+"')", true);
         }
         catch
         {
             strWLID = "0";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSB")+"')", true);
         }
 
         return strWLID;

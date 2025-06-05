@@ -23,6 +23,6 @@ public partial class TTWorkFlowViewMainBackup : System.Web.UI.Page
 
         strWLName = ds.Tables[0].Rows[0]["WLName"].ToString();
 
-        this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strWLID + " " + strWLName;
+        this.Title = LanguageHandle.GetWord("GongZuoLiu") + strWLID + " " + strWLName;
     }
 }

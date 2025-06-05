@@ -31,7 +31,7 @@ public partial class TTConstractUploadDocForParentWindow : System.Web.UI.Page
 
             if(strExtName.ToLower().IndexOf("doc")<0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiZhiNengShangChuanwordW").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiZhiNengShangChuanwordW")+"')", true);
                 return;
             }
 

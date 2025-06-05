@@ -66,8 +66,8 @@ public partial class TTReportDesigner : System.Web.UI.Page
                 string strDBUserID = GetDatabaseReadOnlyUserID().ToLower();
                 if (strDBUserID == "")
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "111", "<script>alert('" + LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK").ToString().Trim() + "');</script>");
-                    Response.Write(LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "111", "<script>alert('" + LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK") + "');</script>");
+                    Response.Write(LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK"));
                     return;
                 }
 
@@ -115,7 +115,7 @@ public partial class TTReportDesigner : System.Web.UI.Page
         strTemID = Request.QueryString["TemID"];
         strTemName = GetReportTemName(strTemID);
 
-        this.Title = LanguageHandle.GetWord("FenXiMoXing").ToString().Trim() + strTemID + " " + strTemName + LanguageHandle.GetWord("DingYi").ToString().Trim();
+        this.Title = LanguageHandle.GetWord("FenXiMoXing") + strTemID + " " + strTemName + LanguageHandle.GetWord("DingYi");
     }
 
     protected void StiMobileDesigner1_SaveReport(object sender, StiSaveReportEventArgs e)
@@ -157,13 +157,13 @@ public partial class TTReportDesigner : System.Web.UI.Page
             ShareClass.RunSqlCommand(strHQL);
 
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG") + "');</script>");
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "');</script>");
         }
     }
 

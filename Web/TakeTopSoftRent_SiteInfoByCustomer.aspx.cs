@@ -54,7 +54,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", LanguageHandle.GetWord("RuanJianZuYongJianZhanWeiHu").ToString().Trim(), strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", LanguageHandle.GetWord("RuanJianZuYongJianZhanWeiHu"), strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -111,7 +111,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        string strPopURL = LanguageHandle.GetWord("JianZhanXinXi").ToString().Trim();
+        string strPopURL = LanguageHandle.GetWord("JianZhanXinXi");
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", strPopURL, true);
     }
 
@@ -147,7 +147,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("YiGengXinXianYouRongLiang").ToString().Trim(), true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("YiGengXinXianYouRongLiang"), true);
         }
         catch (Exception ex)
         {
@@ -228,7 +228,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
             {
                 try
                 {
-                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiShengJiZheGeZhanDianDa").ToString().Trim();
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiShengJiZheGeZhanDianDa");
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_UpdateSiteAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ServerType=" + strServerType + "&RentProductVersion=" + strRentProductVersion + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&IsOEM=" + strIsOEM + "&SiteID=" + strID;
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowSite','true') ", true);
 
@@ -238,11 +238,11 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("YiBeiShengJiDaoZuiXinBanShengJ").ToString().Trim();
+                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi") + strServerType + LanguageHandle.GetWord("De") + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian") + strSiteAppURL + LanguageHandle.GetWord("YiBeiShengJiDaoZuiXinBanShengJ");
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianShengJiTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianShengJiTongZhi"), strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -257,7 +257,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LB_ErrorMsg.Text = err.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("ZhanDianShengJiShiBaiQingJianC").ToString().Trim(), true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("ZhanDianShengJiShiBaiQingJianC"), true);
                 }
             }
 
@@ -269,7 +269,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                     string strZipDocName = strSiteAppName + "Doc" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".zip";
                     string strDownloadDocURL = strSiteAppURL + @"/BackupDoc/" + strZipDocName;
 
-                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiFaSongZheGeZhanDianBei").ToString().Trim();
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiFaSongZheGeZhanDianBei");
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_SendSiteBackupDocAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ZipDocName=" + strZipDocName + "&ServerType=" + strServerType;
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowSite','true') ", true);
 
@@ -279,11 +279,11 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("DeShuJuBeiFenWenJianXiaZaiDiZh").ToString().Trim() + strDownloadDocURL + LanguageHandle.GetWord("QingJiShiXiaZaiRuYouWenTiQingL").ToString().Trim();
+                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi") + strServerType + LanguageHandle.GetWord("De") + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian") + strSiteAppURL + LanguageHandle.GetWord("DeShuJuBeiFenWenJianXiaZaiDiZh") + strDownloadDocURL + LanguageHandle.GetWord("QingJiShiXiaZaiRuYouWenTiQingL");
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("BeiFenWenJianXiaZaiTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("BeiFenWenJianXiaZaiTongZhi"), strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -298,7 +298,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LB_ErrorMsg.Text = err.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiFaSongShiBaiQingJianCha").ToString().Trim(), true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiFaSongShiBaiQingJianCha"), true);
                 }
             }
 
@@ -306,7 +306,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
             {
                 try
                 {
-                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiShanChuZheGeZhanDianDa").ToString().Trim();
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiShanChuZheGeZhanDianDa");
 
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_DeleteSiteAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ServerType=" + strServerType;
 
@@ -322,11 +322,11 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("YiBeiShanChuRuYouWenTiQingLian").ToString().Trim();
+                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi") + strServerType + LanguageHandle.GetWord("De") + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian") + strSiteAppURL + LanguageHandle.GetWord("YiBeiShanChuRuYouWenTiQingLian");
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianShanChuTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianShanChuTongZhi"), strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -343,7 +343,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                     LB_ErrorMsg.Text = err.Message.ToString();
                     LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
 
@@ -377,7 +377,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
 
                         ((TextBox)e.Item.FindControl("TB_CurrentCapacity")).Text = strFolderSize;
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("YiGengXinXianYouRongLiang").ToString().Trim(), true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("YiGengXinXianYouRongLiang"), true);
 
                     }
                     catch (Exception ex)
@@ -387,7 +387,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim(), true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia"), true);
                 }
             }
 
@@ -401,7 +401,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                         strHQL = "Update T_RentSiteInfoByCustomer Set BuyCapacity = " + strCurrentCapacity + " Where ID = " + strID;
                         ShareClass.RunSqlCommand(strHQL);
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("BaoCunChengGong").ToString().Trim(), true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("BaoCunChengGong"), true);
                     }
                     catch (Exception ex)
                     {
@@ -410,7 +410,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim(), true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia"), true);
                 }
             }
 
@@ -418,7 +418,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
             {
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiBaoCunZheGeZhanDianDeX").ToString().Trim();
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiBaoCunZheGeZhanDianDeX");
                     strSiteVirtualDirectoryPhysicalPath = ((TextBox)e.Item.FindControl("TB_SiteVirtualDirectoryPhysicalPath")).Text.Trim();
 
                     strHQL = "Update T_RentSiteInfoByCustomer Set SiteVirtualDirectoryPhysicalPath = '" + strSiteVirtualDirectoryPhysicalPath + "' Where ID = " + strID;
@@ -431,7 +431,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim(), true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia"), true);
                 }
             }
 
@@ -448,12 +448,12 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                     }
                     catch
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianHaiCunZaiJiLuBu").ToString().Trim(), true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", LanguageHandle.GetWord("TiShiCiZhanDianHaiCunZaiJiLuBu"), true);
                 }
             }
         }

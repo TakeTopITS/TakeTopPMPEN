@@ -121,7 +121,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
         NpgsqlDataReader dr = mail.GetSingleMail(nMailID);
         if (dr.Read())
         {
-            Title.Text = LanguageHandle.GetWord("ZhuaiFa").ToString().Trim() + dr["Title"].ToString();
+            Title.Text = LanguageHandle.GetWord("ZhuaiFa") + dr["Title"].ToString();
             //CC.Text = dr["CCAddress"].ToString();
             //To.Text = dr["ToAddress"].ToString();
 
@@ -245,7 +245,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC") + "');</script>");
             }
             else
             {
@@ -266,13 +266,13 @@ CKEditor1.Language = Session["LangCode"].ToString();
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "');</script>");
                 }
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "');</script>");
         }
     }
 

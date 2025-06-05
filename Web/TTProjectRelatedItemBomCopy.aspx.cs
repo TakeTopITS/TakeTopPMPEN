@@ -38,7 +38,7 @@ public partial class TTProjectRelatedItemBomCopy : System.Web.UI.Page
         {
             try
             {
-                TakeTopBOM.InitialTemplatePrjectTreeForBOM(TreeView2, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                TakeTopBOM.InitialTemplatePrjectTreeForBOM(TreeView2, strUserCode, LanguageHandle.GetWord("ZongXiangMu"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
             }
             catch (Exception err)
             {
@@ -160,16 +160,16 @@ public partial class TTProjectRelatedItemBomCopy : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + err.Message.ToString() + "')", true);
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC") + "')", true);
         }
     }
 
@@ -180,7 +180,7 @@ public partial class TTProjectRelatedItemBomCopy : System.Web.UI.Page
 
         if (DL_OldVersionID.Items.Count == 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBMXMBXBLYGJHBB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBMXMBXBLYGJHBB") + "')", true);
             return;
         }
 
@@ -211,11 +211,11 @@ public partial class TTProjectRelatedItemBomCopy : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -252,7 +252,7 @@ public partial class TTProjectRelatedItemBomCopy : System.Web.UI.Page
 
         if (strNewProjectID == strOldProjectID & strOldVerID == strNewVerID)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGTYXMDFZHBFZDBOMBBHBNXTJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGTYXMDFZHBFZDBOMBBHBNXTJC") + "')", true);
             return;
         }
 
@@ -262,11 +262,11 @@ public partial class TTProjectRelatedItemBomCopy : System.Web.UI.Page
 
             TakeTopBOM.InitialProjectItemBomTree(strNewProjectID, strNewVerID, TreeView1);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFZSBJC") + "')", true);
         }
     }
 

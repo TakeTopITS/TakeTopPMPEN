@@ -34,7 +34,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiBeiFenNiDeZhanDianWenJ").ToString().Trim();
+        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiBeiFenNiDeZhanDianWenJ");
 
         if (Page.IsPostBack == false)
         {
@@ -44,16 +44,16 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
                 {
                     //发送站点备份文件
                     SendSiteBackupDoc();
-                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianBeiFenWenJianFaSongChe").ToString().Trim();
+                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianBeiFenWenJianFaSongChe");
                 }
                 catch
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("TiShiFaSongShiBaiQingJianCha").ToString().Trim();
+                    LB_Message.Text = LanguageHandle.GetWord("TiShiFaSongShiBaiQingJianCha");
                 }
             }
             else
             {
-                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia");
             }
         }
 

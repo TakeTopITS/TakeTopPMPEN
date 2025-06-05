@@ -47,12 +47,12 @@ public partial class TTGoodsAfterSaleServiceManage : System.Web.UI.Page
             DLC_StartTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             LoadGoodsType();
 
-            LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB").ToString().Trim();
+            LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB");
 
             strHQL = "Select * From V_GoodsListRelatedCustomerAfterSale  Where char_length(SN) > 0 and ";
             strHQL += " OperatorCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
@@ -81,7 +81,7 @@ public partial class TTGoodsAfterSaleServiceManage : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = treeNode.Text.Trim();
 
-            LB_GoodsOwner.Text = strDepartName + LanguageHandle.GetWord("DLPLB").ToString().Trim();
+            LB_GoodsOwner.Text = strDepartName + LanguageHandle.GetWord("DLPLB");
 
             strHQL = "Select * From V_GoodsListRelatedCustomerAfterSale  Where ";
             strHQL += " OperatorCode in (Select UserCode From T_ProjectMember Where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ")";
@@ -164,7 +164,7 @@ public partial class TTGoodsAfterSaleServiceManage : System.Web.UI.Page
         string strCustomerName = ((Button)e.Item.FindControl("BT_CustomerName")).Text.Trim();
         string strBelongDepartCode = ShareClass.GetDepartCodeFromCustomerCode(strCustomerCode);
 
-        LB_GoodsOwner.Text = strCustomerName + LanguageHandle.GetWord("DLPLB").ToString().Trim();
+        LB_GoodsOwner.Text = strCustomerName + LanguageHandle.GetWord("DLPLB");
         strDepartString = LB_DepartString.Text.Trim();
 
         strHQL = "Select * From V_GoodsListRelatedCustomerAfterSale  Where ";

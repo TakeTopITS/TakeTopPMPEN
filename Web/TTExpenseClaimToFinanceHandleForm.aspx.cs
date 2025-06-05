@@ -49,7 +49,7 @@ public partial class TTExpenseClaimToFinanceHandleForm : System.Web.UI.Page
             LB_UserCode.Text = strUserCode;
             LB_UserName.Text = strUserName;
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "from ExpenseClaim as expenseClaim where ";
@@ -73,7 +73,7 @@ public partial class TTExpenseClaimToFinanceHandleForm : System.Web.UI.Page
 
             LB_Amount.Text = deExpense.ToString();
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe") + strUserCode + strUserName;
         }
     }
 
@@ -92,7 +92,7 @@ public partial class TTExpenseClaimToFinanceHandleForm : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
@@ -117,7 +117,7 @@ public partial class TTExpenseClaimToFinanceHandleForm : System.Web.UI.Page
             LB_Amount.Text = deExpense.ToString();
 
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName;
             LB_Sql.Text = strHQL;
 
             LB_OperatorCode.Text = "";
@@ -159,7 +159,7 @@ public partial class TTExpenseClaimToFinanceHandleForm : System.Web.UI.Page
 
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + " " + strUserName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe") + strUserCode + " " + strUserName;
 
         LoadRelatedWL("ExpenseReimbursement", -1);
         LoadRelatedExpenseClaimDetail("-1");
@@ -227,16 +227,16 @@ public partial class TTExpenseClaimToFinanceHandleForm : System.Web.UI.Page
 
                         e.Item.Cells[8].Text = "Recorded";
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZYZTWTGHWCDCNJZJC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZYZTWTGHWCDCNJZJC") + "')", true);
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ") + "')", true);
                 }
 
             }
@@ -339,7 +339,7 @@ public partial class TTExpenseClaimToFinanceHandleForm : System.Web.UI.Page
 
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll");
 
         LoadRelatedWL("ExpenseReimbursement", -1);
         LoadRelatedExpenseClaimDetail("-1");

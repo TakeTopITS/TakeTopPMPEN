@@ -24,11 +24,11 @@ public partial class TTWorkflowApproveRecord : System.Web.UI.Page
         strWLName = ShareClass.GetWorkFlowName(strRelatedID);
         if (strType == "WorkFlow")
         {
-            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("ShenHeJiLu").ToString().Trim();
+            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu") + strRelatedID + " " + strWLName + LanguageHandle.GetWord("ShenHeJiLu");
         }
         else
         {
-            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou").ToString().Trim() + strStepID + LanguageHandle.GetWord("ShenHeJiLu").ToString().Trim();
+            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu") + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou") + strStepID + LanguageHandle.GetWord("ShenHeJiLu");
         }
 
         if (Page.IsPostBack != true)

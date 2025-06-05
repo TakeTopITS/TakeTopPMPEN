@@ -31,7 +31,7 @@ public partial class TTAppUserLogonLog : System.Web.UI.Page
             strHQL2 = "Select Distinct(UserCode) From T_LogonLog where to_char(LoginTime,'yyyymmdd') = " + "'" + dtSelectedDate.ToString("yyyyMMdd") + "'" + " Group By UserCode";
             DataSet ds2 = ShareClass.GetDataSetFromSql(strHQL2, "T_LogonLog");
 
-            LB_QueryScope.Text = dtSelectedDate.ToShortDateString() + "," + LanguageHandle.GetWord("CiShu").ToString().Trim() + ds1.Tables[0].Rows.Count.ToString() + "," + LanguageHandle.GetWord("RenShu").ToString().Trim() + ds2.Tables[0].Rows.Count.ToString();
+            LB_QueryScope.Text = dtSelectedDate.ToShortDateString() + "," + LanguageHandle.GetWord("CiShu") + ds1.Tables[0].Rows.Count.ToString() + "," + LanguageHandle.GetWord("RenShu") + ds2.Tables[0].Rows.Count.ToString();
         }
     }
 }

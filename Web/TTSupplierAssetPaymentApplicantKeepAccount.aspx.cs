@@ -113,7 +113,7 @@ public partial class TTSupplierAssetPaymentApplicantKeepAccount : System.Web.UI.
                         //把申报费用列入项目费用
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("ZiChanCaiGouFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("ZiChanCaiGouFeiYong"), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
@@ -121,19 +121,19 @@ public partial class TTSupplierAssetPaymentApplicantKeepAccount : System.Web.UI.
                     ShareClass.RunSqlCommand(strHQL);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
 
 
                     LoadSupplierAssetPaymentApplicant(strUserCode);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCSQDYJJZBNCFJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCSQDYJJZBNCFJC") + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ") + "')", true);
             }
         }
     }

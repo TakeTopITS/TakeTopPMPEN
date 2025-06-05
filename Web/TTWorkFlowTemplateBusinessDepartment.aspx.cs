@@ -44,12 +44,12 @@ public partial class TTWorkFlowTemplateBusinessDepartment : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView4, strUserCode);
+            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView4, strUserCode);
 
             strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             strPosition = ShareClass.GetUserDuty(strUserCode);
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView4, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView4, strUserCode);
 
             LoadWorkFlowTemplateBusinessDepartment(strWFTemName);
 

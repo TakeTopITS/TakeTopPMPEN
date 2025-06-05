@@ -47,7 +47,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
 
         strDefectName = Defectment.DefectName.Trim();
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + "缺陷：" + strDefectID + " " + Defectment.DefectName + "的相关文档";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + "缺陷：" + strDefectID + " " + Defectment.DefectName + "的相关文档";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -56,7 +56,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Defect", strDefectID, strDefectName);
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
             LoadRelatedDoc(strDefectID);
 
@@ -112,7 +112,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
             strDocType = docType.Type.Trim();
 
             strHQL = " from Document as document where document.RelatedType = 'Defect' and document.RelatedID = " + strDefectID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX") + strDocType;
 
             //设置缺省的文件类型
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -122,14 +122,14 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
         else
         {
             strHQL = " from Document as document where document.RelatedType = 'Defect' and document.RelatedID = " + strDefectID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
         }
 
         lst2 = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst2;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
@@ -202,7 +202,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ") + "');</script>");
                 }
             }
 
@@ -219,7 +219,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID  + strDocName;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen") + LanguageHandle.GetWord("WenJian") + strDocID  + strDocName;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -247,7 +247,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
             string strDocType = GetDocTypeName(strDocTypeID);
             if (strDocTypeID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC") + "');</script>");
                 return;
             }
             string strDepartCode = GetDepartCode(strUserCode);
@@ -272,7 +272,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + strFileName3);
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC") + "');</script>");
             }
             else
             {
@@ -307,13 +307,13 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "');</script>");
                 }
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "');</script>");
         }
     }
 
@@ -415,11 +415,11 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
 
             LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS") + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSB") + "');</script>");
         }
     }
 
@@ -550,7 +550,7 @@ public partial class TTProjectRelatedDefectDoc : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);

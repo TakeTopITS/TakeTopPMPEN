@@ -38,10 +38,10 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
             LoadLeaveType();
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode.Trim());
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode.Trim());
             LB_DepartString.Text = strDepartString;
 
-            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao").ToString().Trim();
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao");
 
             strHQL = "from LeaveApplyForm as leaveApplyForm ";
             strHQL += " Where leaveApplyForm.DepartCode in " + strDepartString;
@@ -62,9 +62,9 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
                 }
             }
 
-            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
-            //lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + ""+LanguageHandle.GetWord("XiaoShi")+"；合计：" + strDayNum + "Days";
-            lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
+            //lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia") + strHourNum + ""+LanguageHandle.GetWord("XiaoShi")+"；合计：" + strDayNum + "Days";
+            lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia") + strHourNum + LanguageHandle.GetWord("XiaoShi");
 
             LB_Sql.Text = strHQL;
         }
@@ -95,8 +95,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
 
             intCount = LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
-            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("DeQingJiaXinXi").ToString().Trim();
-            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + intCount.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("DeQingJiaXinXi");
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + intCount.ToString() + LanguageHandle.GetWord("Tiao");
 
             LB_DepartCode.Text = strDepartCode;
         }
@@ -123,7 +123,7 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao").ToString().Trim();
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao");
 
         string strDepartString = LB_DepartString.Text.Trim();
 
@@ -166,8 +166,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
             }
         }
 
-        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
-        lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
+        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD") + lst.Count.ToString() + LanguageHandle.GetWord("Tiao");
+        lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia") + strHourNum + LanguageHandle.GetWord("XiaoShi");
 
         LB_Sql.Text = strHQL;
 
@@ -194,12 +194,12 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("QingJiaXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("QingJiaXinXi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }

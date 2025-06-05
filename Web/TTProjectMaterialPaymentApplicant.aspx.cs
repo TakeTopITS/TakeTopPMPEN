@@ -589,7 +589,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
 
                 LoadVendorRelatedGoodsListByName(projectMaterialPaymentApplicant.PartA.Trim());
 
-                TB_WLName.Text = LanguageHandle.GetWord("XiangMuWuZhiCaiGouShengQing").ToString().Trim() + projectMaterialPaymentApplicant.AOName.Trim() + LanguageHandle.GetWord("FuKuan").ToString().Trim();
+                TB_WLName.Text = LanguageHandle.GetWord("XiangMuWuZhiCaiGouShengQing") + projectMaterialPaymentApplicant.AOName.Trim() + LanguageHandle.GetWord("FuKuan");
 
                 LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Project", projectMaterialPaymentApplicant.AOID);
 
@@ -623,7 +623,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
                 intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
                 if (intWLNumber > 0 | projectMaterialPaymentApplicant.Status == "Recorded")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCSQDYTJSPHYJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCSQDYTJSPHYJC") + "')", true);
                     return;
                 }
 
@@ -643,7 +643,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC") + "')", true);
                 }
             }
         }
@@ -705,7 +705,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
 
         if (GetProjectMaterialPaymentApplicantCodeCount("0", strAOName) > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZXTDMQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZXTDMQJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -720,7 +720,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -771,7 +771,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
 
             NB_CurrentTotalPaymentAmount.Amount = 0;
 
-            TB_WLName.Text = LanguageHandle.GetWord("FeiYong").ToString().Trim() + strAOName + LanguageHandle.GetWord("ShenQing").ToString().Trim();
+            TB_WLName.Text = LanguageHandle.GetWord("FeiYong") + strAOName + LanguageHandle.GetWord("ShenQing");
 
             BT_SubmitApply.Enabled = true;
 
@@ -782,7 +782,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCKNCGMCZD50GHZHBZZSZD100GHZGDJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCKNCGMCZD50GHZHBZZSZD100GHZGDJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -836,7 +836,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
 
         if (GetProjectMaterialPaymentApplicantCodeCount(strAOID, strAOName) > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZXTDMQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZXTDMQJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -858,7 +858,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -873,7 +873,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -926,11 +926,11 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
                     if (strToDoWLDetailID == null) { strToDoWLDetailID = "0"; }  ShareClass.UpdateWokflowRelatedXMLFile("MainTable", strToDoWLID, strToDoWLDetailID, strCmdText);
                 }
             }
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
     }
@@ -1459,11 +1459,11 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
                     }
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1515,7 +1515,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -1570,7 +1570,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         //检查相应科目项目预算有没有超支 //检查相应科目项目预算有没有超支
         if (ShareClass.CheckProjectExpenseBudgetByProjectMaterialPayApplicant(strProjectID, TB_Account.Text.Trim(), NB_Amount.Amount) == false)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop777", "popShow('popwindow','true','popDetailWindow') ", true);
         }
@@ -1578,7 +1578,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         {
             if (strType == "" | strGoodsName == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
             }
             else
             {
@@ -1661,12 +1661,12 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
                         }
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop555", "popShow('popwindow','true') ", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop777", "popShow('popwindow','true','popDetailWindow') ", true);
                 }
@@ -1712,7 +1712,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         //检查相应科目项目预算有没有超支 //检查相应科目项目预算有没有超支
         if (ShareClass.CheckProjectExpenseBudgetByProjectMaterialPayApplicant(strProjectID, TB_Account.Text.Trim(), NB_Amount.Amount) == false)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop777", "popShow('popwindow','true','popDetailWindow') ", true);
         }
@@ -1720,7 +1720,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         {
             if (strType == "" | strGoodsName == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
             }
             else
             {
@@ -1802,13 +1802,13 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
                         }
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop555", "popShow('popwindow','true') ", true);
 
                 }
                 catch (Exception err)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop777", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -1900,7 +1900,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
 
     protected void BT_AllPurGoods_Click(object sender, EventArgs e)
     {
-        //LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB").ToString().Trim(); 
+        //LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB"); 
         //LB_GoodsOwner.Visible = true;
 
         string strUserCode = LB_UserCode.Text.Trim();
@@ -1935,7 +1935,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC") + "');</script>");
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -1995,11 +1995,11 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
             strXMLFile2 = Server.MapPath(strXMLFile2);
             xmlProcess.DbToXML(strCmdText, "T_ProjectMaterialPaymentApplicant", strXMLFile2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPCGSSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPCGSSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPCGSSBKNGZLMCGCZD25GHZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPCGSSBKNGZLMCGCZD25GHZJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -2130,7 +2130,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
 
 
@@ -2200,7 +2200,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popInvoiceWindow','true','popInvoiceDetailWindow') ", true);
         }
@@ -2245,13 +2245,13 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
             LoadConstractRelatedInvoice(strAOID);
             CountInvoiceAmount(strAOID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popInvoiceWindow','true') ", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popInvoiceWindow','true','popInvoiceDetailWindow') ", true);
         }

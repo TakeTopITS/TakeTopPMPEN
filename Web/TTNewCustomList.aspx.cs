@@ -41,7 +41,7 @@ public partial class TTNewCustomList : System.Web.UI.Page
             {
                 CustomModule customModule = (CustomModule)customModuleList[0];
                 customModuleBLL.DeleteCustomerModule(customModule);
-                Response.Write(LanguageHandle.GetWord("scriptalertShanChuChengGongscr").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("scriptalertShanChuChengGongscr"));
                 //重新加载列表
                 BindCustomModuleData();
             }

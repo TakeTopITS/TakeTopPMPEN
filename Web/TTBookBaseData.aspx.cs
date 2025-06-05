@@ -104,37 +104,37 @@ public partial class TTBookBaseData : System.Web.UI.Page
         string strBorrowNum = string.IsNullOrEmpty(TB_BorrowNum.Text.Trim()) ? "0" : TB_BorrowNum.Text.Trim();
         if (string.IsNullOrEmpty(strTypeName))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZLXMCJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZLXMCJC")+"')", true);
             ddl_TypeName.Focus();
             return;
         }
         if (!IsNumeric(strBorrowDays))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC")+"')", true);
             TB_BorrowDays.Focus();
             return;
         }
         if (!IsNumeric(strBorrowNum))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC")+"')", true);
             TB_BorrowNum.Focus();
             return;
         }
         if (strBorrowDays.Contains(".") || strBorrowDays.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC")+"')", true);
             TB_BorrowDays.Focus();
             return;
         }
         if (strBorrowNum.Contains(".") || strBorrowNum.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC")+"')", true);
             TB_BorrowNum.Focus();
             return;
         }
         if (IsBookReaderType(strTypeName))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLXMCZSJBZYCZJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLXMCZSJBZYCZJC")+"')", true);
             ddl_TypeName.Focus();
             return;
         }
@@ -167,37 +167,37 @@ public partial class TTBookBaseData : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(strTypeName))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZLXMCJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZLXMCJC")+"')", true);
             ddl_TypeName.Focus();
             return;
         }
         if (!IsNumeric(strBorrowDays))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC")+"')", true);
             TB_BorrowDays.Focus();
             return;
         }
         if (!IsNumeric(strBorrowNum))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC")+"')", true);
             TB_BorrowNum.Focus();
             return;
         }
         if (strBorrowDays.Contains(".") || strBorrowDays.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYTSYDYHDY0DZSJC")+"')", true);
             TB_BorrowDays.Focus();
             return;
         }
         if (strBorrowNum.Contains(".") || strBorrowNum.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDJYSLYDYHDY0DZSJC")+"')", true);
             TB_BorrowNum.Focus();
             return;
         }
         if (IsBookReaderType(strTypeName, strTypeID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLXMCZSJBZYCZJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLXMCZSJBZYCZJC")+"')", true);
             ddl_TypeName.Focus();
             return;
         }
@@ -229,7 +229,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
 
         if (IsBookPublishers(strISBNNo, strPublishersName))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCBSISBNBMHZCBSMZSJBZYCZJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCBSISBNBMHZCBSMZSJBZYCZJC")+"')", true);
             TB_ISBNNo.Focus();
             TB_PublishersName.Focus();
             return;
@@ -262,7 +262,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
 
         if (IsBookPublishersBook(strId.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCBSYBSYWFSC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCBSYBSYWFSC")+"')", true);
             return;
         }
 
@@ -345,19 +345,19 @@ public partial class TTBookBaseData : System.Web.UI.Page
 
         if (!IsNumeric(strSortNo))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDZJPXYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDZJPXYDYHDY0DZSJC")+"')", true);
             TB_SortNoC.Focus();
             return;
         }
         if (strSortNo.Contains(".") || strSortNo.Contains("-"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDZJPXYDYHDY0DZSJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRZDZJPXYDYHDY0DZSJC")+"')", true);
             TB_SortNoC.Focus();
             return;
         }
         if (IsBookCertificate(strCertificateName))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGJYZJMCZSJBZYCZJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGJYZJMCZSJBZYCZJC")+"')", true);
             TB_CertificateName.Focus();
             return;
         }
@@ -388,7 +388,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
 
         if (IsBookCertificateBook(strId.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGZJYBSYWFSC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGZJYBSYWFSC")+"')", true);
             return;
         }
 

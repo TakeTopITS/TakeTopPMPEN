@@ -79,7 +79,7 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             DataList1.DataSource = lst;
             DataList1.DataBind();
 
-            if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan").ToString().Trim()))
+            if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan")))
             {
                 DataList1.Visible = true;
                 DataList2.Visible = false;
@@ -278,11 +278,11 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             BT_Add.Enabled = true;
             BT_Finish.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSBJC") + "')", true);
         }
     }
 
@@ -309,11 +309,11 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             BT_Add.Enabled = false;
             BT_Finish.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTuiChuLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTuiChuLanguageHandleGetWordZ")+"')", true); 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTuiChuLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTuiChuLanguageHandleGetWordZ")+"')", true); 
         }
     }
 
@@ -337,11 +337,11 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             customerQuestionBLL.UpdateCustomerQuestion(customerQuestion, int.Parse(strQuestionID));
             LoadCustomerQuestion(strQuestionID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCSBJC") + "')", true);
         }
     }
 
@@ -365,11 +365,11 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             customerQuestionBLL.UpdateCustomerQuestion(customerQuestion, int.Parse(strQuestionID));
             LoadCustomerQuestion(strQuestionID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -402,14 +402,14 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
 
             //推送消息给受理人
             Msg msg = new Msg();
-            string strMsg = LanguageHandle.GetWord("FuWuXuQiu").ToString().Trim() + ":" + customerQuestion.Question.Trim() + "," + LanguageHandle.GetWord("ZZYaoNiChuLi").ToString().Trim();
+            string strMsg = LanguageHandle.GetWord("FuWuXuQiu") + ":" + customerQuestion.Question.Trim() + "," + LanguageHandle.GetWord("ZZYaoNiChuLi");
             msg.SendMSM("Message", strOperatorCode, strMsg, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDSBJC") + "')", true);
         }
     }
 
@@ -484,11 +484,11 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             LoadRelatedDoc(strQuestionID);
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -561,11 +561,11 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             LoadCustomerQuestionHandleRecord(strQuestionID);
             LoadRelatedDoc(strQuestionID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -593,11 +593,11 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
             BT_Update.Enabled = false;
             BT_Delete.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
 
         LoadCustomerQuestionHandleRecord(strQuestionID);
@@ -695,7 +695,7 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
         DataList1.DataSource = lst;
         DataList1.DataBind();
 
-        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan").ToString().Trim()))
+        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan")))
         {
             DataList1.Visible = true;
             DataList2.Visible = false;
@@ -722,7 +722,7 @@ HE_HandleDetail.Language = Session["LangCode"].ToString();
         DataList4.DataSource = lst;
         DataList4.DataBind();
 
-        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan").ToString().Trim()))
+        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan")))
         {
             DataList4.Visible = true;
             DataList3.Visible = false;

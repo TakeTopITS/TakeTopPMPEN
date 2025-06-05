@@ -94,13 +94,13 @@ public partial class DefaultMobile : System.Web.UI.Page
 
             if (strUserCode == "" | strPassword == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYHMHMMDBNWKJC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYHMHMMDBNWKJC") + "');</script>");
                 return;
             }
 
             if (ShareClass.SqlFilter(strUserCode) | ShareClass.SqlFilter(strPassword))
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB") + "');</script>");
                 return;
             }
 
@@ -221,7 +221,7 @@ public partial class DefaultMobile : System.Web.UI.Page
                         {
                             if (strAllowDevice == "PC")
                             {
-                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGNBNYYDSBDLPTJC").ToString().Trim() + "');</script>");
+                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGNBNYYDSBDLPTJC") + "');</script>");
                                 return;
                             }
                         }
@@ -229,7 +229,7 @@ public partial class DefaultMobile : System.Web.UI.Page
                         {
                             if (strAllowDevice == "MOBILE")
                             {
-                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGNZNYYDSBDLPTJC").ToString().Trim() + "');</script>");
+                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGNZNYYDSBDLPTJC") + "');</script>");
                                 return;
                             }
                         }
@@ -308,9 +308,9 @@ public partial class DefaultMobile : System.Web.UI.Page
                 else
                 {
                     LB_ErrorMsg.Visible = true;
-                    LB_ErrorMsg.Text = LanguageHandle.GetWord("ZZSBYYKNRX1YHDMHMMCW2BSAPPYHHYBZZSY").ToString().Trim();
+                    LB_ErrorMsg.Text = LanguageHandle.GetWord("ZZSBYYKNRX1YHDMHMMCW2BSAPPYHHYBZZSY");
 
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY") + "');</script>");
                 }
             }
             catch (Exception err)
@@ -320,7 +320,7 @@ public partial class DefaultMobile : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            //Response.Write(LanguageHandle.GetWord("ZZTSFWQFMQCXDL").ToString().Trim());
+            //Response.Write(LanguageHandle.GetWord("ZZTSFWQFMQCXDL"));
         }
     }
 
@@ -364,16 +364,16 @@ public partial class DefaultMobile : System.Web.UI.Page
             {
                 InsertOrUpdateSMSCode(strUserCode, strSMSCode);
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS") + "');</script>");
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ") + "');</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC") + "');</script>");
         }
     }
 

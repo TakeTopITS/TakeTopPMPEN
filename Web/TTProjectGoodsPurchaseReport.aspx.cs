@@ -41,7 +41,7 @@ public partial class TTProjectGoodsPurchaseReport : System.Web.UI.Page
         }
 
 
-        LB_ReportName.Text =  LanguageHandle.GetWord("LiaoPingCaiGou").ToString().Trim() + LanguageHandle.GetWord("BaoBiao").ToString().Trim();
+        LB_ReportName.Text =  LanguageHandle.GetWord("LiaoPingCaiGou") + LanguageHandle.GetWord("BaoBiao");
 
         LB_UserCode.Text = strUserCode;
         strUserName = GetUserName(strUserCode);

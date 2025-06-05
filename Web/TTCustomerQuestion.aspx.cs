@@ -59,18 +59,18 @@ public partial class TTCustomerQuestion : System.Web.UI.Page
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strEMail == "" | strQuestion == "" | strAddress == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC") + "')", true);
 
-            LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim() + "";
+            LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC") + "";
         }
         else
         {
             if (String.Compare(Request.Cookies["CheckCode"].Value, TB_CheckCode.Text, true) != 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM") + "')", true);
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim() + "";
+                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC") + "";
                 return;
             }
 
@@ -78,7 +78,7 @@ public partial class TTCustomerQuestion : System.Web.UI.Page
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = LanguageHandle.GetWord("DiShiGongSi").ToString().Trim() + strCompany + LanguageHandle.GetWord("DeZhi").ToString().Trim() + strAddress + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strContactPerson + LanguageHandle.GetWord("ZhuCeLe").ToString().Trim() + strType + LanguageHandle.GetWord("DeXinXiQingGuanZhu").ToString().Trim();
+                string strNofiInfo = LanguageHandle.GetWord("DiShiGongSi") + strCompany + LanguageHandle.GetWord("DeZhi") + strAddress + LanguageHandle.GetWord("DeYuanGong") + strContactPerson + LanguageHandle.GetWord("ZhuCeLe") + strType + LanguageHandle.GetWord("DeXinXiQingGuanZhu");
                 Action action = new Action(delegate ()
                 {
                     try
@@ -110,15 +110,15 @@ public partial class TTCustomerQuestion : System.Web.UI.Page
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJCGTDKFHZYTZNBNJJWTXX").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJCGTDKFHZYTZNBNJJWTXX")+"')", true);
 
-                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJCGTDKFHZYTZNBNJJWTXX").ToString().Trim() + "";
+                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJCGTDKFHZYTZNBNJJWTXX") + "";
             }
             catch
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJSBJC")+"')", true);
 
-                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim() + "";
+                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC") + "";
             }
         }
     }

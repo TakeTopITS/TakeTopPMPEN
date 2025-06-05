@@ -16,7 +16,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strProjectID = Request.QueryString["ProjectID"];
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + ShareClass.GetProjectName(strProjectID.Trim()) + "的项目文控";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + ShareClass.GetProjectName(strProjectID.Trim()) + "的项目文控";
 
         LB_UserCode.Text = strUserCode.Trim();
         LB_UserName.Text = ShareClass.GetUserName(strUserCode.Trim());
@@ -57,7 +57,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             }
             lbl_ParamaValue.Text = strDocTypeID;
 
-            if (strDocTypeName.Contains(LanguageHandle.GetWord("Project").ToString().Trim()) && strDocTypeName.Contains(LanguageHandle.GetWord("WenKongLieBiao").ToString().Trim()))
+            if (strDocTypeName.Contains(LanguageHandle.GetWord("Project")) && strDocTypeName.Contains(LanguageHandle.GetWord("WenKongLieBiao")))
             {
                 lbl_TreeViewName.Text = "";
                 ddl_ParentName.Items.Clear();
@@ -68,14 +68,14 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
                 if (strDocTypeName.Contains("."))
                 {
                     lbl_TreeViewName.Text = strDocTypeName.Substring(strDocTypeName.LastIndexOf(".") + 1);
-                    if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaTuDengJi").ToString().Trim())
+                    if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaTuDengJi"))
                     {
-                        lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim();
+                        lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouTuDengJi");
 
                     }
-                    else if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaWenDengJi").ToString().Trim())
+                    else if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaWenDengJi"))
                     {
-                        lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim();
+                        lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouWenDengJi");
                     }
 
                     BindParentNameData(strDocTypeName.Substring(0, strDocTypeName.IndexOf(".")));
@@ -139,7 +139,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
                 catch (Exception ex)
                 {
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC") + "')", true);
                 }
             }
 
@@ -147,20 +147,20 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             {
                 if (proGraphRegistration.ArchiveIdentification == 1)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDAYBGDWXZCGD").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDAYBGDWXZCGD") + "')", true);
                     return;
                 }
                 proGraphRegistration.ArchiveIdentification = 1;
                 proGraphRegistrationBLL.UpdateProGraphRegistration(proGraphRegistration, proGraphRegistration.ID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG") + "')", true);
             }
 
             if (e.CommandName == "Delete")
             {
                 if (IsProSendFigureRegistrationExitFileNo(TB_FileNo.Text.Trim()))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTYYBFFWFSCJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGTYYBFFWFSCJC") + "')", true);
                     return;
                 }
 
@@ -180,11 +180,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
                     BT_Active.Enabled = false;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
                 }
 
             }
@@ -233,30 +233,30 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_FileNo.Text.Trim()) || TB_FileNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHBNWKJC") + "')", true);
             TB_FileNo.Focus();
             return;
         }
         if (IsProGraphRegistration(TB_FileNo.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHZSJBZYCZJC") + "')", true);
             TB_FileNo.Focus();
             return;
         }
         string strBookImage;
-        string strImage = UploadBookDesign(AttachFile, LanguageHandle.GetWord("ShouTuFuJian").ToString().Trim()).Trim();
+        string strImage = UploadBookDesign(AttachFile, LanguageHandle.GetWord("ShouTuFuJian")).Trim();
         if (strImage.Equals("0"))//附件为空
         {
             strBookImage = "";
         }
         else if (strImage.Equals("1"))//存在同名文件，上传失败，请改名后再上传！
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC") + "')", true);
             return;
         }
-        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"
+        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC")+"
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
             return;
         }
         else
@@ -294,11 +294,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BT_Active.Enabled = true;
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -306,13 +306,13 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_FileNo.Text.Trim()) || TB_FileNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHBNWKJC") + "')", true);
             TB_FileNo.Focus();
             return;
         }
         if (IsProGraphRegistration(TB_FileNo.Text.Trim(), LB_GraphRegistrationID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHZSJBZYCZJC") + "')", true);
             TB_FileNo.Focus();
             return;
         }
@@ -322,18 +322,18 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         ProGraphRegistration proGraphRegistration = (ProGraphRegistration)lst[0];
         string strFileNoOld = proGraphRegistration.FileNo.Trim();
         string strDocTypeOld = proGraphRegistration.DocType.Trim();
-        string strImage = UploadBookDesign(AttachFile, LanguageHandle.GetWord("ShouTuFuJian").ToString().Trim()).Trim();
+        string strImage = UploadBookDesign(AttachFile, LanguageHandle.GetWord("ShouTuFuJian")).Trim();
         if (strImage.Equals("0"))//附件为空
         {
         }
         else if (strImage.Equals("1"))//存在同名文件，上传失败，请改名后再上传！
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC") + "')", true);
             return;
         }
-        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"
+        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC")+"
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
             return;
         }
         else
@@ -365,11 +365,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
             BT_Active.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -377,13 +377,13 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_FileNo.Text.Trim()) || TB_FileNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHBNWKJC") + "')", true);
             TB_FileNo.Focus();
             return;
         }
         if (IsProGraphRegistration(TB_FileNo.Text.Trim(), LB_GraphRegistrationID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAHZSJBZYCZJC") + "')", true);
             TB_FileNo.Focus();
             return;
         }
@@ -393,24 +393,24 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         ProGraphRegistration proGraphRegistration = (ProGraphRegistration)lst[0];
         if (proGraphRegistration.ArchiveIdentification == 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAYGDJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAYGDJC") + "')", true);
             return;
         }
 
         string strFileNoOld = proGraphRegistration.FileNo.Trim();
         string strDocTypeOld = proGraphRegistration.DocType.Trim();
-        string strImage = UploadBookDesign(AttachFile, LanguageHandle.GetWord("ShouTuFuJian").ToString().Trim()).Trim();
+        string strImage = UploadBookDesign(AttachFile, LanguageHandle.GetWord("ShouTuFuJian")).Trim();
         if (strImage.Equals("0"))//附件为空
         {
         }
         else if (strImage.Equals("1"))//存在同名文件，上传失败，请改名后再上传！
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC") + "')", true);
             return;
         }
-        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"
+        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC")+"
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
             return;
         }
         else
@@ -443,11 +443,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
             BT_Active.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord") + LanguageHandle.GetWord("ZZSBJC") + "')", true); 
         }
     }
 
@@ -497,7 +497,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
                 catch (Exception ex)
                 {
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC") + "')", true);
                 }
             }
 
@@ -516,11 +516,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
                     LB_SendFigureRegistrationID.Text = "";
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
                 }
 
             }
@@ -529,14 +529,14 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             {
                 if (!string.IsNullOrEmpty(proSendFigureRegistration.BackPer) && proSendFigureRegistration.BackPer.Trim() != "")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGTZYBHSWXZCHS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGTZYBHSWXZCHS") + "')", true);
                     return;
                 }
                 proSendFigureRegistration.BackPer = strUserCode.Trim();
                 proSendFigureRegistration.BackTime = DateTime.Now;
                 proSendFigureRegistrationBLL.UpdateProSendFigureRegistration(proSendFigureRegistration, proSendFigureRegistration.ID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHSCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHSCG") + "')", true);
             }
             lbl_TreeViewName.Text = proSendFigureRegistration.DocType.Trim();
         }
@@ -582,31 +582,31 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(ddl_FileNo.SelectedValue.Trim()) || ddl_FileNo.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAMCWBXJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAMCWBXJC") + "')", true);
             ddl_FileNo.Focus();
             return;
         }
         if (int.Parse(lbl_FileOld.Text.Trim()) <= 0 || int.Parse(lbl_TableOld.Text.Trim()) <= 0 || int.Parse(lbl_FigureOld.Text.Trim()) <= 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAYBFFJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAYBFFJC") + "')", true);
             ddl_FileNo.Focus();
             return;
         }
         if (int.Parse(NB_FileNum.Amount.ToString()) > int.Parse(lbl_FileOld.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAFSYCCKYSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAFSYCCKYSLJC") + "')", true);
             NB_FileNum.Focus();
             return;
         }
         if (int.Parse(NB_TableNum.Amount.ToString()) > int.Parse(lbl_TableOld.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFBSYCCKYSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFBSYCCKYSLJC") + "')", true);
             NB_TableNum.Focus();
             return;
         }
         if (int.Parse(NB_FigureNum1.Amount.ToString()) > int.Parse(lbl_FigureOld.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFTSYCCKYSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFTSYCCKYSLJC") + "')", true);
             NB_FigureNum1.Focus();
             return;
         }
@@ -643,11 +643,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BindInformation();
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -655,31 +655,31 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(ddl_FileNo.SelectedValue.Trim()) || ddl_FileNo.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAMCWBXJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDAMCWBXJC") + "')", true);
             ddl_FileNo.Focus();
             return;
         }
         if (int.Parse(lbl_FileOld.Text.Trim()) <= 0 || int.Parse(lbl_TableOld.Text.Trim()) <= 0 || int.Parse(lbl_FigureOld.Text.Trim()) <= 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAYBFFJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAYBFFJC") + "')", true);
             ddl_FileNo.Focus();
             return;
         }
         if (int.Parse(NB_FileNum.Amount.ToString()) > int.Parse(lbl_FileOld.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAFSYCCKYSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAFSYCCKYSLJC") + "')", true);
             NB_FileNum.Focus();
             return;
         }
         if (int.Parse(NB_TableNum.Amount.ToString()) > int.Parse(lbl_TableOld.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFBSYCCKYSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFBSYCCKYSLJC") + "')", true);
             NB_TableNum.Focus();
             return;
         }
         if (int.Parse(NB_FigureNum1.Amount.ToString()) > int.Parse(lbl_FigureOld.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFTSYCCKYSLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGDAMFTSYCCKYSLJC") + "')", true);
             NB_FigureNum1.Focus();
             return;
         }
@@ -718,11 +718,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BindInformation();
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -773,7 +773,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
                 string strId = LB_ReceiptRegistrationID.Text.Trim();
                 if (IsProIssueRegistrationExitDocumentNo(TB_DocumentNo.Text.Trim()))//ProIssueRegistration
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGWJYBFFWFSCJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGWJYBFFWFSCJC") + "')", true);
                     return;
                 }
 
@@ -793,11 +793,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
                     LB_ReceiptRegistrationID.Text = "";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
                 }
             }
 
@@ -805,27 +805,27 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             {
                 if (!string.IsNullOrEmpty(proReceiptRegistration.DestroyPeople) && proReceiptRegistration.DestroyPeople.Trim() != "")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGWJYBXHWXZCXH").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGWJYBXHWXZCXH") + "')", true);
                     return;
                 }
                 proReceiptRegistration.DestroyPeople = strUserCode.Trim();
                 proReceiptRegistration.DestructionDate = DateTime.Now;
                 proReceiptRegistrationBLL.UpdateProReceiptRegistration(proReceiptRegistration, proReceiptRegistration.ID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXHCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXHCG") + "')", true);
             }
 
             if (e.CommandName == "Active")
             {
                 if (proReceiptRegistration.ArchiveIdentification == 1)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGWJYBGDWXZCGD").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGWJYBGDWXZCGD") + "')", true);
                     return;
                 }
                 proReceiptRegistration.ArchiveIdentification = 1;
                 proReceiptRegistrationBLL.UpdateProReceiptRegistration(proReceiptRegistration, proReceiptRegistration.ID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG") + "')", true);
             }
             lbl_TreeViewName.Text = proReceiptRegistration.DocType.Trim();
         }
@@ -870,30 +870,30 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_DocumentNo.Text.Trim()) || TB_DocumentNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHBNWKJC") + "')", true);
             TB_DocumentNo.Focus();
             return;
         }
         if (IsProReceiptRegistration(TB_DocumentNo.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHZSJBZYCZJC") + "')", true);
             TB_DocumentNo.Focus();
             return;
         }
         string strBookImage;
-        string strImage = UploadBookDesign(AttachDocument, LanguageHandle.GetWord("WenJianFuJian").ToString().Trim()).Trim();
+        string strImage = UploadBookDesign(AttachDocument, LanguageHandle.GetWord("WenJianFuJian")).Trim();
         if (strImage.Equals("0"))//附件为空
         {
             strBookImage = "";
         }
         else if (strImage.Equals("1"))//存在同名文件，上传失败，请改名后再上传！
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC") + "')", true);
             return;
         }
-        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"
+        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC")+"
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
             return;
         }
         else
@@ -930,11 +930,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
             Button7.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -942,13 +942,13 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_DocumentNo.Text.Trim()) || TB_DocumentNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHBNWKJC") + "')", true);
             TB_DocumentNo.Focus();
             return;
         }
         if (IsProReceiptRegistration(TB_DocumentNo.Text.Trim(), LB_ReceiptRegistrationID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHZSJBZYCZJC") + "')", true);
             TB_DocumentNo.Focus();
             return;
         }
@@ -958,18 +958,18 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         ProReceiptRegistration proReceiptRegistration = (ProReceiptRegistration)lst[0];
         string strDocumentNoOld = proReceiptRegistration.DocumentNo.Trim();
         string strDocTypeOld = proReceiptRegistration.DocType.Trim();
-        string strImage = UploadBookDesign(AttachDocument, LanguageHandle.GetWord("WenJianFuJian").ToString().Trim()).Trim();
+        string strImage = UploadBookDesign(AttachDocument, LanguageHandle.GetWord("WenJianFuJian")).Trim();
         if (strImage.Equals("0"))//附件为空
         {
         }
         else if (strImage.Equals("1"))//存在同名文件，上传失败，请改名后再上传！
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC") + "')", true);
             return;
         }
-        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"
+        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC")+"
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
             return;
         }
         else
@@ -1002,11 +1002,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
             Button7.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -1015,13 +1015,13 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_DocumentNo.Text.Trim()) || TB_DocumentNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHBNWKJC") + "')", true);
             TB_DocumentNo.Focus();
             return;
         }
         if (IsProReceiptRegistration(TB_DocumentNo.Text.Trim(), LB_ReceiptRegistrationID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHZSJBZYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJBHZSJBZYCZJC") + "')", true);
             TB_DocumentNo.Focus();
             return;
         }
@@ -1031,23 +1031,23 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         ProReceiptRegistration proReceiptRegistration = (ProReceiptRegistration)lst[0];
         if (proReceiptRegistration.ArchiveIdentification == 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJYGDJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJYGDJC") + "')", true);
             return;
         }
         string strDocumentNoOld = proReceiptRegistration.DocumentNo.Trim();
         string strDocTypeOld = proReceiptRegistration.DocType.Trim();
-        string strImage = UploadBookDesign(AttachDocument, LanguageHandle.GetWord("WenJianFuJian").ToString().Trim()).Trim();
+        string strImage = UploadBookDesign(AttachDocument, LanguageHandle.GetWord("WenJianFuJian")).Trim();
         if (strImage.Equals("0"))//附件为空
         {
         }
         else if (strImage.Equals("1"))//存在同名文件，上传失败，请改名后再上传！
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMWJGMHZSC") + "')", true);
             return;
         }
-        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"
+        else if (strImage.Equals("2"))//上传"+LanguageHandle.GetWord("ZZSBJC")+"
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
             return;
         }
         else
@@ -1083,11 +1083,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
             Button7.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGuiDangLanguageHandleGetWord") + LanguageHandle.GetWord("ZZSBJC") + "')", true); 
         }
     }
 
@@ -1183,11 +1183,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
                     lbl_TreeViewName.Text = lbl_DocType1.Text.Trim();
                     BindInformation();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
                 }
             }
 
@@ -1195,14 +1195,14 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             {
                 if (!string.IsNullOrEmpty(proIssueRegistration.Recycling) && proIssueRegistration.Recycling.Trim() != "")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGWJYBHSWXZCHS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGWJYBHSWXZCHS") + "')", true);
                     return;
                 }
                 proIssueRegistration.Recycling = strUserCode.Trim();
                 proIssueRegistration.CollectionDate = DateTime.Now;
                 proIssueRegistrationBLL.UpdateProIssueRegistration(proIssueRegistration, proIssueRegistration.ID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHSCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHSCG") + "')", true);
             }
             lbl_TreeViewName.Text = proIssueRegistration.DocType.Trim();
         }
@@ -1248,13 +1248,13 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(ddl_DocumentNo.SelectedValue.Trim()) || ddl_DocumentNo.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJMCWBXJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJMCWBXJC") + "')", true);
             ddl_DocumentNo.Focus();
             return;
         }
         if (IsDestroyProReceiptRegistration(ddl_DocumentNo.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGWJYBXHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGWJYBXHJC") + "')", true);
             ddl_DocumentNo.Focus();
             return;
         }
@@ -1288,11 +1288,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             lbl_TreeViewName.Text = lbl_DocType1.Text.Trim();
             BindInformation();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
         }
     }
 
@@ -1300,13 +1300,13 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(ddl_DocumentNo.SelectedValue.Trim()) || ddl_DocumentNo.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJMCWBXJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWJMCWBXJC") + "')", true);
             ddl_DocumentNo.Focus();
             return;
         }
         if (IsDestroyProReceiptRegistration(ddl_DocumentNo.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGWJYBXHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGWJYBXHJC") + "')", true);
             ddl_DocumentNo.Focus();
             return;
         }
@@ -1341,11 +1341,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             lbl_TreeViewName.Text = lbl_DocType1.Text.Trim();
             BindInformation();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         }
     }
 
@@ -1518,31 +1518,31 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (ddl_ParentName.SelectedValue.Trim() == "PleaseSelect" || string.IsNullOrEmpty(ddl_ParentName.SelectedValue))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZJDDFJDJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZJDDFJDJC") + "')", true);
             ddl_ParentName.Focus();
             return;
         }
-        if (ddl_ParentName.SelectedValue.Trim() == LanguageHandle.GetWord("FaTuDengJi").ToString().Trim() || ddl_ParentName.SelectedValue.Trim() == LanguageHandle.GetWord("FaWenDengJi").ToString().Trim())
+        if (ddl_ParentName.SelectedValue.Trim() == LanguageHandle.GetWord("FaTuDengJi") || ddl_ParentName.SelectedValue.Trim() == LanguageHandle.GetWord("FaWenDengJi"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFTWDJWXTJZJDHXYDBSTWDJXDZJDDGLJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFTWDJWXTJZJDHXYDBSTWDJXDZJDDGLJC") + "')", true);
             ddl_ParentName.Focus();
             return;
         }
         if (txtClassificationName.Text.Trim() == "" || string.IsNullOrEmpty(txtClassificationName.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNWKJC") + "')", true);
             txtClassificationName.Focus();
             return;
         }
         if (txtClassificationName.Text.Trim().Contains("."))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNBHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNBHJC") + "')", true);
             txtClassificationName.Focus();
             return;
         }
         if (IsProDocGraphControl(ddl_ParentName.SelectedValue.Trim(), txtClassificationName.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDYCZJC") + "')", true);
             ddl_ParentName.Focus();
             txtClassificationName.Focus();
             return;
@@ -1557,14 +1557,14 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             proDocGraphControlBLL.AddProDocGraphControl(proDocGraphControl);
             lbl_NewID.Text = GetProDocGraphControlID(proDocGraphControl.ParentName.Trim(), proDocGraphControl.ClassificationName.Trim());
 
-            if (proDocGraphControl.ParentName.Trim() == LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim())
+            if (proDocGraphControl.ParentName.Trim() == LanguageHandle.GetWord("ShouTuDengJi"))
             {
-                proDocGraphControl.ParentName = LanguageHandle.GetWord("FaTuDengJi").ToString().Trim();
+                proDocGraphControl.ParentName = LanguageHandle.GetWord("FaTuDengJi");
                 proDocGraphControlBLL.AddProDocGraphControl(proDocGraphControl);
             }
-            else if (proDocGraphControl.ParentName.Trim() == LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim())
+            else if (proDocGraphControl.ParentName.Trim() == LanguageHandle.GetWord("ShouWenDengJi"))
             {
-                proDocGraphControl.ParentName = LanguageHandle.GetWord("FaWenDengJi").ToString().Trim();
+                proDocGraphControl.ParentName = LanguageHandle.GetWord("FaWenDengJi");
                 proDocGraphControlBLL.AddProDocGraphControl(proDocGraphControl);
             }
 
@@ -1579,12 +1579,12 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BT_UpdateDocType.Enabled = true;
             BT_DeleteDocType.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord") + LanguageHandle.GetWord("ZZXZCG") + "')", true); 
         }
         catch (Exception err)
         {
             //LogClass.WriteLogFile(err.Message.ToString());
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDXZSB").ToString().Trim() + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDXZSB") + "')", true);
         }
     }
 
@@ -1592,30 +1592,30 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (ddl_ParentName.SelectedValue.Trim() == "PleaseSelect" || string.IsNullOrEmpty(ddl_ParentName.SelectedValue))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZJDDFJDJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZJDDFJDJC") + "')", true);
             ddl_ParentName.Focus();
             return;
         }
         if (txtClassificationName.Text.Trim() == "" || string.IsNullOrEmpty(txtClassificationName.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNWKJC") + "')", true);
             txtClassificationName.Focus();
             return;
         }
         if (lbl_NewID.Text.Trim() == "" || string.IsNullOrEmpty(lbl_NewID.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDSJBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDSJBCZJC") + "')", true);
             return;
         }
         if (txtClassificationName.Text.Trim().Contains("."))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNBHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDMCBNBHJC") + "')", true);
             txtClassificationName.Focus();
             return;
         }
         if (IsProDocGraphControl(ddl_ParentName.SelectedValue.Trim(), txtClassificationName.Text.Trim(), lbl_NewID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDYCZJC") + "')", true);
             ddl_ParentName.Focus();
             txtClassificationName.Focus();
             return;
@@ -1642,11 +1642,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BT_UpdateDocType.Enabled = true;
             BT_DeleteDocType.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord").ToString().Trim() + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJieDianLanguageHandleGetWord") + LanguageHandle.GetWord("ZZXZCG") + "')", true); 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDXGSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDXGSB") + "')", true);
         }
     }
 
@@ -1654,12 +1654,12 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (IsProDocGraphControlByDocType(txtClassificationName.Text.Trim(), lbl_ParamaValue.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDYBDYWFSCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJDYBDYWFSCJC") + "')", true);
             return;
         }
         if (txtClassificationName.Text.Trim() == "" || string.IsNullOrEmpty(txtClassificationName.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDSJBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGJDSJBCZJC") + "')", true);
             txtClassificationName.Focus();
             return;
         }
@@ -1678,11 +1678,11 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             BT_UpdateDocType.Enabled = false;
             BT_DeleteDocType.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 
@@ -1836,7 +1836,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
 
 
         string strHQL = "Select * From T_ProGraphRegistration Where ProjectID='" + strProjectID + "' ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -1853,8 +1853,8 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         DataGrid3.DataBind();
         lbl_sql3.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("ShouTuDengJiLieBiao").ToString().Trim();
-        LB_ProGraphRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("ShouTuDengJiLieBiao");
+        LB_ProGraphRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -1932,12 +1932,12 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strprojectid + " " + strprojectname + LanguageHandle.GetWord("WenKongLieBiao").ToString().Trim();
+        node1.Text = LanguageHandle.GetWord("Project") + strprojectid + " " + strprojectname + LanguageHandle.GetWord("WenKongLieBiao");
         node1.Target = "0";
         node1.Expanded = true;
         tv.Nodes.Add(node1);
 
-        string namelist = LanguageHandle.GetWord("ShouTuDengJiFaTuDengJiShouWenD").ToString().Trim();
+        string namelist = LanguageHandle.GetWord("ShouTuDengJiFaTuDengJiShouWenD");
         string[] tempNameList = namelist.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
         for (int i = 0; i < tempNameList.Length; i++)
@@ -1988,7 +1988,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     protected void LoadProGraphRegistration()
     {
         string strHQL = "Select * From T_ProGraphRegistration Where ProjectID='" + strProjectID + "' ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -2001,8 +2001,8 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         DataGrid3.DataBind();
         lbl_sql3.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("ShouTuDengJiLieBiao").ToString().Trim();
-        LB_ProGraphRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("ShouTuDengJiLieBiao");
+        LB_ProGraphRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -2072,7 +2072,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     protected void LoadProSendFigureRegistration()
     {
         string strHQL = "Select * From T_ProSendFigureRegistration Where FileNo in (Select FileNo From T_ProGraphRegistration Where ProjectID='" + strProjectID + "') ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -2085,8 +2085,8 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         DataGrid5.DataBind();
         lbl_sql4.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("FaTuDengJiLieBiao").ToString().Trim();
-        LB_ProSendFigureRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("FaTuDengJiLieBiao");
+        LB_ProSendFigureRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -2138,7 +2138,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     protected void LoadProReceiptRegistration()
     {
         string strHQL = "Select * From T_ProReceiptRegistration Where ProjectID='" + strProjectID + "' ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -2151,8 +2151,8 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         DataGrid1.DataBind();
         lbl_sql1.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("ShouWenDengJiLieBiao").ToString().Trim();
-        LB_ProReceiptRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("ShouWenDengJiLieBiao");
+        LB_ProReceiptRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -2222,7 +2222,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     protected void LoadProIssueRegistration()
     {
         string strHQL = "Select * From T_ProIssueRegistration Where DocumentNo in (Select DocumentNo From T_ProReceiptRegistration Where ProjectID='" + strProjectID + "') ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -2235,8 +2235,8 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
         DataGrid2.DataBind();
         lbl_sql2.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("FaWenDengJiLieBiao").ToString().Trim();
-        LB_ProIssueRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("FaWenDengJiLieBiao");
+        LB_ProIssueRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -2300,30 +2300,30 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     /// </summary>
     protected void LoadProDocType()
     {
-        DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim());
+        DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi"));
         if (dt != null && dt.Rows.Count > 0)
         {
             ddl_DocType.Items.Clear();
-            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim()));
-            SetInterval(ddl_DocType, LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), " ");
+            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi"), LanguageHandle.GetWord("ShouTuDengJi")));
+            SetInterval(ddl_DocType, LanguageHandle.GetWord("ShouTuDengJi"), " ");
         }
         else
         {
             ddl_DocType.Items.Clear();
-            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim()));
+            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi"), LanguageHandle.GetWord("ShouTuDengJi")));
         }
 
-        dt = GetList(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim());
+        dt = GetList(LanguageHandle.GetWord("ShouWenDengJi"));
         if (dt != null && dt.Rows.Count > 0)
         {
             ddl_DocType1.Items.Clear();
-            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim()));
-            SetInterval(ddl_DocType1, LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), " ");
+            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi"), LanguageHandle.GetWord("ShouWenDengJi")));
+            SetInterval(ddl_DocType1, LanguageHandle.GetWord("ShouWenDengJi"), " ");
         }
         else
         {
             ddl_DocType1.Items.Clear();
-            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim()));
+            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi"), LanguageHandle.GetWord("ShouWenDengJi")));
         }
     }
 
@@ -2479,7 +2479,7 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
             lbl_NewID.Text = proDocGraphControl.ID.ToString();
         }
 
-        if (strDocTypeName.Contains(LanguageHandle.GetWord("Project").ToString().Trim()) && strDocTypeName.Contains(LanguageHandle.GetWord("WenKongLieBiao").ToString().Trim()))
+        if (strDocTypeName.Contains(LanguageHandle.GetWord("Project")) && strDocTypeName.Contains(LanguageHandle.GetWord("WenKongLieBiao")))
         {
             txtParentName.Text = "";
             txtClassificationName.Text = "";
@@ -2526,58 +2526,58 @@ public partial class TTProjDocumentControl : System.Web.UI.Page
     {
         if (strparentnameFirst == "1")
         {
-            DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim());
+            DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi"));
             if (dt != null && dt.Rows.Count > 0)
             {
                 DataGrid3.CurrentPageIndex = 0;
 
                 ddl_ParentName.Items.Clear();
-                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim()));
-                SetInterval(ddl_ParentName, LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), " ");
+                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi"), LanguageHandle.GetWord("ShouTuDengJi")));
+                SetInterval(ddl_ParentName, LanguageHandle.GetWord("ShouTuDengJi"), " ");
             }
             else
             {
                 ddl_ParentName.Items.Clear();
-                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim()));
+                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi"), LanguageHandle.GetWord("ShouTuDengJi")));
             }
-            txtParentName.Text = LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim();
+            txtParentName.Text = LanguageHandle.GetWord("ShouTuDengJi");
         }
         else if (strparentnameFirst == "3")
         {
             DataGrid2.CurrentPageIndex = 0;
 
-            DataTable dt = GetList(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim());
+            DataTable dt = GetList(LanguageHandle.GetWord("ShouWenDengJi"));
             if (dt != null && dt.Rows.Count > 0)
             {
                 DataGrid1.CurrentPageIndex = 0;
 
                 ddl_ParentName.Items.Clear();
-                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim()));
-                SetInterval(ddl_ParentName, LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), " ");
+                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi"), LanguageHandle.GetWord("ShouWenDengJi")));
+                SetInterval(ddl_ParentName, LanguageHandle.GetWord("ShouWenDengJi"), " ");
             }
             else
             {
                 ddl_ParentName.Items.Clear();
-                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim()));
+                ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi"), LanguageHandle.GetWord("ShouWenDengJi")));
             }
-            txtParentName.Text = LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim();
+            txtParentName.Text = LanguageHandle.GetWord("ShouWenDengJi");
         }
         else if (strparentnameFirst == "2")
         {
             DataGrid1.CurrentPageIndex = 0;
 
-            txtParentName.Text = LanguageHandle.GetWord("FaTuDengJi").ToString().Trim();
+            txtParentName.Text = LanguageHandle.GetWord("FaTuDengJi");
             ddl_ParentName.Items.Clear();
-            ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("FaTuDengJi").ToString().Trim(), LanguageHandle.GetWord("FaTuDengJi").ToString().Trim()));
+            ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("FaTuDengJi"), LanguageHandle.GetWord("FaTuDengJi")));
         }
         else if (strparentnameFirst == "4")
         {
             DataGrid5.CurrentPageIndex = 0;
 
 
-            txtParentName.Text = LanguageHandle.GetWord("FaWenDengJi").ToString().Trim();
+            txtParentName.Text = LanguageHandle.GetWord("FaWenDengJi");
             ddl_ParentName.Items.Clear();
-            ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("FaWenDengJi").ToString().Trim(), LanguageHandle.GetWord("FaWenDengJi").ToString().Trim()));
+            ddl_ParentName.Items.Insert(0, new ListItem(LanguageHandle.GetWord("FaWenDengJi"), LanguageHandle.GetWord("FaWenDengJi")));
         }
     }
 

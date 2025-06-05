@@ -74,12 +74,12 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
         if (strRelatedType == "MEETING")
         {
-            strRelatedTypeCN = LanguageHandle.GetWord("HuiYi").ToString().Trim();
+            strRelatedTypeCN = LanguageHandle.GetWord("HuiYi");
         }
 
         if (strRelatedType == "WORKFLOW")
         {
-            strRelatedTypeCN = LanguageHandle.GetWord("LiuCheng").ToString().Trim();
+            strRelatedTypeCN = LanguageHandle.GetWord("LiuCheng");
         }
 
         if (strRelatedType == "PROJECT")
@@ -89,7 +89,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
         if (strRelatedType == "ProPlan")
         {
-            strRelatedTypeCN = LanguageHandle.GetWord("XiangMuJiHua").ToString().Trim();
+            strRelatedTypeCN = LanguageHandle.GetWord("XiangMuJiHua");
         }
 
         if (strRelatedType == "REQ")
@@ -99,12 +99,12 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
         if (strRelatedType == "CONSTRACT")
         {
-            strRelatedTypeCN = LanguageHandle.GetWord("GeTong").ToString().Trim();
+            strRelatedTypeCN = LanguageHandle.GetWord("GeTong");
         }
 
         if (strRelatedType == "CANDIDATE")
         {
-            strRelatedTypeCN = LanguageHandle.GetWord("HouShuaRen").ToString().Trim();
+            strRelatedTypeCN = LanguageHandle.GetWord("HouShuaRen");
         }
 
         if (strRelatedType == "OTHER")
@@ -137,7 +137,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
             }
 
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
 
 
             if (strRelatedType == "OTHER" | strRelatedType == "WORKFLOW" | strRelatedType == "REQ")
@@ -329,12 +329,12 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
             HL_RelatedDoc.Enabled = true;
             HL_RelatedDoc.NavigateUrl = "TTCollaborationRelatedDoc.aspx?RelatedID=" + strCOID;
-            TB_Message.Text = LanguageHandle.GetWord("NiYiBeiYaoQingCanJiaXieZuo").ToString().Trim() + strCOID + " " + strCollaborationName + LanguageHandle.GetWord("YaoQingZhe").ToString().Trim() + ShareClass.GetUserName(strUserCode) + " " + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
+            TB_Message.Text = LanguageHandle.GetWord("NiYiBeiYaoQingCanJiaXieZuo") + strCOID + " " + strCollaborationName + LanguageHandle.GetWord("YaoQingZhe") + ShareClass.GetUserName(strUserCode) + " " + LanguageHandle.GetWord("QingZhunShiCanJia");
 
             LoadCollaborationMember(strCOID);
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
         }
         catch (Exception err)
@@ -401,12 +401,12 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -438,11 +438,11 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -474,11 +474,11 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHSBJC") + "')", true);
         }
     }
 
@@ -492,7 +492,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
         if (struserCode.Trim() == usercodeGold)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCJZBYJRXTHZDJRJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCJZBYJRXTHZDJRJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
@@ -505,7 +505,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
         {
             if (dt.Rows[i]["UserCode"].ToString().Trim() == struserCode.Trim())
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 return;
@@ -660,7 +660,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
 
                 HL_RelatedDoc.NavigateUrl = "TTCollaborationRelatedDoc.aspx?RelatedID=" + strID;
-                TB_Message.Text = LanguageHandle.GetWord("NiYiBeiYaoQingCanJiaXieZuo").ToString().Trim() + strID + " " + collaboration.CollaborationName.Trim() + LanguageHandle.GetWord("YaoQingZhe").ToString().Trim() + collaboration.CreatorName.Trim() + " " + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
+                TB_Message.Text = LanguageHandle.GetWord("NiYiBeiYaoQingCanJiaXieZuo") + strID + " " + collaboration.CollaborationName.Trim() + LanguageHandle.GetWord("YaoQingZhe") + collaboration.CreatorName.Trim() + " " + LanguageHandle.GetWord("QingZhunShiCanJia");
 
                 HL_RelatedDoc.Enabled = true;
                 BT_Close.Enabled = true;
@@ -698,11 +698,11 @@ CKEditor1.Language = Session["LangCode"].ToString();
                     LoadCollaborationMember(strID);
                     LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }
@@ -806,7 +806,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
                 if (CB_MSM.Checked == true | CB_Mail.Checked == true)
                 {
-                    strSubject = LanguageHandle.GetWord("XieZuoTongZhi").ToString().Trim();
+                    strSubject = LanguageHandle.GetWord("XieZuoTongZhi");
 
                     if (CB_MSM.Checked == true)
                     {
@@ -821,7 +821,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZTZFSWB").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZTZFSWB") + "')", true);
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }

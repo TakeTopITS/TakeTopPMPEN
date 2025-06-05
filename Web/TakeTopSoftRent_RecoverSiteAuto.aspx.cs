@@ -82,7 +82,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
             string strServerType = Request.QueryString["ServerType"];
 
             string strRentProductVersionType;
-            if (strRentProductVersion == LanguageHandle.GetWord("JiTuanBan").ToString().Trim())
+            if (strRentProductVersion == LanguageHandle.GetWord("JiTuanBan"))
             {
                 strRentProductVersionType = "YES";
             }
@@ -96,14 +96,14 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
 
             if (VerifyWebSiteAppIsExist(strSiteName, strSiteAppName))
             {
-                LB_Message.Text = LanguageHandle.GetWord("HuiFuShiBaiCunZaiXiangTongMing").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("HuiFuShiBaiCunZaiXiangTongMing");
                 return;
             }
 
             //»Ö¸´Õ¾µãÓ¦ÓÃ
             RecoverSiteAPP(strRentProductType, strRentProductVersionType, strSiteAppSystemName, strSiteAppName, strSiteAppURL, strSiteName, strSiteBindingInfo, strSiteDirectory, strSiteTemplateDirectory, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath, strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory, strSiteDBLoginUserID, strSiteDBUserLoginPassword, strIsOEM);
 
-            LB_Message.Text = LanguageHandle.GetWord("ZhanDianHuiFuChengGongNiKeYiDa").ToString().Trim() + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
+            LB_Message.Text = LanguageHandle.GetWord("ZhanDianHuiFuChengGongNiKeYiDa") + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
             LB_CloseMessage.Visible = false;
 
             //LB_Message.Text = strSiteDBRestoreFile;

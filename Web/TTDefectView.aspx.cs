@@ -44,7 +44,7 @@ public partial class TTDefectView : System.Web.UI.Page
             }
             else
             {
-                Response.Write(LanguageHandle.GetWord("CiQueXianBuCunZaiKeNengYiBeiSh").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("CiQueXianBuCunZaiKeNengYiBeiSh"));
             }
         }
     }

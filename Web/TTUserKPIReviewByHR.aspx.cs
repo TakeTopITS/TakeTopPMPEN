@@ -61,7 +61,7 @@ HE_HRSummary.Language = Session["LangCode"].ToString();
                 HE_HRSummary.Visible = true;
             }
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
         }
     }
 
@@ -150,7 +150,7 @@ HE_HRSummary.Language = Session["LangCode"].ToString();
         dtStartTime = userKPICheck.StartTime;
         dtEndTime = userKPICheck.EndTime;
 
-        strChartTitle = LanguageHandle.GetWord("BuMen").ToString().Trim() + strDepartName + LanguageHandle.GetWord("ChengYuanJiXiaoZongPingFenDuiB").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("BuMen") + strDepartName + LanguageHandle.GetWord("ChengYuanJiXiaoZongPingFenDuiB");
 
         strHQL = "Select UserName as XName,TotalPoint as YNumber From T_UserKPICheck ";
         strHQL += " Where UserCode in (Select UserCode From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "')";
@@ -254,7 +254,7 @@ HE_HRSummary.Language = Session["LangCode"].ToString();
         deHRPoint = NB_HRPoint.Amount;
         if (deHRPoint > 100)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFSBNDY100JC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFSBNDY100JC") + "')", true);
             return;
         }
 
@@ -269,7 +269,7 @@ HE_HRSummary.Language = Session["LangCode"].ToString();
 
         if (strUserComment == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGPHYJBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGPHYJBNWKJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
@@ -295,11 +295,11 @@ HE_HRSummary.Language = Session["LangCode"].ToString();
             {
                 kpiHRReviewBLL.AddKPIHRReview(kpiHRReview);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
             }
         }
         else
@@ -319,11 +319,11 @@ HE_HRSummary.Language = Session["LangCode"].ToString();
             {
                 kpiHRReviewBLL.UpdateKPIHRReview(kpiHRReview, int.Parse(strKPIHRReviewID));
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }

@@ -126,8 +126,8 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid3.DataBind();
         LB_Sql.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("Juan").ToString().Trim();
-        LB_Count.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("Juan");
+        LB_Count.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -161,8 +161,8 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid5.DataBind();
         LB_Sql1.Text = strHQL;
 
-        LB_FindCondition2.Text = LanguageHandle.GetWord("JuanNeiJian").ToString().Trim();
-        LB_TotalCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition2.Text = LanguageHandle.GetWord("JuanNeiJian");
+        LB_TotalCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -187,8 +187,8 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid1.DataBind();
         LB_Sql.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("Juan").ToString().Trim();
-        LB_Count.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("Juan");
+        LB_Count.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -214,8 +214,8 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid2.DataBind();
         LB_Sql1.Text = strHQL;
 
-        LB_FindCondition2.Text = LanguageHandle.GetWord("JuanNeiJian").ToString().Trim();
-        LB_TotalCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition2.Text = LanguageHandle.GetWord("JuanNeiJian");
+        LB_TotalCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
@@ -343,12 +343,12 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
     {
         if (strDocType == "Drawing")
         {
-            DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim());
+            DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi"));
             if (dt != null && dt.Rows.Count > 0)
             {
                 DL_DocGraphType.Items.Clear();
                 DL_DocGraphType.Items.Insert(0, new ListItem("--Select--", ""));
-                SetInterval(DL_DocGraphType, LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), " ");
+                SetInterval(DL_DocGraphType, LanguageHandle.GetWord("ShouTuDengJi"), " ");
             }
             else
             {
@@ -358,12 +358,12 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         }
         else
         {
-            DataTable dt = GetList(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim());
+            DataTable dt = GetList(LanguageHandle.GetWord("ShouWenDengJi"));
             if (dt != null && dt.Rows.Count > 0)
             {
                 DL_DocGraphType.Items.Clear();
                 DL_DocGraphType.Items.Insert(0, new ListItem("--Select--", ""));
-                SetInterval(DL_DocGraphType, LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), " ");
+                SetInterval(DL_DocGraphType, LanguageHandle.GetWord("ShouWenDengJi"), " ");
             }
             else
             {

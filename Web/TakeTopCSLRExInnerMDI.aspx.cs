@@ -19,7 +19,7 @@ public partial class TakeTopCSLRExInnerMDI : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            //Response.Write(LanguageHandle.GetWord("ZZTSFWQFMQCXDL").ToString().Trim());
+            //Response.Write(LanguageHandle.GetWord("ZZTSFWQFMQCXDL"));
         }
     }
 }

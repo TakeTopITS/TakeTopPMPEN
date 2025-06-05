@@ -230,7 +230,7 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
                 HL_RunProjectByWF.NavigateUrl = "TTRelatedDIYWorkflowForm.aspx?RelatedType=Project&RelatedID=" + strProjectID;
 
                 //2013-10-11 LiuJianping 项目文控模块 可编辑 判断用户是否是文控专员的角色或项目经理，若是则可编辑，否则只能查看
-                if (ISActorGroupByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("WenKongZhuanYuan").ToString().Trim(), strProjectID) || strUserCode.Trim().Equals(strPMUserCode.ToString()))
+                if (ISActorGroupByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("WenKongZhuanYuan"), strProjectID) || strUserCode.Trim().Equals(strPMUserCode.ToString()))
                 {
                     HL_ProjectDocControl.NavigateUrl = "TTProjDocumentControl.aspx?ProjectID=" + strProjectID;
                 }
@@ -379,11 +379,11 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
 
             AddStatusChangeRecord(strProjectID, strOldStatus, strNewStatus, strOldStatusValue, strNewStatusValue, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTGBCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTGBCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTGBSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTGBSBJC") + "')", true);
         }
     }
 
@@ -424,13 +424,13 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
                     if (lst.Count == 0)
                     {
                         DL_StatusValue.SelectedValue = "InProgress";
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG") + "')", true);
                     }
                 }
                 else
                 {
                     DL_StatusValue.SelectedValue = "InProgress";
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG") + "')", true);
                 }
             }
         }
@@ -443,11 +443,11 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
 
             AddStatusChangeRecord(strProjectID, strOldStatus, strNewStatus, strOldStatusValue, strNewStatusValue, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTZGBCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTZGBCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTZGBSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZTZGBSBJC") + "')", true);
         }
     }
 
@@ -535,7 +535,7 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
 
         if (strTodaySummary == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJNRBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJNRBNWKJC") + "')", true);
             return;
         }
 
@@ -543,7 +543,7 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
         {
             if (NB_FinishPercent.Amount > 100)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCBFBBNCG100JC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCBFBBNCG100JC") + "')", true);
             }
             else
             {
@@ -589,11 +589,11 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
                         dailyWork = (DailyWork)lst[0];
                         LB_WorkID.Text = dailyWork.WorkID.ToString();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG") + "')", true);
                     }
                     catch
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCCJC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCCJC") + "')", true);
                     }
                 }
                 else
@@ -629,19 +629,19 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
 
                         ShareClass.UpdateProjectCompleteDegree(strProjectID, deFinishPercent);
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG") + "')", true);
 
                     }
                     catch
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSBJCZ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSBJCZ") + "')", true);
                     }
                 }
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiJiaoShiBaiBaiFenBiBuNengWe").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiJiaoShiBaiBaiFenBiBuNengWe")+"')", true);
         }
     }
 
@@ -683,7 +683,7 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
                 AddStatusChangeRecord(strProjectID, strOldStatus, strNewStatus, strOldStatusValue, strNewStatusValue, strUserCode);
                 LB_Status.Text = strNewStatus;
 
-                TB_Message.Text = strUserName + LanguageHandle.GetWord("ShouLiLeNiJianLiDeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName;
+                TB_Message.Text = strUserName + LanguageHandle.GetWord("ShouLiLeNiJianLiDeXiangMu") + strProjectID + " " + strProjectName;
 
                 LoadProject(strProjectID);
 
@@ -695,12 +695,12 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNYSLGBNZFSL").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNYSLGBNZFSL") + "')", true);
         }
     }
 
@@ -741,20 +741,20 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
                 AddStatusChangeRecord(strProjectID, strOldStatus, strNewStatus, strOldStatusValue, strNewStatusValue, strUserCode);
                 LB_Status.Text = strNewStatus;
 
-                TB_Message.Text = strUserName + LanguageHandle.GetWord("JuJueLeNiJianLiDeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName;
+                TB_Message.Text = strUserName + LanguageHandle.GetWord("JuJueLeNiJianLiDeXiangMu") + strProjectID + " " + strProjectName;
 
                 LoadProject(strProjectID);
             }
             catch
             {
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJJSBJCZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJJSBJCZ") + "')", true);
 
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCXMYZJXZBNJJL").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCXMYZJXZBNJJL") + "')", true);
         }
     }
 
@@ -795,18 +795,18 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
                 AddStatusChangeRecord(strProjectID, strOldStatus, strNewStatus, strOldStatusValue, strNewStatusValue, strUserCode);
                 LB_Status.Text = strNewStatus;
 
-                TB_Message.Text = strUserName + LanguageHandle.GetWord("KaiShiChuLiNiJianLiDeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName;
+                TB_Message.Text = strUserName + LanguageHandle.GetWord("KaiShiChuLiNiJianLiDeXiangMu") + strProjectID + " " + strProjectName;
 
                 LoadProject(strProjectID);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHDSBJCZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHDSBJCZ") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCXMYZHDJXZBYJHL").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCXMYZHDJXZBYJHL") + "')", true);
         }
     }
 
@@ -820,7 +820,7 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
 
         if (CB_ReturnMsg.Checked == true | CB_ReturnMail.Checked == true)
         {
-            strSubject = LanguageHandle.GetWord("XiangMuChuLiQingKuangFanKui").ToString().Trim();
+            strSubject = LanguageHandle.GetWord("XiangMuChuLiQingKuangFanKui");
             strMsg = TB_Message.Text.Trim();
 
             if (CB_ReturnMsg.Checked == true)
@@ -834,7 +834,7 @@ HE_TodaySummary.Language = Session["LangCode"].ToString();
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB") + "')", true);
     }
 
     protected void AddStatusChangeRecord(string strProjectID, string strOldStatus, string strNewStatus, string strOldStatusValue, string strNewStatusValue, string strUserCode)

@@ -50,7 +50,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiDaiHaoXiangBuNengW").ToString().Trim();
+            LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiDaiHaoXiangBuNengW");
         }
         else
         {
@@ -58,7 +58,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             {
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiYanZhengMaCuoWuQin").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiYanZhengMaCuoWuQin");
                 return;
             }
 
@@ -66,7 +66,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi").ToString().Trim() + strCompany + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe").ToString().Trim() + strType + LanguageHandle.GetWord("DeShiYongXinXiQingGuanZhu").ToString().Trim();
+                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi") + strCompany + LanguageHandle.GetWord("DeYuanGong") + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe") + strType + LanguageHandle.GetWord("DeShiYongXinXiQingGuanZhu");
                 Action action = new Action(delegate ()
                 {
                     try
@@ -87,7 +87,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+'1 day'::interval," + LanguageHandle.GetWord("XinJian").ToString().Trim() + ",'','','',''," + "'" + strWebSite + "'" + ")";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+'1 day'::interval," + "'"+ LanguageHandle.GetWord("XinJian") +"'" + ",'','','',''," + "'" + strWebSite + "'" + ")";
 
             try
             {
@@ -100,7 +100,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             }
             catch
             {
-                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha");
             }
         }
     }

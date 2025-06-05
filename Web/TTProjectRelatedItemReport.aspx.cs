@@ -35,7 +35,7 @@ public partial class TTProjectRelatedItemReport : System.Web.UI.Page
         {
             LoadProjectRelatedItem(strProjectID);
 
-            LB_ProjectName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
+            LB_ProjectName.Text = LanguageHandle.GetWord("XiangMu") + ": " + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
         }
     }
 

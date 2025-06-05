@@ -89,7 +89,7 @@ public partial class TTPersonalSpaceWorkflow : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
 
         strUserName = Session["UserName"].ToString();
-        strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + ": " + strUserCode + "  " + strUserName;
+        strUserInfo = LanguageHandle.GetWord("YongHu") + ": " + strUserCode + "  " + strUserName;
 
         try
         {

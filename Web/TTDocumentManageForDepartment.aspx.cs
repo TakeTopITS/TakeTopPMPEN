@@ -44,10 +44,10 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
             LB_ParentDepratString.Text = strParentDepartString;
             LB_UnderDepartStringg.Text = strUnderDepartString;
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             ShareClass.InitialAllUserDocTypeTree(TreeView3, strUserCode);
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("MyDocumentList").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("MyDocumentList");
 
             strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             strHQL = "from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'";
@@ -113,7 +113,7 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName + LanguageHandle.GetWord("ZZDWDLB").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen") + strDepartName + LanguageHandle.GetWord("ZZDWDLB");
 
             strHQL = "from Document as document where document.DepartCode = " + "'" + strDepartCode + "'";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
@@ -164,7 +164,7 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
         strParentDepartString = LB_ParentDepratString.Text.Trim();
         strUnderDepartString = LB_UnderDepartStringg.Text.Trim();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("User").ToString().Trim() + ":" + strUploadManName + LanguageHandle.GetWord("ZZDWDLB").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("User") + ":" + strUploadManName + LanguageHandle.GetWord("ZZDWDLB");
 
         strHQL = "from Document as document where document.UploadManCode = " + "'" + strUploadManCode + "'";
         strHQL += " and (((document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";  
@@ -209,7 +209,7 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
         strParentDepartString = LB_ParentDepratString.Text.Trim();
         strUnderDepartString = LB_UnderDepartStringg.Text.Trim();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZWJMBH").ToString().Trim() + strDocName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZWJMBH") + strDocName;
 
         strDocType = "%" + strDocType + "%";
         strDocName = "%" + strDocName + "%";

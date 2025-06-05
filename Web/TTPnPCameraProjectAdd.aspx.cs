@@ -18,7 +18,7 @@ public partial class TTPnPCameraProjectAdd : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TV_Department, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TV_Department, strUserCode);
             LB_DepartString.Text = strDepartString;
            
             if (!string.IsNullOrEmpty(Request.QueryString["id"]))

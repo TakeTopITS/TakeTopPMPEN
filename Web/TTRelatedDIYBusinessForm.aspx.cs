@@ -47,7 +47,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
         }
         catch
         {
-            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC");
             return;
         }
 
@@ -66,7 +66,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
                 strTemName = GetWorkFlowTemName(strIdentifyString);
                 if (strTemName == "")
                 {
-                    xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
+                    xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC");
                     return;
                 }
                 strXSNFile = GetWorkFlowTemXSNFile(strIdentifyString);
@@ -111,7 +111,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
         }
         catch
         {
-            xdoc.Text = LanguageHandle.GetWord("ZZZBCXXBCZYGSMYDY").ToString().Trim();
+            xdoc.Text = LanguageHandle.GetWord("ZZZBCXXBCZYGSMYDY");
         }
     }
 
@@ -154,8 +154,8 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            LB_Msg.Text = LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim();
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
+            LB_Msg.Text = LanguageHandle.GetWord("ZZBCSBJC");
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "');</script>");
         }
         else
         {
@@ -172,8 +172,8 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
             LoadBusinessFormRelatedWorkFlowTemplate(strRelatedType, strRelatedID);
             DL_WorkflowTemplate.SelectedValue = strXSNFile;
 
-            LB_Msg.Text = LanguageHandle.GetWord("ZZBCCG").ToString().Trim();
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
+            LB_Msg.Text = LanguageHandle.GetWord("ZZBCCG");
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG") + "');</script>");
         }
     }
 
@@ -195,11 +195,11 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
             //列出关联的流程模板
             LoadBusinessFormRelatedWorkFlowTemplate(strRelatedType, strRelatedID);
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCCG") + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "');</script>");
         }
     }
 
@@ -281,13 +281,13 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = LanguageHandle.GetWord("CWXYMBWJBCZQJC").ToString().Trim();
+            xdoc.Text = LanguageHandle.GetWord("CWXYMBWJBCZQJC");
             return;
         }
 
         if (intResult == -1)
         {
-            xdoc.Text = LanguageHandle.GetWord("CWBDMBZCSBQJC").ToString().Trim();
+            xdoc.Text = LanguageHandle.GetWord("CWBDMBZCSBQJC");
             return;
         }
 
@@ -328,7 +328,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC");
         }
 
 

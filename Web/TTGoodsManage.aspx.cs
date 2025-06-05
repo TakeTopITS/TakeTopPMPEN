@@ -46,7 +46,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
@@ -55,7 +55,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
             LoadGoodsType();
             ShareClass.LoadVendorList(DL_VendorList, strUserCode);
 
-            LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB").ToString().Trim();
+            LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB");
 
             strHQL = "from Goods as goods where ";
             strHQL += " goods.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
@@ -83,7 +83,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = treeNode.Text.Trim();
 
-            LB_GoodsOwner.Text = strDepartName + LanguageHandle.GetWord("DLPLB").ToString().Trim();
+            LB_GoodsOwner.Text = strDepartName + LanguageHandle.GetWord("DLPLB");
 
             strHQL = "from Goods as goods where goods.OwnerCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") ";
             strHQL += " and goods.Number > 0";
@@ -111,7 +111,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
         string strGoodsName = "%" + TB_GoodsName.Text.Trim() + "%";
         string strVendor = "%" + DL_VendorList.SelectedValue.Trim() + "%";
 
-        LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB").ToString().Trim();
+        LB_GoodsOwner.Text = LanguageHandle.GetWord("SYLPLB");
         strDepartString = LB_DepartString.Text.Trim();
 
         strHQL = "from Goods as goods where ";
@@ -140,7 +140,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
         string strUserCode = ((Button)e.Item.FindControl("BT_UserCode")).Text.Trim();
         string strUserName = ((Button)e.Item.FindControl("BT_UserName")).Text.Trim();
 
-        LB_GoodsOwner.Text = strUserName + LanguageHandle.GetWord("DLPLB").ToString().Trim();
+        LB_GoodsOwner.Text = strUserName + LanguageHandle.GetWord("DLPLB");
 
         strHQL = "from Goods as goods where goods.OwnerCode = " + "'" + strUserCode + "'";
         strHQL += " and goods.Number > 0";

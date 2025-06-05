@@ -67,7 +67,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
                 {
                     try
                     {
-                        msg.SendPhoneMSMBySP(strMobilePhone, LanguageHandle.GetWord("XiangMuBaoYanZhengMa").ToString().Trim() + TB_Password.Text.Trim(), "ADMIN");
+                        msg.SendPhoneMSMBySP(strMobilePhone, LanguageHandle.GetWord("XiangMuBaoYanZhengMa") + TB_Password.Text.Trim(), "ADMIN");
                     }
                     catch
                     {
@@ -75,7 +75,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
                     try
                     {
-                        msg.SendMail(strSendUserCode, LanguageHandle.GetWord("XiangMuBaoYanZhengMa").ToString().Trim(), strCheckCode, "ADMIN");
+                        msg.SendMail(strSendUserCode, LanguageHandle.GetWord("XiangMuBaoYanZhengMa"), strCheckCode, "ADMIN");
                     }
                     catch
                     {
@@ -87,7 +87,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
                         string strOpenID = TakeTopCore.WXHelper.GetUserWeXinOpenIDByUserCode(strSendUserCode);
                         if (strOpenID != "")
                         {
-                            msg.SendWeChatGZMsg(strOpenID, LanguageHandle.GetWord("XiangMuBaoYanZhengMa").ToString().Trim() + strCheckCode);
+                            msg.SendWeChatGZMsg(strOpenID, LanguageHandle.GetWord("XiangMuBaoYanZhengMa") + strCheckCode);
                         }
                     }
                     catch
@@ -100,12 +100,12 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
             }).Start();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNHYZMYFSDWXGZHTDGLBQDKNDWXCK").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNHYZMYFSDWXGZHTDGLBQDKNDWXCK") + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSSBQJCNYMYGZWXGCHTDGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSSBQJCNYMYGZWXGCHTDGLB") + "')", true);
         }
     }
 
@@ -119,7 +119,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
         if (strUserCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHBNWKQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHBNWKQJC") + "')", true);
             return;
         }
 
@@ -128,14 +128,14 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
         strCheckCode2 = Session[strUserCode + "CheckCode"].ToString();
         if (strCheckCode1 != strCheckCode2 | strCheckCode1 == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNZMCWQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNZMCWQJC") + "')", true);
             return;
         }
 
         Regex mobileReg = new Regex("[0-9]{11,11}");
         if (!mobileReg.IsMatch(strUserCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHMBZQQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHMBZQQJC") + "')", true);
             return;
         }
 
@@ -143,14 +143,14 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMember");
         if (ds.Tables[0].Rows.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCSJHBCZQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCSJHBCZQJC") + "')", true);
             return;
         }
 
         strPassword = TB_Password.Text.Trim();
         if (strPassword.Length < 8)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBMMCDBXDYHDY8WJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBMMCDBXDYHDY8WJC") + "')", true);
             return;
         }
 
@@ -159,11 +159,11 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
             strHQL = "Update T_ProjectMember SET Password = '" + EncryptPassword(TB_Password.Text.Trim(), "MD5") + "' Where UserCode = '" + strUserCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMMGGCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMMGGCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMMGGSBQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMMGGSBQJC") + "')", true);
         }
     }
 

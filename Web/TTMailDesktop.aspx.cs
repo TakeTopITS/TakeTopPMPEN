@@ -59,7 +59,7 @@ public partial class MailDesktop : System.Web.UI.Page
 
                 ///重新绑定控件的数据				
                 BindFolderData();
-                Response.Write("<script>alert('" + LanguageHandle.GetWord("ShanChuShuJuChengGongQingTuoSh").ToString().Trim() + "');</script>");
+                Response.Write("<script>alert('" + LanguageHandle.GetWord("ShanChuShuJuChengGongQingTuoSh") + "');</script>");
             }
             catch (Exception ex)
             {   ///跳转到异常错误处理页面

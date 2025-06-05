@@ -41,7 +41,7 @@ public partial class TTWorkFlowView : System.Web.UI.Page
             }
             else
             {
-                Response.Write(LanguageHandle.GetWord("CiGongZuoLiuBuCunZaiKeNengYiBe").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("CiGongZuoLiuBuCunZaiKeNengYiBe"));
             }
         }
     }

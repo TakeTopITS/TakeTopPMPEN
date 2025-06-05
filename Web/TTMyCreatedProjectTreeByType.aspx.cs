@@ -44,7 +44,7 @@ public partial class TTMyCreatedProjectTreeByType : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = LanguageHandle.GetWord("BAnLeiXingLiuLanWoJianLiDeXian").ToString().Trim();
+        node1.Text = LanguageHandle.GetWord("BAnLeiXingLiuLanWoJianLiDeXian");
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);

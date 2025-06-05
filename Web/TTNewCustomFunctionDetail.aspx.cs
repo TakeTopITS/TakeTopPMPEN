@@ -34,17 +34,17 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
 
         //目标客户模块
         TreeNode NodeTarget = new TreeNode();
-        NodeTarget.Text = LanguageHandle.GetWord("KeHuKaiFa").ToString().Trim();
+        NodeTarget.Text = LanguageHandle.GetWord("KeHuKaiFa");
         NodeTarget.Value = "target|" + strCustomCode;
         TV_Customers.Nodes.Add(NodeTarget);
         //开发计划模块
         TreeNode NodePlan = new TreeNode();
-        NodePlan.Text = LanguageHandle.GetWord("KaiFaJiHua").ToString().Trim();
+        NodePlan.Text = LanguageHandle.GetWord("KaiFaJiHua");
         NodePlan.Value = "plan|" + strCustomCode;
         TV_Customers.Nodes.Add(NodePlan);
         //产品报价模块
         TreeNode NodeProduct = new TreeNode();
-        NodeProduct.Text = LanguageHandle.GetWord("ChanPinBaoJia").ToString().Trim();
+        NodeProduct.Text = LanguageHandle.GetWord("ChanPinBaoJia");
         NodeProduct.Value = "product|" + strCustomCode;
 
         CustomModuleBLL customModuleBLL = new CustomModuleBLL();
@@ -69,12 +69,12 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
         TV_Customers.Nodes.Add(NodeProduct);
         //专题讨论模块
         TreeNode NodeProject = new TreeNode();
-        NodeProject.Text = LanguageHandle.GetWord("ZhuanTiTaoLun").ToString().Trim();
+        NodeProject.Text = LanguageHandle.GetWord("ZhuanTiTaoLun");
         NodeProject.Value = "project|" + strCustomCode;
         TV_Customers.Nodes.Add(NodeProject);
         //销售跟踪模块
         TreeNode NodeSale = new TreeNode();
-        NodeSale.Text = LanguageHandle.GetWord("XiaoShouGenZong").ToString().Trim();
+        NodeSale.Text = LanguageHandle.GetWord("XiaoShouGenZong");
         NodeSale.Value = "sale|" + strCustomCode;
         TV_Customers.Nodes.Add(NodeSale);
 
@@ -241,12 +241,12 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXinZengChuCuoQingJi").ToString().Trim());
+                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXinZengChuCuoQingJi"));
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertKeHuDaiMaHeMingChen").ToString().Trim());
+            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertKeHuDaiMaHeMingChen"));
         }
     }
 
@@ -333,21 +333,21 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
 
                     LoadCustomTree(strCustomerCode);
 
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBaoCunChengGongShow").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBaoCunChengGongShow"));
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXiuGaiChuCuoQingJia").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXiuGaiChuCuoQingJia"));
                 }
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBuNengXiuGaiKeHuDai").ToString().Trim());
+                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBuNengXiuGaiKeHuDai"));
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertGongYingShangDaiMaH").ToString().Trim());
+            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertGongYingShangDaiMaH"));
         }
     }
 
@@ -400,7 +400,7 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "plan")
@@ -438,7 +438,7 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "project")
@@ -476,7 +476,7 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa"));
                 }
             }
             else if (arrSelectNodeValue[0] == "child")

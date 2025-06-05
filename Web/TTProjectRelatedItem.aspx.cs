@@ -342,14 +342,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         //先导入物料主数据
         if (ExcelToDataTrainingForItem() == -1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDaoRuShiBaiShuJuYouWuQingJia").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDaoRuShiBaiShuJuYouWuQingJia")+"')", true);
             return;
         }
 
         //导入项目关联物料数据
         if (ExelToDBTestForProjectItem() == -1)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC");
 
             return;
         }
@@ -357,13 +357,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -372,7 +372,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
             }
             else
             {
@@ -389,13 +389,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -408,7 +408,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                 //判断物料是否在项目预算中已存在
                                 if (CheckProjectRelatedItemIsExisted(strItemCode, strProjectID))
                                 {
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("CuoWuDaiMa").ToString().Trim() + strItemCode + LanguageHandle.GetWord("YiCunZaiBuNengChongFuTianJiaQi").ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("CuoWuDaiMa") + strItemCode + LanguageHandle.GetWord("YiCunZaiBuNengChongFuTianJiaQi");
                                     continue;
                                 }
 
@@ -420,49 +420,49 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                     ProjectRelatedItem projectRelatedItem = new ProjectRelatedItem();
 
                                     projectRelatedItem.ProjectID = int.Parse(strProjectID);
-                                    projectRelatedItem.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
-                                    projectRelatedItem.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
+                                    projectRelatedItem.ItemName = dr[i][LanguageHandle.GetWord("MingChen")].ToString().Trim();
 
-                                    projectRelatedItem.FirstDirectory = dr[i][LanguageHandle.GetWord("YiJiMuLu").ToString().Trim()].ToString().Trim();
-                                    projectRelatedItem.SecondDirectory = dr[i][LanguageHandle.GetWord("ErJiMuLu").ToString().Trim()].ToString().Trim();
-                                    projectRelatedItem.ThirdDirectory = dr[i][LanguageHandle.GetWord("SanJiMuLu").ToString().Trim()].ToString().Trim();
-                                    projectRelatedItem.FourthDirectory = dr[i][LanguageHandle.GetWord("SiJiMuLu").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.FirstDirectory = dr[i][LanguageHandle.GetWord("YiJiMuLu")].ToString().Trim();
+                                    projectRelatedItem.SecondDirectory = dr[i][LanguageHandle.GetWord("ErJiMuLu")].ToString().Trim();
+                                    projectRelatedItem.ThirdDirectory = dr[i][LanguageHandle.GetWord("SanJiMuLu")].ToString().Trim();
+                                    projectRelatedItem.FourthDirectory = dr[i][LanguageHandle.GetWord("SiJiMuLu")].ToString().Trim();
 
 
-                                    projectRelatedItem.BomVersionID = int.Parse(dr[i][LanguageHandle.GetWord("BOMBanBen").ToString().Trim()].ToString().Trim());
-                                    projectRelatedItem.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
-                                    projectRelatedItem.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
-                                    projectRelatedItem.ReservedNumber = decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang").ToString().Trim()].ToString().Trim());
-                                    projectRelatedItem.DefaultProcess = dr[i][LanguageHandle.GetWord("QueShengGongYi").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.BomVersionID = int.Parse(dr[i][LanguageHandle.GetWord("BOMBanBen")].ToString().Trim());
+                                    projectRelatedItem.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang")].ToString().Trim());
+                                    projectRelatedItem.Unit = dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
+                                    projectRelatedItem.ReservedNumber = decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang")].ToString().Trim());
+                                    projectRelatedItem.DefaultProcess = dr[i][LanguageHandle.GetWord("QueShengGongYi")].ToString().Trim();
                                     projectRelatedItem.Status = dr[i]["Status"].ToString().Trim();   
 
-                                    projectRelatedItem.AleadyPurchased = decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.AleadyPurchased = decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang")].ToString().Trim());
 
                                     try
                                     {
-                                        projectRelatedItem.AleadyPick = decimal.Parse(dr[i][LanguageHandle.GetWord("YiLingLiaoLiang").ToString().Trim()].ToString().Trim());
+                                        projectRelatedItem.AleadyPick = decimal.Parse(dr[i][LanguageHandle.GetWord("YiLingLiaoLiang")].ToString().Trim());
                                     }
                                     catch
                                     {
                                         projectRelatedItem.AleadyPick = 0;
                                     }
 
-                                    projectRelatedItem.AleadyCheckOut = decimal.Parse(dr[i][LanguageHandle.GetWord("YiChuKuLiang").ToString().Trim()].ToString().Trim());
-                                    projectRelatedItem.AleadyCheckIn = decimal.Parse(dr[i][LanguageHandle.GetWord("YiRuKuLiang").ToString().Trim()].ToString().Trim());
-                                    projectRelatedItem.AleadyProduction = decimal.Parse(dr[i][LanguageHandle.GetWord("YiShengChanLiang").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.AleadyCheckOut = decimal.Parse(dr[i][LanguageHandle.GetWord("YiChuKuLiang")].ToString().Trim());
+                                    projectRelatedItem.AleadyCheckIn = decimal.Parse(dr[i][LanguageHandle.GetWord("YiRuKuLiang")].ToString().Trim());
+                                    projectRelatedItem.AleadyProduction = decimal.Parse(dr[i][LanguageHandle.GetWord("YiShengChanLiang")].ToString().Trim());
                                     try
                                     {
-                                        projectRelatedItem.AleadySale = decimal.Parse(dr[i][LanguageHandle.GetWord("YiXiaoShouLiang").ToString().Trim()].ToString().Trim());
+                                        projectRelatedItem.AleadySale = decimal.Parse(dr[i][LanguageHandle.GetWord("YiXiaoShouLiang")].ToString().Trim());
                                     }
                                     catch
                                     {
                                         projectRelatedItem.AleadySale = 0;
                                     }
 
-                                    projectRelatedItem.PurchasePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
-                                    projectRelatedItem.SalePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.PurchasePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia")].ToString().Trim());
+                                    projectRelatedItem.SalePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia")].ToString().Trim());
 
-                                    projectRelatedItem.Comment = dr[i][LanguageHandle.GetWord("BeiZhu").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.Comment = dr[i][LanguageHandle.GetWord("BeiZhu")].ToString().Trim();
 
                                     projectRelatedItem.ModelNumber = item.ModelNumber;
                                     projectRelatedItem.Specification = item.Specification;
@@ -474,8 +474,8 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                 }
                                 catch (Exception err)
                                 {
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strItemCode + " : " + err.Message.ToString() + "<br/>"; ;
-                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strItemCode + " : " + err.Message.ToString());
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strItemCode + " : " + err.Message.ToString() + "<br/>"; ;
+                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strItemCode + " : " + err.Message.ToString());
                                 }
                             }
 
@@ -485,7 +485,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                     LoadProjectRelatedItem(strProjectID);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG") + "')", true);
                 }
             }
         }
@@ -501,13 +501,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -516,7 +516,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
                 j = -1;
             }
             else
@@ -534,14 +534,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                     j = -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -550,36 +550,36 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                             IList lst = itemBLL.GetAllItems(strHQL);
                             if (lst != null && lst.Count > 0)//存在，则不操作
                             {
-                                CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
+                                CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim());
 
 
                                 try
                                 {
-                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiLingLiaoLiang").ToString().Trim()].ToString().Trim());
-                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiXiaoShouLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiLingLiaoLiang")].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiXiaoShouLiang")].ToString().Trim());
                                 }
                                 catch
                                 {
                                     j = -1;
 
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("MoBanBiaoGeGuoShiQingXiaZaiZui").ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("MoBanBiaoGeGuoShiQingXiaZaiZui");
                                     continue;
                                 }
 
 
                                 try
                                 {
-                                    decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
-                                    decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang").ToString().Trim()].ToString().Trim());
-                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang").ToString().Trim()].ToString().Trim());
-                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiChuKuLiang").ToString().Trim()].ToString().Trim());
-                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiShengChanLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang")].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang")].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang")].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiChuKuLiang")].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiShengChanLiang")].ToString().Trim());
                                 }
                                 catch
                                 {
                                     j = -1;
 
-                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZZDRSBSLBLSLYWSZ").ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZZDRSBSLBLSLYWSZ");
                                     continue;
                                 }
 
@@ -588,7 +588,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                             {
                                 j = -1;
 
-                                LB_ErrorText.Text += strItemCode + LanguageHandle.GetWord("ZZZWLDMBCZQJC").ToString().Trim();
+                                LB_ErrorText.Text += strItemCode + LanguageHandle.GetWord("ZZZWLDMBCZQJC");
                                 continue;
                             }
 
@@ -614,12 +614,12 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "Project" + strProjectID + LanguageHandle.GetWord("GuanLianWuLiao").ToString().Trim() + DateTime.Now.ToString("yyyyMMddHHmmss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = "Project" + strProjectID + LanguageHandle.GetWord("GuanLianWuLiao") + DateTime.Now.ToString("yyyyMMddHHmmss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }
@@ -712,7 +712,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         if (ExelToDBTestForItem() == -1)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC");
 
             return -1;
         }
@@ -736,13 +736,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 return -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 return -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -751,7 +751,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRSB") + "')", true);
                 return -1;
             }
             else
@@ -769,14 +769,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                     return -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -790,13 +790,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                             {
                                 Item item = new Item();
 
-                                item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
-                                item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
+                                item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
+                                item.ItemName = dr[i][LanguageHandle.GetWord("MingChen")].ToString().Trim();
                                 item.Type = dr[i][""+LanguageHandle.GetWord("ShuXing")+"（"+LanguageHandle.GetWord("CaiGouJian")+"、"+LanguageHandle.GetWord("ZiZhiJian")+"、"+LanguageHandle.GetWord("WaiXieJian")+"、"+LanguageHandle.GetWord("JiaoFuJian")+"）"].ToString().Trim(); ;   
                                 strBigType = dr[i][""+LanguageHandle.GetWord("DaLei")+"（"+LanguageHandle.GetWord("WuLiao")+"、"+LanguageHandle.GetWord("ZiChan")+"）"].ToString().Trim();   
 
                                 item.BigType = "";
-                                if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
+                                if (strBigType == LanguageHandle.GetWord("WuLiao"))
                                 {
                                     item.BigType = "Goods";
                                 }
@@ -806,12 +806,12 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                 }
 
                                 item.SmallType = dr[i][""+LanguageHandle.GetWord("XiaoLei")+"（"+LanguageHandle.GetWord("WuLiaoHuoZiChanLeiXing")+"）"].ToString().Trim();   
-                                item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
-                                item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
-                                item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
-                                item.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
+                                item.Specification = dr[i][LanguageHandle.GetWord("GuiGe")].ToString().Trim();
+                                item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao")].ToString().Trim();
+                                item.Brand = dr[i][LanguageHandle.GetWord("PinPai")].ToString().Trim();
+                                item.Unit = dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim();
 
-                                item.RegistrationNumber = dr[i][LanguageHandle.GetWord("ZhuCeZhengHao").ToString().Trim()].ToString().Trim();
+                                item.RegistrationNumber = dr[i][LanguageHandle.GetWord("ZhuCeZhengHao")].ToString().Trim();
                                 item.PackingType = dr[i]["PackagingMethod"].ToString().Trim();   
 
                                 item.PULeadTime = dePULeadTime;
@@ -844,7 +844,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                 ShareClass.RunSqlCommand(strHQL);
 
                                 //strHQL = "Insert Into T_ItemBom(ItemCode,ParentItemCode,ChildItemCode,Number,Unit,DefaultProcess,ChildItemVerID,VerID)";
-                                //strHQL += " Values(" + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + ",1," + "'" + dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim() + "'" + "," + "'" + strDefaultProcess + "'" + ",1,1)";
+                                //strHQL += " Values(" + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + ",1," + "'" + dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim() + "'" + "," + "'" + strDefaultProcess + "'" + ",1,1)";
                                 //ShareClass.RunSqlCommand(strHQL);
 
 
@@ -860,7 +860,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                         }
                     }
 
-                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
+                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG") + "')", true);
                 }
 
                 return 1;
@@ -876,13 +876,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         if (FileUpload_Training.HasFile == false)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
             j = -1;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
             j = -1;
         }
         string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -891,7 +891,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
             j = -1;
         }
         else
@@ -909,36 +909,36 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                 j = -1;
             }
             else
             {
                 for (int i = 0; i < dr.Length; i++)
                 {
-                    strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                    strItemCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                     if (strItemCode != "")
                     {
-                        CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
+                        CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei")].ToString().Trim());
 
                         string strBigType = dr[i][""+LanguageHandle.GetWord("DaLei")+"（"+LanguageHandle.GetWord("WuLiao")+"、"+LanguageHandle.GetWord("ZiChan")+"）"].ToString().Trim();   
-                        if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
+                        if (strBigType != LanguageHandle.GetWord("WuLiao") & strBigType != "Assets")
                         {
-                            LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW").ToString().Trim() + strBigType + LanguageHandle.GetWord("QingJianCha").ToString().Trim();
+                            LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW") + strBigType + LanguageHandle.GetWord("QingJianCha");
                             j = -1;
                         }
 
                         string strSmallType = dr[i][""+LanguageHandle.GetWord("XiaoLei")+"（"+LanguageHandle.GetWord("WuLiaoHuoZiChanLeiXing")+"）"].ToString().Trim();   
                         if (CheckSmallType(strSmallType, strBigType) == 0)
                         {
-                            if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())
+                            if (strBigType != LanguageHandle.GetWord("WuLiao"))
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei").ToString().Trim() + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiJiChuShuJuW").ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei") + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiJiChuShuJuW");
                             }
                             else
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei").ToString().Trim() + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiWuLiaoLeiXi").ToString().Trim();
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei") + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiWuLiaoLeiXi");
                             }
 
                             j = -1;
@@ -955,7 +955,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
     {
         string strHQL;
 
-        if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
+        if (strBigType == LanguageHandle.GetWord("WuLiao"))
         {
             strHQL = "Select Type From T_GoodsType Where Type = '" + strType + "'";
         }
@@ -1017,7 +1017,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         //判断物料是否在项目预算中已存在
         if (CheckProjectRelatedItemIsExisted(strItemCode, strProjectID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiWuLiaoYiCunZaiBuNengC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiWuLiaoYiCunZaiBuNengC")+"')", true);
             return;
         }
 
@@ -1075,11 +1075,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
             LoadProjectRelatedItem(strProjectID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJRXMCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJRXMCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJRSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJRSBJC") + "')", true);
         }
     }
 
@@ -1147,16 +1147,16 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                 BT_DeleteToProject.Enabled = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiCiWuZiYuSuanYiBeiCaiYo").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiCiWuZiYuSuanYiBeiCaiYo")+"')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
         }
     }
 
@@ -1209,16 +1209,16 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                 LoadProjectRelatedItem(strProjectID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBWZYSYBCYBNSCQJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBWZYSYBCYBNSCQJC") + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSCSBJC") + "')", true);
         }
     }
 
@@ -1251,13 +1251,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             TakeTopBOM.InitialProjectItemBomTree(strProjectID, strVerID, TreeView2);
             LB_ProRelatedItemBomCost.Text = TakeTopBOM.SumProjectItemBomCost(strProjectID, strVerID).ToString("F2");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGHBOMCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGHBOMCG") + "')", true);
 
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCXZJXGCPZXMLHZJXMCPBOMBBH").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCXZJXGCPZXMLHZJXMCPBOMBBH") + "')", true);
         }
     }
 
@@ -1290,7 +1290,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         projectRelatedItemBom.Number = 1;
         projectRelatedItemBom.ReservedNumber = 0;
-        projectRelatedItemBom.Unit = LanguageHandle.GetWord("Ge").ToString().Trim();
+        projectRelatedItemBom.Unit = LanguageHandle.GetWord("Ge");
         projectRelatedItemBom.VerID = int.Parse(strVerID);
 
         projectRelatedItemBom.ItemType = "FinishedProduct";   
@@ -1307,8 +1307,8 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         projectRelatedItemBom.HRCost = 0;
         projectRelatedItemBom.MTCost = 0;
 
-        projectRelatedItemBom.Comment = LanguageHandle.GetWord("XiangMuMingChen").ToString().Trim();
-        projectRelatedItemBom.DefaultProcess = LanguageHandle.GetWord("ZiZhi").ToString().Trim();
+        projectRelatedItemBom.Comment = LanguageHandle.GetWord("XiangMuMingChen");
+        projectRelatedItemBom.DefaultProcess = LanguageHandle.GetWord("ZiZhi");
         projectRelatedItemBom.PhotoURL = "";
         projectRelatedItemBom.SortNumber = 0;
 
@@ -1392,7 +1392,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             projectRelatedItemBom.HRCost = projectRelatedItem.HRCost;
             projectRelatedItemBom.MTCost = projectRelatedItem.MTCost;
 
-            projectRelatedItemBom.Comment = LanguageHandle.GetWord("WuLiaoZiLiao").ToString().Trim();
+            projectRelatedItemBom.Comment = LanguageHandle.GetWord("WuLiaoZiLiao");
             projectRelatedItemBom.DefaultProcess = strDefaultProcess;
             projectRelatedItemBom.PhotoURL = projectRelatedItem.PhotoURL;
             projectRelatedItemBom.SortNumber = 0;
@@ -1472,7 +1472,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             projectRelatedItemBom.HRCost = itemBom.HRCost;
             projectRelatedItemBom.MTCost = itemBom.MTCost;
 
-            projectRelatedItemBom.Comment = LanguageHandle.GetWord("WuLiaoZiLiao").ToString().Trim();
+            projectRelatedItemBom.Comment = LanguageHandle.GetWord("WuLiaoZiLiao");
             projectRelatedItemBom.DefaultProcess = itemBom.DefaultProcess.Trim();
 
             projectRelatedItemBom.SortNumber = 0;
@@ -1735,7 +1735,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         LoadProjectRelatedItem(strProjectID);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZWC").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZWC") + "')", true);
         //ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popParentProjectItemWindow','false') ", true);
     }
 
@@ -1781,16 +1781,16 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + err.Message.ToString() + "')", true);
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC") + "')", true);
         }
     }
 
@@ -1801,7 +1801,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         if (DL_ChangeProjectItemBomVersionID.Items.Count == 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBMXMBXBLYGJHBB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBMXMBXBLYGJHBB") + "')", true);
             return;
         }
 
@@ -1833,11 +1833,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 
@@ -1893,7 +1893,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             {
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBBLXYGG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBBLXYGG") + "')", true);
             }
             catch
             {
@@ -2027,11 +2027,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
             BT_DeleteFormBom.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGXGSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGXGSBJC") + "')", true);
         }
     }
 
@@ -2064,11 +2064,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             BT_UpdateFormBom.Enabled = false;
             BT_DeleteFormBom.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
     }
 

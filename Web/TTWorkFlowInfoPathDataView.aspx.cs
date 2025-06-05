@@ -38,7 +38,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
         else
         {
             strXSNFile = Request.QueryString["XSNFile"];
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGXSNFILEWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGXSNFILEWKJC") + "');</script>");
             return;
         }
         LB_XSNFile.Text = strXSNFile;
@@ -51,7 +51,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
         else
         {
             strXMLFile = Request.QueryString["XMLFile"];
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGXMLFILEWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGXMLFILEWKJC") + "');</script>");
             return;
         }
 
@@ -229,7 +229,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
         catch (Exception err)
         {
             //LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC") + "');</script>");
         }
     }
 
@@ -365,7 +365,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
                             }
                         }).Start();
 
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG") + "');</script>");
                     }
                 }
                 else
@@ -376,16 +376,16 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
                     }
                     catch
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC").ToString().Trim() + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC") + "');</script>");
                     }
 
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "');</script>");
                 }
             }
             else
             {
                 string strCanNotNullFieldList = GetCanNotNullFieldList(strID, strWLTemName, strXMLFile);
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC") + "');</script>");
             }
         }
         catch
@@ -396,7 +396,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC") + "');</script>");
             }
         }
     }
@@ -495,16 +495,16 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
                     }
                     catch
                     {
-                        //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC").ToString().Trim() + "');</script>");
+                        //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC") + "');</script>");
                     }
 
-                  /*  ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>")*/;
+                  /*  ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "');</script>")*/;
                 }
             }
             else
             {
                 string strCanNotNullFieldList = GetCanNotNullFieldList(strID, strWLTemName, strXMLFile);
-                //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC").ToString().Trim() + "');</script>");
+                //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC") + "');</script>");
             }
         }
         catch
@@ -515,7 +515,7 @@ public partial class _TTWorkFlowInfoPathDataView : System.Web.UI.Page
             }
             catch
             {
-                //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC").ToString().Trim() + "');</script>");
+                //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZBCSJSBJC") + "');</script>");
             }
         }
     }

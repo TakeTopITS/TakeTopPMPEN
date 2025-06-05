@@ -34,7 +34,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = GetUserName(strUserCode);
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "费用报销汇总！";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + strProjectName + "费用报销汇总！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -58,10 +58,10 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
                 deExpense += expenseClaim.Amount;
             }
 
-            LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+            LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan");
             LB_Amount.Text = deExpense.ToString();
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll") + strUserCode + strUserName;
         }
     }
 
@@ -106,10 +106,10 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
                     deExpense += expenseClaim.Amount;
                 }
 
-                LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+                LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan");
                 LB_Amount.Text = deExpense.ToString();
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll") + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
 
                 LoadRelatedWL("ExpenseReimbursement", "Project", 0);
@@ -191,10 +191,10 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
             deExpense += expenseClaim.Amount;
         }
 
-        LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+        LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan");
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll");
 
         LoadRelatedWL("ExpenseReimbursement", "Project", 0);
         LoadRelatedExpenseClaimDetail("0");

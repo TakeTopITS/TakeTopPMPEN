@@ -103,7 +103,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
         try
         {
             customerBLL.UpdateCustomer(customer, strCustomerCode);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPZBACG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPZBACG") + "')", true);
 
             LB_ReviewStatus.Text = "SUCCESS";
 
@@ -113,7 +113,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
             try
             {
                 string strCreatorCode = customer.CreatorCode.Trim();
-                string strNofiInfo = LanguageHandle.GetWord("ZZNDKHBAYBPZTGQGZ").ToString().Trim();
+                string strNofiInfo = LanguageHandle.GetWord("ZZNDKHBAYBPZTGQGZ");
                 Action action = new Action(delegate ()
                 {
                     try
@@ -133,7 +133,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPZBASBQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPZBASBQJC") + "')", true);
         }
     }
 
@@ -157,7 +157,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
         try
         {
             customerBLL.UpdateCustomer(customer, strCustomerCode);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQQBACG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQQBACG") + "')", true);
 
             LB_ReviewStatus.Text = "Refused";
 
@@ -167,7 +167,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
             try
             {
                 string strCreatorCode = customer.CreatorCode.Trim();
-                string strNofiInfo = LanguageHandle.GetWord("ZZNDKHBAYBJQQGZ").ToString().Trim();
+                string strNofiInfo = LanguageHandle.GetWord("ZZNDKHBAYBJQQGZ");
                 Action action = new Action(delegate ()
                 {
                     try
@@ -187,7 +187,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQQBASBQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQQBASBQJC") + "')", true);
         }
     }
 

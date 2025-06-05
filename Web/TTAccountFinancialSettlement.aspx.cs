@@ -217,25 +217,25 @@ public partial class TTAccountFinancialSettlement : System.Web.UI.Page
     {
         //if (DL_FinancialID.SelectedValue.Trim() == "0")
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSHJZTWBXJC").ToString().Trim()+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSHJZTWBXJC")+"')", true);
         //    DL_FinancialID.Focus();
         //    return;
         //}
         //if (DL_IntervalID.SelectedValue.Trim() == "0")
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSHJJWBXJC").ToString().Trim()+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSHJJWBXJC")+"')", true);
         //    DL_IntervalID.Focus();
         //    return;
         //}
         if (DL_Financial.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSCWZTWBXJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSCWZTWBXJC")+"')", true);
             DL_Financial.Focus();
             return;
         }
         if (DL_Interval.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSCWJWBXJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSCWJWBXJC")+"')", true);
             DL_Interval.Focus();
             return;
         }
@@ -287,7 +287,7 @@ public partial class TTAccountFinancialSettlement : System.Web.UI.Page
 
             LoadAccountGeneralLedgerList(DL_Financial.SelectedValue.Trim(), DL_Interval.SelectedValue.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZZCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZZCG")+"')", true);
         }
     }
 

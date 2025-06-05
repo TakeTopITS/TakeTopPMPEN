@@ -94,7 +94,7 @@ public partial class TakeTopLRExLeft : System.Web.UI.Page
         strUserName = Session["UserName"].ToString();
         if (strUserCode == "ADMIN")
         {
-            if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("GuanKongZhongXin").ToString().Trim(), "SYSTEM", strUserType) == false)
+            if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("GuanKongZhongXin"), "SYSTEM", strUserType) == false)
             {
                 //strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('ControlCenter','ADMIN','YES','SYSTEM','" + strUserType + "')";   
                 //ShareClass.RunSqlCommand(strHQL);
@@ -105,7 +105,7 @@ public partial class TakeTopLRExLeft : System.Web.UI.Page
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("JiTongMoZuSheDing").ToString().Trim(), "SYSTEM", strUserType) == false)
+            if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("JiTongMoZuSheDing"), "SYSTEM", strUserType) == false)
             {
                 //strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('SystemModuleSettings','ADMIN','YES','SYSTEM','" + strUserType + "')";   
                 //ShareClass.RunSqlCommand(strHQL);

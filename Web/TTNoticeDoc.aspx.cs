@@ -45,7 +45,7 @@ public partial class TTNoticeDoc : System.Web.UI.Page
             DL_DocType.DataSource = lst;
             DL_DocType.DataBind();
 
-            LB_DocOwner.Text = LanguageHandle.GetWord("GongSiGongGaoWenJianLieBiao").ToString().Trim();
+            LB_DocOwner.Text = LanguageHandle.GetWord("GongSiGongGaoWenJianLieBiao");
           
             strHQL = "from Document as document where ((document.Visible = 'Company') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted' Order by document.DocID DESC";  
 
@@ -101,7 +101,7 @@ public partial class TTNoticeDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_DocOwner.Text = LanguageHandle.GetWord("LeiXing").ToString().Trim() + strDocType + LanguageHandle.GetWord("DeWenDangLieBiao").ToString().Trim();
+        LB_DocOwner.Text = LanguageHandle.GetWord("LeiXing") + strDocType + LanguageHandle.GetWord("DeWenDangLieBiao");
         strHQL = "from Document as document where  document.DocType = " + "'" + strDocType + "'" + " and ((document.DepartCode = " + "'" + strDepartCode + "'" + ") or (document.Visible = 'Company')) and document.Status<> 'Deleted' Order by document.DocID DESC";  
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
@@ -132,7 +132,7 @@ public partial class TTNoticeDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_DocOwner.Text = LanguageHandle.GetWord("WenJianMingBaoHan").ToString().Trim() + strDocName + LanguageHandle.GetWord("ZiFuChuanDeWenDangLieBiao").ToString().Trim();
+        LB_DocOwner.Text = LanguageHandle.GetWord("WenJianMingBaoHan") + strDocName + LanguageHandle.GetWord("ZiFuChuanDeWenDangLieBiao");
 
         strDocName = "%" + strDocName + "%";
         strHQL = "from Document as document where document.DocName like " + "'" + strDocName + "'" + " and ((document.Visible = 'Company') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted'  Order by document.DocID DESC";  

@@ -92,11 +92,11 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
                     LoadProjectPrimaveraTaskList(strProjectID.Trim());
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
                 }
             }
         }
@@ -173,7 +173,7 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
     {
         if (TB_TaskCode.Text.Trim() == ""||TB_TaskName.Text.Trim()==""||DLC_EndDate.Text.Trim()==""||DLC_BeginDate.Text.Trim()=="")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMZYMCJZYYXDBNWKCZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMZYMCJZYYXDBNWKCZSBJC")+"')", true);
             TB_TaskCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -181,7 +181,7 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
         }
         if (IsProjectPrimaveraTask(TB_TaskCode.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMYCZCZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMYCZCZSBJC")+"')", true);
             TB_TaskCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -202,7 +202,7 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
 
         if (projectPrimaveraTask.BeginDate > projectPrimaveraTask.EndDate)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYYXDKSSJBNDYJSSJCZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYYXDKSSJBNDYJSSJCZSBJC")+"')", true);
             DLC_BeginDate.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -215,11 +215,11 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
 
             LoadProjectPrimaveraTaskList(strProjectID.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG")+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB")+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -229,7 +229,7 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
     {
         if (TB_TaskCode.Text.Trim() == "" || TB_TaskName.Text.Trim() == "" || DLC_EndDate.Text.Trim() == "" || DLC_BeginDate.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMZYMCJZYYXDBNWKCZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMZYMCJZYYXDBNWKCZSBJC")+"')", true);
             TB_TaskCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -237,7 +237,7 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
         }
         if (IsProjectPrimaveraTask(TB_TaskCode.Text.Trim(),LB_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMYCZCZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYBMYCZCZSBJC")+"')", true);
             TB_TaskCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -257,7 +257,7 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
 
         if (projectPrimaveraTask.BeginDate > projectPrimaveraTask.EndDate)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYYXDKSSJBNDYJSSJCZSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYYXDKSSJBNDYJSSJCZSBJC")+"')", true);
             DLC_BeginDate.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -269,11 +269,11 @@ public partial class TTProjectPrimaveraTask : System.Web.UI.Page
             projectPrimaveraTaskBLL.UpdateProjectPrimaveraTask(projectPrimaveraTask, projectPrimaveraTask.ID);
             LoadProjectPrimaveraTaskList(strProjectID.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim() +"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG") +"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB")+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }

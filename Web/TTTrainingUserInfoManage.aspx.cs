@@ -23,7 +23,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            IsPlayButton(strUserCode.Trim(), LanguageHandle.GetWord("PeiXunGuanLi").ToString().Trim());
+            IsPlayButton(strUserCode.Trim(), LanguageHandle.GetWord("PeiXunGuanLi"));
             BindCheckData();
         }
     }
@@ -58,39 +58,39 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (ddl_TrainingType.SelectedValue.Trim() == "PleaseSelect")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSPXXLBBJC").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSPXXLBBJC")+"')", true);
                     ddl_TrainingType.Focus();
                     return;
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "EmployeeTraining")
                 {
-                    fileName = LanguageHandle.GetWord("YuanGongPeiXun").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("YuanGongPeiXun") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "TrainingRecord")
                 {
-                    fileName = LanguageHandle.GetWord("PeiXunJiLu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("PeiXunJiLu") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialOperations")
                 {
-                    fileName = LanguageHandle.GetWord("TeChongZuoYe").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("TeChongZuoYe") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialEquipment")
                 {
-                    fileName = LanguageHandle.GetWord("TeChongSheBei").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("TeChongSheBei") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "WeldingCertification")
                 {
-                    fileName = LanguageHandle.GetWord("HanJieChiZheng").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("HanJieChiZheng") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "ConstructionManagerCertificate")
                 {
-                    fileName = LanguageHandle.GetWord("ShiGongGuanLiYuanZheng").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("ShiGongGuanLiYuanZheng") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC")+"')", true);
             }
         }
     }
@@ -175,7 +175,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         {
             string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',A.ProfessionalSkillLevel 'ProfessionalSkillLevel'," +   
                 "A.ProfessionSkillNumber 'ProfessionalSkillAppraisalCertificateNumber',A.ValidityType 'AppraisedOccupation',A.ReleaseTime 'CertificateIssuanceDate',A.AnnValidTime 'AntiTerrorismValidityPeriod',"+   
-                LanguageHandle.GetWord("AAnnCertificateNoAnKongZhengSh").ToString().Trim() +
+                LanguageHandle.GetWord("AAnnCertificateNoAnKongZhengSh") +
                 "from T_TREmployeeTraining A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -218,7 +218,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         else if (ddl_TrainingType.SelectedValue.Trim() == "TrainingRecord")
         {
             string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',A.TrainingProject 'TrainingProgram'," +   
-                LanguageHandle.GetWord("ATrainingAccordPeiXunYiJuATrai").ToString().Trim() +
+                LanguageHandle.GetWord("ATrainingAccordPeiXunYiJuATrai") +
                 "A.TrainingTime 'TrainingDate' from T_TRTrainingRecordEmp A,T_ProjectMember B Where A.UserCode=B.UserCode ";   
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -260,7 +260,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialOperations")
         {
             string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',B.WorkType 'LaborCategory',A.SpeOpeType 'SpecialOperationsCategory'," +   
-                LanguageHandle.GetWord("ASpeOpeProjectTeChongZuoYeZhun").ToString().Trim() +
+                LanguageHandle.GetWord("ASpeOpeProjectTeChongZuoYeZhun") +
                 "from T_TRSpecialOperations A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -302,7 +302,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialEquipment")
         {
             string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',B.WorkType 'LaborCategory',A.SpeEquType 'SpecialEquipmentCategory'," +   
-                LanguageHandle.GetWord("ASpeEquProjectTeChongSheBeiZhu").ToString().Trim() +
+                LanguageHandle.GetWord("ASpeEquProjectTeChongSheBeiZhu") +
                 "from T_TRSpecialEquipment A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -387,7 +387,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         else if (ddl_TrainingType.SelectedValue.Trim() == "ConstructionManagerCertificate")
         {
             string strHQL = "select A.ID 'SerialNumber',B.IDCard 'IDNumber',B.UserName 'Name',B.Gender 'Gender',B.BirthDay 'DateOfBirth',A.Unit 'Unit',B.WorkType 'LaborCategory',A.Job 'Position'," +   
-                LanguageHandle.GetWord("ACertificateNoGangWeiZhengShuB").ToString().Trim() +
+                LanguageHandle.GetWord("ACertificateNoGangWeiZhengShuB") +
                 "from T_TRPostCertificate A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {

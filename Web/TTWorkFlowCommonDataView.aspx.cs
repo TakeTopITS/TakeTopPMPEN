@@ -732,7 +732,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC") + "')", true);
         }
     }
 
@@ -849,7 +849,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             string strCurrencyType = expenseClaim.CurrencyType.Trim();
             string strReAndPayer = expenseClaim.ApplicantCode.Trim() + expenseClaim.ApplicantName.Trim();
             string strStatus = expenseClaim.Status.Trim();
-            string strPayMethod = LanguageHandle.GetWord("ZhuaiZhang").ToString().Trim();
+            string strPayMethod = LanguageHandle.GetWord("ZhuaiZhang");
 
             strApplicantCode = expenseClaim.ApplicantCode.Trim();
             strRelatedType = expenseClaim.RelatedType.Trim();
@@ -898,16 +898,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
                     ((Label)(DataList6.Items[0].FindControl("LB_Status"))).Text = "Recorded";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo")+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ") + "')", true);
             }
         }
     }
@@ -964,7 +964,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         //把申报费用列入项目费用
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("WuZiCaiGouFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("WuZiCaiGouFeiYong"), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
@@ -972,16 +972,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo")+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ") + "')", true);
             }
         }
     }
@@ -1008,7 +1008,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             string strApplicantName = bMPurchaseApplication.Application;
             strAccountCode = bMPurchaseApplication.AccountCode.Trim();
             strAccountName = bMPurchaseApplication.AccountName.Trim();
-            string strPayMethod = LanguageHandle.GetWord("ZhuaiZhang").ToString().Trim();
+            string strPayMethod = LanguageHandle.GetWord("ZhuaiZhang");
 
             if (strStatus != "Recorded")
             {
@@ -1023,7 +1023,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     //把申报费用列入项目费用
                     if (intProjectID > 1)
                     {
-                        ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("GongChengFenBaoFeiYong").ToString().Trim(), deAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                        ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("GongChengFenBaoFeiYong"), deAmount, strCurrencyType, strApplicantCode, strApplicantName);
                     }
 
                     strHQL = "Update T_BMPurchaseApplication Set Status = 'Recorded' Where ID = " + strID;
@@ -1031,16 +1031,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
                     ((Label)(DataList32.Items[0].FindControl("LB_Status"))).Text = "Recorded";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo")+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ") + "')", true);
             }
         }
     }
@@ -1098,7 +1098,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         //把申报费用列入项目费用
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("WuZiCaiGouFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("WuZiCaiGouFeiYong"), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
@@ -1106,16 +1106,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo")+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ") + "')", true);
             }
         }
     }
@@ -1172,7 +1172,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         //把申报费用列入项目费用
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("ZiChanCaiGouFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("ZiChanCaiGouFeiYong"), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
@@ -1180,16 +1180,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo")+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ") + "')", true);
             }
         }
     }
@@ -1218,11 +1218,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 strHQL = "Update T_ConstractPayableVisa Set RelatedImpact = '" + strRelatedImpact + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiBuWei").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiBuWei")+"')", true);
             }
         }
 
@@ -1237,11 +1237,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 strHQL = "Update T_ConstractPayableVisa Set RelatedResult = '" + strRelatedResult + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiBuWei").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiBuWei")+"')", true);
             }
         }
     }

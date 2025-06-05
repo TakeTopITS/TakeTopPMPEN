@@ -31,7 +31,7 @@ public partial class TTMakeBookManage : System.Web.UI.Page
         {
             txt_Borrow.Text = strUserCode;
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             BindDDLOther();
@@ -246,21 +246,21 @@ public partial class TTMakeBookManage : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (DropDownList1.SelectedValue.Trim().Equals("0"))
                 {
-                    fileName = LanguageHandle.GetWord("BiaoZhunYuTuShuXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("BiaoZhunYuTuShuXinXi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (DropDownList1.SelectedValue.Trim().Equals("1"))
                 {
-                    fileName = LanguageHandle.GetWord("TuShuXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("TuShuXinXi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = LanguageHandle.GetWord("BiaoZhunXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("BiaoZhunXinXi") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }
@@ -338,13 +338,13 @@ public partial class TTMakeBookManage : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = LanguageHandle.GetWord("ShuJiJieYueQingKuang").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("ShuJiJieYueQingKuang") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
                 CreateExcel(getExportBookBorrowList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }
@@ -352,8 +352,8 @@ public partial class TTMakeBookManage : System.Web.UI.Page
     protected DataTable getExportBookBorrowList()
     {
         string strHQL = " Select bookBorrowRecord.BookClassificationName StandardOrBookClassification,bookBorrowRecord.ReferenceNo RegistrationNumber,bookBorrowRecord.BarCode StandardNumber," +   
-            LanguageHandle.GetWord("bookBorrowRecordBookNameBiaoZh").ToString().Trim() +
-            LanguageHandle.GetWord("bookBorrowRecordBorrowCodeJieY").ToString().Trim() +
+            LanguageHandle.GetWord("bookBorrowRecordBookNameBiaoZh") +
+            LanguageHandle.GetWord("bookBorrowRecordBorrowCodeJieY") +
             "projectMember.MobilePhone as MobileNumber,bookBorrowRecord.ReaderTypeName as BorrowerType From T_BookBorrowRecord as bookBorrowRecord,T_ProjectMember as projectMember Where bookBorrowRecord.BorrowCode=projectMember.UserCode " +   
             "and bookBorrowRecord.BookInfoId in (Select ID From T_BookInformation Where 1=1 ";
 

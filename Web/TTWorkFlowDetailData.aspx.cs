@@ -89,7 +89,7 @@ public partial class TTWorkFlowDetailData : System.Web.UI.Page
             }
             catch
             {
-                Response.Write(LanguageHandle.GetWord("CuoWuCiGongZuoLiuShuJuWenJianB").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("CuoWuCiGongZuoLiuShuJuWenJianB"));
                 return;
             }
 
@@ -191,7 +191,7 @@ public partial class TTWorkFlowDetailData : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDKSPSJSBKNSXYGZLMBDBKSYDBDSCWJC").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDKSPSJSBKNSXYGZLMBDBKSYDBDSCWJC") + "');</script>");
                 }
             }
         }

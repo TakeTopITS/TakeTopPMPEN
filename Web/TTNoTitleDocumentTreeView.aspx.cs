@@ -185,9 +185,9 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
             InitialProTree();
 
@@ -202,7 +202,7 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 DataGrid2.DataSource = ds;
                 DataGrid2.DataBind();
 
-                LB_UnUploadMustDocCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+                LB_UnUploadMustDocCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + ds.Tables[0].Rows.Count.ToString();
 
                 TR_UnUploadForMustDocList.Visible = true;
             }
@@ -225,7 +225,7 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = strRelatedType + "£º" + strRelatedID + " " + strRelatedName + LanguageHandle.GetWord("WenDangLieBiao").ToString().Trim();
+        node1.Text = strRelatedType + "£º" + strRelatedID + " " + strRelatedName + LanguageHandle.GetWord("WenDangLieBiao");
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -313,9 +313,9 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 DataGrid1.DataSource = lst2;
                 DataGrid1.DataBind();
 
-                LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+                LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX") + strDocType;
 
-                LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+                LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
             }
         }
         else
@@ -326,9 +326,9 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
             DataGrid1.DataSource = lst2;
             DataGrid1.DataBind();
 
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
-            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
         }
 
     }

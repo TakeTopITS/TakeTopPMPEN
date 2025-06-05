@@ -153,7 +153,7 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
         CarOilTypeRecord carOilTypeRecord = new CarOilTypeRecord();
         if (string.IsNullOrEmpty(ddl_OilInformation.SelectedValue) || ddl_OilInformation.SelectedValue.Trim().Equals("0"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGYLBNWK").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGYLBNWK")+"')", true);
             return;
         }
         carOilTypeRecord.CarNo = LB_ID.Text.Trim();//³µÅÆºÅ
@@ -180,12 +180,12 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
             DataGrid2.DataBind();
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG")+"')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSB")+"')", true);
         }
     }
 
@@ -284,13 +284,13 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
     {
         if (FileUpload1.HasFile == false)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGNZEXCELWJ")+"')", true);
             return;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload1.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZKYZEXCELWJ")+"')", true);
             return;
         }
 
@@ -303,7 +303,7 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim()+"');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZEXCLEBDRSB")+"');</script>");
         }
         else
         {
@@ -320,21 +320,21 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ")+"')", true);
             }
             else
             {
                 for (int i = 0; i < dr.Length; i++)
                 {
-                    carOilTypeRecord.CarNo = dr[i][LanguageHandle.GetWord("ChePaiHao").ToString().Trim()].ToString();
-                    carOilTypeRecord.OilTypeId = int.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("YouLiaoBianHao").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("YouLiaoBianHao").ToString().Trim()].ToString());
-                    carOilTypeRecord.OilName = dr[i][LanguageHandle.GetWord("YouLiaoMingChen").ToString().Trim()].ToString();
+                    carOilTypeRecord.CarNo = dr[i][LanguageHandle.GetWord("ChePaiHao")].ToString();
+                    carOilTypeRecord.OilTypeId = int.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("YouLiaoBianHao")].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("YouLiaoBianHao")].ToString());
+                    carOilTypeRecord.OilName = dr[i][LanguageHandle.GetWord("YouLiaoMingChen")].ToString();
                     carOilTypeRecord.Type = dr[i]["FuelModel"].ToString();   
-                    carOilTypeRecord.DepartCode = dr[i][LanguageHandle.GetWord("GuiShuBuMenBianMa").ToString().Trim()].ToString();
-                    carOilTypeRecord.OilNum = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("JiaYouShuLiang").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("JiaYouShuLiang").ToString().Trim()].ToString());
-                    carOilTypeRecord.OilPrice = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString());
-                    carOilTypeRecord.OilMoney = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString());
-                    carOilTypeRecord.CreateTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString());
+                    carOilTypeRecord.DepartCode = dr[i][LanguageHandle.GetWord("GuiShuBuMenBianMa")].ToString();
+                    carOilTypeRecord.OilNum = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("JiaYouShuLiang")].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("JiaYouShuLiang")].ToString());
+                    carOilTypeRecord.OilPrice = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChanJia")].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("ChanJia")].ToString());
+                    carOilTypeRecord.OilMoney = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE")].ToString());
+                    carOilTypeRecord.CreateTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChuangJianShiJian")].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("ChuangJianShiJian")].ToString());
                     try
                     {
                         carOilTypeRecordBLL.AddCarOilTypeRecord(carOilTypeRecord);
@@ -343,12 +343,12 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
                     catch
                     {
                         int num = i + 1;
-                        string Msg = LanguageHandle.GetWord("JingGaoExcelBiaoBuFenShuJuDaoR").ToString().Trim() + num + LanguageHandle.GetWord("TiaoKaiShiDaoRuShiBaiQingXianB").ToString().Trim();
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMSG").ToString().Trim()+"')", true);
+                        string Msg = LanguageHandle.GetWord("JingGaoExcelBiaoBuFenShuJuDaoR") + num + LanguageHandle.GetWord("TiaoKaiShiDaoRuShiBaiQingXianB");
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMSG")+"')", true);
                         return;
                     }
                 }
-                Response.Write(LanguageHandle.GetWord("scriptalertExcleBiaoDaoRuCheng").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("scriptalertExcleBiaoDaoRuCheng"));
             }
         }
     }

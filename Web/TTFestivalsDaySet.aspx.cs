@@ -205,11 +205,11 @@ public partial class TTFestivalsDaySet : System.Web.UI.Page
         {
             CopyFestivalsDayToYear(this.ddl_year.SelectedValue, this.ddl_copy.SelectedValue);
             CopyExchangeDayToYear(this.ddl_year.SelectedValue, this.ddl_copy.SelectedValue);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script2", "alert('" +LanguageHandle.GetWord("ZZDiShiFuZhiChengGong").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script2", "alert('" +LanguageHandle.GetWord("ZZDiShiFuZhiChengGong")+"')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script1", "alert('" +LanguageHandle.GetWord("ZZJingGaoFuZhiDaoDeNianFenBuNe").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script1", "alert('" +LanguageHandle.GetWord("ZZJingGaoFuZhiDaoDeNianFenBuNe")+"')", true);
         }
 
     }

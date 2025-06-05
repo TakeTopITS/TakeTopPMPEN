@@ -27,7 +27,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuMeiYueYuSuanTongJiBaoBi").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuMeiYueYuSuanTongJiBaoBi");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -35,7 +35,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -142,7 +142,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuMeiYueYuSuanTongJiBaoBi").ToString().Trim());
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuMeiYueYuSuanTongJiBaoBi"));
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
@@ -191,7 +191,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = LanguageHandle.GetWord("YueDuYuSuan").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("YueDuYuSuan");
 
         strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) || 'Budget') as XName,SUM(COALESCE(Amount,0)) as YNumber From V_ProjectBudgetChartForEveryMonth
                  Where ";

@@ -54,7 +54,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
             TB_DepartCode.Text = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             LB_DepartName.Text = ShareClass.GetDepartName(TB_DepartCode.Text.Trim());
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
         }
     }
 
@@ -88,7 +88,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            RB_OvertimeType.Items.Add(new ListItem(LanguageHandle.GetWord("1MoJiaBanLeiXing").ToString().Trim(), ""));
+            RB_OvertimeType.Items.Add(new ListItem(LanguageHandle.GetWord("1MoJiaBanLeiXing"), ""));
         }
     }
 
@@ -248,13 +248,13 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
     {
         if (RB_OvertimeType.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC") + "')", true);
             RB_OvertimeType.Focus();
             return;
         }
         if (DLC_StartTime.Text.Trim() == "" || DLC_EndTime.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC") + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -268,14 +268,14 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
         if (DLC_StartTime.Text.Trim() != DLC_EndTime.Text.Trim())
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiShiJianHeJieShu").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiShiJianHeJieShu")+"')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
             return;
         }
 
         if (dtEndTime < dtStartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC") + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -285,7 +285,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
         if (dtEndTime.Year != dtStartTime.Year & dtEndTime.Month != dtStartTime.Month)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBuNengShenQingKuaNian").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBuNengShenQingKuaNian")+"')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -322,7 +322,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
             LoadOvertimeApplyForm(strUserCode);
 
-            LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan").ToString().Trim(), int.Parse(LB_ID.Text.Trim()));
+            LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan"), int.Parse(LB_ID.Text.Trim()));
 
             string strOvertimeType;
             strOvertimeType = RB_OvertimeType.SelectedValue.Trim();
@@ -331,11 +331,11 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
             LB_TotalOvertimeDaysForCurrentMonth.Text = ShareClass.GetTotalOvertimeDayNumberInCurrentMonth(strOvertimeType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
             LB_TotalOvertimeDaysForCurrentYear.Text = ShareClass.GetTotalOvertimeDayNumberInCurrentYear(strOvertimeType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
         }
     }
 
@@ -355,7 +355,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
     {
         if (RB_OvertimeType.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC") + "')", true);
             RB_OvertimeType.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
@@ -363,7 +363,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         }
         if (DLC_StartTime.Text.Trim() == "" || DLC_EndTime.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC") + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -378,7 +378,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
         if (DLC_StartTime.Text.Trim() != DLC_EndTime.Text.Trim())
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiShiJianHeJieShu").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiShiJianHeJieShu")+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
             return;
@@ -386,7 +386,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
         if (dtEndTime < dtStartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC") + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -396,7 +396,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
         if (dtEndTime.Year != dtStartTime.Year & dtEndTime.Month != dtStartTime.Month)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBuNengShenQingKuaNian").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBuNengShenQingKuaNian")+"')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -443,13 +443,13 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", LanguageHandle.GetWord("JiaBan").ToString().Trim(), LB_ID.Text.Trim(), "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", LanguageHandle.GetWord("JiaBan"), LB_ID.Text.Trim(), "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText = "select * from T_OvertimeApplyForm where ID = " + LB_ID.Text;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AttendanceManagement", LanguageHandle.GetWord("JiaBan").ToString().Trim(), LB_ID.Text.Trim());
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AttendanceManagement", LanguageHandle.GetWord("JiaBan"), LB_ID.Text.Trim());
                     }
 
                     if (strToDoWLID != null)
@@ -458,11 +458,11 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
                         ShareClass.UpdateWokflowRelatedXMLFile("MainTable", strToDoWLID, strToDoWLDetailID, strCmdText);
                     }
                 }
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             }
         }
     }
@@ -479,7 +479,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBBNWKJC") + "')", true);
             return strWLID;
         }
 
@@ -491,13 +491,13 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         //{
         ShareClass.RunSqlCommand(strHQL);
 
-        strXMLFileName = LanguageHandle.GetWord("JiaBanShenQing").ToString().Trim() + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+        strXMLFileName = LanguageHandle.GetWord("JiaBanShenQing") + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
         strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         WorkFlow workFlow = new WorkFlow();
 
-        workFlow.WLName = strUserCode + ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("DeJiaBanShenQing").ToString().Trim();
+        workFlow.WLName = strUserCode + ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("DeJiaBanShenQing");
         workFlow.WLType = "AttendanceManagement";
         workFlow.Status = "New";
         workFlow.TemName = DL_TemName.SelectedValue.Trim();
@@ -514,7 +514,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            workFlow.RelatedType = LanguageHandle.GetWord("JiaBan").ToString().Trim();
+            workFlow.RelatedType = LanguageHandle.GetWord("JiaBan");
             workFlow.RelatedID = int.Parse(strID);
         }
 
@@ -549,7 +549,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         strXMLFile2 = Server.MapPath(strXMLFile2);
         xmlProcess.DbToXML(strCmdText, "T_OvertimeApplyForm", strXMLFile2);
 
-        LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan").ToString().Trim(), int.Parse(LB_ID.Text.Trim()));
+        LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan"), int.Parse(LB_ID.Text.Trim()));
 
         DL_Status.SelectedValue = "InProgress";
 
@@ -558,13 +558,13 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
 
         BT_SubmitApply.Enabled = false;
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCCG").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCCG") + "')", true);
         //}
         //catch
         //{
         //    strWLID = "0";
 
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCSBKNSMCZSGDJC").ToString().Trim() + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCSBKNSMCZSGDJC") + "')", true);
         //}
 
         LoadOvertimeApplyForm(strUserCode);
@@ -572,7 +572,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         //catch
         //{
         //    strWLID = "0";
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
         //}
 
         return strWLID;
@@ -602,7 +602,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
         {
             string strID = e.Item.Cells[3].Text.Trim();
 
-            int intWLNumber = LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan").ToString().Trim(), int.Parse(strID));
+            int intWLNumber = LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan"), int.Parse(strID));
             if (intWLNumber > 0)
             {
                 BT_New.Visible = false;
@@ -615,7 +615,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
             }
 
             //从流程中打开的业务单
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", LanguageHandle.GetWord("JiaBan").ToString().Trim(), strID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", LanguageHandle.GetWord("JiaBan"), strID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_New.Visible = true;
@@ -652,7 +652,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
                 TB_Duty.Text = overtimeApplyForm.Duty.Trim();
                 LB_DepartName.Text = overtimeApplyForm.DepartName.Trim();
 
-                LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan").ToString().Trim(), int.Parse(LB_ID.Text.Trim()));
+                LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("JiaBan"), int.Parse(LB_ID.Text.Trim()));
 
                 string strOvertimeType;
                 strOvertimeType = RB_OvertimeType.SelectedValue.Trim();
@@ -679,7 +679,7 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
             {
                 if (intWLNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC") + "')", true);
                     return;
                 }
 
@@ -702,11 +702,11 @@ public partial class TTAPPOvertimeApplyFormWF : System.Web.UI.Page
                     LB_TotalOvertimeDaysForCurrentYear.Text = ShareClass.GetTotalOvertimeDayNumberInCurrentYear(strOvertimeType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }

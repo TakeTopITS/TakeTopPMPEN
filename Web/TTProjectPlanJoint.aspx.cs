@@ -48,7 +48,7 @@ public partial class TTProjectPlanJoint : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strTemProjectID, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strTemProjectID, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
 
             LoadProjectPlanVersion(strNewProjectID);
 
@@ -153,7 +153,7 @@ public partial class TTProjectPlanJoint : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSQXZLYJD").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSQXZLYJD") + "')", true);
             return;
         }
 
@@ -166,7 +166,7 @@ public partial class TTProjectPlanJoint : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSQXZMBJD").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSQXZMBJD") + "')", true);
             return;
         }
 
@@ -189,12 +189,12 @@ public partial class TTProjectPlanJoint : System.Web.UI.Page
 
             TakeTopPlan.InitialProjectPlanTreeForPlanJoint(TreeView1, strNewProjectID, strNewVerID, strSelectedPlanID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZPingJieChengGong").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZPingJieChengGong") + "')", true);
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZPingJieShiBaiQJZ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZPingJieShiBaiQJZ") + "')", true);
         }
     }
 

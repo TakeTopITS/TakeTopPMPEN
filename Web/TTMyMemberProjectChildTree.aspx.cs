@@ -27,7 +27,7 @@ public partial class TTMyMemberProjectChildTree : System.Web.UI.Page
         LB_ProjectName.Text = strProjectName;
 
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的子项目树";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + strProjectName + "的子项目树";
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)

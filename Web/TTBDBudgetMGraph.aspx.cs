@@ -32,10 +32,10 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (!IsPostBack)
         {
-            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView2, strUserCode);
+            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView2, strUserCode);
 
             DropDownList2.Enabled = false;
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             //LoadDepartInformation();
             TextBox1.Enabled = false;
 
@@ -98,7 +98,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         {
             if (string.IsNullOrEmpty(txt_Year.Text) || txt_Year.Text.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNFBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNFBJC") + "')", true);
                 txt_Year.Focus();
                 return;
             }
@@ -107,7 +107,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         {
             if (string.IsNullOrEmpty(lbl_DCode.Text) || lbl_DCode.Text.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSBMBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSBMBJC") + "')", true);
                 return;
             }
         }
@@ -124,17 +124,17 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         if (DropDownList1.SelectedValue.Trim() == "Department")  
         {
 
-            strResult = LanguageHandle.GetWord("ABMTJFYFB").ToString().Trim();
+            strResult = LanguageHandle.GetWord("ABMTJFYFB");
         }
         else if (DropDownList1.SelectedValue.Trim() == "Subject")   
         {
 
-            strResult = LanguageHandle.GetWord("AKMTJFYFB").ToString().Trim();
+            strResult = LanguageHandle.GetWord("AKMTJFYFB");
         }
         else
         {
 
-            strResult = lbl_DName.Text.Trim() + LanguageHandle.GetWord("DeFeiYongFenBu").ToString().Trim();
+            strResult = lbl_DName.Text.Trim() + LanguageHandle.GetWord("DeFeiYongFenBu");
         }
 
 
@@ -199,7 +199,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
 
             intSum += intMoneyCount;
 
-            strNameProfile += strName + ":" + intMoneyCount.ToString() + LanguageHandle.GetWord("Yuan").ToString().Trim();
+            strNameProfile += strName + ":" + intMoneyCount.ToString() + LanguageHandle.GetWord("Yuan");
         }
 
         LB_ProjectStatus.Text = strResult + ": " + strNameProfile.Trim();

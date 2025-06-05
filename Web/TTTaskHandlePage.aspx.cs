@@ -217,7 +217,7 @@ public partial class TTTaskHandlePage : System.Web.UI.Page
         DataGrid4.DataBind();
         SetProTaskColorForDataGrid(DataGrid4);
         LB_Sql4.Text = strHQL;
-        LB_TotalNumber4.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
+        LB_TotalNumber4.Text = LanguageHandle.GetWord("JiLuShu") + lst.Count.ToString();
 
         strHQL = "from ProjectTask as projectTask where projectTask.MakeManCode = " + "'" + strUserCode + "'";
         strHQL += " and ((projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
@@ -228,7 +228,7 @@ public partial class TTTaskHandlePage : System.Web.UI.Page
         DataGrid6.DataBind();
         SetProTaskColorForDataGrid(DataGrid6);
         LB_Sql6.Text = strHQL;
-        LB_TotalNumber6.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
+        LB_TotalNumber6.Text = LanguageHandle.GetWord("JiLuShu") + lst.Count.ToString();
 
         FinishPercentPicture4();
         FinishPercentPicture6();

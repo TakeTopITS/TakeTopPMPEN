@@ -44,25 +44,25 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
         if (strRelatedType == "ProjectTask")
         {
             strRelatedName = GetProjectTaskName(strRelatedID);
-            //this.Title = LanguageHandle.GetWord("XiangMuRenWu").ToString().Trim() + strRelatedID + " " + strRelatedName + "角色组设置！";
+            //this.Title = LanguageHandle.GetWord("XiangMuRenWu") + strRelatedID + " " + strRelatedName + "角色组设置！";
         }
 
         if (strRelatedType == "Req")
         {
             strRelatedName = GetRequirementName(strRelatedID);
-            //this.Title = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("XuQiu") + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Meeting")
         {
             strRelatedName = GetMeetingName(strRelatedID);
-            //this.Title = LanguageHandle.GetWord("HuiYi").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("HuiYi") + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectRisk")
         {
             strRelatedName = GetProjectRiskName(strRelatedID);
-            //this.Title = LanguageHandle.GetWord("FengXian").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("FengXian") + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         LB_UserCode.Text = strUserCode;
@@ -74,36 +74,36 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
         {
             if (strRelatedType == "Project")
             {
-                TB_ActorGroup.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
+                TB_ActorGroup.Text = LanguageHandle.GetWord("Project") + strRelatedID + LanguageHandle.GetWord("Zu");
             }
 
             if (strRelatedType == "ProjectTask")
             {
-                TB_ActorGroup.Text = LanguageHandle.GetWord("XiangMuRenWu").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
+                TB_ActorGroup.Text = LanguageHandle.GetWord("XiangMuRenWu") + strRelatedID + LanguageHandle.GetWord("Zu");
             }
 
             if (strRelatedType == "Req")
             {
-                TB_ActorGroup.Text = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
+                TB_ActorGroup.Text = LanguageHandle.GetWord("XuQiu") + strRelatedID + LanguageHandle.GetWord("Zu");
             }
 
             if (strRelatedType == "Meeting")  
             {
-                TB_ActorGroup.Text = LanguageHandle.GetWord("HuiYi").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
+                TB_ActorGroup.Text = LanguageHandle.GetWord("HuiYi") + strRelatedID + LanguageHandle.GetWord("Zu");
             }
 
             if (strRelatedType == "ProjectRisk")
             {
-                TB_ActorGroup.Text = LanguageHandle.GetWord("FengXian").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
+                TB_ActorGroup.Text = LanguageHandle.GetWord("FengXian") + strRelatedID + LanguageHandle.GetWord("Zu");
             }
 
             if (strUserType == "INNER")
             {
-                TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+                TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             }
             else
             {
-                TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+                TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
             }
 
             if (strRelatedType == "Project")
@@ -183,7 +183,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
             if (lst.Count > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMDJSZQJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMDJSZQJC") + "')", true);
                 return;
             }
 
@@ -220,12 +220,12 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSZZMBNWK").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSZZMBNWK") + "')", true);
         }
     }
 
@@ -255,7 +255,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
 
             string strRelatedUserCode = LB_RelatedUserCode.Text.Trim();
 
-            if (strUserCode != strMakeUserCode | strGroupName == LanguageHandle.GetWord("GeRen").ToString().Trim() | strGroupName == LanguageHandle.GetWord("QuanTi").ToString().Trim() | strGroupName == LanguageHandle.GetWord("GongSi").ToString().Trim() | strGroupName == LanguageHandle.GetWord("JiTuan").ToString().Trim())
+            if (strUserCode != strMakeUserCode | strGroupName == LanguageHandle.GetWord("GeRen") | strGroupName == LanguageHandle.GetWord("QuanTi") | strGroupName == LanguageHandle.GetWord("GongSi") | strGroupName == LanguageHandle.GetWord("JiTuan"))
             {
                 BT_New.Enabled = false;
             
@@ -283,11 +283,11 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             ShareClass.RunSqlCommand(strHQL);
             LoadRelatedActorGroup(strRelatedType, strRelatedID, strLangCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCJSZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCJSZCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC") + "')", true);
         }
     }
 
@@ -444,7 +444,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord").ToString().Trim()+"')", true); 
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord")+"')", true); 
                 }
             }
         }
@@ -544,12 +544,12 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
         }
     }
 
@@ -584,11 +584,11 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
 
             LoadActorGroupDetail(strGroupName);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXiuGaiLanguageHandleGetWordZ").ToString().Trim() + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXiuGaiLanguageHandleGetWordZ") + LanguageHandle.GetWord("ZZBCSB") + "')", true); 
         }
     }
 

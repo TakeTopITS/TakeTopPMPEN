@@ -30,7 +30,7 @@ public partial class TTAppSMSSendDIY : System.Web.UI.Page
 
         if (Page.IsPostBack != true)
         {
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
 
             string strDepartCode = GetDepartCode(strUserCode);
 
@@ -109,12 +109,12 @@ public partial class TTAppSMSSendDIY : System.Web.UI.Page
             LoadSMSSendDIYList(strUserCode);
             LoadSMSRelatedUserList(strID);
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG")+"')", true);
 
         }
         catch
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim()+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC")+"')", true);
 
         }
     }
@@ -157,12 +157,12 @@ public partial class TTAppSMSSendDIY : System.Web.UI.Page
         //    }
         //    else
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCJSRYYCZBNZFJRJC").ToString().Trim()+"')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCJSRYYCZBNZFJRJC")+"')", true);
         //    }
         //}
         //else
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCWKJLBNZJJSRY").ToString().Trim()+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCWKJLBNZJJSRY")+"')", true);
         //}
         #endregion
 
@@ -174,7 +174,7 @@ public partial class TTAppSMSSendDIY : System.Web.UI.Page
 
         //if (struserCode.Trim() == usercodeGold)
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCJZBYJRXTHZDJRJC").ToString().Trim()+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCJZBYJRXTHZDJRJC")+"')", true);
         //    return;
         //}
 
@@ -185,7 +185,7 @@ public partial class TTAppSMSSendDIY : System.Web.UI.Page
         {
             if (dt.Rows[i]["UserCode"].ToString().Trim() == struserCode.Trim())
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC") + "')", true);
                 return;
             }
         }
@@ -452,7 +452,7 @@ public partial class TTAppSMSSendDIY : System.Web.UI.Page
 
         LoadSMSSendDIYList(strUserCode);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXFSWB").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXFSWB") + "')", true);
     }
 
     protected void UpdateSMSSendDIYStatus(string strID)
@@ -479,12 +479,12 @@ public partial class TTAppSMSSendDIY : System.Web.UI.Page
 
             LoadSMSSendDIYList(strUserCode);
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG")+"')", true);
 
         }
         catch
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim()+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC")+"')", true);
 
         }
     }

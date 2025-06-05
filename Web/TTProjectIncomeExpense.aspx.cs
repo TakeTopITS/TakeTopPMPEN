@@ -104,7 +104,7 @@ public partial class TTProjectIncomeExpense : System.Web.UI.Page
             string strCmdText = "select A.Account as XName,sum(A.ConfirmAmount * B.ExchangeRate) as YNumber from T_ProExpense A,T_CurrencyType B ";
             strCmdText += " where A.CurrencyType = B.Type and A.ProjectID = " + strProjectID + " Group By A.Account";
             
-            string strChartTitle = LanguageHandle.GetWord("XMFYFBT").ToString().Trim();
+            string strChartTitle = LanguageHandle.GetWord("XMFYFBT");
             IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
         }

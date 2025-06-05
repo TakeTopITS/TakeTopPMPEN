@@ -31,7 +31,7 @@ public partial class TTMyCollaborationBackup : System.Web.UI.Page
             string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll");
 
             CollaborationBLL collaborationBLL = new CollaborationBLL();
 

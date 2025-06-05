@@ -108,8 +108,8 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_FindCondition2.Text = LanguageHandle.GetWord("WenJianShangChuanZheBaoHan").ToString().Trim() + strUploadManName;
-            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+            LB_FindCondition2.Text = LanguageHandle.GetWord("WenJianShangChuanZheBaoHan") + strUploadManName;
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
         }
         catch
         {
@@ -133,8 +133,8 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_FindCondition2.Text = LanguageHandle.GetWord("WenJianLeiXing").ToString().Trim() + strDocType;
-        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_FindCondition2.Text = LanguageHandle.GetWord("WenJianLeiXing") + strDocType;
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
     }
 
     protected void LoadProjectDoc(string strUserCode, string strRelatedType, string strRelatedID)
@@ -273,9 +273,9 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
-        LB_FindCondition1.Text = LanguageHandle.GetWord("ChaXunFanWeiShi").ToString().Trim() + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
+        LB_FindCondition1.Text = LanguageHandle.GetWord("ChaXunFanWeiShi") + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
         LB_FindCondition2.Text = "";
     }
 
@@ -407,9 +407,9 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
-        LB_FindCondition1.Text = LanguageHandle.GetWord("ChaXunFanWeiShi").ToString().Trim() + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
+        LB_FindCondition1.Text = LanguageHandle.GetWord("ChaXunFanWeiShi") + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
         LB_FindCondition2.Text = "";
     }
 
@@ -436,9 +436,9 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
 
-        LB_FindCondition1.Text = LanguageHandle.GetWord("CXFWXMSY").ToString().Trim();
+        LB_FindCondition1.Text = LanguageHandle.GetWord("CXFWXMSY");
         LB_FindCondition2.Text = "";
     }
 

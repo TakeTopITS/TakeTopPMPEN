@@ -70,9 +70,9 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
 
             FinishPercentPicture3();
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY");
 
-            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + LanguageHandle.GetWord("RWFPJLBB").ToString().Trim();
+            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu") + ": " + strProjectID + " " + LanguageHandle.GetWord("RWFPJLBB");
             strHQL = "select Status as XName, Count(*) as YNumber from T_ProjectTask where ProjectID = " + strProjectID + " Group By Status ";
 
             IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Column&ChartName=" + LB_ReportName.Text + "&SqlCode=" + ShareClass.Escape(strHQL);
@@ -123,7 +123,7 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
                 LB_Member1.Text = strUserCode + " " + strUserName;
                 LB_Member2.Text = strUserCode + " " + strUserName;
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCY").ToString().Trim() + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCY") + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
                 LB_OperatorCode.Text = strUserCode;
 
@@ -160,7 +160,7 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
             strHQL += " and projectTask.Status = " + "'" + strStatus + "'";
             strHQL += " Order by projectTask.TaskID DESC";
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZCZZSY").ToString().Trim() + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZCZZSY") + LanguageHandle.GetWord("ZhuangTai") + strStatus;
         }
         else
         {
@@ -169,7 +169,7 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
             strHQL += " and projectTask.Status = " + "'" + strStatus + "'";
             strHQL += " Order by projectTask.TaskID DESC";
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("Operator").ToString().Trim() + ":" + strOperatorCode + " " + GetUserName(strOperatorCode) + "," + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("Operator") + ":" + strOperatorCode + " " + GetUserName(strOperatorCode) + "," + LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
         }
 
         lst = projectTaskBLL.GetAllProjectTasks(strHQL);
@@ -209,7 +209,7 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
 
         GetTotalExpenseAndManHour(strProjectID);
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY");
         LB_OperatorCode.Text = "All";
 
         FinishPercentPicture3();
@@ -248,7 +248,7 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid3.Items[i].Cells[11].Text.Trim();
 
-            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
+            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng"))
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -320,8 +320,8 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
         LB_Amount.Text = deExpense.ToString();
         LB_ManHour.Text = deManHour.ToString();
 
-        LB_Member1.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
-        LB_Member2.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+        LB_Member1.Text = LanguageHandle.GetWord("SuoYouChenYuan");
+        LB_Member2.Text = LanguageHandle.GetWord("SuoYouChenYuan");
 
 
     }

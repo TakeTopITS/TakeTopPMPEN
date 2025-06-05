@@ -107,7 +107,7 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
             //把申报费用列入项目费用
             if (strRelatedType == "Project" & intRelatedID > 1)
             {
-                ShareClass.AddConstractPayAmountToProExpense(intRelatedID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("ShengChanJiaGongFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                ShareClass.AddConstractPayAmountToProExpense(intRelatedID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("ShengChanJiaGongFeiYong"), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
             }
 
 
@@ -115,14 +115,14 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
             ShareClass.RunSqlCommand(strHQL);
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG") + "')", true);
 
             LoadGoodsProductionOrder(strUserCode);
 
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCSQDYJJZBNCFJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCSQDYJJZBNCFJC") + "')", true);
         }
     }
 

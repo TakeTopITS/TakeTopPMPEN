@@ -18,7 +18,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strProjectID = Request.QueryString["ProjectID"];
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + ShareClass.GetProjectName(strProjectID.Trim()) + "的项目文控";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + ShareClass.GetProjectName(strProjectID.Trim()) + "的项目文控";
 
         LB_UserCode.Text = strUserCode.Trim();
         LB_UserName.Text = ShareClass.GetUserName(strUserCode.Trim());
@@ -117,12 +117,12 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strprojectid + " " + strprojectname + LanguageHandle.GetWord("WenKongLieBiao").ToString().Trim();
+        node1.Text = LanguageHandle.GetWord("Project") + strprojectid + " " + strprojectname + LanguageHandle.GetWord("WenKongLieBiao");
         node1.Target = "0";
         node1.Expanded = true;
         tv.Nodes.Add(node1);
 
-        string namelist = LanguageHandle.GetWord("ShouTuDengJiFaTuDengJiShouWenD").ToString().Trim();
+        string namelist = LanguageHandle.GetWord("ShouTuDengJiFaTuDengJiShouWenD");
         string[] tempNameList = namelist.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
         for (int i = 0; i < tempNameList.Length; i++)
@@ -171,7 +171,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     protected void LoadProGraphRegistration()
     {
         string strHQL = "Select * From T_ProGraphRegistration Where ProjectID='" + strProjectID + "' ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -184,8 +184,8 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid3.DataBind();
         lbl_sql3.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("ShouTuDengJiLieBiao").ToString().Trim();
-        LB_ProGraphRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("ShouTuDengJiLieBiao");
+        LB_ProGraphRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -194,7 +194,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     protected void LoadProSendFigureRegistration()
     {
         string strHQL = "Select * From T_ProSendFigureRegistration Where FileNo in (Select FileNo From T_ProGraphRegistration Where ProjectID='" + strProjectID + "') ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouTuDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -207,8 +207,8 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid5.DataBind();
         lbl_sql4.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("FaTuDengJiLieBiao").ToString().Trim();
-        LB_ProSendFigureRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("FaTuDengJiLieBiao");
+        LB_ProSendFigureRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -217,7 +217,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     protected void LoadProReceiptRegistration()
     {
         string strHQL = "Select * From T_ProReceiptRegistration Where ProjectID='" + strProjectID + "' ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -230,8 +230,8 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid1.DataBind();
         lbl_sql1.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("ShouWenDengJiLieBiao").ToString().Trim();
-        LB_ProReceiptRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("ShouWenDengJiLieBiao");
+        LB_ProReceiptRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -240,7 +240,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     protected void LoadProIssueRegistration()
     {
         string strHQL = "Select * From T_ProIssueRegistration Where DocumentNo in (Select DocumentNo From T_ProReceiptRegistration Where ProjectID='" + strProjectID + "') ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim())
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != LanguageHandle.GetWord("ShouWenDengJi"))
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -253,8 +253,8 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid2.DataBind();
         lbl_sql2.Text = strHQL;
 
-        LB_FindCondition.Text = LanguageHandle.GetWord("FaWenDengJiLieBiao").ToString().Trim();
-        LB_ProIssueRegistrationCount.Text = LanguageHandle.GetWord("ZongShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = LanguageHandle.GetWord("FaWenDengJiLieBiao");
+        LB_ProIssueRegistrationCount.Text = LanguageHandle.GetWord("ZongShu") + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
@@ -292,30 +292,30 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     /// </summary>
     protected void LoadProDocType()
     {
-        DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim());
+        DataTable dt = GetList(LanguageHandle.GetWord("ShouTuDengJi"));
         if (dt != null && dt.Rows.Count > 0)
         {
             ddl_DocType.Items.Clear();
-            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim()));
-            SetInterval(ddl_DocType, LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), " ");
+            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi"), LanguageHandle.GetWord("ShouTuDengJi")));
+            SetInterval(ddl_DocType, LanguageHandle.GetWord("ShouTuDengJi"), " ");
         }
         else
         {
             ddl_DocType.Items.Clear();
-            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim()));
+            ddl_DocType.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouTuDengJi"), LanguageHandle.GetWord("ShouTuDengJi")));
         }
 
-        dt = GetList(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim());
+        dt = GetList(LanguageHandle.GetWord("ShouWenDengJi"));
         if (dt != null && dt.Rows.Count > 0)
         {
             ddl_DocType1.Items.Clear();
-            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim()));
-            SetInterval(ddl_DocType1, LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), " ");
+            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi"), LanguageHandle.GetWord("ShouWenDengJi")));
+            SetInterval(ddl_DocType1, LanguageHandle.GetWord("ShouWenDengJi"), " ");
         }
         else
         {
             ddl_DocType1.Items.Clear();
-            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim(), LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim()));
+            ddl_DocType1.Items.Insert(0, new ListItem(LanguageHandle.GetWord("ShouWenDengJi"), LanguageHandle.GetWord("ShouWenDengJi")));
         }
     }
 
@@ -401,7 +401,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         }
         lbl_ParamaValue.Text = strDocTypeID;
 
-        if (strDocTypeName.Contains(LanguageHandle.GetWord("Project").ToString().Trim()) && strDocTypeName.Contains(LanguageHandle.GetWord("WenKongLieBiao").ToString().Trim()))
+        if (strDocTypeName.Contains(LanguageHandle.GetWord("Project")) && strDocTypeName.Contains(LanguageHandle.GetWord("WenKongLieBiao")))
         {
             lbl_TreeViewName.Text = "";
         }
@@ -410,10 +410,10 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
             if (strDocTypeName.Contains("."))
             {
                 lbl_TreeViewName.Text = strDocTypeName.Substring(strDocTypeName.LastIndexOf(".") + 1);
-                if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaTuDengJi").ToString().Trim())
-                    lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouTuDengJi").ToString().Trim();
-                else if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaWenDengJi").ToString().Trim())
-                    lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouWenDengJi").ToString().Trim();
+                if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaTuDengJi"))
+                    lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouTuDengJi");
+                else if (lbl_TreeViewName.Text == LanguageHandle.GetWord("FaWenDengJi"))
+                    lbl_TreeViewName.Text = LanguageHandle.GetWord("ShouWenDengJi");
             }
             else
             {

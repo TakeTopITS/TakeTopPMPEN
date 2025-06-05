@@ -164,9 +164,9 @@ public partial class TTRelatedFormView : System.Web.UI.Page
 
         if (strRelatedType == "Other")
         {
-            Response.Write(LanguageHandle.GetWord("CiYeWuMoGuanLianBiaoChan").ToString().Trim());
+            Response.Write(LanguageHandle.GetWord("CiYeWuMoGuanLianBiaoChan"));
 
-            //this.Title = LanguageHandle.GetWord("CiYeWuMoGuanLianBiaoChan").ToString().Trim();
+            //this.Title = LanguageHandle.GetWord("CiYeWuMoGuanLianBiaoChan");
         }
     }
 }

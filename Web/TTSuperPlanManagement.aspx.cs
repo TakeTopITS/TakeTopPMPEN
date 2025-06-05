@@ -40,7 +40,7 @@ public partial class TTSuperPlanManagement : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); 
         if (Page.IsPostBack == false)
         {
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView1, strUserCode);
         }
     }
 
@@ -83,7 +83,7 @@ public partial class TTSuperPlanManagement : System.Web.UI.Page
         if (treeNode.Target == "0")
         {
             strPlanID = treeNode.Target.Trim();
-            strPlanName = LanguageHandle.GetWord("WoDeJiHua").ToString().Trim();
+            strPlanName = LanguageHandle.GetWord("WoDeJiHua");
         }
         else
         {
@@ -122,7 +122,7 @@ public partial class TTSuperPlanManagement : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Plan");
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBCZZJHBNSCJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBCZZJHBNSCJC")+"')", true);
             return;
         }
 
@@ -155,11 +155,11 @@ public partial class TTSuperPlanManagement : System.Web.UI.Page
             catch
             {
             }
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG")+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCSBJC")+"')", true);
         }        
     }
 

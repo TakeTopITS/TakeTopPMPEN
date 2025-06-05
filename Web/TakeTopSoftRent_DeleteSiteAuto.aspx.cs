@@ -31,7 +31,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiShanChuNiDeYingYongZha").ToString().Trim();
+        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiShanChuNiDeYingYongZha");
 
         if (Page.IsPostBack == false)
         {
@@ -41,16 +41,16 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
                 {
                     //É¾³ýÕ¾µã
                     DeleteSite();
-                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianShanChuChengGong").ToString().Trim();
+                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianShanChuChengGong");
                 }
                 catch (Exception err)
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("ShanChuShiBaiQingJianCha").ToString().Trim();
+                    LB_Message.Text = LanguageHandle.GetWord("ShanChuShiBaiQingJianCha");
                 }
             }
             else
             {
-                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia");
             }
 
             IMB_Process.Visible = false;

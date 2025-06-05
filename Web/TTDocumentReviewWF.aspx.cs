@@ -43,7 +43,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Other", "0", "0");
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
 
             LoadDocument(strUserCode);
 
@@ -92,7 +92,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
             strHQL = " from Document as document where document.DocType = " + "'" + strDocType + "'";
             strHQL += " and document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'";
             strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX") + strDocType;
 
             ////设置缺省的文件类型
             //ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -104,14 +104,14 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
             strHQL = " from Document as document where ";
             strHQL += " document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'";
             strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY");
         }
 
         lst2 = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst2;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst2.Count.ToString();
     }
 
     protected void DataGrid1_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -147,7 +147,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ") + "');</script>");
                 }
             }
 
@@ -164,7 +164,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim()  + strDocID  + strDocName;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen") + LanguageHandle.GetWord("WenJian")  + strDocID  + strDocName;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -183,7 +183,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
             string strDocTypeID = DL_DocType.SelectedValue.Trim();
             if (strDocTypeID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC") + "');</script>");
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -209,7 +209,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC") + "');</script>");
             }
             else
             {
@@ -242,18 +242,18 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
                     ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Other", "0", "0");
 
 
-                    TB_Message.Text = GetUserName(strUserCode) + LanguageHandle.GetWord("ShangChuanLeWenJian").ToString().Trim() + strFileName2 + LanguageHandle.GetWord("QingJiShiChaKan").ToString().Trim();
+                    TB_Message.Text = GetUserName(strUserCode) + LanguageHandle.GetWord("ShangChuanLeWenJian") + strFileName2 + LanguageHandle.GetWord("QingJiShiChaKan");
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "');</script>");
                 }
 
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "');</script>");
         }
     }
 
@@ -277,7 +277,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
             ActorGroupDetail actorGroupDetail = new ActorGroupDetail();
             strHQL = "from ActorGroupDetail as actorGroupDetail where actorGroupDetail.GroupName = " + "'" + strVisible + "'";
             lst = actorGroupDetailBLL.GetAllActorGroupDetails(strHQL);
-            strSubject = LanguageHandle.GetWord("WenJianChaYueTongZhi").ToString().Trim();
+            strSubject = LanguageHandle.GetWord("WenJianChaYueTongZhi");
 
             for (i = 0; i < lst.Count; i++)
             {
@@ -296,7 +296,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB") + "')", true);
     }
 
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
@@ -339,7 +339,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC") + "');</script>");
             return "0";
         }
 
@@ -396,12 +396,12 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
             //自动附加要评审的工作流文件
             AddWLDocument(strDocID, int.Parse(strWLID));
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCCG").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCCG") + "');</script>");
         }
         catch
         {
             strWLID = "0";
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCSB").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCSB") + "');</script>");
         }
 
         return strWLID;
@@ -504,7 +504,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS") + ": " + lst.Count.ToString();
     }
 
     protected int GetWLID(string strWLName, string strWLType, string strXMLFile, string strCreatorCode, DateTime dtCreateTime)

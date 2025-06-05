@@ -43,7 +43,7 @@ public partial class TTTableNameMapppingList : System.Web.UI.Page
             {
                 TableNameMapping tableNameMapping = (TableNameMapping)tableNameMappingList[0];
                 tableNameMappingBLL.DeleteTableNameMapping(tableNameMapping);
-                Response.Write(LanguageHandle.GetWord("scriptalertShanChuChengGongscr").ToString().Trim());
+                Response.Write(LanguageHandle.GetWord("scriptalertShanChuChengGongscr"));
                 //重新加载列表
                 BindTableNameMappingsData();
             }

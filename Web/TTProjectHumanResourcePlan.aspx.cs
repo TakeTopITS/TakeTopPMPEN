@@ -58,26 +58,26 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC") + "')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
             else
             {
                 DateTime dt = DateTime.Parse(strYearMonth.Trim());
-                Label14.Text = dt.ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label15.Text = dt.AddMonths(1).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label16.Text = dt.AddMonths(2).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label17.Text = dt.AddMonths(3).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label18.Text = dt.AddMonths(4).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label19.Text = dt.AddMonths(5).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label20.Text = dt.AddMonths(6).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label21.Text = dt.AddMonths(7).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label22.Text = dt.AddMonths(8).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label23.Text = dt.AddMonths(9).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label24.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label25.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label26.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label14.Text = dt.ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label15.Text = dt.AddMonths(1).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label16.Text = dt.AddMonths(2).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label17.Text = dt.AddMonths(3).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label18.Text = dt.AddMonths(4).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label19.Text = dt.AddMonths(5).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label20.Text = dt.AddMonths(6).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label21.Text = dt.AddMonths(7).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label22.Text = dt.AddMonths(8).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label23.Text = dt.AddMonths(9).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label24.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label25.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label26.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
                 //strHQL = "select * from (select WorkType," +
                 //    " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
                 //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
@@ -163,26 +163,26 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC") + "')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
             else
             {
                 DateTime dt = DateTime.Parse(strYearMonth.Trim());
-                Label1.Text = dt.ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label2.Text = dt.AddMonths(1).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label3.Text = dt.AddMonths(2).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label4.Text = dt.AddMonths(3).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label5.Text = dt.AddMonths(4).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label6.Text = dt.AddMonths(5).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label7.Text = dt.AddMonths(6).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label8.Text = dt.AddMonths(7).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label9.Text = dt.AddMonths(8).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label10.Text = dt.AddMonths(9).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label11.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label12.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
-                Label13.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label1.Text = dt.ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label2.Text = dt.AddMonths(1).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label3.Text = dt.AddMonths(2).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label4.Text = dt.AddMonths(3).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label5.Text = dt.AddMonths(4).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label6.Text = dt.AddMonths(5).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label7.Text = dt.AddMonths(6).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label8.Text = dt.AddMonths(7).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label9.Text = dt.AddMonths(8).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label10.Text = dt.AddMonths(9).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label11.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label12.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
+                Label13.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue"));
                 //strHQL = "select WorkType," +
                 //    " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
                 //    " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
@@ -244,11 +244,11 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (ddl_ProjectID.SelectedValue.Trim() == "0")
                 {
-                    fileName = LanguageHandle.GetWord("QuanTiXiangMuHuiZongJiHuaDuiZh").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("QuanTiXiangMuHuiZongJiHuaDuiZh") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanZongJiHua").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanZongJiHua") + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
 
                 string strHQL;
@@ -310,7 +310,7 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC") + "')", true);
             }
         }
     }

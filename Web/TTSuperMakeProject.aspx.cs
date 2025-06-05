@@ -69,7 +69,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
                 BT_DirectDepartment.Visible = false;
             }
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView3, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT"), TreeView3, strUserCode);
             ShareClass.InitialPrjectTreeByAuthority(TreeView4, strUserCode);
 
             try
@@ -78,12 +78,12 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCCZFXMWBSXMHZXMDXMDJLYFPXMYMGZ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCCZFXMWBSXMHZXMDXMDJLYFPXMYMGZ") + "')", true);
             }
 
-            LB_ProjectList.Text = LanguageHandle.GetWord("SuoYouXiangMuLieBiao").ToString().Trim();
+            LB_ProjectList.Text = LanguageHandle.GetWord("SuoYouXiangMuLieBiao");
 
-            TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2);
+            TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT"), TreeView2);
 
             strHQL = "from ProjectMember as projectMember where projectMember.UserCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.UserCode = " + "'" + strUserCode + "'" + ") Order By projectMember.SortNumber ASC";
             lst = projectMemberBLL.GetAllProjectMembers(strHQL);
@@ -150,7 +150,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
         {
             BT_Upate.Enabled = false;
             BT_Delete.Enabled = false;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCKNSSTXGZXMJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCKNSSTXGZXMJC") + "')", true);
             return;
         }
 
@@ -281,13 +281,13 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
             LB_ParentProjectID.Text = project.ParentID.ToString();
             TB_ParentProject.Text = ShareClass.GetProjectName(project.ParentID.ToString());
 
-            TB_Message.Text = strUserName + LanguageHandle.GetWord("GeiNiJianLiLeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName + LanguageHandle.GetWord("QingJiShiShouLi").ToString().Trim();
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("GeiNiJianLiLeXiangMu") + strProjectID + " " + strProjectName + LanguageHandle.GetWord("QingJiShiShouLi");
 
             LB_ErrorMsg.Text = "";
         }
         catch (Exception err)
         {
-            LB_ErrorMsg.Text = LanguageHandle.GetWord("JingGao").ToString().Trim() + "," + LanguageHandle.GetWord("XTFSCWYYHCSRX").ToString().Trim() + ": " + err.Message.ToString();
+            LB_ErrorMsg.Text = LanguageHandle.GetWord("JingGao") + "," + LanguageHandle.GetWord("XTFSCWYYHCSRX") + ": " + err.Message.ToString();
         }
     }
 
@@ -369,13 +369,13 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
         if (strParentID == strProjectID)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWBNZSHZXMZWFXMJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWBNZSHZXMZWFXMJC") + "')", true);
             return;
         }
 
         if (strPMCode == "" | strStatus == "" | strBeginDate == "" | strEndDate == "" | strProject == "" | strDetail == "" | strAcceptStandard == "" | strParentID == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -412,7 +412,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
             if (strProjectID == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXWLBNXGJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXWLBNXGJC") + "')", true);
             }
             else
             {
@@ -430,15 +430,15 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
                     ShareClass.InitialPrjectTreeWithDeleteLine(TreeView1);
 
-                    TB_Message.Text = strUserName + LanguageHandle.GetWord("GengXinLeXiangMu").ToString().Trim() + strProjectID + " " + strProject + LanguageHandle.GetWord("DeNeiRongQingGuanZhuTeCiTongZh").ToString().Trim();
+                    TB_Message.Text = strUserName + LanguageHandle.GetWord("GengXinLeXiangMu") + strProjectID + " " + strProject + LanguageHandle.GetWord("DeNeiRongQingGuanZhuTeCiTongZh");
 
                     LB_Sql.Text = strHQL;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
                 }
             }
         }
@@ -530,13 +530,13 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
         {
             projectBLL.UpdateProject(project, int.Parse(strProjectID));
 
-            LB_ProjectClass.Text = LanguageHandle.GetWord("MoBanXiangMu").ToString().Trim();
+            LB_ProjectClass.Text = LanguageHandle.GetWord("MoBanXiangMu");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSWMBXM").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSWMBXM") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 
@@ -560,11 +560,11 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
             LB_ProjectClass.Text = "Normal";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSWCGXM").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSWCGXM") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC") + "')", true);
         }
     }
 
@@ -614,13 +614,13 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
             BT_SetCommonProject.Enabled = false;
             BT_TransferProject.Enabled = false;
 
-            TB_Message.Text = strUserName + LanguageHandle.GetWord("ShanChuLeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName + LanguageHandle.GetWord("DeNeiRongCiWeiZhenShanChuQingG").ToString().Trim();
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("ShanChuLeXiangMu") + strProjectID + " " + strProjectName + LanguageHandle.GetWord("DeNeiRongCiWeiZhenShanChuQingG");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord")+"')", true); 
         }
     }
 
@@ -653,7 +653,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
         strMsg = TB_Message.Text.Trim();
 
-        strSubject = LanguageHandle.GetWord("XiangMuTongZhi").ToString().Trim();
+        strSubject = LanguageHandle.GetWord("XiangMuTongZhi");
 
         Msg msg = new Msg();
 
@@ -678,11 +678,11 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXFSCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXFSCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXinXiFaSongLanguageHandleGet").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXinXiFaSongLanguageHandleGet") + LanguageHandle.GetWord("ZZSBJC") + LanguageHandle.GetWord("ZZSBJC") + "')", true); 
         }
     }
 
@@ -719,7 +719,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
         LB_ProjectID.Text = "";
 
-        LB_ProjectList.Text = strUnderlingCode + strUnderLingName + LanguageHandle.GetWord("DeXiangMuLieBiao").ToString().Trim();
+        LB_ProjectList.Text = strUnderlingCode + strUnderLingName + LanguageHandle.GetWord("DeXiangMuLieBiao");
 
         strHQL = "from Project as project where project.PMCode = " + "'" + strUnderlingCode + "'" + " and project.UserCode = " + "'" + strUserCode + "'" + " and project.Status <> 'Archived' order by project.ProjectID DESC";
 
@@ -749,7 +749,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
             {
                 BT_Upate.Enabled = false;
                 BT_Delete.Enabled = false;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCKNSSTXGZXMJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCKNSSTXGZXMJC") + "')", true);
                 return;
             }
 
@@ -866,7 +866,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
                 CB_Mail.Enabled = true;
                 BT_Send.Enabled = true;
 
-                TB_Message.Text = strUserName + LanguageHandle.GetWord("GeiNiJianLiLeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName + LanguageHandle.GetWord("QingJiShiShouLi").ToString().Trim();
+                TB_Message.Text = strUserName + LanguageHandle.GetWord("GeiNiJianLiLeXiangMu") + strProjectID + " " + strProjectName + LanguageHandle.GetWord("QingJiShiShouLi");
             }
             catch(Exception err)
             {
@@ -877,7 +877,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
 
                 LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCKNSSTXGZXMHCXMDZTBZZTLBZJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCKNSSTXGZXMHCXMDZTBZZTLBZJC") + "')", true);
             }
         }
     }
@@ -896,7 +896,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
         DataGrid2.DataBind();
 
         LB_ProjectList.Visible = true;
-        LB_ProjectList.Text = LanguageHandle.GetWord("WoChengYuanDeSuoYouXiangMuLieB").ToString().Trim();
+        LB_ProjectList.Text = LanguageHandle.GetWord("WoChengYuanDeSuoYouXiangMuLieB");
 
         DataGrid2.Visible = true;
 
@@ -989,13 +989,13 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
                         if (lst.Count == 0)
                         {
                             DL_StatusValue.SelectedValue = "InProgress";
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG").ToString().Trim() + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG") + "')", true);
                         }
                     }
                     else
                     {
                         DL_StatusValue.SelectedValue = "InProgress";
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG") + "')", true);
                     }
                 }
             }
@@ -1003,7 +1003,7 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
         else
         {
             DL_StatusValue.SelectedValue = "InProgress";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCWKJLBNGBZTZXZXM").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCWKJLBNGBZTZXZXM") + "')", true);
         }
     }
 
@@ -1096,18 +1096,18 @@ HE_ProjectDetail.Language = Session["LangCode"].ToString();
                 DataGrid2.DataBind();
 
                 LB_Sql.Text = strHQL;
-                LB_ProjectList.Text = strNewPMCode + strNewPMName + LanguageHandle.GetWord("DeXiangMuLieBiao").ToString().Trim();
+                LB_ProjectList.Text = strNewPMCode + strNewPMName + LanguageHandle.GetWord("DeXiangMuLieBiao");
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZXCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZXCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhuaiXiangLanguageHandleGetW").ToString().Trim() + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhuaiXiangLanguageHandleGetW") + LanguageHandle.GetWord("ZZSBJC") + "')", true); 
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXMJLDDMBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXMJLDDMBNWKJC") + "')", true);
         }
     }
 

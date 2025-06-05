@@ -24,7 +24,7 @@ public partial class TTInvolvedProjectRelatedReqMain : System.Web.UI.Page
         string strProjectID = Request.QueryString["ProjectID"];
 
         string strProject = GetProjectName(strProjectID);
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProject + "相关需求";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + strProject + "相关需求";
     }
 
     protected string GetProjectName(string strProjectID)

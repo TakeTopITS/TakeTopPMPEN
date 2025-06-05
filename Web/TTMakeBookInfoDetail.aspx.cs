@@ -54,7 +54,7 @@ public partial class TTMakeBookInfoDetail : System.Web.UI.Page
             lbl_Version.Text = bookInformation.Version;
             lbl_Title.Text = bookInformation.BookName;
             strBookImage = bookInformation.BookImage;
-            if (bookInformation.BookType.Trim().Equals(LanguageHandle.GetWord("TuShu").ToString().Trim()))
+            if (bookInformation.BookType.Trim().Equals(LanguageHandle.GetWord("TuShu")))
             {
                 Panel_Book.Visible = true;
                 Panel_Stand.Visible = false;

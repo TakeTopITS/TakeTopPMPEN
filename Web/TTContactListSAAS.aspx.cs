@@ -32,14 +32,14 @@ public partial class TTContactListSAAS : System.Web.UI.Page
                 string strURL = Context.Request.Url.AbsoluteUri;
                 strURL = strURL.Substring(0, strURL.LastIndexOf("/"));
 
-                TB_Message.Text = LanguageHandle.GetWord("NiHao").ToString().Trim() + "£¬" + strUserName + LanguageHandle.GetWord("YaoQingNiCanYuXiangMu").ToString().Trim() + "£º " + strProjectName + ", " + LanguageHandle.GetWord("QYDNDLZD").ToString().Trim() + ": " + strURL + " ," +  LanguageHandle.GetWord("QYDNDLZCDLJRPTZZBLDJXMGLMG").ToString().Trim() + " " + strProjectCode + " " + LanguageHandle.GetWord("JiaRu").ToString().Trim();
+                TB_Message.Text = LanguageHandle.GetWord("NiHao") + "£¬" + strUserName + LanguageHandle.GetWord("YaoQingNiCanYuXiangMu") + "£º " + strProjectName + ", " + LanguageHandle.GetWord("QYDNDLZD") + ": " + strURL + " ," +  LanguageHandle.GetWord("QYDNDLZCDLJRPTZZBLDJXMGLMG") + " " + strProjectCode + " " + LanguageHandle.GetWord("JiaRu");
             }
         }
 
         if (strRelatedType == "Attendance")
         {
-            strRelatedType = LanguageHandle.GetWord("KaoQing").ToString().Trim();
-            TB_Message.Text = LanguageHandle.GetWord("NiHao").ToString().Trim() + "£¬" + strUserName + LanguageHandle.GetWord("YQNCYQDKQQGZWXGZHTDGLB").ToString().Trim() + strUserCode + LanguageHandle.GetWord("JiaRu").ToString().Trim();
+            strRelatedType = LanguageHandle.GetWord("KaoQing");
+            TB_Message.Text = LanguageHandle.GetWord("NiHao") + "£¬" + strUserName + LanguageHandle.GetWord("YQNCYQDKQQGZWXGZHTDGLB") + strUserCode + LanguageHandle.GetWord("JiaRu");
         }
 
         if (strRelatedType == "Customer")
@@ -154,11 +154,11 @@ public partial class TTContactListSAAS : System.Web.UI.Page
                 //BT_Update.Enabled = false;
                 //BT_Delete.Enabled = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
             }
         }
     }
@@ -267,16 +267,16 @@ public partial class TTContactListSAAS : System.Web.UI.Page
 
                 LoadContactList(strUserCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click4", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCMMZWEMAILDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click4", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCMMZWEMAILDBNWKJC") + "')", true);
         }
     }
 
@@ -357,16 +357,16 @@ public partial class TTContactListSAAS : System.Web.UI.Page
 
                 LoadContactList(strUserCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click4", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCMMZWEMAILDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click4", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCMMZWEMAILDBNWKJC") + "')", true);
         }
     }
 
@@ -475,7 +475,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
                     {
                         try
                         {
-                            msg.SendMailByEmail(strEMail, LanguageHandle.GetWord("TaDingXiangMuBao").ToString().Trim(), strMsg, "ADMIN");
+                            msg.SendMailByEmail(strEMail, LanguageHandle.GetWord("TaDingXiangMuBao"), strMsg, "ADMIN");
                         }
                         catch
                         {
@@ -525,7 +525,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
 
         LoadSMSSendDIYList(strSendUserCode);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXYTSGSMSXRYDEMAILHSJQJSTXTM").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXYTSGSMSXRYDEMAILHSJQJSTXTM") + "')", true);
     }
 
     protected void DataGrid4_ItemCommand(object sender, DataGridCommandEventArgs e)

@@ -45,7 +45,7 @@ public partial class TTGoodsPurchaseManagementForThirdPart : System.Web.UI.Page
         HL_SystemAnalystChartRelatedUserSet.NavigateUrl = "TTSystemAnalystChartRelatedUserSet.aspx?FormType=GoodsPurchaseManagement";
 
         string strChartTitle, strCmdText;
-        strChartTitle = LanguageHandle.GetWord("CGEQST").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("CGEQST");
         strCmdText = @"Select SUBSTRING(to_char(A.PurTime,'yyyymmdd'),0,7) as XName,COALESCE(SUM(A.Amount),0) as YNumber
         From T_GoodsPurchaseOrder A Where CAST(SUBSTRING(to_char(A.PurTime,'yyyymmdd'),0,5) as int) > extract(year from now()) - 2  
         and POID in (Select RelatedID From T_Collaboration Where CoID In(Select CoID From T_CollaborationMember Where UserCode = '" + strUserCode + "'))";

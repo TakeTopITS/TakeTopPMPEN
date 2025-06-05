@@ -93,7 +93,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
             strROID = e.Item.Cells[3].Text.Trim();
             LB_ROID.Text = strROID;
 
-            int intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+            int intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -110,7 +110,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
             }
 
             //从流程中打开的业务单
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -142,8 +142,8 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
                 LoadGoodsReturnDetail(strROID);
 
-                TB_WLName.Text = LanguageHandle.GetWord("ShengChanTuiLiao").ToString().Trim() + goodsReturnOrder.ReturnName.Trim() + LanguageHandle.GetWord("ShenQing").ToString().Trim();
-                ShareClass.LoadRelatedWL("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), goodsReturnOrder.ROID, DataGrid4);
+                TB_WLName.Text = LanguageHandle.GetWord("ShengChanTuiLiao") + goodsReturnOrder.ReturnName.Trim() + LanguageHandle.GetWord("ShenQing");
+                ShareClass.LoadRelatedWL("ProductionReturn", LanguageHandle.GetWord("WuLiao"), goodsReturnOrder.ROID, DataGrid4);
 
                 if (e.CommandName == "Update")
                 {
@@ -158,7 +158,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+                intWLNumber = intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
                 if (intWLNumber > 0)
                 {
                     return;
@@ -183,7 +183,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCKNCZMXJLJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCKNCZMXJLJC") + "')", true);
                 }
             }
         }
@@ -436,11 +436,11 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -497,13 +497,13 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
             //从流程中打开的业务单
             //更改工作流关联的数据文件
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select ROID as ProductionROID,ROID as DetailROID, * from T_GoodsReturnOrder where ROID = " + strROID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
                 }
 
                 if (strToDoWLID != null)
@@ -512,11 +512,11 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -532,7 +532,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
             string strROID = LB_ROID.Text.Trim();
 
-            int intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+            int intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -603,7 +603,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+                intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
                     return;
@@ -636,7 +636,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
                     //从流程中打开的业务单
                     //更改工作流关联的数据文件
-                    string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID, "0");
+                    string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -644,7 +644,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
                         strCmdText = "select ROID as BorrowROID,ROID as DetailROID,* from T_GoodsReturnOrder where ROID = " + strROID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
                         }
 
                         if (strToDoWLID != null)
@@ -659,11 +659,11 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
                         }
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }
@@ -692,11 +692,11 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
         }
 
         strROID = LB_ROID.Text.Trim();
-        int intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+        int intWLNumber = ShareClass.GetRelatedWorkFlowNumber("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -760,7 +760,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
         if (strGoodsCode == "" | strGoodsName == "" | strSpec == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -807,7 +807,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID, "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -815,7 +815,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
                     strCmdText = "select ROID as BorrowROID,ROID as DetailROID,* from T_GoodsReturnOrder where ROID = " + strROID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
                     }
 
                     if (strToDoWLID != null)
@@ -835,7 +835,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -890,7 +890,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
         if (strGoodsCode == "" | strGoodsName == "" | strSpec == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
         }
         else
         {
@@ -927,7 +927,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID, "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -935,7 +935,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
                     strCmdText = "select ROID as BorrowROID,ROID as DetailROID,* from T_GoodsReturnOrder where ROID = " + strROID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strROID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ProductionReturn", LanguageHandle.GetWord("WuLiao"), strROID);
                     }
 
                     if (strToDoWLID != null)
@@ -954,7 +954,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -1185,7 +1185,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC") + "');</script>");
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -1206,7 +1206,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = LanguageHandle.GetWord("WuLiao").ToString().Trim();
+        workFlow.RelatedType = LanguageHandle.GetWord("WuLiao");
         workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strROID);
         workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
@@ -1235,7 +1235,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strROID));
+            LoadRelatedWL(strWLType, LanguageHandle.GetWord("WuLiao"), int.Parse(strROID));
 
             UpdateGoodsReturnOrderStatus(strROID, "InProgress");
             DL_ReturnOrderStatus.SelectedValue = "InProgress";
@@ -1244,11 +1244,11 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
             strXMLFile2 = Server.MapPath(strXMLFile2);
             xmlProcess.DbToXML(strCmdText, "T_GoodsReturnOrder", strXMLFile2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPGHSSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPGHSSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPGHGSSBKNGZLMCGCZD25GHZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLPGHGSSBKNGZLMCGCZD25GHZJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -1498,7 +1498,7 @@ public partial class TTGoodsReturnOrderForProduction : System.Web.UI.Page
 
     protected void LoadGoodsProductionOrderDetail(string strPDID)
     {
-        LB_GoodsOwner.Text = LanguageHandle.GetWord("ShengChanDan").ToString().Trim() + ": " + strPDID + LanguageHandle.GetWord("MingXi").ToString().Trim();
+        LB_GoodsOwner.Text = LanguageHandle.GetWord("ShengChanDan") + ": " + strPDID + LanguageHandle.GetWord("MingXi");
 
         string strHQL = "Select * from T_GoodsProductionOrderDetail where PDID = " + strPDID + " Order by ID DESC";
 

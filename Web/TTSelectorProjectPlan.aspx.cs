@@ -80,7 +80,7 @@ public partial class TTSelectorProjectPlan : System.Web.UI.Page
 
                         if (!string.IsNullOrEmpty(strExistProjectID))
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDSSLXYJBDXMSHARECLASSOBJECTTOSTRINGDRPROJECTPROJECTNAMETRIMXXBD").ToString().Trim()+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDSSLXYJBDXMSHARECLASSOBJECTTOSTRINGDRPROJECTPROJECTNAMETRIMXXBD")+"')", true);
                             return;
                         }
                         else { 
@@ -93,7 +93,7 @@ public partial class TTSelectorProjectPlan : System.Web.UI.Page
 
                             DataBinder(HF_PlanID.Value);
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG")+"')", true);
                         }
                     }
                     else
@@ -103,11 +103,11 @@ public partial class TTSelectorProjectPlan : System.Web.UI.Page
 
                         DataBinder(HF_PlanID.Value);
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG")+"')", true);
                     }
                 }
                 catch (Exception ex) {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCCJC").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCCJC")+"')", true);
                 }
             }
             else if (cmdName == "cancel")
@@ -124,11 +124,11 @@ public partial class TTSelectorProjectPlan : System.Web.UI.Page
                     //重新加载列表
                     DataBinder(HF_PlanID.Value);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG")+"')", true);
                 }
                 catch (Exception ex)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXCCJC").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXCCJC")+"')", true);
                 }
             }
 
@@ -143,14 +143,14 @@ public partial class TTSelectorProjectPlan : System.Web.UI.Page
         string strPlanID = HF_PlanID.Value;
         if (!string.IsNullOrEmpty(strPlanID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXCSSLXJLZXM").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXCSSLXJLZXM")+"')", true);
             return;
         }
 
         //string strProjectID = DDL_Project.SelectedValue;
         //if (!string.IsNullOrEmpty(strProjectID))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZXM").ToString().Trim()+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZXM")+"')", true);
         //    return;
         //}
     }

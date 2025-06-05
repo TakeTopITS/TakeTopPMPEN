@@ -47,11 +47,11 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
                     TakeTopPlan.InitialProjectPlanTree(TreeView3, strRelatedProjectID, strRelatedProjectPlanVerID);
                 }
 
-                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strRelatedProjectID, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, strRelatedProjectID, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
             }
             else
             {
-                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, null, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                InitialTemplatePrjectTreeForPlan(TreeView2, strUserCode, null, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
 
             }
         }
@@ -125,7 +125,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
 
         if (intVerID > 100 | intVerID < 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBBHZNS1100ZJDSZ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBBHZNS1100ZJDSZ") + "')", true);
             return;
         }
 
@@ -155,16 +155,16 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
                 TakeTopPlan.InitialProjectPlanTree(TreeView3, strOldProjectID, strVerID);
                 HL_ProPlanGanttOld.NavigateUrl = "TTWorkPlanGanttForProject.aspx?pid=" + strOldProjectID + "&VerID=" + strVerID;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC") + "')", true);
         }
     }
 
@@ -192,7 +192,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             {
                 if (strType == "Baseline" || strType == "InUse")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBBZBBZNYLXZSCJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBBZBBZNYLXZSCJC") + "')", true);
                     return;
                 }
                 else
@@ -225,11 +225,11 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
                 TakeTopPlan.InitialProjectPlanTree(TreeView3, strOldProjectID, strVerID);
                 HL_ProPlanGanttOld.NavigateUrl = "TTWorkPlanGanttForProject.aspx?pid=" + strOldProjectID + "&VerID=" + strVerID;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBKNBCZCBBHJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBKNBCZCBBHJC") + "')", true);
             }
         }
     }
@@ -253,7 +253,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiQingXianShuaZeXiangMu").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiQingXianShuaZeXiangMu")+"')", true);
                 return false;
             }
         }
@@ -271,7 +271,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             {
                 if (strType == "Baseline" || strType == "InUse")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBBZBBZNYLXZSCJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBBZBBZNYLXZSCJC") + "')", true);
                     return false;
                 }
                 else
@@ -350,15 +350,15 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWZJHSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWZJHSBJC") + "')", true);
                 return;
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJHCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJHCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiQingXianShuaZeXiangMuH").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiQingXianShuaZeXiangMuH")+"')", true);
         }
     }
 
@@ -538,7 +538,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             workPlan.VerID = int.Parse(strPlanVerID);
             workPlan.FromProjectID = int.Parse(strProjectID);
             workPlan.FromProjectPlanVerID = int.Parse(strPlanVerID);
-            workPlan.Name = ds1.Tables[0].Rows[i]["ItemCode"].ToString().Trim() + ds1.Tables[0].Rows[i]["ItemName"].ToString().Trim() + LanguageHandle.GetWord("GuiGe").ToString().Trim() + ds1.Tables[0].Rows[i]["specification"].ToString().Trim() + "£©";
+            workPlan.Name = ds1.Tables[0].Rows[i]["ItemCode"].ToString().Trim() + ds1.Tables[0].Rows[i]["ItemName"].ToString().Trim() + LanguageHandle.GetWord("GuiGe") + ds1.Tables[0].Rows[i]["specification"].ToString().Trim() + "£©";
 
             workPlan.Budget = 0;
             workPlan.WorkHour = 0;
@@ -1041,7 +1041,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         catch (SqlException ex)
         {
             ///Å×³öÒì³£
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChuShiHuaMoZuShuJuShiBai").ToString().Trim()+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZChuShiHuaMoZuShuJuShiBai")+"')", true);
             throw new Exception(ex.Message, ex);
         }
         finally

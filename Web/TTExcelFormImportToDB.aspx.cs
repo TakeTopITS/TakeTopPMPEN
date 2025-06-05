@@ -65,20 +65,20 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
 
         if (strFormType == "")
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("QingShuRuBiaoChanLeiXing").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("QingShuRuBiaoChanLeiXing");
             return;
         }
 
 
         if (FileUpload_Training.HasFile == false)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
             return;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
             return;
         }
         string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -87,7 +87,7 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
         }
         else
         {
@@ -102,11 +102,11 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
 
             if (strErrorUserCodeString == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click555", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRBWC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click555", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRBWC") + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRJBWCDXMRYSJDRSBSTRERRORUSERCODESTRINGJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRJBWCDXMRYSJDRSBSTRERRORUSERCODESTRINGJC") + "')", true);
             }
         }
     }
@@ -224,7 +224,7 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            LB_ErrorText.Text = LanguageHandle.GetWord("ExcelGeShiCuoWuHuoZheExcelZhen").ToString().Trim() + err.Message.ToString();
+            LB_ErrorText.Text = LanguageHandle.GetWord("ExcelGeShiCuoWuHuoZheExcelZhen") + err.Message.ToString();
         }
     }
 

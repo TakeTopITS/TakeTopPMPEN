@@ -97,9 +97,9 @@ public partial class TTConstractView : System.Web.UI.Page
             CountInvoiceAmount(strConstractCode);
 
 
-            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("BuChongXieYi").ToString().Trim(), DataGrid19);
-            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("GeTongYiJu").ToString().Trim(), DataGrid20);
-            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("XiangMuJiTaXinXi").ToString().Trim(), DataGrid21);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("BuChongXieYi"), DataGrid19);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("GeTongYiJu"), DataGrid20);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("XiangMuJiTaXinXi"), DataGrid21);
 
             LB_ConstractCode.Text = strConstractCode;
 

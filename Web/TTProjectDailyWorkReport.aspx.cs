@@ -34,7 +34,7 @@ public partial class TTProjectDailyWorkReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuGongZuoRiZhi").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuGongZuoRiZhi");
         //this.Title = "项目：" + strProjectID + " " + strProjectName + " 工作日志报表！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
@@ -74,7 +74,7 @@ public partial class TTProjectDailyWorkReport : System.Web.UI.Page
             LB_ConfirmIncome.Text = deConfirmSalary.ToString();
 
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll");
             LB_Sql.Text = strHQL;
         }
     }
@@ -107,7 +107,7 @@ public partial class TTProjectDailyWorkReport : System.Web.UI.Page
         LB_ConfirmManHour.Text = deConfirmManHour.ToString();
         LB_ConfirmIncome.Text = deConfirmSalary.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll");
     }
 
     protected void BT_DateFind_Click(object sender, EventArgs e)
@@ -147,7 +147,7 @@ public partial class TTProjectDailyWorkReport : System.Web.UI.Page
         LB_ConfirmIncome.Text = deConfirmSalary.ToString();
 
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("KaiShiRiQi").ToString().Trim() + ":" + strStartDate + LanguageHandle.GetWord("JieShuRiQi").ToString().Trim() + ":" + strEndDate;
+        LB_QueryScope.Text = LanguageHandle.GetWord("KaiShiRiQi") + ":" + strStartDate + LanguageHandle.GetWord("JieShuRiQi") + ":" + strEndDate;
 
         LB_TimeScope.Text = strStartDate + "-" + strEndDate;
     }

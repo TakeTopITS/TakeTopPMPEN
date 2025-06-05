@@ -111,13 +111,13 @@ public partial class TakeTopLRTop : System.Web.UI.Page
 
             if (string.Compare(strNoticeDate, strDeadline) > 0 & string.Compare(strDeadline, strCurrentDate) >= 0)
             {
-                strMessage = LanguageHandle.GetWord("QingZhuYiJiTongShouQuanJiangYu").ToString().Trim() + strDeadlineDate + LanguageHandle.GetWord("DaoJiQingJinKuaiXuFeiHeBeiFenS").ToString().Trim();
+                strMessage = LanguageHandle.GetWord("QingZhuYiJiTongShouQuanJiangYu") + strDeadlineDate + LanguageHandle.GetWord("DaoJiQingJinKuaiXuFeiHeBeiFenS");
             }
             else
             {
                 if (string.Compare(strCurrentDate, strDeadline) > 0)
                 {
-                    strMessage = LanguageHandle.GetWord("QingZhuYiJiTongShouQuanYiYu").ToString().Trim() + strDeadline + LanguageHandle.GetWord("GuoJiQingXuFeiZaiShiYong").ToString().Trim();
+                    strMessage = LanguageHandle.GetWord("QingZhuYiJiTongShouQuanYiYu") + strDeadline + LanguageHandle.GetWord("GuoJiQingXuFeiZaiShiYong");
                 }
                 else
                 {

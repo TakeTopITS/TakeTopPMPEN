@@ -79,7 +79,7 @@ public partial class TTPersonalSpaceNewsNoticeForSAAS : System.Web.UI.Page
 
 
         strUserName = Session["UserName"].ToString();
-        strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + ": " + strUserCode + "  " + strUserName;
+        strUserInfo = LanguageHandle.GetWord("YongHu") + ": " + strUserCode + "  " + strUserName;
 
         try
         {

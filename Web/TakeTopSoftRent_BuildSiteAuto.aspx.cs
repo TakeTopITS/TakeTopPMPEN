@@ -90,7 +90,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             string strIsOEM = Request.QueryString["IsOEM"];
 
             string strRentProductVersionType;
-            if (strRentProductVersion == LanguageHandle.GetWord("JiTuanBan").ToString().Trim())
+            if (strRentProductVersion == LanguageHandle.GetWord("JiTuanBan"))
             {
                 strRentProductVersionType = "YES";
             }
@@ -102,7 +102,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
 
             if (VerifyWebSiteAppIsExist(strSiteName, strSiteAppName))
             {
-                LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiCunZaiXiangTon").ToString().Trim();
+                LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiCunZaiXiangTon");
                 return;
             }
 
@@ -114,7 +114,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             //string strScript = "<script>openMDIFrom('" + strSiteAppURL + "');</script>";
             //ClientScript.RegisterStartupScript(GetType(), "", strScript);
 
-            LB_Message.Text = LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK").ToString().Trim() + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoMiMa").ToString().Trim();
+            LB_Message.Text = LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK") + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoMiMa");
             LB_CloseMessage.Visible = false;
         }
         catch (Exception err)
@@ -156,7 +156,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
         //从模板数据库恢复数据库
         if (!ShareClass.RestoreDatabaseFromTemplateDB(strSiteDBName, strDBRestoreFile))
         {
-            LogClass.WriteLogFile(LanguageHandle.GetWord("HuiFuShuJuKuShiBai").ToString().Trim());
+            LogClass.WriteLogFile(LanguageHandle.GetWord("HuiFuShuJuKuShiBai"));
         }
 
         //授予用户数据库权限，只针对这个数据库

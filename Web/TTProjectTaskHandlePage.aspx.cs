@@ -240,7 +240,7 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
         DataGrid4.DataBind();
         SetProTaskColorForDataGrid(DataGrid4);
         LB_Sql4.Text = strHQL;
-        LB_TotalNumber4.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
+        LB_TotalNumber4.Text = LanguageHandle.GetWord("JiLuShu") + lst.Count.ToString();
 
         if (strProjectID != "0")
         {
@@ -262,7 +262,7 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
         DataGrid6.DataBind();
         SetProTaskColorForDataGrid(DataGrid6);
         LB_Sql6.Text = strHQL;
-        LB_TotalNumber6.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
+        LB_TotalNumber6.Text = LanguageHandle.GetWord("JiLuShu") + lst.Count.ToString();
 
         FinishPercentPicture4();
         FinishPercentPicture6();

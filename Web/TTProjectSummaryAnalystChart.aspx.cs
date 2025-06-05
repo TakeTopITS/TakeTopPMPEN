@@ -59,29 +59,29 @@ public partial class TTProjectSummaryAnalystChart : System.Web.UI.Page
         string strHQL;
         string strCmdText, strChartTitle;
 
-        strChartTitle = LanguageHandle.GetWord("JHZTFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("JHZTFBT");
         strCmdText = @"Select (cast(percent_done as varchar) || cast('%' as varchar)) as XName,cast(count(*) as numeric) as YNumber
                   From T_ImplePlan  where ProjectID = " + strProjectID + " and VerID in (Select VerID From T_ProjectPlanVersion Where ProjectID = " + strProjectID + " and Type  not in ('Baseline','Backup'))  Group By percent_done";
         IFrame_Chart_PlanStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = LanguageHandle.GetWord("XMFYYSFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("XMFYYSFBT");
         strCmdText = @"Select A.Account as XName,SUM(A.ConfirmAmount) as YNumber 
                   From T_ProExpense A LEFT JOIN T_ProjectBudget B ON A.ProjectID = B.ProjectID AND A.Account = B.Account 
                       WHERE  A.ProjectID = " + strProjectID + " Group By A.Account ";
         IFrame_Chart_Expense.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = LanguageHandle.GetWord("RWZTFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("RWZTFBT");
         strCmdText = "select Status as XName,count(*) as YNumber from T_ProjectTask ";
         strCmdText += " where ProjectID = " + strProjectID + " Group By Status";
         IFrame_Chart_TaskStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = LanguageHandle.GetWord("XQZTFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("XQZTFBT");
         strCmdText = "select Status as XName,count(*) as YNumber from T_Requirement ";
         strCmdText += " where ReqID in (select ReqID from T_RelatedReq where ProjectID  = " + strProjectID + ")  Group By Status";
         IFrame_Chart_RequirementStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
 
-        strChartTitle = LanguageHandle.GetWord("GZLZTFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("GZLZTFBT");
         strHQL = "select Status as XName, Count(*) as YNumber from T_WorkFlow where ";
         strHQL += " ((RelatedType = 'Project' and RelatedID = " + strProjectID + ")";
         strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
@@ -95,7 +95,7 @@ public partial class TTProjectSummaryAnalystChart : System.Web.UI.Page
         IFrame_Chart_WorkFlowStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
 
-        strChartTitle = LanguageHandle.GetWord("FXZTFBT").ToString().Trim();
+        strChartTitle = LanguageHandle.GetWord("FXZTFBT");
         strCmdText = "select Status as XName,count(*) as YNumber from T_ProjectRisk ";
         strCmdText += " where ProjectID = " + strProjectID + " Group By Status";
         IFrame_Chart_RiskStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);

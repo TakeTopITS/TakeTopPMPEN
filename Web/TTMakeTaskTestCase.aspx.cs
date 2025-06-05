@@ -44,7 +44,7 @@ public partial class TTMakeTaskTestCase : System.Web.UI.Page
 HE_Description.Language = Session["LangCode"].ToString();
       
 
-        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + GetProjectName(strProjectID) + "的任务：" + strTaskID + " " + GetTaskName(strTaskID) + " " + " 的测试用例！";
+        //this.Title = LanguageHandle.GetWord("Project") + strProjectID + " " + GetProjectName(strProjectID) + "的任务：" + strTaskID + " " + GetTaskName(strTaskID) + " " + " 的测试用例！";
         LB_UserCode.Text = strUserCode;
 
 
@@ -61,7 +61,7 @@ HE_Description.Language = Session["LangCode"].ToString();
                 HE_Description.Visible = true;
             }
 
-            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
 
             strHQL = "from TestStatus as testStatus";
             strHQL += " Where testStatus.LangCode =" + "'" + strLangCode + "'";
@@ -300,19 +300,19 @@ HE_Description.Language = Session["LangCode"].ToString();
                 LB_CaseID.Text = strCaseID;
 
                 LoadTaskTestCase(strTaskID);
-                InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -358,12 +358,12 @@ HE_Description.Language = Session["LangCode"].ToString();
             taskTestCaseBLL.UpdateTaskTestCase(taskTestCase, int.Parse(strID));
             LoadTaskTestCase(strTaskID);
 
-            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -426,13 +426,13 @@ HE_Description.Language = Session["LangCode"].ToString();
                     taskTestCaseBLL.DeleteTaskTestCase(taskTestCase);
                     LoadTaskTestCase(strTaskID);
 
-                    InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), "TemplateProject", LanguageHandle.GetWord("CommonProject").ToString().Trim());
+                    InitialTemplatePrjectTaskTestCaseTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu"), LanguageHandle.GetWord("ZZTSDSSFF"), "TemplateProject", LanguageHandle.GetWord("CommonProject"));
 
                     LB_CaseID.Text = "";
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }

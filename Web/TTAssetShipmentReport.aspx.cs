@@ -35,7 +35,7 @@ public partial class TTAssetShipmentReport : System.Web.UI.Page
         strRelatedType = Request.QueryString["RelatedType"];
         strRelatedID = Request.QueryString["RelatedID"];
 
-        LB_ReportName.Text = LanguageHandle.GetWord("ZiChanChuKuBaoBiao").ToString().Trim();
+        LB_ReportName.Text = LanguageHandle.GetWord("ZiChanChuKuBaoBiao");
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);

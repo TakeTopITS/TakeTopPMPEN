@@ -56,7 +56,7 @@ public partial class TTMyMemTask : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "ajustHeight", "AdjustDivHeight();", true);
         if (Page.IsPostBack == false)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.LoadMemberByUserCodeForDataGrid(strUserCode, "Project", DataGrid1);
@@ -94,7 +94,7 @@ public partial class TTMyMemTask : System.Web.UI.Page
 
     protected void BT_AllTasks_Click(object sender, EventArgs e)
     {
-        string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+        string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
         LB_DepartString.Text = strDepartString;
 
         LoadProjectTaskAssignRecord(strUserCode,"");

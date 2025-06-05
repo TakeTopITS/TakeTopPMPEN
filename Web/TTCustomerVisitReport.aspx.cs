@@ -127,7 +127,7 @@ public partial class TTCustomerVisitReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_CustomerQuestion");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("KeHuBaiFangTongJiBiao").ToString().Trim() + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xls");
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("KeHuBaiFangTongJiBiao") + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xls");
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("DaoChuChengGong")+"£¡');", true);   
     }

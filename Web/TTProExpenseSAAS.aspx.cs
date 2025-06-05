@@ -235,7 +235,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
 
                     if (e.CommandName == "Claim")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCXMYJAHGHXBNBXFYL").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCXMYJAHGHXBNBXFYL") + "')", true);
                     }
                 }
                 else
@@ -291,7 +291,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
         }
@@ -375,7 +375,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -385,7 +385,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             //检查相应科目项目预算有没有超支 //检查相应科目项目预算有没有超支
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, strAccount, deAmount) == false)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -406,7 +406,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -449,7 +449,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             try
             {
                 proExpenseBLL.UpdateProExpense(proExpense, int.Parse(strID));
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXCG") + "')", true);
 
                 LoadAndUpdateProExpense(LB_Sql.Text.Trim());
 
@@ -458,7 +458,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXSBJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -468,7 +468,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             //检查相应科目项目预算有没有超支 //检查相应科目项目预算有没有超支
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, strAccount, deAmount) == false)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZFYCGKMYSHXMZYSJC") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -478,7 +478,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             try
             {
                 proExpenseBLL.UpdateProExpense(proExpense, int.Parse(strID));
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
 
                 LoadAndUpdateProExpense(LB_Sql.Text.Trim());
 
@@ -487,7 +487,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -650,7 +650,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             dailyWork.Address = "";
             dailyWork.ProjectID = int.Parse(strProjectID);
             dailyWork.ProjectName = ShareClass.GetProjectName(strProjectID);
-            dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong").ToString().Trim();
+            dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong");
             dailyWork.Achievement = "";
             dailyWork.Charge = DeCurrentDayAmount;
             dailyWork.ConfirmCharge = DeCurrentDayConfirmAmount;

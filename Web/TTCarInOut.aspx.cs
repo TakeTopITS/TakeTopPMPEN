@@ -153,7 +153,7 @@ public partial class TTCarInOut : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('"+LanguageHandle.GetWord("ZZCCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('"+LanguageHandle.GetWord("ZZCCCG")+"')", true);
         }
         catch
         {
@@ -203,7 +203,7 @@ public partial class TTCarInOut : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('"+LanguageHandle.GetWord("ZZSHOUCHECG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('"+LanguageHandle.GetWord("ZZSHOUCHECG") + "')", true);
         }
         catch
         {

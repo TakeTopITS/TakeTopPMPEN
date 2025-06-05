@@ -39,12 +39,12 @@ public partial class TTWorkFlowStepBusinessMember : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView4, strUserCode);
+            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView4, strUserCode);
 
             strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             strPosition = ShareClass.GetUserDuty(strUserCode);
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView4, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT"),TreeView4, strUserCode);
             strHQL = "from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'";
             ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
             lst = projectMemberBLL.GetAllProjectMembers(strHQL);
@@ -66,7 +66,7 @@ public partial class TTWorkFlowStepBusinessMember : System.Web.UI.Page
                 workFlow = GetWorkFlow(strWLID);
                 strWLName = workFlow.WLName.Trim();
 
-                TB_Message.Text = LanguageHandle.GetWord("GongZuoLiuShenQing").ToString().Trim() + "£º" + strWLID + " " + strWLName + "," + LanguageHandle.GetWord("BuZhou").ToString().Trim() + "£º" + strStepID + " " + strStepName;
+                TB_Message.Text = LanguageHandle.GetWord("GongZuoLiuShenQing") + "£º" + strWLID + " " + strWLName + "," + LanguageHandle.GetWord("BuZhou") + "£º" + strStepID + " " + strStepName;
             }
             catch
             {
@@ -116,7 +116,7 @@ public partial class TTWorkFlowStepBusinessMember : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowStepBusinessMember");
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFZJ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFZJ") + "')", true);
         }
         else
         {
@@ -151,7 +151,7 @@ public partial class TTWorkFlowStepBusinessMember : System.Web.UI.Page
         }
         
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXFSWB").ToString().Trim() + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXFSWB") + "')", true);
     }
 
     

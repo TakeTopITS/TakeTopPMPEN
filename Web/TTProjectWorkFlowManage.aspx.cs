@@ -108,7 +108,7 @@ public partial class TTProjectWorkFlowManage : System.Web.UI.Page
                 SetWorkFlowRecordColor();
                 LB_Sql3.Text = strHQL;
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID;
+                LB_QueryScope.Text = LanguageHandle.GetWord("Project") + strProjectID;
             }
             else
             {
@@ -167,7 +167,7 @@ public partial class TTProjectWorkFlowManage : System.Web.UI.Page
                 SetWorkFlowRecordColor();
                 LB_Sql3.Text = strHQL;
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ":" + LanguageHandle.GetWord("SuoYou").ToString().Trim();
+                LB_QueryScope.Text = LanguageHandle.GetWord("XiangMu") + ":" + LanguageHandle.GetWord("SuoYou");
             }
         }
     }

@@ -51,13 +51,13 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
     {
         if (FileUpload_Training.HasFile == false)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
             return;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
             return;
         }
         string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -66,7 +66,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
         }
         else
         {
@@ -83,7 +83,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
             }
             else
             {
@@ -92,10 +92,10 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
 
                 for (int i = 0; i < dr.Length; i++)
                 {
-                    if (dr[i][LanguageHandle.GetWord("KeHuDaiMa").ToString().Trim()].ToString().Trim() != "")
+                    if (dr[i][LanguageHandle.GetWord("KeHuDaiMa")].ToString().Trim() != "")
                     {
-                        string strCustomerCode = dr[i][LanguageHandle.GetWord("KeHuDaiMa").ToString().Trim()].ToString().Trim();
-                        string strRelatedUserNameList = dr[i][LanguageHandle.GetWord("KeShiRenYuan").ToString().Trim()].ToString().Trim();
+                        string strCustomerCode = dr[i][LanguageHandle.GetWord("KeHuDaiMa")].ToString().Trim();
+                        string strRelatedUserNameList = dr[i][LanguageHandle.GetWord("KeShiRenYuan")].ToString().Trim();
                         string[] strRelatedUserArray = strRelatedUserNameList.Split(',');
 
                         if (CheckCustomerIsExisted(strCustomerCode) > 0)
@@ -125,17 +125,17 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
                             }
                             catch (Exception err)
                             {
-                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strCustomerCode + " : " + err.Message.ToString() + "<br/>";
+                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strCustomerCode + " : " + err.Message.ToString() + "<br/>";
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strCustomerCode + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strCustomerCode + " : " + err.Message.ToString());
                             }
                         }
                     }
                 }
 
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRCG");
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click41", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click41", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG") + "')", true);
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click21", "displayWaitingImage('none');", true);
             }
         }
@@ -184,13 +184,13 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ");
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ");
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -199,7 +199,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB");
                 j = -1;
             }
             else
@@ -217,7 +217,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                     j = -1;
                 }
                 else
@@ -227,7 +227,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strCustomerCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                        strCustomerCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
 
                         if (strCustomerCode != "")
                         {
@@ -235,13 +235,13 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
                             lst = customerBLL.GetAllCustomers(strHQL);
                             if (lst != null && lst.Count > 0)//存在，则不操作
                             {
-                                LB_ErrorText.Text += dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim() + LanguageHandle.GetWord("ZZYCZDRSBQJC").ToString().Trim();
+                                LB_ErrorText.Text += dr[i][LanguageHandle.GetWord("MingChen")].ToString().Trim() + LanguageHandle.GetWord("ZZYCZDRSBQJC");
                                 j = -1;
                             }
                             else//新增
                             {
-                                customer.CustomerCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
-                                customer.CustomerName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
+                                customer.CustomerCode = dr[i][LanguageHandle.GetWord("DaiMa")].ToString().Trim();
+                                customer.CustomerName = dr[i][LanguageHandle.GetWord("MingChen")].ToString().Trim();
                             }
 
                             continue;

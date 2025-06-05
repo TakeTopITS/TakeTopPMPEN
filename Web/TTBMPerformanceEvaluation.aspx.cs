@@ -125,7 +125,7 @@ public partial class TTBMPerformanceEvaluation : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(ddl_ExpertID.SelectedValue) || ddl_ExpertID.SelectedValue.Trim() == "0")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCPZJBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCPZJBNWKCZSBJC") + "')", true);
             ddl_ExpertID.Focus();
             return;
         }
@@ -155,11 +155,11 @@ public partial class TTBMPerformanceEvaluation : System.Web.UI.Page
             GetExpertList(bMPerformanceEvaluation.BidPlanID.ToString().Trim());
             LoadBMPerformanceEvaluationList(bMPerformanceEvaluation.BidPlanID.ToString().Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }
@@ -243,7 +243,7 @@ public partial class TTBMPerformanceEvaluation : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(ddl_ExpertID.SelectedValue) || ddl_ExpertID.SelectedValue.Trim() == "0")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCPZJBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCPZJBNWKCZSBJC") + "')", true);
             ddl_ExpertID.Focus();
             return;
         }
@@ -275,11 +275,11 @@ public partial class TTBMPerformanceEvaluation : System.Web.UI.Page
             GetExpertList(bMPerformanceEvaluation.BidPlanID.ToString().Trim());
             LoadBMPerformanceEvaluationList(bMPerformanceEvaluation.BidPlanID.ToString());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSB") + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }
     }
@@ -306,11 +306,11 @@ public partial class TTBMPerformanceEvaluation : System.Web.UI.Page
             GetExpertList(bMPerformanceEvaluation.BidPlanID.ToString().Trim());
             LoadBMPerformanceEvaluationList(bMPerformanceEvaluation.BidPlanID.ToString());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSB") + "')", true);
         }
     }
 

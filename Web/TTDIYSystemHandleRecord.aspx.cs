@@ -60,7 +60,7 @@ public partial class TTDIYSystemHandleRecord : System.Web.UI.Page
         {
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_StartTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll");
 
             BT_CreateUserDIYModule.Attributes.Add("onclick", "popShowByURL('TTDIYSystemByForm.aspx?TemIdentifyString=" + Request.QueryString["TemIdentifyString"].ToString() + "&ModuleName=" + strModuleName + "','" + strHomeModuleName + "', 1000, 500,window.location)");
 
@@ -154,7 +154,7 @@ public partial class TTDIYSystemHandleRecord : System.Web.UI.Page
 
         strWFID = NB_WFID.Amount.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("GongZuoLiuBianHao").ToString().Trim() + "£º" + strWFID;
+        LB_QueryScope.Text = LanguageHandle.GetWord("GongZuoLiuBianHao") + "£º" + strWFID;
 
         DataGrid1.CurrentPageIndex = 0;
         DataGrid3.CurrentPageIndex = 0;
@@ -248,7 +248,7 @@ public partial class TTDIYSystemHandleRecord : System.Web.UI.Page
         strStartTime = DLC_StartTime.Text;
         strEndTime = DLC_EndTime.Text;
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("KaiShiRiQi").ToString().Trim() + ":" + strStartTime + LanguageHandle.GetWord("JieShuRiQi").ToString().Trim() + ":" + strEndTime;
+        LB_QueryScope.Text = LanguageHandle.GetWord("KaiShiRiQi") + ":" + strStartTime + LanguageHandle.GetWord("JieShuRiQi") + ":" + strEndTime;
 
         DataGrid1.CurrentPageIndex = 0;
         DataGrid3.CurrentPageIndex = 0;
@@ -422,7 +422,7 @@ public partial class TTDIYSystemHandleRecord : System.Web.UI.Page
         IList lst;
 
         string strUserCode = LB_UserCode.Text;
-        LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll");
 
         DataSet ds = new DataSet();
 
@@ -495,7 +495,7 @@ public partial class TTDIYSystemHandleRecord : System.Web.UI.Page
     {
         string strStatus = ((Button)e.Item.FindControl("BT_Status")).Text.Trim();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZhuangTai") + ":" + strStatus;
 
         string strUserCode = LB_UserCode.Text.Trim();
         string strHQL;

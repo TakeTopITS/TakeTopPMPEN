@@ -57,7 +57,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
             if (strUserCode == "ADMIN")
             {
-                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1);
+                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT"), TreeView1);
 
                 strHQL = "Select DepartCode,DepartName From T_Department Order By DepartCode ASC";
             }
@@ -66,14 +66,14 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 string strSystemVersionType = Session["SystemVersionType"].ToString();
                 if (strSystemVersionType == "GROUP" | strSystemVersionType == "ENTERPRISE")
                 {
-                    strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
+                    strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT"), TreeView1, strUserCode);
                     LB_DepartString.Text = strDepartString;
 
                     strHQL = "Select DepartCode,DepartName From T_Department Where DepartCode in " + strDepartString;
                 }
                 else
                 {
-                    LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1);
+                    LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT"), TreeView1);
 
                     strHQL = "Select DepartCode,DepartName From T_Department Order By DepartCode ASC";
                 }
@@ -173,11 +173,11 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                 LoadCandidate(strBelongDepartCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
             }
         }
     }
@@ -227,21 +227,21 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                     IM_MemberPhoto.ImageUrl = strFileName3;
                     HL_MemberPhoto.NavigateUrl = strFileName3;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCHCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCHCG") + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -262,11 +262,11 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
             HL_MemberPhoto.NavigateUrl = "";
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG") + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC") + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -331,7 +331,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LTCandidateInformation");
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZXTXMDHXRQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZXTXMDHXRQJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -371,18 +371,18 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 //BT_Delete.Enabled = true;
                 BT_UploadPhoto.Enabled = true;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJCDMZFHMXWK").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJCDMZFHMXWK") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCMMZWEMAILDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCMMZWEMAILDBNWKJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -440,18 +440,18 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                 LoadCandidate(strBelongDepartCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJCDMZFHMXWK").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJCDMZFHMXWK") + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCZWEMAILDBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYHDMYHMCZWEMAILDBNWKJC") + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -467,20 +467,20 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
         if (ExcelToDBTest() == -1)
         {
-            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim() ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC") ;
             return;
         }
         else
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ") ;
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ") ;
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -489,7 +489,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB") ;
             }
             else
             {
@@ -506,13 +506,13 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ") ;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strNewUserName = dr[i][LanguageHandle.GetWord("XingMing").ToString().Trim()].ToString().Trim();
+                        strNewUserName = dr[i][LanguageHandle.GetWord("XingMing")].ToString().Trim();
                         LTCandidateInformationBLL ltCandidateInformationBLL = new LTCandidateInformationBLL();
                         string strHQL = "from LTCandidateInformation as ltCandidateInformation where ltCandidateInformation.UserName = '" + strNewUserName + "' ";
                         IList lst = ltCandidateInformationBLL.GetAllLTCandidateInformations(strHQL);
@@ -525,18 +525,18 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                             try
                             {
-                                ltCandidateInformation.UserName = dr[i][LanguageHandle.GetWord("XingMing").ToString().Trim()].ToString().Trim();
-                                ltCandidateInformation.Gender = dr[i][LanguageHandle.GetWord("XingBie").ToString().Trim()].ToString().Trim() == "" ? "Male" : dr[i][LanguageHandle.GetWord("XingBie").ToString().Trim()].ToString().Trim();
-                                ltCandidateInformation.Age = int.Parse(dr[i][LanguageHandle.GetWord("NianLing").ToString().Trim()].ToString().Trim() == "" ? "0" : dr[i][LanguageHandle.GetWord("NianLing").ToString().Trim()].ToString().Trim());
+                                ltCandidateInformation.UserName = dr[i][LanguageHandle.GetWord("XingMing")].ToString().Trim();
+                                ltCandidateInformation.Gender = dr[i][LanguageHandle.GetWord("XingBie")].ToString().Trim() == "" ? "Male" : dr[i][LanguageHandle.GetWord("XingBie")].ToString().Trim();
+                                ltCandidateInformation.Age = int.Parse(dr[i][LanguageHandle.GetWord("NianLing")].ToString().Trim() == "" ? "0" : dr[i][LanguageHandle.GetWord("NianLing")].ToString().Trim());
 
                                 ltCandidateInformation.BelongDepartCode = DL_BelongDepartment.SelectedValue;
                                 ltCandidateInformation.BelongDepartName = DL_BelongDepartment.SelectedItem.Text;
 
-                                ltCandidateInformation.Department = dr[i][LanguageHandle.GetWord("GongSi").ToString().Trim()].ToString().Trim();
-                                ltCandidateInformation.Department = dr[i][LanguageHandle.GetWord("BuMen").ToString().Trim()].ToString().Trim();
-                                ltCandidateInformation.CurrentDuty = dr[i][LanguageHandle.GetWord("DangQianZhiWu").ToString().Trim()].ToString().Trim();
+                                ltCandidateInformation.Department = dr[i][LanguageHandle.GetWord("GongSi")].ToString().Trim();
+                                ltCandidateInformation.Department = dr[i][LanguageHandle.GetWord("BuMen")].ToString().Trim();
+                                ltCandidateInformation.CurrentDuty = dr[i][LanguageHandle.GetWord("DangQianZhiWu")].ToString().Trim();
 
-                                ltCandidateInformation.MobilePhone = dr[i][LanguageHandle.GetWord("ShouJi").ToString().Trim()].ToString().Trim();
+                                ltCandidateInformation.MobilePhone = dr[i][LanguageHandle.GetWord("ShouJi")].ToString().Trim();
 
                                 ltCandidateInformation.CreateTime = DateTime.Now;
 
@@ -549,9 +549,9 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                             {
                                 strErrorUserCodeString += strNewUserName + ",";
 
-                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strNewUserName + " : " + err.Message.ToString() + "<br/>"; ;
+                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strNewUserName + " : " + err.Message.ToString() + "<br/>"; ;
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strNewUserName + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC") + " : " + LanguageHandle.GetWord("HangHao") + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa") + ": " + strNewUserName + " : " + err.Message.ToString());
                             }
 
                         }
@@ -560,11 +560,11 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                     if (strErrorUserCodeString == "")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRBWC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRBWC") + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRJBWCDXMRYSJDRSBSTRERRORUSERCODESTRINGJC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRJBWCDXMRYSJDRSBSTRERRORUSERCODESTRINGJC") + "')", true);
                     }
                 }
             }
@@ -599,13 +599,13 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ") ;
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ") ;
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -614,7 +614,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB") ;
                 j = -1;
             }
             else
@@ -632,20 +632,20 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ");
                     j = -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        string strUserName = dr[i][LanguageHandle.GetWord("XingMing").ToString().Trim()].ToString().Trim();
+                        string strUserName = dr[i][LanguageHandle.GetWord("XingMing")].ToString().Trim();
                         LTCandidateInformationBLL ltCandidateInformationBLL = new LTCandidateInformationBLL();
                         string strHQL = "from LTCandidateInformation as ltCandidateInformation where ltCandidateInformation.UserName = '" + strUserName + "' ";
                         IList lst = ltCandidateInformationBLL.GetAllLTCandidateInformations(strHQL);
                         if (lst != null && lst.Count > 0)//存在，则不操作
                         {
-                            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGCZXTZHDYGDRICYDMTOSTRINGTRIMDRICYXMTOSTRINGTRIMJC").ToString().Trim();
+                            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGCZXTZHDYGDRICYDMTOSTRINGTRIMDRICYXMTOSTRINGTRIMJC");
                             j = -1;
                         }
                         else//新增

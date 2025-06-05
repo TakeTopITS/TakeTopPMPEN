@@ -50,11 +50,11 @@ public partial class TTConfirmProjectExpense : System.Web.UI.Page
                 deConfirmExpense += proExpense.ConfirmAmount;
             }
 
-            LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+            LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan");
             LB_Amount.Text = deExpense.ToString();
             LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll") + strUserCode + strUserName;
         }
     }
 
@@ -104,7 +104,7 @@ public partial class TTConfirmProjectExpense : System.Web.UI.Page
                 LB_Amount.Text = deExpense.ToString();
                 LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll") + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
             }
         }
@@ -133,11 +133,11 @@ public partial class TTConfirmProjectExpense : System.Web.UI.Page
             deConfirmExpense += proExpense.ConfirmAmount;
         }
 
-        LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+        LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan");
         LB_Amount.Text = deExpense.ToString();
         LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll");
     }
 
     protected void DataList1_ItemCommand(object sender, DataListCommandEventArgs e)
@@ -165,7 +165,7 @@ public partial class TTConfirmProjectExpense : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSRZDJEGS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSRZDJEGS") + "')", true);
                 return;
             }
 
@@ -179,11 +179,11 @@ public partial class TTConfirmProjectExpense : System.Web.UI.Page
                 strProjectID = proExpense.ProjectID.ToString();
                 UpdateDailyProjectExpense(strUserCode, strProjectID, proExpense.RegisterDate);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXFYCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXFYCG") + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXFYSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXFYSBJC") + "')", true);
             }
         }
     }
@@ -246,7 +246,7 @@ public partial class TTConfirmProjectExpense : System.Web.UI.Page
             dailyWork.Address = "";
             dailyWork.ProjectID = int.Parse(strProjectID);
             dailyWork.ProjectName = ShareClass.GetProjectName(strProjectID);
-            dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong").ToString().Trim();
+            dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong");
             dailyWork.Achievement = "";
             dailyWork.Charge = deAmount;
             dailyWork.ConfirmCharge = deConfirmAmount;

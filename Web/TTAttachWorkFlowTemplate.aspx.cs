@@ -76,7 +76,7 @@ public partial class TTAttachWorkFlowTemplate : System.Web.UI.Page
         if (strRelatedType == "CustomerService")
         {
             strRelatedName = GetCustomerQuestionName(strRelatedID);
-            //this.Title = LanguageHandle.GetWord("KEHUFUWU").ToString().Trim()  + strRelatedID + " " + strRelatedName + "的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("KEHUFUWU")  + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectType")
@@ -192,12 +192,12 @@ public partial class TTAttachWorkFlowTemplate : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWJC") + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSBZGGZLMBYBTJBNZFTJ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSBZGGZLMBYBTJBNZFTJ") + "')", true);
             }
         }
     }

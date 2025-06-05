@@ -82,7 +82,7 @@ SELECT WFD.WLID
         }
         else if (!string.IsNullOrEmpty(TB_WFID.Text.Trim()) && !int.TryParse(TB_WFID.Text, out wfId))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("GZLBHZNSZS").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("GZLBHZNSZS") + "')", true);
             return;
         }
 
