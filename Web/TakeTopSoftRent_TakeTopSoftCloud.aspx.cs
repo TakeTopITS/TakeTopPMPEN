@@ -37,8 +37,39 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
             LoadRentProductType();
 
             LoadRentProductVerType();
+
+
+            string strProductENType, strType;
+            strProductENType = Request.QueryString["Type"];
+            if (strProductENType != null)
+            {
+                strType = GetProductNameByENName(strProductENType);
+
+                if (strType != null)
+                {
+                    DL_Type.SelectedValue = strType;
+                }
+            }
         }
     }
+
+    protected string GetProductNameByENName(string strENName)
+    {
+        string strHQL;
+
+        strHQL = string.Format(@"Select trim(Type)  From T_RentProductType Where ENType ='{0}'", strENName);
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            return ds.Tables[0].Rows[0][0].ToString().Trim();
+        }
+        else
+        {
+            return null;
+        }
+    }
+
 
     protected void DL_ServerType_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -324,12 +355,11 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
             return "";
         }
     }
-
     protected void LoadRentProductType()
     {
         string strHQL;
 
-        strHQL = "Select * From T_RentProductType Order By SortNumber ASC";
+        strHQL = "Select trim(Type) as Type,trim(ENType) as ENType From T_RentProductType Order By SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
 
         DL_Type.DataSource = ds;
