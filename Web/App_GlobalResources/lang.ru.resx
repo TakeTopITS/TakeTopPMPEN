@@ -27664,7 +27664,7 @@
     <value>Покупка версии:</value>
   </data>
   <data name="YongHuShu" xml:space="preserve">
-    <value>, количество пользователей:</value>
+    <value>,количество пользователей</value>
   </data>
   <data name="DiJiaoShiBaiQingJianCha" xml:space="preserve">
     <value>Отправка не удалась, проверьте!</value>
@@ -31823,28 +31823,7 @@
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>Примечание: Для получения важной информации, пожалуйста, введите данные правильно.</value>
   </data>
-  <data name="JianZhanXinXi" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BaoCunChengGong" xml:space="preserve">
-    <value>Успешно сохранено</value>
-  </data>
-  <data name="BaoCunShiBaiQingJianCha1" xml:space="preserve">
-    <value>Ошибка сохранения Проверьте</value>
-  </data>
-  <data name="BaZhanDian" xml:space="preserve">
-    <value>Веб-сайт</value>
-  </data>
-  <data name="BeiFenWenJianXiaZaiTongZhi1" xml:space="preserve">
-    <value>Уведомление о скачивании резервной копии</value>
-  </data>
   <data name="BiaoZhunBan" xml:space="preserve">
-    <value>Стандартная версия</value>
-  </data>
-  <data name="BiaoZhunBan1" xml:space="preserve">
     <value>Стандартная версия</value>
   </data>
   <data name="Bing" xml:space="preserve">
@@ -31865,9 +31844,6 @@
   <data name="ChanPin1" xml:space="preserve">
     <value>Продукт</value>
   </data>
-  <data name="ChanPin2" xml:space="preserve">
-    <value>Продукт</value>
-  </data>
   <data name="ChanPinDuoYuanHuaFuWuGeXingHua" xml:space="preserve">
     <value>Диверсификация продуктов Персонализированные услуги ПО для управления предприятиями любого размера и отрасли создает новые цепочки ценности</value>
   </data>
@@ -31877,22 +31853,10 @@
   <data name="ChanPinYuJiShuYanFaGuanLi" xml:space="preserve">
     <value>Управление разработкой продуктов и технологий</value>
   </data>
-  <data name="ChengWeiHeZuoHuoBan" xml:space="preserve">
-    <value>Стать партнером</value>
-  </data>
-  <data name="ChuangJianShiBaiCunZaiXiangTon1" xml:space="preserve">
-    <value>Ошибка создания Сайт с таким именем уже существует Проверьте</value>
-  </data>
-  <data name="ChuangJianShiBaiMeiYouNiXuanQu" xml:space="preserve">
-    <value>Ошибка создания Нет базовых параметров для выбранной версии Проверьте</value>
-  </data>
   <data name="CunChuKongJian" xml:space="preserve">
     <value>Место для хранения</value>
   </data>
   <data name="CunChuRongLiang" xml:space="preserve">
-    <value>Объем памяти</value>
-  </data>
-  <data name="CunChuRongLiang1" xml:space="preserve">
     <value>Объем памяти</value>
   </data>
   <data name="DaiLiXieYiTongGuoDiQuShouQuan" xml:space="preserve">
@@ -31901,50 +31865,8 @@
   <data name="DanWeiHuoZheGe" xml:space="preserve">
     <value>Компания или частное лицо</value>
   </data>
-  <data name="De" xml:space="preserve">
-    <value>От</value>
-  </data>
-  <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Заявка на покупку Обработайте своевременно</value>
-  </data>
   <data name="DeHuoBanGaiXingYe" xml:space="preserve">
     <value>Партнеры отрасли</value>
-  </data>
-  <data name="DengLuZhangHaoMiMa" xml:space="preserve">
-    <value>Логин и пароль</value>
-  </data>
-  <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
-    <value>Логин и пароль Используйте с уверенностью По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
-  </data>
-  <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Заявка Обработайте своевременно</value>
-  </data>
-  <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
-    <value>Информация о тестировании Обратите внимание</value>
-  </data>
-  <data name="DeShuJuBeiFenWenJianXiaZaiDiZh" xml:space="preserve">
-    <value>Ссылка для скачивания резервной копии:</value>
-  </data>
-  <data name="DeShuJuFuZhiDao" xml:space="preserve">
-    <value>Данные скопированы в</value>
-  </data>
-  <data name="DeTaiDingTuoDing" xml:space="preserve">
-    <value>Taiding Tuoding</value>
-  </data>
-  <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
-    <value>Отзывы о проблемах Обратите внимание</value>
-  </data>
-  <data name="DeYuanGong1" xml:space="preserve">
-    <value>Сотрудники</value>
-  </data>
-  <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Заявка на аренду Обработайте своевременно</value>
-  </data>
-  <data name="DianHua3" xml:space="preserve">
-    <value>Телефон</value>
-  </data>
-  <data name="DianHua5" xml:space="preserve">
-    <value>Телефон</value>
   </data>
   <data name="DiQuZengZhiFenXiaoXieYiBing" xml:space="preserve">
     <value>Соглашение о региональной дистрибуции с добавленной стоимостью и продажа через собственные каналы</value>
@@ -31955,17 +31877,8 @@
   <data name="FaZhanDeDaiLiMeiChengYiDanAnCi" xml:space="preserve">
     <value>Агент по развитию За каждую заключенную сделку агент получает процент от стоимости программного обеспечения и лицензий пользователей в соответствии с объемом закупок у нас</value>
   </data>
-  <data name="FuWu" xml:space="preserve">
-    <value>Сервис</value>
-  </data>
   <data name="GeBanBenJiaGeCanJian" xml:space="preserve">
     <value>Цены версий см.</value>
-  </data>
-  <data name="GengXinShiBaiQingJianCha1" xml:space="preserve">
-    <value>Ошибка обновления Проверьте</value>
-  </data>
-  <data name="GongCheng1" xml:space="preserve">
-    <value>Инженерия</value>
   </data>
   <data name="GongChengSheJiShiGongXiangMu" xml:space="preserve">
     <value>Управление проектами проектирования и строительства</value>
@@ -31973,50 +31886,20 @@
   <data name="GongChengXiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Платформа управления инженерными проектами</value>
   </data>
-  <data name="GongChengXiangMuGuanLiPingTai2" xml:space="preserve">
-    <value>Платформа управления инженерными проектами</value>
-  </data>
   <data name="GongNengMoKuaiYuJiaGe" xml:space="preserve">
     <value>Функциональные модули и цены</value>
-  </data>
-  <data name="GongSi1" xml:space="preserve">
-    <value>Компания</value>
-  </data>
-  <data name="Gou" xml:space="preserve">
-    <value>Покупка</value>
   </data>
   <data name="GouMai1" xml:space="preserve">
     <value>Купить</value>
   </data>
-  <data name="GouMai2" xml:space="preserve">
-    <value>Покупка</value>
-  </data>
-  <data name="GouMaiBanBen1" xml:space="preserve">
-    <value>Версия для покупки</value>
-  </data>
   <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
     <value>Купите программное обеспечение для управления Taiding Tuoding</value>
-  </data>
-  <data name="HuBeiHao" xml:space="preserve">
-    <value>Номер Hu Bei</value>
-  </data>
-  <data name="HuiFuShiBaiCunZaiXiangTongMing1" xml:space="preserve">
-    <value>Ошибка восстановления Сайт с таким именем уже существует Проверьте</value>
-  </data>
-  <data name="HuiFuShiBaiMeiYouNiXuanQuDeCha" xml:space="preserve">
-    <value>Ошибка восстановления Нет базовых параметров для выбранной версии Проверьте</value>
-  </data>
-  <data name="HuiFuShuJuKuShiBai1" xml:space="preserve">
-    <value>Ошибка восстановления базы данных</value>
   </data>
   <data name="JiaGe1" xml:space="preserve">
     <value>Цена</value>
   </data>
   <data name="JiaGeBiao" xml:space="preserve">
     <value>Прайс-лист</value>
-  </data>
-  <data name="JianZhanXinXi1" xml:space="preserve">
-    <value>Информация для создания сайта</value>
   </data>
   <data name="JieShaoPengYouQuFaZhanDeDiYi" xml:space="preserve">
     <value>Рекомендуйте друзей в качестве агентов первого уровня За каждую сделку получайте процент от стоимости ПО и лицензий</value>
@@ -32027,29 +31910,14 @@
   <data name="JiMuHuaJieGouKeAnXuXuanPeiZi" xml:space="preserve">
     <value>Модульная структура Можно выбирать и комбинировать по необходимости</value>
   </data>
-  <data name="JingGaoZhanDianMingChenZhiNeng1" xml:space="preserve">
-    <value>Предупреждение: Название сайта только буквы Без китайских символов, цифр, знаков или пробелов Проверьте</value>
-  </data>
   <data name="JingXiaoHuoBan" xml:space="preserve">
     <value>Партнеры по дистрибуции</value>
   </data>
   <data name="JiTuanBan" xml:space="preserve">
     <value>Групповая версия</value>
   </data>
-  <data name="JiTuanBan1" xml:space="preserve">
-    <value>Групповая версия</value>
-  </data>
-  <data name="JiTuanBan2" xml:space="preserve">
-    <value>Групповая версия</value>
-  </data>
   <data name="JiTuanGuanKong" xml:space="preserve">
     <value>Групповое управление</value>
-  </data>
-  <data name="KeFu1" xml:space="preserve">
-    <value>Служба поддержки</value>
-  </data>
-  <data name="KeHuGuanXiGuanLiPingTai" xml:space="preserve">
-    <value>Платформа управления взаимоотношениями с клиентами</value>
   </data>
   <data name="KeHuShouQianShouHouFuWuJinXiao" xml:space="preserve">
     <value>Обслуживание клиентов до и после продажи Управление запасами и т.д.</value>
@@ -32060,17 +31928,8 @@
   <data name="Lian" xml:space="preserve">
     <value>Модуль</value>
   </data>
-  <data name="LianJie" xml:space="preserve">
-    <value>Ссылка</value>
-  </data>
   <data name="LianXiDiZhi1" xml:space="preserve">
     <value>Контактный адрес</value>
-  </data>
-  <data name="LianXiDiZhi2" xml:space="preserve">
-    <value>Контактный адрес</value>
-  </data>
-  <data name="LianXiRen1" xml:space="preserve">
-    <value>Контактное лицо</value>
   </data>
   <data name="LiuChengZiChanZhiShiCheLiang" xml:space="preserve">
     <value>Процессные активы Знания Транспорт и т.д.</value>
@@ -32081,41 +31940,14 @@
   <data name="NengShiYongXiTongDanKeYiXiaZai" xml:space="preserve">
     <value>Можно использовать систему, но можно скачивать и сохранять данные для продолжения использования Требуется продление оплаты</value>
   </data>
-  <data name="NiHaoNi1" xml:space="preserve">
-    <value>Здравствуйте</value>
-  </data>
   <data name="PeiXunRenZheng" xml:space="preserve">
     <value>Сертификация обучения</value>
-  </data>
-  <data name="PingTai" xml:space="preserve">
-    <value>Платформа</value>
-  </data>
-  <data name="PingTaiMingChen" xml:space="preserve">
-    <value>Название платформы</value>
-  </data>
-  <data name="QingBuYaoGuanBiCiYeMian" xml:space="preserve">
-    <value>Не закрывайте эту страницу</value>
-  </data>
-  <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
-    <value>Скачайте своевременно По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
-  </data>
-  <data name="QingZaiXiaMianTianXieNiDeLian" xml:space="preserve">
-    <value>Заполните контактные данные ниже Ссылка для скачивания появится автоматически</value>
   </data>
   <data name="QiYeBan" xml:space="preserve">
     <value>Пользователи</value>
   </data>
-  <data name="QiYeBan1" xml:space="preserve">
-    <value>Корпоративная версия</value>
-  </data>
   <data name="QiYeJiKuanKeKuoZhanRuanJian" xml:space="preserve">
     <value>Корпоративная версия Масштабируемое ПО</value>
-  </data>
-  <data name="QiYeZongHeGuanLiPingTai" xml:space="preserve">
-    <value>Интегрированная корпоративная платформа управления</value>
-  </data>
-  <data name="QuanBuGengXinChengGong" xml:space="preserve">
-    <value>Все обновления успешны</value>
   </data>
   <data name="QuDaoFenChengZhengCe" xml:space="preserve">
     <value>Политика распределения по каналам</value>
@@ -32123,50 +31955,17 @@
   <data name="Ren1" xml:space="preserve">
     <value>Платформа управления проектами внедрения ПО</value>
   </data>
-  <data name="Ren2" xml:space="preserve">
-    <value>Пользователи</value>
-  </data>
-  <data name="Ren3" xml:space="preserve">
-    <value>Пользователи</value>
-  </data>
   <data name="RenZhiYaoDengLuShiYongXiTongDe" xml:space="preserve">
     <value>Пользователи (имеются в виду входящие в систему, а не общее число сотрудников)</value>
   </data>
-  <data name="RuanJianGouMaiShenQingTongZhi1" xml:space="preserve">
-    <value>Уведомление о заявке на покупку ПО</value>
-  </data>
-  <data name="RuanJianShiShi" xml:space="preserve">
-    <value>Внедрение ПО</value>
-  </data>
   <data name="RuanJianShiShiXiangMuGuanLi" xml:space="preserve">
-    <value>Платформа управления проектами внедрения ПО</value>
-  </data>
-  <data name="RuanJianShiShiXiangMuGuanLi1" xml:space="preserve">
     <value>Платформа управления проектами внедрения ПО</value>
   </data>
   <data name="RuanJianXiTongShiShiXiangMu" xml:space="preserve">
     <value>Соглашение о сотрудничестве Использование клиентской базы для предоставления</value>
   </data>
-  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
-    <value>Параметры аренды и создания сайта</value>
-  </data>
-  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
-    <value>Обслуживание арендованного сайта</value>
-  </data>
-  <data name="RuanJianZuYongShenQingTongZhi1" xml:space="preserve">
-    <value>Уведомление о заявке на аренду ПО</value>
-  </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
     <value>Если ваш регион или клиентская база подходят для продвижения Taiding</value>
-  </data>
-  <data name="RuYouWenTiQingZhiJieLianXiKeFu" xml:space="preserve">
-    <value>По вопросам обращайтесь в службу поддержки</value>
-  </data>
-  <data name="ShanChuShiBaiQingJianCha1" xml:space="preserve">
-    <value>Ошибка удаления Проверьте</value>
-  </data>
-  <data name="ShangHuiXinXi1" xml:space="preserve">
-    <value>Информация торговой палаты</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>Партнеры по бизнес-возможностям</value>
@@ -32176,21 +31975,6 @@
   </data>
   <data name="ShenQing1" xml:space="preserve">
     <value>Заявка</value>
-  </data>
-  <data name="ShenQing2" xml:space="preserve">
-    <value>Заявка</value>
-  </data>
-  <data name="SheZhiShiFouZiDongJianZhan" xml:space="preserve">
-    <value>Настройка автоматического создания сайта</value>
-  </data>
-  <data name="ShiBaiCunZaiXiangTongMingChenD1" xml:space="preserve">
-    <value>Ошибка Сайт с таким именем уже существует Проверьте</value>
-  </data>
-  <data name="ShiBaiYaoFuZhiDeZhanDianBuNeng" xml:space="preserve">
-    <value>Ошибка Сайт для копирования не может быть пустым Проверьте</value>
-  </data>
-  <data name="ShiBaiYaoShanChuDeZhanDianBuNe" xml:space="preserve">
-    <value>Ошибка Сайт для удаления не может быть пустым Проверьте</value>
   </data>
   <data name="ShiXianYingLiDeHuoBan" xml:space="preserve">
     <value>Прибыльные партнеры</value>
@@ -32225,9 +32009,6 @@
   <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
     <value>Taiding Cloud снижает затраты Мгновенная активация на базе Alibaba Cloud Безопасно и надежно</value>
   </data>
-  <data name="ShouJiHao1" xml:space="preserve">
-    <value>Номер телефона</value>
-  </data>
   <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
     <value>Авторизованные сервисные партнеры</value>
   </data>
@@ -32245,6 +32026,408 @@
   </data>
   <data name="TiGongXiangMuJiHuaJinDuRenWu" xml:space="preserve">
     <value>Сокровищница проектов</value>
+  </data>
+  <data name="WeiXin" xml:space="preserve">
+    <value>WeChat</value>
+  </data>
+  <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
+    <value>Наша система из шести каналов</value>
+  </data>
+  <data name="XiangMuGuanLiZiXun" xml:space="preserve">
+    <value>Консалтинг по управлению проектами</value>
+  </data>
+  <data name="XiangMuGuanLiZiXunPeiXunRen" xml:space="preserve">
+    <value>Консалтинг по управлению проектами Сертификация обучения</value>
+  </data>
+  <data name="XiangMuXingPingTai" xml:space="preserve">
+    <value>Проектно-ориентированная платформа</value>
+  </data>
+  <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
+    <value>Управление проектным производством</value>
+  </data>
+  <data name="XiaoShouFenChengZhengCe" xml:space="preserve">
+    <value>Политика распределения продаж</value>
+  </data>
+  <data name="XiaoShouShangJiHuoZheBangZhuWo" xml:space="preserve">
+    <value>Возможности продаж или помощь в процессах маркетинга отношений</value>
+  </data>
+  <data name="XingYeKaiFaHuoBan" xml:space="preserve">
+    <value>Отраслевые партнеры по развитию</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
+    <value>Платформа управления проектами системной интеграции</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>Платформа управления проектами НИОКР</value>
+  </data>
+  <data name="YanZhengMa1" xml:space="preserve">
+    <value>Код подтверждения</value>
+  </data>
+  <data name="YiYueDingDeHeZuoMoShiZaiWoMen" xml:space="preserve">
+    <value>Продажи через наши каналы с распределением прибыли</value>
+  </data>
+  <data name="YongHuShu1" xml:space="preserve">
+    <value>Количество пользователей</value>
+  </data>
+  <data name="YuanChengFuWu" xml:space="preserve">
+    <value>Удаленный сервис</value>
+  </data>
+  <data name="YuanQi" xml:space="preserve">
+    <value>От юаней</value>
+  </data>
+  <data name="YuanRenYue" xml:space="preserve">
+    <value>Юаней с человека в месяц</value>
+  </data>
+  <data name="YuanYongHu1" xml:space="preserve">
+    <value>Юаней за пользователя</value>
+  </data>
+  <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
+    <value>Организации, сотрудничающие в обучении и распределяющие прибыль</value>
+  </data>
+  <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
+    <value>Арендуйте Taiding Tuoding на Taiding Cloud Оплата за человека в месяц Заполните</value>
+  </data>
+  <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
+    <value>Партнеры по дистрибуции с добавленной стоимостью</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLi" xml:space="preserve">
+    <value>Управление государственными проектами</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>Платформа управления государственными проектами</value>
+  </data>
+  <data name="ZhiChi" xml:space="preserve">
+    <value>Поддержка</value>
+  </data>
+  <data name="ZhiJieXiaoShouWoMenXieZhuFen" xml:space="preserve">
+    <value>Прямые продажи Мы помогаем в распределении согласно агентскому соглашению</value>
+  </data>
+  <data name="ZiBei" xml:space="preserve">
+    <value>Самостоятельная подготовка</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai" xml:space="preserve">
+    <value>Интегрированная платформа управления</value>
+  </data>
+  <data name="ZuYongShenQing" xml:space="preserve">
+    <value>Заявка на аренду</value>
+  </data>
+  <data name="JianZhanXinXi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BaZhanDian" xml:space="preserve">
+    <value>Веб-сайт</value>
+  </data>
+  <data name="BiaoZhunBan1" xml:space="preserve">
+    <value>Стандартная версия</value>
+  </data>
+  <data name="ChanPin2" xml:space="preserve">
+    <value>Продукт</value>
+  </data>
+  <data name="CunChuRongLiang1" xml:space="preserve">
+    <value>Объем памяти</value>
+  </data>
+  <data name="DeShuJuFuZhiDao" xml:space="preserve">
+    <value>Данные скопированы в</value>
+  </data>
+  <data name="DianHua3" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="FuWu" xml:space="preserve">
+    <value>Сервис</value>
+  </data>
+  <data name="GongCheng1" xml:space="preserve">
+    <value>Инженерия</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>Платформа управления инженерными проектами</value>
+  </data>
+  <data name="GongSi1" xml:space="preserve">
+    <value>Компания</value>
+  </data>
+  <data name="Gou" xml:space="preserve">
+    <value>Покупка</value>
+  </data>
+  <data name="HuBeiHao" xml:space="preserve">
+    <value>Номер Hu Bei</value>
+  </data>
+  <data name="JiTuanBan1" xml:space="preserve">
+    <value>Групповая версия</value>
+  </data>
+  <data name="KeFu1" xml:space="preserve">
+    <value>Служба поддержки</value>
+  </data>
+  <data name="KeHuGuanXiGuanLiPingTai" xml:space="preserve">
+    <value>Платформа управления взаимоотношениями с клиентами</value>
+  </data>
+  <data name="LianJie" xml:space="preserve">
+    <value>Ссылка</value>
+  </data>
+  <data name="LianXiDiZhi2" xml:space="preserve">
+    <value>Контактный адрес</value>
+  </data>
+  <data name="LianXiRen1" xml:space="preserve">
+    <value>Контактное лицо</value>
+  </data>
+  <data name="PingTai" xml:space="preserve">
+    <value>Платформа</value>
+  </data>
+  <data name="PingTaiMingChen" xml:space="preserve">
+    <value>Название платформы</value>
+  </data>
+  <data name="QingBuYaoGuanBiCiYeMian" xml:space="preserve">
+    <value>Не закрывайте эту страницу</value>
+  </data>
+  <data name="QingZaiXiaMianTianXieNiDeLian" xml:space="preserve">
+    <value>Заполните контактные данные ниже Ссылка для скачивания появится автоматически</value>
+  </data>
+  <data name="QiYeBan1" xml:space="preserve">
+    <value>Корпоративная версия</value>
+  </data>
+  <data name="QiYeZongHeGuanLiPingTai" xml:space="preserve">
+    <value>Интегрированная корпоративная платформа управления</value>
+  </data>
+  <data name="Ren2" xml:space="preserve">
+    <value>Пользователи</value>
+  </data>
+  <data name="RuanJianShiShi" xml:space="preserve">
+    <value>Внедрение ПО</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi1" xml:space="preserve">
+    <value>Платформа управления проектами внедрения ПО</value>
+  </data>
+  <data name="RuYouWenTiQingZhiJieLianXiKeFu" xml:space="preserve">
+    <value>По вопросам обращайтесь в службу поддержки</value>
+  </data>
+  <data name="ShenQing2" xml:space="preserve">
+    <value>Заявка</value>
+  </data>
+  <data name="SheZhiShiFouZiDongJianZhan" xml:space="preserve">
+    <value>Настройка автоматического создания сайта</value>
+  </data>
+  <data name="ShouJiHao1" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="TuoDingXinXi" xml:space="preserve">
+    <value>Информация Tuoding</value>
+  </data>
+  <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
+    <value>Все наши продукты управления Корпоративная версия предлагает бесплатный тест При проблемах во время теста</value>
+  </data>
+  <data name="Xian" xml:space="preserve">
+    <value>Текущий</value>
+  </data>
+  <data name="XiangMuBao1" xml:space="preserve">
+    <value>Сокровищница проектов</value>
+  </data>
+  <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>Платформа управления проектами</value>
+  </data>
+  <data name="XiangMuXingPingTai1" xml:space="preserve">
+    <value>Проектно-ориентированная платформа</value>
+  </data>
+  <data name="XiaZai1" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="XiaZaiLianJie" xml:space="preserve">
+    <value>Ссылка для скачивания</value>
+  </data>
+  <data name="XieTongPingTai" xml:space="preserve">
+    <value>Платформа для совместной работы</value>
+  </data>
+  <data name="XingYeJuXianWeiCuJinYeJieXiang" xml:space="preserve">
+    <value>Вклад в отрасль Для продвижения ПО управления проектами и улучшения управления</value>
+  </data>
+  <data name="XiTongJiCheng" xml:space="preserve">
+    <value>Системная интеграция</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing1" xml:space="preserve">
+    <value>Платформа управления проектами системной интеграции</value>
+  </data>
+  <data name="YanFa" xml:space="preserve">
+    <value>НИОКР</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>Платформа управления проектами НИОКР</value>
+  </data>
+  <data name="YanZhengMa2" xml:space="preserve">
+    <value>Код подтверждения</value>
+  </data>
+  <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
+    <value>По вопросам обращайтесь в службу поддержки Taiding</value>
+  </data>
+  <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
+    <value>Копирование файлов и инициализация данных Займет несколько минут до появления страницы входа</value>
+  </data>
+  <data name="YongHuShu2" xml:space="preserve">
+    <value>Количество пользователей</value>
+  </data>
+  <data name="YuanMa1" xml:space="preserve">
+    <value>Исходный код</value>
+  </data>
+  <data name="ZaiXianShiYong" xml:space="preserve">
+    <value>Онлайн-тест</value>
+  </data>
+  <data name="ZhanDian1" xml:space="preserve">
+    <value>Веб-сайт</value>
+  </data>
+  <data name="ZhanDianMingChen" xml:space="preserve">
+    <value>Название сайта</value>
+  </data>
+  <data name="ZhanDianXinXi" xml:space="preserve">
+    <value>Информация о сайте</value>
+  </data>
+  <data name="ZhengWu" xml:space="preserve">
+    <value>Государственный</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>Платформа управления государственными проектами</value>
+  </data>
+  <data name="ZhengZaiChuangJianNiDeYingYong" xml:space="preserve">
+    <value>Создание вашего сайта Займет несколько минут Пожалуйста, подождите</value>
+  </data>
+  <data name="ZhengZaiChuangJianZhanDianDa" xml:space="preserve">
+    <value>Создание сайта Займет несколько минут Пожалуйста, подождите</value>
+  </data>
+  <data name="ZhengZaiHuiFuNiDeYingYongZhan" xml:space="preserve">
+    <value>Восстановление вашего сайта Займет несколько минут Пожалуйста, подождите</value>
+  </data>
+  <data name="ZhongYaoQingZhenShiTianXie" xml:space="preserve">
+    <value>Важно: Заполните достоверной информацией</value>
+  </data>
+  <data name="ZhuXiangMuGuanLiPingTaiZhiNeng" xml:space="preserve">
+    <value>Примечание: Название платформы только буквы или китайские символы</value>
+  </data>
+  <data name="ZhuZhiNengYouZiMuZuCheng" xml:space="preserve">
+    <value>Примечание: Только буквы</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai1" xml:space="preserve">
+    <value>Интегрированная платформа управления</value>
+  </data>
+  <data name="ZongHePingTai" xml:space="preserve">
+    <value>Интегрированная платформа</value>
+  </data>
+  <data name="BaoCunChengGong" xml:space="preserve">
+    <value>Успешно сохранено</value>
+  </data>
+  <data name="BaoCunShiBaiQingJianCha1" xml:space="preserve">
+    <value>Ошибка сохранения Проверьте</value>
+  </data>
+  <data name="BeiFenWenJianXiaZaiTongZhi1" xml:space="preserve">
+    <value>Уведомление о скачивании резервной копии</value>
+  </data>
+  <data name="ChengWeiHeZuoHuoBan" xml:space="preserve">
+    <value>Стать партнером</value>
+  </data>
+  <data name="ChuangJianShiBaiCunZaiXiangTon1" xml:space="preserve">
+    <value>Ошибка создания Сайт с таким именем уже существует Проверьте</value>
+  </data>
+  <data name="ChuangJianShiBaiMeiYouNiXuanQu" xml:space="preserve">
+    <value>Ошибка создания Нет базовых параметров для выбранной версии Проверьте</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>От</value>
+  </data>
+  <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>Заявка на покупку Обработайте своевременно</value>
+  </data>
+  <data name="DengLuZhangHaoMiMa" xml:space="preserve">
+    <value>Логин и пароль</value>
+  </data>
+  <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
+    <value>Логин и пароль Используйте с уверенностью По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
+  </data>
+  <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>Заявка Обработайте своевременно</value>
+  </data>
+  <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
+    <value>Информация о тестировании Обратите внимание</value>
+  </data>
+  <data name="DeShuJuBeiFenWenJianXiaZaiDiZh" xml:space="preserve">
+    <value>Ссылка для скачивания резервной копии:</value>
+  </data>
+  <data name="DeTaiDingTuoDing" xml:space="preserve">
+    <value>Taiding Tuoding</value>
+  </data>
+  <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
+    <value>Отзывы о проблемах Обратите внимание</value>
+  </data>
+  <data name="DeYuanGong1" xml:space="preserve">
+    <value>Сотрудники</value>
+  </data>
+  <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>Заявка на аренду Обработайте своевременно</value>
+  </data>
+  <data name="DianHua5" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="GengXinShiBaiQingJianCha1" xml:space="preserve">
+    <value>Ошибка обновления Проверьте</value>
+  </data>
+  <data name="GouMai2" xml:space="preserve">
+    <value>Покупка</value>
+  </data>
+  <data name="GouMaiBanBen1" xml:space="preserve">
+    <value>Версия для покупки</value>
+  </data>
+  <data name="HuiFuShiBaiCunZaiXiangTongMing1" xml:space="preserve">
+    <value>Ошибка восстановления Сайт с таким именем уже существует Проверьте</value>
+  </data>
+  <data name="HuiFuShiBaiMeiYouNiXuanQuDeCha" xml:space="preserve">
+    <value>Ошибка восстановления Нет базовых параметров для выбранной версии Проверьте</value>
+  </data>
+  <data name="HuiFuShuJuKuShiBai1" xml:space="preserve">
+    <value>Ошибка восстановления базы данных</value>
+  </data>
+  <data name="JianZhanXinXi1" xml:space="preserve">
+    <value>Информация для создания сайта</value>
+  </data>
+  <data name="JingGaoZhanDianMingChenZhiNeng1" xml:space="preserve">
+    <value>Предупреждение: Название сайта только буквы Без китайских символов, цифр, знаков или пробелов Проверьте</value>
+  </data>
+  <data name="JiTuanBan2" xml:space="preserve">
+    <value>Групповая версия</value>
+  </data>
+  <data name="NiHaoNi1" xml:space="preserve">
+    <value>Здравствуйте</value>
+  </data>
+  <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
+    <value>Скачайте своевременно По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
+  </data>
+  <data name="QuanBuGengXinChengGong" xml:space="preserve">
+    <value>Все обновления успешны</value>
+  </data>
+  <data name="Ren3" xml:space="preserve">
+    <value>Пользователи</value>
+  </data>
+  <data name="RuanJianGouMaiShenQingTongZhi1" xml:space="preserve">
+    <value>Уведомление о заявке на покупку ПО</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
+    <value>Параметры аренды и создания сайта</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
+    <value>Обслуживание арендованного сайта</value>
+  </data>
+  <data name="RuanJianZuYongShenQingTongZhi1" xml:space="preserve">
+    <value>Уведомление о заявке на аренду ПО</value>
+  </data>
+  <data name="ShanChuShiBaiQingJianCha1" xml:space="preserve">
+    <value>Ошибка удаления Проверьте</value>
+  </data>
+  <data name="ShangHuiXinXi1" xml:space="preserve">
+    <value>Информация торговой палаты</value>
+  </data>
+  <data name="ShiBaiCunZaiXiangTongMingChenD1" xml:space="preserve">
+    <value>Ошибка Сайт с таким именем уже существует Проверьте</value>
+  </data>
+  <data name="ShiBaiYaoFuZhiDeZhanDianBuNeng" xml:space="preserve">
+    <value>Ошибка Сайт для копирования не может быть пустым Проверьте</value>
+  </data>
+  <data name="ShiBaiYaoShanChuDeZhanDianBuNe" xml:space="preserve">
+    <value>Ошибка Сайт для удаления не может быть пустым Проверьте</value>
   </data>
   <data name="TiJiaoChengGong" xml:space="preserve">
     <value>Успешно отправлено</value>
@@ -32291,101 +32474,17 @@
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>Земляки Добро пожаловать в торговую палату Спасибо</value>
   </data>
-  <data name="TuoDingXinXi" xml:space="preserve">
-    <value>Информация Tuoding</value>
-  </data>
   <data name="WaiBuFaBu" xml:space="preserve">
     <value>Внешняя публикация</value>
-  </data>
-  <data name="WeiXin" xml:space="preserve">
-    <value>WeChat</value>
-  </data>
-  <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
-    <value>Наша система из шести каналов</value>
-  </data>
-  <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
-    <value>Все наши продукты управления Корпоративная версия предлагает бесплатный тест При проблемах во время теста</value>
-  </data>
-  <data name="Xian" xml:space="preserve">
-    <value>Текущий</value>
-  </data>
-  <data name="XiangMuBao1" xml:space="preserve">
-    <value>Сокровищница проектов</value>
-  </data>
-  <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
-    <value>Платформа управления проектами</value>
-  </data>
-  <data name="XiangMuGuanLiZiXun" xml:space="preserve">
-    <value>Консалтинг по управлению проектами</value>
-  </data>
-  <data name="XiangMuGuanLiZiXunPeiXunRen" xml:space="preserve">
-    <value>Консалтинг по управлению проектами Сертификация обучения</value>
-  </data>
-  <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Проектно-ориентированная платформа</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Проектно-ориентированная платформа</value>
-  </data>
-  <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
-    <value>Управление проектным производством</value>
-  </data>
-  <data name="XiaoShouFenChengZhengCe" xml:space="preserve">
-    <value>Политика распределения продаж</value>
-  </data>
-  <data name="XiaoShouShangJiHuoZheBangZhuWo" xml:space="preserve">
-    <value>Возможности продаж или помощь в процессах маркетинга отношений</value>
-  </data>
-  <data name="XiaZai1" xml:space="preserve">
-    <value>Скачать</value>
-  </data>
-  <data name="XiaZaiLianJie" xml:space="preserve">
-    <value>Ссылка для скачивания</value>
-  </data>
-  <data name="XieTongPingTai" xml:space="preserve">
-    <value>Платформа для совместной работы</value>
-  </data>
-  <data name="XingYeJuXianWeiCuJinYeJieXiang" xml:space="preserve">
-    <value>Вклад в отрасль Для продвижения ПО управления проектами и улучшения управления</value>
-  </data>
-  <data name="XingYeKaiFaHuoBan" xml:space="preserve">
-    <value>Отраслевые партнеры по развитию</value>
   </data>
   <data name="XinJian1" xml:space="preserve">
     <value>Создать новый</value>
   </data>
-  <data name="XiTongJiCheng" xml:space="preserve">
-    <value>Системная интеграция</value>
-  </data>
-  <data name="XiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
-    <value>Платформа управления проектами системной интеграции</value>
-  </data>
-  <data name="XiTongJiChengXiangMuGuanLiPing1" xml:space="preserve">
-    <value>Платформа управления проектами системной интеграции</value>
-  </data>
   <data name="XuNiMuLuDeJueDuiLuJingBaoCunCh1" xml:space="preserve">
     <value>Абсолютные пути виртуальных каталогов успешно сохранены</value>
   </data>
-  <data name="YanFa" xml:space="preserve">
-    <value>НИОКР</value>
-  </data>
-  <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
-    <value>Платформа управления проектами НИОКР</value>
-  </data>
-  <data name="YanFaXiangMuGuanLiPingTai2" xml:space="preserve">
-    <value>Платформа управления проектами НИОКР</value>
-  </data>
-  <data name="YanZhengMa1" xml:space="preserve">
-    <value>Код подтверждения</value>
-  </data>
-  <data name="YanZhengMa2" xml:space="preserve">
-    <value>Код подтверждения</value>
-  </data>
   <data name="YanZhengMaCuoWuQingJianCha1" xml:space="preserve">
     <value>Неверный код подтверждения Проверьте</value>
-  </data>
-  <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
-    <value>По вопросам обращайтесь в службу поддержки Taiding</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
     <value>Был удален По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
@@ -32408,53 +32507,11 @@
   <data name="YiHuiFuZhanDianDiZhiShi" xml:space="preserve">
     <value>Адрес уже восстановленного сайта</value>
   </data>
-  <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
-    <value>Копирование файлов и инициализация данных Займет несколько минут до появления страницы входа</value>
-  </data>
-  <data name="YiYueDingDeHeZuoMoShiZaiWoMen" xml:space="preserve">
-    <value>Продажи через наши каналы с распределением прибыли</value>
-  </data>
-  <data name="YongHuShu1" xml:space="preserve">
-    <value>Количество пользователей</value>
-  </data>
-  <data name="YongHuShu2" xml:space="preserve">
-    <value>Количество пользователей</value>
-  </data>
   <data name="YongHuShu3" xml:space="preserve">
     <value>Количество пользователей</value>
   </data>
-  <data name="YuanChengFuWu" xml:space="preserve">
-    <value>Удаленный сервис</value>
-  </data>
-  <data name="YuanMa1" xml:space="preserve">
-    <value>Исходный код</value>
-  </data>
   <data name="YuanMaXiaZai1" xml:space="preserve">
     <value>Скачать исходный код</value>
-  </data>
-  <data name="YuanQi" xml:space="preserve">
-    <value>От юаней</value>
-  </data>
-  <data name="YuanRenYue" xml:space="preserve">
-    <value>Юаней с человека в месяц</value>
-  </data>
-  <data name="YuanYongHu1" xml:space="preserve">
-    <value>Юаней за пользователя</value>
-  </data>
-  <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
-    <value>Организации, сотрудничающие в обучении и распределяющие прибыль</value>
-  </data>
-  <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>Арендуйте Taiding Tuoding на Taiding Cloud Оплата за человека в месяц Заполните</value>
-  </data>
-  <data name="ZaiXianShiYong" xml:space="preserve">
-    <value>Онлайн-тест</value>
-  </data>
-  <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
-    <value>Партнеры по дистрибуции с добавленной стоимостью</value>
-  </data>
-  <data name="ZhanDian1" xml:space="preserve">
-    <value>Веб-сайт</value>
   </data>
   <data name="ZhanDian2" xml:space="preserve">
     <value>Веб-сайт</value>
@@ -32474,9 +32531,6 @@
   <data name="ZhanDianHuiFuTongZhi1" xml:space="preserve">
     <value>Уведомление о восстановлении сайта</value>
   </data>
-  <data name="ZhanDianMingChen" xml:space="preserve">
-    <value>Название сайта</value>
-  </data>
   <data name="ZhanDianShanChuChengGong1" xml:space="preserve">
     <value>Сайт успешно удален</value>
   </data>
@@ -32492,21 +32546,6 @@
   <data name="ZhanDianShengJiTongZhi1" xml:space="preserve">
     <value>Уведомление об обновлении сайта</value>
   </data>
-  <data name="ZhanDianXinXi" xml:space="preserve">
-    <value>Информация о сайте</value>
-  </data>
-  <data name="ZhengWu" xml:space="preserve">
-    <value>Государственный</value>
-  </data>
-  <data name="ZhengWuXiangMuGuanLi" xml:space="preserve">
-    <value>Управление государственными проектами</value>
-  </data>
-  <data name="ZhengWuXiangMuGuanLiPingTai1" xml:space="preserve">
-    <value>Платформа управления государственными проектами</value>
-  </data>
-  <data name="ZhengWuXiangMuGuanLiPingTai2" xml:space="preserve">
-    <value>Платформа управления государственными проектами</value>
-  </data>
   <data name="ZhengZaiBaoCunYingYongZhanDian1" xml:space="preserve">
     <value>Сохранение абсолютных путей виртуальных каталогов Займет несколько минут Пожалуйста, подождите</value>
   </data>
@@ -32516,17 +32555,8 @@
   <data name="ZhengZaiBeiFenNiDeZhanDianWenJ1" xml:space="preserve">
     <value>Создание резервной копии вашего сайта Займет несколько минут Пожалуйста, подождите</value>
   </data>
-  <data name="ZhengZaiChuangJianNiDeYingYong" xml:space="preserve">
-    <value>Создание вашего сайта Займет несколько минут Пожалуйста, подождите</value>
-  </data>
-  <data name="ZhengZaiChuangJianZhanDianDa" xml:space="preserve">
-    <value>Создание сайта Займет несколько минут Пожалуйста, подождите</value>
-  </data>
   <data name="ZhengZaiFaSongZheGeZhanDianBei1" xml:space="preserve">
     <value>Отправка резервной копии сайта Займет несколько минут Пожалуйста, подождите</value>
-  </data>
-  <data name="ZhengZaiHuiFuNiDeYingYongZhan" xml:space="preserve">
-    <value>Восстановление вашего сайта Займет несколько минут Пожалуйста, подождите</value>
   </data>
   <data name="ZhengZaiShanChuNiDeYingYongZha1" xml:space="preserve">
     <value>Удаление вашего сайта Займет несколько минут Пожалуйста, подождите</value>
@@ -32540,41 +32570,14 @@
   <data name="ZhengZaiShengJiZheGeZhanDianDa1" xml:space="preserve">
     <value>Обновление этого сайта Займет несколько минут Пожалуйста, подождите</value>
   </data>
-  <data name="ZhiChi" xml:space="preserve">
-    <value>Поддержка</value>
-  </data>
-  <data name="ZhiJieXiaoShouWoMenXieZhuFen" xml:space="preserve">
-    <value>Прямые продажи Мы помогаем в распределении согласно агентскому соглашению</value>
-  </data>
-  <data name="ZhongYaoQingZhenShiTianXie" xml:space="preserve">
-    <value>Важно: Заполните достоверной информацией</value>
-  </data>
   <data name="ZhuCeChengGongHuanYingNiJiaRuS" xml:space="preserve">
     <value>Успешная регистрация Добро пожаловать в торговую палату Спасибо</value>
   </data>
   <data name="ZhuCeShiBaiQingLianXiShangHuiG" xml:space="preserve">
     <value>Ошибка регистрации Свяжитесь с администратором торговой палаты через WeChat</value>
   </data>
-  <data name="ZhuXiangMuGuanLiPingTaiZhiNeng" xml:space="preserve">
-    <value>Примечание: Название платформы только буквы или китайские символы</value>
-  </data>
-  <data name="ZhuZhiNengYouZiMuZuCheng" xml:space="preserve">
-    <value>Примечание: Только буквы</value>
-  </data>
-  <data name="ZiBei" xml:space="preserve">
-    <value>Самостоятельная подготовка</value>
-  </data>
   <data name="ZiJian" xml:space="preserve">
     <value>Самостоятельное создание</value>
-  </data>
-  <data name="ZongHeGuanLiPingTai" xml:space="preserve">
-    <value>Интегрированная платформа управления</value>
-  </data>
-  <data name="ZongHeGuanLiPingTai1" xml:space="preserve">
-    <value>Интегрированная платформа управления</value>
-  </data>
-  <data name="ZongHePingTai" xml:space="preserve">
-    <value>Интегрированная платформа</value>
   </data>
   <data name="ZunJingDe1" xml:space="preserve">
     <value>Уважаемый</value>
@@ -32584,9 +32587,6 @@
   </data>
   <data name="ZuYongBanBen1" xml:space="preserve">
     <value>Версия для аренды</value>
-  </data>
-  <data name="ZuYongShenQing" xml:space="preserve">
-    <value>Заявка на аренду</value>
   </data>
   <data name="ZuYongZhanDian1" xml:space="preserve">
     <value>Аренда сайта</value>

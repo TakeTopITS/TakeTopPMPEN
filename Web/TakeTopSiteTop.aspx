@@ -140,10 +140,10 @@
                 window.location.href = "http://www.ourpm.net/error.html";
 
             }
-            else {
+            //else {
 
-                window.location.href = 'https://www.taketopits.com/TDSite/TakeTopSiteDefaultLeftRight_TakeTopSoft.aspx';
-            }
+            //    window.location.href = 'https://www.taketopits.com/TDSite/TakeTopSiteDefaultLeftRight_TakeTopSoft.aspx';
+            //}
 
         }
 
