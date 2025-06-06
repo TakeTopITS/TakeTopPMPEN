@@ -76,7 +76,7 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiangMuBao%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YuanYongHu%>"></asp:Label></h3>
+                                        <br /><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -216,37 +216,6 @@
                                         </p>
                                     </div>
                                 </li>
-                                <%--  <li class="bigbox">
-                                    <div class="img"><a href="#"><img src="Logo/website/Images/201312181423378443.png" /></a></div>
-
-                                    <h3><a href="#">CRM¡¢OA</a></h3>
-
-                                    <h3>
-                                        <br /><asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
-
-                                    <p>&nbsp;</p>
-
-                                    <div class="pointer">
-                                        <p class="pointer_one"><a href="#"><asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,KeHuShouQianShouHouFuWuJinXiao%>"></asp:Label></a></p>
-                                        <p class="pointer_one"><a href="#"><asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,LiuChengZiChanZhiShiCheLiang%>"></asp:Label></a></p>
-                                    </div>
-                                </li>
-                               
-
-                                 <li class="bigbox">
-                                    <div class="img"><a href="#"><img src="Logo/website/Images/20131218142463453.png" /></a></div>
-
-                                    <h3><a href="#"><asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,ZongHeGuanLiPingTai%>"></asp:Label></a></h3>
-
-                                    <h3>
-                                        <br /><asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
-
-                                    <p>&nbsp;</p>
-
-                                    <div class="pointer">
-                                        <p class="pointer_one"><a href="#"><asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,ChangGuiXingYeGongChengXingYe%>"></asp:Label></a></p>
-                                    </div>
-                                </li>--%>
                             </ul>
                             <p>
                                 &nbsp;
@@ -352,7 +321,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td  class="formItemBgStyleForAlignLeft"><asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label><asp:Label ID="Label10" runat="server"  Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
+                                                                    <td  class="formItemBgStyleForAlignLeft"><asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
                                                                     </td>
                                                                     <td  class="formItemBgStyleForAlignLeft">
                                                                         <table>

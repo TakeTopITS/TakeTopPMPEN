@@ -47,13 +47,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* ȷ���������ݺ��� */
+            z-index: -1; /* 确保它在内容后面 */
         }
 
             .tupian img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover; /* ����ͼƬ������������������ */
+                object-fit: cover; /* 保持图片比例并覆盖整个区域 */
             }
     </style>
 

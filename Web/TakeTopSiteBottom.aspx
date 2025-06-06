@@ -70,7 +70,7 @@
             window.open(site1, "SiteRightContainerFrame");
             window.open(site2, "leftFrame");
         }
-
+ 
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");
