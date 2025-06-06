@@ -24880,7 +24880,7 @@
     <value>법적 고지</value>
   </data>
   <data name="GuanYuTaiDingTuoDing" xml:space="preserve">
-    <value>Taidingtuoding 소개</value>
+    <value>TakeTop 소개</value>
   </data>
   <data name="YiJianFanKui" xml:space="preserve">
     <value>피드백</value>
@@ -28351,7 +28351,7 @@
     <value>연락처</value>
   </data>
   <data name="LianJiRen" xml:space="preserve">
-    <value>중국어 주소</value>
+    <value>담당자</value>
   </data>
   <data name="ZhongWenDeZhi" xml:space="preserve">
     <value>영어 주소</value>
@@ -29398,7 +29398,7 @@
     <value>이 프로젝트 작업은 존재하지 않거나 삭제되었을 수 있습니다. 확인하세요!</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>오류, 유형은 비워둘 수 없습니다!</value>
+    <value>레코드 수</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>실패, 담당 딜러 코드가 비어 있습니다. [선택] 버튼을 클릭하여 검색 및 선택하세요!</value>
@@ -31821,28 +31821,7 @@
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>주: 중요한 정보를 받으려면 올바른 정보를 입력하십시오.</value>
   </data>
-  <data name="JianZhanXinXi" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BaoCunChengGong" xml:space="preserve">
-    <value>저장 성공</value>
-  </data>
-  <data name="BaoCunShiBaiQingJianCha1" xml:space="preserve">
-    <value>저장 실패 확인 필요</value>
-  </data>
-  <data name="BaZhanDian" xml:space="preserve">
-    <value>웹사이트</value>
-  </data>
-  <data name="BeiFenWenJianXiaZaiTongZhi1" xml:space="preserve">
-    <value>백업 파일 다운로드 알림</value>
-  </data>
   <data name="BiaoZhunBan" xml:space="preserve">
-    <value>스탠다드 버전</value>
-  </data>
-  <data name="BiaoZhunBan1" xml:space="preserve">
     <value>스탠다드 버전</value>
   </data>
   <data name="Bing" xml:space="preserve">
@@ -31863,9 +31842,6 @@
   <data name="ChanPin1" xml:space="preserve">
     <value>제품</value>
   </data>
-  <data name="ChanPin2" xml:space="preserve">
-    <value>제품</value>
-  </data>
   <data name="ChanPinDuoYuanHuaFuWuGeXingHua" xml:space="preserve">
     <value>제품 다양화 및 맞춤형 서비스 업계 구분 없는 대중소기업용 관리 소프트웨어로 새로운 가치 창출</value>
   </data>
@@ -31875,22 +31851,10 @@
   <data name="ChanPinYuJiShuYanFaGuanLi" xml:space="preserve">
     <value>제품 및 기술 연구개발 관리</value>
   </data>
-  <data name="ChengWeiHeZuoHuoBan" xml:space="preserve">
-    <value>파트너 되기</value>
-  </data>
-  <data name="ChuangJianShiBaiCunZaiXiangTon1" xml:space="preserve">
-    <value>생성 실패 동일한 이름의 웹사이트 이미 존재 확인 필요</value>
-  </data>
-  <data name="ChuangJianShiBaiMeiYouNiXuanQu" xml:space="preserve">
-    <value>생성 실패 선택한 제품 버전의 사용 가능한 웹사이트 기본 매개변수 없음 확인 필요</value>
-  </data>
   <data name="CunChuKongJian" xml:space="preserve">
     <value>저장 공간</value>
   </data>
   <data name="CunChuRongLiang" xml:space="preserve">
-    <value>저장 용량</value>
-  </data>
-  <data name="CunChuRongLiang1" xml:space="preserve">
     <value>저장 용량</value>
   </data>
   <data name="DaiLiXieYiTongGuoDiQuShouQuan" xml:space="preserve">
@@ -31899,50 +31863,8 @@
   <data name="DanWeiHuoZheGe" xml:space="preserve">
     <value>기업 또는 개인</value>
   </data>
-  <data name="De" xml:space="preserve">
-    <value>발신</value>
-  </data>
-  <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>구매 신청 즉시 처리</value>
-  </data>
   <data name="DeHuoBanGaiXingYe" xml:space="preserve">
     <value>업계 파트너</value>
-  </data>
-  <data name="DengLuZhangHaoMiMa" xml:space="preserve">
-    <value>로그인 계정 및 비밀번호</value>
-  </data>
-  <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
-    <value>로그인 계정 및 비밀번호 안심하고 사용하세요 문제 발생 시 고객센터로 연락 주십시오 본 메일은 타이딩 탁딩 그룹에서 발송</value>
-  </data>
-  <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>신청 즉시 처리</value>
-  </data>
-  <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
-    <value>시험 사용 정보 참고</value>
-  </data>
-  <data name="DeShuJuBeiFenWenJianXiaZaiDiZh" xml:space="preserve">
-    <value>데이터 백업 파일 다운로드 주소</value>
-  </data>
-  <data name="DeShuJuFuZhiDao" xml:space="preserve">
-    <value>데이터 복사</value>
-  </data>
-  <data name="DeTaiDingTuoDing" xml:space="preserve">
-    <value>타이딩 탁딩</value>
-  </data>
-  <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
-    <value>문제 피드백 참고</value>
-  </data>
-  <data name="DeYuanGong1" xml:space="preserve">
-    <value>직원</value>
-  </data>
-  <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>임대 신청 즉시 처리</value>
-  </data>
-  <data name="DianHua3" xml:space="preserve">
-    <value>전화</value>
-  </data>
-  <data name="DianHua5" xml:space="preserve">
-    <value>전화</value>
   </data>
   <data name="DiQuZengZhiFenXiaoXieYiBing" xml:space="preserve">
     <value>지역 부가가치 유통 계약 및 자사 유통 채널을 통한 판매</value>
@@ -31953,17 +31875,8 @@
   <data name="FaZhanDeDaiLiMeiChengYiDanAnCi" xml:space="preserve">
     <value>개발 에이전트 계약 체결 시 소프트웨어 사용료 및 사용자 라이선스 수수료의 일정 비율을 당사 구매액에 따라 지급</value>
   </data>
-  <data name="FuWu" xml:space="preserve">
-    <value>서비스</value>
-  </data>
   <data name="GeBanBenJiaGeCanJian" xml:space="preserve">
     <value>각 버전 가격 참조</value>
-  </data>
-  <data name="GengXinShiBaiQingJianCha1" xml:space="preserve">
-    <value>업데이트 실패 확인 필요</value>
-  </data>
-  <data name="GongCheng1" xml:space="preserve">
-    <value>엔지니어링</value>
   </data>
   <data name="GongChengSheJiShiGongXiangMu" xml:space="preserve">
     <value>엔지니어링 설계 시공 프로젝트 관리</value>
@@ -31971,50 +31884,20 @@
   <data name="GongChengXiangMuGuanLiPingTai1" xml:space="preserve">
     <value>엔지니어링 프로젝트 관리 플랫폼</value>
   </data>
-  <data name="GongChengXiangMuGuanLiPingTai2" xml:space="preserve">
-    <value>엔지니어링 프로젝트 관리 플랫폼</value>
-  </data>
   <data name="GongNengMoKuaiYuJiaGe" xml:space="preserve">
     <value>기능 모듈 및 가격</value>
-  </data>
-  <data name="GongSi1" xml:space="preserve">
-    <value>회사</value>
-  </data>
-  <data name="Gou" xml:space="preserve">
-    <value>구매</value>
   </data>
   <data name="GouMai1" xml:space="preserve">
     <value>구매</value>
   </data>
-  <data name="GouMai2" xml:space="preserve">
-    <value>구매</value>
-  </data>
-  <data name="GouMaiBanBen1" xml:space="preserve">
-    <value>구매 버전</value>
-  </data>
   <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
-    <value>타이딩 탁딩(Taiding Tuoding) 관리 소프트웨어 구매</value>
-  </data>
-  <data name="HuBeiHao" xml:space="preserve">
-    <value>후베이 번호</value>
-  </data>
-  <data name="HuiFuShiBaiCunZaiXiangTongMing1" xml:space="preserve">
-    <value>복원 실패 동일한 이름의 웹사이트 이미 존재 확인 필요</value>
-  </data>
-  <data name="HuiFuShiBaiMeiYouNiXuanQuDeCha" xml:space="preserve">
-    <value>복원 실패 선택한 제품 버전의 사용 가능한 웹사이트 기본 매개변수 없음 확인 필요</value>
-  </data>
-  <data name="HuiFuShuJuKuShiBai1" xml:space="preserve">
-    <value>데이터베이스 복원 실패</value>
+    <value>타이딩 탁딩(TakeTop) 관리 소프트웨어 구매</value>
   </data>
   <data name="JiaGe1" xml:space="preserve">
     <value>가격</value>
   </data>
   <data name="JiaGeBiao" xml:space="preserve">
     <value>가격표</value>
-  </data>
-  <data name="JianZhanXinXi1" xml:space="preserve">
-    <value>웹사이트 구축 정보</value>
   </data>
   <data name="JieShaoPengYouQuFaZhanDeDiYi" xml:space="preserve">
     <value>1차 대리점으로 친구 소개 계약 체결 시 해당 주문의 소프트웨어 및 사용자 라이선스 수수료 일부 지급</value>
@@ -32025,29 +31908,14 @@
   <data name="JiMuHuaJieGouKeAnXuXuanPeiZi" xml:space="preserve">
     <value>모듈식 구조 필요에 따라 선택 및 조합 가능</value>
   </data>
-  <data name="JingGaoZhanDianMingChenZhiNeng1" xml:space="preserve">
-    <value>경고: 웹사이트 이름은 영문자만 가능 한자, 숫자, 구두점, 공백 불가 확인 필요</value>
-  </data>
   <data name="JingXiaoHuoBan" xml:space="preserve">
     <value>판매 파트너</value>
   </data>
   <data name="JiTuanBan" xml:space="preserve">
     <value>그룹 버전</value>
   </data>
-  <data name="JiTuanBan1" xml:space="preserve">
-    <value>그룹 버전</value>
-  </data>
-  <data name="JiTuanBan2" xml:space="preserve">
-    <value>그룹 버전</value>
-  </data>
   <data name="JiTuanGuanKong" xml:space="preserve">
     <value>그룹 통제</value>
-  </data>
-  <data name="KeFu1" xml:space="preserve">
-    <value>고객 서비스</value>
-  </data>
-  <data name="KeHuGuanXiGuanLiPingTai" xml:space="preserve">
-    <value>고객 관계 관리 플랫폼</value>
   </data>
   <data name="KeHuShouQianShouHouFuWuJinXiao" xml:space="preserve">
     <value>판매 전후 고객 서비스 재고 관리 등</value>
@@ -32058,17 +31926,8 @@
   <data name="Lian" xml:space="preserve">
     <value>모듈</value>
   </data>
-  <data name="LianJie" xml:space="preserve">
-    <value>링크</value>
-  </data>
   <data name="LianXiDiZhi1" xml:space="preserve">
     <value>연락처 주소</value>
-  </data>
-  <data name="LianXiDiZhi2" xml:space="preserve">
-    <value>연락처 주소</value>
-  </data>
-  <data name="LianXiRen1" xml:space="preserve">
-    <value>연락 담당자</value>
   </data>
   <data name="LiuChengZiChanZhiShiCheLiang" xml:space="preserve">
     <value>프로세스 자산 지식 차량 등</value>
@@ -32079,41 +31938,14 @@
   <data name="NengShiYongXiTongDanKeYiXiaZai" xml:space="preserve">
     <value>시스템 사용 가능 but 데이터 다운로드 및 백업 후 계속 사용 가능 갱신 요금 필요</value>
   </data>
-  <data name="NiHaoNi1" xml:space="preserve">
-    <value>안녕하세요</value>
-  </data>
   <data name="PeiXunRenZheng" xml:space="preserve">
     <value>교육 인증</value>
-  </data>
-  <data name="PingTai" xml:space="preserve">
-    <value>플랫폼</value>
-  </data>
-  <data name="PingTaiMingChen" xml:space="preserve">
-    <value>플랫폼 이름</value>
-  </data>
-  <data name="QingBuYaoGuanBiCiYeMian" xml:space="preserve">
-    <value>이 페이지를 닫지 마십시오</value>
-  </data>
-  <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
-    <value>즉시 다운로드 문제 발생 시 고객센터로 문의 주십시오 본 메일은 타이딩 탁딩 그룹에서 발송</value>
-  </data>
-  <data name="QingZaiXiaMianTianXieNiDeLian" xml:space="preserve">
-    <value>아래 연락처 정보 작성 제출 성공 후 다운로드 링크 자동 표시</value>
   </data>
   <data name="QiYeBan" xml:space="preserve">
     <value>사용자 수</value>
   </data>
-  <data name="QiYeBan1" xml:space="preserve">
-    <value>엔터프라이즈 버전</value>
-  </data>
   <data name="QiYeJiKuanKeKuoZhanRuanJian" xml:space="preserve">
     <value>엔터프라이즈 버전 확장 가능 소프트웨어</value>
-  </data>
-  <data name="QiYeZongHeGuanLiPingTai" xml:space="preserve">
-    <value>기업 통합 관리 플랫폼</value>
-  </data>
-  <data name="QuanBuGengXinChengGong" xml:space="preserve">
-    <value>모든 업데이트 성공</value>
   </data>
   <data name="QuDaoFenChengZhengCe" xml:space="preserve">
     <value>채널 수익 분배 정책</value>
@@ -32121,50 +31953,17 @@
   <data name="Ren1" xml:space="preserve">
     <value>소프트웨어 시스템 구현 프로젝트 관리</value>
   </data>
-  <data name="Ren2" xml:space="preserve">
-    <value>사용자 수</value>
-  </data>
-  <data name="Ren3" xml:space="preserve">
-    <value>사용자 수</value>
-  </data>
   <data name="RenZhiYaoDengLuShiYongXiTongDe" xml:space="preserve">
     <value>사용자 수(기업 총 직원 수가 아닌 시스템 로그인자 수 기준)</value>
   </data>
-  <data name="RuanJianGouMaiShenQingTongZhi1" xml:space="preserve">
-    <value>소프트웨어 구매 신청 알림</value>
-  </data>
-  <data name="RuanJianShiShi" xml:space="preserve">
-    <value>소프트웨어 구현</value>
-  </data>
   <data name="RuanJianShiShiXiangMuGuanLi" xml:space="preserve">
-    <value>소프트웨어 구현 프로젝트 관리 플랫폼</value>
-  </data>
-  <data name="RuanJianShiShiXiangMuGuanLi1" xml:space="preserve">
     <value>소프트웨어 구현 프로젝트 관리 플랫폼</value>
   </data>
   <data name="RuanJianXiTongShiShiXiangMu" xml:space="preserve">
     <value>비즈니스 기회 협력 계약 자사 고객 자원 우위 활용 제공</value>
   </data>
-  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
-    <value>소프트웨어 임대 웹사이트 구축 매개변수</value>
-  </data>
-  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
-    <value>소프트웨어 임대 웹사이트 구축 유지보수</value>
-  </data>
-  <data name="RuanJianZuYongShenQingTongZhi1" xml:space="preserve">
-    <value>소프트웨어 임대 신청 알림</value>
-  </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
     <value>귀사 지역 또는 현재 보유한 고객 자원이 타이딩 홍보에 적합한 경우</value>
-  </data>
-  <data name="RuYouWenTiQingZhiJieLianXiKeFu" xml:space="preserve">
-    <value>문의 사항은 고객센터로 직접 연락</value>
-  </data>
-  <data name="ShanChuShiBaiQingJianCha1" xml:space="preserve">
-    <value>삭제 실패 확인 필요</value>
-  </data>
-  <data name="ShangHuiXinXi1" xml:space="preserve">
-    <value>상공회의소 정보</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>비즈니스 기회 파트너</value>
@@ -32174,21 +31973,6 @@
   </data>
   <data name="ShenQing1" xml:space="preserve">
     <value>신청</value>
-  </data>
-  <data name="ShenQing2" xml:space="preserve">
-    <value>신청</value>
-  </data>
-  <data name="SheZhiShiFouZiDongJianZhan" xml:space="preserve">
-    <value>자동 웹사이트 생성 설정</value>
-  </data>
-  <data name="ShiBaiCunZaiXiangTongMingChenD1" xml:space="preserve">
-    <value>실패 동일한 이름의 웹사이트 이미 존재 확인 필요</value>
-  </data>
-  <data name="ShiBaiYaoFuZhiDeZhanDianBuNeng" xml:space="preserve">
-    <value>실패 복사할 웹사이트 비울 수 없음 확인 필요</value>
-  </data>
-  <data name="ShiBaiYaoShanChuDeZhanDianBuNe" xml:space="preserve">
-    <value>실패 삭제할 웹사이트 비울 수 없음 확인 필요</value>
   </data>
   <data name="ShiXianYingLiDeHuoBan" xml:space="preserve">
     <value>수익 창출 파트너</value>
@@ -32223,9 +32007,6 @@
   <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
     <value>타이딩 클라우드 비용 절감 Alibaba Cloud 기반 안전하고 신뢰할 수 있음</value>
   </data>
-  <data name="ShouJiHao1" xml:space="preserve">
-    <value>휴대폰 번호</value>
-  </data>
   <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
     <value>인증 서비스 파트너</value>
   </data>
@@ -32243,6 +32024,408 @@
   </data>
   <data name="TiGongXiangMuJiHuaJinDuRenWu" xml:space="preserve">
     <value>프로젝트 보물</value>
+  </data>
+  <data name="WeiXin" xml:space="preserve">
+    <value>WeChat</value>
+  </data>
+  <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
+    <value>당사 채널 6대 시스템</value>
+  </data>
+  <data name="XiangMuGuanLiZiXun" xml:space="preserve">
+    <value>프로젝트 관리 컨설팅</value>
+  </data>
+  <data name="XiangMuGuanLiZiXunPeiXunRen" xml:space="preserve">
+    <value>프로젝트 관리 컨설팅 교육 인증</value>
+  </data>
+  <data name="XiangMuXingPingTai" xml:space="preserve">
+    <value>프로젝트형 플랫폼</value>
+  </data>
+  <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
+    <value>프로젝트형 제조 관리</value>
+  </data>
+  <data name="XiaoShouFenChengZhengCe" xml:space="preserve">
+    <value>판매 수익 분배 정책</value>
+  </data>
+  <data name="XiaoShouShangJiHuoZheBangZhuWo" xml:space="preserve">
+    <value>판매 기회 제공 또는 관계 마케팅 프로세스 지원</value>
+  </data>
+  <data name="XingYeKaiFaHuoBan" xml:space="preserve">
+    <value>업계 개발 파트너</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
+    <value>시스템 통합 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>R&amp;D 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="YanZhengMa1" xml:space="preserve">
+    <value>인증 코드</value>
+  </data>
+  <data name="YiYueDingDeHeZuoMoShiZaiWoMen" xml:space="preserve">
+    <value>합의된 협력 모델에 따라 당사 채널에서 판매 및 비례 분배</value>
+  </data>
+  <data name="YongHuShu1" xml:space="preserve">
+    <value>사용자 수</value>
+  </data>
+  <data name="YuanChengFuWu" xml:space="preserve">
+    <value>원격 서비스</value>
+  </data>
+  <data name="YuanQi" xml:space="preserve">
+    <value>월 ~~원부터</value>
+  </data>
+  <data name="YuanRenYue" xml:space="preserve">
+    <value>월 ~~원/인</value>
+  </data>
+  <data name="YuanYongHu1" xml:space="preserve">
+    <value>~~원/사용자</value>
+  </data>
+  <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
+    <value>교육 분야에서 협력하고 합의에 따라 이익을 분배하는 조직 및 기관</value>
+  </data>
+  <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
+    <value>타이딩 클라우드에서 타이딩 탁딩 프로젝트 관리 소프트웨어 임대 인/월 기준 과금 아래 작성</value>
+  </data>
+  <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
+    <value>부가가치 유통 파트너</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLi" xml:space="preserve">
+    <value>정부 프로젝트 관리</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>정부 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="ZhiChi" xml:space="preserve">
+    <value>지원</value>
+  </data>
+  <data name="ZhiJieXiaoShouWoMenXieZhuFen" xml:space="preserve">
+    <value>직접 판매 당사가 수익 분배 지원 판매 대리점 수익 분배 계약에 따라 실행</value>
+  </data>
+  <data name="ZiBei" xml:space="preserve">
+    <value>자체 준비</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai" xml:space="preserve">
+    <value>통합 관리 플랫폼</value>
+  </data>
+  <data name="ZuYongShenQing" xml:space="preserve">
+    <value>임대 신청</value>
+  </data>
+  <data name="JianZhanXinXi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZhuYaoJieShouZhongYaoXinXiQing" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BaZhanDian" xml:space="preserve">
+    <value>웹사이트</value>
+  </data>
+  <data name="BiaoZhunBan1" xml:space="preserve">
+    <value>스탠다드 버전</value>
+  </data>
+  <data name="ChanPin2" xml:space="preserve">
+    <value>제품</value>
+  </data>
+  <data name="CunChuRongLiang1" xml:space="preserve">
+    <value>저장 용량</value>
+  </data>
+  <data name="DeShuJuFuZhiDao" xml:space="preserve">
+    <value>데이터 복사</value>
+  </data>
+  <data name="DianHua3" xml:space="preserve">
+    <value>전화</value>
+  </data>
+  <data name="FuWu" xml:space="preserve">
+    <value>서비스</value>
+  </data>
+  <data name="GongCheng1" xml:space="preserve">
+    <value>엔지니어링</value>
+  </data>
+  <data name="GongChengXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>엔지니어링 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="GongSi1" xml:space="preserve">
+    <value>회사</value>
+  </data>
+  <data name="Gou" xml:space="preserve">
+    <value>구매</value>
+  </data>
+  <data name="HuBeiHao" xml:space="preserve">
+    <value>후베이 번호</value>
+  </data>
+  <data name="JiTuanBan1" xml:space="preserve">
+    <value>그룹 버전</value>
+  </data>
+  <data name="KeFu1" xml:space="preserve">
+    <value>고객 서비스</value>
+  </data>
+  <data name="KeHuGuanXiGuanLiPingTai" xml:space="preserve">
+    <value>고객 관계 관리 플랫폼</value>
+  </data>
+  <data name="LianJie" xml:space="preserve">
+    <value>링크</value>
+  </data>
+  <data name="LianXiDiZhi2" xml:space="preserve">
+    <value>연락처 주소</value>
+  </data>
+  <data name="LianXiRen1" xml:space="preserve">
+    <value>연락 담당자</value>
+  </data>
+  <data name="PingTai" xml:space="preserve">
+    <value>플랫폼</value>
+  </data>
+  <data name="PingTaiMingChen" xml:space="preserve">
+    <value>플랫폼 이름</value>
+  </data>
+  <data name="QingBuYaoGuanBiCiYeMian" xml:space="preserve">
+    <value>이 페이지를 닫지 마십시오</value>
+  </data>
+  <data name="QingZaiXiaMianTianXieNiDeLian" xml:space="preserve">
+    <value>아래 연락처 정보 작성 제출 성공 후 다운로드 링크 자동 표시</value>
+  </data>
+  <data name="QiYeBan1" xml:space="preserve">
+    <value>엔터프라이즈 버전</value>
+  </data>
+  <data name="QiYeZongHeGuanLiPingTai" xml:space="preserve">
+    <value>기업 통합 관리 플랫폼</value>
+  </data>
+  <data name="Ren2" xml:space="preserve">
+    <value>사용자 수</value>
+  </data>
+  <data name="RuanJianShiShi" xml:space="preserve">
+    <value>소프트웨어 구현</value>
+  </data>
+  <data name="RuanJianShiShiXiangMuGuanLi1" xml:space="preserve">
+    <value>소프트웨어 구현 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="RuYouWenTiQingZhiJieLianXiKeFu" xml:space="preserve">
+    <value>문의 사항은 고객센터로 직접 연락</value>
+  </data>
+  <data name="ShenQing2" xml:space="preserve">
+    <value>신청</value>
+  </data>
+  <data name="SheZhiShiFouZiDongJianZhan" xml:space="preserve">
+    <value>자동 웹사이트 생성 설정</value>
+  </data>
+  <data name="ShouJiHao1" xml:space="preserve">
+    <value>휴대폰 번호</value>
+  </data>
+  <data name="TuoDingXinXi" xml:space="preserve">
+    <value>탁딩 정보</value>
+  </data>
+  <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
+    <value>당사 탁딩의 모든 관리 소프트웨어 플랫폼 제품 엔터프라이즈 버전 무료 온라인 시험 사용 제공 시험 중 문제 발생 시</value>
+  </data>
+  <data name="Xian" xml:space="preserve">
+    <value>현재</value>
+  </data>
+  <data name="XiangMuBao1" xml:space="preserve">
+    <value>프로젝트 보물</value>
+  </data>
+  <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
+    <value>프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="XiangMuXingPingTai1" xml:space="preserve">
+    <value>프로젝트형 플랫폼</value>
+  </data>
+  <data name="XiaZai1" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+  <data name="XiaZaiLianJie" xml:space="preserve">
+    <value>다운로드 링크</value>
+  </data>
+  <data name="XieTongPingTai" xml:space="preserve">
+    <value>협업 플랫폼</value>
+  </data>
+  <data name="XingYeJuXianWeiCuJinYeJieXiang" xml:space="preserve">
+    <value>업계 기여 업계의 프로젝트 관리 소프트웨어 발전과 기업 프로젝트 관리 수준 향상 촉진</value>
+  </data>
+  <data name="XiTongJiCheng" xml:space="preserve">
+    <value>시스템 통합</value>
+  </data>
+  <data name="XiTongJiChengXiangMuGuanLiPing1" xml:space="preserve">
+    <value>시스템 통합 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="YanFa" xml:space="preserve">
+    <value>R&amp;D</value>
+  </data>
+  <data name="YanFaXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>R&amp;D 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="YanZhengMa2" xml:space="preserve">
+    <value>인증 코드</value>
+  </data>
+  <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
+    <value>지원 필요 시 타이딩 고객센터로 문의</value>
+  </data>
+  <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
+    <value>웹사이트 파일 복사 및 데이터 초기화 필요 완료까지 몇 분 소요 로그인 페이지 표시</value>
+  </data>
+  <data name="YongHuShu2" xml:space="preserve">
+    <value>사용자 수</value>
+  </data>
+  <data name="YuanMa1" xml:space="preserve">
+    <value>소스 코드</value>
+  </data>
+  <data name="ZaiXianShiYong" xml:space="preserve">
+    <value>온라인 시험 사용</value>
+  </data>
+  <data name="ZhanDian1" xml:space="preserve">
+    <value>웹사이트</value>
+  </data>
+  <data name="ZhanDianMingChen" xml:space="preserve">
+    <value>웹사이트 이름</value>
+  </data>
+  <data name="ZhanDianXinXi" xml:space="preserve">
+    <value>웹사이트 정보</value>
+  </data>
+  <data name="ZhengWu" xml:space="preserve">
+    <value>정부</value>
+  </data>
+  <data name="ZhengWuXiangMuGuanLiPingTai2" xml:space="preserve">
+    <value>정부 프로젝트 관리 플랫폼</value>
+  </data>
+  <data name="ZhengZaiChuangJianNiDeYingYong" xml:space="preserve">
+    <value>애플리케이션 웹사이트 생성 중 약 몇 분 소요 기다려 주십시오</value>
+  </data>
+  <data name="ZhengZaiChuangJianZhanDianDa" xml:space="preserve">
+    <value>웹사이트 생성 중 약 몇 분 소요 잠시 기다려 주십시오</value>
+  </data>
+  <data name="ZhengZaiHuiFuNiDeYingYongZhan" xml:space="preserve">
+    <value>애플리케이션 웹사이트 복원 중 약 몇 분 소요 기다려 주십시오</value>
+  </data>
+  <data name="ZhongYaoQingZhenShiTianXie" xml:space="preserve">
+    <value>중요: 정확한 정보 기입</value>
+  </data>
+  <data name="ZhuXiangMuGuanLiPingTaiZhiNeng" xml:space="preserve">
+    <value>참고: 프로젝트 관리 플랫폼은 영문자 또는 한자만 사용 가능</value>
+  </data>
+  <data name="ZhuZhiNengYouZiMuZuCheng" xml:space="preserve">
+    <value>참고: 영문자만 사용 가능</value>
+  </data>
+  <data name="ZongHeGuanLiPingTai1" xml:space="preserve">
+    <value>통합 관리 플랫폼</value>
+  </data>
+  <data name="ZongHePingTai" xml:space="preserve">
+    <value>통합 플랫폼</value>
+  </data>
+  <data name="BaoCunChengGong" xml:space="preserve">
+    <value>저장 성공</value>
+  </data>
+  <data name="BaoCunShiBaiQingJianCha1" xml:space="preserve">
+    <value>저장 실패 확인 필요</value>
+  </data>
+  <data name="BeiFenWenJianXiaZaiTongZhi1" xml:space="preserve">
+    <value>백업 파일 다운로드 알림</value>
+  </data>
+  <data name="ChengWeiHeZuoHuoBan" xml:space="preserve">
+    <value>파트너 되기</value>
+  </data>
+  <data name="ChuangJianShiBaiCunZaiXiangTon1" xml:space="preserve">
+    <value>생성 실패 동일한 이름의 웹사이트 이미 존재 확인 필요</value>
+  </data>
+  <data name="ChuangJianShiBaiMeiYouNiXuanQu" xml:space="preserve">
+    <value>생성 실패 선택한 제품 버전의 사용 가능한 웹사이트 기본 매개변수 없음 확인 필요</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>발신</value>
+  </data>
+  <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>구매 신청 즉시 처리</value>
+  </data>
+  <data name="DengLuZhangHaoMiMa" xml:space="preserve">
+    <value>로그인 계정 및 비밀번호</value>
+  </data>
+  <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
+    <value>로그인 계정 및 비밀번호 안심하고 사용하세요 문제 발생 시 고객센터로 연락 주십시오 본 메일은 타이딩 탁딩 그룹에서 발송</value>
+  </data>
+  <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>신청 즉시 처리</value>
+  </data>
+  <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
+    <value>시험 사용 정보 참고</value>
+  </data>
+  <data name="DeShuJuBeiFenWenJianXiaZaiDiZh" xml:space="preserve">
+    <value>데이터 백업 파일 다운로드 주소</value>
+  </data>
+  <data name="DeTaiDingTuoDing" xml:space="preserve">
+    <value>타이딩 탁딩</value>
+  </data>
+  <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
+    <value>문제 피드백 참고</value>
+  </data>
+  <data name="DeYuanGong1" xml:space="preserve">
+    <value>직원</value>
+  </data>
+  <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
+    <value>임대 신청 즉시 처리</value>
+  </data>
+  <data name="DianHua5" xml:space="preserve">
+    <value>전화</value>
+  </data>
+  <data name="GengXinShiBaiQingJianCha1" xml:space="preserve">
+    <value>업데이트 실패 확인 필요</value>
+  </data>
+  <data name="GouMai2" xml:space="preserve">
+    <value>구매</value>
+  </data>
+  <data name="GouMaiBanBen1" xml:space="preserve">
+    <value>구매 버전</value>
+  </data>
+  <data name="HuiFuShiBaiCunZaiXiangTongMing1" xml:space="preserve">
+    <value>복원 실패 동일한 이름의 웹사이트 이미 존재 확인 필요</value>
+  </data>
+  <data name="HuiFuShiBaiMeiYouNiXuanQuDeCha" xml:space="preserve">
+    <value>복원 실패 선택한 제품 버전의 사용 가능한 웹사이트 기본 매개변수 없음 확인 필요</value>
+  </data>
+  <data name="HuiFuShuJuKuShiBai1" xml:space="preserve">
+    <value>데이터베이스 복원 실패</value>
+  </data>
+  <data name="JianZhanXinXi1" xml:space="preserve">
+    <value>웹사이트 구축 정보</value>
+  </data>
+  <data name="JingGaoZhanDianMingChenZhiNeng1" xml:space="preserve">
+    <value>경고: 웹사이트 이름은 영문자만 가능 한자, 숫자, 구두점, 공백 불가 확인 필요</value>
+  </data>
+  <data name="JiTuanBan2" xml:space="preserve">
+    <value>그룹 버전</value>
+  </data>
+  <data name="NiHaoNi1" xml:space="preserve">
+    <value>안녕하세요</value>
+  </data>
+  <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
+    <value>즉시 다운로드 문제 발생 시 고객센터로 문의 주십시오 본 메일은 타이딩 탁딩 그룹에서 발송</value>
+  </data>
+  <data name="QuanBuGengXinChengGong" xml:space="preserve">
+    <value>모든 업데이트 성공</value>
+  </data>
+  <data name="Ren3" xml:space="preserve">
+    <value>사용자 수</value>
+  </data>
+  <data name="RuanJianGouMaiShenQingTongZhi1" xml:space="preserve">
+    <value>소프트웨어 구매 신청 알림</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanCanShu1" xml:space="preserve">
+    <value>소프트웨어 임대 웹사이트 구축 매개변수</value>
+  </data>
+  <data name="RuanJianZuYongJianZhanWeiHu1" xml:space="preserve">
+    <value>소프트웨어 임대 웹사이트 구축 유지보수</value>
+  </data>
+  <data name="RuanJianZuYongShenQingTongZhi1" xml:space="preserve">
+    <value>소프트웨어 임대 신청 알림</value>
+  </data>
+  <data name="ShanChuShiBaiQingJianCha1" xml:space="preserve">
+    <value>삭제 실패 확인 필요</value>
+  </data>
+  <data name="ShangHuiXinXi1" xml:space="preserve">
+    <value>상공회의소 정보</value>
+  </data>
+  <data name="ShiBaiCunZaiXiangTongMingChenD1" xml:space="preserve">
+    <value>실패 동일한 이름의 웹사이트 이미 존재 확인 필요</value>
+  </data>
+  <data name="ShiBaiYaoFuZhiDeZhanDianBuNeng" xml:space="preserve">
+    <value>실패 복사할 웹사이트 비울 수 없음 확인 필요</value>
+  </data>
+  <data name="ShiBaiYaoShanChuDeZhanDianBuNe" xml:space="preserve">
+    <value>실패 삭제할 웹사이트 비울 수 없음 확인 필요</value>
   </data>
   <data name="TiJiaoChengGong" xml:space="preserve">
     <value>제출 성공</value>
@@ -32289,101 +32472,17 @@
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>동포 여러분 상공회의소에 오신 것을 환영합니다</value>
   </data>
-  <data name="TuoDingXinXi" xml:space="preserve">
-    <value>탁딩 정보</value>
-  </data>
   <data name="WaiBuFaBu" xml:space="preserve">
     <value>외부 게시</value>
-  </data>
-  <data name="WeiXin" xml:space="preserve">
-    <value>WeChat</value>
-  </data>
-  <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
-    <value>당사 채널 6대 시스템</value>
-  </data>
-  <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
-    <value>당사 탁딩의 모든 관리 소프트웨어 플랫폼 제품 엔터프라이즈 버전 무료 온라인 시험 사용 제공 시험 중 문제 발생 시</value>
-  </data>
-  <data name="Xian" xml:space="preserve">
-    <value>현재</value>
-  </data>
-  <data name="XiangMuBao1" xml:space="preserve">
-    <value>프로젝트 보물</value>
-  </data>
-  <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
-    <value>프로젝트 관리 플랫폼</value>
-  </data>
-  <data name="XiangMuGuanLiZiXun" xml:space="preserve">
-    <value>프로젝트 관리 컨설팅</value>
-  </data>
-  <data name="XiangMuGuanLiZiXunPeiXunRen" xml:space="preserve">
-    <value>프로젝트 관리 컨설팅 교육 인증</value>
-  </data>
-  <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>프로젝트형 플랫폼</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>프로젝트형 플랫폼</value>
-  </data>
-  <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
-    <value>프로젝트형 제조 관리</value>
-  </data>
-  <data name="XiaoShouFenChengZhengCe" xml:space="preserve">
-    <value>판매 수익 분배 정책</value>
-  </data>
-  <data name="XiaoShouShangJiHuoZheBangZhuWo" xml:space="preserve">
-    <value>판매 기회 제공 또는 관계 마케팅 프로세스 지원</value>
-  </data>
-  <data name="XiaZai1" xml:space="preserve">
-    <value>다운로드</value>
-  </data>
-  <data name="XiaZaiLianJie" xml:space="preserve">
-    <value>다운로드 링크</value>
-  </data>
-  <data name="XieTongPingTai" xml:space="preserve">
-    <value>협업 플랫폼</value>
-  </data>
-  <data name="XingYeJuXianWeiCuJinYeJieXiang" xml:space="preserve">
-    <value>업계 기여 업계의 프로젝트 관리 소프트웨어 발전과 기업 프로젝트 관리 수준 향상 촉진</value>
-  </data>
-  <data name="XingYeKaiFaHuoBan" xml:space="preserve">
-    <value>업계 개발 파트너</value>
   </data>
   <data name="XinJian1" xml:space="preserve">
     <value>새로 생성</value>
   </data>
-  <data name="XiTongJiCheng" xml:space="preserve">
-    <value>시스템 통합</value>
-  </data>
-  <data name="XiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
-    <value>시스템 통합 프로젝트 관리 플랫폼</value>
-  </data>
-  <data name="XiTongJiChengXiangMuGuanLiPing1" xml:space="preserve">
-    <value>시스템 통합 프로젝트 관리 플랫폼</value>
-  </data>
   <data name="XuNiMuLuDeJueDuiLuJingBaoCunCh1" xml:space="preserve">
     <value>가상 디렉터리 절대 경로 저장 성공</value>
   </data>
-  <data name="YanFa" xml:space="preserve">
-    <value>R&amp;D</value>
-  </data>
-  <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
-    <value>R&amp;D 프로젝트 관리 플랫폼</value>
-  </data>
-  <data name="YanFaXiangMuGuanLiPingTai2" xml:space="preserve">
-    <value>R&amp;D 프로젝트 관리 플랫폼</value>
-  </data>
-  <data name="YanZhengMa1" xml:space="preserve">
-    <value>인증 코드</value>
-  </data>
-  <data name="YanZhengMa2" xml:space="preserve">
-    <value>인증 코드</value>
-  </data>
   <data name="YanZhengMaCuoWuQingJianCha1" xml:space="preserve">
     <value>인증 코드 오류 확인 필요</value>
-  </data>
-  <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
-    <value>지원 필요 시 타이딩 고객센터로 문의</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
     <value>삭제됨 문제 발생 시 고객센터로 문의 주십시오 본 메일은 타이딩 탁딩 그룹에서 발송</value>
@@ -32406,53 +32505,11 @@
   <data name="YiHuiFuZhanDianDiZhiShi" xml:space="preserve">
     <value>이미 복원된 웹사이트 주소</value>
   </data>
-  <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
-    <value>웹사이트 파일 복사 및 데이터 초기화 필요 완료까지 몇 분 소요 로그인 페이지 표시</value>
-  </data>
-  <data name="YiYueDingDeHeZuoMoShiZaiWoMen" xml:space="preserve">
-    <value>합의된 협력 모델에 따라 당사 채널에서 판매 및 비례 분배</value>
-  </data>
-  <data name="YongHuShu1" xml:space="preserve">
-    <value>사용자 수</value>
-  </data>
-  <data name="YongHuShu2" xml:space="preserve">
-    <value>사용자 수</value>
-  </data>
   <data name="YongHuShu3" xml:space="preserve">
     <value>사용자 수</value>
   </data>
-  <data name="YuanChengFuWu" xml:space="preserve">
-    <value>원격 서비스</value>
-  </data>
-  <data name="YuanMa1" xml:space="preserve">
-    <value>소스 코드</value>
-  </data>
   <data name="YuanMaXiaZai1" xml:space="preserve">
     <value>소스 코드 다운로드</value>
-  </data>
-  <data name="YuanQi" xml:space="preserve">
-    <value>월 ~~원부터</value>
-  </data>
-  <data name="YuanRenYue" xml:space="preserve">
-    <value>월 ~~원/인</value>
-  </data>
-  <data name="YuanYongHu1" xml:space="preserve">
-    <value>~~원/사용자</value>
-  </data>
-  <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
-    <value>교육 분야에서 협력하고 합의에 따라 이익을 분배하는 조직 및 기관</value>
-  </data>
-  <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>타이딩 클라우드에서 타이딩 탁딩 프로젝트 관리 소프트웨어 임대 인/월 기준 과금 아래 작성</value>
-  </data>
-  <data name="ZaiXianShiYong" xml:space="preserve">
-    <value>온라인 시험 사용</value>
-  </data>
-  <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
-    <value>부가가치 유통 파트너</value>
-  </data>
-  <data name="ZhanDian1" xml:space="preserve">
-    <value>웹사이트</value>
   </data>
   <data name="ZhanDian2" xml:space="preserve">
     <value>웹사이트</value>
@@ -32472,9 +32529,6 @@
   <data name="ZhanDianHuiFuTongZhi1" xml:space="preserve">
     <value>웹사이트 복원 알림</value>
   </data>
-  <data name="ZhanDianMingChen" xml:space="preserve">
-    <value>웹사이트 이름</value>
-  </data>
   <data name="ZhanDianShanChuChengGong1" xml:space="preserve">
     <value>웹사이트 삭제 성공</value>
   </data>
@@ -32490,21 +32544,6 @@
   <data name="ZhanDianShengJiTongZhi1" xml:space="preserve">
     <value>웹사이트 업그레이드 알림</value>
   </data>
-  <data name="ZhanDianXinXi" xml:space="preserve">
-    <value>웹사이트 정보</value>
-  </data>
-  <data name="ZhengWu" xml:space="preserve">
-    <value>정부</value>
-  </data>
-  <data name="ZhengWuXiangMuGuanLi" xml:space="preserve">
-    <value>정부 프로젝트 관리</value>
-  </data>
-  <data name="ZhengWuXiangMuGuanLiPingTai1" xml:space="preserve">
-    <value>정부 프로젝트 관리 플랫폼</value>
-  </data>
-  <data name="ZhengWuXiangMuGuanLiPingTai2" xml:space="preserve">
-    <value>정부 프로젝트 관리 플랫폼</value>
-  </data>
   <data name="ZhengZaiBaoCunYingYongZhanDian1" xml:space="preserve">
     <value>애플리케이션 웹사이트 가상 디렉터리 절대 경로 저장 중 약 몇 분 소요 기다려 주십시오</value>
   </data>
@@ -32514,17 +32553,8 @@
   <data name="ZhengZaiBeiFenNiDeZhanDianWenJ1" xml:space="preserve">
     <value>웹사이트 파일 백업 중 약 몇 분 소요 기다려 주십시오</value>
   </data>
-  <data name="ZhengZaiChuangJianNiDeYingYong" xml:space="preserve">
-    <value>애플리케이션 웹사이트 생성 중 약 몇 분 소요 기다려 주십시오</value>
-  </data>
-  <data name="ZhengZaiChuangJianZhanDianDa" xml:space="preserve">
-    <value>웹사이트 생성 중 약 몇 분 소요 잠시 기다려 주십시오</value>
-  </data>
   <data name="ZhengZaiFaSongZheGeZhanDianBei1" xml:space="preserve">
     <value>이 웹사이트 백업 파일 전송 중 약 몇 분 소요 기다려 주십시오</value>
-  </data>
-  <data name="ZhengZaiHuiFuNiDeYingYongZhan" xml:space="preserve">
-    <value>애플리케이션 웹사이트 복원 중 약 몇 분 소요 기다려 주십시오</value>
   </data>
   <data name="ZhengZaiShanChuNiDeYingYongZha1" xml:space="preserve">
     <value>애플리케이션 웹사이트 삭제 중 약 몇 분 소요 기다려 주십시오</value>
@@ -32538,41 +32568,14 @@
   <data name="ZhengZaiShengJiZheGeZhanDianDa1" xml:space="preserve">
     <value>이 웹사이트 업그레이드 중 약 몇 분 소요 기다려 주십시오</value>
   </data>
-  <data name="ZhiChi" xml:space="preserve">
-    <value>지원</value>
-  </data>
-  <data name="ZhiJieXiaoShouWoMenXieZhuFen" xml:space="preserve">
-    <value>직접 판매 당사가 수익 분배 지원 판매 대리점 수익 분배 계약에 따라 실행</value>
-  </data>
-  <data name="ZhongYaoQingZhenShiTianXie" xml:space="preserve">
-    <value>중요: 정확한 정보 기입</value>
-  </data>
   <data name="ZhuCeChengGongHuanYingNiJiaRuS" xml:space="preserve">
     <value>등록 성공 상공회의소에 오신 것을 환영합니다</value>
   </data>
   <data name="ZhuCeShiBaiQingLianXiShangHuiG" xml:space="preserve">
     <value>등록 실패 상공회의소 관리자 WeChat 문의</value>
   </data>
-  <data name="ZhuXiangMuGuanLiPingTaiZhiNeng" xml:space="preserve">
-    <value>참고: 프로젝트 관리 플랫폼은 영문자 또는 한자만 사용 가능</value>
-  </data>
-  <data name="ZhuZhiNengYouZiMuZuCheng" xml:space="preserve">
-    <value>참고: 영문자만 사용 가능</value>
-  </data>
-  <data name="ZiBei" xml:space="preserve">
-    <value>자체 준비</value>
-  </data>
   <data name="ZiJian" xml:space="preserve">
     <value>자체 구축</value>
-  </data>
-  <data name="ZongHeGuanLiPingTai" xml:space="preserve">
-    <value>통합 관리 플랫폼</value>
-  </data>
-  <data name="ZongHeGuanLiPingTai1" xml:space="preserve">
-    <value>통합 관리 플랫폼</value>
-  </data>
-  <data name="ZongHePingTai" xml:space="preserve">
-    <value>통합 플랫폼</value>
   </data>
   <data name="ZunJingDe1" xml:space="preserve">
     <value>귀하</value>
@@ -32582,9 +32585,6 @@
   </data>
   <data name="ZuYongBanBen1" xml:space="preserve">
     <value>임대 버전</value>
-  </data>
-  <data name="ZuYongShenQing" xml:space="preserve">
-    <value>임대 신청</value>
   </data>
   <data name="ZuYongZhanDian1" xml:space="preserve">
     <value>웹사이트 임대</value>

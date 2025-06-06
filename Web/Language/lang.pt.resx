@@ -967,7 +967,7 @@
     <value>Plano Estrutura (WBS)</value>
   </data>
   <data name="BQSYTDRJ" xml:space="preserve">
-    <value>Copyright © 2006-2026 Thai Top Software</value>
+    <value>Copyright © 2006-2026 TakeTop Software</value>
   </data>
   <data name="BrowseByType" xml:space="preserve">
     <value>Navegar por Tipo</value>
@@ -12520,7 +12520,7 @@
     <value>NT</value>
   </data>
   <data name="TaiDingRuanJian" xml:space="preserve">
-    <value>Thai Top Software</value>
+    <value>TakeTop Software</value>
   </data>
   <data name="TanShangBiLi" xml:space="preserve">
     <value>Proporção de teste:</value>
@@ -24880,7 +24880,7 @@
     <value>jogi közlemények</value>
   </data>
   <data name="GuanYuTaiDingTuoDing" xml:space="preserve">
-    <value>Körülbelül Taidingtuoding</value>
+    <value>Körülbelül TakeTop</value>
   </data>
   <data name="YiJianFanKui" xml:space="preserve">
     <value>Visszajelzés</value>
@@ -27595,7 +27595,7 @@
     <value>Configuração do módulo do sistema</value>
   </data>
   <data name="TaiDingTaDingZhongLiYue" xml:space="preserve">
-    <value>Taiding - Tuoding - Zhong Liyue</value>
+    <value>TakeTop - Zhong Liyue</value>
   </data>
   <data name="QingZhuYiJiTongShouQuanJiangYu" xml:space="preserve">
     <value>Atenção, a autorização do sistema expirará em</value>
@@ -27655,10 +27655,10 @@
     <value>Informações da associação comercial</value>
   </data>
   <data name="ZZDiJiaoChengGongTaiDingTaDing" xml:space="preserve">
-    <value>----- Envio bem-sucedido, o atendimento ao cliente da Taiding Tuoding entrará em contato em 5 minutos, por favor, aguarde, obrigado!</value>
+    <value>----- Envio bem-sucedido, o atendimento ao cliente da TakeTop entrará em contato em 5 minutos, por favor, aguarde, obrigado!</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>----- Falha no envio, por favor, entre em contato com o atendimento ao cliente da Taiding Tuoding (021-51085119), obrigado!</value>
+    <value>----- Falha no envio, por favor, entre em contato com o atendimento ao cliente da TakeTop (021-51085119), obrigado!</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>Comprar versão:</value>
@@ -27778,7 +27778,7 @@
     <value>) restaurado:</value>
   </data>
   <data name="ZhengZaiBeiFenNiDeZhanDianWenJ" xml:space="preserve">
-    <value>de: Taiding Tuoding</value>
+    <value>de: TakeTop</value>
   </data>
   <data name="ZhanDianBeiFenWenJianFaSongChe" xml:space="preserve">
     <value>Site restaurado, o endereço é:</value>
@@ -27823,7 +27823,7 @@
     <value>Site:</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
-    <value>foi atualizado para a versão mais recente, a primeira abertura após a atualização será mais lenta, levará aproximadamente 5 a 10 minutos para a página de login aparecer, em caso de problemas, entre em contato com o atendimento ao cliente da Taiding Tuoding (021-51085119), obrigado, este e-mail foi enviado pelo Grupo Taiding Tuoding!</value>
+    <value>foi atualizado para a versão mais recente, a primeira abertura após a atualização será mais lenta, levará aproximadamente 5 a 10 minutos para a página de login aparecer, em caso de problemas, entre em contato com o atendimento ao cliente da TakeTop (021-51085119), obrigado, este e-mail foi enviado pelo Grupo TakeTop!</value>
   </data>
   <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
     <value>Notificação de atualização de site</value>
@@ -27835,7 +27835,7 @@
     <value>O endereço de download do arquivo de backup do site é:</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
-    <value>, por favor, baixe imediatamente, em caso de problemas, entre em contato com o atendimento ao cliente (021-51085119), obrigado, este e-mail foi enviado pelo Grupo Taiding Tuoding!</value>
+    <value>, por favor, baixe imediatamente, em caso de problemas, entre em contato com o atendimento ao cliente (021-51085119), obrigado, este e-mail foi enviado pelo Grupo TakeTop!</value>
   </data>
   <data name="ZhengZaiBaoCunZheGeZhanDianDeX" xml:space="preserve">
     <value>Notificação de download de arquivo de backup</value>
@@ -27844,7 +27844,7 @@
     <value>Excluindo este site, levará aproximadamente 5 minutos, por favor, aguarde pacientemente......</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>foi excluído, em caso de problemas, entre em contato com o atendimento ao cliente (021-51085119), obrigado, este e-mail foi enviado pelo Grupo Taiding Tuoding!</value>
+    <value>foi excluído, em caso de problemas, entre em contato com o atendimento ao cliente (021-51085119), obrigado, este e-mail foi enviado pelo Grupo TakeTop!</value>
   </data>
   <data name="RuanJianZuYongShenQingTongZhi" xml:space="preserve">
     <value>Notificação de exclusão de site</value>
@@ -28333,7 +28333,7 @@
     <value>Base do contrato</value>
   </data>
   <data name="DeNeiRongQingGuanZhuTeCiTongZh" xml:space="preserve">
-    <value>Tuoding Project Treasure</value>
+    <value>TakeTop Project Treasure</value>
   </data>
   <data name="ShanChuLeXiangMu" xml:space="preserve">
     <value>Atribuiu a demanda:</value>
@@ -28351,7 +28351,7 @@
     <value>  Status:</value>
   </data>
   <data name="LianJiRen" xml:space="preserve">
-    <value>Atualizou o projeto:</value>
+    <value>Pessoa de Contato</value>
   </data>
   <data name="ZhongWenDeZhi" xml:space="preserve">
     <value>conteúdo, por favor, dê atenção, esta notificação!</value>
@@ -28393,7 +28393,7 @@
     <value>Atendimento ao cliente</value>
   </data>
   <data name="TaiDingXiangMuBao" xml:space="preserve">
-    <value>Taiding Project Treasure</value>
+    <value>TakeTop Project Treasure</value>
   </data>
   <data name="XiangMuZengGeGuanLiPingTai" xml:space="preserve">
     <value>Plataforma de gerenciamento integrado de projetos</value>
@@ -29398,7 +29398,7 @@
     <value>Número de registros:</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>Esta tarefa do projeto não existe, pode ter sido excluída, por favor, verifique!</value>
+    <value>Número de Registros</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>Erro, o tipo não pode estar vazio!</value>
@@ -31300,7 +31300,7 @@
     <value>Navegação de módulos do sistema</value>
   </data>
   <data name="TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu" xml:space="preserve">
-    <value>Árvore completa de módulos da plataforma de gestão integrada Taiding</value>
+    <value>Árvore completa de módulos da plataforma de gestão integrada TakeTop</value>
   </data>
   <data name="TuoYe" xml:space="preserve">
     <value>Arrastar e soltar</value>
@@ -31891,7 +31891,7 @@
     <value>Comprar</value>
   </data>
   <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
-    <value>Compre o software de gestão Taiding Tuoding</value>
+    <value>Compre o software de gestão TakeTop</value>
   </data>
   <data name="JiaGe1" xml:space="preserve">
     <value>Preço</value>
@@ -31963,7 +31963,7 @@
     <value>Acordo de cooperação de oportunidades de negócio Utilização de recursos próprios de clientes para fornecer</value>
   </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
-    <value>Se a sua região ou recursos de clientes da sua empresa são adequados para promover Taiding</value>
+    <value>Se a sua região ou recursos de clientes da sua empresa são adequados para promover TakeTop</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>Parceiros de oportunidades de negócio</value>
@@ -32005,7 +32005,7 @@
     <value>Refere-se a assinar acordo de distribuição de valor acrescentado regional e vender a nossa série através de canais próprios</value>
   </data>
   <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
-    <value>Taiding Cloud reduz custos Ativação imediata baseada na Alibaba Cloud Seguro e fiável</value>
+    <value>TakeTop Cloud reduz custos Ativação imediata baseada na Alibaba Cloud Seguro e fiável</value>
   </data>
   <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
     <value>Parceiros de serviço autorizados</value>
@@ -32083,7 +32083,7 @@
     <value>Organizações que cooperam em formação e partilham lucros de acordo com contrato</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>Alugue o software Taiding Tuoding na Taiding Cloud Pagamento por pessoa por mês Preencha o</value>
+    <value>Alugue o software TakeTop na TakeTop Cloud Pagamento por pessoa por mês Preencha o</value>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>Parceiros distribuidores de valor acrescentado</value>
@@ -32209,7 +32209,7 @@
     <value>Número de telemóvel</value>
   </data>
   <data name="TuoDingXinXi" xml:space="preserve">
-    <value>Informação Tuoding</value>
+    <value>Informação TakeTop</value>
   </data>
   <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
     <value>Todos os nossos produtos de software de gestão Versão empresarial oferece teste gratuito online Se problemas durante o teste</value>
@@ -32254,7 +32254,7 @@
     <value>Código de verificação</value>
   </data>
   <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
-    <value>Para assistência contacte o serviço ao cliente Taiding no</value>
+    <value>Para assistência contacte o serviço ao cliente TakeTop no</value>
   </data>
   <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
     <value>A copiar ficheiros e inicializar dados Levará minutos até completar e aparecer a página de login</value>
@@ -32335,7 +32335,7 @@
     <value>Conta e palavra-passe</value>
   </data>
   <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
-    <value>Conta e palavra-passe Use com confiança Para questões contacte o serviço ao cliente Obrigado Este email é enviado pelo Taiding Tuoding Group</value>
+    <value>Conta e palavra-passe Use com confiança Para questões contacte o serviço ao cliente Obrigado Este email é enviado pelo TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
     <value>Pedido Processe prontamente</value>
@@ -32347,7 +32347,7 @@
     <value>O URL para descarregar o ficheiro de backup é</value>
   </data>
   <data name="DeTaiDingTuoDing" xml:space="preserve">
-    <value>Taiding Tuoding</value>
+    <value>TakeTop</value>
   </data>
   <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
     <value>Comentários sobre problemas Preste atenção</value>
@@ -32392,7 +32392,7 @@
     <value>Olá você</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
-    <value>Descarregue prontamente Para questões contacte o serviço ao cliente Obrigado Este email é do Taiding Tuoding Group</value>
+    <value>Descarregue prontamente Para questões contacte o serviço ao cliente Obrigado Este email é do TakeTop Group</value>
   </data>
   <data name="QuanBuGengXinChengGong" xml:space="preserve">
     <value>Todas as atualizações bem-sucedidas</value>
@@ -32431,7 +32431,7 @@
     <value>Envio bem-sucedido</value>
   </data>
   <data name="TiJiaoChengGongTaiDingTuoDingK" xml:space="preserve">
-    <value>Envio bem-sucedido Serviço ao cliente Taiding Tuoding contactá-lo-á em minutos Aguarde Obrigado</value>
+    <value>Envio bem-sucedido Serviço ao cliente TakeTop contactá-lo-á em minutos Aguarde Obrigado</value>
   </data>
   <data name="TiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
     <value>Envio bem-sucedido Link de descarregamento abaixo Clique para descarregar</value>
@@ -32443,7 +32443,7 @@
     <value>Erro no envio Campos marcados * não podem estar vazios Verifique</value>
   </data>
   <data name="TiJiaoShiBaiQingDianHuaLianXiT" xml:space="preserve">
-    <value>Erro no envio Contacte serviço ao cliente Taiding Tuoding por telefone Obrigado</value>
+    <value>Erro no envio Contacte serviço ao cliente TakeTop por telefone Obrigado</value>
   </data>
   <data name="TiJiaoShiBaiQingJianCha" xml:space="preserve">
     <value>Erro no envio Verifique</value>
@@ -32485,10 +32485,10 @@
     <value>Código de verificação incorreto Verifique</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
-    <value>Foi eliminado Para questões contacte o serviço ao cliente Obrigado Este email é do Taiding Tuoding Group</value>
+    <value>Foi eliminado Para questões contacte o serviço ao cliente Obrigado Este email é do TakeTop Group</value>
   </data>
   <data name="YiBeiShengJiDaoZuiXinBanShengJ1" xml:space="preserve">
-    <value>Foi atualizado para a versão mais recente Primeiro acesso será mais lento Cerca de minutos até aparecer página de login Para questões contacte o serviço ao cliente Obrigado Este email é do Taiding Tuoding Group</value>
+    <value>Foi atualizado para a versão mais recente Primeiro acesso será mais lento Cerca de minutos até aparecer página de login Para questões contacte o serviço ao cliente Obrigado Este email é do TakeTop Group</value>
   </data>
   <data name="YiChuangJian1" xml:space="preserve">
     <value>Já criado</value>

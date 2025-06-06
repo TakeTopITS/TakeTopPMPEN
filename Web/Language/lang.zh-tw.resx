@@ -29398,7 +29398,7 @@
     <value>項目費用分佈圖</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>記錄數：</value>
+    <value>記錄數</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>此項目任務不存在，可能已被刪除，請檢查！</value>
@@ -31816,7 +31816,7 @@
     <value>平台開通後，客服會為你提供試用培訓，試用期不超過一周。</value>
   </data>
   <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
-    <value>如有意願，請在下面填寫你的聯絡資訊。</value>
+    <value>如有意願，請在下面填寫你的聯絡資訊：</value>
   </data>
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>注：為接收重要資訊，請正確填寫。</value>
@@ -31963,7 +31963,7 @@
     <value>軟體系統實施專案管理</value>
   </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
-    <value>如果您所在的地區或者您公司目前所擁有的客戶資源非常適合推廣泰</value>
+    <value>如果您所在的地區或者您公司目前所擁有的客戶資源非常適合推廣泰頂拓鼎的項目管理軟件，那麼可以成為我們的合作夥伴！</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>商機合作夥伴</value>
@@ -31981,7 +31981,7 @@
     <value>試用滿意後必須付費才能繼續使用如付費期間中斷續費系統會進入為</value>
   </data>
   <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
-    <value>使用時間不限軟體安裝在使用者自備的伺服器上請在下面填寫購買申請</value>
+    <value>使用時間不限，軟件安裝喺用戶自備嘅服務器上，請喺下面填寫購買申請</value>
   </data>
   <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
     <value>是指獲得實施服務體系的資格認證並具備較強的管理軟體服務實施服</value>
@@ -32014,7 +32014,7 @@
     <value>授權培訓夥伴</value>
   </data>
   <data name="TaiDingYunJiangDiChengBenJiShi" xml:space="preserve">
-    <value>泰鼎雲降低成本即時開通基於阿裡雲安全可靠</value>
+    <value>泰鼎云 - 降低成本，即时开通，基于阿里云，安全可靠</value>
   </data>
   <data name="TiGongMianFeiKongJianKuoRong" xml:space="preserve">
     <value>提供免費空間擴容費元月</value>
@@ -32086,7 +32086,7 @@
     <value>在培訓領域進行合作並按照約定比例進行利潤分配的組織和機構</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>在泰鼎雲上租用泰頂拓鼎專案管理軟體模式按人按月付費請在下面填</value>
+    <value>在泰鼎雲上租用泰頂拓鼎項目管理軟件模式（按人按月付費）請喺下面填寫申請信息</value>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>增值分銷夥伴</value>

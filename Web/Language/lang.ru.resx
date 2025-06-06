@@ -24880,7 +24880,7 @@
     <value>Юридическая информация</value>
   </data>
   <data name="GuanYuTaiDingTuoDing" xml:space="preserve">
-    <value>О Taidingtuoding</value>
+    <value>О TakeTop</value>
   </data>
   <data name="YiJianFanKui" xml:space="preserve">
     <value>обратная связь</value>
@@ -28351,7 +28351,7 @@
     <value>содержание, обратите внимание, уведомление!</value>
   </data>
   <data name="LianJiRen" xml:space="preserve">
-    <value>Удалил проект:</value>
+    <value>Контактное лицо</value>
   </data>
   <data name="ZhongWenDeZhi" xml:space="preserve">
     <value>Уведомление о проекте</value>
@@ -29400,7 +29400,7 @@
     <value>Количество записей:</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>Эта задача проекта не существует, возможно, была удалена, проверьте!</value>
+    <value>Количество записей</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>Ошибка: тип не может быть пустым!</value>
@@ -31302,7 +31302,7 @@
     <value>Обзор модулей системы</value>
   </data>
   <data name="TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu" xml:space="preserve">
-    <value>Полное дерево модулей интегрированной платформы управления Taiding</value>
+    <value>Полное дерево модулей интегрированной платформы управления TakeTop</value>
   </data>
   <data name="TuoYe" xml:space="preserve">
     <value>Перетащить и отпустить</value>
@@ -31893,7 +31893,7 @@
     <value>Купить</value>
   </data>
   <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
-    <value>Купите программное обеспечение для управления Taiding Tuoding</value>
+    <value>Купите программное обеспечение для управления TakeTop</value>
   </data>
   <data name="JiaGe1" xml:space="preserve">
     <value>Цена</value>
@@ -31965,7 +31965,7 @@
     <value>Соглашение о сотрудничестве Использование клиентской базы для предоставления</value>
   </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
-    <value>Если ваш регион или клиентская база подходят для продвижения Taiding</value>
+    <value>Если ваш регион или клиентская база подходят для продвижения TakeTop</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>Партнеры по бизнес-возможностям</value>
@@ -32007,7 +32007,7 @@
     <value>Организации, подписавшие соглашение о региональной дистрибуции и продающие через собственные каналы</value>
   </data>
   <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
-    <value>Taiding Cloud снижает затраты Мгновенная активация на базе Alibaba Cloud Безопасно и надежно</value>
+    <value>TakeTop Cloud снижает затраты Мгновенная активация на базе Alibaba Cloud Безопасно и надежно</value>
   </data>
   <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
     <value>Авторизованные сервисные партнеры</value>
@@ -32085,7 +32085,7 @@
     <value>Организации, сотрудничающие в обучении и распределяющие прибыль</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>Арендуйте Taiding Tuoding на Taiding Cloud Оплата за человека в месяц Заполните</value>
+    <value>Арендуйте TakeTop на TakeTop Cloud Оплата за человека в месяц Заполните</value>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>Партнеры по дистрибуции с добавленной стоимостью</value>
@@ -32211,7 +32211,7 @@
     <value>Номер телефона</value>
   </data>
   <data name="TuoDingXinXi" xml:space="preserve">
-    <value>Информация Tuoding</value>
+    <value>Информация TakeTop</value>
   </data>
   <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
     <value>Все наши продукты управления Корпоративная версия предлагает бесплатный тест При проблемах во время теста</value>
@@ -32256,7 +32256,7 @@
     <value>Код подтверждения</value>
   </data>
   <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
-    <value>По вопросам обращайтесь в службу поддержки Taiding</value>
+    <value>По вопросам обращайтесь в службу поддержки TakeTop</value>
   </data>
   <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
     <value>Копирование файлов и инициализация данных Займет несколько минут до появления страницы входа</value>
@@ -32337,7 +32337,7 @@
     <value>Логин и пароль</value>
   </data>
   <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
-    <value>Логин и пароль Используйте с уверенностью По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
+    <value>Логин и пароль Используйте с уверенностью По вопросам обращайтесь в поддержку Это письмо от TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
     <value>Заявка Обработайте своевременно</value>
@@ -32349,7 +32349,7 @@
     <value>Ссылка для скачивания резервной копии:</value>
   </data>
   <data name="DeTaiDingTuoDing" xml:space="preserve">
-    <value>Taiding Tuoding</value>
+    <value>TakeTop</value>
   </data>
   <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
     <value>Отзывы о проблемах Обратите внимание</value>
@@ -32394,7 +32394,7 @@
     <value>Здравствуйте</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
-    <value>Скачайте своевременно По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
+    <value>Скачайте своевременно По вопросам обращайтесь в поддержку Это письмо от TakeTop Group</value>
   </data>
   <data name="QuanBuGengXinChengGong" xml:space="preserve">
     <value>Все обновления успешны</value>
@@ -32433,7 +32433,7 @@
     <value>Успешно отправлено</value>
   </data>
   <data name="TiJiaoChengGongTaiDingTuoDingK" xml:space="preserve">
-    <value>Успешно отправлено Служба поддержки Taiding Tuoding свяжется в течение минут Спасибо</value>
+    <value>Успешно отправлено Служба поддержки TakeTop свяжется в течение минут Спасибо</value>
   </data>
   <data name="TiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
     <value>Успешно отправлено Ссылка для скачивания ниже Кликните для скачивания</value>
@@ -32445,7 +32445,7 @@
     <value>Ошибка отправки Поля со * не могут быть пустыми Проверьте</value>
   </data>
   <data name="TiJiaoShiBaiQingDianHuaLianXiT" xml:space="preserve">
-    <value>Ошибка отправки Свяжитесь со службой поддержки Taiding Tuoding по телефону Спасибо</value>
+    <value>Ошибка отправки Свяжитесь со службой поддержки TakeTop по телефону Спасибо</value>
   </data>
   <data name="TiJiaoShiBaiQingJianCha" xml:space="preserve">
     <value>Ошибка отправки Проверьте</value>
@@ -32487,10 +32487,10 @@
     <value>Неверный код подтверждения Проверьте</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
-    <value>Был удален По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
+    <value>Был удален По вопросам обращайтесь в поддержку Это письмо от TakeTop Group</value>
   </data>
   <data name="YiBeiShengJiDaoZuiXinBanShengJ1" xml:space="preserve">
-    <value>Обновлено до последней версии Первый вход займет около минут По вопросам обращайтесь в поддержку Это письмо от Taiding Tuoding Group</value>
+    <value>Обновлено до последней версии Первый вход займет около минут По вопросам обращайтесь в поддержку Это письмо от TakeTop Group</value>
   </data>
   <data name="YiChuangJian1" xml:space="preserve">
     <value>Уже создано</value>

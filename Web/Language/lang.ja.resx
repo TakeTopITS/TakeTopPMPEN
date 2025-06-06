@@ -24880,7 +24880,7 @@
     <value>法的通知</value>
   </data>
   <data name="GuanYuTaiDingTuoDing" xml:space="preserve">
-    <value>Taidingtuodingについて</value>
+    <value>TakeTopについて</value>
   </data>
   <data name="YiJianFanKui" xml:space="preserve">
     <value>フィードバック</value>
@@ -28351,7 +28351,7 @@
     <value>第三者設備：データをインポート</value>
   </data>
   <data name="LianJiRen" xml:space="preserve">
-    <value>連絡先</value>
+    <value>担当者</value>
   </data>
   <data name="ZhongWenDeZhi" xml:space="preserve">
     <value>中国語住所</value>
@@ -29398,7 +29398,7 @@
     <value>プロジェクト費用分布図</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>記録数：</value>
+    <value>記録数</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>このプロジェクトタスクは存在しません。削除された可能性があります。確認してください！</value>

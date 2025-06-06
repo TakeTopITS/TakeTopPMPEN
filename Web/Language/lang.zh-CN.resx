@@ -29412,7 +29412,7 @@
     <value>项目费用分布图</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>记录数：</value>
+    <value>记录数</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>此项目任务不存在，可能已被删除，请检查！</value>
@@ -31826,13 +31826,13 @@
     <value>提交</value>
   </data>
   <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiBingWeiNiKaiTongPingTai" xml:space="preserve">
-    <value>提交成功後，客服會立刻與你聯絡並為你開通平台。</value>
+    <value>提交成功后，客服会立刻与你联络并为你开通平台。</value>
   </data>
   <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
-    <value>提交成功後，客服會立刻與你聯絡，你也可以直接聯絡客服。</value>
+    <value>提交成功后，客服会立刻与你联络，你也可以直接联络客服。</value>
   </data>
   <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
-    <value>提交成功後，客服會立刻與你聯絡，你也可以直接聯絡主管。</value>
+    <value>提交成功后，客服会立刻与你联络，你也可以直接联络主管。</value>
   </data>
   <data name="FuJiaShuiMing" xml:space="preserve">
     <value>附加說明</value>
@@ -31844,13 +31844,13 @@
     <value>模組與價格</value>
   </data>
   <data name="NiYeKeYiZhiJieLianJiKeFu" xml:space="preserve">
-    <value>你也可以直接聯絡客服。</value>
+    <value>你也可以直接联络客服</value>
   </data>
   <data name="PingTaiKaiTongHouKeFuHuiPeiXunNiShiYongShiYongJiBuChaoYiZhou" xml:space="preserve">
-    <value>平台開通後，客服會為你提供試用培訓，試用期不超過一周。</value>
+    <value>平台开通后，客服会为你提供试用培训，试用期不超过一周。</value>
   </data>
   <data name="RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi" xml:space="preserve">
-    <value>如有意願，請在下面填寫你的聯絡資訊。</value>
+    <value>如有意愿，请在下面填写你的联络信息：</value>
   </data>
   <data name="ZhuYaoJieShouChongYaoXinXiQingZhengQueTianXie" xml:space="preserve">
     <value>注：為接收重要資訊，請正確填寫。</value>
@@ -31997,7 +31997,7 @@
     <value>软件系统实施项目管理</value>
   </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
-    <value>如果您所在的地区或者您公司目前所拥有的客户资源非常适合推广泰</value>
+    <value>如果您所在的地区或者您公司目前所拥有的客户资源非常适合推广泰顶拓鼎的项目管理软件 ，那么可以成为我们的合作伙伴！</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>商机合作伙伴</value>
@@ -32015,7 +32015,7 @@
     <value>试用满意后必须付费才能继续使用如付费期间中断续费系统会进入为</value>
   </data>
   <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
-    <value>使用时间不限软件安装在用户自备的服务器上请在下面填写购买申请</value>
+    <value>使用时间不限，软件安装在用户自备的服务器上，请在下面填写购买申请</value>
   </data>
   <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
     <value>是指获得实施服务体系的资格认证并具备较强的管理软件服务实施服</value>
@@ -32048,7 +32048,7 @@
     <value>授权培训伙伴</value>
   </data>
   <data name="TaiDingYunJiangDiChengBenJiShi" xml:space="preserve">
-    <value>泰鼎云降低成本即时开通基于阿里云安全可靠</value>
+    <value>泰鼎云 - 降低成本，即时开通，基于阿里云，安全可靠</value>
   </data>
   <data name="TiGongMianFeiKongJianKuoRong" xml:space="preserve">
     <value>提供免费空间扩容费元月</value>
@@ -32120,7 +32120,7 @@
     <value>在培训领域进行合作并按照约定比例进行利润分配的组织和机构</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>在泰鼎云上租用泰顶拓鼎项目管理软件模式按人按月付费请在下面填</value>
+    <value>在泰鼎云上租用泰顶拓鼎项目管理软件模式（按人按月付费）请在下面填写申请信息</value>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>增值分销伙伴</value>
