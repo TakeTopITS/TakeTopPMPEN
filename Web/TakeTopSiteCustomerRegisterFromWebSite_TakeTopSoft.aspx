@@ -159,11 +159,9 @@
                                         <td colspan="2" align="center" class="formItemBgStyleForAlignCenter">
                                             <br />
                                             <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
-                                                <a href="tencent://message/uin=3166455252&amp;Site=&amp;Menu=yes">
-                                                    <img align="absmiddle" src="images/qq.png" />QQ </a>£¬
-                                            </a>
-                                            Tel£º<a href="tel:02151085119" class="call">021-51085119"></a>
-
+                                                <img align="absmiddle" src="images/qq.png" />QQ </a>£¬
+                                          
+                                            <a href="tel:02151085119" class="call">Tel£º021-51085119</a>
                                         </td>
                                     </tr>
                                 </table>
