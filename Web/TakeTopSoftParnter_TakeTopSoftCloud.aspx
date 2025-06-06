@@ -78,7 +78,7 @@
                                                                 
                                                                   <asp:Label ID="Label1" runat="server"  Text="<%$ Resources:lang,RuYouYiXiangQingZaiXiaMianTianXieNiDeLianJiXinXi%>"></asp:Label>
                                                             </h3>
-                                                            <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
+                                                            <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="680px">
                                                                 <tr>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:Label ID="Label2" runat="server"  Text="<%$ Resources:lang,GongSi%>"></asp:Label>
@@ -230,7 +230,7 @@
 
                                                             <p style="margin: 0px; padding: 0px;"><strong><asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ShouQuanPeiXunHuoBan%>"></asp:Label></strong></p>
 
-                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label32358" runat="server" Text="<%$ Resources:lang,ShiZhiNengJieHeXiLie%>"></asp:Label><asp:Label ID="Label12345243264" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ZaiPeiXunLingYuJinXingHeZuo%>"></asp:Label></p>
+                                                            <p style="margin: 0px; padding: 0px;"><asp:Label ID="Label32358" runat="server" Text="<%$ Resources:lang,ShiZhiNengJieHeXiLie%>"></asp:Label><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ZaiPeiXunLingYuJinXingHeZuo%>"></asp:Label></p>
 
                                                             <p style="margin: 0px; padding: 0px;">&nbsp;</p>
 

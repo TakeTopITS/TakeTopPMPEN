@@ -143,9 +143,9 @@
                                                 </div>
                                                 <div id="id5">
                                                     <h3><asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,ZuYongShenQing%>"></asp:Label></h3>
-                                                    <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
+                                                    <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="680px">
                                                         <tr>
-                                                            <td class="formItemBgStyleForAlignLeft" width="100px">
+                                                            <td class="formItemBgStyleForAlignLeft">
 
                                                                 <asp:Label ID="Label3" runat="server"  Text="<%$ Resources:lang,ChanPin%>"></asp:Label>
                                                             </td>

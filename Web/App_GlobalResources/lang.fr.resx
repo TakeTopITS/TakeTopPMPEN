@@ -967,7 +967,7 @@
     <value>Structure du plan (WBS)</value>
   </data>
   <data name="BQSYTDRJ" xml:space="preserve">
-    <value>Copyright © 2006-2026 Thai Top Logiciel</value>
+    <value>Copyright © 2006-2026 TakeTop Logiciel</value>
   </data>
   <data name="BrowseByType" xml:space="preserve">
     <value>Parcourir par catégorie</value>
@@ -12520,7 +12520,7 @@
     <value>NT</value>
   </data>
   <data name="TaiDingRuanJian" xml:space="preserve">
-    <value>Thai Top Logiciel</value>
+    <value>TakeTop Logiciel</value>
   </data>
   <data name="TanShangBiLi" xml:space="preserve">
     <value>Rapport d'essai:</value>
@@ -12565,10 +12565,10 @@
     <value>Manuel de l'utilisateur Thai haut Plate-forme de gestion de projet</value>
   </data>
   <data name="TDXTGLPTSSSC" xml:space="preserve">
-    <value>Thai Top gestion collaborative Manuel plate-forme de mise en œuvre</value>
+    <value>TakeTop gestion collaborative Manuel plate-forme de mise en œuvre</value>
   </data>
   <data name="TDXTGLPTYHSC" xml:space="preserve">
-    <value>Thai Top gestion collaborative Manuel plate-forme de l'utilisateur</value>
+    <value>TakeTop gestion collaborative Manuel plate-forme de l'utilisateur</value>
   </data>
   <data name="TeJi" xml:space="preserve">
     <value>Extra urgence</value>
@@ -24880,7 +24880,7 @@
     <value>Mentions légales</value>
   </data>
   <data name="GuanYuTaiDingTuoDing" xml:space="preserve">
-    <value>A propos de Taidingtuoding</value>
+    <value>A propos de TakeTop</value>
   </data>
   <data name="YiJianFanKui" xml:space="preserve">
     <value>Commentaires</value>
@@ -27595,7 +27595,7 @@
     <value>Configuration des modules du système</value>
   </data>
   <data name="TaiDingTaDingZhongLiYue" xml:space="preserve">
-    <value>Taiding - Tuoding - Zhong Liyue</value>
+    <value>TakeTop - Zhong Liyue</value>
   </data>
   <data name="QingZhuYiJiTongShouQuanJiangYu" xml:space="preserve">
     <value>Veuillez noter que l'autorisation du système expirera le</value>
@@ -27655,10 +27655,10 @@
     <value>Informations de la chambre de commerce</value>
   </data>
   <data name="ZZDiJiaoChengGongTaiDingTaDing" xml:space="preserve">
-    <value>----- Soumission réussie, le service client de Taiding Tuoding vous contactera dans les 5 minutes, veuillez patienter, merci !</value>
+    <value>----- Soumission réussie, le service client de TakeTop vous contactera dans les 5 minutes, veuillez patienter, merci !</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>----- Échec de la soumission, veuillez contacter le service client de Taiding Tuoding (021-51085119), merci !</value>
+    <value>----- Échec de la soumission, veuillez contacter le service client de TakeTop (021-51085119), merci !</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>Acheter version :</value>
@@ -27733,7 +27733,7 @@
     <value>Bonjour, votre</value>
   </data>
   <data name="YiChuangJianZhanDianDeZhiShi" xml:space="preserve">
-    <value>, compte de connexion : ADMIN Mot de passe : 12345678, n'hésitez pas à utiliser, pour toute question, veuillez contacter le service client (021-51085119), merci, cet e-mail est envoyé par le groupe Taiding Tuoding !</value>
+    <value>, compte de connexion : ADMIN Mot de passe : 12345678, n'hésitez pas à utiliser, pour toute question, veuillez contacter le service client (021-51085119), merci, cet e-mail est envoyé par le groupe TakeTop !</value>
   </data>
   <data name="DengLuZhangHaoADMINMiMa1234567" xml:space="preserve">
     <value>Notification de création de site</value>
@@ -27769,7 +27769,7 @@
     <value>) a été restauré :</value>
   </data>
   <data name="YiHuiFuZhanDianDeZhiShi" xml:space="preserve">
-    <value>de : Taiding Tuoding</value>
+    <value>de : TakeTop</value>
   </data>
   <data name="ZhanDianHuiFuTongZhi" xml:space="preserve">
     <value>Site restauré, l'adresse est :</value>
@@ -27814,7 +27814,7 @@
     <value>Site :</value>
   </data>
   <data name="ZhanDianShengJiTongZhi" xml:space="preserve">
-    <value>a été mis à niveau vers la dernière version, la première ouverture après la mise à niveau sera plus lente, environ 5 à 10 minutes avant que la page de connexion n'apparaisse, en cas de problème, veuillez contacter le service client de Taiding Tuoding (021-51085119), merci, cet e-mail est envoyé par le groupe Taiding Tuoding !</value>
+    <value>a été mis à niveau vers la dernière version, la première ouverture après la mise à niveau sera plus lente, environ 5 à 10 minutes avant que la page de connexion n'apparaisse, en cas de problème, veuillez contacter le service client de TakeTop (021-51085119), merci, cet e-mail est envoyé par le groupe TakeTop !</value>
   </data>
   <data name="ZhengZaiFaSongZheGeZhanDianBei" xml:space="preserve">
     <value>Notification de mise à niveau de site</value>
@@ -27826,7 +27826,7 @@
     <value>L'adresse de téléchargement des fichiers de sauvegarde des données est :</value>
   </data>
   <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
-    <value>, veuillez télécharger rapidement, en cas de problème, veuillez contacter le service client (021-51085119), merci, cet e-mail est envoyé par le groupe Taiding Tuoding !</value>
+    <value>, veuillez télécharger rapidement, en cas de problème, veuillez contacter le service client (021-51085119), merci, cet e-mail est envoyé par le groupe TakeTop !</value>
   </data>
   <data name="ZhengZaiShanChuZheGeZhanDianDa" xml:space="preserve">
     <value>Notification de téléchargement des fichiers de sauvegarde</value>
@@ -27835,7 +27835,7 @@
     <value>Suppression de ce site en cours, cela prendra environ 5 minutes, veuillez patienter......</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
-    <value>a été supprimé, en cas de problème, veuillez contacter le service client (021-51085119), merci, cet e-mail est envoyé par le groupe Taiding Tuoding !</value>
+    <value>a été supprimé, en cas de problème, veuillez contacter le service client (021-51085119), merci, cet e-mail est envoyé par le groupe TakeTop !</value>
   </data>
   <data name="ZhengZaiBaoCunZheGeZhanDianDeX" xml:space="preserve">
     <value>Notification de suppression de site</value>
@@ -28312,7 +28312,7 @@
     <value>Base contractuelle</value>
   </data>
   <data name="TaDingXiangMuBao" xml:space="preserve">
-    <value>Projet Tuoding Bao</value>
+    <value>Projet TakeTop Bao</value>
   </data>
   <data name="GeiNiFenPaLeXuQiu" xml:space="preserve">
     <value>Vous a attribué une demande :</value>
@@ -28351,7 +28351,7 @@
     <value>Équipement tiers : Importation de données</value>
   </data>
   <data name="LianJiRen" xml:space="preserve">
-    <value>Contact</value>
+    <value>Personne de Contact</value>
   </data>
   <data name="ZhongWenDeZhi" xml:space="preserve">
     <value>Adresse en chinois</value>
@@ -28393,7 +28393,7 @@
     <value>Service client</value>
   </data>
   <data name="TaiDingXiangMuBao" xml:space="preserve">
-    <value>Projet Taiding Bao</value>
+    <value>Projet TakeTop Bao</value>
   </data>
   <data name="XiangMuZengGeGuanLiPingTai" xml:space="preserve">
     <value>Plateforme de gestion intégrée de projets</value>
@@ -29398,7 +29398,7 @@
     <value>Nombre d'enregistrements :</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>Cette tâche de projet n'existe pas, elle a peut-être été supprimée, veuillez vérifier !</value>
+    <value>Nombre d'Enregistrements</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>Erreur, le type ne peut pas être vide !</value>
@@ -31300,7 +31300,7 @@
     <value>Navigation des modules système</value>
   </data>
   <data name="TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu" xml:space="preserve">
-    <value>Arbre de modules complet de la plateforme de gestion intégrale Taiding</value>
+    <value>Arbre de modules complet de la plateforme de gestion intégrale TakeTop</value>
   </data>
   <data name="TuoYe" xml:space="preserve">
     <value>Faites glisser et déposez</value>
@@ -31891,7 +31891,7 @@
     <value>Acheter</value>
   </data>
   <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
-    <value>Acheter le logiciel de gestion Taiding Tuoding</value>
+    <value>Acheter le logiciel de gestion TakeTop</value>
   </data>
   <data name="JiaGe1" xml:space="preserve">
     <value>Prix</value>
@@ -31963,7 +31963,7 @@
     <value>Accord de coopération opportunités commerciales Utilisation de ressources clients propres pour fournir</value>
   </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
-    <value>Si votre région ou vos ressources clients sont très adaptées pour promouvoir Taiding</value>
+    <value>Si votre région ou vos ressources clients sont très adaptées pour promouvoir TakeTop</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>Partenaires opportunités commerciales</value>
@@ -32005,7 +32005,7 @@
     <value>Désigne signer un accord de distribution à valeur ajoutée régionale et vendre notre série via canaux propres</value>
   </data>
   <data name="ShiZhiYuQianShuShangJiHeZuoXie" xml:space="preserve">
-    <value>Taiding Cloud réduit les coûts Activation immédiate basée sur Alibaba Cloud Sécurisé et fiable</value>
+    <value>TakeTop Cloud réduit les coûts Activation immédiate basée sur Alibaba Cloud Sécurisé et fiable</value>
   </data>
   <data name="ShouQuanFuWuHuoBan" xml:space="preserve">
     <value>Partenaires de service agréés</value>
@@ -32083,7 +32083,7 @@
     <value>Organisations coopérant en formation et partageant les bénéfices selon accord</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>Louez le logiciel Taiding Tuoding sur Taiding Cloud Paiement par personne par mois Remplissez le</value>
+    <value>Louez le logiciel TakeTop sur TakeTop Cloud Paiement par personne par mois Remplissez le</value>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>Partenaires distributeurs à valeur ajoutée</value>
@@ -32209,7 +32209,7 @@
     <value>Numéro de téléphone portable</value>
   </data>
   <data name="TuoDingXinXi" xml:space="preserve">
-    <value>Information Tuoding</value>
+    <value>Information TakeTop</value>
   </data>
   <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
     <value>Tous nos produits logiciels de gestion Version entreprise offre un essai gratuit en ligne Si problèmes pendant l'essai</value>
@@ -32254,7 +32254,7 @@
     <value>Code de vérification</value>
   </data>
   <data name="YaoXieZhuQingLianXiTaiDingKeFu" xml:space="preserve">
-    <value>Pour assistance contactez le service client Taiding au</value>
+    <value>Pour assistance contactez le service client TakeTop au</value>
   </data>
   <data name="YinWeiYaoFuZhiZhanDianWenJian" xml:space="preserve">
     <value>Copie de fichiers et initialisation des données Compte quelques minutes jusqu'à complétion et apparition page de connexion</value>
@@ -32335,7 +32335,7 @@
     <value>Compte et mot de passe</value>
   </data>
   <data name="DengLuZhangHaoMiMaQingFangXinS" xml:space="preserve">
-    <value>Compte et mot de passe Utilisez en toute confiance Pour questions contactez le service client Merci Cet email est envoyé par Taiding Tuoding Group</value>
+    <value>Compte et mot de passe Utilisez en toute confiance Pour questions contactez le service client Merci Cet email est envoyé par TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
     <value>Demande Traiter rapidement</value>
@@ -32347,7 +32347,7 @@
     <value>L'URL de téléchargement du fichier de sauvegarde est</value>
   </data>
   <data name="DeTaiDingTuoDing" xml:space="preserve">
-    <value>Taiding Tuoding</value>
+    <value>TakeTop</value>
   </data>
   <data name="DeWenTiFanKuiQingGuanZhu1" xml:space="preserve">
     <value>Commentaires sur problèmes Soyez attentif</value>
@@ -32392,7 +32392,7 @@
     <value>Bonjour vous</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL1" xml:space="preserve">
-    <value>Télécharger rapidement Pour questions contactez le service client Merci Cet email provient de Taiding Tuoding Group</value>
+    <value>Télécharger rapidement Pour questions contactez le service client Merci Cet email provient de TakeTop Group</value>
   </data>
   <data name="QuanBuGengXinChengGong" xml:space="preserve">
     <value>Mises à jour complétées avec succès</value>
@@ -32431,7 +32431,7 @@
     <value>Envoi réussi</value>
   </data>
   <data name="TiJiaoChengGongTaiDingTuoDingK" xml:space="preserve">
-    <value>Envoi réussi Le service client Taiding Tuoding vous contactera dans quelques minutes Veuillez patienter Merci</value>
+    <value>Envoi réussi Le service client TakeTop vous contactera dans quelques minutes Veuillez patienter Merci</value>
   </data>
   <data name="TiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
     <value>Envoi réussi Lien de téléchargement ci-dessous Cliquez pour télécharger</value>
@@ -32443,7 +32443,7 @@
     <value>Erreur d'envoi Champs marqués * ne peuvent être vides Vérifiez</value>
   </data>
   <data name="TiJiaoShiBaiQingDianHuaLianXiT" xml:space="preserve">
-    <value>Erreur d'envoi Contactez le service client Taiding Tuoding par téléphone Merci</value>
+    <value>Erreur d'envoi Contactez le service client TakeTop par téléphone Merci</value>
   </data>
   <data name="TiJiaoShiBaiQingJianCha" xml:space="preserve">
     <value>Erreur d'envoi Vérifiez</value>
@@ -32485,10 +32485,10 @@
     <value>Code de vérification incorrect Vérifiez</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian1" xml:space="preserve">
-    <value>A été supprimé Pour questions contactez le service client Merci Cet email provient de Taiding Tuoding Group</value>
+    <value>A été supprimé Pour questions contactez le service client Merci Cet email provient de TakeTop Group</value>
   </data>
   <data name="YiBeiShengJiDaoZuiXinBanShengJ1" xml:space="preserve">
-    <value>A été mis à jour vers dernière version Première ouverture plus longue Quelques minutes jusqu'à apparition page de connexion Pour questions contactez le service client Merci Cet email provient de Taiding Tuoding Group</value>
+    <value>A été mis à jour vers dernière version Première ouverture plus longue Quelques minutes jusqu'à apparition page de connexion Pour questions contactez le service client Merci Cet email provient de TakeTop Group</value>
   </data>
   <data name="YiChuangJian1" xml:space="preserve">
     <value>Déjà créé</value>

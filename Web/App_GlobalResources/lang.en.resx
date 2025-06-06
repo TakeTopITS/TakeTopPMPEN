@@ -967,7 +967,7 @@
     <value>Structure (WBS) Plan</value>
   </data>
   <data name="BQSYTDRJ" xml:space="preserve">
-    <value>Copyright © 2006-2026 Thai Top Software</value>
+    <value>Copyright © 2006-2026 TakeTop Software</value>
   </data>
   <data name="BrowseByType" xml:space="preserve">
     <value>Browse by Category</value>
@@ -12520,7 +12520,7 @@
     <value>NT</value>
   </data>
   <data name="TaiDingRuanJian" xml:space="preserve">
-    <value>Thai Top Software</value>
+    <value>TakeTop Software</value>
   </data>
   <data name="TanShangBiLi" xml:space="preserve">
     <value>Testing ratio:</value>
@@ -12565,10 +12565,10 @@
     <value>Thai top Project Management Platform User's Manual</value>
   </data>
   <data name="TDXTGLPTSSSC" xml:space="preserve">
-    <value>Thai Top collaborative management platform Implementation Manual</value>
+    <value>TakeTop collaborative management platform Implementation Manual</value>
   </data>
   <data name="TDXTGLPTYHSC" xml:space="preserve">
-    <value>Thai Top collaborative management platform User Manual</value>
+    <value>TakeTop collaborative management platform User Manual</value>
   </data>
   <data name="TeJi" xml:space="preserve">
     <value>Extra urgent</value>
@@ -24880,7 +24880,7 @@
     <value>Legal Notices</value>
   </data>
   <data name="GuanYuTaiDingTuoDing" xml:space="preserve">
-    <value>About Taidingtuoding</value>
+    <value>About TakeTop</value>
   </data>
   <data name="YiJianFanKui" xml:space="preserve">
     <value>Feedback</value>
@@ -27596,7 +27596,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>System module settings</value>
   </data>
   <data name="TaiDingTaDingZhongLiYue" xml:space="preserve">
-    <value>Taiding-Tuoding-Zhong Liyue</value>
+    <value>TakeTop-Zhong Liyue</value>
   </data>
   <data name="QingZhuYiJiTongShouQuanJiangYu" xml:space="preserve">
     <value>Please note, the system authorization will expire on</value>
@@ -27656,10 +27656,10 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Chamber information</value>
   </data>
   <data name="ZZDiJiaoChengGongTaiDingTaDing" xml:space="preserve">
-    <value>----- Submission successful, Taiding Tuoding customer service will contact you within 5 minutes, please wait, thank you!</value>
+    <value>----- Submission successful, TakeTop customer service will contact you within 5 minutes, please wait, thank you!</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>----- Submission failed, please contact Taiding Tuoding customer service (021-51085119), thank you!</value>
+    <value>----- Submission failed, please contact TakeTop customer service (021-51085119), thank you!</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>Purchase version:</value>
@@ -27737,7 +27737,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Site created, address is:</value>
   </data>
   <data name="DengLuZhangHaoADMINMiMa1234567" xml:space="preserve">
-    <value>, login account: ADMIN password: 12345678, please use with confidence, if you have any questions, please contact customer service (021-51085119), thank you, this email is sent from Taiding Tuoding Group!</value>
+    <value>, login account: ADMIN password: 12345678, please use with confidence, if you have any questions, please contact customer service (021-51085119), thank you, this email is sent from TakeTop Group!</value>
   </data>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>Site creation notification</value>
@@ -27767,7 +27767,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Deletion failed, please check!</value>
   </data>
   <data name="DeTaiDingTaDing" xml:space="preserve">
-    <value>Of: Taiding Tuoding</value>
+    <value>Of: TakeTop</value>
   </data>
   <data name="YiHuiFuZhanDianDeZhiShi" xml:space="preserve">
     <value>Restoration failed, no available site base parameters for the product version you selected, please check!</value>
@@ -27824,7 +27824,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Data backup file download address is:</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
-    <value>Has been upgraded to the latest version, the first time opening after upgrading will be slow, it will take about 5 to 10 minutes for the login page to appear, if you have any questions, please contact Taiding Tuoding customer service (021-51085119), thank you, this email is from Taiding Tuoding Group!</value>
+    <value>Has been upgraded to the latest version, the first time opening after upgrading will be slow, it will take about 5 to 10 minutes for the login page to appear, if you have any questions, please contact TakeTop customer service (021-51085119), thank you, this email is from TakeTop Group!</value>
   </data>
   <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
     <value>Backup file download notification</value>
@@ -27833,10 +27833,10 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Sending this site backup file, it will take about 5 minutes, please wait patiently......</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
-    <value>Has been deleted, if you have any questions, please contact customer service (021-51085119), thank you, this email is from Taiding Tuoding Group!</value>
+    <value>Has been deleted, if you have any questions, please contact customer service (021-51085119), thank you, this email is from TakeTop Group!</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
-    <value>, please download in time, if you have any questions, please contact customer service (021-51085119), thank you, this email is from Taiding Tuoding Group!</value>
+    <value>, please download in time, if you have any questions, please contact customer service (021-51085119), thank you, this email is from TakeTop Group!</value>
   </data>
   <data name="ZhengZaiBaoCunZheGeZhanDianDeX" xml:space="preserve">
     <value>Saving the absolute path of this site's virtual directory, it will take about 1 minute, please wait patiently......</value>
@@ -28325,7 +28325,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Production date format is incorrect or empty, the format should be like: 2021-04-01)</value>
   </data>
   <data name="XuQiuFenPaTongZhi" xml:space="preserve">
-    <value>Tuoding Project Treasure</value>
+    <value>TakeTop Project Treasure</value>
   </data>
   <data name="nbspnbspZhuangTai" xml:space="preserve">
     <value>Material maintenance report.xls</value>
@@ -28352,7 +28352,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Deleted project:</value>
   </data>
   <data name="LianJiRen" xml:space="preserve">
-    <value>Sales return report.xls</value>
+    <value>Contact Person</value>
   </data>
   <data name="ZhongWenDeZhi" xml:space="preserve">
     <value>Created a project for you:</value>
@@ -28484,7 +28484,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Special equipment certification time</value>
   </data>
   <data name="GangWeiZhengShuQuZhengShiJian" xml:space="preserve">
-    <value>Taiding Project Treasure</value>
+    <value>TakeTop Project Treasure</value>
   </data>
   <data name="PeiXunDeDian" xml:space="preserve">
     <value>Certificate validity period</value>
@@ -29399,7 +29399,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Project expense distribution chart</value>
   </data>
   <data name="JiLuShu" xml:space="preserve">
-    <value>Record count:</value>
+    <value>Record count</value>
   </data>
   <data name="CiXiangMuRenWuBuCunZaiKeNengYi" xml:space="preserve">
     <value>This project task does not exist, it may have been deleted, please check!</value>
@@ -31301,7 +31301,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>System Module Browsing</value>
   </data>
   <data name="TaiDingZengGeGuanLiPingTaiWanZhengMoKuaiShu" xml:space="preserve">
-    <value>Taiding Integrated Management Platform Complete Module Tree</value>
+    <value>TakeTop Integrated Management Platform Complete Module Tree</value>
   </data>
   <data name="TuoYe" xml:space="preserve">
     <value>Drag and Drop</value>
@@ -31805,7 +31805,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Additional Notes</value>
   </data>
   <data name="KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang" xml:space="preserve">
-    <value>Bank of Communications Co., Ltd., Shanghai Pudong Avenue Branch</value>
+    <value>招商银行股份有限公司上海浦东大道支行</value>
   </data>
   <data name="MoKuaiYuJiaGe" xml:space="preserve">
     <value>Modules and Pricing</value>
@@ -31892,7 +31892,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Purchase</value>
   </data>
   <data name="GouMaiTaiDingTuoDingGuanLiRuan" xml:space="preserve">
-    <value>Purchase Taiding Tuoding management software</value>
+    <value>Purchase TakeTop management software</value>
   </data>
   <data name="JiaGe1" xml:space="preserve">
     <value>Price</value>
@@ -31964,7 +31964,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Software system implementation project management</value>
   </data>
   <data name="RuGuoNinSuoZaiDeDiQuHuoZheNin" xml:space="preserve">
-    <value>If the region you are in or the customer resources your company currently has are very suitable for promoting Taiding,</value>
+    <value>If the region you are in or the customer resources your company currently has are very suitable for promoting TakeTop project management software,then you can become our partner!</value>
   </data>
   <data name="ShangJiHeZuoHuoBan" xml:space="preserve">
     <value>Business opportunity partners</value>
@@ -32015,16 +32015,16 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Authorized training partners</value>
   </data>
   <data name="TaiDingYunJiangDiChengBenJiShi" xml:space="preserve">
-    <value>Taiding Cloud - Reduce costs, instant activation, based on Alibaba Cloud, safe and reliable</value>
+    <value>TakeTop Cloud -Reduce costs, instant activation, based on Alibaba Cloud, safe and reliable</value>
   </data>
   <data name="TiGongMianFeiKongJianKuoRong" xml:space="preserve">
-    <value>Provide free space, with an expansion fee of [X] yuan/month.</value>
+    <value>Provide free space, with an expansion fee of yuan/month.</value>
   </data>
   <data name="TiGongShangJiJiWoMenBingXieZhu" xml:space="preserve">
-    <value>Provide business opportunities for us and assist us in sales (we take the lead) to close deals, and can receive a commission based on the software and user [X]% of this order.</value>
+    <value>Provide business opportunities for us and assist us in sales (we take the lead) to close deals, and can receive a commission based on the software and user  of this order.</value>
   </data>
   <data name="TiGongXiangMuJiHuaJinDuRenWu" xml:space="preserve">
-    <value>Provide project planning, progress, task, cost, and document management functions, easy to use, and can be mastered in [X] minutes.</value>
+    <value>Provide project planning, progress, task, cost, and document management functions, easy to use, and can be mastered in minutes.</value>
   </data>
   <data name="WeiXin" xml:space="preserve">
     <value>WeChat</value>
@@ -32075,19 +32075,19 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Remote service</value>
   </data>
   <data name="YuanQi" xml:space="preserve">
-    <value>Starting from [X] yuan</value>
+    <value>Starting from yuan</value>
   </data>
   <data name="YuanRenYue" xml:space="preserve">
-    <value>[X] yuan/person/month</value>
+    <value> yuan/person/month</value>
   </data>
   <data name="YuanYongHu1" xml:space="preserve">
-    <value>[X] yuan/user</value>
+    <value>yuan/user</value>
   </data>
   <data name="ZaiPeiXunLingYuJinXingHeZuo" xml:space="preserve">
     <value>Organizations and institutions that cooperate in the training field and distribute profits according to the agreed proportion.</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>Rent Taiding Tuoding project management software on Taiding Cloud (SaaS model, pay per person per month). Please fill in the application below.</value>
+    <value>Rent TakeTop project management software on TakeTop Cloud (SaaS model, pay per person per month). Please fill in the application below.</value>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>Value-added distribution partners</value>
@@ -32213,7 +32213,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Mobile Number</value>
   </data>
   <data name="TuoDingXinXi" xml:space="preserve">
-    <value>Tuoding Information</value>
+    <value>TakeTop Information</value>
   </data>
   <data name="WoMenTuoDingSuoYouGuanLiRuan" xml:space="preserve">
     <value>All our management software platforms offer free online trials for the Enterprise Edition. If you encounter any issues during the trial,</value>

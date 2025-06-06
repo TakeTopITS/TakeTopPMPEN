@@ -102,7 +102,7 @@
                     </a>
                     </span>
                 </p>
-                <p><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TuoDingXinXi%>"></asp:Label><a href="http://www.miitbeian.gov.cn" target="_blank"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HuBeiHao%>"></asp:Label></a>taketopits.com</p>
+                <p><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TuoDingXinXi%>"></asp:Label><a href="http://www.miitbeian.gov.cn" target="_blank"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HuBeiHao%>"></asp:Label>沪ICP备18022438号</a>taketopits.com</p>
             </div>
 
         </div>
