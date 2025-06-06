@@ -108,15 +108,8 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
 
             //创建站点应用
             CreateSiteAPP(strRentProductType, strRentProductVersionType, strSiteAppSystemName, strSiteAppName, strSiteAppURL, strSiteName, strSiteBindingInfo, strSiteDirectory, strSiteTemplateDirectory, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath, strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory, strSiteDBLoginUserID, strSiteDBUserLoginPassword, strIsOEM);
-
-
-            ////跳转页面
-            //string strScript = "<script>openMDIFrom('" + strSiteAppURL + "');</script>";
-            //ClientScript.RegisterStartupScript(GetType(), "", strScript);
-
-            //LB_Message.Text = "站点创建成功，你可以点击下面链接打开和收藏此站点，注意第一次打开登录页面时因要初始化系统，耗时会较长，此后不会超过5秒钟， <br/><br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>登录帐号：ADMIN    密码： 12345678";
-
-            LB_Message.Text =  LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK") + "<br/><br/> <a href='\"" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>" + Resources.lang.DengLuZhangHaoMiMa;
+           
+            LB_Message.Text =  LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK") + "<br/><br/> <a href='\"" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>" +  LanguageHandle.GetWord("DengLuZhangHao") + " ：ADMIN   " + LanguageHandle.GetWord("MiMa")  + " ： 12345678";
 
             LB_CloseMessage.Visible = false;
         }

@@ -103,7 +103,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
             //»Ö¸´Õ¾µãÓ¦ÓÃ
             RecoverSiteAPP(strRentProductType, strRentProductVersionType, strSiteAppSystemName, strSiteAppName, strSiteAppURL, strSiteName, strSiteBindingInfo, strSiteDirectory, strSiteTemplateDirectory, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath, strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory, strSiteDBLoginUserID, strSiteDBUserLoginPassword, strIsOEM);
 
-            LB_Message.Text = LanguageHandle.GetWord("ZhanDianHuiFuChengGongNiKeYiDa") + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
+            LB_Message.Text = Resources.lang.ZhanDianHuiFuChengGongNiKeYiDa + "< br/><br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
             LB_CloseMessage.Visible = false;
 
             //LB_Message.Text = strSiteDBRestoreFile;
