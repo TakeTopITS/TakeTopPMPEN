@@ -33,16 +33,16 @@
                 <ContentTemplate>
                     <div id="#AboveDiv" style="position: relative; top: 30px; text-align: center;">
                         <img src="Images/khfw.gif" alt="" style="width: 80%;" />
-                        <table style="width: 100%">
+                        <table style="width: 100%;">
                             <tr>
                                 <td align="center" style="padding-top: 15px;">
-                                    <table border="0" cellpadding="0" cellspacing="3" class="zi">
+                                    <table border="0" cellpadding="0" cellspacing="3" class="zi" width="680px">
                                         <tr>
                                             <td colspan="2" align="center" class="formItemBgStyleForAlignLeft"></td>
 
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyleForAlignLeft" width="15%">
+                                            <td class="formItemBgStyleForAlignLeft" >
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DanWei%>" ></asp:Label>
                                                  </td>
                                             <td class="formItemBgStyleForAlignLeft">
