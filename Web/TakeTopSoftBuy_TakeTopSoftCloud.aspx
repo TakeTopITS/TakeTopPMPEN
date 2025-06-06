@@ -76,7 +76,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiangMuBao%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                        <%--<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -94,7 +97,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,XiTongJiChengXiangMuGuanLiPing%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                        <%--<asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -112,7 +118,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YanFaXiangMuGuanLiPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label1914124" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                        <%--<asp:Label ID="Label1914124" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -130,7 +139,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,GongChengXiangMuGuanLiPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label1346546549" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                        <%--<asp:Label ID="Label1346546549" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -149,7 +161,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,RuanJianShiShiXiangMuGuanLi%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label6767519" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                       <%-- <asp:Label ID="Label6767519" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -167,7 +182,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,XiangMuXingPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label67876819" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                       <%-- <asp:Label ID="Label67876819" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -186,7 +204,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ZhengWuXiangMuGuanLiPingTai%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label19976976" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                       <%-- <asp:Label ID="Label19976976" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
@@ -206,7 +227,10 @@
                                     <h3>
                                         <a href="#"><asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,XiangMuGuanLiZiXun%>"></asp:Label></a></h3>
                                     <h3>
-                                        <br /><asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label></h3>
+                                        <br />
+                                     <%--   <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>
+
+                                    </h3>
                                     <p>
                                         &nbsp;
                                     </p>
