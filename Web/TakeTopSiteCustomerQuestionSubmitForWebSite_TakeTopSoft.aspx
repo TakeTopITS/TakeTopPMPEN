@@ -36,7 +36,7 @@
                         <table style="width: 100%;">
                             <tr>
                                 <td align="center" style="padding-top: 15px;">
-                                    <table border="0" cellpadding="0" cellspacing="3" class="zi" width="680px">
+                                    <table border="0" cellpadding="0" cellspacing="3" class="zi" width="780px">
                                         <tr>
                                             <td colspan="2" align="center" class="formItemBgStyleForAlignLeft"></td>
 
