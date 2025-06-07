@@ -181,7 +181,7 @@
                                                         <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,ZuYongShenQing%>"></asp:Label></h3>
                                                     <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="680px">
                                                         <tr>
-                                                            <td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
 
                                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label>
                                                             </td>
@@ -191,7 +191,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyleForAlignLeft">
+                                                            <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
 
                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BanBen%>"></asp:Label>
                                                             </td>
@@ -233,7 +233,7 @@
                                                                 &nbsp;<font color="#FF0000">*</font> &nbsp;&nbsp;</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="formItemBgStyleForAlignLeft" style="padding-bottom: 25px;">
+                                                            <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
 
                                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShouJi%>"></asp:Label>
                                                             </td>

@@ -272,12 +272,12 @@
                                                 <tr>
                                                     <td width="50%">
                                                         <p class="zuyong">
-                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<strong><asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,GouMaiTaiDingTuoDingGuanLiRuan%>"></asp:Label></strong><asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,ShiYongShiJianBuXianRuanJianAn%>"></asp:Label>
+                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<strong><asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,GouMaiTaiDingTuoDingGuanLiRuan%>"></asp:Label>£¬</strong><asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,ShiYongShiJianBuXianRuanJianAn%>"></asp:Label>£º
                                                         </p>
                                                         <div id="id5">
                                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="680px">
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
                                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
@@ -286,7 +286,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
 
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BanBen%>"></asp:Label>
                                                                     </td>
