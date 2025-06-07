@@ -155,14 +155,14 @@
                 <td  class="formItemBgStyleForAlignLeft" style ="vertical-align:middle;">
                     <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
                 </td>
-                <td  class="formItemBgStyleForAlignLeft">
+               <td class="formItemBgStyleForAlignLeft" style="vertical-align:bottom;">
                     <table>
                         <tr>
                             <td >
                                 <asp:TextBox ID="TB_CheckCode" runat="server" ForeColor="#000000"  Style="width: 100px; height: 32px;" ></asp:TextBox>
                             </td>
                             <td >
-                                <asp:Image ID="IM_CheckCode" runat="server" src="TTCheckCode.aspx" Style="width: 150px; height: 50px;" />
+                                <asp:Image ID="IM_CheckCode" runat="server" src="../../../TTCheckCode.aspx" Style="width: 150px; height: 50px;" />
                             </td>
                         </tr>
                     </table>

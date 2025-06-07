@@ -56,9 +56,11 @@
                         &nbsp;
                     </p>
                     <div class="title">
-                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,QiYeJiKuanKeKuoZhanRuanJian%>"></asp:Label></div>
+                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,QiYeJiKuanKeKuoZhanRuanJian%>"></asp:Label>
+                    </div>
                     <div class="title1">
-                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JiMuHuaJieGouKeAnXuXuanPeiZi%>"></asp:Label></div>
+                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JiMuHuaJieGouKeAnXuXuanPeiZi%>"></asp:Label>
+                    </div>
                     <div class="main">
                         <p style="text-align: center; padding-bottom: 30px; font-size: 28px;">
                             <br />
@@ -364,17 +366,17 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">
-                                                                        <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
+                                                                    <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle;">
+                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
                                                                     </td>
-                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="vertical-align: bottom;">
                                                                         <table>
                                                                             <tr>
                                                                                 <td>
                                                                                     <asp:TextBox ID="TB_CheckCode" runat="server" ForeColor="#000000" Style="width: 150px; height: 40px;"></asp:TextBox>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:Image ID="IM_CheckCode" runat="server" src="TTCheckCode.aspx" Style="width: 150px; height: 40px;" />
+                                                                                    <asp:Image ID="IM_CheckCode" runat="server" src="../../../TTCheckCode.aspx" Style="width: 150px; height: 40px;" />
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

@@ -10,7 +10,7 @@
 <head id="Head1" runat="server">
     <title>‘⁄œﬂ ‘”√</title>
     <link id="mainCss" href="../../../css/bluelightmain.css" rel="stylesheet" type="text/css" />
-    <link id="flxappCss" href="css/flxapp.css" rel="stylesheet" type="text/css" />
+    <link id="flxappCss" href="../../../css/flxapp.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="../../../Logo/website/js/jquery-1.3.1.js"></script>
     <script src="../../../js/jquery.min.js" type="text/javascript"></script>
@@ -23,6 +23,19 @@
             /*background-image: url(Images/login_bj.jpg);*/
             background-repeat: repeat-x;
             font: normal 130% Helvetica, Arial, sans-serif;
+        }
+
+        a:link {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Liberation Sans", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, SimSun, "WenQuanYi Zen Hei Sharp", sans-serif';
+        }
+
+        a:hover {
+            color: #000000;
+            text-decoration: none;
         }
     </style>
 
@@ -100,7 +113,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignLeft" valign="top">
+                                        <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
                                             <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShiYongYuanYin%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <asp:DropDownList ID="DL_TryProductResonType" Height="35px" DataValueField="Type" DataTextField="Type" Style="font-size: 16px;" runat="server">
@@ -108,16 +121,16 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="formItemBgStyleForAlignLeft" valign="top">
+                                        <td class="formItemBgStyleForAlignLeft" style="vertical-align:bottom;">
                                             <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
                                             <table>
                                                 <tr>
-                                                    <td>
+                                                    <td >
                                                         <asp:TextBox ID="TB_CheckCode" runat="server" Style="width: 100px; height: 35px; font-size: 16px;"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:Image ID="IM_CheckCode" runat="server" src="TTCheckCode.aspx" Width="100px" Height="35px" />
+                                                        <asp:Image ID="IM_CheckCode" runat="server" src="../../../TTCheckCode.aspx" Width="100px" Height="35px" />
                                                     </td>
                                                 </tr>
                                             </table>

@@ -58,26 +58,31 @@
 
                                                 <div class="qudaohezuo">
                                                     <div class="wenzi">
-                                                        <p class="zuyong"><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XingYeJuXianWeiCuJinYeJieXiang%>"></asp:Label></p>
+                                                        <p class="zuyong">
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XingYeJuXianWeiCuJinYeJieXiang%>"></asp:Label></p>
 
                                                         <div id="id5" style="padding-left: 20px;">
-                                                            <h3><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QingZaiXiaMianTianXieNiDeLian%>"></asp:Label></h3>
+                                                            <h3>
+                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QingZaiXiaMianTianXieNiDeLian%>"></asp:Label></h3>
                                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_Company" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font> </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_ContactPerson" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font> &nbsp;&nbsp;</td>
                                                                 </tr>
 
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_PhoneNumber" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font> </td>
@@ -86,15 +91,17 @@
 
 
                                                                 <tr>
-                                                                    <td  class="formItemBgStyleForAlignLeft"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label></td>
-                                                                    <td  class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle;">
+                                                                        <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
+                                                                    </td>
+                                                                    <td class="formItemBgStyleForAlignLeft" style="vertical-align: bottom;">
                                                                         <table>
                                                                             <tr>
                                                                                 <td>
                                                                                     <asp:TextBox ID="TB_CheckCode" runat="server" ForeColor="#000000" Style="width: 150px; height: 40px;"></asp:TextBox>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:Image ID="IM_CheckCode" runat="server" src="TTCheckCode.aspx" Style="width: 150px; height: 40px;" />
+                                                                                    <asp:Image ID="IM_CheckCode" runat="server" src="../../../TTCheckCode.aspx" Style="width: 150px; height: 40px;" />
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -110,26 +117,30 @@
                                                                 </tr>
 
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyleForAlignLeft" width="100px"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyleForAlignLeft" width="100px">
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_Type" runat="server" Style="height: 50px;">
-                                                                            <asp:ListItem Value ="Download"  Text="<%$ Resources:lang,XiaZai%>"></asp:ListItem>
+                                                                            <asp:ListItem Value="Download" Text="<%$ Resources:lang,XiaZai%>"></asp:ListItem>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="auto-style1"><asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BanBen%>"></asp:Label></td>
+                                                                    <td class="auto-style1">
+                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,BanBen%>"></asp:Label></td>
                                                                     <td class="auto-style1">
                                                                         <asp:DropDownList ID="DL_Version" runat="server" Style="height: 50px;">
-                                                                            <asp:ListItem Value ="ECMP" Text="<%$ Resources:lang,ZongHeGuanLiPingTai%>" ></asp:ListItem>
+                                                                            <asp:ListItem Value="ECMP" Text="<%$ Resources:lang,ZongHeGuanLiPingTai%>"></asp:ListItem>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YongHuShu%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YongHuShu%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000" Style="width: 150px; height: 30px;" Text="100"></asp:TextBox>
-                                                                        <strong><asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label></strong> <font color="#FF0000">*</font> </td>
+                                                                        <strong>
+                                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Ren%>"></asp:Label></strong> <font color="#FF0000">*</font> </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
 
@@ -140,7 +151,8 @@
                                                                 </tr>
                                                                 <tr style="display: none;">
 
-                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:TextBox ID="TB_Address" runat="server" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font>
@@ -148,7 +160,8 @@
                                                                 </tr>
                                                                 <tr style="display: none;">
 
-                                                                    <td class="formItemBgStyleForAlignLeft"><asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,CunChuRongLiang%>"></asp:Label></td>
+                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,CunChuRongLiang%>"></asp:Label></td>
                                                                     <td class="formItemBgStyleForAlignLeft">
                                                                         <asp:DropDownList ID="DL_ServerType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ServerType_SelectedIndexChanged">
                                                                             <asp:ListItem Value="Apply" Text="<%$ Resources:lang,ShenQing%>"></asp:ListItem>
@@ -161,15 +174,17 @@
 
                                                             <br />
 
-                                                            <li><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:Label><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,LianJie%>"></asp:Label><asp:HyperLink ID="HL_SourceCodeDownload" runat="server"  Text="<%$ Resources:lang,YuanMaXiaZai%>" Visible="false"></asp:HyperLink>
-                                                                <br /><asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YaoXieZhuQingLianXiTaiDingKeFu%>"></asp:Label><asp:Label ID="Label53535" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º021-51085119£©
+                                                            <li>
+                                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:Label><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,LianJie%>"></asp:Label><asp:HyperLink ID="HL_SourceCodeDownload" runat="server" Text="<%$ Resources:lang,YuanMaXiaZai%>" Visible="false"></asp:HyperLink>
+                                                                <br />
+                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YaoXieZhuQingLianXiTaiDingKeFu%>"></asp:Label><asp:Label ID="Label53535" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º021-51085119£©
                                                            
                                                                 </br>
                                                                      <p style="text-align: left;">
                                                                          <img alt="" src="../../../Logo/ECMP.png" style="width: 640px; height: 600px;" />
 
                                                                      </p>
-                                                                <%--  &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" /><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>£¬<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º<a href="tel:02151085119" class="call">021-51085119</a><br />--%>
+                                                                <%--  &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="../../../images/qq.png" /><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>£¬<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º<a href="tel:02151085119" class="call">021-51085119</a><br />--%>
                                                             </li>
 
                                                         </div>
