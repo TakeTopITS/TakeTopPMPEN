@@ -72,7 +72,7 @@
                                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></a>
                                                         </td>
                                                         <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <a href="TTSuperSystemModuleSet.aspx">
+                                                            <a href="Outer/TTSuperSystemModuleSet.aspx">
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiTongMoZuSheDing%>" ForeColor="White"></asp:Label>
                                                             </a>
                                                         </td>
