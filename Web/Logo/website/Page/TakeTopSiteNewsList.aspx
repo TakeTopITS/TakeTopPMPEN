@@ -8,10 +8,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title></title>
-    <link href="Logo/website/css/new.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/new.css" rel="stylesheet" type="text/css" />
 
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="js/allAHandler.js" type="text/javascript"></script>
+    <script src="../../../js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
 
     <style type="text/css">
         .ToolBarLeftRight {
@@ -99,7 +99,7 @@
                         <tr>
                             <td width="100px" align="left">
                                 <a href="javascript:ChangeMenu(1)">
-                                    <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="?????????" runat="server" /></a>
+                                    <asp:Image ID="IM_RightToLeft" ImageUrl="../../../Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="Arrow" runat="server" /></a>
 
                             </td>
                         </tr>
@@ -139,19 +139,19 @@
                     </table>
                 </div>
                 <div class="tupian">
-                    <img src="Logo/website/Images/1.jpg" />
+                    <img src="../../../Logo/website/Images/1.jpg" alt="1" />
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
         <div style="position: absolute; left: 50%; top: 50%;">
             <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                 <ProgressTemplate>
-                    <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                    <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                 </ProgressTemplate>
             </asp:UpdateProgress>
         </div>
     </form>
 
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

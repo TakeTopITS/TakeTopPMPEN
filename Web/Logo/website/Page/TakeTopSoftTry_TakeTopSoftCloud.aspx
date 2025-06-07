@@ -5,13 +5,13 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link href="Logo/website/css/ziliaoxiazai.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/ziliaoxiazai.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/allAHandler.js"></script>
-    <script type="text/javascript" src="js/layer/layer/layer.js"></script>
-    <script type="text/javascript" src="js/popwindow.js"></script>
+    <script type="text/javascript" src="../../../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/allAHandlerForWebSite.js"></script>
+    <script type="text/javascript" src="../../../js/layer/layer/layer.js"></script>
+    <script type="text/javascript" src="../../../js/popwindow.js"></script>
 
     <script type="text/javascript" language="javascript">
 
@@ -35,7 +35,7 @@
     <form id="form1" runat="server">
         <div class="fw_list">
             <p class="fw_zlxz"><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,WoMenTuoDingSuoYouGuanLiRuan%>"></asp:Label><a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
-                    <img align="absmiddle" src="images/qq.png" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>��
+                    <img align="absmiddle" src="../../../images/qq.png" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>��
             </p>
 
             <div class="wenzi">
@@ -54,4 +54,5 @@
         </div>
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

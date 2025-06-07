@@ -48,7 +48,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td style="text-align: right; width: 100px;">
+                                            <td style="text-align: right; width: 100px; vertical-align:middle;">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>£º</td>
                                             <td align="left" style="width: 80px;padding-top:2px;">
                                                 <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged">
@@ -177,5 +177,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

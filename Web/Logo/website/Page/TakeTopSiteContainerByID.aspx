@@ -1,28 +1,27 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsView.aspx.cs" Inherits="TakeTopSiteNewsView" %>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=device-dpi" />
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteContainerByID.aspx.cs" Inherits="TakeTopSiteContainerByID" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.7.2.min.js"></script>
+    <link id="mainCss" href="../../../css/cssGreen/bluelightmain.css" rel="stylesheet" type="text/css" />
+    <script src="../../../js/jquery.min.js" type="text/javascript"></script>
 
-    <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
-    <style>
+    <script src="../../../js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
+
+    <style type="text/css">
         /*html {
             overflow-x: hidden;
         }*/
         div {
-            cursor: pointer;
+            cursor: pointer
         }
 
         .ToolBarLeftRight {
             position: fixed !important;
-            top: 250px;
+            top: 320px;
             left: 0px;
             margin: 0 auto;
             position: absolute;
@@ -36,8 +35,10 @@
     </style>
 
     <script type="text/javascript" language="javascript">
-        document.ontouchmove = function (e) { e.preventDefault(); };
         $(function () {
+
+            aHandler();
+
             if (top.location != self.location) { } else { CloseWebPage(); }
             var browser = {
                 versions: function () {
@@ -93,6 +94,7 @@
             }
 
             if (way == 1) {
+
                 var browser = {
                     versions: function () {
                         var u = navigator.userAgent, app = navigator.appVersion;
@@ -116,103 +118,55 @@
             }
         }
 
-        //����URL��Ϊ����
-        function popShowByURL(url, title, width, height) {
-            var w = 'auto', h = 'auto', t =  url.replace('.aspx', '').replace("TT",'');
-            if (title) {
-                t = title;
-            }
-            if (width) {
-                w = width + 'px';
-            }
-            if (height) {
-                h = height + 'px';
-            }
-            layer.open({
-                type: 2,
-                title: t,
-                anim: 0,
-                fixed: true,
-                resize: true,
-                scrollbar: true,
-                moveOut: true,
-                shade: false,
-                shadeClose: false,
-                maxmin: true,
-                content: url,
-                area: ["99%", "99%"]
-                ,
-                zIndex: layer..zIndex, //�ص�1
-                success: function (layero) {
-                    layer.setTop(layero); //�ص�2
-                },
-                end: function () {
-
-                    if (location.href.indexOf("TTCollaborationManage.aspx") >= 0 || location.href.indexOf("TTPlanManagement.aspx") >= 0
-                        || location.href.indexOf("TTTaskManagement.aspx") >= 0 || location.href.indexOf("TTKPIManagement.aspx") >= 0
-                        || location.href.indexOf("TTWLManage.aspx") >= 0 || location.href.indexOf("TTProjectTaskManage.aspx") >= 0
-                        || location.href.indexOf("TTReqManage.aspx") >= 0 || location.href.indexOf("TTProjectRequirementManage.aspx") >= 0
-                        || location.href.indexOf("TTProjectWorkFlowManage.aspx") >= 0 || location.href.indexOf("TTDefectManage.aspx") >= 0
-                        || location.href.indexOf("TTProjectTaskList.aspx") >= 0 || location.href.indexOf("TTProjectRelatedReqMain.aspx") >= 0
-                        || location.href.indexOf("TTProjectRelatedDefectMain.aspx") >= 0
-
-                    ) {
-
-                        location.reload();
-                    }
-
-                }
-            });
-        }
-
-
     </script>
 
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?59b6149c7d08132d9262552e18205ae6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
 </head>
-<body>
+<body onload="parent.document.all.iHeight.height=this.document.body.scrollHeight+10;">
     <form id="form1" runat="server">
 
-        <div id="divBody" width="100%">
-            <table width="100%%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <div id="divLeftBar" runat="server" class="ToolBarLeftRight" width="95%">
+            <table width="100%">
                 <tr>
-                    <td height="31" class="page_topbj">
-                        <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td align="left">
-                                    <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td width="29">
-                                                <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
-                                            </td>
-                                            <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                <asp:Label ID="LB_CompanyNews" runat="server" Text="<%$ Resources:lang,LastestNews%>"></asp:Label>
-                                            </td>
-                                            <td width="5">
-                                                <img alt="" src="ImagesSkin/main_top_r.jpg" width="5" height="31" />
-                                            </td>
-                                        </tr>
-                                    </table>
+                    <td width="100px" align="left">
+                        <a href="javascript:ChangeMenu(1)">
+                            <asp:Image ID="IM_RightToLeft" ImageUrl="../../../Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="Arrow" runat="server" /></a>
 
-                                </td>
-                            </tr>
-                        </table>
                     </td>
                 </tr>
+            </table>
+        </div>
 
+        <div id="divBody" width="100%">
+            <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td valign="top" style="padding: 5px 5px 5px 5px; overflow-y: auto;">
+                    <td valign="top">
                         <asp:DataList ID="DataList1" runat="server" Width="100%">
                             <HeaderTemplate>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <%#DataBinder .Eval (Container.DataItem ,"Content") %>
                             </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Left" />
+                            <%--  <ItemStyle HorizontalAlign="center" />--%>
                         </asp:DataList>
                     </td>
                 </tr>
             </table>
         </div>
+        <br />
+        <iframe src="TakeTopSiteTop.aspx" id="SiteBottomFrameID" name="SiteBottomFrame" style="width: 100%; height: 80px;" frameborder="no" scrolling="no" marginwidth="0" marginheight="0" marginbottom="0" />
+
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../..//' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../..//' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+</html>

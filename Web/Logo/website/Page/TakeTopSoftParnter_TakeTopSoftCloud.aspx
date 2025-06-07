@@ -11,9 +11,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>‘⁄œﬂº”√À</title>
-    <link href="Logo/website/css/media.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/media.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
         a {
@@ -188,7 +188,7 @@
                                                             <li>
                                                                 <asp:Label ID="Label6" runat="server"  Text="<%$ Resources:lang,DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiKeFu%>"></asp:Label>£∫
                                                               <br />
-                                                                &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" />QQ</a>£¨Tel£∫<a href="tel:02151085119" class="call">021-51085119</a><br />
+                                                                &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="../../../images/qq.png" />QQ</a>£¨Tel£∫<a href="tel:02151085119" class="call">021-51085119</a><br />
                                                             </li>
 
                                                         </div>
@@ -255,11 +255,11 @@
         <div style="position: absolute; left: 50%; top: 50%;">
             <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                 <ProgressTemplate>
-                    <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                    <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                 </ProgressTemplate>
             </asp:UpdateProgress>
         </div>
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

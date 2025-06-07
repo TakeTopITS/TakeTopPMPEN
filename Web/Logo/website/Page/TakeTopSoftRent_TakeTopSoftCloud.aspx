@@ -9,14 +9,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>ÔÚÏß×âÓÃ---Ì©¶¥ÍØ¶¦</title>
-    <link href="Logo/website/css/media.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/media.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="Logo/website/js/jquery-1.3.1.js"></script>
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="js/allAHandler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../Logo/website/js/jquery-1.3.1.js"></script>
+    <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -310,7 +310,7 @@
                                                     <table style="font-size: large;">
                                                         <tr>
                                                             <td>
-                                                                <asp:Image ID="IMG_TakeTopAliPay" ImageUrl="Images/TakeTopSAASAliPay.png" Width="320" Height="320" runat="server"></asp:Image>
+                                                                <asp:Image ID="IMG_TakeTopAliPay" ImageUrl="../../../Images/TakeTopSAASAliPay.png" Width="320" Height="320" runat="server"></asp:Image>
                                                             </td>
                                                             <td style="vertical-align: middle;" class="section">
 
@@ -343,7 +343,7 @@
                     <div class="layui-layer layui-layer-iframe" id="popwindow" name="fixedDiv"
                         style="z-index: 9999; width: 680px; height: 530px; position: absolute; overflow: hidden; display: none; border-radius: 10px;">
                         <div class="layui-layer-title" style="background: #e7e7e8;" id="popwindow_title">
-                            <asp:Label ID="Label205" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label>
+                            <asp:Label ID="Label205" runat="server" Text="&lt;div&gt;&lt;img src=../../../ImagesSkin/Update.png border=0 width=30px height=30px alt='BusinessForm' /&gt;&lt;/div&gt;"></asp:Label>
                         </div>
                         <div id="popwindow_content" class="layui-layer-content" style="overflow: auto; padding: 0px 5px 0px 5px;">
 
@@ -365,11 +365,11 @@
         <div style="position: absolute; left: 50%; top: 50%;">
             <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                 <ProgressTemplate>
-                    <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                    <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                 </ProgressTemplate>
             </asp:UpdateProgress>
         </div>
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

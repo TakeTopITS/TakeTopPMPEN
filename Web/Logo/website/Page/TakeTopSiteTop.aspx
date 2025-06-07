@@ -13,11 +13,11 @@
     <meta name="description" content="泰顶、拓鼎、项目软件、项目系统、协同OA、ERP,协同平台、教育管理、金融服务、客户管理、客户关系、客户平台、系统实施、猎头、猎聘、云办公、泰顶最新产品、技术、解决方案价值及成功案例" />
 
     <title>企业管理软件提供商-泰顶拓鼎首页</title>
-    <link href="Logo/website/css/shouye.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/public.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/header.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/forever.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/scrollDiv.css" rel="stylesheet" type="text/css" />
+    <link href="..\css\shouye.css" rel="stylesheet" type="text/css" />
+    <link href="..\css\public.css" rel="stylesheet" type="text/css" />
+    <link href="..\css\header.css" rel="stylesheet" type="text/css" />
+    <link href="..\css\forever.css" rel="stylesheet" type="text/css" />
+    <link href="..\css\scrollDiv.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
         .mylist li {
@@ -46,11 +46,11 @@
             padding: 3px;
         }
     </style>
-    <script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="./js/public.js"></script>
-    <script type="text/javascript" src="./js/wk_inc.js" language="javascript"></script>
-    <script type="text/javascript" src="./js/forever.js"></script>
-    <script src="js/allAHandler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../js/public.js"></script>
+    <script type="text/javascript" src="../../../js/wk_inc.js" language="javascript"></script>
+    <script type="text/javascript" src="../../../js/forever.js"></script>
+    <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
 
     <script type="text/javascript">
 
@@ -191,8 +191,8 @@
             <div id="headerbg">
                 <div id="header">
                     <div id="logo">
-                        <img class="pc" src="Logo/website/Images/SiteLogoPC.png" />
-                        <img class="mobile" src="Logo/website/Images/SiteLogoMobile.png" />
+                        <img class="pc" src="../../../Logo/website/Images/SiteLogoPC.png" />
+                        <img class="mobile" src="../../../Logo/website/Images/SiteLogoMobile.png" />
                     </div>
 
                     <div id="lianjie1">
@@ -289,5 +289,5 @@
         </div>
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

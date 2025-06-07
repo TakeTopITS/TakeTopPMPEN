@@ -1,4 +1,4 @@
-using Stimulsoft.Svg;
+ï»¿using Stimulsoft.Svg;
 
 using System;
 using System.Data;
@@ -20,7 +20,7 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
 
                 LoadLanguageForDropListForWebSite(ddlLangSwitcher);
 
-                // È·±£ÏÂÀ­¿òÏÔÊ¾µ±Ç°ÓïÑÔ£¨ÓÅÏÈ´ÓCookie¶ÁÈ¡£©
+                // ç¡®ä¿ä¸‹æ‹‰æ¡†æ˜¾ç¤ºå½“å‰è¯­è¨€ï¼ˆä¼˜å…ˆä»Cookieè¯»å–ï¼‰
                 strLangCode = Session["LangCode"].ToString();
 
                 ddlLangSwitcher.SelectedValue = strLangCode;
@@ -39,19 +39,19 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
 
     protected override void InitializeCulture()
     {
-        // È·¶¨ÓïÑÔ´úÂëµÄÓÅÏÈ¼¶£ºCookie > Session > Ä¬ÈÏÅäÖÃ
+        // ç¡®å®šè¯­è¨€ä»£ç çš„ä¼˜å…ˆçº§ï¼šCookie > Session > é»˜è®¤é…ç½®
         strLangCode = Request.Cookies["LangCode"]?.Value ??
                      Session["LangCode"]?.ToString() ??
                      System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
 
-        // È·±£SessionºÍCookieÍ¬²½
+        // ç¡®ä¿Sessionå’ŒCookieåŒæ­¥
         Session["LangCode"] = strLangCode;
         Response.SetCookie(new HttpCookie("LangCode", strLangCode)
         {
             Expires = DateTime.Now.AddYears(1)
         });
 
-        // ÉèÖÃµ±Ç°Ïß³ÌµÄÎÄ»¯
+        // è®¾ç½®å½“å‰çº¿ç¨‹çš„æ–‡åŒ–
         System.Threading.Thread.CurrentThread.CurrentCulture =
             System.Globalization.CultureInfo.CreateSpecificCulture(strLangCode);
         System.Threading.Thread.CurrentThread.CurrentUICulture =
@@ -75,7 +75,7 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
     {
         string selectedLang = ddlLangSwitcher.SelectedValue.Trim();
 
-        // ¸üĞÂSessionºÍCookie
+        // æ›´æ–°Sessionå’ŒCookie
         Session["LangCode"] = selectedLang;
 
 
@@ -84,13 +84,13 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
             Expires = DateTime.Now.AddYears(1)
         });
 
-        // ÖØĞÂ¼ÓÔØÕû¸ö¿ò¼Ü¼¯
+        // é‡æ–°åŠ è½½æ•´ä¸ªæ¡†æ¶é›†
         string script = @"
             <script type='text/javascript'>
-                if(top != self) {  // Èç¹ûµ±Ç°Ò³ÃæÊÇÔÚ¿ò¼ÜÖĞ
-                    top.location.href = top.location.href;  // Ë¢ĞÂÕû¸ö¿ò¼Ü¼¯
+                if(top != self) {  // å¦‚æœå½“å‰é¡µé¢æ˜¯åœ¨æ¡†æ¶ä¸­
+                    top.location.href = top.location.href;  // åˆ·æ–°æ•´ä¸ªæ¡†æ¶é›†
                 } else {
-                    window.location.href = window.location.href;  // ÆÕÍ¨Ò³ÃæË¢ĞÂ
+                    window.location.href = window.location.href;  // æ™®é€šé¡µé¢åˆ·æ–°
                 }
             </script>";
 
@@ -111,9 +111,9 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
     protected void BindHeadLineData()
     {
         string strHtml = string.Empty;
-        string strHQL = string.Format(@"Select * from T_HeadLine where LangCode = '{0}' 
-                       and Type =  '{1}' and Status = '{2}' and IsHead = 'YES' 
-                       Order by ID DESC", strLangCode,LanguageHandle.GetWord("WaiBu"),LanguageHandle.GetWord("FaBu"));
+        string strHQL = "Select * from T_HeadLine where LangCode = '" + strLangCode + "' " +
+                       "and Type = 'å¤–éƒ¨' and Status = 'å‘å¸ƒ' and IsHead = 'YES' " +
+                       "Order by ID DESC";
 
         DataTable dtHeadLine = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "HeadLine").Tables[0];
         DataView dvHeadLine = new DataView(dtHeadLine);

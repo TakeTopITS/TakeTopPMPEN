@@ -10,8 +10,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link href="css/zhuce.css" rel="stylesheet" type="text/css">
-    <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
+    <link href="../../../css/zhuce.css" rel="stylesheet" type="text/css">
+    <link id="mainCss" href="../../../css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         body {
             background-repeat: repeat-x;
@@ -25,8 +25,8 @@
             width: expression (document.body.clientWidth <= 277? "277px" : "auto" ));
         }
     </style>
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="js/allAHandler.js"></script>
+    <script type="text/javascript" src="../../../js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/allAHandlerForWebSite.js"></script>
     <script type="text/javascript" language="javascript">
         $(function () {
         });
@@ -53,11 +53,11 @@
 
             if (detectmob()) {
 
-                window.open("Logo/indexSAAS.html");
+                window.open("../../../Logo/indexSAAS.html");
             }
             else {
 
-                window.open("Logo/indexSAAS.html", "_parent");
+                window.open("../../../Logo/indexSAAS.html", "_parent");
             }
         }
 
@@ -74,7 +74,7 @@
           <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
                 <td align="center" class="formItemBgStyleForAlignLeft" colspan="2"> 
-                    <img src="Logo/CommercelLogo.jpg" style ="width :160px;height:160px;" />
+                    <img src="../../../Logo/CommercelLogo.jpg" style ="width :160px;height:160px;" />
                         <br />      
                     <br />
                 </td>
@@ -553,10 +553,12 @@
     <div class="dibupic"> </div>
     <div style="position: absolute; left: 50%; top: 50%;">
       <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
-        <ProgressTemplate> <img src="Images/Processing.gif" alt="Loading,please wait..." /> </ProgressTemplate>
+        <ProgressTemplate> <img src="../../../Images/Processing.gif" alt="Loading,please wait..." /> </ProgressTemplate>
       </asp:UpdateProgress>
     </div>
   </form>
 </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script></html>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+
+</html>

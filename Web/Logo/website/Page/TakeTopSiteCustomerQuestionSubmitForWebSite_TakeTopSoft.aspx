@@ -9,9 +9,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link href="Logo/website/css/yijianfankui.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/allAHandler.js"></script>
+    <link href="../../../Logo/website/css/yijianfankui.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/allAHandlerForWebSite.js"></script>
     <script type="text/javascript" language="javascript">
         $(function () {
             if (top.location != self.location) { } else { CloseWebPage(); }
@@ -32,7 +32,7 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div id="#AboveDiv" style="position: relative; top: 30px; text-align: center;">
-                        <img src="Images/khfw.gif" alt="" style="width: 80%;" />
+                        <img src="../../../Images/khfw.gif" alt="" style="width: 80%;" />
                         <table style="width: 100%;">
                             <tr>
                                 <td align="center" style="padding-top: 15px;">
@@ -151,11 +151,11 @@
             <div style="position: absolute; left: 50%; top: 50%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                        <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>
         </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

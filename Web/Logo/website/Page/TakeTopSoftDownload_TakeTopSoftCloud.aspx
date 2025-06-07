@@ -12,9 +12,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>‘⁄œﬂº”√À</title>
-    <link href="Logo/website/css/media.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
-    <link href="Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/media.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
         a {
@@ -166,7 +166,7 @@
                                                            
                                                                 </br>
                                                                      <p style="text-align: left;">
-                                                                         <img alt="" src="Logo/ECMP.png" style="width: 640px; height: 600px;" />
+                                                                         <img alt="" src="../../../Logo/ECMP.png" style="width: 640px; height: 600px;" />
 
                                                                      </p>
                                                                 <%--  &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" /><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>£¨<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£∫<a href="tel:02151085119" class="call">021-51085119</a><br />--%>
@@ -192,11 +192,11 @@
         <div style="position: absolute; left: 50%; top: 50%;">
             <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                 <ProgressTemplate>
-                    <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                    <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                 </ProgressTemplate>
             </asp:UpdateProgress>
         </div>
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

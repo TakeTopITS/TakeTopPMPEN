@@ -86,12 +86,11 @@ public partial class TakeTopSiteNewsList : System.Web.UI.Page
             }
         }
     }
-
     protected void LoadHeadLine()
     {
         string strHQL;
 
-        strHQL = string.Format(@"Select * from T_HeadLine where LangCode = '{0}' and Type = 'External' and Status = 'Publish' and IsHead = 'YES' 
+        strHQL = string.Format(@"Select * from T_HeadLine where LangCode = '{0}' and Type = '外部' and Status = '发布' and IsHead = 'YES' 
                           Order by ID DESC", strLangCode);
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 

@@ -7,10 +7,10 @@
 <head id="Head1" runat="server">
     <title></title>
 
-    <link href="Logo/website/css/bluelightSiteleftEx.css" rel="stylesheet" type="text/css" />
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="lhgdialog/lhgcore.min.js"></script>
-    <script type="text/javascript" src="lhgdialog/lhgdialog.min.js"> </script>
+    <link href="../../../Logo/website/css/bluelightSiteleftEx.css" rel="stylesheet" type="text/css" />
+    <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../lhgdialog/lhgcore.min.js"></script>
+    <script type="text/javascript" src="../../../lhgdialog/lhgdialog.min.js"> </script>
 
     <script type="text/javascript" language="javascript">
         document.ontouchmove = function (e) {
@@ -488,7 +488,7 @@
 
         div.leftSet {
             height: 40px;
-            background: url(Logo/website/Images/leftSetbg.gif) 0 0 no-repeat;
+            background: url(../../../Logo/website/Images/leftSetbg.gif) 0 0 no-repeat;
             z-index: -2;
         }
 
@@ -501,7 +501,7 @@
         }
 
             .content span {
-                background: url(Logo/website/Images/jiant.gif) 0 12px no-repeat;
+                background: url(../../../Logo/website/Images/jiant.gif) 0 12px no-repeat;
                 padding-left: 12px;
             }
 
@@ -618,7 +618,7 @@
 
                                                 </td>
                                                 <td align="left" width="12">
-                                                    <img src="Logo/website/Images/left-jiantou.png" /></td>
+                                                    <img src="../../../Logo/website/Images/left-jiantou.png" /></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -636,7 +636,7 @@
 
                 <asp:HiddenField ID="HF_ClickValue" runat="server" Value="" />
                 <div id="divload" style="position: absolute; left: 40%; top: 30%; display: none;">
-                    <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                    <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                 </div>
             </ContentTemplate>
 
@@ -644,12 +644,12 @@
         <div style="position: absolute; left: 20%; top: 20%;">
             <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                 <ProgressTemplate>
-                    <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                    <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                 </ProgressTemplate>
             </asp:UpdateProgress>
         </div>
     </form>
 
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

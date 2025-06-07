@@ -9,13 +9,13 @@
 
 <head id="Head1" runat="server">
     <title>‘⁄œﬂ ‘”√</title>
-    <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
+    <link id="mainCss" href="../../../css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <link id="flxappCss" href="css/flxapp.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="Logo/website/js/jquery-1.3.1.js"></script>
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="js/allAHandler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../Logo/website/js/jquery-1.3.1.js"></script>
+    <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
 
     <style type="text/css">
         body {
@@ -53,7 +53,7 @@
                 <ContentTemplate>
 
                     <div style="font-size: 36pt; width: 100%; text-align: center;">
-                        <img align="absmiddle" src="images/onlineTry.jpg" alt="onlineTry" />
+                        <img align="absmiddle" src="../../../images/onlineTry.jpg" alt="onlineTry" />
                     </div>
                     <table style="width: 100%;">
                         <tr>
@@ -159,7 +159,7 @@
                                         <td colspan="2" align="center" class="formItemBgStyleForAlignCenter">
                                             <br />
                                             <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
-                                                <img align="absmiddle" src="images/qq.png" />QQ </a>£¨
+                                                <img align="absmiddle" src="../../../images/qq.png" />QQ </a>£¨
                                           
                                             <a href="tel:02151085119" class="call">Tel£∫021-51085119</a>
                                         </td>
@@ -174,11 +174,11 @@
             <div style="position: absolute; left: 50%; top: 50%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                        <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>
         </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

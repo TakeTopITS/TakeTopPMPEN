@@ -20,7 +20,7 @@ using ProjectMgt.DAL;
 using ProjectMgt.BLL;
 
 
-public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
+public partial class TakeTopSoftParnter_TakeTopSoftCloud : System.Web.UI.Page
 {
     string strWebSite;
     protected void Page_Load(object sender, EventArgs e)
@@ -67,24 +67,24 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
         strAddress = TB_Address.Text.Trim();
         strPostCode = "";
         strType = DL_Type.SelectedValue.Trim();
-        strQuestion = LanguageHandle.GetWord("YuanMaXiaZai");
+        strQuestion = Resources.lang.ChengWeiHeZuoHuoBan;
         dtAnswerTime = DateTime.Now.AddHours(24);
 
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC") + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDHXBNWKJC + "')", true);
 
-            LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha");
+            LB_Message.Text = Resources.lang.TiJiaoShiBaiQingJianCha;
         }
         else
         {
             if (String.Compare(Request.Cookies["CheckCode"].Value, TB_CheckCode.Text, true) != 0)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM") + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYZMCWSRZDYZM + "')", true);
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = LanguageHandle.GetWord("YanZhengMaCuoWuQingJianCha");
+                LB_Message.Text = Resources.lang.YanZhengMaCuoWuQingJianCha;
                 return;
             }
 
@@ -92,13 +92,13 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi") + strCompany + LanguageHandle.GetWord("DeYuanGong") + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe") + strQuestion + LanguageHandle.GetWord("DeShenQingQingJiShiChuLi");
+                string strNofiInfo = Resources.lang.TiShiGongSi + strCompany + Resources.lang.DeYuanGong + strContactPerson + "( " + strPhoneNumber + " )" + Resources.lang.TiJiaoLe  + strQuestion + Resources.lang.DeShenQingQingJiShiChuLi;
                 Action action = new Action(delegate ()
                 {
                     try
                     {
                         Msg msg = new Msg();
-                        msg.SendMSM("Message", strCSOperatorCode, strNofiInfo, "ADMIN");
+                        msg.SendMSM("Message",strCSOperatorCode, strNofiInfo, "ADMIN");
                     }
                     catch (Exception ex)
                     {
@@ -114,26 +114,24 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'"+ LanguageHandle.GetWord("XinJian") +"'" + ",'','','','','" + strWebSite + "')";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'" + Resources.lang.XinJian + "'"  + ",'','','','','" + strWebSite + "')";
 
             try
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
 
-                LB_Message.Text = LanguageHandle.GetWord("TiJiaoChengGongXiaZaiLianJieZa");
+                LB_Message.Text = Resources.lang.TiJiaoChengGong;
 
-                HL_SourceCodeDownload.Visible = true;
-                HL_SourceCodeDownload.NavigateUrl = "https://www.taketopits.com/Download/Setup/Develop/TakeTopPCMPDPSetup.zip";
-
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('---提交成功')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", Resources.lang.TiJiaoChengGongTaiDingTuoDingK, true);
             }
             catch (Exception err)
             {
                 LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
 
-                LB_Message.Text = LanguageHandle.GetWord("TiJiaoShiBaiQingJianCha");
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('-----提交失败，请检查！')", true);
+                LB_Message.Text = Resources.lang.TiJiaoShiBaiQingJianCha;
+
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", Resources.lang.TiJiaoShiBaiQingDianHuaLianXiT, true);
 
             }
         }

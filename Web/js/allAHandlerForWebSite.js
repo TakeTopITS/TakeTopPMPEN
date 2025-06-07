@@ -1,6 +1,7 @@
 ﻿
-document.write("<script language=javascript src='js/layer/layer/layer.js'></script>");
-document.write("<script language=javascript src='js/popwindow.js'></script>");
+document.write("<script language=javascript src='../../../js/layer/layer/layer.js'></script>");
+document.write("<script language=javascript src='../../../js/popwindow.js'></script>");
+
 
 function aHandler() {
 
@@ -271,36 +272,6 @@ function aHandlerForPopFixedSizeWindow() {
         }
 
     });
-}
-
-//使链接打开的窗口在框架内，用于自定义表单页面
-function aHandlerForWorkflowDIYFormDataPopWindow(e) {
-    e = e || event;
-    var target = e.target || e.srcElement,
-        url;
-    if (target.tagName === 'A') {
-
-        url = target.href;
-        title = target.innerText;
-
-    } else if (target.tagName === 'SPAN') {
-
-        //父标签onclick属性的值
-        url = target.parentNode.href;
-        if (url === 'undefined' || url === null || url === "") {
-            return;
-        }
-        title = target.innerText;
-    }
-
-    if (url.toUpperCase().indexOf("TTUserInforSimple.aspx".toUpperCase()) !== -1 || url.toUpperCase().indexOf("TTWorkFlowViewMain.aspx".toUpperCase()) !== -1
-        || url.toUpperCase().indexOf("TTWFChartView".toUpperCase()) !== -1 || url.toUpperCase().indexOf("TTWLRelatedDoc.aspx".toUpperCase()) !== -1
-    ) {
-
-        top.frames[0].frames[2].parent.frames["rightTabFrame"].popShowByURL(url, title, 800, 600, window.location, window.location)
-
-        stopDefault(e);
-    }
 }
 
 //取消事件的默认行为

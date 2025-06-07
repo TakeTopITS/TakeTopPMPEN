@@ -6,9 +6,9 @@
 <head id="Head1" runat="server">
     <title>项目管理软件与咨询服务提供商-泰顶拓鼎</title>
 
-     <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-       <script src="js/allAHandler.js" type="text/javascript"></script>
+     <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../js/jquery-1.7.2.min.js" type="text/javascript"></script>
+       <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
 
     <script>
         var _hmt = _hmt || [];
@@ -83,5 +83,5 @@
 <noframes>
     <body>你的浏览器不支持框架！</body>
 </noframes>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

@@ -5,25 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-  
     <meta charset="UTF-8" />
     <meta name="keywords" content="泰顶,拓鼎,项目管理,项目管理软件,项目管理系统,项目管理平台,项目型ERP" />
     <meta name="description" content="泰顶、拓鼎、项目管理、项目软件、项目系统、ERP、CRM、OA、协同平台、云办公、泰顶最新产品、技术、解决方案价值及成功案例" />
 
     <title>项目型企业管理软件提供商-泰顶拓鼎首页</title>
-    <link href="Logo/website/css/shouye.css" rel="stylesheet" type="text/css" />
-    <link href="./css/public.css" rel="stylesheet" type="text/css" />
-    <link href="./css/header.css" rel="stylesheet" type="text/css" />
-    <link href="./css/forever.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="./js/public.js"></script>
-    <script src="./js/wk_inc.js" language="javascript"></script>
-    <script type="text/javascript" src="./js/forever.js"></script>
+    <link href="../../../css/shouye.css" rel="stylesheet" type="text/css" />
+    <link href="../../../css/public.css" rel="stylesheet" type="text/css" />
+    <link href="../../../css/header.css" rel="stylesheet" type="text/css" />
+    <link href="../../../css/forever.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../js/public.js"></script>
+    <script type="text/javascript" src="../../../js/wk_inc.js"></script>
+    <script type="text/javascript" src="../../../js/forever.js"></script>
 
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="js/allAHandler.js" type="text/javascript"></script>
+    <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
 
     <style type="text/css">
         .TextColor {
@@ -54,7 +52,7 @@
                     window.sidebar.addPanel(sTitle, sURL, "");
                 }
                 catch (e) {
-                    alert("�����ղ�ʧ�ܣ���ʹ��Ctrl+D�������");
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
                 }
             }
         }
@@ -108,5 +106,5 @@
         </div>
     </form>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

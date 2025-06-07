@@ -27,7 +27,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
         {
             if (strHomeModuleName == "" | strHomeModuleName == null)
             {
-                strHomeModuleName = LanguageHandle.GetWord("HomePage");
+                strHomeModuleName = Resources.lang.HomePage;
             }
 
             LB_HomeModuleName.Text = strHomeModuleName;
@@ -82,7 +82,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
 
             if (strIconURL.Trim() == "")
             {
-                strIconURL = @"Logo/website/Images/ModuleIcon.png";
+                strIconURL = @"../../../Logo/website/Images/ModuleIcon.png";
             }
             if (strPageName.IndexOf("?") >= 0)
             {
@@ -210,7 +210,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                     {
                         if (strMsg != "")
                         {
-                            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSTRMSG") + "');</script>");
+                            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSTRMSG + "');</script>");
 
                             strHQL = "Insert Into T_UserLoginManageMsgRelatedUser(LoginID,UserCode,UserName)";
                             strHQL += " Values(" + strLoginID + ",'" + strUserCode + "','" + strUserName + "')";
@@ -227,7 +227,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                             ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_UserLoginManage");
                             if (ds.Tables[0].Rows.Count == 0)
                             {
-                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSTRMSG") + "');</script>");
+                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSTRMSG + "');</script>");
 
                                 strHQL = "Insert Into T_UserLoginManageMsgRelatedUser(LoginID,UserCode,UserName)";
                                 strHQL += " Values(" + strLoginID + ",'" + strUserCode + "','" + strUserName + "')";

@@ -58,18 +58,18 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strEMail == "" | strQuestion == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC") + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDHXBNWKJC + "')", true);
 
-            LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC") + "";
+            LB_Message.Text = "" + Resources.lang.ZZTJSBJC + "";
         }
         else
         {
             if (String.Compare(Request.Cookies["CheckCode"].Value, TB_CheckCode.Text, true) != 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM") + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYZMCWSRZDYZM + "')", true);
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC") + "";
+                LB_Message.Text = "" + Resources.lang.ZZTJSBJC + "";
                 return;
             }
 
@@ -77,7 +77,7 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = LanguageHandle.GetWord("TiShiGongSi") + strCompany + LanguageHandle.GetWord("DeYuanGong") + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("TiJiaoLe") + strType + LanguageHandle.GetWord("DeWenTiFanKuiQingGuanZhu");
+                string strNofiInfo = Resources.lang.TiShiGongSi + strCompany + Resources.lang.DeYuanGong + strContactPerson + "( " + strPhoneNumber + " )" + Resources.lang.TiJiaoLe + strType + Resources.lang.DeWenTiFanKuiQingGuanZhu;
                 Action action = new Action(delegate ()
                 {
                     try
@@ -102,21 +102,22 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'"+ LanguageHandle.GetWord("XinJian") +"'" + ",'','','',''," + "'" + strWebSite + "'" + ")";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'" + Resources.lang.XinJian + "'"  + ",'','','',''," + "'" + strWebSite + "'" + ")";
 
 
             try
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJCGTDKFHZYTZNBNJJWTXX")+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTJCGTDKFHZYTZNBNJJWTXX+"')", true);
 
-                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJCGTDKFHZYTZNBNJJWTXX") + "";
+                LB_Message.Text = "" + Resources.lang.ZZTJCGTDKFHZYTZNBNJJWTXX + "";
             }
-            catch (Exception err)
+            catch(Exception err)
             {
                 LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
-                LB_Message.Text = "" + LanguageHandle.GetWord("ZZTJSBJC") + "";
+
+                LB_Message.Text = "" + Resources.lang.ZZTJSBJC + "";
             }
         }
     }
