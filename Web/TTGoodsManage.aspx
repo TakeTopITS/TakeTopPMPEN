@@ -184,9 +184,10 @@
                                             <td valign="top">
                                                 <table style="font-size: 10pt; width: 100%" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td onmousemove="javascript:displayOwnerColumn();" style="vertical-align: middle;">......
+                                                        <td onmousemove="javascript:displayOwnerColumn();" style="vertical-align:bottom;">
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;<img src="Images/LeftRightArrow.png" alt="Arrow" />
                                                         </td>
-                                                        <td valign="top" align="left" style="padding: 5px 2px  0px 5px;">
+                                                        <td valign="top" align="left" style="padding: 0px 2px 5px 5px;">
                                                             <table cellpadding="0" cellspacing="0" class="formBgStyle">
                                                                 <tr>
                                                                     <td align="right">
