@@ -52,7 +52,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
         if (strSiteAppSystemName == "" | strSiteAppName == "")
         {
-            LB_Message.Text = LanguageHandle.GetWord("TiShiDaiHaoDeDuBuNengKongQingJ");
+            LB_Message.Text = Resources.lang.TiShiDaiHaoDeDuBuNengKongQingJ;
         }
         else
         {
@@ -79,7 +79,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
                 if (ds.Tables[0].Rows.Count == 0)
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("HuiFuShiBaiMeiYouNiXuanQuDeCha");
+                    LB_Message.Text = Resources.lang.HuiFuShiBaiMeiYouNiXuanQuDeCha;
                     return;
                 }
 
@@ -110,7 +110,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("ShiBaiCunZaiXiangTongMingChenD");
+                    LB_Message.Text = Resources.lang.ShiBaiCunZaiXiangTongMingChenD;
                     return;
                 }
 
@@ -157,9 +157,8 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 {
                     ShareClass.RunSqlCommand(strHQL);
                 }
-                catch (Exception err)
+                catch
                 {
-                    LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
                 }
 
 
@@ -168,7 +167,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 try
                 {
                     string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                    string strMSMMsg = strRentUserName + LanguageHandle.GetWord("DianHua") + strRentUserPhoneNumber + LanguageHandle.GetWord("YiHuiFu") + strRentProductName + "(" + strRentProductVersion + LanguageHandle.GetWord("ZuYongZhanDian") + strSiteAppURL;
+                    string strMSMMsg = strRentUserName + Resources.lang.DianHua + strRentUserPhoneNumber + Resources.lang.YiHuiFu + strRentProductName + "(" + strRentProductVersion + Resources.lang.ZuYongZhanDian + strSiteAppURL;
                     Action action = new Action(delegate ()
                     {
                         Msg msg = new Msg();
@@ -181,11 +180,11 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                         {
                         }
 
-                        string strEMailMsg = LanguageHandle.GetWord("NiHaoNi") + strServerType + LanguageHandle.GetWord("DeTaiDingTuoDing") + strRentProductName + LanguageHandle.GetWord("YiHuiFuZhanDianDiZhiShi") + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoMiMaQingFangXinS");
+                        string strEMailMsg = Resources.lang.NiHaoNi + strServerType + Resources.lang.DeTaiDingTuoDing + strRentProductName + Resources.lang.YiHuiFuZhanDianDiZhiShi + strSiteAppURL + Resources.lang.DengLuZhangHaoMiMaQingFangXinS;
 
                         try
                         {
-                            msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianHuiFuTongZhi"), strEMailMsg, "ADMIN");
+                            msg.SendMailByEmail(strRentUserEMail, Resources.lang.ZhanDianHuiFuTongZhi, strEMailMsg, "ADMIN");
                         }
                         catch
                         {

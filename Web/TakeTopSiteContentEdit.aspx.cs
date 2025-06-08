@@ -29,9 +29,9 @@ public partial class TakeTopSiteContentEdit : System.Web.UI.Page
     {
         //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
-        _FileBrowser.BasePath = "ckfinder/";
+        _FileBrowser.BasePath = "ckfinder/"; Session["PageName"] = "TakeTopSiteContentEdit";
         _FileBrowser.SetupCKEditor(CKEditor1);
-CKEditor1.Language = Session["LangCode"].ToString();
+        CKEditor1.Language = Session["LangCode"].ToString();
 
         strUserCode = Session["UserCode"].ToString();
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
@@ -94,12 +94,12 @@ CKEditor1.Language = Session["LangCode"].ToString();
                         AND trim(ModuleName) || '{0}' NOT IN (SELECT DISTINCT Trim(ModuleName) || LangCode FROM t_sitemodulecontent Where LangCode = '{0}')", strLangCode, strFromLangCode);
             ShareClass.RunSqlCommand(strHQL);
 
-          
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG") + "')", true);
+
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZCG + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC") + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZSBJC + "')", true);
         }
     }
 
@@ -218,11 +218,11 @@ CKEditor1.Language = Session["LangCode"].ToString();
             BT_Update.Enabled = true;
             BT_Delete.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
         catch (Exception err)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
         }
     }
 
@@ -271,11 +271,11 @@ CKEditor1.Language = Session["LangCode"].ToString();
 
             LoadSiteModuleContent(strModuleName, strLangCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG") + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC") + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
         }
     }
 
@@ -314,7 +314,7 @@ CKEditor1.Language = Session["LangCode"].ToString();
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>" + LanguageHandle.GetWord("XiTongMoZu") + "<b>";
+        node1.Text = "<b>" + Resources.lang.XiTongMoZu + "<b>";
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);

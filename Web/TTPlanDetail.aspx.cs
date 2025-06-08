@@ -31,7 +31,7 @@ public partial class TTPlanDetail : System.Web.UI.Page
 
         //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
-        _FileBrowser.BasePath = "ckfinder/";
+        _FileBrowser.BasePath = "ckfinder/"; Session["PageName"] = "TakeTopSiteContentEdit";
         _FileBrowser.SetupCKEditor(HE_LogDetail);
 HE_LogDetail.Language = Session["LangCode"].ToString();
 

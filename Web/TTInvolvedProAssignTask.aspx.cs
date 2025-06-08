@@ -22,7 +22,7 @@ public partial class TTInvolvedProAssignTask : System.Web.UI.Page
 
         //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
-        _FileBrowser.BasePath = "ckfinder/";
+        _FileBrowser.BasePath = "ckfinder/"; Session["PageName"] = "TakeTopSiteContentEdit";
         _FileBrowser.SetupCKEditor(HE_Operation);
 HE_Operation.Language = Session["LangCode"].ToString();
 

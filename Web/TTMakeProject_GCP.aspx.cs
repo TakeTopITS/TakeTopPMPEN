@@ -33,7 +33,7 @@ public partial class TTMakeProject_GCP : System.Web.UI.Page
 
         //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
-        _FileBrowser.BasePath = "ckfinder/";
+        _FileBrowser.BasePath = "ckfinder/"; Session["PageName"] = "TakeTopSiteContentEdit";
         _FileBrowser.SetupCKEditor(HE_AcceptStandard);
 HE_AcceptStandard.Language = Session["LangCode"].ToString();
         _FileBrowser.SetupCKEditor(HE_ProjectDetail);

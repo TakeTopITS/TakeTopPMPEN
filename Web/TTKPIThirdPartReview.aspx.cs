@@ -32,7 +32,7 @@ public partial class TTKPIThirdPartReview : System.Web.UI.Page
 
         //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
-        _FileBrowser.BasePath = "ckfinder/";
+        _FileBrowser.BasePath = "ckfinder/"; Session["PageName"] = "TakeTopSiteContentEdit";
         _FileBrowser.SetupCKEditor(HE_UserSummary);
 HE_UserSummary.Language = Session["LangCode"].ToString();
 

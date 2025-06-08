@@ -18,6 +18,8 @@
 
         });
 
+      
+
     </script>
 </head>
 <body>
@@ -48,9 +50,9 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td style="text-align: right; width: 100px; vertical-align:middle;">
+                                            <td style="text-align: right; width: 100px; vertical-align: middle;">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>£º</td>
-                                            <td align="left" style="width: 80px;padding-top:2px;">
+                                            <td align="left" style="width: 80px; padding-top: 2px;">
                                                 <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                             </td>
@@ -144,9 +146,9 @@
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                                         </td>
                                                         <td class="formItemBgStyleForAlignLeft">
-                                                            <CKEditor:CKEditorControl ID="CKEditor1" Width="98%" Height="550px" runat="server" Visible="False">
+                                                            <CKEditor:CKEditorControl ID="CKEditor1" Width="98%" Height="550px" runat="server" Visible="False" >
                                                             </CKEditor:CKEditorControl>
-                                                            <CKEditor:CKEditorControl runat="server" ID="HTEditor1" Width="98%" Height="550px" Visible="False" />
+                                                            <CKEditor:CKEditorControl runat="server" ID="HTEditor1" Width="98%" Height="550px" Visible="False"  />
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -177,5 +179,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory =  '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

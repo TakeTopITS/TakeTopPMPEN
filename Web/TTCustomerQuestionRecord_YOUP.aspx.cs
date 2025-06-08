@@ -30,7 +30,7 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
 
         //CKEditor≥ı ºªØ      
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
-        _FileBrowser.BasePath = "ckfinder/";
+        _FileBrowser.BasePath = "ckfinder/"; Session["PageName"] = "TakeTopSiteContentEdit";
         _FileBrowser.SetupCKEditor(TB_Question);
 TB_Question.Language = Session["LangCode"].ToString();
 

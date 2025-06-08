@@ -90,7 +90,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             string strIsOEM = Request.QueryString["IsOEM"];
 
             string strRentProductVersionType;
-            if (strRentProductVersion == LanguageHandle.GetWord("JiTuanBan"))
+            if (strRentProductVersion == Resources.lang.JiTuanBan)
             {
                 strRentProductVersionType = "YES";
             }
@@ -102,14 +102,19 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
 
             if (VerifyWebSiteAppIsExist(strSiteName, strSiteAppName))
             {
-                LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiCunZaiXiangTon");
+                LB_Message.Text = Resources.lang.ChuangJianShiBaiCunZaiXiangTon;
                 return;
             }
 
             //创建站点应用
             CreateSiteAPP(strRentProductType, strRentProductVersionType, strSiteAppSystemName, strSiteAppName, strSiteAppURL, strSiteName, strSiteBindingInfo, strSiteDirectory, strSiteTemplateDirectory, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath, strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory, strSiteDBLoginUserID, strSiteDBUserLoginPassword, strIsOEM);
-           
-            LB_Message.Text =  LanguageHandle.GetWord("ZhanDianChuangJianChengGongNiK") + "<br/><br/> <a href='\"" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>" +  LanguageHandle.GetWord("DengLuZhangHao") + " ：ADMIN   " + LanguageHandle.GetWord("MiMa")  + " ： 12345678";
+
+
+            ////跳转页面
+            //string strScript = "<script>openMDIFrom('" + strSiteAppURL + "');</script>";
+            //ClientScript.RegisterStartupScript(GetType(), "", strScript);
+
+            LB_Message.Text = Resources.lang.ZhanDianChuangJianChengGongNiK + "< br/><br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>" + Resources.lang.DengLuZhangHao + " ：ADMIN   " + Resources.lang.MiMa + " ： 12345678";
 
             LB_CloseMessage.Visible = false;
         }
@@ -152,7 +157,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
         //从模板数据库恢复数据库
         if (!ShareClass.RestoreDatabaseFromTemplateDB(strSiteDBName, strDBRestoreFile))
         {
-            LogClass.WriteLogFile(LanguageHandle.GetWord("HuiFuShuJuKuShiBai"));
+            LogClass.WriteLogFile(Resources.lang.HuiFuShuJuKuShiBai);
         }
 
         //授予用户数据库权限，只针对这个数据库

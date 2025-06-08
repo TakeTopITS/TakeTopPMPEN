@@ -32,7 +32,7 @@ public partial class TTScheduleEventLesderReview : System.Web.UI.Page
 
         //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
-        _FileBrowser.BasePath = "ckfinder/";
+        _FileBrowser.BasePath = "ckfinder/"; Session["PageName"] = "TakeTopSiteContentEdit";
         _FileBrowser.SetupCKEditor(HE_LeaderReview);
 HE_LeaderReview.Language = Session["LangCode"].ToString();
 

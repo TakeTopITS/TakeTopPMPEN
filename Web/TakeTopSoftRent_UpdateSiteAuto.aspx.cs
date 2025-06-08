@@ -35,7 +35,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiShengJiNiDeYingYongZha");
+        LB_Message.Text = Resources.lang.ZhengZaiShengJiNiDeYingYongZha;
 
         if (Page.IsPostBack == false)
         {
@@ -44,16 +44,16 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
                 try
                 {
                     UpdateSite();
-                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianShengJiChengGong");
+                    LB_Message.Text = Resources.lang.ZhanDianShengJiChengGong;
                 }
                 catch
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianShengJiShiBaiQingJianC");
+                    LB_Message.Text = Resources.lang.ZhanDianShengJiShiBaiQingJianC;
                 }
             }
             else
             {
-                LB_Message.Text = LanguageHandle.GetWord("TiShiCiZhanDianBuCunZaiQingJia");
+                LB_Message.Text = Resources.lang.TiShiCiZhanDianBuCunZaiQingJia;
             }
 
             IMB_Process.Visible = false;
@@ -84,7 +84,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
 
         strRentProductType = Request.QueryString["RentProductType"];
         strRentProductVersion = Request.QueryString["RentProductVersion"];
-        if (strRentProductVersion == LanguageHandle.GetWord("JiTuanBan"))
+        if (strRentProductVersion == Resources.lang.JiTuanBan)
         {
             strRentProductVersionType = "YES";
         }
@@ -101,7 +101,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
         if (ds.Tables[0].Rows.Count == 0)
         {
-            LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiMeiYouNiXuanQu");
+            LB_Message.Text = Resources.lang.ChuangJianShiBaiMeiYouNiXuanQu;
             return;
         }
         strRentProductType = ds.Tables[0].Rows[0]["RentProductType"].ToString().Trim();
