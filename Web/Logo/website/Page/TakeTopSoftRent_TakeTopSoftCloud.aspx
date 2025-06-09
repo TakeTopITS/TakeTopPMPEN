@@ -26,11 +26,11 @@
             }
             else {
 
-                window.location.href = 'https://www.taketopits.com';
+               /* window.location.href = 'https://www.taketopits.com';*/
             }
 
 
-            aHandler();
+            aHandlerForCurentWindow();
 
         });
 

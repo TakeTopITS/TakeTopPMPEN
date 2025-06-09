@@ -24,11 +24,11 @@
             }
             else {
 
-                window.location.href = 'https://www.taketopits.com';
+              /*  window.location.href = 'https://www.taketopits.com';*/
             }
 
 
-            aHandler();
+            aHandlerForCurentWindow();
 
             $('.bigbox').hover(function () {
                 $(".pointer", this).stop().animate({ top: '190px' }, { queue: false, duration: 160 });
