@@ -256,7 +256,7 @@
                                                                 <asp:Label ID="Label323543" runat="server" Text="<%$ Resources:lang,XingYeKaiFaHuoBan%>"></asp:Label></strong></p>
 
                                                             <p style="margin: 0px; padding: 0px;">
-                                                                <asp:Label ID="Label423452350" runat="server" Text="<%$ Resources:lang,ShiZhiNengGouTongGuoPingTaiHuo%>"></asp:Label><asp:Label ID="Label145634564" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,DeHuoBanGaiXingYe%>"></asp:Label><asp:Label ID="Label1234523454" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label><asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,YiYueDingDeHeZuoMoShiZaiWoMen%>"></asp:Label></p>
+                                                                <asp:Label ID="Label423452350" runat="server" Text="<%$ Resources:lang,ShiZhiNengGouTongGuoPingTaiHuo%>"></asp:Label><asp:Label ID="Label1234523454" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label>£¬<asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,YiYueDingDeHeZuoMoShiZaiWoMen%>"></asp:Label></p>
                                                         </div>
                                                     </div>
                                                 </div>
