@@ -31915,7 +31915,8 @@
     <value>提交成功后，客服会立刻与你联络，你也可以直接联络客服。</value>
   </data>
   <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
-    <value>提交成功后，客服会立刻与你联络，你也可以直接联络</value>
+    <value>提交成功后，客服会立刻与你联络，你也可以直接联络客服</value>
+    <comment>提交成功后，客服会立刻与你联络，你也可以直接联络客服</comment>
   </data>
   <data name="FuJiaShuiMing" xml:space="preserve">
     <value>附加說明</value>
@@ -31989,7 +31990,7 @@
     <value>地区增值分销协议并通过自有分销渠道销售我们我们系列</value>
   </data>
   <data name="DuoYuanHuaFuWuGeXingHuaDeDa" xml:space="preserve">
-    <value>多元化服务个性化的大中小型不限行业管理软件催生新型价值渠道体</value>
+    <value>多元化服务个性化的大中小型不限行业管理软件催生新型价值渠道体体系</value>
   </data>
   <data name="FaZhanDeDaiLiMeiChengYiDanAnCi" xml:space="preserve">
     <value>发展的代理每成一单按此单软件和用户授权费代理商向我方采购额的</value>
@@ -32025,7 +32026,8 @@
     <value>记录数</value>
   </data>
   <data name="JiMuHuaJieGouKeAnXuXuanPeiZi" xml:space="preserve">
-    <value>积木化结构可按需选配自由组合</value>
+    <value>积木式结构，可按需选配自由组合</value>
+    <comment>积木式结构，可按需选配自由组合</comment>
   </data>
   <data name="JingXiaoHuoBan" xml:space="preserve">
     <value>经销伙伴</value>
@@ -32055,7 +32057,7 @@
     <value>模块</value>
   </data>
   <data name="NengShiYongXiTongDanKeYiXiaZai" xml:space="preserve">
-    <value>能使用系统但可以下载备份相关系统数据继续使用需要续费</value>
+    <value>不能使用系统，但可以下载备份相关系统数据，继续使用需要续费</value>
   </data>
   <data name="PeiXunRenZheng" xml:space="preserve">
     <value>培训认证</value>
@@ -32097,16 +32099,18 @@
     <value>实现盈利的伙伴</value>
   </data>
   <data name="ShiYongManYiHouBiXuFuFeiCai" xml:space="preserve">
-    <value>试用满意后必须付费才能继续使用如付费期间中断续费系统会进入为</value>
+    <value>试用满意后，需要付费才能继续使用该系统，如果期间内付款中断，系统将进入保留期，</value>
+    <comment>试用满意后，需要付费才能继续使用该系统，如果期间内付款中断，系统将进入保留期，</comment>
   </data>
   <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
     <value>使用时间不限，软件安装在用户自备的服务器上，请在下面填写购买申请</value>
   </data>
   <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
-    <value>是指获得实施服务体系的资格认证并具备较强的管理软件服务实施服</value>
+    <value>是指获得实施服务体系的资格认证并具备较强的管理软件服务实施服务的伙伴</value>
   </data>
   <data name="ShiZhiNengGouTongGuoPingTaiHuo" xml:space="preserve">
-    <value>是指能够通过平台或可集成平台开发形成与互补的行业模块产品的伙</value>
+    <value>是指能够通过平台或可集成平台开发形成与互补的行业模块产品的伙伴</value>
+    <comment>是指能够通过平台或可集成平台开发形成与互补的行业模块产品的伙伴</comment>
   </data>
   <data name="ShiZhiNengJieHeXiLie" xml:space="preserve">
     <value>是指能结合系列</value>
@@ -32205,7 +32209,8 @@
     <value>在培训领域进行合作并按照约定比例进行利润分配的组织和机构</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>在泰鼎云上租用泰顶拓鼎项目管理软件模式（按人按月付费）请在下面填写申请信息</value>
+    <value>在泰鼎云上租用泰顶拓鼎项目管理软件（Saas模式：按人按月付费）请在下面填写申请信息</value>
+    <comment>在泰鼎云上租用泰顶拓鼎项目管理软件（Saas模式：按人按月付费）请在下面填写申请信息</comment>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>增值分销伙伴</value>

@@ -31799,7 +31799,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>After successful submission, customer service will contact you immediately, and you can also contact customer service directly.</value>
   </data>
   <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
-    <value>After successful submission, customer service will contact you immediately, and you can also contact the supervisor directly.</value>
+    <value>After successful submission, customer service will contact you immediately, and you can also contact the supervisor directly</value>
   </data>
   <data name="FuJiaShuiMing" xml:space="preserve">
     <value>Additional Notes</value>
@@ -31982,7 +31982,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>After a satisfactory trial, payment is required to continue using the system. If the payment is interrupted during the period, the system will enter a retention period.</value>
   </data>
   <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
-    <value>Unlimited use time, the software is installed on the server provided by the user. Please fill in the purchase application below.</value>
+    <value>Unlimited use time, the software is installed on the server provided by the user. Please fill in the purchase application below</value>
   </data>
   <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
     <value>Refers to partners who have obtained the qualification certification of the implementation/service system and have strong capabilities in management software service implementation.</value>
