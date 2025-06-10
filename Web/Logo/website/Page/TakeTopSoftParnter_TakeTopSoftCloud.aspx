@@ -57,8 +57,8 @@
 
                                                 <div class="qudaohezuo">
                                                     <div class="wenzi">
-                                                        <p class="zuyong">
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,RuGuoNinSuoZaiDeDiQuHuoZheNin%>"></asp:Label></p>
+                                                        <p class="zuyong" >
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,RuGuoNinSuoZaiDeDiQuHuoZheNin%>"></asp:Label></p>
 
                                                         <%-- <p style="text-indent: 20px;"><strong><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,QuDaoFenChengZhengCe%>"></asp:Label></strong></p>
 
