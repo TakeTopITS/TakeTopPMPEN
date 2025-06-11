@@ -2422,7 +2422,7 @@
     <value>Commission percentage</value>
   </data>
   <data name="Company" xml:space="preserve">
-    <value>The company</value>
+    <value>Company</value>
   </data>
   <data name="CompanyNews" xml:space="preserve">
     <value>Company news</value>
@@ -4609,7 +4609,7 @@
     <value>Budget Work</value>
   </data>
   <data name="GongSi" xml:space="preserve">
-    <value>The company</value>
+    <value>Company</value>
   </data>
   <data name="GongSi2" xml:space="preserve">
     <value>The company</value>

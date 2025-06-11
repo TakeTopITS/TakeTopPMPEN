@@ -89,7 +89,7 @@
                                     </tr>
                                     <tr>
                                         <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,DanWei%>"></asp:Label></td>
+                                            <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,Company%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft" w>
                                             <asp:TextBox ID="TB_Company" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
                                             <font color="#FF0000">&nbsp;*</font>

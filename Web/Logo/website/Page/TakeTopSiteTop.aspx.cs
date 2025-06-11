@@ -84,15 +84,28 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
             Expires = DateTime.Now.AddYears(1)
         });
 
-        // 重新加载整个框架集
+        //// 重新加载整个框架集
+        //string script = @"
+        //    <script type='text/javascript'>
+        //        if(top != self) {  // 如果当前页面是在框架中
+        //            top.location.href = top.location.href;  // 刷新整个框架集
+        //        } else {
+        //            window.location.href = window.location.href;  // 普通页面刷新
+        //        }
+        //    </script>";
+
         string script = @"
-            <script type='text/javascript'>
-                if(top != self) {  // 如果当前页面是在框架中
-                    top.location.href = top.location.href;  // 刷新整个框架集
-                } else {
-                    window.location.href = window.location.href;  // 普通页面刷新
-                }
-            </script>";
+    <script type='text/javascript'>
+        try {
+            if(top != self) {
+                top.location.reload(true);
+            } else {
+                window.location.reload(true);
+            }
+        } catch(e) {
+            window.location.reload(true);
+        }
+    </script>";
 
         ClientScript.RegisterStartupScript(this.GetType(), "RefreshParent", script);
     }
