@@ -27658,7 +27658,7 @@
     <value>-----Invio riuscito, il servizio clienti TakeTop ti contatterà entro 5 minuti, si prega di attendere, grazie!</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>-----Invio fallito, si prega di contattare il servizio clienti TakeTop (021-51085119), grazie!</value>
+    <value>-----Invio fallito, si prega di contattare il servizio clienti TakeTop ((086) 021-51085119), grazie!</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>Acquista versione:</value>
@@ -27736,7 +27736,7 @@
     <value>sito creato, l'indirizzo è:</value>
   </data>
   <data name="DengLuZhangHaoADMINMiMa1234567" xml:space="preserve">
-    <value>, account di accesso: ADMIN password: 12345678, si prega di utilizzare con fiducia, per qualsiasi problema contattare il servizio clienti (021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
+    <value>, account di accesso: ADMIN password: 12345678, si prega di utilizzare con fiducia, per qualsiasi problema contattare il servizio clienti ((086) 021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
   </data>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>Notifica di creazione del sito</value>
@@ -27817,7 +27817,7 @@
     <value>Sito:</value>
   </data>
   <data name="ZhengZaiFaSongZheGeZhanDianBei" xml:space="preserve">
-    <value>è stato aggiornato all'ultima versione, il primo avvio dopo l'aggiornamento sarà più lento, ci vorranno circa 5-10 minuti per visualizzare la pagina di accesso, per qualsiasi problema, contattare il servizio clienti TakeTop (021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
+    <value>è stato aggiornato all'ultima versione, il primo avvio dopo l'aggiornamento sarà più lento, ci vorranno circa 5-10 minuti per visualizzare la pagina di accesso, per qualsiasi problema, contattare il servizio clienti TakeTop ((086) 021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
   </data>
   <data name="DeShuJuBeiFenWenJianXiaZaiDeZh" xml:space="preserve">
     <value>Notifica di aggiornamento del sito</value>
@@ -27829,7 +27829,7 @@
     <value>L'indirizzo di download del file di backup dei dati è:</value>
   </data>
   <data name="ZhengZaiShanChuZheGeZhanDianDa" xml:space="preserve">
-    <value>, si prega di scaricare tempestivamente, per qualsiasi problema contattare il servizio clienti (021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
+    <value>, si prega di scaricare tempestivamente, per qualsiasi problema contattare il servizio clienti ((086) 021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
     <value>Notifica di download del file di backup</value>
@@ -27838,7 +27838,7 @@
     <value>Sto eliminando questo sito, ci vorranno circa 5 minuti, si prega di attendere pazientemente......</value>
   </data>
   <data name="ZhengZaiBaoCunZheGeZhanDianDeX" xml:space="preserve">
-    <value>è stato eliminato, per qualsiasi problema, contattare il servizio clienti (021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
+    <value>è stato eliminato, per qualsiasi problema, contattare il servizio clienti ((086) 021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
     <value>Notifica di eliminazione del sito</value>
@@ -31800,7 +31800,7 @@
     <value>Dopo l'invio corretto, il servizio clienti ti contatterà immediatamente, puoi anche contattare direttamente il servizio clienti.</value>
   </data>
   <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
-    <value>Dopo l'invio corretto, il servizio clienti ti contatterà immediatamente, puoi anche contattare direttamente il responsabile.</value>
+    <value>Dopo l'invio corretto, il servizio clienti ti contatterà immediatamente, puoi anche contattare direttamente il responsabile</value>
   </data>
   <data name="FuJiaShuiMing" xml:space="preserve">
     <value>Note aggiuntive</value>
@@ -31989,7 +31989,7 @@
     <value>Si riferisce alla certificazione per sistemi di servizi implementativi e forte capacità di implementare servizi software gestionali</value>
   </data>
   <data name="ShiZhiNengGouTongGuoPingTaiHuo" xml:space="preserve">
-    <value>Si riferisce a firmare un</value>
+    <value>Si riferisce a partner in grado di sviluppare moduli specifici per l'industria che integrano o possono essere integrati con la piattaforma.</value>
   </data>
   <data name="ShiZhiNengJieHeXiLie" xml:space="preserve">
     <value>Si riferisce a combinare una serie</value>

@@ -83,7 +83,7 @@
                                             <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ChanPing%>"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="LB_Product" runat="server"></asp:Label>
+                                            <asp:Label ID="LB_Product" runat="server" Visible="false"></asp:Label> <asp:Label ID="LB_ProductHomeName" runat="server"></asp:Label>
                                             <br />
                                         </td>
                                     </tr>
@@ -116,7 +116,7 @@
                                         <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
                                             <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShiYongYuanYin%>"></asp:Label></td>
                                         <td class="formItemBgStyleForAlignLeft">
-                                            <asp:DropDownList ID="DL_TryProductResonType" Height="35px" DataValueField="Type" DataTextField="Type" Style="font-size: 16px;" runat="server">
+                                            <asp:DropDownList ID="DL_TryProductResonType" Height="35px" DataValueField="Type" DataTextField="HomeTypeName" Style="font-size: 16px;" runat="server">
                                             </asp:DropDownList>
                                         </td>
                                     </tr>

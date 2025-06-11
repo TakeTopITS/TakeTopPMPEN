@@ -8,12 +8,17 @@ using static com.sun.tools.javac.tree.DCTree;
 
 public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.Web.UI.Page
 {
-    string strSystemType,strWebSite;
+    string strSystemType, strWebSite, strLangCode;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        strSystemType = Request.QueryString["SystemType"];
+        // 确定语言代码的优先级：Cookie > Session > 默认配置
+        strLangCode = Request.Cookies["LangCode"]?.Value ??
+                     Session["LangCode"]?.ToString() ??
+                     System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
 
+
+        strSystemType = Request.QueryString["SystemType"];
         strWebSite = Request.QueryString["WebSite"];
         if (strWebSite == null)
         {
@@ -23,9 +28,10 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            LoadTryProductResonType();
+            LoadTryProductResonType(strLangCode);
 
-            LB_Product.Text = GetProductTypeNameByENType(strSystemType);
+            LB_Product.Text = GetProductTypeNameByENType(strSystemType,strLangCode);
+            LB_ProductHomeName.Text = GetProductTypeHomeNameByENType(strSystemType, strLangCode);
         }
     }
 
@@ -93,7 +99,7 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
 
-                strTargetPage = GetProductTypeDemoURLByENType(strSystemType);
+                strTargetPage = GetProductTypeDemoURLByENType(strSystemType,strLangCode);
 
                 string strScript = "openMDIFrom('" + strTargetPage + "');";
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", strScript, true);
@@ -107,11 +113,11 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
         }
     }
 
-    protected string GetProductTypeNameByENType(string strENType)
+    protected string GetProductTypeNameByENType(string strENType,string strLangCode)
     {
         string strHQL;
 
-        strHQL = string.Format(@"Select Type From T_RentProducttype Where ENType ='{0}'", strENType);
+        strHQL = string.Format(@"Select Type From T_RentProducttype Where ENType ='{0}' and LangCode ='{1}'", strENType,strLangCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProducttype");
         if(ds.Tables[0].Rows.Count > 0)
         {
@@ -123,11 +129,11 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
         }
     }
 
-    protected string GetProductTypeDemoURLByENType(string strENType)
+    protected string GetProductTypeHomeNameByENType(string strENType, string strLangCode)
     {
         string strHQL;
 
-        strHQL = string.Format(@"Select DemoURL From T_RentProducttype Where ENType ='{0}'", strENType);
+        strHQL = string.Format(@"Select HomeTypeName From T_RentProducttype Where ENType ='{0}' and LangCode ='{1}'", strENType, strLangCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProducttype");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -139,12 +145,29 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
         }
     }
 
-    protected void LoadTryProductResonType()
+
+    protected string GetProductTypeDemoURLByENType(string strENType,string strLangCode)
     {
         string strHQL;
 
-        strHQL = "Select * From T_RentProductVerType Order By SortNumber ASC";
-        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+        strHQL = string.Format(@"Select DemoURL From T_RentProducttype Where ENType ='{0}' and LangCode ='{1}'", strENType,strLangCode);
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProducttype");
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            return ds.Tables[0].Rows[0][0].ToString().Trim();
+        }
+        else
+        {
+            return "";
+        }
+    }
+
+    protected void LoadTryProductResonType(string strLangCode)
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_TryProductResontype Where LangCode ='" + strLangCode + "' Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_TryProductResontype");
 
         DL_TryProductResonType.DataSource = ds;
         DL_TryProductResonType.DataBind();

@@ -12853,4 +12853,33 @@ Delete From T_ProModule Where ModuleName = '网站编辑';</SQLText>
     <ID>3793</ID>
     <SQLText>Update T_ProModule Set DiyFlow = 'NO' Where ModuleName = 'WebSiteEditor';</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3794</ID>
+    <SQLText>Alter table public.t_rentproducttype Add Column HomeTypeName character(100) Default '';
+Alter table public.t_rentproducttype Add Column LangCode character(10) Default '';
+Alter table public.t_rentproductvertype Add Column HomeTypeName character(100) Default '';
+Alter table public.t_rentproductvertype Add Column LangCode character(10) Default '';
+Alter table public.T_TryProductResontype Add Column HomeTypeName character(100) Default '';
+Alter table public.T_TryProductResontype Add Column LangCode character(10) Default '';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3795</ID>
+    <SQLText>UPdate  public.t_rentproducttype Set HomeTypeName = Type;
+UPdate  public.t_rentproducttype Set LangCode = 'zh-CN';
+UPdate  public.t_rentproductvertype Set HomeTypeName = Type;
+UPdate  public.t_rentproductvertype Set LangCode = 'zh-CN';
+UPdate  public.T_TryProductResontype Set HomeTypeName = Type;
+UPdate  public.T_TryProductResontype Set LangCode = 'zh-CN';</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3796</ID>
+    <SQLText>ALTER TABLE public.t_rentproducttype DROP CONSTRAINT IF EXISTS t_rentproducttype_pkey;
+ALTER TABLE public.t_rentproducttype ADD COLUMN ID SERIAL PRIMARY KEY;
+
+ALTER TABLE public.t_rentproductvertype DROP CONSTRAINT IF EXISTS t_rentproductvertype_pkey;
+ALTER TABLE public.t_rentproductvertype ADD COLUMN ID SERIAL PRIMARY KEY;
+
+ALTER TABLE public.T_TryProductResontype DROP CONSTRAINT IF EXISTS T_TryProductResontype_pkey;
+ALTER TABLE public.T_TryProductResontype ADD COLUMN ID SERIAL PRIMARY KEY;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

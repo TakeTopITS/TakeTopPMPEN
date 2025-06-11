@@ -27658,7 +27658,7 @@
     <value>-----提交成功，泰頂拓鼎客服會在5分鐘之內聯繫你，請稍候，謝謝！</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>-----提交失敗，請電話聯繫泰頂拓鼎客服（021-51085119），謝謝！</value>
+    <value>-----提交失敗，請電話聯繫泰頂拓鼎客服（(086) 021-51085119），謝謝！</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>購買 版本：</value>
@@ -27736,7 +27736,7 @@
     <value>已創建網站，地址是：</value>
   </data>
   <data name="DengLuZhangHaoADMINMiMa1234567" xml:space="preserve">
-    <value>,登錄帳號：ADMIN 密碼：12345678 ，請放心使用，有問題請隨時聯繫客服（021-51085119），謝謝，此郵件發自泰頂拓鼎集團！</value>
+    <value>,登錄帳號：ADMIN 密碼：12345678 ，請放心使用，有問題請隨時聯繫客服（(086) 021-51085119），謝謝，此郵件發自泰頂拓鼎集團！</value>
   </data>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>網站創建通知</value>
@@ -27811,7 +27811,7 @@
     <value>網站：</value>
   </data>
   <data name="YiBeiShengJiDaoZuiXinBanShengJ" xml:space="preserve">
-    <value>已被升級到最新版，升級後第一次打開會較慢，大約要5到10分鐘才會出現登錄頁面，如有問題，請聯繫泰頂拓鼎客服（021-51085119），謝謝，此郵件來自泰頂拓鼎集團！</value>
+    <value>已被升級到最新版，升級後第一次打開會較慢，大約要5到10分鐘才會出現登錄頁面，如有問題，請聯繫泰頂拓鼎客服（(086) 021-51085119），謝謝，此郵件來自泰頂拓鼎集團！</value>
   </data>
   <data name="ZhanDianShengJiTongZhi" xml:space="preserve">
     <value>網站升級通知</value>
@@ -27823,7 +27823,7 @@
     <value>的資料備份文件下載地址是:</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
-    <value>，請及時下載，如有問題請聯繫客服（021-51085119），謝謝，此郵件來自泰頂拓鼎集團！</value>
+    <value>，請及時下載，如有問題請聯繫客服（(086) 021-51085119），謝謝，此郵件來自泰頂拓鼎集團！</value>
   </data>
   <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
     <value>備份檔案下載通知</value>
@@ -27832,7 +27832,7 @@
     <value>正在刪除這個網站，大概需要5分鐘，請耐心等候......</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
-    <value>已被刪除，如有問題，請聯繫客服（021-51085119），謝謝，此郵件來自泰頂拓鼎集團！</value>
+    <value>已被刪除，如有問題，請聯繫客服（(086) 021-51085119），謝謝，此郵件來自泰頂拓鼎集團！</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
     <value>網站刪除通知</value>
@@ -31798,7 +31798,7 @@
     <value>提交成功後，客服會立刻與你聯絡，你也可以直接聯絡客服。</value>
   </data>
   <data name="DiJiaoChengGongHouKeFuJiangHuiLiKeLianJiNiNiYeKeYiZhiJieLianJiZhuGuan" xml:space="preserve">
-    <value>提交成功後，客服會立刻與你聯絡，你也可以直接聯絡主管。</value>
+    <value>提交成功後，客服會立刻與你聯絡，你也可以直接聯絡客服</value>
   </data>
   <data name="FuJiaShuiMing" xml:space="preserve">
     <value>附加說明</value>
@@ -31870,7 +31870,7 @@
     <value>地區增值分銷協定並通過自有分銷管道銷售我們我們系列</value>
   </data>
   <data name="DuoYuanHuaFuWuGeXingHuaDeDa" xml:space="preserve">
-    <value>多元化服務個性化的大中小型不限行業管理軟體催生新型價值管道體</value>
+    <value>多元化服務個性化的大中小型不限行業管理軟體催生新型價值管道體系</value>
   </data>
   <data name="FaZhanDeDaiLiMeiChengYiDanAnCi" xml:space="preserve">
     <value>發展的代理每成一單按此單軟體和使用者授權費代理商向我方採購額的</value>
@@ -31936,7 +31936,7 @@
     <value>模組</value>
   </data>
   <data name="NengShiYongXiTongDanKeYiXiaZai" xml:space="preserve">
-    <value>能使用系統但可以下載備份相關系統資料繼續使用需要續費</value>
+    <value>不能使用系統，但可以下載備份相關系統資料，繼續使用需要續費</value>
   </data>
   <data name="PeiXunRenZheng" xml:space="preserve">
     <value>培訓認證</value>
@@ -31978,16 +31978,16 @@
     <value>實現盈利的夥伴</value>
   </data>
   <data name="ShiYongManYiHouBiXuFuFeiCai" xml:space="preserve">
-    <value>試用滿意後必須付費才能繼續使用如付費期間中斷續費系統會進入為</value>
+    <value>试用满意后，需要付费才能继续使用该系统，如果期间内付款中断，系统将进入保留期，</value>
   </data>
   <data name="ShiYongShiJianBuXianRuanJianAn" xml:space="preserve">
     <value>使用時間不限，軟件安裝喺用戶自備嘅服務器上，請喺下面填寫購買申請</value>
   </data>
   <data name="ShiZhiHuoDeShiShiFuWuTiXiDeZi" xml:space="preserve">
-    <value>是指獲得實施服務體系的資格認證並具備較強的管理軟體服務實施服</value>
+    <value>是指獲得實施服務體系的資格認證並具備較強的管理軟體服務實施服务的伙伴</value>
   </data>
   <data name="ShiZhiNengGouTongGuoPingTaiHuo" xml:space="preserve">
-    <value>是指能夠通過平臺或可集成平臺開發形成與互補的行業模組產品的夥</value>
+    <value>是指能夠通過平臺或可集成平臺開發形成與互補的行業模組產品的夥伴，</value>
   </data>
   <data name="ShiZhiNengJieHeXiLie" xml:space="preserve">
     <value>是指能結合系列</value>
@@ -32086,7 +32086,7 @@
     <value>在培訓領域進行合作並按照約定比例進行利潤分配的組織和機構</value>
   </data>
   <data name="ZaiTaiDingYunShangZuYongTai" xml:space="preserve">
-    <value>在泰鼎雲上租用泰頂拓鼎項目管理軟件模式（按人按月付費）請喺下面填寫申請信息</value>
+    <value>在泰鼎雲上租用泰頂拓鼎專案管理軟體（Saas模式：按人按月付費）請在下面填寫申請資訊</value>
   </data>
   <data name="ZengZhiFenXiaoHuoBan" xml:space="preserve">
     <value>增值分銷夥伴</value>

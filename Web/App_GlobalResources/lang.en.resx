@@ -32432,7 +32432,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Failure, the site to be copied cannot be empty, please check.</value>
   </data>
   <data name="TiJiaoChengGong" xml:space="preserve">
-    <value>Failure, the site to be deleted cannot be empty, please check.</value>
+    <value>Submit successfully</value>
   </data>
   <data name="TiJiaoChengGongTaiDingTuoDingK" xml:space="preserve">
     <value>Submission successful.</value>

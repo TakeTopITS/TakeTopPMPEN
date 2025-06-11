@@ -1,6 +1,4 @@
-﻿using Stimulsoft.Svg;
-
-using System;
+﻿using System;
 using System.Data;
 using System.Web;
 using System.Web.UI;
@@ -12,10 +10,14 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session["LangCode"] = ddlLangSwitcher.SelectedValue;
+
         if (!IsPostBack)
         {
             try
             {
+                Session["LangCode"] = ddlLangSwitcher.SelectedValue;
+
                 InitializeCulture();
 
                 LoadLanguageForDropListForWebSite(ddlLangSwitcher);

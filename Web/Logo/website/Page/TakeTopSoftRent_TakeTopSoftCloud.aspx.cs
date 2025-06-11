@@ -24,9 +24,14 @@ using Stimulsoft.Base.Indicator;
 
 public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
 {
-    string strWebSite;
+    string strWebSite, strLangCode;
     protected void Page_Load(object sender, EventArgs e)
     {
+        // 确定语言代码的优先级：Cookie > Session > 默认配置
+        strLangCode = Request.Cookies["LangCode"]?.Value ??
+                     Session["LangCode"]?.ToString() ??
+                     System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
         strWebSite = Request.QueryString["WebSite"];
         if (strWebSite == null)
         {
@@ -35,8 +40,8 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
 
         if (Page.IsPostBack == false)
         {
-            LoadRentProductType();
-            LoadRentProductVerType();
+            LoadRentProductType(strLangCode);
+            LoadRentProductVerType(strLangCode);
 
             string strProductENType, strType;
             strProductENType = Request.QueryString["Type"];
@@ -353,22 +358,22 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
         }
     }
 
-    protected void LoadRentProductType()
+    protected void LoadRentProductType(string strLangCode)
     {
         string strHQL;
 
-        strHQL = "Select trim(Type) as Type,trim(ENType) as ENType From T_RentProductType Order By SortNumber ASC";
+        strHQL = "Select trim(Type) as Type,trim(ENType) as ENType,Trim(HomeTypeName) as HomeTypeName From T_RentProductType Where LangCode = '" + strLangCode + "' Order By SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
 
         DL_Type.DataSource = ds;
         DL_Type.DataBind();
     }
 
-    protected void LoadRentProductVerType()
+    protected void LoadRentProductVerType(string strLangCode)
     {
         string strHQL;
 
-        strHQL = "Select * From T_RentProductVerType Order By SortNumber ASC";
+        strHQL = "Select * From T_RentProductVerType Where LangCode = '" + strLangCode + "' Order By SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
 
         DL_Version.DataSource = ds;

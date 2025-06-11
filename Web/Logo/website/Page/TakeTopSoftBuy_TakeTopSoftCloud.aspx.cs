@@ -1,29 +1,17 @@
-using Microsoft.Web.Administration;
-using Microsoft.Web.Management;
-
-using ProjectMgt.BLL;
-using ProjectMgt.DAL;
-using ProjectMgt.Model;
-
 using System;
-using System.Collections;
-using System.Configuration.Internal;
 using System.Data;
-using System.Data.SqlClient;
-using System.Resources;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Windows.Forms;
 
 public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
 {
-    string strWebSite;
+    string strWebSite, strLangCode;
     protected void Page_Load(object sender, EventArgs e)
     {
+        // 确定语言代码的优先级：Cookie > Session > 默认配置
+        strLangCode = Request.Cookies["LangCode"]?.Value ??
+                     Session["LangCode"]?.ToString() ??
+                     System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
         strWebSite = Request.QueryString["WebSite"];
         if (strWebSite == null)
         {
@@ -32,14 +20,14 @@ public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
 
         if (Page.IsPostBack == false)
         {
-            LoadRentProductType();
-            LoadRentProductVerType();
+            LoadRentProductType(strLangCode);
+            LoadRentProductVerType(strLangCode);
 
             string strProductENType, strType;
             strProductENType = Request.QueryString["Type"];
             if (strProductENType != null)
             {
-                strType = GetProductNameByENName(strProductENType);
+                strType = GetProductNameByENName(strProductENType, strLangCode);
 
                 if (strType != null)
                 {
@@ -49,22 +37,6 @@ public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
         }
     }
 
-    protected string GetProductNameByENName(string strENName)
-    {
-        string strHQL;
-
-        strHQL = string.Format(@"Select trim(Type)  From T_RentProductType Where ENType ='{0}'", strENName);
-        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
-
-        if (ds.Tables[0].Rows.Count > 0)
-        {
-            return ds.Tables[0].Rows[0][0].ToString().Trim();
-        }
-        else
-        {
-            return null;
-        }
-    }
 
     protected void DL_ServerType_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -341,7 +313,7 @@ public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = "Select SiteURL From T_RentSiteBaseData Where RentProductName = '" + strProductName + "' and RentProductVersion = '" + strProductVersionType + "' and IsCanUse = 'YES'";
+        strHQL = "Select SiteURL From T_RentSiteBaseData Where RentProductName = '" + strProductName + "' and RentProductVersion = '" + strProductVersionType + "' and IsCanUse = 'YES'";        
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -353,22 +325,38 @@ public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
         }
     }
 
-    protected void LoadRentProductType()
+    protected string GetProductNameByENName(string strENName, string strLangCode)
     {
         string strHQL;
 
-        strHQL = "Select trim(Type) as Type,trim(ENType) as ENType From T_RentProductType Order By SortNumber ASC";
+        strHQL = string.Format(@"Select trim(Type) as Type From T_RentProductType Where ENType ='{0}' and LangCode ='{1}'", strENName, strLangCode);
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            return ds.Tables[0].Rows[0][0].ToString().Trim();
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    protected void LoadRentProductType(string strLangCode)
+    {
+        string strHQL;
+
+        strHQL = "Select trim(Type) as Type,trim(ENType) as ENType,trim(HomeTypeName) as HomeTypeName From T_RentProductType Where LangCode = '" + strLangCode + "' Order By SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
 
         DL_Type.DataSource = ds;
         DL_Type.DataBind();
     }
 
-    protected void LoadRentProductVerType()
+    protected void LoadRentProductVerType(string strLangCode)
     {
         string strHQL;
 
-        strHQL = "Select * From T_RentProductVerType Order By SortNumber ASC";
+        strHQL = "Select * From T_RentProductVerType Where LangCode = '" + strLangCode + "' Order By SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
 
         DL_Version.DataSource = ds;

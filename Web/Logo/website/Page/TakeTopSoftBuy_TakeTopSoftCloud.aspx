@@ -281,7 +281,7 @@
                                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ChanPin%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyleForAlignLeft">
-                                                                        <asp:DropDownList ID="DL_Type" DataValueField="Type" DataTextField="Type" runat="server" Style="height: 50px;">
+                                                                        <asp:DropDownList ID="DL_Type" DataValueField="Type" DataTextField="HomeTypeName" runat="server" Style="height: 50px;">
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
@@ -294,7 +294,7 @@
                                                                         <table>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:DropDownList ID="DL_Version" DataValueField="Type" DataTextField="Type" runat="server" Style="height: 50px;">
+                                                                                    <asp:DropDownList ID="DL_Version" DataValueField="Type" DataTextField="HomeTypeName" runat="server" Style="height: 50px;">
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td>&nbsp;

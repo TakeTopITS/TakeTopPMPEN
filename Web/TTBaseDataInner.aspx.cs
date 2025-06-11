@@ -19,7 +19,7 @@ public partial class TTBaseDataInner : System.Web.UI.Page
 
         string strUserCode = Session["UserCode"].ToString();
         LB_UserCode.Text = strUserCode;
-        strLangCode = Session["LangCode"].ToString();
+        strLangCode = ddlLangSwitcher.SelectedValue;
 
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
@@ -33,6 +33,7 @@ public partial class TTBaseDataInner : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
+            strLangCode = Session["LangCode"].ToString();
             LB_SelectedProjectType.Text = "";
 
             LoadAIInterface();
@@ -53,8 +54,133 @@ public partial class TTBaseDataInner : System.Web.UI.Page
             LoadOtherStatus(strLangCode);
             LoadFunInforDialBoxList(strLangCode);
 
+            LoadRentProductType(strLangCode);
+            LoadRentProductVertype(strLangCode);
+            LoadTryProductResontype(strLangCode);
+
             ShareClass.LoadLanguageForDropList(ddlLangSwitcher);
             ddlLangSwitcher.SelectedValue = strLangCode;
+        }
+    }
+
+    protected void ddlLangSwitcher_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        strLangCode = ddlLangSwitcher.SelectedValue;
+
+        LoadWLType(strLangCode);
+        LoadProjectStatus("", strLangCode);
+        LoadWLStatus(strLangCode);
+
+        LoadTestStatus(strLangCode);
+        LoadPlanStatus(strLangCode);
+        LoadTaskStatus(strLangCode);
+        LoadReqStatus(strLangCode);
+        LoadActorGroup(strLangCode);
+        LoadOtherStatus(strLangCode);
+        LoadFunInforDialBoxList(strLangCode);
+
+        LoadRentProductType(strLangCode);
+        LoadRentProductVertype(strLangCode);
+        LoadTryProductResontype(strLangCode);
+    }
+
+    protected void BT_CopyForHomeLanguage_Click(object sender, EventArgs e)
+    {
+        string strHQL;
+
+        string strFromLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
+        strLangCode = ddlLangSwitcher.SelectedValue.Trim();
+        try
+        {
+            strHQL = "Insert Into T_WLType(Type,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Type,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_WLType";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Type)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Type)) || ltrim(rtrim(LangCode))  From T_WLType Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_ProjectStatus(Status,SortNumber ,ReviewControl ,ProjectType ,IdentityString ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Status,SortNumber ,ReviewControl ,ProjectType ,IdentityString,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_ProjectStatus";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " || ltrim(rtrim(ProjectType)) Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode)) || ltrim(rtrim(ProjectType)) From T_ProjectStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_ReqStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_ReqStatus";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_ReqStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_PlanStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_PlanStatus";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_PlanStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_TaskStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_TaskStatus";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_TaskStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_TestStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_TestStatus";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_TestStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_WLStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_WLStatus";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_WLStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_ActorGroup(GroupName,MakeUserCode,Type,IdentifyString,BelongDepartCode,BelongDepartName,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT GroupName,MakeUserCode,Type,IdentifyString,BelongDepartCode,BelongDepartName,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_ActorGroup";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(GroupName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(GroupName)) || ltrim(rtrim(LangCode))  From T_ActorGroup Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_OtherStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
+            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_OtherStatus";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_OtherStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = "Insert Into T_FunInforDialBox(InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName,LangCode)";
+            strHQL += " Select InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName," + "'" + strLangCode + "'" + " From T_FunInforDialBox";
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(InforName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(InforName)) || ltrim(rtrim(LangCode))  From T_FunInforDialBox Where LangCode = " + "'" + strLangCode + "'" + ")";
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = string.Format(@"INSERT INTO T_RentProductType(Type, ENType, HomeTypeName, DemoURL, SortNumber,LangCode) 
+                SELECT Type ,ENType ,HomeTypeName,DemoURL,SortNumber,'{1}' From T_RentProductType
+                   Where LangCode = '{0}'", strFromLangCode, strLangCode);
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = string.Format(@"INSERT INTO t_rentproductvertype(Type, HomeTypeName, SortNumber,LangCode) 
+                SELECT Type ,HomeTypeName,SortNumber,'{1}' From t_rentproductvertype
+                   Where LangCode = '{0}'", strFromLangCode, strLangCode);
+            ShareClass.RunSqlCommand(strHQL);
+
+            strHQL = string.Format(@"INSERT INTO T_TryProductResontype(Type, HomeTypeName,  SortNumber,LangCode) 
+                SELECT Type ,HomeTypeName,SortNumber,'{1}' From T_TryProductResontype
+                   Where LangCode = '{0}'", strFromLangCode, strLangCode);
+            ShareClass.RunSqlCommand(strHQL);
+
+
+            LoadWLType(strLangCode);
+            LoadProjectStatus("", strLangCode);
+            LoadWLStatus(strLangCode);
+
+            LoadTestStatus(strLangCode);
+            LoadPlanStatus(strLangCode);
+            LoadTaskStatus(strLangCode);
+            LoadReqStatus(strLangCode);
+            LoadActorGroup(strLangCode);
+            LoadOtherStatus(strLangCode);
+            LoadFunInforDialBoxList(strLangCode);
+
+
+            LoadRentProductType(strLangCode);
+            LoadRentProductVertype(strLangCode);
+            LoadTryProductResontype(strLangCode);
+
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG") + "')", true);
+        }
+        catch
+        {
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC") + "')", true);
         }
     }
 
@@ -273,101 +399,7 @@ public partial class TTBaseDataInner : System.Web.UI.Page
         }
     }
 
-    protected void ddlLangSwitcher_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        strLangCode = ddlLangSwitcher.SelectedValue;
-
-        LoadWLType(strLangCode);
-        LoadProjectStatus("", strLangCode);
-        LoadWLStatus(strLangCode);
-
-        LoadTestStatus(strLangCode);
-        LoadPlanStatus(strLangCode);
-        LoadTaskStatus(strLangCode);
-        LoadReqStatus(strLangCode);
-        LoadActorGroup(strLangCode);
-        LoadOtherStatus(strLangCode);
-        LoadFunInforDialBoxList(strLangCode);
-    }
-
-    protected void BT_CopyForHomeLanguage_Click(object sender, EventArgs e)
-    {
-        string strHQL;
-
-        string strFromLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
-
-        strLangCode = ddlLangSwitcher.SelectedValue.Trim();
-        try
-        {
-            strHQL = "Insert Into T_WLType(Type,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Type,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_WLType";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Type)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Type)) || ltrim(rtrim(LangCode))  From T_WLType Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_ProjectStatus(Status,SortNumber ,ReviewControl ,ProjectType ,IdentityString ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Status,SortNumber ,ReviewControl ,ProjectType ,IdentityString,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_ProjectStatus";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " || ltrim(rtrim(ProjectType)) Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode)) || ltrim(rtrim(ProjectType)) From T_ProjectStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_ReqStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_ReqStatus";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_ReqStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_PlanStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_PlanStatus";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_PlanStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_TaskStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_TaskStatus";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_TaskStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_TestStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_TestStatus";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_TestStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_WLStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_WLStatus";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_WLStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_ActorGroup(GroupName,MakeUserCode,Type,IdentifyString,BelongDepartCode,BelongDepartName,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT GroupName,MakeUserCode,Type,IdentifyString,BelongDepartCode,BelongDepartName,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_ActorGroup";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(GroupName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(GroupName)) || ltrim(rtrim(LangCode))  From T_ActorGroup Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_OtherStatus(Status,SortNumber ,MakeType,LangCode,HomeName )";
-            strHQL += " SELECT Status,SortNumber ,MakeType ," + "'" + strLangCode + "'" + ",HomeName FROM T_OtherStatus";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(Status)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(Status)) || ltrim(rtrim(LangCode))  From T_OtherStatus Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            strHQL = "Insert Into T_FunInforDialBox(InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName,LangCode)";
-            strHQL += " Select InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName," + "'" + strLangCode + "'" + " From T_FunInforDialBox";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(InforName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(InforName)) || ltrim(rtrim(LangCode))  From T_FunInforDialBox Where LangCode = " + "'" + strLangCode + "'" + ")";
-            ShareClass.RunSqlCommand(strHQL);
-
-            LoadWLType(strLangCode);
-            LoadProjectStatus("", strLangCode);
-            LoadWLStatus(strLangCode);
-
-            LoadTestStatus(strLangCode);
-            LoadPlanStatus(strLangCode);
-            LoadTaskStatus(strLangCode);
-            LoadReqStatus(strLangCode);
-            LoadActorGroup(strLangCode);
-            LoadOtherStatus(strLangCode);
-            LoadFunInforDialBoxList(strLangCode);
-
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG") + "')", true);
-        }
-        catch
-        {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC") + "')", true);
-        }
-    }
+  
 
     protected void BT_ProjectStatusNew_Click(object sender, EventArgs e)
     {
@@ -1452,5 +1484,200 @@ public partial class TTBaseDataInner : System.Web.UI.Page
         DataGrid2.DataSource = ds;
         DataGrid2.DataBind();
     }
+
+
+
+    protected void DataGrid4_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+
+        string strID = ((Button)e.Item.FindControl("BT_ID")).Text;
+        string strType = e.Item.Cells[1].Text.Trim();
+        string strENType = e.Item.Cells[2].Text.Trim();
+        string strHomeType = e.Item.Cells[3].Text.Trim();
+        string strDemoURL = e.Item.Cells[4].Text.Trim();
+        string strSortNumber = e.Item.Cells[5].Text.Trim();
+
+        LB_RentProductTypeID.Text = strID;
+        TB_RentProductType.Text = strType;
+        TB_RentProductENType.Text = strENType;
+        TB_HomeRentProductType.Text = strHomeType;
+        TB_RentProductDemoURL.Text = strDemoURL;
+        TB_RentProductTypeSort.Text = strSortNumber;
+    }
+
+    protected void BT_RentProductTypeNew_Click(object sender, EventArgs e)
+    {
+        string strType = TB_RentProductType.Text.Trim();
+        string strENType = TB_RentProductENType.Text.Trim();
+        string strHomeType = TB_HomeRentProductType.Text.Trim();
+        string strDemoURL = TB_RentProductDemoURL.Text.Trim();
+        string strSortNo = TB_RentProductTypeSort.Text.Trim();
+
+        string strHQL = string.Format(@"INSERT INTO T_RentProductType(Type, ENType, HomeTypeName, DemoURL, SortNumber,LangCode) 
+                  VALUES ('{0}', '{1}', '{2}', '{3}', '{4}','{5}')", strType, strENType, strHomeType, strDemoURL, strSortNo, strLangCode);
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductType(strLangCode);
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_RentProductTypeDelete_Click(object sender, EventArgs e)
+    {
+        string strID = LB_RentProductTypeID.Text;
+        string strType = TB_RentProductType.Text.Trim();
+        string strSortNo = TB_RentProductTypeSort.Text.Trim();
+
+        string strHQL = "Delete From T_RentProductType Where ID =  " + strID;
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductType(strLangCode);
+        }
+        catch
+        {
+        }
+    }
+
+    protected void DataGrid25_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+        string strID = ((Button)e.Item.FindControl("BT_ID")).Text;
+        string strType = e.Item.Cells[1].Text.Trim();
+        string strHomeType = e.Item.Cells[2].Text.Trim();
+        string strSortNumber = e.Item.Cells[3].Text.Trim();
+
+        LB_RentProductVersionTypeID.Text = strID;
+        TB_RentProductVersionType.Text = strType;
+        TB_HomeRentProductVersionType.Text = strHomeType;
+        TB_RentProductVersionSort.Text = strSortNumber;
+    }
+
+    protected void BT_RentProductVersionTypeNew_Click(object sender, EventArgs e)
+    {
+        string strType = TB_RentProductVersionType.Text.Trim();
+        string strHomeType = TB_HomeRentProductVersionType.Text.Trim();
+        string strSortNo = TB_RentProductVersionSort.Text.Trim();
+
+        string strHQL = string.Format(@"INSERT INTO t_RentProductVerType(Type,HomeTypeName, SortNumber,LangCode)  
+                   VALUES ('{0}', '{1}','{2}','{3}')", strType, strHomeType, strSortNo, strLangCode);
+
+        LogClass.WriteLogFile(strHQL);
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductVertype(strLangCode);
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_RentProductVersionTypeDelete_Click(object sender, EventArgs e)
+    {
+        string strID = LB_RentProductVersionTypeID.Text;
+        string strType = TB_RentProductVersionType.Text.Trim();
+        string strSortNo = TB_RentProductVersionSort.Text.Trim();
+
+        string strHQL = "Delete From t_RentProductVerType Where ID =  " + strID;
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadRentProductVertype(strLangCode);
+        }
+        catch
+        {
+        }
+    }
+
+
+    protected void DataGrid31_ItemCommand(object sender, DataGridCommandEventArgs e)
+    {
+        string strID = ((Button)e.Item.FindControl("BT_ID")).Text;
+        string strType = e.Item.Cells[1].Text.Trim();
+        string strHomeType = e.Item.Cells[2].Text.Trim();
+        string strSortNumber = e.Item.Cells[3].Text.Trim();
+
+        LB_TryProductResonTypeID.Text = strID;
+        TB_TryProductResonType.Text = strType;
+        TB_HomeTryProductResonType.Text = strHomeType;
+        TB_TryProductResonSort.Text = strSortNumber;
+    }
+
+    protected void BT_TryProductResonTypeNew_Click(object sender, EventArgs e)
+    {
+        string strType = TB_TryProductResonType.Text.Trim();
+        string strHomeType = TB_HomeTryProductResonType.Text.Trim();
+        string strSortNo = TB_TryProductResonSort.Text.Trim();
+
+        string strHQL = string.Format(@"INSERT INTO t_TryProductResontype(Type,HomeTypeName, SortNumber,LangCode) 
+                VALUES ('{0}', '{1}','{2}','{3}')", strType, strHomeType, strSortNo, strLangCode);
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadTryProductResontype(strLangCode);
+        }
+        catch
+        {
+        }
+    }
+
+    protected void BT_TryProductResonTypeDelete_Click(object sender, EventArgs e)
+    {
+        string strID = LB_TryProductResonTypeID.Text.Trim();
+        string strSortNo = TB_TryProductResonSort.Text.Trim();
+
+        string strHQL = "Delete From t_TryProductResontype Where ID = " + strID;
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            LoadTryProductResontype(strLangCode);
+        }
+        catch
+        {
+        }
+    }
+
+    protected void LoadRentProductType(string strLangCode)
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductType where LangCode = '" + strLangCode + "' Order By SortNumber ASC";
+        LogClass.WriteLogFile(strHQL);
+
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentProductType");
+
+        DataGrid4.DataSource = ds;
+        DataGrid4.DataBind();
+    }
+
+    protected void LoadRentProductVertype(string strLangCode)
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_RentProductVertype where LangCode = '" + strLangCode + "' Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "RentProductVertype");
+
+        DataGrid25.DataSource = ds;
+        DataGrid25.DataBind();
+    }
+
+
+    protected void LoadTryProductResontype(string strLangCode)
+    {
+        string strHQL;
+
+        strHQL = "Select * From T_TryProductResontype where LangCode = '" + strLangCode + "' Order By SortNumber ASC";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "TryProductResontype");
+
+        DataGrid31.DataSource = ds;
+        DataGrid31.DataBind();
+    }
+
 
 }

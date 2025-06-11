@@ -1208,6 +1208,246 @@
                                                                     </td>
                                                                 </tr>
 
+                                                                <tr>
+
+                                                                    <td colspan="2" align="left"><strong>WebSite: 
+                                                                        <asp:Label ID="Label140" runat="server" Text="<%$ Resources:lang,ZhuYongChanPingLeiXing%>"></asp:Label>
+
+                                                                    </strong></td>
+                                                                    <td colspan="2" align="left"><strong>WebSite: 
+                                                                        <asp:Label ID="Label141" runat="server" Text="<%$ Resources:lang,zhuYongChanPingBanBeng%>"></asp:Label>
+                                                                    </strong></td>
+                                                                    <td colspan="2" align="left"><strong>WebSite: 
+                                                                       <asp:Label ID="Label142" runat="server" Text="<%$ Resources:lang,ShiYongChanPingYuanYing%>"></asp:Label>
+                                                                    </strong></td>
+
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td colspan="2" valign="top" align="center">
+
+                                                                        <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="98%">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                        <tr>
+                                                                                            <td align="center" width="5%"><strong>
+                                                                                                <asp:Label ID="Label64" runat="server" Text="<%$ Resources:lang,ID%>"></asp:Label>
+                                                                                            </strong></td>
+                                                                                            <td align="center" width="20%"><strong>
+                                                                                                <asp:Label ID="Label104" runat="server" Text="<%$ Resources:lang,LeiXingMingCheng%>"></asp:Label>
+                                                                                            </strong></td>
+                                                                                            <td align="center" width="10%"><strong>
+                                                                                                <asp:Label ID="Label121" runat="server" Text="<%$ Resources:lang,LeiXingMingCheng%>"></asp:Label>EN
+                                                                                            </strong></td>
+                                                                                            <td align="center" width="25%"><strong>
+                                                                                                <asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,LeiXingMingCheng%>"></asp:Label>(Home)
+                                                                                            </strong></td>
+                                                                                            <td align="center" width="35%"><strong>
+                                                                                                <asp:Label ID="Label123" runat="server" Text="DemoURL"></asp:Label>
+                                                                                            </strong></td>
+                                                                                            <td align="center" width="5%"><strong>
+                                                                                                <asp:Label ID="Label105" runat="server" Text="<%$ Resources:lang,PaiXu%>"></asp:Label>
+                                                                                            </strong></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid4_ItemCommand" ShowHeader="false" Width="98%">
+                                                                            <FooterStyle BackColor="#57CD1" Font-Bold="True" ForeColor="White" />
+                                                                            <EditItemStyle BackColor="#2461BF" />
+                                                                            <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                            <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
+                                                                            <ItemStyle CssClass="itemStyle" />
+                                                                            <Columns>
+                                                                                <asp:TemplateColumn HeaderText="ÀàÐÍÃû³Æ">
+                                                                                    <ItemTemplate>
+                                                                                        <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                                                </asp:TemplateColumn>
+                                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="ENType" HeaderText="ENType">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="HomeTypeName" HeaderText="HomeTypeName">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="DemoURL" HeaderText="DemoURL">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="SortNumber" HeaderText="ÅÅÐò">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                                </asp:BoundColumn>
+                                                                            </Columns>
+                                                                        </asp:DataGrid>
+                                                                        <asp:Label ID="LB_RentProductTypeID" runat="server"></asp:Label>
+                                                                        <asp:Label ID="Label106" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
+                                                                        <asp:TextBox ID="TB_RentProductType" runat="server" Width="110px"></asp:TextBox>
+                                                                        <br />
+                                                                        <asp:Label ID="Label120" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>EN
+                                                                        <asp:TextBox ID="TB_RentProductENType" runat="server" Width="110px"></asp:TextBox>
+
+                                                                        <br />
+                                                                        <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>(Home)
+                                                                        <asp:TextBox ID="TB_HomeRentProductType" runat="server" Width="110px"></asp:TextBox>
+
+                                                                        <br />
+                                                                        <asp:Label ID="Label122" runat="server" Text="DemoURL"></asp:Label>
+                                                                        <asp:TextBox ID="TB_RentProductDemoURL" runat="server" Width="370px"></asp:TextBox>
+                                                                        <br />
+                                                                        <asp:Label ID="Label119" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>
+                                                                        <asp:TextBox ID="TB_RentProductTypeSort" runat="server" Width="110px"></asp:TextBox>
+                                                                        <br />
+                                                                        <br />
+                                                                        <asp:Button ID="BT_RentProductTypeNew" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_RentProductTypeNew_Click" />
+                                                                        <asp:Button ID="BT_RentProductTypeDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_RentProductTypeDelete_Click" />
+
+
+
+                                                                    </td>
+                                                                    <td colspan="2">
+                                                                        <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="98%">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                        <tr>
+                                                                                            <td align="center" width="10%"><strong>
+                                                                                                <asp:Label ID="Label70" runat="server" Text="<%$ Resources:lang,ID%>"></asp:Label>
+                                                                                            </strong></td>
+                                                                                            <td align="center" width="30%"><strong>
+                                                                                                <asp:Label ID="Label126" runat="server" Text="<%$ Resources:lang,LeiXingMingCheng%>"></asp:Label>
+                                                                                            </strong></td>
+                                                                                            <td align="center" width="30%"><strong>
+                                                                                                <asp:Label ID="Label71" runat="server" Text="<%$ Resources:lang,LeiXingMingCheng%>"></asp:Label>(Home)
+                                                                                            </strong></td>
+                                                                                            <td align="center"><strong>
+                                                                                                <asp:Label ID="Label127" runat="server" Text="<%$ Resources:lang,PaiXu%>"></asp:Label>
+                                                                                            </strong></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <asp:DataGrid ID="DataGrid25" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid25_ItemCommand" ShowHeader="false" Width="98%">
+                                                                            <FooterStyle BackColor="#57CD1" Font-Bold="True" ForeColor="White" />
+                                                                            <EditItemStyle BackColor="#2461BF" />
+                                                                            <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                            <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
+                                                                            <ItemStyle CssClass="itemStyle" />
+                                                                            <Columns>
+                                                                                <asp:TemplateColumn HeaderText="ID">
+                                                                                    <ItemTemplate>
+                                                                                        <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                                </asp:TemplateColumn>
+                                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="HomeTypeName" HeaderText="Type">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                                                                </asp:BoundColumn>
+
+                                                                                <asp:BoundColumn DataField="SortNumber" HeaderText="ÅÅÐò">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                                </asp:BoundColumn>
+                                                                            </Columns>
+                                                                        </asp:DataGrid>
+
+                                                                        <asp:Label ID="LB_RentProductVersionTypeID" runat="server"></asp:Label>
+                                                                        <asp:Label ID="Label128" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
+                                                                        <asp:TextBox ID="TB_RentProductVersionType" runat="server" Width="110px"></asp:TextBox>
+                                                                        <br />
+                                                                        <asp:Label ID="Label67" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>(Home)
+                                                                        <asp:TextBox ID="TB_HomeRentProductVersionType" runat="server" Width="110px"></asp:TextBox>
+
+                                                                        <br />
+                                                                        <asp:Label ID="Label130" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>
+                                                                        <asp:TextBox ID="TB_RentProductVersionSort" runat="server" Width="110px"></asp:TextBox>
+                                                                        <br />
+                                                                        <br />
+                                                                        <asp:Button ID="BT_RentProductVersionTypeNew" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_RentProductVersionTypeNew_Click" />
+                                                                        <asp:Button ID="BT_RentProductVersionTypeDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_RentProductVersionTypeDelete_Click" />
+                                                                    </td>
+                                                                    <td colspan="2">
+                                                                        <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="0" cellspacing="0" width="98%">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                        <tr>
+                                                                                            <td align="center" width="10%"><strong>
+                                                                                                <asp:Label ID="Label132" runat="server" Text="<%$ Resources:lang,ID%>"></asp:Label>
+                                                                                            </strong></td>
+
+                                                                                            <td align="center" width="30%"><strong>
+                                                                                                <asp:Label ID="Label72" runat="server" Text="<%$ Resources:lang,YuanYing%>"></asp:Label>
+                                                                                            </strong></td>
+
+
+                                                                                            <td align="center" width="30%"><strong>
+                                                                                                <asp:Label ID="Label73" runat="server" Text="<%$ Resources:lang,YuanYing%>"></asp:Label>(Home)
+                                                                                            </strong></td>
+                                                                                            <td align="center"><strong>
+                                                                                                <asp:Label ID="Label133" runat="server" Text="<%$ Resources:lang,PaiXu%>"></asp:Label>
+                                                                                            </strong></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <asp:DataGrid ID="DataGrid31" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid31_ItemCommand" ShowHeader="false" Width="98%">
+                                                                            <FooterStyle BackColor="#57CD1" Font-Bold="True" ForeColor="White" />
+                                                                            <EditItemStyle BackColor="#2461BF" />
+                                                                            <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                            <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
+                                                                            <ItemStyle CssClass="itemStyle" />
+                                                                            <Columns>
+                                                                                <asp:TemplateColumn HeaderText="ID">
+                                                                                    <ItemTemplate>
+                                                                                        <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
+                                                                                    </ItemTemplate>
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                                </asp:TemplateColumn>
+                                                                                <asp:BoundColumn DataField="Type" HeaderText="Type">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="HomeTypeName" HeaderText="Type">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="SortNumber" HeaderText="ÅÅÐò">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                                </asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
+                                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
+                                                                                </asp:BoundColumn>
+                                                                            </Columns>
+                                                                        </asp:DataGrid>
+                                                                        <asp:Label ID="LB_TryProductResonTypeID" runat="server"></asp:Label>
+                                                                        <asp:Label ID="Label134" runat="server" Text="<%$ Resources:lang,YuanYing%>"></asp:Label>
+                                                                        <asp:TextBox ID="TB_TryProductResonType" runat="server" Width="110px"></asp:TextBox>
+
+                                                                        <br />
+                                                                        <asp:Label ID="Label68" runat="server" Text="<%$ Resources:lang,YuanYing%>"></asp:Label>(Home)
+                                                                        <asp:TextBox ID="TB_HomeTryProductResonType" runat="server" Width="110px"></asp:TextBox>
+                                                                        <br />
+                                                                        <asp:Label ID="Label135" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>
+                                                                        <asp:TextBox ID="TB_TryProductResonSort" runat="server" Width="110px"></asp:TextBox>
+                                                                        <br />
+                                                                        <br />
+                                                                        <asp:Button ID="BT_TryProductResonTypeNew" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_TryProductResonTypeNew_Click" />
+                                                                        <asp:Button ID="BT_TryProductResonTypeDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_TryProductResonTypeDelete_Click" />
+                                                                    </td>
+                                                                </tr>
                                                             </table>
                                                         </td>
                                                     </tr>
