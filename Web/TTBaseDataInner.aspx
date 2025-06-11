@@ -184,11 +184,11 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="15%" />
                                                                     </asp:BoundColumn>
                                                                     <%-- <asp:TemplateColumn HeaderText="Status">
-    <ItemTemplate>
-        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("AllowPMChangeStatus").ToString()) %>
-    </ItemTemplate>
-    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
-</asp:TemplateColumn>
+                                                                        <ItemTemplate>
+                                                                            <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("AllowPMChangeStatus").ToString()) %>
+                                                                        </ItemTemplate>
+                                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
+                                                                    </asp:TemplateColumn>
                                                                     <asp:BoundColumn DataField="AutoRunWFAfterMakeProject" HeaderText="立项后自动发起流程">
                                                                         <ItemStyle CssClass="itemBorder" Horizontalalign="left" Width="14%" />
                                                                     </asp:BoundColumn>
@@ -379,7 +379,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="8" class="formItemBgStyleForAlignLeft">
+                                                                                <td colspan="8" class="formItemBgStyleForAlignCenter">
                                                                                     <asp:Button ID="BT_ProjectTypeNew" runat="server" CssClass="inpu" OnClick="BT_ProejctTypeNew_Click"
                                                                                         Text="<%$ Resources:lang,XinZeng%>" />
                                                                                     &nbsp;
@@ -427,7 +427,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyleForAlignLeft">
+                                                                    <td class="formItemBgStyleForAlignCenter">
                                                                         <asp:Button ID="BT_ProjectStatusNew" runat="server" CssClass="inpu" OnClick="BT_ProjectStatusNew_Click"
                                                                             Text="<%$ Resources:lang,XinZeng%>" />
                                                                         &nbsp;
@@ -438,6 +438,11 @@
                                                                     </td>
                                                                 </tr>
                                                             </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6" style="background-color: yellow;">
+                                                            <br />
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -888,7 +893,9 @@
                                                                     <td rowspan="4">&nbsp;</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="6" style="background-color: buttonface"></td>
+                                                                    <td colspan="6" style="background-color: yellow;">
+                                                                        <br />
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="left">
@@ -909,7 +916,7 @@
                                                                         </strong></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="left" valign="top" rowspan="2">
+                                                                    <td align="Center" valign="top">
                                                                         <table background="ImagesSkin/main_n_bj.jpg" border="0" cellpadding="" cellspacing="" width="98%">
                                                                             <tr>
                                                                                 <td width="7">
@@ -978,7 +985,7 @@
                                                                         <br />
                                                                         <asp:Button ID="BT_ActorGroupSave" runat="server" CssClass="inpu" OnClick="BT_ActorGroupSave_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                                     </td>
-                                                                    <td valign="top" align="left" rowspan="2">
+                                                                    <td valign="top" align="left">
                                                                         <table width="98%" border="0" cellpadding="" cellspacing="" background="ImagesSkin/main_n_bj.jpg">
                                                                             <tr>
                                                                                 <td width="7">
@@ -1058,7 +1065,7 @@
                                                                         &nbsp;
                                                                     <asp:Button ID="BT_WFTypeSave" runat="server" CssClass="inpu" OnClick="BT_WFTypeSave_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                                     </td>
-                                                                    <td valign="top" align="left" rowspan="2">
+                                                                    <td valign="top" align="left">
                                                                         <table width="98%" border="0" cellpadding="" cellspacing="" background="ImagesSkin/main_n_bj.jpg">
                                                                             <tr>
                                                                                 <td width="7">
@@ -1138,7 +1145,7 @@
                                                                     <asp:Button ID="BT_OtherStatusSave" runat="server" CssClass="inpu" OnClick="BT_OtherStatusSave_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                                     </td>
 
-                                                                    <td valign="top" align="left" colspan="2" rowspan="2">
+                                                                    <td valign="top" align="left" colspan="2">
                                                                         <table width="98%" border="0" cellpadding="" cellspacing="" background="ImagesSkin/main_n_bj.jpg">
                                                                             <tr>
                                                                                 <td width="7">
@@ -1206,8 +1213,12 @@
                                                                         <br />
                                                                         <asp:Button ID="BT_EarlyOrderNameSave" runat="server" CssClass="inpu" OnClick="BT_EarlyOrderNameSave_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                                     </td>
-                                                                </tr>
 
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="6" style="background-color: yellow;">WebSite
+                                                                    </td>
+                                                                </tr>
                                                                 <tr>
 
                                                                     <td colspan="2" align="left"><strong>WebSite: 
@@ -1218,11 +1229,10 @@
                                                                         <asp:Label ID="Label141" runat="server" Text="<%$ Resources:lang,zhuYongChanPingBanBeng%>"></asp:Label>
                                                                     </strong></td>
                                                                     <td colspan="2" align="left"><strong>WebSite: 
-                                                                       <asp:Label ID="Label142" runat="server" Text="<%$ Resources:lang,ShiYongChanPingYuanYing%>"></asp:Label>
+                                                                         <asp:Label ID="Label142" runat="server" Text="<%$ Resources:lang,ShiYongChanPingYuanYing%>"></asp:Label>
                                                                     </strong></td>
 
                                                                 </tr>
-
                                                                 <tr>
                                                                     <td colspan="2" valign="top" align="center">
 
@@ -1308,8 +1318,6 @@
                                                                         <br />
                                                                         <asp:Button ID="BT_RentProductTypeNew" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZeng%>" OnClick="BT_RentProductTypeNew_Click" />
                                                                         <asp:Button ID="BT_RentProductTypeDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_RentProductTypeDelete_Click" />
-
-
 
                                                                     </td>
                                                                     <td colspan="2">
