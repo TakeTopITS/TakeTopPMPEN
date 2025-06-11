@@ -32041,7 +32041,7 @@
     <value>Conseil en gestion de projets Certification formation</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Plateforme orientée projets</value>
+    <value>Plateforme ERP orientée vers les projets</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Gestion de fabrication orientée projets</value>
@@ -32225,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Plateforme de gestion de projets</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Plateforme orientée projets</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Télécharger</value>

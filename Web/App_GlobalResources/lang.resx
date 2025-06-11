@@ -28432,6 +28432,7 @@
   </data>
   <data name="XiangMuXingERPPingTai" xml:space="preserve">
     <value>项目型ERP平台</value>
+    <comment>项目型ERP平台</comment>
   </data>
   <data name="CRMPingTai" xml:space="preserve">
     <value>CRM平台</value>
@@ -32164,7 +32165,8 @@
     <value>项目管理咨询培训认证</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>项目型平台</value>
+    <value>项目型ERP平台</value>
+    <comment>项目型ERP平台</comment>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>项目型制造管理</value>
@@ -32351,9 +32353,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>项目管理平台</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>专案型平台</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>下载</value>

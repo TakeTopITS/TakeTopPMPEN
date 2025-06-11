@@ -28408,7 +28408,7 @@
     <value>政府プロジェクト管理プラットフォーム</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>工事プロジェクト管理プラットフォーム</value>
+    <value>エンジニアリングプロジェクト管理プラットフォーム</value>
   </data>
   <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
     <value>システム統合プロジェクト管理プラットフォーム</value>
@@ -32041,7 +32041,7 @@
     <value>プロジェクト管理コンサルティング トレーニング認証</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>プロジェクト型プラットフォーム</value>
+    <value>プロジェクト型ERPプラットフォーム</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>プロジェクト型製造管理</value>
@@ -32225,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>プロジェクト管理プラットフォーム</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>プロジェクト型プラットフォーム</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>ダウンロード</value>

@@ -195,7 +195,7 @@
                                     </div>
                                     <h3>
                                         <a href="#">
-                                            <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,XiangMuXingPingTai%>"></asp:Label></a></h3>
+                                            <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,XiangMuXingERPPingTai%>"></asp:Label></a></h3>
                                     <h3>
                                         <br />
                                         <%-- <asp:Label ID="Label67876819" runat="server" Text="<%$ Resources:lang,YuanQi%>"></asp:Label>--%>

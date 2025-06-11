@@ -28402,10 +28402,10 @@
     <value>Addetto alle vendite telefoniche</value>
   </data>
   <data name="YanFaXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Servizio clienti</value>
+    <value>Piattaforma gestione progetti R&amp;S</value>
   </data>
   <data name="ZhengWuXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Progetto TakeTop Bao</value>
+    <value>Piattaforma gestione progetti governativi</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
     <value>Piattaforma di gestione integrata dei progetti</value>
@@ -28417,7 +28417,7 @@
     <value>Piattaforma di gestione dei progetti di ricerca e sviluppo</value>
   </data>
   <data name="XiangMuXingERPPingTai" xml:space="preserve">
-    <value>Piattaforma di gestione dei progetti governativi</value>
+    <value>Piattaforma ERP orientata ai progetti</value>
   </data>
   <data name="CRMPingTai" xml:space="preserve">
     <value>Piattaforma di gestione dei progetti di ingegneria</value>
@@ -32043,7 +32043,7 @@
     <value>Consulenza gestione progetti Certificazione formazione</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Piattaforma orientata progetti</value>
+    <value>Piattaforma ERP orientata ai progetti</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Gestione manifatturiera orientata progetti</value>
@@ -32227,9 +32227,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Piattaforma gestione progetti</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Piattaforma orientata ai progetti</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Scarica</value>
