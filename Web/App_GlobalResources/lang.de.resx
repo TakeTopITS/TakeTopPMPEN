@@ -27658,7 +27658,7 @@
     <value>----- Einreichung erfolgreich, der Kundenservice von TakeTop wird sich innerhalb von 5 Minuten bei Ihnen melden. Bitte warten Sie, danke!</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>----- Einreichung fehlgeschlagen, bitte kontaktieren Sie den Kundenservice von TakeTop telefonisch (021-51085119), danke!</value>
+    <value>----- Einreichung fehlgeschlagen, bitte kontaktieren Sie den Kundenservice von TakeTop telefonisch ((086) 021-51085119), danke!</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>Kauf Version:</value>
@@ -27739,7 +27739,7 @@
     <value>Website wurde erstellt, die Adresse lautet:</value>
   </data>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
-    <value>, Login-Konto: ADMIN Passwort: 12345678. Bitte verwenden Sie es sorglos, bei Fragen kontaktieren Sie bitte den Kundenservice (021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
+    <value>, Login-Konto: ADMIN Passwort: 12345678. Bitte verwenden Sie es sorglos, bei Fragen kontaktieren Sie bitte den Kundenservice ((086) 021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
   </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>Database restore failed!</value>
@@ -27820,7 +27820,7 @@
     <value>Website:</value>
   </data>
   <data name="DeShuJuBeiFenWenJianXiaZaiDeZh" xml:space="preserve">
-    <value>wurde auf die neueste Version aktualisiert. Beim ersten Öffnen nach dem Upgrade kann es langsamer sein, es dauert etwa 5 bis 10 Minuten, bis die Login-Seite erscheint. Bei Fragen kontaktieren Sie bitte den Kundenservice von TakeTop (021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
+    <value>wurde auf die neueste Version aktualisiert. Beim ersten Öffnen nach dem Upgrade kann es langsamer sein, es dauert etwa 5 bis 10 Minuten, bis die Login-Seite erscheint. Bei Fragen kontaktieren Sie bitte den Kundenservice von TakeTop ((086) 021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
     <value>Benachrichtigung über Website-Upgrade</value>
@@ -27832,7 +27832,7 @@
     <value>Der Download-Link für die Backup-Dateien lautet:</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
-    <value>, bitte laden Sie sie zeitnah herunter. Bei Fragen kontaktieren Sie bitte den Kundenservice (021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
+    <value>, bitte laden Sie sie zeitnah herunter. Bei Fragen kontaktieren Sie bitte den Kundenservice ((086) 021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
     <value>Benachrichtigung über Backup-Datei-Download</value>
@@ -27841,7 +27841,7 @@
     <value>Diese Website wird gelöscht, dies wird etwa 5 Minuten dauern, bitte haben Sie etwas Geduld......</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>wurde gelöscht. Bei Fragen kontaktieren Sie bitte den Kundenservice (021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
+    <value>wurde gelöscht. Bei Fragen kontaktieren Sie bitte den Kundenservice ((086) 021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Benachrichtigung über Website-Löschung</value>

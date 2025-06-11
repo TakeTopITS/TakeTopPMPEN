@@ -24868,7 +24868,7 @@
     <value>Website Editor</value>
   </data>
   <data name="QuDaoHeZuo" xml:space="preserve">
-    <value>Channel Partners</value>
+    <value>Channel</value>
   </data>
   <data name="ZaiXianZuYong" xml:space="preserve">
     <value>Online rental</value>
@@ -27659,7 +27659,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>----- Submission successful, TakeTop customer service will contact you within 5 minutes, please wait, thank you!</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>----- Submission failed, please contact TakeTop customer service (021-51085119), thank you!</value>
+    <value>----- Submission failed, please contact TakeTop customer service ((086) 021-51085119), thank you!</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>Purchase version:</value>
@@ -27737,7 +27737,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Site created, address is:</value>
   </data>
   <data name="DengLuZhangHaoADMINMiMa1234567" xml:space="preserve">
-    <value>, login account: ADMIN password: 12345678, please use with confidence, if you have any questions, please contact customer service (021-51085119), thank you, this email is sent from TakeTop Group!</value>
+    <value>, login account: ADMIN password: 12345678, please use with confidence, if you have any questions, please contact customer service ((086) 021-51085119), thank you, this email is sent from TakeTop Group!</value>
   </data>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
     <value>Site creation notification</value>
@@ -27824,7 +27824,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Data backup file download address is:</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
-    <value>Has been upgraded to the latest version, the first time opening after upgrading will be slow, it will take about 5 to 10 minutes for the login page to appear, if you have any questions, please contact TakeTop customer service (021-51085119), thank you, this email is from TakeTop Group!</value>
+    <value>Has been upgraded to the latest version, the first time opening after upgrading will be slow, it will take about 5 to 10 minutes for the login page to appear, if you have any questions, please contact TakeTop customer service ((086) 021-51085119), thank you, this email is from TakeTop Group!</value>
   </data>
   <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
     <value>Backup file download notification</value>
@@ -27833,10 +27833,10 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Sending this site backup file, it will take about 5 minutes, please wait patiently......</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
-    <value>Has been deleted, if you have any questions, please contact customer service (021-51085119), thank you, this email is from TakeTop Group!</value>
+    <value>Has been deleted, if you have any questions, please contact customer service ((086) 021-51085119), thank you, this email is from TakeTop Group!</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
-    <value>, please download in time, if you have any questions, please contact customer service (021-51085119), thank you, this email is from TakeTop Group!</value>
+    <value>, please download in time, if you have any questions, please contact customer service ((086) 021-51085119), thank you, this email is from TakeTop Group!</value>
   </data>
   <data name="ZhengZaiBaoCunZheGeZhanDianDeX" xml:space="preserve">
     <value>Saving the absolute path of this site's virtual directory, it will take about 1 minute, please wait patiently......</value>

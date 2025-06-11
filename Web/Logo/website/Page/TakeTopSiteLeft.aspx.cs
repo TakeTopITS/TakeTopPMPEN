@@ -93,7 +93,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                 strPageName = strPageName + "?ModuleName=" + strModuleName + "&HomeModuleName=" + strHomeModuleName + "&ModuleType=" + strModuleType;
             }
 
-            strHtml += "<span name=\"parent1\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\"><span onclick=\"OnPlusEvent(this)\" class=\"plusSpan\"><img src=\'" + strIconURL + "' />&nbsp;<span onclick=\"OnMinusEvent(this)\" class=\"minusSpan\"><span class=\"titleSpan\" onclick=\"CreateTabModule('" + strHomeModuleName + "','" + strPageName + "',this)\" ondblclick=\"OnDoubleClickModule(this)\">" + "<a   href = " + strPageName + " target=SiteRightContainerFrame > <font color='#505050'>" + strHomeModuleName + "</font></a> " + " </span></span></span></span>";
+            strHtml += "<span title=" + strHomeModuleName + " name=\"parent1\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\"><span onclick=\"OnPlusEvent(this)\" class=\"plusSpan\"><img src=\'" + strIconURL + "' />&nbsp;<span onclick=\"OnMinusEvent(this)\" class=\"minusSpan\"><span class=\"titleSpan\" onclick=\"CreateTabModule('" + strHomeModuleName + "','" + strPageName + "',this)\" ondblclick=\"OnDoubleClickModule(this)\">" + "<a   href = " + strPageName + " target=SiteRightContainerFrame > <font color='#505050'>" + strHomeModuleName + "</font></a> " + " </span></span></span></span>";
 
             if (!isFirst)
             {
@@ -127,11 +127,11 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
 
                 if (dvModule.Count > 0)
                 {
-                    strHtml += "<span class=\"titleSpan\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\"  ondblclick=\"OnDoubleClickModule(this)\"><span class=\"titleSpan\" onclick=\"CreateTabModule('" + strChildHomeModuleName + "','" + strChildPageName + "',this)\" >" + "<a  href = " + strChildPageName + " target=SiteRightContainerFrame ><font color='#505050'>" + strChildHomeModuleName + "</font></a>" + " </span></span>";
+                    strHtml += "<span title=" + strChildHomeModuleName + " class=\"titleSpan\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\"  ondblclick=\"OnDoubleClickModule(this)\"><span class=\"titleSpan\" onclick=\"CreateTabModule('" + strChildHomeModuleName + "','" + strChildPageName + "',this)\" >" + "<a  href = " + strChildPageName + " target=SiteRightContainerFrame ><font color='#505050'>" + strChildHomeModuleName + "</font></a>" + " </span></span>";
                 }
                 else
                 {
-                    strHtml += "<li><span class=\"titleSpan\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\" onclick=\"CreateTab('" + strChildHomeModuleName + "','" + strChildPageName + "',this)\">" + "<a   href = " + strChildPageName + " target=SiteRightContainerFrame ><font color='#505050'>" + strChildHomeModuleName + "</font></a>" + "</span></li>";
+                    strHtml += "<li><span title=" + strChildHomeModuleName + " class=\"titleSpan\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\" onclick=\"CreateTab('" + strChildHomeModuleName + "','" + strChildPageName + "',this)\">" + "<a   href = " + strChildPageName + " target=SiteRightContainerFrame ><font color='#505050'>" + strChildHomeModuleName + "</font></a>" + "</span></li>";
                 }
 
                 strHtml += "<div class=\"text\">";
@@ -152,7 +152,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                         strGrandSonPageName = strGrandSonPageName + "?ModuleName=" + strGrandSonModuleName + "&HomeModuleName=" + strGrandSonHomeModuleName + "&ModuleType=" + strGrandSonModuleType;
                     }
 
-                    strHtml += "<li><span class=\"titleSpan\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\" onclick=\"CreateTab('" + strGrandSonHomeModuleName + "','" + strGrandSonPageName + "',this)\">" + "<a   href = " + strGrandSonPageName + " target=SiteRightContainerFrame > <font color='#505050'>" + strGrandSonHomeModuleName + "</font></a> " + "</span></li>";
+                    strHtml += "<li><span title=" + strGrandSonHomeModuleName +" class=\"titleSpan\" onmouseover=\"OnMouseOverEvent(this)\" onmouseout=\"OnMouseOutEvent(this)\" onclick=\"CreateTab('" + strGrandSonHomeModuleName + "','" + strGrandSonPageName + "',this)\">" + "<a   href = " + strGrandSonPageName + " target=SiteRightContainerFrame > <font color='#505050'>" + strGrandSonHomeModuleName + "</font></a> " + "</span></li>";
 
                 }
 

@@ -27649,7 +27649,7 @@
     <value>-----제출 성공, 탄딩 탄딩 고객 서비스가 5분 이내에 연락하겠습니다. 잠시 기다려 주십시오, 감사합니다!</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH" xml:space="preserve">
-    <value>-----제출 실패, 탄딩 탄딩 고객 서비스(021-51085119)에 전화로 문의하십시오. 감사합니다!</value>
+    <value>-----제출 실패, 탄딩 탄딩 고객 서비스((086) 021-51085119)에 전화로 문의하십시오. 감사합니다!</value>
   </data>
   <data name="ShangHuiXinXi" xml:space="preserve">
     <value>구매 버전:</value>
@@ -27802,7 +27802,7 @@
     <value>사이트를 업그레이드하고 있습니다. 약 5분 정도 걸릴 예정이니 기다려 주십시오......</value>
   </data>
   <data name="ZZDiShiCiZhanDianHaiCunZaiJiLu" xml:space="preserve">
-    <value>사이트가 최신 버전으로 업그레이드되었습니다. 업그레이드 후 처음 열면 로그인 페이지가 나타나기까지 약 5~10분이 소요될 수 있습니다. 문제가 있으면 태정 탄딩 고객 서비스(021-51085119)에 연락해 주십시오. 감사합니다. 이 메일은 태정 탄딩 그룹에서 발송되었습니다!</value>
+    <value>사이트가 최신 버전으로 업그레이드되었습니다. 업그레이드 후 처음 열면 로그인 페이지가 나타나기까지 약 5~10분이 소요될 수 있습니다. 문제가 있으면 태정 탄딩 고객 서비스((086) 021-51085119)에 연락해 주십시오. 감사합니다. 이 메일은 태정 탄딩 그룹에서 발송되었습니다!</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
     <value>사이트 업그레이드 통지</value>
@@ -27814,7 +27814,7 @@
     <value>사이트 데이터 백업 파일의 다운로드 주소는 다음과 같습니다:</value>
   </data>
   <data name="ZhanDianShengJiTongZhi" xml:space="preserve">
-    <value>빠른 시간 내에 다운로드하여 주십시오. 문제가 있으면 고객 서비스(021-51085119)에 연락해 주십시오. 감사합니다. 이 메일은 태정 탄딩 그룹에서 발송되었습니다!</value>
+    <value>빠른 시간 내에 다운로드하여 주십시오. 문제가 있으면 고객 서비스((086) 021-51085119)에 연락해 주십시오. 감사합니다. 이 메일은 태정 탄딩 그룹에서 발송되었습니다!</value>
   </data>
   <data name="ZhengZaiFaSongZheGeZhanDianBei" xml:space="preserve">
     <value>백업 파일 다운로드 통지</value>
@@ -27823,7 +27823,7 @@
     <value>사이트를 삭제하고 있습니다. 약 5분 정도 걸릴 예정이니 기다려 주십시오......</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
-    <value>사이트가 삭제되었습니다. 문제가 있으면 고객 서비스(021-51085119)에 연락해 주십시오. 감사합니다. 이 메일은 태정 탄딩 그룹에서 발송되었습니다!</value>
+    <value>사이트가 삭제되었습니다. 문제가 있으면 고객 서비스((086) 021-51085119)에 연락해 주십시오. 감사합니다. 이 메일은 태정 탄딩 그룹에서 발송되었습니다!</value>
   </data>
   <data name="BeiFenWenJianXiaZaiTongZhi" xml:space="preserve">
     <value>사이트 삭제 통지</value>

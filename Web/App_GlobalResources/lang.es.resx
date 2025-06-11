@@ -27658,7 +27658,7 @@
     <value>-----Envío exitoso, el servicio al cliente de TakeTop se pondrá en contacto contigo en 5 minutos, ¡por favor espera, gracias!</value>
   </data>
   <data name="ZZDiJiaoShiBaiQingDianHuaLianJ" xml:space="preserve">
-    <value>-----Envío fallido, ¡por favor contacta al servicio al cliente de TakeTop (021-51085119), gracias!</value>
+    <value>-----Envío fallido, ¡por favor contacta al servicio al cliente de TakeTop ((086) 021-51085119), gracias!</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
     <value>Compra de versión:</value>
@@ -27739,7 +27739,7 @@
     <value>Ha sido creado el sitio, la dirección es:</value>
   </data>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
-    <value>, Cuenta de acceso: ADMIN Contraseña: 12345678, ¡por favor usa con confianza, si tienes algún problema contacta al servicio al cliente (021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
+    <value>, Cuenta de acceso: ADMIN Contraseña: 12345678, ¡por favor usa con confianza, si tienes algún problema contacta al servicio al cliente ((086) 021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
   </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>¡Error al restaurar la base de datos!</value>
@@ -27820,7 +27820,7 @@
     <value>Sitio:</value>
   </data>
   <data name="DeShuJuBeiFenWenJianXiaZaiDeZh" xml:space="preserve">
-    <value>Ha sido actualizado a la última versión, la primera apertura después de la actualización será lenta, tomará entre 5 y 10 minutos para que aparezca la página de inicio de sesión, si tienes algún problema, ¡por favor contacta al servicio al cliente de TakeTop (021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
+    <value>Ha sido actualizado a la última versión, la primera apertura después de la actualización será lenta, tomará entre 5 y 10 minutos para que aparezca la página de inicio de sesión, si tienes algún problema, ¡por favor contacta al servicio al cliente de TakeTop ((086) 021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
     <value>Notificación de actualización de sitio</value>
@@ -27832,7 +27832,7 @@
     <value>El enlace de descarga del archivo de copia de seguridad es:</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
-    <value>, ¡por favor descarga a tiempo, si tienes algún problema contacta al servicio al cliente (021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
+    <value>, ¡por favor descarga a tiempo, si tienes algún problema contacta al servicio al cliente ((086) 021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
     <value>Notificación de descarga de copia de seguridad</value>
@@ -27841,7 +27841,7 @@
     <value>Eliminando este sitio, tomará aproximadamente 5 minutos, ¡por favor espera pacientemente...</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Ha sido eliminado, si tienes algún problema, ¡por favor contacta al servicio al cliente (021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
+    <value>Ha sido eliminado, si tienes algún problema, ¡por favor contacta al servicio al cliente ((086) 021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Notificación de eliminación de sitio</value>

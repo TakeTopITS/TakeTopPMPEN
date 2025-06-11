@@ -43,7 +43,7 @@
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyleForAlignLeft">
-                                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DanWei%>"></asp:Label>
+                                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,Company%>"></asp:Label>
                                             </td>
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <asp:TextBox ID="TB_Company" runat="server" Style="width: 250px; height: 30px;"></asp:TextBox>

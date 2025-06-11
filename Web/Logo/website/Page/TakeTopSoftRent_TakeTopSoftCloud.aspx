@@ -327,7 +327,7 @@
                                                     <li>
                                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,NiYeKeYiZhiJieLianJiKeFu%>"></asp:Label>£º
                                                         <br />
-                                                        &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="../../../images/qq.png" />QQ</a>£¬Tel£º<a href="tel:02151085119" class="call">021-51085119</a>¡£<br />
+                                                        &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="../../../images/qq.png" />QQ</a>£¬Tel£º<a href="tel:02151085119" class="call">(086) 021-51085119</a>¡£<br />
                                                     </li>
                                                 </div>
                                                 <div id="id7" class="section">

@@ -27661,7 +27661,7 @@
     <value>-----提出成功、泰頂拓鼎カスタマーサービスが5分以内にご連絡します。少々お待ちください、ありがとうございます！</value>
   </data>
   <data name="GouMaiBanBen" xml:space="preserve">
-    <value>-----提出失敗、泰頂拓鼎カスタマーサービスにお電話ください（021-51085119）、ありがとうございます！</value>
+    <value>-----提出失敗、泰頂拓鼎カスタマーサービスにお電話ください（(086) 021-51085119）、ありがとうございます！</value>
   </data>
   <data name="YongHuShu" xml:space="preserve">
     <value>購入 バージョン</value>
@@ -27739,7 +27739,7 @@
     <value>サイトが作成されました。アドレスは：</value>
   </data>
   <data name="ZhanDianChuangJianTongZhi" xml:space="preserve">
-    <value>、ログインアカウント：ADMIN パスワード：12345678 、ご安心してご利用ください。問題があればカスタマーサービス（021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
+    <value>、ログインアカウント：ADMIN パスワード：12345678 、ご安心してご利用ください。問題があればカスタマーサービス（(086) 021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
   </data>
   <data name="HuiFuShuJuKuShiBai" xml:space="preserve">
     <value>データベースの復元に失敗しました！</value>
@@ -27820,7 +27820,7 @@
     <value>サイト：</value>
   </data>
   <data name="DeShuJuBeiFenWenJianXiaZaiDeZh" xml:space="preserve">
-    <value>最新版にアップグレードされました。初回起動時は遅くなります。ログインページが表示されるまで約5〜10分かかります。問題があれば泰頂拓鼎カスタマーサービス（021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
+    <value>最新版にアップグレードされました。初回起動時は遅くなります。ログインページが表示されるまで約5〜10分かかります。問題があれば泰頂拓鼎カスタマーサービス（(086) 021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
   </data>
   <data name="QingJiShiXiaZaiRuYouWenTiQingL" xml:space="preserve">
     <value>サイトアップグレード通知</value>
@@ -27832,7 +27832,7 @@
     <value>のデータバックアップファイルダウンロードアドレスは：</value>
   </data>
   <data name="YiBeiShanChuRuYouWenTiQingLian" xml:space="preserve">
-    <value>、早めにダウンロードしてください。問題があればカスタマーサービス（021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
+    <value>、早めにダウンロードしてください。問題があればカスタマーサービス（(086) 021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
   </data>
   <data name="ZhanDianShanChuTongZhi" xml:space="preserve">
     <value>バックアップファイルダウンロード通知</value>
@@ -27841,7 +27841,7 @@
     <value>このサイトを削除中です。約5分かかりますので、お待ちください......</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>削除されました。問題があればカスタマーサービス（021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
+    <value>削除されました。問題があればカスタマーサービス（(086) 021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>サイト削除通知</value>

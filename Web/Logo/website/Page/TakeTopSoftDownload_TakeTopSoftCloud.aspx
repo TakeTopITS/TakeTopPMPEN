@@ -177,14 +177,14 @@
                                                             <li>
                                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:Label><asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,LianJie%>"></asp:Label><asp:HyperLink ID="HL_SourceCodeDownload" runat="server" Text="<%$ Resources:lang,YuanMaXiaZai%>" Visible="false"></asp:HyperLink>
                                                                 <br />
-                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YaoXieZhuQingLianXiTaiDingKeFu%>"></asp:Label><asp:Label ID="Label53535" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º021-51085119£©
+                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YaoXieZhuQingLianXiTaiDingKeFu%>"></asp:Label><asp:Label ID="Label53535" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º(086) 021-51085119£©
                                                            
                                                                 </br>
                                                                      <p style="text-align: left;">
                                                                          <img alt="" src="../../../Logo/ECMP.png" style="width: 640px; height: 600px;" />
 
                                                                      </p>
-                                                                <%--  &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="../../../images/qq.png" /><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>£¬<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º<a href="tel:02151085119" class="call">021-51085119</a><br />--%>
+                                                                <%--  &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="../../../images/qq.png" /><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,KeFu%>"></asp:Label></a>£¬<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DianHua%>"></asp:Label>£º<a href="tel:02151085119" class="call">(086) 021-51085119</a><br />--%>
                                                             </li>
 
                                                         </div>
