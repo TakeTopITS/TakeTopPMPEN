@@ -32033,6 +32033,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>Наша система из шести каналов</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>Сокровище Проекта</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Консалтинг по управлению проектами</value>
   </data>

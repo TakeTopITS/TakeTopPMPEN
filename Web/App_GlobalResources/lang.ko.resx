@@ -32031,6 +32031,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>당사 채널 6대 시스템</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>프로젝트 보물</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>프로젝트 관리 컨설팅</value>
   </data>
