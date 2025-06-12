@@ -28408,7 +28408,7 @@
     <value>Платформа управления государственными проектами</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Платформа управления строительными проектами</value>
+    <value>Платформа управления инженерными проектами</value>
   </data>
   <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
     <value>Платформа управления проектами системной интеграции</value>
@@ -32033,6 +32033,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>Наша система из шести каналов</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>TakeTop XMB(Mini PMP)</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Консалтинг по управлению проектами</value>
   </data>
@@ -32040,7 +32043,7 @@
     <value>Консалтинг по управлению проектами Сертификация обучения</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Проектно-ориентированная платформа</value>
+    <value>Проектно-ориентированная платформа ERP</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Управление проектным производством</value>
@@ -32224,9 +32227,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Платформа управления проектами</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Проектно-ориентированная платформа</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Скачать</value>

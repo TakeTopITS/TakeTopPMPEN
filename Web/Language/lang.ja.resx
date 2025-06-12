@@ -27841,7 +27841,7 @@
     <value>このサイトを削除中です。約5分かかりますので、お待ちください......</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>削除されました。問題があればカスタマーサービス（(086) 021-51085119）までご連絡ください。このメールは泰頂拓鼎グループから送信されました！</value>
+    <value>賃貸バージョン</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>サイト削除通知</value>
@@ -28408,7 +28408,7 @@
     <value>政府プロジェクト管理プラットフォーム</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>工事プロジェクト管理プラットフォーム</value>
+    <value>エンジニアリングプロジェクト管理プラットフォーム</value>
   </data>
   <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
     <value>システム統合プロジェクト管理プラットフォーム</value>
@@ -32031,6 +32031,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>当社チャネル6大システム</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>プロジェクト宝</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>プロジェクト管理コンサルティング</value>
   </data>
@@ -32038,7 +32041,7 @@
     <value>プロジェクト管理コンサルティング トレーニング認証</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>プロジェクト型プラットフォーム</value>
+    <value>プロジェクト型ERPプラットフォーム</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>プロジェクト型製造管理</value>
@@ -32222,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>プロジェクト管理プラットフォーム</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>プロジェクト型プラットフォーム</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>ダウンロード</value>

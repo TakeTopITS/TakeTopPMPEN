@@ -1299,18 +1299,18 @@
                                                                         </asp:DataGrid>
                                                                         <asp:Label ID="LB_RentProductTypeID" runat="server"></asp:Label>
                                                                         <asp:Label ID="Label106" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
-                                                                        <asp:TextBox ID="TB_RentProductType" runat="server" Width="110px"></asp:TextBox>
+                                                                        <asp:TextBox ID="TB_RentProductType" runat="server" Width="410px"></asp:TextBox>
                                                                         <br />
                                                                         <asp:Label ID="Label120" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>EN
                                                                         <asp:TextBox ID="TB_RentProductENType" runat="server" Width="110px"></asp:TextBox>
 
                                                                         <br />
                                                                         <asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>(Home)
-                                                                        <asp:TextBox ID="TB_HomeRentProductType" runat="server" Width="110px"></asp:TextBox>
+                                                                        <asp:TextBox ID="TB_HomeRentProductType" runat="server" Width="410px"></asp:TextBox>
 
                                                                         <br />
                                                                         <asp:Label ID="Label122" runat="server" Text="DemoURL"></asp:Label>
-                                                                        <asp:TextBox ID="TB_RentProductDemoURL" runat="server" Width="370px"></asp:TextBox>
+                                                                        <asp:TextBox ID="TB_RentProductDemoURL" runat="server" Width="470px"></asp:TextBox>
                                                                         <br />
                                                                         <asp:Label ID="Label119" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>
                                                                         <asp:TextBox ID="TB_RentProductTypeSort" runat="server" Width="110px"></asp:TextBox>

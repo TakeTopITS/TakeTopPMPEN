@@ -27841,7 +27841,7 @@
     <value>Notificação de download de arquivo de backup</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Excluindo este site, levará aproximadamente 5 minutos, por favor, aguarde pacientemente......</value>
+    <value>Versão de Aluguel:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>foi excluído, em caso de problemas, entre em contato com o atendimento ao cliente ((086) 021-51085119), obrigado, este e-mail foi enviado pelo Grupo TakeTop!</value>
@@ -28405,10 +28405,10 @@
     <value>Plataforma de gerenciamento de projetos de P&amp;D</value>
   </data>
   <data name="ZhengWuXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Plataforma de gerenciamento de projetos governamentais</value>
+    <value>Plataforma de gestão de projetos governamentais</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Plataforma de gerenciamento de projetos de engenharia</value>
+    <value>Plataforma de gestão de projetos de engenharia</value>
   </data>
   <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
     <value>Plataforma de gerenciamento de projetos de integração de sistemas</value>
@@ -32031,6 +32031,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>Os nossos seis sistemas de canais</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>TakeTopXMB(Mini PMP)</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Consultoria em gestão de projetos</value>
   </data>
@@ -32038,7 +32041,7 @@
     <value>Consultoria em gestão de projetos Certificação de formação</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Plataforma orientada para projetos</value>
+    <value>Plataforma ERP orientada a projetos</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Gestão de manufatura orientada para projetos</value>
@@ -32222,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Plataforma de gestão de projetos</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Plataforma orientada para projetos</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Descarregar</value>

@@ -27841,7 +27841,7 @@
     <value>소프트웨어 대여 신청 통지</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>애플리케이션 사이트를 업그레이드하고 있습니다. 약 5분 정도 걸릴 예정이니 기다려 주십시오......</value>
+    <value>대여 버전:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>사이트 업그레이드 성공!</value>
@@ -28408,7 +28408,7 @@
     <value>건설 프로젝트 관리 플랫폼</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>시스템 통합 프로젝트 관리 플랫폼</value>
+    <value>엔지니어링 프로젝트 관리 플랫폼</value>
   </data>
   <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
     <value>소프트웨어 구현 프로젝트 관리 플랫폼</value>
@@ -32031,6 +32031,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>당사 채널 6대 시스템</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>프로젝트 보물</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>프로젝트 관리 컨설팅</value>
   </data>
@@ -32038,7 +32041,7 @@
     <value>프로젝트 관리 컨설팅 교육 인증</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>프로젝트형 플랫폼</value>
+    <value>프로젝트형 ERP 플랫폼</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>프로젝트형 제조 관리</value>
@@ -32222,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>프로젝트 관리 플랫폼</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>프로젝트형 플랫폼</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>다운로드</value>

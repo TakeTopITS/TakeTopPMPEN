@@ -27841,7 +27841,7 @@
     <value>è stato eliminato, per qualsiasi problema, contattare il servizio clienti ((086) 021-51085119), grazie, questa email è inviata dal gruppo TakeTop!</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Notifica di eliminazione del sito</value>
+    <value>Versione di Noleggio:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Sto salvando il percorso assoluto della directory virtuale di questo sito, ci vorrà circa 1 minuto, si prega di attendere pazientemente......</value>
@@ -28402,10 +28402,10 @@
     <value>Addetto alle vendite telefoniche</value>
   </data>
   <data name="YanFaXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Servizio clienti</value>
+    <value>Piattaforma gestione progetti R&amp;S</value>
   </data>
   <data name="ZhengWuXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Progetto TakeTop Bao</value>
+    <value>Piattaforma gestione progetti governativi</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
     <value>Piattaforma di gestione integrata dei progetti</value>
@@ -28417,7 +28417,7 @@
     <value>Piattaforma di gestione dei progetti di ricerca e sviluppo</value>
   </data>
   <data name="XiangMuXingERPPingTai" xml:space="preserve">
-    <value>Piattaforma di gestione dei progetti governativi</value>
+    <value>Piattaforma ERP orientata ai progetti</value>
   </data>
   <data name="CRMPingTai" xml:space="preserve">
     <value>Piattaforma di gestione dei progetti di ingegneria</value>
@@ -32033,6 +32033,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>I nostri sei sistemi di canali</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>TakeTopXMB(Mini PMP)</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Consulenza gestione progetti</value>
   </data>
@@ -32040,7 +32043,7 @@
     <value>Consulenza gestione progetti Certificazione formazione</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Piattaforma orientata progetti</value>
+    <value>Piattaforma ERP orientata ai progetti</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Gestione manifatturiera orientata progetti</value>
@@ -32224,9 +32227,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Piattaforma gestione progetti</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Piattaforma orientata ai progetti</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Scarica</value>

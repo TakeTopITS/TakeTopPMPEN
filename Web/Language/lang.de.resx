@@ -27841,7 +27841,7 @@
     <value>Diese Website wird gelöscht, dies wird etwa 5 Minuten dauern, bitte haben Sie etwas Geduld......</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>wurde gelöscht. Bei Fragen kontaktieren Sie bitte den Kundenservice ((086) 021-51085119), danke, diese E-Mail wurde von der TakeTop Group gesendet!</value>
+    <value>Mietversion:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Benachrichtigung über Website-Löschung</value>
@@ -28402,13 +28402,13 @@
     <value>F&amp;E-Projektmanagement-Plattform</value>
   </data>
   <data name="YanFaXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Regierungsprojektmanagement-Plattform</value>
+    <value>F&amp;E-Projektmanagementplattform</value>
   </data>
   <data name="ZhengWuXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Ingenieurprojektmanagement-Plattform</value>
+    <value>Behördliche Projektmanagementplattform</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Systemintegrations-Projektmanagement-Plattform</value>
+    <value>Projektmanagementplattform für Ingenieurprojekte</value>
   </data>
   <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
     <value>Software-Implementierungs-Projektmanagement-Plattform</value>
@@ -28417,7 +28417,7 @@
     <value>Projektbasiertes ERP-System</value>
   </data>
   <data name="XiangMuXingERPPingTai" xml:space="preserve">
-    <value>CRM-Plattform</value>
+    <value>Projekt-basierter ERP-Plattform</value>
   </data>
   <data name="CRMPingTai" xml:space="preserve">
     <value>Kollaborative OA-Plattform</value>
@@ -32031,6 +32031,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>Unsere Channel-Sechs-Systeme</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>TakeTopXMB(Mini PMP)</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Projektmanagementberatung</value>
   </data>
@@ -32038,7 +32041,7 @@
     <value>Projektmanagementberatung Schulungszertifizierung</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Projektorientierte Plattform</value>
+    <value>Projekt-basierter ERP-Plattform</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Projektorientierte Fertigungssteuerung</value>
@@ -32222,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Projektmanagementplattform</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Projektorientierte Plattform</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Download</value>

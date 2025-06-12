@@ -27841,7 +27841,7 @@
     <value>Eliminando este sitio, tomará aproximadamente 5 minutos, ¡por favor espera pacientemente...</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Ha sido eliminado, si tienes algún problema, ¡por favor contacta al servicio al cliente ((086) 021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
+    <value>Versión de Alquiler:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Notificación de eliminación de sitio</value>
@@ -32031,6 +32031,9 @@
   <data name="WoMenQuDaoLiuDaTiXi" xml:space="preserve">
     <value>Nuestros seis sistemas de canales</value>
   </data>
+  <data name="XiangMuBao" xml:space="preserve">
+    <value>TakeTopXMB(Mini PMP)</value>
+  </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Consultoría en gestión de proyectos</value>
   </data>
@@ -32038,7 +32041,7 @@
     <value>Consultoría en gestión de proyectos Certificación de capacitación</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Plataforma orientada a proyectos</value>
+    <value>Plataforma ERP orientada a proyectos</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Gestión de manufactura orientada a proyectos</value>
@@ -32222,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Plataforma de gestión de proyectos</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Plataforma orientada a proyectos</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Descargar</value>

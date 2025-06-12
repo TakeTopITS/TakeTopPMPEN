@@ -27842,7 +27842,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Saving the absolute path of this site's virtual directory, it will take about 1 minute, please wait patiently......</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Deleting this site, it will take about 5 minutes, please wait patiently......</value>
+    <value>Rental Version:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Rental application of, please handle it promptly!!!</value>
@@ -28403,13 +28403,13 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Contract basis</value>
   </data>
   <data name="YanFaXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Customer service</value>
+    <value>R&amp;D Project Management Platform</value>
   </data>
   <data name="ZhengWuXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Assigned a demand to you:</value>
+    <value>Government Project Management Platform</value>
   </data>
   <data name="GongChengXiangMuGuanLiPingTai" xml:space="preserve">
-    <value>Project comprehensive management platform</value>
+    <value>Engineering Project Management Platform</value>
   </data>
   <data name="JiTongJiChengXiangMuGuanLiPing" xml:space="preserve">
     <value>To you, please handle promptly!</value>
@@ -28418,7 +28418,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>R&amp;D project management platform</value>
   </data>
   <data name="XiangMuXingERPPingTai" xml:space="preserve">
-    <value>  Status:</value>
+    <value>Project-oriented ERP Platform</value>
   </data>
   <data name="CRMPingTai" xml:space="preserve">
     <value>Engineering project management platform</value>
@@ -32033,7 +32033,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Our six major channel systems</value>
   </data>
   <data name="XiangMuBao" xml:space="preserve">
-    <value>XMB</value>
+    <value>TakeTopXMB(Mini PMP)</value>
   </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Project management consulting</value>
@@ -32042,7 +32042,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Project management consulting, training, certification</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>Project-based platform</value>
+    <value>Project-oriented ERP Platform</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>Project-based manufacturing management</value>
@@ -32060,7 +32060,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>System integration project management platform</value>
   </data>
   <data name="YanFaXiangMuGuanLiPingTai1" xml:space="preserve">
-    <value>Research and development project management platform</value>
+    <value>R&amp;D Project Management Platform</value>
   </data>
   <data name="YanZhengMa1" xml:space="preserve">
     <value>Verification code</value>
@@ -32226,9 +32226,6 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>Project Management Platform</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>Project-based Platform</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>Download</value>

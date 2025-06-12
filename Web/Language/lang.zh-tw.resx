@@ -32041,7 +32041,7 @@
     <value>專案管理諮詢培訓認證</value>
   </data>
   <data name="XiangMuXingPingTai" xml:space="preserve">
-    <value>專案型平臺</value>
+    <value>專案型ERP平臺</value>
   </data>
   <data name="XiangMuXingZhiZaoGuanLi" xml:space="preserve">
     <value>專案型製造管理</value>
@@ -32225,9 +32225,6 @@
   </data>
   <data name="XiangMuGuanLiPingTai1" xml:space="preserve">
     <value>專案管理平臺</value>
-  </data>
-  <data name="XiangMuXingPingTai1" xml:space="preserve">
-    <value>專案型平臺</value>
   </data>
   <data name="XiaZai1" xml:space="preserve">
     <value>下載</value>
