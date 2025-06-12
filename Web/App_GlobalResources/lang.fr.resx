@@ -27841,7 +27841,7 @@
     <value>Notification de suppression de site</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Sauvegarde du chemin absolu du répertoire virtuel de ce site en cours, cela prendra environ 1 minute, veuillez patienter......</value>
+    <value>Version de Location:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Location version :</value>
@@ -32032,7 +32032,7 @@
     <value>Nos six systèmes de canaux</value>
   </data>
   <data name="XiangMuBao" xml:space="preserve">
-    <value>Trésor de Projet</value>
+    <value>TakeTopXMB(Mini PMP)</value>
   </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Conseil en gestion de projets</value>

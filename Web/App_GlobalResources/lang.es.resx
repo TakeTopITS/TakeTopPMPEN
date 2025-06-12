@@ -27841,7 +27841,7 @@
     <value>Eliminando este sitio, tomará aproximadamente 5 minutos, ¡por favor espera pacientemente...</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Ha sido eliminado, si tienes algún problema, ¡por favor contacta al servicio al cliente ((086) 021-51085119), gracias, este correo es enviado por el Grupo TakeTop!</value>
+    <value>Versión de Alquiler:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Notificación de eliminación de sitio</value>
@@ -32032,7 +32032,7 @@
     <value>Nuestros seis sistemas de canales</value>
   </data>
   <data name="XiangMuBao" xml:space="preserve">
-    <value>Tesoro de Proyecto</value>
+    <value>TakeTopXMB(Mini PMP)</value>
   </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Consultoría en gestión de proyectos</value>

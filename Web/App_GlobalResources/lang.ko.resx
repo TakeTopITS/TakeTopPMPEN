@@ -27841,7 +27841,7 @@
     <value>소프트웨어 대여 신청 통지</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>애플리케이션 사이트를 업그레이드하고 있습니다. 약 5분 정도 걸릴 예정이니 기다려 주십시오......</value>
+    <value>대여 버전:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>사이트 업그레이드 성공!</value>

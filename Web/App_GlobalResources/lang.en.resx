@@ -27842,7 +27842,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Saving the absolute path of this site's virtual directory, it will take about 1 minute, please wait patiently......</value>
   </data>
   <data name="ZuYongBanBen" xml:space="preserve">
-    <value>Deleting this site, it will take about 5 minutes, please wait patiently......</value>
+    <value>Rental Version:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
     <value>Rental application of, please handle it promptly!!!</value>
@@ -32033,7 +32033,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Our six major channel systems</value>
   </data>
   <data name="XiangMuBao" xml:space="preserve">
-    <value>Project Treasure(XMB)</value>
+    <value>TakeTopXMB(Mini PMP)</value>
   </data>
   <data name="XiangMuGuanLiZiXun" xml:space="preserve">
     <value>Project management consulting</value>
