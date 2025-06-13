@@ -22,9 +22,22 @@ using ProjectMgt.BLL;
 
 public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
 {
-    string strWebSite;
+    string strWebSite, strLangCode;
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        // 确定语言代码的优先级：Cookie > Session > 默认配置
+        strLangCode = Request.Cookies["LangCode"]?.Value ??
+                     Session["LangCode"]?.ToString() ??
+                     System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
+        // 确保Session和Cookie同步
+        Session["LangCode"] = strLangCode;
+        Response.SetCookie(new HttpCookie("LangCode", strLangCode)
+        {
+            Expires = DateTime.Now.AddYears(1)
+        });
+
         strWebSite = Request.QueryString["WebSite"];
         if (strWebSite == null)
         {

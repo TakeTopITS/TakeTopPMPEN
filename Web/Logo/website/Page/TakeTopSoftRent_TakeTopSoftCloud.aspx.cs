@@ -32,6 +32,13 @@ public partial class TakeTopSoftRent_TakeTopSoftCloud : System.Web.UI.Page
                      Session["LangCode"]?.ToString() ??
                      System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
 
+        // 确保Session和Cookie同步
+        Session["LangCode"] = strLangCode;
+        Response.SetCookie(new HttpCookie("LangCode", strLangCode)
+        {
+            Expires = DateTime.Now.AddYears(1)
+        });
+
         strWebSite = Request.QueryString["WebSite"];
         if (strWebSite == null)
         {

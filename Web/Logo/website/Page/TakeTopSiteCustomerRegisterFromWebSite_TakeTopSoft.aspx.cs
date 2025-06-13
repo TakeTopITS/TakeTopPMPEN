@@ -2,6 +2,7 @@ using Stimulsoft.Report.Dictionary;
 
 using System;
 using System.Data;
+using System.Web;
 using System.Web.UI;
 
 using static com.sun.tools.javac.tree.DCTree;
@@ -17,6 +18,13 @@ public partial class TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft: System.
                      Session["LangCode"]?.ToString() ??
                      System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
 
+
+        // 确保Session和Cookie同步
+        Session["LangCode"] = strLangCode;
+        Response.SetCookie(new HttpCookie("LangCode", strLangCode)
+        {
+            Expires = DateTime.Now.AddYears(1)
+        });
 
         strSystemType = Request.QueryString["SystemType"];
         strWebSite = Request.QueryString["WebSite"];

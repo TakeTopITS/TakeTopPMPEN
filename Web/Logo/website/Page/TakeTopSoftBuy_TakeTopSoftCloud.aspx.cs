@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Web;
 using System.Web.UI;
 
 public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
@@ -11,6 +12,13 @@ public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
         strLangCode = Request.Cookies["LangCode"]?.Value ??
                      Session["LangCode"]?.ToString() ??
                      System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
+        // 确保Session和Cookie同步
+        Session["LangCode"] = strLangCode;
+        Response.SetCookie(new HttpCookie("LangCode", strLangCode)
+        {
+            Expires = DateTime.Now.AddYears(1)
+        });
 
         strWebSite = Request.QueryString["WebSite"];
         if (strWebSite == null)
