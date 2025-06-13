@@ -172185,4 +172185,34 @@ Message Input string '80.55555555555556' is not a valid integer. Path '[0].perce
 An error occurred while executing the query.
 
 ------------------------------------
+
+Log Entry : 1:02:05 PM Friday, June 13, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:02:09 PM Friday, June 13, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:02:10 PM Friday, June 13, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:02:10 PM Friday, June 13, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:02:10 PM Friday, June 13, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 1:02:10 PM Friday, June 13, 2025 
+An error occurred while executing the query.
+
+------------------------------------
 
