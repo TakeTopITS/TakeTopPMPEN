@@ -27674,7 +27674,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Verification code error, please check!</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Purchase application, please handle it promptly!!!</value>
+    <value>The purchase request should be processed promptly.</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>Software purchase application notification</value>
@@ -27806,7 +27806,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Prompt, this site still exists, the record cannot be deleted, please check!</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>Prompt, sending failed, please check</value>
+    <value>The site is being upgraded. This will take approximately 5 minutes. Please wait patiently……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>Site:</value>
@@ -32330,7 +32330,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>The purchase application should be processed in time.</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Login account password.</value>
+    <value>The purchase request should be processed as soon as possible.</value>
   </data>
   <data name="DengLuZhangHaoMiMa" xml:space="preserve">
     <value>Login account password, please use it with confidence. If there are any problems, please contact customer service at any time. Thank you. This email is from Tai Ding Toding Group.</value>
@@ -32357,7 +32357,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>The lease application should be processed in time.</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Phone.</value>
+    <value>The rental request should be processed as soon as possible.</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>Update failed, please check.</value>
@@ -32438,7 +32438,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Submission successful, Tai Ding Toding customer service will contact you within minutes, please wait. Thank you.</value>
   </data>
   <data name="TiJiaoLe" xml:space="preserve">
-    <value>Submission successful, the download link is below, click to download.</value>
+    <value>Submission successful,</value>
   </data>
   <data name="TiJiaoShiBaiDaiHaoXiangBuNengW" xml:space="preserve">
     <value>Submission has been made.</value>
@@ -32468,7 +32468,7 @@ The progress of the task affects the schedule to be confirmed</value>
     <value>Prompt: The items marked with an asterisk cannot be empty, please check.</value>
   </data>
   <data name="TiShiGongSi" xml:space="preserve">
-    <value>Prompt: The sending failed, please check.</value>
+    <value>Prompt the Company</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>Prompt: Company.</value>

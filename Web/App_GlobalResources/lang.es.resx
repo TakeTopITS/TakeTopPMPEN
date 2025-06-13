@@ -27673,7 +27673,7 @@
     <value>Error en el código de verificación, ¡por favor verifica!</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Solicitud de compra de</value>
+    <value>La solicitud de compra debe ser procesada a tiempo.</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>, ¡por favor procesa a tiempo!!!</value>
@@ -27691,10 +27691,10 @@
     <value>-----Envío fallido, ¡por favor verifica!</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Descarga del código fuente</value>
+    <value>La solicitud, por favor, procese a tiempo!!!</value>
   </data>
   <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
-    <value>Solicitud de</value>
+    <value>Envío exitoso. El enlace de descarga está abajo. ¡Haga clic para descargar!</value>
   </data>
   <data name="ChengWeiGeZuoHuoBan" xml:space="preserve">
     <value>, ¡por favor procesa a tiempo!!!</value>
@@ -27805,7 +27805,7 @@
     <value>Advertencia, envío fallido, ¡por favor verifica</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>Advertencia, este sitio no existe, ¡por favor verifica!</value>
+    <value>Se está actualizando este sitio. Probablemente tomará alrededor de 5 minutos. Por favor, espere pacientemente……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>¡Guardado exitoso!</value>
@@ -32329,7 +32329,7 @@
     <value>De</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Solicitud de compra Procesar pronto</value>
+    <value>La solicitud de compra debe ser procesada lo antes posible.</value>
   </data>
   <data name="DengLuZhangHaoMiMa" xml:space="preserve">
     <value>Cuenta y contraseña</value>
@@ -32338,7 +32338,7 @@
     <value>Cuenta y contraseña Úselo con confianza Para dudas contacte servicio al cliente Gracias Este correo es enviado por TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Solicitud Procesar pronto</value>
+    <value>La solicitud, por favor, procese a tiempo</value>
   </data>
   <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
     <value>Información de prueba Preste atención</value>
@@ -32356,7 +32356,7 @@
     <value>Empleados</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Solicitud de alquiler Procesar pronto</value>
+    <value>La solicitud de alquiler debe ser procesada lo antes posible.</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>Teléfono</value>
@@ -32467,7 +32467,7 @@
     <value>Nota Error al enviar Verifique</value>
   </data>
   <data name="TiShiGongSi" xml:space="preserve">
-    <value>Nota Empresa</value>
+    <value>Avisar a la Empresa</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>Compatriota Bienvenido a la cámara de comercio Gracias</value>

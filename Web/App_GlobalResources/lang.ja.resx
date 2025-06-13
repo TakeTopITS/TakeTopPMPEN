@@ -27673,7 +27673,7 @@
     <value>提出失敗、確認してください！</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>確認コードエラー、確認してください！</value>
+    <value>購入申請はタイムリーに処理してください。</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>の 購入 申請、早めに処理してください！！！</value>
@@ -27691,7 +27691,7 @@
     <value>-----提出失敗、確認してください！</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>ソースコードダウンロード</value>
+    <value>申請はできるだけ早く処理してください。</value>
   </data>
   <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
     <value>の申請、早めに処理してください！！！</value>
@@ -27805,7 +27805,7 @@
     <value>ヒント、送信失敗、確認してください</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>ヒント、このサイトは存在しません。確認してください！</value>
+    <value>このサイトはアップグレード中で、概算で5分かかります。しばらくお待ちください……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>保存成功</value>
@@ -27844,7 +27844,7 @@
     <value>賃貸バージョン</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>サイト削除通知</value>
+    <value>賃貸申請はできるだけ早く処理してください。</value>
   </data>
   <data name="RuanJianZuYongShenQingTongZhi" xml:space="preserve">
     <value>このサイトの仮想ディレクトリの絶対パスを保存中です。約1分かかりますので、お待ちください......</value>
@@ -32338,7 +32338,7 @@
     <value>ログインアカウントとパスワード ご安心してご利用ください 問題があれば随時カスタマーサービスへ 本メールは泰頂拓鼎グループから送信</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>申請を速やかに処理してください</value>
+    <value>申請はできるだけ早く処理してください。</value>
   </data>
   <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
     <value>試用情報にご注意ください</value>
@@ -32356,7 +32356,7 @@
     <value>従業員</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>レンタル申請を速やかに処理してください</value>
+    <value>賃貸申請はできるだけ早く処理してください。</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>電話</value>
@@ -32467,7 +32467,7 @@
     <value>注：送信失敗 確認してください</value>
   </data>
   <data name="TiShiGongSi" xml:space="preserve">
-    <value>注：会社</value>
+    <value>会社に注意を促す</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>同郷の皆様 商工会へようこそ</value>
