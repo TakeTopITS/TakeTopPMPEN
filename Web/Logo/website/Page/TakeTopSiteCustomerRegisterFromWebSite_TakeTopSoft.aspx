@@ -1,197 +1,206 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx.cs" Inherits="TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft" %>
-
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
-
 <%@ Import Namespace="System.Globalization" %>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0.1, user-scalable=1" />
     <title>在线试用</title>
     <link id="mainCss" href="../../../css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <link id="flxappCss" href="../../../css/flxapp.css" rel="stylesheet" type="text/css" />
-
-    <script type="text/javascript" src="../../../Logo/website/js/jquery-1.3.1.js"></script>
     <script src="../../../js/jquery.min.js" type="text/javascript"></script>
-    <script src="../../../js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="../../../js/allAHandlerForWebSite.js" type="text/javascript"></script>
 
     <style type="text/css">
         body {
-            /*margin-top: 5px;*/
-            /*background-image: url(Images/login_bj.jpg);*/
+            margin: 0;
+            padding: 0;
             background-repeat: repeat-x;
-            font: normal 130% Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 16px; /* 默认字体大小 */
         }
 
-        a:link {
+        a {
             color: black;
             text-decoration: none;
             font-weight: 500;
-            font-size: 14px;
-            font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Liberation Sans", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, SimSun, "WenQuanYi Zen Hei Sharp", sans-serif';
+            font-size: 1rem;
         }
 
         a:hover {
             color: #000000;
             text-decoration: none;
         }
-    </style>
 
-
-    <script type="text/javascript" language="javascript">
-
-        $(function () {
-        });
-
-
-        function openMDIFrom(strMDIPageName) {
-
-            window.open(strMDIPageName, '_blank');
-
-            CloseLayer();
-
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
         }
 
-    </script>
+        .form-item {
+            margin-bottom: 1rem;
+        }
 
+        .form-item label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-item input[type="text"],
+        .form-item select {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-item input[type="text"]:focus,
+        .form-item select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .form-item .required {
+            color: red;
+        }
+
+        .form-item .button {
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-item .button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-item .message {
+            color: red;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .form-item input[type="text"],
+            .form-item select {
+                font-size: 14px;
+            }
+
+            .form-item .button {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+            // 页面加载时的初始化代码
+        });
+
+        function openMDIFrom(strMDIPageName) {
+            window.open(strMDIPageName, '_blank');
+        }
+    </script>
 </head>
 <body>
-    <center>
+    <div class="container">
         <form id="form1" runat="server">
             <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True" EnableScriptLocalization="True">
             </asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-
-                    <div style="font-size: 36pt; width: 100%; text-align: center;">
+                    <div style="font-size: 2rem; text-align: center;">
                         <img align="absmiddle" src="../../../images/onlineTry.jpg" alt="onlineTry" />
                     </div>
-                    <table style="width: 100%;">
-                        <tr>
-                            <td style="height: 40px; padding-top: 20px; text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp;
-                                    <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,QXTXYXXXD%>"></asp:Label><font color="#FF0000">*</font>
-                                <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,HMWBTXRHDJZCANXTJZJDNDSYYM%>"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="padding-top: 15px;">
-                                <table border="0" cellpadding="0" cellspacing="3" width="500px">
-                                    <tr>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ChanPing%>"></asp:Label>
-                                        </td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="LB_Product" runat="server" Visible="false"></asp:Label> <asp:Label ID="LB_ProductHomeName" runat="server"></asp:Label>
-                                            <br />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,Company%>"></asp:Label></td>
-                                        <td class="formItemBgStyleForAlignLeft" w>
-                                            <asp:TextBox ID="TB_Company" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
-                                            <font color="#FF0000">&nbsp;*</font>
-
-                                        </td>
-
-                                        <tr>
-                                            <td class="formItemBgStyleForAlignLeft">
-                                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label></td>
-                                            <td class="formItemBgStyleForAlignLeft">
-                                                <asp:TextBox ID="TB_ContactPerson" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
-                                                &nbsp;<font color="#FF0000">*</font> </td>
-
-                                        </tr>
-                                    <tr>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label></td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:TextBox ID="TB_PhoneNumber" runat="server" Style="width: 90%; height: 25px; font-size: 16px;"></asp:TextBox>
-                                            <font color="#FF0000">&nbsp;*</font>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
-                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShiYongYuanYin%>"></asp:Label></td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:DropDownList ID="DL_TryProductResonType" Height="35px" DataValueField="Type" DataTextField="HomeTypeName" Style="font-size: 16px;" runat="server">
-                                            </asp:DropDownList>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="formItemBgStyleForAlignLeft" style="vertical-align:bottom;">
-                                            <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label></td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <table>
-                                                <tr>
-                                                    <td >
-                                                        <asp:TextBox ID="TB_CheckCode" runat="server" Style="width: 100px; height: 35px; font-size: 16px;"></asp:TextBox>
-                                                    </td>
-                                                    <td>
-                                                        <asp:Image ID="IM_CheckCode" runat="server" src="../../../TTCheckCode.aspx" Width="100px" Height="35px" />
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="formItemBgStyleForAlignLeft"></td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Button ID="BT_Summit" runat="server" Width="100px" Height="35px" OnClick="BT_Summit_Click" Text="<%$ Resources:lang,TiJiao%>" />
-                                            <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
-                                        </td>
-                                    </tr>
-                                    <tr style="display: none;">
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Email%>"></asp:Label>
-                                        </td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:TextBox ID="TB_EMail" runat="server" Style="width: 90%;"></asp:TextBox>
-                                            &nbsp;<font color="#FF0000">*</font> </td>
-                                    </tr>
-                                    <tr style="display: none;">
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label>
-                                        </td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:TextBox ID="TB_Address" runat="server" Style="width: 90%;"></asp:TextBox>
-                                            <font color="#FF0000">&nbsp;*</font> </td>
-                                    </tr>
-
-                                    <tr style="display: none;">
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YouBian%>"></asp:Label>
-                                        </td>
-                                        <td class="formItemBgStyleForAlignLeft">
-                                            <asp:TextBox ID="TB_PostCode" runat="server" Style="width: 90%; height: 25px;"></asp:TextBox>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" align="center" class="formItemBgStyleForAlignCenter">
-                                            <br />
-                                            <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
-                                                <img align="absmiddle" src="../../../images/qq.png" />QQ </a>，
-                                          
-                                            <a href="tel:02151085119" class="call">Tel：(086) 021-51085119</a>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="form-item">
+                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,QXTXYXXXD%>"></asp:Label>
+                        <span class="required">*</span>
+                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,HMWBTXRHDJZCANXTJZJDNDSYYM%>"></asp:Label>
+                    </div>
+                    <div class="form-item">
+                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ChanPing%>"></asp:Label>
+                        <asp:Label ID="LB_Product" runat="server" Visible="false"></asp:Label>
+                        <asp:Label ID="LB_ProductHomeName" runat="server"></asp:Label>
+                    </div>
+                    <div class="form-item">
+                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,Company%>"></asp:Label>
+                        <asp:TextBox ID="TB_Company" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="form-item">
+                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label>
+                        <asp:TextBox ID="TB_ContactPerson" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="form-item">
+                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>
+                        <asp:TextBox ID="TB_PhoneNumber" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="form-item">
+                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShiYongYuanYin%>"></asp:Label>
+                        <asp:DropDownList ID="DL_TryProductResonType" runat="server" DataValueField="Type" DataTextField="HomeTypeName"  CssClass="form-control" Style="Height:70px;font-size: 1rem;">
+                        </asp:DropDownList>
+                    </div>
+                    <div class="form-item">
+                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:TextBox ID="TB_CheckCode" runat="server" CssClass="form-control" Style="width: 100px; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:Image ID="IM_CheckCode" runat="server" src="../../../TTCheckCode.aspx" Width="100px" Height="35px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-item">
+                        <asp:Button ID="BT_Summit" runat="server" CssClass="button" OnClick="BT_Summit_Click" Text="<%$ Resources:lang,TiJiao%>" />
+                        <asp:Label ID="LB_Message" runat="server" ForeColor="Red" CssClass="message"></asp:Label>
+                    </div>
+                    <!-- 保留隐藏的表单字段 -->
+                    <div class="form-item" style="display: none;">
+                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Email%>"></asp:Label>
+                        <asp:TextBox ID="TB_EMail" runat="server" CssClass="form-control" Style="width: 100%;"></asp:TextBox>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="form-item" style="display: none;">
+                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label>
+                        <asp:TextBox ID="TB_Address" runat="server" CssClass="form-control" Style="width: 100%;"></asp:TextBox>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="form-item" style="display: none;">
+                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YouBian%>"></asp:Label>
+                        <asp:TextBox ID="TB_PostCode" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem;"></asp:TextBox>
+                    </div>
+                    <div class="form-item">
+                        <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
+                            <img align="absmiddle" src="../../../images/qq.png" />QQ </a>，
+                        <a href="tel:02151085119" class="call">Tel：(086) 021-51085119</a>
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
-            <div style="position: absolute; left: 50%; top: 50%;">
+            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="../../../Images/Processing.gif" alt="Loading,please wait..." />
+                        <img src="../../../Images/Processing.gif" alt="Loading, please wait..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>
         </form>
+    </div>
+    <script type="text/javascript">
+        var cssDirectory = '<%= Session["CssDirectory"] %>';
+        var oLink = document.getElementById('mainCss');
+        oLink.href = '../../../css/' + cssDirectory + '/bluelightmain.css';
+    </script>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '../../../' + '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../../../' + 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>
