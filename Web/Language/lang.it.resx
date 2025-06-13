@@ -5875,7 +5875,7 @@
     <value>- Girare in un compito</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
-    <value>Nessuna voce sono obbligatori), quindi fare clic sul pulsante "Registrati", il sistema direttamente vi porterà alla pagina di processo</value>
+    <value>Il campo del numero è obbligatorio. Quindi fai clic sul pulsante "Invia", e il sistema accederà automaticamente alla piattaforma di prova.</value>
   </data>
   <data name="HNJBZGJXYXGS" xml:space="preserve">
     <value>Henan GeIL Heavy Machinery Co., Ltd.</value>
@@ -27673,7 +27673,7 @@
     <value>Codice di verifica errato, si prega di verificare!</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>richiesta di acquisto, si prega di elaborare tempestivamente!!!</value>
+    <value>La richiesta di acquisto deve essere gestita tempestivamente.</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>Notifica di richiesta di acquisto software</value>
@@ -27691,7 +27691,7 @@
     <value>Download del codice sorgente</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>richiesta, si prega di elaborare tempestivamente!!!</value>
+    <value>La richiesta, per favore, gestisci tempestivamente!!!</value>
   </data>
   <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
     <value>Invio riuscito, il link per il download è di seguito, clicca per scaricare!</value>
@@ -27805,7 +27805,7 @@
     <value>Attenzione, questo sito non esiste, si prega di verificare!</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>Salvataggio completato con successo</value>
+    <value>Il sito è in fase di aggiornamento. Ci vorranno circa 5 minuti. Attendere pazientemente……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>Attenzione, questo sito esiste ancora, il record non può essere eliminato, si prega di verificare!</value>
@@ -32331,7 +32331,7 @@
     <value>Di</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Richiesta acquisto Elaborare tempestivamente</value>
+    <value>La richiesta di acquisto deve essere gestita il più presto possibile.</value>
   </data>
   <data name="DengLuZhangHaoMiMa" xml:space="preserve">
     <value>Account e password</value>
@@ -32340,7 +32340,7 @@
     <value>Account e password Usa con fiducia Per domande contatta l'assistenza Grazie Questa email è inviata da TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Richiesta Elaborare tempestivamente</value>
+    <value>La richiesta, per favore, gestisci tempestivamente</value>
   </data>
   <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
     <value>Informazioni prova Presta attenzione</value>
@@ -32358,7 +32358,7 @@
     <value>Dipendenti</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Richiesta affitto Elaborare tempestivamente</value>
+    <value>La richiesta di noleggio deve essere gestita il più presto possibile.</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>Telefono</value>
@@ -32469,7 +32469,7 @@
     <value>Nota Invio fallito Verifica</value>
   </data>
   <data name="TiShiGongSi" xml:space="preserve">
-    <value>Nota Azienda</value>
+    <value>Avvertire l'Impresa</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>Connazionale Benvenuto nella camera commercio Grazie</value>

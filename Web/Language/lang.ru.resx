@@ -5875,7 +5875,7 @@
     <value>- Включить в задачу</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
-    <value>Записей не требуется), а затем нажмите на кнопку "Регистрация", система будет принимать непосредственное вам пробной страницы</value>
+    <value>Поле номера является обязательным. Затем нажмите кнопку "Отправить", и система автоматически войдет в тестовую платформу.</value>
   </data>
   <data name="HNJBZGJXYXGS" xml:space="preserve">
     <value>Хэнань GeIL тяжелого машиностроения, ООО</value>
@@ -27673,7 +27673,7 @@
     <value>Ошибка проверочного кода, проверьте!</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Заявка на покупку</value>
+    <value>Заявка на покупку должна быть обработана своевременно.</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>, пожалуйста, обработайте вовремя!!!</value>
@@ -27691,7 +27691,7 @@
     <value>-----Отправка не удалась, проверьте!</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Скачивание исходного кода</value>
+    <value>Заявка, пожалуйста, обработайте как можно скорее!!!</value>
   </data>
   <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
     <value>Заявка, пожалуйста, обработайте вовремя!!!</value>
@@ -27805,7 +27805,7 @@
     <value>Подсказка: отправка не удалась, проверьте</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>Подсказка: этот сайт не существует, проверьте!</value>
+    <value>Сайт обновляется. Это займет около 5 минут. Пожалуйста, подождите……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>Сохранение успешно</value>
@@ -27844,7 +27844,7 @@
     <value>был удален, при возникновении вопросов свяжитесь с службой поддержки ((086) 021-51085119), спасибо, это письмо отправлено от группы Тайдинг Тодинг!</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Уведомление об удалении сайта</value>
+    <value>Заявка на аренду должна быть обработана как можно скорее.</value>
   </data>
   <data name="RuanJianZuYongShenQingTongZhi" xml:space="preserve">
     <value>Сохранение абсолютного пути виртуального каталога сайта займет около 1 минуты, подождите...</value>
@@ -32331,7 +32331,7 @@
     <value>От</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Заявка на покупку Обработайте своевременно</value>
+    <value>Заявка на покупку должна быть обработана как можно скорее.</value>
   </data>
   <data name="DengLuZhangHaoMiMa" xml:space="preserve">
     <value>Логин и пароль</value>
@@ -32340,7 +32340,7 @@
     <value>Логин и пароль Используйте с уверенностью По вопросам обращайтесь в поддержку Это письмо от TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Заявка Обработайте своевременно</value>
+    <value>Заявка, пожалуйста, обработайте как можно скорее</value>
   </data>
   <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
     <value>Информация о тестировании Обратите внимание</value>
@@ -32358,7 +32358,7 @@
     <value>Сотрудники</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Заявка на аренду Обработайте своевременно</value>
+    <value>Заявка на аренду должна быть обработана как можно скорее.</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>Телефон</value>

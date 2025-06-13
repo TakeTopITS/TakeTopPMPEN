@@ -5875,7 +5875,7 @@
     <value>- Tourner dans une tâche</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
-    <value>Pas d'entrées sont obligatoires), puis cliquez sur le bouton "Inscription", le système va directement vous amène à la page d'essai</value>
+    <value>Le champ du numéro est obligatoire. Cliquez ensuite sur le bouton "Soumettre", et le système se connectera automatiquement à la plateforme d'essai.</value>
   </data>
   <data name="HNJBZGJXYXGS" xml:space="preserve">
     <value>Henan GeIL Heavy Machinery Co., Ltd.</value>
@@ -27673,7 +27673,7 @@
     <value>Code de vérification incorrect, veuillez vérifier !</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>demande d'achat, veuillez traiter rapidement !!!</value>
+    <value>La demande d'achat doit être traitée en temps opportun.</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>Notification de demande d'achat de logiciel</value>
@@ -27691,7 +27691,7 @@
     <value>Téléchargement du code source</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>demande, veuillez traiter rapidement !!!</value>
+    <value>La demande, s'il vous plaît, traiter en temps opportun!!!</value>
   </data>
   <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
     <value>Soumission réussie, le lien de téléchargement est ci-dessous, cliquez pour télécharger !</value>
@@ -27805,7 +27805,7 @@
     <value>Sauvegarde réussie</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>Avertissement, ce site existe toujours, l'enregistrement ne peut pas être supprimé, veuillez vérifier !</value>
+    <value>Le site est en cours de mise à jour. Cela prendra environ 5 minutes. Veuillez patienter……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>Mise à niveau de ce site en cours, cela prendra environ 5 minutes, veuillez patienter......</value>
@@ -27844,7 +27844,7 @@
     <value>Version de Location:</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Location version :</value>
+    <value>La demande de location doit être traitée le plus tôt possible.</value>
   </data>
   <data name="RuanJianZuYongShenQingTongZhi" xml:space="preserve">
     <value>demande de location, veuillez traiter rapidement !!!</value>
@@ -32329,7 +32329,7 @@
     <value>De</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Demande d'achat Traiter rapidement</value>
+    <value>La demande d'achat doit être traitée le plus tôt possible.</value>
   </data>
   <data name="DengLuZhangHaoMiMa" xml:space="preserve">
     <value>Compte et mot de passe</value>
@@ -32338,7 +32338,7 @@
     <value>Compte et mot de passe Utilisez en toute confiance Pour questions contactez le service client Merci Cet email est envoyé par TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Demande Traiter rapidement</value>
+    <value>La demande, s'il vous plaît, traiter en temps opportun</value>
   </data>
   <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
     <value>Information d'essai Soyez attentif</value>
@@ -32356,7 +32356,7 @@
     <value>Employés</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Demande de location Traiter rapidement</value>
+    <value>La demande de location doit être traitée le plus tôt possible</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>Téléphone</value>
@@ -32467,7 +32467,7 @@
     <value>Note Erreur d'envoi Vérifiez</value>
   </data>
   <data name="TiShiGongSi" xml:space="preserve">
-    <value>Note Entreprise</value>
+    <value>Avertir l'Entreprise</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>Compatriote Bienvenue à la chambre de commerce Merci</value>

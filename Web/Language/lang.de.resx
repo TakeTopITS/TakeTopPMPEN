@@ -5875,7 +5875,7 @@
     <value>- Biegen Sie in einer Aufgabe</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
-    <value>Keine Einträge sind erforderlich), dann klicken Sie auf die Schaltfläche "Registrieren", wird das System direkt bringen Sie zu den Testseite</value>
+    <value>Die Nummer ist ein Pflichtfeld. Klicken Sie dann auf die Schaltfläche "Absenden", und das System wird automatisch in die Testplattform einloggen.</value>
   </data>
   <data name="HNJBZGJXYXGS" xml:space="preserve">
     <value>Henan GeIL Heavy Machinery Co., Ltd.</value>
@@ -27673,7 +27673,7 @@
     <value>Verifizierungscode falsch, bitte überprüfen!</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Kaufanfrage von</value>
+    <value>Die Kaufanfrage sollte rechtzeitig bearbeitet werden.</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>, bitte zeitnah bearbeiten!!!</value>
@@ -27691,10 +27691,10 @@
     <value>----- Einreichung fehlgeschlagen, bitte überprüfen!</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Quellcode-Download</value>
+    <value>Die Antrag, bitte umgehend bearbeiten!!!</value>
   </data>
   <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
-    <value>Anfrage von</value>
+    <value>Erfolgreich eingereicht. Der Download-Link steht unten zur Verfügung. Klicken Sie darauf, um herunterzuladen!</value>
   </data>
   <data name="ChengWeiGeZuoHuoBan" xml:space="preserve">
     <value>, bitte zeitnah bearbeiten!!!</value>
@@ -27805,7 +27805,7 @@
     <value>Hinweis, Sendung fehlgeschlagen, bitte überprüfen</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>Hinweis, diese Website existiert nicht, bitte überprüfen!</value>
+    <value>Die Website wird aktualisiert. Dies kann ungefähr 5 Minuten dauern. Bitte warten Sie geduldig……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>Speichern erfolgreich</value>
@@ -32329,7 +32329,7 @@
     <value>Von</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Kaufantrag bitte umgehend bearbeiten</value>
+    <value>Die Kaufanfrage sollte so schnell wie möglich bearbeitet werden.</value>
   </data>
   <data name="DengLuZhangHaoMiMa" xml:space="preserve">
     <value>Login-Konto und Passwort</value>
@@ -32338,7 +32338,7 @@
     <value>Login-Konto und Passwort Bitte nutzen Sie es sorglos Bei Problemen kontaktieren Sie jederzeit den Kundenservice Danke Diese E-Mail wurde von der TakeTop Group gesendet</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Antrag bitte umgehend bearbeiten</value>
+    <value>Die Antrag, bitte umgehend bearbeiten</value>
   </data>
   <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
     <value>Testinformationen bitte beachten</value>
@@ -32356,7 +32356,7 @@
     <value>Mitarbeiter</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Mietantrag bitte umgehend bearbeiten</value>
+    <value>Die Mietanfrage sollte so schnell wie möglich bearbeitet werden.</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>Telefon</value>
@@ -32467,7 +32467,7 @@
     <value>Hinweis Senden fehlgeschlagen Bitte überprüfen</value>
   </data>
   <data name="TiShiGongSi" xml:space="preserve">
-    <value>Hinweis Unternehmen</value>
+    <value>Hinweis an das Unternehmen</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>Landsmann Willkommen im Handelsverband Danke</value>

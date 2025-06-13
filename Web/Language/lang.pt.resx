@@ -5875,7 +5875,7 @@
     <value>- Se transformar em uma tarefa</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
-    <value>Não são necessárias entradas), em seguida, clique no botão "Register", o sistema irá levá-lo diretamente para a página de julgamento</value>
+    <value>O campo de número é obrigatório. Em seguida, clique no botão "Enviar", e o sistema fará login automaticamente na plataforma de teste.</value>
   </data>
   <data name="HNJBZGJXYXGS" xml:space="preserve">
     <value>Henan GeIL Heavy Machinery Co., Ltd.</value>
@@ -27673,7 +27673,7 @@
     <value>Código de verificação incorreto, por favor, verifique!</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Pedido de compra de</value>
+    <value>O pedido de compra deve ser processado prontamente.</value>
   </data>
   <data name="RuanJianGouMaiShenQingTongZhi" xml:space="preserve">
     <value>, por favor, processe imediatamente!!!</value>
@@ -27691,10 +27691,10 @@
     <value>----- Falha no envio, por favor, verifique!</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi" xml:space="preserve">
-    <value>Download do código-fonte</value>
+    <value>O pedido, por favor, processado prontamente!!!</value>
   </data>
   <data name="DiJiaoChengGongXiaZaiLianJieZa" xml:space="preserve">
-    <value>Pedido de</value>
+    <value>Envio bem-sucedido. O link de download está abaixo. Clique para baixar!</value>
   </data>
   <data name="ChengWeiGeZuoHuoBan" xml:space="preserve">
     <value>, por favor, processe imediatamente!!!</value>
@@ -27805,7 +27805,7 @@
     <value>Falha na atualização do site, por favor, verifique!</value>
   </data>
   <data name="ZhengZaiShengJiZheGeZhanDianDa" xml:space="preserve">
-    <value>Aviso, falha no envio, por favor, verifique</value>
+    <value>Este site está sendo atualizado. Isso levará cerca de 5 minutos. Por favor, aguarde pacientemente……</value>
   </data>
   <data name="ZhanDian" xml:space="preserve">
     <value>Aviso, este site não existe, por favor, verifique!</value>
@@ -32329,7 +32329,7 @@
     <value>De</value>
   </data>
   <data name="DeGouMaiShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Pedido de compra Processe prontamente</value>
+    <value>O pedido de compra deve ser processado o mais rápido possível.</value>
   </data>
   <data name="DengLuZhangHaoMiMa" xml:space="preserve">
     <value>Conta e palavra-passe</value>
@@ -32338,7 +32338,7 @@
     <value>Conta e palavra-passe Use com confiança Para questões contacte o serviço ao cliente Obrigado Este email é enviado pelo TakeTop Group</value>
   </data>
   <data name="DeShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Pedido Processe prontamente</value>
+    <value>O pedido, por favor, processado prontamente</value>
   </data>
   <data name="DeShiYongXinXiQingGuanZhu1" xml:space="preserve">
     <value>Informação de teste Preste atenção</value>
@@ -32356,7 +32356,7 @@
     <value>Colaboradores</value>
   </data>
   <data name="DeZuYongShenQingQingJiShiChuLi1" xml:space="preserve">
-    <value>Pedido de aluguer Processe prontamente</value>
+    <value>O pedido de aluguel deve ser processado o mais rápido possível.</value>
   </data>
   <data name="DianHua5" xml:space="preserve">
     <value>Telefone</value>
@@ -32467,7 +32467,7 @@
     <value>Nota Erro no envio Verifique</value>
   </data>
   <data name="TiShiGongSi" xml:space="preserve">
-    <value>Nota Empresa</value>
+    <value>Alertar a Empresa</value>
   </data>
   <data name="TongXiangHuanYingNiJiaRuShangH1" xml:space="preserve">
     <value>Compatriota Bem-vindo à câmara de comércio Obrigado</value>
