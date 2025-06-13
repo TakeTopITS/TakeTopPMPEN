@@ -1,4 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft.aspx.cs" Inherits="TakeTopSiteCustomerRegisterFromWebSite_TakeTopSoft" %>
+
 <%@ Import Namespace="System.Globalization" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,10 +27,10 @@
             font-size: 1rem;
         }
 
-        a:hover {
-            color: #000000;
-            text-decoration: none;
-        }
+            a:hover {
+                color: #000000;
+                text-decoration: none;
+            }
 
         .container {
             max-width: 600px;
@@ -41,49 +42,50 @@
             margin-bottom: 1rem;
         }
 
-        .form-item label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
+            .form-item label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-size: 22px; /* 默认字体大小 */
+            }
 
-        .form-item input[type="text"],
-        .form-item select {
-            width: 100%;
-            padding: 0.5rem;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+            .form-item input[type="text"],
+            .form-item select {
+                width: 100%;
+                padding: 0.5rem;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
 
-        .form-item input[type="text"]:focus,
-        .form-item select:focus {
-            outline: none;
-            border-color: #007bff;
-        }
+                .form-item input[type="text"]:focus,
+                .form-item select:focus {
+                    outline: none;
+                    border-color: #007bff;
+                }
 
-        .form-item .required {
-            color: red;
-        }
+            .form-item .required {
+                color: red;
+            }
 
-        .form-item .button {
-            padding: 0.5rem 1rem;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+            .form-item .button {
+                padding: 0.5rem 1rem;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
 
-        .form-item .button:hover {
-            background-color: #0056b3;
-        }
+                .form-item .button:hover {
+                    background-color: #0056b3;
+                }
 
-        .form-item .message {
-            color: red;
-            margin-top: 0.5rem;
-        }
+            .form-item .message {
+                color: red;
+                margin-top: 0.5rem;
+            }
 
-        @media (max-width: 768px) {
+        @media (max-width: 99%) {
             body {
                 font-size: 16px;
             }
@@ -131,22 +133,22 @@
                     </div>
                     <div class="form-item">
                         <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,Company%>"></asp:Label>
-                        <asp:TextBox ID="TB_Company" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                        <asp:TextBox ID="TB_Company" runat="server" CssClass="form-control" Style="width: 100%; height: 2.0rem; font-size: 1rem;"></asp:TextBox>
                         <span class="required">*</span>
                     </div>
                     <div class="form-item">
                         <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label>
-                        <asp:TextBox ID="TB_ContactPerson" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                        <asp:TextBox ID="TB_ContactPerson" runat="server" CssClass="form-control" Style="width: 100%; height: 2.0rem; font-size: 1rem;"></asp:TextBox>
                         <span class="required">*</span>
                     </div>
                     <div class="form-item">
                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>
-                        <asp:TextBox ID="TB_PhoneNumber" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                        <asp:TextBox ID="TB_PhoneNumber" runat="server" CssClass="form-control" Style="width: 100%; height: 2.0rem; font-size: 1rem;"></asp:TextBox>
                         <span class="required">*</span>
                     </div>
                     <div class="form-item">
                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShiYongYuanYin%>"></asp:Label>
-                        <asp:DropDownList ID="DL_TryProductResonType" runat="server" DataValueField="Type" DataTextField="HomeTypeName"  CssClass="form-control" Style="Height:70px;font-size: 1rem;">
+                        <asp:DropDownList ID="DL_TryProductResonType" runat="server" DataValueField="Type" DataTextField="HomeTypeName" CssClass="form-control" Style="height: 3.0rem; font-size: 1rem;">
                         </asp:DropDownList>
                     </div>
                     <div class="form-item">
@@ -154,7 +156,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:TextBox ID="TB_CheckCode" runat="server" CssClass="form-control" Style="width: 100px; height: 2.5rem; font-size: 1rem;"></asp:TextBox>
+                                    <asp:TextBox ID="TB_CheckCode" runat="server" CssClass="form-control" Style="width: 100px; height: 2.0rem; font-size: 1rem;"></asp:TextBox>
                                 </td>
                                 <td>
                                     <asp:Image ID="IM_CheckCode" runat="server" src="../../../TTCheckCode.aspx" Width="100px" Height="35px" />
@@ -179,11 +181,12 @@
                     </div>
                     <div class="form-item" style="display: none;">
                         <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YouBian%>"></asp:Label>
-                        <asp:TextBox ID="TB_PostCode" runat="server" CssClass="form-control" Style="width: 100%; height: 2.5rem;"></asp:TextBox>
+                        <asp:TextBox ID="TB_PostCode" runat="server" CssClass="form-control" Style="width: 100%; height: 2.0rem;"></asp:TextBox>
                     </div>
                     <div class="form-item">
                         <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
                             <img align="absmiddle" src="../../../images/qq.png" />QQ </a>，
+                       
                         <a href="tel:02151085119" class="call">Tel：(086) 021-51085119</a>
                     </div>
                 </ContentTemplate>
