@@ -103,6 +103,7 @@
                         itemGap: 8,
                         x: 'center',
                         y: 'center',
+                        textAlign: 'center', // 显式设置文本对齐
                         textStyle: {
                             color: '#000000',
                             fontSize: 10,
@@ -252,6 +253,7 @@
                         itemGap: 8,
                         x: 'center',
                         y: 'center',
+                        textAlign: 'center', // 显式设置文本对齐
                         textStyle: {
                             color: '#000000',
                             fontSize: 10,
@@ -395,6 +397,7 @@
                         subtext: '',
                         x: 'center',
                         y: 'center',
+                        textAlign: 'center', // 显式设置文本对齐
                         textStyle: {
                             color: '#000000',
                             fontSize: 10,
@@ -567,6 +570,7 @@
                         itemGap: 8,
                         x: 'center',
                         y: 'center',
+                        textAlign: 'center', // 显式设置文本对齐
                         textStyle: {
                             color: '#000000',
                             fontSize: 10,
@@ -758,6 +762,7 @@
                         subtext: '',
                         x: 'center',
                         y: 'center',
+                        textAlign: 'center', // 显式设置文本对齐
                         textStyle: {
                             color: '#000000',
                             fontSize: 10,
@@ -857,6 +862,7 @@
                         itemGap: 8,
                         x: 'center',
                         y: 'center',
+                        textAlign: 'center', // 显式设置文本对齐
                         textStyle: {
                             color: '#000000',
                             fontSize: 10,
@@ -945,6 +951,7 @@
                         itemGap: 8,
                         x: 'center',
                         y: 'center',
+                        textAlign: 'center', // 显式设置文本对齐
                         textStyle: {
                             color: '#000000',
                             fontSize: 10,
@@ -1038,7 +1045,7 @@
 
             if (chartType == 'HRuningProjectStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行项目总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='left' style='padding-left:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行项目总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1076,7 +1083,7 @@
 
             if (chartType == 'HDelayProjectStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card red' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Process.png' alt = 'Clock Icon'/> </td><td align='left'>  严重延误项目数 : <span id='spanXNumber'></span></h3> <p>进度正常: <span id='spanYNumber'></span></p> <p>轻度延误 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card red' > <table><tr><td colpan='3' width='30%' align='left' style='padding-left:20px;'><img src = 'ImagesSkin/Process.png' alt = 'Clock Icon'/> </td><td align='left'>  严重延误项目数 : <span id='spanXNumber'></span></h3> <p>进度正常: <span id='spanYNumber'></span></p> <p>轻度延误 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1114,7 +1121,7 @@
 
             if (chartType == 'HAnnualPaymentStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目回款 : <span id='spanXNumber'></span></h3> <p>年度成本核算: <span id='spanYNumber'></span></p> <p>成本超支项目数 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='left' style='padding-left:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目回款 : <span id='spanXNumber'></span></h3> <p>年度成本核算: <span id='spanYNumber'></span></p> <p>成本超支项目数 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1151,7 +1158,7 @@
 
             if (chartType == 'HAnnualWorkHourStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card brown' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目工时投入 : <span id='spanXNumber'></span></h3> <p>年度填报人数: <span id='spanYNumber'></span></p> <p>人工成本 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card brown' > <table><tr><td colpan='3' width='30%' align='left' style='padding-left:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目工时投入 : <span id='spanXNumber'></span></h3> <p>年度填报人数: <span id='spanYNumber'></span></p> <p>人工成本 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1188,7 +1195,7 @@
 
             if (chartType == 'HRuningTaskStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card lightblue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行任务总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card lightblue' > <table><tr><td colpan='3' width='30%' align='left' style='padding-left:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行任务总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({

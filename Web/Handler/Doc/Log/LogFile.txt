@@ -172495,4 +172495,494 @@ Message Input string '80.55555555555556' is not a valid integer. Path '[0].perce
 An error occurred while executing the query.
 
 ------------------------------------
+
+Log Entry : 3:02:46 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:02:46 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:02:47 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:02:47 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:02:48 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:02:48 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:02:50 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:04:33 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:04:33 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:04:34 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:04:34 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:04:35 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:04:36 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:05:53 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:05:55 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:05:55 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:05:55 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:05:56 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:05:56 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:10:44 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:10:45 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:10:45 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:10:45 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:10:45 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:10:45 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:11:22 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:11:22 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:11:22 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:11:23 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:11:23 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:11:24 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:12 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:17 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:17 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:17 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:17 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:17 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:50 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:50 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:51 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:26:52 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:11 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:11 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:12 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:34 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:34 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:38 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:39 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:39 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:39 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:39 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:39 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:45 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:45 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:27:47 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:28:57 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:28:57 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:01 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:01 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:16 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:39 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:40 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:40 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:42 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:44 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:49 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:29:49 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:31:39 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:31:41 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:31:42 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:31:43 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:31:44 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:31:44 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:34:49 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:34:50 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:34:57 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:01 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:01 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:52 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:58 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:35:59 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:36:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:36:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:36:00 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:36:01 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:30 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:30 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:30 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:32 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:33 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:34 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:35 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
+
+Log Entry : 3:39:43 AM Sunday, June 15, 2025 
+An error occurred while executing the query.
+
+------------------------------------
 
