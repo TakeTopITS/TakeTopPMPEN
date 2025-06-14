@@ -128,8 +128,8 @@
                     </div>
                     <div class="form-item">
                         <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ChanPing%>"></asp:Label>
-                        <asp:Label ID="LB_Product" runat="server" Visible="false"></asp:Label>
-                        <asp:Label ID="LB_ProductHomeName" runat="server"></asp:Label>
+                        <asp:Label ID="LB_Product" runat="server" Visible="false"></asp:Label>:
+                        <b> <asp:Label ID="LB_ProductHomeName" runat="server"></asp:Label> </b>
                     </div>
                     <div class="form-item">
                         <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,Company%>"></asp:Label>
