@@ -32593,4 +32593,16 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
     <value>Lease site.</value>
   </data>
+  <data name="GouMaiZhiXunWenTi" xml:space="preserve">
+    <value>Purchase Consultation Questions</value>
+  </data>
+  <data name="CaoZuoShiYongWenTi" xml:space="preserve">
+    <value>Operation and Usage Questions</value>
+  </data>
+  <data name="ShiShiFuWuWenTi" xml:space="preserve">
+    <value>Implementation Service Questions</value>
+  </data>
+  <data name="QiTaiWenTi" xml:space="preserve">
+    <value>Other Questions</value>
+  </data>
 </root>

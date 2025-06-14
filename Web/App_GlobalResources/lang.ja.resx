@@ -32592,4 +32592,16 @@
   <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
     <value>レンタルウェブサイトメンテナンス</value>
   </data>
+  <data name="GouMaiZhiXunWenTi" xml:space="preserve">
+    <value>購入相談の質問</value>
+  </data>
+  <data name="CaoZuoShiYongWenTi" xml:space="preserve">
+    <value>操作使用に関する質問</value>
+  </data>
+  <data name="ShiShiFuWuWenTi" xml:space="preserve">
+    <value>実施サービスに関する質問</value>
+  </data>
+  <data name="QiTaiWenTi" xml:space="preserve">
+    <value>その他の質問</value>
+  </data>
 </root>

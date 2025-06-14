@@ -30,7 +30,7 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            LoadCustomerQuestionType();
+            //LoadCustomerQuestionType();
         }
     }
 

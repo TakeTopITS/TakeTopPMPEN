@@ -32592,4 +32592,16 @@
   <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
     <value>Mantenimiento de sitio alquilado</value>
   </data>
+  <data name="GouMaiZhiXunWenTi" xml:space="preserve">
+    <value>Preguntas de Consulta de Compra</value>
+  </data>
+  <data name="CaoZuoShiYongWenTi" xml:space="preserve">
+    <value>Preguntas sobre Operación y Uso</value>
+  </data>
+  <data name="ShiShiFuWuWenTi" xml:space="preserve">
+    <value>Preguntas sobre Servicios de Implementación</value>
+  </data>
+  <data name="QiTaiWenTi" xml:space="preserve">
+    <value>Otras Preguntas</value>
+  </data>
 </root>

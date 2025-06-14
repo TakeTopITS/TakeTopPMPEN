@@ -81,13 +81,18 @@
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,WenTiLeiBie%>"></asp:Label>
                                             </td>
                                             <td class="formItemBgStyleForAlignLeft">
-                                                <asp:DropDownList ID="DL_CustomerQuestionType" runat="server" Height="35px" DataTextField="Type"
-                                                    DataValueField="Type" CssClass="DDList">
+                                                <asp:DropDownList ID="DL_CustomerQuestionType" runat="server" Height="35px" CssClass="DDList">
+
+                                                    <asp:ListItem Text="<%$ Resources:lang,GouMaiZhiXunWenTi%>"></asp:ListItem>
+                                                    <asp:ListItem Text="<%$ Resources:lang,CaoZuoShiYongWenTi%>"></asp:ListItem>
+                                                    <asp:ListItem Text="<%$ Resources:lang,ShiShiFuWuWenTi%>"></asp:ListItem>
+                                                    <asp:ListItem Text="<%$ Resources:lang,QiTaiWenTi%>"></asp:ListItem>
+
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td valign="top" class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
+                                            <td valign="top" class="formItemBgStyleForAlignLeft" style="vertical-align: middle;">
                                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WenTiMiaoShu%>"></asp:Label>
                                             </td>
                                             <td class="formItemBgStyleForAlignLeft">
@@ -96,7 +101,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="formItemBgStyleForAlignLeft" style="vertical-align:middle;">
+                                            <td class="formItemBgStyleForAlignLeft" style="vertical-align: middle;">
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label></td>
                                             <td class="formItemBgStyleForAlignLeft">
                                                 <table>
