@@ -1051,7 +1051,7 @@
 
             if (chartType == 'HRuningProjectStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>" + "<%=LanguageHandle.GetWord("ZaiZiXingXiangMuZhongShu").ToString() %>" + ":<span id='spanXNumber'></span></h3> <p> " + "<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("NianDuWanCheng").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='center'>" + "<%=LanguageHandle.GetWord("ZaiZiXingXiangMuZhongShu").ToString() %>" + ":<span id='spanXNumber'></span></h3> <p> " + "<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("NianDuWanCheng").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1089,7 +1089,7 @@
 
             if (chartType == 'HDelayProjectStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card red' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Process.png' alt = 'Clock Icon'/> </td><td align='left'>" + "<%=LanguageHandle.GetWord("NianDuYanWuXiangMuShu").ToString() %>"+ ":<span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("JingDuZhengChang").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("QingDuYanWu").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card red' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Process.png' alt = 'Clock Icon'/> </td><td align='center'>" + "<%=LanguageHandle.GetWord("NianDuYanWuXiangMuShu").ToString() %>"+ ":<span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("JingDuZhengChang").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("QingDuYanWu").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1127,7 +1127,7 @@
 
             if (chartType == 'HAnnualPaymentStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='left'>" + "<%=LanguageHandle.GetWord("XiangMuNianDuhHuiKan").ToString() %>" + ":<span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("NianDuChengBenHeShuan").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("ChengBenChaoZiXiangMuShu").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='center'>" + "<%=LanguageHandle.GetWord("XiangMuNianDuhHuiKan").ToString() %>" + ":<span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("NianDuChengBenHeShuan").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("ChengBenChaoZiXiangMuShu").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1164,7 +1164,7 @@
 
             if (chartType == 'HAnnualWorkHourStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card brown' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>" + "<%=LanguageHandle.GetWord("NianDuXiangMuGongShiTouRu").ToString() %>" + ": <span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("NianDuTeiBaoRenShu").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("RenGongChengBen").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card brown' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='center'>" + "<%=LanguageHandle.GetWord("NianDuXiangMuGongShiTouRu").ToString() %>" + ": <span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("NianDuTeiBaoRenShu").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("RenGongChengBen").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1201,7 +1201,7 @@
 
             if (chartType == 'HRuningTaskStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card lightblue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>" + "<%=LanguageHandle.GetWord("ZaiZhiXingRenWuZhongShu").ToString() %>" + ": <span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("NianDuWanCheng").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card lightblue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='center'>" + "<%=LanguageHandle.GetWord("ZaiZhiXingRenWuZhongShu").ToString() %>" + ": <span id='spanXNumber'></span></h3> <p>" + "<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>" + ": <span id='spanYNumber'></span></p> <p>" + "<%=LanguageHandle.GetWord("NianDuWanCheng").ToString() %>" + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({

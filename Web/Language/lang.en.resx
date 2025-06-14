@@ -5875,7 +5875,7 @@
     <value>- Turn to the task</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
-    <value>The number field is required. Then click the "Submit" button, and the system will automatically log in to the trial platform.</value>
+    <value>The number field is required). Then click the "Submit" button, and the system will automatically log in to the trial platform.</value>
   </data>
   <data name="HNJBZGJXYXGS" xml:space="preserve">
     <value>Henan GeIL Heavy Machinery Co., Ltd.</value>
@@ -12544,25 +12544,25 @@
     <value>Synchronized to the code table supplies</value>
   </data>
   <data name="TDKHGXGLPTSSSC" xml:space="preserve">
-    <value>Thai top customer relationship management platform Implementation Manual</value>
+    <value>TakeTop customer relationship management platform Implementation Manual</value>
   </data>
   <data name="TDQYZHGLPTSSSCYHSC" xml:space="preserve">
-    <value>Thai top enterprise management platform Implementation Manual User Manual</value>
+    <value>TakeTop enterprise management platform Implementation Manual User Manual</value>
   </data>
   <data name="TDRJGSHC" xml:space="preserve">
-    <value>Thai top software companies album</value>
+    <value>TakeTop software companies album</value>
   </data>
   <data name="TDRJGSYCPGNJSHSP" xml:space="preserve">
-    <value>Thai top software company and product function introduction (with video)</value>
+    <value>TakeTop software company and product function introduction (with video)</value>
   </data>
   <data name="TDRJSSPXJCELYYB" xml:space="preserve">
-    <value>Thai top software implementation training course (2011 Edition)</value>
+    <value>TakeTop software implementation training course (2011 Edition)</value>
   </data>
   <data name="TDXMGLPTSSSC" xml:space="preserve">
-    <value>Thai top project management platform Implementation Manual</value>
+    <value>TakeTop project management platform Implementation Manual</value>
   </data>
   <data name="TDXMGLPTYHSC" xml:space="preserve">
-    <value>Thai top Project Management Platform User's Manual</value>
+    <value>TakeTop Project Management Platform User's Manual</value>
   </data>
   <data name="TDXTGLPTSSSC" xml:space="preserve">
     <value>TakeTop collaborative management platform Implementation Manual</value>
@@ -22045,7 +22045,7 @@
     <value>Submitted successfully</value>
   </data>
   <data name="ZZTJCGTDKFHZYTZNBNJJWTXX" xml:space="preserve">
-    <value>Submitted successfully, Thailand top customer service will help you solve the problem within one day, thank you!</value>
+    <value>Submitted successfully,TakeTop customer service will help you solve the problem within one day, thank you!</value>
   </data>
   <data name="ZZTJCWJCCWYYKNSEXMESSAGE" xml:space="preserve">
     <value>Submit error, please check! Error reason might be: "+ ex.Message +"</value>
@@ -32592,5 +32592,17 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
     <value>Lease site.</value>
+  </data>
+  <data name="GouMaiZhiXunWenTi" xml:space="preserve">
+    <value>Purchase Consultation Questions</value>
+  </data>
+  <data name="CaoZuoShiYongWenTi" xml:space="preserve">
+    <value>Operation and Usage Questions</value>
+  </data>
+  <data name="ShiShiFuWuWenTi" xml:space="preserve">
+    <value>Implementation Service Questions</value>
+  </data>
+  <data name="QiTaiWenTi" xml:space="preserve">
+    <value>Other Questions</value>
   </data>
 </root>

@@ -77,7 +77,7 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = Resources.lang.TiShiGongSi + strCompany + Resources.lang.DeYuanGong + strContactPerson + "( " + strPhoneNumber + " )" + Resources.lang.TiJiaoLe + strType + Resources.lang.DeWenTiFanKuiQingGuanZhu;
+                string strNofiInfo = Resources.lang.TiShiGongSi + strCompany + Resources.lang.DeYuanGong + strContactPerson + "( " + strPhoneNumber + " )" + Resources.lang.TiJiaoLe + strType + Resources.lang.ZZTJCGTDKFHZYTZNBNJJWTXX;
                 Action action = new Action(delegate ()
                 {
                     try

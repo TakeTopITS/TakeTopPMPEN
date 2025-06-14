@@ -32626,4 +32626,16 @@
   <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
     <value>租用网站维护</value>
   </data>
+  <data name="GouMaiZhiXunWenTi" xml:space="preserve">
+    <value>购买咨询问题</value>
+  </data>
+  <data name="CaoZuoShiYongWenTi" xml:space="preserve">
+    <value>操作使用问题</value>
+  </data>
+  <data name="ShiShiFuWuWenTi" xml:space="preserve">
+    <value>实施服务问题</value>
+  </data>
+  <data name="QiTaiWenTi" xml:space="preserve">
+    <value>其他问题</value>
+  </data>
 </root>

@@ -5875,7 +5875,7 @@
     <value>- Tourner dans une tâche</value>
   </data>
   <data name="HMWBTXRHDJZCANXTJZJDNDSYYM" xml:space="preserve">
-    <value>Le champ du numéro est obligatoire. Cliquez ensuite sur le bouton "Soumettre", et le système se connectera automatiquement à la plateforme d'essai.</value>
+    <value>Le champ du numéro est obligatoire). Cliquez ensuite sur le bouton "Soumettre", et le système se connectera automatiquement à la plateforme d'essai.</value>
   </data>
   <data name="HNJBZGJXYXGS" xml:space="preserve">
     <value>Henan GeIL Heavy Machinery Co., Ltd.</value>
@@ -12544,10 +12544,10 @@
     <value>Synchronisé à la table de code de matériau</value>
   </data>
   <data name="TDKHGXGLPTSSSC" xml:space="preserve">
-    <value>Thai top relation client Manuel plateforme de gestion de mise en œuvre</value>
+    <value>TakeTop relation client Manuel plateforme de gestion de mise en œuvre</value>
   </data>
   <data name="TDQYZHGLPTSSSCYHSC" xml:space="preserve">
-    <value>Top management de l'entreprise Thai plate-forme mise en œuvre Manuel de l'utilisateur</value>
+    <value>TakeTop management de l'entreprise Thai plate-forme mise en œuvre Manuel de l'utilisateur</value>
   </data>
   <data name="TDRJGSHC" xml:space="preserve">
     <value>Thai premiers éditeurs de logiciels album</value>
@@ -12559,7 +12559,7 @@
     <value>Cours de formation de mise en œuvre du logiciel Top Thai (2011 Edition)</value>
   </data>
   <data name="TDXMGLPTSSSC" xml:space="preserve">
-    <value>Top Thai gestion de projet Manuel plateforme de mise en œuvre</value>
+    <value>TakeTop Thai gestion de projet Manuel plateforme de mise en œuvre</value>
   </data>
   <data name="TDXMGLPTYHSC" xml:space="preserve">
     <value>Manuel de l'utilisateur Thai haut Plate-forme de gestion de projet</value>
@@ -23782,19 +23782,19 @@
     <value>Vérifier si il ya le programme double</value>
   </data>
   <data name="TDERPPTYHSC" xml:space="preserve">
-    <value>Manuel de Thai top ERP Platform utilisateur</value>
+    <value>Manuel de TakeTop ERP Platform utilisateur</value>
   </data>
   <data name="TDJLFWGLPTYHSC" xml:space="preserve">
-    <value>Thai top services financiers plateforme de gestion Manuel de l'utilisateur</value>
+    <value>TakeTop services financiers plateforme de gestion Manuel de l'utilisateur</value>
   </data>
   <data name="TDJYGLPTYHSC" xml:space="preserve">
-    <value>Manuel de Top Thai Education Platform Management utilisateur</value>
+    <value>Manuel de TakeTop Education Platform Management utilisateur</value>
   </data>
   <data name="TDXTJCYSSXMGLPTYHSC" xml:space="preserve">
-    <value>Thai intégration de Top des systèmes et la mise en œuvre de la gestion de projet Manuel plate-forme de l'utilisateur</value>
+    <value>TakeTop intégration de Top des systèmes et la mise en œuvre de la gestion de projet Manuel plate-forme de l'utilisateur</value>
   </data>
   <data name="TDKHGXGLPTYHSC" xml:space="preserve">
-    <value>Thai top relation client Manuel plateforme de gestion de l'utilisateur</value>
+    <value>TakeTop relation client Manuel plateforme de gestion de l'utilisateur</value>
   </data>
   <data name="HanJieJiLuLieBiao" xml:space="preserve">
     <value>Soudage liste des enregistrements</value>
@@ -32591,5 +32591,17 @@
   </data>
   <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
     <value>Maintenance de site loué</value>
+  </data>
+  <data name="GouMaiZhiXunWenTi" xml:space="preserve">
+    <value>Questions de consultation d'achat</value>
+  </data>
+  <data name="CaoZuoShiYongWenTi" xml:space="preserve">
+    <value>Questions sur l'opération et l'utilisation</value>
+  </data>
+  <data name="ShiShiFuWuWenTi" xml:space="preserve">
+    <value>Questions sur les services de mise en œuvre</value>
+  </data>
+  <data name="QiTaiWenTi" xml:space="preserve">
+    <value>Autres Questions</value>
   </data>
 </root>

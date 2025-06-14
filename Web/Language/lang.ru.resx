@@ -32594,4 +32594,16 @@
   <data name="ZuYongZhanDianWeiHu" xml:space="preserve">
     <value>Обслуживание арендованного сайта</value>
   </data>
+  <data name="GouMaiZhiXunWenTi" xml:space="preserve">
+    <value>Вопросы консультации по покупке</value>
+  </data>
+  <data name="CaoZuoShiYongWenTi" xml:space="preserve">
+    <value>Вопросы о работе и использовании</value>
+  </data>
+  <data name="ShiShiFuWuWenTi" xml:space="preserve">
+    <value>Вопросы о сервисах внедрения</value>
+  </data>
+  <data name="QiTaiWenTi" xml:space="preserve">
+    <value>Другие вопросы</value>
+  </data>
 </root>
