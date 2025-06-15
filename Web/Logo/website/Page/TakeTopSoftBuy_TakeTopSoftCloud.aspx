@@ -61,14 +61,7 @@
                     <div class="title1">
                         <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,JiMuHuaJieGouKeAnXuXuanPeiZi%>"></asp:Label>
                     </div>
-                    <div class="main">
-                        <p style="text-align: center; padding-bottom: 30px; font-size: 28px;">
-                            <br />
-                            <span style="text-align: center; font-size: small;"><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html"
-                                target="_blank">
-                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,GongNengMoKuaiYuJiaGe%>"></asp:Label></a> </span>
-                        </p>
-                    </div>
+              
                     <div class="box">
                         <div id="list">
                             <ul id="smalllist">
@@ -297,14 +290,7 @@
                                                                                     <asp:DropDownList ID="DL_Version" DataValueField="Type" DataTextField="HomeTypeName" runat="server" Style="height: 50px;">
                                                                                     </asp:DropDownList>
                                                                                 </td>
-                                                                                <td>&nbsp;
-                                                                                </td>
-                                                                                <td style="vertical-align: middle;">
-                                                                                    <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">
-
-                                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MoKuaiYuJiaGe%>"></asp:Label>
-                                                                                    </a>
-                                                                                </td>
+                                                                          
                                                                             </tr>
                                                                         </table>
                                                                     </td>

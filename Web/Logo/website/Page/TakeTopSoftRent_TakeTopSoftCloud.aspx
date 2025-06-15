@@ -75,17 +75,7 @@
                                                 <p class="zuyong">
                                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,ZaiTaiDingYunShangZuYongTai%>"></asp:Label></p>
                                                 <div id="id4">
-                                                    <h3>
-                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JiaGeBiao%>"></asp:Label><h3>
-                                                            <div class="main">
-                                                                <p style="text-align: center; padding-bottom: 30px; font-size: 28px;">
-                                                                    <br />
-                                                                    <span style="text-align: center; font-size: small;">
-                                                                        <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">
-                                                                            <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,GongNengMoKuaiYuJiaGe%>"></asp:Label></a>
-                                                                    </span>
-                                                                </p>
-                                                            </div>
+                                                   
                                                             <p>
                                                                 <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,GeBanBenJiaGeCanJian%>"></asp:Label></p>
                                                             <table border="1" class="ziti" style="text-align: center; width: 95%; border-collapse: collapse; border: 1px dotted #C0C0C0;">
@@ -202,14 +192,7 @@
                                                                             <asp:DropDownList ID="DL_Version" DataValueField="Type" DataTextField="HomeTypeName" runat="server" Style="height: 50px;">
                                                                             </asp:DropDownList>
                                                                         </td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">
-
-                                                                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,MoKuaiYuJiaGe%>"></asp:Label>
-
-                                                                            </a>
-                                                                        </td>
+                                                                  
                                                                     </tr>
                                                                 </table>
                                                             </td>
@@ -354,17 +337,13 @@
                                                             </td>
                                                             <td style="vertical-align: middle;" class="section">
 
-                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,KaiHuHangQiaoShangYinHangGuFenYouXianGongSiShangHaiPuDongDaDaoZhiHang%>"></asp:Label>
+                                                                <asp:Label ID="Label17" runat="server" Text="招商银行股份有限公司上海浦东大道支行"></asp:Label>
                                                                 <br />
                                                                 <br />
                                                                 <asp:Label ID="Label18" runat="server" Text="开户名：策顶信息科技（上海）有限公司 "></asp:Label>
-
                                                                 <br />
                                                                 <br />
-
-                                                                <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ZhangHao%>"></asp:Label>
-                                                                ：
-                                                                121916330110501
+                                                                <asp:Label ID="Label19" runat="server" Text="帐号：121916330110501"></asp:Label>
                                                             </td>
                                                         </tr>
                                                     </table>
